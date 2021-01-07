@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * InstanceGroupManagers.applyUpdatesToInstances
+ * RegionInstanceGroupManagers.applyUpdatesToInstances
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -28,6 +28,14 @@ package com.google.api.services.compute.model;
  */
 @SuppressWarnings("javadoc")
 public final class RegionInstanceGroupManagersApplyUpdatesRequest extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Flag to update all instances instead of specified list of ?instances?. If the flag is set to
+   * true then the instances may not be specified in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allInstances;
 
   /**
    * The list of URLs of one or more instances for which you want to apply updates. Each URL can be
@@ -58,6 +66,25 @@ public final class RegionInstanceGroupManagersApplyUpdatesRequest extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.String mostDisruptiveAllowedAction;
+
+  /**
+   * Flag to update all instances instead of specified list of ?instances?. If the flag is set to
+   * true then the instances may not be specified in the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllInstances() {
+    return allInstances;
+  }
+
+  /**
+   * Flag to update all instances instead of specified list of ?instances?. If the flag is set to
+   * true then the instances may not be specified in the request.
+   * @param allInstances allInstances or {@code null} for none
+   */
+  public RegionInstanceGroupManagersApplyUpdatesRequest setAllInstances(java.lang.Boolean allInstances) {
+    this.allInstances = allInstances;
+    return this;
+  }
 
   /**
    * The list of URLs of one or more instances for which you want to apply updates. Each URL can be

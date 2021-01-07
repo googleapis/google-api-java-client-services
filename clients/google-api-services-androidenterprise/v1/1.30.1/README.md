@@ -1,6 +1,6 @@
 # Google Play EMM API Client Library for Java
 
-Manages the deployment of apps to Android for Work users.
+Manages the deployment of apps to Android Enterprise devices.
 
 This page contains information about getting started with the Google Play EMM API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-androidenterprise</artifactId>
-      <version>v1-rev20200315-1.30.9</version>
+      <version>v1-rev20201104-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-androidenterprise:v1-rev20200315-1.30.9'
+  compile 'com.google.apis:google-api-services-androidenterprise:v1-rev20201104-1.30.10'
 }
 ```
 

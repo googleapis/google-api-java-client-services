@@ -56,7 +56,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum number of business days spent before an order is shipped. 0 means same day shipped, 1
-   * means next day shipped. Must be greater than or equal to minHandlingTimeInDays.
+   * means next day shipped. Must be greater than or equal to `minHandlingTimeInDays`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Must be greater than or equal to minTransitTimeInDays.
+   * next day delivery. Must be greater than or equal to `minTransitTimeInDays`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +80,8 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Either {min,max}TransitTimeInDays or transitTimeTable must be set, but not
-   * both.
+   * next day delivery. Either `{min,max}TransitTimeInDays` or `transitTimeTable` must be set, but
+   * not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Transit time table, number of business days spent in transit based on row and column
-   * dimensions. Either {min,max}TransitTimeInDays or transitTimeTable can be set, but not both.
+   * dimensions. Either `{min,max}TransitTimeInDays` or `transitTimeTable` can be set, but not both.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum number of business days spent before an order is shipped. 0 means same day shipped, 1
-   * means next day shipped. Must be greater than or equal to minHandlingTimeInDays.
+   * means next day shipped. Must be greater than or equal to `minHandlingTimeInDays`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxHandlingTimeInDays() {
@@ -171,7 +171,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum number of business days spent before an order is shipped. 0 means same day shipped, 1
-   * means next day shipped. Must be greater than or equal to minHandlingTimeInDays.
+   * means next day shipped. Must be greater than or equal to `minHandlingTimeInDays`.
    * @param maxHandlingTimeInDays maxHandlingTimeInDays or {@code null} for none
    */
   public DeliveryTime setMaxHandlingTimeInDays(java.lang.Long maxHandlingTimeInDays) {
@@ -181,7 +181,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Must be greater than or equal to minTransitTimeInDays.
+   * next day delivery. Must be greater than or equal to `minTransitTimeInDays`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxTransitTimeInDays() {
@@ -190,7 +190,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Maximum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Must be greater than or equal to minTransitTimeInDays.
+   * next day delivery. Must be greater than or equal to `minTransitTimeInDays`.
    * @param maxTransitTimeInDays maxTransitTimeInDays or {@code null} for none
    */
   public DeliveryTime setMaxTransitTimeInDays(java.lang.Long maxTransitTimeInDays) {
@@ -219,8 +219,8 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Either {min,max}TransitTimeInDays or transitTimeTable must be set, but not
-   * both.
+   * next day delivery. Either `{min,max}TransitTimeInDays` or `transitTimeTable` must be set, but
+   * not both.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinTransitTimeInDays() {
@@ -229,8 +229,8 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Minimum number of business days that is spent in transit. 0 means same day delivery, 1 means
-   * next day delivery. Either {min,max}TransitTimeInDays or transitTimeTable must be set, but not
-   * both.
+   * next day delivery. Either `{min,max}TransitTimeInDays` or `transitTimeTable` must be set, but
+   * not both.
    * @param minTransitTimeInDays minTransitTimeInDays or {@code null} for none
    */
   public DeliveryTime setMinTransitTimeInDays(java.lang.Long minTransitTimeInDays) {
@@ -259,7 +259,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Transit time table, number of business days spent in transit based on row and column
-   * dimensions. Either {min,max}TransitTimeInDays or transitTimeTable can be set, but not both.
+   * dimensions. Either `{min,max}TransitTimeInDays` or `transitTimeTable` can be set, but not both.
    * @return value or {@code null} for none
    */
   public TransitTable getTransitTimeTable() {
@@ -268,7 +268,7 @@ public final class DeliveryTime extends com.google.api.client.json.GenericJson {
 
   /**
    * Transit time table, number of business days spent in transit based on row and column
-   * dimensions. Either {min,max}TransitTimeInDays or transitTimeTable can be set, but not both.
+   * dimensions. Either `{min,max}TransitTimeInDays` or `transitTimeTable` can be set, but not both.
    * @param transitTimeTable transitTimeTable or {@code null} for none
    */
   public DeliveryTime setTransitTimeTable(TransitTable transitTimeTable) {

@@ -20,8 +20,8 @@ package com.google.api.services.deploymentmanager.model;
  * Model definition for Resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deployment Manager API V2Beta Methods.
- * For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud Deployment Manager V2 API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -81,8 +81,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.lang.String properties;
 
   /**
-   * Output only. The type of the resource, for example compute.v1.instance, or
-   * cloudfunctions.v1beta1.function.
+   * Output only. The type of the resource, for example `compute.v1.instance`, or
+   * `cloudfunctions.v1beta1.function`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,8 +246,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The type of the resource, for example compute.v1.instance, or
-   * cloudfunctions.v1beta1.function.
+   * Output only. The type of the resource, for example `compute.v1.instance`, or
+   * `cloudfunctions.v1beta1.function`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -255,8 +255,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The type of the resource, for example compute.v1.instance, or
-   * cloudfunctions.v1beta1.function.
+   * Output only. The type of the resource, for example `compute.v1.instance`, or
+   * `cloudfunctions.v1beta1.function`.
    * @param type type or {@code null} for none
    */
   public Resource setType(java.lang.String type) {

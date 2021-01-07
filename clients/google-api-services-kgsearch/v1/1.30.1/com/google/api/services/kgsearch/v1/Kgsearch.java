@@ -46,7 +46,7 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Knowledge Graph Search API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Knowledge Graph Search API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -286,9 +286,7 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'.
-       */
+      /** The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'. */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> languages;
 
@@ -298,9 +296,7 @@ public class Kgsearch extends com.google.api.client.googleapis.services.json.Abs
         return languages;
       }
 
-      /**
-       * The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'.
-       */
+      /** The list of language codes (defined in ISO 693) to run the query with, e.g. 'en'. */
       public Search setLanguages(java.util.List<java.lang.String> languages) {
         this.languages = languages;
         return this;

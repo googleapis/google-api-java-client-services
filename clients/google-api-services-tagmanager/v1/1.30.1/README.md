@@ -1,7 +1,6 @@
 # Tag Manager API Client Library for Java
 
-This API allows clients to access and modify container and tag
-     configuration.
+This API allows clients to access and modify container and tag configuration.
 
 This page contains information about getting started with the Tag Manager API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-tagmanager</artifactId>
-      <version>v1-rev20200220-1.30.9</version>
+      <version>v1-rev20200826-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-tagmanager:v1-rev20200220-1.30.9'
+  compile 'com.google.apis:google-api-services-tagmanager:v1-rev20200826-1.30.10'
 }
 ```
 

@@ -46,7 +46,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Run API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Run Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -335,9 +335,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The project ID or project number from which the storages should be listed.
-       */
+      /** The project ID or project number from which the storages should be listed. */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
@@ -347,9 +345,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         return parent;
       }
 
-      /**
-       * The project ID or project number from which the storages should be listed.
-       */
+      /** The project ID or project number from which the storages should be listed. */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
         return this;
@@ -457,8 +453,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the run server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the CustomResourceDefinition being retrieved. If needed,
-      replace {namespace_id} with the
+       * @param name The name of the CustomResourceDefinition being retrieved. If needed, replace {namespace_id} with the
        *        project ID.
        * @return the request
        */
@@ -485,8 +480,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the CustomResourceDefinition being retrieved. If needed,
-      replace {namespace_id} with the
+         * @param name The name of the CustomResourceDefinition being retrieved. If needed, replace {namespace_id} with the
        *        project ID.
          * @since 1.13
          */
@@ -670,8 +664,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the CustomResourceDefinition being retrieved. If needed,
-        replace {namespace_id} with the
+         * @param name The name of the CustomResourceDefinition being retrieved. If needed, replace {namespace_id} with the
          *        project ID.
          * @return the request
          */
@@ -698,8 +691,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the CustomResourceDefinition being retrieved. If needed,
-        replace {namespace_id} with the
+           * @param name The name of the CustomResourceDefinition being retrieved. If needed, replace {namespace_id} with the
          *        project ID.
            * @since 1.13
            */
@@ -819,8 +811,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the run server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project ID or project number from which the storages should
-        be listed.
+         * @param parent The project ID or project number from which the storages should be listed.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -846,8 +837,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project ID or project number from which the storages should
-        be listed.
+           * @param parent The project ID or project number from which the storages should be listed.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -925,9 +915,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The project ID or project number from which the storages should be listed.
-           */
+          /** The project ID or project number from which the storages should be listed. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
@@ -937,9 +925,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             return parent;
           }
 
-          /**
-           * The project ID or project number from which the storages should be listed.
-           */
+          /** The project ID or project number from which the storages should be listed. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

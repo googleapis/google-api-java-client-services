@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Player to be used for a video playback.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -36,7 +36,7 @@ public final class VideoPlayer extends com.google.api.client.json.GenericJson {
   private java.lang.Long embedHeight;
 
   /**
-   * An  tag that embeds a player that will play the video.
+   * An iframe tag that embeds a player that will play the video.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class VideoPlayer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An  tag that embeds a player that will play the video.
+   * An iframe tag that embeds a player that will play the video.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmbedHtml() {
@@ -73,7 +73,7 @@ public final class VideoPlayer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An  tag that embeds a player that will play the video.
+   * An iframe tag that embeds a player that will play the video.
    * @param embedHtml embedHtml or {@code null} for none
    */
   public VideoPlayer setEmbedHtml(java.lang.String embedHtml) {

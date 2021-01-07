@@ -46,7 +46,7 @@ public class AdSense extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the AdSense Management API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the AdSense Management API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -528,6 +528,22 @@ public class AdSense extends com.google.api.client.googleapis.services.json.Abst
         /** Ad client to get the code for. */
         public GetAdCode setAdClientId(java.lang.String adClientId) {
           this.adClientId = adClientId;
+          return this;
+        }
+
+        /** Tag partner to include in the ad code snippet. */
+        @com.google.api.client.util.Key
+        private java.lang.String tagPartner;
+
+        /** Tag partner to include in the ad code snippet.
+         */
+        public java.lang.String getTagPartner() {
+          return tagPartner;
+        }
+
+        /** Tag partner to include in the ad code snippet. */
+        public GetAdCode setTagPartner(java.lang.String tagPartner) {
+          this.tagPartner = tagPartner;
           return this;
         }
 

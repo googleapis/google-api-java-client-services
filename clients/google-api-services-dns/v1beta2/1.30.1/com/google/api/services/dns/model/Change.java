@@ -24,7 +24,7 @@ package com.google.api.services.dns.model;
  * the sum effect of applying all Change elements in the Changes collection in sequence.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -62,7 +62,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isServing;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#change".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +77,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
 
   /**
    * Status of the operation (output only). A status of "done" means that the request to update the
-   * authoritative servers has been sent, but the servers might not be updated yet.
+   * authoritative servers has been sent but the servers might not be updated yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +152,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#change".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -161,7 +159,6 @@ public final class Change extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#change".
    * @param kind kind or {@code null} for none
    */
   public Change setKind(java.lang.String kind) {
@@ -190,7 +187,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
 
   /**
    * Status of the operation (output only). A status of "done" means that the request to update the
-   * authoritative servers has been sent, but the servers might not be updated yet.
+   * authoritative servers has been sent but the servers might not be updated yet.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -199,7 +196,7 @@ public final class Change extends com.google.api.client.json.GenericJson {
 
   /**
    * Status of the operation (output only). A status of "done" means that the request to update the
-   * authoritative servers has been sent, but the servers might not be updated yet.
+   * authoritative servers has been sent but the servers might not be updated yet.
    * @param status status or {@code null} for none
    */
   public Change setStatus(java.lang.String status) {

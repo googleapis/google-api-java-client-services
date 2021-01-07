@@ -27,10 +27,10 @@ package com.google.api.services.compute.model;
  *
  * Example Policy with multiple AuditConfigs:
  *
- * { "audit_configs": [ { "service": "allServices" "audit_log_configs": [ { "log_type": "DATA_READ",
- * "exempted_members": [ "user:jose@example.com" ] }, { "log_type": "DATA_WRITE", }, { "log_type":
- * "ADMIN_READ", } ] }, { "service": "sampleservice.googleapis.com" "audit_log_configs": [ {
- * "log_type": "DATA_READ", }, { "log_type": "DATA_WRITE", "exempted_members": [
+ * { "audit_configs": [ { "service": "allServices", "audit_log_configs": [ { "log_type":
+ * "DATA_READ", "exempted_members": [ "user:jose@example.com" ] }, { "log_type": "DATA_WRITE" }, {
+ * "log_type": "ADMIN_READ" } ] }, { "service": "sampleservice.googleapis.com", "audit_log_configs":
+ * [ { "log_type": "DATA_READ" }, { "log_type": "DATA_WRITE", "exempted_members": [
  * "user:aliya@example.com" ] } ] } ] }
  *
  * For sampleservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ logging. It also

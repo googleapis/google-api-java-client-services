@@ -1,7 +1,6 @@
 # Cloud Trace API Client Library for Java
 
-Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Cloud Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus.
-
+Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Cloud Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus. 
 
 This page contains information about getting started with the Cloud Trace API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudtrace</artifactId>
-      <version>v2-rev20200309-1.30.9</version>
+      <version>v2-rev20200805-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudtrace:v2-rev20200309-1.30.9'
+  compile 'com.google.apis:google-api-services-cloudtrace:v2-rev20200805-1.30.10'
 }
 ```
 

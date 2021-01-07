@@ -54,13 +54,28 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * Optional. The Compute Engine network to be used for machine communications. Cannot be specified
    * with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default"
    * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
-   * Subnetworks for more information).A full URL, partial URI, or short name are valid. Examples:
+   * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
+   * URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default
    * projects/[project_id]/regions/global/default default
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String networkUri;
+
+  /**
+   * Optional. Node Group Affinity for sole-tenant clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeGroupAffinity nodeGroupAffinity;
+
+  /**
+   * Optional. The type of IPv6 access for a cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String privateIpv6GoogleAccess;
 
   /**
    * Optional. Reservation Affinity for consuming Zonal reservation.
@@ -70,9 +85,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private ReservationAffinity reservationAffinity;
 
   /**
-   * Optional. The Dataproc service account (also see VM Data Plane identity) used by Dataproc
-   * cluster VM instances to access Google Cloud Platform services.If not specified, the Compute
-   * Engine default service account is used.
+   * Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts
+   * /configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane
+   * identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
+   * principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to
+   * access Google Cloud Platform services.If not specified, the Compute Engine default service
+   * account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
+   * is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +123,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.lang.String subnetworkUri;
 
   /**
-   * The Compute Engine tags to add to all instances (see Tagging instances).
+   * The Compute Engine tags to add to all instances (see Tagging instances
+   * (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +192,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * Optional. The Compute Engine network to be used for machine communications. Cannot be specified
    * with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default"
    * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
-   * Subnetworks for more information).A full URL, partial URI, or short name are valid. Examples:
+   * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
+   * URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default
    * projects/[project_id]/regions/global/default default
    * @return value or {@code null} for none
@@ -185,13 +206,48 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    * Optional. The Compute Engine network to be used for machine communications. Cannot be specified
    * with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default"
    * network of the project is used, if it exists. Cannot be a "Custom Subnet Network" (see Using
-   * Subnetworks for more information).A full URL, partial URI, or short name are valid. Examples:
+   * Subnetworks (https://cloud.google.com/compute/docs/subnetworks) for more information).A full
+   * URL, partial URI, or short name are valid. Examples:
    * https://www.googleapis.com/compute/v1/projects/[project_id]/regions/global/default
    * projects/[project_id]/regions/global/default default
    * @param networkUri networkUri or {@code null} for none
    */
   public GceClusterConfig setNetworkUri(java.lang.String networkUri) {
     this.networkUri = networkUri;
+    return this;
+  }
+
+  /**
+   * Optional. Node Group Affinity for sole-tenant clusters.
+   * @return value or {@code null} for none
+   */
+  public NodeGroupAffinity getNodeGroupAffinity() {
+    return nodeGroupAffinity;
+  }
+
+  /**
+   * Optional. Node Group Affinity for sole-tenant clusters.
+   * @param nodeGroupAffinity nodeGroupAffinity or {@code null} for none
+   */
+  public GceClusterConfig setNodeGroupAffinity(NodeGroupAffinity nodeGroupAffinity) {
+    this.nodeGroupAffinity = nodeGroupAffinity;
+    return this;
+  }
+
+  /**
+   * Optional. The type of IPv6 access for a cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrivateIpv6GoogleAccess() {
+    return privateIpv6GoogleAccess;
+  }
+
+  /**
+   * Optional. The type of IPv6 access for a cluster.
+   * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
+   */
+  public GceClusterConfig setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
+    this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
     return this;
   }
 
@@ -213,9 +269,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The Dataproc service account (also see VM Data Plane identity) used by Dataproc
-   * cluster VM instances to access Google Cloud Platform services.If not specified, the Compute
-   * Engine default service account is used.
+   * Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts
+   * /configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane
+   * identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
+   * principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to
+   * access Google Cloud Platform services.If not specified, the Compute Engine default service
+   * account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
+   * is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -223,9 +283,13 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The Dataproc service account (also see VM Data Plane identity) used by Dataproc
-   * cluster VM instances to access Google Cloud Platform services.If not specified, the Compute
-   * Engine default service account is used.
+   * Optional. The Dataproc service account (https://cloud.google.com/dataproc/docs/concepts
+   * /configuring-clusters/service-accounts#service_accounts_in_dataproc) (also see VM Data Plane
+   * identity (https://cloud.google.com/dataproc/docs/concepts/iam/dataproc-
+   * principals#vm_service_account_data_plane_identity)) used by Dataproc cluster VM instances to
+   * access Google Cloud Platform services.If not specified, the Compute Engine default service
+   * account (https://cloud.google.com/compute/docs/access/service-accounts#default_service_account)
+   * is used.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GceClusterConfig setServiceAccount(java.lang.String serviceAccount) {
@@ -290,7 +354,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Compute Engine tags to add to all instances (see Tagging instances).
+   * The Compute Engine tags to add to all instances (see Tagging instances
+   * (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -298,7 +363,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The Compute Engine tags to add to all instances (see Tagging instances).
+   * The Compute Engine tags to add to all instances (see Tagging instances
+   * (https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
    * @param tags tags or {@code null} for none
    */
   public GceClusterConfig setTags(java.util.List<java.lang.String> tags) {

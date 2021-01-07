@@ -19,15 +19,18 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Backend Service resource.
  *
- * A backend service contains configuration values for Google Cloud Platform load balancing
- * services.
+ * A backend service defines how Google Cloud load balancers distribute traffic. The backend service
+ * configuration contains a set of values, such as the protocol used to connect to backends, various
+ * distribution and session settings, health checks, and timeouts. These settings provide fine-
+ * grained control over how your load balancer behaves. Most of the settings have default values
+ * that allow for easy configuration if you need to get started quickly.
  *
  * Backend services in Google Compute Engine can be either regionally or globally scoped.
  *
  * * [Global](/compute/docs/reference/rest/{$api_version}/backendServices) *
  * [Regional](/compute/docs/reference/rest/{$api_version}/regionBackendServices)
  *
- * For more information, read Backend Services.
+ * For more information, see Backend Services.
  *
  * (== resource_for {$api_version}.backendService ==)
  *
@@ -42,8 +45,15 @@ package com.google.api.services.compute.model;
 public final class BackendService extends com.google.api.client.json.GenericJson {
 
   /**
+   * Lifetime of cookies in seconds. Only applicable if the loadBalancingScheme is EXTERNAL,
+   * INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, the protocol is HTTP or HTTPS, and the
+   * sessionAffinity is GENERATED_COOKIE, or HTTP_COOKIE.
+   *
    * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
    * (or equivalent). The maximum allowed value is one day (86,400).
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,6 +86,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,6 +111,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,15 +171,17 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy)
    * resource for health checking this backend service. Not all backend services support legacy
-   * health checks. See  Load balancer guide. Currently at most one health check can be specified.
-   * Backend services with instance group or zonal NEG backends must have a health check. Backend
-   * services with internet NEG backends must not have a health check. A health check must
+   * health checks. See  Load balancer guide. Currently, at most one health check can be specified
+   * for each backend service. Backend services with instance group or zonal NEG backends must have
+   * a health check. Backend services with internet or serverless NEG backends must not have a
+   * health check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> healthChecks;
 
   /**
+   * The configurations for Identity-Aware Proxy on this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,15 +224,18 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * address as the destination address of the incoming connection before the connection was
    * redirected to the load balancer.  - MAGLEV: used as a drop in replacement for the ring hash
    * load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and
-   * host selection times. For more information about Maglev, refer to
+   * host selection times. For more information about Maglev, see
    * https://ai.google/research/pubs/pub44824
    *
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
    *
-   * If sessionAffinity is not NONE, and this field is not set to >MAGLEV or RING_HASH, session
+   * If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session
    * affinity settings will not take effect.
+   *
+   * Only the default ROUND_ROBIN policy is supported when the backend service is referenced by a
+   * URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,6 +275,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +299,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
    * each backend instance group. This parameter has no meaning if the backends are NEGs.
    *
-   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
+   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,9 +308,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP. depending on the chosen load balancer
-   * or Traffic Director configuration. Refer to the documentation for the load balancer or for
-   * Traffic Director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load
+   * balancer or Traffic Director configuration. Refer to the documentation for the load balancer or
+   * for Traffic Director for more information.
+   *
+   * Must be set to GRPC when the backend service is referenced by a URL map that is bound to target
+   * gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -309,6 +336,16 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String securityPolicy;
 
   /**
+   * This field specifies the security policy that applies to this backend service. This field is
+   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
+   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
+   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecuritySettings securitySettings;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -327,6 +364,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    *
    * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are
    * NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -334,15 +374,22 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The backend service timeout has a different meaning depending on the type of load balancer. For
-   * more information read,  Backend service settings The default is 30 seconds.
+   * more information see,  Backend service settings The default is 30 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer timeoutSec;
 
   /**
+   * Lifetime of cookies in seconds. Only applicable if the loadBalancingScheme is EXTERNAL,
+   * INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, the protocol is HTTP or HTTPS, and the
+   * sessionAffinity is GENERATED_COOKIE, or HTTP_COOKIE.
+   *
    * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
    * (or equivalent). The maximum allowed value is one day (86,400).
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAffinityCookieTtlSec() {
@@ -350,8 +397,15 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Lifetime of cookies in seconds. Only applicable if the loadBalancingScheme is EXTERNAL,
+   * INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, the protocol is HTTP or HTTPS, and the
+   * sessionAffinity is GENERATED_COOKIE, or HTTP_COOKIE.
+   *
    * If set to 0, the cookie is non-persistent and lasts only until the end of the browser session
    * (or equivalent). The maximum allowed value is one day (86,400).
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param affinityCookieTtlSec affinityCookieTtlSec or {@code null} for none
    */
   public BackendService setAffinityCookieTtlSec(java.lang.Integer affinityCookieTtlSec) {
@@ -400,6 +454,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public CircuitBreakers getCircuitBreakers() {
@@ -413,6 +470,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param circuitBreakers circuitBreakers or {@code null} for none
    */
   public BackendService setCircuitBreakers(CircuitBreakers circuitBreakers) {
@@ -446,6 +506,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public ConsistentHashLoadBalancerSettings getConsistentHash() {
@@ -463,6 +526,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param consistentHash consistentHash or {@code null} for none
    */
   public BackendService setConsistentHash(ConsistentHashLoadBalancerSettings consistentHash) {
@@ -627,9 +693,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy)
    * resource for health checking this backend service. Not all backend services support legacy
-   * health checks. See  Load balancer guide. Currently at most one health check can be specified.
-   * Backend services with instance group or zonal NEG backends must have a health check. Backend
-   * services with internet NEG backends must not have a health check. A health check must
+   * health checks. See  Load balancer guide. Currently, at most one health check can be specified
+   * for each backend service. Backend services with instance group or zonal NEG backends must have
+   * a health check. Backend services with internet or serverless NEG backends must not have a
+   * health check.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHealthChecks() {
@@ -639,9 +706,10 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy)
    * resource for health checking this backend service. Not all backend services support legacy
-   * health checks. See  Load balancer guide. Currently at most one health check can be specified.
-   * Backend services with instance group or zonal NEG backends must have a health check. Backend
-   * services with internet NEG backends must not have a health check. A health check must
+   * health checks. See  Load balancer guide. Currently, at most one health check can be specified
+   * for each backend service. Backend services with instance group or zonal NEG backends must have
+   * a health check. Backend services with internet or serverless NEG backends must not have a
+   * health check.
    * @param healthChecks healthChecks or {@code null} for none
    */
   public BackendService setHealthChecks(java.util.List<java.lang.String> healthChecks) {
@@ -650,6 +718,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The configurations for Identity-Aware Proxy on this resource.
    * @return value or {@code null} for none
    */
   public BackendServiceIAP getIap() {
@@ -657,6 +726,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The configurations for Identity-Aware Proxy on this resource.
    * @param iap iap or {@code null} for none
    */
   public BackendService setIap(BackendServiceIAP iap) {
@@ -735,15 +805,18 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * address as the destination address of the incoming connection before the connection was
    * redirected to the load balancer.  - MAGLEV: used as a drop in replacement for the ring hash
    * load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and
-   * host selection times. For more information about Maglev, refer to
+   * host selection times. For more information about Maglev, see
    * https://ai.google/research/pubs/pub44824
    *
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
    *
-   * If sessionAffinity is not NONE, and this field is not set to >MAGLEV or RING_HASH, session
+   * If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session
    * affinity settings will not take effect.
+   *
+   * Only the default ROUND_ROBIN policy is supported when the backend service is referenced by a
+   * URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalityLbPolicy() {
@@ -762,15 +835,18 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * address as the destination address of the incoming connection before the connection was
    * redirected to the load balancer.  - MAGLEV: used as a drop in replacement for the ring hash
    * load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and
-   * host selection times. For more information about Maglev, refer to
+   * host selection times. For more information about Maglev, see
    * https://ai.google/research/pubs/pub44824
    *
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
    *
-   * If sessionAffinity is not NONE, and this field is not set to >MAGLEV or RING_HASH, session
+   * If sessionAffinity is not NONE, and this field is not set to MAGLEV or RING_HASH, session
    * affinity settings will not take effect.
+   *
+   * Only the default ROUND_ROBIN policy is supported when the backend service is referenced by a
+   * URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
    * @param localityLbPolicy localityLbPolicy or {@code null} for none
    */
   public BackendService setLocalityLbPolicy(java.lang.String localityLbPolicy) {
@@ -848,6 +924,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public OutlierDetection getOutlierDetection() {
@@ -861,6 +940,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * This field is applicable to either:   - A regional backend service with the service_protocol
    * set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global
    * backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param outlierDetection outlierDetection or {@code null} for none
    */
   public BackendService setOutlierDetection(OutlierDetection outlierDetection) {
@@ -897,7 +979,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
    * each backend instance group. This parameter has no meaning if the backends are NEGs.
    *
-   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
+   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
    * @return value or {@code null} for none
    */
   public java.lang.String getPortName() {
@@ -910,7 +992,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * INTERNAL_SELF_MANAGED and the backends are instance groups. The named port must be defined on
    * each backend instance group. This parameter has no meaning if the backends are NEGs.
    *
-   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Blaancing).
+   * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
    * @param portName portName or {@code null} for none
    */
   public BackendService setPortName(java.lang.String portName) {
@@ -921,9 +1003,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP. depending on the chosen load balancer
-   * or Traffic Director configuration. Refer to the documentation for the load balancer or for
-   * Traffic Director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load
+   * balancer or Traffic Director configuration. Refer to the documentation for the load balancer or
+   * for Traffic Director for more information.
+   *
+   * Must be set to GRPC when the backend service is referenced by a URL map that is bound to target
+   * gRPC proxy.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -933,9 +1018,12 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, or UDP. depending on the chosen load balancer
-   * or Traffic Director configuration. Refer to the documentation for the load balancer or for
-   * Traffic Director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, TCP, SSL, UDP or GRPC. depending on the chosen load
+   * balancer or Traffic Director configuration. Refer to the documentation for the load balancer or
+   * for Traffic Director for more information.
+   *
+   * Must be set to GRPC when the backend service is referenced by a URL map that is bound to target
+   * gRPC proxy.
    * @param protocol protocol or {@code null} for none
    */
   public BackendService setProtocol(java.lang.String protocol) {
@@ -982,6 +1070,29 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * This field specifies the security policy that applies to this backend service. This field is
+   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
+   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
+   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * @return value or {@code null} for none
+   */
+  public SecuritySettings getSecuritySettings() {
+    return securitySettings;
+  }
+
+  /**
+   * This field specifies the security policy that applies to this backend service. This field is
+   * applicable to either: - A regional backend service with the service_protocol set to HTTP,
+   * HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED.  - A global backend service
+   * with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+   * @param securitySettings securitySettings or {@code null} for none
+   */
+  public BackendService setSecuritySettings(SecuritySettings securitySettings) {
+    this.securitySettings = securitySettings;
+    return this;
+  }
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
@@ -1010,6 +1121,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    *
    * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are
    * NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionAffinity() {
@@ -1028,6 +1142,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    *
    * When the loadBalancingScheme is INTERNAL_SELF_MANAGED, or INTERNAL_MANAGED, possible values are
    * NONE, CLIENT_IP, GENERATED_COOKIE, HEADER_FIELD, or HTTP_COOKIE.
+   *
+   * Not supported when the backend service is referenced by a URL map that is bound to target gRPC
+   * proxy that has validateForProxyless field set to true.
    * @param sessionAffinity sessionAffinity or {@code null} for none
    */
   public BackendService setSessionAffinity(java.lang.String sessionAffinity) {
@@ -1037,7 +1154,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The backend service timeout has a different meaning depending on the type of load balancer. For
-   * more information read,  Backend service settings The default is 30 seconds.
+   * more information see,  Backend service settings The default is 30 seconds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSec() {
@@ -1046,7 +1163,7 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * The backend service timeout has a different meaning depending on the type of load balancer. For
-   * more information read,  Backend service settings The default is 30 seconds.
+   * more information see,  Backend service settings The default is 30 seconds.
    * @param timeoutSec timeoutSec or {@code null} for none
    */
   public BackendService setTimeoutSec(java.lang.Integer timeoutSec) {

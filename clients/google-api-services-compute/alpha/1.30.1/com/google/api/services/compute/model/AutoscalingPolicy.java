@@ -91,13 +91,6 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private java.lang.String mode;
 
   /**
-   * Configuration parameters of autoscaling based on queuing system.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AutoscalingPolicyQueueBasedScaling queueBasedScaling;
-
-  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,6 +101,15 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private AutoscalingPolicyScaleInControl scaleInControl;
+
+  /**
+   * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and
+   * they can overlap. During overlapping periods the greatest min_required_replicas of all scaling
+   * schedules will be applied. Up to 128 scaling schedules are allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, AutoscalingPolicyScalingSchedule> scalingSchedules;
 
   /**
    * The number of seconds that the autoscaler should wait before it starts collecting information
@@ -253,23 +255,6 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Configuration parameters of autoscaling based on queuing system.
-   * @return value or {@code null} for none
-   */
-  public AutoscalingPolicyQueueBasedScaling getQueueBasedScaling() {
-    return queueBasedScaling;
-  }
-
-  /**
-   * Configuration parameters of autoscaling based on queuing system.
-   * @param queueBasedScaling queueBasedScaling or {@code null} for none
-   */
-  public AutoscalingPolicy setQueueBasedScaling(AutoscalingPolicyQueueBasedScaling queueBasedScaling) {
-    this.queueBasedScaling = queueBasedScaling;
-    return this;
-  }
-
-  /**
    * @return value or {@code null} for none
    */
   public AutoscalingPolicyScaleDownControl getScaleDownControl() {
@@ -296,6 +281,27 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    */
   public AutoscalingPolicy setScaleInControl(AutoscalingPolicyScaleInControl scaleInControl) {
     this.scaleInControl = scaleInControl;
+    return this;
+  }
+
+  /**
+   * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and
+   * they can overlap. During overlapping periods the greatest min_required_replicas of all scaling
+   * schedules will be applied. Up to 128 scaling schedules are allowed.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, AutoscalingPolicyScalingSchedule> getScalingSchedules() {
+    return scalingSchedules;
+  }
+
+  /**
+   * Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and
+   * they can overlap. During overlapping periods the greatest min_required_replicas of all scaling
+   * schedules will be applied. Up to 128 scaling schedules are allowed.
+   * @param scalingSchedules scalingSchedules or {@code null} for none
+   */
+  public AutoscalingPolicy setScalingSchedules(java.util.Map<String, AutoscalingPolicyScalingSchedule> scalingSchedules) {
+    this.scalingSchedules = scalingSchedules;
     return this;
   }
 

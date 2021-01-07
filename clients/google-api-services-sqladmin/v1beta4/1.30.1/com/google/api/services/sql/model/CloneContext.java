@@ -30,9 +30,9 @@ package com.google.api.services.sql.model;
 public final class CloneContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Binary log coordinates, if specified, identify the position up to which the source instance
-   * should be cloned. If not specified, the source instance is cloned up to the most recent binary
-   * log coordinates.
+   * Binary log coordinates, if specified, identify the position up to which the source instance is
+   * cloned. If not specified, the source instance is cloned up to the most recent binary log
+   * coordinates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   private java.lang.String destinationInstanceName;
 
   /**
-   * This is always sql#cloneContext.
+   * This is always *sql#cloneContext*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,9 +67,9 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   private String pointInTime;
 
   /**
-   * Binary log coordinates, if specified, identify the position up to which the source instance
-   * should be cloned. If not specified, the source instance is cloned up to the most recent binary
-   * log coordinates.
+   * Binary log coordinates, if specified, identify the position up to which the source instance is
+   * cloned. If not specified, the source instance is cloned up to the most recent binary log
+   * coordinates.
    * @return value or {@code null} for none
    */
   public BinLogCoordinates getBinLogCoordinates() {
@@ -77,9 +77,9 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Binary log coordinates, if specified, identify the position up to which the source instance
-   * should be cloned. If not specified, the source instance is cloned up to the most recent binary
-   * log coordinates.
+   * Binary log coordinates, if specified, identify the position up to which the source instance is
+   * cloned. If not specified, the source instance is cloned up to the most recent binary log
+   * coordinates.
    * @param binLogCoordinates binLogCoordinates or {@code null} for none
    */
   public CloneContext setBinLogCoordinates(BinLogCoordinates binLogCoordinates) {
@@ -105,7 +105,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always sql#cloneContext.
+   * This is always *sql#cloneContext*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -113,7 +113,7 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always sql#cloneContext.
+   * This is always *sql#cloneContext*.
    * @param kind kind or {@code null} for none
    */
   public CloneContext setKind(java.lang.String kind) {

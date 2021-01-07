@@ -46,7 +46,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Tasks API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Tasks API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -508,12 +508,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
       public class Queues {
 
         /**
-         * Creates a queue.
-         *
-         * Queues created with this method allow tasks to live for a maximum of 31 days. After a task is 31
-         * days old, the task will be deleted regardless of whether it was dispatched or not.
-         *
-         * WARNING: Using this method may have unintended side effects if you are using an App Engine
+         * Creates a queue. Queues created with this method allow tasks to live for a maximum of 31 days.
+         * After a task is 31 days old, the task will be deleted regardless of whether it was dispatched or
+         * not. WARNING: Using this method may have unintended side effects if you are using an App Engine
          * `queue.yaml` or `queue.xml` file to manage your queues. Read [Overview of Queue Management and
          * queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this method.
          *
@@ -522,13 +519,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location name in which the queue will be created.
-        For example:
-         *        `projects/PROJECT_ID/locations/LOCATION_ID`
-        The list of allowed locations can be obtained
-         *        by calling Cloud
-        Tasks' implementation of
-        ListLocations.
+         * @param parent Required. The location name in which the queue will be created. For example:
+         *        `projects/PROJECT_ID/locations/LOCATION_ID` The list of allowed locations can be obtained
+         *        by calling Cloud Tasks' implementation of ListLocations.
          * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.Queue}
          * @return the request
          */
@@ -546,14 +539,12 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a queue.
-           *
-           * Queues created with this method allow tasks to live for a maximum of 31 days. After a task is
-           * 31 days old, the task will be deleted regardless of whether it was dispatched or not.
-           *
-           * WARNING: Using this method may have unintended side effects if you are using an App Engine
-           * `queue.yaml` or `queue.xml` file to manage your queues. Read [Overview of Queue Management and
-           * queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this method.
+           * Creates a queue. Queues created with this method allow tasks to live for a maximum of 31 days.
+           * After a task is 31 days old, the task will be deleted regardless of whether it was dispatched
+           * or not. WARNING: Using this method may have unintended side effects if you are using an App
+           * Engine `queue.yaml` or `queue.xml` file to manage your queues. Read [Overview of Queue
+           * Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this
+           * method.
            *
            * Create a request for the method "queues.create".
            *
@@ -563,13 +554,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location name in which the queue will be created.
-        For example:
-         *        `projects/PROJECT_ID/locations/LOCATION_ID`
-        The list of allowed locations can be obtained
-         *        by calling Cloud
-        Tasks' implementation of
-        ListLocations.
+           * @param parent Required. The location name in which the queue will be created. For example:
+         *        `projects/PROJECT_ID/locations/LOCATION_ID` The list of allowed locations can be obtained
+         *        by calling Cloud Tasks' implementation of ListLocations.
            * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.Queue}
            * @since 1.13
            */
@@ -640,19 +627,15 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The location name in which the queue will be created. For example:
-           * `projects/PROJECT_ID/locations/LOCATION_ID`
-           *
-           * The list of allowed locations can be obtained by calling Cloud Tasks' implementation of
-           * ListLocations.
+           * `projects/PROJECT_ID/locations/LOCATION_ID` The list of allowed locations can be
+           * obtained by calling Cloud Tasks' implementation of ListLocations.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The location name in which the queue will be created. For example:
-         `projects/PROJECT_ID/locations/LOCATION_ID`
-
-         The list of allowed locations can be obtained by calling Cloud Tasks' implementation of
-         ListLocations.
+         `projects/PROJECT_ID/locations/LOCATION_ID` The list of allowed locations can be obtained by
+         calling Cloud Tasks' implementation of ListLocations.
            */
           public java.lang.String getParent() {
             return parent;
@@ -660,10 +643,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The location name in which the queue will be created. For example:
-           * `projects/PROJECT_ID/locations/LOCATION_ID`
-           *
-           * The list of allowed locations can be obtained by calling Cloud Tasks' implementation of
-           * ListLocations.
+           * `projects/PROJECT_ID/locations/LOCATION_ID` The list of allowed locations can be
+           * obtained by calling Cloud Tasks' implementation of ListLocations.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -681,14 +662,10 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Deletes a queue.
-         *
-         * This command will delete the queue even if it has tasks in it.
-         *
-         * Note: If you delete a queue, a queue with the same name can't be created for 7 days.
-         *
-         * WARNING: Using this method may have unintended side effects if you are using an App Engine
-         * `queue.yaml` or `queue.xml` file to manage your queues. Read [Overview of Queue Management and
+         * Deletes a queue. This command will delete the queue even if it has tasks in it. Note: If you
+         * delete a queue, a queue with the same name can't be created for 7 days. WARNING: Using this
+         * method may have unintended side effects if you are using an App Engine `queue.yaml` or
+         * `queue.xml` file to manage your queues. Read [Overview of Queue Management and
          * queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this method.
          *
          * Create a request for the method "queues.delete".
@@ -696,8 +673,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The queue name. For example:
-        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+         * @param name Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -714,14 +690,10 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
           /**
-           * Deletes a queue.
-           *
-           * This command will delete the queue even if it has tasks in it.
-           *
-           * Note: If you delete a queue, a queue with the same name can't be created for 7 days.
-           *
-           * WARNING: Using this method may have unintended side effects if you are using an App Engine
-           * `queue.yaml` or `queue.xml` file to manage your queues. Read [Overview of Queue Management and
+           * Deletes a queue. This command will delete the queue even if it has tasks in it. Note: If you
+           * delete a queue, a queue with the same name can't be created for 7 days. WARNING: Using this
+           * method may have unintended side effects if you are using an App Engine `queue.yaml` or
+           * `queue.xml` file to manage your queues. Read [Overview of Queue Management and
            * queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this method.
            *
            * Create a request for the method "queues.delete".
@@ -732,8 +704,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The queue name. For example:
-        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+           * @param name Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -982,20 +953,16 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Gets the access control policy for a Queue. Returns an empty policy if the resource exists and
-         * does not have a policy set.
-         *
-         * Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on the
-         * specified resource parent:
-         *
-         * * `cloudtasks.queues.getIamPolicy`
+         * does not have a policy set. Authorization requires the following [Google
+         * IAM](https://cloud.google.com/iam) permission on the specified resource parent: *
+         * `cloudtasks.queues.getIamPolicy`
          *
          * Create a request for the method "queues.getIamPolicy".
          *
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.GetIamPolicyRequest}
          * @return the request
@@ -1015,12 +982,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Gets the access control policy for a Queue. Returns an empty policy if the resource exists and
-           * does not have a policy set.
-           *
-           * Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on
-           * the specified resource parent:
-           *
-           * * `cloudtasks.queues.getIamPolicy`
+           * does not have a policy set. Authorization requires the following [Google
+           * IAM](https://cloud.google.com/iam) permission on the specified resource parent: *
+           * `cloudtasks.queues.getIamPolicy`
            *
            * Create a request for the method "queues.getIamPolicy".
            *
@@ -1030,8 +994,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.GetIamPolicyRequest}
            * @since 1.13
@@ -1135,17 +1098,14 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Lists queues.
-         *
-         * Queues are returned in lexicographical order.
+         * Lists queues. Queues are returned in lexicographical order.
          *
          * Create a request for the method "queues.list".
          *
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location name.
-        For example: `projects/PROJECT_ID/locations/LOCATION_ID`
+         * @param parent Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1162,9 +1122,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists queues.
-           *
-           * Queues are returned in lexicographical order.
+           * Lists queues. Queues are returned in lexicographical order.
            *
            * Create a request for the method "queues.list".
            *
@@ -1173,8 +1131,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location name.
-        For example: `projects/PROJECT_ID/locations/LOCATION_ID`
+           * @param parent Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1281,12 +1238,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * `filter` can be used to specify a subset of queues. Any Queue field can be used as a
            * filter and several operators as supported. For example: `<=, <, >=, >, !=, =, :`. The
            * filter syntax is the same as described in [Stackdriver's Advanced Logs
-           * Filters](https://cloud.google.com/logging/docs/view/advanced_filters).
-           *
-           * Sample filter "state: PAUSED".
-           *
-           * Note that using filters might cause fewer queues than the requested page_size to be
-           * returned.
+           * Filters](https://cloud.google.com/logging/docs/view/advanced_filters). Sample filter
+           * "state: PAUSED". Note that using filters might cause fewer queues than the requested
+           * page_size to be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -1294,11 +1248,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           /**` filter` can be used to specify a subset of queues. Any Queue field can be used as a filter and
         ` several operators as supported. For example: `<=, <, >=, >, !=, =, :`. The filter syntax is the
         ` same as described in [Stackdriver's Advanced Logs
-        ` Filters](https://cloud.google.com/logging/docs/view/advanced_filters).
-        `
-        ` Sample filter "state: PAUSED".
-        `
-        ` Note that using filters might cause fewer queues than the requested page_size to be returned.
+        ` Filters](https://cloud.google.com/logging/docs/view/advanced_filters). Sample filter "state:
+        ` PAUSED". Note that using filters might cause fewer queues than the requested page_size to be
+        ` returned.
         `
 
            */
@@ -1310,12 +1262,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * `filter` can be used to specify a subset of queues. Any Queue field can be used as a
            * filter and several operators as supported. For example: `<=, <, >=, >, !=, =, :`. The
            * filter syntax is the same as described in [Stackdriver's Advanced Logs
-           * Filters](https://cloud.google.com/logging/docs/view/advanced_filters).
-           *
-           * Sample filter "state: PAUSED".
-           *
-           * Note that using filters might cause fewer queues than the requested page_size to be
-           * returned.
+           * Filters](https://cloud.google.com/logging/docs/view/advanced_filters). Sample filter
+           * "state: PAUSED". Note that using filters might cause fewer queues than the requested
+           * page_size to be returned.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -1323,31 +1272,25 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Requested page size.
-           *
-           * The maximum page size is 9800. If unspecified, the page size will be the maximum. Fewer
-           * queues than requested might be returned, even if more queues exist; use the
-           * next_page_token in the response to determine if more queues exist.
+           * Requested page size. The maximum page size is 9800. If unspecified, the page size will
+           * be the maximum. Fewer queues than requested might be returned, even if more queues
+           * exist; use the next_page_token in the response to determine if more queues exist.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Requested page size.
-
-         The maximum page size is 9800. If unspecified, the page size will be the maximum. Fewer queues than
-         requested might be returned, even if more queues exist; use the next_page_token in the response to
-         determine if more queues exist.
+          /** Requested page size. The maximum page size is 9800. If unspecified, the page size will be the
+         maximum. Fewer queues than requested might be returned, even if more queues exist; use the
+         next_page_token in the response to determine if more queues exist.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Requested page size.
-           *
-           * The maximum page size is 9800. If unspecified, the page size will be the maximum. Fewer
-           * queues than requested might be returned, even if more queues exist; use the
-           * next_page_token in the response to determine if more queues exist.
+           * Requested page size. The maximum page size is 9800. If unspecified, the page size will
+           * be the maximum. Fewer queues than requested might be returned, even if more queues
+           * exist; use the next_page_token in the response to determine if more queues exist.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1355,33 +1298,28 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * A token identifying the page of results to return.
-           *
-           * To request the first page results, page_token must be empty. To request the next page
-           * of results, page_token must be the value of next_page_token returned from the previous
-           * call to ListQueues method. It is an error to switch the value of the filter while
-           * iterating through pages.
+           * A token identifying the page of results to return. To request the first page results,
+           * page_token must be empty. To request the next page of results, page_token must be the
+           * value of next_page_token returned from the previous call to ListQueues method. It is an
+           * error to switch the value of the filter while iterating through pages.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A token identifying the page of results to return.
-
-         To request the first page results, page_token must be empty. To request the next page of results,
-         page_token must be the value of next_page_token returned from the previous call to ListQueues
-         method. It is an error to switch the value of the filter while iterating through pages.
+          /** A token identifying the page of results to return. To request the first page results, page_token
+         must be empty. To request the next page of results, page_token must be the value of next_page_token
+         returned from the previous call to ListQueues method. It is an error to switch the value of the
+         filter while iterating through pages.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A token identifying the page of results to return.
-           *
-           * To request the first page results, page_token must be empty. To request the next page
-           * of results, page_token must be the value of next_page_token returned from the previous
-           * call to ListQueues method. It is an error to switch the value of the filter while
-           * iterating through pages.
+           * A token identifying the page of results to return. To request the first page results,
+           * page_token must be empty. To request the next page of results, page_token must be the
+           * value of next_page_token returned from the previous call to ListQueues method. It is an
+           * error to switch the value of the filter while iterating through pages.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -1394,13 +1332,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates a queue.
-         *
-         * This method creates the queue if it does not exist and updates the queue if it does exist.
-         *
-         * Queues created with this method allow tasks to live for a maximum of 31 days. After a task is 31
-         * days old, the task will be deleted regardless of whether it was dispatched or not.
-         *
+         * Updates a queue. This method creates the queue if it does not exist and updates the queue if it
+         * does exist. Queues created with this method allow tasks to live for a maximum of 31 days. After a
+         * task is 31 days old, the task will be deleted regardless of whether it was dispatched or not.
          * WARNING: Using this method may have unintended side effects if you are using an App Engine
          * `queue.yaml` or `queue.xml` file to manage your queues. Read [Overview of Queue Management and
          * queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this method.
@@ -1410,29 +1344,16 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Caller-specified and required in CreateQueue,
-        after which it becomes output only.
-        The queue name.
+         * @param name Caller-specified and required in CreateQueue, after which it becomes output only. The queue name.
          *        The queue name must have the following format:
-         *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-        * `PROJECT_ID` can contain
-         *        letters ([A-Za-z]), numbers ([0-9]),
-           hyphens (-), colons (:), or periods (.).
-           For
-         *        more information, see
-           [Identifying
-           projects](https://cloud.google.com/resource-
-         *        manager/docs/creating-managing-projects#identifying_projects)
-        * `LOCATION_ID` is the
-         *        canonical ID for the queue's location.
-           The list of available locations can be obtained
-         *        by calling
-           ListLocations.
-           For more information, see
-         *        https://cloud.google.com/about/locations/.
-        * `QUEUE_ID` can contain letters ([A-Za-z]),
-         *        numbers ([0-9]), or
-          hyphens (-). The maximum length is 100 characters.
+         *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain
+         *        letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
+         *        information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
+         *        /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for
+         *        the queue's location. The list of available locations can be obtained by calling
+         *        ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+         *        `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum
+         *        length is 100 characters.
          * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.Queue}
          * @return the request
          */
@@ -1450,13 +1371,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
           /**
-           * Updates a queue.
-           *
-           * This method creates the queue if it does not exist and updates the queue if it does exist.
-           *
-           * Queues created with this method allow tasks to live for a maximum of 31 days. After a task is
-           * 31 days old, the task will be deleted regardless of whether it was dispatched or not.
-           *
+           * Updates a queue. This method creates the queue if it does not exist and updates the queue if it
+           * does exist. Queues created with this method allow tasks to live for a maximum of 31 days. After
+           * a task is 31 days old, the task will be deleted regardless of whether it was dispatched or not.
            * WARNING: Using this method may have unintended side effects if you are using an App Engine
            * `queue.yaml` or `queue.xml` file to manage your queues. Read [Overview of Queue Management and
            * queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this method.
@@ -1469,29 +1386,16 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Caller-specified and required in CreateQueue,
-        after which it becomes output only.
-        The queue name.
+           * @param name Caller-specified and required in CreateQueue, after which it becomes output only. The queue name.
          *        The queue name must have the following format:
-         *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-        * `PROJECT_ID` can contain
-         *        letters ([A-Za-z]), numbers ([0-9]),
-           hyphens (-), colons (:), or periods (.).
-           For
-         *        more information, see
-           [Identifying
-           projects](https://cloud.google.com/resource-
-         *        manager/docs/creating-managing-projects#identifying_projects)
-        * `LOCATION_ID` is the
-         *        canonical ID for the queue's location.
-           The list of available locations can be obtained
-         *        by calling
-           ListLocations.
-           For more information, see
-         *        https://cloud.google.com/about/locations/.
-        * `QUEUE_ID` can contain letters ([A-Za-z]),
-         *        numbers ([0-9]), or
-          hyphens (-). The maximum length is 100 characters.
+         *        `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain
+         *        letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
+         *        information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
+         *        /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for
+         *        the queue's location. The list of available locations can be obtained by calling
+         *        ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+         *        `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum
+         *        length is 100 characters.
            * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.Queue}
            * @since 1.13
            */
@@ -1561,59 +1465,45 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Caller-specified and required in CreateQueue, after which it becomes output only.
-           *
-           * The queue name.
-           *
-           * The queue name must have the following format:
-           * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-           *
-           * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons
-           * (:), or periods (.). For more information, see [Identifying
-           * projects](https://cloud.google.com/resource-manager/docs/creating-managing-
-           * projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the queue's
-           * location. The list of available locations can be obtained by calling ListLocations. For
-           * more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can
-           * contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100
-           * characters.
+           * Caller-specified and required in CreateQueue, after which it becomes output only. The
+           * queue name. The queue name must have the following format:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain
+           * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
+           * information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
+           * /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID
+           * for the queue's location. The list of available locations can be obtained by calling
+           * ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+           * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum
+           * length is 100 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Caller-specified and required in CreateQueue, after which it becomes output only.
-
-         The queue name.
-
+          /** Caller-specified and required in CreateQueue, after which it becomes output only. The queue name.
          The queue name must have the following format:
-         `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-
-         * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods
-         (.). For more information, see [Identifying projects](https://cloud.google.com/resource-
-         manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID
-         for the queue's location. The list of available locations can be obtained by calling ListLocations.
-         For more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain
-         letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100 characters.
+         `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain letters
+         ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see
+         [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-
+         projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the queue's location. The
+         list of available locations can be obtained by calling ListLocations. For more information, see
+         https://cloud.google.com/about/locations/. * `QUEUE_ID` can contain letters ([A-Za-z]), numbers
+         ([0-9]), or hyphens (-). The maximum length is 100 characters.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Caller-specified and required in CreateQueue, after which it becomes output only.
-           *
-           * The queue name.
-           *
-           * The queue name must have the following format:
-           * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-           *
-           * * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons
-           * (:), or periods (.). For more information, see [Identifying
-           * projects](https://cloud.google.com/resource-manager/docs/creating-managing-
-           * projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the queue's
-           * location. The list of available locations can be obtained by calling ListLocations. For
-           * more information, see https://cloud.google.com/about/locations/. * `QUEUE_ID` can
-           * contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum length is 100
-           * characters.
+           * Caller-specified and required in CreateQueue, after which it becomes output only. The
+           * queue name. The queue name must have the following format:
+           * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` * `PROJECT_ID` can contain
+           * letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more
+           * information, see [Identifying projects](https://cloud.google.com/resource-manager/docs
+           * /creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID
+           * for the queue's location. The list of available locations can be obtained by calling
+           * ListLocations. For more information, see https://cloud.google.com/about/locations/. *
+           * `QUEUE_ID` can contain letters ([A-Za-z]), numbers ([0-9]), or hyphens (-). The maximum
+           * length is 100 characters.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1626,25 +1516,22 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * A mask used to specify which fields of the queue are being updated.
-           *
-           * If empty, then all fields will be updated.
+           * A mask used to specify which fields of the queue are being updated. If empty, then all
+           * fields will be updated.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** A mask used to specify which fields of the queue are being updated.
-
-         If empty, then all fields will be updated.
+          /** A mask used to specify which fields of the queue are being updated. If empty, then all fields will
+         be updated.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * A mask used to specify which fields of the queue are being updated.
-           *
-           * If empty, then all fields will be updated.
+           * A mask used to specify which fields of the queue are being updated. If empty, then all
+           * fields will be updated.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -1657,19 +1544,16 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Pauses the queue.
-         *
-         * If a queue is paused then the system will stop dispatching tasks until the queue is resumed via
-         * ResumeQueue. Tasks can still be added when the queue is paused. A queue is paused if its state is
-         * PAUSED.
+         * Pauses the queue. If a queue is paused then the system will stop dispatching tasks until the
+         * queue is resumed via ResumeQueue. Tasks can still be added when the queue is paused. A queue is
+         * paused if its state is PAUSED.
          *
          * Create a request for the method "queues.pause".
          *
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The queue name. For example:
-        `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+         * @param name Required. The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
          * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.PauseQueueRequest}
          * @return the request
          */
@@ -1687,11 +1571,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
           /**
-           * Pauses the queue.
-           *
-           * If a queue is paused then the system will stop dispatching tasks until the queue is resumed via
-           * ResumeQueue. Tasks can still be added when the queue is paused. A queue is paused if its state
-           * is PAUSED.
+           * Pauses the queue. If a queue is paused then the system will stop dispatching tasks until the
+           * queue is resumed via ResumeQueue. Tasks can still be added when the queue is paused. A queue is
+           * paused if its state is PAUSED.
            *
            * Create a request for the method "queues.pause".
            *
@@ -1701,8 +1583,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The queue name. For example:
-        `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+           * @param name Required. The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.PauseQueueRequest}
            * @since 1.13
            */
@@ -1804,20 +1685,16 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Purges a queue by deleting all of its tasks.
-         *
-         * All tasks created before this method is called are permanently deleted.
-         *
-         * Purge operations can take up to one minute to take effect. Tasks might be dispatched before the
-         * purge takes effect. A purge is irreversible.
+         * Purges a queue by deleting all of its tasks. All tasks created before this method is called are
+         * permanently deleted. Purge operations can take up to one minute to take effect. Tasks might be
+         * dispatched before the purge takes effect. A purge is irreversible.
          *
          * Create a request for the method "queues.purge".
          *
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Purge#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The queue name. For example:
-        `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+         * @param name Required. The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
          * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.PurgeQueueRequest}
          * @return the request
          */
@@ -1835,12 +1712,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
           /**
-           * Purges a queue by deleting all of its tasks.
-           *
-           * All tasks created before this method is called are permanently deleted.
-           *
-           * Purge operations can take up to one minute to take effect. Tasks might be dispatched before the
-           * purge takes effect. A purge is irreversible.
+           * Purges a queue by deleting all of its tasks. All tasks created before this method is called are
+           * permanently deleted. Purge operations can take up to one minute to take effect. Tasks might be
+           * dispatched before the purge takes effect. A purge is irreversible.
            *
            * Create a request for the method "queues.purge".
            *
@@ -1850,8 +1724,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The queue name. For example:
-        `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+           * @param name Required. The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.PurgeQueueRequest}
            * @since 1.13
            */
@@ -1953,11 +1826,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Resume a queue.
-         *
-         * This method resumes a queue after it has been PAUSED or DISABLED. The state of a queue is stored
-         * in the queue's state; after calling this method it will be set to RUNNING.
-         *
+         * Resume a queue. This method resumes a queue after it has been PAUSED or DISABLED. The state of a
+         * queue is stored in the queue's state; after calling this method it will be set to RUNNING.
          * WARNING: Resuming many high-QPS queues at the same time can lead to target overloading. If you
          * are resuming high-QPS queues, follow the 500/50/5 pattern described in [Managing Cloud Tasks
          * Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
@@ -1967,8 +1837,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link Resume#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The queue name. For example:
-        `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+         * @param name Required. The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
          * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.ResumeQueueRequest}
          * @return the request
          */
@@ -1986,11 +1855,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
           /**
-           * Resume a queue.
-           *
-           * This method resumes a queue after it has been PAUSED or DISABLED. The state of a queue is
-           * stored in the queue's state; after calling this method it will be set to RUNNING.
-           *
+           * Resume a queue. This method resumes a queue after it has been PAUSED or DISABLED. The state of
+           * a queue is stored in the queue's state; after calling this method it will be set to RUNNING.
            * WARNING: Resuming many high-QPS queues at the same time can lead to target overloading. If you
            * are resuming high-QPS queues, follow the 500/50/5 pattern described in [Managing Cloud Tasks
            * Scaling Risks](https://cloud.google.com/tasks/docs/manage-cloud-task-scaling).
@@ -2003,8 +1869,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The queue name. For example:
-        `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
+           * @param name Required. The queue name. For example: `projects/PROJECT_ID/location/LOCATION_ID/queues/QUEUE_ID`
            * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.ResumeQueueRequest}
            * @since 1.13
            */
@@ -2106,23 +1971,17 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Sets the access control policy for a Queue. Replaces any existing policy.
-         *
-         * Note: The Cloud Console does not check queue-level IAM permissions yet. Project-level permissions
-         * are required to use the Cloud Console.
-         *
-         * Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on the
-         * specified resource parent:
-         *
-         * * `cloudtasks.queues.setIamPolicy`
+         * Sets the access control policy for a Queue. Replaces any existing policy. Note: The Cloud Console
+         * does not check queue-level IAM permissions yet. Project-level permissions are required to use the
+         * Cloud Console. Authorization requires the following [Google IAM](https://cloud.google.com/iam)
+         * permission on the specified resource parent: * `cloudtasks.queues.setIamPolicy`
          *
          * Create a request for the method "queues.setIamPolicy".
          *
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.SetIamPolicyRequest}
          * @return the request
@@ -2141,15 +2000,11 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
           /**
-           * Sets the access control policy for a Queue. Replaces any existing policy.
-           *
-           * Note: The Cloud Console does not check queue-level IAM permissions yet. Project-level
-           * permissions are required to use the Cloud Console.
-           *
-           * Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission on
-           * the specified resource parent:
-           *
-           * * `cloudtasks.queues.setIamPolicy`
+           * Sets the access control policy for a Queue. Replaces any existing policy. Note: The Cloud
+           * Console does not check queue-level IAM permissions yet. Project-level permissions are required
+           * to use the Cloud Console. Authorization requires the following [Google
+           * IAM](https://cloud.google.com/iam) permission on the specified resource parent: *
+           * `cloudtasks.queues.setIamPolicy`
            *
            * Create a request for the method "queues.setIamPolicy".
            *
@@ -2159,8 +2014,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.SetIamPolicyRequest}
            * @since 1.13
@@ -2265,18 +2119,16 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Returns permissions that a caller has on a Queue. If the resource does not exist, this will
-         * return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * return an empty set of permissions, not a NOT_FOUND error. Note: This operation is designed to be
+         * used for building permission-aware UIs and command-line tools, not for authorization checking.
+         * This operation may "fail open" without warning.
          *
          * Create a request for the method "queues.testIamPermissions".
          *
          * This request holds the parameters needed by the cloudtasks server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.TestIamPermissionsRequest}
          * @return the request
@@ -2296,10 +2148,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Returns permissions that a caller has on a Queue. If the resource does not exist, this will
-           * return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * return an empty set of permissions, not a NOT_FOUND error. Note: This operation is designed to
+           * be used for building permission-aware UIs and command-line tools, not for authorization
+           * checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "queues.testIamPermissions".
            *
@@ -2309,8 +2160,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -2435,19 +2285,15 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         public class Tasks {
 
           /**
-           * Creates a task and adds it to a queue.
-           *
-           * Tasks cannot be updated after creation; there is no UpdateTask command.
-           *
-           * * The maximum task size is 100KB.
+           * Creates a task and adds it to a queue. Tasks cannot be updated after creation; there is no
+           * UpdateTask command. * The maximum task size is 100KB.
            *
            * Create a request for the method "tasks.create".
            *
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The queue name. For example:
-          `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+           * @param parent Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            *        The queue must already exist.
            * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.CreateTaskRequest}
            * @return the request
@@ -2466,11 +2312,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
             /**
-             * Creates a task and adds it to a queue.
-             *
-             * Tasks cannot be updated after creation; there is no UpdateTask command.
-             *
-             * * The maximum task size is 100KB.
+             * Creates a task and adds it to a queue. Tasks cannot be updated after creation; there is no
+             * UpdateTask command. * The maximum task size is 100KB.
              *
              * Create a request for the method "tasks.create".
              *
@@ -2480,8 +2323,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The queue name. For example:
-          `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+             * @param parent Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            *        The queue must already exist.
              * @param content the {@link com.google.api.services.cloudtasks.v2beta3.model.CreateTaskRequest}
              * @since 1.13
@@ -2553,15 +2395,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The queue name. For example:
-             * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-             *
-             * The queue must already exist.
+             * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
+             * exist.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-
            The queue must already exist.
              */
             public java.lang.String getParent() {
@@ -2570,9 +2410,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The queue name. For example:
-             * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
-             *
-             * The queue must already exist.
+             * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID` The queue must already
+             * exist.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2590,10 +2429,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes a task.
-           *
-           * A task can be deleted if it is scheduled or dispatched. A task cannot be deleted if it has
-           * executed successfully or permanently failed.
+           * Deletes a task. A task can be deleted if it is scheduled or dispatched. A task cannot be deleted
+           * if it has executed successfully or permanently failed.
            *
            * Create a request for the method "tasks.delete".
            *
@@ -2618,10 +2455,8 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+/tasks/[^/]+$");
 
             /**
-             * Deletes a task.
-             *
-             * A task can be deleted if it is scheduled or dispatched. A task cannot be deleted if it has
-             * executed successfully or permanently failed.
+             * Deletes a task. A task can be deleted if it is scheduled or dispatched. A task cannot be
+             * deleted if it has executed successfully or permanently failed.
              *
              * Create a request for the method "tasks.delete".
              *
@@ -2876,25 +2711,20 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * The response_view specifies which subset of the Task will be returned.
-             *
-             * By default response_view is BASIC; not all information is retrieved by default
-             * because some data, such as payloads, might be desirable to return only when needed
-             * because of its large size or because of the sensitivity of data that it contains.
-             *
-             * Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
-             * IAM](https://cloud.google.com/iam/) permission on the Task resource.
+             * The response_view specifies which subset of the Task will be returned. By default
+             * response_view is BASIC; not all information is retrieved by default because some
+             * data, such as payloads, might be desirable to return only when needed because of its
+             * large size or because of the sensitivity of data that it contains. Authorization for
+             * FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
+             * permission on the Task resource.
              */
             @com.google.api.client.util.Key
             private java.lang.String responseView;
 
-            /** The response_view specifies which subset of the Task will be returned.
-
-           By default response_view is BASIC; not all information is retrieved by default because some data,
-           such as payloads, might be desirable to return only when needed because of its large size or
-           because of the sensitivity of data that it contains.
-
-           Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
+            /** The response_view specifies which subset of the Task will be returned. By default response_view is
+           BASIC; not all information is retrieved by default because some data, such as payloads, might be
+           desirable to return only when needed because of its large size or because of the sensitivity of
+           data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
            IAM](https://cloud.google.com/iam/) permission on the Task resource.
              */
             public java.lang.String getResponseView() {
@@ -2902,14 +2732,12 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * The response_view specifies which subset of the Task will be returned.
-             *
-             * By default response_view is BASIC; not all information is retrieved by default
-             * because some data, such as payloads, might be desirable to return only when needed
-             * because of its large size or because of the sensitivity of data that it contains.
-             *
-             * Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
-             * IAM](https://cloud.google.com/iam/) permission on the Task resource.
+             * The response_view specifies which subset of the Task will be returned. By default
+             * response_view is BASIC; not all information is retrieved by default because some
+             * data, such as payloads, might be desirable to return only when needed because of its
+             * large size or because of the sensitivity of data that it contains. Authorization for
+             * FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
+             * permission on the Task resource.
              */
             public Get setResponseView(java.lang.String responseView) {
               this.responseView = responseView;
@@ -2922,20 +2750,16 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Lists the tasks in a queue.
-           *
-           * By default, only the BASIC view is retrieved due to performance considerations; response_view
-           * controls the subset of information which is returned.
-           *
-           * The tasks may be returned in any order. The ordering may change at any time.
+           * Lists the tasks in a queue. By default, only the BASIC view is retrieved due to performance
+           * considerations; response_view controls the subset of information which is returned. The tasks may
+           * be returned in any order. The ordering may change at any time.
            *
            * Create a request for the method "tasks.list".
            *
            * This request holds the parameters needed by the cloudtasks server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The queue name. For example:
-          `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+           * @param parent Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2952,12 +2776,9 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+$");
 
             /**
-             * Lists the tasks in a queue.
-             *
-             * By default, only the BASIC view is retrieved due to performance considerations; response_view
-             * controls the subset of information which is returned.
-             *
-             * The tasks may be returned in any order. The ordering may change at any time.
+             * Lists the tasks in a queue. By default, only the BASIC view is retrieved due to performance
+             * considerations; response_view controls the subset of information which is returned. The tasks
+             * may be returned in any order. The ordering may change at any time.
              *
              * Create a request for the method "tasks.list".
              *
@@ -2966,8 +2787,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The queue name. For example:
-          `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
+             * @param parent Required. The queue name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3073,34 +2893,25 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Maximum page size.
-             *
-             * Fewer tasks than requested might be returned, even if more tasks exist; use
-             * next_page_token in the response to determine if more tasks exist.
-             *
-             * The maximum page size is 1000. If unspecified, the page size will be the maximum.
+             * Maximum page size. Fewer tasks than requested might be returned, even if more tasks
+             * exist; use next_page_token in the response to determine if more tasks exist. The
+             * maximum page size is 1000. If unspecified, the page size will be the maximum.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Maximum page size.
-
-           Fewer tasks than requested might be returned, even if more tasks exist; use next_page_token in the
-           response to determine if more tasks exist.
-
-           The maximum page size is 1000. If unspecified, the page size will be the maximum.
+            /** Maximum page size. Fewer tasks than requested might be returned, even if more tasks exist; use
+           next_page_token in the response to determine if more tasks exist. The maximum page size is 1000. If
+           unspecified, the page size will be the maximum.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Maximum page size.
-             *
-             * Fewer tasks than requested might be returned, even if more tasks exist; use
-             * next_page_token in the response to determine if more tasks exist.
-             *
-             * The maximum page size is 1000. If unspecified, the page size will be the maximum.
+             * Maximum page size. Fewer tasks than requested might be returned, even if more tasks
+             * exist; use next_page_token in the response to determine if more tasks exist. The
+             * maximum page size is 1000. If unspecified, the page size will be the maximum.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -3108,37 +2919,27 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * A token identifying the page of results to return.
-             *
-             * To request the first page results, page_token must be empty. To request the next page
-             * of results, page_token must be the value of next_page_token returned from the
-             * previous call to ListTasks method.
-             *
-             * The page token is valid for only 2 hours.
+             * A token identifying the page of results to return. To request the first page results,
+             * page_token must be empty. To request the next page of results, page_token must be the
+             * value of next_page_token returned from the previous call to ListTasks method. The
+             * page token is valid for only 2 hours.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** A token identifying the page of results to return.
-
-           To request the first page results, page_token must be empty. To request the next page of results,
-           page_token must be the value of next_page_token returned from the previous call to ListTasks
-           method.
-
-           The page token is valid for only 2 hours.
+            /** A token identifying the page of results to return. To request the first page results, page_token
+           must be empty. To request the next page of results, page_token must be the value of next_page_token
+           returned from the previous call to ListTasks method. The page token is valid for only 2 hours.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * A token identifying the page of results to return.
-             *
-             * To request the first page results, page_token must be empty. To request the next page
-             * of results, page_token must be the value of next_page_token returned from the
-             * previous call to ListTasks method.
-             *
-             * The page token is valid for only 2 hours.
+             * A token identifying the page of results to return. To request the first page results,
+             * page_token must be empty. To request the next page of results, page_token must be the
+             * value of next_page_token returned from the previous call to ListTasks method. The
+             * page token is valid for only 2 hours.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -3146,25 +2947,20 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * The response_view specifies which subset of the Task will be returned.
-             *
-             * By default response_view is BASIC; not all information is retrieved by default
-             * because some data, such as payloads, might be desirable to return only when needed
-             * because of its large size or because of the sensitivity of data that it contains.
-             *
-             * Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
-             * IAM](https://cloud.google.com/iam/) permission on the Task resource.
+             * The response_view specifies which subset of the Task will be returned. By default
+             * response_view is BASIC; not all information is retrieved by default because some
+             * data, such as payloads, might be desirable to return only when needed because of its
+             * large size or because of the sensitivity of data that it contains. Authorization for
+             * FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
+             * permission on the Task resource.
              */
             @com.google.api.client.util.Key
             private java.lang.String responseView;
 
-            /** The response_view specifies which subset of the Task will be returned.
-
-           By default response_view is BASIC; not all information is retrieved by default because some data,
-           such as payloads, might be desirable to return only when needed because of its large size or
-           because of the sensitivity of data that it contains.
-
-           Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
+            /** The response_view specifies which subset of the Task will be returned. By default response_view is
+           BASIC; not all information is retrieved by default because some data, such as payloads, might be
+           desirable to return only when needed because of its large size or because of the sensitivity of
+           data that it contains. Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
            IAM](https://cloud.google.com/iam/) permission on the Task resource.
              */
             public java.lang.String getResponseView() {
@@ -3172,14 +2968,12 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * The response_view specifies which subset of the Task will be returned.
-             *
-             * By default response_view is BASIC; not all information is retrieved by default
-             * because some data, such as payloads, might be desirable to return only when needed
-             * because of its large size or because of the sensitivity of data that it contains.
-             *
-             * Authorization for FULL requires `cloudtasks.tasks.fullView` [Google
-             * IAM](https://cloud.google.com/iam/) permission on the Task resource.
+             * The response_view specifies which subset of the Task will be returned. By default
+             * response_view is BASIC; not all information is retrieved by default because some
+             * data, such as payloads, might be desirable to return only when needed because of its
+             * large size or because of the sensitivity of data that it contains. Authorization for
+             * FULL requires `cloudtasks.tasks.fullView` [Google IAM](https://cloud.google.com/iam/)
+             * permission on the Task resource.
              */
             public List setResponseView(java.lang.String responseView) {
               this.responseView = responseView;
@@ -3192,23 +2986,16 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Forces a task to run now.
-           *
-           * When this method is called, Cloud Tasks will dispatch the task, even if the task is already
-           * running, the queue has reached its RateLimits or is PAUSED.
-           *
-           * This command is meant to be used for manual debugging. For example, RunTask can be used to retry
-           * a failed task after a fix has been made or to manually force a task to be dispatched now.
-           *
-           * The dispatched task is returned. That is, the task that is returned contains the status after the
-           * task is dispatched but before the task is received by its target.
-           *
-           * If Cloud Tasks receives a successful response from the task's target, then the task will be
-           * deleted; otherwise the task's schedule_time will be reset to the time that RunTask was called
-           * plus the retry delay specified in the queue's RetryConfig.
-           *
-           * RunTask returns NOT_FOUND when it is called on a task that has already succeeded or permanently
-           * failed.
+           * Forces a task to run now. When this method is called, Cloud Tasks will dispatch the task, even if
+           * the task is already running, the queue has reached its RateLimits or is PAUSED. This command is
+           * meant to be used for manual debugging. For example, RunTask can be used to retry a failed task
+           * after a fix has been made or to manually force a task to be dispatched now. The dispatched task
+           * is returned. That is, the task that is returned contains the status after the task is dispatched
+           * but before the task is received by its target. If Cloud Tasks receives a successful response from
+           * the task's target, then the task will be deleted; otherwise the task's schedule_time will be
+           * reset to the time that RunTask was called plus the retry delay specified in the queue's
+           * RetryConfig. RunTask returns NOT_FOUND when it is called on a task that has already succeeded or
+           * permanently failed.
            *
            * Create a request for the method "tasks.run".
            *
@@ -3234,23 +3021,16 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/queues/[^/]+/tasks/[^/]+$");
 
             /**
-             * Forces a task to run now.
-             *
-             * When this method is called, Cloud Tasks will dispatch the task, even if the task is already
-             * running, the queue has reached its RateLimits or is PAUSED.
-             *
-             * This command is meant to be used for manual debugging. For example, RunTask can be used to
-             * retry a failed task after a fix has been made or to manually force a task to be dispatched now.
-             *
-             * The dispatched task is returned. That is, the task that is returned contains the status after
-             * the task is dispatched but before the task is received by its target.
-             *
-             * If Cloud Tasks receives a successful response from the task's target, then the task will be
-             * deleted; otherwise the task's schedule_time will be reset to the time that RunTask was called
-             * plus the retry delay specified in the queue's RetryConfig.
-             *
-             * RunTask returns NOT_FOUND when it is called on a task that has already succeeded or permanently
-             * failed.
+             * Forces a task to run now. When this method is called, Cloud Tasks will dispatch the task, even
+             * if the task is already running, the queue has reached its RateLimits or is PAUSED. This command
+             * is meant to be used for manual debugging. For example, RunTask can be used to retry a failed
+             * task after a fix has been made or to manually force a task to be dispatched now. The dispatched
+             * task is returned. That is, the task that is returned contains the status after the task is
+             * dispatched but before the task is received by its target. If Cloud Tasks receives a successful
+             * response from the task's target, then the task will be deleted; otherwise the task's
+             * schedule_time will be reset to the time that RunTask was called plus the retry delay specified
+             * in the queue's RetryConfig. RunTask returns NOT_FOUND when it is called on a task that has
+             * already succeeded or permanently failed.
              *
              * Create a request for the method "tasks.run".
              *

@@ -33,6 +33,13 @@ package com.google.api.services.compute.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Controls for advanced machine-related behavior features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvancedMachineFeatures advancedMachineFeatures;
+
+  /**
    * Allows this instance to send and receive packets with non-matching destination or source IPs.
    * This is required if you plan to use this instance to forward routes. For more information, see
    * Enabling IP Forwarding.
@@ -192,6 +199,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * [Output Only] Last start timestamp in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastStartTimestamp;
+
+  /**
+   * [Output Only] Last stop timestamp in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastStopTimestamp;
+
+  /**
+   * [Output Only] Last suspended timestamp in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastSuspendedTimestamp;
+
+  /**
    * Full or partial URL of the machine type resource to use for this instance, in the format:
    * zones/zone/machineTypes/machine-type. This is provided by the client when the instance is
    * created. For example, the following is a valid partial url to a predefined machine type: zones
@@ -248,7 +276,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
-   * Specifies whether this instance will be shut down on key revocation.
+   * PostKeyRevocationActionType of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,11 +312,34 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
+   * [Output Only] Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Sets the scheduling options for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Scheduling scheduling;
+
+  /**
+   * Secure labels to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure labels allowed is 300.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> secureLabels;
+
+  /**
+   * Secure tags to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure tags allowed is 300.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> secureTags;
 
   /**
    * [Output Only] Server-defined URL for this resource.
@@ -328,12 +379,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicy;
 
   /**
+   * Deprecating, please use shielded_instance_config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ShieldedVmConfig shieldedVmConfig;
 
   /**
+   * Deprecating, please use shielded_instance_integrity_policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,7 +416,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, STOPPED, SUSPENDING, SUSPENDED, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about
+   * the status of the instance, see  Instance life cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -400,6 +454,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Controls for advanced machine-related behavior features.
+   * @return value or {@code null} for none
+   */
+  public AdvancedMachineFeatures getAdvancedMachineFeatures() {
+    return advancedMachineFeatures;
+  }
+
+  /**
+   * Controls for advanced machine-related behavior features.
+   * @param advancedMachineFeatures advancedMachineFeatures or {@code null} for none
+   */
+  public Instance setAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {
+    this.advancedMachineFeatures = advancedMachineFeatures;
+    return this;
+  }
 
   /**
    * Allows this instance to send and receive packets with non-matching destination or source IPs.
@@ -823,6 +894,57 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Last start timestamp in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastStartTimestamp() {
+    return lastStartTimestamp;
+  }
+
+  /**
+   * [Output Only] Last start timestamp in RFC3339 text format.
+   * @param lastStartTimestamp lastStartTimestamp or {@code null} for none
+   */
+  public Instance setLastStartTimestamp(java.lang.String lastStartTimestamp) {
+    this.lastStartTimestamp = lastStartTimestamp;
+    return this;
+  }
+
+  /**
+   * [Output Only] Last stop timestamp in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastStopTimestamp() {
+    return lastStopTimestamp;
+  }
+
+  /**
+   * [Output Only] Last stop timestamp in RFC3339 text format.
+   * @param lastStopTimestamp lastStopTimestamp or {@code null} for none
+   */
+  public Instance setLastStopTimestamp(java.lang.String lastStopTimestamp) {
+    this.lastStopTimestamp = lastStopTimestamp;
+    return this;
+  }
+
+  /**
+   * [Output Only] Last suspended timestamp in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastSuspendedTimestamp() {
+    return lastSuspendedTimestamp;
+  }
+
+  /**
+   * [Output Only] Last suspended timestamp in RFC3339 text format.
+   * @param lastSuspendedTimestamp lastSuspendedTimestamp or {@code null} for none
+   */
+  public Instance setLastSuspendedTimestamp(java.lang.String lastSuspendedTimestamp) {
+    this.lastSuspendedTimestamp = lastSuspendedTimestamp;
+    return this;
+  }
+
+  /**
    * Full or partial URL of the machine type resource to use for this instance, in the format:
    * zones/zone/machineTypes/machine-type. This is provided by the client when the instance is
    * created. For example, the following is a valid partial url to a predefined machine type: zones
@@ -950,7 +1072,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether this instance will be shut down on key revocation.
+   * PostKeyRevocationActionType of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostKeyRevocationActionType() {
@@ -958,7 +1080,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether this instance will be shut down on key revocation.
+   * PostKeyRevocationActionType of the instance.
    * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
    */
   public Instance setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {
@@ -1037,6 +1159,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * [Output Only] Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Instance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
    * Sets the scheduling options for this instance.
    * @return value or {@code null} for none
    */
@@ -1050,6 +1189,44 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setScheduling(Scheduling scheduling) {
     this.scheduling = scheduling;
+    return this;
+  }
+
+  /**
+   * Secure labels to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure labels allowed is 300.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSecureLabels() {
+    return secureLabels;
+  }
+
+  /**
+   * Secure labels to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure labels allowed is 300.
+   * @param secureLabels secureLabels or {@code null} for none
+   */
+  public Instance setSecureLabels(java.util.List<java.lang.String> secureLabels) {
+    this.secureLabels = secureLabels;
+    return this;
+  }
+
+  /**
+   * Secure tags to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure tags allowed is 300.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSecureTags() {
+    return secureTags;
+  }
+
+  /**
+   * Secure tags to apply to this instance. These can be later modified by the update method.
+   * Maximum number of secure tags allowed is 300.
+   * @param secureTags secureTags or {@code null} for none
+   */
+  public Instance setSecureTags(java.util.List<java.lang.String> secureTags) {
+    this.secureTags = secureTags;
     return this;
   }
 
@@ -1143,6 +1320,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecating, please use shielded_instance_config.
    * @return value or {@code null} for none
    */
   public ShieldedVmConfig getShieldedVmConfig() {
@@ -1150,6 +1328,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecating, please use shielded_instance_config.
    * @param shieldedVmConfig shieldedVmConfig or {@code null} for none
    */
   public Instance setShieldedVmConfig(ShieldedVmConfig shieldedVmConfig) {
@@ -1158,6 +1337,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecating, please use shielded_instance_integrity_policy.
    * @return value or {@code null} for none
    */
   public ShieldedVmIntegrityPolicy getShieldedVmIntegrityPolicy() {
@@ -1165,6 +1345,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecating, please use shielded_instance_integrity_policy.
    * @param shieldedVmIntegrityPolicy shieldedVmIntegrityPolicy or {@code null} for none
    */
   public Instance setShieldedVmIntegrityPolicy(ShieldedVmIntegrityPolicy shieldedVmIntegrityPolicy) {
@@ -1227,7 +1408,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, STOPPED, SUSPENDING, SUSPENDED, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about
+   * the status of the instance, see  Instance life cycle.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1236,7 +1418,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] The status of the instance. One of the following values: PROVISIONING, STAGING,
-   * RUNNING, STOPPING, STOPPED, SUSPENDING, SUSPENDED, and TERMINATED.
+   * RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about
+   * the status of the instance, see  Instance life cycle.
    * @param status status or {@code null} for none
    */
   public Instance setStatus(java.lang.String status) {

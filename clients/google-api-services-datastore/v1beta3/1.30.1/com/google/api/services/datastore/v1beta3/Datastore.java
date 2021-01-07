@@ -20,8 +20,7 @@ package com.google.api.services.datastore.v1beta3;
  * Service definition for Datastore (v1beta3).
  *
  * <p>
- * Accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.
-
+ * Accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class Datastore extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Datastore API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Datastore API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

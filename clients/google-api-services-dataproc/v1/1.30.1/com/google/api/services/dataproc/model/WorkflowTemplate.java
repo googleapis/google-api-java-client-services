@@ -70,17 +70,17 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of the workflow template, as described in
    * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
-   * the resource name of the  template has the following format:
+   * the resource name of the template has the following format:
    * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-   * projects.locations.workflowTemplates, the resource name of the  template has the following
-   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   * projects.locations.workflowTemplates, the resource name of the template has the following
+   * format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. emplate parameters whose values are substituted into the template. Values for
+   * Optional. Template parameters whose values are substituted into the template. Values for
    * parameters must be provided when the template is instantiated.
    * The value may be {@code null}.
    */
@@ -198,10 +198,10 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of the workflow template, as described in
    * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
-   * the resource name of the  template has the following format:
+   * the resource name of the template has the following format:
    * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-   * projects.locations.workflowTemplates, the resource name of the  template has the following
-   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   * projects.locations.workflowTemplates, the resource name of the template has the following
+   * format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -211,10 +211,10 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of the workflow template, as described in
    * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
-   * the resource name of the  template has the following format:
+   * the resource name of the template has the following format:
    * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-   * projects.locations.workflowTemplates, the resource name of the  template has the following
-   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   * projects.locations.workflowTemplates, the resource name of the template has the following
+   * format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * @param name name or {@code null} for none
    */
   public WorkflowTemplate setName(java.lang.String name) {
@@ -223,7 +223,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. emplate parameters whose values are substituted into the template. Values for
+   * Optional. Template parameters whose values are substituted into the template. Values for
    * parameters must be provided when the template is instantiated.
    * @return value or {@code null} for none
    */
@@ -232,7 +232,7 @@ public final class WorkflowTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. emplate parameters whose values are substituted into the template. Values for
+   * Optional. Template parameters whose values are substituted into the template. Values for
    * parameters must be provided when the template is instantiated.
    * @param parameters parameters or {@code null} for none
    */

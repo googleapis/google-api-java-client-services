@@ -21,8 +21,8 @@ package com.google.api.services.dfareporting.model;
  * specifically for managing user profiles, whereas UserProfiles is for accessing the API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -91,11 +91,11 @@ public final class AccountUserProfile extends com.google.api.client.json.Generic
   private java.lang.String kind;
 
   /**
-   * Locale of the user profile. This is a required field. Acceptable values are:   - "cs" (Czech)
-   * - "de" (German)  - "en" (English)  - "en-GB" (English United Kingdom)  - "es" (Spanish)  - "fr"
-   * (French)  - "it" (Italian)  - "ja" (Japanese)  - "ko" (Korean)  - "pl" (Polish)  - "pt-BR"
-   * (Portuguese Brazil) - "ru" (Russian)  - "sv" (Swedish)  - "tr" (Turkish)  - "zh-CN" (Chinese
-   * Simplified)  - "zh-TW" (Chinese Traditional)
+   * Locale of the user profile. This is a required field. Acceptable values are: - "cs" (Czech) -
+   * "de" (German) - "en" (English) - "en-GB" (English United Kingdom) - "es" (Spanish) - "fr"
+   * (French) - "it" (Italian) - "ja" (Japanese) - "ko" (Korean) - "pl" (Polish) - "pt-BR"
+   * (Portuguese Brazil) - "ru" (Russian) - "sv" (Swedish) - "tr" (Turkish) - "zh-CN" (Chinese
+   * Simplified) - "zh-TW" (Chinese Traditional)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,8 @@ public final class AccountUserProfile extends com.google.api.client.json.Generic
 
   /**
    * Name of the user profile. This is a required field. Must be less than 64 characters long, must
-   * be globally unique, and cannot contain whitespace or any of the following characters: "&;"#%,".
+   * be globally unique, and cannot contain whitespace or any of the following characters:
+   * "&;<>"#%,".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -294,11 +295,11 @@ public final class AccountUserProfile extends com.google.api.client.json.Generic
   }
 
   /**
-   * Locale of the user profile. This is a required field. Acceptable values are:   - "cs" (Czech)
-   * - "de" (German)  - "en" (English)  - "en-GB" (English United Kingdom)  - "es" (Spanish)  - "fr"
-   * (French)  - "it" (Italian)  - "ja" (Japanese)  - "ko" (Korean)  - "pl" (Polish)  - "pt-BR"
-   * (Portuguese Brazil) - "ru" (Russian)  - "sv" (Swedish)  - "tr" (Turkish)  - "zh-CN" (Chinese
-   * Simplified)  - "zh-TW" (Chinese Traditional)
+   * Locale of the user profile. This is a required field. Acceptable values are: - "cs" (Czech) -
+   * "de" (German) - "en" (English) - "en-GB" (English United Kingdom) - "es" (Spanish) - "fr"
+   * (French) - "it" (Italian) - "ja" (Japanese) - "ko" (Korean) - "pl" (Polish) - "pt-BR"
+   * (Portuguese Brazil) - "ru" (Russian) - "sv" (Swedish) - "tr" (Turkish) - "zh-CN" (Chinese
+   * Simplified) - "zh-TW" (Chinese Traditional)
    * @return value or {@code null} for none
    */
   public java.lang.String getLocale() {
@@ -306,11 +307,11 @@ public final class AccountUserProfile extends com.google.api.client.json.Generic
   }
 
   /**
-   * Locale of the user profile. This is a required field. Acceptable values are:   - "cs" (Czech)
-   * - "de" (German)  - "en" (English)  - "en-GB" (English United Kingdom)  - "es" (Spanish)  - "fr"
-   * (French)  - "it" (Italian)  - "ja" (Japanese)  - "ko" (Korean)  - "pl" (Polish)  - "pt-BR"
-   * (Portuguese Brazil) - "ru" (Russian)  - "sv" (Swedish)  - "tr" (Turkish)  - "zh-CN" (Chinese
-   * Simplified)  - "zh-TW" (Chinese Traditional)
+   * Locale of the user profile. This is a required field. Acceptable values are: - "cs" (Czech) -
+   * "de" (German) - "en" (English) - "en-GB" (English United Kingdom) - "es" (Spanish) - "fr"
+   * (French) - "it" (Italian) - "ja" (Japanese) - "ko" (Korean) - "pl" (Polish) - "pt-BR"
+   * (Portuguese Brazil) - "ru" (Russian) - "sv" (Swedish) - "tr" (Turkish) - "zh-CN" (Chinese
+   * Simplified) - "zh-TW" (Chinese Traditional)
    * @param locale locale or {@code null} for none
    */
   public AccountUserProfile setLocale(java.lang.String locale) {
@@ -320,7 +321,8 @@ public final class AccountUserProfile extends com.google.api.client.json.Generic
 
   /**
    * Name of the user profile. This is a required field. Must be less than 64 characters long, must
-   * be globally unique, and cannot contain whitespace or any of the following characters: "&;"#%,".
+   * be globally unique, and cannot contain whitespace or any of the following characters:
+   * "&;<>"#%,".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -329,7 +331,8 @@ public final class AccountUserProfile extends com.google.api.client.json.Generic
 
   /**
    * Name of the user profile. This is a required field. Must be less than 64 characters long, must
-   * be globally unique, and cannot contain whitespace or any of the following characters: "&;"#%,".
+   * be globally unique, and cannot contain whitespace or any of the following characters:
+   * "&;<>"#%,".
    * @param name name or {@code null} for none
    */
   public AccountUserProfile setName(java.lang.String name) {

@@ -46,7 +46,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Asset API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Asset API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -150,14 +150,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The name of the project/folder/organization where this feed
-    should be created in. It can
-     *        only be an organization number (such as
-    "organizations/123"), a folder number (such as
-     *        "folders/123"), a project ID
-    (such as "projects/my-project-id")", or a project number
-     *        (such as
-    "projects/12345").
+     * @param parent Required. The name of the project/folder/organization where this feed should be created in. It can
+     *        only be an organization number (such as "organizations/123"), a folder number (such as
+     *        "folders/123"), a project ID (such as "projects/my-project-id")", or a project number
+     *        (such as "projects/12345").
      * @param content the {@link com.google.api.services.cloudasset.v1.model.CreateFeedRequest}
      * @return the request
      */
@@ -185,14 +181,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The name of the project/folder/organization where this feed
-    should be created in. It can
-     *        only be an organization number (such as
-    "organizations/123"), a folder number (such as
-     *        "folders/123"), a project ID
-    (such as "projects/my-project-id")", or a project number
-     *        (such as
-    "projects/12345").
+       * @param parent Required. The name of the project/folder/organization where this feed should be created in. It can
+     *        only be an organization number (such as "organizations/123"), a folder number (such as
+     *        "folders/123"), a project ID (such as "projects/my-project-id")", or a project number
+     *        (such as "projects/12345").
        * @param content the {@link com.google.api.services.cloudasset.v1.model.CreateFeedRequest}
        * @since 1.13
        */
@@ -309,8 +301,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
      * @param name Required. The name of the feed and it must be in the format of:
-     *        projects/project_number/feeds/feed_id
-    folders/folder_number/feeds/feed_id
+     *        projects/project_number/feeds/feed_id folders/folder_number/feeds/feed_id
      *        organizations/organization_number/feeds/feed_id
      * @return the request
      */
@@ -339,8 +330,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The name of the feed and it must be in the format of:
-     *        projects/project_number/feeds/feed_id
-    folders/folder_number/feeds/feed_id
+     *        projects/project_number/feeds/feed_id folders/folder_number/feeds/feed_id
      *        organizations/organization_number/feeds/feed_id
        * @since 1.13
        */
@@ -454,8 +444,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param name Required. The name of the Feed and it must be in the format of:
-     *        projects/project_number/feeds/feed_id
-    folders/folder_number/feeds/feed_id
+     *        projects/project_number/feeds/feed_id folders/folder_number/feeds/feed_id
      *        organizations/organization_number/feeds/feed_id
      * @return the request
      */
@@ -483,8 +472,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param name Required. The name of the Feed and it must be in the format of:
-     *        projects/project_number/feeds/feed_id
-    folders/folder_number/feeds/feed_id
+     *        projects/project_number/feeds/feed_id folders/folder_number/feeds/feed_id
      *        organizations/organization_number/feeds/feed_id
        * @since 1.13
        */
@@ -607,10 +595,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The parent project/folder/organization whose feeds are to be
-    listed. It can only be using
-     *        project/folder/organization number (such as
-    "folders/12345")", or a project ID (such as
+     * @param parent Required. The parent project/folder/organization whose feeds are to be listed. It can only be using
+     *        project/folder/organization number (such as "folders/12345")", or a project ID (such as
      *        "projects/my-project-id").
      * @return the request
      */
@@ -637,10 +623,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The parent project/folder/organization whose feeds are to be
-    listed. It can only be using
-     *        project/folder/organization number (such as
-    "folders/12345")", or a project ID (such as
+       * @param parent Required. The parent project/folder/organization whose feeds are to be listed. It can only be using
+     *        project/folder/organization number (such as "folders/12345")", or a project ID (such as
      *        "projects/my-project-id").
        * @since 1.13
        */
@@ -763,13 +747,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The format will be
-    projects/{project_number}/feeds/{client-assigned_feed_identifier} or
+     * @param name Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or
      *        folders/{folder_number}/feeds/{client-assigned_feed_identifier} or
-     *        organizations/{organization_number}/feeds/{client-assigned_feed_identifier}
-    The client-
-     *        assigned feed identifier must be unique within the parent
-    project/folder/organization.
+     *        organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-
+     *        assigned feed identifier must be unique within the parent project/folder/organization.
      * @param content the {@link com.google.api.services.cloudasset.v1.model.UpdateFeedRequest}
      * @return the request
      */
@@ -797,13 +778,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The format will be
-    projects/{project_number}/feeds/{client-assigned_feed_identifier} or
+       * @param name Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or
      *        folders/{folder_number}/feeds/{client-assigned_feed_identifier} or
-     *        organizations/{organization_number}/feeds/{client-assigned_feed_identifier}
-    The client-
-     *        assigned feed identifier must be unique within the parent
-    project/folder/organization.
+     *        organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-
+     *        assigned feed identifier must be unique within the parent project/folder/organization.
        * @param content the {@link com.google.api.services.cloudasset.v1.model.UpdateFeedRequest}
        * @since 1.13
        */
@@ -876,19 +854,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. The format will be projects/{project_number}/feeds/{client-
        * assigned_feed_identifier} or folders/{folder_number}/feeds/{client-
        * assigned_feed_identifier} or organizations/{organization_number}/feeds/{client-
-       * assigned_feed_identifier}
-       *
-       * The client-assigned feed identifier must be unique within the parent
-       * project/folder/organization.
+       * assigned_feed_identifier} The client-assigned feed identifier must be unique within the
+       * parent project/folder/organization.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
       /** Required. The format will be projects/{project_number}/feeds/{client-assigned_feed_identifier} or
      folders/{folder_number}/feeds/{client-assigned_feed_identifier} or
-     organizations/{organization_number}/feeds/{client-assigned_feed_identifier}
-
-     The client-assigned feed identifier must be unique within the parent project/folder/organization.
+     organizations/{organization_number}/feeds/{client-assigned_feed_identifier} The client-assigned
+     feed identifier must be unique within the parent project/folder/organization.
        */
       public java.lang.String getName() {
         return name;
@@ -898,10 +873,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Required. The format will be projects/{project_number}/feeds/{client-
        * assigned_feed_identifier} or folders/{folder_number}/feeds/{client-
        * assigned_feed_identifier} or organizations/{organization_number}/feeds/{client-
-       * assigned_feed_identifier}
-       *
-       * The client-assigned feed identifier must be unique within the parent
-       * project/folder/organization.
+       * assigned_feed_identifier} The client-assigned feed identifier must be unique within the
+       * parent project/folder/organization.
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -942,7 +915,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -967,7 +940,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/operations/[^/]+/.*$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -1105,11 +1078,710 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   public class V1 {
 
     /**
-     * Batch gets the update history of assets that overlap a time window. For RESOURCE content, this
-     * API outputs history with asset in both non-delete or deleted status. For IAM_POLICY content, this
+     * Analyzes IAM policies to answer which identities have what accesses on which resources.
+     *
+     * Create a request for the method "v1.analyzeIamPolicy".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link AnalyzeIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param scope Required. The relative name of the root asset. Only resources and IAM policies within the scope will
+     *        be analyzed. This can only be an organization number (such as "organizations/123"), a
+     *        folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or
+     *        a project number (such as "projects/12345"). To know how to get organization id, visit
+     *        [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        organization#retrieving_your_organization_id). To know how to get folder or project id,
+     *        visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        folders#viewing_or_listing_folders_and_projects).
+     * @return the request
+     */
+    public AnalyzeIamPolicy analyzeIamPolicy(java.lang.String scope) throws java.io.IOException {
+      AnalyzeIamPolicy result = new AnalyzeIamPolicy(scope);
+      initialize(result);
+      return result;
+    }
+
+    public class AnalyzeIamPolicy extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.AnalyzeIamPolicyResponse> {
+
+      private static final String REST_PATH = "v1/{+scope}:analyzeIamPolicy";
+
+      private final java.util.regex.Pattern SCOPE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Analyzes IAM policies to answer which identities have what accesses on which resources.
+       *
+       * Create a request for the method "v1.analyzeIamPolicy".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link AnalyzeIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link AnalyzeIamPolicy#initialize(com.google.api.client.googleapis.services.Abs
+       * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param scope Required. The relative name of the root asset. Only resources and IAM policies within the scope will
+     *        be analyzed. This can only be an organization number (such as "organizations/123"), a
+     *        folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or
+     *        a project number (such as "projects/12345"). To know how to get organization id, visit
+     *        [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        organization#retrieving_your_organization_id). To know how to get folder or project id,
+     *        visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        folders#viewing_or_listing_folders_and_projects).
+       * @since 1.13
+       */
+      protected AnalyzeIamPolicy(java.lang.String scope) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.AnalyzeIamPolicyResponse.class);
+        this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public AnalyzeIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (AnalyzeIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AnalyzeIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (AnalyzeIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AnalyzeIamPolicy setAlt(java.lang.String alt) {
+        return (AnalyzeIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public AnalyzeIamPolicy setCallback(java.lang.String callback) {
+        return (AnalyzeIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public AnalyzeIamPolicy setFields(java.lang.String fields) {
+        return (AnalyzeIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public AnalyzeIamPolicy setKey(java.lang.String key) {
+        return (AnalyzeIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public AnalyzeIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (AnalyzeIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AnalyzeIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AnalyzeIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AnalyzeIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (AnalyzeIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AnalyzeIamPolicy setUploadType(java.lang.String uploadType) {
+        return (AnalyzeIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AnalyzeIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AnalyzeIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The relative name of the root asset. Only resources and IAM policies within the
+       * scope will be analyzed. This can only be an organization number (such as
+       * "organizations/123"), a folder number (such as "folders/123"), a project ID (such as
+       * "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to
+       * get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * managing-organization#retrieving_your_organization_id). To know how to get folder or
+       * project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * folders#viewing_or_listing_folders_and_projects).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String scope;
+
+      /** Required. The relative name of the root asset. Only resources and IAM policies within the scope
+     will be analyzed. This can only be an organization number (such as "organizations/123"), a folder
+     number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project
+     number (such as "projects/12345"). To know how to get organization id, visit [here
+     ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here
+     ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     folders#viewing_or_listing_folders_and_projects).
+       */
+      public java.lang.String getScope() {
+        return scope;
+      }
+
+      /**
+       * Required. The relative name of the root asset. Only resources and IAM policies within the
+       * scope will be analyzed. This can only be an organization number (such as
+       * "organizations/123"), a folder number (such as "folders/123"), a project ID (such as
+       * "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to
+       * get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * managing-organization#retrieving_your_organization_id). To know how to get folder or
+       * project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * folders#viewing_or_listing_folders_and_projects).
+       */
+      public AnalyzeIamPolicy setScope(java.lang.String scope) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.scope = scope;
+        return this;
+      }
+
+      /** Optional. The permissions to appear in result. */
+      @com.google.api.client.util.Key("analysisQuery.accessSelector.permissions")
+      private java.util.List<java.lang.String> analysisQueryAccessSelectorPermissions;
+
+      /** Optional. The permissions to appear in result.
+       */
+      public java.util.List<java.lang.String> getAnalysisQueryAccessSelectorPermissions() {
+        return analysisQueryAccessSelectorPermissions;
+      }
+
+      /** Optional. The permissions to appear in result. */
+      public AnalyzeIamPolicy setAnalysisQueryAccessSelectorPermissions(java.util.List<java.lang.String> analysisQueryAccessSelectorPermissions) {
+        this.analysisQueryAccessSelectorPermissions = analysisQueryAccessSelectorPermissions;
+        return this;
+      }
+
+      /** Optional. The roles to appear in result. */
+      @com.google.api.client.util.Key("analysisQuery.accessSelector.roles")
+      private java.util.List<java.lang.String> analysisQueryAccessSelectorRoles;
+
+      /** Optional. The roles to appear in result.
+       */
+      public java.util.List<java.lang.String> getAnalysisQueryAccessSelectorRoles() {
+        return analysisQueryAccessSelectorRoles;
+      }
+
+      /** Optional. The roles to appear in result. */
+      public AnalyzeIamPolicy setAnalysisQueryAccessSelectorRoles(java.util.List<java.lang.String> analysisQueryAccessSelectorRoles) {
+        this.analysisQueryAccessSelectorRoles = analysisQueryAccessSelectorRoles;
+        return this;
+      }
+
+      /**
+       * Required. The identity appear in the form of members in [IAM policy
+       * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
+       * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
+       * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
+       * (such as * and ?) are not supported. You must give a specific identity.
+       */
+      @com.google.api.client.util.Key("analysisQuery.identitySelector.identity")
+      private java.lang.String analysisQueryIdentitySelectorIdentity;
+
+      /** Required. The identity appear in the form of members in [IAM policy
+     binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms
+     are: "user:mike@example.com", "group:admins@example.com", "domain:google.com", "serviceAccount:my-
+     project-id@appspot.gserviceaccount.com". Notice that wildcard characters (such as * and ?) are not
+     supported. You must give a specific identity.
+       */
+      public java.lang.String getAnalysisQueryIdentitySelectorIdentity() {
+        return analysisQueryIdentitySelectorIdentity;
+      }
+
+      /**
+       * Required. The identity appear in the form of members in [IAM policy
+       * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported
+       * forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com",
+       * "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters
+       * (such as * and ?) are not supported. You must give a specific identity.
+       */
+      public AnalyzeIamPolicy setAnalysisQueryIdentitySelectorIdentity(java.lang.String analysisQueryIdentitySelectorIdentity) {
+        this.analysisQueryIdentitySelectorIdentity = analysisQueryIdentitySelectorIdentity;
+        return this;
+      }
+
+      /**
+       * Optional. If true, the response will include access analysis from identities to resources
+       * via service account impersonation. This is a very expensive operation, because many derived
+       * queries will be executed. We highly recommend you use
+       * AssetService.AnalyzeIamPolicyLongrunning rpc instead. For example, if the request analyzes
+       * for which resources user A has permission P, and there's an IAM policy states user A has
+       * iam.serviceAccounts.getAccessToken permission to a service account SA, and there's another
+       * IAM policy states service account SA has permission P to a GCP folder F, then user A
+       * potentially has access to the GCP folder F. And those advanced analysis results will be
+       * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another
+       * example, if the request analyzes for who has permission P to a GCP folder F, and there's an
+       * IAM policy states user A has iam.serviceAccounts.actAs permission to a service account SA,
+       * and there's another IAM policy states service account SA has permission P to the GCP folder
+       * F, then user A potentially has access to the GCP folder F. And those advanced analysis
+       * results will be included in
+       * AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
+       */
+      @com.google.api.client.util.Key("analysisQuery.options.analyzeServiceAccountImpersonation")
+      private java.lang.Boolean analysisQueryOptionsAnalyzeServiceAccountImpersonation;
+
+      /** Optional. If true, the response will include access analysis from identities to resources via
+     service account impersonation. This is a very expensive operation, because many derived queries
+     will be executed. We highly recommend you use AssetService.AnalyzeIamPolicyLongrunning rpc instead.
+     For example, if the request analyzes for which resources user A has permission P, and there's an
+     IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a service account SA,
+     and there's another IAM policy states service account SA has permission P to a GCP folder F, then
+     user A potentially has access to the GCP folder F. And those advanced analysis results will be
+     included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another example, if
+     the request analyzes for who has permission P to a GCP folder F, and there's an IAM policy states
+     user A has iam.serviceAccounts.actAs permission to a service account SA, and there's another IAM
+     policy states service account SA has permission P to the GCP folder F, then user A potentially has
+     access to the GCP folder F. And those advanced analysis results will be included in
+     AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
+       */
+      public java.lang.Boolean getAnalysisQueryOptionsAnalyzeServiceAccountImpersonation() {
+        return analysisQueryOptionsAnalyzeServiceAccountImpersonation;
+      }
+
+      /**
+       * Optional. If true, the response will include access analysis from identities to resources
+       * via service account impersonation. This is a very expensive operation, because many derived
+       * queries will be executed. We highly recommend you use
+       * AssetService.AnalyzeIamPolicyLongrunning rpc instead. For example, if the request analyzes
+       * for which resources user A has permission P, and there's an IAM policy states user A has
+       * iam.serviceAccounts.getAccessToken permission to a service account SA, and there's another
+       * IAM policy states service account SA has permission P to a GCP folder F, then user A
+       * potentially has access to the GCP folder F. And those advanced analysis results will be
+       * included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another
+       * example, if the request analyzes for who has permission P to a GCP folder F, and there's an
+       * IAM policy states user A has iam.serviceAccounts.actAs permission to a service account SA,
+       * and there's another IAM policy states service account SA has permission P to the GCP folder
+       * F, then user A potentially has access to the GCP folder F. And those advanced analysis
+       * results will be included in
+       * AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Default is false.
+       */
+      public AnalyzeIamPolicy setAnalysisQueryOptionsAnalyzeServiceAccountImpersonation(java.lang.Boolean analysisQueryOptionsAnalyzeServiceAccountImpersonation) {
+        this.analysisQueryOptionsAnalyzeServiceAccountImpersonation = analysisQueryOptionsAnalyzeServiceAccountImpersonation;
+        return this;
+      }
+
+      /**
+       * Optional. If true, the identities section of the result will expand any Google groups
+       * appearing in an IAM policy binding. If IamPolicyAnalysisQuery.identity_selector is
+       * specified, the identity in the result will be determined by the selector, and this flag is
+       * not allowed to set. Default is false.
+       */
+      @com.google.api.client.util.Key("analysisQuery.options.expandGroups")
+      private java.lang.Boolean analysisQueryOptionsExpandGroups;
+
+      /** Optional. If true, the identities section of the result will expand any Google groups appearing in
+     an IAM policy binding. If IamPolicyAnalysisQuery.identity_selector is specified, the identity in
+     the result will be determined by the selector, and this flag is not allowed to set. Default is
+     false.
+       */
+      public java.lang.Boolean getAnalysisQueryOptionsExpandGroups() {
+        return analysisQueryOptionsExpandGroups;
+      }
+
+      /**
+       * Optional. If true, the identities section of the result will expand any Google groups
+       * appearing in an IAM policy binding. If IamPolicyAnalysisQuery.identity_selector is
+       * specified, the identity in the result will be determined by the selector, and this flag is
+       * not allowed to set. Default is false.
+       */
+      public AnalyzeIamPolicy setAnalysisQueryOptionsExpandGroups(java.lang.Boolean analysisQueryOptionsExpandGroups) {
+        this.analysisQueryOptionsExpandGroups = analysisQueryOptionsExpandGroups;
+        return this;
+      }
+
+      /**
+       * Optional. If true and IamPolicyAnalysisQuery.resource_selector is not specified, the
+       * resource section of the result will expand any resource attached to an IAM policy to
+       * include resources lower in the resource hierarchy. For example, if the request analyzes for
+       * which resources user A has permission P, and the results include an IAM policy with P on a
+       * GCP folder, the results will also include resources in that folder with permission P. If
+       * true and IamPolicyAnalysisQuery.resource_selector is specified, the resource section of the
+       * result will expand the specified resource to include resources lower in the resource
+       * hierarchy. Only project or lower resources are supported. Folder and organization resource
+       * cannot be used together with this option. For example, if the request analyzes for which
+       * users have permission P on a GCP project with this option enabled, the results will include
+       * all users who have permission P on that project or any lower resource. Default is false.
+       */
+      @com.google.api.client.util.Key("analysisQuery.options.expandResources")
+      private java.lang.Boolean analysisQueryOptionsExpandResources;
+
+      /** Optional. If true and IamPolicyAnalysisQuery.resource_selector is not specified, the resource
+     section of the result will expand any resource attached to an IAM policy to include resources lower
+     in the resource hierarchy. For example, if the request analyzes for which resources user A has
+     permission P, and the results include an IAM policy with P on a GCP folder, the results will also
+     include resources in that folder with permission P. If true and
+     IamPolicyAnalysisQuery.resource_selector is specified, the resource section of the result will
+     expand the specified resource to include resources lower in the resource hierarchy. Only project or
+     lower resources are supported. Folder and organization resource cannot be used together with this
+     option. For example, if the request analyzes for which users have permission P on a GCP project
+     with this option enabled, the results will include all users who have permission P on that project
+     or any lower resource. Default is false.
+       */
+      public java.lang.Boolean getAnalysisQueryOptionsExpandResources() {
+        return analysisQueryOptionsExpandResources;
+      }
+
+      /**
+       * Optional. If true and IamPolicyAnalysisQuery.resource_selector is not specified, the
+       * resource section of the result will expand any resource attached to an IAM policy to
+       * include resources lower in the resource hierarchy. For example, if the request analyzes for
+       * which resources user A has permission P, and the results include an IAM policy with P on a
+       * GCP folder, the results will also include resources in that folder with permission P. If
+       * true and IamPolicyAnalysisQuery.resource_selector is specified, the resource section of the
+       * result will expand the specified resource to include resources lower in the resource
+       * hierarchy. Only project or lower resources are supported. Folder and organization resource
+       * cannot be used together with this option. For example, if the request analyzes for which
+       * users have permission P on a GCP project with this option enabled, the results will include
+       * all users who have permission P on that project or any lower resource. Default is false.
+       */
+      public AnalyzeIamPolicy setAnalysisQueryOptionsExpandResources(java.lang.Boolean analysisQueryOptionsExpandResources) {
+        this.analysisQueryOptionsExpandResources = analysisQueryOptionsExpandResources;
+        return this;
+      }
+
+      /**
+       * Optional. If true, the access section of result will expand any roles appearing in IAM
+       * policy bindings to include their permissions. If IamPolicyAnalysisQuery.access_selector is
+       * specified, the access section of the result will be determined by the selector, and this
+       * flag is not allowed to set. Default is false.
+       */
+      @com.google.api.client.util.Key("analysisQuery.options.expandRoles")
+      private java.lang.Boolean analysisQueryOptionsExpandRoles;
+
+      /** Optional. If true, the access section of result will expand any roles appearing in IAM policy
+     bindings to include their permissions. If IamPolicyAnalysisQuery.access_selector is specified, the
+     access section of the result will be determined by the selector, and this flag is not allowed to
+     set. Default is false.
+       */
+      public java.lang.Boolean getAnalysisQueryOptionsExpandRoles() {
+        return analysisQueryOptionsExpandRoles;
+      }
+
+      /**
+       * Optional. If true, the access section of result will expand any roles appearing in IAM
+       * policy bindings to include their permissions. If IamPolicyAnalysisQuery.access_selector is
+       * specified, the access section of the result will be determined by the selector, and this
+       * flag is not allowed to set. Default is false.
+       */
+      public AnalyzeIamPolicy setAnalysisQueryOptionsExpandRoles(java.lang.Boolean analysisQueryOptionsExpandRoles) {
+        this.analysisQueryOptionsExpandRoles = analysisQueryOptionsExpandRoles;
+        return this;
+      }
+
+      /**
+       * Optional. If true, the result will output group identity edges, starting from the binding's
+       * group members, to any expanded identities. Default is false.
+       */
+      @com.google.api.client.util.Key("analysisQuery.options.outputGroupEdges")
+      private java.lang.Boolean analysisQueryOptionsOutputGroupEdges;
+
+      /** Optional. If true, the result will output group identity edges, starting from the binding's group
+     members, to any expanded identities. Default is false.
+       */
+      public java.lang.Boolean getAnalysisQueryOptionsOutputGroupEdges() {
+        return analysisQueryOptionsOutputGroupEdges;
+      }
+
+      /**
+       * Optional. If true, the result will output group identity edges, starting from the binding's
+       * group members, to any expanded identities. Default is false.
+       */
+      public AnalyzeIamPolicy setAnalysisQueryOptionsOutputGroupEdges(java.lang.Boolean analysisQueryOptionsOutputGroupEdges) {
+        this.analysisQueryOptionsOutputGroupEdges = analysisQueryOptionsOutputGroupEdges;
+        return this;
+      }
+
+      /**
+       * Optional. If true, the result will output resource edges, starting from the policy attached
+       * resource, to any expanded resources. Default is false.
+       */
+      @com.google.api.client.util.Key("analysisQuery.options.outputResourceEdges")
+      private java.lang.Boolean analysisQueryOptionsOutputResourceEdges;
+
+      /** Optional. If true, the result will output resource edges, starting from the policy attached
+     resource, to any expanded resources. Default is false.
+       */
+      public java.lang.Boolean getAnalysisQueryOptionsOutputResourceEdges() {
+        return analysisQueryOptionsOutputResourceEdges;
+      }
+
+      /**
+       * Optional. If true, the result will output resource edges, starting from the policy attached
+       * resource, to any expanded resources. Default is false.
+       */
+      public AnalyzeIamPolicy setAnalysisQueryOptionsOutputResourceEdges(java.lang.Boolean analysisQueryOptionsOutputResourceEdges) {
+        this.analysisQueryOptionsOutputResourceEdges = analysisQueryOptionsOutputResourceEdges;
+        return this;
+      }
+
+      /**
+       * Required. The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-
+       * name-format) of a resource of [supported resource types](https://cloud.google.com/asset-
+       * inventory/docs/supported-asset-types#analyzable_asset_types).
+       */
+      @com.google.api.client.util.Key("analysisQuery.resourceSelector.fullResourceName")
+      private java.lang.String analysisQueryResourceSelectorFullResourceName;
+
+      /** Required. The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-name-
+     format) of a resource of [supported resource types](https://cloud.google.com/asset-inventory/docs
+     /supported-asset-types#analyzable_asset_types).
+       */
+      public java.lang.String getAnalysisQueryResourceSelectorFullResourceName() {
+        return analysisQueryResourceSelectorFullResourceName;
+      }
+
+      /**
+       * Required. The [full resource name] (https://cloud.google.com/asset-inventory/docs/resource-
+       * name-format) of a resource of [supported resource types](https://cloud.google.com/asset-
+       * inventory/docs/supported-asset-types#analyzable_asset_types).
+       */
+      public AnalyzeIamPolicy setAnalysisQueryResourceSelectorFullResourceName(java.lang.String analysisQueryResourceSelectorFullResourceName) {
+        this.analysisQueryResourceSelectorFullResourceName = analysisQueryResourceSelectorFullResourceName;
+        return this;
+      }
+
+      /**
+       * Optional. Amount of time executable has to complete. See JSON representation of
+       * [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json). If this field
+       * is set with a value less than the RPC deadline, and the execution of your query hasn't
+       * finished in the specified execution timeout, you will get a response with partial result.
+       * Otherwise, your query's execution will continue until the RPC deadline. If it's not
+       * finished until then, you will get a DEADLINE_EXCEEDED error. Default is empty.
+       */
+      @com.google.api.client.util.Key
+      private String executionTimeout;
+
+      /** Optional. Amount of time executable has to complete. See JSON representation of
+     [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json). If this field is set
+     with a value less than the RPC deadline, and the execution of your query hasn't finished in the
+     specified execution timeout, you will get a response with partial result. Otherwise, your query's
+     execution will continue until the RPC deadline. If it's not finished until then, you will get a
+     DEADLINE_EXCEEDED error. Default is empty.
+       */
+      public String getExecutionTimeout() {
+        return executionTimeout;
+      }
+
+      /**
+       * Optional. Amount of time executable has to complete. See JSON representation of
+       * [Duration](https://developers.google.com/protocol-buffers/docs/proto3#json). If this field
+       * is set with a value less than the RPC deadline, and the execution of your query hasn't
+       * finished in the specified execution timeout, you will get a response with partial result.
+       * Otherwise, your query's execution will continue until the RPC deadline. If it's not
+       * finished until then, you will get a DEADLINE_EXCEEDED error. Default is empty.
+       */
+      public AnalyzeIamPolicy setExecutionTimeout(String executionTimeout) {
+        this.executionTimeout = executionTimeout;
+        return this;
+      }
+
+      @Override
+      public AnalyzeIamPolicy set(String parameterName, Object value) {
+        return (AnalyzeIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Analyzes IAM policies asynchronously to answer which identities have what accesses on which
+     * resources, and writes the analysis results to a Google Cloud Storage or a BigQuery destination.
+     * For Cloud Storage destination, the output format is the JSON format that represents a
+     * AnalyzeIamPolicyResponse. This method implements the google.longrunning.Operation, which allows
+     * you to track the operation status. We recommend intervals of at least 2 seconds with exponential
+     * backoff retry to poll the operation result. The metadata contains the request to help callers to
+     * map responses to requests.
+     *
+     * Create a request for the method "v1.analyzeIamPolicyLongrunning".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link AnalyzeIamPolicyLongrunning#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param scope Required. The relative name of the root asset. Only resources and IAM policies within the scope will
+     *        be analyzed. This can only be an organization number (such as "organizations/123"), a
+     *        folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or
+     *        a project number (such as "projects/12345"). To know how to get organization id, visit
+     *        [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        organization#retrieving_your_organization_id). To know how to get folder or project id,
+     *        visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        folders#viewing_or_listing_folders_and_projects).
+     * @param content the {@link com.google.api.services.cloudasset.v1.model.AnalyzeIamPolicyLongrunningRequest}
+     * @return the request
+     */
+    public AnalyzeIamPolicyLongrunning analyzeIamPolicyLongrunning(java.lang.String scope, com.google.api.services.cloudasset.v1.model.AnalyzeIamPolicyLongrunningRequest content) throws java.io.IOException {
+      AnalyzeIamPolicyLongrunning result = new AnalyzeIamPolicyLongrunning(scope, content);
+      initialize(result);
+      return result;
+    }
+
+    public class AnalyzeIamPolicyLongrunning extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+scope}:analyzeIamPolicyLongrunning";
+
+      private final java.util.regex.Pattern SCOPE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Analyzes IAM policies asynchronously to answer which identities have what accesses on which
+       * resources, and writes the analysis results to a Google Cloud Storage or a BigQuery destination.
+       * For Cloud Storage destination, the output format is the JSON format that represents a
+       * AnalyzeIamPolicyResponse. This method implements the google.longrunning.Operation, which allows
+       * you to track the operation status. We recommend intervals of at least 2 seconds with
+       * exponential backoff retry to poll the operation result. The metadata contains the request to
+       * help callers to map responses to requests.
+       *
+       * Create a request for the method "v1.analyzeIamPolicyLongrunning".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link AnalyzeIamPolicyLongrunning#execute()} method to invoke
+       * the remote operation. <p> {@link AnalyzeIamPolicyLongrunning#initialize(com.google.api.client.g
+       * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param scope Required. The relative name of the root asset. Only resources and IAM policies within the scope will
+     *        be analyzed. This can only be an organization number (such as "organizations/123"), a
+     *        folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or
+     *        a project number (such as "projects/12345"). To know how to get organization id, visit
+     *        [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        organization#retrieving_your_organization_id). To know how to get folder or project id,
+     *        visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     *        folders#viewing_or_listing_folders_and_projects).
+       * @param content the {@link com.google.api.services.cloudasset.v1.model.AnalyzeIamPolicyLongrunningRequest}
+       * @since 1.13
+       */
+      protected AnalyzeIamPolicyLongrunning(java.lang.String scope, com.google.api.services.cloudasset.v1.model.AnalyzeIamPolicyLongrunningRequest content) {
+        super(CloudAsset.this, "POST", REST_PATH, content, com.google.api.services.cloudasset.v1.model.Operation.class);
+        this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning set$Xgafv(java.lang.String $Xgafv) {
+        return (AnalyzeIamPolicyLongrunning) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning setAccessToken(java.lang.String accessToken) {
+        return (AnalyzeIamPolicyLongrunning) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning setAlt(java.lang.String alt) {
+        return (AnalyzeIamPolicyLongrunning) super.setAlt(alt);
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning setCallback(java.lang.String callback) {
+        return (AnalyzeIamPolicyLongrunning) super.setCallback(callback);
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning setFields(java.lang.String fields) {
+        return (AnalyzeIamPolicyLongrunning) super.setFields(fields);
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning setKey(java.lang.String key) {
+        return (AnalyzeIamPolicyLongrunning) super.setKey(key);
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning setOauthToken(java.lang.String oauthToken) {
+        return (AnalyzeIamPolicyLongrunning) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (AnalyzeIamPolicyLongrunning) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning setQuotaUser(java.lang.String quotaUser) {
+        return (AnalyzeIamPolicyLongrunning) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning setUploadType(java.lang.String uploadType) {
+        return (AnalyzeIamPolicyLongrunning) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AnalyzeIamPolicyLongrunning) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The relative name of the root asset. Only resources and IAM policies within the
+       * scope will be analyzed. This can only be an organization number (such as
+       * "organizations/123"), a folder number (such as "folders/123"), a project ID (such as
+       * "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to
+       * get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * managing-organization#retrieving_your_organization_id). To know how to get folder or
+       * project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * folders#viewing_or_listing_folders_and_projects).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String scope;
+
+      /** Required. The relative name of the root asset. Only resources and IAM policies within the scope
+     will be analyzed. This can only be an organization number (such as "organizations/123"), a folder
+     number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project
+     number (such as "projects/12345"). To know how to get organization id, visit [here
+     ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here
+     ](https://cloud.google.com/resource-manager/docs/creating-managing-
+     folders#viewing_or_listing_folders_and_projects).
+       */
+      public java.lang.String getScope() {
+        return scope;
+      }
+
+      /**
+       * Required. The relative name of the root asset. Only resources and IAM policies within the
+       * scope will be analyzed. This can only be an organization number (such as
+       * "organizations/123"), a folder number (such as "folders/123"), a project ID (such as
+       * "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to
+       * get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-
+       * managing-organization#retrieving_your_organization_id). To know how to get folder or
+       * project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-
+       * folders#viewing_or_listing_folders_and_projects).
+       */
+      public AnalyzeIamPolicyLongrunning setScope(java.lang.String scope) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.scope = scope;
+        return this;
+      }
+
+      @Override
+      public AnalyzeIamPolicyLongrunning set(String parameterName, Object value) {
+        return (AnalyzeIamPolicyLongrunning) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this
      * API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps
-     * in the output history. If a specified asset does not exist, this API returns an INVALID_ARGUMENT
-     * error.
+     * in the output history. Otherwise, this API outputs history with asset in both non-delete or
+     * deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT error.
      *
      * Create a request for the method "v1.batchGetAssetsHistory".
      *
@@ -1117,10 +1789,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link BatchGetAssetsHistory#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. The relative name of the root asset. It can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id")", or a project
+     * @param parent Required. The relative name of the root asset. It can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id")", or a project
      *        number (such as "projects/12345").
      * @return the request
      */
@@ -1138,11 +1808,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Batch gets the update history of assets that overlap a time window. For RESOURCE content, this
-       * API outputs history with asset in both non-delete or deleted status. For IAM_POLICY content,
+       * Batch gets the update history of assets that overlap a time window. For IAM_POLICY content,
        * this API outputs history when the asset and its attached IAM POLICY both exist. This can create
-       * gaps in the output history. If a specified asset does not exist, this API returns an
-       * INVALID_ARGUMENT error.
+       * gaps in the output history. Otherwise, this API outputs history with asset in both non-delete
+       * or deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT
+       * error.
        *
        * Create a request for the method "v1.batchGetAssetsHistory".
        *
@@ -1152,10 +1822,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. It can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id")", or a project
+       * @param parent Required. The relative name of the root asset. It can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id")", or a project
      *        number (such as "projects/12345").
        * @since 1.13
        */
@@ -1266,39 +1934,31 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * A list of the full names of the assets. For example:
-       * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-       * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-       * and [Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-name-
-       * format) for more info.
-       *
-       * The request becomes a no-op if the asset name list is empty, and the max size of the asset
-       * name list is 100 in one request.
+       * A list of the full names of the assets. See: https://cloud.google.com/asset-inventory/docs
+       * /resource-name-format Example:
+       * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. The
+       * request becomes a no-op if the asset name list is empty, and the max size of the asset name
+       * list is 100 in one request.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> assetNames;
 
-      /** A list of the full names of the assets. For example:
-     `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Resource
-     Names](https://cloud.google.com/apis/design/resource_names#full_resource_name) and [Resource Name
-     Format](https://cloud.google.com/asset-inventory/docs/resource-name-format) for more info.
-
-     The request becomes a no-op if the asset name list is empty, and the max size of the asset name
-     list is 100 in one request.
+      /** A list of the full names of the assets. See: https://cloud.google.com/asset-inventory/docs
+     /resource-name-format Example:
+     `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. The request
+     becomes a no-op if the asset name list is empty, and the max size of the asset name list is 100 in
+     one request.
        */
       public java.util.List<java.lang.String> getAssetNames() {
         return assetNames;
       }
 
       /**
-       * A list of the full names of the assets. For example:
-       * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See
-       * [Resource Names](https://cloud.google.com/apis/design/resource_names#full_resource_name)
-       * and [Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-name-
-       * format) for more info.
-       *
-       * The request becomes a no-op if the asset name list is empty, and the max size of the asset
-       * name list is 100 in one request.
+       * A list of the full names of the assets. See: https://cloud.google.com/asset-inventory/docs
+       * /resource-name-format Example:
+       * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. The
+       * request becomes a no-op if the asset name list is empty, and the max size of the asset name
+       * list is 100 in one request.
        */
       public BatchGetAssetsHistory setAssetNames(java.util.List<java.lang.String> assetNames) {
         this.assetNames = assetNames;
@@ -1365,21 +2025,22 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
-     * Exports assets with time and resource types to a given Cloud Storage location. The output format
-     * is newline-delimited JSON. This API implements the google.longrunning.Operation API allowing you
-     * to keep track of the export.
+     * Exports assets with time and resource types to a given Cloud Storage location/BigQuery table. For
+     * Cloud Storage location destinations, the output format is newline-delimited JSON. Each line
+     * represents a google.cloud.asset.v1.Asset in the JSON format; for BigQuery table destinations, the
+     * output table stores the fields in asset proto as columns. This API implements the
+     * google.longrunning.Operation API , which allows you to keep track of the export. We recommend
+     * intervals of at least 2 seconds with exponential retry to poll the export operation result. For
+     * regular-size resource parent, the export operation usually finishes within 5 minutes.
      *
      * Create a request for the method "v1.exportAssets".
      *
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link ExportAssets#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. The relative name of the root asset. This can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id"), or a project number
-     *        (such as "projects/12345"),
-    or a folder number (such as "folders/123").
+     * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), or a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123").
      * @param content the {@link com.google.api.services.cloudasset.v1.model.ExportAssetsRequest}
      * @return the request
      */
@@ -1397,9 +2058,13 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Exports assets with time and resource types to a given Cloud Storage location. The output
-       * format is newline-delimited JSON. This API implements the google.longrunning.Operation API
-       * allowing you to keep track of the export.
+       * Exports assets with time and resource types to a given Cloud Storage location/BigQuery table.
+       * For Cloud Storage location destinations, the output format is newline-delimited JSON. Each line
+       * represents a google.cloud.asset.v1.Asset in the JSON format; for BigQuery table destinations,
+       * the output table stores the fields in asset proto as columns. This API implements the
+       * google.longrunning.Operation API , which allows you to keep track of the export. We recommend
+       * intervals of at least 2 seconds with exponential retry to poll the export operation result. For
+       * regular-size resource parent, the export operation usually finishes within 5 minutes.
        *
        * Create a request for the method "v1.exportAssets".
        *
@@ -1409,12 +2074,9 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * ExportAssets#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. The relative name of the root asset. This can only be an
-    organization number (such as
-     *        "organizations/123"), a project ID (such as
-    "projects/my-project-id"), or a project number
-     *        (such as "projects/12345"),
-    or a folder number (such as "folders/123").
+       * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
+     *        "organizations/123"), a project ID (such as "projects/my-project-id"), or a project number
+     *        (such as "projects/12345"), or a folder number (such as "folders/123").
        * @param content the {@link com.google.api.services.cloudasset.v1.model.ExportAssetsRequest}
        * @since 1.13
        */
@@ -1517,6 +2179,673 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       @Override
       public ExportAssets set(String parameterName, Object value) {
         return (ExportAssets) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Searches all IAM policies within the specified scope, such as a project, folder, or organization.
+     * The caller must be granted the `cloudasset.assets.searchAllIamPolicies` permission on the desired
+     * scope, otherwise the request will be rejected.
+     *
+     * Create a request for the method "v1.searchAllIamPolicies".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link SearchAllIamPolicies#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
+     *        policies within the `scope`. The caller must be granted the
+     *        [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+     *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+     * @return the request
+     */
+    public SearchAllIamPolicies searchAllIamPolicies(java.lang.String scope) throws java.io.IOException {
+      SearchAllIamPolicies result = new SearchAllIamPolicies(scope);
+      initialize(result);
+      return result;
+    }
+
+    public class SearchAllIamPolicies extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.SearchAllIamPoliciesResponse> {
+
+      private static final String REST_PATH = "v1/{+scope}:searchAllIamPolicies";
+
+      private final java.util.regex.Pattern SCOPE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Searches all IAM policies within the specified scope, such as a project, folder, or
+       * organization. The caller must be granted the `cloudasset.assets.searchAllIamPolicies`
+       * permission on the desired scope, otherwise the request will be rejected.
+       *
+       * Create a request for the method "v1.searchAllIamPolicies".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link SearchAllIamPolicies#execute()} method to invoke the
+       * remote operation. <p> {@link SearchAllIamPolicies#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
+     *        policies within the `scope`. The caller must be granted the
+     *        [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+     *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       * @since 1.13
+       */
+      protected SearchAllIamPolicies(java.lang.String scope) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.SearchAllIamPoliciesResponse.class);
+        this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public SearchAllIamPolicies set$Xgafv(java.lang.String $Xgafv) {
+        return (SearchAllIamPolicies) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SearchAllIamPolicies setAccessToken(java.lang.String accessToken) {
+        return (SearchAllIamPolicies) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SearchAllIamPolicies setAlt(java.lang.String alt) {
+        return (SearchAllIamPolicies) super.setAlt(alt);
+      }
+
+      @Override
+      public SearchAllIamPolicies setCallback(java.lang.String callback) {
+        return (SearchAllIamPolicies) super.setCallback(callback);
+      }
+
+      @Override
+      public SearchAllIamPolicies setFields(java.lang.String fields) {
+        return (SearchAllIamPolicies) super.setFields(fields);
+      }
+
+      @Override
+      public SearchAllIamPolicies setKey(java.lang.String key) {
+        return (SearchAllIamPolicies) super.setKey(key);
+      }
+
+      @Override
+      public SearchAllIamPolicies setOauthToken(java.lang.String oauthToken) {
+        return (SearchAllIamPolicies) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SearchAllIamPolicies setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SearchAllIamPolicies) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SearchAllIamPolicies setQuotaUser(java.lang.String quotaUser) {
+        return (SearchAllIamPolicies) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SearchAllIamPolicies setUploadType(java.lang.String uploadType) {
+        return (SearchAllIamPolicies) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SearchAllIamPolicies setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SearchAllIamPolicies) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. A scope can be a project, a folder, or an organization. The search is limited to
+       * the IAM policies within the `scope`. The caller must be granted the
+       * [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+       * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String scope;
+
+      /** Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
+     policies within the `scope`. The caller must be granted the
+     [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs/access-
+     control#required_permissions) permission on the desired scope. The allowed values are: *
+     projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+     organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       */
+      public java.lang.String getScope() {
+        return scope;
+      }
+
+      /**
+       * Required. A scope can be a project, a folder, or an organization. The search is limited to
+       * the IAM policies within the `scope`. The caller must be granted the
+       * [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+       * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       */
+      public SearchAllIamPolicies setScope(java.lang.String scope) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.scope = scope;
+        return this;
+      }
+
+      /**
+       * Optional. The page size for search result pagination. Page size is capped at 500 even if a
+       * larger value is given. If set to zero, server will pick an appropriate default. Returned
+       * results may be fewer than requested. When this happens, there could be more results as long
+       * as `next_page_token` is returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The page size for search result pagination. Page size is capped at 500 even if a larger
+     value is given. If set to zero, server will pick an appropriate default. Returned results may be
+     fewer than requested. When this happens, there could be more results as long as `next_page_token`
+     is returned.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The page size for search result pagination. Page size is capped at 500 even if a
+       * larger value is given. If set to zero, server will pick an appropriate default. Returned
+       * results may be fewer than requested. When this happens, there could be more results as long
+       * as `next_page_token` is returned.
+       */
+      public SearchAllIamPolicies setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. If present, retrieve the next batch of results from the preceding call to this
+       * method. `page_token` must be the value of `next_page_token` from the previous response. The
+       * values of all other method parameters must be identical to those in the previous call.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. If present, retrieve the next batch of results from the preceding call to this method.
+     `page_token` must be the value of `next_page_token` from the previous response. The values of all
+     other method parameters must be identical to those in the previous call.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. If present, retrieve the next batch of results from the preceding call to this
+       * method. `page_token` must be the value of `next_page_token` from the previous response. The
+       * values of all other method parameters must be identical to those in the previous call.
+       */
+      public SearchAllIamPolicies setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Optional. The query statement. See [how to construct a query](https://cloud.google.com
+       * /asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more
+       * information. If not specified or empty, it will search all the IAM policies within the
+       * specified `scope`. Examples: * `policy:amy@gmail.com` to find IAM policy bindings that
+       * specify user "amy@gmail.com". * `policy:roles/compute.admin` to find IAM policy bindings
+       * that specify the Compute Admin role. * `policy.role.permissions:storage.buckets.update` to
+       * find IAM policy bindings that specify a role containing "storage.buckets.update"
+       * permission. Note that if callers don't have `iam.roles.get` access to a role's included
+       * permissions, policy bindings that specify this role will be dropped from the search
+       * results. * `resource:organizations/123456` to find IAM policy bindings that are set on
+       * "organizations/123456". * `Important` to find IAM policy bindings that contain "Important"
+       * as a word in any of the searchable fields (except for the included permissions). * `*por*`
+       * to find IAM policy bindings that contain "por" as a substring in any of the searchable
+       * fields (except for the included permissions). * `resource:(instance1 OR instance2)
+       * policy:amy` to find IAM policy bindings that are set on resources "instance1" or
+       * "instance2" and also specify user "amy".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Optional. The query statement. See [how to construct a query](https://cloud.google.com/asset-
+     inventory/docs/searching-iam-policies#how_to_construct_a_query) for more information. If not
+     specified or empty, it will search all the IAM policies within the specified `scope`. Examples: *
+     `policy:amy@gmail.com` to find IAM policy bindings that specify user "amy@gmail.com". *
+     `policy:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin role. *
+     `policy.role.permissions:storage.buckets.update` to find IAM policy bindings that specify a role
+     containing "storage.buckets.update" permission. Note that if callers don't have `iam.roles.get`
+     access to a role's included permissions, policy bindings that specify this role will be dropped
+     from the search results. * `resource:organizations/123456` to find IAM policy bindings that are set
+     on "organizations/123456". * `Important` to find IAM policy bindings that contain "Important" as a
+     word in any of the searchable fields (except for the included permissions). * `*por*` to find IAM
+     policy bindings that contain "por" as a substring in any of the searchable fields (except for the
+     included permissions). * `resource:(instance1 OR instance2) policy:amy` to find IAM policy bindings
+     that are set on resources "instance1" or "instance2" and also specify user "amy".
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Optional. The query statement. See [how to construct a query](https://cloud.google.com
+       * /asset-inventory/docs/searching-iam-policies#how_to_construct_a_query) for more
+       * information. If not specified or empty, it will search all the IAM policies within the
+       * specified `scope`. Examples: * `policy:amy@gmail.com` to find IAM policy bindings that
+       * specify user "amy@gmail.com". * `policy:roles/compute.admin` to find IAM policy bindings
+       * that specify the Compute Admin role. * `policy.role.permissions:storage.buckets.update` to
+       * find IAM policy bindings that specify a role containing "storage.buckets.update"
+       * permission. Note that if callers don't have `iam.roles.get` access to a role's included
+       * permissions, policy bindings that specify this role will be dropped from the search
+       * results. * `resource:organizations/123456` to find IAM policy bindings that are set on
+       * "organizations/123456". * `Important` to find IAM policy bindings that contain "Important"
+       * as a word in any of the searchable fields (except for the included permissions). * `*por*`
+       * to find IAM policy bindings that contain "por" as a substring in any of the searchable
+       * fields (except for the included permissions). * `resource:(instance1 OR instance2)
+       * policy:amy` to find IAM policy bindings that are set on resources "instance1" or
+       * "instance2" and also specify user "amy".
+       */
+      public SearchAllIamPolicies setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      @Override
+      public SearchAllIamPolicies set(String parameterName, Object value) {
+        return (SearchAllIamPolicies) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Searches all Cloud resources within the specified scope, such as a project, folder, or
+     * organization. The caller must be granted the `cloudasset.assets.searchAllResources` permission on
+     * the desired scope, otherwise the request will be rejected.
+     *
+     * Create a request for the method "v1.searchAllResources".
+     *
+     * This request holds the parameters needed by the cloudasset server.  After setting any optional
+     * parameters, call the {@link SearchAllResources#execute()} method to invoke the remote operation.
+     *
+     * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the
+     *        resources within the `scope`. The caller must be granted the
+     *        [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+     *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+     * @return the request
+     */
+    public SearchAllResources searchAllResources(java.lang.String scope) throws java.io.IOException {
+      SearchAllResources result = new SearchAllResources(scope);
+      initialize(result);
+      return result;
+    }
+
+    public class SearchAllResources extends CloudAssetRequest<com.google.api.services.cloudasset.v1.model.SearchAllResourcesResponse> {
+
+      private static final String REST_PATH = "v1/{+scope}:searchAllResources";
+
+      private final java.util.regex.Pattern SCOPE_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
+
+      /**
+       * Searches all Cloud resources within the specified scope, such as a project, folder, or
+       * organization. The caller must be granted the `cloudasset.assets.searchAllResources` permission
+       * on the desired scope, otherwise the request will be rejected.
+       *
+       * Create a request for the method "v1.searchAllResources".
+       *
+       * This request holds the parameters needed by the the cloudasset server.  After setting any
+       * optional parameters, call the {@link SearchAllResources#execute()} method to invoke the remote
+       * operation. <p> {@link SearchAllResources#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the
+     *        resources within the `scope`. The caller must be granted the
+     *        [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
+     *        /access-control#required_permissions) permission on the desired scope. The allowed values
+     *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+     *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       * @since 1.13
+       */
+      protected SearchAllResources(java.lang.String scope) {
+        super(CloudAsset.this, "GET", REST_PATH, null, com.google.api.services.cloudasset.v1.model.SearchAllResourcesResponse.class);
+        this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public SearchAllResources set$Xgafv(java.lang.String $Xgafv) {
+        return (SearchAllResources) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SearchAllResources setAccessToken(java.lang.String accessToken) {
+        return (SearchAllResources) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SearchAllResources setAlt(java.lang.String alt) {
+        return (SearchAllResources) super.setAlt(alt);
+      }
+
+      @Override
+      public SearchAllResources setCallback(java.lang.String callback) {
+        return (SearchAllResources) super.setCallback(callback);
+      }
+
+      @Override
+      public SearchAllResources setFields(java.lang.String fields) {
+        return (SearchAllResources) super.setFields(fields);
+      }
+
+      @Override
+      public SearchAllResources setKey(java.lang.String key) {
+        return (SearchAllResources) super.setKey(key);
+      }
+
+      @Override
+      public SearchAllResources setOauthToken(java.lang.String oauthToken) {
+        return (SearchAllResources) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SearchAllResources setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SearchAllResources) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SearchAllResources setQuotaUser(java.lang.String quotaUser) {
+        return (SearchAllResources) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SearchAllResources setUploadType(java.lang.String uploadType) {
+        return (SearchAllResources) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SearchAllResources setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SearchAllResources) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. A scope can be a project, a folder, or an organization. The search is limited to
+       * the resources within the `scope`. The caller must be granted the
+       * [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+       * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String scope;
+
+      /** Required. A scope can be a project, a folder, or an organization. The search is limited to the
+     resources within the `scope`. The caller must be granted the
+     [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs/access-
+     control#required_permissions) permission on the desired scope. The allowed values are: *
+     projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+     "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+     organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       */
+      public java.lang.String getScope() {
+        return scope;
+      }
+
+      /**
+       * Required. A scope can be a project, a folder, or an organization. The search is limited to
+       * the resources within the `scope`. The caller must be granted the
+       * [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
+       * /access-control#required_permissions) permission on the desired scope. The allowed values
+       * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
+       * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+       */
+      public SearchAllResources setScope(java.lang.String scope) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+              "Parameter scope must conform to the pattern " +
+              "^[^/]+/[^/]+$");
+        }
+        this.scope = scope;
+        return this;
+      }
+
+      /**
+       * Optional. A list of asset types that this request searches for. If empty, it will search
+       * all the [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-
+       * asset-types#searchable_asset_types).
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> assetTypes;
+
+      /** Optional. A list of asset types that this request searches for. If empty, it will search all the
+     [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+     types#searchable_asset_types).
+       */
+      public java.util.List<java.lang.String> getAssetTypes() {
+        return assetTypes;
+      }
+
+      /**
+       * Optional. A list of asset types that this request searches for. If empty, it will search
+       * all the [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-
+       * asset-types#searchable_asset_types).
+       */
+      public SearchAllResources setAssetTypes(java.util.List<java.lang.String> assetTypes) {
+        this.assetTypes = assetTypes;
+        return this;
+      }
+
+      /**
+       * Optional. A comma separated list of fields specifying the sorting order of the results. The
+       * default order is ascending. Add " DESC" after the field name to indicate descending order.
+       * Redundant space characters are ignored. Example: "location DESC, name". Only string fields
+       * in the response are sortable, including `name`, `displayName`, `description`, `location`.
+       * All the other fields such as repeated fields (e.g., `networkTags`), map fields (e.g.,
+       * `labels`) and struct fields (e.g., `additionalAttributes`) are not supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Optional. A comma separated list of fields specifying the sorting order of the results. The default
+     order is ascending. Add " DESC" after the field name to indicate descending order. Redundant space
+     characters are ignored. Example: "location DESC, name". Only string fields in the response are
+     sortable, including `name`, `displayName`, `description`, `location`. All the other fields such as
+     repeated fields (e.g., `networkTags`), map fields (e.g., `labels`) and struct fields (e.g.,
+     `additionalAttributes`) are not supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Optional. A comma separated list of fields specifying the sorting order of the results. The
+       * default order is ascending. Add " DESC" after the field name to indicate descending order.
+       * Redundant space characters are ignored. Example: "location DESC, name". Only string fields
+       * in the response are sortable, including `name`, `displayName`, `description`, `location`.
+       * All the other fields such as repeated fields (e.g., `networkTags`), map fields (e.g.,
+       * `labels`) and struct fields (e.g., `additionalAttributes`) are not supported.
+       */
+      public SearchAllResources setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Optional. The page size for search result pagination. Page size is capped at 500 even if a
+       * larger value is given. If set to zero, server will pick an appropriate default. Returned
+       * results may be fewer than requested. When this happens, there could be more results as long
+       * as `next_page_token` is returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The page size for search result pagination. Page size is capped at 500 even if a larger
+     value is given. If set to zero, server will pick an appropriate default. Returned results may be
+     fewer than requested. When this happens, there could be more results as long as `next_page_token`
+     is returned.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The page size for search result pagination. Page size is capped at 500 even if a
+       * larger value is given. If set to zero, server will pick an appropriate default. Returned
+       * results may be fewer than requested. When this happens, there could be more results as long
+       * as `next_page_token` is returned.
+       */
+      public SearchAllResources setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. If present, then retrieve the next batch of results from the preceding call to
+       * this method. `page_token` must be the value of `next_page_token` from the previous
+       * response. The values of all other method parameters, must be identical to those in the
+       * previous call.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. If present, then retrieve the next batch of results from the preceding call to this
+     method. `page_token` must be the value of `next_page_token` from the previous response. The values
+     of all other method parameters, must be identical to those in the previous call.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. If present, then retrieve the next batch of results from the preceding call to
+       * this method. `page_token` must be the value of `next_page_token` from the previous
+       * response. The values of all other method parameters, must be identical to those in the
+       * previous call.
+       */
+      public SearchAllResources setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Optional. The query statement. See [how to construct a query](http://cloud.google.com
+       * /asset-inventory/docs/searching-resources#how_to_construct_a_query) for more information.
+       * If not specified or empty, it will search all the resources within the specified `scope`.
+       * Note that the query string is compared against each Cloud IAM policy binding, including its
+       * members, roles, and Cloud IAM conditions. The returned Cloud IAM policies will only contain
+       * the bindings that match your query. To learn more about the IAM policy structure, see [IAM
+       * policy doc](https://cloud.google.com/iam/docs/policies#structure). Examples: *
+       * `name:Important` to find Cloud resources whose name contains "Important" as a word. *
+       * `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a
+       * prefix. * `description:*por*` to find Cloud resources whose description contains "por" as a
+       * substring. * `location:us-west*` to find Cloud resources whose location is prefixed with
+       * "us-west". * `labels:prod` to find Cloud resources whose labels contain "prod" as a key or
+       * value. * `labels.env:prod` to find Cloud resources that have a label "env" and its value is
+       * "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `Important` to
+       * find Cloud resources that contain "Important" as a word in any of the searchable fields. *
+       * `Impor*` to find Cloud resources that contain "Impor" as a prefix in any of the searchable
+       * fields. * `*por*` to find Cloud resources that contain "por" as a substring in any of the
+       * searchable fields. * `Important location:(us-west1 OR global)` to find Cloud resources that
+       * contain "Important" as a word in any of the searchable fields and are also located in the
+       * "us-west1" region or the "global" location.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Optional. The query statement. See [how to construct a query](http://cloud.google.com/asset-
+     inventory/docs/searching-resources#how_to_construct_a_query) for more information. If not specified
+     or empty, it will search all the resources within the specified `scope`. Note that the query string
+     is compared against each Cloud IAM policy binding, including its members, roles, and Cloud IAM
+     conditions. The returned Cloud IAM policies will only contain the bindings that match your query.
+     To learn more about the IAM policy structure, see [IAM policy
+     doc](https://cloud.google.com/iam/docs/policies#structure). Examples: * `name:Important` to find
+     Cloud resources whose name contains "Important" as a word. * `displayName:Impor*` to find Cloud
+     resources whose display name contains "Impor" as a prefix. * `description:*por*` to find Cloud
+     resources whose description contains "por" as a substring. * `location:us-west*` to find Cloud
+     resources whose location is prefixed with "us-west". * `labels:prod` to find Cloud resources whose
+     labels contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources that have a
+     label "env" and its value is "prod". * `labels.env:*` to find Cloud resources that have a label
+     "env". * `Important` to find Cloud resources that contain "Important" as a word in any of the
+     searchable fields. * `Impor*` to find Cloud resources that contain "Impor" as a prefix in any of
+     the searchable fields. * `*por*` to find Cloud resources that contain "por" as a substring in any
+     of the searchable fields. * `Important location:(us-west1 OR global)` to find Cloud resources that
+     contain "Important" as a word in any of the searchable fields and are also located in the "us-
+     west1" region or the "global" location.
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Optional. The query statement. See [how to construct a query](http://cloud.google.com
+       * /asset-inventory/docs/searching-resources#how_to_construct_a_query) for more information.
+       * If not specified or empty, it will search all the resources within the specified `scope`.
+       * Note that the query string is compared against each Cloud IAM policy binding, including its
+       * members, roles, and Cloud IAM conditions. The returned Cloud IAM policies will only contain
+       * the bindings that match your query. To learn more about the IAM policy structure, see [IAM
+       * policy doc](https://cloud.google.com/iam/docs/policies#structure). Examples: *
+       * `name:Important` to find Cloud resources whose name contains "Important" as a word. *
+       * `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a
+       * prefix. * `description:*por*` to find Cloud resources whose description contains "por" as a
+       * substring. * `location:us-west*` to find Cloud resources whose location is prefixed with
+       * "us-west". * `labels:prod` to find Cloud resources whose labels contain "prod" as a key or
+       * value. * `labels.env:prod` to find Cloud resources that have a label "env" and its value is
+       * "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `Important` to
+       * find Cloud resources that contain "Important" as a word in any of the searchable fields. *
+       * `Impor*` to find Cloud resources that contain "Impor" as a prefix in any of the searchable
+       * fields. * `*por*` to find Cloud resources that contain "por" as a substring in any of the
+       * searchable fields. * `Important location:(us-west1 OR global)` to find Cloud resources that
+       * contain "Important" as a word in any of the searchable fields and are also located in the
+       * "us-west1" region or the "global" location.
+       */
+      public SearchAllResources setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      @Override
+      public SearchAllResources set(String parameterName, Object value) {
+        return (SearchAllResources) super.set(parameterName, value);
       }
     }
 

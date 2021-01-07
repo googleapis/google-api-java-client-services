@@ -20,8 +20,7 @@ package com.google.api.services.cloudtrace.v2beta1;
  * Service definition for CloudTrace (v2beta1).
  *
  * <p>
- * Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Cloud Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus.
-
+ * Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Cloud Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Trace API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Trace API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -164,19 +163,17 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
     public class TraceSinks {
 
       /**
-       * Creates a sink that exports trace spans to a destination.  The export of newly-ingested traces
+       * Creates a sink that exports trace spans to a destination. The export of newly-ingested traces
        * begins immediately, unless the sink's `writer_identity` is not permitted to write to the
-       * destination.  A sink can export traces only from the resource owning the sink (the 'parent').
+       * destination. A sink can export traces only from the resource owning the sink (the 'parent').
        *
        * Create a request for the method "traceSinks.create".
        *
        * This request holds the parameters needed by the cloudtrace server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource in which to create the sink (currently only project
-      sinks are supported):
-       *        "projects/[PROJECT_ID]"
-      Examples: `"projects/my-trace-project"`, `"projects/123456789"`.
+       * @param parent Required. The resource in which to create the sink (currently only project sinks are supported):
+       *        "projects/[PROJECT_ID]" Examples: `"projects/my-trace-project"`, `"projects/123456789"`.
        * @param content the {@link com.google.api.services.cloudtrace.v2beta1.model.TraceSink}
        * @return the request
        */
@@ -194,9 +191,9 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a sink that exports trace spans to a destination.  The export of newly-ingested traces
+         * Creates a sink that exports trace spans to a destination. The export of newly-ingested traces
          * begins immediately, unless the sink's `writer_identity` is not permitted to write to the
-         * destination.  A sink can export traces only from the resource owning the sink (the 'parent').
+         * destination. A sink can export traces only from the resource owning the sink (the 'parent').
          *
          * Create a request for the method "traceSinks.create".
          *
@@ -206,10 +203,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource in which to create the sink (currently only project
-      sinks are supported):
-       *        "projects/[PROJECT_ID]"
-      Examples: `"projects/my-trace-project"`, `"projects/123456789"`.
+         * @param parent Required. The resource in which to create the sink (currently only project sinks are supported):
+       *        "projects/[PROJECT_ID]" Examples: `"projects/my-trace-project"`, `"projects/123456789"`.
          * @param content the {@link com.google.api.services.cloudtrace.v2beta1.model.TraceSink}
          * @since 1.13
          */
@@ -280,20 +275,14 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. The resource in which to create the sink (currently only project sinks are
-         * supported):
-         *
-         * "projects/[PROJECT_ID]"
-         *
-         * Examples: `"projects/my-trace-project"`, `"projects/123456789"`.
+         * supported): "projects/[PROJECT_ID]" Examples: `"projects/my-trace-project"`,
+         * `"projects/123456789"`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The resource in which to create the sink (currently only project sinks are supported):
-
-       "projects/[PROJECT_ID]"
-
-       Examples: `"projects/my-trace-project"`, `"projects/123456789"`.
+       "projects/[PROJECT_ID]" Examples: `"projects/my-trace-project"`, `"projects/123456789"`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -301,11 +290,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. The resource in which to create the sink (currently only project sinks are
-         * supported):
-         *
-         * "projects/[PROJECT_ID]"
-         *
-         * Examples: `"projects/my-trace-project"`, `"projects/123456789"`.
+         * supported): "projects/[PROJECT_ID]" Examples: `"projects/my-trace-project"`,
+         * `"projects/123456789"`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -330,11 +316,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudtrace server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The full resource name of the sink to delete, including the
-      parent resource and the sink
-       *        identifier:
-          "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-      Example:
+       * @param name Required. The full resource name of the sink to delete, including the parent resource and the sink
+       *        identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
        *        `"projects/12345/traceSinks/my-sink-id"`.
        * @return the request
        */
@@ -362,11 +345,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The full resource name of the sink to delete, including the
-      parent resource and the sink
-       *        identifier:
-          "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-      Example:
+         * @param name Required. The full resource name of the sink to delete, including the parent resource and the sink
+       *        identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
        *        `"projects/12345/traceSinks/my-sink-id"`.
          * @since 1.13
          */
@@ -437,21 +417,15 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. The full resource name of the sink to delete, including the parent resource and
-         * the sink identifier:
-         *
-         * "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-         *
-         * Example: `"projects/12345/traceSinks/my-sink-id"`.
+         * the sink identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
+         * `"projects/12345/traceSinks/my-sink-id"`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The full resource name of the sink to delete, including the parent resource and the sink
-       identifier:
-
-       "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-
-       Example: `"projects/12345/traceSinks/my-sink-id"`.
+       identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example: `"projects/12345/traceSinks
+       /my-sink-id"`.
          */
         public java.lang.String getName() {
           return name;
@@ -459,11 +433,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. The full resource name of the sink to delete, including the parent resource and
-         * the sink identifier:
-         *
-         * "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-         *
-         * Example: `"projects/12345/traceSinks/my-sink-id"`.
+         * the sink identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
+         * `"projects/12345/traceSinks/my-sink-id"`.
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -488,9 +459,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudtrace server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the sink:
-          "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-       *        Example: `"projects/12345/traceSinks/my-sink-id"`.
+       * @param name Required. The resource name of the sink: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
+       *        `"projects/12345/traceSinks/my-sink-id"`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -516,9 +486,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the sink:
-          "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-       *        Example: `"projects/12345/traceSinks/my-sink-id"`.
+         * @param name Required. The resource name of the sink: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
+       *        `"projects/12345/traceSinks/my-sink-id"`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -597,30 +566,21 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The resource name of the sink:
-         *
-         * "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-         *
+         * Required. The resource name of the sink: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
          * Example: `"projects/12345/traceSinks/my-sink-id"`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the sink:
-
-       "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-
-       Example: `"projects/12345/traceSinks/my-sink-id"`.
+        /** Required. The resource name of the sink: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
+       `"projects/12345/traceSinks/my-sink-id"`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The resource name of the sink:
-         *
-         * "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-         *
+         * Required. The resource name of the sink: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
          * Example: `"projects/12345/traceSinks/my-sink-id"`.
          */
         public Get setName(java.lang.String name) {
@@ -646,10 +606,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudtrace server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource whose sinks are to be listed (currently only
-      project parent resources
-       *        are supported):
-          "projects/[PROJECT_ID]"
+       * @param parent Required. The parent resource whose sinks are to be listed (currently only project parent resources
+       *        are supported): "projects/[PROJECT_ID]"
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -675,10 +633,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource whose sinks are to be listed (currently only
-      project parent resources
-       *        are supported):
-          "projects/[PROJECT_ID]"
+         * @param parent Required. The parent resource whose sinks are to be listed (currently only project parent resources
+       *        are supported): "projects/[PROJECT_ID]"
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -758,17 +714,13 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. The parent resource whose sinks are to be listed (currently only project parent
-         * resources are supported):
-         *
-         * "projects/[PROJECT_ID]"
+         * resources are supported): "projects/[PROJECT_ID]"
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The parent resource whose sinks are to be listed (currently only project parent resources
-       are supported):
-
-       "projects/[PROJECT_ID]"
+       are supported): "projects/[PROJECT_ID]"
          */
         public java.lang.String getParent() {
           return parent;
@@ -776,9 +728,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. The parent resource whose sinks are to be listed (currently only project parent
-         * resources are supported):
-         *
-         * "projects/[PROJECT_ID]"
+         * resources are supported): "projects/[PROJECT_ID]"
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -792,14 +742,14 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The maximum number of results to return from this request. Non-positive values
-         * are ignored.  The presence of `nextPageToken` in the response indicates that more results
+         * are ignored. The presence of `nextPageToken` in the response indicates that more results
          * might be available.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The maximum number of results to return from this request. Non-positive values are
-       ignored.  The presence of `nextPageToken` in the response indicates that more results might be
+       ignored. The presence of `nextPageToken` in the response indicates that more results might be
        available.
          */
         public java.lang.Integer getPageSize() {
@@ -808,7 +758,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The maximum number of results to return from this request. Non-positive values
-         * are ignored.  The presence of `nextPageToken` in the response indicates that more results
+         * are ignored. The presence of `nextPageToken` in the response indicates that more results
          * might be available.
          */
         public List setPageSize(java.lang.Integer pageSize) {
@@ -818,16 +768,15 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. If present, then retrieve the next batch of results from the preceding call to
-         * this method.  `pageToken` must be the value of `nextPageToken` from the previous
-         * response.  The values of other method parameters should be identical to those in the
-         * previous call.
+         * this method. `pageToken` must be the value of `nextPageToken` from the previous response.
+         * The values of other method parameters should be identical to those in the previous call.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** Optional. If present, then retrieve the next batch of results from the preceding call to this
-       method.  `pageToken` must be the value of `nextPageToken` from the previous response.  The values
-       of other method parameters should be identical to those in the previous call.
+       method. `pageToken` must be the value of `nextPageToken` from the previous response. The values of
+       other method parameters should be identical to those in the previous call.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -835,9 +784,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. If present, then retrieve the next batch of results from the preceding call to
-         * this method.  `pageToken` must be the value of `nextPageToken` from the previous
-         * response.  The values of other method parameters should be identical to those in the
-         * previous call.
+         * this method. `pageToken` must be the value of `nextPageToken` from the previous response.
+         * The values of other method parameters should be identical to those in the previous call.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -850,7 +798,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Updates a sink.  This method updates fields in the existing sink according to the provided update
+       * Updates a sink. This method updates fields in the existing sink according to the provided update
        * mask. The sink's name cannot be changed nor any output-only fields (e.g. the writer_identity).
        *
        * Create a request for the method "traceSinks.patch".
@@ -858,11 +806,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudtrace server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The full resource name of the sink to update, including the
-      parent resource and the sink
-       *        identifier:
-          "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-      Example:
+       * @param name Required. The full resource name of the sink to update, including the parent resource and the sink
+       *        identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
        *        `"projects/12345/traceSinks/my-sink-id"`.
        * @param content the {@link com.google.api.services.cloudtrace.v2beta1.model.TraceSink}
        * @return the request
@@ -881,7 +826,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/traceSinks/[^/]+$");
 
         /**
-         * Updates a sink.  This method updates fields in the existing sink according to the provided
+         * Updates a sink. This method updates fields in the existing sink according to the provided
          * update mask. The sink's name cannot be changed nor any output-only fields (e.g. the
          * writer_identity).
          *
@@ -893,11 +838,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The full resource name of the sink to update, including the
-      parent resource and the sink
-       *        identifier:
-          "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-      Example:
+         * @param name Required. The full resource name of the sink to update, including the parent resource and the sink
+       *        identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
        *        `"projects/12345/traceSinks/my-sink-id"`.
          * @param content the {@link com.google.api.services.cloudtrace.v2beta1.model.TraceSink}
          * @since 1.13
@@ -969,21 +911,15 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. The full resource name of the sink to update, including the parent resource and
-         * the sink identifier:
-         *
-         * "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-         *
-         * Example: `"projects/12345/traceSinks/my-sink-id"`.
+         * the sink identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
+         * `"projects/12345/traceSinks/my-sink-id"`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The full resource name of the sink to update, including the parent resource and the sink
-       identifier:
-
-       "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-
-       Example: `"projects/12345/traceSinks/my-sink-id"`.
+       identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example: `"projects/12345/traceSinks
+       /my-sink-id"`.
          */
         public java.lang.String getName() {
           return name;
@@ -991,11 +927,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. The full resource name of the sink to update, including the parent resource and
-         * the sink identifier:
-         *
-         * "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]"
-         *
-         * Example: `"projects/12345/traceSinks/my-sink-id"`.
+         * the sink identifier: "projects/[PROJECT_NUMBER]/traceSinks/[SINK_ID]" Example:
+         * `"projects/12345/traceSinks/my-sink-id"`.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1009,29 +942,19 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. Field mask that specifies the fields in `trace_sink` that are to be updated. A
-         * sink field is overwritten if, and only if, it is in the update mask.  `name` and
-         * `writer_identity` fields cannot be updated.
-         *
-         * An empty updateMask is considered an error.
-         *
+         * sink field is overwritten if, and only if, it is in the update mask. `name` and
+         * `writer_identity` fields cannot be updated. An empty updateMask is considered an error.
          * For a detailed `FieldMask` definition, see https://developers.google.com/protocol-
-         * buffers/docs/reference/google.protobuf#fieldmask
-         *
-         * Example: `updateMask=output_config`.
+         * buffers/docs/reference/google.protobuf#fieldmask Example: `updateMask=output_config`.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Required. Field mask that specifies the fields in `trace_sink` that are to be updated. A sink field
-       is overwritten if, and only if, it is in the update mask.  `name` and `writer_identity` fields
-       cannot be updated.
-
-       An empty updateMask is considered an error.
-
-       For a detailed `FieldMask` definition, see https://developers.google.com/protocol-
-       buffers/docs/reference/google.protobuf#fieldmask
-
-       Example: `updateMask=output_config`.
+       is overwritten if, and only if, it is in the update mask. `name` and `writer_identity` fields
+       cannot be updated. An empty updateMask is considered an error. For a detailed `FieldMask`
+       definition, see https://developers.google.com/protocol-
+       buffers/docs/reference/google.protobuf#fieldmask Example: `updateMask=output_config`.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -1039,15 +962,10 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Required. Field mask that specifies the fields in `trace_sink` that are to be updated. A
-         * sink field is overwritten if, and only if, it is in the update mask.  `name` and
-         * `writer_identity` fields cannot be updated.
-         *
-         * An empty updateMask is considered an error.
-         *
+         * sink field is overwritten if, and only if, it is in the update mask. `name` and
+         * `writer_identity` fields cannot be updated. An empty updateMask is considered an error.
          * For a detailed `FieldMask` definition, see https://developers.google.com/protocol-
-         * buffers/docs/reference/google.protobuf#fieldmask
-         *
-         * Example: `updateMask=output_config`.
+         * buffers/docs/reference/google.protobuf#fieldmask Example: `updateMask=output_config`.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

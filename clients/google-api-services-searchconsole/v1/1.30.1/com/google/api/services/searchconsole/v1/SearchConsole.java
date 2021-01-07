@@ -20,7 +20,7 @@ package com.google.api.services.searchconsole.v1;
  * Service definition for SearchConsole (v1).
  *
  * <p>
- * Provides tools for running validation tests against single URLs
+ * The Search Console API provides access to both Search Console data (verified users only) and to public information on an URL basis (anyone)
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class SearchConsole extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Search Console URL Testing Tools API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Google Search Console API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -120,6 +120,1242 @@ public class SearchConsole extends com.google.api.client.googleapis.services.jso
   @Override
   protected void initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest<?> httpClientRequest) throws java.io.IOException {
     super.initialize(httpClientRequest);
+  }
+
+  /**
+   * An accessor for creating requests from the Searchanalytics collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SearchConsole searchconsole = new SearchConsole(...);}
+   *   {@code SearchConsole.Searchanalytics.List request = searchconsole.searchanalytics().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Searchanalytics searchanalytics() {
+    return new Searchanalytics();
+  }
+
+  /**
+   * The "searchanalytics" collection of methods.
+   */
+  public class Searchanalytics {
+
+    /**
+     * Query your data with filters and parameters that you define. Returns zero or more rows grouped by
+     * the row keys that you define. You must define a date range of one or more days. When date is one
+     * of the group by values, any days without data are omitted from the result list. If you need to
+     * know which days have data, issue a broad date range query grouped by date for any metric, and see
+     * which day rows are returned.
+     *
+     * Create a request for the method "searchanalytics.query".
+     *
+     * This request holds the parameters needed by the searchconsole server.  After setting any optional
+     * parameters, call the {@link Query#execute()} method to invoke the remote operation.
+     *
+     * @param siteUrl The site's URL, including protocol. For example: `http://www.example.com/`.
+     * @param content the {@link com.google.api.services.searchconsole.v1.model.SearchAnalyticsQueryRequest}
+     * @return the request
+     */
+    public Query query(java.lang.String siteUrl, com.google.api.services.searchconsole.v1.model.SearchAnalyticsQueryRequest content) throws java.io.IOException {
+      Query result = new Query(siteUrl, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Query extends SearchConsoleRequest<com.google.api.services.searchconsole.v1.model.SearchAnalyticsQueryResponse> {
+
+      private static final String REST_PATH = "webmasters/v3/sites/{siteUrl}/searchAnalytics/query";
+
+      /**
+       * Query your data with filters and parameters that you define. Returns zero or more rows grouped
+       * by the row keys that you define. You must define a date range of one or more days. When date is
+       * one of the group by values, any days without data are omitted from the result list. If you need
+       * to know which days have data, issue a broad date range query grouped by date for any metric,
+       * and see which day rows are returned.
+       *
+       * Create a request for the method "searchanalytics.query".
+       *
+       * This request holds the parameters needed by the the searchconsole server.  After setting any
+       * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param siteUrl The site's URL, including protocol. For example: `http://www.example.com/`.
+       * @param content the {@link com.google.api.services.searchconsole.v1.model.SearchAnalyticsQueryRequest}
+       * @since 1.13
+       */
+      protected Query(java.lang.String siteUrl, com.google.api.services.searchconsole.v1.model.SearchAnalyticsQueryRequest content) {
+        super(SearchConsole.this, "POST", REST_PATH, content, com.google.api.services.searchconsole.v1.model.SearchAnalyticsQueryResponse.class);
+        this.siteUrl = com.google.api.client.util.Preconditions.checkNotNull(siteUrl, "Required parameter siteUrl must be specified.");
+      }
+
+      @Override
+      public Query set$Xgafv(java.lang.String $Xgafv) {
+        return (Query) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Query setAccessToken(java.lang.String accessToken) {
+        return (Query) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Query setAlt(java.lang.String alt) {
+        return (Query) super.setAlt(alt);
+      }
+
+      @Override
+      public Query setCallback(java.lang.String callback) {
+        return (Query) super.setCallback(callback);
+      }
+
+      @Override
+      public Query setFields(java.lang.String fields) {
+        return (Query) super.setFields(fields);
+      }
+
+      @Override
+      public Query setKey(java.lang.String key) {
+        return (Query) super.setKey(key);
+      }
+
+      @Override
+      public Query setOauthToken(java.lang.String oauthToken) {
+        return (Query) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Query) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Query setQuotaUser(java.lang.String quotaUser) {
+        return (Query) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Query setUploadType(java.lang.String uploadType) {
+        return (Query) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Query setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Query) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`. */
+      @com.google.api.client.util.Key
+      private java.lang.String siteUrl;
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`.
+       */
+      public java.lang.String getSiteUrl() {
+        return siteUrl;
+      }
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`. */
+      public Query setSiteUrl(java.lang.String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+      }
+
+      @Override
+      public Query set(String parameterName, Object value) {
+        return (Query) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Sitemaps collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SearchConsole searchconsole = new SearchConsole(...);}
+   *   {@code SearchConsole.Sitemaps.List request = searchconsole.sitemaps().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Sitemaps sitemaps() {
+    return new Sitemaps();
+  }
+
+  /**
+   * The "sitemaps" collection of methods.
+   */
+  public class Sitemaps {
+
+    /**
+     * Deletes a sitemap from this site.
+     *
+     * Create a request for the method "sitemaps.delete".
+     *
+     * This request holds the parameters needed by the searchconsole server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param siteUrl The site's URL, including protocol. For example: `http://www.example.com/`.
+     * @param feedpath The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+     * @return the request
+     */
+    public Delete delete(java.lang.String siteUrl, java.lang.String feedpath) throws java.io.IOException {
+      Delete result = new Delete(siteUrl, feedpath);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends SearchConsoleRequest<Void> {
+
+      private static final String REST_PATH = "webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}";
+
+      /**
+       * Deletes a sitemap from this site.
+       *
+       * Create a request for the method "sitemaps.delete".
+       *
+       * This request holds the parameters needed by the the searchconsole server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param siteUrl The site's URL, including protocol. For example: `http://www.example.com/`.
+       * @param feedpath The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String siteUrl, java.lang.String feedpath) {
+        super(SearchConsole.this, "DELETE", REST_PATH, null, Void.class);
+        this.siteUrl = com.google.api.client.util.Preconditions.checkNotNull(siteUrl, "Required parameter siteUrl must be specified.");
+        this.feedpath = com.google.api.client.util.Preconditions.checkNotNull(feedpath, "Required parameter feedpath must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`. */
+      @com.google.api.client.util.Key
+      private java.lang.String siteUrl;
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`.
+       */
+      public java.lang.String getSiteUrl() {
+        return siteUrl;
+      }
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`. */
+      public Delete setSiteUrl(java.lang.String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+      }
+
+      /** The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`. */
+      @com.google.api.client.util.Key
+      private java.lang.String feedpath;
+
+      /** The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+       */
+      public java.lang.String getFeedpath() {
+        return feedpath;
+      }
+
+      /** The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`. */
+      public Delete setFeedpath(java.lang.String feedpath) {
+        this.feedpath = feedpath;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves information about a specific sitemap.
+     *
+     * Create a request for the method "sitemaps.get".
+     *
+     * This request holds the parameters needed by the searchconsole server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param siteUrl The site's URL, including protocol. For example: `http://www.example.com/`.
+     * @param feedpath The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+     * @return the request
+     */
+    public Get get(java.lang.String siteUrl, java.lang.String feedpath) throws java.io.IOException {
+      Get result = new Get(siteUrl, feedpath);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends SearchConsoleRequest<com.google.api.services.searchconsole.v1.model.WmxSitemap> {
+
+      private static final String REST_PATH = "webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}";
+
+      /**
+       * Retrieves information about a specific sitemap.
+       *
+       * Create a request for the method "sitemaps.get".
+       *
+       * This request holds the parameters needed by the the searchconsole server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param siteUrl The site's URL, including protocol. For example: `http://www.example.com/`.
+       * @param feedpath The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+       * @since 1.13
+       */
+      protected Get(java.lang.String siteUrl, java.lang.String feedpath) {
+        super(SearchConsole.this, "GET", REST_PATH, null, com.google.api.services.searchconsole.v1.model.WmxSitemap.class);
+        this.siteUrl = com.google.api.client.util.Preconditions.checkNotNull(siteUrl, "Required parameter siteUrl must be specified.");
+        this.feedpath = com.google.api.client.util.Preconditions.checkNotNull(feedpath, "Required parameter feedpath must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`. */
+      @com.google.api.client.util.Key
+      private java.lang.String siteUrl;
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`.
+       */
+      public java.lang.String getSiteUrl() {
+        return siteUrl;
+      }
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`. */
+      public Get setSiteUrl(java.lang.String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+      }
+
+      /** The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`. */
+      @com.google.api.client.util.Key
+      private java.lang.String feedpath;
+
+      /** The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+       */
+      public java.lang.String getFeedpath() {
+        return feedpath;
+      }
+
+      /** The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`. */
+      public Get setFeedpath(java.lang.String feedpath) {
+        this.feedpath = feedpath;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the [sitemaps-entries](/webmaster-tools/v3/sitemaps) submitted for this site, or included
+     * in the sitemap index file (if `sitemapIndex` is specified in the request).
+     *
+     * Create a request for the method "sitemaps.list".
+     *
+     * This request holds the parameters needed by the searchconsole server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param siteUrl The site's URL, including protocol. For example: `http://www.example.com/`.
+     * @return the request
+     */
+    public List list(java.lang.String siteUrl) throws java.io.IOException {
+      List result = new List(siteUrl);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends SearchConsoleRequest<com.google.api.services.searchconsole.v1.model.SitemapsListResponse> {
+
+      private static final String REST_PATH = "webmasters/v3/sites/{siteUrl}/sitemaps";
+
+      /**
+       * Lists the [sitemaps-entries](/webmaster-tools/v3/sitemaps) submitted for this site, or included
+       * in the sitemap index file (if `sitemapIndex` is specified in the request).
+       *
+       * Create a request for the method "sitemaps.list".
+       *
+       * This request holds the parameters needed by the the searchconsole server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param siteUrl The site's URL, including protocol. For example: `http://www.example.com/`.
+       * @since 1.13
+       */
+      protected List(java.lang.String siteUrl) {
+        super(SearchConsole.this, "GET", REST_PATH, null, com.google.api.services.searchconsole.v1.model.SitemapsListResponse.class);
+        this.siteUrl = com.google.api.client.util.Preconditions.checkNotNull(siteUrl, "Required parameter siteUrl must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`. */
+      @com.google.api.client.util.Key
+      private java.lang.String siteUrl;
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`.
+       */
+      public java.lang.String getSiteUrl() {
+        return siteUrl;
+      }
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`. */
+      public List setSiteUrl(java.lang.String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+      }
+
+      /**
+       * A URL of a site's sitemap index. For example: `http://www.example.com/sitemapindex.xml`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String sitemapIndex;
+
+      /**  A URL of a site's sitemap index. For example: `http://www.example.com/sitemapindex.xml`.
+       */
+      public java.lang.String getSitemapIndex() {
+        return sitemapIndex;
+      }
+
+      /**
+       * A URL of a site's sitemap index. For example: `http://www.example.com/sitemapindex.xml`.
+       */
+      public List setSitemapIndex(java.lang.String sitemapIndex) {
+        this.sitemapIndex = sitemapIndex;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Submits a sitemap for a site.
+     *
+     * Create a request for the method "sitemaps.submit".
+     *
+     * This request holds the parameters needed by the searchconsole server.  After setting any optional
+     * parameters, call the {@link Submit#execute()} method to invoke the remote operation.
+     *
+     * @param siteUrl The site's URL, including protocol. For example: `http://www.example.com/`.
+     * @param feedpath The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+     * @return the request
+     */
+    public Submit submit(java.lang.String siteUrl, java.lang.String feedpath) throws java.io.IOException {
+      Submit result = new Submit(siteUrl, feedpath);
+      initialize(result);
+      return result;
+    }
+
+    public class Submit extends SearchConsoleRequest<Void> {
+
+      private static final String REST_PATH = "webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}";
+
+      /**
+       * Submits a sitemap for a site.
+       *
+       * Create a request for the method "sitemaps.submit".
+       *
+       * This request holds the parameters needed by the the searchconsole server.  After setting any
+       * optional parameters, call the {@link Submit#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Submit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param siteUrl The site's URL, including protocol. For example: `http://www.example.com/`.
+       * @param feedpath The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+       * @since 1.13
+       */
+      protected Submit(java.lang.String siteUrl, java.lang.String feedpath) {
+        super(SearchConsole.this, "PUT", REST_PATH, null, Void.class);
+        this.siteUrl = com.google.api.client.util.Preconditions.checkNotNull(siteUrl, "Required parameter siteUrl must be specified.");
+        this.feedpath = com.google.api.client.util.Preconditions.checkNotNull(feedpath, "Required parameter feedpath must be specified.");
+      }
+
+      @Override
+      public Submit set$Xgafv(java.lang.String $Xgafv) {
+        return (Submit) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Submit setAccessToken(java.lang.String accessToken) {
+        return (Submit) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Submit setAlt(java.lang.String alt) {
+        return (Submit) super.setAlt(alt);
+      }
+
+      @Override
+      public Submit setCallback(java.lang.String callback) {
+        return (Submit) super.setCallback(callback);
+      }
+
+      @Override
+      public Submit setFields(java.lang.String fields) {
+        return (Submit) super.setFields(fields);
+      }
+
+      @Override
+      public Submit setKey(java.lang.String key) {
+        return (Submit) super.setKey(key);
+      }
+
+      @Override
+      public Submit setOauthToken(java.lang.String oauthToken) {
+        return (Submit) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Submit setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Submit) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Submit setQuotaUser(java.lang.String quotaUser) {
+        return (Submit) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Submit setUploadType(java.lang.String uploadType) {
+        return (Submit) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Submit setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Submit) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`. */
+      @com.google.api.client.util.Key
+      private java.lang.String siteUrl;
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`.
+       */
+      public java.lang.String getSiteUrl() {
+        return siteUrl;
+      }
+
+      /** The site's URL, including protocol. For example: `http://www.example.com/`. */
+      public Submit setSiteUrl(java.lang.String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+      }
+
+      /** The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`. */
+      @com.google.api.client.util.Key
+      private java.lang.String feedpath;
+
+      /** The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+       */
+      public java.lang.String getFeedpath() {
+        return feedpath;
+      }
+
+      /** The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`. */
+      public Submit setFeedpath(java.lang.String feedpath) {
+        this.feedpath = feedpath;
+        return this;
+      }
+
+      @Override
+      public Submit set(String parameterName, Object value) {
+        return (Submit) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Sites collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SearchConsole searchconsole = new SearchConsole(...);}
+   *   {@code SearchConsole.Sites.List request = searchconsole.sites().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Sites sites() {
+    return new Sites();
+  }
+
+  /**
+   * The "sites" collection of methods.
+   */
+  public class Sites {
+
+    /**
+     * Adds a site to the set of the user's sites in Search Console.
+     *
+     * Create a request for the method "sites.add".
+     *
+     * This request holds the parameters needed by the searchconsole server.  After setting any optional
+     * parameters, call the {@link Add#execute()} method to invoke the remote operation.
+     *
+     * @param siteUrl The URL of the site to add.
+     * @return the request
+     */
+    public Add add(java.lang.String siteUrl) throws java.io.IOException {
+      Add result = new Add(siteUrl);
+      initialize(result);
+      return result;
+    }
+
+    public class Add extends SearchConsoleRequest<Void> {
+
+      private static final String REST_PATH = "webmasters/v3/sites/{siteUrl}";
+
+      /**
+       * Adds a site to the set of the user's sites in Search Console.
+       *
+       * Create a request for the method "sites.add".
+       *
+       * This request holds the parameters needed by the the searchconsole server.  After setting any
+       * optional parameters, call the {@link Add#execute()} method to invoke the remote operation. <p>
+       * {@link Add#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param siteUrl The URL of the site to add.
+       * @since 1.13
+       */
+      protected Add(java.lang.String siteUrl) {
+        super(SearchConsole.this, "PUT", REST_PATH, null, Void.class);
+        this.siteUrl = com.google.api.client.util.Preconditions.checkNotNull(siteUrl, "Required parameter siteUrl must be specified.");
+      }
+
+      @Override
+      public Add set$Xgafv(java.lang.String $Xgafv) {
+        return (Add) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Add setAccessToken(java.lang.String accessToken) {
+        return (Add) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Add setAlt(java.lang.String alt) {
+        return (Add) super.setAlt(alt);
+      }
+
+      @Override
+      public Add setCallback(java.lang.String callback) {
+        return (Add) super.setCallback(callback);
+      }
+
+      @Override
+      public Add setFields(java.lang.String fields) {
+        return (Add) super.setFields(fields);
+      }
+
+      @Override
+      public Add setKey(java.lang.String key) {
+        return (Add) super.setKey(key);
+      }
+
+      @Override
+      public Add setOauthToken(java.lang.String oauthToken) {
+        return (Add) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Add setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Add) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Add setQuotaUser(java.lang.String quotaUser) {
+        return (Add) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Add setUploadType(java.lang.String uploadType) {
+        return (Add) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Add setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Add) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The URL of the site to add. */
+      @com.google.api.client.util.Key
+      private java.lang.String siteUrl;
+
+      /** The URL of the site to add.
+       */
+      public java.lang.String getSiteUrl() {
+        return siteUrl;
+      }
+
+      /** The URL of the site to add. */
+      public Add setSiteUrl(java.lang.String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+      }
+
+      @Override
+      public Add set(String parameterName, Object value) {
+        return (Add) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Removes a site from the set of the user's Search Console sites.
+     *
+     * Create a request for the method "sites.delete".
+     *
+     * This request holds the parameters needed by the searchconsole server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param siteUrl The URI of the property as defined in Search Console. **Examples:** `http://www.example.com/` or
+     *        `sc-domain:example.com`.
+     * @return the request
+     */
+    public Delete delete(java.lang.String siteUrl) throws java.io.IOException {
+      Delete result = new Delete(siteUrl);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends SearchConsoleRequest<Void> {
+
+      private static final String REST_PATH = "webmasters/v3/sites/{siteUrl}";
+
+      /**
+       * Removes a site from the set of the user's Search Console sites.
+       *
+       * Create a request for the method "sites.delete".
+       *
+       * This request holds the parameters needed by the the searchconsole server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param siteUrl The URI of the property as defined in Search Console. **Examples:** `http://www.example.com/` or
+     *        `sc-domain:example.com`.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String siteUrl) {
+        super(SearchConsole.this, "DELETE", REST_PATH, null, Void.class);
+        this.siteUrl = com.google.api.client.util.Preconditions.checkNotNull(siteUrl, "Required parameter siteUrl must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The URI of the property as defined in Search Console. **Examples:**
+       * `http://www.example.com/` or `sc-domain:example.com`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String siteUrl;
+
+      /** The URI of the property as defined in Search Console. **Examples:** `http://www.example.com/` or
+     `sc-domain:example.com`.
+       */
+      public java.lang.String getSiteUrl() {
+        return siteUrl;
+      }
+
+      /**
+       * The URI of the property as defined in Search Console. **Examples:**
+       * `http://www.example.com/` or `sc-domain:example.com`.
+       */
+      public Delete setSiteUrl(java.lang.String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves information about specific site.
+     *
+     * Create a request for the method "sites.get".
+     *
+     * This request holds the parameters needed by the searchconsole server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param siteUrl The URI of the property as defined in Search Console. **Examples:** `http://www.example.com/` or
+     *        `sc-domain:example.com`.
+     * @return the request
+     */
+    public Get get(java.lang.String siteUrl) throws java.io.IOException {
+      Get result = new Get(siteUrl);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends SearchConsoleRequest<com.google.api.services.searchconsole.v1.model.WmxSite> {
+
+      private static final String REST_PATH = "webmasters/v3/sites/{siteUrl}";
+
+      /**
+       * Retrieves information about specific site.
+       *
+       * Create a request for the method "sites.get".
+       *
+       * This request holds the parameters needed by the the searchconsole server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param siteUrl The URI of the property as defined in Search Console. **Examples:** `http://www.example.com/` or
+     *        `sc-domain:example.com`.
+       * @since 1.13
+       */
+      protected Get(java.lang.String siteUrl) {
+        super(SearchConsole.this, "GET", REST_PATH, null, com.google.api.services.searchconsole.v1.model.WmxSite.class);
+        this.siteUrl = com.google.api.client.util.Preconditions.checkNotNull(siteUrl, "Required parameter siteUrl must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The URI of the property as defined in Search Console. **Examples:**
+       * `http://www.example.com/` or `sc-domain:example.com`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String siteUrl;
+
+      /** The URI of the property as defined in Search Console. **Examples:** `http://www.example.com/` or
+     `sc-domain:example.com`.
+       */
+      public java.lang.String getSiteUrl() {
+        return siteUrl;
+      }
+
+      /**
+       * The URI of the property as defined in Search Console. **Examples:**
+       * `http://www.example.com/` or `sc-domain:example.com`.
+       */
+      public Get setSiteUrl(java.lang.String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the user's Search Console sites.
+     *
+     * Create a request for the method "sites.list".
+     *
+     * This request holds the parameters needed by the searchconsole server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends SearchConsoleRequest<com.google.api.services.searchconsole.v1.model.SitesListResponse> {
+
+      private static final String REST_PATH = "webmasters/v3/sites";
+
+      /**
+       * Lists the user's Search Console sites.
+       *
+       * Create a request for the method "sites.list".
+       *
+       * This request holds the parameters needed by the the searchconsole server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(SearchConsole.this, "GET", REST_PATH, null, com.google.api.services.searchconsole.v1.model.SitesListResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

@@ -46,7 +46,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Asset API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Asset API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,24 +143,21 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   public class IamPolicies {
 
     /**
-     * Searches all the IAM policies under a given accessible CRM scope (project/folder/organization).
-     * This RPC gives callers especially admins the ability to search all the IAM policies under a
-     * scope, even if they don't have .getIamPolicy permission of all the IAM policies. Callers should
-     * have cloud.assets.SearchAllIamPolicies permission on the requested scope, otherwise it will be
-     * rejected.
+     * Searches all the IAM policies within a given accessible CRM scope (project/folder/organization).
+     * This RPC gives callers especially administrators the ability to search all the IAM policies
+     * within a scope, even if they don't have `.getIamPolicy` permission of all the IAM policies.
+     * Callers should have `cloud.assets.SearchAllIamPolicies` permission on the requested scope,
+     * otherwise the request will be rejected.
      *
      * Create a request for the method "iamPolicies.searchAll".
      *
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link SearchAll#execute()} method to invoke the remote operation.
      *
-     * @param scope Required. The relative name of an asset. The search is limited to the resources
-    within the `scope`.
-     *        The allowed value must be:
-    * Organization number (such as "organizations/123")
-    * Folder
-     *        number(such as "folders/1234")
-    * Project number (such as "projects/12345")
+     * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
+     *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
+     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
+     *        (such as "projects/abc")
      * @return the request
      */
     public SearchAll searchAll(java.lang.String scope) throws java.io.IOException {
@@ -177,11 +174,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Searches all the IAM policies under a given accessible CRM scope (project/folder/organization).
-       * This RPC gives callers especially admins the ability to search all the IAM policies under a
-       * scope, even if they don't have .getIamPolicy permission of all the IAM policies. Callers should
-       * have cloud.assets.SearchAllIamPolicies permission on the requested scope, otherwise it will be
-       * rejected.
+       * Searches all the IAM policies within a given accessible CRM scope
+       * (project/folder/organization). This RPC gives callers especially administrators the ability to
+       * search all the IAM policies within a scope, even if they don't have `.getIamPolicy` permission
+       * of all the IAM policies. Callers should have `cloud.assets.SearchAllIamPolicies` permission on
+       * the requested scope, otherwise the request will be rejected.
        *
        * Create a request for the method "iamPolicies.searchAll".
        *
@@ -191,13 +188,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * SearchAll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param scope Required. The relative name of an asset. The search is limited to the resources
-    within the `scope`.
-     *        The allowed value must be:
-    * Organization number (such as "organizations/123")
-    * Folder
-     *        number(such as "folders/1234")
-    * Project number (such as "projects/12345")
+       * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
+     *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
+     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
+     *        (such as "projects/abc")
        * @since 1.13
        */
       protected SearchAll(java.lang.String scope) {
@@ -278,14 +272,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345")
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       @com.google.api.client.util.Key
       private java.lang.String scope;
 
       /** Required. The relative name of an asset. The search is limited to the resources within the `scope`.
      The allowed value must be: * Organization number (such as "organizations/123") * Folder number(such
-     as "folders/1234") * Project number (such as "projects/12345")
+     as "folders/1234") * Project number (such as "projects/12345") * Project id (such as
+     "projects/abc")
        */
       public java.lang.String getScope() {
         return scope;
@@ -294,7 +290,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345")
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       public SearchAll setScope(java.lang.String scope) {
         if (!getSuppressPatternChecks()) {
@@ -413,23 +410,21 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
   public class Resources {
 
     /**
-     * Searches all the resources under a given accessible CRM scope (project/folder/organization). This
-     * RPC gives callers especially admins the ability to search all the resources under a scope, even
-     * if they don't have .get permission of all the resources. Callers should have
-     * cloud.assets.SearchAllResources permission on the requested scope, otherwise it will be rejected.
+     * Searches all the resources within a given accessible CRM scope (project/folder/organization).
+     * This RPC gives callers especially administrators the ability to search all the resources within a
+     * scope, even if they don't have `.get` permission of all the resources. Callers should have
+     * `cloud.assets.SearchAllResources` permission on the requested scope, otherwise the request will
+     * be rejected.
      *
      * Create a request for the method "resources.searchAll".
      *
      * This request holds the parameters needed by the cloudasset server.  After setting any optional
      * parameters, call the {@link SearchAll#execute()} method to invoke the remote operation.
      *
-     * @param scope Required. The relative name of an asset. The search is limited to the resources
-    within the `scope`.
-     *        The allowed value must be:
-    * Organization number (such as "organizations/123")
-    * Folder
-     *        number(such as "folders/1234")
-    * Project number (such as "projects/12345")
+     * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
+     *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
+     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
+     *        (such as "projects/abc")
      * @return the request
      */
     public SearchAll searchAll(java.lang.String scope) throws java.io.IOException {
@@ -446,11 +441,11 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Searches all the resources under a given accessible CRM scope (project/folder/organization).
-       * This RPC gives callers especially admins the ability to search all the resources under a scope,
-       * even if they don't have .get permission of all the resources. Callers should have
-       * cloud.assets.SearchAllResources permission on the requested scope, otherwise it will be
-       * rejected.
+       * Searches all the resources within a given accessible CRM scope (project/folder/organization).
+       * This RPC gives callers especially administrators the ability to search all the resources within
+       * a scope, even if they don't have `.get` permission of all the resources. Callers should have
+       * `cloud.assets.SearchAllResources` permission on the requested scope, otherwise the request will
+       * be rejected.
        *
        * Create a request for the method "resources.searchAll".
        *
@@ -460,13 +455,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * SearchAll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param scope Required. The relative name of an asset. The search is limited to the resources
-    within the `scope`.
-     *        The allowed value must be:
-    * Organization number (such as "organizations/123")
-    * Folder
-     *        number(such as "folders/1234")
-    * Project number (such as "projects/12345")
+       * @param scope Required. The relative name of an asset. The search is limited to the resources within the `scope`.
+     *        The allowed value must be: * Organization number (such as "organizations/123") * Folder
+     *        number(such as "folders/1234") * Project number (such as "projects/12345") * Project id
+     *        (such as "projects/abc")
        * @since 1.13
        */
       protected SearchAll(java.lang.String scope) {
@@ -547,14 +539,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345")
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       @com.google.api.client.util.Key
       private java.lang.String scope;
 
       /** Required. The relative name of an asset. The search is limited to the resources within the `scope`.
      The allowed value must be: * Organization number (such as "organizations/123") * Folder number(such
-     as "folders/1234") * Project number (such as "projects/12345")
+     as "folders/1234") * Project number (such as "projects/12345") * Project id (such as
+     "projects/abc")
        */
       public java.lang.String getScope() {
         return scope;
@@ -563,7 +557,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. The relative name of an asset. The search is limited to the resources within the
        * `scope`. The allowed value must be: * Organization number (such as "organizations/123") *
-       * Folder number(such as "folders/1234") * Project number (such as "projects/12345")
+       * Folder number(such as "folders/1234") * Project number (such as "projects/12345") * Project
+       * id (such as "projects/abc")
        */
       public SearchAll setScope(java.lang.String scope) {
         if (!getSuppressPatternChecks()) {
@@ -600,15 +595,15 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. A comma separated list of fields specifying the sorting order of the results. The
-       * default order is ascending. Add " desc" after the field name to indicate descending order.
-       * Redundant space characters are ignored. For example, "  foo ,  bar  desc  ".
+       * default order is ascending. Add ` DESC` after the field name to indicate descending order.
+       * Redundant space characters are ignored. For example, ` location DESC , name `.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
       /** Optional. A comma separated list of fields specifying the sorting order of the results. The default
-     order is ascending. Add " desc" after the field name to indicate descending order. Redundant space
-     characters are ignored. For example, "  foo ,  bar  desc  ".
+     order is ascending. Add ` DESC` after the field name to indicate descending order. Redundant space
+     characters are ignored. For example, ` location DESC , name `.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -616,8 +611,8 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. A comma separated list of fields specifying the sorting order of the results. The
-       * default order is ascending. Add " desc" after the field name to indicate descending order.
-       * Redundant space characters are ignored. For example, "  foo ,  bar  desc  ".
+       * default order is ascending. Add ` DESC` after the field name to indicate descending order.
+       * Redundant space characters are ignored. For example, ` location DESC , name `.
        */
       public SearchAll setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -655,7 +650,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. If present, then retrieve the next batch of results from the preceding call to
-       * this method.  `page_token` must be the value of `next_page_token` from the previous
+       * this method. `page_token` must be the value of `next_page_token` from the previous
        * response. The values of all other method parameters, must be identical to those in the
        * previous call.
        */
@@ -663,7 +658,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       private java.lang.String pageToken;
 
       /** Optional. If present, then retrieve the next batch of results from the preceding call to this
-     method.  `page_token` must be the value of `next_page_token` from the previous response. The values
+     method. `page_token` must be the value of `next_page_token` from the previous response. The values
      of all other method parameters, must be identical to those in the previous call.
        */
       public java.lang.String getPageToken() {
@@ -672,7 +667,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Optional. If present, then retrieve the next batch of results from the preceding call to
-       * this method.  `page_token` must be the value of `next_page_token` from the previous
+       * this method. `page_token` must be the value of `next_page_token` from the previous
        * response. The values of all other method parameters, must be identical to those in the
        * previous call.
        */

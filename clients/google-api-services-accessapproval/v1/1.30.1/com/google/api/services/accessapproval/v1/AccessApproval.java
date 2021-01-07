@@ -46,7 +46,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Access Approval API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Access Approval API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -430,10 +430,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
      * optional parameters, call the {@link UpdateAccessApprovalSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name The resource name of the settings. Format is one of:
-     *        "projects/{project_id}/accessApprovalSettings"
-     *        "folders/{folder_id}/accessApprovalSettings"
-     *        "organizations/{organization_id}/accessApprovalSettings"
+     * @param name The resource name of the settings. Format is one of: * "projects/{project}/accessApprovalSettings" *
+     *        "folders/{folder}/accessApprovalSettings" *
+     *        "organizations/{organization}/accessApprovalSettings"
      * @param content the {@link com.google.api.services.accessapproval.v1.model.AccessApprovalSettings}
      * @return the request
      */
@@ -462,10 +461,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the settings. Format is one of:
-     *        "projects/{project_id}/accessApprovalSettings"
-     *        "folders/{folder_id}/accessApprovalSettings"
-     *        "organizations/{organization_id}/accessApprovalSettings"
+       * @param name The resource name of the settings. Format is one of: * "projects/{project}/accessApprovalSettings" *
+     *        "folders/{folder}/accessApprovalSettings" *
+     *        "organizations/{organization}/accessApprovalSettings"
        * @param content the {@link com.google.api.services.accessapproval.v1.model.AccessApprovalSettings}
        * @since 1.13
        */
@@ -535,28 +533,24 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
 
       /**
-       * The resource name of the settings. Format is one of:
-       *
-       * "projects/{project_id}/accessApprovalSettings" "folders/{folder_id}/accessApprovalSettings"
-       * "organizations/{organization_id}/accessApprovalSettings"
+       * The resource name of the settings. Format is one of: *
+       * "projects/{project}/accessApprovalSettings" * "folders/{folder}/accessApprovalSettings" *
+       * "organizations/{organization}/accessApprovalSettings"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the settings. Format is one of:
-
-     "projects/{project_id}/accessApprovalSettings" "folders/{folder_id}/accessApprovalSettings"
-     "organizations/{organization_id}/accessApprovalSettings"
+      /** The resource name of the settings. Format is one of: * "projects/{project}/accessApprovalSettings"
+     * "folders/{folder}/accessApprovalSettings" * "organizations/{organization}/accessApprovalSettings"
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The resource name of the settings. Format is one of:
-       *
-       * "projects/{project_id}/accessApprovalSettings" "folders/{folder_id}/accessApprovalSettings"
-       * "organizations/{organization_id}/accessApprovalSettings"
+       * The resource name of the settings. Format is one of: *
+       * "projects/{project}/accessApprovalSettings" * "folders/{folder}/accessApprovalSettings" *
+       * "organizations/{organization}/accessApprovalSettings"
        */
       public UpdateAccessApprovalSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -572,11 +566,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * The update mask applies to the settings. Only the top level fields of
        * AccessApprovalSettings (notification_emails & enrolled_services) are supported. For each
        * field, if it is included, the currently stored value will be entirely overwritten with the
-       * value of the field passed in this request.
-       *
-       * For the `FieldMask` definition, see https://developers.google.com/protocol-
-       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
-       * notification_emails field will be updated.
+       * value of the field passed in this request. For the `FieldMask` definition, see
+       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
+       * this field is left unset, only the notification_emails field will be updated.
        */
       @com.google.api.client.util.Key
       private String updateMask;
@@ -584,9 +576,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       /** The update mask applies to the settings. Only the top level fields of AccessApprovalSettings
      (notification_emails & enrolled_services) are supported. For each field, if it is included, the
      currently stored value will be entirely overwritten with the value of the field passed in this
-     request.
-
-     For the `FieldMask` definition, see https://developers.google.com/protocol-
+     request. For the `FieldMask` definition, see https://developers.google.com/protocol-
      buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
      notification_emails field will be updated.
        */
@@ -598,11 +588,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * The update mask applies to the settings. Only the top level fields of
        * AccessApprovalSettings (notification_emails & enrolled_services) are supported. For each
        * field, if it is included, the currently stored value will be entirely overwritten with the
-       * value of the field passed in this request.
-       *
-       * For the `FieldMask` definition, see https://developers.google.com/protocol-
-       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
-       * notification_emails field will be updated.
+       * value of the field passed in this request. For the `FieldMask` definition, see
+       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
+       * this field is left unset, only the notification_emails field will be updated.
        */
       public UpdateAccessApprovalSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -636,10 +624,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
     public class ApprovalRequests {
 
       /**
-       * Approves a request and returns the updated ApprovalRequest.
-       *
-       * Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request
-       * exists but is not in a pending state.
+       * Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request does
+       * not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
        *
        * Create a request for the method "approvalRequests.approve".
        *
@@ -664,10 +650,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^folders/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Approves a request and returns the updated ApprovalRequest.
-         *
-         * Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request
-         * exists but is not in a pending state.
+         * Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request
+         * does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending
+         * state.
          *
          * Create a request for the method "approvalRequests.approve".
          *
@@ -773,14 +758,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
-       * Dismisses a request. Returns the updated ApprovalRequest.
-       *
-       * NOTE: This does not deny access to the resource if another request has been made and approved. It
-       * is equivalent in effect to ignoring the request altogether.
-       *
-       * Returns NOT_FOUND if the request does not exist.
-       *
-       * Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
+       * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the
+       * resource if another request has been made and approved. It is equivalent in effect to ignoring
+       * the request altogether. Returns NOT_FOUND if the request does not exist. Returns
+       * FAILED_PRECONDITION if the request exists but is not in a pending state.
        *
        * Create a request for the method "approvalRequests.dismiss".
        *
@@ -805,14 +786,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^folders/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Dismisses a request. Returns the updated ApprovalRequest.
-         *
-         * NOTE: This does not deny access to the resource if another request has been made and approved.
-         * It is equivalent in effect to ignoring the request altogether.
-         *
-         * Returns NOT_FOUND if the request does not exist.
-         *
-         * Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
+         * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to
+         * the resource if another request has been made and approved. It is equivalent in effect to
+         * ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns
+         * FAILED_PRECONDITION if the request exists but is not in a pending state.
          *
          * Create a request for the method "approvalRequests.dismiss".
          *
@@ -1064,9 +1041,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * This request holds the parameters needed by the accessapproval server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource. This may be "projects/{project_id}",
-      "folders/{folder_id}", or
-       *        "organizations/{organization_id}".
+       * @param parent The parent resource. This may be "projects/{project}", "folders/{folder}", or
+       *        "organizations/{organization}".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1093,9 +1069,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource. This may be "projects/{project_id}",
-      "folders/{folder_id}", or
-       *        "organizations/{organization_id}".
+         * @param parent The parent resource. This may be "projects/{project}", "folders/{folder}", or
+       *        "organizations/{organization}".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1174,22 +1149,22 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
 
         /**
-         * The parent resource. This may be "projects/{project_id}", "folders/{folder_id}", or
-         * "organizations/{organization_id}".
+         * The parent resource. This may be "projects/{project}", "folders/{folder}", or
+         * "organizations/{organization}".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource. This may be "projects/{project_id}", "folders/{folder_id}", or
-       "organizations/{organization_id}".
+        /** The parent resource. This may be "projects/{project}", "folders/{folder}", or
+       "organizations/{organization}".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent resource. This may be "projects/{project_id}", "folders/{folder_id}", or
-         * "organizations/{organization_id}".
+         * The parent resource. This may be "projects/{project}", "folders/{folder}", or
+         * "organizations/{organization}".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1203,20 +1178,21 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
         /**
          * A filter on the type of approval requests to retrieve. Must be one of the following
-         * values:
-         *
-         * [not set]: Requests that are pending or have active approvals. ALL: All requests.
-         * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * values: * [not set]: Requests that are pending or have active approvals. * ALL: All
+         * requests. * PENDING: Only pending requests. * ACTIVE: Only active (i.e. currently
+         * approved) requests. * DISMISSED: Only requests that have been dismissed, or requests that
+         * . are not approved and past expiration. * EXPIRED: Only requests that have been approved,
+         * and the approval has expired. * HISTORY: Active, dismissed and expired requests.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** A filter on the type of approval requests to retrieve. Must be one of the following values:
-
-       [not set]: Requests that are pending or have active approvals. ALL: All requests. PENDING: Only
-       pending requests. ACTIVE: Only active (i.e. currently approved) requests. DISMISSED: Only dismissed
-       (including expired) requests.
+        /** A filter on the type of approval requests to retrieve. Must be one of the following values: * [not
+       set]: Requests that are pending or have active approvals. * ALL: All requests. * PENDING: Only
+       pending requests. * ACTIVE: Only active (i.e. currently approved) requests. * DISMISSED: Only
+       requests that have been dismissed, or requests that . are not approved and past expiration. *
+       EXPIRED: Only requests that have been approved, and the approval has expired. * HISTORY: Active,
+       dismissed and expired requests.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -1224,11 +1200,11 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
         /**
          * A filter on the type of approval requests to retrieve. Must be one of the following
-         * values:
-         *
-         * [not set]: Requests that are pending or have active approvals. ALL: All requests.
-         * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * values: * [not set]: Requests that are pending or have active approvals. * ALL: All
+         * requests. * PENDING: Only pending requests. * ACTIVE: Only active (i.e. currently
+         * approved) requests. * DISMISSED: Only requests that have been dismissed, or requests that
+         * . are not approved and past expiration. * EXPIRED: Only requests that have been approved,
+         * and the approval has expired. * HISTORY: Active, dismissed and expired requests.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -1584,10 +1560,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
      * optional parameters, call the {@link UpdateAccessApprovalSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name The resource name of the settings. Format is one of:
-     *        "projects/{project_id}/accessApprovalSettings"
-     *        "folders/{folder_id}/accessApprovalSettings"
-     *        "organizations/{organization_id}/accessApprovalSettings"
+     * @param name The resource name of the settings. Format is one of: * "projects/{project}/accessApprovalSettings" *
+     *        "folders/{folder}/accessApprovalSettings" *
+     *        "organizations/{organization}/accessApprovalSettings"
      * @param content the {@link com.google.api.services.accessapproval.v1.model.AccessApprovalSettings}
      * @return the request
      */
@@ -1616,10 +1591,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the settings. Format is one of:
-     *        "projects/{project_id}/accessApprovalSettings"
-     *        "folders/{folder_id}/accessApprovalSettings"
-     *        "organizations/{organization_id}/accessApprovalSettings"
+       * @param name The resource name of the settings. Format is one of: * "projects/{project}/accessApprovalSettings" *
+     *        "folders/{folder}/accessApprovalSettings" *
+     *        "organizations/{organization}/accessApprovalSettings"
        * @param content the {@link com.google.api.services.accessapproval.v1.model.AccessApprovalSettings}
        * @since 1.13
        */
@@ -1689,28 +1663,24 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
 
       /**
-       * The resource name of the settings. Format is one of:
-       *
-       * "projects/{project_id}/accessApprovalSettings" "folders/{folder_id}/accessApprovalSettings"
-       * "organizations/{organization_id}/accessApprovalSettings"
+       * The resource name of the settings. Format is one of: *
+       * "projects/{project}/accessApprovalSettings" * "folders/{folder}/accessApprovalSettings" *
+       * "organizations/{organization}/accessApprovalSettings"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the settings. Format is one of:
-
-     "projects/{project_id}/accessApprovalSettings" "folders/{folder_id}/accessApprovalSettings"
-     "organizations/{organization_id}/accessApprovalSettings"
+      /** The resource name of the settings. Format is one of: * "projects/{project}/accessApprovalSettings"
+     * "folders/{folder}/accessApprovalSettings" * "organizations/{organization}/accessApprovalSettings"
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The resource name of the settings. Format is one of:
-       *
-       * "projects/{project_id}/accessApprovalSettings" "folders/{folder_id}/accessApprovalSettings"
-       * "organizations/{organization_id}/accessApprovalSettings"
+       * The resource name of the settings. Format is one of: *
+       * "projects/{project}/accessApprovalSettings" * "folders/{folder}/accessApprovalSettings" *
+       * "organizations/{organization}/accessApprovalSettings"
        */
       public UpdateAccessApprovalSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1726,11 +1696,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * The update mask applies to the settings. Only the top level fields of
        * AccessApprovalSettings (notification_emails & enrolled_services) are supported. For each
        * field, if it is included, the currently stored value will be entirely overwritten with the
-       * value of the field passed in this request.
-       *
-       * For the `FieldMask` definition, see https://developers.google.com/protocol-
-       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
-       * notification_emails field will be updated.
+       * value of the field passed in this request. For the `FieldMask` definition, see
+       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
+       * this field is left unset, only the notification_emails field will be updated.
        */
       @com.google.api.client.util.Key
       private String updateMask;
@@ -1738,9 +1706,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       /** The update mask applies to the settings. Only the top level fields of AccessApprovalSettings
      (notification_emails & enrolled_services) are supported. For each field, if it is included, the
      currently stored value will be entirely overwritten with the value of the field passed in this
-     request.
-
-     For the `FieldMask` definition, see https://developers.google.com/protocol-
+     request. For the `FieldMask` definition, see https://developers.google.com/protocol-
      buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
      notification_emails field will be updated.
        */
@@ -1752,11 +1718,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * The update mask applies to the settings. Only the top level fields of
        * AccessApprovalSettings (notification_emails & enrolled_services) are supported. For each
        * field, if it is included, the currently stored value will be entirely overwritten with the
-       * value of the field passed in this request.
-       *
-       * For the `FieldMask` definition, see https://developers.google.com/protocol-
-       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
-       * notification_emails field will be updated.
+       * value of the field passed in this request. For the `FieldMask` definition, see
+       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
+       * this field is left unset, only the notification_emails field will be updated.
        */
       public UpdateAccessApprovalSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -1790,10 +1754,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
     public class ApprovalRequests {
 
       /**
-       * Approves a request and returns the updated ApprovalRequest.
-       *
-       * Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request
-       * exists but is not in a pending state.
+       * Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request does
+       * not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
        *
        * Create a request for the method "approvalRequests.approve".
        *
@@ -1818,10 +1780,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^organizations/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Approves a request and returns the updated ApprovalRequest.
-         *
-         * Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request
-         * exists but is not in a pending state.
+         * Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request
+         * does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending
+         * state.
          *
          * Create a request for the method "approvalRequests.approve".
          *
@@ -1927,14 +1888,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
-       * Dismisses a request. Returns the updated ApprovalRequest.
-       *
-       * NOTE: This does not deny access to the resource if another request has been made and approved. It
-       * is equivalent in effect to ignoring the request altogether.
-       *
-       * Returns NOT_FOUND if the request does not exist.
-       *
-       * Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
+       * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the
+       * resource if another request has been made and approved. It is equivalent in effect to ignoring
+       * the request altogether. Returns NOT_FOUND if the request does not exist. Returns
+       * FAILED_PRECONDITION if the request exists but is not in a pending state.
        *
        * Create a request for the method "approvalRequests.dismiss".
        *
@@ -1959,14 +1916,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^organizations/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Dismisses a request. Returns the updated ApprovalRequest.
-         *
-         * NOTE: This does not deny access to the resource if another request has been made and approved.
-         * It is equivalent in effect to ignoring the request altogether.
-         *
-         * Returns NOT_FOUND if the request does not exist.
-         *
-         * Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
+         * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to
+         * the resource if another request has been made and approved. It is equivalent in effect to
+         * ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns
+         * FAILED_PRECONDITION if the request exists but is not in a pending state.
          *
          * Create a request for the method "approvalRequests.dismiss".
          *
@@ -2218,9 +2171,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * This request holds the parameters needed by the accessapproval server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource. This may be "projects/{project_id}",
-      "folders/{folder_id}", or
-       *        "organizations/{organization_id}".
+       * @param parent The parent resource. This may be "projects/{project}", "folders/{folder}", or
+       *        "organizations/{organization}".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2247,9 +2199,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource. This may be "projects/{project_id}",
-      "folders/{folder_id}", or
-       *        "organizations/{organization_id}".
+         * @param parent The parent resource. This may be "projects/{project}", "folders/{folder}", or
+       *        "organizations/{organization}".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2328,22 +2279,22 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
 
         /**
-         * The parent resource. This may be "projects/{project_id}", "folders/{folder_id}", or
-         * "organizations/{organization_id}".
+         * The parent resource. This may be "projects/{project}", "folders/{folder}", or
+         * "organizations/{organization}".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource. This may be "projects/{project_id}", "folders/{folder_id}", or
-       "organizations/{organization_id}".
+        /** The parent resource. This may be "projects/{project}", "folders/{folder}", or
+       "organizations/{organization}".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent resource. This may be "projects/{project_id}", "folders/{folder_id}", or
-         * "organizations/{organization_id}".
+         * The parent resource. This may be "projects/{project}", "folders/{folder}", or
+         * "organizations/{organization}".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2357,20 +2308,21 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
         /**
          * A filter on the type of approval requests to retrieve. Must be one of the following
-         * values:
-         *
-         * [not set]: Requests that are pending or have active approvals. ALL: All requests.
-         * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * values: * [not set]: Requests that are pending or have active approvals. * ALL: All
+         * requests. * PENDING: Only pending requests. * ACTIVE: Only active (i.e. currently
+         * approved) requests. * DISMISSED: Only requests that have been dismissed, or requests that
+         * . are not approved and past expiration. * EXPIRED: Only requests that have been approved,
+         * and the approval has expired. * HISTORY: Active, dismissed and expired requests.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** A filter on the type of approval requests to retrieve. Must be one of the following values:
-
-       [not set]: Requests that are pending or have active approvals. ALL: All requests. PENDING: Only
-       pending requests. ACTIVE: Only active (i.e. currently approved) requests. DISMISSED: Only dismissed
-       (including expired) requests.
+        /** A filter on the type of approval requests to retrieve. Must be one of the following values: * [not
+       set]: Requests that are pending or have active approvals. * ALL: All requests. * PENDING: Only
+       pending requests. * ACTIVE: Only active (i.e. currently approved) requests. * DISMISSED: Only
+       requests that have been dismissed, or requests that . are not approved and past expiration. *
+       EXPIRED: Only requests that have been approved, and the approval has expired. * HISTORY: Active,
+       dismissed and expired requests.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -2378,11 +2330,11 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
         /**
          * A filter on the type of approval requests to retrieve. Must be one of the following
-         * values:
-         *
-         * [not set]: Requests that are pending or have active approvals. ALL: All requests.
-         * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * values: * [not set]: Requests that are pending or have active approvals. * ALL: All
+         * requests. * PENDING: Only pending requests. * ACTIVE: Only active (i.e. currently
+         * approved) requests. * DISMISSED: Only requests that have been dismissed, or requests that
+         * . are not approved and past expiration. * EXPIRED: Only requests that have been approved,
+         * and the approval has expired. * HISTORY: Active, dismissed and expired requests.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -2738,10 +2690,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
      * optional parameters, call the {@link UpdateAccessApprovalSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name The resource name of the settings. Format is one of:
-     *        "projects/{project_id}/accessApprovalSettings"
-     *        "folders/{folder_id}/accessApprovalSettings"
-     *        "organizations/{organization_id}/accessApprovalSettings"
+     * @param name The resource name of the settings. Format is one of: * "projects/{project}/accessApprovalSettings" *
+     *        "folders/{folder}/accessApprovalSettings" *
+     *        "organizations/{organization}/accessApprovalSettings"
      * @param content the {@link com.google.api.services.accessapproval.v1.model.AccessApprovalSettings}
      * @return the request
      */
@@ -2770,10 +2721,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the settings. Format is one of:
-     *        "projects/{project_id}/accessApprovalSettings"
-     *        "folders/{folder_id}/accessApprovalSettings"
-     *        "organizations/{organization_id}/accessApprovalSettings"
+       * @param name The resource name of the settings. Format is one of: * "projects/{project}/accessApprovalSettings" *
+     *        "folders/{folder}/accessApprovalSettings" *
+     *        "organizations/{organization}/accessApprovalSettings"
        * @param content the {@link com.google.api.services.accessapproval.v1.model.AccessApprovalSettings}
        * @since 1.13
        */
@@ -2843,28 +2793,24 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       }
 
       /**
-       * The resource name of the settings. Format is one of:
-       *
-       * "projects/{project_id}/accessApprovalSettings" "folders/{folder_id}/accessApprovalSettings"
-       * "organizations/{organization_id}/accessApprovalSettings"
+       * The resource name of the settings. Format is one of: *
+       * "projects/{project}/accessApprovalSettings" * "folders/{folder}/accessApprovalSettings" *
+       * "organizations/{organization}/accessApprovalSettings"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the settings. Format is one of:
-
-     "projects/{project_id}/accessApprovalSettings" "folders/{folder_id}/accessApprovalSettings"
-     "organizations/{organization_id}/accessApprovalSettings"
+      /** The resource name of the settings. Format is one of: * "projects/{project}/accessApprovalSettings"
+     * "folders/{folder}/accessApprovalSettings" * "organizations/{organization}/accessApprovalSettings"
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The resource name of the settings. Format is one of:
-       *
-       * "projects/{project_id}/accessApprovalSettings" "folders/{folder_id}/accessApprovalSettings"
-       * "organizations/{organization_id}/accessApprovalSettings"
+       * The resource name of the settings. Format is one of: *
+       * "projects/{project}/accessApprovalSettings" * "folders/{folder}/accessApprovalSettings" *
+       * "organizations/{organization}/accessApprovalSettings"
        */
       public UpdateAccessApprovalSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -2880,11 +2826,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * The update mask applies to the settings. Only the top level fields of
        * AccessApprovalSettings (notification_emails & enrolled_services) are supported. For each
        * field, if it is included, the currently stored value will be entirely overwritten with the
-       * value of the field passed in this request.
-       *
-       * For the `FieldMask` definition, see https://developers.google.com/protocol-
-       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
-       * notification_emails field will be updated.
+       * value of the field passed in this request. For the `FieldMask` definition, see
+       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
+       * this field is left unset, only the notification_emails field will be updated.
        */
       @com.google.api.client.util.Key
       private String updateMask;
@@ -2892,9 +2836,7 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
       /** The update mask applies to the settings. Only the top level fields of AccessApprovalSettings
      (notification_emails & enrolled_services) are supported. For each field, if it is included, the
      currently stored value will be entirely overwritten with the value of the field passed in this
-     request.
-
-     For the `FieldMask` definition, see https://developers.google.com/protocol-
+     request. For the `FieldMask` definition, see https://developers.google.com/protocol-
      buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
      notification_emails field will be updated.
        */
@@ -2906,11 +2848,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * The update mask applies to the settings. Only the top level fields of
        * AccessApprovalSettings (notification_emails & enrolled_services) are supported. For each
        * field, if it is included, the currently stored value will be entirely overwritten with the
-       * value of the field passed in this request.
-       *
-       * For the `FieldMask` definition, see https://developers.google.com/protocol-
-       * buffers/docs/reference/google.protobuf#fieldmask If this field is left unset, only the
-       * notification_emails field will be updated.
+       * value of the field passed in this request. For the `FieldMask` definition, see
+       * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If
+       * this field is left unset, only the notification_emails field will be updated.
        */
       public UpdateAccessApprovalSettings setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -2944,10 +2884,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
     public class ApprovalRequests {
 
       /**
-       * Approves a request and returns the updated ApprovalRequest.
-       *
-       * Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request
-       * exists but is not in a pending state.
+       * Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request does
+       * not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
        *
        * Create a request for the method "approvalRequests.approve".
        *
@@ -2972,10 +2910,9 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^projects/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Approves a request and returns the updated ApprovalRequest.
-         *
-         * Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request
-         * exists but is not in a pending state.
+         * Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request
+         * does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending
+         * state.
          *
          * Create a request for the method "approvalRequests.approve".
          *
@@ -3081,14 +3018,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
       }
       /**
-       * Dismisses a request. Returns the updated ApprovalRequest.
-       *
-       * NOTE: This does not deny access to the resource if another request has been made and approved. It
-       * is equivalent in effect to ignoring the request altogether.
-       *
-       * Returns NOT_FOUND if the request does not exist.
-       *
-       * Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
+       * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the
+       * resource if another request has been made and approved. It is equivalent in effect to ignoring
+       * the request altogether. Returns NOT_FOUND if the request does not exist. Returns
+       * FAILED_PRECONDITION if the request exists but is not in a pending state.
        *
        * Create a request for the method "approvalRequests.dismiss".
        *
@@ -3113,14 +3046,10 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
             java.util.regex.Pattern.compile("^projects/[^/]+/approvalRequests/[^/]+$");
 
         /**
-         * Dismisses a request. Returns the updated ApprovalRequest.
-         *
-         * NOTE: This does not deny access to the resource if another request has been made and approved.
-         * It is equivalent in effect to ignoring the request altogether.
-         *
-         * Returns NOT_FOUND if the request does not exist.
-         *
-         * Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
+         * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to
+         * the resource if another request has been made and approved. It is equivalent in effect to
+         * ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns
+         * FAILED_PRECONDITION if the request exists but is not in a pending state.
          *
          * Create a request for the method "approvalRequests.dismiss".
          *
@@ -3372,9 +3301,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
        * This request holds the parameters needed by the accessapproval server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource. This may be "projects/{project_id}",
-      "folders/{folder_id}", or
-       *        "organizations/{organization_id}".
+       * @param parent The parent resource. This may be "projects/{project}", "folders/{folder}", or
+       *        "organizations/{organization}".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3401,9 +3329,8 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource. This may be "projects/{project_id}",
-      "folders/{folder_id}", or
-       *        "organizations/{organization_id}".
+         * @param parent The parent resource. This may be "projects/{project}", "folders/{folder}", or
+       *        "organizations/{organization}".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3482,22 +3409,22 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
         }
 
         /**
-         * The parent resource. This may be "projects/{project_id}", "folders/{folder_id}", or
-         * "organizations/{organization_id}".
+         * The parent resource. This may be "projects/{project}", "folders/{folder}", or
+         * "organizations/{organization}".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource. This may be "projects/{project_id}", "folders/{folder_id}", or
-       "organizations/{organization_id}".
+        /** The parent resource. This may be "projects/{project}", "folders/{folder}", or
+       "organizations/{organization}".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The parent resource. This may be "projects/{project_id}", "folders/{folder_id}", or
-         * "organizations/{organization_id}".
+         * The parent resource. This may be "projects/{project}", "folders/{folder}", or
+         * "organizations/{organization}".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3511,20 +3438,21 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
         /**
          * A filter on the type of approval requests to retrieve. Must be one of the following
-         * values:
-         *
-         * [not set]: Requests that are pending or have active approvals. ALL: All requests.
-         * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * values: * [not set]: Requests that are pending or have active approvals. * ALL: All
+         * requests. * PENDING: Only pending requests. * ACTIVE: Only active (i.e. currently
+         * approved) requests. * DISMISSED: Only requests that have been dismissed, or requests that
+         * . are not approved and past expiration. * EXPIRED: Only requests that have been approved,
+         * and the approval has expired. * HISTORY: Active, dismissed and expired requests.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** A filter on the type of approval requests to retrieve. Must be one of the following values:
-
-       [not set]: Requests that are pending or have active approvals. ALL: All requests. PENDING: Only
-       pending requests. ACTIVE: Only active (i.e. currently approved) requests. DISMISSED: Only dismissed
-       (including expired) requests.
+        /** A filter on the type of approval requests to retrieve. Must be one of the following values: * [not
+       set]: Requests that are pending or have active approvals. * ALL: All requests. * PENDING: Only
+       pending requests. * ACTIVE: Only active (i.e. currently approved) requests. * DISMISSED: Only
+       requests that have been dismissed, or requests that . are not approved and past expiration. *
+       EXPIRED: Only requests that have been approved, and the approval has expired. * HISTORY: Active,
+       dismissed and expired requests.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -3532,11 +3460,11 @@ public class AccessApproval extends com.google.api.client.googleapis.services.js
 
         /**
          * A filter on the type of approval requests to retrieve. Must be one of the following
-         * values:
-         *
-         * [not set]: Requests that are pending or have active approvals. ALL: All requests.
-         * PENDING: Only pending requests. ACTIVE: Only active (i.e. currently approved) requests.
-         * DISMISSED: Only dismissed (including expired) requests.
+         * values: * [not set]: Requests that are pending or have active approvals. * ALL: All
+         * requests. * PENDING: Only pending requests. * ACTIVE: Only active (i.e. currently
+         * approved) requests. * DISMISSED: Only requests that have been dismissed, or requests that
+         * . are not approved and past expiration. * EXPIRED: Only requests that have been approved,
+         * and the approval has expired. * HISTORY: Active, dismissed and expired requests.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

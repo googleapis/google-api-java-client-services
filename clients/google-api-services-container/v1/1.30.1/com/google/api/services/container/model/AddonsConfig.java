@@ -39,6 +39,21 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private CloudRunConfig cloudRunConfig;
 
   /**
+   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP
+   * services through the Kubernetes API
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfigConnectorConfig configConnectorConfig;
+
+  /**
+   * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DnsCacheConfig dnsCacheConfig;
+
+  /**
    * Configuration for the horizontal pod autoscaling feature, which increases or decreases the
    * number of replica pods a replication controller has based on the resource usage of the existing
    * pods.
@@ -87,6 +102,42 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setCloudRunConfig(CloudRunConfig cloudRunConfig) {
     this.cloudRunConfig = cloudRunConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP
+   * services through the Kubernetes API
+   * @return value or {@code null} for none
+   */
+  public ConfigConnectorConfig getConfigConnectorConfig() {
+    return configConnectorConfig;
+  }
+
+  /**
+   * Configuration for the ConfigConnector add-on, a Kubernetes extension to manage hosted GCP
+   * services through the Kubernetes API
+   * @param configConnectorConfig configConnectorConfig or {@code null} for none
+   */
+  public AddonsConfig setConfigConnectorConfig(ConfigConnectorConfig configConnectorConfig) {
+    this.configConnectorConfig = configConnectorConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+   * @return value or {@code null} for none
+   */
+  public DnsCacheConfig getDnsCacheConfig() {
+    return dnsCacheConfig;
+  }
+
+  /**
+   * Configuration for NodeLocalDNS, a dns cache running on cluster nodes
+   * @param dnsCacheConfig dnsCacheConfig or {@code null} for none
+   */
+  public AddonsConfig setDnsCacheConfig(DnsCacheConfig dnsCacheConfig) {
+    this.dnsCacheConfig = dnsCacheConfig;
     return this;
   }
 

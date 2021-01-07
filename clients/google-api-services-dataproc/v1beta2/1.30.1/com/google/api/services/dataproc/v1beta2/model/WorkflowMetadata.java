@@ -51,6 +51,30 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   private ClusterOperation createCluster;
 
   /**
+   * Output only. DAG end time, which is only set for workflows with dag_timeout when the DAG ends.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String dagEndTime;
+
+  /**
+   * Output only. DAG start time, which is only set for workflows with dag_timeout when the DAG
+   * begins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String dagStartTime;
+
+  /**
+   * Output only. The timeout duration for the DAG of jobs. Minimum timeout duration is 10 minutes
+   * and maximum is 24 hours, expressed as a google.protobuf.Duration. For example, "1800" = 1800
+   * seconds/30 minutes duration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String dagTimeout;
+
+  /**
    * Output only. The delete cluster operation metadata.
    * The value may be {@code null}.
    */
@@ -95,10 +119,10 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of the workflow template as described in
    * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
-   * the resource name of the  template has the following format:
+   * the resource name of the template has the following format:
    * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-   * projects.locations.workflowTemplates, the resource name of the  template has the following
-   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   * projects.locations.workflowTemplates, the resource name of the template has the following
+   * format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,6 +183,63 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
    */
   public WorkflowMetadata setCreateCluster(ClusterOperation createCluster) {
     this.createCluster = createCluster;
+    return this;
+  }
+
+  /**
+   * Output only. DAG end time, which is only set for workflows with dag_timeout when the DAG ends.
+   * @return value or {@code null} for none
+   */
+  public String getDagEndTime() {
+    return dagEndTime;
+  }
+
+  /**
+   * Output only. DAG end time, which is only set for workflows with dag_timeout when the DAG ends.
+   * @param dagEndTime dagEndTime or {@code null} for none
+   */
+  public WorkflowMetadata setDagEndTime(String dagEndTime) {
+    this.dagEndTime = dagEndTime;
+    return this;
+  }
+
+  /**
+   * Output only. DAG start time, which is only set for workflows with dag_timeout when the DAG
+   * begins.
+   * @return value or {@code null} for none
+   */
+  public String getDagStartTime() {
+    return dagStartTime;
+  }
+
+  /**
+   * Output only. DAG start time, which is only set for workflows with dag_timeout when the DAG
+   * begins.
+   * @param dagStartTime dagStartTime or {@code null} for none
+   */
+  public WorkflowMetadata setDagStartTime(String dagStartTime) {
+    this.dagStartTime = dagStartTime;
+    return this;
+  }
+
+  /**
+   * Output only. The timeout duration for the DAG of jobs. Minimum timeout duration is 10 minutes
+   * and maximum is 24 hours, expressed as a google.protobuf.Duration. For example, "1800" = 1800
+   * seconds/30 minutes duration.
+   * @return value or {@code null} for none
+   */
+  public String getDagTimeout() {
+    return dagTimeout;
+  }
+
+  /**
+   * Output only. The timeout duration for the DAG of jobs. Minimum timeout duration is 10 minutes
+   * and maximum is 24 hours, expressed as a google.protobuf.Duration. For example, "1800" = 1800
+   * seconds/30 minutes duration.
+   * @param dagTimeout dagTimeout or {@code null} for none
+   */
+  public WorkflowMetadata setDagTimeout(String dagTimeout) {
+    this.dagTimeout = dagTimeout;
     return this;
   }
 
@@ -267,10 +348,10 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of the workflow template as described in
    * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
-   * the resource name of the  template has the following format:
+   * the resource name of the template has the following format:
    * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-   * projects.locations.workflowTemplates, the resource name of the  template has the following
-   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   * projects.locations.workflowTemplates, the resource name of the template has the following
+   * format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getTemplate() {
@@ -280,10 +361,10 @@ public final class WorkflowMetadata extends com.google.api.client.json.GenericJs
   /**
    * Output only. The resource name of the workflow template as described in
    * https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,
-   * the resource name of the  template has the following format:
+   * the resource name of the template has the following format:
    * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-   * projects.locations.workflowTemplates, the resource name of the  template has the following
-   * format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   * projects.locations.workflowTemplates, the resource name of the template has the following
+   * format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
    * @param template template or {@code null} for none
    */
   public WorkflowMetadata setTemplate(java.lang.String template) {

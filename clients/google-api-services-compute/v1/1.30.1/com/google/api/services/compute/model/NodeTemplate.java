@@ -20,8 +20,7 @@ package com.google.api.services.compute.model;
  * Represent a sole-tenant Node Template resource.
  *
  * You can use a template to define properties for nodes in a node group. For more information, read
- * Creating node groups and instances. (== resource_for {$api_version}.nodeTemplates ==) (== NextID:
- * 19 ==)
+ * Creating node groups and instances. (== resource_for {$api_version}.nodeTemplates ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -32,6 +31,13 @@ package com.google.api.services.compute.model;
  */
 @SuppressWarnings("javadoc")
 public final class NodeTemplate extends com.google.api.client.json.GenericJson {
+
+  /**
+   * CPU overcommit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cpuOvercommitType;
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -136,6 +142,23 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String statusMessage;
+
+  /**
+   * CPU overcommit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCpuOvercommitType() {
+    return cpuOvercommitType;
+  }
+
+  /**
+   * CPU overcommit.
+   * @param cpuOvercommitType cpuOvercommitType or {@code null} for none
+   */
+  public NodeTemplate setCpuOvercommitType(java.lang.String cpuOvercommitType) {
+    this.cpuOvercommitType = cpuOvercommitType;
+    return this;
+  }
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.

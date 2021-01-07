@@ -17,10 +17,10 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Ratings schemes. The country-specific ratings are mostly for movies and shows. NEXT_ID: 72
+ * Ratings schemes. The country-specific ratings are mostly for movies and shows. LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,14 +38,14 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String acbRating;
 
   /**
-   * The video's rating from Italy's Autorità per le Garanzie nelle Comunicazioni (AGCOM).
+   * The video's rating from Italy's Autorit per le Garanzie nelle Comunicazioni (AGCOM).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agcomRating;
 
   /**
-   * The video's Anatel (Asociación Nacional de Televisión) rating for Chilean television.
+   * The video's Anatel (Asociacin Nacional de Televisin) rating for Chilean television.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String bfvcRating;
 
   /**
-   * The video's rating from the Austrian Board of Media Classification (Bundesministerium für
+   * The video's rating from the Austrian Board of Media Classification (Bundesministerium fr
    * Unterricht, Kunst und Kultur).
    * The value may be {@code null}.
    */
@@ -100,14 +100,14 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String cbfcRating;
 
   /**
-   * The video's Consejo de Calificación Cinematográfica (Chile) rating.
+   * The video's Consejo de Calificacin Cinematogrfica (Chile) rating.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cccRating;
 
   /**
-   * The video's rating from Portugal's Comissão de Classificação de Espect´culos.
+   * The video's rating from Portugal's Comisso de Classificao de Espectculos.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +128,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String chvrsRating;
 
   /**
-   * The video's rating from the Commission de Contrôle des Films (Belgium).
+   * The video's rating from the Commission de Contrle des Films (Belgium).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +149,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String cncRating;
 
   /**
-   * The video's rating from France's Conseil supérieur de l?audiovisuel, which rates broadcast
+   * The video's rating from France's Conseil suprieur de l’audiovisuel, which rates broadcast
    * content.
    * The value may be {@code null}.
    */
@@ -172,8 +172,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String czfilmRating;
 
   /**
-   * The video's Departamento de Justiça, Classificação, Qualificação e Títulos (DJCQT - Brazil)
-   * rating.
+   * The video's Departamento de Justia, Classificao, Qualificao e Ttulos (DJCQT - Brazil) rating.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,7 +208,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String egfilmRating;
 
   /**
-   * The video's Eirin (映倫) rating. Eirin is the Japanese rating system.
+   * The video's Eirin () rating. Eirin is the Japanese rating system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,7 +264,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String grfilmRating;
 
   /**
-   * The video's Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA - Spain) rating.
+   * The video's Instituto de la Cinematografa y de las Artes Audiovisuales (ICAA - Spain) rating.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -301,14 +300,15 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String kfcbRating;
 
   /**
-   * voor de Classificatie van Audiovisuele Media (Netherlands).
+   * The video's NICAM/Kijkwijzer rating from the Nederlands Instituut voor de Classificatie van
+   * Audiovisuele Media (Netherlands).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kijkwijzerRating;
 
   /**
-   * The video's Korea Media Rating Board (영상물등급위원회) rating. The KMRB rates videos in South Korea.
+   * The video's Korea Media Rating Board () rating. The KMRB rates videos in South Korea.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -367,15 +367,16 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String mekuRating;
 
   /**
-   * The rating system for MENA countries, a clone of MPAA. It is needed to
+   * The rating system for MENA countries, a clone of MPAA. It is needed to prevent titles go live
+   * w/o additional QC check, since some of them can be inappropriate for the countries at all. See
+   * b/33408548 for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String menaMpaaRating;
 
   /**
-   * The video's rating from the Ministero dei Beni e delle Attività Culturali e del Turismo
-   * (Italy).
+   * The video's rating from the Ministero dei Beni e delle Attivit Culturali e del Turismo (Italy).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -389,7 +390,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String mocRating;
 
   /**
-   * The video's rating from Taiwan's Ministry of Culture (文化部).
+   * The video's rating from Taiwan's Ministry of Culture ().
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -403,7 +404,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String mpaaRating;
 
   /**
-   * The rating system for trailer, DVD, and Ad in the US. See
+   * The rating system for trailer, DVD, and Ad in the US.  See
    * http://movielabs.com/md/ratings/v2.3/html/US_MPAAT_Ratings.html.
    * The value may be {@code null}.
    */
@@ -446,13 +447,14 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String nfvcbRating;
 
   /**
-   * The video's rating from the Nacionãlais Kino centrs (National Film Centre of Latvia).
+   * The video's rating from the Nacionlais Kino centrs (National Film Centre of Latvia).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nkclvRating;
 
   /**
+   * The National Media Council ratings system for United Arab Emirates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -495,7 +497,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String rtcRating;
 
   /**
-   * The video's rating from Ireland's Raidió Teilifís Éireann.
+   * The video's rating from Ireland's Raidi Teilifs ireann.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -523,7 +525,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   private java.lang.String smaisRating;
 
   /**
-   * The video's rating from Statens medieråd (Sweden's National Media Council).
+   * The video's rating from Statens medierd (Sweden's National Media Council).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -563,7 +565,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from Italy's Autorità per le Garanzie nelle Comunicazioni (AGCOM).
+   * The video's rating from Italy's Autorit per le Garanzie nelle Comunicazioni (AGCOM).
    * @return value or {@code null} for none
    */
   public java.lang.String getAgcomRating() {
@@ -571,7 +573,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from Italy's Autorità per le Garanzie nelle Comunicazioni (AGCOM).
+   * The video's rating from Italy's Autorit per le Garanzie nelle Comunicazioni (AGCOM).
    * @param agcomRating agcomRating or {@code null} for none
    */
   public ContentRating setAgcomRating(java.lang.String agcomRating) {
@@ -580,7 +582,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Anatel (Asociación Nacional de Televisión) rating for Chilean television.
+   * The video's Anatel (Asociacin Nacional de Televisin) rating for Chilean television.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnatelRating() {
@@ -588,7 +590,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Anatel (Asociación Nacional de Televisión) rating for Chilean television.
+   * The video's Anatel (Asociacin Nacional de Televisin) rating for Chilean television.
    * @param anatelRating anatelRating or {@code null} for none
    */
   public ContentRating setAnatelRating(java.lang.String anatelRating) {
@@ -631,7 +633,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from the Austrian Board of Media Classification (Bundesministerium für
+   * The video's rating from the Austrian Board of Media Classification (Bundesministerium fr
    * Unterricht, Kunst und Kultur).
    * @return value or {@code null} for none
    */
@@ -640,7 +642,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from the Austrian Board of Media Classification (Bundesministerium für
+   * The video's rating from the Austrian Board of Media Classification (Bundesministerium fr
    * Unterricht, Kunst und Kultur).
    * @param bmukkRating bmukkRating or {@code null} for none
    */
@@ -711,7 +713,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Consejo de Calificación Cinematográfica (Chile) rating.
+   * The video's Consejo de Calificacin Cinematogrfica (Chile) rating.
    * @return value or {@code null} for none
    */
   public java.lang.String getCccRating() {
@@ -719,7 +721,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Consejo de Calificación Cinematográfica (Chile) rating.
+   * The video's Consejo de Calificacin Cinematogrfica (Chile) rating.
    * @param cccRating cccRating or {@code null} for none
    */
   public ContentRating setCccRating(java.lang.String cccRating) {
@@ -728,7 +730,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from Portugal's Comissão de Classificação de Espect´culos.
+   * The video's rating from Portugal's Comisso de Classificao de Espectculos.
    * @return value or {@code null} for none
    */
   public java.lang.String getCceRating() {
@@ -736,7 +738,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from Portugal's Comissão de Classificação de Espect´culos.
+   * The video's rating from Portugal's Comisso de Classificao de Espectculos.
    * @param cceRating cceRating or {@code null} for none
    */
   public ContentRating setCceRating(java.lang.String cceRating) {
@@ -779,7 +781,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from the Commission de Contrôle des Films (Belgium).
+   * The video's rating from the Commission de Contrle des Films (Belgium).
    * @return value or {@code null} for none
    */
   public java.lang.String getCicfRating() {
@@ -787,7 +789,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from the Commission de Contrôle des Films (Belgium).
+   * The video's rating from the Commission de Contrle des Films (Belgium).
    * @param cicfRating cicfRating or {@code null} for none
    */
   public ContentRating setCicfRating(java.lang.String cicfRating) {
@@ -830,7 +832,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from France's Conseil supérieur de l?audiovisuel, which rates broadcast
+   * The video's rating from France's Conseil suprieur de l’audiovisuel, which rates broadcast
    * content.
    * @return value or {@code null} for none
    */
@@ -839,7 +841,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from France's Conseil supérieur de l?audiovisuel, which rates broadcast
+   * The video's rating from France's Conseil suprieur de l’audiovisuel, which rates broadcast
    * content.
    * @param csaRating csaRating or {@code null} for none
    */
@@ -885,8 +887,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Departamento de Justiça, Classificação, Qualificação e Títulos (DJCQT - Brazil)
-   * rating.
+   * The video's Departamento de Justia, Classificao, Qualificao e Ttulos (DJCQT - Brazil) rating.
    * @return value or {@code null} for none
    */
   public java.lang.String getDjctqRating() {
@@ -894,8 +895,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Departamento de Justiça, Classificação, Qualificação e Títulos (DJCQT - Brazil)
-   * rating.
+   * The video's Departamento de Justia, Classificao, Qualificao e Ttulos (DJCQT - Brazil) rating.
    * @param djctqRating djctqRating or {@code null} for none
    */
   public ContentRating setDjctqRating(java.lang.String djctqRating) {
@@ -974,7 +974,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Eirin (映倫) rating. Eirin is the Japanese rating system.
+   * The video's Eirin () rating. Eirin is the Japanese rating system.
    * @return value or {@code null} for none
    */
   public java.lang.String getEirinRating() {
@@ -982,7 +982,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Eirin (映倫) rating. Eirin is the Japanese rating system.
+   * The video's Eirin () rating. Eirin is the Japanese rating system.
    * @param eirinRating eirinRating or {@code null} for none
    */
   public ContentRating setEirinRating(java.lang.String eirinRating) {
@@ -1110,7 +1110,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA - Spain) rating.
+   * The video's Instituto de la Cinematografa y de las Artes Audiovisuales (ICAA - Spain) rating.
    * @return value or {@code null} for none
    */
   public java.lang.String getIcaaRating() {
@@ -1118,7 +1118,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA - Spain) rating.
+   * The video's Instituto de la Cinematografa y de las Artes Audiovisuales (ICAA - Spain) rating.
    * @param icaaRating icaaRating or {@code null} for none
    */
   public ContentRating setIcaaRating(java.lang.String icaaRating) {
@@ -1197,7 +1197,8 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * voor de Classificatie van Audiovisuele Media (Netherlands).
+   * The video's NICAM/Kijkwijzer rating from the Nederlands Instituut voor de Classificatie van
+   * Audiovisuele Media (Netherlands).
    * @return value or {@code null} for none
    */
   public java.lang.String getKijkwijzerRating() {
@@ -1205,7 +1206,8 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * voor de Classificatie van Audiovisuele Media (Netherlands).
+   * The video's NICAM/Kijkwijzer rating from the Nederlands Instituut voor de Classificatie van
+   * Audiovisuele Media (Netherlands).
    * @param kijkwijzerRating kijkwijzerRating or {@code null} for none
    */
   public ContentRating setKijkwijzerRating(java.lang.String kijkwijzerRating) {
@@ -1214,7 +1216,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Korea Media Rating Board (영상물등급위원회) rating. The KMRB rates videos in South Korea.
+   * The video's Korea Media Rating Board () rating. The KMRB rates videos in South Korea.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmrbRating() {
@@ -1222,7 +1224,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's Korea Media Rating Board (영상물등급위원회) rating. The KMRB rates videos in South Korea.
+   * The video's Korea Media Rating Board () rating. The KMRB rates videos in South Korea.
    * @param kmrbRating kmrbRating or {@code null} for none
    */
   public ContentRating setKmrbRating(java.lang.String kmrbRating) {
@@ -1356,7 +1358,9 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The rating system for MENA countries, a clone of MPAA. It is needed to
+   * The rating system for MENA countries, a clone of MPAA. It is needed to prevent titles go live
+   * w/o additional QC check, since some of them can be inappropriate for the countries at all. See
+   * b/33408548 for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getMenaMpaaRating() {
@@ -1364,7 +1368,9 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The rating system for MENA countries, a clone of MPAA. It is needed to
+   * The rating system for MENA countries, a clone of MPAA. It is needed to prevent titles go live
+   * w/o additional QC check, since some of them can be inappropriate for the countries at all. See
+   * b/33408548 for more details.
    * @param menaMpaaRating menaMpaaRating or {@code null} for none
    */
   public ContentRating setMenaMpaaRating(java.lang.String menaMpaaRating) {
@@ -1373,8 +1379,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from the Ministero dei Beni e delle Attività Culturali e del Turismo
-   * (Italy).
+   * The video's rating from the Ministero dei Beni e delle Attivit Culturali e del Turismo (Italy).
    * @return value or {@code null} for none
    */
   public java.lang.String getMibacRating() {
@@ -1382,8 +1387,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from the Ministero dei Beni e delle Attività Culturali e del Turismo
-   * (Italy).
+   * The video's rating from the Ministero dei Beni e delle Attivit Culturali e del Turismo (Italy).
    * @param mibacRating mibacRating or {@code null} for none
    */
   public ContentRating setMibacRating(java.lang.String mibacRating) {
@@ -1409,7 +1413,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from Taiwan's Ministry of Culture (文化部).
+   * The video's rating from Taiwan's Ministry of Culture ().
    * @return value or {@code null} for none
    */
   public java.lang.String getMoctwRating() {
@@ -1417,7 +1421,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from Taiwan's Ministry of Culture (文化部).
+   * The video's rating from Taiwan's Ministry of Culture ().
    * @param moctwRating moctwRating or {@code null} for none
    */
   public ContentRating setMoctwRating(java.lang.String moctwRating) {
@@ -1443,7 +1447,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The rating system for trailer, DVD, and Ad in the US. See
+   * The rating system for trailer, DVD, and Ad in the US.  See
    * http://movielabs.com/md/ratings/v2.3/html/US_MPAAT_Ratings.html.
    * @return value or {@code null} for none
    */
@@ -1452,7 +1456,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The rating system for trailer, DVD, and Ad in the US. See
+   * The rating system for trailer, DVD, and Ad in the US.  See
    * http://movielabs.com/md/ratings/v2.3/html/US_MPAAT_Ratings.html.
    * @param mpaatRating mpaatRating or {@code null} for none
    */
@@ -1547,7 +1551,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from the Nacionãlais Kino centrs (National Film Centre of Latvia).
+   * The video's rating from the Nacionlais Kino centrs (National Film Centre of Latvia).
    * @return value or {@code null} for none
    */
   public java.lang.String getNkclvRating() {
@@ -1555,7 +1559,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from the Nacionãlais Kino centrs (National Film Centre of Latvia).
+   * The video's rating from the Nacionlais Kino centrs (National Film Centre of Latvia).
    * @param nkclvRating nkclvRating or {@code null} for none
    */
   public ContentRating setNkclvRating(java.lang.String nkclvRating) {
@@ -1564,6 +1568,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The National Media Council ratings system for United Arab Emirates.
    * @return value or {@code null} for none
    */
   public java.lang.String getNmcRating() {
@@ -1571,6 +1576,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The National Media Council ratings system for United Arab Emirates.
    * @param nmcRating nmcRating or {@code null} for none
    */
   public ContentRating setNmcRating(java.lang.String nmcRating) {
@@ -1666,7 +1672,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from Ireland's Raidió Teilifís Éireann.
+   * The video's rating from Ireland's Raidi Teilifs ireann.
    * @return value or {@code null} for none
    */
   public java.lang.String getRteRating() {
@@ -1674,7 +1680,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from Ireland's Raidió Teilifís Éireann.
+   * The video's rating from Ireland's Raidi Teilifs ireann.
    * @param rteRating rteRating or {@code null} for none
    */
   public ContentRating setRteRating(java.lang.String rteRating) {
@@ -1734,7 +1740,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from Statens medieråd (Sweden's National Media Council).
+   * The video's rating from Statens medierd (Sweden's National Media Council).
    * @return value or {@code null} for none
    */
   public java.lang.String getSmsaRating() {
@@ -1742,7 +1748,7 @@ public final class ContentRating extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The video's rating from Statens medieråd (Sweden's National Media Council).
+   * The video's rating from Statens medierd (Sweden's National Media Council).
    * @param smsaRating smsaRating or {@code null} for none
    */
   public ContentRating setSmsaRating(java.lang.String smsaRating) {

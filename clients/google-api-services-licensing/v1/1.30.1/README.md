@@ -1,14 +1,14 @@
-# Licensing API Client Library for Java
+# Enterprise License Manager API Client Library for Java
 
-Licensing API to view and manage licenses for your domain
+The Google Enterprise License Manager API's allows you to license apps for all the users of a domain managed by you.
 
-This page contains information about getting started with the Licensing API
+This page contains information about getting started with the Enterprise License Manager API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Licensing API][javadoc]
+* Browse the [Javadoc reference for the Enterprise License Manager API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Licensing API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Enterprise License Manager API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-licensing</artifactId>
-      <version>v1-rev20190916-1.30.9</version>
+      <version>v1-rev20201116-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-licensing:v1-rev20190916-1.30.9'
+  compile 'com.google.apis:google-api-services-licensing:v1-rev20201116-1.30.10'
 }
 ```
 

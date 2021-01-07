@@ -51,6 +51,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private AddConditionalFormatRuleRequest addConditionalFormatRule;
 
   /**
+   * Adds a data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddDataSourceRequest addDataSource;
+
+  /**
    * Creates a group over the specified range.
    * The value may be {@code null}.
    */
@@ -162,6 +169,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private DeleteConditionalFormatRuleRequest deleteConditionalFormatRule;
+
+  /**
+   * Deletes a data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteDataSourceRequest deleteDataSource;
 
   /**
    * Deletes developer metadata
@@ -297,6 +311,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private RandomizeRangeRequest randomizeRange;
 
   /**
+   * Refreshs one or multiple data sources and associated dbobjects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RefreshDataSourceRequest refreshDataSource;
+
+  /**
    * Repeats a single cell across a range.
    * The value may be {@code null}.
    */
@@ -379,6 +400,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UpdateConditionalFormatRuleRequest updateConditionalFormatRule;
+
+  /**
+   * Updates a data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateDataSourceRequest updateDataSource;
 
   /**
    * Updates an existing developer metadata entry
@@ -498,6 +526,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setAddConditionalFormatRule(AddConditionalFormatRuleRequest addConditionalFormatRule) {
     this.addConditionalFormatRule = addConditionalFormatRule;
+    return this;
+  }
+
+  /**
+   * Adds a data source.
+   * @return value or {@code null} for none
+   */
+  public AddDataSourceRequest getAddDataSource() {
+    return addDataSource;
+  }
+
+  /**
+   * Adds a data source.
+   * @param addDataSource addDataSource or {@code null} for none
+   */
+  public Request setAddDataSource(AddDataSourceRequest addDataSource) {
+    this.addDataSource = addDataSource;
     return this;
   }
 
@@ -772,6 +817,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setDeleteConditionalFormatRule(DeleteConditionalFormatRuleRequest deleteConditionalFormatRule) {
     this.deleteConditionalFormatRule = deleteConditionalFormatRule;
+    return this;
+  }
+
+  /**
+   * Deletes a data source.
+   * @return value or {@code null} for none
+   */
+  public DeleteDataSourceRequest getDeleteDataSource() {
+    return deleteDataSource;
+  }
+
+  /**
+   * Deletes a data source.
+   * @param deleteDataSource deleteDataSource or {@code null} for none
+   */
+  public Request setDeleteDataSource(DeleteDataSourceRequest deleteDataSource) {
+    this.deleteDataSource = deleteDataSource;
     return this;
   }
 
@@ -1099,6 +1161,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Refreshs one or multiple data sources and associated dbobjects.
+   * @return value or {@code null} for none
+   */
+  public RefreshDataSourceRequest getRefreshDataSource() {
+    return refreshDataSource;
+  }
+
+  /**
+   * Refreshs one or multiple data sources and associated dbobjects.
+   * @param refreshDataSource refreshDataSource or {@code null} for none
+   */
+  public Request setRefreshDataSource(RefreshDataSourceRequest refreshDataSource) {
+    this.refreshDataSource = refreshDataSource;
+    return this;
+  }
+
+  /**
    * Repeats a single cell across a range.
    * @return value or {@code null} for none
    */
@@ -1299,6 +1378,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateConditionalFormatRule(UpdateConditionalFormatRuleRequest updateConditionalFormatRule) {
     this.updateConditionalFormatRule = updateConditionalFormatRule;
+    return this;
+  }
+
+  /**
+   * Updates a data source.
+   * @return value or {@code null} for none
+   */
+  public UpdateDataSourceRequest getUpdateDataSource() {
+    return updateDataSource;
+  }
+
+  /**
+   * Updates a data source.
+   * @param updateDataSource updateDataSource or {@code null} for none
+   */
+  public Request setUpdateDataSource(UpdateDataSourceRequest updateDataSource) {
+    this.updateDataSource = updateDataSource;
     return this;
   }
 

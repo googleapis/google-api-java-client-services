@@ -31,8 +31,9 @@ package com.google.api.services.compute.model;
  * Optionally, certificate file contents that you upload can contain a set of up to five PEM-encoded
  * certificates. The API call creates an object (sslCertificate) that holds this data. You can use
  * SSL keys and certificates to secure connections to a load balancer. For more information, read
- * Creating and using SSL certificates and SSL certificates quotas and limits. (== resource_for
- * {$api_version}.sslCertificates ==) (== resource_for {$api_version}.regionSslCertificates ==)
+ * Creating and using SSL certificates, SSL certificates quotas and limits, and  Troubleshooting SSL
+ * certificates. (== resource_for {$api_version}.sslCertificates ==) (== resource_for
+ * {$api_version}.regionSslCertificates ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -45,8 +46,9 @@ package com.google.api.services.compute.model;
 public final class SslCertificate extends com.google.api.client.json.GenericJson {
 
   /**
-   * A local certificate file. The certificate must be in PEM format. The certificate chain must be
-   * no greater than 5 certs long. The chain must include at least one intermediate cert.
+   * A value read into memory from a certificate file. The certificate file must be in PEM format.
+   * The certificate chain must be no greater than 5 certs long. The chain must include at least one
+   * intermediate cert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,6 +69,13 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * [Output Only] Expire time of the certificate. RFC3339
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String expireTime;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -81,6 +90,13 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
+   * Configuration and status of a managed SSL certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SslCertificateManagedSslCertificate managed;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -92,7 +108,8 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * A write-only private key in PEM format. Only insert requests will include this field.
+   * A value read into memory from a write-only private key file. The private key file must be in
+   * PEM format. For security, only insert requests include this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +131,31 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
-   * A local certificate file. The certificate must be in PEM format. The certificate chain must be
-   * no greater than 5 certs long. The chain must include at least one intermediate cert.
+   * Configuration and status of a self-managed SSL certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SslCertificateSelfManagedSslCertificate selfManaged;
+
+  /**
+   * [Output Only] Domains associated with the certificate via Subject Alternative Name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> subjectAlternativeNames;
+
+  /**
+   * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not
+   * specified, the certificate is self-managed and the fields certificate and private_key are used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * A value read into memory from a certificate file. The certificate file must be in PEM format.
+   * The certificate chain must be no greater than 5 certs long. The chain must include at least one
+   * intermediate cert.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertificate() {
@@ -123,8 +163,9 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A local certificate file. The certificate must be in PEM format. The certificate chain must be
-   * no greater than 5 certs long. The chain must include at least one intermediate cert.
+   * A value read into memory from a certificate file. The certificate file must be in PEM format.
+   * The certificate chain must be no greater than 5 certs long. The chain must include at least one
+   * intermediate cert.
    * @param certificate certificate or {@code null} for none
    */
   public SslCertificate setCertificate(java.lang.String certificate) {
@@ -167,6 +208,23 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output Only] Expire time of the certificate. RFC3339
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * [Output Only] Expire time of the certificate. RFC3339
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public SslCertificate setExpireTime(java.lang.String expireTime) {
+    this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
@@ -201,6 +259,23 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Configuration and status of a managed SSL certificate.
+   * @return value or {@code null} for none
+   */
+  public SslCertificateManagedSslCertificate getManaged() {
+    return managed;
+  }
+
+  /**
+   * Configuration and status of a managed SSL certificate.
+   * @param managed managed or {@code null} for none
+   */
+  public SslCertificate setManaged(SslCertificateManagedSslCertificate managed) {
+    this.managed = managed;
+    return this;
+  }
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -226,7 +301,8 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A write-only private key in PEM format. Only insert requests will include this field.
+   * A value read into memory from a write-only private key file. The private key file must be in
+   * PEM format. For security, only insert requests include this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateKey() {
@@ -234,7 +310,8 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A write-only private key in PEM format. Only insert requests will include this field.
+   * A value read into memory from a write-only private key file. The private key file must be in
+   * PEM format. For security, only insert requests include this field.
    * @param privateKey privateKey or {@code null} for none
    */
   public SslCertificate setPrivateKey(java.lang.String privateKey) {
@@ -275,6 +352,59 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
    */
   public SslCertificate setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Configuration and status of a self-managed SSL certificate.
+   * @return value or {@code null} for none
+   */
+  public SslCertificateSelfManagedSslCertificate getSelfManaged() {
+    return selfManaged;
+  }
+
+  /**
+   * Configuration and status of a self-managed SSL certificate.
+   * @param selfManaged selfManaged or {@code null} for none
+   */
+  public SslCertificate setSelfManaged(SslCertificateSelfManagedSslCertificate selfManaged) {
+    this.selfManaged = selfManaged;
+    return this;
+  }
+
+  /**
+   * [Output Only] Domains associated with the certificate via Subject Alternative Name.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSubjectAlternativeNames() {
+    return subjectAlternativeNames;
+  }
+
+  /**
+   * [Output Only] Domains associated with the certificate via Subject Alternative Name.
+   * @param subjectAlternativeNames subjectAlternativeNames or {@code null} for none
+   */
+  public SslCertificate setSubjectAlternativeNames(java.util.List<java.lang.String> subjectAlternativeNames) {
+    this.subjectAlternativeNames = subjectAlternativeNames;
+    return this;
+  }
+
+  /**
+   * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not
+   * specified, the certificate is self-managed and the fields certificate and private_key are used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not
+   * specified, the certificate is self-managed and the fields certificate and private_key are used.
+   * @param type type or {@code null} for none
+   */
+  public SslCertificate setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

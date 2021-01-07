@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Contains properties of a Campaign Manager advertiser.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -74,7 +74,7 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    * advertiser's floodlight configuration ID in order to share that advertiser's floodlight
    * configuration with this advertiser, so long as: - This advertiser's original floodlight
    * configuration is not already associated with floodlight activities or floodlight activity
-   * groups.  - This advertiser's original floodlight configuration is not already shared with
+   * groups. - This advertiser's original floodlight configuration is not already shared with
    * another advertiser.
    * The value may be {@code null}.
    */
@@ -247,7 +247,7 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    * advertiser's floodlight configuration ID in order to share that advertiser's floodlight
    * configuration with this advertiser, so long as: - This advertiser's original floodlight
    * configuration is not already associated with floodlight activities or floodlight activity
-   * groups.  - This advertiser's original floodlight configuration is not already shared with
+   * groups. - This advertiser's original floodlight configuration is not already shared with
    * another advertiser.
    * @return value or {@code null} for none
    */
@@ -261,7 +261,7 @@ public final class Advertiser extends com.google.api.client.json.GenericJson {
    * advertiser's floodlight configuration ID in order to share that advertiser's floodlight
    * configuration with this advertiser, so long as: - This advertiser's original floodlight
    * configuration is not already associated with floodlight activities or floodlight activity
-   * groups.  - This advertiser's original floodlight configuration is not already shared with
+   * groups. - This advertiser's original floodlight configuration is not already shared with
    * another advertiser.
    * @param floodlightConfigurationId floodlightConfigurationId or {@code null} for none
    */

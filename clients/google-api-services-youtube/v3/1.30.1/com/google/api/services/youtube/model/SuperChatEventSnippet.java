@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Model definition for SuperChatEventSnippet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,7 @@ package com.google.api.services.youtube.model;
 public final class SuperChatEventSnippet extends com.google.api.client.json.GenericJson {
 
   /**
-   * The purchase amount, in micros of the purchase currency. e.g., 1 is represented as 1000000.
+   * The purchase amount, in micros of the purchase currency.  e.g., 1 is represented as 1000000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -51,34 +51,26 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   private java.lang.String commentText;
 
   /**
-   * The date and time when the event occurred. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time when the event occurred. The value is specified in ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime createdAt;
+  private java.lang.String createdAt;
 
   /**
-   * The currency in which the purchase was made. ISO 4217.
+   * The currency in which the purchase was made.  ISO 4217.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currency;
 
   /**
-   * A rendered string that displays the purchase amount and currency (e.g., "$1.00"). The string is
-   * rendered for the given language.
+   * A rendered string that displays the purchase amount and currency (e.g., "$1.00").  The string
+   * is rendered for the given language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayString;
-
-  /**
-   * True if this event is a Super Chat for Good purchase.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean isSuperChatForGood;
 
   /**
    * True if this event is a Super Sticker event.
@@ -96,14 +88,6 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   private java.lang.Long messageType;
 
   /**
-   * If this event is a Super Chat for Good purchase, this field will contain information about the
-   * charity the purchase is donated to.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Nonprofit nonprofit;
-
-  /**
    * If this event is a Super Sticker event, this field will contain metadata about the Super
    * Sticker.
    * The value may be {@code null}.
@@ -119,7 +103,7 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   private ChannelProfileDetails supporterDetails;
 
   /**
-   * The purchase amount, in micros of the purchase currency. e.g., 1 is represented as 1000000.
+   * The purchase amount, in micros of the purchase currency.  e.g., 1 is represented as 1000000.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getAmountMicros() {
@@ -127,7 +111,7 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   }
 
   /**
-   * The purchase amount, in micros of the purchase currency. e.g., 1 is represented as 1000000.
+   * The purchase amount, in micros of the purchase currency.  e.g., 1 is represented as 1000000.
    * @param amountMicros amountMicros or {@code null} for none
    */
   public SuperChatEventSnippet setAmountMicros(java.math.BigInteger amountMicros) {
@@ -170,26 +154,24 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   }
 
   /**
-   * The date and time when the event occurred. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time when the event occurred. The value is specified in ISO 8601 format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getCreatedAt() {
+  public java.lang.String getCreatedAt() {
     return createdAt;
   }
 
   /**
-   * The date and time when the event occurred. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time when the event occurred. The value is specified in ISO 8601 format.
    * @param createdAt createdAt or {@code null} for none
    */
-  public SuperChatEventSnippet setCreatedAt(com.google.api.client.util.DateTime createdAt) {
+  public SuperChatEventSnippet setCreatedAt(java.lang.String createdAt) {
     this.createdAt = createdAt;
     return this;
   }
 
   /**
-   * The currency in which the purchase was made. ISO 4217.
+   * The currency in which the purchase was made.  ISO 4217.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrency() {
@@ -197,7 +179,7 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   }
 
   /**
-   * The currency in which the purchase was made. ISO 4217.
+   * The currency in which the purchase was made.  ISO 4217.
    * @param currency currency or {@code null} for none
    */
   public SuperChatEventSnippet setCurrency(java.lang.String currency) {
@@ -206,8 +188,8 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   }
 
   /**
-   * A rendered string that displays the purchase amount and currency (e.g., "$1.00"). The string is
-   * rendered for the given language.
+   * A rendered string that displays the purchase amount and currency (e.g., "$1.00").  The string
+   * is rendered for the given language.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayString() {
@@ -215,29 +197,12 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
   }
 
   /**
-   * A rendered string that displays the purchase amount and currency (e.g., "$1.00"). The string is
-   * rendered for the given language.
+   * A rendered string that displays the purchase amount and currency (e.g., "$1.00").  The string
+   * is rendered for the given language.
    * @param displayString displayString or {@code null} for none
    */
   public SuperChatEventSnippet setDisplayString(java.lang.String displayString) {
     this.displayString = displayString;
-    return this;
-  }
-
-  /**
-   * True if this event is a Super Chat for Good purchase.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIsSuperChatForGood() {
-    return isSuperChatForGood;
-  }
-
-  /**
-   * True if this event is a Super Chat for Good purchase.
-   * @param isSuperChatForGood isSuperChatForGood or {@code null} for none
-   */
-  public SuperChatEventSnippet setIsSuperChatForGood(java.lang.Boolean isSuperChatForGood) {
-    this.isSuperChatForGood = isSuperChatForGood;
     return this;
   }
 
@@ -274,25 +239,6 @@ public final class SuperChatEventSnippet extends com.google.api.client.json.Gene
    */
   public SuperChatEventSnippet setMessageType(java.lang.Long messageType) {
     this.messageType = messageType;
-    return this;
-  }
-
-  /**
-   * If this event is a Super Chat for Good purchase, this field will contain information about the
-   * charity the purchase is donated to.
-   * @return value or {@code null} for none
-   */
-  public Nonprofit getNonprofit() {
-    return nonprofit;
-  }
-
-  /**
-   * If this event is a Super Chat for Good purchase, this field will contain information about the
-   * charity the purchase is donated to.
-   * @param nonprofit nonprofit or {@code null} for none
-   */
-  public SuperChatEventSnippet setNonprofit(Nonprofit nonprofit) {
-    this.nonprofit = nonprofit;
     return this;
   }
 

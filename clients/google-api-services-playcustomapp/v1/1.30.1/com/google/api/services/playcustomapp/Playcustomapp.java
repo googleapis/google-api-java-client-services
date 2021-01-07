@@ -20,12 +20,12 @@ package com.google.api.services.playcustomapp;
  * Service definition for Playcustomapp (v1).
  *
  * <p>
- * An API to publish custom Android apps.
+ * API to create and publish custom Android apps
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/android/work/play/custom-app-api" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/android/work/play/custom-app-api/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Play Custom App Publishing API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Google Play Custom App Publishing API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -55,7 +55,7 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://playcustomapp.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -63,7 +63,7 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "playcustomapp/v1/accounts/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/playcustomapp/v1";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -163,7 +163,7 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
     public class CustomApps {
 
       /**
-       * Create and publish a new custom app.
+       * Creates a new custom app.
        *
        * Create a request for the method "customApps.create".
        *
@@ -181,7 +181,7 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Create and publish a new custom app.
+       * Creates a new custom app.
        *
        * Create a request for the method "customApps.create".
        *
@@ -206,10 +206,10 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
 
       public class Create extends PlaycustomappRequest<com.google.api.services.playcustomapp.model.CustomApp> {
 
-        private static final String REST_PATH = "{account}/customApps";
+        private static final String REST_PATH = "playcustomapp/v1/accounts/{account}/customApps";
 
         /**
-         * Create and publish a new custom app.
+         * Creates a new custom app.
          *
          * Create a request for the method "customApps.create".
          *
@@ -229,7 +229,7 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Create and publish a new custom app.
+         * Creates a new custom app.
          *
          * Create a request for the method "customApps.create".
          *
@@ -255,8 +255,23 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
         public Create setAlt(java.lang.String alt) {
           return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
         }
 
         @Override
@@ -285,8 +300,13 @@ public class Playcustomapp extends com.google.api.client.googleapis.services.jso
         }
 
         @Override
-        public Create setUserIp(java.lang.String userIp) {
-          return (Create) super.setUserIp(userIp);
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
         /** Developer account ID. */

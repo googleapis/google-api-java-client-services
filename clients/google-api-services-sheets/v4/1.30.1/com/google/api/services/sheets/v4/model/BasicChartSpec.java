@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * The specification for a basic chart.  See BasicChartType for the list of charts this supports.
+ * The specification for a basic chart. See BasicChartType for the list of charts this supports.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -71,9 +71,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
 
   /**
    * The number of rows or columns in the data that are "headers". If not set, Google Sheets will
-   * guess how many rows are headers based on the data.
-   *
-   * (Note that BasicChartAxis.title may override the axis title  inferred from the header values.)
+   * guess how many rows are headers based on the data. (Note that BasicChartAxis.title may override
+   * the axis title inferred from the header values.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,8 +80,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
 
   /**
    * If some values in a series are missing, gaps may appear in the chart (e.g, segments of lines in
-   * a line chart will be missing).  To eliminate these gaps set this to true. Applies to Line,
-   * Area, and Combo charts.
+   * a line chart will be missing). To eliminate these gaps set this to true. Applies to Line, Area,
+   * and Combo charts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,9 +200,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
 
   /**
    * The number of rows or columns in the data that are "headers". If not set, Google Sheets will
-   * guess how many rows are headers based on the data.
-   *
-   * (Note that BasicChartAxis.title may override the axis title  inferred from the header values.)
+   * guess how many rows are headers based on the data. (Note that BasicChartAxis.title may override
+   * the axis title inferred from the header values.)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHeaderCount() {
@@ -212,9 +210,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
 
   /**
    * The number of rows or columns in the data that are "headers". If not set, Google Sheets will
-   * guess how many rows are headers based on the data.
-   *
-   * (Note that BasicChartAxis.title may override the axis title  inferred from the header values.)
+   * guess how many rows are headers based on the data. (Note that BasicChartAxis.title may override
+   * the axis title inferred from the header values.)
    * @param headerCount headerCount or {@code null} for none
    */
   public BasicChartSpec setHeaderCount(java.lang.Integer headerCount) {
@@ -224,8 +221,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
 
   /**
    * If some values in a series are missing, gaps may appear in the chart (e.g, segments of lines in
-   * a line chart will be missing).  To eliminate these gaps set this to true. Applies to Line,
-   * Area, and Combo charts.
+   * a line chart will be missing). To eliminate these gaps set this to true. Applies to Line, Area,
+   * and Combo charts.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInterpolateNulls() {
@@ -234,8 +231,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
 
   /**
    * If some values in a series are missing, gaps may appear in the chart (e.g, segments of lines in
-   * a line chart will be missing).  To eliminate these gaps set this to true. Applies to Line,
-   * Area, and Combo charts.
+   * a line chart will be missing). To eliminate these gaps set this to true. Applies to Line, Area,
+   * and Combo charts.
    * @param interpolateNulls interpolateNulls or {@code null} for none
    */
   public BasicChartSpec setInterpolateNulls(java.lang.Boolean interpolateNulls) {

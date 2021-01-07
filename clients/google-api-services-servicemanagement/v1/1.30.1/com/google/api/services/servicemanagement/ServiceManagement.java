@@ -46,7 +46,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Service Management API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Service Management API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,7 +143,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -168,7 +168,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -386,38 +386,27 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * A string for filtering Operations. The following filter fields are supported
-       *
-       * * serviceName Required. Only `=` operator is allowed. * startTime The time this job was
-       * started, in ISO 8601 format. Allowed operators are `>=`,  `>`, `<=`, and `<`. * status Can
-       * be `done`, `in_progress`, or `failed`. Allowed operators are `=`, and `!=`.
-       *
-       * Filter expression supports conjunction (AND) and disjunction (OR) logical operators.
-       * However, the serviceName restriction must be at the top-level and can only be combined with
-       * other restrictions via the AND logical operator.
-       *
-       * Examples
-       *
-       * * `serviceName={some-service}.googleapis.com` * `serviceName={some-service}.googleapis.com
-       * AND startTime>="2017-02-01"` * `serviceName={some-service}.googleapis.com AND status=done`
-       * * `serviceName={some-service}.googleapis.com AND (status=done OR startTime>="2017-02-01")`
+       * A string for filtering Operations. The following filter fields are supported: *
+       * serviceName: Required. Only `=` operator is allowed. * startTime: The time this job was
+       * started, in ISO 8601 format. Allowed operators are `>=`, `>`, `<=`, and `<`. * status: Can
+       * be `done`, `in_progress`, or `failed`. Allowed operators are `=`, and `!=`. Filter
+       * expression supports conjunction (AND) and disjunction (OR) logical operators. However, the
+       * serviceName restriction must be at the top-level and can only be combined with other
+       * restrictions via the AND logical operator. Examples: * `serviceName={some-
+       * service}.googleapis.com` * `serviceName={some-service}.googleapis.com AND
+       * startTime>="2017-02-01"` * `serviceName={some-service}.googleapis.com AND status=done` *
+       * `serviceName={some-service}.googleapis.com AND (status=done OR startTime>="2017-02-01")`
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** A string for filtering Operations. The following filter fields are supported
-
-     * serviceName Required. Only `=` operator is allowed. * startTime The time this job was started, in
-     ISO 8601 format. Allowed operators are `>=`,  `>`, `<=`, and `<`. * status Can be `done`,
-     `in_progress`, or `failed`. Allowed operators are `=`, and `!=`.
-
-     Filter expression supports conjunction (AND) and disjunction (OR) logical operators. However, the
-     serviceName restriction must be at the top-level and can only be combined with other restrictions
-     via the AND logical operator.
-
-     Examples
-
-     * `serviceName={some-service}.googleapis.com` * `serviceName={some-service}.googleapis.com AND
+      /** A string for filtering Operations. The following filter fields are supported: * serviceName:
+     Required. Only `=` operator is allowed. * startTime: The time this job was started, in ISO 8601
+     format. Allowed operators are `>=`, `>`, `<=`, and `<`. * status: Can be `done`, `in_progress`, or
+     `failed`. Allowed operators are `=`, and `!=`. Filter expression supports conjunction (AND) and
+     disjunction (OR) logical operators. However, the serviceName restriction must be at the top-level
+     and can only be combined with other restrictions via the AND logical operator. Examples: *
+     `serviceName={some-service}.googleapis.com` * `serviceName={some-service}.googleapis.com AND
      startTime>="2017-02-01"` * `serviceName={some-service}.googleapis.com AND status=done` *
      `serviceName={some-service}.googleapis.com AND (status=done OR startTime>="2017-02-01")`
        */
@@ -426,21 +415,16 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * A string for filtering Operations. The following filter fields are supported
-       *
-       * * serviceName Required. Only `=` operator is allowed. * startTime The time this job was
-       * started, in ISO 8601 format. Allowed operators are `>=`,  `>`, `<=`, and `<`. * status Can
-       * be `done`, `in_progress`, or `failed`. Allowed operators are `=`, and `!=`.
-       *
-       * Filter expression supports conjunction (AND) and disjunction (OR) logical operators.
-       * However, the serviceName restriction must be at the top-level and can only be combined with
-       * other restrictions via the AND logical operator.
-       *
-       * Examples
-       *
-       * * `serviceName={some-service}.googleapis.com` * `serviceName={some-service}.googleapis.com
-       * AND startTime>="2017-02-01"` * `serviceName={some-service}.googleapis.com AND status=done`
-       * * `serviceName={some-service}.googleapis.com AND (status=done OR startTime>="2017-02-01")`
+       * A string for filtering Operations. The following filter fields are supported: *
+       * serviceName: Required. Only `=` operator is allowed. * startTime: The time this job was
+       * started, in ISO 8601 format. Allowed operators are `>=`, `>`, `<=`, and `<`. * status: Can
+       * be `done`, `in_progress`, or `failed`. Allowed operators are `=`, and `!=`. Filter
+       * expression supports conjunction (AND) and disjunction (OR) logical operators. However, the
+       * serviceName restriction must be at the top-level and can only be combined with other
+       * restrictions via the AND logical operator. Examples: * `serviceName={some-
+       * service}.googleapis.com` * `serviceName={some-service}.googleapis.com AND
+       * startTime>="2017-02-01"` * `serviceName={some-service}.googleapis.com AND status=done` *
+       * `serviceName={some-service}.googleapis.com AND (status=done OR startTime>="2017-02-01")`
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -531,9 +515,10 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
   public class Services {
 
     /**
-     * Creates a new managed service. Please note one producer project can own no more than 20 services.
-     *
-     * Operation
+     * Creates a new managed service. A managed service is immutable, and is subject to mandatory 30-day
+     * data retention. You cannot move a service or recreate it within 30 days after deletion. One
+     * producer project can own no more than 500 services. For security and reliability purposes, a
+     * production service should be hosted in a dedicated producer project. Operation
      *
      * Create a request for the method "services.create".
      *
@@ -554,10 +539,10 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/services";
 
       /**
-       * Creates a new managed service. Please note one producer project can own no more than 20
-       * services.
-       *
-       * Operation
+       * Creates a new managed service. A managed service is immutable, and is subject to mandatory
+       * 30-day data retention. You cannot move a service or recreate it within 30 days after deletion.
+       * One producer project can own no more than 500 services. For security and reliability purposes,
+       * a production service should be hosted in a dedicated producer project. Operation
        *
        * Create a request for the method "services.create".
        *
@@ -637,18 +622,15 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
     /**
      * Deletes a managed service. This method will change the service to the `Soft-Delete` state for 30
      * days. Within this period, service producers may call UndeleteService to restore the service.
-     * After 30 days, the service will be permanently deleted.
-     *
-     * Operation
+     * After 30 days, the service will be permanently deleted. Operation
      *
      * Create a request for the method "services.delete".
      *
      * This request holds the parameters needed by the servicemanagement server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-    for naming
-     *        requirements.  For example: `example.googleapis.com`.
+     * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+     *        requirements. For example: `example.googleapis.com`.
      * @return the request
      */
     public Delete delete(java.lang.String serviceName) throws java.io.IOException {
@@ -664,9 +646,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       /**
        * Deletes a managed service. This method will change the service to the `Soft-Delete` state for
        * 30 days. Within this period, service producers may call UndeleteService to restore the service.
-       * After 30 days, the service will be permanently deleted.
-       *
-       * Operation
+       * After 30 days, the service will be permanently deleted. Operation
        *
        * Create a request for the method "services.delete".
        *
@@ -676,9 +656,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-    for naming
-     *        requirements.  For example: `example.googleapis.com`.
+       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+     *        requirements. For example: `example.googleapis.com`.
        * @since 1.13
        */
       protected Delete(java.lang.String serviceName) {
@@ -742,22 +721,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Required. The name of the service.  See the [overview](/service-management/overview) for
-       * naming requirements.  For example: `example.googleapis.com`.
+       * Required. The name of the service. See the [overview](/service-management/overview) for
+       * naming requirements. For example: `example.googleapis.com`.
        */
       @com.google.api.client.util.Key
       private java.lang.String serviceName;
 
-      /** Required. The name of the service.  See the [overview](/service-management/overview) for naming
-     requirements.  For example: `example.googleapis.com`.
+      /** Required. The name of the service. See the [overview](/service-management/overview) for naming
+     requirements. For example: `example.googleapis.com`.
        */
       public java.lang.String getServiceName() {
         return serviceName;
       }
 
       /**
-       * Required. The name of the service.  See the [overview](/service-management/overview) for
-       * naming requirements.  For example: `example.googleapis.com`.
+       * Required. The name of the service. See the [overview](/service-management/overview) for
+       * naming requirements. For example: `example.googleapis.com`.
        */
       public Delete setServiceName(java.lang.String serviceName) {
         this.serviceName = serviceName;
@@ -770,153 +749,15 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Disables a service for a project, so it can no longer be be used for the project. It prevents
-     * accidental usage that may cause unexpected billing charges or security leaks.
-     *
-     * Operation
-     *
-     * Create a request for the method "services.disable".
-     *
-     * This request holds the parameters needed by the servicemanagement server.  After setting any
-     * optional parameters, call the {@link Disable#execute()} method to invoke the remote operation.
-     *
-     * @param serviceName Required. Name of the service to disable. Specifying an unknown service name
-    will cause the request
-     *        to fail.
-     * @param content the {@link com.google.api.services.servicemanagement.model.DisableServiceRequest}
-     * @return the request
-     */
-    public Disable disable(java.lang.String serviceName, com.google.api.services.servicemanagement.model.DisableServiceRequest content) throws java.io.IOException {
-      Disable result = new Disable(serviceName, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Disable extends ServiceManagementRequest<com.google.api.services.servicemanagement.model.Operation> {
-
-      private static final String REST_PATH = "v1/services/{serviceName}:disable";
-
-      /**
-       * Disables a service for a project, so it can no longer be be used for the project. It prevents
-       * accidental usage that may cause unexpected billing charges or security leaks.
-       *
-       * Operation
-       *
-       * Create a request for the method "services.disable".
-       *
-       * This request holds the parameters needed by the the servicemanagement server.  After setting
-       * any optional parameters, call the {@link Disable#execute()} method to invoke the remote
-       * operation. <p> {@link
-       * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param serviceName Required. Name of the service to disable. Specifying an unknown service name
-    will cause the request
-     *        to fail.
-       * @param content the {@link com.google.api.services.servicemanagement.model.DisableServiceRequest}
-       * @since 1.13
-       */
-      protected Disable(java.lang.String serviceName, com.google.api.services.servicemanagement.model.DisableServiceRequest content) {
-        super(ServiceManagement.this, "POST", REST_PATH, content, com.google.api.services.servicemanagement.model.Operation.class);
-        this.serviceName = com.google.api.client.util.Preconditions.checkNotNull(serviceName, "Required parameter serviceName must be specified.");
-      }
-
-      @Override
-      public Disable set$Xgafv(java.lang.String $Xgafv) {
-        return (Disable) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Disable setAccessToken(java.lang.String accessToken) {
-        return (Disable) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Disable setAlt(java.lang.String alt) {
-        return (Disable) super.setAlt(alt);
-      }
-
-      @Override
-      public Disable setCallback(java.lang.String callback) {
-        return (Disable) super.setCallback(callback);
-      }
-
-      @Override
-      public Disable setFields(java.lang.String fields) {
-        return (Disable) super.setFields(fields);
-      }
-
-      @Override
-      public Disable setKey(java.lang.String key) {
-        return (Disable) super.setKey(key);
-      }
-
-      @Override
-      public Disable setOauthToken(java.lang.String oauthToken) {
-        return (Disable) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Disable setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Disable) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Disable setQuotaUser(java.lang.String quotaUser) {
-        return (Disable) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Disable setUploadType(java.lang.String uploadType) {
-        return (Disable) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Disable setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Disable) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Required. Name of the service to disable. Specifying an unknown service name will cause the
-       * request to fail.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String serviceName;
-
-      /** Required. Name of the service to disable. Specifying an unknown service name will cause the request
-     to fail.
-       */
-      public java.lang.String getServiceName() {
-        return serviceName;
-      }
-
-      /**
-       * Required. Name of the service to disable. Specifying an unknown service name will cause the
-       * request to fail.
-       */
-      public Disable setServiceName(java.lang.String serviceName) {
-        this.serviceName = serviceName;
-        return this;
-      }
-
-      @Override
-      public Disable set(String parameterName, Object value) {
-        return (Disable) super.set(parameterName, value);
-      }
-    }
-    /**
      * Enables a service for a project, so it can be used for the project. See [Cloud Auth
-     * Guide](https://cloud.google.com/docs/authentication) for more information.
-     *
-     * Operation
+     * Guide](https://cloud.google.com/docs/authentication) for more information. Operation
      *
      * Create a request for the method "services.enable".
      *
      * This request holds the parameters needed by the servicemanagement server.  After setting any
      * optional parameters, call the {@link Enable#execute()} method to invoke the remote operation.
      *
-     * @param serviceName Required. Name of the service to enable. Specifying an unknown service name will
-    cause the request
+     * @param serviceName Required. Name of the service to enable. Specifying an unknown service name will cause the request
      *        to fail.
      * @param content the {@link com.google.api.services.servicemanagement.model.EnableServiceRequest}
      * @return the request
@@ -933,9 +774,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
 
       /**
        * Enables a service for a project, so it can be used for the project. See [Cloud Auth
-       * Guide](https://cloud.google.com/docs/authentication) for more information.
-       *
-       * Operation
+       * Guide](https://cloud.google.com/docs/authentication) for more information. Operation
        *
        * Create a request for the method "services.enable".
        *
@@ -945,8 +784,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param serviceName Required. Name of the service to enable. Specifying an unknown service name will
-    cause the request
+       * @param serviceName Required. Name of the service to enable. Specifying an unknown service name will cause the request
      *        to fail.
        * @param content the {@link com.google.api.services.servicemanagement.model.EnableServiceRequest}
        * @since 1.13
@@ -1041,13 +879,11 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
     }
     /**
      * Generates and returns a report (errors, warnings and changes from existing configurations)
-     * associated with GenerateConfigReportRequest.new_value
-     *
-     * If GenerateConfigReportRequest.old_value is specified, GenerateConfigReportRequest will contain a
-     * single ChangeReport based on the comparison between GenerateConfigReportRequest.new_value and
-     * GenerateConfigReportRequest.old_value. If GenerateConfigReportRequest.old_value is not specified,
-     * this method will compare GenerateConfigReportRequest.new_value with the last pushed service
-     * configuration.
+     * associated with GenerateConfigReportRequest.new_value If GenerateConfigReportRequest.old_value is
+     * specified, GenerateConfigReportRequest will contain a single ChangeReport based on the comparison
+     * between GenerateConfigReportRequest.new_value and GenerateConfigReportRequest.old_value. If
+     * GenerateConfigReportRequest.old_value is not specified, this method will compare
+     * GenerateConfigReportRequest.new_value with the last pushed service configuration.
      *
      * Create a request for the method "services.generateConfigReport".
      *
@@ -1070,10 +906,9 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
 
       /**
        * Generates and returns a report (errors, warnings and changes from existing configurations)
-       * associated with GenerateConfigReportRequest.new_value
-       *
-       * If GenerateConfigReportRequest.old_value is specified, GenerateConfigReportRequest will contain
-       * a single ChangeReport based on the comparison between GenerateConfigReportRequest.new_value and
+       * associated with GenerateConfigReportRequest.new_value If GenerateConfigReportRequest.old_value
+       * is specified, GenerateConfigReportRequest will contain a single ChangeReport based on the
+       * comparison between GenerateConfigReportRequest.new_value and
        * GenerateConfigReportRequest.old_value. If GenerateConfigReportRequest.old_value is not
        * specified, this method will compare GenerateConfigReportRequest.new_value with the last pushed
        * service configuration.
@@ -1161,8 +996,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
      * This request holds the parameters needed by the servicemanagement server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param serviceName Required. The name of the service.  See the `ServiceManager` overview for naming
-    requirements.  For
+     * @param serviceName Required. The name of the service. See the `ServiceManager` overview for naming requirements. For
      *        example: `example.googleapis.com`.
      * @return the request
      */
@@ -1187,8 +1021,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param serviceName Required. The name of the service.  See the `ServiceManager` overview for naming
-    requirements.  For
+       * @param serviceName Required. The name of the service. See the `ServiceManager` overview for naming requirements. For
      *        example: `example.googleapis.com`.
        * @since 1.13
        */
@@ -1263,13 +1096,13 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Required. The name of the service.  See the `ServiceManager` overview for naming
-       * requirements.  For example: `example.googleapis.com`.
+       * Required. The name of the service. See the `ServiceManager` overview for naming
+       * requirements. For example: `example.googleapis.com`.
        */
       @com.google.api.client.util.Key
       private java.lang.String serviceName;
 
-      /** Required. The name of the service.  See the `ServiceManager` overview for naming requirements.  For
+      /** Required. The name of the service. See the `ServiceManager` overview for naming requirements. For
      example: `example.googleapis.com`.
        */
       public java.lang.String getServiceName() {
@@ -1277,8 +1110,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Required. The name of the service.  See the `ServiceManager` overview for naming
-       * requirements.  For example: `example.googleapis.com`.
+       * Required. The name of the service. See the `ServiceManager` overview for naming
+       * requirements. For example: `example.googleapis.com`.
        */
       public Get setServiceName(java.lang.String serviceName) {
         this.serviceName = serviceName;
@@ -1298,9 +1131,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
      * This request holds the parameters needed by the servicemanagement server.  After setting any
      * optional parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
      *
-     * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-    for naming
-     *        requirements.  For example: `example.googleapis.com`.
+     * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+     *        requirements. For example: `example.googleapis.com`.
      * @return the request
      */
     public GetConfig getConfig(java.lang.String serviceName) throws java.io.IOException {
@@ -1324,9 +1156,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-    for naming
-     *        requirements.  For example: `example.googleapis.com`.
+       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+     *        requirements. For example: `example.googleapis.com`.
        * @since 1.13
        */
       protected GetConfig(java.lang.String serviceName) {
@@ -1400,22 +1231,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Required. The name of the service.  See the [overview](/service-management/overview) for
-       * naming requirements.  For example: `example.googleapis.com`.
+       * Required. The name of the service. See the [overview](/service-management/overview) for
+       * naming requirements. For example: `example.googleapis.com`.
        */
       @com.google.api.client.util.Key
       private java.lang.String serviceName;
 
-      /** Required. The name of the service.  See the [overview](/service-management/overview) for naming
-     requirements.  For example: `example.googleapis.com`.
+      /** Required. The name of the service. See the [overview](/service-management/overview) for naming
+     requirements. For example: `example.googleapis.com`.
        */
       public java.lang.String getServiceName() {
         return serviceName;
       }
 
       /**
-       * Required. The name of the service.  See the [overview](/service-management/overview) for
-       * naming requirements.  For example: `example.googleapis.com`.
+       * Required. The name of the service. See the [overview](/service-management/overview) for
+       * naming requirements. For example: `example.googleapis.com`.
        */
       public GetConfig setServiceName(java.lang.String serviceName) {
         this.serviceName = serviceName;
@@ -1423,34 +1254,29 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Required. The id of the service configuration resource.
-       *
-       * This field must be specified for the server to return all fields, including `SourceInfo`.
+       * Required. The id of the service configuration resource. This field must be specified for
+       * the server to return all fields, including `SourceInfo`.
        */
       @com.google.api.client.util.Key
       private java.lang.String configId;
 
-      /** Required. The id of the service configuration resource.
-
-     This field must be specified for the server to return all fields, including `SourceInfo`.
+      /** Required. The id of the service configuration resource. This field must be specified for the server
+     to return all fields, including `SourceInfo`.
        */
       public java.lang.String getConfigId() {
         return configId;
       }
 
       /**
-       * Required. The id of the service configuration resource.
-       *
-       * This field must be specified for the server to return all fields, including `SourceInfo`.
+       * Required. The id of the service configuration resource. This field must be specified for
+       * the server to return all fields, including `SourceInfo`.
        */
       public GetConfig setConfigId(java.lang.String configId) {
         this.configId = configId;
         return this;
       }
 
-      /**
-       * Specifies which parts of the Service Config should be returned in the response.
-       */
+      /** Specifies which parts of the Service Config should be returned in the response. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
@@ -1460,9 +1286,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         return view;
       }
 
-      /**
-       * Specifies which parts of the Service Config should be returned in the response.
-       */
+      /** Specifies which parts of the Service Config should be returned in the response. */
       public GetConfig setView(java.lang.String view) {
         this.view = view;
         return this;
@@ -1483,8 +1307,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.servicemanagement.model.GetIamPolicyRequest}
      * @return the request
@@ -1514,8 +1337,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.servicemanagement.model.GetIamPolicyRequest}
        * @since 1.13
@@ -1619,13 +1441,10 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Lists managed services.
-     *
-     * Returns all public services. For authenticated users, also returns all services the calling user
-     * has "servicemanagement.services.get" permission for.
-     *
-     * **BETA:** If the caller specifies the `consumer_id`, it returns only the services enabled on the
-     * consumer. The `consumer_id` must have the format of "project:{PROJECT-ID}".
+     * Lists managed services. Returns all public services. For authenticated users, also returns all
+     * services the calling user has "servicemanagement.services.get" permission for. **BETA:** If the
+     * caller specifies the `consumer_id`, it returns only the services enabled on the consumer. The
+     * `consumer_id` must have the format of "project:{PROJECT-ID}".
      *
      * Create a request for the method "services.list".
      *
@@ -1645,13 +1464,10 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/services";
 
       /**
-       * Lists managed services.
-       *
-       * Returns all public services. For authenticated users, also returns all services the calling
-       * user has "servicemanagement.services.get" permission for.
-       *
-       * **BETA:** If the caller specifies the `consumer_id`, it returns only the services enabled on
-       * the consumer. The `consumer_id` must have the format of "project:{PROJECT-ID}".
+       * Lists managed services. Returns all public services. For authenticated users, also returns all
+       * services the calling user has "servicemanagement.services.get" permission for. **BETA:** If the
+       * caller specifies the `consumer_id`, it returns only the services enabled on the consumer. The
+       * `consumer_id` must have the format of "project:{PROJECT-ID}".
        *
        * Create a request for the method "services.list".
        *
@@ -1733,25 +1549,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Include services consumed by the specified consumer.
-       *
-       * The Google Service Management implementation accepts the following forms: - project:
+       * Include services consumed by the specified consumer. The Google Service Management
+       * implementation accepts the following forms: - project:
        */
       @com.google.api.client.util.Key
       private java.lang.String consumerId;
 
-      /** Include services consumed by the specified consumer.
-
-     The Google Service Management implementation accepts the following forms: - project:
+      /** Include services consumed by the specified consumer. The Google Service Management implementation
+     accepts the following forms: - project:
        */
       public java.lang.String getConsumerId() {
         return consumerId;
       }
 
       /**
-       * Include services consumed by the specified consumer.
-       *
-       * The Google Service Management implementation accepts the following forms: - project:
+       * Include services consumed by the specified consumer. The Google Service Management
+       * implementation accepts the following forms: - project:
        */
       public List setConsumerId(java.lang.String consumerId) {
         this.consumerId = consumerId;
@@ -1781,9 +1594,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * Token identifying which result to start with; returned by a previous list call.
-       */
+      /** Token identifying which result to start with; returned by a previous list call. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
@@ -1793,9 +1604,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         return pageToken;
       }
 
-      /**
-       * Token identifying which result to start with; returned by a previous list call.
-       */
+      /** Token identifying which result to start with; returned by a previous list call. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -1823,9 +1632,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Sets the access control policy on the specified resource. Replaces any existing policy.
-     *
-     * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+     * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+     * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
      *
      * Create a request for the method "services.setIamPolicy".
      *
@@ -1833,8 +1641,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.servicemanagement.model.SetIamPolicyRequest}
      * @return the request
@@ -1853,9 +1660,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
           java.util.regex.Pattern.compile("^services/[^/]+$");
 
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
-       *
-       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "services.setIamPolicy".
        *
@@ -1865,8 +1671,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.servicemanagement.model.SetIamPolicyRequest}
        * @since 1.13
@@ -1971,10 +1776,9 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
     }
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-     * this will return an empty set of permissions, not a NOT_FOUND error.
-     *
-     * Note: This operation is designed to be used for building permission-aware UIs and command-line
-     * tools, not for authorization checking. This operation may "fail open" without warning.
+     * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+     * designed to be used for building permission-aware UIs and command-line tools, not for
+     * authorization checking. This operation may "fail open" without warning.
      *
      * Create a request for the method "services.testIamPermissions".
      *
@@ -1982,8 +1786,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
      * @param content the {@link com.google.api.services.servicemanagement.model.TestIamPermissionsRequest}
      * @return the request
@@ -2003,10 +1806,9 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
 
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not
-       * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+       * operation is designed to be used for building permission-aware UIs and command-line tools, not
+       * for authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "services.testIamPermissions".
        *
@@ -2016,8 +1818,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.servicemanagement.model.TestIamPermissionsRequest}
        * @since 1.13
@@ -2123,17 +1924,14 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
     /**
      * Revives a previously deleted managed service. The method restores the service using the
      * configuration at the time the service was deleted. The target service must exist and must have
-     * been deleted within the last 30 days.
-     *
-     * Operation
+     * been deleted within the last 30 days. Operation
      *
      * Create a request for the method "services.undelete".
      *
      * This request holds the parameters needed by the servicemanagement server.  After setting any
      * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
      *
-     * @param serviceName Required. The name of the service. See the [overview](/service-management/overview)
-    for naming
+     * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
      *        requirements. For example: `example.googleapis.com`.
      * @return the request
      */
@@ -2150,9 +1948,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       /**
        * Revives a previously deleted managed service. The method restores the service using the
        * configuration at the time the service was deleted. The target service must exist and must have
-       * been deleted within the last 30 days.
-       *
-       * Operation
+       * been deleted within the last 30 days. Operation
        *
        * Create a request for the method "services.undelete".
        *
@@ -2162,8 +1958,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview)
-    for naming
+       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
      *        requirements. For example: `example.googleapis.com`.
        * @since 1.13
        */
@@ -2279,19 +2074,16 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       /**
        * Creates a new service configuration (version) for a managed service. This method only stores the
        * service configuration. To roll out the service configuration to backend systems please call
-       * CreateServiceRollout.
-       *
-       * Only the 100 most recent service configurations and ones referenced by existing rollouts are kept
-       * for each service. The rest will be deleted eventually.
+       * CreateServiceRollout. Only the 100 most recent service configurations and ones referenced by
+       * existing rollouts are kept for each service. The rest will be deleted eventually.
        *
        * Create a request for the method "configs.create".
        *
        * This request holds the parameters needed by the servicemanagement server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
        * @param content the {@link com.google.api.services.servicemanagement.model.Service}
        * @return the request
        */
@@ -2308,10 +2100,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         /**
          * Creates a new service configuration (version) for a managed service. This method only stores
          * the service configuration. To roll out the service configuration to backend systems please call
-         * CreateServiceRollout.
-         *
-         * Only the 100 most recent service configurations and ones referenced by existing rollouts are
-         * kept for each service. The rest will be deleted eventually.
+         * CreateServiceRollout. Only the 100 most recent service configurations and ones referenced by
+         * existing rollouts are kept for each service. The rest will be deleted eventually.
          *
          * Create a request for the method "configs.create".
          *
@@ -2321,9 +2111,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+         * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
          * @param content the {@link com.google.api.services.servicemanagement.model.Service}
          * @since 1.13
          */
@@ -2388,22 +2177,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         @com.google.api.client.util.Key
         private java.lang.String serviceName;
 
-        /** Required. The name of the service.  See the [overview](/service-management/overview) for naming
-       requirements.  For example: `example.googleapis.com`.
+        /** Required. The name of the service. See the [overview](/service-management/overview) for naming
+       requirements. For example: `example.googleapis.com`.
          */
         public java.lang.String getServiceName() {
           return serviceName;
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         public Create setServiceName(java.lang.String serviceName) {
           this.serviceName = serviceName;
@@ -2423,13 +2212,10 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the servicemanagement server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
-       * @param configId Required. The id of the service configuration resource.
-      This field must be specified for the server
-       *        to return all fields, including
-      `SourceInfo`.
+       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
+       * @param configId Required. The id of the service configuration resource. This field must be specified for the server
+       *        to return all fields, including `SourceInfo`.
        * @return the request
        */
       public Get get(java.lang.String serviceName, java.lang.String configId) throws java.io.IOException {
@@ -2453,13 +2239,10 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
-         * @param configId Required. The id of the service configuration resource.
-      This field must be specified for the server
-       *        to return all fields, including
-      `SourceInfo`.
+         * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
+         * @param configId Required. The id of the service configuration resource. This field must be specified for the server
+       *        to return all fields, including `SourceInfo`.
          * @since 1.13
          */
         protected Get(java.lang.String serviceName, java.lang.String configId) {
@@ -2534,22 +2317,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         @com.google.api.client.util.Key
         private java.lang.String serviceName;
 
-        /** Required. The name of the service.  See the [overview](/service-management/overview) for naming
-       requirements.  For example: `example.googleapis.com`.
+        /** Required. The name of the service. See the [overview](/service-management/overview) for naming
+       requirements. For example: `example.googleapis.com`.
          */
         public java.lang.String getServiceName() {
           return serviceName;
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         public Get setServiceName(java.lang.String serviceName) {
           this.serviceName = serviceName;
@@ -2557,34 +2340,29 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The id of the service configuration resource.
-         *
-         * This field must be specified for the server to return all fields, including `SourceInfo`.
+         * Required. The id of the service configuration resource. This field must be specified for
+         * the server to return all fields, including `SourceInfo`.
          */
         @com.google.api.client.util.Key
         private java.lang.String configId;
 
-        /** Required. The id of the service configuration resource.
-
-       This field must be specified for the server to return all fields, including `SourceInfo`.
+        /** Required. The id of the service configuration resource. This field must be specified for the server
+       to return all fields, including `SourceInfo`.
          */
         public java.lang.String getConfigId() {
           return configId;
         }
 
         /**
-         * Required. The id of the service configuration resource.
-         *
-         * This field must be specified for the server to return all fields, including `SourceInfo`.
+         * Required. The id of the service configuration resource. This field must be specified for
+         * the server to return all fields, including `SourceInfo`.
          */
         public Get setConfigId(java.lang.String configId) {
           this.configId = configId;
           return this;
         }
 
-        /**
-         * Specifies which parts of the Service Config should be returned in the response.
-         */
+        /** Specifies which parts of the Service Config should be returned in the response. */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
@@ -2594,9 +2372,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
           return view;
         }
 
-        /**
-         * Specifies which parts of the Service Config should be returned in the response.
-         */
+        /** Specifies which parts of the Service Config should be returned in the response. */
         public Get setView(java.lang.String view) {
           this.view = view;
           return this;
@@ -2616,9 +2392,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the servicemanagement server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
        * @return the request
        */
       public List list(java.lang.String serviceName) throws java.io.IOException {
@@ -2643,9 +2418,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+         * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
          * @since 1.13
          */
         protected List(java.lang.String serviceName) {
@@ -2719,22 +2493,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         @com.google.api.client.util.Key
         private java.lang.String serviceName;
 
-        /** Required. The name of the service.  See the [overview](/service-management/overview) for naming
-       requirements.  For example: `example.googleapis.com`.
+        /** Required. The name of the service. See the [overview](/service-management/overview) for naming
+       requirements. For example: `example.googleapis.com`.
          */
         public java.lang.String getServiceName() {
           return serviceName;
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         public List setServiceName(java.lang.String serviceName) {
           this.serviceName = serviceName;
@@ -2789,21 +2563,17 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * Creates a new service configuration (version) for a managed service based on user-supplied
        * configuration source files (for example: OpenAPI Specification). This method stores the source
        * configurations as well as the generated service configuration. To rollout the service
-       * configuration to other services, please call CreateServiceRollout.
-       *
-       * Only the 100 most recent configuration sources and ones referenced by existing service
-       * configurtions are kept for each service. The rest will be deleted eventually.
-       *
-       * Operation
+       * configuration to other services, please call CreateServiceRollout. Only the 100 most recent
+       * configuration sources and ones referenced by existing service configurtions are kept for each
+       * service. The rest will be deleted eventually. Operation
        *
        * Create a request for the method "configs.submit".
        *
        * This request holds the parameters needed by the servicemanagement server.  After setting any
        * optional parameters, call the {@link Submit#execute()} method to invoke the remote operation.
        *
-       * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
        * @param content the {@link com.google.api.services.servicemanagement.model.SubmitConfigSourceRequest}
        * @return the request
        */
@@ -2821,12 +2591,9 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * Creates a new service configuration (version) for a managed service based on user-supplied
          * configuration source files (for example: OpenAPI Specification). This method stores the source
          * configurations as well as the generated service configuration. To rollout the service
-         * configuration to other services, please call CreateServiceRollout.
-         *
-         * Only the 100 most recent configuration sources and ones referenced by existing service
-         * configurtions are kept for each service. The rest will be deleted eventually.
-         *
-         * Operation
+         * configuration to other services, please call CreateServiceRollout. Only the 100 most recent
+         * configuration sources and ones referenced by existing service configurtions are kept for each
+         * service. The rest will be deleted eventually. Operation
          *
          * Create a request for the method "configs.submit".
          *
@@ -2836,9 +2603,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * Submit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+         * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
          * @param content the {@link com.google.api.services.servicemanagement.model.SubmitConfigSourceRequest}
          * @since 1.13
          */
@@ -2903,22 +2669,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         @com.google.api.client.util.Key
         private java.lang.String serviceName;
 
-        /** Required. The name of the service.  See the [overview](/service-management/overview) for naming
-       requirements.  For example: `example.googleapis.com`.
+        /** Required. The name of the service. See the [overview](/service-management/overview) for naming
+       requirements. For example: `example.googleapis.com`.
          */
         public java.lang.String getServiceName() {
           return serviceName;
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         public Submit setServiceName(java.lang.String serviceName) {
           this.serviceName = serviceName;
@@ -2962,8 +2728,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.servicemanagement.model.GetIamPolicyRequest}
        * @return the request
@@ -2993,8 +2758,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.servicemanagement.model.GetIamPolicyRequest}
          * @since 1.13
@@ -3098,9 +2862,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         }
       }
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
-       *
-       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "consumers.setIamPolicy".
        *
@@ -3108,8 +2871,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.servicemanagement.model.SetIamPolicyRequest}
        * @return the request
@@ -3128,9 +2890,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^services/[^/]+/consumers/[^/]+$");
 
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "consumers.setIamPolicy".
          *
@@ -3140,8 +2901,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.servicemanagement.model.SetIamPolicyRequest}
          * @since 1.13
@@ -3246,10 +3006,9 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       }
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-       * this will return an empty set of permissions, not a NOT_FOUND error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+       * designed to be used for building permission-aware UIs and command-line tools, not for
+       * authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "consumers.testIamPermissions".
        *
@@ -3257,8 +3016,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.servicemanagement.model.TestIamPermissionsRequest}
        * @return the request
@@ -3278,10 +3036,9 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
-         * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+         * operation is designed to be used for building permission-aware UIs and command-line tools, not
+         * for authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "consumers.testIamPermissions".
          *
@@ -3291,8 +3048,7 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.servicemanagement.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -3420,24 +3176,19 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
       /**
        * Creates a new service configuration rollout. Based on rollout, the Google Service Management will
        * roll out the service configurations to different backend services. For example, the logging
-       * configuration will be pushed to Google Cloud Logging.
-       *
-       * Please note that any previous pending and running Rollouts and associated Operations will be
-       * automatically cancelled so that the latest Rollout will not be blocked by previous Rollouts.
-       *
-       * Only the 100 most recent (in any state) and the last 10 successful (if not already part of the
-       * set of 100 most recent) rollouts are kept for each service. The rest will be deleted eventually.
-       *
-       * Operation
+       * configuration will be pushed to Google Cloud Logging. Please note that any previous pending and
+       * running Rollouts and associated Operations will be automatically cancelled so that the latest
+       * Rollout will not be blocked by previous Rollouts. Only the 100 most recent (in any state) and the
+       * last 10 successful (if not already part of the set of 100 most recent) rollouts are kept for each
+       * service. The rest will be deleted eventually. Operation
        *
        * Create a request for the method "rollouts.create".
        *
        * This request holds the parameters needed by the servicemanagement server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
        * @param content the {@link com.google.api.services.servicemanagement.model.Rollout}
        * @return the request
        */
@@ -3454,16 +3205,11 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         /**
          * Creates a new service configuration rollout. Based on rollout, the Google Service Management
          * will roll out the service configurations to different backend services. For example, the
-         * logging configuration will be pushed to Google Cloud Logging.
-         *
-         * Please note that any previous pending and running Rollouts and associated Operations will be
-         * automatically cancelled so that the latest Rollout will not be blocked by previous Rollouts.
-         *
-         * Only the 100 most recent (in any state) and the last 10 successful (if not already part of the
-         * set of 100 most recent) rollouts are kept for each service. The rest will be deleted
-         * eventually.
-         *
-         * Operation
+         * logging configuration will be pushed to Google Cloud Logging. Please note that any previous
+         * pending and running Rollouts and associated Operations will be automatically cancelled so that
+         * the latest Rollout will not be blocked by previous Rollouts. Only the 100 most recent (in any
+         * state) and the last 10 successful (if not already part of the set of 100 most recent) rollouts
+         * are kept for each service. The rest will be deleted eventually. Operation
          *
          * Create a request for the method "rollouts.create".
          *
@@ -3473,9 +3219,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+         * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
          * @param content the {@link com.google.api.services.servicemanagement.model.Rollout}
          * @since 1.13
          */
@@ -3540,22 +3285,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         @com.google.api.client.util.Key
         private java.lang.String serviceName;
 
-        /** Required. The name of the service.  See the [overview](/service-management/overview) for naming
-       requirements.  For example: `example.googleapis.com`.
+        /** Required. The name of the service. See the [overview](/service-management/overview) for naming
+       requirements. For example: `example.googleapis.com`.
          */
         public java.lang.String getServiceName() {
           return serviceName;
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         public Create setServiceName(java.lang.String serviceName) {
           this.serviceName = serviceName;
@@ -3575,9 +3320,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the servicemanagement server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
        * @param rolloutId Required. The id of the rollout resource.
        * @return the request
        */
@@ -3602,9 +3346,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+         * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
          * @param rolloutId Required. The id of the rollout resource.
          * @since 1.13
          */
@@ -3680,22 +3423,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         @com.google.api.client.util.Key
         private java.lang.String serviceName;
 
-        /** Required. The name of the service.  See the [overview](/service-management/overview) for naming
-       requirements.  For example: `example.googleapis.com`.
+        /** Required. The name of the service. See the [overview](/service-management/overview) for naming
+       requirements. For example: `example.googleapis.com`.
          */
         public java.lang.String getServiceName() {
           return serviceName;
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         public Get setServiceName(java.lang.String serviceName) {
           this.serviceName = serviceName;
@@ -3732,9 +3475,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the servicemanagement server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+       * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
        * @return the request
        */
       public List list(java.lang.String serviceName) throws java.io.IOException {
@@ -3759,9 +3501,8 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param serviceName Required. The name of the service.  See the [overview](/service-management/overview)
-      for naming
-       *        requirements.  For example: `example.googleapis.com`.
+         * @param serviceName Required. The name of the service. See the [overview](/service-management/overview) for naming
+       *        requirements. For example: `example.googleapis.com`.
          * @since 1.13
          */
         protected List(java.lang.String serviceName) {
@@ -3835,22 +3576,22 @@ public class ServiceManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         @com.google.api.client.util.Key
         private java.lang.String serviceName;
 
-        /** Required. The name of the service.  See the [overview](/service-management/overview) for naming
-       requirements.  For example: `example.googleapis.com`.
+        /** Required. The name of the service. See the [overview](/service-management/overview) for naming
+       requirements. For example: `example.googleapis.com`.
          */
         public java.lang.String getServiceName() {
           return serviceName;
         }
 
         /**
-         * Required. The name of the service.  See the [overview](/service-management/overview) for
-         * naming requirements.  For example: `example.googleapis.com`.
+         * Required. The name of the service. See the [overview](/service-management/overview) for
+         * naming requirements. For example: `example.googleapis.com`.
          */
         public List setServiceName(java.lang.String serviceName) {
           this.serviceName = serviceName;

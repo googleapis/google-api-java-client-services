@@ -1,14 +1,14 @@
-# YouTube Data API Client Library for Java
+# YouTube Data API v3 Client Library for Java
 
-Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.
+The YouTube Data API v3 is an API that provides access to YouTube data, such as videos, playlists, and channels.
 
-This page contains information about getting started with the YouTube Data API
+This page contains information about getting started with the YouTube Data API v3
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the YouTube Data API][javadoc]
+* Browse the [Javadoc reference for the YouTube Data API v3][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the YouTube Data API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the YouTube Data API v3][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-youtube</artifactId>
-      <version>v3-rev20200312-1.30.9</version>
+      <version>v3-rev20200618-1.30.9</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-youtube:v3-rev20200312-1.30.9'
+  compile 'com.google.apis:google-api-services-youtube:v3-rev20200618-1.30.9'
 }
 ```
 

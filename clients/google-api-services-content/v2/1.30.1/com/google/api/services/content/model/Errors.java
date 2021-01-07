@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class Errors extends com.google.api.client.json.GenericJson {
 
   /**
-   * The HTTP status of the first error in errors.
+   * The HTTP status of the first error in `errors`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +51,14 @@ public final class Errors extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message of the first error in errors.
+   * The message of the first error in `errors`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * The HTTP status of the first error in errors.
+   * The HTTP status of the first error in `errors`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCode() {
@@ -66,7 +66,7 @@ public final class Errors extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The HTTP status of the first error in errors.
+   * The HTTP status of the first error in `errors`.
    * @param code code or {@code null} for none
    */
   public Errors setCode(java.lang.Long code) {
@@ -92,7 +92,7 @@ public final class Errors extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message of the first error in errors.
+   * The message of the first error in `errors`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -100,7 +100,7 @@ public final class Errors extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The message of the first error in errors.
+   * The message of the first error in `errors`.
    * @param message message or {@code null} for none
    */
   public Errors setMessage(java.lang.String message) {

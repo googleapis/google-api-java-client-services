@@ -46,7 +46,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Ad Exchange Buyer API II library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Ad Exchange Buyer API II library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -170,8 +170,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param accountId Unique numerical account ID for the buyer of which the client buyer
-      is a customer; the sponsor buyer
+       * @param accountId Unique numerical account ID for the buyer of which the client buyer is a customer; the sponsor buyer
        *        to create a client for. (required)
        * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.Client}
        * @return the request
@@ -197,8 +196,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param accountId Unique numerical account ID for the buyer of which the client buyer
-      is a customer; the sponsor buyer
+         * @param accountId Unique numerical account ID for the buyer of which the client buyer is a customer; the sponsor buyer
        *        to create a client for. (required)
          * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.Client}
          * @since 1.13
@@ -642,8 +640,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param accountId Unique numerical account ID for the buyer of which the client buyer
-      is a customer; the sponsor buyer
+       * @param accountId Unique numerical account ID for the buyer of which the client buyer is a customer; the sponsor buyer
        *        to update a client for. (required)
        * @param clientAccountId Unique numerical account ID of the client to update. (required)
        * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.Client}
@@ -670,8 +667,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param accountId Unique numerical account ID for the buyer of which the client buyer
-      is a customer; the sponsor buyer
+         * @param accountId Unique numerical account ID for the buyer of which the client buyer is a customer; the sponsor buyer
        *        to update a client for. (required)
          * @param clientAccountId Unique numerical account ID of the client to update. (required)
          * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.Client}
@@ -812,8 +808,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param accountId Numerical account ID of the client's sponsor buyer. (required)
-         * @param clientAccountId Numerical account ID of the client buyer that the user
-        should be associated with. (required)
+         * @param clientAccountId Numerical account ID of the client buyer that the user should be associated with. (required)
          * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.ClientUserInvitation}
          * @return the request
          */
@@ -839,8 +834,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param accountId Numerical account ID of the client's sponsor buyer. (required)
-           * @param clientAccountId Numerical account ID of the client buyer that the user
-        should be associated with. (required)
+           * @param clientAccountId Numerical account ID of the client buyer that the user should be associated with. (required)
            * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.ClientUserInvitation}
            * @since 1.13
            */
@@ -957,8 +951,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param accountId Numerical account ID of the client's sponsor buyer. (required)
-         * @param clientAccountId Numerical account ID of the client buyer that the user invitation
-        to be retrieved is associated
+         * @param clientAccountId Numerical account ID of the client buyer that the user invitation to be retrieved is associated
          *        with. (required)
          * @param invitationId Numerical identifier of the user invitation to retrieve. (required)
          * @return the request
@@ -984,8 +977,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param accountId Numerical account ID of the client's sponsor buyer. (required)
-           * @param clientAccountId Numerical account ID of the client buyer that the user invitation
-        to be retrieved is associated
+           * @param clientAccountId Numerical account ID of the client buyer that the user invitation to be retrieved is associated
          *        with. (required)
            * @param invitationId Numerical identifier of the user invitation to retrieve. (required)
            * @since 1.13
@@ -1131,14 +1123,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param accountId Numerical account ID of the client's sponsor buyer. (required)
-         * @param clientAccountId Numerical account ID of the client buyer to list invitations for.
-        (required)
-        You must either specify
-         *        a string representation of a
-        numerical account identifier or the `-` character
-        to list all
-         *        the invitations for all the clients
-        of a given sponsor buyer.
+         * @param clientAccountId Numerical account ID of the client buyer to list invitations for. (required) You must either specify
+         *        a string representation of a numerical account identifier or the `-` character to list all
+         *        the invitations for all the clients of a given sponsor buyer.
          * @return the request
          */
         public List list(java.lang.Long accountId, java.lang.String clientAccountId) throws java.io.IOException {
@@ -1162,14 +1149,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param accountId Numerical account ID of the client's sponsor buyer. (required)
-           * @param clientAccountId Numerical account ID of the client buyer to list invitations for.
-        (required)
-        You must either specify
-         *        a string representation of a
-        numerical account identifier or the `-` character
-        to list all
-         *        the invitations for all the clients
-        of a given sponsor buyer.
+           * @param clientAccountId Numerical account ID of the client buyer to list invitations for. (required) You must either specify
+         *        a string representation of a numerical account identifier or the `-` character to list all
+         *        the invitations for all the clients of a given sponsor buyer.
            * @since 1.13
            */
           protected List(java.lang.Long accountId, java.lang.String clientAccountId) {
@@ -1370,8 +1352,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param accountId Numerical account ID of the client's sponsor buyer. (required)
-         * @param clientAccountId Numerical account ID of the client buyer
-        that the user to be retrieved is associated with.
+         * @param clientAccountId Numerical account ID of the client buyer that the user to be retrieved is associated with.
          *        (required)
          * @param userId Numerical identifier of the user to retrieve. (required)
          * @return the request
@@ -1397,8 +1378,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param accountId Numerical account ID of the client's sponsor buyer. (required)
-           * @param clientAccountId Numerical account ID of the client buyer
-        that the user to be retrieved is associated with.
+           * @param clientAccountId Numerical account ID of the client buyer that the user to be retrieved is associated with.
          *        (required)
            * @param userId Numerical identifier of the user to retrieve. (required)
            * @since 1.13
@@ -1543,15 +1523,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param accountId Numerical account ID of the sponsor buyer of the client to list users for.
-        (required)
-         * @param clientAccountId The account ID of the client buyer to list users for. (required)
-        You must specify either a string
-         *        representation of a
-        numerical account identifier or the `-` character
-        to list all the
-         *        client users for all the clients
-        of a given sponsor buyer.
+         * @param accountId Numerical account ID of the sponsor buyer of the client to list users for. (required)
+         * @param clientAccountId The account ID of the client buyer to list users for. (required) You must specify either a string
+         *        representation of a numerical account identifier or the `-` character to list all the
+         *        client users for all the clients of a given sponsor buyer.
          * @return the request
          */
         public List list(java.lang.Long accountId, java.lang.String clientAccountId) throws java.io.IOException {
@@ -1574,15 +1549,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param accountId Numerical account ID of the sponsor buyer of the client to list users for.
-        (required)
-           * @param clientAccountId The account ID of the client buyer to list users for. (required)
-        You must specify either a string
-         *        representation of a
-        numerical account identifier or the `-` character
-        to list all the
-         *        client users for all the clients
-        of a given sponsor buyer.
+           * @param accountId Numerical account ID of the sponsor buyer of the client to list users for. (required)
+           * @param clientAccountId The account ID of the client buyer to list users for. (required) You must specify either a string
+         *        representation of a numerical account identifier or the `-` character to list all the
+         *        client users for all the clients of a given sponsor buyer.
            * @since 1.13
            */
           protected List(java.lang.Long accountId, java.lang.String clientAccountId) {
@@ -1765,8 +1735,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
          * @param accountId Numerical account ID of the client's sponsor buyer. (required)
-         * @param clientAccountId Numerical account ID of the client buyer that the user to be retrieved
-        is associated with.
+         * @param clientAccountId Numerical account ID of the client buyer that the user to be retrieved is associated with.
          *        (required)
          * @param userId Numerical identifier of the user to retrieve. (required)
          * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.ClientUser}
@@ -1794,8 +1763,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param accountId Numerical account ID of the client's sponsor buyer. (required)
-           * @param clientAccountId Numerical account ID of the client buyer that the user to be retrieved
-        is associated with.
+           * @param clientAccountId Numerical account ID of the client buyer that the user to be retrieved is associated with.
          *        (required)
            * @param userId Numerical identifier of the user to retrieve. (required)
            * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.ClientUser}
@@ -1954,9 +1922,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param accountId The account that this creative belongs to.
-      Can be used to filter the response of the
-      creatives.list
+       * @param accountId The account that this creative belongs to. Can be used to filter the response of the creatives.list
        *        method.
        * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.Creative}
        * @return the request
@@ -1982,9 +1948,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param accountId The account that this creative belongs to.
-      Can be used to filter the response of the
-      creatives.list
+         * @param accountId The account that this creative belongs to. Can be used to filter the response of the creatives.list
        *        method.
          * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.Creative}
          * @since 1.13
@@ -2252,8 +2216,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param accountId The account to list the creatives from.
-      Specify "-" to list all creatives the current user has
+       * @param accountId The account to list the creatives from. Specify "-" to list all creatives the current user has
        *        access to.
        * @return the request
        */
@@ -2277,8 +2240,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param accountId The account to list the creatives from.
-      Specify "-" to list all creatives the current user has
+         * @param accountId The account to list the creatives from. Specify "-" to list all creatives the current user has
        *        access to.
          * @since 1.13
          */
@@ -2428,29 +2390,23 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
         /**
          * An optional query string to filter creatives. If no filter is specified, all active
-         * creatives will be returned. Supported queries are:
-         *
-         * accountId=account_id_string creativeId=creative_id_string dealsStatus: {approved,
-         * conditionally_approved, disapproved, not_checked} openAuctionStatus: {approved,
-         * conditionally_approved, disapproved, not_checked} attribute: {a numeric attribute from
-         * the list of attributes} disapprovalReason: {a reason from DisapprovalReason}
-         *
-         * Example: 'accountId=12345 AND (dealsStatus:disapproved AND
-         * disapprovalReason:unacceptable_content) OR attribute:47'
+         * creatives will be returned. Supported queries are: - accountId=*account_id_string* -
+         * creativeId=*creative_id_string* - dealsStatus: {approved, conditionally_approved,
+         * disapproved, not_checked} - openAuctionStatus: {approved, conditionally_approved,
+         * disapproved, not_checked} - attribute: {a numeric attribute from the list of attributes}
+         * - disapprovalReason: {a reason from DisapprovalReason} Example: 'accountId=12345 AND
+         * (dealsStatus:disapproved AND disapprovalReason:unacceptable_content) OR attribute:47'
          */
         @com.google.api.client.util.Key
         private java.lang.String query;
 
         /** An optional query string to filter creatives. If no filter is specified, all active creatives will
-       be returned. Supported queries are:
-
-       accountId=account_id_string creativeId=creative_id_string dealsStatus: {approved,
-       conditionally_approved, disapproved, not_checked} openAuctionStatus: {approved,
-       conditionally_approved, disapproved, not_checked} attribute: {a numeric attribute from the list of
-       attributes} disapprovalReason: {a reason from DisapprovalReason}
-
-       Example: 'accountId=12345 AND (dealsStatus:disapproved AND disapprovalReason:unacceptable_content)
-       OR attribute:47'
+       be returned. Supported queries are: - accountId=*account_id_string* -
+       creativeId=*creative_id_string* - dealsStatus: {approved, conditionally_approved, disapproved,
+       not_checked} - openAuctionStatus: {approved, conditionally_approved, disapproved, not_checked} -
+       attribute: {a numeric attribute from the list of attributes} - disapprovalReason: {a reason from
+       DisapprovalReason} Example: 'accountId=12345 AND (dealsStatus:disapproved AND
+       disapprovalReason:unacceptable_content) OR attribute:47'
          */
         public java.lang.String getQuery() {
           return query;
@@ -2458,15 +2414,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
         /**
          * An optional query string to filter creatives. If no filter is specified, all active
-         * creatives will be returned. Supported queries are:
-         *
-         * accountId=account_id_string creativeId=creative_id_string dealsStatus: {approved,
-         * conditionally_approved, disapproved, not_checked} openAuctionStatus: {approved,
-         * conditionally_approved, disapproved, not_checked} attribute: {a numeric attribute from
-         * the list of attributes} disapprovalReason: {a reason from DisapprovalReason}
-         *
-         * Example: 'accountId=12345 AND (dealsStatus:disapproved AND
-         * disapprovalReason:unacceptable_content) OR attribute:47'
+         * creatives will be returned. Supported queries are: - accountId=*account_id_string* -
+         * creativeId=*creative_id_string* - dealsStatus: {approved, conditionally_approved,
+         * disapproved, not_checked} - openAuctionStatus: {approved, conditionally_approved,
+         * disapproved, not_checked} - attribute: {a numeric attribute from the list of attributes}
+         * - disapprovalReason: {a reason from DisapprovalReason} Example: 'accountId=12345 AND
+         * (dealsStatus:disapproved AND disapprovalReason:unacceptable_content) OR attribute:47'
          */
         public List setQuery(java.lang.String query) {
           this.query = query;
@@ -2489,8 +2442,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * operation.
        *
        * @param accountId The account of the creative to stop notifications for.
-       * @param creativeId The creative ID of the creative to stop notifications for.
-      Specify "-" to specify stopping account
+       * @param creativeId The creative ID of the creative to stop notifications for. Specify "-" to specify stopping account
        *        level notifications.
        * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.StopWatchingCreativeRequest}
        * @return the request
@@ -2518,8 +2470,7 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param accountId The account of the creative to stop notifications for.
-         * @param creativeId The creative ID of the creative to stop notifications for.
-      Specify "-" to specify stopping account
+         * @param creativeId The creative ID of the creative to stop notifications for. Specify "-" to specify stopping account
        *        level notifications.
          * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.StopWatchingCreativeRequest}
          * @since 1.13
@@ -2637,14 +2588,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param accountId The account that this creative belongs to.
-      Can be used to filter the response of the
-      creatives.list
+       * @param accountId The account that this creative belongs to. Can be used to filter the response of the creatives.list
        *        method.
-       * @param creativeId The buyer-defined creative ID of this creative.
-      Can be used to filter the response of the
-       *        creatives.list
-      method.
+       * @param creativeId The buyer-defined creative ID of this creative. Can be used to filter the response of the
+       *        creatives.list method.
        * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.Creative}
        * @return the request
        */
@@ -2669,14 +2616,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param accountId The account that this creative belongs to.
-      Can be used to filter the response of the
-      creatives.list
+         * @param accountId The account that this creative belongs to. Can be used to filter the response of the creatives.list
        *        method.
-         * @param creativeId The buyer-defined creative ID of this creative.
-      Can be used to filter the response of the
-       *        creatives.list
-      method.
+         * @param creativeId The buyer-defined creative ID of this creative. Can be used to filter the response of the
+       *        creatives.list method.
          * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.Creative}
          * @since 1.13
          */
@@ -2802,13 +2745,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link Watch#execute()} method to invoke the remote operation.
        *
        * @param accountId The account of the creative to watch.
-       * @param creativeId The creative ID to watch for status changes.
-      Specify "-" to watch all creatives under the above
-       *        account.
-      If both creative-level and account-level notifications are
-      sent, only a single
-       *        notification will be sent to the
-      creative-level notification topic.
+       * @param creativeId The creative ID to watch for status changes. Specify "-" to watch all creatives under the above
+       *        account. If both creative-level and account-level notifications are sent, only a single
+       *        notification will be sent to the creative-level notification topic.
        * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.WatchCreativeRequest}
        * @return the request
        */
@@ -2835,13 +2774,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param accountId The account of the creative to watch.
-         * @param creativeId The creative ID to watch for status changes.
-      Specify "-" to watch all creatives under the above
-       *        account.
-      If both creative-level and account-level notifications are
-      sent, only a single
-       *        notification will be sent to the
-      creative-level notification topic.
+         * @param creativeId The creative ID to watch for status changes. Specify "-" to watch all creatives under the above
+       *        account. If both creative-level and account-level notifications are sent, only a single
+       *        notification will be sent to the creative-level notification topic.
          * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.WatchCreativeRequest}
          * @since 1.13
          */
@@ -3118,11 +3053,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param accountId The account to list the associations from.
-        Specify "-" to list all creatives the current user has
+         * @param accountId The account to list the associations from. Specify "-" to list all creatives the current user has
          *        access to.
-         * @param creativeId The creative ID to list the associations from.
-        Specify "-" to list all creatives under the above
+         * @param creativeId The creative ID to list the associations from. Specify "-" to list all creatives under the above
          *        account.
          * @return the request
          */
@@ -3146,11 +3079,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param accountId The account to list the associations from.
-        Specify "-" to list all creatives the current user has
+           * @param accountId The account to list the associations from. Specify "-" to list all creatives the current user has
          *        access to.
-           * @param creativeId The creative ID to list the associations from.
-        Specify "-" to list all creatives under the above
+           * @param creativeId The creative ID to list the associations from. Specify "-" to list all creatives under the above
          *        account.
            * @since 1.13
            */
@@ -3322,25 +3253,21 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
           /**
            * An optional query string to filter deal associations. If no filter is specified, all
-           * associations will be returned. Supported queries are:
-           *
-           * accountId=account_id_string creativeId=creative_id_string dealsId=deals_id_string
-           * dealsStatus:{approved, conditionally_approved, disapproved, not_checked}
-           * openAuctionStatus:{approved, conditionally_approved, disapproved, not_checked}
-           *
-           * Example: 'dealsId=12345 AND dealsStatus:disapproved'
+           * associations will be returned. Supported queries are: - accountId=*account_id_string* -
+           * creativeId=*creative_id_string* - dealsId=*deals_id_string* - dealsStatus:{approved,
+           * conditionally_approved, disapproved, not_checked} - openAuctionStatus:{approved,
+           * conditionally_approved, disapproved, not_checked} Example: 'dealsId=12345 AND
+           * dealsStatus:disapproved'
            */
           @com.google.api.client.util.Key
           private java.lang.String query;
 
           /** An optional query string to filter deal associations. If no filter is specified, all associations
-         will be returned. Supported queries are:
-
-         accountId=account_id_string creativeId=creative_id_string dealsId=deals_id_string
-         dealsStatus:{approved, conditionally_approved, disapproved, not_checked}
-         openAuctionStatus:{approved, conditionally_approved, disapproved, not_checked}
-
-         Example: 'dealsId=12345 AND dealsStatus:disapproved'
+         will be returned. Supported queries are: - accountId=*account_id_string* -
+         creativeId=*creative_id_string* - dealsId=*deals_id_string* - dealsStatus:{approved,
+         conditionally_approved, disapproved, not_checked} - openAuctionStatus:{approved,
+         conditionally_approved, disapproved, not_checked} Example: 'dealsId=12345 AND
+         dealsStatus:disapproved'
            */
           public java.lang.String getQuery() {
             return query;
@@ -3348,13 +3275,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
           /**
            * An optional query string to filter deal associations. If no filter is specified, all
-           * associations will be returned. Supported queries are:
-           *
-           * accountId=account_id_string creativeId=creative_id_string dealsId=deals_id_string
-           * dealsStatus:{approved, conditionally_approved, disapproved, not_checked}
-           * openAuctionStatus:{approved, conditionally_approved, disapproved, not_checked}
-           *
-           * Example: 'dealsId=12345 AND dealsStatus:disapproved'
+           * associations will be returned. Supported queries are: - accountId=*account_id_string* -
+           * creativeId=*creative_id_string* - dealsId=*deals_id_string* - dealsStatus:{approved,
+           * conditionally_approved, disapproved, not_checked} - openAuctionStatus:{approved,
+           * conditionally_approved, disapproved, not_checked} Example: 'dealsId=12345 AND
+           * dealsStatus:disapproved'
            */
           public List setQuery(java.lang.String query) {
             this.query = query;
@@ -3649,25 +3574,22 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
-         * An optional PQL filter query used to query for proposals.
-         *
-         * Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+         * An optional PQL filter query used to query for proposals. Nested repeated fields, such as
+         * proposal.deals.targetingCriterion, cannot be filtered.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** An optional PQL filter query used to query for proposals.
-
-       Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+        /** An optional PQL filter query used to query for proposals. Nested repeated fields, such as
+       proposal.deals.targetingCriterion, cannot be filtered.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * An optional PQL filter query used to query for proposals.
-         *
-         * Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+         * An optional PQL filter query used to query for proposals. Nested repeated fields, such as
+         * proposal.deals.targetingCriterion, cannot be filtered.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -4029,18 +3951,15 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
         /**
          * An optional PQL query used to query for products. See https://developers.google.com/ad-
-         * manager/docs/pqlreference for documentation about PQL and examples.
-         *
-         * Nested repeated fields, such as product.targetingCriterion.inclusions, cannot be
-         * filtered.
+         * manager/docs/pqlreference for documentation about PQL and examples. Nested repeated
+         * fields, such as product.targetingCriterion.inclusions, cannot be filtered.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** An optional PQL query used to query for products. See https://developers.google.com/ad-
-       manager/docs/pqlreference for documentation about PQL and examples.
-
-       Nested repeated fields, such as product.targetingCriterion.inclusions, cannot be filtered.
+       manager/docs/pqlreference for documentation about PQL and examples. Nested repeated fields, such as
+       product.targetingCriterion.inclusions, cannot be filtered.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -4048,10 +3967,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
         /**
          * An optional PQL query used to query for products. See https://developers.google.com/ad-
-         * manager/docs/pqlreference for documentation about PQL and examples.
-         *
-         * Nested repeated fields, such as product.targetingCriterion.inclusions, cannot be
-         * filtered.
+         * manager/docs/pqlreference for documentation about PQL and examples. Nested repeated
+         * fields, such as product.targetingCriterion.inclusions, cannot be filtered.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -5083,25 +5000,22 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
-         * An optional PQL filter query used to query for proposals.
-         *
-         * Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+         * An optional PQL filter query used to query for proposals. Nested repeated fields, such as
+         * proposal.deals.targetingCriterion, cannot be filtered.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** An optional PQL filter query used to query for proposals.
-
-       Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+        /** An optional PQL filter query used to query for proposals. Nested repeated fields, such as
+       proposal.deals.targetingCriterion, cannot be filtered.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * An optional PQL filter query used to query for proposals.
-         *
-         * Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+         * An optional PQL filter query used to query for proposals. Nested repeated fields, such as
+         * proposal.deals.targetingCriterion, cannot be filtered.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -5178,7 +5092,6 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
       /**
        * Update the given proposal to pause serving. This method will set the
        * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all deals in the proposal.
-       *
        * It is a no-op to pause an already-paused proposal. It is an error to call PauseProposal for a
        * proposal that is not finalized or renegotiating.
        *
@@ -5205,10 +5118,8 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         /**
          * Update the given proposal to pause serving. This method will set the
          * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all deals in the
-         * proposal.
-         *
-         * It is a no-op to pause an already-paused proposal. It is an error to call PauseProposal for a
-         * proposal that is not finalized or renegotiating.
+         * proposal. It is a no-op to pause an already-paused proposal. It is an error to call
+         * PauseProposal for a proposal that is not finalized or renegotiating.
          *
          * Create a request for the method "proposals.pause".
          *
@@ -5324,13 +5235,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
       /**
        * Update the given proposal to resume serving. This method will set the
        * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all deals in the
-       * proposal.
-       *
-       * Note that if the `has_seller_paused` bit is also set, serving will not resume until the seller
-       * also resumes.
-       *
-       * It is a no-op to resume an already-running proposal. It is an error to call ResumeProposal for a
-       * proposal that is not finalized or renegotiating.
+       * proposal. Note that if the `has_seller_paused` bit is also set, serving will not resume until the
+       * seller also resumes. It is a no-op to resume an already-running proposal. It is an error to call
+       * ResumeProposal for a proposal that is not finalized or renegotiating.
        *
        * Create a request for the method "proposals.resume".
        *
@@ -5355,13 +5262,9 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         /**
          * Update the given proposal to resume serving. This method will set the
          * `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all deals in the
-         * proposal.
-         *
-         * Note that if the `has_seller_paused` bit is also set, serving will not resume until the seller
-         * also resumes.
-         *
-         * It is a no-op to resume an already-running proposal. It is an error to call ResumeProposal for
-         * a proposal that is not finalized or renegotiating.
+         * proposal. Note that if the `has_seller_paused` bit is also set, serving will not resume until
+         * the seller also resumes. It is a no-op to resume an already-running proposal. It is an error to
+         * call ResumeProposal for a proposal that is not finalized or renegotiating.
          *
          * Create a request for the method "proposals.resume".
          *
@@ -5477,13 +5380,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
       /**
        * Update the given proposal at the client known revision number. If the server revision has
        * advanced since the passed-in `proposal.proposal_revision`, an `ABORTED` error message will be
-       * returned. Only the buyer-modifiable fields of the proposal will be updated.
-       *
-       * Note that the deals in the proposal will be updated to match the passed-in copy. If a passed-in
-       * deal does not have a `deal_id`, the server will assign a new unique ID and create the deal. If
-       * passed-in deal has a `deal_id`, it will be updated to match the passed-in copy. Any existing
-       * deals not present in the passed-in proposal will be deleted. It is an error to pass in a deal
-       * with a `deal_id` not present at head.
+       * returned. Only the buyer-modifiable fields of the proposal will be updated. Note that the deals
+       * in the proposal will be updated to match the passed-in copy. If a passed-in deal does not have a
+       * `deal_id`, the server will assign a new unique ID and create the deal. If passed-in deal has a
+       * `deal_id`, it will be updated to match the passed-in copy. Any existing deals not present in the
+       * passed-in proposal will be deleted. It is an error to pass in a deal with a `deal_id` not present
+       * at head.
        *
        * Create a request for the method "proposals.update".
        *
@@ -5508,13 +5410,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         /**
          * Update the given proposal at the client known revision number. If the server revision has
          * advanced since the passed-in `proposal.proposal_revision`, an `ABORTED` error message will be
-         * returned. Only the buyer-modifiable fields of the proposal will be updated.
-         *
-         * Note that the deals in the proposal will be updated to match the passed-in copy. If a passed-in
-         * deal does not have a `deal_id`, the server will assign a new unique ID and create the deal. If
-         * passed-in deal has a `deal_id`, it will be updated to match the passed-in copy. Any existing
-         * deals not present in the passed-in proposal will be deleted. It is an error to pass in a deal
-         * with a `deal_id` not present at head.
+         * returned. Only the buyer-modifiable fields of the proposal will be updated. Note that the deals
+         * in the proposal will be updated to match the passed-in copy. If a passed-in deal does not have
+         * a `deal_id`, the server will assign a new unique ID and create the deal. If passed-in deal has
+         * a `deal_id`, it will be updated to match the passed-in copy. Any existing deals not present in
+         * the passed-in proposal will be deleted. It is an error to pass in a deal with a `deal_id` not
+         * present at head.
          *
          * Create a request for the method "proposals.update".
          *
@@ -6022,16 +5923,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param ownerName Name of the owner (bidder or account) of the filter set to be created.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123: `bidders/123`
-        - For an account-level filter set for the
-         *        buyer account representing bidder
-          123: `bidders/123/accounts/123`
-        - For an account-level
-         *        filter set for the child seat buyer account 456
-          whose bidder is 123:
+         * @param ownerName Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+         *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+         *        filter set for the child seat buyer account 456 whose bidder is 123:
          *        `bidders/123/accounts/456`
          * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet}
          * @return the request
@@ -6060,16 +5955,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param ownerName Name of the owner (bidder or account) of the filter set to be created.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123: `bidders/123`
-        - For an account-level filter set for the
-         *        buyer account representing bidder
-          123: `bidders/123/accounts/123`
-        - For an account-level
-         *        filter set for the child seat buyer account 456
-          whose bidder is 123:
+           * @param ownerName Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+         *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+         *        filter set for the child seat buyer account 456 whose bidder is 123:
          *        `bidders/123/accounts/456`
            * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet}
            * @since 1.13
@@ -6140,42 +6029,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the owner (bidder or account) of the filter set to be created. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
+           * Name of the owner (bidder or account) of the filter set to be created. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123` - For an account-level
+           * filter set for the buyer account representing bidder 123: `bidders/123/accounts/123` -
+           * For an account-level filter set for the child seat buyer account 456 whose bidder is
            * 123: `bidders/123/accounts/456`
            */
           @com.google.api.client.util.Key
           private java.lang.String ownerName;
 
-          /** Name of the owner (bidder or account) of the filter set to be created. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
-         `bidders/123/accounts/456`
+          /** Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-
+         level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer
+         account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for
+         the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
            */
           public java.lang.String getOwnerName() {
             return ownerName;
           }
 
           /**
-           * Name of the owner (bidder or account) of the filter set to be created. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
+           * Name of the owner (bidder or account) of the filter set to be created. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123` - For an account-level
+           * filter set for the buyer account representing bidder 123: `bidders/123/accounts/123` -
+           * For an account-level filter set for the child seat buyer account 456 whose bidder is
            * 123: `bidders/123/accounts/456`
            */
           public Create setOwnerName(java.lang.String ownerName) {
@@ -6226,16 +6102,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Full name of the resource to delete.
-        For example:
-        - For a bidder-level filter set for bidder 123:
-         *        `bidders/123/filterSets/abc`
-        - For an account-level filter set for the buyer account
-         *        representing bidder
-          123: `bidders/123/accounts/123/filterSets/abc`
-        - For an account-
-         *        level filter set for the child seat buyer account 456
-          whose bidder is 123:
+         * @param name Full name of the resource to delete. For example: - For a bidder-level filter set for bidder 123:
+         *        `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+         *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+         *        filter set for the child seat buyer account 456 whose bidder is 123:
          *        `bidders/123/accounts/456/filterSets/abc`
          * @return the request
          */
@@ -6263,16 +6133,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Full name of the resource to delete.
-        For example:
-        - For a bidder-level filter set for bidder 123:
-         *        `bidders/123/filterSets/abc`
-        - For an account-level filter set for the buyer account
-         *        representing bidder
-          123: `bidders/123/accounts/123/filterSets/abc`
-        - For an account-
-         *        level filter set for the child seat buyer account 456
-          whose bidder is 123:
+           * @param name Full name of the resource to delete. For example: - For a bidder-level filter set for bidder 123:
+         *        `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+         *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+         *        filter set for the child seat buyer account 456 whose bidder is 123:
          *        `bidders/123/accounts/456/filterSets/abc`
            * @since 1.13
            */
@@ -6342,43 +6206,30 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Full name of the resource to delete. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Full name of the resource to delete. For example: - For a bidder-level filter set for
+           * bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the
+           * buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           * an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Full name of the resource to delete. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/filterSets/abc`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
-         `bidders/123/accounts/456/filterSets/abc`
+          /** Full name of the resource to delete. For example: - For a bidder-level filter set for bidder 123:
+         `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account representing
+         bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+         child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Full name of the resource to delete. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Full name of the resource to delete. For example: - For a bidder-level filter set for
+           * bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the
+           * buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           * an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6403,17 +6254,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Full name of the resource being requested.
-        For example:
-        - For a bidder-level filter set for bidder
-         *        123:
-          `bidders/123/filterSets/abc`
-        - For an account-level filter set for the buyer
-         *        account representing bidder
-          123: `bidders/123/accounts/123/filterSets/abc`
-        - For an
-         *        account-level filter set for the child seat buyer account 456
-          whose bidder is 123:
+         * @param name Full name of the resource being requested. For example: - For a bidder-level filter set for bidder
+         *        123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+         *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+         *        filter set for the child seat buyer account 456 whose bidder is 123:
          *        `bidders/123/accounts/456/filterSets/abc`
          * @return the request
          */
@@ -6440,17 +6284,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Full name of the resource being requested.
-        For example:
-        - For a bidder-level filter set for bidder
-         *        123:
-          `bidders/123/filterSets/abc`
-        - For an account-level filter set for the buyer
-         *        account representing bidder
-          123: `bidders/123/accounts/123/filterSets/abc`
-        - For an
-         *        account-level filter set for the child seat buyer account 456
-          whose bidder is 123:
+           * @param name Full name of the resource being requested. For example: - For a bidder-level filter set for bidder
+         *        123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+         *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+         *        filter set for the child seat buyer account 456 whose bidder is 123:
          *        `bidders/123/accounts/456/filterSets/abc`
            * @since 1.13
            */
@@ -6530,27 +6367,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Full name of the resource being requested. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Full name of the resource being requested. For example: - For a bidder-level filter set
+           * for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the
+           * buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           * an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Full name of the resource being requested. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/filterSets/abc`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+          /** Full name of the resource being requested. For example: - For a bidder-level filter set for bidder
+         123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+         representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level filter
+         set for the child seat buyer account 456 whose bidder is 123:
          `bidders/123/accounts/456/filterSets/abc`
            */
           public java.lang.String getName() {
@@ -6558,15 +6387,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Full name of the resource being requested. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Full name of the resource being requested. For example: - For a bidder-level filter set
+           * for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the
+           * buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           * an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6591,16 +6416,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param ownerName Name of the owner (bidder or account) of the filter sets to be listed.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123: `bidders/123`
-        - For an account-level filter set for the
-         *        buyer account representing bidder
-          123: `bidders/123/accounts/123`
-        - For an account-level
-         *        filter set for the child seat buyer account 456
-          whose bidder is 123:
+         * @param ownerName Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+         *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+         *        filter set for the child seat buyer account 456 whose bidder is 123:
          *        `bidders/123/accounts/456`
          * @return the request
          */
@@ -6627,16 +6446,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param ownerName Name of the owner (bidder or account) of the filter sets to be listed.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123: `bidders/123`
-        - For an account-level filter set for the
-         *        buyer account representing bidder
-          123: `bidders/123/accounts/123`
-        - For an account-level
-         *        filter set for the child seat buyer account 456
-          whose bidder is 123:
+           * @param ownerName Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+         *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+         *        filter set for the child seat buyer account 456 whose bidder is 123:
          *        `bidders/123/accounts/456`
            * @since 1.13
            */
@@ -6716,42 +6529,29 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the owner (bidder or account) of the filter sets to be listed. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
+           * Name of the owner (bidder or account) of the filter sets to be listed. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123` - For an account-level
+           * filter set for the buyer account representing bidder 123: `bidders/123/accounts/123` -
+           * For an account-level filter set for the child seat buyer account 456 whose bidder is
            * 123: `bidders/123/accounts/456`
            */
           @com.google.api.client.util.Key
           private java.lang.String ownerName;
 
-          /** Name of the owner (bidder or account) of the filter sets to be listed. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
-         `bidders/123/accounts/456`
+          /** Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-
+         level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer
+         account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for
+         the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
            */
           public java.lang.String getOwnerName() {
             return ownerName;
           }
 
           /**
-           * Name of the owner (bidder or account) of the filter sets to be listed. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
+           * Name of the owner (bidder or account) of the filter sets to be listed. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123` - For an account-level
+           * filter set for the buyer account representing bidder 123: `bidders/123/accounts/123` -
+           * For an account-level filter set for the child seat buyer account 456 whose bidder is
            * 123: `bidders/123/accounts/456`
            */
           public List setOwnerName(java.lang.String ownerName) {
@@ -6847,18 +6647,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @return the request
            */
           public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -6884,18 +6677,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
              * @since 1.13
              */
             protected List(java.lang.String filterSetName) {
@@ -6975,26 +6761,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             @com.google.api.client.util.Key
             private java.lang.String filterSetName;
 
-            /** Name of the filter set that should be applied to the requested metrics. For example:
-
-           - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-           - For an account-level filter set for the buyer account representing bidder 123:
-           `bidders/123/accounts/123/filterSets/abc`
-
-           - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
            `bidders/123/accounts/456/filterSets/abc`
              */
             public java.lang.String getFilterSetName() {
@@ -7003,14 +6782,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             public List setFilterSetName(java.lang.String filterSetName) {
               if (!getSuppressPatternChecks()) {
@@ -7106,18 +6882,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @return the request
            */
           public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -7144,18 +6913,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
              * @since 1.13
              */
             protected List(java.lang.String filterSetName) {
@@ -7235,26 +6997,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             @com.google.api.client.util.Key
             private java.lang.String filterSetName;
 
-            /** Name of the filter set that should be applied to the requested metrics. For example:
-
-           - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-           - For an account-level filter set for the buyer account representing bidder 123:
-           `bidders/123/accounts/123/filterSets/abc`
-
-           - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
            `bidders/123/accounts/456/filterSets/abc`
              */
             public java.lang.String getFilterSetName() {
@@ -7263,14 +7018,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             public List setFilterSetName(java.lang.String filterSetName) {
               if (!getSuppressPatternChecks()) {
@@ -7367,18 +7119,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @return the request
            */
           public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -7405,18 +7150,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
              * @since 1.13
              */
             protected List(java.lang.String filterSetName) {
@@ -7496,26 +7234,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             @com.google.api.client.util.Key
             private java.lang.String filterSetName;
 
-            /** Name of the filter set that should be applied to the requested metrics. For example:
-
-           - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-           - For an account-level filter set for the buyer account representing bidder 123:
-           `bidders/123/accounts/123/filterSets/abc`
-
-           - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
            `bidders/123/accounts/456/filterSets/abc`
              */
             public java.lang.String getFilterSetName() {
@@ -7524,14 +7255,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             public List setFilterSetName(java.lang.String filterSetName) {
               if (!getSuppressPatternChecks()) {
@@ -7628,18 +7356,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @return the request
            */
           public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -7666,18 +7387,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
              * @since 1.13
              */
             protected List(java.lang.String filterSetName) {
@@ -7757,26 +7471,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             @com.google.api.client.util.Key
             private java.lang.String filterSetName;
 
-            /** Name of the filter set that should be applied to the requested metrics. For example:
-
-           - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-           - For an account-level filter set for the buyer account representing bidder 123:
-           `bidders/123/accounts/123/filterSets/abc`
-
-           - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
            `bidders/123/accounts/456/filterSets/abc`
              */
             public java.lang.String getFilterSetName() {
@@ -7785,14 +7492,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             public List setFilterSetName(java.lang.String filterSetName) {
               if (!getSuppressPatternChecks()) {
@@ -7888,18 +7592,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @return the request
            */
           public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -7926,18 +7623,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
              * @since 1.13
              */
             protected List(java.lang.String filterSetName) {
@@ -8017,26 +7707,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             @com.google.api.client.util.Key
             private java.lang.String filterSetName;
 
-            /** Name of the filter set that should be applied to the requested metrics. For example:
-
-           - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-           - For an account-level filter set for the buyer account representing bidder 123:
-           `bidders/123/accounts/123/filterSets/abc`
-
-           - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
            `bidders/123/accounts/456/filterSets/abc`
              */
             public java.lang.String getFilterSetName() {
@@ -8045,14 +7728,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             public List setFilterSetName(java.lang.String filterSetName) {
               if (!getSuppressPatternChecks()) {
@@ -8148,22 +7828,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-            For example:
-            - For a bidder-
-             *        level filter set for bidder 123:
-              `bidders/123/filterSets/abc`
-            - For an account-level
-             *        filter set for the buyer account representing bidder
-              123:
-             *        `bidders/123/accounts/123/filterSets/abc`
-            - For an account-level filter set for the child
-             *        seat buyer account 456
-              whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-             * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by
-            creative.
-            See
-            [creative-status-
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+             *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+             *        filter set for the buyer account representing bidder 123:
+             *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+             *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by creative. See [creative-status-
              *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
              *        codes).
              * @return the request
@@ -8192,22 +7862,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-            For example:
-            - For a bidder-
-             *        level filter set for bidder 123:
-              `bidders/123/filterSets/abc`
-            - For an account-level
-             *        filter set for the buyer account representing bidder
-              123:
-             *        `bidders/123/accounts/123/filterSets/abc`
-            - For an account-level filter set for the child
-             *        seat buyer account 456
-              whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-               * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by
-            creative.
-            See
-            [creative-status-
+               * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+             *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+             *        filter set for the buyer account representing bidder 123:
+             *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+             *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+               * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by creative. See [creative-status-
              *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
              *        codes).
                * @since 1.13
@@ -8290,27 +7950,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
               /**
                * Name of the filter set that should be applied to the requested metrics. For
-               * example:
-               *
-               * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-               *
-               * - For an account-level filter set for the buyer account representing bidder 123:
-               * `bidders/123/accounts/123/filterSets/abc`
-               *
-               * - For an account-level filter set for the child seat buyer account 456 whose bidder
-               * is 123: `bidders/123/accounts/456/filterSets/abc`
+               * example: - For a bidder-level filter set for bidder 123:
+               * `bidders/123/filterSets/abc` - For an account-level filter set for the buyer
+               * account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+               * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+               * `bidders/123/accounts/456/filterSets/abc`
                */
               @com.google.api.client.util.Key
               private java.lang.String filterSetName;
 
-              /** Name of the filter set that should be applied to the requested metrics. For example:
-
-             - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-             - For an account-level filter set for the buyer account representing bidder 123:
-             `bidders/123/accounts/123/filterSets/abc`
-
-             - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+              /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+             bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+             set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+             an account-level filter set for the child seat buyer account 456 whose bidder is 123:
              `bidders/123/accounts/456/filterSets/abc`
                */
               public java.lang.String getFilterSetName() {
@@ -8319,15 +7971,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
               /**
                * Name of the filter set that should be applied to the requested metrics. For
-               * example:
-               *
-               * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-               *
-               * - For an account-level filter set for the buyer account representing bidder 123:
-               * `bidders/123/accounts/123/filterSets/abc`
-               *
-               * - For an account-level filter set for the child seat buyer account 456 whose bidder
-               * is 123: `bidders/123/accounts/456/filterSets/abc`
+               * example: - For a bidder-level filter set for bidder 123:
+               * `bidders/123/filterSets/abc` - For an account-level filter set for the buyer
+               * account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+               * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+               * `bidders/123/accounts/456/filterSets/abc`
                */
               public List setFilterSetName(java.lang.String filterSetName) {
                 if (!getSuppressPatternChecks()) {
@@ -8449,24 +8097,14 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-            For example:
-            - For a bidder-
-             *        level filter set for bidder 123:
-              `bidders/123/filterSets/abc`
-            - For an account-level
-             *        filter set for the buyer account representing bidder
-              123:
-             *        `bidders/123/accounts/123/filterSets/abc`
-            - For an account-level filter set for the child
-             *        seat buyer account 456
-              whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-             * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail.
-            See
-            [creative-status-
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+             *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+             *        filter set for the buyer account representing bidder 123:
+             *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+             *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail. See [creative-status-
              *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
-             *        codes).
-            Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+             *        codes). Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
              * @return the request
              */
             public List list(java.lang.String filterSetName, java.lang.Integer creativeStatusId) throws java.io.IOException {
@@ -8493,24 +8131,14 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-            For example:
-            - For a bidder-
-             *        level filter set for bidder 123:
-              `bidders/123/filterSets/abc`
-            - For an account-level
-             *        filter set for the buyer account representing bidder
-              123:
-             *        `bidders/123/accounts/123/filterSets/abc`
-            - For an account-level filter set for the child
-             *        seat buyer account 456
-              whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-               * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail.
-            See
-            [creative-status-
+               * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+             *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+             *        filter set for the buyer account representing bidder 123:
+             *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+             *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+               * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail. See [creative-status-
              *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
-             *        codes).
-            Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+             *        codes). Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
                * @since 1.13
                */
               protected List(java.lang.String filterSetName, java.lang.Integer creativeStatusId) {
@@ -8591,27 +8219,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
               /**
                * Name of the filter set that should be applied to the requested metrics. For
-               * example:
-               *
-               * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-               *
-               * - For an account-level filter set for the buyer account representing bidder 123:
-               * `bidders/123/accounts/123/filterSets/abc`
-               *
-               * - For an account-level filter set for the child seat buyer account 456 whose bidder
-               * is 123: `bidders/123/accounts/456/filterSets/abc`
+               * example: - For a bidder-level filter set for bidder 123:
+               * `bidders/123/filterSets/abc` - For an account-level filter set for the buyer
+               * account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+               * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+               * `bidders/123/accounts/456/filterSets/abc`
                */
               @com.google.api.client.util.Key
               private java.lang.String filterSetName;
 
-              /** Name of the filter set that should be applied to the requested metrics. For example:
-
-             - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-             - For an account-level filter set for the buyer account representing bidder 123:
-             `bidders/123/accounts/123/filterSets/abc`
-
-             - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+              /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+             bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+             set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+             an account-level filter set for the child seat buyer account 456 whose bidder is 123:
              `bidders/123/accounts/456/filterSets/abc`
                */
               public java.lang.String getFilterSetName() {
@@ -8620,15 +8240,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
               /**
                * Name of the filter set that should be applied to the requested metrics. For
-               * example:
-               *
-               * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-               *
-               * - For an account-level filter set for the buyer account representing bidder 123:
-               * `bidders/123/accounts/123/filterSets/abc`
-               *
-               * - For an account-level filter set for the child seat buyer account 456 whose bidder
-               * is 123: `bidders/123/accounts/456/filterSets/abc`
+               * example: - For a bidder-level filter set for bidder 123:
+               * `bidders/123/filterSets/abc` - For an account-level filter set for the buyer
+               * account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+               * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+               * `bidders/123/accounts/456/filterSets/abc`
                */
               public List setFilterSetName(java.lang.String filterSetName) {
                 if (!getSuppressPatternChecks()) {
@@ -8753,18 +8369,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @return the request
            */
           public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -8790,18 +8399,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
              * @since 1.13
              */
             protected List(java.lang.String filterSetName) {
@@ -8881,26 +8483,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             @com.google.api.client.util.Key
             private java.lang.String filterSetName;
 
-            /** Name of the filter set that should be applied to the requested metrics. For example:
-
-           - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-           - For an account-level filter set for the buyer account representing bidder 123:
-           `bidders/123/accounts/123/filterSets/abc`
-
-           - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
            `bidders/123/accounts/456/filterSets/abc`
              */
             public java.lang.String getFilterSetName() {
@@ -8909,14 +8504,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             public List setFilterSetName(java.lang.String filterSetName) {
               if (!getSuppressPatternChecks()) {
@@ -9013,18 +8605,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @return the request
            */
           public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -9051,18 +8636,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
              * @since 1.13
              */
             protected List(java.lang.String filterSetName) {
@@ -9142,26 +8720,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             @com.google.api.client.util.Key
             private java.lang.String filterSetName;
 
-            /** Name of the filter set that should be applied to the requested metrics. For example:
-
-           - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-           - For an account-level filter set for the buyer account representing bidder 123:
-           `bidders/123/accounts/123/filterSets/abc`
-
-           - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
            `bidders/123/accounts/456/filterSets/abc`
              */
             public java.lang.String getFilterSetName() {
@@ -9170,14 +8741,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             public List setFilterSetName(java.lang.String filterSetName) {
               if (!getSuppressPatternChecks()) {
@@ -9273,18 +8841,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @return the request
            */
           public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -9311,18 +8872,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
              * @since 1.13
              */
             protected List(java.lang.String filterSetName) {
@@ -9402,26 +8956,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             @com.google.api.client.util.Key
             private java.lang.String filterSetName;
 
-            /** Name of the filter set that should be applied to the requested metrics. For example:
-
-           - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-           - For an account-level filter set for the buyer account representing bidder 123:
-           `bidders/123/accounts/123/filterSets/abc`
-
-           - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
            `bidders/123/accounts/456/filterSets/abc`
              */
             public java.lang.String getFilterSetName() {
@@ -9430,14 +8977,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             public List setFilterSetName(java.lang.String filterSetName) {
               if (!getSuppressPatternChecks()) {
@@ -9535,16 +9079,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param ownerName Name of the owner (bidder or account) of the filter set to be created.
-      For example:
-      - For a bidder-
-       *        level filter set for bidder 123: `bidders/123`
-      - For an account-level filter set for the
-       *        buyer account representing bidder
-        123: `bidders/123/accounts/123`
-      - For an account-level
-       *        filter set for the child seat buyer account 456
-        whose bidder is 123:
+       * @param ownerName Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-
+       *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+       *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
        *        `bidders/123/accounts/456`
        * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet}
        * @return the request
@@ -9573,16 +9111,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param ownerName Name of the owner (bidder or account) of the filter set to be created.
-      For example:
-      - For a bidder-
-       *        level filter set for bidder 123: `bidders/123`
-      - For an account-level filter set for the
-       *        buyer account representing bidder
-        123: `bidders/123/accounts/123`
-      - For an account-level
-       *        filter set for the child seat buyer account 456
-        whose bidder is 123:
+         * @param ownerName Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-
+       *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+       *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
        *        `bidders/123/accounts/456`
          * @param content the {@link com.google.api.services.adexchangebuyer2.v2beta1.model.FilterSet}
          * @since 1.13
@@ -9653,43 +9185,30 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Name of the owner (bidder or account) of the filter set to be created. For example:
-         *
-         * - For a bidder-level filter set for bidder 123: `bidders/123`
-         *
-         * - For an account-level filter set for the buyer account representing bidder 123:
-         * `bidders/123/accounts/123`
-         *
-         * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-         * 123: `bidders/123/accounts/456`
+         * Name of the owner (bidder or account) of the filter set to be created. For example: - For
+         * a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set
+         * for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456`
          */
         @com.google.api.client.util.Key
         private java.lang.String ownerName;
 
-        /** Name of the owner (bidder or account) of the filter set to be created. For example:
-
-       - For a bidder-level filter set for bidder 123: `bidders/123`
-
-       - For an account-level filter set for the buyer account representing bidder 123:
-       `bidders/123/accounts/123`
-
-       - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
-       `bidders/123/accounts/456`
+        /** Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-
+       level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer
+       account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for
+       the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
          */
         public java.lang.String getOwnerName() {
           return ownerName;
         }
 
         /**
-         * Name of the owner (bidder or account) of the filter set to be created. For example:
-         *
-         * - For a bidder-level filter set for bidder 123: `bidders/123`
-         *
-         * - For an account-level filter set for the buyer account representing bidder 123:
-         * `bidders/123/accounts/123`
-         *
-         * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-         * 123: `bidders/123/accounts/456`
+         * Name of the owner (bidder or account) of the filter set to be created. For example: - For
+         * a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set
+         * for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456`
          */
         public Create setOwnerName(java.lang.String ownerName) {
           if (!getSuppressPatternChecks()) {
@@ -9739,16 +9258,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Full name of the resource to delete.
-      For example:
-      - For a bidder-level filter set for bidder 123:
-       *        `bidders/123/filterSets/abc`
-      - For an account-level filter set for the buyer account
-       *        representing bidder
-        123: `bidders/123/accounts/123/filterSets/abc`
-      - For an account-
-       *        level filter set for the child seat buyer account 456
-        whose bidder is 123:
+       * @param name Full name of the resource to delete. For example: - For a bidder-level filter set for bidder 123:
+       *        `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+       *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
        *        `bidders/123/accounts/456/filterSets/abc`
        * @return the request
        */
@@ -9776,16 +9289,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Full name of the resource to delete.
-      For example:
-      - For a bidder-level filter set for bidder 123:
-       *        `bidders/123/filterSets/abc`
-      - For an account-level filter set for the buyer account
-       *        representing bidder
-        123: `bidders/123/accounts/123/filterSets/abc`
-      - For an account-
-       *        level filter set for the child seat buyer account 456
-        whose bidder is 123:
+         * @param name Full name of the resource to delete. For example: - For a bidder-level filter set for bidder 123:
+       *        `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+       *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
        *        `bidders/123/accounts/456/filterSets/abc`
          * @since 1.13
          */
@@ -9855,43 +9362,30 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Full name of the resource to delete. For example:
-         *
-         * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-         *
-         * - For an account-level filter set for the buyer account representing bidder 123:
-         * `bidders/123/accounts/123/filterSets/abc`
-         *
-         * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-         * 123: `bidders/123/accounts/456/filterSets/abc`
+         * Full name of the resource to delete. For example: - For a bidder-level filter set for
+         * bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer
+         * account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456/filterSets/abc`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Full name of the resource to delete. For example:
-
-       - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-       - For an account-level filter set for the buyer account representing bidder 123:
-       `bidders/123/accounts/123/filterSets/abc`
-
-       - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
-       `bidders/123/accounts/456/filterSets/abc`
+        /** Full name of the resource to delete. For example: - For a bidder-level filter set for bidder 123:
+       `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account representing
+       bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+       child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Full name of the resource to delete. For example:
-         *
-         * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-         *
-         * - For an account-level filter set for the buyer account representing bidder 123:
-         * `bidders/123/accounts/123/filterSets/abc`
-         *
-         * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-         * 123: `bidders/123/accounts/456/filterSets/abc`
+         * Full name of the resource to delete. For example: - For a bidder-level filter set for
+         * bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer
+         * account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456/filterSets/abc`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -9916,17 +9410,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Full name of the resource being requested.
-      For example:
-      - For a bidder-level filter set for bidder
-       *        123:
-        `bidders/123/filterSets/abc`
-      - For an account-level filter set for the buyer
-       *        account representing bidder
-        123: `bidders/123/accounts/123/filterSets/abc`
-      - For an
-       *        account-level filter set for the child seat buyer account 456
-        whose bidder is 123:
+       * @param name Full name of the resource being requested. For example: - For a bidder-level filter set for bidder
+       *        123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+       *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
        *        `bidders/123/accounts/456/filterSets/abc`
        * @return the request
        */
@@ -9953,17 +9440,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Full name of the resource being requested.
-      For example:
-      - For a bidder-level filter set for bidder
-       *        123:
-        `bidders/123/filterSets/abc`
-      - For an account-level filter set for the buyer
-       *        account representing bidder
-        123: `bidders/123/accounts/123/filterSets/abc`
-      - For an
-       *        account-level filter set for the child seat buyer account 456
-        whose bidder is 123:
+         * @param name Full name of the resource being requested. For example: - For a bidder-level filter set for bidder
+       *        123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+       *        representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
        *        `bidders/123/accounts/456/filterSets/abc`
          * @since 1.13
          */
@@ -10043,27 +9523,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Full name of the resource being requested. For example:
-         *
-         * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-         *
-         * - For an account-level filter set for the buyer account representing bidder 123:
-         * `bidders/123/accounts/123/filterSets/abc`
-         *
-         * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-         * 123: `bidders/123/accounts/456/filterSets/abc`
+         * Full name of the resource being requested. For example: - For a bidder-level filter set
+         * for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the
+         * buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456/filterSets/abc`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Full name of the resource being requested. For example:
-
-       - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-       - For an account-level filter set for the buyer account representing bidder 123:
-       `bidders/123/accounts/123/filterSets/abc`
-
-       - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+        /** Full name of the resource being requested. For example: - For a bidder-level filter set for bidder
+       123: `bidders/123/filterSets/abc` - For an account-level filter set for the buyer account
+       representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an account-level filter
+       set for the child seat buyer account 456 whose bidder is 123:
        `bidders/123/accounts/456/filterSets/abc`
          */
         public java.lang.String getName() {
@@ -10071,15 +9543,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Full name of the resource being requested. For example:
-         *
-         * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-         *
-         * - For an account-level filter set for the buyer account representing bidder 123:
-         * `bidders/123/accounts/123/filterSets/abc`
-         *
-         * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-         * 123: `bidders/123/accounts/456/filterSets/abc`
+         * Full name of the resource being requested. For example: - For a bidder-level filter set
+         * for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter set for the
+         * buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456/filterSets/abc`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -10104,16 +9572,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param ownerName Name of the owner (bidder or account) of the filter sets to be listed.
-      For example:
-      - For a bidder-
-       *        level filter set for bidder 123: `bidders/123`
-      - For an account-level filter set for the
-       *        buyer account representing bidder
-        123: `bidders/123/accounts/123`
-      - For an account-level
-       *        filter set for the child seat buyer account 456
-        whose bidder is 123:
+       * @param ownerName Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-
+       *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+       *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
        *        `bidders/123/accounts/456`
        * @return the request
        */
@@ -10140,16 +9602,10 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param ownerName Name of the owner (bidder or account) of the filter sets to be listed.
-      For example:
-      - For a bidder-
-       *        level filter set for bidder 123: `bidders/123`
-      - For an account-level filter set for the
-       *        buyer account representing bidder
-        123: `bidders/123/accounts/123`
-      - For an account-level
-       *        filter set for the child seat buyer account 456
-        whose bidder is 123:
+         * @param ownerName Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-
+       *        level filter set for bidder 123: `bidders/123` - For an account-level filter set for the
+       *        buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level
+       *        filter set for the child seat buyer account 456 whose bidder is 123:
        *        `bidders/123/accounts/456`
          * @since 1.13
          */
@@ -10229,43 +9685,30 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Name of the owner (bidder or account) of the filter sets to be listed. For example:
-         *
-         * - For a bidder-level filter set for bidder 123: `bidders/123`
-         *
-         * - For an account-level filter set for the buyer account representing bidder 123:
-         * `bidders/123/accounts/123`
-         *
-         * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-         * 123: `bidders/123/accounts/456`
+         * Name of the owner (bidder or account) of the filter sets to be listed. For example: - For
+         * a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set
+         * for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456`
          */
         @com.google.api.client.util.Key
         private java.lang.String ownerName;
 
-        /** Name of the owner (bidder or account) of the filter sets to be listed. For example:
-
-       - For a bidder-level filter set for bidder 123: `bidders/123`
-
-       - For an account-level filter set for the buyer account representing bidder 123:
-       `bidders/123/accounts/123`
-
-       - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
-       `bidders/123/accounts/456`
+        /** Name of the owner (bidder or account) of the filter sets to be listed. For example: - For a bidder-
+       level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer
+       account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for
+       the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
          */
         public java.lang.String getOwnerName() {
           return ownerName;
         }
 
         /**
-         * Name of the owner (bidder or account) of the filter sets to be listed. For example:
-         *
-         * - For a bidder-level filter set for bidder 123: `bidders/123`
-         *
-         * - For an account-level filter set for the buyer account representing bidder 123:
-         * `bidders/123/accounts/123`
-         *
-         * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-         * 123: `bidders/123/accounts/456`
+         * Name of the owner (bidder or account) of the filter sets to be listed. For example: - For
+         * a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set
+         * for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an
+         * account-level filter set for the child seat buyer account 456 whose bidder is 123:
+         * `bidders/123/accounts/456`
          */
         public List setOwnerName(java.lang.String ownerName) {
           if (!getSuppressPatternChecks()) {
@@ -10360,18 +9803,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
          * @return the request
          */
         public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -10397,18 +9833,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @since 1.13
            */
           protected List(java.lang.String filterSetName) {
@@ -10487,27 +9916,20 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           @com.google.api.client.util.Key
           private java.lang.String filterSetName;
 
-          /** Name of the filter set that should be applied to the requested metrics. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/filterSets/abc`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
          `bidders/123/accounts/456/filterSets/abc`
            */
           public java.lang.String getFilterSetName() {
@@ -10515,15 +9937,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           public List setFilterSetName(java.lang.String filterSetName) {
             if (!getSuppressPatternChecks()) {
@@ -10619,18 +10038,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
          * @return the request
          */
         public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -10657,18 +10069,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @since 1.13
            */
           protected List(java.lang.String filterSetName) {
@@ -10747,27 +10152,20 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           @com.google.api.client.util.Key
           private java.lang.String filterSetName;
 
-          /** Name of the filter set that should be applied to the requested metrics. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/filterSets/abc`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
          `bidders/123/accounts/456/filterSets/abc`
            */
           public java.lang.String getFilterSetName() {
@@ -10775,15 +10173,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           public List setFilterSetName(java.lang.String filterSetName) {
             if (!getSuppressPatternChecks()) {
@@ -10880,18 +10275,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
          * @return the request
          */
         public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -10918,18 +10306,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @since 1.13
            */
           protected List(java.lang.String filterSetName) {
@@ -11008,27 +10389,20 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           @com.google.api.client.util.Key
           private java.lang.String filterSetName;
 
-          /** Name of the filter set that should be applied to the requested metrics. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/filterSets/abc`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
          `bidders/123/accounts/456/filterSets/abc`
            */
           public java.lang.String getFilterSetName() {
@@ -11036,15 +10410,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           public List setFilterSetName(java.lang.String filterSetName) {
             if (!getSuppressPatternChecks()) {
@@ -11141,18 +10512,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
          * @return the request
          */
         public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -11179,18 +10543,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @since 1.13
            */
           protected List(java.lang.String filterSetName) {
@@ -11269,27 +10626,20 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           @com.google.api.client.util.Key
           private java.lang.String filterSetName;
 
-          /** Name of the filter set that should be applied to the requested metrics. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/filterSets/abc`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
          `bidders/123/accounts/456/filterSets/abc`
            */
           public java.lang.String getFilterSetName() {
@@ -11297,15 +10647,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           public List setFilterSetName(java.lang.String filterSetName) {
             if (!getSuppressPatternChecks()) {
@@ -11401,18 +10748,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
          * @return the request
          */
         public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -11439,18 +10779,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @since 1.13
            */
           protected List(java.lang.String filterSetName) {
@@ -11529,27 +10862,20 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           @com.google.api.client.util.Key
           private java.lang.String filterSetName;
 
-          /** Name of the filter set that should be applied to the requested metrics. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/filterSets/abc`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
          `bidders/123/accounts/456/filterSets/abc`
            */
           public java.lang.String getFilterSetName() {
@@ -11557,15 +10883,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           public List setFilterSetName(java.lang.String filterSetName) {
             if (!getSuppressPatternChecks()) {
@@ -11661,22 +10984,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-           * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by
-          creative.
-          See
-          [creative-status-
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by creative. See [creative-status-
            *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
            *        codes).
            * @return the request
@@ -11705,22 +11018,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-             * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by
-          creative.
-          See
-          [creative-status-
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by creative. See [creative-status-
            *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
            *        codes).
              * @since 1.13
@@ -11803,26 +11106,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             @com.google.api.client.util.Key
             private java.lang.String filterSetName;
 
-            /** Name of the filter set that should be applied to the requested metrics. For example:
-
-           - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-           - For an account-level filter set for the buyer account representing bidder 123:
-           `bidders/123/accounts/123/filterSets/abc`
-
-           - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
            `bidders/123/accounts/456/filterSets/abc`
              */
             public java.lang.String getFilterSetName() {
@@ -11831,14 +11127,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             public List setFilterSetName(java.lang.String filterSetName) {
               if (!getSuppressPatternChecks()) {
@@ -11960,24 +11253,14 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-           * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail.
-          See
-          [creative-status-
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail. See [creative-status-
            *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
-           *        codes).
-          Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+           *        codes). Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
            * @return the request
            */
           public List list(java.lang.String filterSetName, java.lang.Integer creativeStatusId) throws java.io.IOException {
@@ -12004,24 +11287,14 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-          For example:
-          - For a bidder-
-           *        level filter set for bidder 123:
-            `bidders/123/filterSets/abc`
-          - For an account-level
-           *        filter set for the buyer account representing bidder
-            123:
-           *        `bidders/123/accounts/123/filterSets/abc`
-          - For an account-level filter set for the child
-           *        seat buyer account 456
-            whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
-             * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail.
-          See
-          [creative-status-
+             * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+           *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+           *        filter set for the buyer account representing bidder 123:
+           *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+           *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+             * @param creativeStatusId The ID of the creative status for which to retrieve a breakdown by detail. See [creative-status-
            *        codes](https://developers.google.com/authorized-buyers/rtb/downloads/creative-status-
-           *        codes).
-          Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
+           *        codes). Details are only available for statuses 10, 14, 15, 17, 18, 19, 86, and 87.
              * @since 1.13
              */
             protected List(java.lang.String filterSetName, java.lang.Integer creativeStatusId) {
@@ -12102,26 +11375,19 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             @com.google.api.client.util.Key
             private java.lang.String filterSetName;
 
-            /** Name of the filter set that should be applied to the requested metrics. For example:
-
-           - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-           - For an account-level filter set for the buyer account representing bidder 123:
-           `bidders/123/accounts/123/filterSets/abc`
-
-           - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+            /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+           bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+           set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+           an account-level filter set for the child seat buyer account 456 whose bidder is 123:
            `bidders/123/accounts/456/filterSets/abc`
              */
             public java.lang.String getFilterSetName() {
@@ -12130,14 +11396,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
 
             /**
              * Name of the filter set that should be applied to the requested metrics. For example:
-             *
-             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the buyer account representing bidder 123:
-             * `bidders/123/accounts/123/filterSets/abc`
-             *
-             * - For an account-level filter set for the child seat buyer account 456 whose bidder
-             * is 123: `bidders/123/accounts/456/filterSets/abc`
+             * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+             * account-level filter set for the buyer account representing bidder 123:
+             * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+             * child seat buyer account 456 whose bidder is 123:
+             * `bidders/123/accounts/456/filterSets/abc`
              */
             public List setFilterSetName(java.lang.String filterSetName) {
               if (!getSuppressPatternChecks()) {
@@ -12262,18 +11525,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
          * @return the request
          */
         public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -12299,18 +11555,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @since 1.13
            */
           protected List(java.lang.String filterSetName) {
@@ -12389,27 +11638,20 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           @com.google.api.client.util.Key
           private java.lang.String filterSetName;
 
-          /** Name of the filter set that should be applied to the requested metrics. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/filterSets/abc`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
          `bidders/123/accounts/456/filterSets/abc`
            */
           public java.lang.String getFilterSetName() {
@@ -12417,15 +11659,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           public List setFilterSetName(java.lang.String filterSetName) {
             if (!getSuppressPatternChecks()) {
@@ -12522,18 +11761,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
          * @return the request
          */
         public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -12560,18 +11792,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @since 1.13
            */
           protected List(java.lang.String filterSetName) {
@@ -12650,27 +11875,20 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           @com.google.api.client.util.Key
           private java.lang.String filterSetName;
 
-          /** Name of the filter set that should be applied to the requested metrics. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/filterSets/abc`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
          `bidders/123/accounts/456/filterSets/abc`
            */
           public java.lang.String getFilterSetName() {
@@ -12678,15 +11896,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           public List setFilterSetName(java.lang.String filterSetName) {
             if (!getSuppressPatternChecks()) {
@@ -12782,18 +11997,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the adexchangebuyer2 server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+         * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
          * @return the request
          */
         public List list(java.lang.String filterSetName) throws java.io.IOException {
@@ -12820,18 +12028,11 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param filterSetName Name of the filter set that should be applied to the requested metrics.
-        For example:
-        - For a bidder-
-         *        level filter set for bidder 123:
-          `bidders/123/filterSets/abc`
-        - For an account-level
-         *        filter set for the buyer account representing bidder
-          123:
-         *        `bidders/123/accounts/123/filterSets/abc`
-        - For an account-level filter set for the child
-         *        seat buyer account 456
-          whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
+           * @param filterSetName Name of the filter set that should be applied to the requested metrics. For example: - For a bidder-
+         *        level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level
+         *        filter set for the buyer account representing bidder 123:
+         *        `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the child
+         *        seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456/filterSets/abc`
            * @since 1.13
            */
           protected List(java.lang.String filterSetName) {
@@ -12910,27 +12111,20 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           @com.google.api.client.util.Key
           private java.lang.String filterSetName;
 
-          /** Name of the filter set that should be applied to the requested metrics. For example:
-
-         - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-
-         - For an account-level filter set for the buyer account representing bidder 123:
-         `bidders/123/accounts/123/filterSets/abc`
-
-         - For an account-level filter set for the child seat buyer account 456 whose bidder is 123:
+          /** Name of the filter set that should be applied to the requested metrics. For example: - For a
+         bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an account-level filter
+         set for the buyer account representing bidder 123: `bidders/123/accounts/123/filterSets/abc` - For
+         an account-level filter set for the child seat buyer account 456 whose bidder is 123:
          `bidders/123/accounts/456/filterSets/abc`
            */
           public java.lang.String getFilterSetName() {
@@ -12938,15 +12132,12 @@ public class AdExchangeBuyerII extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Name of the filter set that should be applied to the requested metrics. For example:
-           *
-           * - For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the buyer account representing bidder 123:
-           * `bidders/123/accounts/123/filterSets/abc`
-           *
-           * - For an account-level filter set for the child seat buyer account 456 whose bidder is
-           * 123: `bidders/123/accounts/456/filterSets/abc`
+           * Name of the filter set that should be applied to the requested metrics. For example: -
+           * For a bidder-level filter set for bidder 123: `bidders/123/filterSets/abc` - For an
+           * account-level filter set for the buyer account representing bidder 123:
+           * `bidders/123/accounts/123/filterSets/abc` - For an account-level filter set for the
+           * child seat buyer account 456 whose bidder is 123:
+           * `bidders/123/accounts/456/filterSets/abc`
            */
           public List setFilterSetName(java.lang.String filterSetName) {
             if (!getSuppressPatternChecks()) {

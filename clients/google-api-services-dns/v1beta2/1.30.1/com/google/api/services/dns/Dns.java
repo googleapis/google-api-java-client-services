@@ -20,12 +20,12 @@ package com.google.api.services.dns;
  * Service definition for Dns (v1beta2).
  *
  * <p>
- * Configures and serves authoritative DNS records.
+ * 
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/cloud-dns" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/dns/docs" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Cloud DNS API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud DNS API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -63,7 +63,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "dns/v1beta2/projects/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/dns/v1beta2";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -151,7 +151,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
      * @param content the {@link com.google.api.services.dns.model.Change}
      * @return the request
      */
@@ -163,7 +163,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Create extends DnsRequest<com.google.api.services.dns.model.Change> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}/changes";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/changes";
 
       /**
        * Atomically update the ResourceRecordSet collection.
@@ -176,7 +176,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        * @param content the {@link com.google.api.services.dns.model.Change}
        * @since 1.13
        */
@@ -187,8 +187,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Create setAlt(java.lang.String alt) {
         return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
       }
 
       @Override
@@ -217,8 +232,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Create setUserIp(java.lang.String userIp) {
-        return (Create) super.setUserIp(userIp);
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -238,19 +258,19 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public Create setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
@@ -294,7 +314,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
      * @param changeId The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
      * @return the request
      */
@@ -306,7 +326,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Get extends DnsRequest<com.google.api.services.dns.model.Change> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}/changes/{changeId}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/changes/{changeId}";
 
       /**
        * Fetch the representation of an existing Change.
@@ -319,7 +339,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        * @param changeId The identifier of the requested change, from a previous ResourceRecordSetsChangeResponse.
        * @since 1.13
        */
@@ -341,8 +361,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -371,8 +406,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -392,19 +432,19 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public Get setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
@@ -468,7 +508,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -479,7 +519,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class List extends DnsRequest<com.google.api.services.dns.model.ChangesListResponse> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}/changes";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/changes";
 
       /**
        * Enumerate Changes to a ResourceRecordSet collection.
@@ -492,7 +532,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String managedZone) {
@@ -512,8 +552,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -542,8 +597,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -563,19 +623,19 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public List setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
@@ -697,7 +757,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
      * @param dnsKeyId The identifier of the requested DnsKey.
      * @return the request
      */
@@ -709,7 +769,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Get extends DnsRequest<com.google.api.services.dns.model.DnsKey> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}";
 
       /**
        * Fetch the representation of an existing DnsKey.
@@ -722,7 +782,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        * @param dnsKeyId The identifier of the requested DnsKey.
        * @since 1.13
        */
@@ -744,8 +804,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -774,8 +849,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -795,19 +875,19 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public Get setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
@@ -890,7 +970,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -901,7 +981,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class List extends DnsRequest<com.google.api.services.dns.model.DnsKeysListResponse> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}/dnsKeys";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/dnsKeys";
 
       /**
        * Enumerate DnsKeys to a ResourceRecordSet collection.
@@ -914,7 +994,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String managedZone) {
@@ -934,8 +1014,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -964,8 +1059,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -985,19 +1085,19 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public List setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
@@ -1122,7 +1222,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Get extends DnsRequest<com.google.api.services.dns.model.Operation> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}/operations/{operation}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/operations/{operation}";
 
       /**
        * Fetch the representation of an existing Operation.
@@ -1157,8 +1257,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1187,8 +1302,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -1287,7 +1407,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class List extends DnsRequest<com.google.api.services.dns.model.ManagedZoneOperationsListResponse> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}/operations";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/operations";
 
       /**
        * Enumerate Operations for the given ManagedZone.
@@ -1320,8 +1440,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1350,8 +1485,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -1496,7 +1636,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Create extends DnsRequest<com.google.api.services.dns.model.ManagedZone> {
 
-      private static final String REST_PATH = "{project}/managedZones";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones";
 
       /**
        * Create a new ManagedZone.
@@ -1518,8 +1658,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Create setAlt(java.lang.String alt) {
         return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
       }
 
       @Override
@@ -1548,8 +1703,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Create setUserIp(java.lang.String userIp) {
-        return (Create) super.setUserIp(userIp);
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -1605,7 +1765,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
      * @return the request
      */
     public Delete delete(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -1616,7 +1776,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Delete extends DnsRequest<Void> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}";
 
       /**
        * Delete a previously created ManagedZone.
@@ -1629,7 +1789,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        * @since 1.13
        */
       protected Delete(java.lang.String project, java.lang.String managedZone) {
@@ -1639,8 +1799,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -1669,8 +1844,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -1690,19 +1870,19 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public Delete setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
@@ -1746,7 +1926,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -1757,7 +1937,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Get extends DnsRequest<com.google.api.services.dns.model.ManagedZone> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}";
 
       /**
        * Fetch the representation of an existing ManagedZone.
@@ -1770,7 +1950,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String managedZone) {
@@ -1790,8 +1970,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1820,8 +2015,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -1841,19 +2041,19 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public Get setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
@@ -1907,7 +2107,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class List extends DnsRequest<com.google.api.services.dns.model.ManagedZonesListResponse> {
 
-      private static final String REST_PATH = "{project}/managedZones";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones";
 
       /**
        * Enumerate ManagedZones that have been created but not yet deleted.
@@ -1938,8 +2138,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1968,8 +2183,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -2064,7 +2284,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
      * @param content the {@link com.google.api.services.dns.model.ManagedZone}
      * @return the request
      */
@@ -2076,7 +2296,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Patch extends DnsRequest<com.google.api.services.dns.model.Operation> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}";
 
       /**
        * Apply a partial update to an existing ManagedZone.
@@ -2089,7 +2309,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        * @param content the {@link com.google.api.services.dns.model.ManagedZone}
        * @since 1.13
        */
@@ -2100,8 +2320,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -2130,8 +2365,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -2151,19 +2391,19 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public Patch setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
@@ -2207,7 +2447,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
      * @param content the {@link com.google.api.services.dns.model.ManagedZone}
      * @return the request
      */
@@ -2219,7 +2459,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Update extends DnsRequest<com.google.api.services.dns.model.Operation> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}";
 
       /**
        * Update an existing ManagedZone.
@@ -2232,7 +2472,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        * @param content the {@link com.google.api.services.dns.model.ManagedZone}
        * @since 1.13
        */
@@ -2243,8 +2483,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -2273,8 +2528,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -2294,19 +2554,19 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public Update setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;
@@ -2384,7 +2644,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Create extends DnsRequest<com.google.api.services.dns.model.Policy> {
 
-      private static final String REST_PATH = "{project}/policies";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/policies";
 
       /**
        * Create a new Policy
@@ -2406,8 +2666,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Create setAlt(java.lang.String alt) {
         return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
       }
 
       @Override
@@ -2436,8 +2711,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Create setUserIp(java.lang.String userIp) {
-        return (Create) super.setUserIp(userIp);
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -2505,7 +2785,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Delete extends DnsRequest<Void> {
 
-      private static final String REST_PATH = "{project}/policies/{policy}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/policies/{policy}";
 
       /**
        * Delete a previously created Policy. Will fail if the policy is still being referenced by a
@@ -2529,8 +2809,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -2559,8 +2854,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -2643,7 +2943,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Get extends DnsRequest<com.google.api.services.dns.model.Policy> {
 
-      private static final String REST_PATH = "{project}/policies/{policy}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/policies/{policy}";
 
       /**
        * Fetch the representation of an existing Policy.
@@ -2676,8 +2976,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2706,8 +3021,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -2789,7 +3109,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class List extends DnsRequest<com.google.api.services.dns.model.PoliciesListResponse> {
 
-      private static final String REST_PATH = "{project}/policies";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/policies";
 
       /**
        * Enumerate all Policies associated with a project.
@@ -2820,8 +3140,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2850,8 +3185,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -2942,7 +3282,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Patch extends DnsRequest<com.google.api.services.dns.model.PoliciesPatchResponse> {
 
-      private static final String REST_PATH = "{project}/policies/{policy}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/policies/{policy}";
 
       /**
        * Apply a partial update to an existing Policy.
@@ -2966,8 +3306,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -2996,8 +3351,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -3081,7 +3441,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Update extends DnsRequest<com.google.api.services.dns.model.PoliciesUpdateResponse> {
 
-      private static final String REST_PATH = "{project}/policies/{policy}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/policies/{policy}";
 
       /**
        * Update an existing Policy.
@@ -3105,8 +3465,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -3135,8 +3510,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -3241,7 +3621,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class Get extends DnsRequest<com.google.api.services.dns.model.Project> {
 
-      private static final String REST_PATH = "{project}";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}";
 
       /**
        * Fetch the representation of an existing Project.
@@ -3272,8 +3652,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -3302,8 +3697,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -3351,6 +3751,829 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
 
+    /**
+     * An accessor for creating requests from the ManagedZones collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dns dns = new Dns(...);}
+     *   {@code Dns.ManagedZones.List request = dns.managedZones().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ManagedZones managedZones() {
+      return new ManagedZones();
+    }
+
+    /**
+     * The "managedZones" collection of methods.
+     */
+    public class ManagedZones {
+
+      /**
+       * An accessor for creating requests from the Rrsets collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dns dns = new Dns(...);}
+       *   {@code Dns.Rrsets.List request = dns.rrsets().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Rrsets rrsets() {
+        return new Rrsets();
+      }
+
+      /**
+       * The "rrsets" collection of methods.
+       */
+      public class Rrsets {
+
+        /**
+         * Create a new ResourceRecordSet.
+         *
+         * Create a request for the method "rrsets.create".
+         *
+         * This request holds the parameters needed by the dns server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param project Identifies the project addressed by this request.
+         * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+         * @param content the {@link com.google.api.services.dns.model.ResourceRecordSet}
+         * @return the request
+         */
+        public Create create(java.lang.String project, java.lang.String managedZone, com.google.api.services.dns.model.ResourceRecordSet content) throws java.io.IOException {
+          Create result = new Create(project, managedZone, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DnsRequest<com.google.api.services.dns.model.ResourceRecordSet> {
+
+          private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets";
+
+          /**
+           * Create a new ResourceRecordSet.
+           *
+           * Create a request for the method "rrsets.create".
+           *
+           * This request holds the parameters needed by the the dns server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param project Identifies the project addressed by this request.
+           * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+           * @param content the {@link com.google.api.services.dns.model.ResourceRecordSet}
+           * @since 1.13
+           */
+          protected Create(java.lang.String project, java.lang.String managedZone, com.google.api.services.dns.model.ResourceRecordSet content) {
+            super(Dns.this, "POST", REST_PATH, content, com.google.api.services.dns.model.ResourceRecordSet.class);
+            this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+            this.managedZone = com.google.api.client.util.Preconditions.checkNotNull(managedZone, "Required parameter managedZone must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifies the project addressed by this request. */
+          @com.google.api.client.util.Key
+          private java.lang.String project;
+
+          /** Identifies the project addressed by this request.
+           */
+          public java.lang.String getProject() {
+            return project;
+          }
+
+          /** Identifies the project addressed by this request. */
+          public Create setProject(java.lang.String project) {
+            this.project = project;
+            return this;
+          }
+
+          /**
+           * Identifies the managed zone addressed by this request. Can be the managed zone name or
+           * ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String managedZone;
+
+          /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+           */
+          public java.lang.String getManagedZone() {
+            return managedZone;
+          }
+
+          /**
+           * Identifies the managed zone addressed by this request. Can be the managed zone name or
+           * ID.
+           */
+          public Create setManagedZone(java.lang.String managedZone) {
+            this.managedZone = managedZone;
+            return this;
+          }
+
+          /**
+           * For mutating operation requests only. An optional identifier specified by the client.
+           * Must be unique for operation resources in the Operations collection.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String clientOperationId;
+
+          /** For mutating operation requests only. An optional identifier specified by the client. Must be
+         unique for operation resources in the Operations collection.
+           */
+          public java.lang.String getClientOperationId() {
+            return clientOperationId;
+          }
+
+          /**
+           * For mutating operation requests only. An optional identifier specified by the client.
+           * Must be unique for operation resources in the Operations collection.
+           */
+          public Create setClientOperationId(java.lang.String clientOperationId) {
+            this.clientOperationId = clientOperationId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a previously created ResourceRecordSet.
+         *
+         * Create a request for the method "rrsets.delete".
+         *
+         * This request holds the parameters needed by the dns server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param project Identifies the project addressed by this request.
+         * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+         * @param name Fully qualified domain name.
+         * @param type RRSet type.
+         * @return the request
+         */
+        public Delete delete(java.lang.String project, java.lang.String managedZone, java.lang.String name, java.lang.String type) throws java.io.IOException {
+          Delete result = new Delete(project, managedZone, name, type);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DnsRequest<com.google.api.services.dns.model.ResourceRecordSetsDeleteResponse> {
+
+          private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}";
+
+          /**
+           * Delete a previously created ResourceRecordSet.
+           *
+           * Create a request for the method "rrsets.delete".
+           *
+           * This request holds the parameters needed by the the dns server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param project Identifies the project addressed by this request.
+           * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+           * @param name Fully qualified domain name.
+           * @param type RRSet type.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String project, java.lang.String managedZone, java.lang.String name, java.lang.String type) {
+            super(Dns.this, "DELETE", REST_PATH, null, com.google.api.services.dns.model.ResourceRecordSetsDeleteResponse.class);
+            this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+            this.managedZone = com.google.api.client.util.Preconditions.checkNotNull(managedZone, "Required parameter managedZone must be specified.");
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            this.type = com.google.api.client.util.Preconditions.checkNotNull(type, "Required parameter type must be specified.");
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifies the project addressed by this request. */
+          @com.google.api.client.util.Key
+          private java.lang.String project;
+
+          /** Identifies the project addressed by this request.
+           */
+          public java.lang.String getProject() {
+            return project;
+          }
+
+          /** Identifies the project addressed by this request. */
+          public Delete setProject(java.lang.String project) {
+            this.project = project;
+            return this;
+          }
+
+          /**
+           * Identifies the managed zone addressed by this request. Can be the managed zone name or
+           * ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String managedZone;
+
+          /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+           */
+          public java.lang.String getManagedZone() {
+            return managedZone;
+          }
+
+          /**
+           * Identifies the managed zone addressed by this request. Can be the managed zone name or
+           * ID.
+           */
+          public Delete setManagedZone(java.lang.String managedZone) {
+            this.managedZone = managedZone;
+            return this;
+          }
+
+          /** Fully qualified domain name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Fully qualified domain name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Fully qualified domain name. */
+          public Delete setName(java.lang.String name) {
+            this.name = name;
+            return this;
+          }
+
+          /** RRSet type. */
+          @com.google.api.client.util.Key
+          private java.lang.String type;
+
+          /** RRSet type.
+           */
+          public java.lang.String getType() {
+            return type;
+          }
+
+          /** RRSet type. */
+          public Delete setType(java.lang.String type) {
+            this.type = type;
+            return this;
+          }
+
+          /**
+           * For mutating operation requests only. An optional identifier specified by the client.
+           * Must be unique for operation resources in the Operations collection.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String clientOperationId;
+
+          /** For mutating operation requests only. An optional identifier specified by the client. Must be
+         unique for operation resources in the Operations collection.
+           */
+          public java.lang.String getClientOperationId() {
+            return clientOperationId;
+          }
+
+          /**
+           * For mutating operation requests only. An optional identifier specified by the client.
+           * Must be unique for operation resources in the Operations collection.
+           */
+          public Delete setClientOperationId(java.lang.String clientOperationId) {
+            this.clientOperationId = clientOperationId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Fetch the representation of an existing ResourceRecordSet.
+         *
+         * Create a request for the method "rrsets.get".
+         *
+         * This request holds the parameters needed by the dns server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param project Identifies the project addressed by this request.
+         * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+         * @param name Fully qualified domain name.
+         * @param type RRSet type.
+         * @return the request
+         */
+        public Get get(java.lang.String project, java.lang.String managedZone, java.lang.String name, java.lang.String type) throws java.io.IOException {
+          Get result = new Get(project, managedZone, name, type);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DnsRequest<com.google.api.services.dns.model.ResourceRecordSet> {
+
+          private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}";
+
+          /**
+           * Fetch the representation of an existing ResourceRecordSet.
+           *
+           * Create a request for the method "rrsets.get".
+           *
+           * This request holds the parameters needed by the the dns server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param project Identifies the project addressed by this request.
+           * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+           * @param name Fully qualified domain name.
+           * @param type RRSet type.
+           * @since 1.13
+           */
+          protected Get(java.lang.String project, java.lang.String managedZone, java.lang.String name, java.lang.String type) {
+            super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.ResourceRecordSet.class);
+            this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+            this.managedZone = com.google.api.client.util.Preconditions.checkNotNull(managedZone, "Required parameter managedZone must be specified.");
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            this.type = com.google.api.client.util.Preconditions.checkNotNull(type, "Required parameter type must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifies the project addressed by this request. */
+          @com.google.api.client.util.Key
+          private java.lang.String project;
+
+          /** Identifies the project addressed by this request.
+           */
+          public java.lang.String getProject() {
+            return project;
+          }
+
+          /** Identifies the project addressed by this request. */
+          public Get setProject(java.lang.String project) {
+            this.project = project;
+            return this;
+          }
+
+          /**
+           * Identifies the managed zone addressed by this request. Can be the managed zone name or
+           * ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String managedZone;
+
+          /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+           */
+          public java.lang.String getManagedZone() {
+            return managedZone;
+          }
+
+          /**
+           * Identifies the managed zone addressed by this request. Can be the managed zone name or
+           * ID.
+           */
+          public Get setManagedZone(java.lang.String managedZone) {
+            this.managedZone = managedZone;
+            return this;
+          }
+
+          /** Fully qualified domain name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Fully qualified domain name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Fully qualified domain name. */
+          public Get setName(java.lang.String name) {
+            this.name = name;
+            return this;
+          }
+
+          /** RRSet type. */
+          @com.google.api.client.util.Key
+          private java.lang.String type;
+
+          /** RRSet type.
+           */
+          public java.lang.String getType() {
+            return type;
+          }
+
+          /** RRSet type. */
+          public Get setType(java.lang.String type) {
+            this.type = type;
+            return this;
+          }
+
+          /**
+           * For mutating operation requests only. An optional identifier specified by the client.
+           * Must be unique for operation resources in the Operations collection.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String clientOperationId;
+
+          /** For mutating operation requests only. An optional identifier specified by the client. Must be
+         unique for operation resources in the Operations collection.
+           */
+          public java.lang.String getClientOperationId() {
+            return clientOperationId;
+          }
+
+          /**
+           * For mutating operation requests only. An optional identifier specified by the client.
+           * Must be unique for operation resources in the Operations collection.
+           */
+          public Get setClientOperationId(java.lang.String clientOperationId) {
+            this.clientOperationId = clientOperationId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Apply a partial update to an existing ResourceRecordSet.
+         *
+         * Create a request for the method "rrsets.patch".
+         *
+         * This request holds the parameters needed by the dns server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param project Identifies the project addressed by this request.
+         * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+         * @param name Fully qualified domain name.
+         * @param type RRSet type.
+         * @param content the {@link com.google.api.services.dns.model.ResourceRecordSet}
+         * @return the request
+         */
+        public Patch patch(java.lang.String project, java.lang.String managedZone, java.lang.String name, java.lang.String type, com.google.api.services.dns.model.ResourceRecordSet content) throws java.io.IOException {
+          Patch result = new Patch(project, managedZone, name, type, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DnsRequest<com.google.api.services.dns.model.ResourceRecordSet> {
+
+          private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}";
+
+          /**
+           * Apply a partial update to an existing ResourceRecordSet.
+           *
+           * Create a request for the method "rrsets.patch".
+           *
+           * This request holds the parameters needed by the the dns server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param project Identifies the project addressed by this request.
+           * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+           * @param name Fully qualified domain name.
+           * @param type RRSet type.
+           * @param content the {@link com.google.api.services.dns.model.ResourceRecordSet}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String project, java.lang.String managedZone, java.lang.String name, java.lang.String type, com.google.api.services.dns.model.ResourceRecordSet content) {
+            super(Dns.this, "PATCH", REST_PATH, content, com.google.api.services.dns.model.ResourceRecordSet.class);
+            this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+            this.managedZone = com.google.api.client.util.Preconditions.checkNotNull(managedZone, "Required parameter managedZone must be specified.");
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            this.type = com.google.api.client.util.Preconditions.checkNotNull(type, "Required parameter type must be specified.");
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifies the project addressed by this request. */
+          @com.google.api.client.util.Key
+          private java.lang.String project;
+
+          /** Identifies the project addressed by this request.
+           */
+          public java.lang.String getProject() {
+            return project;
+          }
+
+          /** Identifies the project addressed by this request. */
+          public Patch setProject(java.lang.String project) {
+            this.project = project;
+            return this;
+          }
+
+          /**
+           * Identifies the managed zone addressed by this request. Can be the managed zone name or
+           * ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String managedZone;
+
+          /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+           */
+          public java.lang.String getManagedZone() {
+            return managedZone;
+          }
+
+          /**
+           * Identifies the managed zone addressed by this request. Can be the managed zone name or
+           * ID.
+           */
+          public Patch setManagedZone(java.lang.String managedZone) {
+            this.managedZone = managedZone;
+            return this;
+          }
+
+          /** Fully qualified domain name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Fully qualified domain name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Fully qualified domain name. */
+          public Patch setName(java.lang.String name) {
+            this.name = name;
+            return this;
+          }
+
+          /** RRSet type. */
+          @com.google.api.client.util.Key
+          private java.lang.String type;
+
+          /** RRSet type.
+           */
+          public java.lang.String getType() {
+            return type;
+          }
+
+          /** RRSet type. */
+          public Patch setType(java.lang.String type) {
+            this.type = type;
+            return this;
+          }
+
+          /**
+           * For mutating operation requests only. An optional identifier specified by the client.
+           * Must be unique for operation resources in the Operations collection.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String clientOperationId;
+
+          /** For mutating operation requests only. An optional identifier specified by the client. Must be
+         unique for operation resources in the Operations collection.
+           */
+          public java.lang.String getClientOperationId() {
+            return clientOperationId;
+          }
+
+          /**
+           * For mutating operation requests only. An optional identifier specified by the client.
+           * Must be unique for operation resources in the Operations collection.
+           */
+          public Patch setClientOperationId(java.lang.String clientOperationId) {
+            this.clientOperationId = clientOperationId;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
   }
 
   /**
@@ -3382,7 +4605,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param project Identifies the project addressed by this request.
-     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+     * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
      * @return the request
      */
     public List list(java.lang.String project, java.lang.String managedZone) throws java.io.IOException {
@@ -3393,7 +4616,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
     public class List extends DnsRequest<com.google.api.services.dns.model.ResourceRecordSetsListResponse> {
 
-      private static final String REST_PATH = "{project}/managedZones/{managedZone}/rrsets";
+      private static final String REST_PATH = "dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets";
 
       /**
        * Enumerate ResourceRecordSets that have been created but not yet deleted.
@@ -3406,7 +4629,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Identifies the project addressed by this request.
-       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * @param managedZone Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        * @since 1.13
        */
       protected List(java.lang.String project, java.lang.String managedZone) {
@@ -3426,8 +4649,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3456,8 +4694,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Identifies the project addressed by this request. */
@@ -3477,19 +4720,19 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       @com.google.api.client.util.Key
       private java.lang.String managedZone;
 
-      /** Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+      /** Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public java.lang.String getManagedZone() {
         return managedZone;
       }
 
       /**
-       * Identifies the managed zone addressed by this request. Can be the managed zone name or id.
+       * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
        */
       public List setManagedZone(java.lang.String managedZone) {
         this.managedZone = managedZone;

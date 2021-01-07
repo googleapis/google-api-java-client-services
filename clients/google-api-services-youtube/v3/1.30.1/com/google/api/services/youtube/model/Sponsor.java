@@ -17,11 +17,11 @@
 package com.google.api.services.youtube.model;
 
 /**
- * A sponsor resource represents a sponsor for a YouTube channel. A sponsor provides recurring
- * monetary support to a creator and receives special benefits.
+ * A `__sponsor__` resource represents a sponsor for a YouTube channel.  A sponsor provides
+ * recurring monetary support to a creator and receives special benefits.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,14 +38,14 @@ public final class Sponsor extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "youtube#sponsor".
+   * Identifies what kind of resource this is. Value: the fixed string `"youtube#sponsor"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The snippet object contains basic details about the sponsor.
+   * The `snippet` object contains basic details about the sponsor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class Sponsor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "youtube#sponsor".
+   * Identifies what kind of resource this is. Value: the fixed string `"youtube#sponsor"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -77,7 +77,7 @@ public final class Sponsor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "youtube#sponsor".
+   * Identifies what kind of resource this is. Value: the fixed string `"youtube#sponsor"`.
    * @param kind kind or {@code null} for none
    */
   public Sponsor setKind(java.lang.String kind) {
@@ -86,7 +86,7 @@ public final class Sponsor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The snippet object contains basic details about the sponsor.
+   * The `snippet` object contains basic details about the sponsor.
    * @return value or {@code null} for none
    */
   public SponsorSnippet getSnippet() {
@@ -94,7 +94,7 @@ public final class Sponsor extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The snippet object contains basic details about the sponsor.
+   * The `snippet` object contains basic details about the sponsor.
    * @param snippet snippet or {@code null} for none
    */
   public Sponsor setSnippet(SponsorSnippet snippet) {

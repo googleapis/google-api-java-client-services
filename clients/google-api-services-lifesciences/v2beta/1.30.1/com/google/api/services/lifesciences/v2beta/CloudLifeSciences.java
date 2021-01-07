@@ -46,7 +46,7 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Life Sciences API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Life Sciences API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -512,9 +512,7 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
          * cancel the operation, but success is not guaranteed. Clients may use Operations.GetOperation or
          * Operations.ListOperations to check whether the cancellation succeeded or the operation completed
          * despite cancellation. Authorization requires the following [Google
-         * IAM](https://cloud.google.com/iam) permission
-         *
-         * * `lifesciences.operations.cancel`
+         * IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.cancel`
          *
          * Create a request for the method "operations.cancel".
          *
@@ -543,9 +541,7 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
            * cancel the operation, but success is not guaranteed. Clients may use Operations.GetOperation or
            * Operations.ListOperations to check whether the cancellation succeeded or the operation
            * completed despite cancellation. Authorization requires the following [Google
-           * IAM](https://cloud.google.com/iam) permission
-           *
-           * * `lifesciences.operations.cancel`
+           * IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.cancel`
            *
            * Create a request for the method "operations.cancel".
            *
@@ -653,9 +649,7 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
         /**
          * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service. Authorization requires the
-         * following [Google IAM](https://cloud.google.com/iam) permission
-         *
-         * * `lifesciences.operations.get`
+         * following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.get`
          *
          * Create a request for the method "operations.get".
          *
@@ -681,9 +675,8 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
           /**
            * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service. Authorization requires the
-           * following [Google IAM](https://cloud.google.com/iam) permission
-           *
-           * * `lifesciences.operations.get`
+           * following [Google IAM](https://cloud.google.com/iam) permission: *
+           * `lifesciences.operations.get`
            *
            * Create a request for the method "operations.get".
            *
@@ -798,9 +791,7 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
         }
         /**
          * Lists operations that match the specified filter in the request. Authorization requires the
-         * following [Google IAM](https://cloud.google.com/iam) permission
-         *
-         * * `lifesciences.operations.list`
+         * following [Google IAM](https://cloud.google.com/iam) permission: * `lifesciences.operations.list`
          *
          * Create a request for the method "operations.list".
          *
@@ -825,9 +816,8 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
 
           /**
            * Lists operations that match the specified filter in the request. Authorization requires the
-           * following [Google IAM](https://cloud.google.com/iam) permission
-           *
-           * * `lifesciences.operations.list`
+           * following [Google IAM](https://cloud.google.com/iam) permission: *
+           * `lifesciences.operations.list`
            *
            * Create a request for the method "operations.list".
            *
@@ -936,40 +926,36 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
           }
 
           /**
-           * A string for filtering Operations. The following filter fields are supported
-           *
-           * * createTime The time this job was created * events The set of event (names) that have
-           * occurred while running the pipeline.  The  operator can be used to determine if a
-           * particular event has occurred. * error If the pipeline is running, this value is NULL.
+           * A string for filtering Operations. The following filter fields are supported: *
+           * createTime: The time this job was created * events: The set of event (names) that have
+           * occurred while running the pipeline. The : operator can be used to determine if a
+           * particular event has occurred. * error: If the pipeline is running, this value is NULL.
            * Once the pipeline finishes, the value is the standard Google error code. * labels.key
-           * or labels."key with space" where key is a label key. * done If the pipeline is running,
-           * this value is false. Once the pipeline finishes, the value is true.
+           * or labels."key with space" where key is a label key. * done: If the pipeline is
+           * running, this value is false. Once the pipeline finishes, the value is true.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** A string for filtering Operations. The following filter fields are supported
-
-         * createTime The time this job was created * events The set of event (names) that have occurred
-         while running the pipeline.  The  operator can be used to determine if a particular event has
-         occurred. * error If the pipeline is running, this value is NULL.  Once the pipeline finishes, the
-         value is the standard Google error code. * labels.key or labels."key with space" where key is a
-         label key. * done If the pipeline is running, this value is false. Once the pipeline finishes, the
-         value is true.
+          /** A string for filtering Operations. The following filter fields are supported: * createTime: The
+         time this job was created * events: The set of event (names) that have occurred while running the
+         pipeline. The : operator can be used to determine if a particular event has occurred. * error: If
+         the pipeline is running, this value is NULL. Once the pipeline finishes, the value is the standard
+         Google error code. * labels.key or labels."key with space" where key is a label key. * done: If the
+         pipeline is running, this value is false. Once the pipeline finishes, the value is true.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * A string for filtering Operations. The following filter fields are supported
-           *
-           * * createTime The time this job was created * events The set of event (names) that have
-           * occurred while running the pipeline.  The  operator can be used to determine if a
-           * particular event has occurred. * error If the pipeline is running, this value is NULL.
+           * A string for filtering Operations. The following filter fields are supported: *
+           * createTime: The time this job was created * events: The set of event (names) that have
+           * occurred while running the pipeline. The : operator can be used to determine if a
+           * particular event has occurred. * error: If the pipeline is running, this value is NULL.
            * Once the pipeline finishes, the value is the standard Google error code. * labels.key
-           * or labels."key with space" where key is a label key. * done If the pipeline is running,
-           * this value is false. Once the pipeline finishes, the value is true.
+           * or labels."key with space" where key is a label key. * done: If the pipeline is
+           * running, this value is false. Once the pipeline finishes, the value is true.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -1036,18 +1022,15 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
       public class Pipelines {
 
         /**
-         * Runs a pipeline.  The returned Operation's metadata field will contain a
+         * Runs a pipeline. The returned Operation's metadata field will contain a
          * google.cloud.lifesciences.v2beta.Metadata object describing the status of the pipeline execution.
          * The response field will contain a google.cloud.lifesciences.v2beta.RunPipelineResponse object if
-         * the pipeline completes successfully.
-         *
-         * **Note:** Before you can use this method, the *Life Sciences Service Agent* must have access to
-         * your project. This is done automatically when the Cloud Life Sciences API is first enabled, but
-         * if you delete this permission you must disable and re-enable the API to grant the Life Sciences
-         * Service Agent the required permissions. Authorization requires the following [Google
-         * IAM](https://cloud.google.com/iam/) permission:
-         *
-         * * `lifesciences.workflows.run`
+         * the pipeline completes successfully. **Note:** Before you can use this method, the *Life Sciences
+         * Service Agent* must have access to your project. This is done automatically when the Cloud Life
+         * Sciences API is first enabled, but if you delete this permission you must disable and re-enable
+         * the API to grant the Life Sciences Service Agent the required permissions. Authorization requires
+         * the following [Google IAM](https://cloud.google.com/iam/) permission: *
+         * `lifesciences.workflows.run`
          *
          * Create a request for the method "pipelines.run".
          *
@@ -1072,19 +1055,16 @@ public class CloudLifeSciences extends com.google.api.client.googleapis.services
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Runs a pipeline.  The returned Operation's metadata field will contain a
+           * Runs a pipeline. The returned Operation's metadata field will contain a
            * google.cloud.lifesciences.v2beta.Metadata object describing the status of the pipeline
            * execution. The response field will contain a
            * google.cloud.lifesciences.v2beta.RunPipelineResponse object if the pipeline completes
-           * successfully.
-           *
-           * **Note:** Before you can use this method, the *Life Sciences Service Agent* must have access to
-           * your project. This is done automatically when the Cloud Life Sciences API is first enabled, but
-           * if you delete this permission you must disable and re-enable the API to grant the Life Sciences
-           * Service Agent the required permissions. Authorization requires the following [Google
-           * IAM](https://cloud.google.com/iam/) permission:
-           *
-           * * `lifesciences.workflows.run`
+           * successfully. **Note:** Before you can use this method, the *Life Sciences Service Agent* must
+           * have access to your project. This is done automatically when the Cloud Life Sciences API is
+           * first enabled, but if you delete this permission you must disable and re-enable the API to
+           * grant the Life Sciences Service Agent the required permissions. Authorization requires the
+           * following [Google IAM](https://cloud.google.com/iam/) permission: *
+           * `lifesciences.workflows.run`
            *
            * Create a request for the method "pipelines.run".
            *

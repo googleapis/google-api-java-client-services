@@ -19,15 +19,11 @@ package com.google.api.services.servicemanagement.model;
 /**
  * `Endpoint` describes a network endpoint that serves a set of APIs. A service may expose any
  * number of endpoints, and all endpoints share the same service configuration, such as quota
- * configuration and monitoring configuration.
- *
- * Example service configuration:
- *
- *     name: library-example.googleapis.com     endpoints:       # Below entry makes
- * 'google.example.library.v1.Library'       # API be served from endpoint address library-
- * example.googleapis.com.       # It also allows HTTP OPTIONS calls to be passed to the backend,
- * for       # it to decide whether the subsequent cross-origin request is       # allowed to
- * proceed.     - name: library-example.googleapis.com       allow_cors: true
+ * configuration and monitoring configuration. Example service configuration: name: library-
+ * example.googleapis.com endpoints: # Below entry makes 'google.example.library.v1.Library' # API
+ * be served from endpoint address library-example.googleapis.com. # It also allows HTTP OPTIONS
+ * calls to be passed to the backend, for # it to decide whether the subsequent cross-origin request
+ * is # allowed to proceed. - name: library-example.googleapis.com allow_cors: true
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Management API. For a detailed explanation
@@ -42,9 +38,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * DEPRECATED: This field is no longer supported. Instead of using aliases, please specify
-   * multiple google.api.Endpoint for each of the intended aliases.
-   *
-   * Additional names that this endpoint will be hosted on.
+   * multiple google.api.Endpoint for each of the intended aliases. Additional names that this
+   * endpoint will be hosted on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,13 +54,6 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowCors;
-
-  /**
-   * The list of features enabled on this endpoint.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> features;
 
   /**
    * The canonical name of this endpoint.
@@ -86,9 +74,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * DEPRECATED: This field is no longer supported. Instead of using aliases, please specify
-   * multiple google.api.Endpoint for each of the intended aliases.
-   *
-   * Additional names that this endpoint will be hosted on.
+   * multiple google.api.Endpoint for each of the intended aliases. Additional names that this
+   * endpoint will be hosted on.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAliases() {
@@ -97,9 +84,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * DEPRECATED: This field is no longer supported. Instead of using aliases, please specify
-   * multiple google.api.Endpoint for each of the intended aliases.
-   *
-   * Additional names that this endpoint will be hosted on.
+   * multiple google.api.Endpoint for each of the intended aliases. Additional names that this
+   * endpoint will be hosted on.
    * @param aliases aliases or {@code null} for none
    */
   public Endpoint setAliases(java.util.List<java.lang.String> aliases) {
@@ -127,23 +113,6 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   public Endpoint setAllowCors(java.lang.Boolean allowCors) {
     this.allowCors = allowCors;
-    return this;
-  }
-
-  /**
-   * The list of features enabled on this endpoint.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getFeatures() {
-    return features;
-  }
-
-  /**
-   * The list of features enabled on this endpoint.
-   * @param features features or {@code null} for none
-   */
-  public Endpoint setFeatures(java.util.List<java.lang.String> features) {
-    this.features = features;
     return this;
   }
 

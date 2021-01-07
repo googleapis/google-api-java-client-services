@@ -1,7 +1,6 @@
 # Cloud Talent Solution API Client Library for Java
 
-Cloud Talent Solution provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.
-
+Cloud Talent Solution provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters. 
 
 This page contains information about getting started with the Cloud Talent Solution API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-jobs</artifactId>
-      <version>v3-rev20200219-1.30.9</version>
+      <version>v3-rev20200929-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-jobs:v3-rev20200219-1.30.9'
+  compile 'com.google.apis:google-api-services-jobs:v3-rev20200929-1.30.10'
 }
 ```
 

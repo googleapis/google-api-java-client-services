@@ -21,8 +21,8 @@ package com.google.api.services.dfareporting.model;
  * account. The profile_id needs to be specified in other API requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *

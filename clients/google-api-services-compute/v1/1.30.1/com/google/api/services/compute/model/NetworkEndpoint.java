@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * The network endpoint. Next ID: 7
+ * The network endpoint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -28,6 +28,13 @@ package com.google.api.services.compute.model;
  */
 @SuppressWarnings("javadoc")
 public final class NetworkEndpoint extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Metadata defined as annotations on the network endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> annotations;
 
   /**
    * Optional fully qualified domain name of network endpoint. This can only be specified when
@@ -66,6 +73,23 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
+
+  /**
+   * Metadata defined as annotations on the network endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Metadata defined as annotations on the network endpoint.
+   * @param annotations annotations or {@code null} for none
+   */
+  public NetworkEndpoint setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Optional fully qualified domain name of network endpoint. This can only be specified when

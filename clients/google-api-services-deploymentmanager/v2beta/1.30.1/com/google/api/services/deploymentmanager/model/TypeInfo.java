@@ -21,8 +21,8 @@ package com.google.api.services.deploymentmanager.model;
  * with specific collection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deployment Manager API V2Beta Methods.
- * For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud Deployment Manager V2 API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -46,7 +46,7 @@ public final class TypeInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String documentationLink;
 
   /**
-   * Output only. Type of the output. Always deploymentManager#TypeInfo for TypeInfo.
+   * Output only. Type of the output. Always `deploymentManager#TypeInfo` for TypeInfo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class TypeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Type of the output. Always deploymentManager#TypeInfo for TypeInfo.
+   * Output only. Type of the output. Always `deploymentManager#TypeInfo` for TypeInfo.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -124,7 +124,7 @@ public final class TypeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Type of the output. Always deploymentManager#TypeInfo for TypeInfo.
+   * Output only. Type of the output. Always `deploymentManager#TypeInfo` for TypeInfo.
    * @param kind kind or {@code null} for none
    */
   public TypeInfo setKind(java.lang.String kind) {

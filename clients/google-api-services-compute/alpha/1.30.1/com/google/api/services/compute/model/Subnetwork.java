@@ -81,6 +81,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is to disable flow logging.
+   * This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,6 +95,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enablePrivateV6Access;
+
+  /**
+   * [Output Only] The range of external IPv6 addresses that are owned by this subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalIpv6Prefix;
 
   /**
    * Fingerprint of this resource. A hash of the contents stored in this object. This field is used
@@ -134,13 +142,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The range of internal addresses that are owned by this subnetwork. Provide this property when
-   * you create the subnetwork. For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and
-   * non-overlapping within a network. Only IPv4 is supported. This field can be set only at
-   * resource creation time.
+   * you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and
+   * non-overlapping within a network. Only IPv4 is supported. This field is set at resource
+   * creation time. This may be a RFC 1918 IP range, or a privately routed, non-RFC 1918 IP range,
+   * not belonging to Google. The range can be expanded after creation using expandIpCidrRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipCidrRange;
+
+  /**
+   * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the
+   * ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
 
   /**
    * [Output Only] The range of internal IPv6 addresses that are owned by this subnetwork.
@@ -158,7 +176,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * This field denotes the VPC flow logging options for this subnetwork. If logging is enabled,
-   * logs are exported to Stackdriver.
+   * logs are exported to Cloud Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +184,9 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * Can only be specified if VPC flow logging for this subnetwork is enabled. Configures whether
-   * metadata fields should be added to the reported VPC flow logs. Default is INCLUDE_ALL_METADATA.
+   * metadata fields should be added to the reported VPC flow logs. Options are
+   * INCLUDE_ALL_METADATA, EXCLUDE_ALL_METADATA, and CUSTOM_METADATA. Default is
+   * INCLUDE_ALL_METADATA.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,7 +246,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
    * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
    * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
-   * the purpose defaults to PRIVATE_RFC_1918.
+   * the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the
+   * purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,6 +295,16 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
+
+  /**
+   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
+   * specified IPV4_ONLY will be used.
+   *
+   * This field can be both set at resource creation time and updated using patch.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stackType;
 
   /**
    * [Output Only] The state of the subnetwork, which can be one of READY or DRAINING. A subnetwork
@@ -391,6 +422,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is to disable flow logging.
+   * This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableFlowLogs() {
@@ -400,6 +432,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   /**
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is to disable flow logging.
+   * This field isn't supported with the purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * @param enableFlowLogs enableFlowLogs or {@code null} for none
    */
   public Subnetwork setEnableFlowLogs(java.lang.Boolean enableFlowLogs) {
@@ -425,6 +458,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setEnablePrivateV6Access(java.lang.Boolean enablePrivateV6Access) {
     this.enablePrivateV6Access = enablePrivateV6Access;
+    return this;
+  }
+
+  /**
+   * [Output Only] The range of external IPv6 addresses that are owned by this subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalIpv6Prefix() {
+    return externalIpv6Prefix;
+  }
+
+  /**
+   * [Output Only] The range of external IPv6 addresses that are owned by this subnetwork.
+   * @param externalIpv6Prefix externalIpv6Prefix or {@code null} for none
+   */
+  public Subnetwork setExternalIpv6Prefix(java.lang.String externalIpv6Prefix) {
+    this.externalIpv6Prefix = externalIpv6Prefix;
     return this;
   }
 
@@ -554,9 +604,10 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The range of internal addresses that are owned by this subnetwork. Provide this property when
-   * you create the subnetwork. For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and
-   * non-overlapping within a network. Only IPv4 is supported. This field can be set only at
-   * resource creation time.
+   * you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and
+   * non-overlapping within a network. Only IPv4 is supported. This field is set at resource
+   * creation time. This may be a RFC 1918 IP range, or a privately routed, non-RFC 1918 IP range,
+   * not belonging to Google. The range can be expanded after creation using expandIpCidrRange.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -565,13 +616,35 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * The range of internal addresses that are owned by this subnetwork. Provide this property when
-   * you create the subnetwork. For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and
-   * non-overlapping within a network. Only IPv4 is supported. This field can be set only at
-   * resource creation time.
+   * you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and
+   * non-overlapping within a network. Only IPv4 is supported. This field is set at resource
+   * creation time. This may be a RFC 1918 IP range, or a privately routed, non-RFC 1918 IP range,
+   * not belonging to Google. The range can be expanded after creation using expandIpCidrRange.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public Subnetwork setIpCidrRange(java.lang.String ipCidrRange) {
     this.ipCidrRange = ipCidrRange;
+    return this;
+  }
+
+  /**
+   * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the
+   * ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
+   * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the
+   * ipv6_type is EXTERNAL then this subnet cannot enable direct path.
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public Subnetwork setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
     return this;
   }
 
@@ -611,7 +684,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * This field denotes the VPC flow logging options for this subnetwork. If logging is enabled,
-   * logs are exported to Stackdriver.
+   * logs are exported to Cloud Logging.
    * @return value or {@code null} for none
    */
   public SubnetworkLogConfig getLogConfig() {
@@ -620,7 +693,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * This field denotes the VPC flow logging options for this subnetwork. If logging is enabled,
-   * logs are exported to Stackdriver.
+   * logs are exported to Cloud Logging.
    * @param logConfig logConfig or {@code null} for none
    */
   public Subnetwork setLogConfig(SubnetworkLogConfig logConfig) {
@@ -630,7 +703,9 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * Can only be specified if VPC flow logging for this subnetwork is enabled. Configures whether
-   * metadata fields should be added to the reported VPC flow logs. Default is INCLUDE_ALL_METADATA.
+   * metadata fields should be added to the reported VPC flow logs. Options are
+   * INCLUDE_ALL_METADATA, EXCLUDE_ALL_METADATA, and CUSTOM_METADATA. Default is
+   * INCLUDE_ALL_METADATA.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetadata() {
@@ -639,7 +714,9 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
    * Can only be specified if VPC flow logging for this subnetwork is enabled. Configures whether
-   * metadata fields should be added to the reported VPC flow logs. Default is INCLUDE_ALL_METADATA.
+   * metadata fields should be added to the reported VPC flow logs. Options are
+   * INCLUDE_ALL_METADATA, EXCLUDE_ALL_METADATA, and CUSTOM_METADATA. Default is
+   * INCLUDE_ALL_METADATA.
    * @param metadata metadata or {@code null} for none
    */
   public Subnetwork setMetadata(java.lang.String metadata) {
@@ -766,7 +843,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
    * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
    * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
-   * the purpose defaults to PRIVATE_RFC_1918.
+   * the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the
+   * purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurpose() {
@@ -777,7 +855,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
    * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to INTERNAL_HTTPS_LOAD_BALANCER is
    * a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing. If unspecified,
-   * the purpose defaults to PRIVATE_RFC_1918.
+   * the purpose defaults to PRIVATE_RFC_1918. The enableFlowLogs field isn't supported with the
+   * purpose field set to INTERNAL_HTTPS_LOAD_BALANCER.
    * @param purpose purpose or {@code null} for none
    */
   public Subnetwork setPurpose(java.lang.String purpose) {
@@ -883,6 +962,29 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
+   * specified IPV4_ONLY will be used.
+   *
+   * This field can be both set at resource creation time and updated using patch.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStackType() {
+    return stackType;
+  }
+
+  /**
+   * The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not
+   * specified IPV4_ONLY will be used.
+   *
+   * This field can be both set at resource creation time and updated using patch.
+   * @param stackType stackType or {@code null} for none
+   */
+  public Subnetwork setStackType(java.lang.String stackType) {
+    this.stackType = stackType;
     return this;
   }
 

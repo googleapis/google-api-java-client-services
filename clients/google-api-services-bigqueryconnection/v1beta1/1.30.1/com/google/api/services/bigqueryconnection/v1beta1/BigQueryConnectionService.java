@@ -46,7 +46,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the BigQuery Connection API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the BigQuery Connection API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -190,8 +190,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * This request holds the parameters needed by the bigqueryconnection server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        Must be in the format
+         * @param parent Required. Parent resource name. Must be in the format
          *        `projects/{project_id}/locations/{location_id}`
          * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.Connection}
          * @return the request
@@ -220,8 +219,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        Must be in the format
+           * @param parent Required. Parent resource name. Must be in the format
          *        `projects/{project_id}/locations/{location_id}`
            * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.Connection}
            * @since 1.13
@@ -636,8 +634,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.GetIamPolicyRequest}
          * @return the request
@@ -667,8 +664,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.GetIamPolicyRequest}
            * @since 1.13
@@ -779,8 +775,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * This request holds the parameters needed by the bigqueryconnection server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent resource name.
-        Must be in the form: `projects/{project_id}/locations/{location_id}`
+         * @param parent Required. Parent resource name. Must be in the form: `projects/{project_id}/locations/{location_id}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -807,8 +802,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent resource name.
-        Must be in the form: `projects/{project_id}/locations/{location_id}`
+           * @param parent Required. Parent resource name. Must be in the form: `projects/{project_id}/locations/{location_id}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1110,9 +1104,8 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "connections.setIamPolicy".
          *
@@ -1120,8 +1113,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.SetIamPolicyRequest}
          * @return the request
@@ -1140,9 +1132,8 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "connections.setIamPolicy".
            *
@@ -1152,8 +1143,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -1258,10 +1248,9 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "connections.testIamPermissions".
          *
@@ -1269,8 +1258,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
          * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.TestIamPermissionsRequest}
          * @return the request
@@ -1290,10 +1278,9 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "connections.testIamPermissions".
            *
@@ -1303,8 +1290,7 @@ public class BigQueryConnectionService extends com.google.api.client.googleapis.
            * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.bigqueryconnection.v1beta1.model.TestIamPermissionsRequest}
            * @since 1.13

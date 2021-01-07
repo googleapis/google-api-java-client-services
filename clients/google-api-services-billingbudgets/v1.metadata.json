@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-billingbudgets",
+    "version": "v1-rev20201107-1.31.0"
+  }
+}

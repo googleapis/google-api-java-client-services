@@ -20,8 +20,7 @@ package com.google.api.services.admob.v1;
  * Service definition for AdMob (v1).
  *
  * <p>
- * The Google AdMob API lets you programmatically get reports on earnings.
-
+ * The AdMob API allows publishers to programmatically get information about their AdMob account. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the AdMob API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the AdMob API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -151,8 +150,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the admob server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Resource name of the publisher account to retrieve.
-    Example: accounts/pub-9876543210987654
+     * @param name Resource name of the publisher account to retrieve. Example: accounts/pub-9876543210987654
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -178,8 +176,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Resource name of the publisher account to retrieve.
-    Example: accounts/pub-9876543210987654
+       * @param name Resource name of the publisher account to retrieve. Example: accounts/pub-9876543210987654
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -459,15 +456,15 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
     public class MediationReport {
 
       /**
-       * Generates an AdMob Mediation report based on the provided report specification.
+       * Generates an AdMob Mediation report based on the provided report specification. Returns result of
+       * a server-side streaming RPC. The result is returned in a sequence of responses.
        *
        * Create a request for the method "mediationReport.generate".
        *
        * This request holds the parameters needed by the admob server.  After setting any optional
        * parameters, call the {@link Generate#execute()} method to invoke the remote operation.
        *
-       * @param parent Resource name of the account to generate the report for.
-      Example: accounts/pub-9876543210987654
+       * @param parent Resource name of the account to generate the report for. Example: accounts/pub-9876543210987654
        * @param content the {@link com.google.api.services.admob.v1.model.GenerateMediationReportRequest}
        * @return the request
        */
@@ -485,7 +482,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Generates an AdMob Mediation report based on the provided report specification.
+         * Generates an AdMob Mediation report based on the provided report specification. Returns result
+         * of a server-side streaming RPC. The result is returned in a sequence of responses.
          *
          * Create a request for the method "mediationReport.generate".
          *
@@ -495,8 +493,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
          * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Resource name of the account to generate the report for.
-      Example: accounts/pub-9876543210987654
+         * @param parent Resource name of the account to generate the report for. Example: accounts/pub-9876543210987654
          * @param content the {@link com.google.api.services.admob.v1.model.GenerateMediationReportRequest}
          * @since 1.13
          */
@@ -620,15 +617,15 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
     public class NetworkReport {
 
       /**
-       * Generates an AdMob Network report based on the provided report specification.
+       * Generates an AdMob Network report based on the provided report specification. Returns result of a
+       * server-side streaming RPC. The result is returned in a sequence of responses.
        *
        * Create a request for the method "networkReport.generate".
        *
        * This request holds the parameters needed by the admob server.  After setting any optional
        * parameters, call the {@link Generate#execute()} method to invoke the remote operation.
        *
-       * @param parent Resource name of the account to generate the report for.
-      Example: accounts/pub-9876543210987654
+       * @param parent Resource name of the account to generate the report for. Example: accounts/pub-9876543210987654
        * @param content the {@link com.google.api.services.admob.v1.model.GenerateNetworkReportRequest}
        * @return the request
        */
@@ -646,7 +643,8 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Generates an AdMob Network report based on the provided report specification.
+         * Generates an AdMob Network report based on the provided report specification. Returns result of
+         * a server-side streaming RPC. The result is returned in a sequence of responses.
          *
          * Create a request for the method "networkReport.generate".
          *
@@ -656,8 +654,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
          * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Resource name of the account to generate the report for.
-      Example: accounts/pub-9876543210987654
+         * @param parent Resource name of the account to generate the report for. Example: accounts/pub-9876543210987654
          * @param content the {@link com.google.api.services.admob.v1.model.GenerateNetworkReportRequest}
          * @since 1.13
          */

@@ -31,6 +31,15 @@ package com.google.api.services.container.model;
 public final class NetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled
+   * when default_snat_status is disabled. When disabled is set to false, default IP masquerade
+   * rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DefaultSnatStatus defaultSnatStatus;
+
+  /**
    * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod
    * traffic visible for VPC network.
    * The value may be {@code null}.
@@ -39,22 +48,43 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean enableIntraNodeVisibility;
 
   /**
-   * Output only. The relative name of the Google Compute Engine network(/compute/docs/networks-and-
-   * firewalls#networks) to which the cluster is connected. Example: projects/my-
-   * project/global/networks/my-network
+   * Output only. The relative name of the Google Compute Engine
+   * network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
+   * cluster is connected. Example: projects/my-project/global/networks/my-network
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Output only. The relative name of the Google Compute Engine [subnetwork](/compute/docs/vpc) to
-   * which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks
-   * /my-subnet
+   * Output only. The relative name of the Google Compute Engine
+   * [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected.
+   * Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled
+   * when default_snat_status is disabled. When disabled is set to false, default IP masquerade
+   * rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+   * @return value or {@code null} for none
+   */
+  public DefaultSnatStatus getDefaultSnatStatus() {
+    return defaultSnatStatus;
+  }
+
+  /**
+   * Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled
+   * when default_snat_status is disabled. When disabled is set to false, default IP masquerade
+   * rules will be applied to the nodes to prevent sNAT on cluster internal traffic.
+   * @param defaultSnatStatus defaultSnatStatus or {@code null} for none
+   */
+  public NetworkConfig setDefaultSnatStatus(DefaultSnatStatus defaultSnatStatus) {
+    this.defaultSnatStatus = defaultSnatStatus;
+    return this;
+  }
 
   /**
    * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod
@@ -76,9 +106,9 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The relative name of the Google Compute Engine network(/compute/docs/networks-and-
-   * firewalls#networks) to which the cluster is connected. Example: projects/my-
-   * project/global/networks/my-network
+   * Output only. The relative name of the Google Compute Engine
+   * network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
+   * cluster is connected. Example: projects/my-project/global/networks/my-network
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -86,9 +116,9 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The relative name of the Google Compute Engine network(/compute/docs/networks-and-
-   * firewalls#networks) to which the cluster is connected. Example: projects/my-
-   * project/global/networks/my-network
+   * Output only. The relative name of the Google Compute Engine
+   * network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
+   * cluster is connected. Example: projects/my-project/global/networks/my-network
    * @param network network or {@code null} for none
    */
   public NetworkConfig setNetwork(java.lang.String network) {
@@ -97,9 +127,9 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The relative name of the Google Compute Engine [subnetwork](/compute/docs/vpc) to
-   * which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks
-   * /my-subnet
+   * Output only. The relative name of the Google Compute Engine
+   * [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected.
+   * Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -107,9 +137,9 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The relative name of the Google Compute Engine [subnetwork](/compute/docs/vpc) to
-   * which the cluster is connected. Example: projects/my-project/regions/us-central1/subnetworks
-   * /my-subnet
+   * Output only. The relative name of the Google Compute Engine
+   * [subnetwork](https://cloud.google.com/compute/docs/vpc) to which the cluster is connected.
+   * Example: projects/my-project/regions/us-central1/subnetworks/my-subnet
    * @param subnetwork subnetwork or {@code null} for none
    */
   public NetworkConfig setSubnetwork(java.lang.String subnetwork) {

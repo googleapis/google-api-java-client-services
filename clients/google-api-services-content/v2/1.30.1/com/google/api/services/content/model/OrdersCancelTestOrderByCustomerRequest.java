@@ -31,18 +31,16 @@ package com.google.api.services.content.model;
 public final class OrdersCancelTestOrderByCustomerRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "changedMind"  - "orderedWrongItem"  - "other"
+   * The reason for the cancellation. Acceptable values are: - "`changedMind`" -
+   * "`orderedWrongItem`" - "`other`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "changedMind"  - "orderedWrongItem"  - "other"
+   * The reason for the cancellation. Acceptable values are: - "`changedMind`" -
+   * "`orderedWrongItem`" - "`other`"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -50,9 +48,8 @@ public final class OrdersCancelTestOrderByCustomerRequest extends com.google.api
   }
 
   /**
-   * The reason for the cancellation.
-   *
-   * Acceptable values are:   - "changedMind"  - "orderedWrongItem"  - "other"
+   * The reason for the cancellation. Acceptable values are: - "`changedMind`" -
+   * "`orderedWrongItem`" - "`other`"
    * @param reason reason or {@code null} for none
    */
   public OrdersCancelTestOrderByCustomerRequest setReason(java.lang.String reason) {

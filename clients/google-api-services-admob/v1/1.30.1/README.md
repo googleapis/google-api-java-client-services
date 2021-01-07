@@ -1,7 +1,6 @@
 # AdMob API Client Library for Java
 
-The Google AdMob API lets you programmatically get reports on earnings.
-
+The AdMob API allows publishers to programmatically get information about their AdMob account. 
 
 This page contains information about getting started with the AdMob API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-admob</artifactId>
-      <version>v1-rev20200216-1.30.9</version>
+      <version>v1-rev20201114-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-admob:v1-rev20200216-1.30.9'
+  compile 'com.google.apis:google-api-services-admob:v1-rev20201114-1.30.10'
 }
 ```
 

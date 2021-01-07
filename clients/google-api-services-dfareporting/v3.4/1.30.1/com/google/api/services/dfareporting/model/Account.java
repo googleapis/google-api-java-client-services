@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Contains properties of a Campaign Manager account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -81,16 +81,15 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.Long countryId;
 
   /**
-   * ID of currency associated with this account. This is a required field. Acceptable values are:
-   * - "1" for USD  - "2" for GBP  - "3" for ESP  - "4" for SEK  - "5" for CAD  - "6" for JPY  - "7"
-   * for DEM  - "8" for AUD  - "9" for FRF  - "10" for ITL  - "11" for DKK  - "12" for NOK  - "13"
-   * for FIM  - "14" for ZAR  - "15" for IEP  - "16" for NLG  - "17" for EUR  - "18" for KRW  - "19"
-   * for TWD  - "20" for SGD  - "21" for CNY  - "22" for HKD  - "23" for NZD  - "24" for MYR  - "25"
-   * for BRL  - "26" for PTE  - "27" for MXP  - "28" for CLP  - "29" for TRY  - "30" for ARS  - "31"
-   * for PEN  - "32" for ILS  - "33" for CHF  - "34" for VEF  - "35" for COP  - "36" for GTQ  - "37"
-   * for PLN  - "39" for INR  - "40" for THB  - "41" for IDR  - "42" for CZK  - "43" for RON  - "44"
-   * for HUF  - "45" for RUB  - "46" for AED  - "47" for BGN  - "48" for HRK  - "49" for MXN  - "50"
-   * for NGN  - "51" for EGP
+   * ID of currency associated with this account. This is a required field. Acceptable values are: -
+   * "1" for USD - "2" for GBP - "3" for ESP - "4" for SEK - "5" for CAD - "6" for JPY - "7" for DEM
+   * - "8" for AUD - "9" for FRF - "10" for ITL - "11" for DKK - "12" for NOK - "13" for FIM - "14"
+   * for ZAR - "15" for IEP - "16" for NLG - "17" for EUR - "18" for KRW - "19" for TWD - "20" for
+   * SGD - "21" for CNY - "22" for HKD - "23" for NZD - "24" for MYR - "25" for BRL - "26" for PTE -
+   * "28" for CLP - "29" for TRY - "30" for ARS - "31" for PEN - "32" for ILS - "33" for CHF - "34"
+   * for VEF - "35" for COP - "36" for GTQ - "37" for PLN - "39" for INR - "40" for THB - "41" for
+   * IDR - "42" for CZK - "43" for RON - "44" for HUF - "45" for RUB - "46" for AED - "47" for BGN -
+   * "48" for HRK - "49" for MXN - "50" for NGN - "51" for EGP
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -125,11 +124,10 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Locale of this account. Acceptable values are:  - "cs" (Czech)  - "de" (German)  - "en"
-   * (English)  - "en-GB" (English United Kingdom)  - "es" (Spanish)  - "fr" (French)  - "it"
-   * (Italian)  - "ja" (Japanese)  - "ko" (Korean)  - "pl" (Polish)  - "pt-BR" (Portuguese Brazil)
-   * - "ru" (Russian)  - "sv" (Swedish)  - "tr" (Turkish)  - "zh-CN" (Chinese Simplified)  - "zh-TW"
-   * (Chinese Traditional)
+   * Locale of this account. Acceptable values are: - "cs" (Czech) - "de" (German) - "en" (English)
+   * - "en-GB" (English United Kingdom) - "es" (Spanish) - "fr" (French) - "it" (Italian) - "ja"
+   * (Japanese) - "ko" (Korean) - "pl" (Polish) - "pt-BR" (Portuguese Brazil) - "ru" (Russian) -
+   * "sv" (Swedish) - "tr" (Turkish) - "zh-CN" (Chinese Simplified) - "zh-TW" (Chinese Traditional)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -303,16 +301,15 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of currency associated with this account. This is a required field. Acceptable values are:
-   * - "1" for USD  - "2" for GBP  - "3" for ESP  - "4" for SEK  - "5" for CAD  - "6" for JPY  - "7"
-   * for DEM  - "8" for AUD  - "9" for FRF  - "10" for ITL  - "11" for DKK  - "12" for NOK  - "13"
-   * for FIM  - "14" for ZAR  - "15" for IEP  - "16" for NLG  - "17" for EUR  - "18" for KRW  - "19"
-   * for TWD  - "20" for SGD  - "21" for CNY  - "22" for HKD  - "23" for NZD  - "24" for MYR  - "25"
-   * for BRL  - "26" for PTE  - "27" for MXP  - "28" for CLP  - "29" for TRY  - "30" for ARS  - "31"
-   * for PEN  - "32" for ILS  - "33" for CHF  - "34" for VEF  - "35" for COP  - "36" for GTQ  - "37"
-   * for PLN  - "39" for INR  - "40" for THB  - "41" for IDR  - "42" for CZK  - "43" for RON  - "44"
-   * for HUF  - "45" for RUB  - "46" for AED  - "47" for BGN  - "48" for HRK  - "49" for MXN  - "50"
-   * for NGN  - "51" for EGP
+   * ID of currency associated with this account. This is a required field. Acceptable values are: -
+   * "1" for USD - "2" for GBP - "3" for ESP - "4" for SEK - "5" for CAD - "6" for JPY - "7" for DEM
+   * - "8" for AUD - "9" for FRF - "10" for ITL - "11" for DKK - "12" for NOK - "13" for FIM - "14"
+   * for ZAR - "15" for IEP - "16" for NLG - "17" for EUR - "18" for KRW - "19" for TWD - "20" for
+   * SGD - "21" for CNY - "22" for HKD - "23" for NZD - "24" for MYR - "25" for BRL - "26" for PTE -
+   * "28" for CLP - "29" for TRY - "30" for ARS - "31" for PEN - "32" for ILS - "33" for CHF - "34"
+   * for VEF - "35" for COP - "36" for GTQ - "37" for PLN - "39" for INR - "40" for THB - "41" for
+   * IDR - "42" for CZK - "43" for RON - "44" for HUF - "45" for RUB - "46" for AED - "47" for BGN -
+   * "48" for HRK - "49" for MXN - "50" for NGN - "51" for EGP
    * @return value or {@code null} for none
    */
   public java.lang.Long getCurrencyId() {
@@ -320,16 +317,15 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID of currency associated with this account. This is a required field. Acceptable values are:
-   * - "1" for USD  - "2" for GBP  - "3" for ESP  - "4" for SEK  - "5" for CAD  - "6" for JPY  - "7"
-   * for DEM  - "8" for AUD  - "9" for FRF  - "10" for ITL  - "11" for DKK  - "12" for NOK  - "13"
-   * for FIM  - "14" for ZAR  - "15" for IEP  - "16" for NLG  - "17" for EUR  - "18" for KRW  - "19"
-   * for TWD  - "20" for SGD  - "21" for CNY  - "22" for HKD  - "23" for NZD  - "24" for MYR  - "25"
-   * for BRL  - "26" for PTE  - "27" for MXP  - "28" for CLP  - "29" for TRY  - "30" for ARS  - "31"
-   * for PEN  - "32" for ILS  - "33" for CHF  - "34" for VEF  - "35" for COP  - "36" for GTQ  - "37"
-   * for PLN  - "39" for INR  - "40" for THB  - "41" for IDR  - "42" for CZK  - "43" for RON  - "44"
-   * for HUF  - "45" for RUB  - "46" for AED  - "47" for BGN  - "48" for HRK  - "49" for MXN  - "50"
-   * for NGN  - "51" for EGP
+   * ID of currency associated with this account. This is a required field. Acceptable values are: -
+   * "1" for USD - "2" for GBP - "3" for ESP - "4" for SEK - "5" for CAD - "6" for JPY - "7" for DEM
+   * - "8" for AUD - "9" for FRF - "10" for ITL - "11" for DKK - "12" for NOK - "13" for FIM - "14"
+   * for ZAR - "15" for IEP - "16" for NLG - "17" for EUR - "18" for KRW - "19" for TWD - "20" for
+   * SGD - "21" for CNY - "22" for HKD - "23" for NZD - "24" for MYR - "25" for BRL - "26" for PTE -
+   * "28" for CLP - "29" for TRY - "30" for ARS - "31" for PEN - "32" for ILS - "33" for CHF - "34"
+   * for VEF - "35" for COP - "36" for GTQ - "37" for PLN - "39" for INR - "40" for THB - "41" for
+   * IDR - "42" for CZK - "43" for RON - "44" for HUF - "45" for RUB - "46" for AED - "47" for BGN -
+   * "48" for HRK - "49" for MXN - "50" for NGN - "51" for EGP
    * @param currencyId currencyId or {@code null} for none
    */
   public Account setCurrencyId(java.lang.Long currencyId) {
@@ -406,11 +402,10 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Locale of this account. Acceptable values are:  - "cs" (Czech)  - "de" (German)  - "en"
-   * (English)  - "en-GB" (English United Kingdom)  - "es" (Spanish)  - "fr" (French)  - "it"
-   * (Italian)  - "ja" (Japanese)  - "ko" (Korean)  - "pl" (Polish)  - "pt-BR" (Portuguese Brazil)
-   * - "ru" (Russian)  - "sv" (Swedish)  - "tr" (Turkish)  - "zh-CN" (Chinese Simplified)  - "zh-TW"
-   * (Chinese Traditional)
+   * Locale of this account. Acceptable values are: - "cs" (Czech) - "de" (German) - "en" (English)
+   * - "en-GB" (English United Kingdom) - "es" (Spanish) - "fr" (French) - "it" (Italian) - "ja"
+   * (Japanese) - "ko" (Korean) - "pl" (Polish) - "pt-BR" (Portuguese Brazil) - "ru" (Russian) -
+   * "sv" (Swedish) - "tr" (Turkish) - "zh-CN" (Chinese Simplified) - "zh-TW" (Chinese Traditional)
    * @return value or {@code null} for none
    */
   public java.lang.String getLocale() {
@@ -418,11 +413,10 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Locale of this account. Acceptable values are:  - "cs" (Czech)  - "de" (German)  - "en"
-   * (English)  - "en-GB" (English United Kingdom)  - "es" (Spanish)  - "fr" (French)  - "it"
-   * (Italian)  - "ja" (Japanese)  - "ko" (Korean)  - "pl" (Polish)  - "pt-BR" (Portuguese Brazil)
-   * - "ru" (Russian)  - "sv" (Swedish)  - "tr" (Turkish)  - "zh-CN" (Chinese Simplified)  - "zh-TW"
-   * (Chinese Traditional)
+   * Locale of this account. Acceptable values are: - "cs" (Czech) - "de" (German) - "en" (English)
+   * - "en-GB" (English United Kingdom) - "es" (Spanish) - "fr" (French) - "it" (Italian) - "ja"
+   * (Japanese) - "ko" (Korean) - "pl" (Polish) - "pt-BR" (Portuguese Brazil) - "ru" (Russian) -
+   * "sv" (Swedish) - "tr" (Turkish) - "zh-CN" (Chinese Simplified) - "zh-TW" (Chinese Traditional)
    * @param locale locale or {@code null} for none
    */
   public Account setLocale(java.lang.String locale) {

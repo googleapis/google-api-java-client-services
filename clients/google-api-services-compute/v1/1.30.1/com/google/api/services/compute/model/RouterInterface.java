@@ -40,8 +40,8 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
 
   /**
    * URI of the linked Interconnect attachment. It must be in the same region as the router. Each
-   * interface can have one linked resource, which can be either be a VPN tunnel or an Interconnect
-   * attachment.
+   * interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment,
+   * or a virtual machine instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,8 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
 
   /**
    * URI of the linked VPN tunnel, which must be in the same region as the router. Each interface
-   * can have one linked resource, which can be either a VPN tunnel or an Interconnect attachment.
+   * can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a
+   * virtual machine instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +101,8 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
 
   /**
    * URI of the linked Interconnect attachment. It must be in the same region as the router. Each
-   * interface can have one linked resource, which can be either be a VPN tunnel or an Interconnect
-   * attachment.
+   * interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment,
+   * or a virtual machine instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkedInterconnectAttachment() {
@@ -110,8 +111,8 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
 
   /**
    * URI of the linked Interconnect attachment. It must be in the same region as the router. Each
-   * interface can have one linked resource, which can be either be a VPN tunnel or an Interconnect
-   * attachment.
+   * interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment,
+   * or a virtual machine instance.
    * @param linkedInterconnectAttachment linkedInterconnectAttachment or {@code null} for none
    */
   public RouterInterface setLinkedInterconnectAttachment(java.lang.String linkedInterconnectAttachment) {
@@ -121,7 +122,8 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
 
   /**
    * URI of the linked VPN tunnel, which must be in the same region as the router. Each interface
-   * can have one linked resource, which can be either a VPN tunnel or an Interconnect attachment.
+   * can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a
+   * virtual machine instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkedVpnTunnel() {
@@ -130,7 +132,8 @@ public final class RouterInterface extends com.google.api.client.json.GenericJso
 
   /**
    * URI of the linked VPN tunnel, which must be in the same region as the router. Each interface
-   * can have one linked resource, which can be either a VPN tunnel or an Interconnect attachment.
+   * can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a
+   * virtual machine instance.
    * @param linkedVpnTunnel linkedVpnTunnel or {@code null} for none
    */
   public RouterInterface setLinkedVpnTunnel(java.lang.String linkedVpnTunnel) {

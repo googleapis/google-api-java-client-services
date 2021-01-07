@@ -17,7 +17,7 @@
 package com.google.api.services.sql.model;
 
 /**
- * A Cloud SQL instance resource.
+ * A Cloud SQL instance resource. Next field: 35
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -30,10 +30,9 @@ package com.google.api.services.sql.model;
 public final class DatabaseInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * FIRST_GEN: First Generation instance. MySQL only. SECOND_GEN: Second Generation instance or
-   * PostgreSQL instance. EXTERNAL: A database server that is not managed by Google. This property
-   * is read-only; use the tier property in the settings object to determine the database type and
-   * Second or First Generation.
+   * *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by
+   * Google. This property is read-only; use the *tier* property in the *settings* object to
+   * determine the database type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,19 +46,20 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String connectionName;
 
   /**
-   * The current disk usage of the instance in bytes. This property has been deprecated. Users
-   * should use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring
-   * API instead. Please see this announcement for details.
+   * The current disk usage of the instance in bytes. This property has been deprecated. Use the
+   * "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead.
+   * Please see this announcement for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long currentDiskSize;
 
   /**
-   * The database engine type and version. The databaseVersion field can not be changed after
-   * instance creation.  MySQL Second Generation instances: MYSQL_5_7 (default) or MYSQL_5_6.
-   * PostgreSQL instances: POSTGRES_9_6 (default) or POSTGRES_11 Beta MySQL First Generation
-   * instances: MYSQL_5_6 (default) or MYSQL_5_5
+   * The database engine type and version. The *databaseVersion* field cannot be changed after
+   * instance creation. MySQL instances: *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL
+   * instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11* or *POSTGRES_12* (default). SQL Server
+   * instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*,
+   * *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * This field is deprecated and will be removed from a future version of the API. Use the
-   * settings.settingsVersion field instead.
+   * *settings.settingsVersion* field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,9 +106,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String gceZone;
 
   /**
-   * The instance type. This can be one of the following. CLOUD_SQL_INSTANCE: A Cloud SQL instance
-   * that is not replicating from a master. ON_PREMISES_INSTANCE: An instance running on the
-   * customer's premises. READ_REPLICA_INSTANCE: A Cloud SQL instance configured as a read-replica.
+   * The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance
+   * that is not replicating from a master. *ON_PREMISES_INSTANCE*: An instance running on the
+   * customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-
+   * replica.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,15 +123,15 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<IpMapping> ipAddresses;
 
   /**
-   * The IPv6 address assigned to the instance. This property is applicable only to First Generation
-   * instances.
+   * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to
+   * First Generation instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipv6Address;
 
   /**
-   * This is always sql#instance.
+   * This is always *sql#instance*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,10 +174,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String project;
 
   /**
-   * The geographical region. Can be us-central (FIRST_GEN instances only), us-central1 (SECOND_GEN
-   * instances only), asia-east1 or europe-west1. Defaults to us-central or us-central1 depending on
-   * the instance type (First Generation or Second Generation). The region can not be changed after
-   * instance creation.
+   * The geographical region. Can be *us-central* (*FIRST_GEN* instances only) *us-central1*
+   * (*SECOND_GEN* instances only) *asia-east1* or *europe-west1*. Defaults to *us-central* or *us-
+   * central1* depending on the instance type. The region cannot be changed after instance creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,10 +241,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * The current serving state of the Cloud SQL instance. This can be one of the following.
-   * RUNNABLE: The instance is running, or is ready to run when accessed. SUSPENDED: The instance is
-   * not available, for example due to problems with billing. PENDING_CREATE: The instance is being
-   * created. MAINTENANCE: The instance is down for maintenance. FAILED: The instance creation
-   * failed. UNKNOWN_STATE: The state of the instance is unknown.
+   * *RUNNABLE*: The instance is running, or is ready to run when accessed. *SUSPENDED*: The
+   * instance is not available, for example due to problems with billing. *PENDING_CREATE*: The
+   * instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The
+   * instance creation failed. *UNKNOWN_STATE*: The state of the instance is unknown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,10 +258,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> suspensionReason;
 
   /**
-   * FIRST_GEN: First Generation instance. MySQL only. SECOND_GEN: Second Generation instance or
-   * PostgreSQL instance. EXTERNAL: A database server that is not managed by Google. This property
-   * is read-only; use the tier property in the settings object to determine the database type and
-   * Second or First Generation.
+   * *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by
+   * Google. This property is read-only; use the *tier* property in the *settings* object to
+   * determine the database type.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackendType() {
@@ -269,10 +268,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * FIRST_GEN: First Generation instance. MySQL only. SECOND_GEN: Second Generation instance or
-   * PostgreSQL instance. EXTERNAL: A database server that is not managed by Google. This property
-   * is read-only; use the tier property in the settings object to determine the database type and
-   * Second or First Generation.
+   * *SECOND_GEN*: Cloud SQL database instance. *EXTERNAL*: A database server that is not managed by
+   * Google. This property is read-only; use the *tier* property in the *settings* object to
+   * determine the database type.
    * @param backendType backendType or {@code null} for none
    */
   public DatabaseInstance setBackendType(java.lang.String backendType) {
@@ -298,9 +296,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The current disk usage of the instance in bytes. This property has been deprecated. Users
-   * should use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring
-   * API instead. Please see this announcement for details.
+   * The current disk usage of the instance in bytes. This property has been deprecated. Use the
+   * "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead.
+   * Please see this announcement for details.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCurrentDiskSize() {
@@ -308,9 +306,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The current disk usage of the instance in bytes. This property has been deprecated. Users
-   * should use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring
-   * API instead. Please see this announcement for details.
+   * The current disk usage of the instance in bytes. This property has been deprecated. Use the
+   * "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead.
+   * Please see this announcement for details.
    * @param currentDiskSize currentDiskSize or {@code null} for none
    */
   public DatabaseInstance setCurrentDiskSize(java.lang.Long currentDiskSize) {
@@ -319,10 +317,11 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database engine type and version. The databaseVersion field can not be changed after
-   * instance creation.  MySQL Second Generation instances: MYSQL_5_7 (default) or MYSQL_5_6.
-   * PostgreSQL instances: POSTGRES_9_6 (default) or POSTGRES_11 Beta MySQL First Generation
-   * instances: MYSQL_5_6 (default) or MYSQL_5_5
+   * The database engine type and version. The *databaseVersion* field cannot be changed after
+   * instance creation. MySQL instances: *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL
+   * instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11* or *POSTGRES_12* (default). SQL Server
+   * instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*,
+   * *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseVersion() {
@@ -330,10 +329,11 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database engine type and version. The databaseVersion field can not be changed after
-   * instance creation.  MySQL Second Generation instances: MYSQL_5_7 (default) or MYSQL_5_6.
-   * PostgreSQL instances: POSTGRES_9_6 (default) or POSTGRES_11 Beta MySQL First Generation
-   * instances: MYSQL_5_6 (default) or MYSQL_5_5
+   * The database engine type and version. The *databaseVersion* field cannot be changed after
+   * instance creation. MySQL instances: *MYSQL_5_7* (default), or *MYSQL_5_6*. PostgreSQL
+   * instances: *POSTGRES_9_6*, *POSTGRES_10*, *POSTGRES_11* or *POSTGRES_12* (default). SQL Server
+   * instances: *SQLSERVER_2017_STANDARD* (default), *SQLSERVER_2017_ENTERPRISE*,
+   * *SQLSERVER_2017_EXPRESS*, or *SQLSERVER_2017_WEB*.
    * @param databaseVersion databaseVersion or {@code null} for none
    */
   public DatabaseInstance setDatabaseVersion(java.lang.String databaseVersion) {
@@ -379,7 +379,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * This field is deprecated and will be removed from a future version of the API. Use the
-   * settings.settingsVersion field instead.
+   * *settings.settingsVersion* field instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -388,7 +388,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * This field is deprecated and will be removed from a future version of the API. Use the
-   * settings.settingsVersion field instead.
+   * *settings.settingsVersion* field instead.
    * @param etag etag or {@code null} for none
    */
   public DatabaseInstance setEtag(java.lang.String etag) {
@@ -437,9 +437,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The instance type. This can be one of the following. CLOUD_SQL_INSTANCE: A Cloud SQL instance
-   * that is not replicating from a master. ON_PREMISES_INSTANCE: An instance running on the
-   * customer's premises. READ_REPLICA_INSTANCE: A Cloud SQL instance configured as a read-replica.
+   * The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance
+   * that is not replicating from a master. *ON_PREMISES_INSTANCE*: An instance running on the
+   * customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-
+   * replica.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceType() {
@@ -447,9 +448,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The instance type. This can be one of the following. CLOUD_SQL_INSTANCE: A Cloud SQL instance
-   * that is not replicating from a master. ON_PREMISES_INSTANCE: An instance running on the
-   * customer's premises. READ_REPLICA_INSTANCE: A Cloud SQL instance configured as a read-replica.
+   * The instance type. This can be one of the following. *CLOUD_SQL_INSTANCE*: A Cloud SQL instance
+   * that is not replicating from a master. *ON_PREMISES_INSTANCE*: An instance running on the
+   * customer's premises. *READ_REPLICA_INSTANCE*: A Cloud SQL instance configured as a read-
+   * replica.
    * @param instanceType instanceType or {@code null} for none
    */
   public DatabaseInstance setInstanceType(java.lang.String instanceType) {
@@ -475,8 +477,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The IPv6 address assigned to the instance. This property is applicable only to First Generation
-   * instances.
+   * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to
+   * First Generation instances.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6Address() {
@@ -484,8 +486,8 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The IPv6 address assigned to the instance. This property is applicable only to First Generation
-   * instances.
+   * The IPv6 address assigned to the instance. (Deprecated) This property was applicable only to
+   * First Generation instances.
    * @param ipv6Address ipv6Address or {@code null} for none
    */
   public DatabaseInstance setIpv6Address(java.lang.String ipv6Address) {
@@ -494,7 +496,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This is always sql#instance.
+   * This is always *sql#instance*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -502,7 +504,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * This is always sql#instance.
+   * This is always *sql#instance*.
    * @param kind kind or {@code null} for none
    */
   public DatabaseInstance setKind(java.lang.String kind) {
@@ -598,10 +600,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The geographical region. Can be us-central (FIRST_GEN instances only), us-central1 (SECOND_GEN
-   * instances only), asia-east1 or europe-west1. Defaults to us-central or us-central1 depending on
-   * the instance type (First Generation or Second Generation). The region can not be changed after
-   * instance creation.
+   * The geographical region. Can be *us-central* (*FIRST_GEN* instances only) *us-central1*
+   * (*SECOND_GEN* instances only) *asia-east1* or *europe-west1*. Defaults to *us-central* or *us-
+   * central1* depending on the instance type. The region cannot be changed after instance creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -609,10 +610,9 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The geographical region. Can be us-central (FIRST_GEN instances only), us-central1 (SECOND_GEN
-   * instances only), asia-east1 or europe-west1. Defaults to us-central or us-central1 depending on
-   * the instance type (First Generation or Second Generation). The region can not be changed after
-   * instance creation.
+   * The geographical region. Can be *us-central* (*FIRST_GEN* instances only) *us-central1*
+   * (*SECOND_GEN* instances only) *asia-east1* or *europe-west1*. Defaults to *us-central* or *us-
+   * central1* depending on the instance type. The region cannot be changed after instance creation.
    * @param region region or {@code null} for none
    */
   public DatabaseInstance setRegion(java.lang.String region) {
@@ -760,10 +760,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * The current serving state of the Cloud SQL instance. This can be one of the following.
-   * RUNNABLE: The instance is running, or is ready to run when accessed. SUSPENDED: The instance is
-   * not available, for example due to problems with billing. PENDING_CREATE: The instance is being
-   * created. MAINTENANCE: The instance is down for maintenance. FAILED: The instance creation
-   * failed. UNKNOWN_STATE: The state of the instance is unknown.
+   * *RUNNABLE*: The instance is running, or is ready to run when accessed. *SUSPENDED*: The
+   * instance is not available, for example due to problems with billing. *PENDING_CREATE*: The
+   * instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The
+   * instance creation failed. *UNKNOWN_STATE*: The state of the instance is unknown.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -772,10 +772,10 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
 
   /**
    * The current serving state of the Cloud SQL instance. This can be one of the following.
-   * RUNNABLE: The instance is running, or is ready to run when accessed. SUSPENDED: The instance is
-   * not available, for example due to problems with billing. PENDING_CREATE: The instance is being
-   * created. MAINTENANCE: The instance is down for maintenance. FAILED: The instance creation
-   * failed. UNKNOWN_STATE: The state of the instance is unknown.
+   * *RUNNABLE*: The instance is running, or is ready to run when accessed. *SUSPENDED*: The
+   * instance is not available, for example due to problems with billing. *PENDING_CREATE*: The
+   * instance is being created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The
+   * instance creation failed. *UNKNOWN_STATE*: The state of the instance is unknown.
    * @param state state or {@code null} for none
    */
   public DatabaseInstance setState(java.lang.String state) {

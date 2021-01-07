@@ -20,7 +20,7 @@ package com.google.api.services.webfonts;
  * Service definition for Webfonts (v1).
  *
  * <p>
- * Accesses the metadata for all families served by Google Fonts, providing a list of families currently available (including available styles and a list of supported script subsets).
+ * The Google Web Fonts Developer API lets you retrieve information about web fonts served by Google.
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Fonts Developer API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Web Fonts Developer API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -55,7 +55,7 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://webfonts.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -63,7 +63,7 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "webfonts/v1/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/webfonts/v1";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -143,7 +143,7 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
   public class WebfontsOperations {
 
     /**
-     * Retrieves the list of fonts currently served by the Google Fonts Developer API
+     * Retrieves the list of fonts currently served by the Google Fonts Developer API.
      *
      * Create a request for the method "webfonts.list".
      *
@@ -160,10 +160,10 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends WebfontsRequest<com.google.api.services.webfonts.model.WebfontList> {
 
-      private static final String REST_PATH = "webfonts";
+      private static final String REST_PATH = "v1/webfonts";
 
       /**
-       * Retrieves the list of fonts currently served by the Google Fonts Developer API
+       * Retrieves the list of fonts currently served by the Google Fonts Developer API.
        *
        * Create a request for the method "webfonts.list".
        *
@@ -189,8 +189,23 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -219,21 +234,26 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** Enables sorting of the list */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Enables sorting of the list. */
       @com.google.api.client.util.Key
       private java.lang.String sort;
 
-      /** Enables sorting of the list
+      /** Enables sorting of the list.
        */
       public java.lang.String getSort() {
         return sort;
       }
 
-      /** Enables sorting of the list */
+      /** Enables sorting of the list. */
       public List setSort(java.lang.String sort) {
         this.sort = sort;
         return this;

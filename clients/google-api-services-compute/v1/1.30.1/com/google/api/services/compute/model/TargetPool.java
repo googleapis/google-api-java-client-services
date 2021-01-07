@@ -34,8 +34,9 @@ package com.google.api.services.compute.model;
 public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field is applicable only when the containing target pool is serving a forwarding rule as
-   * the primary pool, and its failoverRatio field is properly set to a value between [0, 1].
+   * The server-defined URL for the resource. This field is applicable only when the containing
+   * target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is
+   * properly set to a value between [0, 1].
    *
    * backupPool and failoverRatio together define the fallback behavior of the primary target pool:
    * if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic
@@ -85,8 +86,8 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   /**
    * The URL of the HttpHealthCheck resource. A member instance in this pool is considered healthy
    * if and only if the health checks pass. An empty list means all member instances will be
-   * considered healthy at all times. Only HttpHealthChecks are supported. Only one health check may
-   * be specified.
+   * considered healthy at all times. Only legacy HttpHealthChecks are supported. Only one health
+   * check may be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,8 +152,9 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   private java.lang.String sessionAffinity;
 
   /**
-   * This field is applicable only when the containing target pool is serving a forwarding rule as
-   * the primary pool, and its failoverRatio field is properly set to a value between [0, 1].
+   * The server-defined URL for the resource. This field is applicable only when the containing
+   * target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is
+   * properly set to a value between [0, 1].
    *
    * backupPool and failoverRatio together define the fallback behavior of the primary target pool:
    * if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic
@@ -169,8 +171,9 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This field is applicable only when the containing target pool is serving a forwarding rule as
-   * the primary pool, and its failoverRatio field is properly set to a value between [0, 1].
+   * The server-defined URL for the resource. This field is applicable only when the containing
+   * target pool is serving a forwarding rule as the primary pool, and its failoverRatio field is
+   * properly set to a value between [0, 1].
    *
    * backupPool and failoverRatio together define the fallback behavior of the primary target pool:
    * if the ratio of the healthy instances in the primary pool is at or below failoverRatio, traffic
@@ -263,8 +266,8 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   /**
    * The URL of the HttpHealthCheck resource. A member instance in this pool is considered healthy
    * if and only if the health checks pass. An empty list means all member instances will be
-   * considered healthy at all times. Only HttpHealthChecks are supported. Only one health check may
-   * be specified.
+   * considered healthy at all times. Only legacy HttpHealthChecks are supported. Only one health
+   * check may be specified.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHealthChecks() {
@@ -274,8 +277,8 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   /**
    * The URL of the HttpHealthCheck resource. A member instance in this pool is considered healthy
    * if and only if the health checks pass. An empty list means all member instances will be
-   * considered healthy at all times. Only HttpHealthChecks are supported. Only one health check may
-   * be specified.
+   * considered healthy at all times. Only legacy HttpHealthChecks are supported. Only one health
+   * check may be specified.
    * @param healthChecks healthChecks or {@code null} for none
    */
   public TargetPool setHealthChecks(java.util.List<java.lang.String> healthChecks) {

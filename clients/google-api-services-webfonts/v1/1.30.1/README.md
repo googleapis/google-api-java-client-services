@@ -1,14 +1,14 @@
-# Google Fonts Developer API Client Library for Java
+# Web Fonts Developer API Client Library for Java
 
-Accesses the metadata for all families served by Google Fonts, providing a list of families currently available (including available styles and a list of supported script subsets).
+The Google Web Fonts Developer API lets you retrieve information about web fonts served by Google.
 
-This page contains information about getting started with the Google Fonts Developer API
+This page contains information about getting started with the Web Fonts Developer API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Google Fonts Developer API][javadoc]
+* Browse the [Javadoc reference for the Web Fonts Developer API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Google Fonts Developer API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Web Fonts Developer API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-webfonts</artifactId>
-      <version>v1-rev20160302-1.30.9</version>
+      <version>v1-rev20200819-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-webfonts:v1-rev20160302-1.30.9'
+  compile 'com.google.apis:google-api-services-webfonts:v1-rev20200819-1.30.10'
 }
 ```
 

@@ -20,8 +20,7 @@ package com.google.api.services.cloudshell.v1;
  * Service definition for CloudShell (v1).
  *
  * <p>
- * Allows users to start, configure, and connect to interactive shell sessions running in the cloud.
-
+ * Allows users to start, configure, and connect to interactive shell sessions running in the cloud. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Shell API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Shell API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -144,9 +143,9 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
   public class Operations {
 
     /**
-     * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-     * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-     * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+     * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+     * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
      * methods to check whether the cancellation succeeded or whether the operation completed despite
      * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
      * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -175,13 +174,13 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-       * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-       * other methods to check whether the cancellation succeeded or whether the operation completed
-       * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-       * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-       * corresponding to `Code.CANCELLED`.
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * `Code.CANCELLED`.
        *
        * Create a request for the method "operations.cancel".
        *
@@ -420,7 +419,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -445,7 +444,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -561,13 +560,12 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
     }
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`.
-     *
-     * NOTE: the `name` binding allows API services to override the binding to use different resource
-     * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-     * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-     * compatibility, the default name includes the operations collection id, however overriding users
-     * must ensure the name binding is the parent resource, without the operations collection id.
+     * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+     * the binding to use different resource name schemes, such as `users/operations`. To override the
+     * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+     * configuration. For backwards compatibility, the default name includes the operations collection
+     * id, however overriding users must ensure the name binding is the parent resource, without the
+     * operations collection id.
      *
      * Create a request for the method "operations.list".
      *
@@ -592,13 +590,12 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
 
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * NOTE: the `name` binding allows API services to override the binding to use different resource
-       * name schemes, such as `users/operations`. To override the binding, API services can add a
-       * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-       * compatibility, the default name includes the operations collection id, however overriding users
-       * must ensure the name binding is the parent resource, without the operations collection id.
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+       * override the binding to use different resource name schemes, such as `users/operations`. To
+       * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+       * their service configuration. For backwards compatibility, the default name includes the
+       * operations collection id, however overriding users must ensure the name binding is the parent
+       * resource, without the operations collection id.
        *
        * Create a request for the method "operations.list".
        *
@@ -760,6 +757,759 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
       }
     }
 
+  }
+
+  /**
+   * An accessor for creating requests from the Users collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudShell cloudshell = new CloudShell(...);}
+   *   {@code CloudShell.Users.List request = cloudshell.users().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Users users() {
+    return new Users();
+  }
+
+  /**
+   * The "users" collection of methods.
+   */
+  public class Users {
+
+    /**
+     * An accessor for creating requests from the Environments collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudShell cloudshell = new CloudShell(...);}
+     *   {@code CloudShell.Environments.List request = cloudshell.environments().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Environments environments() {
+      return new Environments();
+    }
+
+    /**
+     * The "environments" collection of methods.
+     */
+    public class Environments {
+
+      /**
+       * Adds a public SSH key to an environment, allowing clients with the corresponding private key to
+       * connect to that environment via SSH. If a key with the same content already exists, this will
+       * error with ALREADY_EXISTS.
+       *
+       * Create a request for the method "environments.addPublicKey".
+       *
+       * This request holds the parameters needed by the cloudshell server.  After setting any optional
+       * parameters, call the {@link AddPublicKey#execute()} method to invoke the remote operation.
+       *
+       * @param environment Environment this key should be added to, e.g. `users/me/environments/default`.
+       * @param content the {@link com.google.api.services.cloudshell.v1.model.AddPublicKeyRequest}
+       * @return the request
+       */
+      public AddPublicKey addPublicKey(java.lang.String environment, com.google.api.services.cloudshell.v1.model.AddPublicKeyRequest content) throws java.io.IOException {
+        AddPublicKey result = new AddPublicKey(environment, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AddPublicKey extends CloudShellRequest<com.google.api.services.cloudshell.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+environment}:addPublicKey";
+
+        private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/environments/[^/]+$");
+
+        /**
+         * Adds a public SSH key to an environment, allowing clients with the corresponding private key to
+         * connect to that environment via SSH. If a key with the same content already exists, this will
+         * error with ALREADY_EXISTS.
+         *
+         * Create a request for the method "environments.addPublicKey".
+         *
+         * This request holds the parameters needed by the the cloudshell server.  After setting any
+         * optional parameters, call the {@link AddPublicKey#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * AddPublicKey#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param environment Environment this key should be added to, e.g. `users/me/environments/default`.
+         * @param content the {@link com.google.api.services.cloudshell.v1.model.AddPublicKeyRequest}
+         * @since 1.13
+         */
+        protected AddPublicKey(java.lang.String environment, com.google.api.services.cloudshell.v1.model.AddPublicKeyRequest content) {
+          super(CloudShell.this, "POST", REST_PATH, content, com.google.api.services.cloudshell.v1.model.Operation.class);
+          this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                "Parameter environment must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+        }
+
+        @Override
+        public AddPublicKey set$Xgafv(java.lang.String $Xgafv) {
+          return (AddPublicKey) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AddPublicKey setAccessToken(java.lang.String accessToken) {
+          return (AddPublicKey) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AddPublicKey setAlt(java.lang.String alt) {
+          return (AddPublicKey) super.setAlt(alt);
+        }
+
+        @Override
+        public AddPublicKey setCallback(java.lang.String callback) {
+          return (AddPublicKey) super.setCallback(callback);
+        }
+
+        @Override
+        public AddPublicKey setFields(java.lang.String fields) {
+          return (AddPublicKey) super.setFields(fields);
+        }
+
+        @Override
+        public AddPublicKey setKey(java.lang.String key) {
+          return (AddPublicKey) super.setKey(key);
+        }
+
+        @Override
+        public AddPublicKey setOauthToken(java.lang.String oauthToken) {
+          return (AddPublicKey) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AddPublicKey setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AddPublicKey) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AddPublicKey setQuotaUser(java.lang.String quotaUser) {
+          return (AddPublicKey) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AddPublicKey setUploadType(java.lang.String uploadType) {
+          return (AddPublicKey) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AddPublicKey setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AddPublicKey) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Environment this key should be added to, e.g. `users/me/environments/default`. */
+        @com.google.api.client.util.Key
+        private java.lang.String environment;
+
+        /** Environment this key should be added to, e.g. `users/me/environments/default`.
+         */
+        public java.lang.String getEnvironment() {
+          return environment;
+        }
+
+        /** Environment this key should be added to, e.g. `users/me/environments/default`. */
+        public AddPublicKey setEnvironment(java.lang.String environment) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                "Parameter environment must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+          this.environment = environment;
+          return this;
+        }
+
+        @Override
+        public AddPublicKey set(String parameterName, Object value) {
+          return (AddPublicKey) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Sends OAuth credentials to a running environment on behalf of a user. When this completes, the
+       * environment will be authorized to run various Google Cloud command line tools without requiring
+       * the user to manually authenticate.
+       *
+       * Create a request for the method "environments.authorize".
+       *
+       * This request holds the parameters needed by the cloudshell server.  After setting any optional
+       * parameters, call the {@link Authorize#execute()} method to invoke the remote operation.
+       *
+       * @param name Name of the resource that should receive the credentials, for example
+       *        `users/me/environments/default` or `users/someone@example.com/environments/default`.
+       * @param content the {@link com.google.api.services.cloudshell.v1.model.AuthorizeEnvironmentRequest}
+       * @return the request
+       */
+      public Authorize authorize(java.lang.String name, com.google.api.services.cloudshell.v1.model.AuthorizeEnvironmentRequest content) throws java.io.IOException {
+        Authorize result = new Authorize(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Authorize extends CloudShellRequest<com.google.api.services.cloudshell.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:authorize";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/environments/[^/]+$");
+
+        /**
+         * Sends OAuth credentials to a running environment on behalf of a user. When this completes, the
+         * environment will be authorized to run various Google Cloud command line tools without requiring
+         * the user to manually authenticate.
+         *
+         * Create a request for the method "environments.authorize".
+         *
+         * This request holds the parameters needed by the the cloudshell server.  After setting any
+         * optional parameters, call the {@link Authorize#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Authorize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Name of the resource that should receive the credentials, for example
+       *        `users/me/environments/default` or `users/someone@example.com/environments/default`.
+         * @param content the {@link com.google.api.services.cloudshell.v1.model.AuthorizeEnvironmentRequest}
+         * @since 1.13
+         */
+        protected Authorize(java.lang.String name, com.google.api.services.cloudshell.v1.model.AuthorizeEnvironmentRequest content) {
+          super(CloudShell.this, "POST", REST_PATH, content, com.google.api.services.cloudshell.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+        }
+
+        @Override
+        public Authorize set$Xgafv(java.lang.String $Xgafv) {
+          return (Authorize) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Authorize setAccessToken(java.lang.String accessToken) {
+          return (Authorize) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Authorize setAlt(java.lang.String alt) {
+          return (Authorize) super.setAlt(alt);
+        }
+
+        @Override
+        public Authorize setCallback(java.lang.String callback) {
+          return (Authorize) super.setCallback(callback);
+        }
+
+        @Override
+        public Authorize setFields(java.lang.String fields) {
+          return (Authorize) super.setFields(fields);
+        }
+
+        @Override
+        public Authorize setKey(java.lang.String key) {
+          return (Authorize) super.setKey(key);
+        }
+
+        @Override
+        public Authorize setOauthToken(java.lang.String oauthToken) {
+          return (Authorize) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Authorize setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Authorize) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Authorize setQuotaUser(java.lang.String quotaUser) {
+          return (Authorize) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Authorize setUploadType(java.lang.String uploadType) {
+          return (Authorize) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Authorize setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Authorize) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Name of the resource that should receive the credentials, for example
+         * `users/me/environments/default` or `users/someone@example.com/environments/default`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Name of the resource that should receive the credentials, for example
+       `users/me/environments/default` or `users/someone@example.com/environments/default`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Name of the resource that should receive the credentials, for example
+         * `users/me/environments/default` or `users/someone@example.com/environments/default`.
+         */
+        public Authorize setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Authorize set(String parameterName, Object value) {
+          return (Authorize) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets an environment. Returns NOT_FOUND if the environment does not exist.
+       *
+       * Create a request for the method "environments.get".
+       *
+       * This request holds the parameters needed by the cloudshell server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the requested resource, for example `users/me/environments/default` or
+       *        `users/someone@example.com/environments/default`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudShellRequest<com.google.api.services.cloudshell.v1.model.Environment> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/environments/[^/]+$");
+
+        /**
+         * Gets an environment. Returns NOT_FOUND if the environment does not exist.
+         *
+         * Create a request for the method "environments.get".
+         *
+         * This request holds the parameters needed by the the cloudshell server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the requested resource, for example `users/me/environments/default` or
+       *        `users/someone@example.com/environments/default`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudShell.this, "GET", REST_PATH, null, com.google.api.services.cloudshell.v1.model.Environment.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the requested resource, for example `users/me/environments/default` or
+         * `users/someone@example.com/environments/default`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the requested resource, for example `users/me/environments/default` or
+       `users/someone@example.com/environments/default`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the requested resource, for example `users/me/environments/default` or
+         * `users/someone@example.com/environments/default`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Removes a public SSH key from an environment. Clients will no longer be able to connect to the
+       * environment using the corresponding private key. If a key with the same content is not present,
+       * this will error with NOT_FOUND.
+       *
+       * Create a request for the method "environments.removePublicKey".
+       *
+       * This request holds the parameters needed by the cloudshell server.  After setting any optional
+       * parameters, call the {@link RemovePublicKey#execute()} method to invoke the remote operation.
+       *
+       * @param environment Environment this key should be removed from, e.g. `users/me/environments/default`.
+       * @param content the {@link com.google.api.services.cloudshell.v1.model.RemovePublicKeyRequest}
+       * @return the request
+       */
+      public RemovePublicKey removePublicKey(java.lang.String environment, com.google.api.services.cloudshell.v1.model.RemovePublicKeyRequest content) throws java.io.IOException {
+        RemovePublicKey result = new RemovePublicKey(environment, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RemovePublicKey extends CloudShellRequest<com.google.api.services.cloudshell.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+environment}:removePublicKey";
+
+        private final java.util.regex.Pattern ENVIRONMENT_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/environments/[^/]+$");
+
+        /**
+         * Removes a public SSH key from an environment. Clients will no longer be able to connect to the
+         * environment using the corresponding private key. If a key with the same content is not present,
+         * this will error with NOT_FOUND.
+         *
+         * Create a request for the method "environments.removePublicKey".
+         *
+         * This request holds the parameters needed by the the cloudshell server.  After setting any
+         * optional parameters, call the {@link RemovePublicKey#execute()} method to invoke the remote
+         * operation. <p> {@link RemovePublicKey#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param environment Environment this key should be removed from, e.g. `users/me/environments/default`.
+         * @param content the {@link com.google.api.services.cloudshell.v1.model.RemovePublicKeyRequest}
+         * @since 1.13
+         */
+        protected RemovePublicKey(java.lang.String environment, com.google.api.services.cloudshell.v1.model.RemovePublicKeyRequest content) {
+          super(CloudShell.this, "POST", REST_PATH, content, com.google.api.services.cloudshell.v1.model.Operation.class);
+          this.environment = com.google.api.client.util.Preconditions.checkNotNull(environment, "Required parameter environment must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                "Parameter environment must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+        }
+
+        @Override
+        public RemovePublicKey set$Xgafv(java.lang.String $Xgafv) {
+          return (RemovePublicKey) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RemovePublicKey setAccessToken(java.lang.String accessToken) {
+          return (RemovePublicKey) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RemovePublicKey setAlt(java.lang.String alt) {
+          return (RemovePublicKey) super.setAlt(alt);
+        }
+
+        @Override
+        public RemovePublicKey setCallback(java.lang.String callback) {
+          return (RemovePublicKey) super.setCallback(callback);
+        }
+
+        @Override
+        public RemovePublicKey setFields(java.lang.String fields) {
+          return (RemovePublicKey) super.setFields(fields);
+        }
+
+        @Override
+        public RemovePublicKey setKey(java.lang.String key) {
+          return (RemovePublicKey) super.setKey(key);
+        }
+
+        @Override
+        public RemovePublicKey setOauthToken(java.lang.String oauthToken) {
+          return (RemovePublicKey) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RemovePublicKey setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RemovePublicKey) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RemovePublicKey setQuotaUser(java.lang.String quotaUser) {
+          return (RemovePublicKey) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RemovePublicKey setUploadType(java.lang.String uploadType) {
+          return (RemovePublicKey) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RemovePublicKey setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RemovePublicKey) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Environment this key should be removed from, e.g. `users/me/environments/default`. */
+        @com.google.api.client.util.Key
+        private java.lang.String environment;
+
+        /** Environment this key should be removed from, e.g. `users/me/environments/default`.
+         */
+        public java.lang.String getEnvironment() {
+          return environment;
+        }
+
+        /** Environment this key should be removed from, e.g. `users/me/environments/default`. */
+        public RemovePublicKey setEnvironment(java.lang.String environment) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
+                "Parameter environment must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+          this.environment = environment;
+          return this;
+        }
+
+        @Override
+        public RemovePublicKey set(String parameterName, Object value) {
+          return (RemovePublicKey) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Starts an existing environment, allowing clients to connect to it. The returned operation will
+       * contain an instance of StartEnvironmentMetadata in its metadata field. Users can wait for the
+       * environment to start by polling this operation via GetOperation. Once the environment has
+       * finished starting and is ready to accept connections, the operation will contain a
+       * StartEnvironmentResponse in its response field.
+       *
+       * Create a request for the method "environments.start".
+       *
+       * This request holds the parameters needed by the cloudshell server.  After setting any optional
+       * parameters, call the {@link Start#execute()} method to invoke the remote operation.
+       *
+       * @param name Name of the resource that should be started, for example `users/me/environments/default` or
+       *        `users/someone@example.com/environments/default`.
+       * @param content the {@link com.google.api.services.cloudshell.v1.model.StartEnvironmentRequest}
+       * @return the request
+       */
+      public Start start(java.lang.String name, com.google.api.services.cloudshell.v1.model.StartEnvironmentRequest content) throws java.io.IOException {
+        Start result = new Start(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Start extends CloudShellRequest<com.google.api.services.cloudshell.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:start";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/environments/[^/]+$");
+
+        /**
+         * Starts an existing environment, allowing clients to connect to it. The returned operation will
+         * contain an instance of StartEnvironmentMetadata in its metadata field. Users can wait for the
+         * environment to start by polling this operation via GetOperation. Once the environment has
+         * finished starting and is ready to accept connections, the operation will contain a
+         * StartEnvironmentResponse in its response field.
+         *
+         * Create a request for the method "environments.start".
+         *
+         * This request holds the parameters needed by the the cloudshell server.  After setting any
+         * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Name of the resource that should be started, for example `users/me/environments/default` or
+       *        `users/someone@example.com/environments/default`.
+         * @param content the {@link com.google.api.services.cloudshell.v1.model.StartEnvironmentRequest}
+         * @since 1.13
+         */
+        protected Start(java.lang.String name, com.google.api.services.cloudshell.v1.model.StartEnvironmentRequest content) {
+          super(CloudShell.this, "POST", REST_PATH, content, com.google.api.services.cloudshell.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+        }
+
+        @Override
+        public Start set$Xgafv(java.lang.String $Xgafv) {
+          return (Start) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Start setAccessToken(java.lang.String accessToken) {
+          return (Start) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Start setAlt(java.lang.String alt) {
+          return (Start) super.setAlt(alt);
+        }
+
+        @Override
+        public Start setCallback(java.lang.String callback) {
+          return (Start) super.setCallback(callback);
+        }
+
+        @Override
+        public Start setFields(java.lang.String fields) {
+          return (Start) super.setFields(fields);
+        }
+
+        @Override
+        public Start setKey(java.lang.String key) {
+          return (Start) super.setKey(key);
+        }
+
+        @Override
+        public Start setOauthToken(java.lang.String oauthToken) {
+          return (Start) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Start) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Start setQuotaUser(java.lang.String quotaUser) {
+          return (Start) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Start setUploadType(java.lang.String uploadType) {
+          return (Start) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Start setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Start) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Name of the resource that should be started, for example `users/me/environments/default`
+         * or `users/someone@example.com/environments/default`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Name of the resource that should be started, for example `users/me/environments/default` or
+       `users/someone@example.com/environments/default`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Name of the resource that should be started, for example `users/me/environments/default`
+         * or `users/someone@example.com/environments/default`.
+         */
+        public Start setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/environments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Start set(String parameterName, Object value) {
+          return (Start) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

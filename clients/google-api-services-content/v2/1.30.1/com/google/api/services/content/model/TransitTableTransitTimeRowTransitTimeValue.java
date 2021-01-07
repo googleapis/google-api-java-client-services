@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class TransitTableTransitTimeRowTransitTimeValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Must be greater than or equal to minTransitTimeInDays.
+   * Must be greater than or equal to `minTransitTimeInDays`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class TransitTableTransitTimeRowTransitTimeValue extends com.google
   private java.lang.Long minTransitTimeInDays;
 
   /**
-   * Must be greater than or equal to minTransitTimeInDays.
+   * Must be greater than or equal to `minTransitTimeInDays`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxTransitTimeInDays() {
@@ -54,7 +54,7 @@ public final class TransitTableTransitTimeRowTransitTimeValue extends com.google
   }
 
   /**
-   * Must be greater than or equal to minTransitTimeInDays.
+   * Must be greater than or equal to `minTransitTimeInDays`.
    * @param maxTransitTimeInDays maxTransitTimeInDays or {@code null} for none
    */
   public TransitTableTransitTimeRowTransitTimeValue setMaxTransitTimeInDays(java.lang.Long maxTransitTimeInDays) {

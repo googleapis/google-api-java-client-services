@@ -69,6 +69,13 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String fingerprint;
 
   /**
+   * [Output Only] An IPv6 internal network address for this network interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6Address;
+
+  /**
    * [Output Only] Type of the resource. Always compute#networkInterface for network interfaces.
    * The value may be {@code null}.
    */
@@ -212,6 +219,23 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface encodeFingerprint(byte[] fingerprint) {
     this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
+    return this;
+  }
+
+  /**
+   * [Output Only] An IPv6 internal network address for this network interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6Address() {
+    return ipv6Address;
+  }
+
+  /**
+   * [Output Only] An IPv6 internal network address for this network interface.
+   * @param ipv6Address ipv6Address or {@code null} for none
+   */
+  public NetworkInterface setIpv6Address(java.lang.String ipv6Address) {
+    this.ipv6Address = ipv6Address;
     return this;
   }
 

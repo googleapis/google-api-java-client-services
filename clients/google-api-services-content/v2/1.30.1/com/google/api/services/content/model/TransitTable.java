@@ -31,8 +31,8 @@ package com.google.api.services.content.model;
 public final class TransitTable extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of postal group names. The last value can be "all other locations". Example: ["zone 1",
-   * "zone 2", "all other locations"]. The referred postal code groups must match the delivery
+   * A list of postal group names. The last value can be `"all other locations"`. Example: `["zone
+   * 1", "zone 2", "all other locations"]`. The referred postal code groups must match the delivery
    * country of the service.
    * The value may be {@code null}.
    */
@@ -46,16 +46,16 @@ public final class TransitTable extends com.google.api.client.json.GenericJson {
   private java.util.List<TransitTableTransitTimeRow> rows;
 
   /**
-   * A list of transit time labels. The last value can be "all other labels". Example: ["food",
-   * "electronics", "all other labels"].
+   * A list of transit time labels. The last value can be `"all other labels"`. Example: `["food",
+   * "electronics", "all other labels"]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> transitTimeLabels;
 
   /**
-   * A list of postal group names. The last value can be "all other locations". Example: ["zone 1",
-   * "zone 2", "all other locations"]. The referred postal code groups must match the delivery
+   * A list of postal group names. The last value can be `"all other locations"`. Example: `["zone
+   * 1", "zone 2", "all other locations"]`. The referred postal code groups must match the delivery
    * country of the service.
    * @return value or {@code null} for none
    */
@@ -64,8 +64,8 @@ public final class TransitTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of postal group names. The last value can be "all other locations". Example: ["zone 1",
-   * "zone 2", "all other locations"]. The referred postal code groups must match the delivery
+   * A list of postal group names. The last value can be `"all other locations"`. Example: `["zone
+   * 1", "zone 2", "all other locations"]`. The referred postal code groups must match the delivery
    * country of the service.
    * @param postalCodeGroupNames postalCodeGroupNames or {@code null} for none
    */
@@ -90,8 +90,8 @@ public final class TransitTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of transit time labels. The last value can be "all other labels". Example: ["food",
-   * "electronics", "all other labels"].
+   * A list of transit time labels. The last value can be `"all other labels"`. Example: `["food",
+   * "electronics", "all other labels"]`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTransitTimeLabels() {
@@ -99,8 +99,8 @@ public final class TransitTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of transit time labels. The last value can be "all other labels". Example: ["food",
-   * "electronics", "all other labels"].
+   * A list of transit time labels. The last value can be `"all other labels"`. Example: `["food",
+   * "electronics", "all other labels"]`.
    * @param transitTimeLabels transitTimeLabels or {@code null} for none
    */
   public TransitTable setTransitTimeLabels(java.util.List<java.lang.String> transitTimeLabels) {

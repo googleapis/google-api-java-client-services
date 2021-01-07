@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Basic details about a channel, including title, description and thumbnails.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -65,25 +65,22 @@ public final class ChannelSnippet extends com.google.api.client.json.GenericJson
   private ChannelLocalization localized;
 
   /**
-   * The date and time that the channel was created. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the channel was created. The value is specified in < a
+   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime publishedAt;
+  private java.lang.String publishedAt;
 
   /**
    * A map of thumbnail images associated with the channel. For each object in the map, the key is
    * the name of the thumbnail image, and the value is an object that contains other information
-   * about the thumbnail.
-   *
-   * When displaying thumbnails in your application, make sure that your code uses the image URLs
-   * exactly as they are returned in API responses. For example, your application should not use the
-   * http domain instead of the https domain in a URL returned in an API response.
-   *
-   * Beginning in July 2018, channel thumbnail URLs will only be available in the https domain,
-   * which is how the URLs appear in API responses. After that time, you might see broken images in
-   * your application if it tries to load YouTube images from the http domain.
+   * about the thumbnail. When displaying thumbnails in your application, make sure that your code
+   * uses the image URLs exactly as they are returned in API responses. For example, your
+   * application should not use the http domain instead of the https domain in a URL returned in an
+   * API response. Beginning in July 2018, channel thumbnail URLs will only be available in the
+   * https domain, which is how the URLs appear in API responses. After that time, you might see
+   * broken images in your application if it tries to load YouTube images from the http domain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,20 +179,20 @@ public final class ChannelSnippet extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The date and time that the channel was created. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the channel was created. The value is specified in < a
+   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getPublishedAt() {
+  public java.lang.String getPublishedAt() {
     return publishedAt;
   }
 
   /**
-   * The date and time that the channel was created. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sZ) format.
+   * The date and time that the channel was created. The value is specified in < a
+   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 format.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public ChannelSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
+  public ChannelSnippet setPublishedAt(java.lang.String publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }
@@ -203,15 +200,12 @@ public final class ChannelSnippet extends com.google.api.client.json.GenericJson
   /**
    * A map of thumbnail images associated with the channel. For each object in the map, the key is
    * the name of the thumbnail image, and the value is an object that contains other information
-   * about the thumbnail.
-   *
-   * When displaying thumbnails in your application, make sure that your code uses the image URLs
-   * exactly as they are returned in API responses. For example, your application should not use the
-   * http domain instead of the https domain in a URL returned in an API response.
-   *
-   * Beginning in July 2018, channel thumbnail URLs will only be available in the https domain,
-   * which is how the URLs appear in API responses. After that time, you might see broken images in
-   * your application if it tries to load YouTube images from the http domain.
+   * about the thumbnail. When displaying thumbnails in your application, make sure that your code
+   * uses the image URLs exactly as they are returned in API responses. For example, your
+   * application should not use the http domain instead of the https domain in a URL returned in an
+   * API response. Beginning in July 2018, channel thumbnail URLs will only be available in the
+   * https domain, which is how the URLs appear in API responses. After that time, you might see
+   * broken images in your application if it tries to load YouTube images from the http domain.
    * @return value or {@code null} for none
    */
   public ThumbnailDetails getThumbnails() {
@@ -221,15 +215,12 @@ public final class ChannelSnippet extends com.google.api.client.json.GenericJson
   /**
    * A map of thumbnail images associated with the channel. For each object in the map, the key is
    * the name of the thumbnail image, and the value is an object that contains other information
-   * about the thumbnail.
-   *
-   * When displaying thumbnails in your application, make sure that your code uses the image URLs
-   * exactly as they are returned in API responses. For example, your application should not use the
-   * http domain instead of the https domain in a URL returned in an API response.
-   *
-   * Beginning in July 2018, channel thumbnail URLs will only be available in the https domain,
-   * which is how the URLs appear in API responses. After that time, you might see broken images in
-   * your application if it tries to load YouTube images from the http domain.
+   * about the thumbnail. When displaying thumbnails in your application, make sure that your code
+   * uses the image URLs exactly as they are returned in API responses. For example, your
+   * application should not use the http domain instead of the https domain in a URL returned in an
+   * API response. Beginning in July 2018, channel thumbnail URLs will only be available in the
+   * https domain, which is how the URLs appear in API responses. After that time, you might see
+   * broken images in your application if it tries to load YouTube images from the http domain.
    * @param thumbnails thumbnails or {@code null} for none
    */
   public ChannelSnippet setThumbnails(ThumbnailDetails thumbnails) {

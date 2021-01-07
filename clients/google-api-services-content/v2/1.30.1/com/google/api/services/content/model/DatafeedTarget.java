@@ -49,10 +49,8 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
   /**
    * The list of destinations to include for this target (corresponds to checked check boxes in
    * Merchant Center). Default destinations are always included unless provided in
-   * excludedDestinations.
-   *
-   * List of supported destinations (if available to the account):   - DisplayAds  - Shopping  -
-   * ShoppingActions  - SurfacesAcrossGoogle
+   * `excludedDestinations`. List of supported destinations (if available to the account): -
+   * DisplayAds - Shopping - ShoppingActions - SurfacesAcrossGoogle
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +58,7 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
 
   /**
    * The two-letter ISO 639-1 language of the items in the feed. Must be a valid language for
-   * targets[].country.
+   * `targets[].country`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,10 +105,8 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
   /**
    * The list of destinations to include for this target (corresponds to checked check boxes in
    * Merchant Center). Default destinations are always included unless provided in
-   * excludedDestinations.
-   *
-   * List of supported destinations (if available to the account):   - DisplayAds  - Shopping  -
-   * ShoppingActions  - SurfacesAcrossGoogle
+   * `excludedDestinations`. List of supported destinations (if available to the account): -
+   * DisplayAds - Shopping - ShoppingActions - SurfacesAcrossGoogle
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedDestinations() {
@@ -120,10 +116,8 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
   /**
    * The list of destinations to include for this target (corresponds to checked check boxes in
    * Merchant Center). Default destinations are always included unless provided in
-   * excludedDestinations.
-   *
-   * List of supported destinations (if available to the account):   - DisplayAds  - Shopping  -
-   * ShoppingActions  - SurfacesAcrossGoogle
+   * `excludedDestinations`. List of supported destinations (if available to the account): -
+   * DisplayAds - Shopping - ShoppingActions - SurfacesAcrossGoogle
    * @param includedDestinations includedDestinations or {@code null} for none
    */
   public DatafeedTarget setIncludedDestinations(java.util.List<java.lang.String> includedDestinations) {
@@ -133,7 +127,7 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
 
   /**
    * The two-letter ISO 639-1 language of the items in the feed. Must be a valid language for
-   * targets[].country.
+   * `targets[].country`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguage() {
@@ -142,7 +136,7 @@ public final class DatafeedTarget extends com.google.api.client.json.GenericJson
 
   /**
    * The two-letter ISO 639-1 language of the items in the feed. Must be a valid language for
-   * targets[].country.
+   * `targets[].country`.
    * @param language language or {@code null} for none
    */
   public DatafeedTarget setLanguage(java.lang.String language) {

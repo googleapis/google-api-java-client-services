@@ -20,7 +20,7 @@ package com.google.api.services.doubleclickbidmanager;
  * Service definition for DoubleClickBidManager (v1).
  *
  * <p>
- * API for viewing and managing your reports in DoubleClick Bid Manager.
+ * DoubleClick Bid Manager API allows users to manage and create campaigns and reports.
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the DoubleClick Bid Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the DoubleClick Bid Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -55,7 +55,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://doubleclickbidmanager.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/doubleclickbidmanager/v1";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -143,7 +143,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
   public class Lineitems {
 
     /**
-     * Retrieves line items in CSV format. TrueView line items are not supported.
+     * Retrieves line items in CSV format. YouTube & partners line items are not supported.
      *
      * Create a request for the method "lineitems.downloadlineitems".
      *
@@ -165,7 +165,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       private static final String REST_PATH = "lineitems/downloadlineitems";
 
       /**
-       * Retrieves line items in CSV format. TrueView line items are not supported.
+       * Retrieves line items in CSV format. YouTube & partners line items are not supported.
        *
        * Create a request for the method "lineitems.downloadlineitems".
        *
@@ -183,8 +183,23 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
+      public Downloadlineitems set$Xgafv(java.lang.String $Xgafv) {
+        return (Downloadlineitems) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Downloadlineitems setAccessToken(java.lang.String accessToken) {
+        return (Downloadlineitems) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Downloadlineitems setAlt(java.lang.String alt) {
         return (Downloadlineitems) super.setAlt(alt);
+      }
+
+      @Override
+      public Downloadlineitems setCallback(java.lang.String callback) {
+        return (Downloadlineitems) super.setCallback(callback);
       }
 
       @Override
@@ -213,8 +228,13 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
-      public Downloadlineitems setUserIp(java.lang.String userIp) {
-        return (Downloadlineitems) super.setUserIp(userIp);
+      public Downloadlineitems setUploadType(java.lang.String uploadType) {
+        return (Downloadlineitems) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Downloadlineitems setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Downloadlineitems) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -223,7 +243,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
     }
     /**
-     * Uploads line items in CSV format. TrueView line items are not supported.
+     * Uploads line items in CSV format. YouTube & partners line items are not supported.
      *
      * Create a request for the method "lineitems.uploadlineitems".
      *
@@ -245,7 +265,7 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       private static final String REST_PATH = "lineitems/uploadlineitems";
 
       /**
-       * Uploads line items in CSV format. TrueView line items are not supported.
+       * Uploads line items in CSV format. YouTube & partners line items are not supported.
        *
        * Create a request for the method "lineitems.uploadlineitems".
        *
@@ -263,8 +283,23 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
+      public Uploadlineitems set$Xgafv(java.lang.String $Xgafv) {
+        return (Uploadlineitems) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Uploadlineitems setAccessToken(java.lang.String accessToken) {
+        return (Uploadlineitems) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Uploadlineitems setAlt(java.lang.String alt) {
         return (Uploadlineitems) super.setAlt(alt);
+      }
+
+      @Override
+      public Uploadlineitems setCallback(java.lang.String callback) {
+        return (Uploadlineitems) super.setCallback(callback);
       }
 
       @Override
@@ -293,8 +328,13 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
-      public Uploadlineitems setUserIp(java.lang.String userIp) {
-        return (Uploadlineitems) super.setUserIp(userIp);
+      public Uploadlineitems setUploadType(java.lang.String uploadType) {
+        return (Uploadlineitems) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Uploadlineitems setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Uploadlineitems) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -366,8 +406,23 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
+      public Createquery set$Xgafv(java.lang.String $Xgafv) {
+        return (Createquery) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Createquery setAccessToken(java.lang.String accessToken) {
+        return (Createquery) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Createquery setAlt(java.lang.String alt) {
         return (Createquery) super.setAlt(alt);
+      }
+
+      @Override
+      public Createquery setCallback(java.lang.String callback) {
+        return (Createquery) super.setCallback(callback);
       }
 
       @Override
@@ -396,8 +451,13 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
-      public Createquery setUserIp(java.lang.String userIp) {
-        return (Createquery) super.setUserIp(userIp);
+      public Createquery setUploadType(java.lang.String uploadType) {
+        return (Createquery) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Createquery setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Createquery) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -447,8 +507,23 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
+      public Deletequery set$Xgafv(java.lang.String $Xgafv) {
+        return (Deletequery) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Deletequery setAccessToken(java.lang.String accessToken) {
+        return (Deletequery) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Deletequery setAlt(java.lang.String alt) {
         return (Deletequery) super.setAlt(alt);
+      }
+
+      @Override
+      public Deletequery setCallback(java.lang.String callback) {
+        return (Deletequery) super.setCallback(callback);
       }
 
       @Override
@@ -477,8 +552,13 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
-      public Deletequery setUserIp(java.lang.String userIp) {
-        return (Deletequery) super.setUserIp(userIp);
+      public Deletequery setUploadType(java.lang.String uploadType) {
+        return (Deletequery) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Deletequery setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Deletequery) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Query ID to delete. */
@@ -553,8 +633,23 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
+      public Getquery set$Xgafv(java.lang.String $Xgafv) {
+        return (Getquery) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Getquery setAccessToken(java.lang.String accessToken) {
+        return (Getquery) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Getquery setAlt(java.lang.String alt) {
         return (Getquery) super.setAlt(alt);
+      }
+
+      @Override
+      public Getquery setCallback(java.lang.String callback) {
+        return (Getquery) super.setCallback(callback);
       }
 
       @Override
@@ -583,8 +678,13 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
-      public Getquery setUserIp(java.lang.String userIp) {
-        return (Getquery) super.setUserIp(userIp);
+      public Getquery setUploadType(java.lang.String uploadType) {
+        return (Getquery) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Getquery setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Getquery) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Query ID to retrieve. */
@@ -657,8 +757,23 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
+      public Listqueries set$Xgafv(java.lang.String $Xgafv) {
+        return (Listqueries) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Listqueries setAccessToken(java.lang.String accessToken) {
+        return (Listqueries) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Listqueries setAlt(java.lang.String alt) {
         return (Listqueries) super.setAlt(alt);
+      }
+
+      @Override
+      public Listqueries setCallback(java.lang.String callback) {
+        return (Listqueries) super.setCallback(callback);
       }
 
       @Override
@@ -687,8 +802,13 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
-      public Listqueries setUserIp(java.lang.String userIp) {
-        return (Listqueries) super.setUserIp(userIp);
+      public Listqueries setUploadType(java.lang.String uploadType) {
+        return (Listqueries) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Listqueries setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Listqueries) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -739,8 +859,23 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
+      public Runquery set$Xgafv(java.lang.String $Xgafv) {
+        return (Runquery) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Runquery setAccessToken(java.lang.String accessToken) {
+        return (Runquery) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Runquery setAlt(java.lang.String alt) {
         return (Runquery) super.setAlt(alt);
+      }
+
+      @Override
+      public Runquery setCallback(java.lang.String callback) {
+        return (Runquery) super.setCallback(callback);
       }
 
       @Override
@@ -769,8 +904,13 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
-      public Runquery setUserIp(java.lang.String userIp) {
-        return (Runquery) super.setUserIp(userIp);
+      public Runquery setUploadType(java.lang.String uploadType) {
+        return (Runquery) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Runquery setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Runquery) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Query ID to run. */
@@ -869,8 +1009,23 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
+      public Listreports set$Xgafv(java.lang.String $Xgafv) {
+        return (Listreports) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Listreports setAccessToken(java.lang.String accessToken) {
+        return (Listreports) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Listreports setAlt(java.lang.String alt) {
         return (Listreports) super.setAlt(alt);
+      }
+
+      @Override
+      public Listreports setCallback(java.lang.String callback) {
+        return (Listreports) super.setCallback(callback);
       }
 
       @Override
@@ -899,8 +1054,13 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
-      public Listreports setUserIp(java.lang.String userIp) {
-        return (Listreports) super.setUserIp(userIp);
+      public Listreports setUploadType(java.lang.String uploadType) {
+        return (Listreports) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Listreports setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Listreports) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Query ID with which the reports are associated. */
@@ -987,8 +1147,23 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
+      public Download set$Xgafv(java.lang.String $Xgafv) {
+        return (Download) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Download setAccessToken(java.lang.String accessToken) {
+        return (Download) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Download setAlt(java.lang.String alt) {
         return (Download) super.setAlt(alt);
+      }
+
+      @Override
+      public Download setCallback(java.lang.String callback) {
+        return (Download) super.setCallback(callback);
       }
 
       @Override
@@ -1017,8 +1192,13 @@ public class DoubleClickBidManager extends com.google.api.client.googleapis.serv
       }
 
       @Override
-      public Download setUserIp(java.lang.String userIp) {
-        return (Download) super.setUserIp(userIp);
+      public Download setUploadType(java.lang.String uploadType) {
+        return (Download) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Download setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Download) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override

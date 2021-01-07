@@ -20,8 +20,8 @@ package com.google.api.services.deploymentmanager.model;
  * Holds the composite type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deployment Manager API V2Beta Methods.
- * For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud Deployment Manager V2 API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -54,15 +54,15 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   /**
    * Map of labels; provided by the client when the resource is created or updated. Specifically:
    * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: [a-z]([-a-z0-9]*[a-z0-9])? Label values must be between 0 and 63 characters long
-   * and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?
+   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long
+   * and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<CompositeTypeLabelEntry> labels;
 
   /**
-   * Name of the composite type, must follow the expression: [a-z]([-a-z0-9_.]{0,61}[a-z0-9])?.
+   * Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,8 +150,8 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   /**
    * Map of labels; provided by the client when the resource is created or updated. Specifically:
    * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: [a-z]([-a-z0-9]*[a-z0-9])? Label values must be between 0 and 63 characters long
-   * and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?
+   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long
+   * and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
    * @return value or {@code null} for none
    */
   public java.util.List<CompositeTypeLabelEntry> getLabels() {
@@ -161,8 +161,8 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   /**
    * Map of labels; provided by the client when the resource is created or updated. Specifically:
    * Label keys must be between 1 and 63 characters long and must conform to the following regular
-   * expression: [a-z]([-a-z0-9]*[a-z0-9])? Label values must be between 0 and 63 characters long
-   * and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?
+   * expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long
+   * and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
    * @param labels labels or {@code null} for none
    */
   public CompositeType setLabels(java.util.List<CompositeTypeLabelEntry> labels) {
@@ -171,7 +171,7 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the composite type, must follow the expression: [a-z]([-a-z0-9_.]{0,61}[a-z0-9])?.
+   * Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -179,7 +179,7 @@ public final class CompositeType extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the composite type, must follow the expression: [a-z]([-a-z0-9_.]{0,61}[a-z0-9])?.
+   * Name of the composite type, must follow the expression: `[a-z]([-a-z0-9_.]{0,61}[a-z0-9])?`.
    * @param name name or {@code null} for none
    */
   public CompositeType setName(java.lang.String name) {

@@ -46,7 +46,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Android Device Provisioning Partner API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Android Device Provisioning Partner API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -317,8 +317,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * This request holds the parameters needed by the androiddeviceprovisioning server.  After setting
        * any optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The customer that manages the configuration. An API resource name
-      in the format
+       * @param parent Required. The customer that manages the configuration. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
        * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.Configuration}
        * @return the request
@@ -347,8 +346,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The customer that manages the configuration. An API resource name
-      in the format
+         * @param parent Required. The customer that manages the configuration. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
          * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.Configuration}
          * @since 1.13
@@ -461,8 +459,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * any optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The configuration to delete. An API resource name in the format
-       *        `customers/[CUSTOMER_ID]/configurations/[CONFIGURATION_ID]`. If the
-      configuration is
+       *        `customers/[CUSTOMER_ID]/configurations/[CONFIGURATION_ID]`. If the configuration is
        *        applied to any devices, the API call fails.
        * @return the request
        */
@@ -492,8 +489,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The configuration to delete. An API resource name in the format
-       *        `customers/[CUSTOMER_ID]/configurations/[CONFIGURATION_ID]`. If the
-      configuration is
+       *        `customers/[CUSTOMER_ID]/configurations/[CONFIGURATION_ID]`. If the configuration is
        *        applied to any devices, the API call fails.
          * @since 1.13
          */
@@ -754,8 +750,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * This request holds the parameters needed by the androiddeviceprovisioning server.  After setting
        * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The customer that manages the listed configurations. An API
-      resource name in the format
+       * @param parent Required. The customer that manages the listed configurations. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
        * @return the request
        */
@@ -783,8 +778,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The customer that manages the listed configurations. An API
-      resource name in the format
+         * @param parent Required. The customer that manages the listed configurations. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
          * @since 1.13
          */
@@ -905,8 +899,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * any optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Output only. The API resource name in the format
-       *        `customers/[CUSTOMER_ID]/configurations/[CONFIGURATION_ID]`. Assigned by
-      the server.
+       *        `customers/[CUSTOMER_ID]/configurations/[CONFIGURATION_ID]`. Assigned by the server.
        * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.Configuration}
        * @return the request
        */
@@ -935,8 +928,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Output only. The API resource name in the format
-       *        `customers/[CUSTOMER_ID]/configurations/[CONFIGURATION_ID]`. Assigned by
-      the server.
+       *        `customers/[CUSTOMER_ID]/configurations/[CONFIGURATION_ID]`. Assigned by the server.
          * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.Configuration}
          * @since 1.13
          */
@@ -1097,8 +1089,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * any optional parameters, call the {@link ApplyConfiguration#execute()} method to invoke the
        * remote operation.
        *
-       * @param parent Required. The customer managing the device. An API resource name in the
-      format
+       * @param parent Required. The customer managing the device. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
        * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.CustomerApplyConfigurationRequest}
        * @return the request
@@ -1129,8 +1120,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param parent Required. The customer managing the device. An API resource name in the
-      format
+         * @param parent Required. The customer managing the device. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
          * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.CustomerApplyConfigurationRequest}
          * @since 1.13
@@ -1389,8 +1379,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * This request holds the parameters needed by the androiddeviceprovisioning server.  After setting
        * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The customer managing the devices. An API resource name in the
-      format
+       * @param parent Required. The customer managing the devices. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
        * @return the request
        */
@@ -1418,8 +1407,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The customer managing the devices. An API resource name in the
-      format
+         * @param parent Required. The customer managing the devices. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
          * @since 1.13
          */
@@ -1578,8 +1566,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * any optional parameters, call the {@link RemoveConfiguration#execute()} method to invoke the
        * remote operation.
        *
-       * @param parent Required. The customer managing the device in the format
-      `customers/[CUSTOMER_ID]`.
+       * @param parent Required. The customer managing the device in the format `customers/[CUSTOMER_ID]`.
        * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.CustomerRemoveConfigurationRequest}
        * @return the request
        */
@@ -1607,8 +1594,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The customer managing the device in the format
-      `customers/[CUSTOMER_ID]`.
+         * @param parent Required. The customer managing the device in the format `customers/[CUSTOMER_ID]`.
          * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.CustomerRemoveConfigurationRequest}
          * @since 1.13
          */
@@ -1677,9 +1663,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
           return (RemoveConfiguration) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The customer managing the device in the format `customers/[CUSTOMER_ID]`.
-         */
+        /** Required. The customer managing the device in the format `customers/[CUSTOMER_ID]`. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -1689,9 +1673,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
           return parent;
         }
 
-        /**
-         * Required. The customer managing the device in the format `customers/[CUSTOMER_ID]`.
-         */
+        /** Required. The customer managing the device in the format `customers/[CUSTOMER_ID]`. */
         public RemoveConfiguration setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1708,10 +1690,9 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
         }
       }
       /**
-       * Unclaims a device from a customer and removes it from zero-touch enrollment.
-       *
-       * After removing a device, a customer must contact their reseller to register the device into zero-
-       * touch enrollment again.
+       * Unclaims a device from a customer and removes it from zero-touch enrollment. After removing a
+       * device, a customer must contact their reseller to register the device into zero-touch enrollment
+       * again.
        *
        * Create a request for the method "devices.unclaim".
        *
@@ -1719,8 +1700,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * any optional parameters, call the {@link Unclaim#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The customer managing the device. An API resource name in the
-      format
+       * @param parent Required. The customer managing the device. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
        * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.CustomerUnclaimDeviceRequest}
        * @return the request
@@ -1739,10 +1719,9 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^customers/[^/]+$");
 
         /**
-         * Unclaims a device from a customer and removes it from zero-touch enrollment.
-         *
-         * After removing a device, a customer must contact their reseller to register the device into
-         * zero-touch enrollment again.
+         * Unclaims a device from a customer and removes it from zero-touch enrollment. After removing a
+         * device, a customer must contact their reseller to register the device into zero-touch
+         * enrollment again.
          *
          * Create a request for the method "devices.unclaim".
          *
@@ -1752,8 +1731,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * Unclaim#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The customer managing the device. An API resource name in the
-      format
+         * @param parent Required. The customer managing the device. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
          * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.CustomerUnclaimDeviceRequest}
          * @since 1.13
@@ -1886,8 +1864,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * This request holds the parameters needed by the androiddeviceprovisioning server.  After setting
        * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The customer that can use the DPCs in configurations. An API
-      resource name in the format
+       * @param parent Required. The customer that can use the DPCs in configurations. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
        * @return the request
        */
@@ -1915,8 +1892,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The customer that can use the DPCs in configurations. An API
-      resource name in the format
+         * @param parent Required. The customer that can use the DPCs in configurations. An API resource name in the format
        *        `customers/[CUSTOMER_ID]`.
          * @since 1.13
          */
@@ -2053,7 +2029,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -2078,7 +2054,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -2247,8 +2223,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * This request holds the parameters needed by the androiddeviceprovisioning server.  After setting
        * any optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource ID in the format `partners/[PARTNER_ID]` that
-      identifies the reseller.
+       * @param parent Required. The parent resource ID in the format `partners/[PARTNER_ID]` that identifies the reseller.
        * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.CreateCustomerRequest}
        * @return the request
        */
@@ -2279,8 +2254,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource ID in the format `partners/[PARTNER_ID]` that
-      identifies the reseller.
+         * @param parent Required. The parent resource ID in the format `partners/[PARTNER_ID]` that identifies the reseller.
          * @param content the {@link com.google.api.services.androiddeviceprovisioning.v1.model.CreateCustomerRequest}
          * @since 1.13
          */
@@ -3080,8 +3054,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
        * This request holds the parameters needed by the androiddeviceprovisioning server.  After setting
        * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The device API resource name in the format
-      `partners/[PARTNER_ID]/devices/[DEVICE_ID]`.
+       * @param name Required. The device API resource name in the format `partners/[PARTNER_ID]/devices/[DEVICE_ID]`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -3108,8 +3081,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The device API resource name in the format
-      `partners/[PARTNER_ID]/devices/[DEVICE_ID]`.
+         * @param name Required. The device API resource name in the format `partners/[PARTNER_ID]/devices/[DEVICE_ID]`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -3959,8 +3931,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
          * This request holds the parameters needed by the androiddeviceprovisioning server.  After setting
          * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name in the format
-        `partners/[PARTNER_ID]/vendors/[VENDOR_ID]`.
+         * @param parent Required. The resource name in the format `partners/[PARTNER_ID]/vendors/[VENDOR_ID]`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3987,8 +3958,7 @@ public class AndroidProvisioningPartner extends com.google.api.client.googleapis
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name in the format
-        `partners/[PARTNER_ID]/vendors/[VENDOR_ID]`.
+           * @param parent Required. The resource name in the format `partners/[PARTNER_ID]/vendors/[VENDOR_ID]`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {

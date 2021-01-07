@@ -45,8 +45,8 @@ public final class OrderinvoicesCreateRefundInvoiceRequest extends com.google.ap
   private java.lang.String operationId;
 
   /**
-   * Option to create a refund-only invoice. Exactly one of refundOnlyOption or returnOption must be
-   * provided.
+   * Option to create a refund-only invoice. Exactly one of `refundOnlyOption` or `returnOption`
+   * must be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class OrderinvoicesCreateRefundInvoiceRequest extends com.google.ap
 
   /**
    * Option to create an invoice for a refund and mark all items within the invoice as returned.
-   * Exactly one of refundOnlyOption or returnOption must be provided.
+   * Exactly one of `refundOnlyOption` or `returnOption` must be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +102,8 @@ public final class OrderinvoicesCreateRefundInvoiceRequest extends com.google.ap
   }
 
   /**
-   * Option to create a refund-only invoice. Exactly one of refundOnlyOption or returnOption must be
-   * provided.
+   * Option to create a refund-only invoice. Exactly one of `refundOnlyOption` or `returnOption`
+   * must be provided.
    * @return value or {@code null} for none
    */
   public OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption getRefundOnlyOption() {
@@ -111,8 +111,8 @@ public final class OrderinvoicesCreateRefundInvoiceRequest extends com.google.ap
   }
 
   /**
-   * Option to create a refund-only invoice. Exactly one of refundOnlyOption or returnOption must be
-   * provided.
+   * Option to create a refund-only invoice. Exactly one of `refundOnlyOption` or `returnOption`
+   * must be provided.
    * @param refundOnlyOption refundOnlyOption or {@code null} for none
    */
   public OrderinvoicesCreateRefundInvoiceRequest setRefundOnlyOption(OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceRefundOption refundOnlyOption) {
@@ -122,7 +122,7 @@ public final class OrderinvoicesCreateRefundInvoiceRequest extends com.google.ap
 
   /**
    * Option to create an invoice for a refund and mark all items within the invoice as returned.
-   * Exactly one of refundOnlyOption or returnOption must be provided.
+   * Exactly one of `refundOnlyOption` or `returnOption` must be provided.
    * @return value or {@code null} for none
    */
   public OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption getReturnOption() {
@@ -131,7 +131,7 @@ public final class OrderinvoicesCreateRefundInvoiceRequest extends com.google.ap
 
   /**
    * Option to create an invoice for a refund and mark all items within the invoice as returned.
-   * Exactly one of refundOnlyOption or returnOption must be provided.
+   * Exactly one of `refundOnlyOption` or `returnOption` must be provided.
    * @param returnOption returnOption or {@code null} for none
    */
   public OrderinvoicesCreateRefundInvoiceRequest setReturnOption(OrderinvoicesCustomBatchRequestEntryCreateRefundInvoiceReturnOption returnOption) {

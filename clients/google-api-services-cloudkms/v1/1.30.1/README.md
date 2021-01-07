@@ -1,7 +1,6 @@
 # Cloud Key Management Service (KMS) API Client Library for Java
 
-Manages keys and performs cryptographic operations in a central cloud service, for direct use by other cloud resources and applications.
-
+Manages keys and performs cryptographic operations in a central cloud service, for direct use by other cloud resources and applications. 
 
 This page contains information about getting started with the Cloud Key Management Service (KMS) API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudkms</artifactId>
-      <version>v1-rev20200221-1.30.9</version>
+      <version>v1-rev20201102-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudkms:v1-rev20200221-1.30.9'
+  compile 'com.google.apis:google-api-services-cloudkms:v1-rev20201102-1.30.10'
 }
 ```
 

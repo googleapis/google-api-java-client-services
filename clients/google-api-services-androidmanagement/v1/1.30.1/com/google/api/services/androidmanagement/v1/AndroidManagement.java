@@ -46,7 +46,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Android Management API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Android Management API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -933,14 +933,14 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Optional short message displayed to the user before wiping the work profile on personal
-         * devices. This has no effect on company owned devices. The maximum message length is 200
-         * characters.
+         * Optional. A short message displayed to the user before wiping the work profile on
+         * personal devices. This has no effect on company owned devices. The maximum message length
+         * is 200 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String wipeReasonMessage;
 
-        /** Optional short message displayed to the user before wiping the work profile on personal devices.
+        /** Optional. A short message displayed to the user before wiping the work profile on personal devices.
        This has no effect on company owned devices. The maximum message length is 200 characters.
          */
         public java.lang.String getWipeReasonMessage() {
@@ -948,9 +948,9 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Optional short message displayed to the user before wiping the work profile on personal
-         * devices. This has no effect on company owned devices. The maximum message length is 200
-         * characters.
+         * Optional. A short message displayed to the user before wiping the work profile on
+         * personal devices. This has no effect on company owned devices. The maximum message length
+         * is 200 characters.
          */
         public Delete setWipeReasonMessage(java.lang.String wipeReasonMessage) {
           this.wipeReasonMessage = wipeReasonMessage;

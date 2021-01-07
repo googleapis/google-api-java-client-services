@@ -1,6 +1,6 @@
 # IAM Service Account Credentials API Client Library for Java
 
-Creates short-lived, limited-privilege credentials for IAM service accounts.
+Creates short-lived credentials for impersonating IAM service accounts. To enable this API, you must enable the IAM API (iam.googleapis.com). 
 
 This page contains information about getting started with the IAM Service Account Credentials API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-iamcredentials</artifactId>
-      <version>v1-rev20200227-1.30.9</version>
+      <version>v1-rev20201022-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-iamcredentials:v1-rev20200227-1.30.9'
+  compile 'com.google.apis:google-api-services-iamcredentials:v1-rev20201022-1.30.10'
 }
 ```
 

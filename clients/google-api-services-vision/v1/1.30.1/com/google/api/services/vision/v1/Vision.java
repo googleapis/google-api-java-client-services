@@ -46,7 +46,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Vision API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Vision API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -144,11 +144,9 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
     /**
      * Service that performs image detection and annotation for a batch of files. Now only
-     * "application/pdf", "image/tiff" and "image/gif" are supported.
-     *
-     * This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages)
-     * frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation
-     * for each image extracted.
+     * "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most
+     * 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or
+     * tiff) from each file provided and perform detection and annotation for each image extracted.
      *
      * Create a request for the method "files.annotate".
      *
@@ -170,11 +168,9 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Service that performs image detection and annotation for a batch of files. Now only
-       * "application/pdf", "image/tiff" and "image/gif" are supported.
-       *
-       * This service will extract at most 5 (customers can specify which 5 in
-       * AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and
-       * perform detection and annotation for each image extracted.
+       * "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at
+       * most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf
+       * or tiff) from each file provided and perform detection and annotation for each image extracted.
        *
        * Create a request for the method "files.annotate".
        *
@@ -481,14 +477,11 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
-     * Run asynchronous image detection and annotation for a list of images.
-     *
-     * Progress and results can be retrieved through the `google.longrunning.Operations` interface.
-     * `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains
-     * `AsyncBatchAnnotateImagesResponse` (results).
-     *
-     * This service will write image annotation outputs to json files in customer GCS bucket, each json
-     * file containing BatchAnnotateImagesResponse proto.
+     * Run asynchronous image detection and annotation for a list of images. Progress and results can be
+     * retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains
+     * `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse`
+     * (results). This service will write image annotation outputs to json files in customer GCS bucket,
+     * each json file containing BatchAnnotateImagesResponse proto.
      *
      * Create a request for the method "images.asyncBatchAnnotate".
      *
@@ -509,14 +502,12 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v1/images:asyncBatchAnnotate";
 
       /**
-       * Run asynchronous image detection and annotation for a list of images.
-       *
-       * Progress and results can be retrieved through the `google.longrunning.Operations` interface.
-       * `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains
-       * `AsyncBatchAnnotateImagesResponse` (results).
-       *
-       * This service will write image annotation outputs to json files in customer GCS bucket, each
-       * json file containing BatchAnnotateImagesResponse proto.
+       * Run asynchronous image detection and annotation for a list of images. Progress and results can
+       * be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata`
+       * contains `OperationMetadata` (metadata). `Operation.response` contains
+       * `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs
+       * to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse
+       * proto.
        *
        * Create a request for the method "images.asyncBatchAnnotate".
        *
@@ -637,7 +628,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
     public class Operations {
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -662,7 +653,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^locations/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -801,9 +792,9 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
   public class Operations {
 
     /**
-     * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-     * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-     * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+     * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+     * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
      * methods to check whether the cancellation succeeded or whether the operation completed despite
      * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
      * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -832,13 +823,13 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-       * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-       * other methods to check whether the cancellation succeeded or whether the operation completed
-       * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-       * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-       * corresponding to `Code.CANCELLED`.
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * `Code.CANCELLED`.
        *
        * Create a request for the method "operations.cancel".
        *
@@ -1075,7 +1066,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -1100,7 +1091,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           java.util.regex.Pattern.compile("^operations/[^/]+$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -1216,13 +1207,12 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
     }
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`.
-     *
-     * NOTE: the `name` binding allows API services to override the binding to use different resource
-     * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-     * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-     * compatibility, the default name includes the operations collection id, however overriding users
-     * must ensure the name binding is the parent resource, without the operations collection id.
+     * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+     * the binding to use different resource name schemes, such as `users/operations`. To override the
+     * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+     * configuration. For backwards compatibility, the default name includes the operations collection
+     * id, however overriding users must ensure the name binding is the parent resource, without the
+     * operations collection id.
      *
      * Create a request for the method "operations.list".
      *
@@ -1247,13 +1237,12 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * NOTE: the `name` binding allows API services to override the binding to use different resource
-       * name schemes, such as `users/operations`. To override the binding, API services can add a
-       * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-       * compatibility, the default name includes the operations collection id, however overriding users
-       * must ensure the name binding is the parent resource, without the operations collection id.
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+       * override the binding to use different resource name schemes, such as `users/operations`. To
+       * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+       * their service configuration. For backwards compatibility, the default name includes the
+       * operations collection id, however overriding users must ensure the name binding is the parent
+       * resource, without the operations collection id.
        *
        * Create a request for the method "operations.list".
        *
@@ -1459,27 +1448,19 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Service that performs image detection and annotation for a batch of files. Now only
-       * "application/pdf", "image/tiff" and "image/gif" are supported.
-       *
-       * This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages)
-       * frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation
-       * for each image extracted.
+       * "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most
+       * 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or
+       * tiff) from each file provided and perform detection and annotation for each image extracted.
        *
        * Create a request for the method "files.annotate".
        *
        * This request holds the parameters needed by the vision server.  After setting any optional
        * parameters, call the {@link Annotate#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. Target project and location to make a call.
-      Format: `projects/{project-id}/locations
-       *        /{location-id}`.
-      If no parent is specified, a region will be chosen automatically.
-       *        Supported location-ids:
-          `us`: USA country only,
-          `asia`: East asia areas, like
-       *        Japan, Taiwan,
-          `eu`: The European Union.
-      Example: `projects/project-A/locations/eu`.
+       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
        * @param content the {@link com.google.api.services.vision.v1.model.BatchAnnotateFilesRequest}
        * @return the request
        */
@@ -1498,11 +1479,9 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Service that performs image detection and annotation for a batch of files. Now only
-         * "application/pdf", "image/tiff" and "image/gif" are supported.
-         *
-         * This service will extract at most 5 (customers can specify which 5 in
-         * AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and
-         * perform detection and annotation for each image extracted.
+         * "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at
+         * most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf
+         * or tiff) from each file provided and perform detection and annotation for each image extracted.
          *
          * Create a request for the method "files.annotate".
          *
@@ -1512,16 +1491,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * Annotate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Optional. Target project and location to make a call.
-      Format: `projects/{project-id}/locations
-       *        /{location-id}`.
-      If no parent is specified, a region will be chosen automatically.
-       *        Supported location-ids:
-          `us`: USA country only,
-          `asia`: East asia areas, like
-       *        Japan, Taiwan,
-          `eu`: The European Union.
-      Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1.model.BatchAnnotateFilesRequest}
          * @since 1.13
          */
@@ -1591,46 +1564,28 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no parent is specified, a region will be chosen automatically.
-         *
-         * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-         * Taiwan, `eu`: The European Union.
-         *
-         * Example: `projects/project-A/locations/eu`.
+         * Optional. Target project and location to make a call. Format: `projects/{project-
+         * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+         * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+         * like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. Target project and location to make a call.
-
-       Format: `projects/{project-id}/locations/{location-id}`.
-
-       If no parent is specified, a region will be chosen automatically.
-
-       Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-       The European Union.
-
-       Example: `projects/project-A/locations/eu`.
+        /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+       location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+       European Union. Example: `projects/project-A/locations/eu`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Optional. Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no parent is specified, a region will be chosen automatically.
-         *
-         * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-         * Taiwan, `eu`: The European Union.
-         *
-         * Example: `projects/project-A/locations/eu`.
+         * Optional. Target project and location to make a call. Format: `projects/{project-
+         * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+         * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+         * like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          */
         public Annotate setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1659,16 +1614,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the vision server.  After setting any optional
        * parameters, call the {@link AsyncBatchAnnotate#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. Target project and location to make a call.
-      Format: `projects/{project-id}/locations
-       *        /{location-id}`.
-      If no parent is specified, a region will be chosen automatically.
-       *        Supported location-ids:
-          `us`: USA country only,
-          `asia`: East asia areas, like
-       *        Japan, Taiwan,
-          `eu`: The European Union.
-      Example: `projects/project-A/locations/eu`.
+       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
        * @param content the {@link com.google.api.services.vision.v1.model.AsyncBatchAnnotateFilesRequest}
        * @return the request
        */
@@ -1700,16 +1649,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param parent Optional. Target project and location to make a call.
-      Format: `projects/{project-id}/locations
-       *        /{location-id}`.
-      If no parent is specified, a region will be chosen automatically.
-       *        Supported location-ids:
-          `us`: USA country only,
-          `asia`: East asia areas, like
-       *        Japan, Taiwan,
-          `eu`: The European Union.
-      Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1.model.AsyncBatchAnnotateFilesRequest}
          * @since 1.13
          */
@@ -1779,46 +1722,28 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no parent is specified, a region will be chosen automatically.
-         *
-         * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-         * Taiwan, `eu`: The European Union.
-         *
-         * Example: `projects/project-A/locations/eu`.
+         * Optional. Target project and location to make a call. Format: `projects/{project-
+         * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+         * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+         * like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. Target project and location to make a call.
-
-       Format: `projects/{project-id}/locations/{location-id}`.
-
-       If no parent is specified, a region will be chosen automatically.
-
-       Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-       The European Union.
-
-       Example: `projects/project-A/locations/eu`.
+        /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+       location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+       European Union. Example: `projects/project-A/locations/eu`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Optional. Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no parent is specified, a region will be chosen automatically.
-         *
-         * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-         * Taiwan, `eu`: The European Union.
-         *
-         * Example: `projects/project-A/locations/eu`.
+         * Optional. Target project and location to make a call. Format: `projects/{project-
+         * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+         * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+         * like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          */
         public AsyncBatchAnnotate setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1865,16 +1790,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the vision server.  After setting any optional
        * parameters, call the {@link Annotate#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. Target project and location to make a call.
-      Format: `projects/{project-id}/locations
-       *        /{location-id}`.
-      If no parent is specified, a region will be chosen automatically.
-       *        Supported location-ids:
-          `us`: USA country only,
-          `asia`: East asia areas, like
-       *        Japan, Taiwan,
-          `eu`: The European Union.
-      Example: `projects/project-A/locations/eu`.
+       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
        * @param content the {@link com.google.api.services.vision.v1.model.BatchAnnotateImagesRequest}
        * @return the request
        */
@@ -1902,16 +1821,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * Annotate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Optional. Target project and location to make a call.
-      Format: `projects/{project-id}/locations
-       *        /{location-id}`.
-      If no parent is specified, a region will be chosen automatically.
-       *        Supported location-ids:
-          `us`: USA country only,
-          `asia`: East asia areas, like
-       *        Japan, Taiwan,
-          `eu`: The European Union.
-      Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1.model.BatchAnnotateImagesRequest}
          * @since 1.13
          */
@@ -1981,46 +1894,28 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no parent is specified, a region will be chosen automatically.
-         *
-         * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-         * Taiwan, `eu`: The European Union.
-         *
-         * Example: `projects/project-A/locations/eu`.
+         * Optional. Target project and location to make a call. Format: `projects/{project-
+         * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+         * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+         * like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. Target project and location to make a call.
-
-       Format: `projects/{project-id}/locations/{location-id}`.
-
-       If no parent is specified, a region will be chosen automatically.
-
-       Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-       The European Union.
-
-       Example: `projects/project-A/locations/eu`.
+        /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+       location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+       European Union. Example: `projects/project-A/locations/eu`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Optional. Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no parent is specified, a region will be chosen automatically.
-         *
-         * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-         * Taiwan, `eu`: The European Union.
-         *
-         * Example: `projects/project-A/locations/eu`.
+         * Optional. Target project and location to make a call. Format: `projects/{project-
+         * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+         * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+         * like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          */
         public Annotate setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2038,30 +1933,21 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Run asynchronous image detection and annotation for a list of images.
-       *
-       * Progress and results can be retrieved through the `google.longrunning.Operations` interface.
-       * `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains
-       * `AsyncBatchAnnotateImagesResponse` (results).
-       *
-       * This service will write image annotation outputs to json files in customer GCS bucket, each json
-       * file containing BatchAnnotateImagesResponse proto.
+       * Run asynchronous image detection and annotation for a list of images. Progress and results can be
+       * retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains
+       * `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse`
+       * (results). This service will write image annotation outputs to json files in customer GCS bucket,
+       * each json file containing BatchAnnotateImagesResponse proto.
        *
        * Create a request for the method "images.asyncBatchAnnotate".
        *
        * This request holds the parameters needed by the vision server.  After setting any optional
        * parameters, call the {@link AsyncBatchAnnotate#execute()} method to invoke the remote operation.
        *
-       * @param parent Optional. Target project and location to make a call.
-      Format: `projects/{project-id}/locations
-       *        /{location-id}`.
-      If no parent is specified, a region will be chosen automatically.
-       *        Supported location-ids:
-          `us`: USA country only,
-          `asia`: East asia areas, like
-       *        Japan, Taiwan,
-          `eu`: The European Union.
-      Example: `projects/project-A/locations/eu`.
+       * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
        * @param content the {@link com.google.api.services.vision.v1.model.AsyncBatchAnnotateImagesRequest}
        * @return the request
        */
@@ -2079,14 +1965,12 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Run asynchronous image detection and annotation for a list of images.
-         *
-         * Progress and results can be retrieved through the `google.longrunning.Operations` interface.
-         * `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains
-         * `AsyncBatchAnnotateImagesResponse` (results).
-         *
-         * This service will write image annotation outputs to json files in customer GCS bucket, each
-         * json file containing BatchAnnotateImagesResponse proto.
+         * Run asynchronous image detection and annotation for a list of images. Progress and results can
+         * be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata`
+         * contains `OperationMetadata` (metadata). `Operation.response` contains
+         * `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs
+         * to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse
+         * proto.
          *
          * Create a request for the method "images.asyncBatchAnnotate".
          *
@@ -2096,16 +1980,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param parent Optional. Target project and location to make a call.
-      Format: `projects/{project-id}/locations
-       *        /{location-id}`.
-      If no parent is specified, a region will be chosen automatically.
-       *        Supported location-ids:
-          `us`: USA country only,
-          `asia`: East asia areas, like
-       *        Japan, Taiwan,
-          `eu`: The European Union.
-      Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+       *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+       *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1.model.AsyncBatchAnnotateImagesRequest}
          * @since 1.13
          */
@@ -2175,46 +2053,28 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no parent is specified, a region will be chosen automatically.
-         *
-         * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-         * Taiwan, `eu`: The European Union.
-         *
-         * Example: `projects/project-A/locations/eu`.
+         * Optional. Target project and location to make a call. Format: `projects/{project-
+         * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+         * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+         * like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Optional. Target project and location to make a call.
-
-       Format: `projects/{project-id}/locations/{location-id}`.
-
-       If no parent is specified, a region will be chosen automatically.
-
-       Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-       The European Union.
-
-       Example: `projects/project-A/locations/eu`.
+        /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+       /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+       location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+       European Union. Example: `projects/project-A/locations/eu`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Optional. Target project and location to make a call.
-         *
-         * Format: `projects/{project-id}/locations/{location-id}`.
-         *
-         * If no parent is specified, a region will be chosen automatically.
-         *
-         * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-         * Taiwan, `eu`: The European Union.
-         *
-         * Example: `projects/project-A/locations/eu`.
+         * Optional. Target project and location to make a call. Format: `projects/{project-
+         * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+         * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+         * like Japan, Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          */
         public AsyncBatchAnnotate setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2275,27 +2135,19 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Service that performs image detection and annotation for a batch of files. Now only
-         * "application/pdf", "image/tiff" and "image/gif" are supported.
-         *
-         * This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages)
-         * frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation
-         * for each image extracted.
+         * "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most
+         * 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or
+         * tiff) from each file provided and perform detection and annotation for each image extracted.
          *
          * Create a request for the method "files.annotate".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Annotate#execute()} method to invoke the remote operation.
          *
-         * @param parent Optional. Target project and location to make a call.
-        Format: `projects/{project-id}/locations
-         *        /{location-id}`.
-        If no parent is specified, a region will be chosen automatically.
-         *        Supported location-ids:
-            `us`: USA country only,
-            `asia`: East asia areas, like
-         *        Japan, Taiwan,
-            `eu`: The European Union.
-        Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1.model.BatchAnnotateFilesRequest}
          * @return the request
          */
@@ -2314,11 +2166,9 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Service that performs image detection and annotation for a batch of files. Now only
-           * "application/pdf", "image/tiff" and "image/gif" are supported.
-           *
-           * This service will extract at most 5 (customers can specify which 5 in
-           * AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and
-           * perform detection and annotation for each image extracted.
+           * "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at
+           * most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf
+           * or tiff) from each file provided and perform detection and annotation for each image extracted.
            *
            * Create a request for the method "files.annotate".
            *
@@ -2328,16 +2178,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Annotate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Optional. Target project and location to make a call.
-        Format: `projects/{project-id}/locations
-         *        /{location-id}`.
-        If no parent is specified, a region will be chosen automatically.
-         *        Supported location-ids:
-            `us`: USA country only,
-            `asia`: East asia areas, like
-         *        Japan, Taiwan,
-            `eu`: The European Union.
-        Example: `projects/project-A/locations/eu`.
+           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
            * @param content the {@link com.google.api.services.vision.v1.model.BatchAnnotateFilesRequest}
            * @since 1.13
            */
@@ -2407,46 +2251,30 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Optional. Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no parent is specified, a region will be chosen automatically.
-           *
-           * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-           * Taiwan, `eu`: The European Union.
-           *
-           * Example: `projects/project-A/locations/eu`.
+           * Optional. Target project and location to make a call. Format: `projects/{project-
+           * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+           * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+           * like Japan, Taiwan, `eu`: The European Union. Example:
+           * `projects/project-A/locations/eu`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Optional. Target project and location to make a call.
-
-         Format: `projects/{project-id}/locations/{location-id}`.
-
-         If no parent is specified, a region will be chosen automatically.
-
-         Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-         The European Union.
-
-         Example: `projects/project-A/locations/eu`.
+          /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+         location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+         European Union. Example: `projects/project-A/locations/eu`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Optional. Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no parent is specified, a region will be chosen automatically.
-           *
-           * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-           * Taiwan, `eu`: The European Union.
-           *
-           * Example: `projects/project-A/locations/eu`.
+           * Optional. Target project and location to make a call. Format: `projects/{project-
+           * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+           * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+           * like Japan, Taiwan, `eu`: The European Union. Example:
+           * `projects/project-A/locations/eu`.
            */
           public Annotate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2475,16 +2303,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link AsyncBatchAnnotate#execute()} method to invoke the remote operation.
          *
-         * @param parent Optional. Target project and location to make a call.
-        Format: `projects/{project-id}/locations
-         *        /{location-id}`.
-        If no parent is specified, a region will be chosen automatically.
-         *        Supported location-ids:
-            `us`: USA country only,
-            `asia`: East asia areas, like
-         *        Japan, Taiwan,
-            `eu`: The European Union.
-        Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1.model.AsyncBatchAnnotateFilesRequest}
          * @return the request
          */
@@ -2516,16 +2338,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Optional. Target project and location to make a call.
-        Format: `projects/{project-id}/locations
-         *        /{location-id}`.
-        If no parent is specified, a region will be chosen automatically.
-         *        Supported location-ids:
-            `us`: USA country only,
-            `asia`: East asia areas, like
-         *        Japan, Taiwan,
-            `eu`: The European Union.
-        Example: `projects/project-A/locations/eu`.
+           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
            * @param content the {@link com.google.api.services.vision.v1.model.AsyncBatchAnnotateFilesRequest}
            * @since 1.13
            */
@@ -2595,46 +2411,30 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Optional. Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no parent is specified, a region will be chosen automatically.
-           *
-           * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-           * Taiwan, `eu`: The European Union.
-           *
-           * Example: `projects/project-A/locations/eu`.
+           * Optional. Target project and location to make a call. Format: `projects/{project-
+           * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+           * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+           * like Japan, Taiwan, `eu`: The European Union. Example:
+           * `projects/project-A/locations/eu`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Optional. Target project and location to make a call.
-
-         Format: `projects/{project-id}/locations/{location-id}`.
-
-         If no parent is specified, a region will be chosen automatically.
-
-         Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-         The European Union.
-
-         Example: `projects/project-A/locations/eu`.
+          /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+         location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+         European Union. Example: `projects/project-A/locations/eu`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Optional. Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no parent is specified, a region will be chosen automatically.
-           *
-           * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-           * Taiwan, `eu`: The European Union.
-           *
-           * Example: `projects/project-A/locations/eu`.
+           * Optional. Target project and location to make a call. Format: `projects/{project-
+           * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+           * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+           * like Japan, Taiwan, `eu`: The European Union. Example:
+           * `projects/project-A/locations/eu`.
            */
           public AsyncBatchAnnotate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2681,16 +2481,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Annotate#execute()} method to invoke the remote operation.
          *
-         * @param parent Optional. Target project and location to make a call.
-        Format: `projects/{project-id}/locations
-         *        /{location-id}`.
-        If no parent is specified, a region will be chosen automatically.
-         *        Supported location-ids:
-            `us`: USA country only,
-            `asia`: East asia areas, like
-         *        Japan, Taiwan,
-            `eu`: The European Union.
-        Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1.model.BatchAnnotateImagesRequest}
          * @return the request
          */
@@ -2718,16 +2512,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Annotate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Optional. Target project and location to make a call.
-        Format: `projects/{project-id}/locations
-         *        /{location-id}`.
-        If no parent is specified, a region will be chosen automatically.
-         *        Supported location-ids:
-            `us`: USA country only,
-            `asia`: East asia areas, like
-         *        Japan, Taiwan,
-            `eu`: The European Union.
-        Example: `projects/project-A/locations/eu`.
+           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
            * @param content the {@link com.google.api.services.vision.v1.model.BatchAnnotateImagesRequest}
            * @since 1.13
            */
@@ -2797,46 +2585,30 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Optional. Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no parent is specified, a region will be chosen automatically.
-           *
-           * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-           * Taiwan, `eu`: The European Union.
-           *
-           * Example: `projects/project-A/locations/eu`.
+           * Optional. Target project and location to make a call. Format: `projects/{project-
+           * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+           * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+           * like Japan, Taiwan, `eu`: The European Union. Example:
+           * `projects/project-A/locations/eu`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Optional. Target project and location to make a call.
-
-         Format: `projects/{project-id}/locations/{location-id}`.
-
-         If no parent is specified, a region will be chosen automatically.
-
-         Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-         The European Union.
-
-         Example: `projects/project-A/locations/eu`.
+          /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+         location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+         European Union. Example: `projects/project-A/locations/eu`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Optional. Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no parent is specified, a region will be chosen automatically.
-           *
-           * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-           * Taiwan, `eu`: The European Union.
-           *
-           * Example: `projects/project-A/locations/eu`.
+           * Optional. Target project and location to make a call. Format: `projects/{project-
+           * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+           * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+           * like Japan, Taiwan, `eu`: The European Union. Example:
+           * `projects/project-A/locations/eu`.
            */
           public Annotate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2854,30 +2626,21 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Run asynchronous image detection and annotation for a list of images.
-         *
-         * Progress and results can be retrieved through the `google.longrunning.Operations` interface.
-         * `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains
-         * `AsyncBatchAnnotateImagesResponse` (results).
-         *
-         * This service will write image annotation outputs to json files in customer GCS bucket, each json
-         * file containing BatchAnnotateImagesResponse proto.
+         * Run asynchronous image detection and annotation for a list of images. Progress and results can be
+         * retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains
+         * `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse`
+         * (results). This service will write image annotation outputs to json files in customer GCS bucket,
+         * each json file containing BatchAnnotateImagesResponse proto.
          *
          * Create a request for the method "images.asyncBatchAnnotate".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link AsyncBatchAnnotate#execute()} method to invoke the remote operation.
          *
-         * @param parent Optional. Target project and location to make a call.
-        Format: `projects/{project-id}/locations
-         *        /{location-id}`.
-        If no parent is specified, a region will be chosen automatically.
-         *        Supported location-ids:
-            `us`: USA country only,
-            `asia`: East asia areas, like
-         *        Japan, Taiwan,
-            `eu`: The European Union.
-        Example: `projects/project-A/locations/eu`.
+         * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
          * @param content the {@link com.google.api.services.vision.v1.model.AsyncBatchAnnotateImagesRequest}
          * @return the request
          */
@@ -2895,14 +2658,12 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Run asynchronous image detection and annotation for a list of images.
-           *
-           * Progress and results can be retrieved through the `google.longrunning.Operations` interface.
-           * `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains
-           * `AsyncBatchAnnotateImagesResponse` (results).
-           *
-           * This service will write image annotation outputs to json files in customer GCS bucket, each
-           * json file containing BatchAnnotateImagesResponse proto.
+           * Run asynchronous image detection and annotation for a list of images. Progress and results can
+           * be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata`
+           * contains `OperationMetadata` (metadata). `Operation.response` contains
+           * `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs
+           * to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse
+           * proto.
            *
            * Create a request for the method "images.asyncBatchAnnotate".
            *
@@ -2912,16 +2673,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Optional. Target project and location to make a call.
-        Format: `projects/{project-id}/locations
-         *        /{location-id}`.
-        If no parent is specified, a region will be chosen automatically.
-         *        Supported location-ids:
-            `us`: USA country only,
-            `asia`: East asia areas, like
-         *        Japan, Taiwan,
-            `eu`: The European Union.
-        Example: `projects/project-A/locations/eu`.
+           * @param parent Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         *        /{location-id}`. If no parent is specified, a region will be chosen automatically.
+         *        Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
+         *        Taiwan, `eu`: The European Union. Example: `projects/project-A/locations/eu`.
            * @param content the {@link com.google.api.services.vision.v1.model.AsyncBatchAnnotateImagesRequest}
            * @since 1.13
            */
@@ -2991,46 +2746,30 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Optional. Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no parent is specified, a region will be chosen automatically.
-           *
-           * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-           * Taiwan, `eu`: The European Union.
-           *
-           * Example: `projects/project-A/locations/eu`.
+           * Optional. Target project and location to make a call. Format: `projects/{project-
+           * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+           * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+           * like Japan, Taiwan, `eu`: The European Union. Example:
+           * `projects/project-A/locations/eu`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Optional. Target project and location to make a call.
-
-         Format: `projects/{project-id}/locations/{location-id}`.
-
-         If no parent is specified, a region will be chosen automatically.
-
-         Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`:
-         The European Union.
-
-         Example: `projects/project-A/locations/eu`.
+          /** Optional. Target project and location to make a call. Format: `projects/{project-id}/locations
+         /{location-id}`. If no parent is specified, a region will be chosen automatically. Supported
+         location-ids: `us`: USA country only, `asia`: East asia areas, like Japan, Taiwan, `eu`: The
+         European Union. Example: `projects/project-A/locations/eu`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Optional. Target project and location to make a call.
-           *
-           * Format: `projects/{project-id}/locations/{location-id}`.
-           *
-           * If no parent is specified, a region will be chosen automatically.
-           *
-           * Supported location-ids: `us`: USA country only, `asia`: East asia areas, like Japan,
-           * Taiwan, `eu`: The European Union.
-           *
-           * Example: `projects/project-A/locations/eu`.
+           * Optional. Target project and location to make a call. Format: `projects/{project-
+           * id}/locations/{location-id}`. If no parent is specified, a region will be chosen
+           * automatically. Supported location-ids: `us`: USA country only, `asia`: East asia areas,
+           * like Japan, Taiwan, `eu`: The European Union. Example:
+           * `projects/project-A/locations/eu`.
            */
           public AsyncBatchAnnotate setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3070,7 +2809,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
       public class Operations {
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -3095,7 +2834,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -3233,20 +2972,15 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Adds a Product to the specified ProductSet. If the Product is already present, no change is made.
-         *
-         * One Product can be added to at most 100 ProductSets.
-         *
-         * Possible errors:
-         *
-         * * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
+         * One Product can be added to at most 100 ProductSets. Possible errors: * Returns NOT_FOUND if the
+         * Product or the ProductSet doesn't exist.
          *
          * Create a request for the method "productSets.addProduct".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link AddProduct#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name for the ProductSet to modify.
-        Format is:
+         * @param name Required. The resource name for the ProductSet to modify. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
          * @param content the {@link com.google.api.services.vision.v1.model.AddProductToProductSetRequest}
          * @return the request
@@ -3266,13 +3000,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Adds a Product to the specified ProductSet. If the Product is already present, no change is
-           * made.
-           *
-           * One Product can be added to at most 100 ProductSets.
-           *
-           * Possible errors:
-           *
-           * * Returns NOT_FOUND if the Product or the ProductSet doesn't exist.
+           * made. One Product can be added to at most 100 ProductSets. Possible errors: * Returns NOT_FOUND
+           * if the Product or the ProductSet doesn't exist.
            *
            * Create a request for the method "productSets.addProduct".
            *
@@ -3282,8 +3011,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * AddProduct#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name for the ProductSet to modify.
-        Format is:
+           * @param name Required. The resource name for the ProductSet to modify. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            * @param content the {@link com.google.api.services.vision.v1.model.AddProductToProductSetRequest}
            * @since 1.13
@@ -3354,25 +3082,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The resource name for the ProductSet to modify.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * Required. The resource name for the ProductSet to modify. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name for the ProductSet to modify.
-
-         Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+          /** Required. The resource name for the ProductSet to modify. Format is:
+         `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The resource name for the ProductSet to modify.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * Required. The resource name for the ProductSet to modify. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           public AddProduct setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3390,19 +3115,15 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Creates and returns a new ProductSet resource.
-         *
-         * Possible errors:
-         *
-         * * Returns INVALID_ARGUMENT if display_name is missing, or is longer than   4096 characters.
+         * Creates and returns a new ProductSet resource. Possible errors: * Returns INVALID_ARGUMENT if
+         * display_name is missing, or is longer than 4096 characters.
          *
          * Create a request for the method "productSets.create".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project in which the ProductSet should be created.
-        Format is
+         * @param parent Required. The project in which the ProductSet should be created. Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
          * @param content the {@link com.google.api.services.vision.v1.model.ProductSet}
          * @return the request
@@ -3421,11 +3142,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates and returns a new ProductSet resource.
-           *
-           * Possible errors:
-           *
-           * * Returns INVALID_ARGUMENT if display_name is missing, or is longer than   4096 characters.
+           * Creates and returns a new ProductSet resource. Possible errors: * Returns INVALID_ARGUMENT if
+           * display_name is missing, or is longer than 4096 characters.
            *
            * Create a request for the method "productSets.create".
            *
@@ -3434,8 +3152,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project in which the ProductSet should be created.
-        Format is
+           * @param parent Required. The project in which the ProductSet should be created. Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
            * @param content the {@link com.google.api.services.vision.v1.model.ProductSet}
            * @since 1.13
@@ -3506,25 +3223,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The project in which the ProductSet should be created.
-           *
-           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           * Required. The project in which the ProductSet should be created. Format is
+           * `projects/PROJECT_ID/locations/LOC_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project in which the ProductSet should be created.
-
-         Format is `projects/PROJECT_ID/locations/LOC_ID`.
+          /** Required. The project in which the ProductSet should be created. Format is
+         `projects/PROJECT_ID/locations/LOC_ID`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project in which the ProductSet should be created.
-           *
-           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           * Required. The project in which the ProductSet should be created. Format is
+           * `projects/PROJECT_ID/locations/LOC_ID`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3571,7 +3285,6 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         }
         /**
          * Permanently deletes a ProductSet. Products and ReferenceImages in the ProductSet are not deleted.
-         *
          * The actual image files are not deleted from Google Cloud Storage.
          *
          * Create a request for the method "productSets.delete".
@@ -3579,8 +3292,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the ProductSet to delete.
-        Format is:
+         * @param name Required. Resource name of the ProductSet to delete. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
          * @return the request
          */
@@ -3599,9 +3311,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Permanently deletes a ProductSet. Products and ReferenceImages in the ProductSet are not
-           * deleted.
-           *
-           * The actual image files are not deleted from Google Cloud Storage.
+           * deleted. The actual image files are not deleted from Google Cloud Storage.
            *
            * Create a request for the method "productSets.delete".
            *
@@ -3610,8 +3320,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the ProductSet to delete.
-        Format is:
+           * @param name Required. Resource name of the ProductSet to delete. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            * @since 1.13
            */
@@ -3681,25 +3390,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. Resource name of the ProductSet to delete.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * Required. Resource name of the ProductSet to delete. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Resource name of the ProductSet to delete.
-
-         Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+          /** Required. Resource name of the ProductSet to delete. Format is:
+         `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Resource name of the ProductSet to delete.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * Required. Resource name of the ProductSet to delete. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3717,19 +3423,15 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Gets information associated with a ProductSet.
-         *
-         * Possible errors:
-         *
-         * * Returns NOT_FOUND if the ProductSet does not exist.
+         * Gets information associated with a ProductSet. Possible errors: * Returns NOT_FOUND if the
+         * ProductSet does not exist.
          *
          * Create a request for the method "productSets.get".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the ProductSet to get.
-        Format is:
+         * @param name Required. Resource name of the ProductSet to get. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
          * @return the request
          */
@@ -3747,11 +3449,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
 
           /**
-           * Gets information associated with a ProductSet.
-           *
-           * Possible errors:
-           *
-           * * Returns NOT_FOUND if the ProductSet does not exist.
+           * Gets information associated with a ProductSet. Possible errors: * Returns NOT_FOUND if the
+           * ProductSet does not exist.
            *
            * Create a request for the method "productSets.get".
            *
@@ -3760,8 +3459,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the ProductSet to get.
-        Format is:
+           * @param name Required. Resource name of the ProductSet to get. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            * @since 1.13
            */
@@ -3841,25 +3539,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. Resource name of the ProductSet to get.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * Required. Resource name of the ProductSet to get. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Resource name of the ProductSet to get.
-
-         Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+          /** Required. Resource name of the ProductSet to get. Format is:
+         `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Resource name of the ProductSet to get.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * Required. Resource name of the ProductSet to get. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3878,22 +3573,18 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         }
         /**
          * Asynchronous API that imports a list of reference images to specified product sets based on a
-         * list of image information.
-         *
-         * The google.longrunning.Operation API can be used to keep track of the progress and results of the
-         * request. `Operation.metadata` contains `BatchOperationMetadata`. (progress) `Operation.response`
-         * contains `ImportProductSetsResponse`. (results)
-         *
-         * The input source of this method is a csv file on Google Cloud Storage. For the format of the csv
-         * file please see ImportProductSetsGcsSource.csv_file_uri.
+         * list of image information. The google.longrunning.Operation API can be used to keep track of the
+         * progress and results of the request. `Operation.metadata` contains `BatchOperationMetadata`.
+         * (progress) `Operation.response` contains `ImportProductSetsResponse`. (results) The input source
+         * of this method is a csv file on Google Cloud Storage. For the format of the csv file please see
+         * ImportProductSetsGcsSource.csv_file_uri.
          *
          * Create a request for the method "productSets.import".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link VisionImport#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project in which the ProductSets should be imported.
-        Format is
+         * @param parent Required. The project in which the ProductSets should be imported. Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
          * @param content the {@link com.google.api.services.vision.v1.model.ImportProductSetsRequest}
          * @return the request
@@ -3913,14 +3604,11 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Asynchronous API that imports a list of reference images to specified product sets based on a
-           * list of image information.
-           *
-           * The google.longrunning.Operation API can be used to keep track of the progress and results of
-           * the request. `Operation.metadata` contains `BatchOperationMetadata`. (progress)
-           * `Operation.response` contains `ImportProductSetsResponse`. (results)
-           *
-           * The input source of this method is a csv file on Google Cloud Storage. For the format of the
-           * csv file please see ImportProductSetsGcsSource.csv_file_uri.
+           * list of image information. The google.longrunning.Operation API can be used to keep track of
+           * the progress and results of the request. `Operation.metadata` contains
+           * `BatchOperationMetadata`. (progress) `Operation.response` contains `ImportProductSetsResponse`.
+           * (results) The input source of this method is a csv file on Google Cloud Storage. For the format
+           * of the csv file please see ImportProductSetsGcsSource.csv_file_uri.
            *
            * Create a request for the method "productSets.import".
            *
@@ -3930,8 +3618,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * VisionImport#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project in which the ProductSets should be imported.
-        Format is
+           * @param parent Required. The project in which the ProductSets should be imported. Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
            * @param content the {@link com.google.api.services.vision.v1.model.ImportProductSetsRequest}
            * @since 1.13
@@ -4002,25 +3689,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The project in which the ProductSets should be imported.
-           *
-           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           * Required. The project in which the ProductSets should be imported. Format is
+           * `projects/PROJECT_ID/locations/LOC_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project in which the ProductSets should be imported.
-
-         Format is `projects/PROJECT_ID/locations/LOC_ID`.
+          /** Required. The project in which the ProductSets should be imported. Format is
+         `projects/PROJECT_ID/locations/LOC_ID`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project in which the ProductSets should be imported.
-           *
-           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           * Required. The project in which the ProductSets should be imported. Format is
+           * `projects/PROJECT_ID/locations/LOC_ID`.
            */
           public VisionImport setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4038,19 +3722,15 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Lists ProductSets in an unspecified order.
-         *
-         * Possible errors:
-         *
-         * * Returns INVALID_ARGUMENT if page_size is greater than 100, or less   than 1.
+         * Lists ProductSets in an unspecified order. Possible errors: * Returns INVALID_ARGUMENT if
+         * page_size is greater than 100, or less than 1.
          *
          * Create a request for the method "productSets.list".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project from which ProductSets should be listed.
-        Format is
+         * @param parent Required. The project from which ProductSets should be listed. Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
          * @return the request
          */
@@ -4068,11 +3748,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists ProductSets in an unspecified order.
-           *
-           * Possible errors:
-           *
-           * * Returns INVALID_ARGUMENT if page_size is greater than 100, or less   than 1.
+           * Lists ProductSets in an unspecified order. Possible errors: * Returns INVALID_ARGUMENT if
+           * page_size is greater than 100, or less than 1.
            *
            * Create a request for the method "productSets.list".
            *
@@ -4081,8 +3758,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project from which ProductSets should be listed.
-        Format is
+           * @param parent Required. The project from which ProductSets should be listed. Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
            * @since 1.13
            */
@@ -4162,25 +3838,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The project from which ProductSets should be listed.
-           *
-           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           * Required. The project from which ProductSets should be listed. Format is
+           * `projects/PROJECT_ID/locations/LOC_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project from which ProductSets should be listed.
-
-         Format is `projects/PROJECT_ID/locations/LOC_ID`.
+          /** Required. The project from which ProductSets should be listed. Format is
+         `projects/PROJECT_ID/locations/LOC_ID`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project from which ProductSets should be listed.
-           *
-           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           * Required. The project from which ProductSets should be listed. Format is
+           * `projects/PROJECT_ID/locations/LOC_ID`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4230,22 +3903,18 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Makes changes to a ProductSet resource. Only display_name can be updated currently.
-         *
-         * Possible errors:
-         *
-         * * Returns NOT_FOUND if the ProductSet does not exist. * Returns INVALID_ARGUMENT if display_name
-         * is present in update_mask but   missing from the request or longer than 4096 characters.
+         * Makes changes to a ProductSet resource. Only display_name can be updated currently. Possible
+         * errors: * Returns NOT_FOUND if the ProductSet does not exist. * Returns INVALID_ARGUMENT if
+         * display_name is present in update_mask but missing from the request or longer than 4096
+         * characters.
          *
          * Create a request for the method "productSets.patch".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the ProductSet.
-        Format is:
-         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
-        This field is ignored
+         * @param name The resource name of the ProductSet. Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored
          *        when creating a ProductSet.
          * @param content the {@link com.google.api.services.vision.v1.model.ProductSet}
          * @return the request
@@ -4264,12 +3933,9 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/productSets/[^/]+$");
 
           /**
-           * Makes changes to a ProductSet resource. Only display_name can be updated currently.
-           *
-           * Possible errors:
-           *
-           * * Returns NOT_FOUND if the ProductSet does not exist. * Returns INVALID_ARGUMENT if
-           * display_name is present in update_mask but   missing from the request or longer than 4096
+           * Makes changes to a ProductSet resource. Only display_name can be updated currently. Possible
+           * errors: * Returns NOT_FOUND if the ProductSet does not exist. * Returns INVALID_ARGUMENT if
+           * display_name is present in update_mask but missing from the request or longer than 4096
            * characters.
            *
            * Create a request for the method "productSets.patch".
@@ -4279,10 +3945,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the ProductSet.
-        Format is:
-         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
-        This field is ignored
+           * @param name The resource name of the ProductSet. Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored
          *        when creating a ProductSet.
            * @param content the {@link com.google.api.services.vision.v1.model.ProductSet}
            * @since 1.13
@@ -4353,31 +4017,25 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The resource name of the ProductSet.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
-           *
-           * This field is ignored when creating a ProductSet.
+           * The resource name of the ProductSet. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is
+           * ignored when creating a ProductSet.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the ProductSet.
-
-         Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
-
-         This field is ignored when creating a ProductSet.
+          /** The resource name of the ProductSet. Format is:
+         `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is ignored when
+         creating a ProductSet.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The resource name of the ProductSet.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`.
-           *
-           * This field is ignored when creating a ProductSet.
+           * The resource name of the ProductSet. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`. This field is
+           * ignored when creating a ProductSet.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4425,8 +4083,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link RemoveProduct#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name for the ProductSet to modify.
-        Format is:
+         * @param name Required. The resource name for the ProductSet to modify. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
          * @param content the {@link com.google.api.services.vision.v1.model.RemoveProductFromProductSetRequest}
          * @return the request
@@ -4455,8 +4112,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * equest)} must be called to initialize this instance immediately after invoking the constructor.
            * </p>
            *
-           * @param name Required. The resource name for the ProductSet to modify.
-        Format is:
+           * @param name Required. The resource name for the ProductSet to modify. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            * @param content the {@link com.google.api.services.vision.v1.model.RemoveProductFromProductSetRequest}
            * @since 1.13
@@ -4527,25 +4183,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The resource name for the ProductSet to modify.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * Required. The resource name for the ProductSet to modify. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name for the ProductSet to modify.
-
-         Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+          /** Required. The resource name for the ProductSet to modify. Format is:
+         `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The resource name for the ProductSet to modify.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+           * Required. The resource name for the ProductSet to modify. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            */
           public RemoveProduct setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4585,19 +4238,15 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Lists the Products in a ProductSet, in an unspecified order. If the ProductSet does not exist,
-           * the products field of the response will be empty.
-           *
-           * Possible errors:
-           *
-           * * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+           * the products field of the response will be empty. Possible errors: * Returns INVALID_ARGUMENT if
+           * page_size is greater than 100 or less than 1.
            *
            * Create a request for the method "products.list".
            *
            * This request holds the parameters needed by the vision server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The ProductSet resource for which to retrieve Products.
-          Format is:
+           * @param name Required. The ProductSet resource for which to retrieve Products. Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
            * @return the request
            */
@@ -4616,11 +4265,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * Lists the Products in a ProductSet, in an unspecified order. If the ProductSet does not exist,
-             * the products field of the response will be empty.
-             *
-             * Possible errors:
-             *
-             * * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+             * the products field of the response will be empty. Possible errors: * Returns INVALID_ARGUMENT
+             * if page_size is greater than 100 or less than 1.
              *
              * Create a request for the method "products.list".
              *
@@ -4629,8 +4275,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The ProductSet resource for which to retrieve Products.
-          Format is:
+             * @param name Required. The ProductSet resource for which to retrieve Products. Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
              * @since 1.13
              */
@@ -4710,25 +4355,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. The ProductSet resource for which to retrieve Products.
-             *
-             * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+             * Required. The ProductSet resource for which to retrieve Products. Format is:
+             * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The ProductSet resource for which to retrieve Products.
-
-           Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+            /** Required. The ProductSet resource for which to retrieve Products. Format is:
+           `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The ProductSet resource for which to retrieve Products.
-             *
-             * Format is: `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
+             * Required. The ProductSet resource for which to retrieve Products. Format is:
+             * `projects/PROJECT_ID/locations/LOC_ID/productSets/PRODUCT_SET_ID`
              */
             public List setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4801,21 +4443,17 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
       public class Products {
 
         /**
-         * Creates and returns a new product resource.
-         *
-         * Possible errors:
-         *
-         * * Returns INVALID_ARGUMENT if display_name is missing or longer than 4096   characters. * Returns
-         * INVALID_ARGUMENT if description is longer than 4096 characters. * Returns INVALID_ARGUMENT if
-         * product_category is missing or invalid.
+         * Creates and returns a new product resource. Possible errors: * Returns INVALID_ARGUMENT if
+         * display_name is missing or longer than 4096 characters. * Returns INVALID_ARGUMENT if description
+         * is longer than 4096 characters. * Returns INVALID_ARGUMENT if product_category is missing or
+         * invalid.
          *
          * Create a request for the method "products.create".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project in which the Product should be created.
-        Format is
+         * @param parent Required. The project in which the Product should be created. Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
          * @param content the {@link com.google.api.services.vision.v1.model.Product}
          * @return the request
@@ -4834,13 +4472,10 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates and returns a new product resource.
-           *
-           * Possible errors:
-           *
-           * * Returns INVALID_ARGUMENT if display_name is missing or longer than 4096   characters. *
-           * Returns INVALID_ARGUMENT if description is longer than 4096 characters. * Returns
-           * INVALID_ARGUMENT if product_category is missing or invalid.
+           * Creates and returns a new product resource. Possible errors: * Returns INVALID_ARGUMENT if
+           * display_name is missing or longer than 4096 characters. * Returns INVALID_ARGUMENT if
+           * description is longer than 4096 characters. * Returns INVALID_ARGUMENT if product_category is
+           * missing or invalid.
            *
            * Create a request for the method "products.create".
            *
@@ -4849,8 +4484,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project in which the Product should be created.
-        Format is
+           * @param parent Required. The project in which the Product should be created. Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
            * @param content the {@link com.google.api.services.vision.v1.model.Product}
            * @since 1.13
@@ -4921,25 +4555,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The project in which the Product should be created.
-           *
-           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           * Required. The project in which the Product should be created. Format is
+           * `projects/PROJECT_ID/locations/LOC_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project in which the Product should be created.
-
-         Format is `projects/PROJECT_ID/locations/LOC_ID`.
+          /** Required. The project in which the Product should be created. Format is
+         `projects/PROJECT_ID/locations/LOC_ID`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project in which the Product should be created.
-           *
-           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           * Required. The project in which the Product should be created. Format is
+           * `projects/PROJECT_ID/locations/LOC_ID`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4985,18 +4616,16 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Permanently deletes a product and its reference images.
-         *
-         * Metadata of the product and all its images will be deleted right away, but search queries against
-         * ProductSets containing the product may still work until all related caches are refreshed.
+         * Permanently deletes a product and its reference images. Metadata of the product and all its
+         * images will be deleted right away, but search queries against ProductSets containing the product
+         * may still work until all related caches are refreshed.
          *
          * Create a request for the method "products.delete".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of product to delete.
-        Format is:
+         * @param name Required. Resource name of product to delete. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
          * @return the request
          */
@@ -5014,11 +4643,9 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
 
           /**
-           * Permanently deletes a product and its reference images.
-           *
-           * Metadata of the product and all its images will be deleted right away, but search queries
-           * against ProductSets containing the product may still work until all related caches are
-           * refreshed.
+           * Permanently deletes a product and its reference images. Metadata of the product and all its
+           * images will be deleted right away, but search queries against ProductSets containing the
+           * product may still work until all related caches are refreshed.
            *
            * Create a request for the method "products.delete".
            *
@@ -5027,8 +4654,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of product to delete.
-        Format is:
+           * @param name Required. Resource name of product to delete. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            * @since 1.13
            */
@@ -5098,25 +4724,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. Resource name of product to delete.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           * Required. Resource name of product to delete. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Resource name of product to delete.
-
-         Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+          /** Required. Resource name of product to delete. Format is:
+         `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Resource name of product to delete.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           * Required. Resource name of product to delete. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5134,19 +4757,15 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Gets information associated with a Product.
-         *
-         * Possible errors:
-         *
-         * * Returns NOT_FOUND if the Product does not exist.
+         * Gets information associated with a Product. Possible errors: * Returns NOT_FOUND if the Product
+         * does not exist.
          *
          * Create a request for the method "products.get".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the Product to get.
-        Format is:
+         * @param name Required. Resource name of the Product to get. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
          * @return the request
          */
@@ -5164,11 +4783,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
 
           /**
-           * Gets information associated with a Product.
-           *
-           * Possible errors:
-           *
-           * * Returns NOT_FOUND if the Product does not exist.
+           * Gets information associated with a Product. Possible errors: * Returns NOT_FOUND if the Product
+           * does not exist.
            *
            * Create a request for the method "products.get".
            *
@@ -5177,8 +4793,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the Product to get.
-        Format is:
+           * @param name Required. Resource name of the Product to get. Format is:
          *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            * @since 1.13
            */
@@ -5258,25 +4873,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. Resource name of the Product to get.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           * Required. Resource name of the Product to get. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Resource name of the Product to get.
-
-         Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+          /** Required. Resource name of the Product to get. Format is:
+         `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Resource name of the Product to get.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+           * Required. Resource name of the Product to get. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5294,19 +4906,15 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Lists products in an unspecified order.
-         *
-         * Possible errors:
-         *
-         * * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+         * Lists products in an unspecified order. Possible errors: * Returns INVALID_ARGUMENT if page_size
+         * is greater than 100 or less than 1.
          *
          * Create a request for the method "products.list".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project OR ProductSet from which Products should be listed.
-        Format:
+         * @param parent Required. The project OR ProductSet from which Products should be listed. Format:
          *        `projects/PROJECT_ID/locations/LOC_ID`
          * @return the request
          */
@@ -5324,11 +4932,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists products in an unspecified order.
-           *
-           * Possible errors:
-           *
-           * * Returns INVALID_ARGUMENT if page_size is greater than 100 or less than 1.
+           * Lists products in an unspecified order. Possible errors: * Returns INVALID_ARGUMENT if
+           * page_size is greater than 100 or less than 1.
            *
            * Create a request for the method "products.list".
            *
@@ -5337,8 +4942,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project OR ProductSet from which Products should be listed.
-        Format:
+           * @param parent Required. The project OR ProductSet from which Products should be listed. Format:
          *        `projects/PROJECT_ID/locations/LOC_ID`
            * @since 1.13
            */
@@ -5418,25 +5022,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The project OR ProductSet from which Products should be listed.
-           *
-           * Format: `projects/PROJECT_ID/locations/LOC_ID`
+           * Required. The project OR ProductSet from which Products should be listed. Format:
+           * `projects/PROJECT_ID/locations/LOC_ID`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project OR ProductSet from which Products should be listed.
-
-         Format: `projects/PROJECT_ID/locations/LOC_ID`
+          /** Required. The project OR ProductSet from which Products should be listed. Format:
+         `projects/PROJECT_ID/locations/LOC_ID`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project OR ProductSet from which Products should be listed.
-           *
-           * Format: `projects/PROJECT_ID/locations/LOC_ID`
+           * Required. The project OR ProductSet from which Products should be listed. Format:
+           * `projects/PROJECT_ID/locations/LOC_ID`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5487,26 +5088,20 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         }
         /**
          * Makes changes to a Product resource. Only the `display_name`, `description`, and `labels` fields
-         * can be updated right now.
-         *
-         * If labels are updated, the change will not be reflected in queries until the next index time.
-         *
-         * Possible errors:
-         *
-         * * Returns NOT_FOUND if the Product does not exist. * Returns INVALID_ARGUMENT if display_name is
-         * present in update_mask but is   missing from the request or longer than 4096 characters. *
-         * Returns INVALID_ARGUMENT if description is present in update_mask but is   longer than 4096
-         * characters. * Returns INVALID_ARGUMENT if product_category is present in update_mask.
+         * can be updated right now. If labels are updated, the change will not be reflected in queries
+         * until the next index time. Possible errors: * Returns NOT_FOUND if the Product does not exist. *
+         * Returns INVALID_ARGUMENT if display_name is present in update_mask but is missing from the
+         * request or longer than 4096 characters. * Returns INVALID_ARGUMENT if description is present in
+         * update_mask but is longer than 4096 characters. * Returns INVALID_ARGUMENT if product_category is
+         * present in update_mask.
          *
          * Create a request for the method "products.patch".
          *
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the product.
-        Format is:
-         *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-        This field is ignored when
+         * @param name The resource name of the product. Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when
          *        creating a product.
          * @param content the {@link com.google.api.services.vision.v1.model.Product}
          * @return the request
@@ -5526,16 +5121,12 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Makes changes to a Product resource. Only the `display_name`, `description`, and `labels`
-           * fields can be updated right now.
-           *
-           * If labels are updated, the change will not be reflected in queries until the next index time.
-           *
-           * Possible errors:
-           *
-           * * Returns NOT_FOUND if the Product does not exist. * Returns INVALID_ARGUMENT if display_name
-           * is present in update_mask but is   missing from the request or longer than 4096 characters. *
-           * Returns INVALID_ARGUMENT if description is present in update_mask but is   longer than 4096
-           * characters. * Returns INVALID_ARGUMENT if product_category is present in update_mask.
+           * fields can be updated right now. If labels are updated, the change will not be reflected in
+           * queries until the next index time. Possible errors: * Returns NOT_FOUND if the Product does not
+           * exist. * Returns INVALID_ARGUMENT if display_name is present in update_mask but is missing from
+           * the request or longer than 4096 characters. * Returns INVALID_ARGUMENT if description is
+           * present in update_mask but is longer than 4096 characters. * Returns INVALID_ARGUMENT if
+           * product_category is present in update_mask.
            *
            * Create a request for the method "products.patch".
            *
@@ -5544,10 +5135,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the product.
-        Format is:
-         *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-        This field is ignored when
+           * @param name The resource name of the product. Format is:
+         *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when
          *        creating a product.
            * @param content the {@link com.google.api.services.vision.v1.model.Product}
            * @since 1.13
@@ -5618,31 +5207,25 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * The resource name of the product.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-           *
-           * This field is ignored when creating a product.
+           * The resource name of the product. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when
+           * creating a product.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the product.
-
-         Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-
-         This field is ignored when creating a product.
+          /** The resource name of the product. Format is:
+         `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when creating a
+         product.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The resource name of the product.
-           *
-           * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
-           *
-           * This field is ignored when creating a product.
+           * The resource name of the product. Format is:
+           * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`. This field is ignored when
+           * creating a product.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5687,24 +5270,17 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         }
         /**
          * Asynchronous API to delete all Products in a ProductSet or all Products that are in no
-         * ProductSet.
-         *
-         * If a Product is a member of the specified ProductSet in addition to other ProductSets, the
-         * Product will still be deleted.
-         *
-         * It is recommended to not delete the specified ProductSet until after this operation has
-         * completed. It is also recommended to not add any of the Products involved in the batch delete to
-         * a new ProductSet while this operation is running because those Products may still end up deleted.
-         *
-         * It's not possible to undo the PurgeProducts operation. Therefore, it is recommended to keep the
-         * csv files used in ImportProductSets (if that was how you originally built the Product Set) before
-         * starting PurgeProducts, in case you need to re-import the data after deletion.
-         *
-         * If the plan is to purge all of the Products from a ProductSet and then re-use the empty
-         * ProductSet to re-import new Products into the empty ProductSet, you must wait until the
-         * PurgeProducts operation has finished for that ProductSet.
-         *
-         * The google.longrunning.Operation API can be used to keep track of the progress and results of the
+         * ProductSet. If a Product is a member of the specified ProductSet in addition to other
+         * ProductSets, the Product will still be deleted. It is recommended to not delete the specified
+         * ProductSet until after this operation has completed. It is also recommended to not add any of the
+         * Products involved in the batch delete to a new ProductSet while this operation is running because
+         * those Products may still end up deleted. It's not possible to undo the PurgeProducts operation.
+         * Therefore, it is recommended to keep the csv files used in ImportProductSets (if that was how you
+         * originally built the Product Set) before starting PurgeProducts, in case you need to re-import
+         * the data after deletion. If the plan is to purge all of the Products from a ProductSet and then
+         * re-use the empty ProductSet to re-import new Products into the empty ProductSet, you must wait
+         * until the PurgeProducts operation has finished for that ProductSet. The
+         * google.longrunning.Operation API can be used to keep track of the progress and results of the
          * request. `Operation.metadata` contains `BatchOperationMetadata`. (progress)
          *
          * Create a request for the method "products.purge".
@@ -5712,8 +5288,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the vision server.  After setting any optional
          * parameters, call the {@link Purge#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project and location in which the Products should be deleted.
-        Format is
+         * @param parent Required. The project and location in which the Products should be deleted. Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
          * @param content the {@link com.google.api.services.vision.v1.model.PurgeProductsRequest}
          * @return the request
@@ -5733,24 +5308,16 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Asynchronous API to delete all Products in a ProductSet or all Products that are in no
-           * ProductSet.
-           *
-           * If a Product is a member of the specified ProductSet in addition to other ProductSets, the
-           * Product will still be deleted.
-           *
-           * It is recommended to not delete the specified ProductSet until after this operation has
-           * completed. It is also recommended to not add any of the Products involved in the batch delete
-           * to a new ProductSet while this operation is running because those Products may still end up
-           * deleted.
-           *
-           * It's not possible to undo the PurgeProducts operation. Therefore, it is recommended to keep the
-           * csv files used in ImportProductSets (if that was how you originally built the Product Set)
-           * before starting PurgeProducts, in case you need to re-import the data after deletion.
-           *
-           * If the plan is to purge all of the Products from a ProductSet and then re-use the empty
-           * ProductSet to re-import new Products into the empty ProductSet, you must wait until the
-           * PurgeProducts operation has finished for that ProductSet.
-           *
+           * ProductSet. If a Product is a member of the specified ProductSet in addition to other
+           * ProductSets, the Product will still be deleted. It is recommended to not delete the specified
+           * ProductSet until after this operation has completed. It is also recommended to not add any of
+           * the Products involved in the batch delete to a new ProductSet while this operation is running
+           * because those Products may still end up deleted. It's not possible to undo the PurgeProducts
+           * operation. Therefore, it is recommended to keep the csv files used in ImportProductSets (if
+           * that was how you originally built the Product Set) before starting PurgeProducts, in case you
+           * need to re-import the data after deletion. If the plan is to purge all of the Products from a
+           * ProductSet and then re-use the empty ProductSet to re-import new Products into the empty
+           * ProductSet, you must wait until the PurgeProducts operation has finished for that ProductSet.
            * The google.longrunning.Operation API can be used to keep track of the progress and results of
            * the request. `Operation.metadata` contains `BatchOperationMetadata`. (progress)
            *
@@ -5761,8 +5328,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * Purge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project and location in which the Products should be deleted.
-        Format is
+           * @param parent Required. The project and location in which the Products should be deleted. Format is
          *        `projects/PROJECT_ID/locations/LOC_ID`.
            * @param content the {@link com.google.api.services.vision.v1.model.PurgeProductsRequest}
            * @since 1.13
@@ -5833,25 +5399,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. The project and location in which the Products should be deleted.
-           *
-           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           * Required. The project and location in which the Products should be deleted. Format is
+           * `projects/PROJECT_ID/locations/LOC_ID`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project and location in which the Products should be deleted.
-
-         Format is `projects/PROJECT_ID/locations/LOC_ID`.
+          /** Required. The project and location in which the Products should be deleted. Format is
+         `projects/PROJECT_ID/locations/LOC_ID`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project and location in which the Products should be deleted.
-           *
-           * Format is `projects/PROJECT_ID/locations/LOC_ID`.
+           * Required. The project and location in which the Products should be deleted. Format is
+           * `projects/PROJECT_ID/locations/LOC_ID`.
            */
           public Purge setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5890,21 +5453,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
         public class ReferenceImages {
 
           /**
-           * Creates and returns a new ReferenceImage resource.
-           *
-           * The `bounding_poly` field is optional. If `bounding_poly` is not specified, the system will try
-           * to detect regions of interest in the image that are compatible with the product_category on the
-           * parent product. If it is specified, detection is ALWAYS skipped. The system converts polygons
-           * into non-rotated rectangles.
-           *
-           * Note that the pipeline will resize the image if the image resolution is too large to process
-           * (above 50MP).
-           *
-           * Possible errors:
-           *
-           * * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096   characters. *
-           * Returns INVALID_ARGUMENT if the product does not exist. * Returns INVALID_ARGUMENT if
-           * bounding_poly is not provided, and nothing   compatible with the parent product's
+           * Creates and returns a new ReferenceImage resource. The `bounding_poly` field is optional. If
+           * `bounding_poly` is not specified, the system will try to detect regions of interest in the image
+           * that are compatible with the product_category on the parent product. If it is specified,
+           * detection is ALWAYS skipped. The system converts polygons into non-rotated rectangles. Note that
+           * the pipeline will resize the image if the image resolution is too large to process (above 50MP).
+           * Possible errors: * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096
+           * characters. * Returns INVALID_ARGUMENT if the product does not exist. * Returns INVALID_ARGUMENT
+           * if bounding_poly is not provided, and nothing compatible with the parent product's
            * product_category is detected. * Returns INVALID_ARGUMENT if bounding_poly contains more than 10
            * polygons.
            *
@@ -5913,8 +5469,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
            * This request holds the parameters needed by the vision server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Resource name of the product in which to create the reference image.
-          Format is
+           * @param parent Required. Resource name of the product in which to create the reference image. Format is
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
            * @param content the {@link com.google.api.services.vision.v1.model.ReferenceImage}
            * @return the request
@@ -5933,23 +5488,16 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
 
             /**
-             * Creates and returns a new ReferenceImage resource.
-             *
-             * The `bounding_poly` field is optional. If `bounding_poly` is not specified, the system will try
-             * to detect regions of interest in the image that are compatible with the product_category on the
-             * parent product. If it is specified, detection is ALWAYS skipped. The system converts polygons
-             * into non-rotated rectangles.
-             *
-             * Note that the pipeline will resize the image if the image resolution is too large to process
-             * (above 50MP).
-             *
-             * Possible errors:
-             *
-             * * Returns INVALID_ARGUMENT if the image_uri is missing or longer than 4096   characters. *
-             * Returns INVALID_ARGUMENT if the product does not exist. * Returns INVALID_ARGUMENT if
-             * bounding_poly is not provided, and nothing   compatible with the parent product's
-             * product_category is detected. * Returns INVALID_ARGUMENT if bounding_poly contains more than 10
-             * polygons.
+             * Creates and returns a new ReferenceImage resource. The `bounding_poly` field is optional. If
+             * `bounding_poly` is not specified, the system will try to detect regions of interest in the
+             * image that are compatible with the product_category on the parent product. If it is specified,
+             * detection is ALWAYS skipped. The system converts polygons into non-rotated rectangles. Note
+             * that the pipeline will resize the image if the image resolution is too large to process (above
+             * 50MP). Possible errors: * Returns INVALID_ARGUMENT if the image_uri is missing or longer than
+             * 4096 characters. * Returns INVALID_ARGUMENT if the product does not exist. * Returns
+             * INVALID_ARGUMENT if bounding_poly is not provided, and nothing compatible with the parent
+             * product's product_category is detected. * Returns INVALID_ARGUMENT if bounding_poly contains
+             * more than 10 polygons.
              *
              * Create a request for the method "referenceImages.create".
              *
@@ -5958,8 +5506,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Resource name of the product in which to create the reference image.
-          Format is
+             * @param parent Required. Resource name of the product in which to create the reference image. Format is
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              * @param content the {@link com.google.api.services.vision.v1.model.ReferenceImage}
              * @since 1.13
@@ -6030,25 +5577,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. Resource name of the product in which to create the reference image.
-             *
-             * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             * Required. Resource name of the product in which to create the reference image. Format
+             * is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Resource name of the product in which to create the reference image.
-
-           Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+            /** Required. Resource name of the product in which to create the reference image. Format is
+           `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Resource name of the product in which to create the reference image.
-             *
-             * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             * Required. Resource name of the product in which to create the reference image. Format
+             * is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6094,20 +5638,16 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * Permanently deletes a reference image.
-           *
-           * The image metadata will be deleted right away, but search queries against ProductSets containing
-           * the image may still work until all related caches are refreshed.
-           *
-           * The actual image files are not deleted from Google Cloud Storage.
+           * Permanently deletes a reference image. The image metadata will be deleted right away, but search
+           * queries against ProductSets containing the image may still work until all related caches are
+           * refreshed. The actual image files are not deleted from Google Cloud Storage.
            *
            * Create a request for the method "referenceImages.delete".
            *
            * This request holds the parameters needed by the vision server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the reference image to delete.
-          Format is:
+           * @param name Required. The resource name of the reference image to delete. Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
            * @return the request
            */
@@ -6125,12 +5665,9 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/referenceImages/[^/]+$");
 
             /**
-             * Permanently deletes a reference image.
-             *
-             * The image metadata will be deleted right away, but search queries against ProductSets
-             * containing the image may still work until all related caches are refreshed.
-             *
-             * The actual image files are not deleted from Google Cloud Storage.
+             * Permanently deletes a reference image. The image metadata will be deleted right away, but
+             * search queries against ProductSets containing the image may still work until all related caches
+             * are refreshed. The actual image files are not deleted from Google Cloud Storage.
              *
              * Create a request for the method "referenceImages.delete".
              *
@@ -6139,8 +5676,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the reference image to delete.
-          Format is:
+             * @param name Required. The resource name of the reference image to delete. Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
              * @since 1.13
              */
@@ -6210,19 +5746,13 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. The resource name of the reference image to delete.
-             *
-             * Format is:
-             *
+             * Required. The resource name of the reference image to delete. Format is:
              * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the reference image to delete.
-
-           Format is:
-
+            /** Required. The resource name of the reference image to delete. Format is:
            `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
              */
             public java.lang.String getName() {
@@ -6230,10 +5760,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. The resource name of the reference image to delete.
-             *
-             * Format is:
-             *
+             * Required. The resource name of the reference image to delete. Format is:
              * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`
              */
             public Delete setName(java.lang.String name) {
@@ -6252,19 +5779,15 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * Gets information associated with a ReferenceImage.
-           *
-           * Possible errors:
-           *
-           * * Returns NOT_FOUND if the specified image does not exist.
+           * Gets information associated with a ReferenceImage. Possible errors: * Returns NOT_FOUND if the
+           * specified image does not exist.
            *
            * Create a request for the method "referenceImages.get".
            *
            * This request holds the parameters needed by the vision server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the ReferenceImage to get.
-          Format is:
+           * @param name Required. The resource name of the ReferenceImage to get. Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
            * @return the request
            */
@@ -6282,11 +5805,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/referenceImages/[^/]+$");
 
             /**
-             * Gets information associated with a ReferenceImage.
-             *
-             * Possible errors:
-             *
-             * * Returns NOT_FOUND if the specified image does not exist.
+             * Gets information associated with a ReferenceImage. Possible errors: * Returns NOT_FOUND if the
+             * specified image does not exist.
              *
              * Create a request for the method "referenceImages.get".
              *
@@ -6295,8 +5815,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the ReferenceImage to get.
-          Format is:
+             * @param name Required. The resource name of the ReferenceImage to get. Format is:
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
              * @since 1.13
              */
@@ -6376,19 +5895,13 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. The resource name of the ReferenceImage to get.
-             *
-             * Format is:
-             *
+             * Required. The resource name of the ReferenceImage to get. Format is:
              * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the ReferenceImage to get.
-
-           Format is:
-
+            /** Required. The resource name of the ReferenceImage to get. Format is:
            `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
              */
             public java.lang.String getName() {
@@ -6396,10 +5909,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. The resource name of the ReferenceImage to get.
-             *
-             * Format is:
-             *
+             * Required. The resource name of the ReferenceImage to get. Format is:
              * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`.
              */
             public Get setName(java.lang.String name) {
@@ -6418,20 +5928,15 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * Lists reference images.
-           *
-           * Possible errors:
-           *
-           * * Returns NOT_FOUND if the parent product does not exist. * Returns INVALID_ARGUMENT if the
-           * page_size is greater than 100, or less   than 1.
+           * Lists reference images. Possible errors: * Returns NOT_FOUND if the parent product does not
+           * exist. * Returns INVALID_ARGUMENT if the page_size is greater than 100, or less than 1.
            *
            * Create a request for the method "referenceImages.list".
            *
            * This request holds the parameters needed by the vision server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Resource name of the product containing the reference images.
-          Format is
+           * @param parent Required. Resource name of the product containing the reference images. Format is
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
            * @return the request
            */
@@ -6449,12 +5954,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+$");
 
             /**
-             * Lists reference images.
-             *
-             * Possible errors:
-             *
-             * * Returns NOT_FOUND if the parent product does not exist. * Returns INVALID_ARGUMENT if the
-             * page_size is greater than 100, or less   than 1.
+             * Lists reference images. Possible errors: * Returns NOT_FOUND if the parent product does not
+             * exist. * Returns INVALID_ARGUMENT if the page_size is greater than 100, or less than 1.
              *
              * Create a request for the method "referenceImages.list".
              *
@@ -6463,8 +5964,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Resource name of the product containing the reference images.
-          Format is
+             * @param parent Required. Resource name of the product containing the reference images. Format is
            *        `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              * @since 1.13
              */
@@ -6544,25 +6044,22 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             }
 
             /**
-             * Required. Resource name of the product containing the reference images.
-             *
-             * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             * Required. Resource name of the product containing the reference images. Format is
+             * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Resource name of the product containing the reference images.
-
-           Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+            /** Required. Resource name of the product containing the reference images. Format is
+           `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Resource name of the product containing the reference images.
-             *
-             * Format is `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
+             * Required. Resource name of the product containing the reference images. Format is
+             * `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6592,17 +6089,14 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * A token identifying a page of results to be returned. This is the value of
-             * `nextPageToken` returned in a previous reference image list request.
-             *
-             * Defaults to the first page if not specified.
+             * `nextPageToken` returned in a previous reference image list request. Defaults to the
+             * first page if not specified.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
             /** A token identifying a page of results to be returned. This is the value of `nextPageToken` returned
-           in a previous reference image list request.
-
-           Defaults to the first page if not specified.
+           in a previous reference image list request. Defaults to the first page if not specified.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -6610,9 +6104,8 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
 
             /**
              * A token identifying a page of results to be returned. This is the value of
-             * `nextPageToken` returned in a previous reference image list request.
-             *
-             * Defaults to the first page if not specified.
+             * `nextPageToken` returned in a previous reference image list request. Defaults to the
+             * first page if not specified.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -6649,7 +6142,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
     public class Operations {
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -6674,7 +6167,7 @@ public class Vision extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".

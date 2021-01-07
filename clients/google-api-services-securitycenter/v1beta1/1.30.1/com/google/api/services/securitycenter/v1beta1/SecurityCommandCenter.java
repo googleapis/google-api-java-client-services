@@ -46,7 +46,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Security Command Center API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Security Command Center API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -301,8 +301,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
      * remote operation.
      *
      * @param name The relative resource name of the settings. See:
-     *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-    Example:
+     *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
      *        "organizations/{organization_id}/organizationSettings".
      * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.OrganizationSettings}
      * @return the request
@@ -332,8 +331,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * immediately after invoking the constructor. </p>
        *
        * @param name The relative resource name of the settings. See:
-     *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-    Example:
+     *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
      *        "organizations/{organization_id}/organizationSettings".
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.OrganizationSettings}
        * @since 1.13
@@ -477,15 +475,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Assets {
 
       /**
-       * Filters an organization's assets and  groups them by their specified properties.
+       * Filters an organization's assets and groups them by their specified properties.
        *
        * Create a request for the method "assets.group".
        *
        * This request holds the parameters needed by the securitycenter server.  After setting any
        * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of the organization to groupBy. Its format is
-      "organizations/[organization_id]".
+       * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id]".
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupAssetsRequest}
        * @return the request
        */
@@ -503,7 +500,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Filters an organization's assets and  groups them by their specified properties.
+         * Filters an organization's assets and groups them by their specified properties.
          *
          * Create a request for the method "assets.group".
          *
@@ -513,8 +510,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * Group#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the organization to groupBy. Its format is
-      "organizations/[organization_id]".
+         * @param parent Required. Name of the organization to groupBy. Its format is "organizations/[organization_id]".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupAssetsRequest}
          * @since 1.13
          */
@@ -761,22 +757,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * When compare_duration is set, the ListAssetResult's "state" attribute is updated to
          * indicate whether the asset was added, removed, or remained present during the
          * compare_duration period of time that precedes the read_time. This is the time between
-         * (read_time - compare_duration) and read_time.
-         *
-         * The state value is derived based on the presence of the asset at the two points in time.
-         * Intermediate state changes between the two times don't affect the result. For example,
-         * the results aren't affected if the asset is removed and re-created again.
-         *
-         * Possible "state" values when compare_duration is specified:
-         *
-         * * "ADDED": indicates that the asset was not present before compare_duration, but present
-         * at read_time. * "REMOVED": indicates that the asset was present at the start of
-         * compare_duration, but not present at read_time. * "ACTIVE": indicates that the asset was
-         * present at both the start and the end of the time period defined by compare_duration and
-         * read_time.
-         *
-         * If compare_duration is not specified, then the only possible state is "UNUSED", which
-         * indicates that the asset is present at read_time.
+         * (read_time - compare_duration) and read_time. The state value is derived based on the
+         * presence of the asset at the two points in time. Intermediate state changes between the
+         * two times don't affect the result. For example, the results aren't affected if the asset
+         * is removed and re-created again. Possible "state" values when compare_duration is
+         * specified: * "ADDED": indicates that the asset was not present before compare_duration,
+         * but present at read_time. * "REMOVED": indicates that the asset was present at the start
+         * of compare_duration, but not present at read_time. * "ACTIVE": indicates that the asset
+         * was present at both the start and the end of the time period defined by compare_duration
+         * and read_time. If compare_duration is not specified, then the only possible state is
+         * "UNUSED", which indicates that the asset is present at read_time.
          */
         @com.google.api.client.util.Key
         private String compareDuration;
@@ -784,21 +774,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /** When compare_duration is set, the ListAssetResult's "state" attribute is updated to indicate
        whether the asset was added, removed, or remained present during the compare_duration period of
        time that precedes the read_time. This is the time between (read_time - compare_duration) and
-       read_time.
-
-       The state value is derived based on the presence of the asset at the two points in time.
+       read_time. The state value is derived based on the presence of the asset at the two points in time.
        Intermediate state changes between the two times don't affect the result. For example, the results
-       aren't affected if the asset is removed and re-created again.
-
-       Possible "state" values when compare_duration is specified:
-
-       * "ADDED": indicates that the asset was not present before compare_duration, but present at
-       read_time. * "REMOVED": indicates that the asset was present at the start of compare_duration, but
-       not present at read_time. * "ACTIVE": indicates that the asset was present at both the start and
-       the end of the time period defined by compare_duration and read_time.
-
-       If compare_duration is not specified, then the only possible state is "UNUSED", which indicates
-       that the asset is present at read_time.
+       aren't affected if the asset is removed and re-created again. Possible "state" values when
+       compare_duration is specified: * "ADDED": indicates that the asset was not present before
+       compare_duration, but present at read_time. * "REMOVED": indicates that the asset was present at
+       the start of compare_duration, but not present at read_time. * "ACTIVE": indicates that the asset
+       was present at both the start and the end of the time period defined by compare_duration and
+       read_time. If compare_duration is not specified, then the only possible state is "UNUSED", which
+       indicates that the asset is present at read_time.
          */
         public String getCompareDuration() {
           return compareDuration;
@@ -808,22 +792,16 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * When compare_duration is set, the ListAssetResult's "state" attribute is updated to
          * indicate whether the asset was added, removed, or remained present during the
          * compare_duration period of time that precedes the read_time. This is the time between
-         * (read_time - compare_duration) and read_time.
-         *
-         * The state value is derived based on the presence of the asset at the two points in time.
-         * Intermediate state changes between the two times don't affect the result. For example,
-         * the results aren't affected if the asset is removed and re-created again.
-         *
-         * Possible "state" values when compare_duration is specified:
-         *
-         * * "ADDED": indicates that the asset was not present before compare_duration, but present
-         * at read_time. * "REMOVED": indicates that the asset was present at the start of
-         * compare_duration, but not present at read_time. * "ACTIVE": indicates that the asset was
-         * present at both the start and the end of the time period defined by compare_duration and
-         * read_time.
-         *
-         * If compare_duration is not specified, then the only possible state is "UNUSED", which
-         * indicates that the asset is present at read_time.
+         * (read_time - compare_duration) and read_time. The state value is derived based on the
+         * presence of the asset at the two points in time. Intermediate state changes between the
+         * two times don't affect the result. For example, the results aren't affected if the asset
+         * is removed and re-created again. Possible "state" values when compare_duration is
+         * specified: * "ADDED": indicates that the asset was not present before compare_duration,
+         * but present at read_time. * "REMOVED": indicates that the asset was present at the start
+         * of compare_duration, but not present at read_time. * "ACTIVE": indicates that the asset
+         * was present at both the start and the end of the time period defined by compare_duration
+         * and read_time. If compare_duration is not specified, then the only possible state is
+         * "UNUSED", which indicates that the asset is present at read_time.
          */
         public List setCompareDuration(String compareDuration) {
           this.compareDuration = compareDuration;
@@ -856,50 +834,29 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Expression that defines the filter to apply across assets. The expression is a list of
          * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
-         * not supported, and `OR` has higher precedence than `AND`.
-         *
-         * Restrictions have the form `  ` and may have a `-` character in front of them to indicate
-         * negation. The fields map to those defined in the Asset resource. Examples include:
-         *
-         * * name * security_center_properties.resource_name * resource_properties.a_property *
-         * security_marks.marks.marka
-         *
-         * The supported operators are:
-         *
-         * * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning
-         * substring matching, for strings.
-         *
-         * The supported value types are:
-         *
-         * * string literals in quotes. * integer literals without quotes. * boolean literals `true`
-         * and `false` without quotes.
-         *
-         * For example, `resource_properties.size = 100` is a valid filter string.
+         * not supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` `
+         * and may have a `-` character in front of them to indicate negation. The fields map to
+         * those defined in the Asset resource. Examples include: * name *
+         * security_center_properties.resource_name * resource_properties.a_property *
+         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
+         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
+         * supported value types are: * string literals in quotes. * integer literals without
+         * quotes. * boolean literals `true` and `false` without quotes. For example,
+         * `resource_properties.size = 100` is a valid filter string.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Expression that defines the filter to apply across assets. The expression is a list of zero or more
        restrictions combined via logical operators `AND` and `OR`. Parentheses are not supported, and `OR`
-       has higher precedence than `AND`.
-
-       Restrictions have the form `  ` and may have a `-` character in front of them to indicate negation.
-       The fields map to those defined in the Asset resource. Examples include:
-
-       * name * security_center_properties.resource_name * resource_properties.a_property *
-       security_marks.marks.marka
-
-       The supported operators are:
-
-       * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring
-       matching, for strings.
-
-       The supported value types are:
-
-       * string literals in quotes. * integer literals without quotes. * boolean literals `true` and
-       `false` without quotes.
-
-       For example, `resource_properties.size = 100` is a valid filter string.
+       has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character in
+       front of them to indicate negation. The fields map to those defined in the Asset resource. Examples
+       include: * name * security_center_properties.resource_name * resource_properties.a_property *
+       security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
+       `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
+       types are: * string literals in quotes. * integer literals without quotes. * boolean literals
+       `true` and `false` without quotes. For example, `resource_properties.size = 100` is a valid filter
+       string.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -908,25 +865,15 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         /**
          * Expression that defines the filter to apply across assets. The expression is a list of
          * zero or more restrictions combined via logical operators `AND` and `OR`. Parentheses are
-         * not supported, and `OR` has higher precedence than `AND`.
-         *
-         * Restrictions have the form `  ` and may have a `-` character in front of them to indicate
-         * negation. The fields map to those defined in the Asset resource. Examples include:
-         *
-         * * name * security_center_properties.resource_name * resource_properties.a_property *
-         * security_marks.marks.marka
-         *
-         * The supported operators are:
-         *
-         * * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning
-         * substring matching, for strings.
-         *
-         * The supported value types are:
-         *
-         * * string literals in quotes. * integer literals without quotes. * boolean literals `true`
-         * and `false` without quotes.
-         *
-         * For example, `resource_properties.size = 100` is a valid filter string.
+         * not supported, and `OR` has higher precedence than `AND`. Restrictions have the form ` `
+         * and may have a `-` character in front of them to indicate negation. The fields map to
+         * those defined in the Asset resource. Examples include: * name *
+         * security_center_properties.resource_name * resource_properties.a_property *
+         * security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`,
+         * `<`, `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The
+         * supported value types are: * string literals in quotes. * integer literals without
+         * quotes. * boolean literals `true` and `false` without quotes. For example,
+         * `resource_properties.size = 100` is a valid filter string.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -939,8 +886,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * "name,resource_properties.a_property". The default sorting order is ascending. To specify
          * descending order for a field, a suffix " desc" should be appended to the field name. For
          * example: "name desc,resource_properties.a_property". Redundant space characters in the
-         * syntax are insignificant. "name desc,resource_properties.a_property" and " name     desc
-         * ,   resource_properties.a_property  " are equivalent.
+         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
+         * resource_properties.a_property " are equivalent.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
@@ -950,7 +897,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        default sorting order is ascending. To specify descending order for a field, a suffix " desc"
        should be appended to the field name. For example: "name desc,resource_properties.a_property".
        Redundant space characters in the syntax are insignificant. "name
-       desc,resource_properties.a_property" and " name     desc  ,   resource_properties.a_property  " are
+       desc,resource_properties.a_property" and " name desc , resource_properties.a_property " are
        equivalent.
          */
         public java.lang.String getOrderBy() {
@@ -963,8 +910,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * "name,resource_properties.a_property". The default sorting order is ascending. To specify
          * descending order for a field, a suffix " desc" should be appended to the field name. For
          * example: "name desc,resource_properties.a_property". Redundant space characters in the
-         * syntax are insignificant. "name desc,resource_properties.a_property" and " name     desc
-         * ,   resource_properties.a_property  " are equivalent.
+         * syntax are insignificant. "name desc,resource_properties.a_property" and " name desc ,
+         * resource_properties.a_property " are equivalent.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -1051,10 +998,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Runs asset discovery. The discovery is tracked with a long-running operation.
-       *
-       * This API can only be called with limited frequency for an organization. If it is called too
-       * frequently the caller will receive a TOO_MANY_REQUESTS error.
+       * Runs asset discovery. The discovery is tracked with a long-running operation. This API can only
+       * be called with limited frequency for an organization. If it is called too frequently the caller
+       * will receive a TOO_MANY_REQUESTS error.
        *
        * Create a request for the method "assets.runDiscovery".
        *
@@ -1081,10 +1027,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Runs asset discovery. The discovery is tracked with a long-running operation.
-         *
-         * This API can only be called with limited frequency for an organization. If it is called too
-         * frequently the caller will receive a TOO_MANY_REQUESTS error.
+         * Runs asset discovery. The discovery is tracked with a long-running operation. This API can only
+         * be called with limited frequency for an organization. If it is called too frequently the caller
+         * will receive a TOO_MANY_REQUESTS error.
          *
          * Create a request for the method "assets.runDiscovery".
          *
@@ -1207,8 +1152,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * operation.
        *
        * @param name The relative resource name of the SecurityMarks. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-      Examples:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
        *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
        *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
@@ -1239,8 +1183,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * invoking the constructor. </p>
          *
          * @param name The relative resource name of the SecurityMarks. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-      Examples:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
        *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
        *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
@@ -1405,9 +1348,9 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
     public class Operations {
 
       /**
-       * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-       * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-       * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
        * methods to check whether the cancellation succeeded or whether the operation completed despite
        * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
        * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -1436,13 +1379,13 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+$");
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-         * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-         * other methods to check whether the cancellation succeeded or whether the operation completed
-         * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-         * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-         * corresponding to `Code.CANCELLED`.
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
          *
@@ -1681,7 +1624,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
         }
       }
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -1706,7 +1649,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
             java.util.regex.Pattern.compile("^organizations/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -1822,13 +1765,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
       }
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * NOTE: the `name` binding allows API services to override the binding to use different resource
-       * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-       * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-       * compatibility, the default name includes the operations collection id, however overriding users
-       * must ensure the name binding is the parent resource, without the operations collection id.
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+       * the binding to use different resource name schemes, such as `users/operations`. To override the
+       * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+       * configuration. For backwards compatibility, the default name includes the operations collection
+       * id, however overriding users must ensure the name binding is the parent resource, without the
+       * operations collection id.
        *
        * Create a request for the method "operations.list".
        *
@@ -1853,13 +1795,12 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
 
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a
-         * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+         * override the binding to use different resource name schemes, such as `users/operations`. To
+         * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+         * their service configuration. For backwards compatibility, the default name includes the
+         * operations collection id, however overriding users must ensure the name binding is the parent
+         * resource, without the operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -2338,8 +2279,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GetIamPolicyRequest}
        * @return the request
@@ -2368,8 +2308,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GetIamPolicyRequest}
          * @since 1.13
@@ -2676,8 +2615,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name The relative resource name of this source. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-      Example:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
        *        "organizations/{organization_id}/sources/{source_id}"
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Source}
        * @return the request
@@ -2707,8 +2645,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The relative resource name of this source. See:
-       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-      Example:
+       *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
        *        "organizations/{organization_id}/sources/{source_id}"
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.Source}
          * @since 1.13
@@ -2839,8 +2776,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SetIamPolicyRequest}
        * @return the request
@@ -2869,8 +2805,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -2982,8 +2917,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.TestIamPermissionsRequest}
        * @return the request
@@ -3012,8 +2946,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -3303,9 +3236,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Filters an organization or source's findings and  groups them by their specified properties.
-         *
-         * To group across all sources provide a `-` as the source id. Example:
+         * Filters an organization or source's findings and groups them by their specified properties. To
+         * group across all sources provide a `-` as the source id. Example:
          * /v1beta1/organizations/{organization_id}/sources/-/findings
          *
          * Create a request for the method "findings.group".
@@ -3314,10 +3246,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Group#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To groupBy across
-        all sources
-         *        provide a source_id of `-`. For example:
-        organizations/{organization_id}/sources/-
+         *        "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
+         *        provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupFindingsRequest}
          * @return the request
          */
@@ -3335,9 +3265,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
           /**
-           * Filters an organization or source's findings and  groups them by their specified properties.
-           *
-           * To group across all sources provide a `-` as the source id. Example:
+           * Filters an organization or source's findings and groups them by their specified properties. To
+           * group across all sources provide a `-` as the source id. Example:
            * /v1beta1/organizations/{organization_id}/sources/-/findings
            *
            * Create a request for the method "findings.group".
@@ -3349,10 +3278,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the source to groupBy. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To groupBy across
-        all sources
-         *        provide a source_id of `-`. For example:
-        organizations/{organization_id}/sources/-
+         *        "organizations/[organization_id]/sources/[source_id]". To groupBy across all sources
+         *        provide a source_id of `-`. For example: organizations/{organization_id}/sources/-
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GroupFindingsRequest}
            * @since 1.13
            */
@@ -3458,10 +3385,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           }
         }
         /**
-         * Lists an organization or source's findings.
-         *
-         * To list across all sources provide a `-` as the source id. Example:
-         * /v1beta1/organizations/{organization_id}/sources/-/findings
+         * Lists an organization or source's findings. To list across all sources provide a `-` as the
+         * source id. Example: /v1beta1/organizations/{organization_id}/sources/-/findings
          *
          * Create a request for the method "findings.list".
          *
@@ -3469,10 +3394,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To list across all
-        sources provide
-         *        a source_id of `-`. For example:
-        organizations/{organization_id}/sources/-
+         *        "organizations/[organization_id]/sources/[source_id]". To list across all sources provide
+         *        a source_id of `-`. For example: organizations/{organization_id}/sources/-
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3489,10 +3412,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
               java.util.regex.Pattern.compile("^organizations/[^/]+/sources/[^/]+$");
 
           /**
-           * Lists an organization or source's findings.
-           *
-           * To list across all sources provide a `-` as the source id. Example:
-           * /v1beta1/organizations/{organization_id}/sources/-/findings
+           * Lists an organization or source's findings. To list across all sources provide a `-` as the
+           * source id. Example: /v1beta1/organizations/{organization_id}/sources/-/findings
            *
            * Create a request for the method "findings.list".
            *
@@ -3502,10 +3423,8 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Name of the source the findings belong to. Its format is
-         *        "organizations/[organization_id]/sources/[source_id]". To list across all
-        sources provide
-         *        a source_id of `-`. For example:
-        organizations/{organization_id}/sources/-
+         *        "organizations/[organization_id]/sources/[source_id]". To list across all sources provide
+         *        a source_id of `-`. For example: organizations/{organization_id}/sources/-
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3640,48 +3559,27 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Expression that defines the filter to apply across findings. The expression is a list
            * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
-           * are not supported, and `OR` has higher precedence than `AND`.
-           *
-           * Restrictions have the form `  ` and may have a `-` character in front of them to
-           * indicate negation. Examples include:
-           *
-           * * name * source_properties.a_property * security_marks.marks.marka
-           *
-           * The supported operators are:
-           *
-           * * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning
-           * substring matching, for strings.
-           *
-           * The supported value types are:
-           *
+           * are not supported, and `OR` has higher precedence than `AND`. Restrictions have the
+           * form ` ` and may have a `-` character in front of them to indicate negation. Examples
+           * include: * name * source_properties.a_property * security_marks.marks.marka The
+           * supported operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer
+           * values. * `:`, meaning substring matching, for strings. The supported value types are:
            * * string literals in quotes. * integer literals without quotes. * boolean literals
-           * `true` and `false` without quotes.
-           *
-           * For example, `source_properties.size = 100` is a valid filter string.
+           * `true` and `false` without quotes. For example, `source_properties.size = 100` is a
+           * valid filter string.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
           /** Expression that defines the filter to apply across findings. The expression is a list of one or
          more restrictions combined via logical operators `AND` and `OR`. Parentheses are not supported, and
-         `OR` has higher precedence than `AND`.
-
-         Restrictions have the form `  ` and may have a `-` character in front of them to indicate negation.
-         Examples include:
-
-         * name * source_properties.a_property * security_marks.marks.marka
-
-         The supported operators are:
-
-         * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning substring
-         matching, for strings.
-
-         The supported value types are:
-
-         * string literals in quotes. * integer literals without quotes. * boolean literals `true` and
-         `false` without quotes.
-
-         For example, `source_properties.size = 100` is a valid filter string.
+         `OR` has higher precedence than `AND`. Restrictions have the form ` ` and may have a `-` character
+         in front of them to indicate negation. Examples include: * name * source_properties.a_property *
+         security_marks.marks.marka The supported operators are: * `=` for all value types. * `>`, `<`,
+         `>=`, `<=` for integer values. * `:`, meaning substring matching, for strings. The supported value
+         types are: * string literals in quotes. * integer literals without quotes. * boolean literals
+         `true` and `false` without quotes. For example, `source_properties.size = 100` is a valid filter
+         string.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -3690,24 +3588,14 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
           /**
            * Expression that defines the filter to apply across findings. The expression is a list
            * of one or more restrictions combined via logical operators `AND` and `OR`. Parentheses
-           * are not supported, and `OR` has higher precedence than `AND`.
-           *
-           * Restrictions have the form `  ` and may have a `-` character in front of them to
-           * indicate negation. Examples include:
-           *
-           * * name * source_properties.a_property * security_marks.marks.marka
-           *
-           * The supported operators are:
-           *
-           * * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer values. * `:`, meaning
-           * substring matching, for strings.
-           *
-           * The supported value types are:
-           *
+           * are not supported, and `OR` has higher precedence than `AND`. Restrictions have the
+           * form ` ` and may have a `-` character in front of them to indicate negation. Examples
+           * include: * name * source_properties.a_property * security_marks.marks.marka The
+           * supported operators are: * `=` for all value types. * `>`, `<`, `>=`, `<=` for integer
+           * values. * `:`, meaning substring matching, for strings. The supported value types are:
            * * string literals in quotes. * integer literals without quotes. * boolean literals
-           * `true` and `false` without quotes.
-           *
-           * For example, `source_properties.size = 100` is a valid filter string.
+           * `true` and `false` without quotes. For example, `source_properties.size = 100` is a
+           * valid filter string.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -3721,7 +3609,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * specify descending order for a field, a suffix " desc" should be appended to the field
            * name. For example: "name desc,source_properties.a_property". Redundant space characters
            * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
-           * desc  ,   source_properties.a_property  " are equivalent.
+           * desc , source_properties.a_property " are equivalent.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
@@ -3731,8 +3619,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          default sorting order is ascending. To specify descending order for a field, a suffix " desc"
          should be appended to the field name. For example: "name desc,source_properties.a_property".
          Redundant space characters in the syntax are insignificant. "name
-         desc,source_properties.a_property" and " name     desc  ,   source_properties.a_property  " are
-         equivalent.
+         desc,source_properties.a_property" and " name desc , source_properties.a_property " are equivalent.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -3745,7 +3632,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * specify descending order for a field, a suffix " desc" should be appended to the field
            * name. For example: "name desc,source_properties.a_property". Redundant space characters
            * in the syntax are insignificant. "name desc,source_properties.a_property" and " name
-           * desc  ,   source_properties.a_property  " are equivalent.
+           * desc , source_properties.a_property " are equivalent.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -3841,8 +3728,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name The relative resource name of this finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        Example:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding}
          * @return the request
@@ -3873,8 +3759,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The relative resource name of this finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        Example:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1Finding}
            * @since 1.13
@@ -4012,8 +3897,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * optional parameters, call the {@link SetState#execute()} method to invoke the remote operation.
          *
          * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        Example:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
          *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SetFindingStateRequest}
          * @return the request
@@ -4043,8 +3927,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The relative resource name of the finding. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        Example:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Example:
          *        "organizations/{organization_id}/sources/{source_id}/finding/{finding_id}".
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.SetFindingStateRequest}
            * @since 1.13
@@ -4160,8 +4043,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
          * operation.
          *
          * @param name The relative resource name of the SecurityMarks. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        Examples:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
          *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
          * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}
@@ -4192,8 +4074,7 @@ public class SecurityCommandCenter extends com.google.api.client.googleapis.serv
            * invoking the constructor. </p>
            *
            * @param name The relative resource name of the SecurityMarks. See:
-         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name
-        Examples:
+         *        https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples:
          *        "organizations/{organization_id}/assets/{asset_id}/securityMarks"
          *        "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
            * @param content the {@link com.google.api.services.securitycenter.v1beta1.model.GoogleCloudSecuritycenterV1beta1SecurityMarks}

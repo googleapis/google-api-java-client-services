@@ -1,6 +1,6 @@
 # Search Ads 360 API Client Library for Java
 
-Reports and modifies your advertising data in DoubleClick Search (for example, campaigns, ad groups, keywords, and conversions).
+The Search Ads 360 API allows developers to automate uploading conversions and downloading reports from Search Ads 360.
 
 This page contains information about getting started with the Search Ads 360 API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-doubleclicksearch</artifactId>
-      <version>v2-rev20200325-1.30.9</version>
+      <version>v2-rev20200825-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-doubleclicksearch:v2-rev20200325-1.30.9'
+  compile 'com.google.apis:google-api-services-doubleclicksearch:v2-rev20200825-1.30.10'
 }
 ```
 

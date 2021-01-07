@@ -20,8 +20,8 @@ package com.google.api.services.deploymentmanager.model;
  * Model definition for ResourceUpdate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deployment Manager API V2Beta Methods.
- * For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud Deployment Manager V2 API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -54,7 +54,7 @@ public final class ResourceUpdate extends com.google.api.client.json.GenericJson
   private java.lang.String finalProperties;
 
   /**
-   * Output only. The intent of the resource: PREVIEW, UPDATE, or CANCEL.
+   * Output only. The intent of the resource: `PREVIEW`, `UPDATE`, or `CANCEL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +152,7 @@ public final class ResourceUpdate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The intent of the resource: PREVIEW, UPDATE, or CANCEL.
+   * Output only. The intent of the resource: `PREVIEW`, `UPDATE`, or `CANCEL`.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntent() {
@@ -160,7 +160,7 @@ public final class ResourceUpdate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The intent of the resource: PREVIEW, UPDATE, or CANCEL.
+   * Output only. The intent of the resource: `PREVIEW`, `UPDATE`, or `CANCEL`.
    * @param intent intent or {@code null} for none
    */
   public ResourceUpdate setIntent(java.lang.String intent) {

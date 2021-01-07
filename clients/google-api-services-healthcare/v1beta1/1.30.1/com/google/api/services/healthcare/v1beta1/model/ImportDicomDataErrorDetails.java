@@ -17,7 +17,8 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Returns the errors encountered during DICOM store import.
+ * Deprecated. Error details are in [Cloud Logging](/healthcare/docs/how-tos/logging). Returns the
+ * errors encountered during DICOM store import.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,10 +31,8 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ImportDicomDataErrorDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated. Use only for debugging purposes.
-   *
-   * Contains sample errors encountered in imports of individual resources. For example, a Cloud
-   * Storage object.
+   * Deprecated. Use only for debugging purposes. Contains sample errors encountered in imports of
+   * individual resources. For example, a Cloud Storage object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,10 +45,8 @@ public final class ImportDicomDataErrorDetails extends com.google.api.client.jso
   }
 
   /**
-   * Deprecated. Use only for debugging purposes.
-   *
-   * Contains sample errors encountered in imports of individual resources. For example, a Cloud
-   * Storage object.
+   * Deprecated. Use only for debugging purposes. Contains sample errors encountered in imports of
+   * individual resources. For example, a Cloud Storage object.
    * @return value or {@code null} for none
    */
   public java.util.List<ErrorDetail> getSampleErrors() {
@@ -57,10 +54,8 @@ public final class ImportDicomDataErrorDetails extends com.google.api.client.jso
   }
 
   /**
-   * Deprecated. Use only for debugging purposes.
-   *
-   * Contains sample errors encountered in imports of individual resources. For example, a Cloud
-   * Storage object.
+   * Deprecated. Use only for debugging purposes. Contains sample errors encountered in imports of
+   * individual resources. For example, a Cloud Storage object.
    * @param sampleErrors sampleErrors or {@code null} for none
    */
   public ImportDicomDataErrorDetails setSampleErrors(java.util.List<ErrorDetail> sampleErrors) {

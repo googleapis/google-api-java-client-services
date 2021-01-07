@@ -32,11 +32,10 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
 
   /**
    * Last known customer selection regarding marketing preferences. In certain cases this selection
-   * might not be known, so this field would be empty. If a customer selected granted in their most
-   * recent order, they can be subscribed to marketing emails. Customers who have chosen denied must
-   * not be subscribed, or must be unsubscribed if already opted-in.
-   *
-   * Acceptable values are:   - "denied"  - "granted"
+   * might not be known, so this field would be empty. If a customer selected `granted` in their
+   * most recent order, they can be subscribed to marketing emails. Customers who have chosen
+   * `denied` must not be subscribed, or must be unsubscribed if already opted-in. Acceptable values
+   * are: - "`denied`" - "`granted`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +51,7 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
 
   /**
    * Email address that can be used for marketing purposes. The field may be empty even if
-   * explicitMarketingPreference is 'granted'. This happens when retrieving an old order from the
+   * `explicitMarketingPreference` is 'granted'. This happens when retrieving an old order from the
    * customer who deleted their account.
    * The value may be {@code null}.
    */
@@ -61,11 +60,10 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
 
   /**
    * Last known customer selection regarding marketing preferences. In certain cases this selection
-   * might not be known, so this field would be empty. If a customer selected granted in their most
-   * recent order, they can be subscribed to marketing emails. Customers who have chosen denied must
-   * not be subscribed, or must be unsubscribed if already opted-in.
-   *
-   * Acceptable values are:   - "denied"  - "granted"
+   * might not be known, so this field would be empty. If a customer selected `granted` in their
+   * most recent order, they can be subscribed to marketing emails. Customers who have chosen
+   * `denied` must not be subscribed, or must be unsubscribed if already opted-in. Acceptable values
+   * are: - "`denied`" - "`granted`"
    * @return value or {@code null} for none
    */
   public java.lang.String getExplicitMarketingPreference() {
@@ -74,11 +72,10 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
 
   /**
    * Last known customer selection regarding marketing preferences. In certain cases this selection
-   * might not be known, so this field would be empty. If a customer selected granted in their most
-   * recent order, they can be subscribed to marketing emails. Customers who have chosen denied must
-   * not be subscribed, or must be unsubscribed if already opted-in.
-   *
-   * Acceptable values are:   - "denied"  - "granted"
+   * might not be known, so this field would be empty. If a customer selected `granted` in their
+   * most recent order, they can be subscribed to marketing emails. Customers who have chosen
+   * `denied` must not be subscribed, or must be unsubscribed if already opted-in. Acceptable values
+   * are: - "`denied`" - "`granted`"
    * @param explicitMarketingPreference explicitMarketingPreference or {@code null} for none
    */
   public OrderCustomerMarketingRightsInfo setExplicitMarketingPreference(java.lang.String explicitMarketingPreference) {
@@ -107,7 +104,7 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
 
   /**
    * Email address that can be used for marketing purposes. The field may be empty even if
-   * explicitMarketingPreference is 'granted'. This happens when retrieving an old order from the
+   * `explicitMarketingPreference` is 'granted'. This happens when retrieving an old order from the
    * customer who deleted their account.
    * @return value or {@code null} for none
    */
@@ -117,7 +114,7 @@ public final class OrderCustomerMarketingRightsInfo extends com.google.api.clien
 
   /**
    * Email address that can be used for marketing purposes. The field may be empty even if
-   * explicitMarketingPreference is 'granted'. This happens when retrieving an old order from the
+   * `explicitMarketingPreference` is 'granted'. This happens when retrieving an old order from the
    * customer who deleted their account.
    * @param marketingEmailAddress marketingEmailAddress or {@code null} for none
    */

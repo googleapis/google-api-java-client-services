@@ -57,25 +57,31 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private NodeConfig config;
 
   /**
-   * The initial node count for the pool. You must ensure that your Compute Engine resource quota is
-   * sufficient for this number of instances. You must also have available firewall and routes
-   * quota.
+   * The initial node count for the pool. You must ensure that your Compute Engine [resource
+   * quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You
+   * must also have available firewall and routes quota.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer initialNodeCount;
 
   /**
-   * [Output only] The resource URLs of the [managed instance groups](/compute/docs/instance-groups
-   * /creating-groups-of-managed-instances) associated with this node pool.
+   * [Output only] The resource URLs of the [managed instance
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
+   * instances) associated with this node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> instanceGroupUrls;
 
   /**
-   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * NodePool's nodes should be located.
+   * The list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
+   * should be located. If this value is unspecified during node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
+   * be used, instead. Warning: changing node pool locations will result in nodes being added and/or
+   * removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,9 +206,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The initial node count for the pool. You must ensure that your Compute Engine resource quota is
-   * sufficient for this number of instances. You must also have available firewall and routes
-   * quota.
+   * The initial node count for the pool. You must ensure that your Compute Engine [resource
+   * quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You
+   * must also have available firewall and routes quota.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialNodeCount() {
@@ -210,9 +216,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The initial node count for the pool. You must ensure that your Compute Engine resource quota is
-   * sufficient for this number of instances. You must also have available firewall and routes
-   * quota.
+   * The initial node count for the pool. You must ensure that your Compute Engine [resource
+   * quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You
+   * must also have available firewall and routes quota.
    * @param initialNodeCount initialNodeCount or {@code null} for none
    */
   public NodePool setInitialNodeCount(java.lang.Integer initialNodeCount) {
@@ -221,8 +227,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The resource URLs of the [managed instance groups](/compute/docs/instance-groups
-   * /creating-groups-of-managed-instances) associated with this node pool.
+   * [Output only] The resource URLs of the [managed instance
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
+   * instances) associated with this node pool.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstanceGroupUrls() {
@@ -230,8 +237,9 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output only] The resource URLs of the [managed instance groups](/compute/docs/instance-groups
-   * /creating-groups-of-managed-instances) associated with this node pool.
+   * [Output only] The resource URLs of the [managed instance
+   * groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-
+   * instances) associated with this node pool.
    * @param instanceGroupUrls instanceGroupUrls or {@code null} for none
    */
   public NodePool setInstanceGroupUrls(java.util.List<java.lang.String> instanceGroupUrls) {
@@ -240,8 +248,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * NodePool's nodes should be located.
+   * The list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
+   * should be located. If this value is unspecified during node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
+   * be used, instead. Warning: changing node pool locations will result in nodes being added and/or
+   * removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -249,8 +262,13 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * NodePool's nodes should be located.
+   * The list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
+   * should be located. If this value is unspecified during node pool creation, the
+   * [Cluster.Locations](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will
+   * be used, instead. Warning: changing node pool locations will result in nodes being added and/or
+   * removed.
    * @param locations locations or {@code null} for none
    */
   public NodePool setLocations(java.util.List<java.lang.String> locations) {

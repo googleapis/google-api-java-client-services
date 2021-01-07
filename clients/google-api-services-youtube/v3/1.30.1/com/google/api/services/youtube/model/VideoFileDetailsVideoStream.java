@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Information about a video stream.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -83,7 +83,7 @@ public final class VideoFileDetailsVideoStream extends com.google.api.client.jso
 
   /**
    * The encoded video content's width in pixels. You can calculate the video's encoding aspect
-   * ratio as width_pixels / height_pixels.
+   * ratio as width_pixels/height_pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,7 +216,7 @@ public final class VideoFileDetailsVideoStream extends com.google.api.client.jso
 
   /**
    * The encoded video content's width in pixels. You can calculate the video's encoding aspect
-   * ratio as width_pixels / height_pixels.
+   * ratio as width_pixels/height_pixels.
    * @return value or {@code null} for none
    */
   public java.lang.Long getWidthPixels() {
@@ -225,7 +225,7 @@ public final class VideoFileDetailsVideoStream extends com.google.api.client.jso
 
   /**
    * The encoded video content's width in pixels. You can calculate the video's encoding aspect
-   * ratio as width_pixels / height_pixels.
+   * ratio as width_pixels/height_pixels.
    * @param widthPixels widthPixels or {@code null} for none
    */
   public VideoFileDetailsVideoStream setWidthPixels(java.lang.Long widthPixels) {

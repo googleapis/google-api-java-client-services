@@ -17,14 +17,10 @@
 package com.google.api.services.serviceconsumermanagement.v1.model;
 
 /**
- * The per-product per-project service identity for a service.
- *
- * Use this field to configure per-product per-project service identity. Example of a service
- * identity configuration.
- *
- *     usage:       service_identity:       - service_account_parent: "projects/123456789"
- * display_name: "Cloud XXX Service Agent"         description: "Used as the identity of Cloud XXX
- * to access resources"
+ * The per-product per-project service identity for a service. Use this field to configure per-
+ * product per-project service identity. Example of a service identity configuration. usage:
+ * service_identity: - service_account_parent: "projects/123456789" display_name: "Cloud XXX Service
+ * Agent" description: "Used as the identity of Cloud XXX to access resources"
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed
@@ -54,9 +50,8 @@ public final class ServiceIdentity extends com.google.api.client.json.GenericJso
   private java.lang.String displayName;
 
   /**
-   * A service account project that hosts the service accounts.
-   *
-   * An example name would be: `projects/123456789`
+   * A service account project that hosts the service accounts. An example name would be:
+   * `projects/123456789`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,9 +96,8 @@ public final class ServiceIdentity extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A service account project that hosts the service accounts.
-   *
-   * An example name would be: `projects/123456789`
+   * A service account project that hosts the service accounts. An example name would be:
+   * `projects/123456789`
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountParent() {
@@ -111,9 +105,8 @@ public final class ServiceIdentity extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A service account project that hosts the service accounts.
-   *
-   * An example name would be: `projects/123456789`
+   * A service account project that hosts the service accounts. An example name would be:
+   * `projects/123456789`
    * @param serviceAccountParent serviceAccountParent or {@code null} for none
    */
   public ServiceIdentity setServiceAccountParent(java.lang.String serviceAccountParent) {

@@ -20,7 +20,7 @@ package com.google.api.services.deploymentmanager.model;
  * Model definition for Manifest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deployment Manager API. For a detailed
+ * transmitted over HTTP when working with the Cloud Deployment Manager V2 API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -78,9 +78,7 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
   private java.lang.String layout;
 
   /**
-   * Output only.
-   *
-   * The name of the manifest.
+   * Output only. The name of the manifest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,9 +192,7 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only.
-   *
-   * The name of the manifest.
+   * Output only. The name of the manifest.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -204,9 +200,7 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only.
-   *
-   * The name of the manifest.
+   * Output only. The name of the manifest.
    * @param name name or {@code null} for none
    */
   public Manifest setName(java.lang.String name) {

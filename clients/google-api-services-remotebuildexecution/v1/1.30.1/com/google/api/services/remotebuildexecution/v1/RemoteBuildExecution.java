@@ -46,7 +46,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Remote Build Execution API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Remote Build Execution API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -150,8 +150,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the remotebuildexecution server.  After setting any
      * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
      *
-     * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
      * @return the request
      */
     public Download download(java.lang.String resourceName) throws java.io.IOException {
@@ -178,8 +177,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
        * @since 1.13
        */
       protected Download(java.lang.String resourceName) {
@@ -273,21 +271,17 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         return (Download) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Name of the media that is being downloaded.  See ReadRequest.resource_name.
-       */
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** Name of the media that is being downloaded.  See ReadRequest.resource_name.
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name.
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
-      /**
-       * Name of the media that is being downloaded.  See ReadRequest.resource_name.
-       */
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
       public Download setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -311,8 +305,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the remotebuildexecution server.  After setting any
      * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
      *
-     * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
      * @param content the {@link com.google.api.services.remotebuildexecution.v1.model.GoogleBytestreamMedia}
      * @return the request
      */
@@ -334,8 +327,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * This method should be used for uploading media content.
      * </p>
      *
-     * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
      * @param content the {@link com.google.api.services.remotebuildexecution.v1.model.GoogleBytestreamMedia} media metadata or {@code null} if none
      * @param mediaContent The media HTTP content or {@code null} if none.
      * @return the request
@@ -365,8 +357,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
        * @param content the {@link com.google.api.services.remotebuildexecution.v1.model.GoogleBytestreamMedia}
        * @since 1.13
        */
@@ -395,8 +386,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * This constructor should be used for uploading media content.
        * </p>
        *
-       * @param resourceName Name of the media that is being downloaded.  See
-    ReadRequest.resource_name.
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
        * @param content the {@link com.google.api.services.remotebuildexecution.v1.model.GoogleBytestreamMedia} media metadata or {@code null} if none
        * @param mediaContent The media HTTP content or {@code null} if none.
        * @since 1.13
@@ -462,21 +452,17 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         return (Upload) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Name of the media that is being downloaded.  See ReadRequest.resource_name.
-       */
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** Name of the media that is being downloaded.  See ReadRequest.resource_name.
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name.
        */
       public java.lang.String getResourceName() {
         return resourceName;
       }
 
-      /**
-       * Name of the media that is being downloaded.  See ReadRequest.resource_name.
-       */
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
       public Upload setResourceName(java.lang.String resourceName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
@@ -516,9 +502,9 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
   public class Operations {
 
     /**
-     * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-     * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-     * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+     * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+     * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
      * methods to check whether the cancellation succeeded or whether the operation completed despite
      * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
      * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -547,13 +533,13 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-       * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-       * other methods to check whether the cancellation succeeded or whether the operation completed
-       * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-       * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-       * corresponding to `Code.CANCELLED`.
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * `Code.CANCELLED`.
        *
        * Create a request for the method "operations.cancel".
        *
@@ -793,13 +779,12 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
     }
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`.
-     *
-     * NOTE: the `name` binding allows API services to override the binding to use different resource
-     * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-     * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-     * compatibility, the default name includes the operations collection id, however overriding users
-     * must ensure the name binding is the parent resource, without the operations collection id.
+     * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+     * the binding to use different resource name schemes, such as `users/operations`. To override the
+     * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+     * configuration. For backwards compatibility, the default name includes the operations collection
+     * id, however overriding users must ensure the name binding is the parent resource, without the
+     * operations collection id.
      *
      * Create a request for the method "operations.list".
      *
@@ -824,13 +809,12 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
 
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * NOTE: the `name` binding allows API services to override the binding to use different resource
-       * name schemes, such as `users/operations`. To override the binding, API services can add a
-       * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-       * compatibility, the default name includes the operations collection id, however overriding users
-       * must ensure the name binding is the parent resource, without the operations collection id.
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+       * override the binding to use different resource name schemes, such as `users/operations`. To
+       * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+       * their service configuration. For backwards compatibility, the default name includes the
+       * operations collection id, however overriding users must ensure the name binding is the parent
+       * resource, without the operations collection id.
        *
        * Create a request for the method "operations.list".
        *
@@ -1036,7 +1020,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
     public class Operations {
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -1061,7 +1045,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".

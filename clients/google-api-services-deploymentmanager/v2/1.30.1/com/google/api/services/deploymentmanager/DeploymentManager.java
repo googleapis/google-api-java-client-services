@@ -20,12 +20,12 @@ package com.google.api.services.deploymentmanager;
  * Service definition for DeploymentManager (v2).
  *
  * <p>
- * Declares, configures, and deploys complex solutions on Google Cloud Platform.
+ * The Google Cloud Deployment Manager v2 API provides services for configuring, deploying, and viewing Google Cloud services and APIs via templates which specify deployments of Cloud resources.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/deployment-manager/" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/deployment-manager" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Cloud Deployment Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Deployment Manager V2 API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -55,7 +55,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://deploymentmanager.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -63,7 +63,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "deploymentmanager/v2/projects/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/deploymentmanager/v2";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -164,7 +164,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class CancelPreview extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Operation> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{deployment}/cancelPreview";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/cancelPreview";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -205,8 +205,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public CancelPreview set$Xgafv(java.lang.String $Xgafv) {
+        return (CancelPreview) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CancelPreview setAccessToken(java.lang.String accessToken) {
+        return (CancelPreview) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public CancelPreview setAlt(java.lang.String alt) {
         return (CancelPreview) super.setAlt(alt);
+      }
+
+      @Override
+      public CancelPreview setCallback(java.lang.String callback) {
+        return (CancelPreview) super.setCallback(callback);
       }
 
       @Override
@@ -235,8 +250,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public CancelPreview setUserIp(java.lang.String userIp) {
-        return (CancelPreview) super.setUserIp(userIp);
+      public CancelPreview setUploadType(java.lang.String uploadType) {
+        return (CancelPreview) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CancelPreview setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CancelPreview) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -306,7 +326,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class Delete extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Operation> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{deployment}";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{deployment}";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -338,8 +358,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -368,8 +403,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -450,7 +490,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class Get extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Deployment> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{deployment}";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{deployment}";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -500,8 +540,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -530,8 +585,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -602,7 +662,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class GetIamPolicy extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Policy> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{resource}/getIamPolicy";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{resource}/getIamPolicy";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -653,8 +713,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetIamPolicy setAlt(java.lang.String alt) {
         return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
       }
 
       @Override
@@ -683,8 +758,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GetIamPolicy setUserIp(java.lang.String userIp) {
-        return (GetIamPolicy) super.setUserIp(userIp);
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID for this request. */
@@ -729,6 +809,22 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
         return this;
       }
 
+      /** Requested IAM Policy version. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer optionsRequestedPolicyVersion;
+
+      /** Requested IAM Policy version.
+       */
+      public java.lang.Integer getOptionsRequestedPolicyVersion() {
+        return optionsRequestedPolicyVersion;
+      }
+
+      /** Requested IAM Policy version. */
+      public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+        return this;
+      }
+
       @Override
       public GetIamPolicy set(String parameterName, Object value) {
         return (GetIamPolicy) super.set(parameterName, value);
@@ -754,7 +850,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class Insert extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Operation> {
 
-      private static final String REST_PATH = "{project}/global/deployments";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -785,8 +881,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -815,8 +926,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -860,17 +976,17 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * If set to true, creates a deployment and creates "shell" resources but does not actually
        * instantiate these resources. This allows you to preview what your deployment looks like.
        * After previewing a deployment, you can deploy your resources by making a request with the
-       * update() method or you can use the cancelPreview() method to cancel the preview altogether.
-       * Note that the deployment will still exist after you cancel the preview and you must
-       * separately delete this deployment if you want to remove it.
+       * `update()` method or you can use the `cancelPreview()` method to cancel the preview
+       * altogether. Note that the deployment will still exist after you cancel the preview and you
+       * must separately delete this deployment if you want to remove it.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean preview;
 
       /** If set to true, creates a deployment and creates "shell" resources but does not actually
      instantiate these resources. This allows you to preview what your deployment looks like. After
-     previewing a deployment, you can deploy your resources by making a request with the update() method
-     or you can use the cancelPreview() method to cancel the preview altogether. Note that the
+     previewing a deployment, you can deploy your resources by making a request with the `update()`
+     method or you can use the `cancelPreview()` method to cancel the preview altogether. Note that the
      deployment will still exist after you cancel the preview and you must separately delete this
      deployment if you want to remove it.
        */
@@ -882,9 +998,9 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * If set to true, creates a deployment and creates "shell" resources but does not actually
        * instantiate these resources. This allows you to preview what your deployment looks like.
        * After previewing a deployment, you can deploy your resources by making a request with the
-       * update() method or you can use the cancelPreview() method to cancel the preview altogether.
-       * Note that the deployment will still exist after you cancel the preview and you must
-       * separately delete this deployment if you want to remove it.
+       * `update()` method or you can use the `cancelPreview()` method to cancel the preview
+       * altogether. Note that the deployment will still exist after you cancel the preview and you
+       * must separately delete this deployment if you want to remove it.
        */
       public Insert setPreview(java.lang.Boolean preview) {
         this.preview = preview;
@@ -915,7 +1031,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class List extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.DeploymentsListResponse> {
 
-      private static final String REST_PATH = "{project}/global/deployments";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -955,8 +1071,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -985,8 +1116,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -1014,41 +1150,32 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * A filter expression that filters resources listed in the response. The expression must
        * specify the field name, a comparison operator, and the value that you want to use for
        * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either =, !=, >, or <.
-       *
-       * For example, if you are filtering Compute Engine instances, you can exclude instances named
-       * example-instance by specifying name != example-instance.
-       *
-       * You can also filter nested fields. For example, you could specify
-       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
-       * automatic restarts. You can use filtering on nested fields to filter based on resource
-       * labels.
-       *
-       * To filter on multiple expressions, provide each separate expression within parentheses. For
-       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
-       * each expression is an AND expression. However, you can include AND and OR expressions
-       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
-       * Broadwell") AND (scheduling.automaticRestart = true).
+       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
+       * instances, you can exclude instances named `example-instance` by specifying `name !=
+       * example-instance`. You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels. To filter on multiple expressions, provide each separate expression within
+       * parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
+       * Skylake") ``` By default, each expression is an `AND` expression. However, you can include
+       * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR
+       * (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** A filter expression that filters resources listed in the response. The expression must specify the
      field name, a comparison operator, and the value that you want to use for filtering. The value must
-     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
-
+     be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `>`, or `<`.
      For example, if you are filtering Compute Engine instances, you can exclude instances named
-     example-instance by specifying name != example-instance.
-
-     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
-     false to include instances only if they are not scheduled for automatic restarts. You can use
-     filtering on nested fields to filter based on resource labels.
-
-     To filter on multiple expressions, provide each separate expression within parentheses. For
-     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
-     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
-     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
-     (scheduling.automaticRestart = true).
+     `example-instance` by specifying `name != example-instance`. You can also filter nested fields. For
+     example, you could specify `scheduling.automaticRestart = false` to include instances only if they
+     are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on
+     resource labels. To filter on multiple expressions, provide each separate expression within
+     parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake")
+     ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+     expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+     Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       public java.lang.String getFilter() {
         return filter;
@@ -1058,21 +1185,16 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * A filter expression that filters resources listed in the response. The expression must
        * specify the field name, a comparison operator, and the value that you want to use for
        * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either =, !=, >, or <.
-       *
-       * For example, if you are filtering Compute Engine instances, you can exclude instances named
-       * example-instance by specifying name != example-instance.
-       *
-       * You can also filter nested fields. For example, you could specify
-       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
-       * automatic restarts. You can use filtering on nested fields to filter based on resource
-       * labels.
-       *
-       * To filter on multiple expressions, provide each separate expression within parentheses. For
-       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
-       * each expression is an AND expression. However, you can include AND and OR expressions
-       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
-       * Broadwell") AND (scheduling.automaticRestart = true).
+       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
+       * instances, you can exclude instances named `example-instance` by specifying `name !=
+       * example-instance`. You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels. To filter on multiple expressions, provide each separate expression within
+       * parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
+       * Skylake") ``` By default, each expression is an `AND` expression. However, you can include
+       * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR
+       * (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1081,17 +1203,17 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
-       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
-       * 500, inclusive. (Default: 500)
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
        */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
       /** The maximum number of results per page that should be returned. If the number of available results
-     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
-     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
-     500) [default: 500] [minimum: 0]
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -1099,9 +1221,9 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
-       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
-       * 500, inclusive. (Default: 500)
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
        */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
@@ -1110,27 +1232,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * Sorts list results by a certain order. By default, results are returned in alphanumerical
-       * order based on the resource name.
-       *
-       * You can also sort results in descending order based on the creation timestamp using
-       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
-       * in reverse chronological order (newest result first). Use this to sort resources like
-       * operations so that the newest operation is returned first.
-       *
-       * Currently, only sorting by name or creationTimestamp desc is supported.
+       * order based on the resource name. You can also sort results in descending order based on
+       * the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based
+       * on the `creationTimestamp` field in reverse chronological order (newest result first). Use
+       * this to sort resources like operations so that the newest operation is returned first.
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
       /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
-     based on the resource name.
-
-     You can also sort results in descending order based on the creation timestamp using
-     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
-     reverse chronological order (newest result first). Use this to sort resources like operations so
-     that the newest operation is returned first.
-
-     Currently, only sorting by name or creationTimestamp desc is supported.
+     based on the resource name. You can also sort results in descending order based on the creation
+     timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the
+     `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort
+     resources like operations so that the newest operation is returned first. Currently, only sorting
+     by `name` or `creationTimestamp desc` is supported.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -1138,14 +1254,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * Sorts list results by a certain order. By default, results are returned in alphanumerical
-       * order based on the resource name.
-       *
-       * You can also sort results in descending order based on the creation timestamp using
-       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
-       * in reverse chronological order (newest result first). Use this to sort resources like
-       * operations so that the newest operation is returned first.
-       *
-       * Currently, only sorting by name or creationTimestamp desc is supported.
+       * order based on the resource name. You can also sort results in descending order based on
+       * the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based
+       * on the `creationTimestamp` field in reverse chronological order (newest result first). Use
+       * this to sort resources like operations so that the newest operation is returned first.
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -1153,13 +1266,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
-       * list request to get the next page of results.
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
      request to get the next page of results.
        */
       public java.lang.String getPageToken() {
@@ -1167,11 +1280,34 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
-       * list request to get the next page of results.
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false and the logic is the same as today.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnPartialSuccess;
+
+      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
+     value is false and the logic is the same as today.
+       */
+      public java.lang.Boolean getReturnPartialSuccess() {
+        return returnPartialSuccess;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false and the logic is the same as today.
+       */
+      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+        this.returnPartialSuccess = returnPartialSuccess;
         return this;
       }
 
@@ -1181,8 +1317,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Updates a deployment and all of the resources described by the deployment manifest. This method
-     * supports patch semantics.
+     * Patches a deployment and all of the resources described by the deployment manifest.
      *
      * Create a request for the method "deployments.patch".
      *
@@ -1202,7 +1337,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class Patch extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Operation> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{deployment}";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{deployment}";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -1211,8 +1346,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       /**
-       * Updates a deployment and all of the resources described by the deployment manifest. This method
-       * supports patch semantics.
+       * Patches a deployment and all of the resources described by the deployment manifest.
        *
        * Create a request for the method "deployments.patch".
        *
@@ -1244,8 +1378,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -1274,8 +1423,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -1356,11 +1510,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * If set to true, updates the deployment and creates and updates the "shell" resources but
        * does not actually alter or instantiate these resources. This allows you to preview what
        * your deployment will look like. You can use this intent to preview how an update would
-       * affect your deployment. You must provide a target.config with a configuration if this is
+       * affect your deployment. You must provide a `target.config` with a configuration if this is
        * set to true. After previewing a deployment, you can deploy your resources by making a
-       * request with the update() or you can cancelPreview() to remove the preview altogether. Note
-       * that the deployment will still exist after you cancel the preview and you must separately
-       * delete this deployment if you want to remove it.
+       * request with the `update()` or you can `cancelPreview()` to remove the preview altogether.
+       * Note that the deployment will still exist after you cancel the preview and you must
+       * separately delete this deployment if you want to remove it.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean preview;
@@ -1368,10 +1522,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       /** If set to true, updates the deployment and creates and updates the "shell" resources but does not
      actually alter or instantiate these resources. This allows you to preview what your deployment will
      look like. You can use this intent to preview how an update would affect your deployment. You must
-     provide a target.config with a configuration if this is set to true. After previewing a deployment,
-     you can deploy your resources by making a request with the update() or you can cancelPreview() to
-     remove the preview altogether. Note that the deployment will still exist after you cancel the
-     preview and you must separately delete this deployment if you want to remove it. [default: false]
+     provide a `target.config` with a configuration if this is set to true. After previewing a
+     deployment, you can deploy your resources by making a request with the `update()` or you can
+     `cancelPreview()` to remove the preview altogether. Note that the deployment will still exist after
+     you cancel the preview and you must separately delete this deployment if you want to remove it.
+     [default: false]
        */
       public java.lang.Boolean getPreview() {
         return preview;
@@ -1381,11 +1536,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * If set to true, updates the deployment and creates and updates the "shell" resources but
        * does not actually alter or instantiate these resources. This allows you to preview what
        * your deployment will look like. You can use this intent to preview how an update would
-       * affect your deployment. You must provide a target.config with a configuration if this is
+       * affect your deployment. You must provide a `target.config` with a configuration if this is
        * set to true. After previewing a deployment, you can deploy your resources by making a
-       * request with the update() or you can cancelPreview() to remove the preview altogether. Note
-       * that the deployment will still exist after you cancel the preview and you must separately
-       * delete this deployment if you want to remove it.
+       * request with the `update()` or you can `cancelPreview()` to remove the preview altogether.
+       * Note that the deployment will still exist after you cancel the preview and you must
+       * separately delete this deployment if you want to remove it.
        */
       public Patch setPreview(java.lang.Boolean preview) {
         this.preview = preview;
@@ -1412,10 +1567,10 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * If set to true, updates the deployment and creates and updates the "shell" resources but does not
      actually alter or instantiate these resources. This allows you to preview what your deployment will
      look like. You can use this intent to preview how an update would affect your deployment. You must
-     provide a target.config with a configuration if this is set to true. After previewing a deployment,
-     you can deploy your resources by making a request with the update() or you can cancelPreview() to
-     remove the preview altogether. Note that the deployment will still exist after you cancel the
-     preview and you must separately delete this deployment if you want to remove it.
+     provide a `target.config` with a configuration if this is set to true. After previewing a
+     deployment, you can deploy your resources by making a request with the `update()` or you can
+     `cancelPreview()` to remove the preview altogether. Note that the deployment will still exist after
+     you cancel the preview and you must separately delete this deployment if you want to remove it.
        * </p>
        */
       public boolean isPreview() {
@@ -1452,7 +1607,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class SetIamPolicy extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Policy> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{resource}/setIamPolicy";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{resource}/setIamPolicy";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -1493,8 +1648,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SetIamPolicy setAlt(java.lang.String alt) {
         return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
       }
 
       @Override
@@ -1523,8 +1693,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public SetIamPolicy setUserIp(java.lang.String userIp) {
-        return (SetIamPolicy) super.setUserIp(userIp);
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID for this request. */
@@ -1596,7 +1771,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class Stop extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Operation> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{deployment}/stop";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/stop";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -1638,8 +1813,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Stop set$Xgafv(java.lang.String $Xgafv) {
+        return (Stop) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Stop setAccessToken(java.lang.String accessToken) {
+        return (Stop) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Stop setAlt(java.lang.String alt) {
         return (Stop) super.setAlt(alt);
+      }
+
+      @Override
+      public Stop setCallback(java.lang.String callback) {
+        return (Stop) super.setCallback(callback);
       }
 
       @Override
@@ -1668,8 +1858,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Stop setUserIp(java.lang.String userIp) {
-        return (Stop) super.setUserIp(userIp);
+      public Stop setUploadType(java.lang.String uploadType) {
+        return (Stop) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Stop) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -1741,7 +1936,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class TestIamPermissions extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.TestPermissionsResponse> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{resource}/testIamPermissions";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{resource}/testIamPermissions";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -1782,8 +1977,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public TestIamPermissions setAlt(java.lang.String alt) {
         return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
       }
 
       @Override
@@ -1812,8 +2022,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public TestIamPermissions setUserIp(java.lang.String userIp) {
-        return (TestIamPermissions) super.setUserIp(userIp);
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID for this request. */
@@ -1884,7 +2099,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class Update extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Operation> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{deployment}";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{deployment}";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -1925,8 +2140,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -1955,8 +2185,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -2037,11 +2272,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * If set to true, updates the deployment and creates and updates the "shell" resources but
        * does not actually alter or instantiate these resources. This allows you to preview what
        * your deployment will look like. You can use this intent to preview how an update would
-       * affect your deployment. You must provide a target.config with a configuration if this is
+       * affect your deployment. You must provide a `target.config` with a configuration if this is
        * set to true. After previewing a deployment, you can deploy your resources by making a
-       * request with the update() or you can cancelPreview() to remove the preview altogether. Note
-       * that the deployment will still exist after you cancel the preview and you must separately
-       * delete this deployment if you want to remove it.
+       * request with the `update()` or you can `cancelPreview()` to remove the preview altogether.
+       * Note that the deployment will still exist after you cancel the preview and you must
+       * separately delete this deployment if you want to remove it.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean preview;
@@ -2049,10 +2284,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       /** If set to true, updates the deployment and creates and updates the "shell" resources but does not
      actually alter or instantiate these resources. This allows you to preview what your deployment will
      look like. You can use this intent to preview how an update would affect your deployment. You must
-     provide a target.config with a configuration if this is set to true. After previewing a deployment,
-     you can deploy your resources by making a request with the update() or you can cancelPreview() to
-     remove the preview altogether. Note that the deployment will still exist after you cancel the
-     preview and you must separately delete this deployment if you want to remove it. [default: false]
+     provide a `target.config` with a configuration if this is set to true. After previewing a
+     deployment, you can deploy your resources by making a request with the `update()` or you can
+     `cancelPreview()` to remove the preview altogether. Note that the deployment will still exist after
+     you cancel the preview and you must separately delete this deployment if you want to remove it.
+     [default: false]
        */
       public java.lang.Boolean getPreview() {
         return preview;
@@ -2062,11 +2298,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * If set to true, updates the deployment and creates and updates the "shell" resources but
        * does not actually alter or instantiate these resources. This allows you to preview what
        * your deployment will look like. You can use this intent to preview how an update would
-       * affect your deployment. You must provide a target.config with a configuration if this is
+       * affect your deployment. You must provide a `target.config` with a configuration if this is
        * set to true. After previewing a deployment, you can deploy your resources by making a
-       * request with the update() or you can cancelPreview() to remove the preview altogether. Note
-       * that the deployment will still exist after you cancel the preview and you must separately
-       * delete this deployment if you want to remove it.
+       * request with the `update()` or you can `cancelPreview()` to remove the preview altogether.
+       * Note that the deployment will still exist after you cancel the preview and you must
+       * separately delete this deployment if you want to remove it.
        */
       public Update setPreview(java.lang.Boolean preview) {
         this.preview = preview;
@@ -2093,10 +2329,10 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * If set to true, updates the deployment and creates and updates the "shell" resources but does not
      actually alter or instantiate these resources. This allows you to preview what your deployment will
      look like. You can use this intent to preview how an update would affect your deployment. You must
-     provide a target.config with a configuration if this is set to true. After previewing a deployment,
-     you can deploy your resources by making a request with the update() or you can cancelPreview() to
-     remove the preview altogether. Note that the deployment will still exist after you cancel the
-     preview and you must separately delete this deployment if you want to remove it.
+     provide a `target.config` with a configuration if this is set to true. After previewing a
+     deployment, you can deploy your resources by making a request with the `update()` or you can
+     `cancelPreview()` to remove the preview altogether. Note that the deployment will still exist after
+     you cancel the preview and you must separately delete this deployment if you want to remove it.
        * </p>
        */
       public boolean isPreview() {
@@ -2155,7 +2391,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class Get extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Manifest> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{deployment}/manifests/{manifest}";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/manifests/{manifest}";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -2215,8 +2451,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2245,8 +2496,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -2337,7 +2593,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class List extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.ManifestsListResponse> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{deployment}/manifests";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/manifests";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -2387,8 +2643,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2417,8 +2688,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -2467,41 +2743,32 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * A filter expression that filters resources listed in the response. The expression must
        * specify the field name, a comparison operator, and the value that you want to use for
        * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either =, !=, >, or <.
-       *
-       * For example, if you are filtering Compute Engine instances, you can exclude instances named
-       * example-instance by specifying name != example-instance.
-       *
-       * You can also filter nested fields. For example, you could specify
-       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
-       * automatic restarts. You can use filtering on nested fields to filter based on resource
-       * labels.
-       *
-       * To filter on multiple expressions, provide each separate expression within parentheses. For
-       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
-       * each expression is an AND expression. However, you can include AND and OR expressions
-       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
-       * Broadwell") AND (scheduling.automaticRestart = true).
+       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
+       * instances, you can exclude instances named `example-instance` by specifying `name !=
+       * example-instance`. You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels. To filter on multiple expressions, provide each separate expression within
+       * parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
+       * Skylake") ``` By default, each expression is an `AND` expression. However, you can include
+       * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR
+       * (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** A filter expression that filters resources listed in the response. The expression must specify the
      field name, a comparison operator, and the value that you want to use for filtering. The value must
-     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
-
+     be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `>`, or `<`.
      For example, if you are filtering Compute Engine instances, you can exclude instances named
-     example-instance by specifying name != example-instance.
-
-     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
-     false to include instances only if they are not scheduled for automatic restarts. You can use
-     filtering on nested fields to filter based on resource labels.
-
-     To filter on multiple expressions, provide each separate expression within parentheses. For
-     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
-     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
-     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
-     (scheduling.automaticRestart = true).
+     `example-instance` by specifying `name != example-instance`. You can also filter nested fields. For
+     example, you could specify `scheduling.automaticRestart = false` to include instances only if they
+     are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on
+     resource labels. To filter on multiple expressions, provide each separate expression within
+     parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake")
+     ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+     expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+     Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       public java.lang.String getFilter() {
         return filter;
@@ -2511,21 +2778,16 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * A filter expression that filters resources listed in the response. The expression must
        * specify the field name, a comparison operator, and the value that you want to use for
        * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either =, !=, >, or <.
-       *
-       * For example, if you are filtering Compute Engine instances, you can exclude instances named
-       * example-instance by specifying name != example-instance.
-       *
-       * You can also filter nested fields. For example, you could specify
-       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
-       * automatic restarts. You can use filtering on nested fields to filter based on resource
-       * labels.
-       *
-       * To filter on multiple expressions, provide each separate expression within parentheses. For
-       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
-       * each expression is an AND expression. However, you can include AND and OR expressions
-       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
-       * Broadwell") AND (scheduling.automaticRestart = true).
+       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
+       * instances, you can exclude instances named `example-instance` by specifying `name !=
+       * example-instance`. You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels. To filter on multiple expressions, provide each separate expression within
+       * parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
+       * Skylake") ``` By default, each expression is an `AND` expression. However, you can include
+       * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR
+       * (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -2534,17 +2796,17 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
-       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
-       * 500, inclusive. (Default: 500)
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
        */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
       /** The maximum number of results per page that should be returned. If the number of available results
-     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
-     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
-     500) [default: 500] [minimum: 0]
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -2552,9 +2814,9 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
-       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
-       * 500, inclusive. (Default: 500)
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
        */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
@@ -2563,27 +2825,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * Sorts list results by a certain order. By default, results are returned in alphanumerical
-       * order based on the resource name.
-       *
-       * You can also sort results in descending order based on the creation timestamp using
-       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
-       * in reverse chronological order (newest result first). Use this to sort resources like
-       * operations so that the newest operation is returned first.
-       *
-       * Currently, only sorting by name or creationTimestamp desc is supported.
+       * order based on the resource name. You can also sort results in descending order based on
+       * the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based
+       * on the `creationTimestamp` field in reverse chronological order (newest result first). Use
+       * this to sort resources like operations so that the newest operation is returned first.
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
       /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
-     based on the resource name.
-
-     You can also sort results in descending order based on the creation timestamp using
-     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
-     reverse chronological order (newest result first). Use this to sort resources like operations so
-     that the newest operation is returned first.
-
-     Currently, only sorting by name or creationTimestamp desc is supported.
+     based on the resource name. You can also sort results in descending order based on the creation
+     timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the
+     `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort
+     resources like operations so that the newest operation is returned first. Currently, only sorting
+     by `name` or `creationTimestamp desc` is supported.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -2591,14 +2847,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * Sorts list results by a certain order. By default, results are returned in alphanumerical
-       * order based on the resource name.
-       *
-       * You can also sort results in descending order based on the creation timestamp using
-       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
-       * in reverse chronological order (newest result first). Use this to sort resources like
-       * operations so that the newest operation is returned first.
-       *
-       * Currently, only sorting by name or creationTimestamp desc is supported.
+       * order based on the resource name. You can also sort results in descending order based on
+       * the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based
+       * on the `creationTimestamp` field in reverse chronological order (newest result first). Use
+       * this to sort resources like operations so that the newest operation is returned first.
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -2606,13 +2859,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
-       * list request to get the next page of results.
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
      request to get the next page of results.
        */
       public java.lang.String getPageToken() {
@@ -2620,11 +2873,34 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
-       * list request to get the next page of results.
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false and the logic is the same as today.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnPartialSuccess;
+
+      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
+     value is false and the logic is the same as today.
+       */
+      public java.lang.Boolean getReturnPartialSuccess() {
+        return returnPartialSuccess;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false and the logic is the same as today.
+       */
+      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+        this.returnPartialSuccess = returnPartialSuccess;
         return this;
       }
 
@@ -2676,7 +2952,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class Get extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Operation> {
 
-      private static final String REST_PATH = "{project}/global/operations/{operation}";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/operations/{operation}";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -2718,8 +2994,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2748,8 +3039,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -2813,7 +3109,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class List extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.OperationsListResponse> {
 
-      private static final String REST_PATH = "{project}/global/operations";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/operations";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -2853,8 +3149,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2883,8 +3194,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -2912,41 +3228,32 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * A filter expression that filters resources listed in the response. The expression must
        * specify the field name, a comparison operator, and the value that you want to use for
        * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either =, !=, >, or <.
-       *
-       * For example, if you are filtering Compute Engine instances, you can exclude instances named
-       * example-instance by specifying name != example-instance.
-       *
-       * You can also filter nested fields. For example, you could specify
-       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
-       * automatic restarts. You can use filtering on nested fields to filter based on resource
-       * labels.
-       *
-       * To filter on multiple expressions, provide each separate expression within parentheses. For
-       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
-       * each expression is an AND expression. However, you can include AND and OR expressions
-       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
-       * Broadwell") AND (scheduling.automaticRestart = true).
+       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
+       * instances, you can exclude instances named `example-instance` by specifying `name !=
+       * example-instance`. You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels. To filter on multiple expressions, provide each separate expression within
+       * parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
+       * Skylake") ``` By default, each expression is an `AND` expression. However, you can include
+       * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR
+       * (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** A filter expression that filters resources listed in the response. The expression must specify the
      field name, a comparison operator, and the value that you want to use for filtering. The value must
-     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
-
+     be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `>`, or `<`.
      For example, if you are filtering Compute Engine instances, you can exclude instances named
-     example-instance by specifying name != example-instance.
-
-     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
-     false to include instances only if they are not scheduled for automatic restarts. You can use
-     filtering on nested fields to filter based on resource labels.
-
-     To filter on multiple expressions, provide each separate expression within parentheses. For
-     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
-     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
-     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
-     (scheduling.automaticRestart = true).
+     `example-instance` by specifying `name != example-instance`. You can also filter nested fields. For
+     example, you could specify `scheduling.automaticRestart = false` to include instances only if they
+     are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on
+     resource labels. To filter on multiple expressions, provide each separate expression within
+     parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake")
+     ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+     expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+     Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       public java.lang.String getFilter() {
         return filter;
@@ -2956,21 +3263,16 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * A filter expression that filters resources listed in the response. The expression must
        * specify the field name, a comparison operator, and the value that you want to use for
        * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either =, !=, >, or <.
-       *
-       * For example, if you are filtering Compute Engine instances, you can exclude instances named
-       * example-instance by specifying name != example-instance.
-       *
-       * You can also filter nested fields. For example, you could specify
-       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
-       * automatic restarts. You can use filtering on nested fields to filter based on resource
-       * labels.
-       *
-       * To filter on multiple expressions, provide each separate expression within parentheses. For
-       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
-       * each expression is an AND expression. However, you can include AND and OR expressions
-       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
-       * Broadwell") AND (scheduling.automaticRestart = true).
+       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
+       * instances, you can exclude instances named `example-instance` by specifying `name !=
+       * example-instance`. You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels. To filter on multiple expressions, provide each separate expression within
+       * parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
+       * Skylake") ``` By default, each expression is an `AND` expression. However, you can include
+       * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR
+       * (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -2979,17 +3281,17 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
-       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
-       * 500, inclusive. (Default: 500)
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
        */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
       /** The maximum number of results per page that should be returned. If the number of available results
-     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
-     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
-     500) [default: 500] [minimum: 0]
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -2997,9 +3299,9 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
-       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
-       * 500, inclusive. (Default: 500)
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
        */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
@@ -3008,27 +3310,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * Sorts list results by a certain order. By default, results are returned in alphanumerical
-       * order based on the resource name.
-       *
-       * You can also sort results in descending order based on the creation timestamp using
-       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
-       * in reverse chronological order (newest result first). Use this to sort resources like
-       * operations so that the newest operation is returned first.
-       *
-       * Currently, only sorting by name or creationTimestamp desc is supported.
+       * order based on the resource name. You can also sort results in descending order based on
+       * the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based
+       * on the `creationTimestamp` field in reverse chronological order (newest result first). Use
+       * this to sort resources like operations so that the newest operation is returned first.
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
       /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
-     based on the resource name.
-
-     You can also sort results in descending order based on the creation timestamp using
-     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
-     reverse chronological order (newest result first). Use this to sort resources like operations so
-     that the newest operation is returned first.
-
-     Currently, only sorting by name or creationTimestamp desc is supported.
+     based on the resource name. You can also sort results in descending order based on the creation
+     timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the
+     `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort
+     resources like operations so that the newest operation is returned first. Currently, only sorting
+     by `name` or `creationTimestamp desc` is supported.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -3036,14 +3332,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * Sorts list results by a certain order. By default, results are returned in alphanumerical
-       * order based on the resource name.
-       *
-       * You can also sort results in descending order based on the creation timestamp using
-       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
-       * in reverse chronological order (newest result first). Use this to sort resources like
-       * operations so that the newest operation is returned first.
-       *
-       * Currently, only sorting by name or creationTimestamp desc is supported.
+       * order based on the resource name. You can also sort results in descending order based on
+       * the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based
+       * on the `creationTimestamp` field in reverse chronological order (newest result first). Use
+       * this to sort resources like operations so that the newest operation is returned first.
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -3051,13 +3344,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
-       * list request to get the next page of results.
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
      request to get the next page of results.
        */
       public java.lang.String getPageToken() {
@@ -3065,11 +3358,34 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
-       * list request to get the next page of results.
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false and the logic is the same as today.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnPartialSuccess;
+
+      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
+     value is false and the logic is the same as today.
+       */
+      public java.lang.Boolean getReturnPartialSuccess() {
+        return returnPartialSuccess;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false and the logic is the same as today.
+       */
+      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+        this.returnPartialSuccess = returnPartialSuccess;
         return this;
       }
 
@@ -3122,7 +3438,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class Get extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.Resource> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{deployment}/resources/{resource}";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/resources/{resource}";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -3174,8 +3490,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -3204,8 +3535,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -3291,7 +3627,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class List extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.ResourcesListResponse> {
 
-      private static final String REST_PATH = "{project}/global/deployments/{deployment}/resources";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/resources";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -3341,8 +3677,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3371,8 +3722,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -3421,41 +3777,32 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * A filter expression that filters resources listed in the response. The expression must
        * specify the field name, a comparison operator, and the value that you want to use for
        * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either =, !=, >, or <.
-       *
-       * For example, if you are filtering Compute Engine instances, you can exclude instances named
-       * example-instance by specifying name != example-instance.
-       *
-       * You can also filter nested fields. For example, you could specify
-       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
-       * automatic restarts. You can use filtering on nested fields to filter based on resource
-       * labels.
-       *
-       * To filter on multiple expressions, provide each separate expression within parentheses. For
-       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
-       * each expression is an AND expression. However, you can include AND and OR expressions
-       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
-       * Broadwell") AND (scheduling.automaticRestart = true).
+       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
+       * instances, you can exclude instances named `example-instance` by specifying `name !=
+       * example-instance`. You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels. To filter on multiple expressions, provide each separate expression within
+       * parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
+       * Skylake") ``` By default, each expression is an `AND` expression. However, you can include
+       * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR
+       * (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** A filter expression that filters resources listed in the response. The expression must specify the
      field name, a comparison operator, and the value that you want to use for filtering. The value must
-     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
-
+     be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `>`, or `<`.
      For example, if you are filtering Compute Engine instances, you can exclude instances named
-     example-instance by specifying name != example-instance.
-
-     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
-     false to include instances only if they are not scheduled for automatic restarts. You can use
-     filtering on nested fields to filter based on resource labels.
-
-     To filter on multiple expressions, provide each separate expression within parentheses. For
-     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
-     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
-     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
-     (scheduling.automaticRestart = true).
+     `example-instance` by specifying `name != example-instance`. You can also filter nested fields. For
+     example, you could specify `scheduling.automaticRestart = false` to include instances only if they
+     are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on
+     resource labels. To filter on multiple expressions, provide each separate expression within
+     parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake")
+     ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+     expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+     Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       public java.lang.String getFilter() {
         return filter;
@@ -3465,21 +3812,16 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * A filter expression that filters resources listed in the response. The expression must
        * specify the field name, a comparison operator, and the value that you want to use for
        * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either =, !=, >, or <.
-       *
-       * For example, if you are filtering Compute Engine instances, you can exclude instances named
-       * example-instance by specifying name != example-instance.
-       *
-       * You can also filter nested fields. For example, you could specify
-       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
-       * automatic restarts. You can use filtering on nested fields to filter based on resource
-       * labels.
-       *
-       * To filter on multiple expressions, provide each separate expression within parentheses. For
-       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
-       * each expression is an AND expression. However, you can include AND and OR expressions
-       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
-       * Broadwell") AND (scheduling.automaticRestart = true).
+       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
+       * instances, you can exclude instances named `example-instance` by specifying `name !=
+       * example-instance`. You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels. To filter on multiple expressions, provide each separate expression within
+       * parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
+       * Skylake") ``` By default, each expression is an `AND` expression. However, you can include
+       * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR
+       * (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -3488,17 +3830,17 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
-       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
-       * 500, inclusive. (Default: 500)
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
        */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
       /** The maximum number of results per page that should be returned. If the number of available results
-     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
-     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
-     500) [default: 500] [minimum: 0]
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -3506,9 +3848,9 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
-       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
-       * 500, inclusive. (Default: 500)
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
        */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
@@ -3517,27 +3859,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * Sorts list results by a certain order. By default, results are returned in alphanumerical
-       * order based on the resource name.
-       *
-       * You can also sort results in descending order based on the creation timestamp using
-       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
-       * in reverse chronological order (newest result first). Use this to sort resources like
-       * operations so that the newest operation is returned first.
-       *
-       * Currently, only sorting by name or creationTimestamp desc is supported.
+       * order based on the resource name. You can also sort results in descending order based on
+       * the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based
+       * on the `creationTimestamp` field in reverse chronological order (newest result first). Use
+       * this to sort resources like operations so that the newest operation is returned first.
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
       /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
-     based on the resource name.
-
-     You can also sort results in descending order based on the creation timestamp using
-     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
-     reverse chronological order (newest result first). Use this to sort resources like operations so
-     that the newest operation is returned first.
-
-     Currently, only sorting by name or creationTimestamp desc is supported.
+     based on the resource name. You can also sort results in descending order based on the creation
+     timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the
+     `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort
+     resources like operations so that the newest operation is returned first. Currently, only sorting
+     by `name` or `creationTimestamp desc` is supported.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -3545,14 +3881,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * Sorts list results by a certain order. By default, results are returned in alphanumerical
-       * order based on the resource name.
-       *
-       * You can also sort results in descending order based on the creation timestamp using
-       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
-       * in reverse chronological order (newest result first). Use this to sort resources like
-       * operations so that the newest operation is returned first.
-       *
-       * Currently, only sorting by name or creationTimestamp desc is supported.
+       * order based on the resource name. You can also sort results in descending order based on
+       * the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based
+       * on the `creationTimestamp` field in reverse chronological order (newest result first). Use
+       * this to sort resources like operations so that the newest operation is returned first.
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -3560,13 +3893,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
-       * list request to get the next page of results.
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
      request to get the next page of results.
        */
       public java.lang.String getPageToken() {
@@ -3574,11 +3907,34 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
-       * list request to get the next page of results.
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false and the logic is the same as today.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnPartialSuccess;
+
+      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
+     value is false and the logic is the same as today.
+       */
+      public java.lang.Boolean getReturnPartialSuccess() {
+        return returnPartialSuccess;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false and the logic is the same as today.
+       */
+      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+        this.returnPartialSuccess = returnPartialSuccess;
         return this;
       }
 
@@ -3629,7 +3985,7 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
     public class List extends DeploymentManagerRequest<com.google.api.services.deploymentmanager.model.TypesListResponse> {
 
-      private static final String REST_PATH = "{project}/global/types";
+      private static final String REST_PATH = "deploymentmanager/v2/projects/{project}/global/types";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -3669,8 +4025,23 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -3699,8 +4070,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The project ID for this request. */
@@ -3728,41 +4104,32 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * A filter expression that filters resources listed in the response. The expression must
        * specify the field name, a comparison operator, and the value that you want to use for
        * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either =, !=, >, or <.
-       *
-       * For example, if you are filtering Compute Engine instances, you can exclude instances named
-       * example-instance by specifying name != example-instance.
-       *
-       * You can also filter nested fields. For example, you could specify
-       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
-       * automatic restarts. You can use filtering on nested fields to filter based on resource
-       * labels.
-       *
-       * To filter on multiple expressions, provide each separate expression within parentheses. For
-       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
-       * each expression is an AND expression. However, you can include AND and OR expressions
-       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
-       * Broadwell") AND (scheduling.automaticRestart = true).
+       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
+       * instances, you can exclude instances named `example-instance` by specifying `name !=
+       * example-instance`. You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels. To filter on multiple expressions, provide each separate expression within
+       * parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
+       * Skylake") ``` By default, each expression is an `AND` expression. However, you can include
+       * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR
+       * (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** A filter expression that filters resources listed in the response. The expression must specify the
      field name, a comparison operator, and the value that you want to use for filtering. The value must
-     be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
-
+     be a string, a number, or a boolean. The comparison operator must be either `=`, `!=`, `>`, or `<`.
      For example, if you are filtering Compute Engine instances, you can exclude instances named
-     example-instance by specifying name != example-instance.
-
-     You can also filter nested fields. For example, you could specify scheduling.automaticRestart =
-     false to include instances only if they are not scheduled for automatic restarts. You can use
-     filtering on nested fields to filter based on resource labels.
-
-     To filter on multiple expressions, provide each separate expression within parentheses. For
-     example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default, each
-     expression is an AND expression. However, you can include AND and OR expressions explicitly. For
-     example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND
-     (scheduling.automaticRestart = true).
+     `example-instance` by specifying `name != example-instance`. You can also filter nested fields. For
+     example, you could specify `scheduling.automaticRestart = false` to include instances only if they
+     are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on
+     resource labels. To filter on multiple expressions, provide each separate expression within
+     parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake")
+     ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+     expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
+     Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       public java.lang.String getFilter() {
         return filter;
@@ -3772,21 +4139,16 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
        * A filter expression that filters resources listed in the response. The expression must
        * specify the field name, a comparison operator, and the value that you want to use for
        * filtering. The value must be a string, a number, or a boolean. The comparison operator must
-       * be either =, !=, >, or <.
-       *
-       * For example, if you are filtering Compute Engine instances, you can exclude instances named
-       * example-instance by specifying name != example-instance.
-       *
-       * You can also filter nested fields. For example, you could specify
-       * scheduling.automaticRestart = false to include instances only if they are not scheduled for
-       * automatic restarts. You can use filtering on nested fields to filter based on resource
-       * labels.
-       *
-       * To filter on multiple expressions, provide each separate expression within parentheses. For
-       * example, (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake"). By default,
-       * each expression is an AND expression. However, you can include AND and OR expressions
-       * explicitly. For example, (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel
-       * Broadwell") AND (scheduling.automaticRestart = true).
+       * be either `=`, `!=`, `>`, or `<`. For example, if you are filtering Compute Engine
+       * instances, you can exclude instances named `example-instance` by specifying `name !=
+       * example-instance`. You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based on resource
+       * labels. To filter on multiple expressions, provide each separate expression within
+       * parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel
+       * Skylake") ``` By default, each expression is an `AND` expression. However, you can include
+       * `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR
+       * (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -3795,17 +4157,17 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
-       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
-       * 500, inclusive. (Default: 500)
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
        */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
       /** The maximum number of results per page that should be returned. If the number of available results
-     is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the next
-     page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
-     500) [default: 500] [minimum: 0]
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -3813,9 +4175,9 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * The maximum number of results per page that should be returned. If the number of available
-       * results is larger than maxResults, Compute Engine returns a nextPageToken that can be used
-       * to get the next page of results in subsequent list requests. Acceptable values are 0 to
-       * 500, inclusive. (Default: 500)
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
        */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
@@ -3824,27 +4186,21 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * Sorts list results by a certain order. By default, results are returned in alphanumerical
-       * order based on the resource name.
-       *
-       * You can also sort results in descending order based on the creation timestamp using
-       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
-       * in reverse chronological order (newest result first). Use this to sort resources like
-       * operations so that the newest operation is returned first.
-       *
-       * Currently, only sorting by name or creationTimestamp desc is supported.
+       * order based on the resource name. You can also sort results in descending order based on
+       * the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based
+       * on the `creationTimestamp` field in reverse chronological order (newest result first). Use
+       * this to sort resources like operations so that the newest operation is returned first.
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
       /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
-     based on the resource name.
-
-     You can also sort results in descending order based on the creation timestamp using
-     orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in
-     reverse chronological order (newest result first). Use this to sort resources like operations so
-     that the newest operation is returned first.
-
-     Currently, only sorting by name or creationTimestamp desc is supported.
+     based on the resource name. You can also sort results in descending order based on the creation
+     timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the
+     `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort
+     resources like operations so that the newest operation is returned first. Currently, only sorting
+     by `name` or `creationTimestamp desc` is supported.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -3852,14 +4208,11 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
 
       /**
        * Sorts list results by a certain order. By default, results are returned in alphanumerical
-       * order based on the resource name.
-       *
-       * You can also sort results in descending order based on the creation timestamp using
-       * orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field
-       * in reverse chronological order (newest result first). Use this to sort resources like
-       * operations so that the newest operation is returned first.
-       *
-       * Currently, only sorting by name or creationTimestamp desc is supported.
+       * order based on the resource name. You can also sort results in descending order based on
+       * the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based
+       * on the `creationTimestamp` field in reverse chronological order (newest result first). Use
+       * this to sort resources like operations so that the newest operation is returned first.
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -3867,13 +4220,13 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
-       * list request to get the next page of results.
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
      request to get the next page of results.
        */
       public java.lang.String getPageToken() {
@@ -3881,11 +4234,34 @@ public class DeploymentManager extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous
-       * list request to get the next page of results.
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false and the logic is the same as today.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnPartialSuccess;
+
+      /** Opt-in for partial success behavior which provides partial results in case of failure. The default
+     value is false and the logic is the same as today.
+       */
+      public java.lang.Boolean getReturnPartialSuccess() {
+        return returnPartialSuccess;
+      }
+
+      /**
+       * Opt-in for partial success behavior which provides partial results in case of failure. The
+       * default value is false and the logic is the same as today.
+       */
+      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+        this.returnPartialSuccess = returnPartialSuccess;
         return this;
       }
 

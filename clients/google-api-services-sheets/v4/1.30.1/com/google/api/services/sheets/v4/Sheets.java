@@ -46,7 +46,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Sheets API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Google Sheets API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,17 +143,12 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
   public class Spreadsheets {
 
     /**
-     * Applies one or more updates to the spreadsheet.
-     *
-     * Each request is validated before being applied. If any request is not valid then the entire
-     * request will fail and nothing will be applied.
-     *
-     * Some requests have replies to give you some information about how they are applied. The replies
-     * will mirror the requests.  For example, if you applied 4 updates and the 3rd one had a reply,
-     * then the response will have 2 empty replies, the actual reply, and another empty reply, in that
-     * order.
-     *
-     * Due to the collaborative nature of spreadsheets, it is not guaranteed that the spreadsheet will
+     * Applies one or more updates to the spreadsheet. Each request is validated before being applied.
+     * If any request is not valid then the entire request will fail and nothing will be applied. Some
+     * requests have replies to give you some information about how they are applied. The replies will
+     * mirror the requests. For example, if you applied 4 updates and the 3rd one had a reply, then the
+     * response will have 2 empty replies, the actual reply, and another empty reply, in that order. Due
+     * to the collaborative nature of spreadsheets, it is not guaranteed that the spreadsheet will
      * reflect exactly your changes after this completes, however it is guaranteed that the updates in
      * the request will be applied together atomically. Your changes may be altered with respect to
      * collaborator changes. If there are no collaborators, the spreadsheet should reflect your changes.
@@ -178,21 +173,16 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v4/spreadsheets/{spreadsheetId}:batchUpdate";
 
       /**
-       * Applies one or more updates to the spreadsheet.
-       *
-       * Each request is validated before being applied. If any request is not valid then the entire
-       * request will fail and nothing will be applied.
-       *
-       * Some requests have replies to give you some information about how they are applied. The replies
-       * will mirror the requests.  For example, if you applied 4 updates and the 3rd one had a reply,
-       * then the response will have 2 empty replies, the actual reply, and another empty reply, in that
-       * order.
-       *
-       * Due to the collaborative nature of spreadsheets, it is not guaranteed that the spreadsheet will
-       * reflect exactly your changes after this completes, however it is guaranteed that the updates in
-       * the request will be applied together atomically. Your changes may be altered with respect to
-       * collaborator changes. If there are no collaborators, the spreadsheet should reflect your
-       * changes.
+       * Applies one or more updates to the spreadsheet. Each request is validated before being applied.
+       * If any request is not valid then the entire request will fail and nothing will be applied. Some
+       * requests have replies to give you some information about how they are applied. The replies will
+       * mirror the requests. For example, if you applied 4 updates and the 3rd one had a reply, then
+       * the response will have 2 empty replies, the actual reply, and another empty reply, in that
+       * order. Due to the collaborative nature of spreadsheets, it is not guaranteed that the
+       * spreadsheet will reflect exactly your changes after this completes, however it is guaranteed
+       * that the updates in the request will be applied together atomically. Your changes may be
+       * altered with respect to collaborator changes. If there are no collaborators, the spreadsheet
+       * should reflect your changes.
        *
        * Create a request for the method "spreadsheets.batchUpdate".
        *
@@ -386,21 +376,14 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
-     * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID.
-     *
-     * By default, data within grids will not be returned. You can include grid data one of two ways:
-     *
-     * * Specify a field mask listing your desired fields using the `fields` URL parameter in HTTP
-     *
-     * * Set the includeGridData URL parameter to true.  If a field mask is set, the `includeGridData`
-     * parameter is ignored
-     *
-     * For large spreadsheets, it is recommended to retrieve only the specific fields of the spreadsheet
-     * that you want.
-     *
-     * To retrieve only subsets of the spreadsheet, use the ranges URL parameter. Multiple ranges can be
-     * specified.  Limiting the range will return only the portions of the spreadsheet that intersect
-     * the requested ranges. Ranges are specified using A1 notation.
+     * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. By default,
+     * data within grids will not be returned. You can include grid data one of two ways: * Specify a
+     * field mask listing your desired fields using the `fields` URL parameter in HTTP * Set the
+     * includeGridData URL parameter to true. If a field mask is set, the `includeGridData` parameter is
+     * ignored For large spreadsheets, it is recommended to retrieve only the specific fields of the
+     * spreadsheet that you want. To retrieve only subsets of the spreadsheet, use the ranges URL
+     * parameter. Multiple ranges can be specified. Limiting the range will return only the portions of
+     * the spreadsheet that intersect the requested ranges. Ranges are specified using A1 notation.
      *
      * Create a request for the method "spreadsheets.get".
      *
@@ -421,21 +404,15 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v4/spreadsheets/{spreadsheetId}";
 
       /**
-       * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID.
-       *
-       * By default, data within grids will not be returned. You can include grid data one of two ways:
-       *
-       * * Specify a field mask listing your desired fields using the `fields` URL parameter in HTTP
-       *
-       * * Set the includeGridData URL parameter to true.  If a field mask is set, the `includeGridData`
-       * parameter is ignored
-       *
-       * For large spreadsheets, it is recommended to retrieve only the specific fields of the
-       * spreadsheet that you want.
-       *
-       * To retrieve only subsets of the spreadsheet, use the ranges URL parameter. Multiple ranges can
-       * be specified.  Limiting the range will return only the portions of the spreadsheet that
-       * intersect the requested ranges. Ranges are specified using A1 notation.
+       * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. By
+       * default, data within grids will not be returned. You can include grid data one of two ways: *
+       * Specify a field mask listing your desired fields using the `fields` URL parameter in HTTP * Set
+       * the includeGridData URL parameter to true. If a field mask is set, the `includeGridData`
+       * parameter is ignored For large spreadsheets, it is recommended to retrieve only the specific
+       * fields of the spreadsheet that you want. To retrieve only subsets of the spreadsheet, use the
+       * ranges URL parameter. Multiple ranges can be specified. Limiting the range will return only the
+       * portions of the spreadsheet that intersect the requested ranges. Ranges are specified using A1
+       * notation.
        *
        * Create a request for the method "spreadsheets.get".
        *
@@ -578,22 +555,15 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
-     * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID.
-     *
-     * This method differs from GetSpreadsheet in that it allows selecting which subsets of spreadsheet
-     * data to return by specifying a dataFilters parameter. Multiple DataFilters can be specified.
-     * Specifying one or more data filters will return the portions of the spreadsheet that intersect
-     * ranges matched by any of the filters.
-     *
-     * By default, data within grids will not be returned. You can include grid data one of two ways:
-     *
-     * * Specify a field mask listing your desired fields using the `fields` URL parameter in HTTP
-     *
-     * * Set the includeGridData parameter to true.  If a field mask is set, the `includeGridData`
-     * parameter is ignored
-     *
-     * For large spreadsheets, it is recommended to retrieve only the specific fields of the spreadsheet
-     * that you want.
+     * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. This method
+     * differs from GetSpreadsheet in that it allows selecting which subsets of spreadsheet data to
+     * return by specifying a dataFilters parameter. Multiple DataFilters can be specified. Specifying
+     * one or more data filters will return the portions of the spreadsheet that intersect ranges
+     * matched by any of the filters. By default, data within grids will not be returned. You can
+     * include grid data one of two ways: * Specify a field mask listing your desired fields using the
+     * `fields` URL parameter in HTTP * Set the includeGridData parameter to true. If a field mask is
+     * set, the `includeGridData` parameter is ignored For large spreadsheets, it is recommended to
+     * retrieve only the specific fields of the spreadsheet that you want.
      *
      * Create a request for the method "spreadsheets.getByDataFilter".
      *
@@ -615,22 +585,15 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v4/spreadsheets/{spreadsheetId}:getByDataFilter";
 
       /**
-       * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID.
-       *
-       * This method differs from GetSpreadsheet in that it allows selecting which subsets of
-       * spreadsheet data to return by specifying a dataFilters parameter. Multiple DataFilters can be
-       * specified.  Specifying one or more data filters will return the portions of the spreadsheet
-       * that intersect ranges matched by any of the filters.
-       *
-       * By default, data within grids will not be returned. You can include grid data one of two ways:
-       *
-       * * Specify a field mask listing your desired fields using the `fields` URL parameter in HTTP
-       *
-       * * Set the includeGridData parameter to true.  If a field mask is set, the `includeGridData`
-       * parameter is ignored
-       *
-       * For large spreadsheets, it is recommended to retrieve only the specific fields of the
-       * spreadsheet that you want.
+       * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. This
+       * method differs from GetSpreadsheet in that it allows selecting which subsets of spreadsheet
+       * data to return by specifying a dataFilters parameter. Multiple DataFilters can be specified.
+       * Specifying one or more data filters will return the portions of the spreadsheet that intersect
+       * ranges matched by any of the filters. By default, data within grids will not be returned. You
+       * can include grid data one of two ways: * Specify a field mask listing your desired fields using
+       * the `fields` URL parameter in HTTP * Set the includeGridData parameter to true. If a field mask
+       * is set, the `includeGridData` parameter is ignored For large spreadsheets, it is recommended to
+       * retrieve only the specific fields of the spreadsheet that you want.
        *
        * Create a request for the method "spreadsheets.getByDataFilter".
        *
@@ -1202,11 +1165,10 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * "table" within that range. Values will be appended to the next row of the table, starting with
        * the first column of the table. See the [guide](/sheets/api/guides/values#appending_values) and
        * [sample code](/sheets/api/samples/writing#append_values) for specific details of how tables are
-       * detected and data is appended.
-       *
-       * The caller must specify the spreadsheet ID, range, and a valueInputOption.  The
-       * `valueInputOption` only controls how the input data will be added to the sheet (column-wise or
-       * row-wise), it does not influence what cell the data starts being written to.
+       * detected and data is appended. The caller must specify the spreadsheet ID, range, and a
+       * valueInputOption. The `valueInputOption` only controls how the input data will be added to the
+       * sheet (column-wise or row-wise), it does not influence what cell the data starts being written
+       * to.
        *
        * Create a request for the method "values.append".
        *
@@ -1214,8 +1176,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Append#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to update.
-       * @param range The A1 notation of a range to search for a logical table of data.
-      Values are appended after the last
+       * @param range The A1 notation of a range to search for a logical table of data. Values are appended after the last
        *        row of the table.
        * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
        * @return the request
@@ -1235,11 +1196,10 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * "table" within that range. Values will be appended to the next row of the table, starting with
          * the first column of the table. See the [guide](/sheets/api/guides/values#appending_values) and
          * [sample code](/sheets/api/samples/writing#append_values) for specific details of how tables are
-         * detected and data is appended.
-         *
-         * The caller must specify the spreadsheet ID, range, and a valueInputOption.  The
-         * `valueInputOption` only controls how the input data will be added to the sheet (column-wise or
-         * row-wise), it does not influence what cell the data starts being written to.
+         * detected and data is appended. The caller must specify the spreadsheet ID, range, and a
+         * valueInputOption. The `valueInputOption` only controls how the input data will be added to the
+         * sheet (column-wise or row-wise), it does not influence what cell the data starts being written
+         * to.
          *
          * Create a request for the method "values.append".
          *
@@ -1249,8 +1209,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to update.
-         * @param range The A1 notation of a range to search for a logical table of data.
-      Values are appended after the last
+         * @param range The A1 notation of a range to search for a logical table of data. Values are appended after the last
        *        row of the table.
          * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
          * @since 1.13
@@ -1589,7 +1548,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Clears one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet
        * ID and one or more DataFilters. Ranges matching any of the specified data filters will be
-       * cleared.  Only values are cleared -- all other properties of the cell (such as formatting, data
+       * cleared. Only values are cleared -- all other properties of the cell (such as formatting, data
        * validation, etc..) are kept.
        *
        * Create a request for the method "values.batchClearByDataFilter".
@@ -1615,7 +1574,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Clears one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet
          * ID and one or more DataFilters. Ranges matching any of the specified data filters will be
-         * cleared.  Only values are cleared -- all other properties of the cell (such as formatting, data
+         * cleared. Only values are cleared -- all other properties of the cell (such as formatting, data
          * validation, etc..) are kept.
          *
          * Create a request for the method "values.batchClearByDataFilter".
@@ -1861,31 +1820,27 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The major dimension that results should use.
-         *
-         * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-         * `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
-         * `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
+         * The major dimension that results should use. For example, if the spreadsheet data is:
+         * `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` returns
+         * `[[1,2],[3,4]]`, whereas requesting `range=A1:B2,majorDimension=COLUMNS` returns
+         * `[[1,3],[2,4]]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String majorDimension;
 
-        /** The major dimension that results should use.
-
-       For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-       `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
-       `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
+        /** The major dimension that results should use. For example, if the spreadsheet data is:
+       `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`,
+       whereas requesting `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
          */
         public java.lang.String getMajorDimension() {
           return majorDimension;
         }
 
         /**
-         * The major dimension that results should use.
-         *
-         * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-         * `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
-         * `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
+         * The major dimension that results should use. For example, if the spreadsheet data is:
+         * `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` returns
+         * `[[1,2],[3,4]]`, whereas requesting `range=A1:B2,majorDimension=COLUMNS` returns
+         * `[[1,3],[2,4]]`.
          */
         public BatchGet setMajorDimension(java.lang.String majorDimension) {
           this.majorDimension = majorDimension;
@@ -1938,8 +1893,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       }
       /**
        * Returns one or more ranges of values that match the specified data filters. The caller must
-       * specify the spreadsheet ID and one or more DataFilters.  Ranges that match any of the data
-       * filters in the request will be returned.
+       * specify the spreadsheet ID and one or more DataFilters. Ranges that match any of the data filters
+       * in the request will be returned.
        *
        * Create a request for the method "values.batchGetByDataFilter".
        *
@@ -1963,7 +1918,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Returns one or more ranges of values that match the specified data filters. The caller must
-         * specify the spreadsheet ID and one or more DataFilters.  Ranges that match any of the data
+         * specify the spreadsheet ID and one or more DataFilters. Ranges that match any of the data
          * filters in the request will be returned.
          *
          * Create a request for the method "values.batchGetByDataFilter".
@@ -2608,31 +2563,27 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The major dimension that results should use.
-         *
-         * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-         * `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
-         * `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
+         * The major dimension that results should use. For example, if the spreadsheet data is:
+         * `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` returns
+         * `[[1,2],[3,4]]`, whereas requesting `range=A1:B2,majorDimension=COLUMNS` returns
+         * `[[1,3],[2,4]]`.
          */
         @com.google.api.client.util.Key
         private java.lang.String majorDimension;
 
-        /** The major dimension that results should use.
-
-       For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-       `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
-       `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
+        /** The major dimension that results should use. For example, if the spreadsheet data is:
+       `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`,
+       whereas requesting `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
          */
         public java.lang.String getMajorDimension() {
           return majorDimension;
         }
 
         /**
-         * The major dimension that results should use.
-         *
-         * For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`, then requesting
-         * `range=A1:B2,majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting
-         * `range=A1:B2,majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
+         * The major dimension that results should use. For example, if the spreadsheet data is:
+         * `A1=1,B1=2,A2=3,B2=4`, then requesting `range=A1:B2,majorDimension=ROWS` returns
+         * `[[1,2],[3,4]]`, whereas requesting `range=A1:B2,majorDimension=COLUMNS` returns
+         * `[[1,3],[2,4]]`.
          */
         public Get setMajorDimension(java.lang.String majorDimension) {
           this.majorDimension = majorDimension;

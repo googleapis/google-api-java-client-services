@@ -30,8 +30,17 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpointGroupsListEndpointsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional list of endpoints to query. This is a more efficient but also limited version of
+   * filter parameter. Endpoints in the filter must have ip_address and port fields populated, other
+   * fields are not supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NetworkEndpointGroupsListEndpointsRequestNetworkEndpointFilter> endpointFilters;
+
+  /**
    * Optional query parameter for showing the health status of each network endpoint. Valid options
-   * are SKIP or SHOW. If you don't specifiy this parameter, the health status of network endpoints
+   * are SKIP or SHOW. If you don't specify this parameter, the health status of network endpoints
    * will not be provided.
    * The value may be {@code null}.
    */
@@ -39,8 +48,29 @@ public final class NetworkEndpointGroupsListEndpointsRequest extends com.google.
   private java.lang.String healthStatus;
 
   /**
+   * Optional list of endpoints to query. This is a more efficient but also limited version of
+   * filter parameter. Endpoints in the filter must have ip_address and port fields populated, other
+   * fields are not supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NetworkEndpointGroupsListEndpointsRequestNetworkEndpointFilter> getEndpointFilters() {
+    return endpointFilters;
+  }
+
+  /**
+   * Optional list of endpoints to query. This is a more efficient but also limited version of
+   * filter parameter. Endpoints in the filter must have ip_address and port fields populated, other
+   * fields are not supported.
+   * @param endpointFilters endpointFilters or {@code null} for none
+   */
+  public NetworkEndpointGroupsListEndpointsRequest setEndpointFilters(java.util.List<NetworkEndpointGroupsListEndpointsRequestNetworkEndpointFilter> endpointFilters) {
+    this.endpointFilters = endpointFilters;
+    return this;
+  }
+
+  /**
    * Optional query parameter for showing the health status of each network endpoint. Valid options
-   * are SKIP or SHOW. If you don't specifiy this parameter, the health status of network endpoints
+   * are SKIP or SHOW. If you don't specify this parameter, the health status of network endpoints
    * will not be provided.
    * @return value or {@code null} for none
    */
@@ -50,7 +80,7 @@ public final class NetworkEndpointGroupsListEndpointsRequest extends com.google.
 
   /**
    * Optional query parameter for showing the health status of each network endpoint. Valid options
-   * are SKIP or SHOW. If you don't specifiy this parameter, the health status of network endpoints
+   * are SKIP or SHOW. If you don't specify this parameter, the health status of network endpoints
    * will not be provided.
    * @param healthStatus healthStatus or {@code null} for none
    */

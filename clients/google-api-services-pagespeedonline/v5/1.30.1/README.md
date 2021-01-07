@@ -1,7 +1,6 @@
 # PageSpeed Insights API Client Library for Java
 
-The PageSpeed Insights API lets you analyze the performance of your website with a simple API.  It offers tailored suggestions for how you can optimize your site, and lets you easily integrate PageSpeed Insights analysis into your development tools and workflow.
-
+The PageSpeed Insights API lets you analyze the performance of your website with a simple API. It offers tailored suggestions for how you can optimize your site, and lets you easily integrate PageSpeed Insights analysis into your development tools and workflow. 
 
 This page contains information about getting started with the PageSpeed Insights API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-pagespeedonline</artifactId>
-      <version>v5-rev20200305-1.30.9</version>
+      <version>v5-rev20200813-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-pagespeedonline:v5-rev20200305-1.30.9'
+  compile 'com.google.apis:google-api-services-pagespeedonline:v5-rev20200813-1.30.10'
 }
 ```
 

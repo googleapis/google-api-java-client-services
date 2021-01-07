@@ -46,7 +46,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Managed Service for Microsoft Active Directory API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Managed Service for Microsoft Active Directory API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -448,26 +448,6 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
         /** The standard list filter. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
-          return this;
-        }
-
-        /**
-         * If true, the returned list will include locations which are not yet revealed.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean includeUnrevealedLocations;
-
-        /** If true, the returned list will include locations which are not yet revealed.
-         */
-        public java.lang.Boolean getIncludeUnrevealedLocations() {
-          return includeUnrevealedLocations;
-        }
-
-        /**
-         * If true, the returned list will include locations which are not yet revealed.
-         */
-        public List setIncludeUnrevealedLocations(java.lang.Boolean includeUnrevealedLocations) {
-          this.includeUnrevealedLocations = includeUnrevealedLocations;
           return this;
         }
 
@@ -1301,8 +1281,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
            * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
            * operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -1331,8 +1310,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -1440,36 +1418,33 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1865,14 +1840,14 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
              * The elements of the repeated paths field may only include fields from Domain: *
-             * `labels` * `locations` * `authorized_networks`
+             * `labels` * `locations` * `authorized_networks` * `audit_logs_enabled`
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
             /** Required. Mask of fields to update. At least one path must be supplied in this field. The elements
            of the repeated paths field may only include fields from Domain: * `labels` * `locations` *
-           `authorized_networks`
+           `authorized_networks` * `audit_logs_enabled`
              */
             public String getUpdateMask() {
               return updateMask;
@@ -1881,7 +1856,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             /**
              * Required. Mask of fields to update. At least one path must be supplied in this field.
              * The elements of the repeated paths field may only include fields from Domain: *
-             * `labels` * `locations` * `authorized_networks`
+             * `labels` * `locations` * `authorized_networks` * `audit_logs_enabled`
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -2176,9 +2151,8 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
           }
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "domains.setIamPolicy".
            *
@@ -2186,8 +2160,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
            * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
            * operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.managedidentities.v1beta1.model.SetIamPolicyRequest}
            * @return the request
@@ -2206,9 +2179,8 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "domains.setIamPolicy".
              *
@@ -2218,8 +2190,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.managedidentities.v1beta1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -2324,10 +2295,9 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "domains.testIamPermissions".
            *
@@ -2335,8 +2305,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
            * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
            * operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.managedidentities.v1beta1.model.TestIamPermissionsRequest}
            * @return the request
@@ -2356,10 +2325,9 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "domains.testIamPermissions".
              *
@@ -2369,8 +2337,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
              * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.managedidentities.v1beta1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -2617,6 +2584,421 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
           }
 
+          /**
+           * An accessor for creating requests from the SqlIntegrations collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedServiceforMicrosoftActiveDirectoryConsumerAPI managedidentities = new ManagedServiceforMicrosoftActiveDirectoryConsumerAPI(...);}
+           *   {@code ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.SqlIntegrations.List request = managedidentities.sqlIntegrations().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public SqlIntegrations sqlIntegrations() {
+            return new SqlIntegrations();
+          }
+
+          /**
+           * The "sqlIntegrations" collection of methods.
+           */
+          public class SqlIntegrations {
+
+            /**
+             * Gets details of a single sqlIntegration.
+             *
+             * Create a request for the method "sqlIntegrations.get".
+             *
+             * This request holds the parameters needed by the managedidentities server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. SQLIntegration resource name using the form:
+             *        `projects/{project_id}/locations/global/domains/sqlIntegrations/{name}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.SQLIntegration> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+/sqlIntegrations/[^/]+$");
+
+              /**
+               * Gets details of a single sqlIntegration.
+               *
+               * Create a request for the method "sqlIntegrations.get".
+               *
+               * This request holds the parameters needed by the the managedidentities server.  After setting
+               * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. SQLIntegration resource name using the form:
+             *        `projects/{project_id}/locations/global/domains/sqlIntegrations/{name}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1beta1.model.SQLIntegration.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/global/domains/[^/]+/sqlIntegrations/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. SQLIntegration resource name using the form:
+               * `projects/{project_id}/locations/global/domains/sqlIntegrations/{name}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. SQLIntegration resource name using the form:
+             `projects/{project_id}/locations/global/domains/sqlIntegrations/{name}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. SQLIntegration resource name using the form:
+               * `projects/{project_id}/locations/global/domains/sqlIntegrations/{name}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/global/domains/[^/]+/sqlIntegrations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists SQLIntegrations in a given domain.
+             *
+             * Create a request for the method "sqlIntegrations.list".
+             *
+             * This request holds the parameters needed by the managedidentities server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The resource name of the SQLIntegrations using the form:
+             *        `projects/{project_id}/locations/global/domains`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.ListSQLIntegrationsResponse> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/sqlIntegrations";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
+
+              /**
+               * Lists SQLIntegrations in a given domain.
+               *
+               * Create a request for the method "sqlIntegrations.list".
+               *
+               * This request holds the parameters needed by the the managedidentities server.  After setting
+               * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The resource name of the SQLIntegrations using the form:
+             *        `projects/{project_id}/locations/global/domains`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1beta1.model.ListSQLIntegrationsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/global/domains/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the SQLIntegrations using the form:
+               * `projects/{project_id}/locations/global/domains`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The resource name of the SQLIntegrations using the form:
+             `projects/{project_id}/locations/global/domains`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The resource name of the SQLIntegrations using the form:
+               * `projects/{project_id}/locations/global/domains`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/global/domains/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. Filter specifying constraints of a list operation. For example,
+               * `SQLIntegration.name="sql"`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Filter specifying constraints of a list operation. For example,
+             `SQLIntegration.name="sql"`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. Filter specifying constraints of a list operation. For example,
+               * `SQLIntegration.name="sql"`.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. Specifies the ordering of results following syntax at
+               * https://cloud.google.com/apis/design/design_patterns#sorting_order.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Optional. Specifies the ordering of results following syntax at
+             https://cloud.google.com/apis/design/design_patterns#sorting_order.
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /**
+               * Optional. Specifies the ordering of results following syntax at
+               * https://cloud.google.com/apis/design/design_patterns#sorting_order.
+               */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of items to return. If not specified, a default value
+               * of 1000 will be used by the service. Regardless of the page_size value, the
+               * response may include a partial list and a caller should only rely on
+               * response'ANIZATIONs next_page_token to determine if there are more instances left
+               * to be queried.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of items to return. If not specified, a default value of 1000 will be
+             used by the service. Regardless of the page_size value, the response may include a partial list and
+             a caller should only rely on response'ANIZATIONs next_page_token to determine if there are more
+             instances left to be queried.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of items to return. If not specified, a default value
+               * of 1000 will be used by the service. Regardless of the page_size value, the
+               * response may include a partial list and a caller should only rely on
+               * response'ANIZATIONs next_page_token to determine if there are more instances left
+               * to be queried.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. The next_page_token value returned from a previous List request, if any.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The next_page_token value returned from a previous List request, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. The next_page_token value returned from a previous List request, if any.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
         /**
          * An accessor for creating requests from the Operations collection.
@@ -2639,9 +3021,9 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
         public class Operations {
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-           * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-           * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
            * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -2670,13 +3052,13 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/operations/[^/]+$");
 
             /**
-             * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-             * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-             * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-             * other methods to check whether the cancellation succeeded or whether the operation completed
-             * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-             * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-             * corresponding to `Code.CANCELLED`.
+             * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+             * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+             * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+             * methods to check whether the cancellation succeeded or whether the operation completed despite
+             * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * `Code.CANCELLED`.
              *
              * Create a request for the method "operations.cancel".
              *
@@ -2915,7 +3297,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
             }
           }
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -2940,7 +3322,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/operations/[^/]+$");
 
             /**
-             * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
              * operation result at intervals as recommended by the API service.
              *
              * Create a request for the method "operations.get".
@@ -3057,13 +3439,12 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-           * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+           * the binding to use different resource name schemes, such as `users/operations`. To override the
+           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -3088,13 +3469,12 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`.
-             *
-             * NOTE: the `name` binding allows API services to override the binding to use different resource
-             * name schemes, such as `users/operations`. To override the binding, API services can add a
-             * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-             * compatibility, the default name includes the operations collection id, however overriding users
-             * must ensure the name binding is the parent resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+             * override the binding to use different resource name schemes, such as `users/operations`. To
+             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+             * their service configuration. For backwards compatibility, the default name includes the
+             * operations collection id, however overriding users must ensure the name binding is the parent
+             * resource, without the operations collection id.
              *
              * Create a request for the method "operations.list".
              *

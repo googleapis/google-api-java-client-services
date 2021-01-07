@@ -37,14 +37,14 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   private java.lang.String caCertificate;
 
   /**
-   * PEM representation of the slave's x509 certificate.
+   * PEM representation of the replica's x509 certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientCertificate;
 
   /**
-   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
+   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
    * client's certificate.
    * The value may be {@code null}.
    */
@@ -66,7 +66,7 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   private java.lang.String hostPort;
 
   /**
-   * This is always sql#onPremisesConfiguration.
+   * This is always *sql#onPremisesConfiguration*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * PEM representation of the slave's x509 certificate.
+   * PEM representation of the replica's x509 certificate.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientCertificate() {
@@ -112,7 +112,7 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * PEM representation of the slave's x509 certificate.
+   * PEM representation of the replica's x509 certificate.
    * @param clientCertificate clientCertificate or {@code null} for none
    */
   public OnPremisesConfiguration setClientCertificate(java.lang.String clientCertificate) {
@@ -121,7 +121,7 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
+   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
    * client's certificate.
    * @return value or {@code null} for none
    */
@@ -130,7 +130,7 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
+   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
    * client's certificate.
    * @param clientKey clientKey or {@code null} for none
    */
@@ -174,7 +174,7 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * This is always sql#onPremisesConfiguration.
+   * This is always *sql#onPremisesConfiguration*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -182,7 +182,7 @@ public final class OnPremisesConfiguration extends com.google.api.client.json.Ge
   }
 
   /**
-   * This is always sql#onPremisesConfiguration.
+   * This is always *sql#onPremisesConfiguration*.
    * @param kind kind or {@code null} for none
    */
   public OnPremisesConfiguration setKind(java.lang.String kind) {

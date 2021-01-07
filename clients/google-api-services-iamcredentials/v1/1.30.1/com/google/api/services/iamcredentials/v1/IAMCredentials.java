@@ -20,7 +20,7 @@ package com.google.api.services.iamcredentials.v1;
  * Service definition for IAMCredentials (v1).
  *
  * <p>
- * Creates short-lived, limited-privilege credentials for IAM service accounts.
+ * Creates short-lived credentials for impersonating IAM service accounts. To enable this API, you must enable the IAM API (iam.googleapis.com). 
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the IAM Service Account Credentials API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the IAM Service Account Credentials API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -171,12 +171,9 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
        * optional parameters, call the {@link GenerateAccessToken#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. The resource name of the service account for which the credentials
-      are requested, in the
-       *        following format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-       *        wildcard
-      character is required; replacing it with a project ID is invalid.
+       * @param name Required. The resource name of the service account for which the credentials are requested, in the
+       *        following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard character is required; replacing it with a project ID is invalid.
        * @param content the {@link com.google.api.services.iamcredentials.v1.model.GenerateAccessTokenRequest}
        * @return the request
        */
@@ -204,12 +201,9 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the service account for which the credentials
-      are requested, in the
-       *        following format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-       *        wildcard
-      character is required; replacing it with a project ID is invalid.
+         * @param name Required. The resource name of the service account for which the credentials are requested, in the
+       *        following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard character is required; replacing it with a project ID is invalid.
          * @param content the {@link com.google.api.services.iamcredentials.v1.model.GenerateAccessTokenRequest}
          * @since 1.13
          */
@@ -325,12 +319,9 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
        * optional parameters, call the {@link GenerateIdToken#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. The resource name of the service account for which the credentials
-      are requested, in the
-       *        following format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-       *        wildcard
-      character is required; replacing it with a project ID is invalid.
+       * @param name Required. The resource name of the service account for which the credentials are requested, in the
+       *        following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard character is required; replacing it with a project ID is invalid.
        * @param content the {@link com.google.api.services.iamcredentials.v1.model.GenerateIdTokenRequest}
        * @return the request
        */
@@ -358,12 +349,9 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name Required. The resource name of the service account for which the credentials
-      are requested, in the
-       *        following format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-       *        wildcard
-      character is required; replacing it with a project ID is invalid.
+         * @param name Required. The resource name of the service account for which the credentials are requested, in the
+       *        following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard character is required; replacing it with a project ID is invalid.
          * @param content the {@link com.google.api.services.iamcredentials.v1.model.GenerateIdTokenRequest}
          * @since 1.13
          */
@@ -478,12 +466,9 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
        * This request holds the parameters needed by the iamcredentials server.  After setting any
        * optional parameters, call the {@link SignBlob#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the service account for which the credentials
-      are requested, in the
-       *        following format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-       *        wildcard
-      character is required; replacing it with a project ID is invalid.
+       * @param name Required. The resource name of the service account for which the credentials are requested, in the
+       *        following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard character is required; replacing it with a project ID is invalid.
        * @param content the {@link com.google.api.services.iamcredentials.v1.model.SignBlobRequest}
        * @return the request
        */
@@ -511,12 +496,9 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * SignBlob#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the service account for which the credentials
-      are requested, in the
-       *        following format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-       *        wildcard
-      character is required; replacing it with a project ID is invalid.
+         * @param name Required. The resource name of the service account for which the credentials are requested, in the
+       *        following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard character is required; replacing it with a project ID is invalid.
          * @param content the {@link com.google.api.services.iamcredentials.v1.model.SignBlobRequest}
          * @since 1.13
          */
@@ -631,12 +613,9 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
        * This request holds the parameters needed by the iamcredentials server.  After setting any
        * optional parameters, call the {@link SignJwt#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the service account for which the credentials
-      are requested, in the
-       *        following format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-       *        wildcard
-      character is required; replacing it with a project ID is invalid.
+       * @param name Required. The resource name of the service account for which the credentials are requested, in the
+       *        following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard character is required; replacing it with a project ID is invalid.
        * @param content the {@link com.google.api.services.iamcredentials.v1.model.SignJwtRequest}
        * @return the request
        */
@@ -664,12 +643,9 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * SignJwt#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the service account for which the credentials
-      are requested, in the
-       *        following format:
-      `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
-       *        wildcard
-      character is required; replacing it with a project ID is invalid.
+         * @param name Required. The resource name of the service account for which the credentials are requested, in the
+       *        following format: `projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID}`. The `-`
+       *        wildcard character is required; replacing it with a project ID is invalid.
          * @param content the {@link com.google.api.services.iamcredentials.v1.model.SignJwtRequest}
          * @since 1.13
          */

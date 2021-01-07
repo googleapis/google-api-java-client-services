@@ -24,7 +24,7 @@ package com.google.api.services.youtube.model;
  * resource(s) associated with the action, such as the video that was rated or uploaded.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -43,7 +43,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   private ActivityContentDetails contentDetails;
 
   /**
-   * Etag of this resource.
+   * Etag of this resource
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Etag of this resource.
+   * Etag of this resource
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -101,7 +101,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Etag of this resource.
+   * Etag of this resource
    * @param etag etag or {@code null} for none
    */
   public Activity setEtag(java.lang.String etag) {

@@ -46,7 +46,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud TPU API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud TPU API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -515,7 +515,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the tpu server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name.
+         * @param name Required. The resource name.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -541,7 +541,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name.
+           * @param name Required. The resource name.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -619,17 +619,17 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name.
+          /** Required. The resource name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -653,7 +653,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the tpu server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name.
+         * @param parent Required. The parent resource name.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -679,7 +679,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name.
+           * @param parent Required. The parent resource name.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -757,17 +757,17 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent resource name. */
+          /** Required. The parent resource name. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name.
+          /** Required. The parent resource name.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent resource name. */
+          /** Required. The parent resource name. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -877,7 +877,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the tpu server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name.
+         * @param parent Required. The parent resource name.
          * @param content the {@link com.google.api.services.tpu.v1alpha1.model.Node}
          * @return the request
          */
@@ -904,7 +904,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name.
+           * @param parent Required. The parent resource name.
            * @param content the {@link com.google.api.services.tpu.v1alpha1.model.Node}
            * @since 1.13
            */
@@ -973,17 +973,17 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent resource name. */
+          /** Required. The parent resource name. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name.
+          /** Required. The parent resource name.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent resource name. */
+          /** Required. The parent resource name. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1023,7 +1023,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the tpu server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name.
+         * @param name Required. The resource name.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1049,7 +1049,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name.
+           * @param name Required. The resource name.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1117,17 +1117,17 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name.
+          /** Required. The resource name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1151,7 +1151,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the tpu server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name.
+         * @param name Required. The resource name.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1177,7 +1177,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name.
+           * @param name Required. The resource name.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1255,17 +1255,17 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name.
+          /** Required. The resource name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1289,7 +1289,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the tpu server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name.
+         * @param parent Required. The parent resource name.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1315,7 +1315,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name.
+           * @param parent Required. The parent resource name.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1393,17 +1393,17 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent resource name. */
+          /** Required. The parent resource name. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name.
+          /** Required. The parent resource name.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent resource name. */
+          /** Required. The parent resource name. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1865,9 +1865,9 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -1895,13 +1895,13 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -2137,7 +2137,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -2162,7 +2162,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -2278,13 +2278,12 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -2309,13 +2308,12 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -2506,7 +2504,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the tpu server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name.
+         * @param name Required. The resource name.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2532,7 +2530,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name.
+           * @param name Required. The resource name.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2610,17 +2608,17 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name.
+          /** Required. The resource name.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The resource name. */
+          /** Required. The resource name. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2644,7 +2642,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the tpu server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name.
+         * @param parent Required. The parent resource name.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2670,7 +2668,7 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name.
+           * @param parent Required. The parent resource name.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2748,17 +2746,17 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent resource name. */
+          /** Required. The parent resource name. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name.
+          /** Required. The parent resource name.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent resource name. */
+          /** Required. The parent resource name. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),

@@ -20,8 +20,7 @@ package com.google.api.services.firestore.v1;
  * Service definition for Firestore (v1).
  *
  * <p>
- * Accesses the NoSQL document database built for automatic scaling, high performance, and ease of application development.
-
+ * Accesses the NoSQL document database built for automatic scaling, high performance, and ease of application development. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Firestore API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Firestore API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -650,10 +649,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Lists the field configuration and metadata for this database.
-           *
-           * Currently, FirestoreAdmin.ListFields only supports listing fields that have been explicitly
-           * overridden. To issue this query, call FirestoreAdmin.ListFields with the filter set to
+           * Lists the field configuration and metadata for this database. Currently,
+           * FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To
+           * issue this query, call FirestoreAdmin.ListFields with the filter set to
            * `indexConfig.usesAncestorConfig:false`.
            *
            * Create a request for the method "fields.list".
@@ -679,10 +677,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/collectionGroups/[^/]+$");
 
             /**
-             * Lists the field configuration and metadata for this database.
-             *
-             * Currently, FirestoreAdmin.ListFields only supports listing fields that have been explicitly
-             * overridden. To issue this query, call FirestoreAdmin.ListFields with the filter set to
+             * Lists the field configuration and metadata for this database. Currently,
+             * FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To
+             * issue this query, call FirestoreAdmin.ListFields with the filter set to
              * `indexConfig.usesAncestorConfig:false`.
              *
              * Create a request for the method "fields.list".
@@ -875,13 +872,11 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Updates a field configuration. Currently, field updates apply only to single field index
            * configuration. However, calls to FirestoreAdmin.UpdateField should provide a field mask to avoid
            * changing any configuration that the caller isn't aware of. The field mask should be specified as:
-           * `{ paths: "index_config" }`.
-           *
-           * This call returns a google.longrunning.Operation which may be used to track the status of the
-           * field update. The metadata for the operation will be the type FieldOperationMetadata.
-           *
-           * To configure the default field settings for the database, use the special `Field` with resource
-           * name: `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`.
+           * `{ paths: "index_config" }`. This call returns a google.longrunning.Operation which may be used
+           * to track the status of the field update. The metadata for the operation will be the type
+           * FieldOperationMetadata. To configure the default field settings for the database, use the special
+           * `Field` with resource name:
+           * `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`.
            *
            * Create a request for the method "fields.patch".
            *
@@ -890,35 +885,19 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            *
            * @param name A field name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{fi
-           *        eld_path}`
-          A field path may be a simple field name, e.g. `address` or a path to fields
-           *        within map_value , e.g. `address.city`,
-          or a special field path. The only valid special
-           *        field is `*`, which
-          represents any field.
-          Field paths may be quoted using ` (backtick).
-           *        The only character that needs
-          to be escaped within a quoted field path is the backtick
-           *        character itself,
-          escaped using a backslash. Special characters in field paths that
-          must
-           *        be quoted include: `*`, `.`,
-          ``` (backtick), `[`, `]`, as well as any ascii symbolic
-           *        characters.
-          Examples:
-          (Note: Comments here are written in markdown syntax, so there is an
-           *        additional layer of backticks to represent a code block)
-          `\`address.city\`` represents a
-           *        field named `address.city`, not the map key
-          `city` in the field `address`.
-          `\`*\``
-           *        represents a field named `*`, not any field.
-          A special `Field` contains the default
-           *        indexing settings for all fields.
-          This field's resource name is:
+           *        eld_path}` A field path may be a simple field name, e.g. `address` or a path to fields
+           *        within map_value , e.g. `address.city`, or a special field path. The only valid special
+           *        field is `*`, which represents any field. Field paths may be quoted using ` (backtick).
+           *        The only character that needs to be escaped within a quoted field path is the backtick
+           *        character itself, escaped using a backslash. Special characters in field paths that must
+           *        be quoted include: `*`, `.`, ``` (backtick), `[`, `]`, as well as any ascii symbolic
+           *        characters. Examples: (Note: Comments here are written in markdown syntax, so there is an
+           *        additional layer of backticks to represent a code block) `\`address.city\`` represents a
+           *        field named `address.city`, not the map key `city` in the field `address`. `\`*\``
+           *        represents a field named `*`, not any field. A special `Field` contains the default
+           *        indexing settings for all fields. This field's resource name is:
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`
-           *        Indexes defined on this `Field` will be applied to all fields which do not
-          have their own
+           *        Indexes defined on this `Field` will be applied to all fields which do not have their own
            *        `Field` index configuration.
            * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1Field}
            * @return the request
@@ -940,13 +919,11 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * Updates a field configuration. Currently, field updates apply only to single field index
              * configuration. However, calls to FirestoreAdmin.UpdateField should provide a field mask to
              * avoid changing any configuration that the caller isn't aware of. The field mask should be
-             * specified as: `{ paths: "index_config" }`.
-             *
-             * This call returns a google.longrunning.Operation which may be used to track the status of the
-             * field update. The metadata for the operation will be the type FieldOperationMetadata.
-             *
-             * To configure the default field settings for the database, use the special `Field` with resource
-             * name: `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`.
+             * specified as: `{ paths: "index_config" }`. This call returns a google.longrunning.Operation
+             * which may be used to track the status of the field update. The metadata for the operation will
+             * be the type FieldOperationMetadata. To configure the default field settings for the database,
+             * use the special `Field` with resource name:
+             * `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`.
              *
              * Create a request for the method "fields.patch".
              *
@@ -958,35 +935,19 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              *
              * @param name A field name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{fi
-           *        eld_path}`
-          A field path may be a simple field name, e.g. `address` or a path to fields
-           *        within map_value , e.g. `address.city`,
-          or a special field path. The only valid special
-           *        field is `*`, which
-          represents any field.
-          Field paths may be quoted using ` (backtick).
-           *        The only character that needs
-          to be escaped within a quoted field path is the backtick
-           *        character itself,
-          escaped using a backslash. Special characters in field paths that
-          must
-           *        be quoted include: `*`, `.`,
-          ``` (backtick), `[`, `]`, as well as any ascii symbolic
-           *        characters.
-          Examples:
-          (Note: Comments here are written in markdown syntax, so there is an
-           *        additional layer of backticks to represent a code block)
-          `\`address.city\`` represents a
-           *        field named `address.city`, not the map key
-          `city` in the field `address`.
-          `\`*\``
-           *        represents a field named `*`, not any field.
-          A special `Field` contains the default
-           *        indexing settings for all fields.
-          This field's resource name is:
+           *        eld_path}` A field path may be a simple field name, e.g. `address` or a path to fields
+           *        within map_value , e.g. `address.city`, or a special field path. The only valid special
+           *        field is `*`, which represents any field. Field paths may be quoted using ` (backtick).
+           *        The only character that needs to be escaped within a quoted field path is the backtick
+           *        character itself, escaped using a backslash. Special characters in field paths that must
+           *        be quoted include: `*`, `.`, ``` (backtick), `[`, `]`, as well as any ascii symbolic
+           *        characters. Examples: (Note: Comments here are written in markdown syntax, so there is an
+           *        additional layer of backticks to represent a code block) `\`address.city\`` represents a
+           *        field named `address.city`, not the map key `city` in the field `address`. `\`*\``
+           *        represents a field named `*`, not any field. A special `Field` contains the default
+           *        indexing settings for all fields. This field's resource name is:
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`
-           *        Indexes defined on this `Field` will be applied to all fields which do not
-          have their own
+           *        Indexes defined on this `Field` will be applied to all fields which do not have their own
            *        `Field` index configuration.
              * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1Field}
              * @since 1.13
@@ -1058,24 +1019,18 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * A field name of the form `projects/{project_id}/databases/{database_id}/collectionGro
-             * ups/{collection_id}/fields/{field_path}`
-             *
-             * A field path may be a simple field name, e.g. `address` or a path to fields within
-             * map_value , e.g. `address.city`, or a special field path. The only valid special
-             * field is `*`, which represents any field.
-             *
+             * ups/{collection_id}/fields/{field_path}` A field path may be a simple field name,
+             * e.g. `address` or a path to fields within map_value , e.g. `address.city`, or a
+             * special field path. The only valid special field is `*`, which represents any field.
              * Field paths may be quoted using ` (backtick). The only character that needs to be
              * escaped within a quoted field path is the backtick character itself, escaped using a
              * backslash. Special characters in field paths that must be quoted include: `*`, `.`,
-             * ``` (backtick), `[`, `]`, as well as any ascii symbolic characters.
-             *
-             * Examples: (Note: Comments here are written in markdown syntax, so there is an
-             * additional layer of backticks to represent a code block) `\`address.city\``
-             * represents a field named `address.city`, not the map key `city` in the field
-             * `address`. `\`*\`` represents a field named `*`, not any field.
-             *
-             * A special `Field` contains the default indexing settings for all fields. This field's
-             * resource name is:
+             * ``` (backtick), `[`, `]`, as well as any ascii symbolic characters. Examples: (Note:
+             * Comments here are written in markdown syntax, so there is an additional layer of
+             * backticks to represent a code block) `\`address.city\`` represents a field named
+             * `address.city`, not the map key `city` in the field `address`. `\`*\`` represents a
+             * field named `*`, not any field. A special `Field` contains the default indexing
+             * settings for all fields. This field's resource name is:
              * `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`
              * Indexes defined on this `Field` will be applied to all fields which do not have their
              * own `Field` index configuration.
@@ -1084,24 +1039,18 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             private java.lang.String name;
 
             /** A field name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{collectio
-           n_id}/fields/{field_path}`
-
-           A field path may be a simple field name, e.g. `address` or a path to fields within map_value , e.g.
-           `address.city`, or a special field path. The only valid special field is `*`, which represents any
-           field.
-
-           Field paths may be quoted using ` (backtick). The only character that needs to be escaped within a
-           quoted field path is the backtick character itself, escaped using a backslash. Special characters
-           in field paths that must be quoted include: `*`, `.`, ``` (backtick), `[`, `]`, as well as any
-           ascii symbolic characters.
-
-           Examples: (Note: Comments here are written in markdown syntax, so there is an additional layer of
-           backticks to represent a code block) `\`address.city\`` represents a field named `address.city`,
-           not the map key `city` in the field `address`. `\`*\`` represents a field named `*`, not any field.
-
-           A special `Field` contains the default indexing settings for all fields. This field's resource name
-           is: `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields` Indexes
-           defined on this `Field` will be applied to all fields which do not have their own `Field` index
+           n_id}/fields/{field_path}` A field path may be a simple field name, e.g. `address` or a path to
+           fields within map_value , e.g. `address.city`, or a special field path. The only valid special
+           field is `*`, which represents any field. Field paths may be quoted using ` (backtick). The only
+           character that needs to be escaped within a quoted field path is the backtick character itself,
+           escaped using a backslash. Special characters in field paths that must be quoted include: `*`, `.`,
+           ``` (backtick), `[`, `]`, as well as any ascii symbolic characters. Examples: (Note: Comments here
+           are written in markdown syntax, so there is an additional layer of backticks to represent a code
+           block) `\`address.city\`` represents a field named `address.city`, not the map key `city` in the
+           field `address`. `\`*\`` represents a field named `*`, not any field. A special `Field` contains
+           the default indexing settings for all fields. This field's resource name is:
+           `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields` Indexes defined
+           on this `Field` will be applied to all fields which do not have their own `Field` index
            configuration.
              */
             public java.lang.String getName() {
@@ -1110,24 +1059,18 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * A field name of the form `projects/{project_id}/databases/{database_id}/collectionGro
-             * ups/{collection_id}/fields/{field_path}`
-             *
-             * A field path may be a simple field name, e.g. `address` or a path to fields within
-             * map_value , e.g. `address.city`, or a special field path. The only valid special
-             * field is `*`, which represents any field.
-             *
+             * ups/{collection_id}/fields/{field_path}` A field path may be a simple field name,
+             * e.g. `address` or a path to fields within map_value , e.g. `address.city`, or a
+             * special field path. The only valid special field is `*`, which represents any field.
              * Field paths may be quoted using ` (backtick). The only character that needs to be
              * escaped within a quoted field path is the backtick character itself, escaped using a
              * backslash. Special characters in field paths that must be quoted include: `*`, `.`,
-             * ``` (backtick), `[`, `]`, as well as any ascii symbolic characters.
-             *
-             * Examples: (Note: Comments here are written in markdown syntax, so there is an
-             * additional layer of backticks to represent a code block) `\`address.city\``
-             * represents a field named `address.city`, not the map key `city` in the field
-             * `address`. `\`*\`` represents a field named `*`, not any field.
-             *
-             * A special `Field` contains the default indexing settings for all fields. This field's
-             * resource name is:
+             * ``` (backtick), `[`, `]`, as well as any ascii symbolic characters. Examples: (Note:
+             * Comments here are written in markdown syntax, so there is an additional layer of
+             * backticks to represent a code block) `\`address.city\`` represents a field named
+             * `address.city`, not the map key `city` in the field `address`. `\`*\`` represents a
+             * field named `*`, not any field. A special `Field` contains the default indexing
+             * settings for all fields. This field's resource name is:
              * `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`
              * Indexes defined on this `Field` will be applied to all fields which do not have their
              * own `Field` index configuration.
@@ -1851,18 +1794,15 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
       public class Documents {
 
         /**
-         * Gets multiple documents.
-         *
-         * Documents returned by this method are not guaranteed to be returned in the same order that they
-         * were requested.
+         * Gets multiple documents. Documents returned by this method are not guaranteed to be returned in
+         * the same order that they were requested.
          *
          * Create a request for the method "documents.batchGet".
          *
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
          *
-         * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
+         * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.BatchGetDocumentsRequest}
          * @return the request
          */
@@ -1880,10 +1820,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
 
           /**
-           * Gets multiple documents.
-           *
-           * Documents returned by this method are not guaranteed to be returned in the same order that they
-           * were requested.
+           * Gets multiple documents. Documents returned by this method are not guaranteed to be returned in
+           * the same order that they were requested.
            *
            * Create a request for the method "documents.batchGet".
            *
@@ -1893,8 +1831,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
+           * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
            * @param content the {@link com.google.api.services.firestore.v1.model.BatchGetDocumentsRequest}
            * @since 1.13
            */
@@ -1996,6 +1933,150 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
+         * Applies a batch of write operations. The BatchWrite method does not apply the write operations
+         * atomically and can apply them out of order. Method does not allow more than one write per
+         * document. Each write succeeds or fails independently. See the BatchWriteResponse for the success
+         * status of each write. If you require an atomically applied set of writes, use Commit instead.
+         *
+         * Create a request for the method "documents.batchWrite".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link BatchWrite#execute()} method to invoke the remote operation.
+         *
+         * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.BatchWriteRequest}
+         * @return the request
+         */
+        public BatchWrite batchWrite(java.lang.String database, com.google.api.services.firestore.v1.model.BatchWriteRequest content) throws java.io.IOException {
+          BatchWrite result = new BatchWrite(database, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchWrite extends FirestoreRequest<com.google.api.services.firestore.v1.model.BatchWriteResponse> {
+
+          private static final String REST_PATH = "v1/{+database}/documents:batchWrite";
+
+          private final java.util.regex.Pattern DATABASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Applies a batch of write operations. The BatchWrite method does not apply the write operations
+           * atomically and can apply them out of order. Method does not allow more than one write per
+           * document. Each write succeeds or fails independently. See the BatchWriteResponse for the
+           * success status of each write. If you require an atomically applied set of writes, use Commit
+           * instead.
+           *
+           * Create a request for the method "documents.batchWrite".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link BatchWrite#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * BatchWrite#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.BatchWriteRequest}
+           * @since 1.13
+           */
+          protected BatchWrite(java.lang.String database, com.google.api.services.firestore.v1.model.BatchWriteRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.BatchWriteResponse.class);
+            this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchWrite set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchWrite) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchWrite setAccessToken(java.lang.String accessToken) {
+            return (BatchWrite) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchWrite setAlt(java.lang.String alt) {
+            return (BatchWrite) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchWrite setCallback(java.lang.String callback) {
+            return (BatchWrite) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchWrite setFields(java.lang.String fields) {
+            return (BatchWrite) super.setFields(fields);
+          }
+
+          @Override
+          public BatchWrite setKey(java.lang.String key) {
+            return (BatchWrite) super.setKey(key);
+          }
+
+          @Override
+          public BatchWrite setOauthToken(java.lang.String oauthToken) {
+            return (BatchWrite) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchWrite setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchWrite) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchWrite setQuotaUser(java.lang.String quotaUser) {
+            return (BatchWrite) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchWrite setUploadType(java.lang.String uploadType) {
+            return (BatchWrite) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchWrite setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchWrite) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String database;
+
+          /** Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
+           */
+          public java.lang.String getDatabase() {
+            return database;
+          }
+
+          /**
+           * Required. The database name. In the format:
+           * `projects/{project_id}/databases/{database_id}`.
+           */
+          public BatchWrite setDatabase(java.lang.String database) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.database = database;
+            return this;
+          }
+
+          @Override
+          public BatchWrite set(String parameterName, Object value) {
+            return (BatchWrite) super.set(parameterName, value);
+          }
+        }
+        /**
          * Starts a new transaction.
          *
          * Create a request for the method "documents.beginTransaction".
@@ -2003,8 +2084,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link BeginTransaction#execute()} method to invoke the remote operation.
          *
-         * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
+         * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.BeginTransactionRequest}
          * @return the request
          */
@@ -2032,8 +2112,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * tractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
+           * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
            * @param content the {@link com.google.api.services.firestore.v1.model.BeginTransactionRequest}
            * @since 1.13
            */
@@ -2142,8 +2221,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Commit#execute()} method to invoke the remote operation.
          *
-         * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
+         * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.CommitRequest}
          * @return the request
          */
@@ -2171,8 +2249,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Commit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
+           * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
            * @param content the {@link com.google.api.services.firestore.v1.model.CommitRequest}
            * @since 1.13
            */
@@ -2437,25 +2514,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The client-assigned document ID to use for this document.
-           *
-           * Optional. If not specified, an ID will be assigned by the service.
+           * The client-assigned document ID to use for this document. Optional. If not specified,
+           * an ID will be assigned by the service.
            */
           @com.google.api.client.util.Key
           private java.lang.String documentId;
 
-          /** The client-assigned document ID to use for this document.
-
-         Optional. If not specified, an ID will be assigned by the service.
+          /** The client-assigned document ID to use for this document. Optional. If not specified, an ID will be
+         assigned by the service.
            */
           public java.lang.String getDocumentId() {
             return documentId;
           }
 
           /**
-           * The client-assigned document ID to use for this document.
-           *
-           * Optional. If not specified, an ID will be assigned by the service.
+           * The client-assigned document ID to use for this document. Optional. If not specified,
+           * an ID will be assigned by the service.
            */
           public CreateDocument setDocumentId(java.lang.String documentId) {
             this.documentId = documentId;
@@ -2645,9 +2719,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /**
-           * When set, the target document must exist and have been last updated at that time.
-           */
+          /** When set, the target document must exist and have been last updated at that time. */
           @com.google.api.client.util.Key("currentDocument.updateTime")
           private String currentDocumentUpdateTime;
 
@@ -2657,9 +2729,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return currentDocumentUpdateTime;
           }
 
-          /**
-           * When set, the target document must exist and have been last updated at that time.
-           */
+          /** When set, the target document must exist and have been last updated at that time. */
           public Delete setCurrentDocumentUpdateTime(String currentDocumentUpdateTime) {
             this.currentDocumentUpdateTime = currentDocumentUpdateTime;
             return this;
@@ -2887,13 +2957,10 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          *
          * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
-         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
-        For example:
-         *        `projects/my-project/databases/my-database/documents` or
-        `projects/my-project/databases
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
          *        /my-database/documents/chatrooms/my-chatroom`
-         * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`
-        or `messages`.
+         * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
          * @return the request
          */
         public List list(java.lang.String parent, java.lang.String collectionId) throws java.io.IOException {
@@ -2921,13 +2988,10 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            *
            * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
-         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
-        For example:
-         *        `projects/my-project/databases/my-database/documents` or
-        `projects/my-project/databases
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
          *        /my-database/documents/chatrooms/my-chatroom`
-           * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`
-        or `messages`.
+           * @param collectionId Required. The collection ID, relative to `parent`, to list. For example: `chatrooms` or `messages`.
            * @since 1.13
            */
           protected List(java.lang.String parent, java.lang.String collectionId) {
@@ -3158,18 +3222,16 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           /**
            * If the list should show missing documents. A missing document is a document that does
            * not exist but has sub-documents. These documents will be returned with a key but will
-           * not have fields, Document.create_time, or Document.update_time set.
-           *
-           * Requests with `show_missing` may not specify `where` or `order_by`.
+           * not have fields, Document.create_time, or Document.update_time set. Requests with
+           * `show_missing` may not specify `where` or `order_by`.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean showMissing;
 
           /** If the list should show missing documents. A missing document is a document that does not exist but
          has sub-documents. These documents will be returned with a key but will not have fields,
-         Document.create_time, or Document.update_time set.
-
-         Requests with `show_missing` may not specify `where` or `order_by`.
+         Document.create_time, or Document.update_time set. Requests with `show_missing` may not specify
+         `where` or `order_by`.
            */
           public java.lang.Boolean getShowMissing() {
             return showMissing;
@@ -3178,9 +3240,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           /**
            * If the list should show missing documents. A missing document is a document that does
            * not exist but has sub-documents. These documents will be returned with a key but will
-           * not have fields, Document.create_time, or Document.update_time set.
-           *
-           * Requests with `show_missing` may not specify `where` or `order_by`.
+           * not have fields, Document.create_time, or Document.update_time set. Requests with
+           * `show_missing` may not specify `where` or `order_by`.
            */
           public List setShowMissing(java.lang.Boolean showMissing) {
             this.showMissing = showMissing;
@@ -3217,8 +3278,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link ListCollectionIds#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent document. In the format:
-         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
-        For example:
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
          *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
          * @param content the {@link com.google.api.services.firestore.v1.model.ListCollectionIdsRequest}
          * @return the request
@@ -3248,8 +3308,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * invoking the constructor. </p>
            *
            * @param parent Required. The parent document. In the format:
-         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
-        For example:
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
          *        `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
            * @param content the {@link com.google.api.services.firestore.v1.model.ListCollectionIdsRequest}
            * @since 1.13
@@ -3363,8 +3422,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Listen#execute()} method to invoke the remote operation.
          *
-         * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
+         * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.ListenRequest}
          * @return the request
          */
@@ -3392,8 +3450,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Listen#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
+           * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
            * @param content the {@link com.google.api.services.firestore.v1.model.ListenRequest}
            * @since 1.13
            */
@@ -3492,6 +3549,155 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           @Override
           public Listen set(String parameterName, Object value) {
             return (Listen) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Partitions a query by returning partition cursors that can be used to run the query in parallel.
+         * The returned partition cursors are split points that can be used by RunQuery as starting/end
+         * points for the query results.
+         *
+         * Create a request for the method "documents.partitionQuery".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link PartitionQuery#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents`. Document resource names are not
+         *        supported; only database resource names can be specified.
+         * @param content the {@link com.google.api.services.firestore.v1.model.PartitionQueryRequest}
+         * @return the request
+         */
+        public PartitionQuery partitionQuery(java.lang.String parent, com.google.api.services.firestore.v1.model.PartitionQueryRequest content) throws java.io.IOException {
+          PartitionQuery result = new PartitionQuery(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PartitionQuery extends FirestoreRequest<com.google.api.services.firestore.v1.model.PartitionQueryResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:partitionQuery";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
+
+          /**
+           * Partitions a query by returning partition cursors that can be used to run the query in
+           * parallel. The returned partition cursors are split points that can be used by RunQuery as
+           * starting/end points for the query results.
+           *
+           * Create a request for the method "documents.partitionQuery".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link PartitionQuery#execute()} method to invoke the remote
+           * operation. <p> {@link PartitionQuery#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param parent Required. The parent resource name. In the format:
+         *        `projects/{project_id}/databases/{database_id}/documents`. Document resource names are not
+         *        supported; only database resource names can be specified.
+           * @param content the {@link com.google.api.services.firestore.v1.model.PartitionQueryRequest}
+           * @since 1.13
+           */
+          protected PartitionQuery(java.lang.String parent, com.google.api.services.firestore.v1.model.PartitionQueryRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.PartitionQueryResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
+            }
+          }
+
+          @Override
+          public PartitionQuery set$Xgafv(java.lang.String $Xgafv) {
+            return (PartitionQuery) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PartitionQuery setAccessToken(java.lang.String accessToken) {
+            return (PartitionQuery) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PartitionQuery setAlt(java.lang.String alt) {
+            return (PartitionQuery) super.setAlt(alt);
+          }
+
+          @Override
+          public PartitionQuery setCallback(java.lang.String callback) {
+            return (PartitionQuery) super.setCallback(callback);
+          }
+
+          @Override
+          public PartitionQuery setFields(java.lang.String fields) {
+            return (PartitionQuery) super.setFields(fields);
+          }
+
+          @Override
+          public PartitionQuery setKey(java.lang.String key) {
+            return (PartitionQuery) super.setKey(key);
+          }
+
+          @Override
+          public PartitionQuery setOauthToken(java.lang.String oauthToken) {
+            return (PartitionQuery) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PartitionQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PartitionQuery) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PartitionQuery setQuotaUser(java.lang.String quotaUser) {
+            return (PartitionQuery) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PartitionQuery setUploadType(java.lang.String uploadType) {
+            return (PartitionQuery) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PartitionQuery setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PartitionQuery) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents`. Document resource names are
+           * not supported; only database resource names can be specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name. In the format:
+         `projects/{project_id}/databases/{database_id}/documents`. Document resource names are not
+         supported; only database resource names can be specified.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name. In the format:
+           * `projects/{project_id}/databases/{database_id}/documents`. Document resource names are
+           * not supported; only database resource names can be specified.
+           */
+          public PartitionQuery setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/documents/[^/]+/.*$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public PartitionQuery set(String parameterName, Object value) {
+            return (PartitionQuery) super.set(parameterName, value);
           }
         }
         /**
@@ -3652,9 +3858,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /**
-           * When set, the target document must exist and have been last updated at that time.
-           */
+          /** When set, the target document must exist and have been last updated at that time. */
           @com.google.api.client.util.Key("currentDocument.updateTime")
           private String currentDocumentUpdateTime;
 
@@ -3664,9 +3868,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return currentDocumentUpdateTime;
           }
 
-          /**
-           * When set, the target document must exist and have been last updated at that time.
-           */
+          /** When set, the target document must exist and have been last updated at that time. */
           public Patch setCurrentDocumentUpdateTime(String currentDocumentUpdateTime) {
             this.currentDocumentUpdateTime = currentDocumentUpdateTime;
             return this;
@@ -3729,8 +3931,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
          *
-         * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
+         * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1.model.RollbackRequest}
          * @return the request
          */
@@ -3758,8 +3959,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
+           * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`.
            * @param content the {@link com.google.api.services.firestore.v1.model.RollbackRequest}
            * @since 1.13
            */
@@ -3870,10 +4070,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          *
          * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
-         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
-        For example:
-         *        `projects/my-project/databases/my-database/documents` or
-        `projects/my-project/databases
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
          *        /my-database/documents/chatrooms/my-chatroom`
          * @param content the {@link com.google.api.services.firestore.v1.model.RunQueryRequest}
          * @return the request
@@ -3904,10 +4102,8 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            *
            * @param parent Required. The parent resource name. In the format:
          *        `projects/{project_id}/databases/{database_id}/documents` or
-         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
-        For example:
-         *        `projects/my-project/databases/my-database/documents` or
-        `projects/my-project/databases
+         *        `projects/{project_id}/databases/{database_id}/documents/{document_path}`. For example:
+         *        `projects/my-project/databases/my-database/documents` or `projects/my-project/databases
          *        /my-database/documents/chatrooms/my-chatroom`
            * @param content the {@link com.google.api.services.firestore.v1.model.RunQueryRequest}
            * @since 1.13
@@ -4027,9 +4223,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the firestore server.  After setting any optional
          * parameters, call the {@link Write#execute()} method to invoke the remote operation.
          *
-         * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
-        This is
+         * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`. This is
          *        only required in the first message.
          * @param content the {@link com.google.api.services.firestore.v1.model.WriteRequest}
          * @return the request
@@ -4058,9 +4252,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Write#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database Required. The database name. In the format:
-        `projects/{project_id}/databases/{database_id}`.
-        This is
+           * @param database Required. The database name. In the format: `projects/{project_id}/databases/{database_id}`. This is
          *        only required in the first message.
            * @param content the {@link com.google.api.services.firestore.v1.model.WriteRequest}
            * @since 1.13
@@ -4188,9 +4380,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -4219,13 +4411,13 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -4464,7 +4656,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -4489,7 +4681,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -4605,13 +4797,12 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -4636,13 +4827,12 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *

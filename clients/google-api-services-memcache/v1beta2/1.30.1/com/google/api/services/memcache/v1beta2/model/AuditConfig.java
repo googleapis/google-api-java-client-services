@@ -27,13 +27,13 @@ package com.google.api.services.memcache.v1beta2.model;
  *
  * Example Policy with multiple AuditConfigs:
  *
- *     {       "audit_configs": [         {           "service": "allServices"
+ *     {       "audit_configs": [         {           "service": "allServices",
  * "audit_log_configs": [             {               "log_type": "DATA_READ",
  * "exempted_members": [                 "user:jose@example.com"               ]             },
- * {               "log_type": "DATA_WRITE",             },             {               "log_type":
- * "ADMIN_READ",             }           ]         },         {           "service":
- * "sampleservice.googleapis.com"           "audit_log_configs": [             {
- * "log_type": "DATA_READ",             },             {               "log_type": "DATA_WRITE",
+ * {               "log_type": "DATA_WRITE"             },             {               "log_type":
+ * "ADMIN_READ"             }           ]         },         {           "service":
+ * "sampleservice.googleapis.com",           "audit_log_configs": [             {
+ * "log_type": "DATA_READ"             },             {               "log_type": "DATA_WRITE",
  * "exempted_members": [                 "user:aliya@example.com"               ]             }
  * ]         }       ]     }
  *

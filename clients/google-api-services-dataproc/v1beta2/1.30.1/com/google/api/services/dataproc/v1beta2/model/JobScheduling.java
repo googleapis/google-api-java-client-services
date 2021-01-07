@@ -39,6 +39,14 @@ public final class JobScheduling extends com.google.api.client.json.GenericJson 
   private java.lang.Integer maxFailuresPerHour;
 
   /**
+   * Optional. Maximum number of times in total a driver may be restarted as a result of driver
+   * exiting with non-zero code before job is reported failed. Maximum value is 240
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxFailuresTotal;
+
+  /**
    * Optional. Maximum number of times per hour a driver may be restarted as a result of driver
    * terminating with non-zero code before job is reported failed.A job may be reported as thrashing
    * if driver exits with non-zero code 4 times within 10 minute window.Maximum value is 10.
@@ -56,6 +64,25 @@ public final class JobScheduling extends com.google.api.client.json.GenericJson 
    */
   public JobScheduling setMaxFailuresPerHour(java.lang.Integer maxFailuresPerHour) {
     this.maxFailuresPerHour = maxFailuresPerHour;
+    return this;
+  }
+
+  /**
+   * Optional. Maximum number of times in total a driver may be restarted as a result of driver
+   * exiting with non-zero code before job is reported failed. Maximum value is 240
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxFailuresTotal() {
+    return maxFailuresTotal;
+  }
+
+  /**
+   * Optional. Maximum number of times in total a driver may be restarted as a result of driver
+   * exiting with non-zero code before job is reported failed. Maximum value is 240
+   * @param maxFailuresTotal maxFailuresTotal or {@code null} for none
+   */
+  public JobScheduling setMaxFailuresTotal(java.lang.Integer maxFailuresTotal) {
+    this.maxFailuresTotal = maxFailuresTotal;
     return this;
   }
 

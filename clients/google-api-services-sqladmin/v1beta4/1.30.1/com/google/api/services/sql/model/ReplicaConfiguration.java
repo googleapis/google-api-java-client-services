@@ -30,9 +30,9 @@ package com.google.api.services.sql.model;
 public final class ReplicaConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies if the replica is the failover target. If the field is set to true the replica will
+   * Specifies if the replica is the failover target. If the field is set to *true* the replica will
    * be designated as a failover replica. In case the master instance fails, the replica instance
-   * will be promoted as the new master instance.  Only one replica can be specified as failover
+   * will be promoted as the new master instance. Only one replica can be specified as failover
    * target, and the replica has to be in different zone with the master instance.
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
   private java.lang.Boolean failoverTarget;
 
   /**
-   * This is always sql#replicaConfiguration.
+   * This is always *sql#replicaConfiguration*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,16 +50,16 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
    * MySQL specific configuration when replicating from a MySQL on-premises master. Replication
    * configuration information such as the username, password, certificates, and keys are not stored
    * in the instance metadata. The configuration information is used only to set up the replication
-   * connection and is stored by MySQL in a file named master.info in the data directory.
+   * connection and is stored by MySQL in a file named *master.info* in the data directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MySqlReplicaConfiguration mysqlReplicaConfiguration;
 
   /**
-   * Specifies if the replica is the failover target. If the field is set to true the replica will
+   * Specifies if the replica is the failover target. If the field is set to *true* the replica will
    * be designated as a failover replica. In case the master instance fails, the replica instance
-   * will be promoted as the new master instance.  Only one replica can be specified as failover
+   * will be promoted as the new master instance. Only one replica can be specified as failover
    * target, and the replica has to be in different zone with the master instance.
    * @return value or {@code null} for none
    */
@@ -68,9 +68,9 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies if the replica is the failover target. If the field is set to true the replica will
+   * Specifies if the replica is the failover target. If the field is set to *true* the replica will
    * be designated as a failover replica. In case the master instance fails, the replica instance
-   * will be promoted as the new master instance.  Only one replica can be specified as failover
+   * will be promoted as the new master instance. Only one replica can be specified as failover
    * target, and the replica has to be in different zone with the master instance.
    * @param failoverTarget failoverTarget or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * This is always sql#replicaConfiguration.
+   * This is always *sql#replicaConfiguration*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -88,7 +88,7 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
   }
 
   /**
-   * This is always sql#replicaConfiguration.
+   * This is always *sql#replicaConfiguration*.
    * @param kind kind or {@code null} for none
    */
   public ReplicaConfiguration setKind(java.lang.String kind) {
@@ -100,7 +100,7 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
    * MySQL specific configuration when replicating from a MySQL on-premises master. Replication
    * configuration information such as the username, password, certificates, and keys are not stored
    * in the instance metadata. The configuration information is used only to set up the replication
-   * connection and is stored by MySQL in a file named master.info in the data directory.
+   * connection and is stored by MySQL in a file named *master.info* in the data directory.
    * @return value or {@code null} for none
    */
   public MySqlReplicaConfiguration getMysqlReplicaConfiguration() {
@@ -111,7 +111,7 @@ public final class ReplicaConfiguration extends com.google.api.client.json.Gener
    * MySQL specific configuration when replicating from a MySQL on-premises master. Replication
    * configuration information such as the username, password, certificates, and keys are not stored
    * in the instance metadata. The configuration information is used only to set up the replication
-   * connection and is stored by MySQL in a file named master.info in the data directory.
+   * connection and is stored by MySQL in a file named *master.info* in the data directory.
    * @param mysqlReplicaConfiguration mysqlReplicaConfiguration or {@code null} for none
    */
   public ReplicaConfiguration setMysqlReplicaConfiguration(MySqlReplicaConfiguration mysqlReplicaConfiguration) {

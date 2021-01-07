@@ -17,16 +17,13 @@
 package com.google.api.services.deploymentmanager.model;
 
 /**
- * Provides the configuration for logging a type of permissions. Example:
- *
- * { "audit_log_configs": [ { "log_type": "DATA_READ", "exempted_members": [ "user:foo@gmail.com" ]
- * }, { "log_type": "DATA_WRITE", } ] }
- *
- * This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting foo@gmail.com from DATA_READ
- * logging.
+ * Provides the configuration for logging a type of permissions. Example: { "audit_log_configs": [ {
+ * "log_type": "DATA_READ", "exempted_members": [ "user:jose@example.com" ] }, { "log_type":
+ * "DATA_WRITE" } ] } This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting
+ * jose@example.com from DATA_READ logging.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deployment Manager API. For a detailed
+ * transmitted over HTTP when working with the Cloud Deployment Manager V2 API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -38,7 +35,7 @@ public final class AuditLogConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the identities that do not cause logging for this type of permission. Follows the
-   * same format of [Binding.members][].
+   * same format of Binding.members.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +50,7 @@ public final class AuditLogConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the identities that do not cause logging for this type of permission. Follows the
-   * same format of [Binding.members][].
+   * same format of Binding.members.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExemptedMembers() {
@@ -62,7 +59,7 @@ public final class AuditLogConfig extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the identities that do not cause logging for this type of permission. Follows the
-   * same format of [Binding.members][].
+   * same format of Binding.members.
    * @param exemptedMembers exemptedMembers or {@code null} for none
    */
   public AuditLogConfig setExemptedMembers(java.util.List<java.lang.String> exemptedMembers) {

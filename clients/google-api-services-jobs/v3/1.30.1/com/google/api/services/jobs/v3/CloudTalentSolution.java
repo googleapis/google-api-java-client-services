@@ -20,8 +20,7 @@ package com.google.api.services.jobs.v3;
  * Service definition for CloudTalentSolution (v3).
  *
  * <p>
- * Cloud Talent Solution provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.
-
+ * Cloud Talent Solution provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Talent Solution API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Talent Solution API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -152,10 +151,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
      * This request holds the parameters needed by the jobs server.  After setting any optional
      * parameters, call the {@link Complete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of project the completion is performed within.
-    The format is
-     *        "projects/{project_id}", for example,
-    "projects/api-test-project".
+     * @param name Required. Resource name of project the completion is performed within. The format is
+     *        "projects/{project_id}", for example, "projects/api-test-project".
      * @return the request
      */
     public Complete complete(java.lang.String name) throws java.io.IOException {
@@ -183,10 +180,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * Complete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of project the completion is performed within.
-    The format is
-     *        "projects/{project_id}", for example,
-    "projects/api-test-project".
+       * @param name Required. Resource name of project the completion is performed within. The format is
+     *        "projects/{project_id}", for example, "projects/api-test-project".
        * @since 1.13
        */
       protected Complete(java.lang.String name) {
@@ -265,25 +260,22 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Required. Resource name of project the completion is performed within.
-       *
-       * The format is "projects/{project_id}", for example, "projects/api-test-project".
+       * Required. Resource name of project the completion is performed within. The format is
+       * "projects/{project_id}", for example, "projects/api-test-project".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of project the completion is performed within.
-
-     The format is "projects/{project_id}", for example, "projects/api-test-project".
+      /** Required. Resource name of project the completion is performed within. The format is
+     "projects/{project_id}", for example, "projects/api-test-project".
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Resource name of project the completion is performed within.
-       *
-       * The format is "projects/{project_id}", for example, "projects/api-test-project".
+       * Required. Resource name of project the completion is performed within. The format is
+       * "projects/{project_id}", for example, "projects/api-test-project".
        */
       public Complete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -296,17 +288,15 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. If provided, restricts completion to specified company.
-       *
-       * The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-
-       * test-project/companies/foo".
+       * Optional. If provided, restricts completion to specified company. The format is
+       * "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+       * project/companies/foo".
        */
       @com.google.api.client.util.Key
       private java.lang.String companyName;
 
-      /** Optional. If provided, restricts completion to specified company.
-
-     The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+      /** Optional. If provided, restricts completion to specified company. The format is
+     "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
      project/companies/foo".
        */
       public java.lang.String getCompanyName() {
@@ -314,10 +304,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Optional. If provided, restricts completion to specified company.
-       *
-       * The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-
-       * test-project/companies/foo".
+       * Optional. If provided, restricts completion to specified company. The format is
+       * "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+       * project/companies/foo".
        */
       public Complete setCompanyName(java.lang.String companyName) {
         this.companyName = companyName;
@@ -325,66 +314,39 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       }
 
       /**
-       * Deprecated. Use language_codes instead.
-       *
-       * Optional.
-       *
-       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-       * For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with the same language_code are returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with the same
-       * language_code are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with the same language_code or companies
-       * having open jobs with the same language_code are returned.
-       *
-       * The maximum number of allowed characters is 255.
+       * Deprecated. Use language_codes instead. Optional. The language of the query. This is the
+       * BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Tags for
+       * Identifying Languages](https://tools.ietf.org/html/bcp47). For CompletionType.JOB_TITLE
+       * type, only open jobs with the same language_code are returned. For
+       * CompletionType.COMPANY_NAME type, only companies having open jobs with the same
+       * language_code are returned. For CompletionType.COMBINED type, only open jobs with the same
+       * language_code or companies having open jobs with the same language_code are returned. The
+       * maximum number of allowed characters is 255.
        */
       @com.google.api.client.util.Key
       private java.lang.String languageCode;
 
-      /** Deprecated. Use language_codes instead.
-
-     Optional.
-
-     The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn". For more
-     information, see [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
-
-     For CompletionType.JOB_TITLE type, only open jobs with the same language_code are returned.
-
-     For CompletionType.COMPANY_NAME type, only companies having open jobs with the same language_code
-     are returned.
-
-     For CompletionType.COMBINED type, only open jobs with the same language_code or companies having
-     open jobs with the same language_code are returned.
-
-     The maximum number of allowed characters is 255.
+      /** Deprecated. Use language_codes instead. Optional. The language of the query. This is the BCP-47
+     language code, such as "en-US" or "sr-Latn". For more information, see [Tags for Identifying
+     Languages](https://tools.ietf.org/html/bcp47). For CompletionType.JOB_TITLE type, only open jobs
+     with the same language_code are returned. For CompletionType.COMPANY_NAME type, only companies
+     having open jobs with the same language_code are returned. For CompletionType.COMBINED type, only
+     open jobs with the same language_code or companies having open jobs with the same language_code are
+     returned. The maximum number of allowed characters is 255.
        */
       public java.lang.String getLanguageCode() {
         return languageCode;
       }
 
       /**
-       * Deprecated. Use language_codes instead.
-       *
-       * Optional.
-       *
-       * The language of the query. This is the BCP-47 language code, such as "en-US" or "sr-Latn".
-       * For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with the same language_code are returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with the same
-       * language_code are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with the same language_code or companies
-       * having open jobs with the same language_code are returned.
-       *
-       * The maximum number of allowed characters is 255.
+       * Deprecated. Use language_codes instead. Optional. The language of the query. This is the
+       * BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see [Tags for
+       * Identifying Languages](https://tools.ietf.org/html/bcp47). For CompletionType.JOB_TITLE
+       * type, only open jobs with the same language_code are returned. For
+       * CompletionType.COMPANY_NAME type, only companies having open jobs with the same
+       * language_code are returned. For CompletionType.COMBINED type, only open jobs with the same
+       * language_code or companies having open jobs with the same language_code are returned. The
+       * maximum number of allowed characters is 255.
        */
       public Complete setLanguageCode(java.lang.String languageCode) {
         this.languageCode = languageCode;
@@ -394,35 +356,23 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       /**
        * Optional. The list of languages of the query. This is the BCP-47 language code, such as
        * "en-US" or "sr-Latn". For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with the same language_codes are
-       * returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with the same
-       * language_codes are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with the same language_codes or companies
-       * having open jobs with the same language_codes are returned.
-       *
-       * The maximum number of allowed characters is 255.
+       * Languages](https://tools.ietf.org/html/bcp47). For CompletionType.JOB_TITLE type, only open
+       * jobs with the same language_codes are returned. For CompletionType.COMPANY_NAME type, only
+       * companies having open jobs with the same language_codes are returned. For
+       * CompletionType.COMBINED type, only open jobs with the same language_codes or companies
+       * having open jobs with the same language_codes are returned. The maximum number of allowed
+       * characters is 255.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> languageCodes;
 
       /** Optional. The list of languages of the query. This is the BCP-47 language code, such as "en-US" or
      "sr-Latn". For more information, see [Tags for Identifying
-     Languages](https://tools.ietf.org/html/bcp47).
-
-     For CompletionType.JOB_TITLE type, only open jobs with the same language_codes are returned.
-
-     For CompletionType.COMPANY_NAME type, only companies having open jobs with the same language_codes
-     are returned.
-
-     For CompletionType.COMBINED type, only open jobs with the same language_codes or companies having
-     open jobs with the same language_codes are returned.
-
-     The maximum number of allowed characters is 255.
+     Languages](https://tools.ietf.org/html/bcp47). For CompletionType.JOB_TITLE type, only open jobs
+     with the same language_codes are returned. For CompletionType.COMPANY_NAME type, only companies
+     having open jobs with the same language_codes are returned. For CompletionType.COMBINED type, only
+     open jobs with the same language_codes or companies having open jobs with the same language_codes
+     are returned. The maximum number of allowed characters is 255.
        */
       public java.util.List<java.lang.String> getLanguageCodes() {
         return languageCodes;
@@ -431,70 +381,50 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
       /**
        * Optional. The list of languages of the query. This is the BCP-47 language code, such as
        * "en-US" or "sr-Latn". For more information, see [Tags for Identifying
-       * Languages](https://tools.ietf.org/html/bcp47).
-       *
-       * For CompletionType.JOB_TITLE type, only open jobs with the same language_codes are
-       * returned.
-       *
-       * For CompletionType.COMPANY_NAME type, only companies having open jobs with the same
-       * language_codes are returned.
-       *
-       * For CompletionType.COMBINED type, only open jobs with the same language_codes or companies
-       * having open jobs with the same language_codes are returned.
-       *
-       * The maximum number of allowed characters is 255.
+       * Languages](https://tools.ietf.org/html/bcp47). For CompletionType.JOB_TITLE type, only open
+       * jobs with the same language_codes are returned. For CompletionType.COMPANY_NAME type, only
+       * companies having open jobs with the same language_codes are returned. For
+       * CompletionType.COMBINED type, only open jobs with the same language_codes or companies
+       * having open jobs with the same language_codes are returned. The maximum number of allowed
+       * characters is 255.
        */
       public Complete setLanguageCodes(java.util.List<java.lang.String> languageCodes) {
         this.languageCodes = languageCodes;
         return this;
       }
 
-      /**
-       * Required. Completion result count.
-       *
-       * The maximum allowed page size is 10.
-       */
+      /** Required. Completion result count. The maximum allowed page size is 10. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Required. Completion result count.
-
-     The maximum allowed page size is 10.
+      /** Required. Completion result count. The maximum allowed page size is 10.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
-      /**
-       * Required. Completion result count.
-       *
-       * The maximum allowed page size is 10.
-       */
+      /** Required. Completion result count. The maximum allowed page size is 10. */
       public Complete setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
       /**
-       * Required. The query used to generate suggestions.
-       *
-       * The maximum number of allowed characters is 255.
+       * Required. The query used to generate suggestions. The maximum number of allowed characters
+       * is 255.
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Required. The query used to generate suggestions.
-
-     The maximum number of allowed characters is 255.
+      /** Required. The query used to generate suggestions. The maximum number of allowed characters is 255.
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Required. The query used to generate suggestions.
-       *
-       * The maximum number of allowed characters is 255.
+       * Required. The query used to generate suggestions. The maximum number of allowed characters
+       * is 255.
        */
       public Complete setQuery(java.lang.String query) {
         this.query = query;
@@ -725,10 +655,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the project under which the company is created.
-      The format is
-       *        "projects/{project_id}", for example,
-      "projects/api-test-project".
+       * @param parent Required. Resource name of the project under which the company is created. The format is
+       *        "projects/{project_id}", for example, "projects/api-test-project".
        * @param content the {@link com.google.api.services.jobs.v3.model.CreateCompanyRequest}
        * @return the request
        */
@@ -755,10 +683,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the project under which the company is created.
-      The format is
-       *        "projects/{project_id}", for example,
-      "projects/api-test-project".
+         * @param parent Required. Resource name of the project under which the company is created. The format is
+       *        "projects/{project_id}", for example, "projects/api-test-project".
          * @param content the {@link com.google.api.services.jobs.v3.model.CreateCompanyRequest}
          * @since 1.13
          */
@@ -828,25 +754,22 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. Resource name of the project under which the company is created.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. Resource name of the project under which the company is created. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the project under which the company is created.
-
-       The format is "projects/{project_id}", for example, "projects/api-test-project".
+        /** Required. Resource name of the project under which the company is created. The format is
+       "projects/{project_id}", for example, "projects/api-test-project".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Resource name of the project under which the company is created.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. Resource name of the project under which the company is created. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -871,10 +794,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the company to be deleted.
-      The format is
-       *        "projects/{project_id}/companies/{company_id}", for example,
-      "projects/api-test-
+       * @param name Required. The resource name of the company to be deleted. The format is
+       *        "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
        *        project/companies/foo".
        * @return the request
        */
@@ -901,10 +822,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the company to be deleted.
-      The format is
-       *        "projects/{project_id}/companies/{company_id}", for example,
-      "projects/api-test-
+         * @param name Required. The resource name of the company to be deleted. The format is
+       *        "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
        *        project/companies/foo".
          * @since 1.13
          */
@@ -974,17 +893,15 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the company to be deleted.
-         *
-         * The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-
-         * test-project/companies/foo".
+         * Required. The resource name of the company to be deleted. The format is
+         * "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+         * project/companies/foo".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the company to be deleted.
-
-       The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+        /** Required. The resource name of the company to be deleted. The format is
+       "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
        project/companies/foo".
          */
         public java.lang.String getName() {
@@ -992,10 +909,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the company to be deleted.
-         *
-         * The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-
-         * test-project/companies/foo".
+         * Required. The resource name of the company to be deleted. The format is
+         * "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+         * project/companies/foo".
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1020,10 +936,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the company to be retrieved.
-      The format is
-       *        "projects/{project_id}/companies/{company_id}", for example,
-      "projects/api-test-
+       * @param name Required. The resource name of the company to be retrieved. The format is
+       *        "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
        *        project/companies/foo".
        * @return the request
        */
@@ -1050,10 +964,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the company to be retrieved.
-      The format is
-       *        "projects/{project_id}/companies/{company_id}", for example,
-      "projects/api-test-
+         * @param name Required. The resource name of the company to be retrieved. The format is
+       *        "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
        *        project/companies/foo".
          * @since 1.13
          */
@@ -1133,17 +1045,15 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the company to be retrieved.
-         *
-         * The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-
-         * test-project/companies/foo".
+         * Required. The resource name of the company to be retrieved. The format is
+         * "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+         * project/companies/foo".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the company to be retrieved.
-
-       The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+        /** Required. The resource name of the company to be retrieved. The format is
+       "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
        project/companies/foo".
          */
         public java.lang.String getName() {
@@ -1151,10 +1061,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the company to be retrieved.
-         *
-         * The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-
-         * test-project/companies/foo".
+         * Required. The resource name of the company to be retrieved. The format is
+         * "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+         * project/companies/foo".
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1179,10 +1088,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name of the project under which the company is created.
-      The format is
-       *        "projects/{project_id}", for example,
-      "projects/api-test-project".
+       * @param parent Required. Resource name of the project under which the company is created. The format is
+       *        "projects/{project_id}", for example, "projects/api-test-project".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1208,10 +1115,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name of the project under which the company is created.
-      The format is
-       *        "projects/{project_id}", for example,
-      "projects/api-test-project".
+         * @param parent Required. Resource name of the project under which the company is created. The format is
+       *        "projects/{project_id}", for example, "projects/api-test-project".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1290,25 +1195,22 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. Resource name of the project under which the company is created.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. Resource name of the project under which the company is created. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name of the project under which the company is created.
-
-       The format is "projects/{project_id}", for example, "projects/api-test-project".
+        /** Required. Resource name of the project under which the company is created. The format is
+       "projects/{project_id}", for example, "projects/api-test-project".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Resource name of the project under which the company is created.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. Resource name of the project under which the company is created. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1360,32 +1262,22 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. Set to true if the companies requested must have open jobs.
-         *
-         * Defaults to false.
-         *
+         * Optional. Set to true if the companies requested must have open jobs. Defaults to false.
          * If true, at most page_size of companies are fetched, among which only those with open
          * jobs are returned.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean requireOpenJobs;
 
-        /** Optional. Set to true if the companies requested must have open jobs.
-
-       Defaults to false.
-
-       If true, at most page_size of companies are fetched, among which only those with open jobs are
-       returned.
+        /** Optional. Set to true if the companies requested must have open jobs. Defaults to false. If true,
+       at most page_size of companies are fetched, among which only those with open jobs are returned.
          */
         public java.lang.Boolean getRequireOpenJobs() {
           return requireOpenJobs;
         }
 
         /**
-         * Optional. Set to true if the companies requested must have open jobs.
-         *
-         * Defaults to false.
-         *
+         * Optional. Set to true if the companies requested must have open jobs. Defaults to false.
          * If true, at most page_size of companies are fetched, among which only those with open
          * jobs are returned.
          */
@@ -1408,13 +1300,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required during company update.
-      The resource name for a company. This is generated by the service
-       *        when a
-      company is created.
-      The format is "projects/{project_id}/companies/{company_id}",
-       *        for example,
-      "projects/api-test-project/companies/foo".
+       * @param name Required during company update. The resource name for a company. This is generated by the service
+       *        when a company is created. The format is "projects/{project_id}/companies/{company_id}",
+       *        for example, "projects/api-test-project/companies/foo".
        * @param content the {@link com.google.api.services.jobs.v3.model.UpdateCompanyRequest}
        * @return the request
        */
@@ -1442,13 +1330,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required during company update.
-      The resource name for a company. This is generated by the service
-       *        when a
-      company is created.
-      The format is "projects/{project_id}/companies/{company_id}",
-       *        for example,
-      "projects/api-test-project/companies/foo".
+         * @param name Required during company update. The resource name for a company. This is generated by the service
+       *        when a company is created. The format is "projects/{project_id}/companies/{company_id}",
+       *        for example, "projects/api-test-project/companies/foo".
          * @param content the {@link com.google.api.services.jobs.v3.model.UpdateCompanyRequest}
          * @since 1.13
          */
@@ -1518,36 +1402,27 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required during company update.
-         *
-         * The resource name for a company. This is generated by the service when a company is
-         * created.
-         *
-         * The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-
-         * test-project/companies/foo".
+         * Required during company update. The resource name for a company. This is generated by the
+         * service when a company is created. The format is
+         * "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+         * project/companies/foo".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required during company update.
-
-       The resource name for a company. This is generated by the service when a company is created.
-
-       The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
-       project/companies/foo".
+        /** Required during company update. The resource name for a company. This is generated by the service
+       when a company is created. The format is "projects/{project_id}/companies/{company_id}", for
+       example, "projects/api-test-project/companies/foo".
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required during company update.
-         *
-         * The resource name for a company. This is generated by the service when a company is
-         * created.
-         *
-         * The format is "projects/{project_id}/companies/{company_id}", for example, "projects/api-
-         * test-project/companies/foo".
+         * Required during company update. The resource name for a company. This is generated by the
+         * service when a company is created. The format is
+         * "projects/{project_id}/companies/{company_id}", for example, "projects/api-test-
+         * project/companies/foo".
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1594,10 +1469,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the project under which the job is created.
-      The format is
-       *        "projects/{project_id}", for example,
-      "projects/api-test-project".
+       * @param parent Required. The resource name of the project under which the job is created. The format is
+       *        "projects/{project_id}", for example, "projects/api-test-project".
        * @param content the {@link com.google.api.services.jobs.v3.model.BatchDeleteJobsRequest}
        * @return the request
        */
@@ -1625,10 +1498,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the project under which the job is created.
-      The format is
-       *        "projects/{project_id}", for example,
-      "projects/api-test-project".
+         * @param parent Required. The resource name of the project under which the job is created. The format is
+       *        "projects/{project_id}", for example, "projects/api-test-project".
          * @param content the {@link com.google.api.services.jobs.v3.model.BatchDeleteJobsRequest}
          * @since 1.13
          */
@@ -1698,25 +1569,22 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the project under which the job is created.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. The resource name of the project under which the job is created. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the project under which the job is created.
-
-       The format is "projects/{project_id}", for example, "projects/api-test-project".
+        /** Required. The resource name of the project under which the job is created. The format is
+       "projects/{project_id}", for example, "projects/api-test-project".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name of the project under which the job is created.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. The resource name of the project under which the job is created. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         public BatchDelete setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1734,19 +1602,16 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Creates a new job.
-       *
-       * Typically, the job becomes searchable within 10 seconds, but it may take up to 5 minutes.
+       * Creates a new job. Typically, the job becomes searchable within 10 seconds, but it may take up to
+       * 5 minutes.
        *
        * Create a request for the method "jobs.create".
        *
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the project under which the job is created.
-      The format is
-       *        "projects/{project_id}", for example,
-      "projects/api-test-project".
+       * @param parent Required. The resource name of the project under which the job is created. The format is
+       *        "projects/{project_id}", for example, "projects/api-test-project".
        * @param content the {@link com.google.api.services.jobs.v3.model.CreateJobRequest}
        * @return the request
        */
@@ -1764,9 +1629,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a new job.
-         *
-         * Typically, the job becomes searchable within 10 seconds, but it may take up to 5 minutes.
+         * Creates a new job. Typically, the job becomes searchable within 10 seconds, but it may take up
+         * to 5 minutes.
          *
          * Create a request for the method "jobs.create".
          *
@@ -1775,10 +1639,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the project under which the job is created.
-      The format is
-       *        "projects/{project_id}", for example,
-      "projects/api-test-project".
+         * @param parent Required. The resource name of the project under which the job is created. The format is
+       *        "projects/{project_id}", for example, "projects/api-test-project".
          * @param content the {@link com.google.api.services.jobs.v3.model.CreateJobRequest}
          * @since 1.13
          */
@@ -1848,25 +1710,22 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the project under which the job is created.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. The resource name of the project under which the job is created. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the project under which the job is created.
-
-       The format is "projects/{project_id}", for example, "projects/api-test-project".
+        /** Required. The resource name of the project under which the job is created. The format is
+       "projects/{project_id}", for example, "projects/api-test-project".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name of the project under which the job is created.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. The resource name of the project under which the job is created. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1884,19 +1743,16 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Deletes the specified job.
-       *
-       * Typically, the job becomes unsearchable within 10 seconds, but it may take up to 5 minutes.
+       * Deletes the specified job. Typically, the job becomes unsearchable within 10 seconds, but it may
+       * take up to 5 minutes.
        *
        * Create a request for the method "jobs.delete".
        *
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the job to be deleted.
-      The format is
-       *        "projects/{project_id}/jobs/{job_id}",
-      for example, "projects/api-test-project/jobs/1234".
+       * @param name Required. The resource name of the job to be deleted. The format is
+       *        "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-project/jobs/1234".
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1913,9 +1769,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/jobs/[^/]+$");
 
         /**
-         * Deletes the specified job.
-         *
-         * Typically, the job becomes unsearchable within 10 seconds, but it may take up to 5 minutes.
+         * Deletes the specified job. Typically, the job becomes unsearchable within 10 seconds, but it
+         * may take up to 5 minutes.
          *
          * Create a request for the method "jobs.delete".
          *
@@ -1924,10 +1779,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the job to be deleted.
-      The format is
-       *        "projects/{project_id}/jobs/{job_id}",
-      for example, "projects/api-test-project/jobs/1234".
+         * @param name Required. The resource name of the job to be deleted. The format is
+       *        "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-project/jobs/1234".
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1996,27 +1849,23 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the job to be deleted.
-         *
-         * The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
+         * Required. The resource name of the job to be deleted. The format is
+         * "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
          * project/jobs/1234".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the job to be deleted.
-
-       The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
-       project/jobs/1234".
+        /** Required. The resource name of the job to be deleted. The format is
+       "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-project/jobs/1234".
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The resource name of the job to be deleted.
-         *
-         * The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
+         * Required. The resource name of the job to be deleted. The format is
+         * "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
          * project/jobs/1234".
          */
         public Delete setName(java.lang.String name) {
@@ -2042,10 +1891,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the job to retrieve.
-      The format is
-       *        "projects/{project_id}/jobs/{job_id}",
-      for example, "projects/api-test-project/jobs/1234".
+       * @param name Required. The resource name of the job to retrieve. The format is
+       *        "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-project/jobs/1234".
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2071,10 +1918,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the job to retrieve.
-      The format is
-       *        "projects/{project_id}/jobs/{job_id}",
-      for example, "projects/api-test-project/jobs/1234".
+         * @param name Required. The resource name of the job to retrieve. The format is
+       *        "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-project/jobs/1234".
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2153,27 +1998,23 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the job to retrieve.
-         *
-         * The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
+         * Required. The resource name of the job to retrieve. The format is
+         * "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
          * project/jobs/1234".
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the job to retrieve.
-
-       The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
-       project/jobs/1234".
+        /** Required. The resource name of the job to retrieve. The format is
+       "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-project/jobs/1234".
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The resource name of the job to retrieve.
-         *
-         * The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
+         * Required. The resource name of the job to retrieve. The format is
+         * "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
          * project/jobs/1234".
          */
         public Get setName(java.lang.String name) {
@@ -2199,10 +2040,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the project under which the job is created.
-      The format is
-       *        "projects/{project_id}", for example,
-      "projects/api-test-project".
+       * @param parent Required. The resource name of the project under which the job is created. The format is
+       *        "projects/{project_id}", for example, "projects/api-test-project".
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2228,10 +2067,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the project under which the job is created.
-      The format is
-       *        "projects/{project_id}", for example,
-      "projects/api-test-project".
+         * @param parent Required. The resource name of the project under which the job is created. The format is
+       *        "projects/{project_id}", for example, "projects/api-test-project".
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2310,25 +2147,22 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the project under which the job is created.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. The resource name of the project under which the job is created. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the project under which the job is created.
-
-       The format is "projects/{project_id}", for example, "projects/api-test-project".
+        /** Required. The resource name of the project under which the job is created. The format is
+       "projects/{project_id}", for example, "projects/api-test-project".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name of the project under which the job is created.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. The resource name of the project under which the job is created. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2341,52 +2175,28 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The filter string specifies the jobs to be enumerated.
-         *
-         * Supported operator: =, AND
-         *
-         * The fields eligible for filtering are:
-         *
-         * * `companyName` (Required) * `requisitionId` (Optional)
-         *
-         * Sample Query:
-         *
-         * * companyName = "projects/api-test-project/companies/123" * companyName = "projects/api-
-         * test-project/companies/123" AND requisitionId = "req-1"
+         * Required. The filter string specifies the jobs to be enumerated. Supported operator: =,
+         * AND The fields eligible for filtering are: * `companyName` (Required) * `requisitionId`
+         * (Optional) Sample Query: * companyName = "projects/api-test-project/companies/123" *
+         * companyName = "projects/api-test-project/companies/123" AND requisitionId = "req-1"
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Required. The filter string specifies the jobs to be enumerated.
-
-       Supported operator: =, AND
-
-       The fields eligible for filtering are:
-
-       * `companyName` (Required) * `requisitionId` (Optional)
-
-       Sample Query:
-
-       * companyName = "projects/api-test-project/companies/123" * companyName = "projects/api-test-
-       project/companies/123" AND requisitionId = "req-1"
+        /** Required. The filter string specifies the jobs to be enumerated. Supported operator: =, AND The
+       fields eligible for filtering are: * `companyName` (Required) * `requisitionId` (Optional) Sample
+       Query: * companyName = "projects/api-test-project/companies/123" * companyName = "projects/api-
+       test-project/companies/123" AND requisitionId = "req-1"
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Required. The filter string specifies the jobs to be enumerated.
-         *
-         * Supported operator: =, AND
-         *
-         * The fields eligible for filtering are:
-         *
-         * * `companyName` (Required) * `requisitionId` (Optional)
-         *
-         * Sample Query:
-         *
-         * * companyName = "projects/api-test-project/companies/123" * companyName = "projects/api-
-         * test-project/companies/123" AND requisitionId = "req-1"
+         * Required. The filter string specifies the jobs to be enumerated. Supported operator: =,
+         * AND The fields eligible for filtering are: * `companyName` (Required) * `requisitionId`
+         * (Optional) Sample Query: * companyName = "projects/api-test-project/companies/123" *
+         * companyName = "projects/api-test-project/companies/123" AND requisitionId = "req-1"
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -2417,34 +2227,25 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. The maximum number of jobs to be returned per page of results.
-         *
-         * If job_view is set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000.
-         * Otherwise, the maximum allowed page size is 100.
-         *
-         * Default is 100 if empty or a number < 1 is specified.
+         * Optional. The maximum number of jobs to be returned per page of results. If job_view is
+         * set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000. Otherwise, the
+         * maximum allowed page size is 100. Default is 100 if empty or a number < 1 is specified.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Optional. The maximum number of jobs to be returned per page of results.
-
-       If job_view is set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000. Otherwise,
-       the maximum allowed page size is 100.
-
-       Default is 100 if empty or a number < 1 is specified.
+        /** Optional. The maximum number of jobs to be returned per page of results. If job_view is set to
+       JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000. Otherwise, the maximum allowed
+       page size is 100. Default is 100 if empty or a number < 1 is specified.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Optional. The maximum number of jobs to be returned per page of results.
-         *
-         * If job_view is set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000.
-         * Otherwise, the maximum allowed page size is 100.
-         *
-         * Default is 100 if empty or a number < 1 is specified.
+         * Optional. The maximum number of jobs to be returned per page of results. If job_view is
+         * set to JobView.JOB_VIEW_ID_ONLY, the maximum allowed page size is 1000. Otherwise, the
+         * maximum allowed page size is 100. Default is 100 if empty or a number < 1 is specified.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -2473,25 +2274,18 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Updates specified job.
-       *
-       * Typically, updated contents become visible in search results within 10 seconds, but it may take
-       * up to 5 minutes.
+       * Updates specified job. Typically, updated contents become visible in search results within 10
+       * seconds, but it may take up to 5 minutes.
        *
        * Create a request for the method "jobs.patch".
        *
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required during job update.
-      The resource name for the job. This is generated by the service when a
-       *        job is created.
-      The format is "projects/{project_id}/jobs/{job_id}",
-      for example,
-       *        "projects/api-test-project/jobs/1234".
-      Use of this field in job queries and API calls is
-       *        preferred over the use of
-      requisition_id since this value is unique.
+       * @param name Required during job update. The resource name for the job. This is generated by the service when a
+       *        job is created. The format is "projects/{project_id}/jobs/{job_id}", for example,
+       *        "projects/api-test-project/jobs/1234". Use of this field in job queries and API calls is
+       *        preferred over the use of requisition_id since this value is unique.
        * @param content the {@link com.google.api.services.jobs.v3.model.UpdateJobRequest}
        * @return the request
        */
@@ -2509,10 +2303,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+/jobs/[^/]+$");
 
         /**
-         * Updates specified job.
-         *
-         * Typically, updated contents become visible in search results within 10 seconds, but it may take
-         * up to 5 minutes.
+         * Updates specified job. Typically, updated contents become visible in search results within 10
+         * seconds, but it may take up to 5 minutes.
          *
          * Create a request for the method "jobs.patch".
          *
@@ -2521,15 +2313,10 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required during job update.
-      The resource name for the job. This is generated by the service when a
-       *        job is created.
-      The format is "projects/{project_id}/jobs/{job_id}",
-      for example,
-       *        "projects/api-test-project/jobs/1234".
-      Use of this field in job queries and API calls is
-       *        preferred over the use of
-      requisition_id since this value is unique.
+         * @param name Required during job update. The resource name for the job. This is generated by the service when a
+       *        job is created. The format is "projects/{project_id}/jobs/{job_id}", for example,
+       *        "projects/api-test-project/jobs/1234". Use of this field in job queries and API calls is
+       *        preferred over the use of requisition_id since this value is unique.
          * @param content the {@link com.google.api.services.jobs.v3.model.UpdateJobRequest}
          * @since 1.13
          */
@@ -2599,43 +2386,28 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required during job update.
-         *
-         * The resource name for the job. This is generated by the service when a job is created.
-         *
-         * The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
-         * project/jobs/1234".
-         *
-         * Use of this field in job queries and API calls is preferred over the use of
-         * requisition_id since this value is unique.
+         * Required during job update. The resource name for the job. This is generated by the
+         * service when a job is created. The format is "projects/{project_id}/jobs/{job_id}", for
+         * example, "projects/api-test-project/jobs/1234". Use of this field in job queries and API
+         * calls is preferred over the use of requisition_id since this value is unique.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required during job update.
-
-       The resource name for the job. This is generated by the service when a job is created.
-
-       The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
-       project/jobs/1234".
-
-       Use of this field in job queries and API calls is preferred over the use of requisition_id since
-       this value is unique.
+        /** Required during job update. The resource name for the job. This is generated by the service when a
+       job is created. The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-
+       test-project/jobs/1234". Use of this field in job queries and API calls is preferred over the use
+       of requisition_id since this value is unique.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required during job update.
-         *
-         * The resource name for the job. This is generated by the service when a job is created.
-         *
-         * The format is "projects/{project_id}/jobs/{job_id}", for example, "projects/api-test-
-         * project/jobs/1234".
-         *
-         * Use of this field in job queries and API calls is preferred over the use of
-         * requisition_id since this value is unique.
+         * Required during job update. The resource name for the job. This is generated by the
+         * service when a job is created. The format is "projects/{project_id}/jobs/{job_id}", for
+         * example, "projects/api-test-project/jobs/1234". Use of this field in job queries and API
+         * calls is preferred over the use of requisition_id since this value is unique.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2653,20 +2425,17 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Searches for jobs using the provided SearchJobsRequest.
-       *
-       * This call constrains the visibility of jobs present in the database, and only returns jobs that
-       * the caller has permission to search against.
+       * Searches for jobs using the provided SearchJobsRequest. This call constrains the visibility of
+       * jobs present in the database, and only returns jobs that the caller has permission to search
+       * against.
        *
        * Create a request for the method "jobs.search".
        *
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link Search#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the project to search within.
-      The format is "projects/{project_id}",
-       *        for example,
-      "projects/api-test-project".
+       * @param parent Required. The resource name of the project to search within. The format is "projects/{project_id}",
+       *        for example, "projects/api-test-project".
        * @param content the {@link com.google.api.services.jobs.v3.model.SearchJobsRequest}
        * @return the request
        */
@@ -2684,10 +2453,9 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Searches for jobs using the provided SearchJobsRequest.
-         *
-         * This call constrains the visibility of jobs present in the database, and only returns jobs that
-         * the caller has permission to search against.
+         * Searches for jobs using the provided SearchJobsRequest. This call constrains the visibility of
+         * jobs present in the database, and only returns jobs that the caller has permission to search
+         * against.
          *
          * Create a request for the method "jobs.search".
          *
@@ -2696,10 +2464,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the project to search within.
-      The format is "projects/{project_id}",
-       *        for example,
-      "projects/api-test-project".
+         * @param parent Required. The resource name of the project to search within. The format is "projects/{project_id}",
+       *        for example, "projects/api-test-project".
          * @param content the {@link com.google.api.services.jobs.v3.model.SearchJobsRequest}
          * @since 1.13
          */
@@ -2769,25 +2535,22 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the project to search within.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. The resource name of the project to search within. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the project to search within.
-
-       The format is "projects/{project_id}", for example, "projects/api-test-project".
+        /** Required. The resource name of the project to search within. The format is "projects/{project_id}",
+       for example, "projects/api-test-project".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name of the project to search within.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. The resource name of the project to search within. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         public Search setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2805,24 +2568,19 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Searches for jobs using the provided SearchJobsRequest.
-       *
-       * This API call is intended for the use case of targeting passive job seekers (for example, job
-       * seekers who have signed up to receive email alerts about potential job opportunities), and has
-       * different algorithmic adjustments that are targeted to passive job seekers.
-       *
-       * This call constrains the visibility of jobs present in the database, and only returns jobs the
-       * caller has permission to search against.
+       * Searches for jobs using the provided SearchJobsRequest. This API call is intended for the use
+       * case of targeting passive job seekers (for example, job seekers who have signed up to receive
+       * email alerts about potential job opportunities), and has different algorithmic adjustments that
+       * are targeted to passive job seekers. This call constrains the visibility of jobs present in the
+       * database, and only returns jobs the caller has permission to search against.
        *
        * Create a request for the method "jobs.searchForAlert".
        *
        * This request holds the parameters needed by the jobs server.  After setting any optional
        * parameters, call the {@link SearchForAlert#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the project to search within.
-      The format is "projects/{project_id}",
-       *        for example,
-      "projects/api-test-project".
+       * @param parent Required. The resource name of the project to search within. The format is "projects/{project_id}",
+       *        for example, "projects/api-test-project".
        * @param content the {@link com.google.api.services.jobs.v3.model.SearchJobsRequest}
        * @return the request
        */
@@ -2840,14 +2598,11 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Searches for jobs using the provided SearchJobsRequest.
-         *
-         * This API call is intended for the use case of targeting passive job seekers (for example, job
-         * seekers who have signed up to receive email alerts about potential job opportunities), and has
-         * different algorithmic adjustments that are targeted to passive job seekers.
-         *
-         * This call constrains the visibility of jobs present in the database, and only returns jobs the
-         * caller has permission to search against.
+         * Searches for jobs using the provided SearchJobsRequest. This API call is intended for the use
+         * case of targeting passive job seekers (for example, job seekers who have signed up to receive
+         * email alerts about potential job opportunities), and has different algorithmic adjustments that
+         * are targeted to passive job seekers. This call constrains the visibility of jobs present in the
+         * database, and only returns jobs the caller has permission to search against.
          *
          * Create a request for the method "jobs.searchForAlert".
          *
@@ -2857,10 +2612,8 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
          * ientRequest)} must be called to initialize this instance immediately after invoking the
          * constructor. </p>
          *
-         * @param parent Required. The resource name of the project to search within.
-      The format is "projects/{project_id}",
-       *        for example,
-      "projects/api-test-project".
+         * @param parent Required. The resource name of the project to search within. The format is "projects/{project_id}",
+       *        for example, "projects/api-test-project".
          * @param content the {@link com.google.api.services.jobs.v3.model.SearchJobsRequest}
          * @since 1.13
          */
@@ -2930,25 +2683,22 @@ public class CloudTalentSolution extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The resource name of the project to search within.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. The resource name of the project to search within. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the project to search within.
-
-       The format is "projects/{project_id}", for example, "projects/api-test-project".
+        /** Required. The resource name of the project to search within. The format is "projects/{project_id}",
+       for example, "projects/api-test-project".
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource name of the project to search within.
-         *
-         * The format is "projects/{project_id}", for example, "projects/api-test-project".
+         * Required. The resource name of the project to search within. The format is
+         * "projects/{project_id}", for example, "projects/api-test-project".
          */
         public SearchForAlert setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

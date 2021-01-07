@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-workflows",
+    "version": "v1beta-rev20201207-1.31.0"
+  }
+}

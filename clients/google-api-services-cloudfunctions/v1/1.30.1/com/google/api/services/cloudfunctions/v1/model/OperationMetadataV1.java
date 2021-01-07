@@ -30,6 +30,14 @@ package com.google.api.services.cloudfunctions.v1.model;
 public final class OperationMetadataV1 extends com.google.api.client.json.GenericJson {
 
   /**
+   * The Cloud Build ID of the function created or updated by an API call. This field is only
+   * populated for Create and Update operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buildId;
+
+  /**
    * The original request that started the operation.
    * The value may be {@code null}.
    */
@@ -65,6 +73,25 @@ public final class OperationMetadataV1 extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long versionId;
+
+  /**
+   * The Cloud Build ID of the function created or updated by an API call. This field is only
+   * populated for Create and Update operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuildId() {
+    return buildId;
+  }
+
+  /**
+   * The Cloud Build ID of the function created or updated by an API call. This field is only
+   * populated for Create and Update operations.
+   * @param buildId buildId or {@code null} for none
+   */
+  public OperationMetadataV1 setBuildId(java.lang.String buildId) {
+    this.buildId = buildId;
+    return this;
+  }
 
   /**
    * The original request that started the operation.

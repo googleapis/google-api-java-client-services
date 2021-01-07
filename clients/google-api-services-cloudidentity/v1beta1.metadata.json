@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-cloudidentity",
-    "version": "v1beta1-rev20200401-1.30.9"
+    "version": "v1beta1-rev20201213-1.31.0"
   }
 }

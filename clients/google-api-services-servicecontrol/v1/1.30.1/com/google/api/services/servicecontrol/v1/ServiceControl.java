@@ -46,7 +46,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Service Control API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Service Control API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -144,14 +144,11 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
     /**
      * Attempts to allocate quota for the specified consumer. It should be called before the operation
-     * is executed.
-     *
-     * This method requires the `servicemanagement.services.quota` permission on the specified service.
-     * For more information, see [Cloud IAM](https://cloud.google.com/iam).
-     *
-     * **NOTE:** The client **must** fail-open on server errors `INTERNAL`, `UNKNOWN`,
-     * `DEADLINE_EXCEEDED`, and `UNAVAILABLE`. To ensure system reliability, the server may inject these
-     * errors to prohibit any hard dependency on the quota functionality.
+     * is executed. This method requires the `servicemanagement.services.quota` permission on the
+     * specified service. For more information, see [Cloud IAM](https://cloud.google.com/iam). **NOTE:**
+     * The client **must** fail-open on server errors `INTERNAL`, `UNKNOWN`, `DEADLINE_EXCEEDED`, and
+     * `UNAVAILABLE`. To ensure system reliability, the server may inject these errors to prohibit any
+     * hard dependency on the quota functionality.
      *
      * Create a request for the method "services.allocateQuota".
      *
@@ -160,8 +157,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
      * operation.
      *
      * @param serviceName Name of the service as specified in the service configuration. For example,
-     *        `"pubsub.googleapis.com"`.
-    See google.api.Service for the definition of a service name.
+     *        `"pubsub.googleapis.com"`. See google.api.Service for the definition of a service name.
      * @param content the {@link com.google.api.services.servicecontrol.v1.model.AllocateQuotaRequest}
      * @return the request
      */
@@ -177,11 +173,8 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * Attempts to allocate quota for the specified consumer. It should be called before the operation
-       * is executed.
-       *
-       * This method requires the `servicemanagement.services.quota` permission on the specified
-       * service. For more information, see [Cloud IAM](https://cloud.google.com/iam).
-       *
+       * is executed. This method requires the `servicemanagement.services.quota` permission on the
+       * specified service. For more information, see [Cloud IAM](https://cloud.google.com/iam).
        * **NOTE:** The client **must** fail-open on server errors `INTERNAL`, `UNKNOWN`,
        * `DEADLINE_EXCEEDED`, and `UNAVAILABLE`. To ensure system reliability, the server may inject
        * these errors to prohibit any hard dependency on the quota functionality.
@@ -195,8 +188,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
        * the constructor. </p>
        *
        * @param serviceName Name of the service as specified in the service configuration. For example,
-     *        `"pubsub.googleapis.com"`.
-    See google.api.Service for the definition of a service name.
+     *        `"pubsub.googleapis.com"`. See google.api.Service for the definition of a service name.
        * @param content the {@link com.google.api.services.servicecontrol.v1.model.AllocateQuotaRequest}
        * @since 1.13
        */
@@ -262,17 +254,13 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * Name of the service as specified in the service configuration. For example,
-       * `"pubsub.googleapis.com"`.
-       *
-       * See google.api.Service for the definition of a service name.
+       * `"pubsub.googleapis.com"`. See google.api.Service for the definition of a service name.
        */
       @com.google.api.client.util.Key
       private java.lang.String serviceName;
 
       /** Name of the service as specified in the service configuration. For example,
-     `"pubsub.googleapis.com"`.
-
-     See google.api.Service for the definition of a service name.
+     `"pubsub.googleapis.com"`. See google.api.Service for the definition of a service name.
        */
       public java.lang.String getServiceName() {
         return serviceName;
@@ -280,9 +268,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * Name of the service as specified in the service configuration. For example,
-       * `"pubsub.googleapis.com"`.
-       *
-       * See google.api.Service for the definition of a service name.
+       * `"pubsub.googleapis.com"`. See google.api.Service for the definition of a service name.
        */
       public AllocateQuota setServiceName(java.lang.String serviceName) {
         this.serviceName = serviceName;
@@ -296,29 +282,23 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
     }
     /**
      * Checks whether an operation on a service should be allowed to proceed based on the configuration
-     * of the service and related policies. It must be called before the operation is executed.
-     *
-     * If feasible, the client should cache the check results and reuse them for 60 seconds. In case of
-     * any server errors, the client should rely on the cached results for much longer time to avoid
-     * outage. WARNING: There is general 60s delay for the configuration and policy propagation,
-     * therefore callers MUST NOT depend on the `Check` method having the latest policy information.
-     *
-     * NOTE: the CheckRequest has the size limit of 64KB.
-     *
-     * This method requires the `servicemanagement.services.check` permission on the specified service.
-     * For more information, see [Cloud IAM](https://cloud.google.com/iam).
+     * of the service and related policies. It must be called before the operation is executed. If
+     * feasible, the client should cache the check results and reuse them for 60 seconds. In case of any
+     * server errors, the client should rely on the cached results for much longer time to avoid outage.
+     * WARNING: There is general 60s delay for the configuration and policy propagation, therefore
+     * callers MUST NOT depend on the `Check` method having the latest policy information. NOTE: the
+     * CheckRequest has the size limit of 64KB. This method requires the
+     * `servicemanagement.services.check` permission on the specified service. For more information, see
+     * [Cloud IAM](https://cloud.google.com/iam).
      *
      * Create a request for the method "services.check".
      *
      * This request holds the parameters needed by the servicecontrol server.  After setting any
      * optional parameters, call the {@link Check#execute()} method to invoke the remote operation.
      *
-     * @param serviceName The service name as specified in its service configuration. For example,
-    `"pubsub.googleapis.com"`.
-     *        See
-    [google.api.Service](https://cloud.google.com/service-
-     *        management/reference/rpc/google.api#google.api.Service)
-    for the definition of a service
+     * @param serviceName The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
+     *        See [google.api.Service](https://cloud.google.com/service-
+     *        management/reference/rpc/google.api#google.api.Service) for the definition of a service
      *        name.
      * @param content the {@link com.google.api.services.servicecontrol.v1.model.CheckRequest}
      * @return the request
@@ -336,17 +316,13 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
       /**
        * Checks whether an operation on a service should be allowed to proceed based on the
        * configuration of the service and related policies. It must be called before the operation is
-       * executed.
-       *
-       * If feasible, the client should cache the check results and reuse them for 60 seconds. In case
-       * of any server errors, the client should rely on the cached results for much longer time to
-       * avoid outage. WARNING: There is general 60s delay for the configuration and policy propagation,
-       * therefore callers MUST NOT depend on the `Check` method having the latest policy information.
-       *
-       * NOTE: the CheckRequest has the size limit of 64KB.
-       *
-       * This method requires the `servicemanagement.services.check` permission on the specified
-       * service. For more information, see [Cloud IAM](https://cloud.google.com/iam).
+       * executed. If feasible, the client should cache the check results and reuse them for 60 seconds.
+       * In case of any server errors, the client should rely on the cached results for much longer time
+       * to avoid outage. WARNING: There is general 60s delay for the configuration and policy
+       * propagation, therefore callers MUST NOT depend on the `Check` method having the latest policy
+       * information. NOTE: the CheckRequest has the size limit of 64KB. This method requires the
+       * `servicemanagement.services.check` permission on the specified service. For more information,
+       * see [Cloud IAM](https://cloud.google.com/iam).
        *
        * Create a request for the method "services.check".
        *
@@ -356,12 +332,9 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
        * Check#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param serviceName The service name as specified in its service configuration. For example,
-    `"pubsub.googleapis.com"`.
-     *        See
-    [google.api.Service](https://cloud.google.com/service-
-     *        management/reference/rpc/google.api#google.api.Service)
-    for the definition of a service
+       * @param serviceName The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
+     *        See [google.api.Service](https://cloud.google.com/service-
+     *        management/reference/rpc/google.api#google.api.Service) for the definition of a service
      *        name.
        * @param content the {@link com.google.api.services.servicecontrol.v1.model.CheckRequest}
        * @since 1.13
@@ -428,9 +401,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * The service name as specified in its service configuration. For example,
-       * `"pubsub.googleapis.com"`.
-       *
-       * See [google.api.Service](https://cloud.google.com/service-
+       * `"pubsub.googleapis.com"`. See [google.api.Service](https://cloud.google.com/service-
        * management/reference/rpc/google.api#google.api.Service) for the definition of a service
        * name.
        */
@@ -438,7 +409,6 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
       private java.lang.String serviceName;
 
       /** The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
-
      See [google.api.Service](https://cloud.google.com/service-
      management/reference/rpc/google.api#google.api.Service) for the definition of a service name.
        */
@@ -448,9 +418,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * The service name as specified in its service configuration. For example,
-       * `"pubsub.googleapis.com"`.
-       *
-       * See [google.api.Service](https://cloud.google.com/service-
+       * `"pubsub.googleapis.com"`. See [google.api.Service](https://cloud.google.com/service-
        * management/reference/rpc/google.api#google.api.Service) for the definition of a service
        * name.
        */
@@ -466,29 +434,22 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
     }
     /**
      * Reports operation results to Google Service Control, such as logs and metrics. It should be
-     * called after an operation is completed.
-     *
-     * If feasible, the client should aggregate reporting data for up to 5 seconds to reduce API
-     * traffic. Limiting aggregation to 5 seconds is to reduce data loss during client crashes. Clients
-     * should carefully choose the aggregation time window to avoid data loss risk more than 0.01% for
-     * business and compliance reasons.
-     *
-     * NOTE: the ReportRequest has the size limit (wire-format byte size) of 1MB.
-     *
-     * This method requires the `servicemanagement.services.report` permission on the specified service.
-     * For more information, see [Google Cloud IAM](https://cloud.google.com/iam).
+     * called after an operation is completed. If feasible, the client should aggregate reporting data
+     * for up to 5 seconds to reduce API traffic. Limiting aggregation to 5 seconds is to reduce data
+     * loss during client crashes. Clients should carefully choose the aggregation time window to avoid
+     * data loss risk more than 0.01% for business and compliance reasons. NOTE: the ReportRequest has
+     * the size limit (wire-format byte size) of 1MB. This method requires the
+     * `servicemanagement.services.report` permission on the specified service. For more information,
+     * see [Google Cloud IAM](https://cloud.google.com/iam).
      *
      * Create a request for the method "services.report".
      *
      * This request holds the parameters needed by the servicecontrol server.  After setting any
      * optional parameters, call the {@link Report#execute()} method to invoke the remote operation.
      *
-     * @param serviceName The service name as specified in its service configuration. For example,
-    `"pubsub.googleapis.com"`.
-     *        See
-    [google.api.Service](https://cloud.google.com/service-
-     *        management/reference/rpc/google.api#google.api.Service)
-    for the definition of a service
+     * @param serviceName The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
+     *        See [google.api.Service](https://cloud.google.com/service-
+     *        management/reference/rpc/google.api#google.api.Service) for the definition of a service
      *        name.
      * @param content the {@link com.google.api.services.servicecontrol.v1.model.ReportRequest}
      * @return the request
@@ -505,17 +466,13 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * Reports operation results to Google Service Control, such as logs and metrics. It should be
-       * called after an operation is completed.
-       *
-       * If feasible, the client should aggregate reporting data for up to 5 seconds to reduce API
-       * traffic. Limiting aggregation to 5 seconds is to reduce data loss during client crashes.
-       * Clients should carefully choose the aggregation time window to avoid data loss risk more than
-       * 0.01% for business and compliance reasons.
-       *
-       * NOTE: the ReportRequest has the size limit (wire-format byte size) of 1MB.
-       *
-       * This method requires the `servicemanagement.services.report` permission on the specified
-       * service. For more information, see [Google Cloud IAM](https://cloud.google.com/iam).
+       * called after an operation is completed. If feasible, the client should aggregate reporting data
+       * for up to 5 seconds to reduce API traffic. Limiting aggregation to 5 seconds is to reduce data
+       * loss during client crashes. Clients should carefully choose the aggregation time window to
+       * avoid data loss risk more than 0.01% for business and compliance reasons. NOTE: the
+       * ReportRequest has the size limit (wire-format byte size) of 1MB. This method requires the
+       * `servicemanagement.services.report` permission on the specified service. For more information,
+       * see [Google Cloud IAM](https://cloud.google.com/iam).
        *
        * Create a request for the method "services.report".
        *
@@ -525,12 +482,9 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
        * Report#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param serviceName The service name as specified in its service configuration. For example,
-    `"pubsub.googleapis.com"`.
-     *        See
-    [google.api.Service](https://cloud.google.com/service-
-     *        management/reference/rpc/google.api#google.api.Service)
-    for the definition of a service
+       * @param serviceName The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
+     *        See [google.api.Service](https://cloud.google.com/service-
+     *        management/reference/rpc/google.api#google.api.Service) for the definition of a service
      *        name.
        * @param content the {@link com.google.api.services.servicecontrol.v1.model.ReportRequest}
        * @since 1.13
@@ -597,9 +551,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * The service name as specified in its service configuration. For example,
-       * `"pubsub.googleapis.com"`.
-       *
-       * See [google.api.Service](https://cloud.google.com/service-
+       * `"pubsub.googleapis.com"`. See [google.api.Service](https://cloud.google.com/service-
        * management/reference/rpc/google.api#google.api.Service) for the definition of a service
        * name.
        */
@@ -607,7 +559,6 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
       private java.lang.String serviceName;
 
       /** The service name as specified in its service configuration. For example, `"pubsub.googleapis.com"`.
-
      See [google.api.Service](https://cloud.google.com/service-
      management/reference/rpc/google.api#google.api.Service) for the definition of a service name.
        */
@@ -617,9 +568,7 @@ public class ServiceControl extends com.google.api.client.googleapis.services.js
 
       /**
        * The service name as specified in its service configuration. For example,
-       * `"pubsub.googleapis.com"`.
-       *
-       * See [google.api.Service](https://cloud.google.com/service-
+       * `"pubsub.googleapis.com"`. See [google.api.Service](https://cloud.google.com/service-
        * management/reference/rpc/google.api#google.api.Service) for the definition of a service
        * name.
        */

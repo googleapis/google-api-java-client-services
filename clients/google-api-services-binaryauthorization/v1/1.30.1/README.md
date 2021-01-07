@@ -1,7 +1,6 @@
 # Binary Authorization API Client Library for Java
 
-The management interface for Binary Authorization, a system providing policy control for images deployed to Kubernetes Engine clusters.
-
+The management interface for Binary Authorization, a system providing policy control for images deployed to Kubernetes Engine clusters. 
 
 This page contains information about getting started with the Binary Authorization API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-binaryauthorization</artifactId>
-      <version>v1-rev20200221-1.30.9</version>
+      <version>v1-rev20201113-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-binaryauthorization:v1-rev20200221-1.30.9'
+  compile 'com.google.apis:google-api-services-binaryauthorization:v1-rev20201113-1.30.10'
 }
 ```
 

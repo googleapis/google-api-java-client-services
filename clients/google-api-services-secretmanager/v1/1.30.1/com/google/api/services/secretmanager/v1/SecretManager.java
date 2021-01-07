@@ -20,8 +20,7 @@ package com.google.api.services.secretmanager.v1;
  * Service definition for SecretManager (v1).
  *
  * <p>
- * Stores API keys, passwords, certificates, and other sensitive data. Provides convenience while improving security.
-
+ * Stores sensitive data such as API keys, passwords, and certificates. Provides convenience while improving security. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Secret Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Secret Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -517,8 +516,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the secretmanager server.  After setting any optional
        * parameters, call the {@link AddVersion#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the Secret to associate with the
-      SecretVersion in the format
+       * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
        *        `projects/secrets`.
        * @param content the {@link com.google.api.services.secretmanager.v1.model.AddSecretVersionRequest}
        * @return the request
@@ -547,8 +545,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * AddVersion#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the Secret to associate with the
-      SecretVersion in the format
+         * @param parent Required. The resource name of the Secret to associate with the SecretVersion in the format
        *        `projects/secrets`.
          * @param content the {@link com.google.api.services.secretmanager.v1.model.AddSecretVersionRequest}
          * @since 1.13
@@ -659,8 +656,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the secretmanager server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the project to associate with the
-      Secret, in the format `projects`.
+       * @param parent Required. The resource name of the project to associate with the Secret, in the format `projects`.
        * @param content the {@link com.google.api.services.secretmanager.v1.model.Secret}
        * @return the request
        */
@@ -688,8 +684,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the project to associate with the
-      Secret, in the format `projects`.
+         * @param parent Required. The resource name of the project to associate with the Secret, in the format `projects`.
          * @param content the {@link com.google.api.services.secretmanager.v1.model.Secret}
          * @since 1.13
          */
@@ -785,17 +780,27 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** Required. This must be unique within the project. */
+        /**
+         * Required. This must be unique within the project. A secret ID is a string with a maximum
+         * length of 255 characters and can contain uppercase and lowercase letters, numerals, and
+         * the hyphen (`-`) and underscore (`_`) characters.
+         */
         @com.google.api.client.util.Key
         private java.lang.String secretId;
 
-        /** Required. This must be unique within the project.
+        /** Required. This must be unique within the project. A secret ID is a string with a maximum length of
+       255 characters and can contain uppercase and lowercase letters, numerals, and the hyphen (`-`) and
+       underscore (`_`) characters.
          */
         public java.lang.String getSecretId() {
           return secretId;
         }
 
-        /** Required. This must be unique within the project. */
+        /**
+         * Required. This must be unique within the project. A secret ID is a string with a maximum
+         * length of 255 characters and can contain uppercase and lowercase letters, numerals, and
+         * the hyphen (`-`) and underscore (`_`) characters.
+         */
         public Create setSecretId(java.lang.String secretId) {
           this.secretId = secretId;
           return this;
@@ -814,8 +819,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the secretmanager server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the Secret to delete in the format
-      `projects/secrets`.
+       * @param name Required. The resource name of the Secret to delete in the format `projects/secrets`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -842,8 +846,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the Secret to delete in the format
-      `projects/secrets`.
+         * @param name Required. The resource name of the Secret to delete in the format `projects/secrets`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1088,8 +1091,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the secretmanager server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @return the request
        */
@@ -1118,8 +1120,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @since 1.13
          */
@@ -1227,34 +1228,33 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned.
-
-       Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-       Requests for policies with any conditional bindings must specify version 3. Policies without any
-       conditional bindings may specify any valid value or leave the field unset.
+        /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+       must specify version 3. Policies without any conditional bindings may specify any valid value or
+       leave the field unset. To learn which resources support conditions in their IAM policies, see the
+       [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
           this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1274,8 +1274,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the secretmanager server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the project associated with the
-      Secrets, in the format `projects`.
+       * @param parent Required. The resource name of the project associated with the Secrets, in the format `projects`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1301,8 +1300,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the project associated with the
-      Secrets, in the format `projects`.
+         * @param parent Required. The resource name of the project associated with the Secrets, in the format `projects`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1606,17 +1604,15 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Sets the access control policy on the specified secret. Replaces any existing policy.
-       *
-       * Permissions on SecretVersions are enforced according to the policy set on the associated Secret.
+       * Sets the access control policy on the specified secret. Replaces any existing policy. Permissions
+       * on SecretVersions are enforced according to the policy set on the associated Secret.
        *
        * Create a request for the method "secrets.setIamPolicy".
        *
        * This request holds the parameters needed by the secretmanager server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.secretmanager.v1.model.SetIamPolicyRequest}
        * @return the request
@@ -1636,7 +1632,6 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
         /**
          * Sets the access control policy on the specified secret. Replaces any existing policy.
-         *
          * Permissions on SecretVersions are enforced according to the policy set on the associated
          * Secret.
          *
@@ -1648,8 +1643,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.secretmanager.v1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -1754,18 +1748,16 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
       }
       /**
        * Returns permissions that a caller has for the specified secret. If the secret does not exist,
-       * this call returns an empty set of permissions, not a NOT_FOUND error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * this call returns an empty set of permissions, not a NOT_FOUND error. Note: This operation is
+       * designed to be used for building permission-aware UIs and command-line tools, not for
+       * authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "secrets.testIamPermissions".
        *
        * This request holds the parameters needed by the secretmanager server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.secretmanager.v1.model.TestIamPermissionsRequest}
        * @return the request
@@ -1785,10 +1777,9 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
 
         /**
          * Returns permissions that a caller has for the specified secret. If the secret does not exist,
-         * this call returns an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this call returns an empty set of permissions, not a NOT_FOUND error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "secrets.testIamPermissions".
          *
@@ -1798,8 +1789,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.secretmanager.v1.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -1924,17 +1914,15 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
       public class Versions {
 
         /**
-         * Accesses a SecretVersion. This call returns the secret data.
-         *
-         * `projects/secrets/versions/latest` is an alias to the `latest` SecretVersion.
+         * Accesses a SecretVersion. This call returns the secret data. `projects/secrets/versions/latest`
+         * is an alias to the `latest` SecretVersion.
          *
          * Create a request for the method "versions.access".
          *
          * This request holds the parameters needed by the secretmanager server.  After setting any optional
          * parameters, call the {@link Access#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the SecretVersion in the format
-        `projects/secrets/versions`.
+         * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
          * @return the request
          */
         public Access access(java.lang.String name) throws java.io.IOException {
@@ -1951,9 +1939,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/secrets/[^/]+/versions/[^/]+$");
 
           /**
-           * Accesses a SecretVersion. This call returns the secret data.
-           *
-           * `projects/secrets/versions/latest` is an alias to the `latest` SecretVersion.
+           * Accesses a SecretVersion. This call returns the secret data. `projects/secrets/versions/latest`
+           * is an alias to the `latest` SecretVersion.
            *
            * Create a request for the method "versions.access".
            *
@@ -1963,8 +1950,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * Access#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the SecretVersion in the format
-        `projects/secrets/versions`.
+           * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
            * @since 1.13
            */
           protected Access(java.lang.String name) {
@@ -2075,9 +2061,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Destroys a SecretVersion.
-         *
-         * Sets the state of the SecretVersion to DESTROYED and irrevocably destroys the secret data.
+         * Destroys a SecretVersion. Sets the state of the SecretVersion to DESTROYED and irrevocably
+         * destroys the secret data.
          *
          * Create a request for the method "versions.destroy".
          *
@@ -2103,9 +2088,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/secrets/[^/]+/versions/[^/]+$");
 
           /**
-           * Destroys a SecretVersion.
-           *
-           * Sets the state of the SecretVersion to DESTROYED and irrevocably destroys the secret data.
+           * Destroys a SecretVersion. Sets the state of the SecretVersion to DESTROYED and irrevocably
+           * destroys the secret data.
            *
            * Create a request for the method "versions.destroy".
            *
@@ -2219,9 +2203,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Disables a SecretVersion.
-         *
-         * Sets the state of the SecretVersion to DISABLED.
+         * Disables a SecretVersion. Sets the state of the SecretVersion to DISABLED.
          *
          * Create a request for the method "versions.disable".
          *
@@ -2247,9 +2229,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/secrets/[^/]+/versions/[^/]+$");
 
           /**
-           * Disables a SecretVersion.
-           *
-           * Sets the state of the SecretVersion to DISABLED.
+           * Disables a SecretVersion. Sets the state of the SecretVersion to DISABLED.
            *
            * Create a request for the method "versions.disable".
            *
@@ -2363,9 +2343,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Enables a SecretVersion.
-         *
-         * Sets the state of the SecretVersion to ENABLED.
+         * Enables a SecretVersion. Sets the state of the SecretVersion to ENABLED.
          *
          * Create a request for the method "versions.enable".
          *
@@ -2391,9 +2369,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/secrets/[^/]+/versions/[^/]+$");
 
           /**
-           * Enables a SecretVersion.
-           *
-           * Sets the state of the SecretVersion to ENABLED.
+           * Enables a SecretVersion. Sets the state of the SecretVersion to ENABLED.
            *
            * Create a request for the method "versions.enable".
            *
@@ -2507,19 +2483,16 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Gets metadata for a SecretVersion.
-         *
-         * `projects/secrets/versions/latest` is an alias to the `latest` SecretVersion.
+         * Gets metadata for a SecretVersion. `projects/secrets/versions/latest` is an alias to the `latest`
+         * SecretVersion.
          *
          * Create a request for the method "versions.get".
          *
          * This request holds the parameters needed by the secretmanager server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the SecretVersion in the format
-        `projects/secrets/versions`.
-         *        `projects/secrets/versions/latest` is an alias to the `latest`
-        SecretVersion.
+         * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
+         *        `projects/secrets/versions/latest` is an alias to the `latest` SecretVersion.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2536,9 +2509,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/secrets/[^/]+/versions/[^/]+$");
 
           /**
-           * Gets metadata for a SecretVersion.
-           *
-           * `projects/secrets/versions/latest` is an alias to the `latest` SecretVersion.
+           * Gets metadata for a SecretVersion. `projects/secrets/versions/latest` is an alias to the
+           * `latest` SecretVersion.
            *
            * Create a request for the method "versions.get".
            *
@@ -2547,10 +2519,8 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the SecretVersion in the format
-        `projects/secrets/versions`.
-         *        `projects/secrets/versions/latest` is an alias to the `latest`
-        SecretVersion.
+           * @param name Required. The resource name of the SecretVersion in the format `projects/secrets/versions`.
+         *        `projects/secrets/versions/latest` is an alias to the `latest` SecretVersion.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2671,8 +2641,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the secretmanager server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name of the Secret associated with the
-        SecretVersions to list, in the format
+         * @param parent Required. The resource name of the Secret associated with the SecretVersions to list, in the format
          *        `projects/secrets`.
          * @return the request
          */
@@ -2699,8 +2668,7 @@ public class SecretManager extends com.google.api.client.googleapis.services.jso
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name of the Secret associated with the
-        SecretVersions to list, in the format
+           * @param parent Required. The resource name of the Secret associated with the SecretVersions to list, in the format
          *        `projects/secrets`.
            * @since 1.13
            */

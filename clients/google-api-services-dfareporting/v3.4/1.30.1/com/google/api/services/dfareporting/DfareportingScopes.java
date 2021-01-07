@@ -17,7 +17,7 @@
 package com.google.api.services.dfareporting;
 
 /**
- * Available OAuth 2.0 scopes for use with the DCM/DFA Reporting And Trafficking API.
+ * Available OAuth 2.0 scopes for use with the Campaign Manager 360 API.
  *
  * @since 1.4
  */

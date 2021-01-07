@@ -21,8 +21,8 @@ package com.google.api.services.dfareporting.model;
  * Campaign Manager require an account permission to be present in the account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -32,9 +32,8 @@ package com.google.api.services.dfareporting.model;
 public final class AccountPermission extends com.google.api.client.json.GenericJson {
 
   /**
-   * Account profiles associated with this account permission.
-   *
-   * Possible values are: - "ACCOUNT_PROFILE_BASIC" - "ACCOUNT_PROFILE_STANDARD"
+   * Account profiles associated with this account permission. Possible values are: -
+   * "ACCOUNT_PROFILE_BASIC" - "ACCOUNT_PROFILE_STANDARD"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,9 +76,8 @@ public final class AccountPermission extends com.google.api.client.json.GenericJ
   private java.lang.Long permissionGroupId;
 
   /**
-   * Account profiles associated with this account permission.
-   *
-   * Possible values are: - "ACCOUNT_PROFILE_BASIC" - "ACCOUNT_PROFILE_STANDARD"
+   * Account profiles associated with this account permission. Possible values are: -
+   * "ACCOUNT_PROFILE_BASIC" - "ACCOUNT_PROFILE_STANDARD"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAccountProfiles() {
@@ -87,9 +85,8 @@ public final class AccountPermission extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Account profiles associated with this account permission.
-   *
-   * Possible values are: - "ACCOUNT_PROFILE_BASIC" - "ACCOUNT_PROFILE_STANDARD"
+   * Account profiles associated with this account permission. Possible values are: -
+   * "ACCOUNT_PROFILE_BASIC" - "ACCOUNT_PROFILE_STANDARD"
    * @param accountProfiles accountProfiles or {@code null} for none
    */
   public AccountPermission setAccountProfiles(java.util.List<java.lang.String> accountProfiles) {

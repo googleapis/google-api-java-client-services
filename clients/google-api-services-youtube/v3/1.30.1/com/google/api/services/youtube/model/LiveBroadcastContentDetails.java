@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Detailed settings of a broadcast.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -41,7 +41,7 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime boundStreamLastUpdateTimeMs;
+  private java.lang.String boundStreamLastUpdateTimeMs;
 
   /**
    * The value may be {@code null}.
@@ -50,15 +50,24 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   private java.lang.String closedCaptionsType;
 
   /**
-   * This setting indicates whether auto start is enabled for this broadcast.
+   * This setting indicates whether auto start is enabled for this broadcast.  The default value for
+   * this property is false.  This setting can only be used by Events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableAutoStart;
 
   /**
+   * This setting indicates whether auto stop is enabled for this broadcast. The default value for
+   * this property is false. This setting can only be used by Events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAutoStop;
+
+  /**
    * This setting indicates whether HTTP POST closed captioning is enabled for this broadcast. The
-   * ingestion URL of the closed captions is returned through the liveStreams API. This is mutually
+   * ingestion URL of the closed captions is returned through the liveStreams API.  This is mutually
    * exclusive with using the closed_captions_type property, and is equivalent to setting
    * closed_captions_type to CLOSED_CAPTIONS_HTTP_POST.
    * The value may be {@code null}.
@@ -159,12 +168,6 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   private java.lang.Boolean startWithSlate;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String stereoLayout;
-
-  /**
    * This value uniquely identifies the live stream bound to the broadcast.
    * @return value or {@code null} for none
    */
@@ -185,7 +188,7 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
    * The date and time that the live stream referenced by boundStreamId was last updated.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getBoundStreamLastUpdateTimeMs() {
+  public java.lang.String getBoundStreamLastUpdateTimeMs() {
     return boundStreamLastUpdateTimeMs;
   }
 
@@ -193,7 +196,7 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
    * The date and time that the live stream referenced by boundStreamId was last updated.
    * @param boundStreamLastUpdateTimeMs boundStreamLastUpdateTimeMs or {@code null} for none
    */
-  public LiveBroadcastContentDetails setBoundStreamLastUpdateTimeMs(com.google.api.client.util.DateTime boundStreamLastUpdateTimeMs) {
+  public LiveBroadcastContentDetails setBoundStreamLastUpdateTimeMs(java.lang.String boundStreamLastUpdateTimeMs) {
     this.boundStreamLastUpdateTimeMs = boundStreamLastUpdateTimeMs;
     return this;
   }
@@ -214,7 +217,8 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
-   * This setting indicates whether auto start is enabled for this broadcast.
+   * This setting indicates whether auto start is enabled for this broadcast.  The default value for
+   * this property is false.  This setting can only be used by Events.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAutoStart() {
@@ -222,7 +226,8 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
-   * This setting indicates whether auto start is enabled for this broadcast.
+   * This setting indicates whether auto start is enabled for this broadcast.  The default value for
+   * this property is false.  This setting can only be used by Events.
    * @param enableAutoStart enableAutoStart or {@code null} for none
    */
   public LiveBroadcastContentDetails setEnableAutoStart(java.lang.Boolean enableAutoStart) {
@@ -231,8 +236,27 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
+   * This setting indicates whether auto stop is enabled for this broadcast. The default value for
+   * this property is false. This setting can only be used by Events.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAutoStop() {
+    return enableAutoStop;
+  }
+
+  /**
+   * This setting indicates whether auto stop is enabled for this broadcast. The default value for
+   * this property is false. This setting can only be used by Events.
+   * @param enableAutoStop enableAutoStop or {@code null} for none
+   */
+  public LiveBroadcastContentDetails setEnableAutoStop(java.lang.Boolean enableAutoStop) {
+    this.enableAutoStop = enableAutoStop;
+    return this;
+  }
+
+  /**
    * This setting indicates whether HTTP POST closed captioning is enabled for this broadcast. The
-   * ingestion URL of the closed captions is returned through the liveStreams API. This is mutually
+   * ingestion URL of the closed captions is returned through the liveStreams API.  This is mutually
    * exclusive with using the closed_captions_type property, and is equivalent to setting
    * closed_captions_type to CLOSED_CAPTIONS_HTTP_POST.
    * @return value or {@code null} for none
@@ -243,7 +267,7 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
 
   /**
    * This setting indicates whether HTTP POST closed captioning is enabled for this broadcast. The
-   * ingestion URL of the closed captions is returned through the liveStreams API. This is mutually
+   * ingestion URL of the closed captions is returned through the liveStreams API.  This is mutually
    * exclusive with using the closed_captions_type property, and is equivalent to setting
    * closed_captions_type to CLOSED_CAPTIONS_HTTP_POST.
    * @param enableClosedCaptions enableClosedCaptions or {@code null} for none
@@ -498,21 +522,6 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
    */
   public LiveBroadcastContentDetails setStartWithSlate(java.lang.Boolean startWithSlate) {
     this.startWithSlate = startWithSlate;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStereoLayout() {
-    return stereoLayout;
-  }
-
-  /**
-   * @param stereoLayout stereoLayout or {@code null} for none
-   */
-  public LiveBroadcastContentDetails setStereoLayout(java.lang.String stereoLayout) {
-    this.stereoLayout = stereoLayout;
     return this;
   }
 

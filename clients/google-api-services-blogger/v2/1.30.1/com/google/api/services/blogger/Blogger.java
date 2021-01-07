@@ -20,12 +20,12 @@ package com.google.api.services.blogger;
  * Service definition for Blogger (v2).
  *
  * <p>
- * API for access to the data within Blogger.
+ * The Blogger API provides access to posts, comments and pages of a Blogger blog.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/blogger/docs/2.0/json/getting_started" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/blogger/docs/3.0/getting_started" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Blogger API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Blogger API v3 library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -55,7 +55,7 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://blogger.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -63,7 +63,7 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "blogger/v2/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/blogger/v2";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -143,14 +143,14 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
   public class Blogs {
 
     /**
-     * Gets one blog by id.
+     * Gets a blog by id.
      *
      * Create a request for the method "blogs.get".
      *
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param blogId The ID of the blog to get.
+     * @param blogId
      * @return the request
      */
     public Get get(java.lang.String blogId) throws java.io.IOException {
@@ -161,10 +161,10 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
 
     public class Get extends BloggerRequest<com.google.api.services.blogger.model.Blog> {
 
-      private static final String REST_PATH = "blogs/{blogId}";
+      private static final String REST_PATH = "v2/blogs/{blogId}";
 
       /**
-       * Gets one blog by id.
+       * Gets a blog by id.
        *
        * Create a request for the method "blogs.get".
        *
@@ -173,7 +173,7 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param blogId The ID of the blog to get.
+       * @param blogId
        * @since 1.13
        */
       protected Get(java.lang.String blogId) {
@@ -192,8 +192,23 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -222,189 +237,27 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
-      }
-
-      /** The ID of the blog to get. */
-      @com.google.api.client.util.Key
-      private java.lang.String blogId;
-
-      /** The ID of the blog to get.
-       */
-      public java.lang.String getBlogId() {
-        return blogId;
-      }
-
-      /** The ID of the blog to get. */
-      public Get setBlogId(java.lang.String blogId) {
-        this.blogId = blogId;
-        return this;
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
       @Override
-      public Get set(String parameterName, Object value) {
-        return (Get) super.set(parameterName, value);
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
-    }
 
-  }
-
-  /**
-   * An accessor for creating requests from the Comments collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code Blogger blogger = new Blogger(...);}
-   *   {@code Blogger.Comments.List request = blogger.comments().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Comments comments() {
-    return new Comments();
-  }
-
-  /**
-   * The "comments" collection of methods.
-   */
-  public class Comments {
-
-    /**
-     * Gets one comment by id.
-     *
-     * Create a request for the method "comments.get".
-     *
-     * This request holds the parameters needed by the blogger server.  After setting any optional
-     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-     *
-     * @param blogId ID of the blog to containing the comment.
-     * @param postId ID of the post to fetch posts from.
-     * @param commentId The ID of the comment to get.
-     * @return the request
-     */
-    public Get get(java.lang.String blogId, java.lang.String postId, java.lang.String commentId) throws java.io.IOException {
-      Get result = new Get(blogId, postId, commentId);
-      initialize(result);
-      return result;
-    }
-
-    public class Get extends BloggerRequest<com.google.api.services.blogger.model.Comment> {
-
-      private static final String REST_PATH = "blogs/{blogId}/posts/{postId}/comments/{commentId}";
+      @com.google.api.client.util.Key
+      private java.lang.String blogId;
 
       /**
-       * Gets one comment by id.
-       *
-       * Create a request for the method "comments.get".
-       *
-       * This request holds the parameters needed by the the blogger server.  After setting any optional
-       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
-       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-       * called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param blogId ID of the blog to containing the comment.
-       * @param postId ID of the post to fetch posts from.
-       * @param commentId The ID of the comment to get.
-       * @since 1.13
-       */
-      protected Get(java.lang.String blogId, java.lang.String postId, java.lang.String commentId) {
-        super(Blogger.this, "GET", REST_PATH, null, com.google.api.services.blogger.model.Comment.class);
-        this.blogId = com.google.api.client.util.Preconditions.checkNotNull(blogId, "Required parameter blogId must be specified.");
-        this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
-        this.commentId = com.google.api.client.util.Preconditions.checkNotNull(commentId, "Required parameter commentId must be specified.");
-      }
 
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public Get setAlt(java.lang.String alt) {
-        return (Get) super.setAlt(alt);
-      }
-
-      @Override
-      public Get setFields(java.lang.String fields) {
-        return (Get) super.setFields(fields);
-      }
-
-      @Override
-      public Get setKey(java.lang.String key) {
-        return (Get) super.setKey(key);
-      }
-
-      @Override
-      public Get setOauthToken(java.lang.String oauthToken) {
-        return (Get) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Get) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Get setQuotaUser(java.lang.String quotaUser) {
-        return (Get) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
-      }
-
-      /** ID of the blog to containing the comment. */
-      @com.google.api.client.util.Key
-      private java.lang.String blogId;
-
-      /** ID of the blog to containing the comment.
        */
       public java.lang.String getBlogId() {
         return blogId;
       }
 
-      /** ID of the blog to containing the comment. */
       public Get setBlogId(java.lang.String blogId) {
         this.blogId = blogId;
-        return this;
-      }
-
-      /** ID of the post to fetch posts from. */
-      @com.google.api.client.util.Key
-      private java.lang.String postId;
-
-      /** ID of the post to fetch posts from.
-       */
-      public java.lang.String getPostId() {
-        return postId;
-      }
-
-      /** ID of the post to fetch posts from. */
-      public Get setPostId(java.lang.String postId) {
-        this.postId = postId;
-        return this;
-      }
-
-      /** The ID of the comment to get. */
-      @com.google.api.client.util.Key
-      private java.lang.String commentId;
-
-      /** The ID of the comment to get.
-       */
-      public java.lang.String getCommentId() {
-        return commentId;
-      }
-
-      /** The ID of the comment to get. */
-      public Get setCommentId(java.lang.String commentId) {
-        this.commentId = commentId;
         return this;
       }
 
@@ -414,45 +267,42 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Retrieves the comments for a blog, possibly filtered.
+     * Lists blogs by user id, possibly filtered.
      *
-     * Create a request for the method "comments.list".
+     * Create a request for the method "blogs.list".
      *
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param blogId ID of the blog to fetch comments from.
-     * @param postId ID of the post to fetch posts from.
+     * @param userId
      * @return the request
      */
-    public List list(java.lang.String blogId, java.lang.String postId) throws java.io.IOException {
-      List result = new List(blogId, postId);
+    public List list(java.lang.String userId) throws java.io.IOException {
+      List result = new List(userId);
       initialize(result);
       return result;
     }
 
-    public class List extends BloggerRequest<com.google.api.services.blogger.model.CommentList> {
+    public class List extends BloggerRequest<com.google.api.services.blogger.model.BlogList> {
 
-      private static final String REST_PATH = "blogs/{blogId}/posts/{postId}/comments";
+      private static final String REST_PATH = "v2/users/{userId}/blogs";
 
       /**
-       * Retrieves the comments for a blog, possibly filtered.
+       * Lists blogs by user id, possibly filtered.
        *
-       * Create a request for the method "comments.list".
+       * Create a request for the method "blogs.list".
        *
        * This request holds the parameters needed by the the blogger server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param blogId ID of the blog to fetch comments from.
-       * @param postId ID of the post to fetch posts from.
+       * @param userId
        * @since 1.13
        */
-      protected List(java.lang.String blogId, java.lang.String postId) {
-        super(Blogger.this, "GET", REST_PATH, null, com.google.api.services.blogger.model.CommentList.class);
-        this.blogId = com.google.api.client.util.Preconditions.checkNotNull(blogId, "Required parameter blogId must be specified.");
-        this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+      protected List(java.lang.String userId) {
+        super(Blogger.this, "GET", REST_PATH, null, com.google.api.services.blogger.model.BlogList.class);
+        this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
       }
 
       @Override
@@ -466,8 +316,23 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -496,102 +361,411 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** ID of the blog to fetch comments from. */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.String userId;
+
+      /**
+
+       */
+      public java.lang.String getUserId() {
+        return userId;
+      }
+
+      public List setUserId(java.lang.String userId) {
+        this.userId = userId;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Comments collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Blogger blogger = new Blogger(...);}
+   *   {@code Blogger.Comments.List request = blogger.comments().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Comments comments() {
+    return new Comments();
+  }
+
+  /**
+   * The "comments" collection of methods.
+   */
+  public class Comments {
+
+    /**
+     * Gets a comment by blog id, post id and comment id.
+     *
+     * Create a request for the method "comments.get".
+     *
+     * This request holds the parameters needed by the blogger server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param blogId
+     * @param postId
+     * @param commentId
+     * @return the request
+     */
+    public Get get(java.lang.String blogId, java.lang.String postId, java.lang.String commentId) throws java.io.IOException {
+      Get result = new Get(blogId, postId, commentId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends BloggerRequest<com.google.api.services.blogger.model.Comment> {
+
+      private static final String REST_PATH = "v2/blogs/{blogId}/posts/{postId}/comments/{commentId}";
+
+      /**
+       * Gets a comment by blog id, post id and comment id.
+       *
+       * Create a request for the method "comments.get".
+       *
+       * This request holds the parameters needed by the the blogger server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param blogId
+       * @param postId
+       * @param commentId
+       * @since 1.13
+       */
+      protected Get(java.lang.String blogId, java.lang.String postId, java.lang.String commentId) {
+        super(Blogger.this, "GET", REST_PATH, null, com.google.api.services.blogger.model.Comment.class);
+        this.blogId = com.google.api.client.util.Preconditions.checkNotNull(blogId, "Required parameter blogId must be specified.");
+        this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+        this.commentId = com.google.api.client.util.Preconditions.checkNotNull(commentId, "Required parameter commentId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
       @com.google.api.client.util.Key
       private java.lang.String blogId;
 
-      /** ID of the blog to fetch comments from.
+      /**
+
        */
       public java.lang.String getBlogId() {
         return blogId;
       }
 
-      /** ID of the blog to fetch comments from. */
-      public List setBlogId(java.lang.String blogId) {
+      public Get setBlogId(java.lang.String blogId) {
         this.blogId = blogId;
         return this;
       }
 
-      /** ID of the post to fetch posts from. */
       @com.google.api.client.util.Key
       private java.lang.String postId;
 
-      /** ID of the post to fetch posts from.
+      /**
+
        */
       public java.lang.String getPostId() {
         return postId;
       }
 
-      /** ID of the post to fetch posts from. */
+      public Get setPostId(java.lang.String postId) {
+        this.postId = postId;
+        return this;
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.String commentId;
+
+      /**
+
+       */
+      public java.lang.String getCommentId() {
+        return commentId;
+      }
+
+      public Get setCommentId(java.lang.String commentId) {
+        this.commentId = commentId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists comments.
+     *
+     * Create a request for the method "comments.list".
+     *
+     * This request holds the parameters needed by the blogger server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param blogId
+     * @param postId
+     * @return the request
+     */
+    public List list(java.lang.String blogId, java.lang.String postId) throws java.io.IOException {
+      List result = new List(blogId, postId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends BloggerRequest<com.google.api.services.blogger.model.CommentList> {
+
+      private static final String REST_PATH = "v2/blogs/{blogId}/posts/{postId}/comments";
+
+      /**
+       * Lists comments.
+       *
+       * Create a request for the method "comments.list".
+       *
+       * This request holds the parameters needed by the the blogger server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param blogId
+       * @param postId
+       * @since 1.13
+       */
+      protected List(java.lang.String blogId, java.lang.String postId) {
+        super(Blogger.this, "GET", REST_PATH, null, com.google.api.services.blogger.model.CommentList.class);
+        this.blogId = com.google.api.client.util.Preconditions.checkNotNull(blogId, "Required parameter blogId must be specified.");
+        this.postId = com.google.api.client.util.Preconditions.checkNotNull(postId, "Required parameter postId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.String blogId;
+
+      /**
+
+       */
+      public java.lang.String getBlogId() {
+        return blogId;
+      }
+
+      public List setBlogId(java.lang.String blogId) {
+        this.blogId = blogId;
+        return this;
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.String postId;
+
+      /**
+
+       */
+      public java.lang.String getPostId() {
+        return postId;
+      }
+
       public List setPostId(java.lang.String postId) {
         this.postId = postId;
         return this;
       }
 
-      /** Whether the body content of the comments is included. */
       @com.google.api.client.util.Key
       private java.lang.Boolean fetchBodies;
 
-      /** Whether the body content of the comments is included.
+      /**
+
        */
       public java.lang.Boolean getFetchBodies() {
         return fetchBodies;
       }
 
-      /** Whether the body content of the comments is included. */
       public List setFetchBodies(java.lang.Boolean fetchBodies) {
         this.fetchBodies = fetchBodies;
         return this;
       }
 
-      /** Maximum number of comments to include in the result. */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of comments to include in the result.
+      /**
+
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of comments to include in the result. */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
-      /** Continuation token if request is paged. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Continuation token if request is paged.
+      /**
+
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Continuation token if request is paged. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
-      /** Earliest date of comment to fetch, a date-time with RFC 3339 formatting. */
       @com.google.api.client.util.Key
-      private com.google.api.client.util.DateTime startDate;
+      private java.lang.String startDate;
 
-      /** Earliest date of comment to fetch, a date-time with RFC 3339 formatting.
+      /**
+
        */
-      public com.google.api.client.util.DateTime getStartDate() {
+      public java.lang.String getStartDate() {
         return startDate;
       }
 
-      /** Earliest date of comment to fetch, a date-time with RFC 3339 formatting. */
-      public List setStartDate(com.google.api.client.util.DateTime startDate) {
+      public List setStartDate(java.lang.String startDate) {
         this.startDate = startDate;
         return this;
       }
@@ -625,15 +799,15 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
   public class Pages {
 
     /**
-     * Gets one blog page by id.
+     * Gets a page by blog id and page id.
      *
      * Create a request for the method "pages.get".
      *
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param blogId ID of the blog containing the page.
-     * @param pageId The ID of the page to get.
+     * @param blogId
+     * @param pageId
      * @return the request
      */
     public Get get(java.lang.String blogId, java.lang.String pageId) throws java.io.IOException {
@@ -644,10 +818,10 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
 
     public class Get extends BloggerRequest<com.google.api.services.blogger.model.Page> {
 
-      private static final String REST_PATH = "blogs/{blogId}/pages/{pageId}";
+      private static final String REST_PATH = "v2/blogs/{blogId}/pages/{pageId}";
 
       /**
-       * Gets one blog page by id.
+       * Gets a page by blog id and page id.
        *
        * Create a request for the method "pages.get".
        *
@@ -656,8 +830,8 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param blogId ID of the blog containing the page.
-       * @param pageId The ID of the page to get.
+       * @param blogId
+       * @param pageId
        * @since 1.13
        */
       protected Get(java.lang.String blogId, java.lang.String pageId) {
@@ -677,8 +851,23 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -707,37 +896,40 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /** ID of the blog containing the page. */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
       @com.google.api.client.util.Key
       private java.lang.String blogId;
 
-      /** ID of the blog containing the page.
+      /**
+
        */
       public java.lang.String getBlogId() {
         return blogId;
       }
 
-      /** ID of the blog containing the page. */
       public Get setBlogId(java.lang.String blogId) {
         this.blogId = blogId;
         return this;
       }
 
-      /** The ID of the page to get. */
       @com.google.api.client.util.Key
       private java.lang.String pageId;
 
-      /** The ID of the page to get.
+      /**
+
        */
       public java.lang.String getPageId() {
         return pageId;
       }
 
-      /** The ID of the page to get. */
       public Get setPageId(java.lang.String pageId) {
         this.pageId = pageId;
         return this;
@@ -749,14 +941,14 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Retrieves pages for a blog, possibly filtered.
+     * Lists pages.
      *
      * Create a request for the method "pages.list".
      *
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param blogId ID of the blog to fetch pages from.
+     * @param blogId
      * @return the request
      */
     public List list(java.lang.String blogId) throws java.io.IOException {
@@ -767,10 +959,10 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
 
     public class List extends BloggerRequest<com.google.api.services.blogger.model.PageList> {
 
-      private static final String REST_PATH = "blogs/{blogId}/pages";
+      private static final String REST_PATH = "v2/blogs/{blogId}/pages";
 
       /**
-       * Retrieves pages for a blog, possibly filtered.
+       * Lists pages.
        *
        * Create a request for the method "pages.list".
        *
@@ -779,7 +971,7 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param blogId ID of the blog to fetch pages from.
+       * @param blogId
        * @since 1.13
        */
       protected List(java.lang.String blogId) {
@@ -798,8 +990,23 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -828,37 +1035,40 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** ID of the blog to fetch pages from. */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
       @com.google.api.client.util.Key
       private java.lang.String blogId;
 
-      /** ID of the blog to fetch pages from.
+      /**
+
        */
       public java.lang.String getBlogId() {
         return blogId;
       }
 
-      /** ID of the blog to fetch pages from. */
       public List setBlogId(java.lang.String blogId) {
         this.blogId = blogId;
         return this;
       }
 
-      /** Whether to retrieve the Page bodies. */
       @com.google.api.client.util.Key
       private java.lang.Boolean fetchBodies;
 
-      /** Whether to retrieve the Page bodies.
+      /**
+
        */
       public java.lang.Boolean getFetchBodies() {
         return fetchBodies;
       }
 
-      /** Whether to retrieve the Page bodies. */
       public List setFetchBodies(java.lang.Boolean fetchBodies) {
         this.fetchBodies = fetchBodies;
         return this;
@@ -893,15 +1103,15 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
   public class Posts {
 
     /**
-     * Get a post by id.
+     * Gets a post by blog id and post id
      *
      * Create a request for the method "posts.get".
      *
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param blogId ID of the blog to fetch the post from.
-     * @param postId The ID of the post
+     * @param blogId
+     * @param postId
      * @return the request
      */
     public Get get(java.lang.String blogId, java.lang.String postId) throws java.io.IOException {
@@ -912,10 +1122,10 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
 
     public class Get extends BloggerRequest<com.google.api.services.blogger.model.Post> {
 
-      private static final String REST_PATH = "blogs/{blogId}/posts/{postId}";
+      private static final String REST_PATH = "v2/blogs/{blogId}/posts/{postId}";
 
       /**
-       * Get a post by id.
+       * Gets a post by blog id and post id
        *
        * Create a request for the method "posts.get".
        *
@@ -924,8 +1134,8 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param blogId ID of the blog to fetch the post from.
-       * @param postId The ID of the post
+       * @param blogId
+       * @param postId
        * @since 1.13
        */
       protected Get(java.lang.String blogId, java.lang.String postId) {
@@ -945,8 +1155,23 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -975,37 +1200,40 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /** ID of the blog to fetch the post from. */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
       @com.google.api.client.util.Key
       private java.lang.String blogId;
 
-      /** ID of the blog to fetch the post from.
+      /**
+
        */
       public java.lang.String getBlogId() {
         return blogId;
       }
 
-      /** ID of the blog to fetch the post from. */
       public Get setBlogId(java.lang.String blogId) {
         this.blogId = blogId;
         return this;
       }
 
-      /** The ID of the post */
       @com.google.api.client.util.Key
       private java.lang.String postId;
 
-      /** The ID of the post
+      /**
+
        */
       public java.lang.String getPostId() {
         return postId;
       }
 
-      /** The ID of the post */
       public Get setPostId(java.lang.String postId) {
         this.postId = postId;
         return this;
@@ -1017,14 +1245,14 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Retrieves a list of posts, possibly filtered.
+     * Lists posts.
      *
      * Create a request for the method "posts.list".
      *
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param blogId ID of the blog to fetch posts from.
+     * @param blogId
      * @return the request
      */
     public List list(java.lang.String blogId) throws java.io.IOException {
@@ -1035,10 +1263,10 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
 
     public class List extends BloggerRequest<com.google.api.services.blogger.model.PostList> {
 
-      private static final String REST_PATH = "blogs/{blogId}/posts";
+      private static final String REST_PATH = "v2/blogs/{blogId}/posts";
 
       /**
-       * Retrieves a list of posts, possibly filtered.
+       * Lists posts.
        *
        * Create a request for the method "posts.list".
        *
@@ -1047,7 +1275,7 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param blogId ID of the blog to fetch posts from.
+       * @param blogId
        * @since 1.13
        */
       protected List(java.lang.String blogId) {
@@ -1066,8 +1294,23 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1096,86 +1339,86 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
       }
 
-      /** ID of the blog to fetch posts from. */
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
       @com.google.api.client.util.Key
       private java.lang.String blogId;
 
-      /** ID of the blog to fetch posts from.
+      /**
+
        */
       public java.lang.String getBlogId() {
         return blogId;
       }
 
-      /** ID of the blog to fetch posts from. */
       public List setBlogId(java.lang.String blogId) {
         this.blogId = blogId;
         return this;
       }
 
-      /** Whether the body content of posts is included. */
       @com.google.api.client.util.Key
       private java.lang.Boolean fetchBodies;
 
-      /** Whether the body content of posts is included.
+      /**
+
        */
       public java.lang.Boolean getFetchBodies() {
         return fetchBodies;
       }
 
-      /** Whether the body content of posts is included. */
       public List setFetchBodies(java.lang.Boolean fetchBodies) {
         this.fetchBodies = fetchBodies;
         return this;
       }
 
-      /** Maximum number of posts to fetch. */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** Maximum number of posts to fetch.
+      /**
+
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
       }
 
-      /** Maximum number of posts to fetch. */
       public List setMaxResults(java.lang.Long maxResults) {
         this.maxResults = maxResults;
         return this;
       }
 
-      /** Continuation token if the request is paged. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Continuation token if the request is paged.
+      /**
+
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Continuation token if the request is paged. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
-      /** Earliest post date to fetch, a date-time with RFC 3339 formatting. */
       @com.google.api.client.util.Key
-      private com.google.api.client.util.DateTime startDate;
+      private java.lang.String startDate;
 
-      /** Earliest post date to fetch, a date-time with RFC 3339 formatting.
+      /**
+
        */
-      public com.google.api.client.util.DateTime getStartDate() {
+      public java.lang.String getStartDate() {
         return startDate;
       }
 
-      /** Earliest post date to fetch, a date-time with RFC 3339 formatting. */
-      public List setStartDate(com.google.api.client.util.DateTime startDate) {
+      public List setStartDate(java.lang.String startDate) {
         this.startDate = startDate;
         return this;
       }
@@ -1209,14 +1452,14 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
   public class Users {
 
     /**
-     * Gets one user by id.
+     * Gets a user by user id.
      *
      * Create a request for the method "users.get".
      *
      * This request holds the parameters needed by the blogger server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param userId The ID of the user to get.
+     * @param userId
      * @return the request
      */
     public Get get(java.lang.String userId) throws java.io.IOException {
@@ -1227,10 +1470,10 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
 
     public class Get extends BloggerRequest<com.google.api.services.blogger.model.User> {
 
-      private static final String REST_PATH = "users/{userId}";
+      private static final String REST_PATH = "v2/users/{userId}";
 
       /**
-       * Gets one user by id.
+       * Gets a user by user id.
        *
        * Create a request for the method "users.get".
        *
@@ -1239,7 +1482,7 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userId The ID of the user to get.
+       * @param userId
        * @since 1.13
        */
       protected Get(java.lang.String userId) {
@@ -1258,8 +1501,23 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1288,21 +1546,25 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
       }
 
-      /** The ID of the user to get. */
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** The ID of the user to get.
+      /**
+
        */
       public java.lang.String getUserId() {
         return userId;
       }
 
-      /** The ID of the user to get. */
       public Get setUserId(java.lang.String userId) {
         this.userId = userId;
         return this;
@@ -1314,142 +1576,6 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       }
     }
 
-    /**
-     * An accessor for creating requests from the Blogs collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code Blogger blogger = new Blogger(...);}
-     *   {@code Blogger.Blogs.List request = blogger.blogs().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Blogs blogs() {
-      return new Blogs();
-    }
-
-    /**
-     * The "blogs" collection of methods.
-     */
-    public class Blogs {
-
-      /**
-       * Retrieves a list of blogs, possibly filtered.
-       *
-       * Create a request for the method "blogs.list".
-       *
-       * This request holds the parameters needed by the blogger server.  After setting any optional
-       * parameters, call the {@link List#execute()} method to invoke the remote operation.
-       *
-       * @param userId ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or the
-       *        user's profile identifier.
-       * @return the request
-       */
-      public List list(java.lang.String userId) throws java.io.IOException {
-        List result = new List(userId);
-        initialize(result);
-        return result;
-      }
-
-      public class List extends BloggerRequest<com.google.api.services.blogger.model.BlogList> {
-
-        private static final String REST_PATH = "users/{userId}/blogs";
-
-        /**
-         * Retrieves a list of blogs, possibly filtered.
-         *
-         * Create a request for the method "blogs.list".
-         *
-         * This request holds the parameters needed by the the blogger server.  After setting any optional
-         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
-         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-         * called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param userId ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or the
-       *        user's profile identifier.
-         * @since 1.13
-         */
-        protected List(java.lang.String userId) {
-          super(Blogger.this, "GET", REST_PATH, null, com.google.api.services.blogger.model.BlogList.class);
-          this.userId = com.google.api.client.util.Preconditions.checkNotNull(userId, "Required parameter userId must be specified.");
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public List setAlt(java.lang.String alt) {
-          return (List) super.setAlt(alt);
-        }
-
-        @Override
-        public List setFields(java.lang.String fields) {
-          return (List) super.setFields(fields);
-        }
-
-        @Override
-        public List setKey(java.lang.String key) {
-          return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (List) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public List setQuotaUser(java.lang.String quotaUser) {
-          return (List) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public List setUserIp(java.lang.String userIp) {
-          return (List) super.setUserIp(userIp);
-        }
-
-        /**
-         * ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks)
-         * or the user's profile identifier.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String userId;
-
-        /** ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks) or the
-       user's profile identifier.
-         */
-        public java.lang.String getUserId() {
-          return userId;
-        }
-
-        /**
-         * ID of the user whose blogs are to be fetched. Either the word 'self' (sans quote marks)
-         * or the user's profile identifier.
-         */
-        public List setUserId(java.lang.String userId) {
-          this.userId = userId;
-          return this;
-        }
-
-        @Override
-        public List set(String parameterName, Object value) {
-          return (List) super.set(parameterName, value);
-        }
-      }
-
-    }
   }
 
   /**

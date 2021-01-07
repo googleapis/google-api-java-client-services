@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-recommender",
+    "version": "v1-rev20201113-1.31.0"
+  }
+}

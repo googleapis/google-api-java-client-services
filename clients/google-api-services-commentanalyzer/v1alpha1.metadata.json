@@ -1,7 +1,0 @@
-{
-  "maven": {
-    "groupId": "com.google.apis",
-    "artifactId": "google-api-services-commentanalyzer",
-    "version": "v1alpha1-rev20200301-1.30.9"
-  }
-}

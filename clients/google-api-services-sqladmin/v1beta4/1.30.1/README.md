@@ -21,8 +21,8 @@ Add the following lines to your `pom.xml` file:
   <dependencies>
     <dependency>
       <groupId>com.google.apis</groupId>
-      <artifactId>google-api-services-sql</artifactId>
-      <version>v1beta4-rev20200310-1.30.9</version>
+      <artifactId>google-api-services-sqladmin</artifactId>
+      <version>v1beta4-rev20201022-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,10 +35,10 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-sql:v1beta4-rev20200310-1.30.9'
+  compile 'com.google.apis:google-api-services-sqladmin:v1beta4-rev20201022-1.30.10'
 }
 ```
 
-[javadoc]: https://googleapis.dev/java/google-api-services-sql/latest/index.html
+[javadoc]: https://googleapis.dev/java/google-api-services-sqladmin/latest/index.html
 [google-api-client]: https://github.com/googleapis/google-api-java-client/
-[api-explorer]: https://developers.google.com/apis-explorer/#p/sql/v1/
+[api-explorer]: https://developers.google.com/apis-explorer/#p/sqladmin/v1/

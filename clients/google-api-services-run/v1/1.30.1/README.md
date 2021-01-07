@@ -1,14 +1,14 @@
-# Cloud Run API Client Library for Java
+# Cloud Run Admin API Client Library for Java
 
 Deploy and manage user provided container images that scale automatically based on HTTP traffic.
 
-This page contains information about getting started with the Cloud Run API
+This page contains information about getting started with the Cloud Run Admin API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Cloud Run API][javadoc]
+* Browse the [Javadoc reference for the Cloud Run Admin API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Cloud Run API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Cloud Run Admin API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-run</artifactId>
-      <version>v1-rev20200302-1.30.9</version>
+      <version>v1-rev20201113-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-run:v1-rev20200302-1.30.9'
+  compile 'com.google.apis:google-api-services-run:v1-rev20201113-1.30.10'
 }
 ```
 

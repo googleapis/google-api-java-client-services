@@ -46,7 +46,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Classroom API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Google Classroom API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,17 +143,12 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
   public class Courses {
 
     /**
-     * Creates a course.
-     *
-     * The user specified in `ownerId` is the owner of the created course and added as a teacher.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` if the requesting user is not permitted to create courses or for access
-     * errors. * `NOT_FOUND` if the primary teacher is not a valid user. * `FAILED_PRECONDITION` if the
-     * course owner's account is disabled or for the following request errors:     *
-     * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if an alias was specified in the `id` and
-     * already exists.
+     * Creates a course. The user specified in `ownerId` is the owner of the created course and added as
+     * a teacher. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting
+     * user is not permitted to create courses or for access errors. * `NOT_FOUND` if the primary
+     * teacher is not a valid user. * `FAILED_PRECONDITION` if the course owner's account is disabled or
+     * for the following request errors: * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if an
+     * alias was specified in the `id` and already exists.
      *
      * Create a request for the method "courses.create".
      *
@@ -174,17 +169,12 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1/courses";
 
       /**
-       * Creates a course.
-       *
-       * The user specified in `ownerId` is the owner of the created course and added as a teacher.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to create courses or for access
-       * errors. * `NOT_FOUND` if the primary teacher is not a valid user. * `FAILED_PRECONDITION` if
-       * the course owner's account is disabled or for the following request errors:     *
-       * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if an alias was specified in the `id` and
-       * already exists.
+       * Creates a course. The user specified in `ownerId` is the owner of the created course and added
+       * as a teacher. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting user is not permitted to create courses or for access errors. * `NOT_FOUND` if the
+       * primary teacher is not a valid user. * `FAILED_PRECONDITION` if the course owner's account is
+       * disabled or for the following request errors: * UserGroupsMembershipLimitReached *
+       * `ALREADY_EXISTS` if an alias was specified in the `id` and already exists.
        *
        * Create a request for the method "courses.create".
        *
@@ -262,22 +252,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Deletes a course.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` if the requesting user is not permitted to delete the requested course or
-     * for access errors. * `NOT_FOUND` if no course exists with the requested ID.
+     * Deletes a course. This method returns the following error codes: * `PERMISSION_DENIED` if the
+     * requesting user is not permitted to delete the requested course or for access errors. *
+     * `NOT_FOUND` if no course exists with the requested ID.
      *
      * Create a request for the method "courses.delete".
      *
      * This request holds the parameters needed by the classroom server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param id Identifier of the course to delete.
-    This identifier can be either the Classroom-assigned identifier
-     *        or an
-    alias.
+     * @param id Identifier of the course to delete. This identifier can be either the Classroom-assigned identifier
+     *        or an alias.
      * @return the request
      */
     public Delete delete(java.lang.String id) throws java.io.IOException {
@@ -291,12 +276,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1/courses/{id}";
 
       /**
-       * Deletes a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to delete the requested course or
-       * for access errors. * `NOT_FOUND` if no course exists with the requested ID.
+       * Deletes a course. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting user is not permitted to delete the requested course or for access errors. *
+       * `NOT_FOUND` if no course exists with the requested ID.
        *
        * Create a request for the method "courses.delete".
        *
@@ -306,10 +288,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param id Identifier of the course to delete.
-    This identifier can be either the Classroom-assigned identifier
-     *        or an
-    alias.
+       * @param id Identifier of the course to delete. This identifier can be either the Classroom-assigned identifier
+     *        or an alias.
        * @since 1.13
        */
       protected Delete(java.lang.String id) {
@@ -401,22 +381,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Returns a course.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-     * for access errors. * `NOT_FOUND` if no course exists with the requested ID.
+     * Returns a course. This method returns the following error codes: * `PERMISSION_DENIED` if the
+     * requesting user is not permitted to access the requested course or for access errors. *
+     * `NOT_FOUND` if no course exists with the requested ID.
      *
      * Create a request for the method "courses.get".
      *
      * This request holds the parameters needed by the classroom server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param id Identifier of the course to return.
-    This identifier can be either the Classroom-assigned identifier
-     *        or an
-    alias.
+     * @param id Identifier of the course to return. This identifier can be either the Classroom-assigned identifier
+     *        or an alias.
      * @return the request
      */
     public Get get(java.lang.String id) throws java.io.IOException {
@@ -430,12 +405,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1/courses/{id}";
 
       /**
-       * Returns a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-       * for access errors. * `NOT_FOUND` if no course exists with the requested ID.
+       * Returns a course. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting user is not permitted to access the requested course or for access errors. *
+       * `NOT_FOUND` if no course exists with the requested ID.
        *
        * Create a request for the method "courses.get".
        *
@@ -444,10 +416,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param id Identifier of the course to return.
-    This identifier can be either the Classroom-assigned identifier
-     *        or an
-    alias.
+       * @param id Identifier of the course to return. This identifier can be either the Classroom-assigned identifier
+     *        or an alias.
        * @since 1.13
        */
       protected Get(java.lang.String id) {
@@ -551,12 +521,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
     /**
      * Returns a list of courses that the requesting user is permitted to view, restricted to those that
      * match the request. Returned courses are ordered by creation time, with the most recently created
-     * coming first.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT` if the query argument is malformed.
-     * * `NOT_FOUND` if any users specified in the query arguments do not exist.
+     * coming first. This method returns the following error codes: * `PERMISSION_DENIED` for access
+     * errors. * `INVALID_ARGUMENT` if the query argument is malformed. * `NOT_FOUND` if any users
+     * specified in the query arguments do not exist.
      *
      * Create a request for the method "courses.list".
      *
@@ -578,12 +545,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Returns a list of courses that the requesting user is permitted to view, restricted to those
        * that match the request. Returned courses are ordered by creation time, with the most recently
-       * created coming first.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT` if the query argument is
-       * malformed. * `NOT_FOUND` if any users specified in the query arguments do not exist.
+       * created coming first. This method returns the following error codes: * `PERMISSION_DENIED` for
+       * access errors. * `INVALID_ARGUMENT` if the query argument is malformed. * `NOT_FOUND` if any
+       * users specified in the query arguments do not exist.
        *
        * Create a request for the method "courses.list".
        *
@@ -688,17 +652,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Maximum number of items to return. Zero or unspecified indicates that the server may assign
-       * a maximum.
-       *
-       * The server may return fewer than the specified number of results.
+       * a maximum. The server may return fewer than the specified number of results.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
-     maximum.
-
-     The server may return fewer than the specified number of results.
+     maximum. The server may return fewer than the specified number of results.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -706,9 +666,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Maximum number of items to return. Zero or unspecified indicates that the server may assign
-       * a maximum.
-       *
-       * The server may return fewer than the specified number of results.
+       * a maximum. The server may return fewer than the specified number of results.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -717,17 +675,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * nextPageToken value returned from a previous list call, indicating that the subsequent page
-       * of results should be returned.
-       *
-       * The list request must be otherwise identical to the one that resulted in this token.
+       * of results should be returned. The list request must be otherwise identical to the one that
+       * resulted in this token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-     results should be returned.
-
-     The list request must be otherwise identical to the one that resulted in this token.
+     results should be returned. The list request must be otherwise identical to the one that resulted
+     in this token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -735,9 +691,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * nextPageToken value returned from a previous list call, indicating that the subsequent page
-       * of results should be returned.
-       *
-       * The list request must be otherwise identical to the one that resulted in this token.
+       * of results should be returned. The list request must be otherwise identical to the one that
+       * resulted in this token.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -746,19 +701,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Restricts returned courses to those having a student with the specified identifier. The
-       * identifier can be one of the following:
-       *
-       * * the numeric identifier for the user * the email address of the user * the string literal
-       * `"me"`, indicating the requesting user
+       * identifier can be one of the following: * the numeric identifier for the user * the email
+       * address of the user * the string literal `"me"`, indicating the requesting user
        */
       @com.google.api.client.util.Key
       private java.lang.String studentId;
 
       /** Restricts returned courses to those having a student with the specified identifier. The identifier
-     can be one of the following:
-
-     * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-     indicating the requesting user
+     can be one of the following: * the numeric identifier for the user * the email address of the user
+     * the string literal `"me"`, indicating the requesting user
        */
       public java.lang.String getStudentId() {
         return studentId;
@@ -766,10 +717,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Restricts returned courses to those having a student with the specified identifier. The
-       * identifier can be one of the following:
-       *
-       * * the numeric identifier for the user * the email address of the user * the string literal
-       * `"me"`, indicating the requesting user
+       * identifier can be one of the following: * the numeric identifier for the user * the email
+       * address of the user * the string literal `"me"`, indicating the requesting user
        */
       public List setStudentId(java.lang.String studentId) {
         this.studentId = studentId;
@@ -778,19 +727,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Restricts returned courses to those having a teacher with the specified identifier. The
-       * identifier can be one of the following:
-       *
-       * * the numeric identifier for the user * the email address of the user * the string literal
-       * `"me"`, indicating the requesting user
+       * identifier can be one of the following: * the numeric identifier for the user * the email
+       * address of the user * the string literal `"me"`, indicating the requesting user
        */
       @com.google.api.client.util.Key
       private java.lang.String teacherId;
 
       /** Restricts returned courses to those having a teacher with the specified identifier. The identifier
-     can be one of the following:
-
-     * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-     indicating the requesting user
+     can be one of the following: * the numeric identifier for the user * the email address of the user
+     * the string literal `"me"`, indicating the requesting user
        */
       public java.lang.String getTeacherId() {
         return teacherId;
@@ -798,10 +743,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Restricts returned courses to those having a teacher with the specified identifier. The
-       * identifier can be one of the following:
-       *
-       * * the numeric identifier for the user * the email address of the user * the string literal
-       * `"me"`, indicating the requesting user
+       * identifier can be one of the following: * the numeric identifier for the user * the email
+       * address of the user * the string literal `"me"`, indicating the requesting user
        */
       public List setTeacherId(java.lang.String teacherId) {
         this.teacherId = teacherId;
@@ -814,24 +757,19 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Updates one or more fields in a course.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or
-     * for access errors. * `NOT_FOUND` if no course exists with the requested ID. * `INVALID_ARGUMENT`
-     * if invalid fields are specified in the update mask or if no update mask is supplied. *
-     * `FAILED_PRECONDITION` for the following request errors:     * CourseNotModifiable
+     * Updates one or more fields in a course. This method returns the following error codes: *
+     * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or for
+     * access errors. * `NOT_FOUND` if no course exists with the requested ID. * `INVALID_ARGUMENT` if
+     * invalid fields are specified in the update mask or if no update mask is supplied. *
+     * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable
      *
      * Create a request for the method "courses.patch".
      *
      * This request holds the parameters needed by the classroom server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param id Identifier of the course to update.
-    This identifier can be either the Classroom-assigned identifier
-     *        or an
-    alias.
+     * @param id Identifier of the course to update. This identifier can be either the Classroom-assigned identifier
+     *        or an alias.
      * @param content the {@link com.google.api.services.classroom.model.Course}
      * @return the request
      */
@@ -846,14 +784,11 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1/courses/{id}";
 
       /**
-       * Updates one or more fields in a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or
+       * Updates one or more fields in a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or
        * for access errors. * `NOT_FOUND` if no course exists with the requested ID. *
        * `INVALID_ARGUMENT` if invalid fields are specified in the update mask or if no update mask is
-       * supplied. * `FAILED_PRECONDITION` for the following request errors:     * CourseNotModifiable
+       * supplied. * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable
        *
        * Create a request for the method "courses.patch".
        *
@@ -863,10 +798,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param id Identifier of the course to update.
-    This identifier can be either the Classroom-assigned identifier
-     *        or an
-    alias.
+       * @param id Identifier of the course to update. This identifier can be either the Classroom-assigned identifier
+     *        or an alias.
        * @param content the {@link com.google.api.services.classroom.model.Course}
        * @since 1.13
        */
@@ -956,32 +889,21 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Mask that identifies which fields on the course to update. This field is required to do an
        * update. The update will fail if invalid fields are specified. The following fields are
-       * valid:
-       *
-       * * `name` * `section` * `descriptionHeading` * `description` * `room` * `courseState` *
-       * `ownerId`
-       *
-       * Note: patches to ownerId are treated as being effective immediately, but in practice it may
-       * take some time for the ownership transfer of all affected resources to complete.
-       *
-       * When set in a query parameter, this field should be specified as
-       *
+       * valid: * `name` * `section` * `descriptionHeading` * `description` * `room` * `courseState`
+       * * `ownerId` Note: patches to ownerId are treated as being effective immediately, but in
+       * practice it may take some time for the ownership transfer of all affected resources to
+       * complete. When set in a query parameter, this field should be specified as
        * `updateMask=,,...`
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
       /** Mask that identifies which fields on the course to update. This field is required to do an update.
-     The update will fail if invalid fields are specified. The following fields are valid:
-
-     * `name` * `section` * `descriptionHeading` * `description` * `room` * `courseState` * `ownerId`
-
-     Note: patches to ownerId are treated as being effective immediately, but in practice it may take
-     some time for the ownership transfer of all affected resources to complete.
-
-     When set in a query parameter, this field should be specified as
-
-     `updateMask=,,...`
+     The update will fail if invalid fields are specified. The following fields are valid: * `name` *
+     `section` * `descriptionHeading` * `description` * `room` * `courseState` * `ownerId` Note: patches
+     to ownerId are treated as being effective immediately, but in practice it may take some time for
+     the ownership transfer of all affected resources to complete. When set in a query parameter, this
+     field should be specified as `updateMask=,,...`
        */
       public String getUpdateMask() {
         return updateMask;
@@ -990,16 +912,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Mask that identifies which fields on the course to update. This field is required to do an
        * update. The update will fail if invalid fields are specified. The following fields are
-       * valid:
-       *
-       * * `name` * `section` * `descriptionHeading` * `description` * `room` * `courseState` *
-       * `ownerId`
-       *
-       * Note: patches to ownerId are treated as being effective immediately, but in practice it may
-       * take some time for the ownership transfer of all affected resources to complete.
-       *
-       * When set in a query parameter, this field should be specified as
-       *
+       * valid: * `name` * `section` * `descriptionHeading` * `description` * `room` * `courseState`
+       * * `ownerId` Note: patches to ownerId are treated as being effective immediately, but in
+       * practice it may take some time for the ownership transfer of all affected resources to
+       * complete. When set in a query parameter, this field should be specified as
        * `updateMask=,,...`
        */
       public Patch setUpdateMask(String updateMask) {
@@ -1013,23 +929,18 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Updates a course.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or
-     * for access errors. * `NOT_FOUND` if no course exists with the requested ID. *
-     * `FAILED_PRECONDITION` for the following request errors:     * CourseNotModifiable
+     * Updates a course. This method returns the following error codes: * `PERMISSION_DENIED` if the
+     * requesting user is not permitted to modify the requested course or for access errors. *
+     * `NOT_FOUND` if no course exists with the requested ID. * `FAILED_PRECONDITION` for the following
+     * request errors: * CourseNotModifiable
      *
      * Create a request for the method "courses.update".
      *
      * This request holds the parameters needed by the classroom server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param id Identifier of the course to update.
-    This identifier can be either the Classroom-assigned identifier
-     *        or an
-    alias.
+     * @param id Identifier of the course to update. This identifier can be either the Classroom-assigned identifier
+     *        or an alias.
      * @param content the {@link com.google.api.services.classroom.model.Course}
      * @return the request
      */
@@ -1044,13 +955,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1/courses/{id}";
 
       /**
-       * Updates a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or
-       * for access errors. * `NOT_FOUND` if no course exists with the requested ID. *
-       * `FAILED_PRECONDITION` for the following request errors:     * CourseNotModifiable
+       * Updates a course. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting user is not permitted to modify the requested course or for access errors. *
+       * `NOT_FOUND` if no course exists with the requested ID. * `FAILED_PRECONDITION` for the
+       * following request errors: * CourseNotModifiable
        *
        * Create a request for the method "courses.update".
        *
@@ -1060,10 +968,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param id Identifier of the course to update.
-    This identifier can be either the Classroom-assigned identifier
-     *        or an
-    alias.
+       * @param id Identifier of the course to update. This identifier can be either the Classroom-assigned identifier
+     *        or an alias.
        * @param content the {@link com.google.api.services.classroom.model.Course}
        * @since 1.13
        */
@@ -1177,25 +1083,19 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
     public class Aliases {
 
       /**
-       * Creates an alias for a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to create the alias or for access
+       * Creates an alias for a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to create the alias or for access
        * errors. * `NOT_FOUND` if the course does not exist. * `ALREADY_EXISTS` if the alias already
-       * exists. * `FAILED_PRECONDITION` if the alias requested does not make sense for the   requesting
-       * user or course (for example, if a user not in a domain   attempts to access a domain-scoped
-       * alias).
+       * exists. * `FAILED_PRECONDITION` if the alias requested does not make sense for the requesting
+       * user or course (for example, if a user not in a domain attempts to access a domain-scoped alias).
        *
        * Create a request for the method "aliases.create".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course to alias.
-      This identifier can be either the Classroom-assigned identifier
-       *        or an
-      alias.
+       * @param courseId Identifier of the course to alias. This identifier can be either the Classroom-assigned identifier
+       *        or an alias.
        * @param content the {@link com.google.api.services.classroom.model.CourseAlias}
        * @return the request
        */
@@ -1210,14 +1110,11 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/aliases";
 
         /**
-         * Creates an alias for a course.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to create the alias or for access
+         * Creates an alias for a course. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to create the alias or for access
          * errors. * `NOT_FOUND` if the course does not exist. * `ALREADY_EXISTS` if the alias already
-         * exists. * `FAILED_PRECONDITION` if the alias requested does not make sense for the   requesting
-         * user or course (for example, if a user not in a domain   attempts to access a domain-scoped
+         * exists. * `FAILED_PRECONDITION` if the alias requested does not make sense for the requesting
+         * user or course (for example, if a user not in a domain attempts to access a domain-scoped
          * alias).
          *
          * Create a request for the method "aliases.create".
@@ -1228,10 +1125,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course to alias.
-      This identifier can be either the Classroom-assigned identifier
-       *        or an
-      alias.
+         * @param courseId Identifier of the course to alias. This identifier can be either the Classroom-assigned identifier
+       *        or an alias.
          * @param content the {@link com.google.api.services.classroom.model.CourseAlias}
          * @since 1.13
          */
@@ -1324,13 +1219,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Deletes an alias of a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to remove the alias or for access
+       * Deletes an alias of a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to remove the alias or for access
        * errors. * `NOT_FOUND` if the alias does not exist. * `FAILED_PRECONDITION` if the alias requested
-       * does not make sense for the   requesting user or course (for example, if a user not in a domain
+       * does not make sense for the requesting user or course (for example, if a user not in a domain
        * attempts to delete a domain-scoped alias).
        *
        * Create a request for the method "aliases.delete".
@@ -1338,12 +1230,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course whose alias should be deleted.
-      This identifier can be either the Classroom-
-       *        assigned identifier or an
-      alias.
-       * @param alias Alias to delete.
-      This may not be the Classroom-assigned identifier.
+       * @param courseId Identifier of the course whose alias should be deleted. This identifier can be either the Classroom-
+       *        assigned identifier or an alias.
+       * @param alias Alias to delete. This may not be the Classroom-assigned identifier.
        * @return the request
        */
       public Delete delete(java.lang.String courseId, java.lang.String alias) throws java.io.IOException {
@@ -1357,14 +1246,11 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/aliases/{alias}";
 
         /**
-         * Deletes an alias of a course.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to remove the alias or for access
+         * Deletes an alias of a course. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to remove the alias or for access
          * errors. * `NOT_FOUND` if the alias does not exist. * `FAILED_PRECONDITION` if the alias
-         * requested does not make sense for the   requesting user or course (for example, if a user not
-         * in a domain   attempts to delete a domain-scoped alias).
+         * requested does not make sense for the requesting user or course (for example, if a user not in
+         * a domain attempts to delete a domain-scoped alias).
          *
          * Create a request for the method "aliases.delete".
          *
@@ -1374,12 +1260,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course whose alias should be deleted.
-      This identifier can be either the Classroom-
-       *        assigned identifier or an
-      alias.
-         * @param alias Alias to delete.
-      This may not be the Classroom-assigned identifier.
+         * @param courseId Identifier of the course whose alias should be deleted. This identifier can be either the Classroom-
+       *        assigned identifier or an alias.
+         * @param alias Alias to delete. This may not be the Classroom-assigned identifier.
          * @since 1.13
          */
         protected Delete(java.lang.String courseId, java.lang.String alias) {
@@ -1466,9 +1349,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
-        /**
-         * Alias to delete. This may not be the Classroom-assigned identifier.
-         */
+        /** Alias to delete. This may not be the Classroom-assigned identifier. */
         @com.google.api.client.util.Key
         private java.lang.String alias;
 
@@ -1478,9 +1359,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           return alias;
         }
 
-        /**
-         * Alias to delete. This may not be the Classroom-assigned identifier.
-         */
+        /** Alias to delete. This may not be the Classroom-assigned identifier. */
         public Delete setAlias(java.lang.String alias) {
           this.alias = alias;
           return this;
@@ -1492,11 +1371,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a list of aliases for a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the course or for access
+       * Returns a list of aliases for a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to access the course or for access
        * errors. * `NOT_FOUND` if the course does not exist.
        *
        * Create a request for the method "aliases.list".
@@ -1504,8 +1380,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param courseId The identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId The identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @return the request
        */
@@ -1520,12 +1395,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/aliases";
 
         /**
-         * Returns a list of aliases for a course.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the course or for
-         * access errors. * `NOT_FOUND` if the course does not exist.
+         * Returns a list of aliases for a course. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to access the course or for access
+         * errors. * `NOT_FOUND` if the course does not exist.
          *
          * Create a request for the method "aliases.list".
          *
@@ -1534,8 +1406,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId The identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId The identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @since 1.13
          */
@@ -1634,17 +1505,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
-       maximum.
-
-       The server may return fewer than the specified number of results.
+       maximum. The server may return fewer than the specified number of results.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -1652,9 +1519,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -1663,17 +1528,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
+       results should be returned. The list request must be otherwise identical to the one that resulted
+       in this token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -1681,9 +1544,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -1718,22 +1580,18 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
     public class Announcements {
 
       /**
-       * Creates an announcement.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
-       * create announcements in the requested course, share a Drive attachment, or for access errors. *
-       * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course does not
-       * exist. * `FAILED_PRECONDITION` for the following request error:     * AttachmentNotVisible
+       * Creates an announcement. This method returns the following error codes: * `PERMISSION_DENIED` if
+       * the requesting user is not permitted to access the requested course, create announcements in the
+       * requested course, share a Drive attachment, or for access errors. * `INVALID_ARGUMENT` if the
+       * request is malformed. * `NOT_FOUND` if the requested course does not exist. *
+       * `FAILED_PRECONDITION` for the following request error: * AttachmentNotVisible
        *
        * Create a request for the method "announcements.create".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param content the {@link com.google.api.services.classroom.model.Announcement}
        * @return the request
@@ -1749,14 +1607,11 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/announcements";
 
         /**
-         * Creates an announcement.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
-         * create announcements in the requested course, share a Drive attachment, or for access errors. *
-         * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course does not
-         * exist. * `FAILED_PRECONDITION` for the following request error:     * AttachmentNotVisible
+         * Creates an announcement. This method returns the following error codes: * `PERMISSION_DENIED`
+         * if the requesting user is not permitted to access the requested course, create announcements in
+         * the requested course, share a Drive attachment, or for access errors. * `INVALID_ARGUMENT` if
+         * the request is malformed. * `NOT_FOUND` if the requested course does not exist. *
+         * `FAILED_PRECONDITION` for the following request error: * AttachmentNotVisible
          *
          * Create a request for the method "announcements.create".
          *
@@ -1766,8 +1621,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param content the {@link com.google.api.services.classroom.model.Announcement}
          * @since 1.13
@@ -1861,29 +1715,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Deletes an announcement.
-       *
-       * This request must be made by the Developer Console project of the [OAuth client
-       * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding
-       * announcement item.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
-       * announcement, if the requesting user is not permitted to delete the requested course or for
-       * access errors. * `FAILED_PRECONDITION` if the requested announcement has already been deleted. *
-       * `NOT_FOUND` if no course exists with the requested ID.
+       * Deletes an announcement. This request must be made by the Developer Console project of the [OAuth
+       * client ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding
+       * announcement item. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting developer project did not create the corresponding announcement, if the requesting
+       * user is not permitted to delete the requested course or for access errors. *
+       * `FAILED_PRECONDITION` if the requested announcement has already been deleted. * `NOT_FOUND` if no
+       * course exists with the requested ID.
        *
        * Create a request for the method "announcements.delete".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-       * @param id Identifier of the announcement to delete.
-      This identifier is a Classroom-assigned identifier.
+       * @param id Identifier of the announcement to delete. This identifier is a Classroom-assigned identifier.
        * @return the request
        */
       public Delete delete(java.lang.String courseId, java.lang.String id) throws java.io.IOException {
@@ -1897,15 +1744,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/announcements/{id}";
 
         /**
-         * Deletes an announcement.
-         *
-         * This request must be made by the Developer Console project of the [OAuth client
-         * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding
-         * announcement item.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
+         * Deletes an announcement. This request must be made by the Developer Console project of the
+         * [OAuth client ID](https://support.google.com/cloud/answer/6158849) used to create the
+         * corresponding announcement item. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
          * announcement, if the requesting user is not permitted to delete the requested course or for
          * access errors. * `FAILED_PRECONDITION` if the requested announcement has already been deleted.
          * * `NOT_FOUND` if no course exists with the requested ID.
@@ -1918,11 +1760,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-         * @param id Identifier of the announcement to delete.
-      This identifier is a Classroom-assigned identifier.
+         * @param id Identifier of the announcement to delete. This identifier is a Classroom-assigned identifier.
          * @since 1.13
          */
         protected Delete(java.lang.String courseId, java.lang.String id) {
@@ -2037,21 +1877,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns an announcement.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-       * announcement, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
-       * `NOT_FOUND` if the requested course or announcement does not exist.
+       * Returns an announcement. This method returns the following error codes: * `PERMISSION_DENIED` if
+       * the requesting user is not permitted to access the requested course or announcement, or for
+       * access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested
+       * course or announcement does not exist.
        *
        * Create a request for the method "announcements.get".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param id Identifier of the announcement.
        * @return the request
@@ -2067,13 +1903,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/announcements/{id}";
 
         /**
-         * Returns an announcement.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-         * announcement, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
-         * `NOT_FOUND` if the requested course or announcement does not exist.
+         * Returns an announcement. This method returns the following error codes: * `PERMISSION_DENIED`
+         * if the requesting user is not permitted to access the requested course or announcement, or for
+         * access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested
+         * course or announcement does not exist.
          *
          * Create a request for the method "announcements.get".
          *
@@ -2082,8 +1915,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param id Identifier of the announcement.
          * @since 1.13
@@ -2204,24 +2036,19 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a list of announcements that the requester is permitted to view.
-       *
-       * Course students may only view `PUBLISHED` announcements. Course teachers and domain
-       * administrators may view all announcements.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-       * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
-       * requested course does not exist.
+       * Returns a list of announcements that the requester is permitted to view. Course students may only
+       * view `PUBLISHED` announcements. Course teachers and domain administrators may view all
+       * announcements. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting user is not permitted to access the requested course or for access errors. *
+       * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course does not
+       * exist.
        *
        * Create a request for the method "announcements.list".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @return the request
        */
@@ -2236,16 +2063,12 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/announcements";
 
         /**
-         * Returns a list of announcements that the requester is permitted to view.
-         *
-         * Course students may only view `PUBLISHED` announcements. Course teachers and domain
-         * administrators may view all announcements.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-         * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
-         * requested course does not exist.
+         * Returns a list of announcements that the requester is permitted to view. Course students may
+         * only view `PUBLISHED` announcements. Course teachers and domain administrators may view all
+         * announcements. This method returns the following error codes: * `PERMISSION_DENIED` if the
+         * requesting user is not permitted to access the requested course or for access errors. *
+         * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course does not
+         * exist.
          *
          * Create a request for the method "announcements.list".
          *
@@ -2254,8 +2077,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @since 1.13
          */
@@ -2406,17 +2228,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
-       maximum.
-
-       The server may return fewer than the specified number of results.
+       maximum. The server may return fewer than the specified number of results.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -2424,9 +2242,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -2435,17 +2251,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
+       results should be returned. The list request must be otherwise identical to the one that resulted
+       in this token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -2453,9 +2267,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -2468,13 +2281,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Modifies assignee mode and options of an announcement.
-       *
-       * Only a teacher of the course that contains the announcement may call this method.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+       * Modifies assignee mode and options of an announcement. Only a teacher of the course that contains
+       * the announcement may call this method. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
        * course work or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND`
        * if the requested course or course work does not exist.
        *
@@ -2483,8 +2292,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link ModifyAssignees#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param id Identifier of the announcement.
        * @param content the {@link com.google.api.services.classroom.model.ModifyAnnouncementAssigneesRequest}
@@ -2501,12 +2309,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/announcements/{id}:modifyAssignees";
 
         /**
-         * Modifies assignee mode and options of an announcement.
-         *
-         * Only a teacher of the course that contains the announcement may call this method.
-         *
-         * This method returns the following error codes:
-         *
+         * Modifies assignee mode and options of an announcement. Only a teacher of the course that
+         * contains the announcement may call this method. This method returns the following error codes:
          * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
          * course work or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
          * `NOT_FOUND` if the requested course or course work does not exist.
@@ -2519,8 +2323,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param id Identifier of the announcement.
          * @param content the {@link com.google.api.services.classroom.model.ModifyAnnouncementAssigneesRequest}
@@ -2632,11 +2435,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Updates one or more fields of an announcement.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
+       * Updates one or more fields of an announcement. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
        * announcement or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
        * `FAILED_PRECONDITION` if the requested announcement has already been deleted. * `NOT_FOUND` if
        * the requested course or announcement does not exist
@@ -2646,8 +2446,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param id Identifier of the announcement.
        * @param content the {@link com.google.api.services.classroom.model.Announcement}
@@ -2664,11 +2463,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/announcements/{id}";
 
         /**
-         * Updates one or more fields of an announcement.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
+         * Updates one or more fields of an announcement. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
          * announcement or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
          * `FAILED_PRECONDITION` if the requested announcement has already been deleted. * `NOT_FOUND` if
          * the requested course or announcement does not exist
@@ -2681,8 +2477,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param id Identifier of the announcement.
          * @param content the {@link com.google.api.services.classroom.model.Announcement}
@@ -2793,12 +2588,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * to do an update. The update fails if invalid fields are specified. If a field supports
          * empty values, it can be cleared by specifying it in the update mask and not in the
          * Announcement object. If a field that does not support empty values is included in the
-         * update mask and not set in the Announcement object, an `INVALID_ARGUMENT` error will be
-         * returned.
-         *
-         * The following fields may be specified by teachers:
-         *
-         * * `text` * `state` * `scheduled_time`
+         * update mask and not set in the Announcement object, an `INVALID_ARGUMENT` error is
+         * returned. The following fields may be specified by teachers: * `text` * `state` *
+         * `scheduled_time`
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -2807,10 +2599,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        update. The update fails if invalid fields are specified. If a field supports empty values, it can
        be cleared by specifying it in the update mask and not in the Announcement object. If a field that
        does not support empty values is included in the update mask and not set in the Announcement
-       object, an `INVALID_ARGUMENT` error will be returned.
-
-       The following fields may be specified by teachers:
-
+       object, an `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers:
        * `text` * `state` * `scheduled_time`
          */
         public String getUpdateMask() {
@@ -2822,12 +2611,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * to do an update. The update fails if invalid fields are specified. If a field supports
          * empty values, it can be cleared by specifying it in the update mask and not in the
          * Announcement object. If a field that does not support empty values is included in the
-         * update mask and not set in the Announcement object, an `INVALID_ARGUMENT` error will be
-         * returned.
-         *
-         * The following fields may be specified by teachers:
-         *
-         * * `text` * `state` * `scheduled_time`
+         * update mask and not set in the Announcement object, an `INVALID_ARGUMENT` error is
+         * returned. The following fields may be specified by teachers: * `text` * `state` *
+         * `scheduled_time`
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -2862,28 +2648,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
     public class CourseWork {
 
       /**
-       * Creates course work.
-       *
-       * The resulting course work (and corresponding student submissions) are associated with the
-       * Developer Console project of the [OAuth client
+       * Creates course work. The resulting course work (and corresponding student submissions) are
+       * associated with the Developer Console project of the [OAuth client
        * ID](https://support.google.com/cloud/answer/6158849) used to make the request. Classroom API
        * requests to modify course work and student submissions must be made with an OAuth client ID from
-       * the associated Developer Console project.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
+       * the associated Developer Console project. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
        * create course work in the requested course, share a Drive attachment, or for access errors. *
        * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course does not
-       * exist. * `FAILED_PRECONDITION` for the following request error:     * AttachmentNotVisible
+       * exist. * `FAILED_PRECONDITION` for the following request error: * AttachmentNotVisible
        *
        * Create a request for the method "courseWork.create".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param content the {@link com.google.api.services.classroom.model.CourseWork}
        * @return the request
@@ -2899,20 +2679,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/courseWork";
 
         /**
-         * Creates course work.
-         *
-         * The resulting course work (and corresponding student submissions) are associated with the
-         * Developer Console project of the [OAuth client
+         * Creates course work. The resulting course work (and corresponding student submissions) are
+         * associated with the Developer Console project of the [OAuth client
          * ID](https://support.google.com/cloud/answer/6158849) used to make the request. Classroom API
          * requests to modify course work and student submissions must be made with an OAuth client ID
-         * from the associated Developer Console project.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
+         * from the associated Developer Console project. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
          * create course work in the requested course, share a Drive attachment, or for access errors. *
          * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course does not
-         * exist. * `FAILED_PRECONDITION` for the following request error:     * AttachmentNotVisible
+         * exist. * `FAILED_PRECONDITION` for the following request error: * AttachmentNotVisible
          *
          * Create a request for the method "courseWork.create".
          *
@@ -2922,8 +2697,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param content the {@link com.google.api.services.classroom.model.CourseWork}
          * @since 1.13
@@ -3017,29 +2791,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Deletes a course work.
-       *
-       * This request must be made by the Developer Console project of the [OAuth client
-       * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course work
-       * item.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course
-       * work, if the requesting user is not permitted to delete the requested course or for access
-       * errors. * `FAILED_PRECONDITION` if the requested course work has already been deleted. *
-       * `NOT_FOUND` if no course exists with the requested ID.
+       * Deletes a course work. This request must be made by the Developer Console project of the [OAuth
+       * client ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding
+       * course work item. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting developer project did not create the corresponding course work, if the requesting user
+       * is not permitted to delete the requested course or for access errors. * `FAILED_PRECONDITION` if
+       * the requested course work has already been deleted. * `NOT_FOUND` if no course exists with the
+       * requested ID.
        *
        * Create a request for the method "courseWork.delete".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-       * @param id Identifier of the course work to delete.
-      This identifier is a Classroom-assigned identifier.
+       * @param id Identifier of the course work to delete. This identifier is a Classroom-assigned identifier.
        * @return the request
        */
       public Delete delete(java.lang.String courseId, java.lang.String id) throws java.io.IOException {
@@ -3053,18 +2820,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{id}";
 
         /**
-         * Deletes a course work.
-         *
-         * This request must be made by the Developer Console project of the [OAuth client
-         * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course
-         * work item.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
-         * course work, if the requesting user is not permitted to delete the requested course or for
-         * access errors. * `FAILED_PRECONDITION` if the requested course work has already been deleted. *
-         * `NOT_FOUND` if no course exists with the requested ID.
+         * Deletes a course work. This request must be made by the Developer Console project of the [OAuth
+         * client ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding
+         * course work item. This method returns the following error codes: * `PERMISSION_DENIED` if the
+         * requesting developer project did not create the corresponding course work, if the requesting
+         * user is not permitted to delete the requested course or for access errors. *
+         * `FAILED_PRECONDITION` if the requested course work has already been deleted. * `NOT_FOUND` if
+         * no course exists with the requested ID.
          *
          * Create a request for the method "courseWork.delete".
          *
@@ -3074,11 +2836,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-         * @param id Identifier of the course work to delete.
-      This identifier is a Classroom-assigned identifier.
+         * @param id Identifier of the course work to delete. This identifier is a Classroom-assigned identifier.
          * @since 1.13
          */
         protected Delete(java.lang.String courseId, java.lang.String id) {
@@ -3193,21 +2953,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns course work.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-       * course work, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
-       * `NOT_FOUND` if the requested course or course work does not exist.
+       * Returns course work. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting user is not permitted to access the requested course or course work, or for access
+       * errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course
+       * or course work does not exist.
        *
        * Create a request for the method "courseWork.get".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param id Identifier of the course work.
        * @return the request
@@ -3223,13 +2979,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{id}";
 
         /**
-         * Returns course work.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-         * course work, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
-         * `NOT_FOUND` if the requested course or course work does not exist.
+         * Returns course work. This method returns the following error codes: * `PERMISSION_DENIED` if
+         * the requesting user is not permitted to access the requested course or course work, or for
+         * access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested
+         * course or course work does not exist.
          *
          * Create a request for the method "courseWork.get".
          *
@@ -3238,8 +2991,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param id Identifier of the course work.
          * @since 1.13
@@ -3360,24 +3112,18 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a list of course work that the requester is permitted to view.
-       *
-       * Course students may only view `PUBLISHED` course work. Course teachers and domain administrators
-       * may view all course work.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-       * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
-       * requested course does not exist.
+       * Returns a list of course work that the requester is permitted to view. Course students may only
+       * view `PUBLISHED` course work. Course teachers and domain administrators may view all course work.
+       * This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is
+       * not permitted to access the requested course or for access errors. * `INVALID_ARGUMENT` if the
+       * request is malformed. * `NOT_FOUND` if the requested course does not exist.
        *
        * Create a request for the method "courseWork.list".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @return the request
        */
@@ -3392,16 +3138,11 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/courseWork";
 
         /**
-         * Returns a list of course work that the requester is permitted to view.
-         *
-         * Course students may only view `PUBLISHED` course work. Course teachers and domain
-         * administrators may view all course work.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-         * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
-         * requested course does not exist.
+         * Returns a list of course work that the requester is permitted to view. Course students may only
+         * view `PUBLISHED` course work. Course teachers and domain administrators may view all course
+         * work. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting
+         * user is not permitted to access the requested course or for access errors. * `INVALID_ARGUMENT`
+         * if the request is malformed. * `NOT_FOUND` if the requested course does not exist.
          *
          * Create a request for the method "courseWork.list".
          *
@@ -3410,8 +3151,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @since 1.13
          */
@@ -3562,17 +3302,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
-       maximum.
-
-       The server may return fewer than the specified number of results.
+       maximum. The server may return fewer than the specified number of results.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -3580,9 +3316,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -3591,17 +3325,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
+       results should be returned. The list request must be otherwise identical to the one that resulted
+       in this token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -3609,9 +3341,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -3624,13 +3355,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Modifies assignee mode and options of a coursework.
-       *
-       * Only a teacher of the course that contains the coursework may call this method.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+       * Modifies assignee mode and options of a coursework. Only a teacher of the course that contains
+       * the coursework may call this method. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
        * course work or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND`
        * if the requested course or course work does not exist.
        *
@@ -3639,8 +3366,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link ModifyAssignees#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param id Identifier of the coursework.
        * @param content the {@link com.google.api.services.classroom.model.ModifyCourseWorkAssigneesRequest}
@@ -3657,13 +3383,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{id}:modifyAssignees";
 
         /**
-         * Modifies assignee mode and options of a coursework.
-         *
-         * Only a teacher of the course that contains the coursework may call this method.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+         * Modifies assignee mode and options of a coursework. Only a teacher of the course that contains
+         * the coursework may call this method. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
          * course work or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
          * `NOT_FOUND` if the requested course or course work does not exist.
          *
@@ -3675,8 +3397,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param id Identifier of the coursework.
          * @param content the {@link com.google.api.services.classroom.model.ModifyCourseWorkAssigneesRequest}
@@ -3788,18 +3509,11 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Updates one or more fields of a course work.
-       *
-       * See google.classroom.v1.CourseWork for details of which fields may be updated and who may change
-       * them.
-       *
-       * This request must be made by the Developer Console project of the [OAuth client
-       * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course work
-       * item.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course
+       * Updates one or more fields of a course work. See google.classroom.v1.CourseWork for details of
+       * which fields may be updated and who may change them. This request must be made by the Developer
+       * Console project of the [OAuth client ID](https://support.google.com/cloud/answer/6158849) used to
+       * create the corresponding course work item. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course
        * work, if the user is not permitted to make the requested modification to the student submission,
        * or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `FAILED_PRECONDITION`
        * if the requested course work has already been deleted. * `NOT_FOUND` if the requested course,
@@ -3810,8 +3524,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param id Identifier of the course work.
        * @param content the {@link com.google.api.services.classroom.model.CourseWork}
@@ -3828,19 +3541,12 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{id}";
 
         /**
-         * Updates one or more fields of a course work.
-         *
-         * See google.classroom.v1.CourseWork for details of which fields may be updated and who may
-         * change them.
-         *
-         * This request must be made by the Developer Console project of the [OAuth client
-         * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course
-         * work item.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
-         * course work, if the user is not permitted to make the requested modification to the student
+         * Updates one or more fields of a course work. See google.classroom.v1.CourseWork for details of
+         * which fields may be updated and who may change them. This request must be made by the Developer
+         * Console project of the [OAuth client ID](https://support.google.com/cloud/answer/6158849) used
+         * to create the corresponding course work item. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course
+         * work, if the user is not permitted to make the requested modification to the student
          * submission, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
          * `FAILED_PRECONDITION` if the requested course work has already been deleted. * `NOT_FOUND` if
          * the requested course, course work, or student submission does not exist.
@@ -3853,8 +3559,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param id Identifier of the course work.
          * @param content the {@link com.google.api.services.classroom.model.CourseWork}
@@ -3965,12 +3670,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * do an update. The update fails if invalid fields are specified. If a field supports empty
          * values, it can be cleared by specifying it in the update mask and not in the CourseWork
          * object. If a field that does not support empty values is included in the update mask and
-         * not set in the CourseWork object, an `INVALID_ARGUMENT` error will be returned.
-         *
-         * The following fields may be specified by teachers:
-         *
-         * * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` *
-         * `scheduled_time` * `submission_modification_mode` * `topic_id`
+         * not set in the CourseWork object, an `INVALID_ARGUMENT` error is returned. The following
+         * fields may be specified by teachers: * `title` * `description` * `state` * `due_date` *
+         * `due_time` * `max_points` * `scheduled_time` * `submission_modification_mode` *
+         * `topic_id`
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -3979,11 +3682,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        update. The update fails if invalid fields are specified. If a field supports empty values, it can
        be cleared by specifying it in the update mask and not in the CourseWork object. If a field that
        does not support empty values is included in the update mask and not set in the CourseWork object,
-       an `INVALID_ARGUMENT` error will be returned.
-
-       The following fields may be specified by teachers:
-
-       * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` * `scheduled_time` *
+       an `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers: *
+       `title` * `description` * `state` * `due_date` * `due_time` * `max_points` * `scheduled_time` *
        `submission_modification_mode` * `topic_id`
          */
         public String getUpdateMask() {
@@ -3995,12 +3695,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * do an update. The update fails if invalid fields are specified. If a field supports empty
          * values, it can be cleared by specifying it in the update mask and not in the CourseWork
          * object. If a field that does not support empty values is included in the update mask and
-         * not set in the CourseWork object, an `INVALID_ARGUMENT` error will be returned.
-         *
-         * The following fields may be specified by teachers:
-         *
-         * * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` *
-         * `scheduled_time` * `submission_modification_mode` * `topic_id`
+         * not set in the CourseWork object, an `INVALID_ARGUMENT` error is returned. The following
+         * fields may be specified by teachers: * `title` * `description` * `state` * `due_date` *
+         * `due_time` * `max_points` * `scheduled_time` * `submission_modification_mode` *
+         * `topic_id`
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -4034,20 +3732,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       public class StudentSubmissions {
 
         /**
-         * Returns a student submission.
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
-         * course work, or student submission or for access errors. * `INVALID_ARGUMENT` if the request is
-         * malformed. * `NOT_FOUND` if the requested course, course work, or student submission does not
-         * exist.
+         * Returns a student submission. * `PERMISSION_DENIED` if the requesting user is not permitted to
+         * access the requested course, course work, or student submission or for access errors. *
+         * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course, course
+         * work, or student submission does not exist.
          *
          * Create a request for the method "studentSubmissions.get".
          *
          * This request holds the parameters needed by the classroom server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
          * @param courseWorkId Identifier of the course work.
          * @param id Identifier of the student submission.
@@ -4064,12 +3759,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}";
 
           /**
-           * Returns a student submission.
-           *
-           * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
-           * course work, or student submission or for access errors. * `INVALID_ARGUMENT` if the request is
-           * malformed. * `NOT_FOUND` if the requested course, course work, or student submission does not
-           * exist.
+           * Returns a student submission. * `PERMISSION_DENIED` if the requesting user is not permitted to
+           * access the requested course, course work, or student submission or for access errors. *
+           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course, course
+           * work, or student submission does not exist.
            *
            * Create a request for the method "studentSubmissions.get".
            *
@@ -4078,8 +3771,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+           * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
            * @param courseWorkId Identifier of the course work.
            * @param id Identifier of the student submission.
@@ -4220,29 +3912,21 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         /**
          * Returns a list of student submissions that the requester is permitted to view, factoring in the
          * OAuth scopes of the request. `-` may be specified as the `course_work_id` to include student
-         * submissions for multiple course work items.
-         *
-         * Course students may only view their own work. Course teachers and domain administrators may view
-         * all student submissions.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-         * course work, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
-         * `NOT_FOUND` if the requested course does not exist.
+         * submissions for multiple course work items. Course students may only view their own work. Course
+         * teachers and domain administrators may view all student submissions. This method returns the
+         * following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to access
+         * the requested course or course work, or for access errors. * `INVALID_ARGUMENT` if the request is
+         * malformed. * `NOT_FOUND` if the requested course does not exist.
          *
          * Create a request for the method "studentSubmissions.list".
          *
          * This request holds the parameters needed by the classroom server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
-         * @param courseWorkId Identifier of the student work to request.
-        This may be set to the string literal `"-"` to request
-         *        student work for
-        all course work in the specified course.
+         * @param courseWorkId Identifier of the student work to request. This may be set to the string literal `"-"` to request
+         *        student work for all course work in the specified course.
          * @return the request
          */
         public List list(java.lang.String courseId, java.lang.String courseWorkId) throws java.io.IOException {
@@ -4258,16 +3942,11 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           /**
            * Returns a list of student submissions that the requester is permitted to view, factoring in the
            * OAuth scopes of the request. `-` may be specified as the `course_work_id` to include student
-           * submissions for multiple course work items.
-           *
-           * Course students may only view their own work. Course teachers and domain administrators may
-           * view all student submissions.
-           *
-           * This method returns the following error codes:
-           *
-           * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-           * course work, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
-           * `NOT_FOUND` if the requested course does not exist.
+           * submissions for multiple course work items. Course students may only view their own work.
+           * Course teachers and domain administrators may view all student submissions. This method returns
+           * the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to
+           * access the requested course or course work, or for access errors. * `INVALID_ARGUMENT` if the
+           * request is malformed. * `NOT_FOUND` if the requested course does not exist.
            *
            * Create a request for the method "studentSubmissions.list".
            *
@@ -4276,13 +3955,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+           * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
-           * @param courseWorkId Identifier of the student work to request.
-        This may be set to the string literal `"-"` to request
-         *        student work for
-        all course work in the specified course.
+           * @param courseWorkId Identifier of the student work to request. This may be set to the string literal `"-"` to request
+         *        student work for all course work in the specified course.
            * @since 1.13
            */
           protected List(java.lang.String courseId, java.lang.String courseWorkId) {
@@ -4429,17 +4105,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Maximum number of items to return. Zero or unspecified indicates that the server may
-           * assign a maximum.
-           *
-           * The server may return fewer than the specified number of results.
+           * assign a maximum. The server may return fewer than the specified number of results.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
-         maximum.
-
-         The server may return fewer than the specified number of results.
+         maximum. The server may return fewer than the specified number of results.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -4447,9 +4119,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Maximum number of items to return. Zero or unspecified indicates that the server may
-           * assign a maximum.
-           *
-           * The server may return fewer than the specified number of results.
+           * assign a maximum. The server may return fewer than the specified number of results.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -4458,17 +4128,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * nextPageToken value returned from a previous list call, indicating that the subsequent
-           * page of results should be returned.
-           *
-           * The list request must be otherwise identical to the one that resulted in this token.
+           * page of results should be returned. The list request must be otherwise identical to the
+           * one that resulted in this token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-         results should be returned.
-
-         The list request must be otherwise identical to the one that resulted in this token.
+         results should be returned. The list request must be otherwise identical to the one that resulted
+         in this token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -4476,9 +4144,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * nextPageToken value returned from a previous list call, indicating that the subsequent
-           * page of results should be returned.
-           *
-           * The list request must be otherwise identical to the one that resulted in this token.
+           * page of results should be returned. The list request must be otherwise identical to the
+           * one that resulted in this token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -4510,19 +4177,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional argument to restrict returned student work to those owned by the student with
-           * the specified identifier. The identifier can be one of the following:
-           *
-           * * the numeric identifier for the user * the email address of the user * the string
-           * literal `"me"`, indicating the requesting user
+           * the specified identifier. The identifier can be one of the following: * the numeric
+           * identifier for the user * the email address of the user * the string literal `"me"`,
+           * indicating the requesting user
            */
           @com.google.api.client.util.Key
           private java.lang.String userId;
 
           /** Optional argument to restrict returned student work to those owned by the student with the
-         specified identifier. The identifier can be one of the following:
-
-         * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-         indicating the requesting user
+         specified identifier. The identifier can be one of the following: * the numeric identifier for the
+         user * the email address of the user * the string literal `"me"`, indicating the requesting user
            */
           public java.lang.String getUserId() {
             return userId;
@@ -4530,10 +4194,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional argument to restrict returned student work to those owned by the student with
-           * the specified identifier. The identifier can be one of the following:
-           *
-           * * the numeric identifier for the user * the email address of the user * the string
-           * literal `"me"`, indicating the requesting user
+           * the specified identifier. The identifier can be one of the following: * the numeric
+           * identifier for the user * the email address of the user * the string literal `"me"`,
+           * indicating the requesting user
            */
           public List setUserId(java.lang.String userId) {
             this.userId = userId;
@@ -4546,29 +4209,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Modifies attachments of student submission.
-         *
-         * Attachments may only be added to student submissions belonging to course work objects with a
-         * `workType` of `ASSIGNMENT`.
-         *
-         * This request must be made by the Developer Console project of the [OAuth client
+         * Modifies attachments of student submission. Attachments may only be added to student submissions
+         * belonging to course work objects with a `workType` of `ASSIGNMENT`. This request must be made by
+         * the Developer Console project of the [OAuth client
          * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course work
-         * item.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-         * course work, if the user is not permitted to modify attachments on the requested student
-         * submission, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND`
-         * if the requested course, course work, or student submission does not exist.
+         * item. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user
+         * is not permitted to access the requested course or course work, if the user is not permitted to
+         * modify attachments on the requested student submission, or for access errors. *
+         * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course, course
+         * work, or student submission does not exist.
          *
          * Create a request for the method "studentSubmissions.modifyAttachments".
          *
          * This request holds the parameters needed by the classroom server.  After setting any optional
          * parameters, call the {@link ModifyAttachments#execute()} method to invoke the remote operation.
          *
-         * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
          * @param courseWorkId Identifier of the course work.
          * @param id Identifier of the student submission.
@@ -4586,21 +4242,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}:modifyAttachments";
 
           /**
-           * Modifies attachments of student submission.
-           *
-           * Attachments may only be added to student submissions belonging to course work objects with a
-           * `workType` of `ASSIGNMENT`.
-           *
-           * This request must be made by the Developer Console project of the [OAuth client
+           * Modifies attachments of student submission. Attachments may only be added to student
+           * submissions belonging to course work objects with a `workType` of `ASSIGNMENT`. This request
+           * must be made by the Developer Console project of the [OAuth client
            * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course
-           * work item.
-           *
-           * This method returns the following error codes:
-           *
-           * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-           * course work, if the user is not permitted to modify attachments on the requested student
-           * submission, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
-           * `NOT_FOUND` if the requested course, course work, or student submission does not exist.
+           * work item. This method returns the following error codes: * `PERMISSION_DENIED` if the
+           * requesting user is not permitted to access the requested course or course work, if the user is
+           * not permitted to modify attachments on the requested student submission, or for access errors.
+           * * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course, course
+           * work, or student submission does not exist.
            *
            * Create a request for the method "studentSubmissions.modifyAttachments".
            *
@@ -4610,8 +4260,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * stractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+           * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
            * @param courseWorkId Identifier of the course work.
            * @param id Identifier of the student submission.
@@ -4741,29 +4390,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Updates one or more fields of a student submission.
-         *
-         * See google.classroom.v1.StudentSubmission for details of which fields may be updated and who may
-         * change them.
-         *
-         * This request must be made by the Developer Console project of the [OAuth client
+         * Updates one or more fields of a student submission. See google.classroom.v1.StudentSubmission for
+         * details of which fields may be updated and who may change them. This request must be made by the
+         * Developer Console project of the [OAuth client
          * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course work
-         * item.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course
-         * work, if the user is not permitted to make the requested modification to the student submission,
-         * or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
-         * requested course, course work, or student submission does not exist.
+         * item. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting
+         * developer project did not create the corresponding course work, if the user is not permitted to
+         * make the requested modification to the student submission, or for access errors. *
+         * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course, course
+         * work, or student submission does not exist.
          *
          * Create a request for the method "studentSubmissions.patch".
          *
          * This request holds the parameters needed by the classroom server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
          * @param courseWorkId Identifier of the course work.
          * @param id Identifier of the student submission.
@@ -4781,21 +4423,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}";
 
           /**
-           * Updates one or more fields of a student submission.
-           *
-           * See google.classroom.v1.StudentSubmission for details of which fields may be updated and who
-           * may change them.
-           *
-           * This request must be made by the Developer Console project of the [OAuth client
+           * Updates one or more fields of a student submission. See google.classroom.v1.StudentSubmission
+           * for details of which fields may be updated and who may change them. This request must be made
+           * by the Developer Console project of the [OAuth client
            * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course
-           * work item.
-           *
-           * This method returns the following error codes:
-           *
-           * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
-           * course work, if the user is not permitted to make the requested modification to the student
-           * submission, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
-           * `NOT_FOUND` if the requested course, course work, or student submission does not exist.
+           * work item. This method returns the following error codes: * `PERMISSION_DENIED` if the
+           * requesting developer project did not create the corresponding course work, if the user is not
+           * permitted to make the requested modification to the student submission, or for access errors. *
+           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course, course
+           * work, or student submission does not exist.
            *
            * Create a request for the method "studentSubmissions.patch".
            *
@@ -4805,8 +4441,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+           * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
            * @param courseWorkId Identifier of the course work.
            * @param id Identifier of the student submission.
@@ -4932,21 +4567,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Mask that identifies which fields on the student submission to update. This field is
-           * required to do an update. The update fails if invalid fields are specified.
-           *
-           * The following fields may be specified by teachers:
-           *
-           * * `draft_grade` * `assigned_grade`
+           * required to do an update. The update fails if invalid fields are specified. The
+           * following fields may be specified by teachers: * `draft_grade` * `assigned_grade`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Mask that identifies which fields on the student submission to update. This field is required to do
-         an update. The update fails if invalid fields are specified.
-
-         The following fields may be specified by teachers:
-
-         * `draft_grade` * `assigned_grade`
+         an update. The update fails if invalid fields are specified. The following fields may be specified
+         by teachers: * `draft_grade` * `assigned_grade`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -4954,11 +4583,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Mask that identifies which fields on the student submission to update. This field is
-           * required to do an update. The update fails if invalid fields are specified.
-           *
-           * The following fields may be specified by teachers:
-           *
-           * * `draft_grade` * `assigned_grade`
+           * required to do an update. The update fails if invalid fields are specified. The
+           * following fields may be specified by teachers: * `draft_grade` * `assigned_grade`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -4971,21 +4597,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Reclaims a student submission on behalf of the student that owns it.
-         *
-         * Reclaiming a student submission transfers ownership of attached Drive files to the student and
-         * updates the submission state.
-         *
-         * Only the student that owns the requested student submission may call this method, and only for a
-         * student submission that has been turned in.
-         *
-         * This request must be made by the Developer Console project of the [OAuth client
-         * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course work
-         * item.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+         * Reclaims a student submission on behalf of the student that owns it. Reclaiming a student
+         * submission transfers ownership of attached Drive files to the student and updates the submission
+         * state. Only the student that owns the requested student submission may call this method, and only
+         * for a student submission that has been turned in. This request must be made by the Developer
+         * Console project of the [OAuth client ID](https://support.google.com/cloud/answer/6158849) used to
+         * create the corresponding course work item. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
          * course work, unsubmit the requested student submission, or for access errors. *
          * `FAILED_PRECONDITION` if the student submission has not been turned in. * `INVALID_ARGUMENT` if
          * the request is malformed. * `NOT_FOUND` if the requested course, course work, or student
@@ -4996,8 +4614,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the classroom server.  After setting any optional
          * parameters, call the {@link Reclaim#execute()} method to invoke the remote operation.
          *
-         * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
          * @param courseWorkId Identifier of the course work.
          * @param id Identifier of the student submission.
@@ -5015,25 +4632,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}:reclaim";
 
           /**
-           * Reclaims a student submission on behalf of the student that owns it.
-           *
-           * Reclaiming a student submission transfers ownership of attached Drive files to the student and
-           * updates the submission state.
-           *
-           * Only the student that owns the requested student submission may call this method, and only for
-           * a student submission that has been turned in.
-           *
-           * This request must be made by the Developer Console project of the [OAuth client
+           * Reclaims a student submission on behalf of the student that owns it. Reclaiming a student
+           * submission transfers ownership of attached Drive files to the student and updates the
+           * submission state. Only the student that owns the requested student submission may call this
+           * method, and only for a student submission that has been turned in. This request must be made by
+           * the Developer Console project of the [OAuth client
            * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course
-           * work item.
-           *
-           * This method returns the following error codes:
-           *
-           * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-           * course work, unsubmit the requested student submission, or for access errors. *
-           * `FAILED_PRECONDITION` if the student submission has not been turned in. * `INVALID_ARGUMENT` if
-           * the request is malformed. * `NOT_FOUND` if the requested course, course work, or student
-           * submission does not exist.
+           * work item. This method returns the following error codes: * `PERMISSION_DENIED` if the
+           * requesting user is not permitted to access the requested course or course work, unsubmit the
+           * requested student submission, or for access errors. * `FAILED_PRECONDITION` if the student
+           * submission has not been turned in. * `INVALID_ARGUMENT` if the request is malformed. *
+           * `NOT_FOUND` if the requested course, course work, or student submission does not exist.
            *
            * Create a request for the method "studentSubmissions.reclaim".
            *
@@ -5043,8 +4652,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * Reclaim#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+           * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
            * @param courseWorkId Identifier of the course work.
            * @param id Identifier of the student submission.
@@ -5174,32 +4782,23 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Returns a student submission.
-         *
-         * Returning a student submission transfers ownership of attached Drive files to the student and may
-         * also update the submission state. Unlike the Classroom application, returning a student
-         * submission does not set assignedGrade to the draftGrade value.
-         *
+         * Returns a student submission. Returning a student submission transfers ownership of attached
+         * Drive files to the student and may also update the submission state. Unlike the Classroom
+         * application, returning a student submission does not set assignedGrade to the draftGrade value.
          * Only a teacher of the course that contains the requested student submission may call this method.
-         *
          * This request must be made by the Developer Console project of the [OAuth client
          * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course work
-         * item.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-         * course work, return the requested student submission, or for access errors. * `INVALID_ARGUMENT`
-         * if the request is malformed. * `NOT_FOUND` if the requested course, course work, or student
-         * submission does not exist.
+         * item. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user
+         * is not permitted to access the requested course or course work, return the requested student
+         * submission, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND`
+         * if the requested course, course work, or student submission does not exist.
          *
          * Create a request for the method "studentSubmissions.return".
          *
          * This request holds the parameters needed by the classroom server.  After setting any optional
          * parameters, call the {@link ClassroomReturn#execute()} method to invoke the remote operation.
          *
-         * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
          * @param courseWorkId Identifier of the course work.
          * @param id Identifier of the student submission.
@@ -5217,25 +4816,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}:return";
 
           /**
-           * Returns a student submission.
-           *
-           * Returning a student submission transfers ownership of attached Drive files to the student and
-           * may also update the submission state. Unlike the Classroom application, returning a student
-           * submission does not set assignedGrade to the draftGrade value.
-           *
+           * Returns a student submission. Returning a student submission transfers ownership of attached
+           * Drive files to the student and may also update the submission state. Unlike the Classroom
+           * application, returning a student submission does not set assignedGrade to the draftGrade value.
            * Only a teacher of the course that contains the requested student submission may call this
-           * method.
-           *
-           * This request must be made by the Developer Console project of the [OAuth client
+           * method. This request must be made by the Developer Console project of the [OAuth client
            * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course
-           * work item.
-           *
-           * This method returns the following error codes:
-           *
-           * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-           * course work, return the requested student submission, or for access errors. *
-           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course, course
-           * work, or student submission does not exist.
+           * work item. This method returns the following error codes: * `PERMISSION_DENIED` if the
+           * requesting user is not permitted to access the requested course or course work, return the
+           * requested student submission, or for access errors. * `INVALID_ARGUMENT` if the request is
+           * malformed. * `NOT_FOUND` if the requested course, course work, or student submission does not
+           * exist.
            *
            * Create a request for the method "studentSubmissions.return".
            *
@@ -5245,8 +4836,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+           * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
            * @param courseWorkId Identifier of the course work.
            * @param id Identifier of the student submission.
@@ -5376,31 +4966,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Turns in a student submission.
-         *
-         * Turning in a student submission transfers ownership of attached Drive files to the teacher and
-         * may also update the submission state.
-         *
-         * This may only be called by the student that owns the specified student submission.
-         *
-         * This request must be made by the Developer Console project of the [OAuth client
+         * Turns in a student submission. Turning in a student submission transfers ownership of attached
+         * Drive files to the teacher and may also update the submission state. This may only be called by
+         * the student that owns the specified student submission. This request must be made by the
+         * Developer Console project of the [OAuth client
          * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course work
-         * item.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-         * course work, turn in the requested student submission, or for access errors. * `INVALID_ARGUMENT`
-         * if the request is malformed. * `NOT_FOUND` if the requested course, course work, or student
-         * submission does not exist.
+         * item. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user
+         * is not permitted to access the requested course or course work, turn in the requested student
+         * submission, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND`
+         * if the requested course, course work, or student submission does not exist.
          *
          * Create a request for the method "studentSubmissions.turnIn".
          *
          * This request holds the parameters needed by the classroom server.  After setting any optional
          * parameters, call the {@link TurnIn#execute()} method to invoke the remote operation.
          *
-         * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
          * @param courseWorkId Identifier of the course work.
          * @param id Identifier of the student submission.
@@ -5418,23 +4999,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{courseWorkId}/studentSubmissions/{id}:turnIn";
 
           /**
-           * Turns in a student submission.
-           *
-           * Turning in a student submission transfers ownership of attached Drive files to the teacher and
-           * may also update the submission state.
-           *
-           * This may only be called by the student that owns the specified student submission.
-           *
-           * This request must be made by the Developer Console project of the [OAuth client
+           * Turns in a student submission. Turning in a student submission transfers ownership of attached
+           * Drive files to the teacher and may also update the submission state. This may only be called by
+           * the student that owns the specified student submission. This request must be made by the
+           * Developer Console project of the [OAuth client
            * ID](https://support.google.com/cloud/answer/6158849) used to create the corresponding course
-           * work item.
-           *
-           * This method returns the following error codes:
-           *
-           * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-           * course work, turn in the requested student submission, or for access errors. *
-           * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course, course
-           * work, or student submission does not exist.
+           * work item. This method returns the following error codes: * `PERMISSION_DENIED` if the
+           * requesting user is not permitted to access the requested course or course work, turn in the
+           * requested student submission, or for access errors. * `INVALID_ARGUMENT` if the request is
+           * malformed. * `NOT_FOUND` if the requested course, course work, or student submission does not
+           * exist.
            *
            * Create a request for the method "studentSubmissions.turnIn".
            *
@@ -5444,8 +5018,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
            * TurnIn#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param courseId Identifier of the course.
-        This identifier can be either the Classroom-assigned identifier or an
+           * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
          *        alias.
            * @param courseWorkId Identifier of the course work.
            * @param id Identifier of the student submission.
@@ -5578,6 +5151,974 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
+     * An accessor for creating requests from the CourseWorkMaterials collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Classroom classroom = new Classroom(...);}
+     *   {@code Classroom.CourseWorkMaterials.List request = classroom.courseWorkMaterials().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public CourseWorkMaterials courseWorkMaterials() {
+      return new CourseWorkMaterials();
+    }
+
+    /**
+     * The "courseWorkMaterials" collection of methods.
+     */
+    public class CourseWorkMaterials {
+
+      /**
+       * Creates a course work material. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
+       * create course work material in the requested course, share a Drive attachment, or for access
+       * errors. * `INVALID_ARGUMENT` if the request is malformed or if more than 20 * materials are
+       * provided. * `NOT_FOUND` if the requested course does not exist. * `FAILED_PRECONDITION` for the
+       * following request error: * AttachmentNotVisible
+       *
+       * Create a request for the method "courseWorkMaterials.create".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+       * @param content the {@link com.google.api.services.classroom.model.CourseWorkMaterial}
+       * @return the request
+       */
+      public Create create(java.lang.String courseId, com.google.api.services.classroom.model.CourseWorkMaterial content) throws java.io.IOException {
+        Create result = new Create(courseId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ClassroomRequest<com.google.api.services.classroom.model.CourseWorkMaterial> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials";
+
+        /**
+         * Creates a course work material. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
+         * create course work material in the requested course, share a Drive attachment, or for access
+         * errors. * `INVALID_ARGUMENT` if the request is malformed or if more than 20 * materials are
+         * provided. * `NOT_FOUND` if the requested course does not exist. * `FAILED_PRECONDITION` for the
+         * following request error: * AttachmentNotVisible
+         *
+         * Create a request for the method "courseWorkMaterials.create".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+         * @param content the {@link com.google.api.services.classroom.model.CourseWorkMaterial}
+         * @since 1.13
+         */
+        protected Create(java.lang.String courseId, com.google.api.services.classroom.model.CourseWorkMaterial content) {
+          super(Classroom.this, "POST", REST_PATH, content, com.google.api.services.classroom.model.CourseWorkMaterial.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       alias.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        public Create setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a course work material. This request must be made by the Developer Console project of the
+       * [OAuth client ID](https://support.google.com/cloud/answer/6158849) used to create the
+       * corresponding course work material item. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course
+       * work material, if the requesting user is not permitted to delete the requested course or for
+       * access errors. * `FAILED_PRECONDITION` if the requested course work material has already been
+       * deleted. * `NOT_FOUND` if no course exists with the requested ID.
+       *
+       * Create a request for the method "courseWorkMaterials.delete".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+       * @param id Identifier of the course work material to delete. This identifier is a Classroom-assigned
+       *        identifier.
+       * @return the request
+       */
+      public Delete delete(java.lang.String courseId, java.lang.String id) throws java.io.IOException {
+        Delete result = new Delete(courseId, id);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ClassroomRequest<com.google.api.services.classroom.model.Empty> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{id}";
+
+        /**
+         * Deletes a course work material. This request must be made by the Developer Console project of
+         * the [OAuth client ID](https://support.google.com/cloud/answer/6158849) used to create the
+         * corresponding course work material item. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding course
+         * work material, if the requesting user is not permitted to delete the requested course or for
+         * access errors. * `FAILED_PRECONDITION` if the requested course work material has already been
+         * deleted. * `NOT_FOUND` if no course exists with the requested ID.
+         *
+         * Create a request for the method "courseWorkMaterials.delete".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+         * @param id Identifier of the course work material to delete. This identifier is a Classroom-assigned
+       *        identifier.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String courseId, java.lang.String id) {
+          super(Classroom.this, "DELETE", REST_PATH, null, com.google.api.services.classroom.model.Empty.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       alias.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        public Delete setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /**
+         * Identifier of the course work material to delete. This identifier is a Classroom-assigned
+         * identifier.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String id;
+
+        /** Identifier of the course work material to delete. This identifier is a Classroom-assigned
+       identifier.
+         */
+        public java.lang.String getId() {
+          return id;
+        }
+
+        /**
+         * Identifier of the course work material to delete. This identifier is a Classroom-assigned
+         * identifier.
+         */
+        public Delete setId(java.lang.String id) {
+          this.id = id;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a course work material. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+       * course work material, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
+       * `NOT_FOUND` if the requested course or course work material does not exist.
+       *
+       * Create a request for the method "courseWorkMaterials.get".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+       * @param id Identifier of the course work material.
+       * @return the request
+       */
+      public Get get(java.lang.String courseId, java.lang.String id) throws java.io.IOException {
+        Get result = new Get(courseId, id);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ClassroomRequest<com.google.api.services.classroom.model.CourseWorkMaterial> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{id}";
+
+        /**
+         * Returns a course work material. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+         * course work material, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
+         * `NOT_FOUND` if the requested course or course work material does not exist.
+         *
+         * Create a request for the method "courseWorkMaterials.get".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+         * @param id Identifier of the course work material.
+         * @since 1.13
+         */
+        protected Get(java.lang.String courseId, java.lang.String id) {
+          super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.CourseWorkMaterial.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       alias.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        public Get setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /** Identifier of the course work material. */
+        @com.google.api.client.util.Key
+        private java.lang.String id;
+
+        /** Identifier of the course work material.
+         */
+        public java.lang.String getId() {
+          return id;
+        }
+
+        /** Identifier of the course work material. */
+        public Get setId(java.lang.String id) {
+          this.id = id;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a list of course work material that the requester is permitted to view. Course students
+       * may only view `PUBLISHED` course work material. Course teachers and domain administrators may
+       * view all course work material. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or for
+       * access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested
+       * course does not exist.
+       *
+       * Create a request for the method "courseWorkMaterials.list".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+       * @return the request
+       */
+      public List list(java.lang.String courseId) throws java.io.IOException {
+        List result = new List(courseId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ClassroomRequest<com.google.api.services.classroom.model.ListCourseWorkMaterialResponse> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials";
+
+        /**
+         * Returns a list of course work material that the requester is permitted to view. Course students
+         * may only view `PUBLISHED` course work material. Course teachers and domain administrators may
+         * view all course work material. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
+         * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
+         * requested course does not exist.
+         *
+         * Create a request for the method "courseWorkMaterials.list".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+         * @since 1.13
+         */
+        protected List(java.lang.String courseId) {
+          super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.ListCourseWorkMaterialResponse.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       alias.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        public List setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /**
+         * Restriction on the work status to return. Only course work material that matches is
+         * returned. If unspecified, items with a work status of `PUBLISHED` is returned.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> courseWorkMaterialStates;
+
+        /** Restriction on the work status to return. Only course work material that matches is returned. If
+       unspecified, items with a work status of `PUBLISHED` is returned.
+         */
+        public java.util.List<java.lang.String> getCourseWorkMaterialStates() {
+          return courseWorkMaterialStates;
+        }
+
+        /**
+         * Restriction on the work status to return. Only course work material that matches is
+         * returned. If unspecified, items with a work status of `PUBLISHED` is returned.
+         */
+        public List setCourseWorkMaterialStates(java.util.List<java.lang.String> courseWorkMaterialStates) {
+          this.courseWorkMaterialStates = courseWorkMaterialStates;
+          return this;
+        }
+
+        /**
+         * Optional filtering for course work material with at least one Drive material whose ID
+         * matches the provided string. If `material_link` is also specified, course work material
+         * must have materials matching both filters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String materialDriveId;
+
+        /** Optional filtering for course work material with at least one Drive material whose ID matches the
+       provided string. If `material_link` is also specified, course work material must have materials
+       matching both filters.
+         */
+        public java.lang.String getMaterialDriveId() {
+          return materialDriveId;
+        }
+
+        /**
+         * Optional filtering for course work material with at least one Drive material whose ID
+         * matches the provided string. If `material_link` is also specified, course work material
+         * must have materials matching both filters.
+         */
+        public List setMaterialDriveId(java.lang.String materialDriveId) {
+          this.materialDriveId = materialDriveId;
+          return this;
+        }
+
+        /**
+         * Optional filtering for course work material with at least one link material whose URL
+         * partially matches the provided string.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String materialLink;
+
+        /** Optional filtering for course work material with at least one link material whose URL partially
+       matches the provided string.
+         */
+        public java.lang.String getMaterialLink() {
+          return materialLink;
+        }
+
+        /**
+         * Optional filtering for course work material with at least one link material whose URL
+         * partially matches the provided string.
+         */
+        public List setMaterialLink(java.lang.String materialLink) {
+          this.materialLink = materialLink;
+          return this;
+        }
+
+        /**
+         * Optional sort ordering for results. A comma-separated list of fields with an optional
+         * sort direction keyword. Supported field is `updateTime`. Supported direction keywords are
+         * `asc` and `desc`. If not specified, `updateTime desc` is the default behavior. Examples:
+         * `updateTime asc`, `updateTime`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional sort ordering for results. A comma-separated list of fields with an optional sort
+       direction keyword. Supported field is `updateTime`. Supported direction keywords are `asc` and
+       `desc`. If not specified, `updateTime desc` is the default behavior. Examples: `updateTime asc`,
+       `updateTime`
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional sort ordering for results. A comma-separated list of fields with an optional
+         * sort direction keyword. Supported field is `updateTime`. Supported direction keywords are
+         * `asc` and `desc`. If not specified, `updateTime desc` is the default behavior. Examples:
+         * `updateTime asc`, `updateTime`
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Maximum number of items to return. Zero or unspecified indicates that the server may
+         * assign a maximum. The server may return fewer than the specified number of results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
+       maximum. The server may return fewer than the specified number of results.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of items to return. Zero or unspecified indicates that the server may
+         * assign a maximum. The server may return fewer than the specified number of results.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
+       results should be returned. The list request must be otherwise identical to the one that resulted
+       in this token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * nextPageToken value returned from a previous list call, indicating that the subsequent
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates one or more fields of a course work material. This method returns the following error
+       * codes: * `PERMISSION_DENIED` if the requesting developer project for access errors. *
+       * `INVALID_ARGUMENT` if the request is malformed. * `FAILED_PRECONDITION` if the requested course
+       * work material has already been deleted. * `NOT_FOUND` if the requested course or course work
+       * material does not exist
+       *
+       * Create a request for the method "courseWorkMaterials.patch".
+       *
+       * This request holds the parameters needed by the classroom server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+       * @param id Identifier of the course work material.
+       * @param content the {@link com.google.api.services.classroom.model.CourseWorkMaterial}
+       * @return the request
+       */
+      public Patch patch(java.lang.String courseId, java.lang.String id, com.google.api.services.classroom.model.CourseWorkMaterial content) throws java.io.IOException {
+        Patch result = new Patch(courseId, id, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends ClassroomRequest<com.google.api.services.classroom.model.CourseWorkMaterial> {
+
+        private static final String REST_PATH = "v1/courses/{courseId}/courseWorkMaterials/{id}";
+
+        /**
+         * Updates one or more fields of a course work material. This method returns the following error
+         * codes: * `PERMISSION_DENIED` if the requesting developer project for access errors. *
+         * `INVALID_ARGUMENT` if the request is malformed. * `FAILED_PRECONDITION` if the requested course
+         * work material has already been deleted. * `NOT_FOUND` if the requested course or course work
+         * material does not exist
+         *
+         * Create a request for the method "courseWorkMaterials.patch".
+         *
+         * This request holds the parameters needed by the the classroom server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       *        alias.
+         * @param id Identifier of the course work material.
+         * @param content the {@link com.google.api.services.classroom.model.CourseWorkMaterial}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String courseId, java.lang.String id, com.google.api.services.classroom.model.CourseWorkMaterial content) {
+          super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.CourseWorkMaterial.class);
+          this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+          this.id = com.google.api.client.util.Preconditions.checkNotNull(id, "Required parameter id must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String courseId;
+
+        /** Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
+       alias.
+         */
+        public java.lang.String getCourseId() {
+          return courseId;
+        }
+
+        /**
+         * Identifier of the course. This identifier can be either the Classroom-assigned identifier
+         * or an alias.
+         */
+        public Patch setCourseId(java.lang.String courseId) {
+          this.courseId = courseId;
+          return this;
+        }
+
+        /** Identifier of the course work material. */
+        @com.google.api.client.util.Key
+        private java.lang.String id;
+
+        /** Identifier of the course work material.
+         */
+        public java.lang.String getId() {
+          return id;
+        }
+
+        /** Identifier of the course work material. */
+        public Patch setId(java.lang.String id) {
+          this.id = id;
+          return this;
+        }
+
+        /**
+         * Mask that identifies which fields on the course work material to update. This field is
+         * required to do an update. The update fails if invalid fields are specified. If a field
+         * supports empty values, it can be cleared by specifying it in the update mask and not in
+         * the course work material object. If a field that does not support empty values is
+         * included in the update mask and not set in the course work material object, an
+         * `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers:
+         * * `title` * `description` * `state` * `scheduled_time` * `topic_id`
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Mask that identifies which fields on the course work material to update. This field is required to
+       do an update. The update fails if invalid fields are specified. If a field supports empty values,
+       it can be cleared by specifying it in the update mask and not in the course work material object.
+       If a field that does not support empty values is included in the update mask and not set in the
+       course work material object, an `INVALID_ARGUMENT` error is returned. The following fields may be
+       specified by teachers: * `title` * `description` * `state` * `scheduled_time` * `topic_id`
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Mask that identifies which fields on the course work material to update. This field is
+         * required to do an update. The update fails if invalid fields are specified. If a field
+         * supports empty values, it can be cleared by specifying it in the update mask and not in
+         * the course work material object. If a field that does not support empty values is
+         * included in the update mask and not set in the course work material object, an
+         * `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers:
+         * * `title` * `description` * `state` * `scheduled_time` * `topic_id`
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Students collection.
      *
      * <p>The typical use is:</p>
@@ -5598,26 +6139,20 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
     public class Students {
 
       /**
-       * Adds a user as a student of a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to create students in this course
-       * or for access errors. * `NOT_FOUND` if the requested course ID does not exist. *
+       * Adds a user as a student of a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to create students in this course or
+       * for access errors. * `NOT_FOUND` if the requested course ID does not exist. *
        * `FAILED_PRECONDITION` if the requested user's account is disabled, for the following request
-       * errors:     * CourseMemberLimitReached     * CourseNotModifiable     *
-       * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if the user is already a student or teacher
-       * in the course.
+       * errors: * CourseMemberLimitReached * CourseNotModifiable * UserGroupsMembershipLimitReached *
+       * `ALREADY_EXISTS` if the user is already a student or teacher in the course.
        *
        * Create a request for the method "students.create".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course to create the student in.
-      This identifier can be either the Classroom-
-       *        assigned identifier or an
-      alias.
+       * @param courseId Identifier of the course to create the student in. This identifier can be either the Classroom-
+       *        assigned identifier or an alias.
        * @param content the {@link com.google.api.services.classroom.model.Student}
        * @return the request
        */
@@ -5632,16 +6167,12 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/students";
 
         /**
-         * Adds a user as a student of a course.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to create students in this course
+         * Adds a user as a student of a course. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to create students in this course
          * or for access errors. * `NOT_FOUND` if the requested course ID does not exist. *
          * `FAILED_PRECONDITION` if the requested user's account is disabled, for the following request
-         * errors:     * CourseMemberLimitReached     * CourseNotModifiable     *
-         * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if the user is already a student or teacher
-         * in the course.
+         * errors: * CourseMemberLimitReached * CourseNotModifiable * UserGroupsMembershipLimitReached *
+         * `ALREADY_EXISTS` if the user is already a student or teacher in the course.
          *
          * Create a request for the method "students.create".
          *
@@ -5651,10 +6182,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course to create the student in.
-      This identifier can be either the Classroom-
-       *        assigned identifier or an
-      alias.
+         * @param courseId Identifier of the course to create the student in. This identifier can be either the Classroom-
+       *        assigned identifier or an alias.
          * @param content the {@link com.google.api.services.classroom.model.Student}
          * @since 1.13
          */
@@ -5773,12 +6302,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Deletes a student of a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to delete students of this course
-       * or for access errors. * `NOT_FOUND` if no student of this course has the requested ID or if the
+       * Deletes a student of a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to delete students of this course or
+       * for access errors. * `NOT_FOUND` if no student of this course has the requested ID or if the
        * course does not exist.
        *
        * Create a request for the method "students.delete".
@@ -5786,15 +6312,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-       * @param userId Identifier of the student to delete. The identifier can be one of the
-      following:
-      * the numeric
-       *        identifier for the user
-      * the email address of the user
-      * the string literal `"me"`,
+       * @param userId Identifier of the student to delete. The identifier can be one of the following: * the numeric
+       *        identifier for the user * the email address of the user * the string literal `"me"`,
        *        indicating the requesting user
        * @return the request
        */
@@ -5809,11 +6330,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/students/{userId}";
 
         /**
-         * Deletes a student of a course.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to delete students of this course
+         * Deletes a student of a course. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to delete students of this course
          * or for access errors. * `NOT_FOUND` if no student of this course has the requested ID or if the
          * course does not exist.
          *
@@ -5825,15 +6343,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-         * @param userId Identifier of the student to delete. The identifier can be one of the
-      following:
-      * the numeric
-       *        identifier for the user
-      * the email address of the user
-      * the string literal `"me"`,
+         * @param userId Identifier of the student to delete. The identifier can be one of the following: * the numeric
+       *        identifier for the user * the email address of the user * the string literal `"me"`,
        *        indicating the requesting user
          * @since 1.13
          */
@@ -5922,28 +6435,25 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Identifier of the student to delete. The identifier can be one of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * Identifier of the student to delete. The identifier can be one of the following: * the
+         * numeric identifier for the user * the email address of the user * the string literal
+         * `"me"`, indicating the requesting user
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** Identifier of the student to delete. The identifier can be one of the following:
-
-       * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-       indicating the requesting user
+        /** Identifier of the student to delete. The identifier can be one of the following: * the numeric
+       identifier for the user * the email address of the user * the string literal `"me"`, indicating the
+       requesting user
          */
         public java.lang.String getUserId() {
           return userId;
         }
 
         /**
-         * Identifier of the student to delete. The identifier can be one of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * Identifier of the student to delete. The identifier can be one of the following: * the
+         * numeric identifier for the user * the email address of the user * the string literal
+         * `"me"`, indicating the requesting user
          */
         public Delete setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -5956,11 +6466,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a student of a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to view students of this course or
+       * Returns a student of a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to view students of this course or
        * for access errors. * `NOT_FOUND` if no student of this course has the requested ID or if the
        * course does not exist.
        *
@@ -5969,15 +6476,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-       * @param userId Identifier of the student to return. The identifier can be one of the
-      following:
-      * the numeric
-       *        identifier for the user
-      * the email address of the user
-      * the string literal `"me"`,
+       * @param userId Identifier of the student to return. The identifier can be one of the following: * the numeric
+       *        identifier for the user * the email address of the user * the string literal `"me"`,
        *        indicating the requesting user
        * @return the request
        */
@@ -5992,12 +6494,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/students/{userId}";
 
         /**
-         * Returns a student of a course.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to view students of this course
-         * or for access errors. * `NOT_FOUND` if no student of this course has the requested ID or if the
+         * Returns a student of a course. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to view students of this course or
+         * for access errors. * `NOT_FOUND` if no student of this course has the requested ID or if the
          * course does not exist.
          *
          * Create a request for the method "students.get".
@@ -6007,15 +6506,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-         * @param userId Identifier of the student to return. The identifier can be one of the
-      following:
-      * the numeric
-       *        identifier for the user
-      * the email address of the user
-      * the string literal `"me"`,
+         * @param userId Identifier of the student to return. The identifier can be one of the following: * the numeric
+       *        identifier for the user * the email address of the user * the string literal `"me"`,
        *        indicating the requesting user
          * @since 1.13
          */
@@ -6114,28 +6608,25 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Identifier of the student to return. The identifier can be one of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * Identifier of the student to return. The identifier can be one of the following: * the
+         * numeric identifier for the user * the email address of the user * the string literal
+         * `"me"`, indicating the requesting user
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** Identifier of the student to return. The identifier can be one of the following:
-
-       * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-       indicating the requesting user
+        /** Identifier of the student to return. The identifier can be one of the following: * the numeric
+       identifier for the user * the email address of the user * the string literal `"me"`, indicating the
+       requesting user
          */
         public java.lang.String getUserId() {
           return userId;
         }
 
         /**
-         * Identifier of the student to return. The identifier can be one of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * Identifier of the student to return. The identifier can be one of the following: * the
+         * numeric identifier for the user * the email address of the user * the string literal
+         * `"me"`, indicating the requesting user
          */
         public Get setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -6148,19 +6639,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a list of students of this course that the requester is permitted to view.
-       *
-       * This method returns the following error codes:
-       *
-       * * `NOT_FOUND` if the course does not exist. * `PERMISSION_DENIED` for access errors.
+       * Returns a list of students of this course that the requester is permitted to view. This method
+       * returns the following error codes: * `NOT_FOUND` if the course does not exist. *
+       * `PERMISSION_DENIED` for access errors.
        *
        * Create a request for the method "students.list".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @return the request
        */
@@ -6175,11 +6663,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/students";
 
         /**
-         * Returns a list of students of this course that the requester is permitted to view.
-         *
-         * This method returns the following error codes:
-         *
-         * * `NOT_FOUND` if the course does not exist. * `PERMISSION_DENIED` for access errors.
+         * Returns a list of students of this course that the requester is permitted to view. This method
+         * returns the following error codes: * `NOT_FOUND` if the course does not exist. *
+         * `PERMISSION_DENIED` for access errors.
          *
          * Create a request for the method "students.list".
          *
@@ -6188,8 +6674,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @since 1.13
          */
@@ -6287,25 +6772,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Maximum number of items to return. Zero means no maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * Maximum number of items to return. The default is 30 if unspecified or `0`. The server
+         * may return fewer than the specified number of results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of items to return. Zero means no maximum.
-
-       The server may return fewer than the specified number of results.
+        /** Maximum number of items to return. The default is 30 if unspecified or `0`. The server may return
+       fewer than the specified number of results.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Maximum number of items to return. Zero means no maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * Maximum number of items to return. The default is 30 if unspecified or `0`. The server
+         * may return fewer than the specified number of results.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -6314,17 +6796,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
+       results should be returned. The list request must be otherwise identical to the one that resulted
+       in this token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -6332,9 +6812,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -6369,15 +6848,12 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
     public class Teachers {
 
       /**
-       * Creates a teacher of a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not  permitted to create teachers in this course
-       * or for access errors. * `NOT_FOUND` if the requested course ID does not exist. *
+       * Creates a teacher of a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to create teachers in this course or
+       * for access errors. * `NOT_FOUND` if the requested course ID does not exist. *
        * `FAILED_PRECONDITION` if the requested user's account is disabled, for the following request
-       * errors:     * CourseMemberLimitReached     * CourseNotModifiable     * CourseTeacherLimitReached
-       * * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if the user is already a teacher or student
+       * errors: * CourseMemberLimitReached * CourseNotModifiable * CourseTeacherLimitReached *
+       * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if the user is already a teacher or student
        * in the course.
        *
        * Create a request for the method "teachers.create".
@@ -6385,8 +6861,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param content the {@link com.google.api.services.classroom.model.Teacher}
        * @return the request
@@ -6402,16 +6877,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/teachers";
 
         /**
-         * Creates a teacher of a course.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not  permitted to create teachers in this
-         * course or for access errors. * `NOT_FOUND` if the requested course ID does not exist. *
+         * Creates a teacher of a course. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to create teachers in this course
+         * or for access errors. * `NOT_FOUND` if the requested course ID does not exist. *
          * `FAILED_PRECONDITION` if the requested user's account is disabled, for the following request
-         * errors:     * CourseMemberLimitReached     * CourseNotModifiable     *
-         * CourseTeacherLimitReached     * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if the user
-         * is already a teacher or student in the course.
+         * errors: * CourseMemberLimitReached * CourseNotModifiable * CourseTeacherLimitReached *
+         * UserGroupsMembershipLimitReached * `ALREADY_EXISTS` if the user is already a teacher or student
+         * in the course.
          *
          * Create a request for the method "teachers.create".
          *
@@ -6421,8 +6893,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param content the {@link com.google.api.services.classroom.model.Teacher}
          * @since 1.13
@@ -6516,12 +6987,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Deletes a teacher of a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to delete teachers of this course
-       * or for access errors. * `NOT_FOUND` if no teacher of this course has the requested ID or if the
+       * Deletes a teacher of a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to delete teachers of this course or
+       * for access errors. * `NOT_FOUND` if no teacher of this course has the requested ID or if the
        * course does not exist. * `FAILED_PRECONDITION` if the requested ID belongs to the primary teacher
        * of this course.
        *
@@ -6530,15 +6998,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-       * @param userId Identifier of the teacher to delete. The identifier can be one of the
-      following:
-      * the numeric
-       *        identifier for the user
-      * the email address of the user
-      * the string literal `"me"`,
+       * @param userId Identifier of the teacher to delete. The identifier can be one of the following: * the numeric
+       *        identifier for the user * the email address of the user * the string literal `"me"`,
        *        indicating the requesting user
        * @return the request
        */
@@ -6553,11 +7016,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/teachers/{userId}";
 
         /**
-         * Deletes a teacher of a course.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to delete teachers of this course
+         * Deletes a teacher of a course. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to delete teachers of this course
          * or for access errors. * `NOT_FOUND` if no teacher of this course has the requested ID or if the
          * course does not exist. * `FAILED_PRECONDITION` if the requested ID belongs to the primary
          * teacher of this course.
@@ -6570,15 +7030,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-         * @param userId Identifier of the teacher to delete. The identifier can be one of the
-      following:
-      * the numeric
-       *        identifier for the user
-      * the email address of the user
-      * the string literal `"me"`,
+         * @param userId Identifier of the teacher to delete. The identifier can be one of the following: * the numeric
+       *        identifier for the user * the email address of the user * the string literal `"me"`,
        *        indicating the requesting user
          * @since 1.13
          */
@@ -6667,28 +7122,25 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Identifier of the teacher to delete. The identifier can be one of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * Identifier of the teacher to delete. The identifier can be one of the following: * the
+         * numeric identifier for the user * the email address of the user * the string literal
+         * `"me"`, indicating the requesting user
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** Identifier of the teacher to delete. The identifier can be one of the following:
-
-       * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-       indicating the requesting user
+        /** Identifier of the teacher to delete. The identifier can be one of the following: * the numeric
+       identifier for the user * the email address of the user * the string literal `"me"`, indicating the
+       requesting user
          */
         public java.lang.String getUserId() {
           return userId;
         }
 
         /**
-         * Identifier of the teacher to delete. The identifier can be one of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * Identifier of the teacher to delete. The identifier can be one of the following: * the
+         * numeric identifier for the user * the email address of the user * the string literal
+         * `"me"`, indicating the requesting user
          */
         public Delete setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -6701,11 +7153,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a teacher of a course.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to view teachers of this course or
+       * Returns a teacher of a course. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to view teachers of this course or
        * for access errors. * `NOT_FOUND` if no teacher of this course has the requested ID or if the
        * course does not exist.
        *
@@ -6714,15 +7163,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-       * @param userId Identifier of the teacher to return. The identifier can be one of the
-      following:
-      * the numeric
-       *        identifier for the user
-      * the email address of the user
-      * the string literal `"me"`,
+       * @param userId Identifier of the teacher to return. The identifier can be one of the following: * the numeric
+       *        identifier for the user * the email address of the user * the string literal `"me"`,
        *        indicating the requesting user
        * @return the request
        */
@@ -6737,12 +7181,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/teachers/{userId}";
 
         /**
-         * Returns a teacher of a course.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to view teachers of this course
-         * or for access errors. * `NOT_FOUND` if no teacher of this course has the requested ID or if the
+         * Returns a teacher of a course. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to view teachers of this course or
+         * for access errors. * `NOT_FOUND` if no teacher of this course has the requested ID or if the
          * course does not exist.
          *
          * Create a request for the method "teachers.get".
@@ -6752,15 +7193,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
-         * @param userId Identifier of the teacher to return. The identifier can be one of the
-      following:
-      * the numeric
-       *        identifier for the user
-      * the email address of the user
-      * the string literal `"me"`,
+         * @param userId Identifier of the teacher to return. The identifier can be one of the following: * the numeric
+       *        identifier for the user * the email address of the user * the string literal `"me"`,
        *        indicating the requesting user
          * @since 1.13
          */
@@ -6859,28 +7295,25 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Identifier of the teacher to return. The identifier can be one of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * Identifier of the teacher to return. The identifier can be one of the following: * the
+         * numeric identifier for the user * the email address of the user * the string literal
+         * `"me"`, indicating the requesting user
          */
         @com.google.api.client.util.Key
         private java.lang.String userId;
 
-        /** Identifier of the teacher to return. The identifier can be one of the following:
-
-       * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-       indicating the requesting user
+        /** Identifier of the teacher to return. The identifier can be one of the following: * the numeric
+       identifier for the user * the email address of the user * the string literal `"me"`, indicating the
+       requesting user
          */
         public java.lang.String getUserId() {
           return userId;
         }
 
         /**
-         * Identifier of the teacher to return. The identifier can be one of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * Identifier of the teacher to return. The identifier can be one of the following: * the
+         * numeric identifier for the user * the email address of the user * the string literal
+         * `"me"`, indicating the requesting user
          */
         public Get setUserId(java.lang.String userId) {
           this.userId = userId;
@@ -6893,19 +7326,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a list of teachers of this course that the requester is permitted to view.
-       *
-       * This method returns the following error codes:
-       *
-       * * `NOT_FOUND` if the course does not exist. * `PERMISSION_DENIED` for access errors.
+       * Returns a list of teachers of this course that the requester is permitted to view. This method
+       * returns the following error codes: * `NOT_FOUND` if the course does not exist. *
+       * `PERMISSION_DENIED` for access errors.
        *
        * Create a request for the method "teachers.list".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @return the request
        */
@@ -6920,11 +7350,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/teachers";
 
         /**
-         * Returns a list of teachers of this course that the requester is permitted to view.
-         *
-         * This method returns the following error codes:
-         *
-         * * `NOT_FOUND` if the course does not exist. * `PERMISSION_DENIED` for access errors.
+         * Returns a list of teachers of this course that the requester is permitted to view. This method
+         * returns the following error codes: * `NOT_FOUND` if the course does not exist. *
+         * `PERMISSION_DENIED` for access errors.
          *
          * Create a request for the method "teachers.list".
          *
@@ -6933,8 +7361,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @since 1.13
          */
@@ -7032,25 +7459,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Maximum number of items to return. Zero means no maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * Maximum number of items to return. The default is 30 if unspecified or `0`. The server
+         * may return fewer than the specified number of results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of items to return. Zero means no maximum.
-
-       The server may return fewer than the specified number of results.
+        /** Maximum number of items to return. The default is 30 if unspecified or `0`. The server may return
+       fewer than the specified number of results.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * Maximum number of items to return. Zero means no maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * Maximum number of items to return. The default is 30 if unspecified or `0`. The server
+         * may return fewer than the specified number of results.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -7059,17 +7483,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
+       results should be returned. The list request must be otherwise identical to the one that resulted
+       in this token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -7077,9 +7499,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -7114,21 +7535,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
     public class Topics {
 
       /**
-       * Creates a topic.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
-       * create a topic in the requested course, or for access errors. * `INVALID_ARGUMENT` if the request
-       * is malformed. * `NOT_FOUND` if the requested course does not exist.
+       * Creates a topic. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting user is not permitted to access the requested course, create a topic in the requested
+       * course, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if
+       * the requested course does not exist.
        *
        * Create a request for the method "topics.create".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param content the {@link com.google.api.services.classroom.model.Topic}
        * @return the request
@@ -7144,13 +7561,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/topics";
 
         /**
-         * Creates a topic.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course,
-         * create a topic in the requested course, or for access errors. * `INVALID_ARGUMENT` if the
-         * request is malformed. * `NOT_FOUND` if the requested course does not exist.
+         * Creates a topic. This method returns the following error codes: * `PERMISSION_DENIED` if the
+         * requesting user is not permitted to access the requested course, create a topic in the
+         * requested course, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
+         * `NOT_FOUND` if the requested course does not exist.
          *
          * Create a request for the method "topics.create".
          *
@@ -7160,8 +7574,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param content the {@link com.google.api.services.classroom.model.Topic}
          * @since 1.13
@@ -7255,21 +7668,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Deletes a topic.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not allowed to delete the requested topic or for
-       * access errors. * `FAILED_PRECONDITION` if the requested topic has already been deleted. *
-       * `NOT_FOUND` if no course or topic exists with the requested ID.
+       * Deletes a topic. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting user is not allowed to delete the requested topic or for access errors. *
+       * `FAILED_PRECONDITION` if the requested topic has already been deleted. * `NOT_FOUND` if no course
+       * or topic exists with the requested ID.
        *
        * Create a request for the method "topics.delete".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param id Identifier of the topic to delete.
        * @return the request
@@ -7285,13 +7694,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/topics/{id}";
 
         /**
-         * Deletes a topic.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not allowed to delete the requested topic or
-         * for access errors. * `FAILED_PRECONDITION` if the requested topic has already been deleted. *
-         * `NOT_FOUND` if no course or topic exists with the requested ID.
+         * Deletes a topic. This method returns the following error codes: * `PERMISSION_DENIED` if the
+         * requesting user is not allowed to delete the requested topic or for access errors. *
+         * `FAILED_PRECONDITION` if the requested topic has already been deleted. * `NOT_FOUND` if no
+         * course or topic exists with the requested ID.
          *
          * Create a request for the method "topics.delete".
          *
@@ -7301,8 +7707,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param id Identifier of the topic to delete.
          * @since 1.13
@@ -7413,13 +7818,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a topic.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-       * topic, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if
-       * the requested course or topic does not exist.
+       * Returns a topic. This method returns the following error codes: * `PERMISSION_DENIED` if the
+       * requesting user is not permitted to access the requested course or topic, or for access errors. *
+       * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course or topic
+       * does not exist.
        *
        * Create a request for the method "topics.get".
        *
@@ -7441,13 +7843,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/topics/{id}";
 
         /**
-         * Returns a topic.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-         * topic, or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if
-         * the requested course or topic does not exist.
+         * Returns a topic. This method returns the following error codes: * `PERMISSION_DENIED` if the
+         * requesting user is not permitted to access the requested course or topic, or for access errors.
+         * * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course or
+         * topic does not exist.
          *
          * Create a request for the method "topics.get".
          *
@@ -7569,21 +7968,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns the list of topics that the requester is permitted to view.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-       * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
-       * requested course does not exist.
+       * Returns the list of topics that the requester is permitted to view. This method returns the
+       * following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to access
+       * the requested course or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
+       * `NOT_FOUND` if the requested course does not exist.
        *
        * Create a request for the method "topics.list".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @return the request
        */
@@ -7598,13 +7993,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/topics";
 
         /**
-         * Returns the list of topics that the requester is permitted to view.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to access the requested course or
-         * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
-         * requested course does not exist.
+         * Returns the list of topics that the requester is permitted to view. This method returns the
+         * following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to access
+         * the requested course or for access errors. * `INVALID_ARGUMENT` if the request is malformed. *
+         * `NOT_FOUND` if the requested course does not exist.
          *
          * Create a request for the method "topics.list".
          *
@@ -7613,8 +8005,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @since 1.13
          */
@@ -7713,17 +8104,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
-       maximum.
-
-       The server may return fewer than the specified number of results.
+       maximum. The server may return fewer than the specified number of results.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -7731,9 +8118,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -7742,17 +8127,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
+       results should be returned. The list request must be otherwise identical to the one that resulted
+       in this token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -7760,9 +8143,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -7775,12 +8157,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Updates one or more fields of a topic.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding topic
-       * or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
+       * Updates one or more fields of a topic. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding topic or
+       * for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
        * requested course or topic does not exist
        *
        * Create a request for the method "topics.patch".
@@ -7788,8 +8167,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+       * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
        * @param id Identifier of the topic.
        * @param content the {@link com.google.api.services.classroom.model.Topic}
@@ -7806,13 +8184,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/courses/{courseId}/topics/{id}";
 
         /**
-         * Updates one or more fields of a topic.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding
-         * topic or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if
-         * the requested course or topic does not exist
+         * Updates one or more fields of a topic. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting developer project did not create the corresponding topic
+         * or for access errors. * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the
+         * requested course or topic does not exist
          *
          * Create a request for the method "topics.patch".
          *
@@ -7822,8 +8197,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param courseId Identifier of the course.
-      This identifier can be either the Classroom-assigned identifier or an
+         * @param courseId Identifier of the course. This identifier can be either the Classroom-assigned identifier or an
        *        alias.
          * @param id Identifier of the topic.
          * @param content the {@link com.google.api.services.classroom.model.Topic}
@@ -7934,11 +8308,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * update. The update fails if invalid fields are specified. If a field supports empty
          * values, it can be cleared by specifying it in the update mask and not in the Topic
          * object. If a field that does not support empty values is included in the update mask and
-         * not set in the Topic object, an `INVALID_ARGUMENT` error will be returned.
-         *
-         * The following fields may be specified:
-         *
-         * * `name`
+         * not set in the Topic object, an `INVALID_ARGUMENT` error is returned. The following
+         * fields may be specified: * `name`
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -7947,11 +8318,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        The update fails if invalid fields are specified. If a field supports empty values, it can be
        cleared by specifying it in the update mask and not in the Topic object. If a field that does not
        support empty values is included in the update mask and not set in the Topic object, an
-       `INVALID_ARGUMENT` error will be returned.
-
-       The following fields may be specified:
-
-       * `name`
+       `INVALID_ARGUMENT` error is returned. The following fields may be specified: * `name`
          */
         public String getUpdateMask() {
           return updateMask;
@@ -7962,11 +8329,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * update. The update fails if invalid fields are specified. If a field supports empty
          * values, it can be cleared by specifying it in the update mask and not in the Topic
          * object. If a field that does not support empty values is included in the update mask and
-         * not set in the Topic object, an `INVALID_ARGUMENT` error will be returned.
-         *
-         * The following fields may be specified:
-         *
-         * * `name`
+         * not set in the Topic object, an `INVALID_ARGUMENT` error is returned. The following
+         * fields may be specified: * `name`
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -8004,14 +8368,12 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
     /**
      * Accepts an invitation, removing it and adding the invited user to the teachers or students (as
-     * appropriate) of the specified course. Only the invited user may accept an invitation.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` if the requesting user is not permitted to accept the requested invitation
-     * or for access errors. * `FAILED_PRECONDITION` for the following request errors:     *
-     * CourseMemberLimitReached     * CourseNotModifiable     * CourseTeacherLimitReached     *
-     * UserGroupsMembershipLimitReached * `NOT_FOUND` if no invitation exists with the requested ID.
+     * appropriate) of the specified course. Only the invited user may accept an invitation. This method
+     * returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted
+     * to accept the requested invitation or for access errors. * `FAILED_PRECONDITION` for the
+     * following request errors: * CourseMemberLimitReached * CourseNotModifiable *
+     * CourseTeacherLimitReached * UserGroupsMembershipLimitReached * `NOT_FOUND` if no invitation
+     * exists with the requested ID.
      *
      * Create a request for the method "invitations.accept".
      *
@@ -8033,14 +8395,12 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Accepts an invitation, removing it and adding the invited user to the teachers or students (as
-       * appropriate) of the specified course. Only the invited user may accept an invitation.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to accept the requested
-       * invitation or for access errors. * `FAILED_PRECONDITION` for the following request errors:
-       * * CourseMemberLimitReached     * CourseNotModifiable     * CourseTeacherLimitReached     *
-       * UserGroupsMembershipLimitReached * `NOT_FOUND` if no invitation exists with the requested ID.
+       * appropriate) of the specified course. Only the invited user may accept an invitation. This
+       * method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not
+       * permitted to accept the requested invitation or for access errors. * `FAILED_PRECONDITION` for
+       * the following request errors: * CourseMemberLimitReached * CourseNotModifiable *
+       * CourseTeacherLimitReached * UserGroupsMembershipLimitReached * `NOT_FOUND` if no invitation
+       * exists with the requested ID.
        *
        * Create a request for the method "invitations.accept".
        *
@@ -8136,12 +8496,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
     }
     /**
      * Creates an invitation. Only one invitation for a user and course may exist at a time. Delete and
-     * re-create an invitation to make changes.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` if the requesting user is not permitted to create invitations for this
-     * course or for access errors. * `NOT_FOUND` if the course or the user does not exist. *
+     * re-create an invitation to make changes. This method returns the following error codes: *
+     * `PERMISSION_DENIED` if the requesting user is not permitted to create invitations for this course
+     * or for access errors. * `NOT_FOUND` if the course or the user does not exist. *
      * `FAILED_PRECONDITION` if the requested user's account is disabled or if the user already has this
      * role or a role with greater permissions. * `ALREADY_EXISTS` if an invitation for the specified
      * user and course already exists.
@@ -8166,11 +8523,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Creates an invitation. Only one invitation for a user and course may exist at a time. Delete
-       * and re-create an invitation to make changes.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to create invitations for this
+       * and re-create an invitation to make changes. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to create invitations for this
        * course or for access errors. * `NOT_FOUND` if the course or the user does not exist. *
        * `FAILED_PRECONDITION` if the requested user's account is disabled or if the user already has
        * this role or a role with greater permissions. * `ALREADY_EXISTS` if an invitation for the
@@ -8252,12 +8606,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Deletes an invitation.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` if the requesting user is not permitted to delete the requested invitation
-     * or for access errors. * `NOT_FOUND` if no invitation exists with the requested ID.
+     * Deletes an invitation. This method returns the following error codes: * `PERMISSION_DENIED` if
+     * the requesting user is not permitted to delete the requested invitation or for access errors. *
+     * `NOT_FOUND` if no invitation exists with the requested ID.
      *
      * Create a request for the method "invitations.delete".
      *
@@ -8278,12 +8629,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1/invitations/{id}";
 
       /**
-       * Deletes an invitation.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to delete the requested
-       * invitation or for access errors. * `NOT_FOUND` if no invitation exists with the requested ID.
+       * Deletes an invitation. This method returns the following error codes: * `PERMISSION_DENIED` if
+       * the requesting user is not permitted to delete the requested invitation or for access errors. *
+       * `NOT_FOUND` if no invitation exists with the requested ID.
        *
        * Create a request for the method "invitations.delete".
        *
@@ -8378,12 +8726,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Returns an invitation.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` if the requesting user is not permitted to view the requested invitation or
-     * for access errors. * `NOT_FOUND` if no invitation exists with the requested ID.
+     * Returns an invitation. This method returns the following error codes: * `PERMISSION_DENIED` if
+     * the requesting user is not permitted to view the requested invitation or for access errors. *
+     * `NOT_FOUND` if no invitation exists with the requested ID.
      *
      * Create a request for the method "invitations.get".
      *
@@ -8404,12 +8749,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1/invitations/{id}";
 
       /**
-       * Returns an invitation.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to view the requested invitation
-       * or for access errors. * `NOT_FOUND` if no invitation exists with the requested ID.
+       * Returns an invitation. This method returns the following error codes: * `PERMISSION_DENIED` if
+       * the requesting user is not permitted to view the requested invitation or for access errors. *
+       * `NOT_FOUND` if no invitation exists with the requested ID.
        *
        * Create a request for the method "invitations.get".
        *
@@ -8514,13 +8856,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
     }
     /**
      * Returns a list of invitations that the requesting user is permitted to view, restricted to those
-     * that match the list request.
-     *
-     * *Note:* At least one of `user_id` or `course_id` must be supplied. Both fields can be supplied.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` for access errors.
+     * that match the list request. *Note:* At least one of `user_id` or `course_id` must be supplied.
+     * Both fields can be supplied. This method returns the following error codes: * `PERMISSION_DENIED`
+     * for access errors.
      *
      * Create a request for the method "invitations.list".
      *
@@ -8541,13 +8879,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Returns a list of invitations that the requesting user is permitted to view, restricted to
-       * those that match the list request.
-       *
-       * *Note:* At least one of `user_id` or `course_id` must be supplied. Both fields can be supplied.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` for access errors.
+       * those that match the list request. *Note:* At least one of `user_id` or `course_id` must be
+       * supplied. Both fields can be supplied. This method returns the following error codes: *
+       * `PERMISSION_DENIED` for access errors.
        *
        * Create a request for the method "invitations.list".
        *
@@ -8627,9 +8961,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Restricts returned invitations to those for a course with the specified identifier.
-       */
+      /** Restricts returned invitations to those for a course with the specified identifier. */
       @com.google.api.client.util.Key
       private java.lang.String courseId;
 
@@ -8639,34 +8971,29 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         return courseId;
       }
 
-      /**
-       * Restricts returned invitations to those for a course with the specified identifier.
-       */
+      /** Restricts returned invitations to those for a course with the specified identifier. */
       public List setCourseId(java.lang.String courseId) {
         this.courseId = courseId;
         return this;
       }
 
       /**
-       * Maximum number of items to return. Zero means no maximum.
-       *
-       * The server may return fewer than the specified number of results.
+       * Maximum number of items to return. The default is 500 if unspecified or `0`. The server may
+       * return fewer than the specified number of results.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Maximum number of items to return. Zero means no maximum.
-
-     The server may return fewer than the specified number of results.
+      /** Maximum number of items to return. The default is 500 if unspecified or `0`. The server may return
+     fewer than the specified number of results.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Maximum number of items to return. Zero means no maximum.
-       *
-       * The server may return fewer than the specified number of results.
+       * Maximum number of items to return. The default is 500 if unspecified or `0`. The server may
+       * return fewer than the specified number of results.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -8675,17 +9002,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * nextPageToken value returned from a previous list call, indicating that the subsequent page
-       * of results should be returned.
-       *
-       * The list request must be otherwise identical to the one that resulted in this token.
+       * of results should be returned. The list request must be otherwise identical to the one that
+       * resulted in this token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-     results should be returned.
-
-     The list request must be otherwise identical to the one that resulted in this token.
+     results should be returned. The list request must be otherwise identical to the one that resulted
+     in this token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -8693,9 +9018,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * nextPageToken value returned from a previous list call, indicating that the subsequent page
-       * of results should be returned.
-       *
-       * The list request must be otherwise identical to the one that resulted in this token.
+       * of results should be returned. The list request must be otherwise identical to the one that
+       * resulted in this token.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -8704,19 +9028,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Restricts returned invitations to those for a specific user. The identifier can be one of
-       * the following:
-       *
-       * * the numeric identifier for the user * the email address of the user * the string literal
-       * `"me"`, indicating the requesting user
+       * the following: * the numeric identifier for the user * the email address of the user * the
+       * string literal `"me"`, indicating the requesting user
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
       /** Restricts returned invitations to those for a specific user. The identifier can be one of the
-     following:
-
-     * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-     indicating the requesting user
+     following: * the numeric identifier for the user * the email address of the user * the string
+     literal `"me"`, indicating the requesting user
        */
       public java.lang.String getUserId() {
         return userId;
@@ -8724,10 +9044,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Restricts returned invitations to those for a specific user. The identifier can be one of
-       * the following:
-       *
-       * * the numeric identifier for the user * the email address of the user * the string literal
-       * `"me"`, indicating the requesting user
+       * the following: * the numeric identifier for the user * the email address of the user * the
+       * string literal `"me"`, indicating the requesting user
        */
       public List setUserId(java.lang.String userId) {
         this.userId = userId;
@@ -8764,28 +9082,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
     /**
      * Creates a `Registration`, causing Classroom to start sending notifications from the provided
-     * `feed` to the destination provided in `cloudPubSubTopic`.
-     *
-     * Returns the created `Registration`. Currently, this will be the same as the argument, but with
-     * server-assigned fields such as `expiry_time` and `id` filled in.
-     *
-     * Note that any value specified for the `expiry_time` or `id` fields will be ignored.
-     *
-     * While Classroom may validate the `cloudPubSubTopic` and return errors on a best effort basis, it
-     * is the caller's responsibility to ensure that it exists and that Classroom has permission to
-     * publish to it.
-     *
-     * This method may return the following error codes:
-     *
-     * * `PERMISSION_DENIED` if:     * the authenticated user does not have permission to receive
-     * notifications from the requested field; or     * the credential provided does not include the
-     * appropriate scope for       the requested feed.     * another access error is encountered. *
-     * `INVALID_ARGUMENT` if:     * no `cloudPubsubTopic` is specified, or the specified
-     * `cloudPubsubTopic` is not valid; or     * no `feed` is specified, or the specified `feed` is not
-     * valid. * `NOT_FOUND` if:     * the specified `feed` cannot be located, or the requesting user
-     * does       not have permission to determine whether or not it exists; or     * the specified
-     * `cloudPubsubTopic` cannot be located, or Classroom has       not been granted permission to
-     * publish to it.
+     * `feed` to the destination provided in `cloudPubSubTopic`. Returns the created `Registration`.
+     * Currently, this will be the same as the argument, but with server-assigned fields such as
+     * `expiry_time` and `id` filled in. Note that any value specified for the `expiry_time` or `id`
+     * fields will be ignored. While Classroom may validate the `cloudPubSubTopic` and return errors on
+     * a best effort basis, it is the caller's responsibility to ensure that it exists and that
+     * Classroom has permission to publish to it. This method may return the following error codes: *
+     * `PERMISSION_DENIED` if: * the authenticated user does not have permission to receive
+     * notifications from the requested field; or * the current user has not granted access to the
+     * current Cloud project with the appropriate scope for the requested feed. Note that domain-wide
+     * delegation of authority is not currently supported for this purpose. If the request has the
+     * appropriate scope, but no grant exists, a Request Errors is returned. * another access error is
+     * encountered. * `INVALID_ARGUMENT` if: * no `cloudPubsubTopic` is specified, or the specified
+     * `cloudPubsubTopic` is not valid; or * no `feed` is specified, or the specified `feed` is not
+     * valid. * `NOT_FOUND` if: * the specified `feed` cannot be located, or the requesting user does
+     * not have permission to determine whether or not it exists; or * the specified `cloudPubsubTopic`
+     * cannot be located, or Classroom has not been granted permission to publish to it.
      *
      * Create a request for the method "registrations.create".
      *
@@ -8807,28 +9119,23 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Creates a `Registration`, causing Classroom to start sending notifications from the provided
-       * `feed` to the destination provided in `cloudPubSubTopic`.
-       *
-       * Returns the created `Registration`. Currently, this will be the same as the argument, but with
-       * server-assigned fields such as `expiry_time` and `id` filled in.
-       *
-       * Note that any value specified for the `expiry_time` or `id` fields will be ignored.
-       *
-       * While Classroom may validate the `cloudPubSubTopic` and return errors on a best effort basis,
-       * it is the caller's responsibility to ensure that it exists and that Classroom has permission to
-       * publish to it.
-       *
-       * This method may return the following error codes:
-       *
-       * * `PERMISSION_DENIED` if:     * the authenticated user does not have permission to receive
-       * notifications from the requested field; or     * the credential provided does not include the
-       * appropriate scope for       the requested feed.     * another access error is encountered. *
-       * `INVALID_ARGUMENT` if:     * no `cloudPubsubTopic` is specified, or the specified
-       * `cloudPubsubTopic` is not valid; or     * no `feed` is specified, or the specified `feed` is
-       * not valid. * `NOT_FOUND` if:     * the specified `feed` cannot be located, or the requesting
-       * user does       not have permission to determine whether or not it exists; or     * the
-       * specified `cloudPubsubTopic` cannot be located, or Classroom has       not been granted
-       * permission to publish to it.
+       * `feed` to the destination provided in `cloudPubSubTopic`. Returns the created `Registration`.
+       * Currently, this will be the same as the argument, but with server-assigned fields such as
+       * `expiry_time` and `id` filled in. Note that any value specified for the `expiry_time` or `id`
+       * fields will be ignored. While Classroom may validate the `cloudPubSubTopic` and return errors
+       * on a best effort basis, it is the caller's responsibility to ensure that it exists and that
+       * Classroom has permission to publish to it. This method may return the following error codes: *
+       * `PERMISSION_DENIED` if: * the authenticated user does not have permission to receive
+       * notifications from the requested field; or * the current user has not granted access to the
+       * current Cloud project with the appropriate scope for the requested feed. Note that domain-wide
+       * delegation of authority is not currently supported for this purpose. If the request has the
+       * appropriate scope, but no grant exists, a Request Errors is returned. * another access error is
+       * encountered. * `INVALID_ARGUMENT` if: * no `cloudPubsubTopic` is specified, or the specified
+       * `cloudPubsubTopic` is not valid; or * no `feed` is specified, or the specified `feed` is not
+       * valid. * `NOT_FOUND` if: * the specified `feed` cannot be located, or the requesting user does
+       * not have permission to determine whether or not it exists; or * the specified
+       * `cloudPubsubTopic` cannot be located, or Classroom has not been granted permission to publish
+       * to it.
        *
        * Create a request for the method "registrations.create".
        *
@@ -9047,24 +9354,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
   public class UserProfiles {
 
     /**
-     * Returns a user profile.
-     *
-     * This method returns the following error codes:
-     *
-     * * `PERMISSION_DENIED` if the requesting user is not permitted to access this user profile, if no
-     * profile exists with the requested ID, or for access errors.
+     * Returns a user profile. This method returns the following error codes: * `PERMISSION_DENIED` if
+     * the requesting user is not permitted to access this user profile, if no profile exists with the
+     * requested ID, or for access errors.
      *
      * Create a request for the method "userProfiles.get".
      *
      * This request holds the parameters needed by the classroom server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param userId Identifier of the profile to return. The identifier can be one of the
-    following:
-    * the numeric
-     *        identifier for the user
-    * the email address of the user
-    * the string literal `"me"`,
+     * @param userId Identifier of the profile to return. The identifier can be one of the following: * the numeric
+     *        identifier for the user * the email address of the user * the string literal `"me"`,
      *        indicating the requesting user
      * @return the request
      */
@@ -9079,12 +9379,9 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "v1/userProfiles/{userId}";
 
       /**
-       * Returns a user profile.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to access this user profile, if
-       * no profile exists with the requested ID, or for access errors.
+       * Returns a user profile. This method returns the following error codes: * `PERMISSION_DENIED` if
+       * the requesting user is not permitted to access this user profile, if no profile exists with the
+       * requested ID, or for access errors.
        *
        * Create a request for the method "userProfiles.get".
        *
@@ -9093,12 +9390,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param userId Identifier of the profile to return. The identifier can be one of the
-    following:
-    * the numeric
-     *        identifier for the user
-    * the email address of the user
-    * the string literal `"me"`,
+       * @param userId Identifier of the profile to return. The identifier can be one of the following: * the numeric
+     *        identifier for the user * the email address of the user * the string literal `"me"`,
      *        indicating the requesting user
        * @since 1.13
        */
@@ -9173,27 +9466,24 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Identifier of the profile to return. The identifier can be one of the following:
-       *
-       * * the numeric identifier for the user * the email address of the user * the string literal
+       * Identifier of the profile to return. The identifier can be one of the following: * the
+       * numeric identifier for the user * the email address of the user * the string literal
        * `"me"`, indicating the requesting user
        */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** Identifier of the profile to return. The identifier can be one of the following:
-
-     * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-     indicating the requesting user
+      /** Identifier of the profile to return. The identifier can be one of the following: * the numeric
+     identifier for the user * the email address of the user * the string literal `"me"`, indicating the
+     requesting user
        */
       public java.lang.String getUserId() {
         return userId;
       }
 
       /**
-       * Identifier of the profile to return. The identifier can be one of the following:
-       *
-       * * the numeric identifier for the user * the email address of the user * the string literal
+       * Identifier of the profile to return. The identifier can be one of the following: * the
+       * numeric identifier for the user * the email address of the user * the string literal
        * `"me"`, indicating the requesting user
        */
       public Get setUserId(java.lang.String userId) {
@@ -9229,29 +9519,23 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Creates a guardian invitation, and sends an email to the guardian asking them to confirm that
-       * they are the student's guardian.
-       *
-       * Once the guardian accepts the invitation, their `state` will change to `COMPLETED` and they will
-       * start receiving guardian notifications. A `Guardian` resource will also be created to represent
-       * the active guardian.
-       *
-       * The request object must have the `student_id` and `invited_email_address` fields set. Failing to
-       * set these fields, or setting any other fields in the request, will result in an error.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the current user does not have permission to   manage guardians, if the
-       * guardian in question has already rejected   too many requests for that student, if guardians are
-       * not enabled for the   domain in question, or for other access errors. * `RESOURCE_EXHAUSTED` if
-       * the student or guardian has exceeded the guardian   link limit. * `INVALID_ARGUMENT` if the
-       * guardian email address is not valid (for   example, if it is too long), or if the format of the
-       * student ID provided   cannot be recognized (it is not an email address, nor a `user_id` from
-       * this API). This error will also be returned if read-only fields are set,   or if the `state`
-       * field is set to to a value other than `PENDING`. * `NOT_FOUND` if the student ID provided is a
-       * valid student ID, but   Classroom has no record of that student. * `ALREADY_EXISTS` if there is
-       * already a pending guardian invitation for   the student and `invited_email_address` provided, or
-       * if the provided   `invited_email_address` matches the Google account of an existing   `Guardian`
-       * for this user.
+       * they are the student's guardian. Once the guardian accepts the invitation, their `state` will
+       * change to `COMPLETED` and they will start receiving guardian notifications. A `Guardian` resource
+       * will also be created to represent the active guardian. The request object must have the
+       * `student_id` and `invited_email_address` fields set. Failing to set these fields, or setting any
+       * other fields in the request, will result in an error. This method returns the following error
+       * codes: * `PERMISSION_DENIED` if the current user does not have permission to manage guardians, if
+       * the guardian in question has already rejected too many requests for that student, if guardians
+       * are not enabled for the domain in question, or for other access errors. * `RESOURCE_EXHAUSTED` if
+       * the student or guardian has exceeded the guardian link limit. * `INVALID_ARGUMENT` if the
+       * guardian email address is not valid (for example, if it is too long), or if the format of the
+       * student ID provided cannot be recognized (it is not an email address, nor a `user_id` from this
+       * API). This error will also be returned if read-only fields are set, or if the `state` field is
+       * set to to a value other than `PENDING`. * `NOT_FOUND` if the student ID provided is a valid
+       * student ID, but Classroom has no record of that student. * `ALREADY_EXISTS` if there is already a
+       * pending guardian invitation for the student and `invited_email_address` provided, or if the
+       * provided `invited_email_address` matches the Google account of an existing `Guardian` for this
+       * user.
        *
        * Create a request for the method "guardianInvitations.create".
        *
@@ -9274,29 +9558,23 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Creates a guardian invitation, and sends an email to the guardian asking them to confirm that
-         * they are the student's guardian.
-         *
-         * Once the guardian accepts the invitation, their `state` will change to `COMPLETED` and they
-         * will start receiving guardian notifications. A `Guardian` resource will also be created to
-         * represent the active guardian.
-         *
-         * The request object must have the `student_id` and `invited_email_address` fields set. Failing
-         * to set these fields, or setting any other fields in the request, will result in an error.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the current user does not have permission to   manage guardians, if
-         * the guardian in question has already rejected   too many requests for that student, if
-         * guardians are not enabled for the   domain in question, or for other access errors. *
-         * `RESOURCE_EXHAUSTED` if the student or guardian has exceeded the guardian   link limit. *
-         * `INVALID_ARGUMENT` if the guardian email address is not valid (for   example, if it is too
-         * long), or if the format of the student ID provided   cannot be recognized (it is not an email
-         * address, nor a `user_id` from   this API). This error will also be returned if read-only fields
-         * are set,   or if the `state` field is set to to a value other than `PENDING`. * `NOT_FOUND` if
-         * the student ID provided is a valid student ID, but   Classroom has no record of that student. *
-         * `ALREADY_EXISTS` if there is already a pending guardian invitation for   the student and
-         * `invited_email_address` provided, or if the provided   `invited_email_address` matches the
-         * Google account of an existing   `Guardian` for this user.
+         * they are the student's guardian. Once the guardian accepts the invitation, their `state` will
+         * change to `COMPLETED` and they will start receiving guardian notifications. A `Guardian`
+         * resource will also be created to represent the active guardian. The request object must have
+         * the `student_id` and `invited_email_address` fields set. Failing to set these fields, or
+         * setting any other fields in the request, will result in an error. This method returns the
+         * following error codes: * `PERMISSION_DENIED` if the current user does not have permission to
+         * manage guardians, if the guardian in question has already rejected too many requests for that
+         * student, if guardians are not enabled for the domain in question, or for other access errors. *
+         * `RESOURCE_EXHAUSTED` if the student or guardian has exceeded the guardian link limit. *
+         * `INVALID_ARGUMENT` if the guardian email address is not valid (for example, if it is too long),
+         * or if the format of the student ID provided cannot be recognized (it is not an email address,
+         * nor a `user_id` from this API). This error will also be returned if read-only fields are set,
+         * or if the `state` field is set to to a value other than `PENDING`. * `NOT_FOUND` if the student
+         * ID provided is a valid student ID, but Classroom has no record of that student. *
+         * `ALREADY_EXISTS` if there is already a pending guardian invitation for the student and
+         * `invited_email_address` provided, or if the provided `invited_email_address` matches the Google
+         * account of an existing `Guardian` for this user.
          *
          * Create a request for the method "guardianInvitations.create".
          *
@@ -9392,17 +9670,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a specific guardian invitation.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the requesting user is not permitted to view   guardian invitations for
-       * the student identified by the `student_id`, if   guardians are not enabled for the domain in
-       * question, or for other   access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but
-       * its format cannot   be recognized (it is not an email address, nor a `student_id` from the   API,
-       * nor the literal string `me`). * `NOT_FOUND` if Classroom cannot find any record of the given
-       * student or   `invitation_id`. May also be returned if the student exists, but the   requesting
-       * user does not have access to see that student.
+       * Returns a specific guardian invitation. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to view guardian invitations for the
+       * student identified by the `student_id`, if guardians are not enabled for the domain in question,
+       * or for other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but its format
+       * cannot be recognized (it is not an email address, nor a `student_id` from the API, nor the
+       * literal string `me`). * `NOT_FOUND` if Classroom cannot find any record of the given student or
+       * `invitation_id`. May also be returned if the student exists, but the requesting user does not
+       * have access to see that student.
        *
        * Create a request for the method "guardianInvitations.get".
        *
@@ -9424,17 +9699,14 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/userProfiles/{studentId}/guardianInvitations/{invitationId}";
 
         /**
-         * Returns a specific guardian invitation.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the requesting user is not permitted to view   guardian invitations
-         * for the student identified by the `student_id`, if   guardians are not enabled for the domain
-         * in question, or for other   access errors. * `INVALID_ARGUMENT` if a `student_id` is specified,
-         * but its format cannot   be recognized (it is not an email address, nor a `student_id` from the
-         * API, nor the literal string `me`). * `NOT_FOUND` if Classroom cannot find any record of the
-         * given student or   `invitation_id`. May also be returned if the student exists, but the
-         * requesting user does not have access to see that student.
+         * Returns a specific guardian invitation. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if the requesting user is not permitted to view guardian invitations for
+         * the student identified by the `student_id`, if guardians are not enabled for the domain in
+         * question, or for other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but
+         * its format cannot be recognized (it is not an email address, nor a `student_id` from the API,
+         * nor the literal string `me`). * `NOT_FOUND` if Classroom cannot find any record of the given
+         * student or `invitation_id`. May also be returned if the student exists, but the requesting user
+         * does not have access to see that student.
          *
          * Create a request for the method "guardianInvitations.get".
          *
@@ -9557,36 +9829,26 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
       /**
        * Returns a list of guardian invitations that the requesting user is permitted to view, filtered by
-       * the parameters provided.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if a `student_id` is specified, and the requesting   user is not permitted
-       * to view guardian invitations for that student, if   `"-"` is specified as the `student_id` and
-       * the user is not a domain   administrator, if guardians are not enabled for the domain in
-       * question,   or for other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but
-       * its format cannot   be recognized (it is not an email address, nor a `student_id` from the   API,
-       * nor the literal string `me`). May also be returned if an invalid   `page_token` or `state` is
-       * provided. * `NOT_FOUND` if a `student_id` is specified, and its format can be   recognized, but
-       * Classroom has no record of that student.
+       * the parameters provided. This method returns the following error codes: * `PERMISSION_DENIED` if
+       * a `student_id` is specified, and the requesting user is not permitted to view guardian
+       * invitations for that student, if `"-"` is specified as the `student_id` and the user is not a
+       * domain administrator, if guardians are not enabled for the domain in question, or for other
+       * access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but its format cannot be
+       * recognized (it is not an email address, nor a `student_id` from the API, nor the literal string
+       * `me`). May also be returned if an invalid `page_token` or `state` is provided. * `NOT_FOUND` if a
+       * `student_id` is specified, and its format can be recognized, but Classroom has no record of that
+       * student.
        *
        * Create a request for the method "guardianInvitations.list".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param studentId The ID of the student whose guardian invitations are to be returned.
-      The identifier can be one of
-       *        the following:
-      * the numeric identifier for the user
-      * the email address of the user
-      * the
-       *        string literal `"me"`, indicating the requesting user
-      * the string literal `"-"`,
-       *        indicating that results should be returned for
-        all students that the requesting user is
-       *        permitted to view guardian
-        invitations.
+       * @param studentId The ID of the student whose guardian invitations are to be returned. The identifier can be one of
+       *        the following: * the numeric identifier for the user * the email address of the user * the
+       *        string literal `"me"`, indicating the requesting user * the string literal `"-"`,
+       *        indicating that results should be returned for all students that the requesting user is
+       *        permitted to view guardian invitations.
        * @return the request
        */
       public List list(java.lang.String studentId) throws java.io.IOException {
@@ -9601,18 +9863,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Returns a list of guardian invitations that the requesting user is permitted to view, filtered
-         * by the parameters provided.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if a `student_id` is specified, and the requesting   user is not
-         * permitted to view guardian invitations for that student, if   `"-"` is specified as the
-         * `student_id` and the user is not a domain   administrator, if guardians are not enabled for the
-         * domain in question,   or for other access errors. * `INVALID_ARGUMENT` if a `student_id` is
-         * specified, but its format cannot   be recognized (it is not an email address, nor a
-         * `student_id` from the   API, nor the literal string `me`). May also be returned if an invalid
-         * `page_token` or `state` is provided. * `NOT_FOUND` if a `student_id` is specified, and its
-         * format can be   recognized, but Classroom has no record of that student.
+         * by the parameters provided. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if a `student_id` is specified, and the requesting user is not permitted to
+         * view guardian invitations for that student, if `"-"` is specified as the `student_id` and the
+         * user is not a domain administrator, if guardians are not enabled for the domain in question, or
+         * for other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but its format
+         * cannot be recognized (it is not an email address, nor a `student_id` from the API, nor the
+         * literal string `me`). May also be returned if an invalid `page_token` or `state` is provided. *
+         * `NOT_FOUND` if a `student_id` is specified, and its format can be recognized, but Classroom has
+         * no record of that student.
          *
          * Create a request for the method "guardianInvitations.list".
          *
@@ -9621,18 +9880,11 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param studentId The ID of the student whose guardian invitations are to be returned.
-      The identifier can be one of
-       *        the following:
-      * the numeric identifier for the user
-      * the email address of the user
-      * the
-       *        string literal `"me"`, indicating the requesting user
-      * the string literal `"-"`,
-       *        indicating that results should be returned for
-        all students that the requesting user is
-       *        permitted to view guardian
-        invitations.
+         * @param studentId The ID of the student whose guardian invitations are to be returned. The identifier can be one of
+       *        the following: * the numeric identifier for the user * the email address of the user * the
+       *        string literal `"me"`, indicating the requesting user * the string literal `"-"`,
+       *        indicating that results should be returned for all students that the requesting user is
+       *        permitted to view guardian invitations.
          * @since 1.13
          */
         protected List(java.lang.String studentId) {
@@ -9707,22 +9959,19 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * The ID of the student whose guardian invitations are to be returned. The identifier can
-         * be one of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user * the string literal `"-"`, indicating
-         * that results should be returned for all students that the requesting user is permitted to
-         * view guardian invitations.
+         * be one of the following: * the numeric identifier for the user * the email address of the
+         * user * the string literal `"me"`, indicating the requesting user * the string literal
+         * `"-"`, indicating that results should be returned for all students that the requesting
+         * user is permitted to view guardian invitations.
          */
         @com.google.api.client.util.Key
         private java.lang.String studentId;
 
         /** The ID of the student whose guardian invitations are to be returned. The identifier can be one of
-       the following:
-
-       * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-       indicating the requesting user * the string literal `"-"`, indicating that results should be
-       returned for all students that the requesting user is permitted to view guardian invitations.
+       the following: * the numeric identifier for the user * the email address of the user * the string
+       literal `"me"`, indicating the requesting user * the string literal `"-"`, indicating that results
+       should be returned for all students that the requesting user is permitted to view guardian
+       invitations.
          */
         public java.lang.String getStudentId() {
           return studentId;
@@ -9730,33 +9979,27 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * The ID of the student whose guardian invitations are to be returned. The identifier can
-         * be one of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user * the string literal `"-"`, indicating
-         * that results should be returned for all students that the requesting user is permitted to
-         * view guardian invitations.
+         * be one of the following: * the numeric identifier for the user * the email address of the
+         * user * the string literal `"me"`, indicating the requesting user * the string literal
+         * `"-"`, indicating that results should be returned for all students that the requesting
+         * user is permitted to view guardian invitations.
          */
         public List setStudentId(java.lang.String studentId) {
           this.studentId = studentId;
           return this;
         }
 
-        /**
-         * If specified, only results with the specified `invited_email_address` will be returned.
-         */
+        /** If specified, only results with the specified `invited_email_address` are returned. */
         @com.google.api.client.util.Key
         private java.lang.String invitedEmailAddress;
 
-        /** If specified, only results with the specified `invited_email_address` will be returned.
+        /** If specified, only results with the specified `invited_email_address` are returned.
          */
         public java.lang.String getInvitedEmailAddress() {
           return invitedEmailAddress;
         }
 
-        /**
-         * If specified, only results with the specified `invited_email_address` will be returned.
-         */
+        /** If specified, only results with the specified `invited_email_address` are returned. */
         public List setInvitedEmailAddress(java.lang.String invitedEmailAddress) {
           this.invitedEmailAddress = invitedEmailAddress;
           return this;
@@ -9764,17 +10007,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
-       maximum.
-
-       The server may return fewer than the specified number of results.
+       maximum. The server may return fewer than the specified number of results.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -9782,9 +10021,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -9793,17 +10030,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
+       results should be returned. The list request must be otherwise identical to the one that resulted
+       in this token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -9811,9 +10046,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -9821,22 +10055,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * If specified, only results with the specified `state` values will be returned. Otherwise,
-         * results with a `state` of `PENDING` will be returned.
+         * If specified, only results with the specified `state` values are returned. Otherwise,
+         * results with a `state` of `PENDING` are returned.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> states;
 
-        /** If specified, only results with the specified `state` values will be returned. Otherwise, results
-       with a `state` of `PENDING` will be returned.
+        /** If specified, only results with the specified `state` values are returned. Otherwise, results with
+       a `state` of `PENDING` are returned.
          */
         public java.util.List<java.lang.String> getStates() {
           return states;
         }
 
         /**
-         * If specified, only results with the specified `state` values will be returned. Otherwise,
-         * results with a `state` of `PENDING` will be returned.
+         * If specified, only results with the specified `state` values are returned. Otherwise,
+         * results with a `state` of `PENDING` are returned.
          */
         public List setStates(java.util.List<java.lang.String> states) {
           this.states = states;
@@ -9849,21 +10083,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Modifies a guardian invitation.
-       *
-       * Currently, the only valid modification is to change the `state` from `PENDING` to `COMPLETE`.
-       * This has the effect of withdrawing the invitation.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if the current user does not have permission to   manage guardians, if
-       * guardians are not enabled for the domain in question   or for other access errors. *
-       * `FAILED_PRECONDITION` if the guardian link is not in the `PENDING` state. * `INVALID_ARGUMENT` if
-       * the format of the student ID provided   cannot be recognized (it is not an email address, nor a
-       * `user_id` from   this API), or if the passed `GuardianInvitation` has a `state` other than
-       * `COMPLETE`, or if it modifies fields other than `state`. * `NOT_FOUND` if the student ID provided
-       * is a valid student ID, but   Classroom has no record of that student, or if the `id` field does
-       * not   refer to a guardian invitation known to Classroom.
+       * Modifies a guardian invitation. Currently, the only valid modification is to change the `state`
+       * from `PENDING` to `COMPLETE`. This has the effect of withdrawing the invitation. This method
+       * returns the following error codes: * `PERMISSION_DENIED` if the current user does not have
+       * permission to manage guardians, if guardians are not enabled for the domain in question or for
+       * other access errors. * `FAILED_PRECONDITION` if the guardian link is not in the `PENDING` state.
+       * * `INVALID_ARGUMENT` if the format of the student ID provided cannot be recognized (it is not an
+       * email address, nor a `user_id` from this API), or if the passed `GuardianInvitation` has a
+       * `state` other than `COMPLETE`, or if it modifies fields other than `state`. * `NOT_FOUND` if the
+       * student ID provided is a valid student ID, but Classroom has no record of that student, or if the
+       * `id` field does not refer to a guardian invitation known to Classroom.
        *
        * Create a request for the method "guardianInvitations.patch".
        *
@@ -9886,21 +10115,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/userProfiles/{studentId}/guardianInvitations/{invitationId}";
 
         /**
-         * Modifies a guardian invitation.
-         *
-         * Currently, the only valid modification is to change the `state` from `PENDING` to `COMPLETE`.
-         * This has the effect of withdrawing the invitation.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if the current user does not have permission to   manage guardians, if
-         * guardians are not enabled for the domain in question   or for other access errors. *
-         * `FAILED_PRECONDITION` if the guardian link is not in the `PENDING` state. * `INVALID_ARGUMENT`
-         * if the format of the student ID provided   cannot be recognized (it is not an email address,
-         * nor a `user_id` from   this API), or if the passed `GuardianInvitation` has a `state` other
-         * than   `COMPLETE`, or if it modifies fields other than `state`. * `NOT_FOUND` if the student ID
-         * provided is a valid student ID, but   Classroom has no record of that student, or if the `id`
-         * field does not   refer to a guardian invitation known to Classroom.
+         * Modifies a guardian invitation. Currently, the only valid modification is to change the `state`
+         * from `PENDING` to `COMPLETE`. This has the effect of withdrawing the invitation. This method
+         * returns the following error codes: * `PERMISSION_DENIED` if the current user does not have
+         * permission to manage guardians, if guardians are not enabled for the domain in question or for
+         * other access errors. * `FAILED_PRECONDITION` if the guardian link is not in the `PENDING`
+         * state. * `INVALID_ARGUMENT` if the format of the student ID provided cannot be recognized (it
+         * is not an email address, nor a `user_id` from this API), or if the passed `GuardianInvitation`
+         * has a `state` other than `COMPLETE`, or if it modifies fields other than `state`. * `NOT_FOUND`
+         * if the student ID provided is a valid student ID, but Classroom has no record of that student,
+         * or if the `id` field does not refer to a guardian invitation known to Classroom.
          *
          * Create a request for the method "guardianInvitations.patch".
          *
@@ -10010,26 +10234,16 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Mask that identifies which fields on the course to update. This field is required to do
-         * an update. The update will fail if invalid fields are specified. The following fields are
-         * valid:
-         *
-         * * `state`
-         *
-         * When set in a query parameter, this field should be specified as
-         *
+         * an update. The update fails if invalid fields are specified. The following fields are
+         * valid: * `state` When set in a query parameter, this field should be specified as
          * `updateMask=,,...`
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Mask that identifies which fields on the course to update. This field is required to do an update.
-       The update will fail if invalid fields are specified. The following fields are valid:
-
-       * `state`
-
-       When set in a query parameter, this field should be specified as
-
-       `updateMask=,,...`
+       The update fails if invalid fields are specified. The following fields are valid: * `state` When
+       set in a query parameter, this field should be specified as `updateMask=,,...`
          */
         public String getUpdateMask() {
           return updateMask;
@@ -10037,13 +10251,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Mask that identifies which fields on the course to update. This field is required to do
-         * an update. The update will fail if invalid fields are specified. The following fields are
-         * valid:
-         *
-         * * `state`
-         *
-         * When set in a query parameter, this field should be specified as
-         *
+         * an update. The update fails if invalid fields are specified. The following fields are
+         * valid: * `state` When set in a query parameter, this field should be specified as
          * `updateMask=,,...`
          */
         public Patch setUpdateMask(String updateMask) {
@@ -10079,31 +10288,23 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
     public class Guardians {
 
       /**
-       * Deletes a guardian.
-       *
-       * The guardian will no longer receive guardian notifications and the guardian will no longer be
-       * accessible via the API.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if no user that matches the provided `student_id`   is visible to the
-       * requesting user, if the requesting user is not   permitted to manage guardians for the student
-       * identified by the   `student_id`, if guardians are not enabled for the domain in question,   or
-       * for other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but its format
-       * cannot   be recognized (it is not an email address, nor a `student_id` from the   API). *
-       * `NOT_FOUND` if the requesting user is permitted to modify guardians for   the requested
-       * `student_id`, but no `Guardian` record exists for that   student with the provided `guardian_id`.
+       * Deletes a guardian. The guardian will no longer receive guardian notifications and the guardian
+       * will no longer be accessible via the API. This method returns the following error codes: *
+       * `PERMISSION_DENIED` if no user that matches the provided `student_id` is visible to the
+       * requesting user, if the requesting user is not permitted to manage guardians for the student
+       * identified by the `student_id`, if guardians are not enabled for the domain in question, or for
+       * other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but its format cannot
+       * be recognized (it is not an email address, nor a `student_id` from the API). * `NOT_FOUND` if the
+       * requesting user is permitted to modify guardians for the requested `student_id`, but no
+       * `Guardian` record exists for that student with the provided `guardian_id`.
        *
        * Create a request for the method "guardians.delete".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param studentId The student whose guardian is to be deleted. One of the following:
-      * the numeric identifier for the
-       *        user
-      * the email address of the user
-      * the string literal `"me"`, indicating the
+       * @param studentId The student whose guardian is to be deleted. One of the following: * the numeric identifier for the
+       *        user * the email address of the user * the string literal `"me"`, indicating the
        *        requesting user
        * @param guardianId The `id` field from a `Guardian`.
        * @return the request
@@ -10119,21 +10320,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/userProfiles/{studentId}/guardians/{guardianId}";
 
         /**
-         * Deletes a guardian.
-         *
-         * The guardian will no longer receive guardian notifications and the guardian will no longer be
-         * accessible via the API.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if no user that matches the provided `student_id`   is visible to the
-         * requesting user, if the requesting user is not   permitted to manage guardians for the student
-         * identified by the   `student_id`, if guardians are not enabled for the domain in question,   or
-         * for other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but its format
-         * cannot   be recognized (it is not an email address, nor a `student_id` from the   API). *
-         * `NOT_FOUND` if the requesting user is permitted to modify guardians for   the requested
-         * `student_id`, but no `Guardian` record exists for that   student with the provided
-         * `guardian_id`.
+         * Deletes a guardian. The guardian will no longer receive guardian notifications and the guardian
+         * will no longer be accessible via the API. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if no user that matches the provided `student_id` is visible to the
+         * requesting user, if the requesting user is not permitted to manage guardians for the student
+         * identified by the `student_id`, if guardians are not enabled for the domain in question, or for
+         * other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but its format cannot
+         * be recognized (it is not an email address, nor a `student_id` from the API). * `NOT_FOUND` if
+         * the requesting user is permitted to modify guardians for the requested `student_id`, but no
+         * `Guardian` record exists for that student with the provided `guardian_id`.
          *
          * Create a request for the method "guardians.delete".
          *
@@ -10143,11 +10338,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param studentId The student whose guardian is to be deleted. One of the following:
-      * the numeric identifier for the
-       *        user
-      * the email address of the user
-      * the string literal `"me"`, indicating the
+         * @param studentId The student whose guardian is to be deleted. One of the following: * the numeric identifier for the
+       *        user * the email address of the user * the string literal `"me"`, indicating the
        *        requesting user
          * @param guardianId The `id` field from a `Guardian`.
          * @since 1.13
@@ -10214,28 +10406,24 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The student whose guardian is to be deleted. One of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * The student whose guardian is to be deleted. One of the following: * the numeric
+         * identifier for the user * the email address of the user * the string literal `"me"`,
+         * indicating the requesting user
          */
         @com.google.api.client.util.Key
         private java.lang.String studentId;
 
-        /** The student whose guardian is to be deleted. One of the following:
-
-       * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-       indicating the requesting user
+        /** The student whose guardian is to be deleted. One of the following: * the numeric identifier for the
+       user * the email address of the user * the string literal `"me"`, indicating the requesting user
          */
         public java.lang.String getStudentId() {
           return studentId;
         }
 
         /**
-         * The student whose guardian is to be deleted. One of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * The student whose guardian is to be deleted. One of the following: * the numeric
+         * identifier for the user * the email address of the user * the string literal `"me"`,
+         * indicating the requesting user
          */
         public Delete setStudentId(java.lang.String studentId) {
           this.studentId = studentId;
@@ -10264,29 +10452,22 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Returns a specific guardian.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if no user that matches the provided `student_id`   is visible to the
-       * requesting user, if the requesting user is not   permitted to view guardian information for the
-       * student identified by the   `student_id`, if guardians are not enabled for the domain in
-       * question,   or for other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but
-       * its format cannot   be recognized (it is not an email address, nor a `student_id` from the   API,
-       * nor the literal string `me`). * `NOT_FOUND` if the requesting user is permitted to view guardians
-       * for   the requested `student_id`, but no `Guardian` record exists for that   student that matches
-       * the provided `guardian_id`.
+       * Returns a specific guardian. This method returns the following error codes: * `PERMISSION_DENIED`
+       * if no user that matches the provided `student_id` is visible to the requesting user, if the
+       * requesting user is not permitted to view guardian information for the student identified by the
+       * `student_id`, if guardians are not enabled for the domain in question, or for other access
+       * errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but its format cannot be recognized
+       * (it is not an email address, nor a `student_id` from the API, nor the literal string `me`). *
+       * `NOT_FOUND` if the requesting user is permitted to view guardians for the requested `student_id`,
+       * but no `Guardian` record exists for that student that matches the provided `guardian_id`.
        *
        * Create a request for the method "guardians.get".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param studentId The student whose guardian is being requested. One of the following:
-      * the numeric identifier for
-       *        the user
-      * the email address of the user
-      * the string literal `"me"`, indicating the
+       * @param studentId The student whose guardian is being requested. One of the following: * the numeric identifier for
+       *        the user * the email address of the user * the string literal `"me"`, indicating the
        *        requesting user
        * @param guardianId The `id` field from a `Guardian`.
        * @return the request
@@ -10302,18 +10483,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1/userProfiles/{studentId}/guardians/{guardianId}";
 
         /**
-         * Returns a specific guardian.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if no user that matches the provided `student_id`   is visible to the
-         * requesting user, if the requesting user is not   permitted to view guardian information for the
-         * student identified by the   `student_id`, if guardians are not enabled for the domain in
-         * question,   or for other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified,
-         * but its format cannot   be recognized (it is not an email address, nor a `student_id` from the
-         * API, nor the literal string `me`). * `NOT_FOUND` if the requesting user is permitted to view
-         * guardians for   the requested `student_id`, but no `Guardian` record exists for that   student
-         * that matches the provided `guardian_id`.
+         * Returns a specific guardian. This method returns the following error codes: *
+         * `PERMISSION_DENIED` if no user that matches the provided `student_id` is visible to the
+         * requesting user, if the requesting user is not permitted to view guardian information for the
+         * student identified by the `student_id`, if guardians are not enabled for the domain in
+         * question, or for other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified, but
+         * its format cannot be recognized (it is not an email address, nor a `student_id` from the API,
+         * nor the literal string `me`). * `NOT_FOUND` if the requesting user is permitted to view
+         * guardians for the requested `student_id`, but no `Guardian` record exists for that student that
+         * matches the provided `guardian_id`.
          *
          * Create a request for the method "guardians.get".
          *
@@ -10322,11 +10500,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param studentId The student whose guardian is being requested. One of the following:
-      * the numeric identifier for
-       *        the user
-      * the email address of the user
-      * the string literal `"me"`, indicating the
+         * @param studentId The student whose guardian is being requested. One of the following: * the numeric identifier for
+       *        the user * the email address of the user * the string literal `"me"`, indicating the
        *        requesting user
          * @param guardianId The `id` field from a `Guardian`.
          * @since 1.13
@@ -10403,28 +10578,25 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The student whose guardian is being requested. One of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * The student whose guardian is being requested. One of the following: * the numeric
+         * identifier for the user * the email address of the user * the string literal `"me"`,
+         * indicating the requesting user
          */
         @com.google.api.client.util.Key
         private java.lang.String studentId;
 
-        /** The student whose guardian is being requested. One of the following:
-
-       * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-       indicating the requesting user
+        /** The student whose guardian is being requested. One of the following: * the numeric identifier for
+       the user * the email address of the user * the string literal `"me"`, indicating the requesting
+       user
          */
         public java.lang.String getStudentId() {
           return studentId;
         }
 
         /**
-         * The student whose guardian is being requested. One of the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user
+         * The student whose guardian is being requested. One of the following: * the numeric
+         * identifier for the user * the email address of the user * the string literal `"me"`,
+         * indicating the requesting user
          */
         public Get setStudentId(java.lang.String studentId) {
           this.studentId = studentId;
@@ -10454,38 +10626,27 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
       /**
        * Returns a list of guardians that the requesting user is permitted to view, restricted to those
-       * that match the request.
-       *
-       * To list guardians for any student that the requesting user may view guardians for, use the
-       * literal character `-` for the student ID.
-       *
-       * This method returns the following error codes:
-       *
-       * * `PERMISSION_DENIED` if a `student_id` is specified, and the requesting   user is not permitted
-       * to view guardian information for that student, if   `"-"` is specified as the `student_id` and
-       * the user is not a domain   administrator, if guardians are not enabled for the domain in
-       * question,   if the `invited_email_address` filter is set by a user who is not a   domain
+       * that match the request. To list guardians for any student that the requesting user may view
+       * guardians for, use the literal character `-` for the student ID. This method returns the
+       * following error codes: * `PERMISSION_DENIED` if a `student_id` is specified, and the requesting
+       * user is not permitted to view guardian information for that student, if `"-"` is specified as the
+       * `student_id` and the user is not a domain administrator, if guardians are not enabled for the
+       * domain in question, if the `invited_email_address` filter is set by a user who is not a domain
        * administrator, or for other access errors. * `INVALID_ARGUMENT` if a `student_id` is specified,
-       * but its format cannot   be recognized (it is not an email address, nor a `student_id` from the
-       * API, nor the literal string `me`). May also be returned if an invalid   `page_token` is provided.
-       * * `NOT_FOUND` if a `student_id` is specified, and its format can be   recognized, but Classroom
-       * has no record of that student.
+       * but its format cannot be recognized (it is not an email address, nor a `student_id` from the API,
+       * nor the literal string `me`). May also be returned if an invalid `page_token` is provided. *
+       * `NOT_FOUND` if a `student_id` is specified, and its format can be recognized, but Classroom has
+       * no record of that student.
        *
        * Create a request for the method "guardians.list".
        *
        * This request holds the parameters needed by the classroom server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param studentId Filter results by the student who the guardian is linked to.
-      The identifier can be one of the
-       *        following:
-      * the numeric identifier for the user
-      * the email address of the user
-      * the
-       *        string literal `"me"`, indicating the requesting user
-      * the string literal `"-"`,
-       *        indicating that results should be returned for
-        all students that the requesting user has
+       * @param studentId Filter results by the student who the guardian is linked to. The identifier can be one of the
+       *        following: * the numeric identifier for the user * the email address of the user * the
+       *        string literal `"me"`, indicating the requesting user * the string literal `"-"`,
+       *        indicating that results should be returned for all students that the requesting user has
        *        access to view.
        * @return the request
        */
@@ -10501,22 +10662,17 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Returns a list of guardians that the requesting user is permitted to view, restricted to those
-         * that match the request.
-         *
-         * To list guardians for any student that the requesting user may view guardians for, use the
-         * literal character `-` for the student ID.
-         *
-         * This method returns the following error codes:
-         *
-         * * `PERMISSION_DENIED` if a `student_id` is specified, and the requesting   user is not
-         * permitted to view guardian information for that student, if   `"-"` is specified as the
-         * `student_id` and the user is not a domain   administrator, if guardians are not enabled for the
-         * domain in question,   if the `invited_email_address` filter is set by a user who is not a
+         * that match the request. To list guardians for any student that the requesting user may view
+         * guardians for, use the literal character `-` for the student ID. This method returns the
+         * following error codes: * `PERMISSION_DENIED` if a `student_id` is specified, and the requesting
+         * user is not permitted to view guardian information for that student, if `"-"` is specified as
+         * the `student_id` and the user is not a domain administrator, if guardians are not enabled for
+         * the domain in question, if the `invited_email_address` filter is set by a user who is not a
          * domain administrator, or for other access errors. * `INVALID_ARGUMENT` if a `student_id` is
-         * specified, but its format cannot   be recognized (it is not an email address, nor a
-         * `student_id` from the   API, nor the literal string `me`). May also be returned if an invalid
-         * `page_token` is provided. * `NOT_FOUND` if a `student_id` is specified, and its format can be
-         * recognized, but Classroom has no record of that student.
+         * specified, but its format cannot be recognized (it is not an email address, nor a `student_id`
+         * from the API, nor the literal string `me`). May also be returned if an invalid `page_token` is
+         * provided. * `NOT_FOUND` if a `student_id` is specified, and its format can be recognized, but
+         * Classroom has no record of that student.
          *
          * Create a request for the method "guardians.list".
          *
@@ -10525,16 +10681,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param studentId Filter results by the student who the guardian is linked to.
-      The identifier can be one of the
-       *        following:
-      * the numeric identifier for the user
-      * the email address of the user
-      * the
-       *        string literal `"me"`, indicating the requesting user
-      * the string literal `"-"`,
-       *        indicating that results should be returned for
-        all students that the requesting user has
+         * @param studentId Filter results by the student who the guardian is linked to. The identifier can be one of the
+       *        following: * the numeric identifier for the user * the email address of the user * the
+       *        string literal `"me"`, indicating the requesting user * the string literal `"-"`,
+       *        indicating that results should be returned for all students that the requesting user has
        *        access to view.
          * @since 1.13
          */
@@ -10610,22 +10760,18 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Filter results by the student who the guardian is linked to. The identifier can be one of
-         * the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user * the string literal `"-"`, indicating
-         * that results should be returned for all students that the requesting user has access to
-         * view.
+         * the following: * the numeric identifier for the user * the email address of the user *
+         * the string literal `"me"`, indicating the requesting user * the string literal `"-"`,
+         * indicating that results should be returned for all students that the requesting user has
+         * access to view.
          */
         @com.google.api.client.util.Key
         private java.lang.String studentId;
 
         /** Filter results by the student who the guardian is linked to. The identifier can be one of the
-       following:
-
-       * the numeric identifier for the user * the email address of the user * the string literal `"me"`,
-       indicating the requesting user * the string literal `"-"`, indicating that results should be
-       returned for all students that the requesting user has access to view.
+       following: * the numeric identifier for the user * the email address of the user * the string
+       literal `"me"`, indicating the requesting user * the string literal `"-"`, indicating that results
+       should be returned for all students that the requesting user has access to view.
          */
         public java.lang.String getStudentId() {
           return studentId;
@@ -10633,12 +10779,10 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Filter results by the student who the guardian is linked to. The identifier can be one of
-         * the following:
-         *
-         * * the numeric identifier for the user * the email address of the user * the string
-         * literal `"me"`, indicating the requesting user * the string literal `"-"`, indicating
-         * that results should be returned for all students that the requesting user has access to
-         * view.
+         * the following: * the numeric identifier for the user * the email address of the user *
+         * the string literal `"me"`, indicating the requesting user * the string literal `"-"`,
+         * indicating that results should be returned for all students that the requesting user has
+         * access to view.
          */
         public List setStudentId(java.lang.String studentId) {
           this.studentId = studentId;
@@ -10670,17 +10814,13 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Maximum number of items to return. Zero or unspecified indicates that the server may assign a
-       maximum.
-
-       The server may return fewer than the specified number of results.
+       maximum. The server may return fewer than the specified number of results.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -10688,9 +10828,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * Maximum number of items to return. Zero or unspecified indicates that the server may
-         * assign a maximum.
-         *
-         * The server may return fewer than the specified number of results.
+         * assign a maximum. The server may return fewer than the specified number of results.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -10699,17 +10837,15 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** nextPageToken value returned from a previous list call, indicating that the subsequent page of
-       results should be returned.
-
-       The list request must be otherwise identical to the one that resulted in this token.
+       results should be returned. The list request must be otherwise identical to the one that resulted
+       in this token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -10717,9 +10853,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * nextPageToken value returned from a previous list call, indicating that the subsequent
-         * page of results should be returned.
-         *
-         * The list request must be otherwise identical to the one that resulted in this token.
+         * page of results should be returned. The list request must be otherwise identical to the
+         * one that resulted in this token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;

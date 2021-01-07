@@ -20,12 +20,12 @@ package com.google.api.services.gamesManagement;
  * Service definition for GamesManagement (v1management).
  *
  * <p>
- * The Management API for Google Play Game Services.
+ * The Google Play Game Management API allows developers to manage resources from the Google Play Game service.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/games/services" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/games/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Play Game Services Management API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Google Play Game Management library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -55,7 +55,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://gamesmanagement.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -63,7 +63,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "games/v1management/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/gamesManagement/v1management";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -162,7 +162,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class Reset extends GamesManagementRequest<com.google.api.services.gamesManagement.model.AchievementResetResponse> {
 
-      private static final String REST_PATH = "achievements/{achievementId}/reset";
+      private static final String REST_PATH = "games/v1management/achievements/{achievementId}/reset";
 
       /**
        * Resets the achievement with the given ID for the currently authenticated player. This method is
@@ -185,8 +185,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Reset set$Xgafv(java.lang.String $Xgafv) {
+        return (Reset) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Reset setAccessToken(java.lang.String accessToken) {
+        return (Reset) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Reset setAlt(java.lang.String alt) {
         return (Reset) super.setAlt(alt);
+      }
+
+      @Override
+      public Reset setCallback(java.lang.String callback) {
+        return (Reset) super.setCallback(callback);
       }
 
       @Override
@@ -215,8 +230,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Reset setUserIp(java.lang.String userIp) {
-        return (Reset) super.setUserIp(userIp);
+      public Reset setUploadType(java.lang.String uploadType) {
+        return (Reset) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Reset setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Reset) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the achievement used by this method. */
@@ -259,7 +279,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetAll extends GamesManagementRequest<com.google.api.services.gamesManagement.model.AchievementResetAllResponse> {
 
-      private static final String REST_PATH = "achievements/reset";
+      private static final String REST_PATH = "games/v1management/achievements/reset";
 
       /**
        * Resets all achievements for the currently authenticated player for your application. This
@@ -280,8 +300,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetAll set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetAll) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetAll setAccessToken(java.lang.String accessToken) {
+        return (ResetAll) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetAll setAlt(java.lang.String alt) {
         return (ResetAll) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetAll setCallback(java.lang.String callback) {
+        return (ResetAll) super.setCallback(callback);
       }
 
       @Override
@@ -310,8 +345,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetAll setUserIp(java.lang.String userIp) {
-        return (ResetAll) super.setUserIp(userIp);
+      public ResetAll setUploadType(java.lang.String uploadType) {
+        return (ResetAll) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetAll setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetAll) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -339,7 +379,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetAllForAllPlayers extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "achievements/resetAllForAllPlayers";
+      private static final String REST_PATH = "games/v1management/achievements/resetAllForAllPlayers";
 
       /**
        * Resets all draft achievements for all players. This method is only available to user accounts
@@ -360,8 +400,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetAllForAllPlayers set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetAllForAllPlayers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetAllForAllPlayers setAccessToken(java.lang.String accessToken) {
+        return (ResetAllForAllPlayers) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetAllForAllPlayers setAlt(java.lang.String alt) {
         return (ResetAllForAllPlayers) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetAllForAllPlayers setCallback(java.lang.String callback) {
+        return (ResetAllForAllPlayers) super.setCallback(callback);
       }
 
       @Override
@@ -390,8 +445,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetAllForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetAllForAllPlayers) super.setUserIp(userIp);
+      public ResetAllForAllPlayers setUploadType(java.lang.String uploadType) {
+        return (ResetAllForAllPlayers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetAllForAllPlayers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetAllForAllPlayers) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -420,7 +480,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetForAllPlayers extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "achievements/{achievementId}/resetForAllPlayers";
+      private static final String REST_PATH = "games/v1management/achievements/{achievementId}/resetForAllPlayers";
 
       /**
        * Resets the achievement with the given ID for all players. This method is only available to user
@@ -443,8 +503,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetForAllPlayers set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetForAllPlayers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetForAllPlayers setAccessToken(java.lang.String accessToken) {
+        return (ResetForAllPlayers) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetForAllPlayers setAlt(java.lang.String alt) {
         return (ResetForAllPlayers) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetForAllPlayers setCallback(java.lang.String callback) {
+        return (ResetForAllPlayers) super.setCallback(callback);
       }
 
       @Override
@@ -473,8 +548,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetForAllPlayers) super.setUserIp(userIp);
+      public ResetForAllPlayers setUploadType(java.lang.String uploadType) {
+        return (ResetForAllPlayers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetForAllPlayers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetForAllPlayers) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the achievement used by this method. */
@@ -519,7 +599,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetMultipleForAllPlayers extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "achievements/resetMultipleForAllPlayers";
+      private static final String REST_PATH = "games/v1management/achievements/resetMultipleForAllPlayers";
 
       /**
        * Resets achievements with the given IDs for all players. This method is only available to user
@@ -541,8 +621,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetMultipleForAllPlayers set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetMultipleForAllPlayers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetMultipleForAllPlayers setAccessToken(java.lang.String accessToken) {
+        return (ResetMultipleForAllPlayers) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetMultipleForAllPlayers setAlt(java.lang.String alt) {
         return (ResetMultipleForAllPlayers) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetMultipleForAllPlayers setCallback(java.lang.String callback) {
+        return (ResetMultipleForAllPlayers) super.setCallback(callback);
       }
 
       @Override
@@ -571,8 +666,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetMultipleForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetMultipleForAllPlayers) super.setUserIp(userIp);
+      public ResetMultipleForAllPlayers setUploadType(java.lang.String uploadType) {
+        return (ResetMultipleForAllPlayers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetMultipleForAllPlayers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetMultipleForAllPlayers) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -623,7 +723,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ListHidden extends GamesManagementRequest<com.google.api.services.gamesManagement.model.HiddenPlayerList> {
 
-      private static final String REST_PATH = "applications/{applicationId}/players/hidden";
+      private static final String REST_PATH = "games/v1management/applications/{applicationId}/players/hidden";
 
       /**
        * Get the list of players hidden from the given application. This method is only available to
@@ -656,8 +756,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ListHidden set$Xgafv(java.lang.String $Xgafv) {
+        return (ListHidden) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListHidden setAccessToken(java.lang.String accessToken) {
+        return (ListHidden) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ListHidden setAlt(java.lang.String alt) {
         return (ListHidden) super.setAlt(alt);
+      }
+
+      @Override
+      public ListHidden setCallback(java.lang.String callback) {
+        return (ListHidden) super.setCallback(callback);
       }
 
       @Override
@@ -686,8 +801,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ListHidden setUserIp(java.lang.String userIp) {
-        return (ListHidden) super.setUserIp(userIp);
+      public ListHidden setUploadType(java.lang.String uploadType) {
+        return (ListHidden) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListHidden setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListHidden) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The application ID from the Google Play developer console. */
@@ -709,15 +829,14 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       /**
        * The maximum number of player resources to return in the response, used for paging. For any
        * response, the actual number of player resources returned may be less than the specified
-       * maxResults.
+       * `maxResults`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
       /** The maximum number of player resources to return in the response, used for paging. For any
-     response, the actual number of player resources returned may be less than the specified maxResults.
-
-     [minimum: 1] [maximum: 50]
+     response, the actual number of player resources returned may be less than the specified
+     `maxResults`.
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
@@ -726,7 +845,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       /**
        * The maximum number of player resources to return in the response, used for paging. For any
        * response, the actual number of player resources returned may be less than the specified
-       * maxResults.
+       * `maxResults`.
        */
       public ListHidden setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -797,7 +916,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class Reset extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "events/{eventId}/reset";
+      private static final String REST_PATH = "games/v1management/events/{eventId}/reset";
 
       /**
        * Resets all player progress on the event with the given ID for the currently authenticated
@@ -820,8 +939,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Reset set$Xgafv(java.lang.String $Xgafv) {
+        return (Reset) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Reset setAccessToken(java.lang.String accessToken) {
+        return (Reset) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Reset setAlt(java.lang.String alt) {
         return (Reset) super.setAlt(alt);
+      }
+
+      @Override
+      public Reset setCallback(java.lang.String callback) {
+        return (Reset) super.setCallback(callback);
       }
 
       @Override
@@ -850,8 +984,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Reset setUserIp(java.lang.String userIp) {
-        return (Reset) super.setUserIp(userIp);
+      public Reset setUploadType(java.lang.String uploadType) {
+        return (Reset) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Reset setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Reset) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the event. */
@@ -894,7 +1033,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetAll extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "events/reset";
+      private static final String REST_PATH = "games/v1management/events/reset";
 
       /**
        * Resets all player progress on all events for the currently authenticated player. This method is
@@ -915,8 +1054,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetAll set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetAll) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetAll setAccessToken(java.lang.String accessToken) {
+        return (ResetAll) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetAll setAlt(java.lang.String alt) {
         return (ResetAll) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetAll setCallback(java.lang.String callback) {
+        return (ResetAll) super.setCallback(callback);
       }
 
       @Override
@@ -945,8 +1099,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetAll setUserIp(java.lang.String userIp) {
-        return (ResetAll) super.setUserIp(userIp);
+      public ResetAll setUploadType(java.lang.String uploadType) {
+        return (ResetAll) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetAll setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetAll) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -974,7 +1133,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetAllForAllPlayers extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "events/resetAllForAllPlayers";
+      private static final String REST_PATH = "games/v1management/events/resetAllForAllPlayers";
 
       /**
        * Resets all draft events for all players. This method is only available to user accounts for
@@ -995,8 +1154,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetAllForAllPlayers set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetAllForAllPlayers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetAllForAllPlayers setAccessToken(java.lang.String accessToken) {
+        return (ResetAllForAllPlayers) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetAllForAllPlayers setAlt(java.lang.String alt) {
         return (ResetAllForAllPlayers) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetAllForAllPlayers setCallback(java.lang.String callback) {
+        return (ResetAllForAllPlayers) super.setCallback(callback);
       }
 
       @Override
@@ -1025,8 +1199,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetAllForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetAllForAllPlayers) super.setUserIp(userIp);
+      public ResetAllForAllPlayers setUploadType(java.lang.String uploadType) {
+        return (ResetAllForAllPlayers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetAllForAllPlayers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetAllForAllPlayers) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -1055,7 +1234,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetForAllPlayers extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "events/{eventId}/resetForAllPlayers";
+      private static final String REST_PATH = "games/v1management/events/{eventId}/resetForAllPlayers";
 
       /**
        * Resets the event with the given ID for all players. This method is only available to user
@@ -1078,8 +1257,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetForAllPlayers set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetForAllPlayers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetForAllPlayers setAccessToken(java.lang.String accessToken) {
+        return (ResetForAllPlayers) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetForAllPlayers setAlt(java.lang.String alt) {
         return (ResetForAllPlayers) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetForAllPlayers setCallback(java.lang.String callback) {
+        return (ResetForAllPlayers) super.setCallback(callback);
       }
 
       @Override
@@ -1108,8 +1302,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetForAllPlayers) super.setUserIp(userIp);
+      public ResetForAllPlayers setUploadType(java.lang.String uploadType) {
+        return (ResetForAllPlayers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetForAllPlayers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetForAllPlayers) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the event. */
@@ -1154,7 +1353,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetMultipleForAllPlayers extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "events/resetMultipleForAllPlayers";
+      private static final String REST_PATH = "games/v1management/events/resetMultipleForAllPlayers";
 
       /**
        * Resets events with the given IDs for all players. This method is only available to user
@@ -1176,8 +1375,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetMultipleForAllPlayers set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetMultipleForAllPlayers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetMultipleForAllPlayers setAccessToken(java.lang.String accessToken) {
+        return (ResetMultipleForAllPlayers) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetMultipleForAllPlayers setAlt(java.lang.String alt) {
         return (ResetMultipleForAllPlayers) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetMultipleForAllPlayers setCallback(java.lang.String callback) {
+        return (ResetMultipleForAllPlayers) super.setCallback(callback);
       }
 
       @Override
@@ -1206,8 +1420,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetMultipleForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetMultipleForAllPlayers) super.setUserIp(userIp);
+      public ResetMultipleForAllPlayers setUploadType(java.lang.String uploadType) {
+        return (ResetMultipleForAllPlayers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetMultipleForAllPlayers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetMultipleForAllPlayers) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -1248,7 +1467,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link Hide#execute()} method to invoke the remote operation.
      *
      * @param applicationId The application ID from the Google Play developer console.
-     * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
      * @return the request
      */
     public Hide hide(java.lang.String applicationId, java.lang.String playerId) throws java.io.IOException {
@@ -1259,7 +1478,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class Hide extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "applications/{applicationId}/players/hidden/{playerId}";
+      private static final String REST_PATH = "games/v1management/applications/{applicationId}/players/hidden/{playerId}";
 
       /**
        * Hide the given player's leaderboard scores from the given application. This method is only
@@ -1273,7 +1492,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param applicationId The application ID from the Google Play developer console.
-       * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
        * @since 1.13
        */
       protected Hide(java.lang.String applicationId, java.lang.String playerId) {
@@ -1283,8 +1502,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Hide set$Xgafv(java.lang.String $Xgafv) {
+        return (Hide) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Hide setAccessToken(java.lang.String accessToken) {
+        return (Hide) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Hide setAlt(java.lang.String alt) {
         return (Hide) super.setAlt(alt);
+      }
+
+      @Override
+      public Hide setCallback(java.lang.String callback) {
+        return (Hide) super.setCallback(callback);
       }
 
       @Override
@@ -1313,8 +1547,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Hide setUserIp(java.lang.String userIp) {
-        return (Hide) super.setUserIp(userIp);
+      public Hide setUploadType(java.lang.String uploadType) {
+        return (Hide) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Hide setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Hide) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The application ID from the Google Play developer console. */
@@ -1333,17 +1572,17 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID.
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID.
        */
       public java.lang.String getPlayerId() {
         return playerId;
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       public Hide setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
@@ -1364,7 +1603,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link Unhide#execute()} method to invoke the remote operation.
      *
      * @param applicationId The application ID from the Google Play developer console.
-     * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+     * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
      * @return the request
      */
     public Unhide unhide(java.lang.String applicationId, java.lang.String playerId) throws java.io.IOException {
@@ -1375,7 +1614,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class Unhide extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "applications/{applicationId}/players/hidden/{playerId}";
+      private static final String REST_PATH = "games/v1management/applications/{applicationId}/players/hidden/{playerId}";
 
       /**
        * Unhide the given player's leaderboard scores from the given application. This method is only
@@ -1390,7 +1629,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param applicationId The application ID from the Google Play developer console.
-       * @param playerId A player ID. A value of me may be used in place of the authenticated player's ID.
+       * @param playerId A player ID. A value of `me` may be used in place of the authenticated player's ID.
        * @since 1.13
        */
       protected Unhide(java.lang.String applicationId, java.lang.String playerId) {
@@ -1400,8 +1639,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Unhide set$Xgafv(java.lang.String $Xgafv) {
+        return (Unhide) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Unhide setAccessToken(java.lang.String accessToken) {
+        return (Unhide) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Unhide setAlt(java.lang.String alt) {
         return (Unhide) super.setAlt(alt);
+      }
+
+      @Override
+      public Unhide setCallback(java.lang.String callback) {
+        return (Unhide) super.setCallback(callback);
       }
 
       @Override
@@ -1430,8 +1684,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Unhide setUserIp(java.lang.String userIp) {
-        return (Unhide) super.setUserIp(userIp);
+      public Unhide setUploadType(java.lang.String uploadType) {
+        return (Unhide) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Unhide setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Unhide) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The application ID from the Google Play developer console. */
@@ -1450,17 +1709,17 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       @com.google.api.client.util.Key
       private java.lang.String playerId;
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID.
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID.
        */
       public java.lang.String getPlayerId() {
         return playerId;
       }
 
-      /** A player ID. A value of me may be used in place of the authenticated player's ID. */
+      /** A player ID. A value of `me` may be used in place of the authenticated player's ID. */
       public Unhide setPlayerId(java.lang.String playerId) {
         this.playerId = playerId;
         return this;
@@ -1469,188 +1728,6 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       @Override
       public Unhide set(String parameterName, Object value) {
         return (Unhide) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
-   * An accessor for creating requests from the Rooms collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code GamesManagement gamesManagement = new GamesManagement(...);}
-   *   {@code GamesManagement.Rooms.List request = gamesManagement.rooms().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Rooms rooms() {
-    return new Rooms();
-  }
-
-  /**
-   * The "rooms" collection of methods.
-   */
-  public class Rooms {
-
-    /**
-     * Reset all rooms for the currently authenticated player for your application. This method is only
-     * accessible to whitelisted tester accounts for your application.
-     *
-     * Create a request for the method "rooms.reset".
-     *
-     * This request holds the parameters needed by the gamesManagement server.  After setting any
-     * optional parameters, call the {@link Reset#execute()} method to invoke the remote operation.
-     *
-     * @return the request
-     */
-    public Reset reset() throws java.io.IOException {
-      Reset result = new Reset();
-      initialize(result);
-      return result;
-    }
-
-    public class Reset extends GamesManagementRequest<Void> {
-
-      private static final String REST_PATH = "rooms/reset";
-
-      /**
-       * Reset all rooms for the currently authenticated player for your application. This method is
-       * only accessible to whitelisted tester accounts for your application.
-       *
-       * Create a request for the method "rooms.reset".
-       *
-       * This request holds the parameters needed by the the gamesManagement server.  After setting any
-       * optional parameters, call the {@link Reset#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Reset#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected Reset() {
-        super(GamesManagement.this, "POST", REST_PATH, null, Void.class);
-      }
-
-      @Override
-      public Reset setAlt(java.lang.String alt) {
-        return (Reset) super.setAlt(alt);
-      }
-
-      @Override
-      public Reset setFields(java.lang.String fields) {
-        return (Reset) super.setFields(fields);
-      }
-
-      @Override
-      public Reset setKey(java.lang.String key) {
-        return (Reset) super.setKey(key);
-      }
-
-      @Override
-      public Reset setOauthToken(java.lang.String oauthToken) {
-        return (Reset) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Reset setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Reset) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Reset setQuotaUser(java.lang.String quotaUser) {
-        return (Reset) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Reset setUserIp(java.lang.String userIp) {
-        return (Reset) super.setUserIp(userIp);
-      }
-
-      @Override
-      public Reset set(String parameterName, Object value) {
-        return (Reset) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Deletes rooms where the only room participants are from whitelisted tester accounts for your
-     * application. This method is only available to user accounts for your developer console.
-     *
-     * Create a request for the method "rooms.resetForAllPlayers".
-     *
-     * This request holds the parameters needed by the gamesManagement server.  After setting any
-     * optional parameters, call the {@link ResetForAllPlayers#execute()} method to invoke the remote
-     * operation.
-     *
-     * @return the request
-     */
-    public ResetForAllPlayers resetForAllPlayers() throws java.io.IOException {
-      ResetForAllPlayers result = new ResetForAllPlayers();
-      initialize(result);
-      return result;
-    }
-
-    public class ResetForAllPlayers extends GamesManagementRequest<Void> {
-
-      private static final String REST_PATH = "rooms/resetForAllPlayers";
-
-      /**
-       * Deletes rooms where the only room participants are from whitelisted tester accounts for your
-       * application. This method is only available to user accounts for your developer console.
-       *
-       * Create a request for the method "rooms.resetForAllPlayers".
-       *
-       * This request holds the parameters needed by the the gamesManagement server.  After setting any
-       * optional parameters, call the {@link ResetForAllPlayers#execute()} method to invoke the remote
-       * operation. <p> {@link ResetForAllPlayers#initialize(com.google.api.client.googleapis.services.A
-       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
-       * invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected ResetForAllPlayers() {
-        super(GamesManagement.this, "POST", REST_PATH, null, Void.class);
-      }
-
-      @Override
-      public ResetForAllPlayers setAlt(java.lang.String alt) {
-        return (ResetForAllPlayers) super.setAlt(alt);
-      }
-
-      @Override
-      public ResetForAllPlayers setFields(java.lang.String fields) {
-        return (ResetForAllPlayers) super.setFields(fields);
-      }
-
-      @Override
-      public ResetForAllPlayers setKey(java.lang.String key) {
-        return (ResetForAllPlayers) super.setKey(key);
-      }
-
-      @Override
-      public ResetForAllPlayers setOauthToken(java.lang.String oauthToken) {
-        return (ResetForAllPlayers) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public ResetForAllPlayers setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (ResetForAllPlayers) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public ResetForAllPlayers setQuotaUser(java.lang.String quotaUser) {
-        return (ResetForAllPlayers) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public ResetForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetForAllPlayers) super.setUserIp(userIp);
-      }
-
-      @Override
-      public ResetForAllPlayers set(String parameterName, Object value) {
-        return (ResetForAllPlayers) super.set(parameterName, value);
       }
     }
 
@@ -1696,7 +1773,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class Reset extends GamesManagementRequest<com.google.api.services.gamesManagement.model.PlayerScoreResetResponse> {
 
-      private static final String REST_PATH = "leaderboards/{leaderboardId}/scores/reset";
+      private static final String REST_PATH = "games/v1management/leaderboards/{leaderboardId}/scores/reset";
 
       /**
        * Resets scores for the leaderboard with the given ID for the currently authenticated player.
@@ -1719,8 +1796,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public Reset set$Xgafv(java.lang.String $Xgafv) {
+        return (Reset) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Reset setAccessToken(java.lang.String accessToken) {
+        return (Reset) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Reset setAlt(java.lang.String alt) {
         return (Reset) super.setAlt(alt);
+      }
+
+      @Override
+      public Reset setCallback(java.lang.String callback) {
+        return (Reset) super.setCallback(callback);
       }
 
       @Override
@@ -1749,8 +1841,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public Reset setUserIp(java.lang.String userIp) {
-        return (Reset) super.setUserIp(userIp);
+      public Reset setUploadType(java.lang.String uploadType) {
+        return (Reset) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Reset setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Reset) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the leaderboard. */
@@ -1793,7 +1890,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetAll extends GamesManagementRequest<com.google.api.services.gamesManagement.model.PlayerScoreResetAllResponse> {
 
-      private static final String REST_PATH = "scores/reset";
+      private static final String REST_PATH = "games/v1management/scores/reset";
 
       /**
        * Resets all scores for all leaderboards for the currently authenticated players. This method is
@@ -1814,8 +1911,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetAll set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetAll) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetAll setAccessToken(java.lang.String accessToken) {
+        return (ResetAll) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetAll setAlt(java.lang.String alt) {
         return (ResetAll) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetAll setCallback(java.lang.String callback) {
+        return (ResetAll) super.setCallback(callback);
       }
 
       @Override
@@ -1844,8 +1956,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetAll setUserIp(java.lang.String userIp) {
-        return (ResetAll) super.setUserIp(userIp);
+      public ResetAll setUploadType(java.lang.String uploadType) {
+        return (ResetAll) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetAll setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetAll) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -1873,7 +1990,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetAllForAllPlayers extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "scores/resetAllForAllPlayers";
+      private static final String REST_PATH = "games/v1management/scores/resetAllForAllPlayers";
 
       /**
        * Resets scores for all draft leaderboards for all players. This method is only available to user
@@ -1894,8 +2011,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetAllForAllPlayers set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetAllForAllPlayers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetAllForAllPlayers setAccessToken(java.lang.String accessToken) {
+        return (ResetAllForAllPlayers) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetAllForAllPlayers setAlt(java.lang.String alt) {
         return (ResetAllForAllPlayers) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetAllForAllPlayers setCallback(java.lang.String callback) {
+        return (ResetAllForAllPlayers) super.setCallback(callback);
       }
 
       @Override
@@ -1924,8 +2056,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetAllForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetAllForAllPlayers) super.setUserIp(userIp);
+      public ResetAllForAllPlayers setUploadType(java.lang.String uploadType) {
+        return (ResetAllForAllPlayers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetAllForAllPlayers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetAllForAllPlayers) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -1954,7 +2091,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetForAllPlayers extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "leaderboards/{leaderboardId}/scores/resetForAllPlayers";
+      private static final String REST_PATH = "games/v1management/leaderboards/{leaderboardId}/scores/resetForAllPlayers";
 
       /**
        * Resets scores for the leaderboard with the given ID for all players. This method is only
@@ -1977,8 +2114,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetForAllPlayers set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetForAllPlayers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetForAllPlayers setAccessToken(java.lang.String accessToken) {
+        return (ResetForAllPlayers) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetForAllPlayers setAlt(java.lang.String alt) {
         return (ResetForAllPlayers) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetForAllPlayers setCallback(java.lang.String callback) {
+        return (ResetForAllPlayers) super.setCallback(callback);
       }
 
       @Override
@@ -2007,8 +2159,13 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetForAllPlayers) super.setUserIp(userIp);
+      public ResetForAllPlayers setUploadType(java.lang.String uploadType) {
+        return (ResetForAllPlayers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetForAllPlayers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetForAllPlayers) super.setUploadProtocol(uploadProtocol);
       }
 
       /** The ID of the leaderboard. */
@@ -2053,7 +2210,7 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
 
     public class ResetMultipleForAllPlayers extends GamesManagementRequest<Void> {
 
-      private static final String REST_PATH = "scores/resetMultipleForAllPlayers";
+      private static final String REST_PATH = "games/v1management/scores/resetMultipleForAllPlayers";
 
       /**
        * Resets scores for the leaderboards with the given IDs for all players. This method is only
@@ -2075,8 +2232,23 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
+      public ResetMultipleForAllPlayers set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetMultipleForAllPlayers) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetMultipleForAllPlayers setAccessToken(java.lang.String accessToken) {
+        return (ResetMultipleForAllPlayers) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetMultipleForAllPlayers setAlt(java.lang.String alt) {
         return (ResetMultipleForAllPlayers) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetMultipleForAllPlayers setCallback(java.lang.String callback) {
+        return (ResetMultipleForAllPlayers) super.setCallback(callback);
       }
 
       @Override
@@ -2105,196 +2277,18 @@ public class GamesManagement extends com.google.api.client.googleapis.services.j
       }
 
       @Override
-      public ResetMultipleForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetMultipleForAllPlayers) super.setUserIp(userIp);
+      public ResetMultipleForAllPlayers setUploadType(java.lang.String uploadType) {
+        return (ResetMultipleForAllPlayers) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetMultipleForAllPlayers setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetMultipleForAllPlayers) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
       public ResetMultipleForAllPlayers set(String parameterName, Object value) {
         return (ResetMultipleForAllPlayers) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
-   * An accessor for creating requests from the TurnBasedMatches collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code GamesManagement gamesManagement = new GamesManagement(...);}
-   *   {@code GamesManagement.TurnBasedMatches.List request = gamesManagement.turnBasedMatches().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public TurnBasedMatches turnBasedMatches() {
-    return new TurnBasedMatches();
-  }
-
-  /**
-   * The "turnBasedMatches" collection of methods.
-   */
-  public class TurnBasedMatches {
-
-    /**
-     * Reset all turn-based match data for a user. This method is only accessible to whitelisted tester
-     * accounts for your application.
-     *
-     * Create a request for the method "turnBasedMatches.reset".
-     *
-     * This request holds the parameters needed by the gamesManagement server.  After setting any
-     * optional parameters, call the {@link Reset#execute()} method to invoke the remote operation.
-     *
-     * @return the request
-     */
-    public Reset reset() throws java.io.IOException {
-      Reset result = new Reset();
-      initialize(result);
-      return result;
-    }
-
-    public class Reset extends GamesManagementRequest<Void> {
-
-      private static final String REST_PATH = "turnbasedmatches/reset";
-
-      /**
-       * Reset all turn-based match data for a user. This method is only accessible to whitelisted
-       * tester accounts for your application.
-       *
-       * Create a request for the method "turnBasedMatches.reset".
-       *
-       * This request holds the parameters needed by the the gamesManagement server.  After setting any
-       * optional parameters, call the {@link Reset#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Reset#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected Reset() {
-        super(GamesManagement.this, "POST", REST_PATH, null, Void.class);
-      }
-
-      @Override
-      public Reset setAlt(java.lang.String alt) {
-        return (Reset) super.setAlt(alt);
-      }
-
-      @Override
-      public Reset setFields(java.lang.String fields) {
-        return (Reset) super.setFields(fields);
-      }
-
-      @Override
-      public Reset setKey(java.lang.String key) {
-        return (Reset) super.setKey(key);
-      }
-
-      @Override
-      public Reset setOauthToken(java.lang.String oauthToken) {
-        return (Reset) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Reset setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Reset) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Reset setQuotaUser(java.lang.String quotaUser) {
-        return (Reset) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Reset setUserIp(java.lang.String userIp) {
-        return (Reset) super.setUserIp(userIp);
-      }
-
-      @Override
-      public Reset set(String parameterName, Object value) {
-        return (Reset) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Deletes turn-based matches where the only match participants are from whitelisted tester accounts
-     * for your application. This method is only available to user accounts for your developer console.
-     *
-     * Create a request for the method "turnBasedMatches.resetForAllPlayers".
-     *
-     * This request holds the parameters needed by the gamesManagement server.  After setting any
-     * optional parameters, call the {@link ResetForAllPlayers#execute()} method to invoke the remote
-     * operation.
-     *
-     * @return the request
-     */
-    public ResetForAllPlayers resetForAllPlayers() throws java.io.IOException {
-      ResetForAllPlayers result = new ResetForAllPlayers();
-      initialize(result);
-      return result;
-    }
-
-    public class ResetForAllPlayers extends GamesManagementRequest<Void> {
-
-      private static final String REST_PATH = "turnbasedmatches/resetForAllPlayers";
-
-      /**
-       * Deletes turn-based matches where the only match participants are from whitelisted tester
-       * accounts for your application. This method is only available to user accounts for your
-       * developer console.
-       *
-       * Create a request for the method "turnBasedMatches.resetForAllPlayers".
-       *
-       * This request holds the parameters needed by the the gamesManagement server.  After setting any
-       * optional parameters, call the {@link ResetForAllPlayers#execute()} method to invoke the remote
-       * operation. <p> {@link ResetForAllPlayers#initialize(com.google.api.client.googleapis.services.A
-       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
-       * invoking the constructor. </p>
-       *
-       * @since 1.13
-       */
-      protected ResetForAllPlayers() {
-        super(GamesManagement.this, "POST", REST_PATH, null, Void.class);
-      }
-
-      @Override
-      public ResetForAllPlayers setAlt(java.lang.String alt) {
-        return (ResetForAllPlayers) super.setAlt(alt);
-      }
-
-      @Override
-      public ResetForAllPlayers setFields(java.lang.String fields) {
-        return (ResetForAllPlayers) super.setFields(fields);
-      }
-
-      @Override
-      public ResetForAllPlayers setKey(java.lang.String key) {
-        return (ResetForAllPlayers) super.setKey(key);
-      }
-
-      @Override
-      public ResetForAllPlayers setOauthToken(java.lang.String oauthToken) {
-        return (ResetForAllPlayers) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public ResetForAllPlayers setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (ResetForAllPlayers) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public ResetForAllPlayers setQuotaUser(java.lang.String quotaUser) {
-        return (ResetForAllPlayers) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public ResetForAllPlayers setUserIp(java.lang.String userIp) {
-        return (ResetForAllPlayers) super.setUserIp(userIp);
-      }
-
-      @Override
-      public ResetForAllPlayers set(String parameterName, Object value) {
-        return (ResetForAllPlayers) super.set(parameterName, value);
       }
     }
 

@@ -20,7 +20,7 @@ package com.google.api.services.dns.model;
  * A policy is a collection of DNS rules applied to one or more Virtual Private Cloud resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -71,7 +71,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#policy".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -189,7 +188,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#policy".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -197,7 +195,6 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#policy".
    * @param kind kind or {@code null} for none
    */
   public Policy setKind(java.lang.String kind) {

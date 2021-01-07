@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * A video resource represents a YouTube video.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -84,7 +84,8 @@ public final class Video extends com.google.api.client.json.GenericJson {
   private VideoLiveStreamingDetails liveStreamingDetails;
 
   /**
-   * List with all localizations.
+   * The localizations object contains localized versions of the basic details about the video, such
+   * as its title and description.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,11 +112,9 @@ public final class Video extends com.google.api.client.json.GenericJson {
    * the uploaded video file. The properties in the object identify the current processing status
    * and an estimate of the time remaining until YouTube finishes processing the video. This part
    * also indicates whether different types of data or content, such as file details or thumbnail
-   * images, are available for the video.
-   *
-   * The processingProgress object is designed to be polled so that the video uploaded can track the
-   * progress that YouTube has made in processing the uploaded video file. This data can only be
-   * retrieved by the video owner.
+   * images, are available for the video. The processingProgress object is designed to be polled so
+   * that the video uploaded can track the progress that YouTube has made in processing the uploaded
+   * video file. This data can only be retrieved by the video owner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -306,7 +305,8 @@ public final class Video extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List with all localizations.
+   * The localizations object contains localized versions of the basic details about the video, such
+   * as its title and description.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, VideoLocalization> getLocalizations() {
@@ -314,7 +314,8 @@ public final class Video extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List with all localizations.
+   * The localizations object contains localized versions of the basic details about the video, such
+   * as its title and description.
    * @param localizations localizations or {@code null} for none
    */
   public Video setLocalizations(java.util.Map<String, VideoLocalization> localizations) {
@@ -365,11 +366,9 @@ public final class Video extends com.google.api.client.json.GenericJson {
    * the uploaded video file. The properties in the object identify the current processing status
    * and an estimate of the time remaining until YouTube finishes processing the video. This part
    * also indicates whether different types of data or content, such as file details or thumbnail
-   * images, are available for the video.
-   *
-   * The processingProgress object is designed to be polled so that the video uploaded can track the
-   * progress that YouTube has made in processing the uploaded video file. This data can only be
-   * retrieved by the video owner.
+   * images, are available for the video. The processingProgress object is designed to be polled so
+   * that the video uploaded can track the progress that YouTube has made in processing the uploaded
+   * video file. This data can only be retrieved by the video owner.
    * @return value or {@code null} for none
    */
   public VideoProcessingDetails getProcessingDetails() {
@@ -381,11 +380,9 @@ public final class Video extends com.google.api.client.json.GenericJson {
    * the uploaded video file. The properties in the object identify the current processing status
    * and an estimate of the time remaining until YouTube finishes processing the video. This part
    * also indicates whether different types of data or content, such as file details or thumbnail
-   * images, are available for the video.
-   *
-   * The processingProgress object is designed to be polled so that the video uploaded can track the
-   * progress that YouTube has made in processing the uploaded video file. This data can only be
-   * retrieved by the video owner.
+   * images, are available for the video. The processingProgress object is designed to be polled so
+   * that the video uploaded can track the progress that YouTube has made in processing the uploaded
+   * video file. This data can only be retrieved by the video owner.
    * @param processingDetails processingDetails or {@code null} for none
    */
   public Video setProcessingDetails(VideoProcessingDetails processingDetails) {

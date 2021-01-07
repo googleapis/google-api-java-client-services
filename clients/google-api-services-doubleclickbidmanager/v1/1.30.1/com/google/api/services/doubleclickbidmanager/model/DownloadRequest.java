@@ -17,7 +17,7 @@
 package com.google.api.services.doubleclickbidmanager.model;
 
 /**
- * Request to fetch stored inventory sources, campaigns, insertion orders, line items, TrueView ad
+ * Request to fetch stored inventory sources, campaigns, insertion orders, line items, YouTube ad
  * groups and ads.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -33,10 +33,8 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
 
   /**
    * File types that will be returned. If INVENTORY_SOURCE is requested, no other file types may be
-   * requested.
-   *
-   * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  -
-   * "INVENTORY_SOURCE"  - "LINE_ITEM"
+   * requested. Acceptable values are: - "AD" - "AD_GROUP" - "CAMPAIGN" - "INSERTION_ORDER" -
+   * "INVENTORY_SOURCE" - "LINE_ITEM"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,10 +65,8 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
 
   /**
    * File types that will be returned. If INVENTORY_SOURCE is requested, no other file types may be
-   * requested.
-   *
-   * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  -
-   * "INVENTORY_SOURCE"  - "LINE_ITEM"
+   * requested. Acceptable values are: - "AD" - "AD_GROUP" - "CAMPAIGN" - "INSERTION_ORDER" -
+   * "INVENTORY_SOURCE" - "LINE_ITEM"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileTypes() {
@@ -79,10 +75,8 @@ public final class DownloadRequest extends com.google.api.client.json.GenericJso
 
   /**
    * File types that will be returned. If INVENTORY_SOURCE is requested, no other file types may be
-   * requested.
-   *
-   * Acceptable values are:   - "AD"  - "AD_GROUP"  - "CAMPAIGN"  - "INSERTION_ORDER"  -
-   * "INVENTORY_SOURCE"  - "LINE_ITEM"
+   * requested. Acceptable values are: - "AD" - "AD_GROUP" - "CAMPAIGN" - "INSERTION_ORDER" -
+   * "INVENTORY_SOURCE" - "LINE_ITEM"
    * @param fileTypes fileTypes or {@code null} for none
    */
   public DownloadRequest setFileTypes(java.util.List<java.lang.String> fileTypes) {

@@ -46,7 +46,7 @@ public class FactCheckTools extends com.google.api.client.googleapis.services.js
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Fact Check Tools API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Fact Check Tools API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -364,9 +364,7 @@ public class FactCheckTools extends com.google.api.client.googleapis.services.js
         return this;
       }
 
-      /**
-       * Textual query string. Required unless `review_publisher_site_filter` is specified.
-       */
+      /** Textual query string. Required unless `review_publisher_site_filter` is specified. */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
@@ -376,9 +374,7 @@ public class FactCheckTools extends com.google.api.client.googleapis.services.js
         return query;
       }
 
-      /**
-       * Textual query string. Required unless `review_publisher_site_filter` is specified.
-       */
+      /** Textual query string. Required unless `review_publisher_site_filter` is specified. */
       public Search setQuery(java.lang.String query) {
         this.query = query;
         return this;
@@ -1028,21 +1024,17 @@ public class FactCheckTools extends com.google.api.client.googleapis.services.js
       }
     }
     /**
-     * Update for all `ClaimReview` markup on a page
-     *
-     * Note that this is a full update. To retain the existing `ClaimReview` markup on a page, first
-     * perform a Get operation, then modify the returned markup, and finally call Update with the entire
-     * `ClaimReview` markup as the body.
+     * Update for all `ClaimReview` markup on a page Note that this is a full update. To retain the
+     * existing `ClaimReview` markup on a page, first perform a Get operation, then modify the returned
+     * markup, and finally call Update with the entire `ClaimReview` markup as the body.
      *
      * Create a request for the method "pages.update".
      *
      * This request holds the parameters needed by the factchecktools server.  After setting any
      * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param name The name of this `ClaimReview` markup page resource, in the form of
-    `pages/{page_id}`. Except for
-     *        update requests, this field is output-only
-    and should not be set by the user.
+     * @param name The name of this `ClaimReview` markup page resource, in the form of `pages/{page_id}`. Except for
+     *        update requests, this field is output-only and should not be set by the user.
      * @param content the {@link com.google.api.services.factchecktools.v1alpha1.model.GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage}
      * @return the request
      */
@@ -1060,11 +1052,9 @@ public class FactCheckTools extends com.google.api.client.googleapis.services.js
           java.util.regex.Pattern.compile("^pages/[^/]+$");
 
       /**
-       * Update for all `ClaimReview` markup on a page
-       *
-       * Note that this is a full update. To retain the existing `ClaimReview` markup on a page, first
-       * perform a Get operation, then modify the returned markup, and finally call Update with the
-       * entire `ClaimReview` markup as the body.
+       * Update for all `ClaimReview` markup on a page Note that this is a full update. To retain the
+       * existing `ClaimReview` markup on a page, first perform a Get operation, then modify the
+       * returned markup, and finally call Update with the entire `ClaimReview` markup as the body.
        *
        * Create a request for the method "pages.update".
        *
@@ -1074,10 +1064,8 @@ public class FactCheckTools extends com.google.api.client.googleapis.services.js
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The name of this `ClaimReview` markup page resource, in the form of
-    `pages/{page_id}`. Except for
-     *        update requests, this field is output-only
-    and should not be set by the user.
+       * @param name The name of this `ClaimReview` markup page resource, in the form of `pages/{page_id}`. Except for
+     *        update requests, this field is output-only and should not be set by the user.
        * @param content the {@link com.google.api.services.factchecktools.v1alpha1.model.GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage}
        * @since 1.13
        */

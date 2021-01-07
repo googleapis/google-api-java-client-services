@@ -46,7 +46,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Build API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Build API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,9 +143,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
   public class Operations {
 
     /**
-     * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-     * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-     * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+     * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+     * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
      * methods to check whether the cancellation succeeded or whether the operation completed despite
      * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
      * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -174,13 +174,13 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-       * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-       * other methods to check whether the cancellation succeeded or whether the operation completed
-       * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-       * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-       * corresponding to `Code.CANCELLED`.
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * `Code.CANCELLED`.
        *
        * Create a request for the method "operations.cancel".
        *
@@ -286,7 +286,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -311,7 +311,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -423,206 +423,6 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`.
-     *
-     * NOTE: the `name` binding allows API services to override the binding to use different resource
-     * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-     * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-     * compatibility, the default name includes the operations collection id, however overriding users
-     * must ensure the name binding is the parent resource, without the operations collection id.
-     *
-     * Create a request for the method "operations.list".
-     *
-     * This request holds the parameters needed by the cloudbuild server.  After setting any optional
-     * parameters, call the {@link List#execute()} method to invoke the remote operation.
-     *
-     * @param name The name of the operation's parent resource.
-     * @return the request
-     */
-    public List list(java.lang.String name) throws java.io.IOException {
-      List result = new List(name);
-      initialize(result);
-      return result;
-    }
-
-    public class List extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.ListOperationsResponse> {
-
-      private static final String REST_PATH = "v1/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations$");
-
-      /**
-       * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * NOTE: the `name` binding allows API services to override the binding to use different resource
-       * name schemes, such as `users/operations`. To override the binding, API services can add a
-       * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-       * compatibility, the default name includes the operations collection id, however overriding users
-       * must ensure the name binding is the parent resource, without the operations collection id.
-       *
-       * Create a request for the method "operations.list".
-       *
-       * This request holds the parameters needed by the the cloudbuild server.  After setting any
-       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name The name of the operation's parent resource.
-       * @since 1.13
-       */
-      protected List(java.lang.String name) {
-        super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.ListOperationsResponse.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public List set$Xgafv(java.lang.String $Xgafv) {
-        return (List) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public List setAlt(java.lang.String alt) {
-        return (List) super.setAlt(alt);
-      }
-
-      @Override
-      public List setCallback(java.lang.String callback) {
-        return (List) super.setCallback(callback);
-      }
-
-      @Override
-      public List setFields(java.lang.String fields) {
-        return (List) super.setFields(fields);
-      }
-
-      @Override
-      public List setKey(java.lang.String key) {
-        return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (List) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public List setQuotaUser(java.lang.String quotaUser) {
-        return (List) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public List setUploadType(java.lang.String uploadType) {
-        return (List) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public List setUploadProtocol(java.lang.String uploadProtocol) {
-        return (List) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The name of the operation's parent resource. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The name of the operation's parent resource.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** The name of the operation's parent resource. */
-      public List setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /** The standard list filter. */
-      @com.google.api.client.util.Key
-      private java.lang.String filter;
-
-      /** The standard list filter.
-       */
-      public java.lang.String getFilter() {
-        return filter;
-      }
-
-      /** The standard list filter. */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
-        return this;
-      }
-
-      /** The standard list page size. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** The standard list page size.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /** The standard list page size. */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      @Override
-      public List set(String parameterName, Object value) {
-        return (List) super.set(parameterName, value);
       }
     }
 
@@ -806,10 +606,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Starts a build with the specified configuration.
-       *
-       * This method returns a long-running `Operation`, which includes the build ID. Pass the build ID to
-       * `GetBuild` to determine the build status (such as `SUCCESS` or `FAILURE`).
+       * Starts a build with the specified configuration. This method returns a long-running `Operation`,
+       * which includes the build ID. Pass the build ID to `GetBuild` to determine the build status (such
+       * as `SUCCESS` or `FAILURE`).
        *
        * Create a request for the method "builds.create".
        *
@@ -831,10 +630,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/builds";
 
         /**
-         * Starts a build with the specified configuration.
-         *
-         * This method returns a long-running `Operation`, which includes the build ID. Pass the build ID
-         * to `GetBuild` to determine the build status (such as `SUCCESS` or `FAILURE`).
+         * Starts a build with the specified configuration. This method returns a long-running
+         * `Operation`, which includes the build ID. Pass the build ID to `GetBuild` to determine the
+         * build status (such as `SUCCESS` or `FAILURE`).
          *
          * Create a request for the method "builds.create".
          *
@@ -924,16 +722,37 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /**
+         * The parent resource where this build will be created. Format:
+         * `projects/{project}/locations/{location}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The parent resource where this build will be created. Format:
+       `projects/{project}/locations/{location}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The parent resource where this build will be created. Format:
+         * `projects/{project}/locations/{location}`
+         */
+        public Create setParent(java.lang.String parent) {
+          this.parent = parent;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);
         }
       }
       /**
-       * Returns information about a previously requested build.
-       *
-       * The `Build` that is returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`),
-       * and timing information.
+       * Returns information about a previously requested build. The `Build` that is returned includes its
+       * status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
        *
        * Create a request for the method "builds.get".
        *
@@ -955,10 +774,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/builds/{id}";
 
         /**
-         * Returns information about a previously requested build.
-         *
-         * The `Build` that is returned includes its status (such as `SUCCESS`, `FAILURE`, or `WORKING`),
-         * and timing information.
+         * Returns information about a previously requested build. The `Build` that is returned includes
+         * its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
          *
          * Create a request for the method "builds.get".
          *
@@ -1074,16 +891,37 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /**
+         * The name of the `Build` to retrieve. Format:
+         * `projects/{project}/locations/{location}/builds/{build}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the `Build` to retrieve. Format:
+       `projects/{project}/locations/{location}/builds/{build}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The name of the `Build` to retrieve. Format:
+         * `projects/{project}/locations/{location}/builds/{build}`
+         */
+        public Get setName(java.lang.String name) {
+          this.name = name;
+          return this;
+        }
+
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
         }
       }
       /**
-       * Lists previously requested builds.
-       *
-       * Previously requested builds may still be in-progress, or may have finished successfully or
-       * unsuccessfully.
+       * Lists previously requested builds. Previously requested builds may still be in-progress, or may
+       * have finished successfully or unsuccessfully.
        *
        * Create a request for the method "builds.list".
        *
@@ -1104,10 +942,8 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/builds";
 
         /**
-         * Lists previously requested builds.
-         *
-         * Previously requested builds may still be in-progress, or may have finished successfully or
-         * unsuccessfully.
+         * Lists previously requested builds. Previously requested builds may still be in-progress, or may
+         * have finished successfully or unsuccessfully.
          *
          * Create a request for the method "builds.list".
          *
@@ -1237,19 +1073,52 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** Token to provide to skip to a particular spot in the list. */
+        /**
+         * The page token for the next page of Builds. If unspecified, the first page of results is
+         * returned. If the token is rejected for any reason, INVALID_ARGUMENT will be thrown. In
+         * this case, the token should be discarded, and pagination should be restarted from the
+         * first page of results. See https://google.aip.dev/158 for more.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Token to provide to skip to a particular spot in the list.
+        /** The page token for the next page of Builds. If unspecified, the first page of results is returned.
+       If the token is rejected for any reason, INVALID_ARGUMENT will be thrown. In this case, the token
+       should be discarded, and pagination should be restarted from the first page of results. See
+       https://google.aip.dev/158 for more.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** Token to provide to skip to a particular spot in the list. */
+        /**
+         * The page token for the next page of Builds. If unspecified, the first page of results is
+         * returned. If the token is rejected for any reason, INVALID_ARGUMENT will be thrown. In
+         * this case, the token should be discarded, and pagination should be restarted from the
+         * first page of results. See https://google.aip.dev/158 for more.
+         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * The parent of the collection of `Builds`. Format: `projects/{project}/locations/location`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The parent of the collection of `Builds`. Format: `projects/{project}/locations/location`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The parent of the collection of `Builds`. Format: `projects/{project}/locations/location`
+         */
+        public List setParent(java.lang.String parent) {
+          this.parent = parent;
           return this;
         }
 
@@ -1259,29 +1128,19 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Creates a new build based on the specified build.
-       *
-       * This method creates a new build using the original build request, which may or may not result in
-       * an identical build.
-       *
-       * For triggered builds:
-       *
+       * Creates a new build based on the specified build. This method creates a new build using the
+       * original build request, which may or may not result in an identical build. For triggered builds:
        * * Triggered builds resolve to a precise revision; therefore a retry of a triggered build will
-       * result in a build that uses the same revision.
-       *
-       * For non-triggered builds that specify `RepoSource`:
-       *
-       * * If the original build built from the tip of a branch, the retried build will build from the tip
-       * of that branch, which may not be the same revision as the original build. * If the original build
-       * specified a commit sha or revision ID, the retried build will use the identical source.
-       *
-       * For builds that specify `StorageSource`:
-       *
-       * * If the original build pulled source from Google Cloud Storage without specifying the generation
-       * of the object, the new build will use the current object, which may be different from the
-       * original build source. * If the original build pulled source from Cloud Storage and specified the
-       * generation of the object, the new build will attempt to use the same object, which may or may not
-       * be available depending on the bucket's lifecycle management settings.
+       * result in a build that uses the same revision. For non-triggered builds that specify
+       * `RepoSource`: * If the original build built from the tip of a branch, the retried build will
+       * build from the tip of that branch, which may not be the same revision as the original build. * If
+       * the original build specified a commit sha or revision ID, the retried build will use the
+       * identical source. For builds that specify `StorageSource`: * If the original build pulled source
+       * from Google Cloud Storage without specifying the generation of the object, the new build will use
+       * the current object, which may be different from the original build source. * If the original
+       * build pulled source from Cloud Storage and specified the generation of the object, the new build
+       * will attempt to use the same object, which may or may not be available depending on the bucket's
+       * lifecycle management settings.
        *
        * Create a request for the method "builds.retry".
        *
@@ -1304,29 +1163,19 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/builds/{id}:retry";
 
         /**
-         * Creates a new build based on the specified build.
-         *
-         * This method creates a new build using the original build request, which may or may not result
-         * in an identical build.
-         *
-         * For triggered builds:
-         *
-         * * Triggered builds resolve to a precise revision; therefore a retry of a triggered build will
-         * result in a build that uses the same revision.
-         *
-         * For non-triggered builds that specify `RepoSource`:
-         *
-         * * If the original build built from the tip of a branch, the retried build will build from the
-         * tip of that branch, which may not be the same revision as the original build. * If the original
-         * build specified a commit sha or revision ID, the retried build will use the identical source.
-         *
-         * For builds that specify `StorageSource`:
-         *
-         * * If the original build pulled source from Google Cloud Storage without specifying the
-         * generation of the object, the new build will use the current object, which may be different
-         * from the original build source. * If the original build pulled source from Cloud Storage and
-         * specified the generation of the object, the new build will attempt to use the same object,
-         * which may or may not be available depending on the bucket's lifecycle management settings.
+         * Creates a new build based on the specified build. This method creates a new build using the
+         * original build request, which may or may not result in an identical build. For triggered
+         * builds: * Triggered builds resolve to a precise revision; therefore a retry of a triggered
+         * build will result in a build that uses the same revision. For non-triggered builds that specify
+         * `RepoSource`: * If the original build built from the tip of a branch, the retried build will
+         * build from the tip of that branch, which may not be the same revision as the original build. *
+         * If the original build specified a commit sha or revision ID, the retried build will use the
+         * identical source. For builds that specify `StorageSource`: * If the original build pulled
+         * source from Google Cloud Storage without specifying the generation of the object, the new build
+         * will use the current object, which may be different from the original build source. * If the
+         * original build pulled source from Cloud Storage and specified the generation of the object, the
+         * new build will attempt to use the same object, which may or may not be available depending on
+         * the bucket's lifecycle management settings.
          *
          * Create a request for the method "builds.retry".
          *
@@ -1442,6 +1291,1219 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
 
     }
     /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudBuild cloudbuild = new CloudBuild(...);}
+     *   {@code CloudBuild.Locations.List request = cloudbuild.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the Builds collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudBuild cloudbuild = new CloudBuild(...);}
+       *   {@code CloudBuild.Builds.List request = cloudbuild.builds().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Builds builds() {
+        return new Builds();
+      }
+
+      /**
+       * The "builds" collection of methods.
+       */
+      public class Builds {
+
+        /**
+         * Cancels a build in progress.
+         *
+         * Create a request for the method "builds.cancel".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the `Build` to retrieve. Format:
+         *        `projects/{project}/locations/{location}/builds/{build}`
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.CancelBuildRequest}
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name, com.google.api.services.cloudbuild.v1.model.CancelBuildRequest content) throws java.io.IOException {
+          Cancel result = new Cancel(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Build> {
+
+          private static final String REST_PATH = "v1/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+
+          /**
+           * Cancels a build in progress.
+           *
+           * Create a request for the method "builds.cancel".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the `Build` to retrieve. Format:
+         *        `projects/{project}/locations/{location}/builds/{build}`
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.CancelBuildRequest}
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name, com.google.api.services.cloudbuild.v1.model.CancelBuildRequest content) {
+            super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Build.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the `Build` to retrieve. Format:
+           * `projects/{project}/locations/{location}/builds/{build}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the `Build` to retrieve. Format:
+         `projects/{project}/locations/{location}/builds/{build}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the `Build` to retrieve. Format:
+           * `projects/{project}/locations/{location}/builds/{build}`
+           */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Starts a build with the specified configuration. This method returns a long-running `Operation`,
+         * which includes the build ID. Pass the build ID to `GetBuild` to determine the build status (such
+         * as `SUCCESS` or `FAILURE`).
+         *
+         * Create a request for the method "builds.create".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource where this build will be created. Format:
+         *        `projects/{project}/locations/{location}`
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.Build}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.Build content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/builds";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Starts a build with the specified configuration. This method returns a long-running
+           * `Operation`, which includes the build ID. Pass the build ID to `GetBuild` to determine the
+           * build status (such as `SUCCESS` or `FAILURE`).
+           *
+           * Create a request for the method "builds.create".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent resource where this build will be created. Format:
+         *        `projects/{project}/locations/{location}`
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.Build}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.cloudbuild.v1.model.Build content) {
+            super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent resource where this build will be created. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource where this build will be created. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent resource where this build will be created. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. ID of the project. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. ID of the project.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. ID of the project. */
+          public Create setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns information about a previously requested build. The `Build` that is returned includes its
+         * status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
+         *
+         * Create a request for the method "builds.get".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the `Build` to retrieve. Format:
+         *        `projects/{project}/locations/{location}/builds/{build}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Build> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+
+          /**
+           * Returns information about a previously requested build. The `Build` that is returned includes
+           * its status (such as `SUCCESS`, `FAILURE`, or `WORKING`), and timing information.
+           *
+           * Create a request for the method "builds.get".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the `Build` to retrieve. Format:
+         *        `projects/{project}/locations/{location}/builds/{build}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.Build.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the `Build` to retrieve. Format:
+           * `projects/{project}/locations/{location}/builds/{build}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the `Build` to retrieve. Format:
+         `projects/{project}/locations/{location}/builds/{build}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the `Build` to retrieve. Format:
+           * `projects/{project}/locations/{location}/builds/{build}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. ID of the build. */
+          @com.google.api.client.util.Key
+          private java.lang.String id;
+
+          /** Required. ID of the build.
+           */
+          public java.lang.String getId() {
+            return id;
+          }
+
+          /** Required. ID of the build. */
+          public Get setId(java.lang.String id) {
+            this.id = id;
+            return this;
+          }
+
+          /** Required. ID of the project. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. ID of the project.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. ID of the project. */
+          public Get setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists previously requested builds. Previously requested builds may still be in-progress, or may
+         * have finished successfully or unsuccessfully.
+         *
+         * Create a request for the method "builds.list".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent of the collection of `Builds`. Format: `projects/{project}/locations/location`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.ListBuildsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/builds";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists previously requested builds. Previously requested builds may still be in-progress, or may
+           * have finished successfully or unsuccessfully.
+           *
+           * Create a request for the method "builds.list".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent of the collection of `Builds`. Format: `projects/{project}/locations/location`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.ListBuildsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent of the collection of `Builds`. Format:
+           * `projects/{project}/locations/location`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent of the collection of `Builds`. Format: `projects/{project}/locations/location`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent of the collection of `Builds`. Format:
+           * `projects/{project}/locations/location`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The raw filter text to constrain the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The raw filter text to constrain the results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** The raw filter text to constrain the results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Number of results to return in the list. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Number of results to return in the list.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Number of results to return in the list. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The page token for the next page of Builds. If unspecified, the first page of results
+           * is returned. If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
+           * In this case, the token should be discarded, and pagination should be restarted from
+           * the first page of results. See https://google.aip.dev/158 for more.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The page token for the next page of Builds. If unspecified, the first page of results is returned.
+         If the token is rejected for any reason, INVALID_ARGUMENT will be thrown. In this case, the token
+         should be discarded, and pagination should be restarted from the first page of results. See
+         https://google.aip.dev/158 for more.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The page token for the next page of Builds. If unspecified, the first page of results
+           * is returned. If the token is rejected for any reason, INVALID_ARGUMENT will be thrown.
+           * In this case, the token should be discarded, and pagination should be restarted from
+           * the first page of results. See https://google.aip.dev/158 for more.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. ID of the project. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** Required. ID of the project.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** Required. ID of the project. */
+          public List setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new build based on the specified build. This method creates a new build using the
+         * original build request, which may or may not result in an identical build. For triggered builds:
+         * * Triggered builds resolve to a precise revision; therefore a retry of a triggered build will
+         * result in a build that uses the same revision. For non-triggered builds that specify
+         * `RepoSource`: * If the original build built from the tip of a branch, the retried build will
+         * build from the tip of that branch, which may not be the same revision as the original build. * If
+         * the original build specified a commit sha or revision ID, the retried build will use the
+         * identical source. For builds that specify `StorageSource`: * If the original build pulled source
+         * from Google Cloud Storage without specifying the generation of the object, the new build will use
+         * the current object, which may be different from the original build source. * If the original
+         * build pulled source from Cloud Storage and specified the generation of the object, the new build
+         * will attempt to use the same object, which may or may not be available depending on the bucket's
+         * lifecycle management settings.
+         *
+         * Create a request for the method "builds.retry".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Retry#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the `Build` to retry. Format: `projects/{project}/locations/{location}/builds/{build}`
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.RetryBuildRequest}
+         * @return the request
+         */
+        public Retry retry(java.lang.String name, com.google.api.services.cloudbuild.v1.model.RetryBuildRequest content) throws java.io.IOException {
+          Retry result = new Retry(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Retry extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:retry";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+
+          /**
+           * Creates a new build based on the specified build. This method creates a new build using the
+           * original build request, which may or may not result in an identical build. For triggered
+           * builds: * Triggered builds resolve to a precise revision; therefore a retry of a triggered
+           * build will result in a build that uses the same revision. For non-triggered builds that specify
+           * `RepoSource`: * If the original build built from the tip of a branch, the retried build will
+           * build from the tip of that branch, which may not be the same revision as the original build. *
+           * If the original build specified a commit sha or revision ID, the retried build will use the
+           * identical source. For builds that specify `StorageSource`: * If the original build pulled
+           * source from Google Cloud Storage without specifying the generation of the object, the new build
+           * will use the current object, which may be different from the original build source. * If the
+           * original build pulled source from Cloud Storage and specified the generation of the object, the
+           * new build will attempt to use the same object, which may or may not be available depending on
+           * the bucket's lifecycle management settings.
+           *
+           * Create a request for the method "builds.retry".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Retry#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Retry#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the `Build` to retry. Format: `projects/{project}/locations/{location}/builds/{build}`
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.RetryBuildRequest}
+           * @since 1.13
+           */
+          protected Retry(java.lang.String name, com.google.api.services.cloudbuild.v1.model.RetryBuildRequest content) {
+            super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+            }
+          }
+
+          @Override
+          public Retry set$Xgafv(java.lang.String $Xgafv) {
+            return (Retry) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Retry setAccessToken(java.lang.String accessToken) {
+            return (Retry) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Retry setAlt(java.lang.String alt) {
+            return (Retry) super.setAlt(alt);
+          }
+
+          @Override
+          public Retry setCallback(java.lang.String callback) {
+            return (Retry) super.setCallback(callback);
+          }
+
+          @Override
+          public Retry setFields(java.lang.String fields) {
+            return (Retry) super.setFields(fields);
+          }
+
+          @Override
+          public Retry setKey(java.lang.String key) {
+            return (Retry) super.setKey(key);
+          }
+
+          @Override
+          public Retry setOauthToken(java.lang.String oauthToken) {
+            return (Retry) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Retry setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Retry) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Retry setQuotaUser(java.lang.String quotaUser) {
+            return (Retry) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Retry setUploadType(java.lang.String uploadType) {
+            return (Retry) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Retry setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Retry) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The name of the `Build` to retry. Format:
+           * `projects/{project}/locations/{location}/builds/{build}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the `Build` to retry. Format: `projects/{project}/locations/{location}/builds/{build}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The name of the `Build` to retry. Format:
+           * `projects/{project}/locations/{location}/builds/{build}`
+           */
+          public Retry setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/builds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Retry set(String parameterName, Object value) {
+            return (Retry) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Operations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudBuild cloudbuild = new CloudBuild(...);}
+       *   {@code CloudBuild.Operations.List request = cloudbuild.operations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Operations operations() {
+        return new Operations();
+      }
+
+      /**
+       * The "operations" collection of methods.
+       */
+      public class Operations {
+
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * `Code.CANCELLED`.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.CancelOperationRequest}
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name, com.google.api.services.cloudbuild.v1.model.CancelOperationRequest content) throws java.io.IOException {
+          Cancel result = new Cancel(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.cloudbuild.v1.model.CancelOperationRequest}
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name, com.google.api.services.cloudbuild.v1.model.CancelOperationRequest content) {
+            super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be cancelled.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
+         * operation result at intervals as recommended by the API service.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
+           * operation result at intervals as recommended by the API service.
+           *
+           * Create a request for the method "operations.get".
+           *
+           * This request holds the parameters needed by the the cloudbuild server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudBuild.this, "GET", REST_PATH, null, com.google.api.services.cloudbuild.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Triggers collection.
      *
      * <p>The typical use is:</p>
@@ -1462,9 +2524,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
     public class Triggers {
 
       /**
-       * Creates a new `BuildTrigger`.
-       *
-       * This API is experimental.
+       * Creates a new `BuildTrigger`. This API is experimental.
        *
        * Create a request for the method "triggers.create".
        *
@@ -1486,9 +2546,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers";
 
         /**
-         * Creates a new `BuildTrigger`.
-         *
-         * This API is experimental.
+         * Creates a new `BuildTrigger`. This API is experimental.
          *
          * Create a request for the method "triggers.create".
          *
@@ -1584,9 +2642,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Deletes a `BuildTrigger` by its project ID and trigger ID.
-       *
-       * This API is experimental.
+       * Deletes a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
        *
        * Create a request for the method "triggers.delete".
        *
@@ -1608,9 +2664,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers/{triggerId}";
 
         /**
-         * Deletes a `BuildTrigger` by its project ID and trigger ID.
-         *
-         * This API is experimental.
+         * Deletes a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
          *
          * Create a request for the method "triggers.delete".
          *
@@ -1723,9 +2777,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Returns information about a `BuildTrigger`.
-       *
-       * This API is experimental.
+       * Returns information about a `BuildTrigger`. This API is experimental.
        *
        * Create a request for the method "triggers.get".
        *
@@ -1747,9 +2799,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers/{triggerId}";
 
         /**
-         * Returns information about a `BuildTrigger`.
-         *
-         * This API is experimental.
+         * Returns information about a `BuildTrigger`. This API is experimental.
          *
          * Create a request for the method "triggers.get".
          *
@@ -1871,9 +2921,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists existing `BuildTrigger`s.
-       *
-       * This API is experimental.
+       * Lists existing `BuildTrigger`s. This API is experimental.
        *
        * Create a request for the method "triggers.list".
        *
@@ -1894,9 +2942,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers";
 
         /**
-         * Lists existing `BuildTrigger`s.
-         *
-         * This API is experimental.
+         * Lists existing `BuildTrigger`s. This API is experimental.
          *
          * Create a request for the method "triggers.list".
          *
@@ -2032,9 +3078,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Updates a `BuildTrigger` by its project ID and trigger ID.
-       *
-       * This API is experimental.
+       * Updates a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
        *
        * Create a request for the method "triggers.patch".
        *
@@ -2057,9 +3101,7 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers/{triggerId}";
 
         /**
-         * Updates a `BuildTrigger` by its project ID and trigger ID.
-         *
-         * This API is experimental.
+         * Updates a `BuildTrigger` by its project ID and trigger ID. This API is experimental.
          *
          * Create a request for the method "triggers.patch".
          *

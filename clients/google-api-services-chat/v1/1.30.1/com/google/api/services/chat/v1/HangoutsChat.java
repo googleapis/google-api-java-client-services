@@ -46,7 +46,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Hangouts Chat API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Hangouts Chat API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -123,6 +123,184 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the Media collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code HangoutsChat chat = new HangoutsChat(...);}
+   *   {@code HangoutsChat.Media.List request = chat.media().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Media media() {
+    return new Media();
+  }
+
+  /**
+   * The "media" collection of methods.
+   */
+  public class Media {
+
+    /**
+     * Downloads media. Download is supported on the URI `/v1/media/{+name}?alt=media`.
+     *
+     * Create a request for the method "media.download".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Download#execute()} method to invoke the remote operation.
+     *
+     * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
+     * @return the request
+     */
+    public Download download(java.lang.String resourceName) throws java.io.IOException {
+      Download result = new Download(resourceName);
+      initialize(result);
+      return result;
+    }
+
+    public class Download extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Media> {
+
+      private static final String REST_PATH = "v1/media/{+resourceName}";
+
+      private final java.util.regex.Pattern RESOURCE_NAME_PATTERN =
+          java.util.regex.Pattern.compile("^.*$");
+
+      /**
+       * Downloads media. Download is supported on the URI `/v1/media/{+name}?alt=media`.
+       *
+       * Create a request for the method "media.download".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Download#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resourceName Name of the media that is being downloaded. See ReadRequest.resource_name.
+       * @since 1.13
+       */
+      protected Download(java.lang.String resourceName) {
+        super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.Media.class);
+        this.resourceName = com.google.api.client.util.Preconditions.checkNotNull(resourceName, "Required parameter resourceName must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^.*$");
+        }
+        initializeMediaDownload();
+      }
+
+      @Override
+      public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+        super.executeMediaAndDownloadTo(outputStream);
+      }
+
+      @Override
+      public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+        return super.executeMediaAsInputStream();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+        return super.executeMedia();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Download set$Xgafv(java.lang.String $Xgafv) {
+        return (Download) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Download setAccessToken(java.lang.String accessToken) {
+        return (Download) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Download setAlt(java.lang.String alt) {
+        return (Download) super.setAlt(alt);
+      }
+
+      @Override
+      public Download setCallback(java.lang.String callback) {
+        return (Download) super.setCallback(callback);
+      }
+
+      @Override
+      public Download setFields(java.lang.String fields) {
+        return (Download) super.setFields(fields);
+      }
+
+      @Override
+      public Download setKey(java.lang.String key) {
+        return (Download) super.setKey(key);
+      }
+
+      @Override
+      public Download setOauthToken(java.lang.String oauthToken) {
+        return (Download) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Download) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Download setQuotaUser(java.lang.String quotaUser) {
+        return (Download) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Download setUploadType(java.lang.String uploadType) {
+        return (Download) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Download setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Download) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name.
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /** Name of the media that is being downloaded. See ReadRequest.resource_name. */
+      public Download setResourceName(java.lang.String resourceName) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^.*$");
+        }
+        this.resourceName = resourceName;
+        return this;
+      }
+
+      @Override
+      public Download set(String parameterName, Object value) {
+        return (Download) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Spaces collection.
    *
    * <p>The typical use is:</p>
@@ -150,8 +328,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the chat server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name of the space, in the form "spaces".
-    Example: spaces/AAAAMpdlehY
+     * @param name Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAMpdlehY
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -177,8 +354,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name of the space, in the form "spaces".
-    Example: spaces/AAAAMpdlehY
+       * @param name Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAMpdlehY
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -257,25 +433,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Required. Resource name of the space, in the form "spaces".
-       *
-       * Example: spaces/AAAAMpdlehY
+       * Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAMpdlehY
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name of the space, in the form "spaces".
-
-     Example: spaces/AAAAMpdlehY
+      /** Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAMpdlehY
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Resource name of the space, in the form "spaces".
-       *
-       * Example: spaces/AAAAMpdlehY
+       * Required. Resource name of the space, in the form "spaces". Example: spaces/AAAAMpdlehY
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -466,9 +636,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the membership to be retrieved, in the form
-      "spaces/members".
-      Example:
+       * @param name Required. Resource name of the membership to be retrieved, in the form "spaces/members". Example:
        *        spaces/AAAAMpdlehY/members/105115627578887013105
        * @return the request
        */
@@ -495,9 +663,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the membership to be retrieved, in the form
-      "spaces/members".
-      Example:
+         * @param name Required. Resource name of the membership to be retrieved, in the form "spaces/members". Example:
        *        spaces/AAAAMpdlehY/members/105115627578887013105
          * @since 1.13
          */
@@ -578,15 +744,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the membership to be retrieved, in the form "spaces/members".
-         *
          * Example: spaces/AAAAMpdlehY/members/105115627578887013105
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the membership to be retrieved, in the form "spaces/members".
-
-       Example: spaces/AAAAMpdlehY/members/105115627578887013105
+        /** Required. Resource name of the membership to be retrieved, in the form "spaces/members". Example:
+       spaces/AAAAMpdlehY/members/105115627578887013105
          */
         public java.lang.String getName() {
           return name;
@@ -594,7 +758,6 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the membership to be retrieved, in the form "spaces/members".
-         *
          * Example: spaces/AAAAMpdlehY/members/105115627578887013105
          */
         public Get setName(java.lang.String name) {
@@ -620,10 +783,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the space for which membership list is to be
-      fetched, in the form
-       *        "spaces".
-      Example: spaces/AAAAMpdlehY
+       * @param parent Required. The resource name of the space for which membership list is to be fetched, in the form
+       *        "spaces". Example: spaces/AAAAMpdlehY
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -649,10 +810,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the space for which membership list is to be
-      fetched, in the form
-       *        "spaces".
-      Example: spaces/AAAAMpdlehY
+         * @param parent Required. The resource name of the space for which membership list is to be fetched, in the form
+       *        "spaces". Example: spaces/AAAAMpdlehY
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -732,17 +891,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The resource name of the space for which membership list is to be fetched, in
-         * the form "spaces".
-         *
-         * Example: spaces/AAAAMpdlehY
+         * the form "spaces". Example: spaces/AAAAMpdlehY
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The resource name of the space for which membership list is to be fetched, in the form
-       "spaces".
-
-       Example: spaces/AAAAMpdlehY
+       "spaces". Example: spaces/AAAAMpdlehY
          */
         public java.lang.String getParent() {
           return parent;
@@ -750,9 +905,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. The resource name of the space for which membership list is to be fetched, in
-         * the form "spaces".
-         *
-         * Example: spaces/AAAAMpdlehY
+         * the form "spaces". Example: spaces/AAAAMpdlehY
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -838,8 +991,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Space resource name, in the form "spaces".
-      Example: spaces/AAAAMpdlehY
+       * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
        */
@@ -866,8 +1018,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Space resource name, in the form "spaces".
-      Example: spaces/AAAAMpdlehY
+         * @param parent Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
          */
@@ -936,9 +1087,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
-         */
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -948,9 +1097,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           return parent;
         }
 
-        /**
-         * Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY
-         */
+        /** Required. Space resource name, in the form "spaces". Example: spaces/AAAAMpdlehY */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -966,9 +1113,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * thread. If this is the first message with a given thread identifier, a new thread is
          * created. Subsequent messages with the same thread identifier will be posted into the same
          * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
-         * of a thread (created earlier by them) to post further updates to it.
-         *
-         * Has no effect if thread field, corresponding to an existing thread, is set in message.
+         * of a thread (created earlier by them) to post further updates to it. Has no effect if
+         * thread field, corresponding to an existing thread, is set in message.
          */
         @com.google.api.client.util.Key
         private java.lang.String threadKey;
@@ -977,9 +1123,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        this is the first message with a given thread identifier, a new thread is created. Subsequent
        messages with the same thread identifier will be posted into the same thread. This relieves bots
        and webhooks from having to store the Hangouts Chat thread ID of a thread (created earlier by them)
-       to post further updates to it.
-
-       Has no effect if thread field, corresponding to an existing thread, is set in message.
+       to post further updates to it. Has no effect if thread field, corresponding to an existing thread,
+       is set in message.
          */
         public java.lang.String getThreadKey() {
           return threadKey;
@@ -990,9 +1135,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * thread. If this is the first message with a given thread identifier, a new thread is
          * created. Subsequent messages with the same thread identifier will be posted into the same
          * thread. This relieves bots and webhooks from having to store the Hangouts Chat thread ID
-         * of a thread (created earlier by them) to post further updates to it.
-         *
-         * Has no effect if thread field, corresponding to an existing thread, is set in message.
+         * of a thread (created earlier by them) to post further updates to it. Has no effect if
+         * thread field, corresponding to an existing thread, is set in message.
          */
         public Create setThreadKey(java.lang.String threadKey) {
           this.threadKey = threadKey;
@@ -1012,9 +1156,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the message to be deleted, in the form
-      "spaces/messages"
-      Example:
+       * @param name Required. Resource name of the message to be deleted, in the form "spaces/messages" Example:
        *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
        * @return the request
        */
@@ -1041,9 +1183,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the message to be deleted, in the form
-      "spaces/messages"
-      Example:
+         * @param name Required. Resource name of the message to be deleted, in the form "spaces/messages" Example:
        *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          * @since 1.13
          */
@@ -1114,15 +1254,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the message to be deleted, in the form "spaces/messages"
-         *
          * Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the message to be deleted, in the form "spaces/messages"
-
-       Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+        /** Required. Resource name of the message to be deleted, in the form "spaces/messages" Example:
+       spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          */
         public java.lang.String getName() {
           return name;
@@ -1130,7 +1268,6 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the message to be deleted, in the form "spaces/messages"
-         *
          * Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          */
         public Delete setName(java.lang.String name) {
@@ -1156,9 +1293,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the message to be retrieved, in the form
-      "spaces/messages".
-      Example:
+       * @param name Required. Resource name of the message to be retrieved, in the form "spaces/messages". Example:
        *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
        * @return the request
        */
@@ -1185,9 +1320,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the message to be retrieved, in the form
-      "spaces/messages".
-      Example:
+         * @param name Required. Resource name of the message to be retrieved, in the form "spaces/messages". Example:
        *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          * @since 1.13
          */
@@ -1268,15 +1401,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the message to be retrieved, in the form "spaces/messages".
-         *
          * Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the message to be retrieved, in the form "spaces/messages".
-
-       Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+        /** Required. Resource name of the message to be retrieved, in the form "spaces/messages". Example:
+       spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          */
         public java.lang.String getName() {
           return name;
@@ -1284,7 +1415,6 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Required. Resource name of the message to be retrieved, in the form "spaces/messages".
-         *
          * Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          */
         public Get setName(java.lang.String name) {
@@ -1310,8 +1440,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the chat server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name, in the form "spaces/messages".
-      Example:
+       * @param name Resource name, in the form "spaces/messages". Example:
        *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
        * @param content the {@link com.google.api.services.chat.v1.model.Message}
        * @return the request
@@ -1339,8 +1468,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name, in the form "spaces/messages".
-      Example:
+         * @param name Resource name, in the form "spaces/messages". Example:
        *        spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          * @param content the {@link com.google.api.services.chat.v1.model.Message}
          * @since 1.13
@@ -1411,25 +1539,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Resource name, in the form "spaces/messages".
-         *
-         * Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+         * Resource name, in the form "spaces/messages". Example:
+         * spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name, in the form "spaces/messages".
-
-       Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+        /** Resource name, in the form "spaces/messages". Example:
+       spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Resource name, in the form "spaces/messages".
-         *
-         * Example: spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
+         * Resource name, in the form "spaces/messages". Example:
+         * spaces/AAAAMpdlehY/messages/UMxbHmzDlr4.UMxbHmzDlr4
          */
         public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1442,25 +1567,22 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. The field paths to be updated, comma separated if there are multiple.
-         *
-         * Currently supported field paths: * text * cards
+         * Required. The field paths to be updated, comma separated if there are multiple. Currently
+         * supported field paths: * text * cards
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. The field paths to be updated, comma separated if there are multiple.
-
-       Currently supported field paths: * text * cards
+        /** Required. The field paths to be updated, comma separated if there are multiple. Currently supported
+       field paths: * text * cards
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Required. The field paths to be updated, comma separated if there are multiple.
-         *
-         * Currently supported field paths: * text * cards
+         * Required. The field paths to be updated, comma separated if there are multiple. Currently
+         * supported field paths: * text * cards
          */
         public Update setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -1473,6 +1595,166 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
 
+      /**
+       * An accessor for creating requests from the Attachments collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code HangoutsChat chat = new HangoutsChat(...);}
+       *   {@code HangoutsChat.Attachments.List request = chat.attachments().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Attachments attachments() {
+        return new Attachments();
+      }
+
+      /**
+       * The "attachments" collection of methods.
+       */
+      public class Attachments {
+
+        /**
+         * Gets the metadata of a message attachment. The attachment data is fetched using the media API.
+         *
+         * Create a request for the method "attachments.get".
+         *
+         * This request holds the parameters needed by the chat server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Resource name of the attachment, in the form "spaces/messages/attachments".
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Attachment> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+/attachments/[^/]+$");
+
+          /**
+           * Gets the metadata of a message attachment. The attachment data is fetched using the media API.
+           *
+           * Create a request for the method "attachments.get".
+           *
+           * This request holds the parameters needed by the the chat server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Resource name of the attachment, in the form "spaces/messages/attachments".
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.Attachment.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^spaces/[^/]+/messages/[^/]+/attachments/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Resource name of the attachment, in the form "spaces/messages/attachments". */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Resource name of the attachment, in the form "spaces/messages/attachments".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Resource name of the attachment, in the form "spaces/messages/attachments". */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^spaces/[^/]+/messages/[^/]+/attachments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

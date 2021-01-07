@@ -37,7 +37,8 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Host portion of the URL.
+   * Host portion of the URL. If headers contains a host header, then host must also match the
+   * header value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +52,8 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
-   * Expected BackendService resource the given URL should be mapped to.
+   * Expected BackendService or BackendBucket resource the given URL should be mapped to. service
+   * cannot be set if expectedRedirectResponseCode is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +77,8 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Host portion of the URL.
+   * Host portion of the URL. If headers contains a host header, then host must also match the
+   * header value.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -83,7 +86,8 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Host portion of the URL.
+   * Host portion of the URL. If headers contains a host header, then host must also match the
+   * header value.
    * @param host host or {@code null} for none
    */
   public UrlMapTest setHost(java.lang.String host) {
@@ -109,7 +113,8 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Expected BackendService resource the given URL should be mapped to.
+   * Expected BackendService or BackendBucket resource the given URL should be mapped to. service
+   * cannot be set if expectedRedirectResponseCode is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -117,7 +122,8 @@ public final class UrlMapTest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Expected BackendService resource the given URL should be mapped to.
+   * Expected BackendService or BackendBucket resource the given URL should be mapped to. service
+   * cannot be set if expectedRedirectResponseCode is set.
    * @param service service or {@code null} for none
    */
   public UrlMapTest setService(java.lang.String service) {

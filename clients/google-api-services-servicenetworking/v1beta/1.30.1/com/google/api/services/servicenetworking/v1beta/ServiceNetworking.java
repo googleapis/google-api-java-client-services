@@ -46,7 +46,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Service Networking API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Service Networking API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,7 +143,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -168,7 +168,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
           java.util.regex.Pattern.compile("^operations/[^/]+$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -321,16 +321,11 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link AddSubnetwork#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. A tenant project in the service producer organization, in the
-    following format:
-     *        services/{service}/{collection-id}/{resource-id}.
-    {collection-id} is the cloud resource
-     *        collection type that represents the
-    tenant project. Only `projects` are supported.
-     *        {resource-id} is the tenant project numeric id, such as
-    `123456`. {service} the name of
-     *        the peering service, such as
-    `service-peering.example.com`. This service must already be
+     * @param parent Required. A tenant project in the service producer organization, in the following format:
+     *        services/{service}/{collection-id}/{resource-id}. {collection-id} is the cloud resource
+     *        collection type that represents the tenant project. Only `projects` are supported.
+     *        {resource-id} is the tenant project numeric id, such as `123456`. {service} the name of
+     *        the peering service, such as `service-peering.example.com`. This service must already be
      *        enabled in the service consumer's project.
      * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.AddSubnetworkRequest}
      * @return the request
@@ -365,16 +360,11 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param parent Required. A tenant project in the service producer organization, in the
-    following format:
-     *        services/{service}/{collection-id}/{resource-id}.
-    {collection-id} is the cloud resource
-     *        collection type that represents the
-    tenant project. Only `projects` are supported.
-     *        {resource-id} is the tenant project numeric id, such as
-    `123456`. {service} the name of
-     *        the peering service, such as
-    `service-peering.example.com`. This service must already be
+       * @param parent Required. A tenant project in the service producer organization, in the following format:
+     *        services/{service}/{collection-id}/{resource-id}. {collection-id} is the cloud resource
+     *        collection type that represents the tenant project. Only `projects` are supported.
+     *        {resource-id} is the tenant project numeric id, such as `123456`. {service} the name of
+     *        the peering service, such as `service-peering.example.com`. This service must already be
      *        enabled in the service consumer's project.
        * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.AddSubnetworkRequest}
        * @since 1.13
@@ -490,7 +480,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
     }
     /**
      * Service producers can use this method to find a currently unused range within consumer allocated
-     * ranges.   This returned range is not reserved, and not guaranteed to remain unused. It will
+     * ranges. This returned range is not reserved, and not guaranteed to remain unused. It will
      * validate previously provided allocated ranges, find non-conflicting sub-range of requested size
      * (expressed in number of leading bits of ipv4 network mask, as in CIDR range notation). Operation
      *
@@ -500,10 +490,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link SearchRange#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. This is in a form services/{service}.
-    {service} the name of the private access management
-     *        service, for example
-    'service-peering.example.com'.
+     * @param parent Required. This is in a form services/{service}. {service} the name of the private access management
+     *        service, for example 'service-peering.example.com'.
      * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.SearchRangeRequest}
      * @return the request
      */
@@ -522,10 +510,10 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
 
       /**
        * Service producers can use this method to find a currently unused range within consumer
-       * allocated ranges.   This returned range is not reserved, and not guaranteed to remain unused.
-       * It will validate previously provided allocated ranges, find non-conflicting sub-range of
-       * requested size (expressed in number of leading bits of ipv4 network mask, as in CIDR range
-       * notation). Operation
+       * allocated ranges. This returned range is not reserved, and not guaranteed to remain unused. It
+       * will validate previously provided allocated ranges, find non-conflicting sub-range of requested
+       * size (expressed in number of leading bits of ipv4 network mask, as in CIDR range notation).
+       * Operation
        *
        * Create a request for the method "services.searchRange".
        *
@@ -535,10 +523,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * SearchRange#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. This is in a form services/{service}.
-    {service} the name of the private access management
-     *        service, for example
-    'service-peering.example.com'.
+       * @param parent Required. This is in a form services/{service}. {service} the name of the private access management
+     *        service, for example 'service-peering.example.com'.
        * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.SearchRangeRequest}
        * @since 1.13
        */
@@ -650,10 +636,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link UpdateConnections#execute()} method to invoke the remote
      * operation.
      *
-     * @param name The service producer peering service that is managing peering connectivity
-    for a service producer
-     *        organization.
-    For Google services that support this functionality, this is
+     * @param name The service producer peering service that is managing peering connectivity for a service producer
+     *        organization. For Google services that support this functionality, this is
      *        `services/servicenetworking.googleapis.com`.
      * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
      * @return the request
@@ -683,10 +667,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name The service producer peering service that is managing peering connectivity
-    for a service producer
-     *        organization.
-    For Google services that support this functionality, this is
+       * @param name The service producer peering service that is managing peering connectivity for a service producer
+     *        organization. For Google services that support this functionality, this is
      *        `services/servicenetworking.googleapis.com`.
        * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
        * @since 1.13
@@ -787,9 +769,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * If a previously defined allocated range is removed, force flag must be set to true.
-       */
+      /** If a previously defined allocated range is removed, force flag must be set to true. */
       @com.google.api.client.util.Key
       private java.lang.Boolean force;
 
@@ -799,9 +779,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         return force;
       }
 
-      /**
-       * If a previously defined allocated range is removed, force flag must be set to true.
-       */
+      /** If a previously defined allocated range is removed, force flag must be set to true. */
       public UpdateConnections setForce(java.lang.Boolean force) {
         this.force = force;
         return this;
@@ -870,10 +848,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the servicenetworking server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The service that is managing peering connectivity for a service producer's
-      organization. For Google
-       *        services that support this functionality, this
-      value is
+       * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+       *        services that support this functionality, this value is
        *        `services/servicenetworking.googleapis.com`.
        * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
        * @return the request
@@ -908,10 +884,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The service that is managing peering connectivity for a service producer's
-      organization. For Google
-       *        services that support this functionality, this
-      value is
+         * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+       *        services that support this functionality, this value is
        *        `services/servicenetworking.googleapis.com`.
          * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
          * @since 1.13
@@ -1025,14 +999,10 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the servicenetworking server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The service that is managing peering connectivity for a service producer's
-      organization. For Google
-       *        services that support this functionality, this
-      value is
-       *        `services/servicenetworking.googleapis.com`.
-      If you specify `-` as the parameter value,
-       *        all configured public peering
-      services are listed.
+       * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+       *        services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`. If you specify `-` as the parameter value,
+       *        all configured public peering services are listed.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1059,14 +1029,10 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The service that is managing peering connectivity for a service producer's
-      organization. For Google
-       *        services that support this functionality, this
-      value is
-       *        `services/servicenetworking.googleapis.com`.
-      If you specify `-` as the parameter value,
-       *        all configured public peering
-      services are listed.
+         * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+       *        services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`. If you specify `-` as the parameter value,
+       *        all configured public peering services are listed.
          * @since 1.13
          */
         protected List(java.lang.String parent) {

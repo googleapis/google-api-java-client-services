@@ -1,6 +1,6 @@
 # Groups Migration API Client Library for Java
 
-Groups Migration Api.
+The Groups Migration API allows domain administrators to archive emails into Google groups.
 
 This page contains information about getting started with the Groups Migration API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-groupsmigration</artifactId>
-      <version>v1-rev20180803-1.30.9</version>
+      <version>v1-rev20200820-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-groupsmigration:v1-rev20180803-1.30.9'
+  compile 'com.google.apis:google-api-services-groupsmigration:v1-rev20200820-1.30.10'
 }
 ```
 

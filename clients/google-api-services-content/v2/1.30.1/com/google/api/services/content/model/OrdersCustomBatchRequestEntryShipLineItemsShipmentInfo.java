@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The carrier handling the shipment. See shipments[].carrier in the  Orders resource
+   * The carrier handling the shipment. See `shipments[].carrier` in the Orders resource
    * representation for a list of acceptable values.
    * The value may be {@code null}.
    */
@@ -54,7 +54,7 @@ public final class OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo extend
   private java.lang.String trackingId;
 
   /**
-   * The carrier handling the shipment. See shipments[].carrier in the  Orders resource
+   * The carrier handling the shipment. See `shipments[].carrier` in the Orders resource
    * representation for a list of acceptable values.
    * @return value or {@code null} for none
    */
@@ -63,7 +63,7 @@ public final class OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo extend
   }
 
   /**
-   * The carrier handling the shipment. See shipments[].carrier in the  Orders resource
+   * The carrier handling the shipment. See `shipments[].carrier` in the Orders resource
    * representation for a list of acceptable values.
    * @param carrier carrier or {@code null} for none
    */

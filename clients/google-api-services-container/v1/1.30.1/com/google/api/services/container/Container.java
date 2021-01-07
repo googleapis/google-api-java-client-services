@@ -46,7 +46,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Kubernetes Engine API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Kubernetes Engine API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -190,8 +190,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent project where subnetworks are usable.
-        Specified in the format 'projects'.
+         * @param parent The parent project where subnetworks are usable. Specified in the format `projects`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -217,8 +216,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent project where subnetworks are usable.
-        Specified in the format 'projects'.
+           * @param parent The parent project where subnetworks are usable. Specified in the format `projects`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -297,19 +295,19 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The parent project where subnetworks are usable. Specified in the format 'projects'.
+           * The parent project where subnetworks are usable. Specified in the format `projects`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent project where subnetworks are usable. Specified in the format 'projects'.
+          /** The parent project where subnetworks are usable. Specified in the format `projects`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * The parent project where subnetworks are usable. Specified in the format 'projects'.
+           * The parent project where subnetworks are usable. Specified in the format `projects`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -434,9 +432,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the container server.  After setting any optional
        * parameters, call the {@link GetServerConfig#execute()} method to invoke the remote operation.
        *
-       * @param name The name (project and location) of the server config to get,
-      specified in the format
-       *        'projects/locations'.
+       * @param name The name (project and location) of the server config to get, specified in the format
+       *        `projects/locations`.
        * @return the request
        */
       public GetServerConfig getServerConfig(java.lang.String name) throws java.io.IOException {
@@ -463,9 +460,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name The name (project and location) of the server config to get,
-      specified in the format
-       *        'projects/locations'.
+         * @param name The name (project and location) of the server config to get, specified in the format
+       *        `projects/locations`.
          * @since 1.13
          */
         protected GetServerConfig(java.lang.String name) {
@@ -545,13 +541,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * The name (project and location) of the server config to get, specified in the format
-         * 'projects/locations'.
+         * `projects/locations`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The name (project and location) of the server config to get, specified in the format
-       'projects/locations'.
+       `projects/locations`.
          */
         public java.lang.String getName() {
           return name;
@@ -559,7 +555,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * The name (project and location) of the server config to get, specified in the format
-         * 'projects/locations'.
+         * `projects/locations`.
          */
         public GetServerConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -598,22 +594,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         * to return operations for. This field has been deprecated and replaced by the name field.
+         * Deprecated. The name of the Google Compute Engine
+         * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
+         * This field has been deprecated and replaced by the name field.
          */
         @com.google.api.client.util.Key
         private java.lang.String zone;
 
-        /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
-       operations for. This field has been deprecated and replaced by the name field.
+        /** Deprecated. The name of the Google Compute Engine
+       [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for. This field
+       has been deprecated and replaced by the name field.
          */
         public java.lang.String getZone() {
           return zone;
         }
 
         /**
-         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         * to return operations for. This field has been deprecated and replaced by the name field.
+         * Deprecated. The name of the Google Compute Engine
+         * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
+         * This field has been deprecated and replaced by the name field.
          */
         public GetServerConfig setZone(java.lang.String zone) {
           this.zone = zone;
@@ -654,9 +653,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link CompleteIpRotation#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to complete IP
-        rotation. Specified in the
-         *        format 'projects/locations/clusters'.
+         * @param name The name (project, location, cluster id) of the cluster to complete IP rotation. Specified in the
+         *        format `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.CompleteIPRotationRequest}
          * @return the request
          */
@@ -684,9 +682,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to complete IP
-        rotation. Specified in the
-         *        format 'projects/locations/clusters'.
+           * @param name The name (project, location, cluster id) of the cluster to complete IP rotation. Specified in the
+         *        format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.CompleteIPRotationRequest}
            * @since 1.13
            */
@@ -757,13 +754,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to complete IP rotation.
-           * Specified in the format 'projects/locations/clusters'.
+           * Specified in the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster id) of the cluster to complete IP rotation. Specified in the
-         format 'projects/locations/clusters'.
+         format `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -771,7 +768,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to complete IP rotation.
-           * Specified in the format 'projects/locations/clusters'.
+           * Specified in the format `projects/locations/clusters`.
            */
           public CompleteIpRotation setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -790,26 +787,19 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
         /**
          * Creates a cluster, consisting of the specified number and type of Google Compute Engine
-         * instances.
-         *
-         * By default, the cluster is created in the project's [default network](/compute/docs/networks-and-
-         * firewalls#networks).
-         *
-         * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
-         * each node to allow the containers on that node to communicate with all other instances in the
-         * cluster.
-         *
-         * Finally, an entry is added to the project's global metadata indicating which CIDR range the
-         * cluster is using.
+         * instances. By default, the cluster is created in the project's [default
+         * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is
+         * added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow
+         * the containers on that node to communicate with all other instances in the cluster. Finally, an
+         * entry is added to the project's global metadata indicating which CIDR range the cluster is using.
          *
          * Create a request for the method "clusters.create".
          *
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent (project and location) where the cluster will be created.
-        Specified in the format
-         *        'projects/locations'.
+         * @param parent The parent (project and location) where the cluster will be created. Specified in the format
+         *        `projects/locations`.
          * @param content the {@link com.google.api.services.container.model.CreateClusterRequest}
          * @return the request
          */
@@ -828,15 +818,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Creates a cluster, consisting of the specified number and type of Google Compute Engine
-           * instances.
-           *
-           * By default, the cluster is created in the project's [default network](/compute/docs/networks-
-           * and-firewalls#networks).
-           *
-           * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
-           * each node to allow the containers on that node to communicate with all other instances in the
-           * cluster.
-           *
+           * instances. By default, the cluster is created in the project's [default
+           * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall
+           * is added for the cluster. After cluster creation, the Kubelet creates routes for each node to
+           * allow the containers on that node to communicate with all other instances in the cluster.
            * Finally, an entry is added to the project's global metadata indicating which CIDR range the
            * cluster is using.
            *
@@ -848,9 +833,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent (project and location) where the cluster will be created.
-        Specified in the format
-         *        'projects/locations'.
+           * @param parent The parent (project and location) where the cluster will be created. Specified in the format
+         *        `projects/locations`.
            * @param content the {@link com.google.api.services.container.model.CreateClusterRequest}
            * @since 1.13
            */
@@ -921,13 +905,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The parent (project and location) where the cluster will be created. Specified in the
-           * format 'projects/locations'.
+           * format `projects/locations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The parent (project and location) where the cluster will be created. Specified in the format
-         'projects/locations'.
+         `projects/locations`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -935,7 +919,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The parent (project and location) where the cluster will be created. Specified in the
-           * format 'projects/locations'.
+           * format `projects/locations`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -953,21 +937,18 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Deletes the cluster, including the Kubernetes endpoint and all worker nodes.
-         *
-         * Firewalls and routes that were configured during cluster creation are also deleted.
-         *
-         * Other Google Compute Engine resources that might be in use by the cluster, such as load balancer
-         * resources, are not deleted if they weren't present when the cluster was initially created.
+         * Deletes the cluster, including the Kubernetes endpoint and all worker nodes. Firewalls and routes
+         * that were configured during cluster creation are also deleted. Other Google Compute Engine
+         * resources that might be in use by the cluster, such as load balancer resources, are not deleted
+         * if they weren't present when the cluster was initially created.
          *
          * Create a request for the method "clusters.delete".
          *
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster) of the cluster to delete.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster) of the cluster to delete. Specified in the format
+         *        `projects/locations/clusters`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -984,13 +965,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Deletes the cluster, including the Kubernetes endpoint and all worker nodes.
-           *
-           * Firewalls and routes that were configured during cluster creation are also deleted.
-           *
-           * Other Google Compute Engine resources that might be in use by the cluster, such as load
-           * balancer resources, are not deleted if they weren't present when the cluster was initially
-           * created.
+           * Deletes the cluster, including the Kubernetes endpoint and all worker nodes. Firewalls and
+           * routes that were configured during cluster creation are also deleted. Other Google Compute
+           * Engine resources that might be in use by the cluster, such as load balancer resources, are not
+           * deleted if they weren't present when the cluster was initially created.
            *
            * Create a request for the method "clusters.delete".
            *
@@ -1000,9 +978,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster) of the cluster to delete.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster) of the cluster to delete. Specified in the format
+         *        `projects/locations/clusters`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1072,13 +1049,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to delete. Specified in the format
-           * 'projects/locations/clusters'.
+           * `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to delete. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -1086,7 +1063,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to delete. Specified in the format
-           * 'projects/locations/clusters'.
+           * `projects/locations/clusters`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1148,24 +1125,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Delete setZone(java.lang.String zone) {
             this.zone = zone;
@@ -1185,9 +1163,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster) of the cluster to retrieve.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster) of the cluster to retrieve. Specified in the format
+         *        `projects/locations/clusters`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1213,9 +1190,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster) of the cluster to retrieve.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster) of the cluster to retrieve. Specified in the format
+         *        `projects/locations/clusters`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1295,13 +1271,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to retrieve. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to retrieve. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -1309,7 +1285,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to retrieve. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1371,24 +1347,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -1409,9 +1386,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link GetJwks#execute()} method to invoke the remote operation.
          *
-         * @param parent The cluster (project, location, cluster id) to get keys for. Specified in
-        the format
-         *        'projects/locations/clusters'.
+         * @param parent The cluster (project, location, cluster id) to get keys for. Specified in the format
+         *        `projects/locations/clusters`.
          * @return the request
          */
         public GetJwks getJwks(java.lang.String parent) throws java.io.IOException {
@@ -1439,9 +1415,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * GetJwks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The cluster (project, location, cluster id) to get keys for. Specified in
-        the format
-         *        'projects/locations/clusters'.
+           * @param parent The cluster (project, location, cluster id) to get keys for. Specified in the format
+         *        `projects/locations/clusters`.
            * @since 1.13
            */
           protected GetJwks(java.lang.String parent) {
@@ -1521,13 +1496,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The cluster (project, location, cluster id) to get keys for. Specified in the format
-           * 'projects/locations/clusters'.
+           * `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The cluster (project, location, cluster id) to get keys for. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1535,7 +1510,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The cluster (project, location, cluster id) to get keys for. Specified in the format
-           * 'projects/locations/clusters'.
+           * `projects/locations/clusters`.
            */
           public GetJwks setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1560,10 +1535,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent (project and location) where the clusters will be listed.
-        Specified in the format
-         *        'projects/locations'.
-        Location "-" matches all zones and all regions.
+         * @param parent The parent (project and location) where the clusters will be listed. Specified in the format
+         *        `projects/locations`. Location "-" matches all zones and all regions.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1589,10 +1562,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent (project and location) where the clusters will be listed.
-        Specified in the format
-         *        'projects/locations'.
-        Location "-" matches all zones and all regions.
+           * @param parent The parent (project and location) where the clusters will be listed. Specified in the format
+         *        `projects/locations`. Location "-" matches all zones and all regions.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1672,13 +1643,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The parent (project and location) where the clusters will be listed. Specified in the
-           * format 'projects/locations'. Location "-" matches all zones and all regions.
+           * format `projects/locations`. Location "-" matches all zones and all regions.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The parent (project and location) where the clusters will be listed. Specified in the format
-         'projects/locations'. Location "-" matches all zones and all regions.
+         `projects/locations`. Location "-" matches all zones and all regions.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1686,7 +1657,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The parent (project and location) where the clusters will be listed. Specified in the
-           * format 'projects/locations'. Location "-" matches all zones and all regions.
+           * format `projects/locations`. Location "-" matches all zones and all regions.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1725,25 +1696,27 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides, or "-" for all zones. This field has been deprecated and
-           * replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides, or "-" for all zones. This field has been deprecated and replaced by the
+           * parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides, or "-" for all zones. This field has been deprecated and replaced by the
-         parent field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides, or "-"
+         for all zones. This field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides, or "-" for all zones. This field has been deprecated and
-           * replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides, or "-" for all zones. This field has been deprecated and replaced by the
+           * parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
@@ -1763,9 +1736,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetAddons#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster) of the cluster to set addons.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster) of the cluster to set addons. Specified in the format
+         *        `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.SetAddonsConfigRequest}
          * @return the request
          */
@@ -1793,9 +1765,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * SetAddons#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster) of the cluster to set addons.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster) of the cluster to set addons. Specified in the format
+         *        `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.SetAddonsConfigRequest}
            * @since 1.13
            */
@@ -1866,13 +1837,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to set addons. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to set addons. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -1880,7 +1851,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to set addons. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           public SetAddons setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1905,9 +1876,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetLegacyAbac#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to set legacy abac.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster id) of the cluster to set legacy abac. Specified in the format
+         *        `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.SetLegacyAbacRequest}
          * @return the request
          */
@@ -1935,9 +1905,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to set legacy abac.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster id) of the cluster to set legacy abac. Specified in the format
+         *        `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.SetLegacyAbacRequest}
            * @since 1.13
            */
@@ -2008,13 +1977,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to set legacy abac. Specified
-           * in the format 'projects/locations/clusters'.
+           * in the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster id) of the cluster to set legacy abac. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -2022,7 +1991,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to set legacy abac. Specified
-           * in the format 'projects/locations/clusters'.
+           * in the format `projects/locations/clusters`.
            */
           public SetLegacyAbac setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2040,17 +2009,17 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-         * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
+         * Sets the locations for a specific cluster. Deprecated. Use
+         * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-
+         * engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
          *
          * Create a request for the method "clusters.setLocations".
          *
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetLocations#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster) of the cluster to set locations.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster) of the cluster to set locations. Specified in the format
+         *        `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.SetLocationsRequest}
          * @return the request
          */
@@ -2068,8 +2037,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
 
           /**
-           * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-           * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
+           * Sets the locations for a specific cluster. Deprecated. Use
+           * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-
+           * engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
            *
            * Create a request for the method "clusters.setLocations".
            *
@@ -2079,9 +2049,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * SetLocations#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster) of the cluster to set locations.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster) of the cluster to set locations. Specified in the format
+         *        `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.SetLocationsRequest}
            * @since 1.13
            */
@@ -2152,13 +2121,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to set locations. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to set locations. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -2166,7 +2135,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to set locations. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           public SetLocations setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2191,9 +2160,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetLogging#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster) of the cluster to set logging.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster) of the cluster to set logging. Specified in the format
+         *        `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.SetLoggingServiceRequest}
          * @return the request
          */
@@ -2221,9 +2189,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * SetLogging#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster) of the cluster to set logging.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster) of the cluster to set logging. Specified in the format
+         *        `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.SetLoggingServiceRequest}
            * @since 1.13
            */
@@ -2294,13 +2261,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to set logging. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to set logging. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -2308,7 +2275,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to set logging. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           public SetLogging setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2334,10 +2301,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link SetMaintenancePolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to set maintenance
-        policy.
-        Specified in the
-         *        format 'projects/locations/clusters'.
+         * @param name The name (project, location, cluster id) of the cluster to set maintenance policy. Specified in the
+         *        format `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.SetMaintenancePolicyRequest}
          * @return the request
          */
@@ -2365,10 +2330,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to set maintenance
-        policy.
-        Specified in the
-         *        format 'projects/locations/clusters'.
+           * @param name The name (project, location, cluster id) of the cluster to set maintenance policy. Specified in the
+         *        format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.SetMaintenancePolicyRequest}
            * @since 1.13
            */
@@ -2439,13 +2402,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to set maintenance policy.
-           * Specified in the format 'projects/locations/clusters'.
+           * Specified in the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster id) of the cluster to set maintenance policy. Specified in the
-         format 'projects/locations/clusters'.
+         format `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -2453,7 +2416,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to set maintenance policy.
-           * Specified in the format 'projects/locations/clusters'.
+           * Specified in the format `projects/locations/clusters`.
            */
           public SetMaintenancePolicy setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2479,9 +2442,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetMasterAuth#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster) of the cluster to set auth.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster) of the cluster to set auth. Specified in the format
+         *        `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.SetMasterAuthRequest}
          * @return the request
          */
@@ -2510,9 +2472,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name The name (project, location, cluster) of the cluster to set auth.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster) of the cluster to set auth. Specified in the format
+         *        `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.SetMasterAuthRequest}
            * @since 1.13
            */
@@ -2583,13 +2544,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to set auth. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to set auth. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -2597,7 +2558,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to set auth. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           public SetMasterAuth setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2622,9 +2583,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetMonitoring#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster) of the cluster to set monitoring.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster) of the cluster to set monitoring. Specified in the format
+         *        `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.SetMonitoringServiceRequest}
          * @return the request
          */
@@ -2652,9 +2612,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name The name (project, location, cluster) of the cluster to set monitoring.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster) of the cluster to set monitoring. Specified in the format
+         *        `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.SetMonitoringServiceRequest}
            * @since 1.13
            */
@@ -2725,13 +2684,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to set monitoring. Specified in
-           * the format 'projects/locations/clusters'.
+           * the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to set monitoring. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -2739,7 +2698,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to set monitoring. Specified in
-           * the format 'projects/locations/clusters'.
+           * the format `projects/locations/clusters`.
            */
           public SetMonitoring setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2764,9 +2723,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetNetworkPolicy#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to set networking
-        policy. Specified in the
-         *        format 'projects/locations/clusters'.
+         * @param name The name (project, location, cluster id) of the cluster to set networking policy. Specified in the
+         *        format `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.SetNetworkPolicyRequest}
          * @return the request
          */
@@ -2794,9 +2752,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * tractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to set networking
-        policy. Specified in the
-         *        format 'projects/locations/clusters'.
+           * @param name The name (project, location, cluster id) of the cluster to set networking policy. Specified in the
+         *        format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.SetNetworkPolicyRequest}
            * @since 1.13
            */
@@ -2867,13 +2824,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to set networking policy.
-           * Specified in the format 'projects/locations/clusters'.
+           * Specified in the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster id) of the cluster to set networking policy. Specified in the
-         format 'projects/locations/clusters'.
+         format `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -2881,7 +2838,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to set networking policy.
-           * Specified in the format 'projects/locations/clusters'.
+           * Specified in the format `projects/locations/clusters`.
            */
           public SetNetworkPolicy setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2906,9 +2863,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link SetResourceLabels#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to set labels.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster id) of the cluster to set labels. Specified in the format
+         *        `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.SetLabelsRequest}
          * @return the request
          */
@@ -2936,9 +2892,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * stractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to set labels.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster id) of the cluster to set labels. Specified in the format
+         *        `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.SetLabelsRequest}
            * @since 1.13
            */
@@ -3009,13 +2964,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to set labels. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster id) of the cluster to set labels. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -3023,7 +2978,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to set labels. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           public SetResourceLabels setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3048,9 +3003,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link StartIpRotation#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster id) of the cluster to start IP
-        rotation. Specified in the
-         *        format 'projects/locations/clusters'.
+         * @param name The name (project, location, cluster id) of the cluster to start IP rotation. Specified in the
+         *        format `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.StartIPRotationRequest}
          * @return the request
          */
@@ -3078,9 +3032,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name The name (project, location, cluster id) of the cluster to start IP
-        rotation. Specified in the
-         *        format 'projects/locations/clusters'.
+           * @param name The name (project, location, cluster id) of the cluster to start IP rotation. Specified in the
+         *        format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.StartIPRotationRequest}
            * @since 1.13
            */
@@ -3151,13 +3104,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to start IP rotation. Specified
-           * in the format 'projects/locations/clusters'.
+           * in the format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster id) of the cluster to start IP rotation. Specified in the
-         format 'projects/locations/clusters'.
+         format `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -3165,7 +3118,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster id) of the cluster to start IP rotation. Specified
-           * in the format 'projects/locations/clusters'.
+           * in the format `projects/locations/clusters`.
            */
           public StartIpRotation setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3190,9 +3143,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster) of the cluster to update.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster) of the cluster to update. Specified in the format
+         *        `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.UpdateClusterRequest}
          * @return the request
          */
@@ -3220,9 +3172,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster) of the cluster to update.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster) of the cluster to update. Specified in the format
+         *        `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.UpdateClusterRequest}
            * @since 1.13
            */
@@ -3293,13 +3244,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to update. Specified in the format
-           * 'projects/locations/clusters'.
+           * `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to update. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -3307,7 +3258,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to update. Specified in the format
-           * 'projects/locations/clusters'.
+           * `projects/locations/clusters`.
            */
           public Update setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3332,9 +3283,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link UpdateMaster#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, cluster) of the cluster to update.
-        Specified in the format
-         *        'projects/locations/clusters'.
+         * @param name The name (project, location, cluster) of the cluster to update. Specified in the format
+         *        `projects/locations/clusters`.
          * @param content the {@link com.google.api.services.container.model.UpdateMasterRequest}
          * @return the request
          */
@@ -3362,9 +3312,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * UpdateMaster#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name (project, location, cluster) of the cluster to update.
-        Specified in the format
-         *        'projects/locations/clusters'.
+           * @param name The name (project, location, cluster) of the cluster to update. Specified in the format
+         *        `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.UpdateMasterRequest}
            * @since 1.13
            */
@@ -3435,13 +3384,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to update. Specified in the format
-           * 'projects/locations/clusters'.
+           * `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to update. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -3449,7 +3398,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to update. Specified in the format
-           * 'projects/locations/clusters'.
+           * `projects/locations/clusters`.
            */
           public UpdateMaster setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3495,10 +3444,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The parent (project, location, cluster id) where the node pool will be
-          created. Specified in the
-           *        format
-          'projects/locations/clusters'.
+           * @param parent The parent (project, location, cluster id) where the node pool will be created. Specified in the
+           *        format `projects/locations/clusters`.
            * @param content the {@link com.google.api.services.container.model.CreateNodePoolRequest}
            * @return the request
            */
@@ -3526,10 +3473,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The parent (project, location, cluster id) where the node pool will be
-          created. Specified in the
-           *        format
-          'projects/locations/clusters'.
+             * @param parent The parent (project, location, cluster id) where the node pool will be created. Specified in the
+           *        format `projects/locations/clusters`.
              * @param content the {@link com.google.api.services.container.model.CreateNodePoolRequest}
              * @since 1.13
              */
@@ -3600,13 +3545,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The parent (project, location, cluster id) where the node pool will be created.
-             * Specified in the format 'projects/locations/clusters'.
+             * Specified in the format `projects/locations/clusters`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** The parent (project, location, cluster id) where the node pool will be created. Specified in the
-           format 'projects/locations/clusters'.
+           format `projects/locations/clusters`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -3614,7 +3559,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The parent (project, location, cluster id) where the node pool will be created.
-             * Specified in the format 'projects/locations/clusters'.
+             * Specified in the format `projects/locations/clusters`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3639,10 +3584,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The name (project, location, cluster, node pool id) of the node pool to
-          delete. Specified in the
-           *        format
-          'projects/locations/clusters/nodePools'.
+           * @param name The name (project, location, cluster, node pool id) of the node pool to delete. Specified in the
+           *        format `projects/locations/clusters/nodePools`.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3669,10 +3612,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name (project, location, cluster, node pool id) of the node pool to
-          delete. Specified in the
-           *        format
-          'projects/locations/clusters/nodePools'.
+             * @param name The name (project, location, cluster, node pool id) of the node pool to delete. Specified in the
+           *        format `projects/locations/clusters/nodePools`.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -3742,13 +3683,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to delete.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The name (project, location, cluster, node pool id) of the node pool to delete. Specified in the
-           format 'projects/locations/clusters/nodePools'.
+           format `projects/locations/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
@@ -3756,7 +3697,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to delete.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3841,14 +3782,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -3856,8 +3798,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Delete setZone(java.lang.String zone) {
               this.zone = zone;
@@ -3877,9 +3819,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name The name (project, location, cluster, node pool id) of the node pool to
-          get. Specified in the format
-           *        'projects/locations/clusters/nodePools'.
+           * @param name The name (project, location, cluster, node pool id) of the node pool to get. Specified in the format
+           *        `projects/locations/clusters/nodePools`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3905,9 +3846,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name (project, location, cluster, node pool id) of the node pool to
-          get. Specified in the format
-           *        'projects/locations/clusters/nodePools'.
+             * @param name The name (project, location, cluster, node pool id) of the node pool to get. Specified in the format
+           *        `projects/locations/clusters/nodePools`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3987,13 +3927,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to get.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The name (project, location, cluster, node pool id) of the node pool to get. Specified in the
-           format 'projects/locations/clusters/nodePools'.
+           format `projects/locations/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
@@ -4001,7 +3941,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to get.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4086,14 +4026,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -4101,8 +4042,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Get setZone(java.lang.String zone) {
               this.zone = zone;
@@ -4122,9 +4063,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent The parent (project, location, cluster id) where the node pools will be
-          listed. Specified in the
-           *        format 'projects/locations/clusters'.
+           * @param parent The parent (project, location, cluster id) where the node pools will be listed. Specified in the
+           *        format `projects/locations/clusters`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -4150,9 +4090,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The parent (project, location, cluster id) where the node pools will be
-          listed. Specified in the
-           *        format 'projects/locations/clusters'.
+             * @param parent The parent (project, location, cluster id) where the node pools will be listed. Specified in the
+           *        format `projects/locations/clusters`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -4232,13 +4171,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The parent (project, location, cluster id) where the node pools will be listed.
-             * Specified in the format 'projects/locations/clusters'.
+             * Specified in the format `projects/locations/clusters`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** The parent (project, location, cluster id) where the node pools will be listed. Specified in the
-           format 'projects/locations/clusters'.
+           format `projects/locations/clusters`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -4246,7 +4185,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The parent (project, location, cluster id) where the node pools will be listed.
-             * Specified in the format 'projects/locations/clusters'.
+             * Specified in the format `projects/locations/clusters`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4309,14 +4248,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the parent field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the parent field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -4324,8 +4264,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             public List setZone(java.lang.String zone) {
               this.zone = zone;
@@ -4346,10 +4286,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
            *
-           * @param name The name (project, location, cluster, node pool id) of the node poll to
-          rollback upgrade.
-          Specified
-           *        in the format 'projects/locations/clusters/nodePools'.
+           * @param name The name (project, location, cluster, node pool id) of the node poll to rollback upgrade. Specified
+           *        in the format `projects/locations/clusters/nodePools`.
            * @param content the {@link com.google.api.services.container.model.RollbackNodePoolUpgradeRequest}
            * @return the request
            */
@@ -4378,10 +4316,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name (project, location, cluster, node pool id) of the node poll to
-          rollback upgrade.
-          Specified
-           *        in the format 'projects/locations/clusters/nodePools'.
+             * @param name The name (project, location, cluster, node pool id) of the node poll to rollback upgrade. Specified
+           *        in the format `projects/locations/clusters/nodePools`.
              * @param content the {@link com.google.api.services.container.model.RollbackNodePoolUpgradeRequest}
              * @since 1.13
              */
@@ -4452,13 +4388,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node poll to rollback
-             * upgrade. Specified in the format 'projects/locations/clusters/nodePools'.
+             * upgrade. Specified in the format `projects/locations/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The name (project, location, cluster, node pool id) of the node poll to rollback upgrade. Specified
-           in the format 'projects/locations/clusters/nodePools'.
+           in the format `projects/locations/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
@@ -4466,7 +4402,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node poll to rollback
-             * upgrade. Specified in the format 'projects/locations/clusters/nodePools'.
+             * upgrade. Specified in the format `projects/locations/clusters/nodePools`.
              */
             public Rollback setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4491,10 +4427,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link SetAutoscaling#execute()} method to invoke the remote operation.
            *
-           * @param name The name (project, location, cluster, node pool) of the node pool to set
-          autoscaler settings.
-           *        Specified in the format
-          'projects/locations/clusters/nodePools'.
+           * @param name The name (project, location, cluster, node pool) of the node pool to set autoscaler settings.
+           *        Specified in the format `projects/locations/clusters/nodePools`.
            * @param content the {@link com.google.api.services.container.model.SetNodePoolAutoscalingRequest}
            * @return the request
            */
@@ -4522,10 +4456,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param name The name (project, location, cluster, node pool) of the node pool to set
-          autoscaler settings.
-           *        Specified in the format
-          'projects/locations/clusters/nodePools'.
+             * @param name The name (project, location, cluster, node pool) of the node pool to set autoscaler settings.
+           *        Specified in the format `projects/locations/clusters/nodePools`.
              * @param content the {@link com.google.api.services.container.model.SetNodePoolAutoscalingRequest}
              * @since 1.13
              */
@@ -4596,13 +4528,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool) of the node pool to set autoscaler
-             * settings. Specified in the format 'projects/locations/clusters/nodePools'.
+             * settings. Specified in the format `projects/locations/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The name (project, location, cluster, node pool) of the node pool to set autoscaler settings.
-           Specified in the format 'projects/locations/clusters/nodePools'.
+           Specified in the format `projects/locations/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
@@ -4610,7 +4542,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool) of the node pool to set autoscaler
-             * settings. Specified in the format 'projects/locations/clusters/nodePools'.
+             * settings. Specified in the format `projects/locations/clusters/nodePools`.
              */
             public SetAutoscaling setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4635,10 +4567,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link SetManagement#execute()} method to invoke the remote operation.
            *
-           * @param name The name (project, location, cluster, node pool id) of the node pool to set
-          management properties.
-           *        Specified in the format
-          'projects/locations/clusters/nodePools'.
+           * @param name The name (project, location, cluster, node pool id) of the node pool to set management properties.
+           *        Specified in the format `projects/locations/clusters/nodePools`.
            * @param content the {@link com.google.api.services.container.model.SetNodePoolManagementRequest}
            * @return the request
            */
@@ -4666,10 +4596,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param name The name (project, location, cluster, node pool id) of the node pool to set
-          management properties.
-           *        Specified in the format
-          'projects/locations/clusters/nodePools'.
+             * @param name The name (project, location, cluster, node pool id) of the node pool to set management properties.
+           *        Specified in the format `projects/locations/clusters/nodePools`.
              * @param content the {@link com.google.api.services.container.model.SetNodePoolManagementRequest}
              * @since 1.13
              */
@@ -4741,13 +4669,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             /**
              * The name (project, location, cluster, node pool id) of the node pool to set
              * management properties. Specified in the format
-             * 'projects/locations/clusters/nodePools'.
+             * `projects/locations/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The name (project, location, cluster, node pool id) of the node pool to set management properties.
-           Specified in the format 'projects/locations/clusters/nodePools'.
+           Specified in the format `projects/locations/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
@@ -4756,7 +4684,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             /**
              * The name (project, location, cluster, node pool id) of the node pool to set
              * management properties. Specified in the format
-             * 'projects/locations/clusters/nodePools'.
+             * `projects/locations/clusters/nodePools`.
              */
             public SetManagement setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4781,10 +4709,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link SetSize#execute()} method to invoke the remote operation.
            *
-           * @param name The name (project, location, cluster, node pool id) of the node pool to set
-          size.
-          Specified in the
-           *        format 'projects/locations/clusters/nodePools'.
+           * @param name The name (project, location, cluster, node pool id) of the node pool to set size. Specified in the
+           *        format `projects/locations/clusters/nodePools`.
            * @param content the {@link com.google.api.services.container.model.SetNodePoolSizeRequest}
            * @return the request
            */
@@ -4812,10 +4738,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * SetSize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name (project, location, cluster, node pool id) of the node pool to set
-          size.
-          Specified in the
-           *        format 'projects/locations/clusters/nodePools'.
+             * @param name The name (project, location, cluster, node pool id) of the node pool to set size. Specified in the
+           *        format `projects/locations/clusters/nodePools`.
              * @param content the {@link com.google.api.services.container.model.SetNodePoolSizeRequest}
              * @since 1.13
              */
@@ -4886,13 +4810,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to set size.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The name (project, location, cluster, node pool id) of the node pool to set size. Specified in the
-           format 'projects/locations/clusters/nodePools'.
+           format `projects/locations/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
@@ -4900,7 +4824,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to set size.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             public SetSize setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4925,9 +4849,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the container server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param name The name (project, location, cluster, node pool) of the node pool to
-          update. Specified in the format
-           *        'projects/locations/clusters/nodePools'.
+           * @param name The name (project, location, cluster, node pool) of the node pool to update. Specified in the format
+           *        `projects/locations/clusters/nodePools`.
            * @param content the {@link com.google.api.services.container.model.UpdateNodePoolRequest}
            * @return the request
            */
@@ -4955,9 +4878,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name (project, location, cluster, node pool) of the node pool to
-          update. Specified in the format
-           *        'projects/locations/clusters/nodePools'.
+             * @param name The name (project, location, cluster, node pool) of the node pool to update. Specified in the format
+           *        `projects/locations/clusters/nodePools`.
              * @param content the {@link com.google.api.services.container.model.UpdateNodePoolRequest}
              * @since 1.13
              */
@@ -5028,13 +4950,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool) of the node pool to update.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The name (project, location, cluster, node pool) of the node pool to update. Specified in the
-           format 'projects/locations/clusters/nodePools'.
+           format `projects/locations/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
@@ -5042,7 +4964,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool) of the node pool to update.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             public Update setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5092,9 +5014,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link GetOpenidConfiguration#execute()} method to invoke the remote
            * operation.
            *
-           * @param parent The cluster (project, location, cluster id) to get the discovery document
-          for. Specified in the
-           *        format 'projects/locations/clusters'.
+           * @param parent The cluster (project, location, cluster id) to get the discovery document for. Specified in the
+           *        format `projects/locations/clusters`.
            * @return the request
            */
           public GetOpenidConfiguration getOpenidConfiguration(java.lang.String parent) throws java.io.IOException {
@@ -5123,9 +5044,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param parent The cluster (project, location, cluster id) to get the discovery document
-          for. Specified in the
-           *        format 'projects/locations/clusters'.
+             * @param parent The cluster (project, location, cluster id) to get the discovery document for. Specified in the
+           *        format `projects/locations/clusters`.
              * @since 1.13
              */
             protected GetOpenidConfiguration(java.lang.String parent) {
@@ -5205,13 +5125,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The cluster (project, location, cluster id) to get the discovery document for.
-             * Specified in the format 'projects/locations/clusters'.
+             * Specified in the format `projects/locations/clusters`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** The cluster (project, location, cluster id) to get the discovery document for. Specified in the
-           format 'projects/locations/clusters'.
+           format `projects/locations/clusters`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -5219,7 +5139,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The cluster (project, location, cluster id) to get the discovery document for.
-             * Specified in the format 'projects/locations/clusters'.
+             * Specified in the format `projects/locations/clusters`.
              */
             public GetOpenidConfiguration setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -5267,9 +5187,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, operation id) of the operation to cancel.
-        Specified in the format
-         *        'projects/locations/operations'.
+         * @param name The name (project, location, operation id) of the operation to cancel. Specified in the format
+         *        `projects/locations/operations`.
          * @param content the {@link com.google.api.services.container.model.CancelOperationRequest}
          * @return the request
          */
@@ -5297,9 +5216,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name (project, location, operation id) of the operation to cancel.
-        Specified in the format
-         *        'projects/locations/operations'.
+           * @param name The name (project, location, operation id) of the operation to cancel. Specified in the format
+         *        `projects/locations/operations`.
            * @param content the {@link com.google.api.services.container.model.CancelOperationRequest}
            * @since 1.13
            */
@@ -5370,13 +5288,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, operation id) of the operation to cancel. Specified in the
-           * format 'projects/locations/operations'.
+           * format `projects/locations/operations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, operation id) of the operation to cancel. Specified in the format
-         'projects/locations/operations'.
+         `projects/locations/operations`.
            */
           public java.lang.String getName() {
             return name;
@@ -5384,7 +5302,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, operation id) of the operation to cancel. Specified in the
-           * format 'projects/locations/operations'.
+           * format `projects/locations/operations`.
            */
           public Cancel setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5409,9 +5327,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name (project, location, operation id) of the operation to get.
-        Specified in the format
-         *        'projects/locations/operations'.
+         * @param name The name (project, location, operation id) of the operation to get. Specified in the format
+         *        `projects/locations/operations`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -5437,9 +5354,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name (project, location, operation id) of the operation to get.
-        Specified in the format
-         *        'projects/locations/operations'.
+           * @param name The name (project, location, operation id) of the operation to get. Specified in the format
+         *        `projects/locations/operations`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -5519,13 +5435,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, operation id) of the operation to get. Specified in the
-           * format 'projects/locations/operations'.
+           * format `projects/locations/operations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, operation id) of the operation to get. Specified in the format
-         'projects/locations/operations'.
+         `projects/locations/operations`.
            */
           public java.lang.String getName() {
             return name;
@@ -5533,7 +5449,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, operation id) of the operation to get. Specified in the
-           * format 'projects/locations/operations'.
+           * format `projects/locations/operations`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5595,24 +5511,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -5632,10 +5549,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the container server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent (project and location) where the operations will be listed.
-        Specified in the format
-         *        'projects/locations'.
-        Location "-" matches all zones and all regions.
+         * @param parent The parent (project and location) where the operations will be listed. Specified in the format
+         *        `projects/locations`. Location "-" matches all zones and all regions.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5661,10 +5576,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent (project and location) where the operations will be listed.
-        Specified in the format
-         *        'projects/locations'.
-        Location "-" matches all zones and all regions.
+           * @param parent The parent (project and location) where the operations will be listed. Specified in the format
+         *        `projects/locations`. Location "-" matches all zones and all regions.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5744,13 +5657,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The parent (project and location) where the operations will be listed. Specified in the
-           * format 'projects/locations'. Location "-" matches all zones and all regions.
+           * format `projects/locations`. Location "-" matches all zones and all regions.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The parent (project and location) where the operations will be listed. Specified in the format
-         'projects/locations'. Location "-" matches all zones and all regions.
+         `projects/locations`. Location "-" matches all zones and all regions.
            */
           public java.lang.String getParent() {
             return parent;
@@ -5758,7 +5671,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The parent (project and location) where the operations will be listed. Specified in the
-           * format 'projects/locations'. Location "-" matches all zones and all regions.
+           * format `projects/locations`. Location "-" matches all zones and all regions.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5797,25 +5710,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * to return operations for, or `-` for all zones. This field has been deprecated and
-           * replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for,
+           * or `-` for all zones. This field has been deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
-         operations for, or `-` for all zones. This field has been deprecated and replaced by the parent
-         field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or `-` for
+         all zones. This field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * to return operations for, or `-` for all zones. This field has been deprecated and
-           * replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for,
+           * or `-` for all zones. This field has been deprecated and replaced by the parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
@@ -5859,13 +5772,11 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
        * parameters, call the {@link GetServerconfig#execute()} method to invoke the remote operation.
        *
        * @param projectId Deprecated. The Google Developers Console [project ID or project
-       *        number](https://support.google.com/cloud/answer/6158840).
-      This field has been deprecated
+       *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
        *        and replaced by the name field.
        * @param zone Deprecated. The name of the Google Compute Engine
-      [zone](/compute/docs/zones#available) to return
-       *        operations for.
-      This field has been deprecated and replaced by the name field.
+       *        [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
+       *        This field has been deprecated and replaced by the name field.
        * @return the request
        */
       public GetServerconfig getServerconfig(java.lang.String projectId, java.lang.String zone) throws java.io.IOException {
@@ -5890,13 +5801,11 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * the constructor. </p>
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-       *        number](https://support.google.com/cloud/answer/6158840).
-      This field has been deprecated
+       *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
        *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-      [zone](/compute/docs/zones#available) to return
-       *        operations for.
-      This field has been deprecated and replaced by the name field.
+       *        [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
+       *        This field has been deprecated and replaced by the name field.
          * @since 1.13
          */
         protected GetServerconfig(java.lang.String projectId, java.lang.String zone) {
@@ -5997,22 +5906,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         * to return operations for. This field has been deprecated and replaced by the name field.
+         * Deprecated. The name of the Google Compute Engine
+         * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
+         * This field has been deprecated and replaced by the name field.
          */
         @com.google.api.client.util.Key
         private java.lang.String zone;
 
-        /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
-       operations for. This field has been deprecated and replaced by the name field.
+        /** Deprecated. The name of the Google Compute Engine
+       [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for. This field
+       has been deprecated and replaced by the name field.
          */
         public java.lang.String getZone() {
           return zone;
         }
 
         /**
-         * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-         * to return operations for. This field has been deprecated and replaced by the name field.
+         * Deprecated. The name of the Google Compute Engine
+         * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for.
+         * This field has been deprecated and replaced by the name field.
          */
         public GetServerconfig setZone(java.lang.String zone) {
           this.zone = zone;
@@ -6021,13 +5933,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * The name (project and location) of the server config to get, specified in the format
-         * 'projects/locations'.
+         * `projects/locations`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The name (project and location) of the server config to get, specified in the format
-       'projects/locations'.
+       `projects/locations`.
          */
         public java.lang.String getName() {
           return name;
@@ -6035,7 +5947,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
         /**
          * The name (project and location) of the server config to get, specified in the format
-         * 'projects/locations'.
+         * `projects/locations`.
          */
         public GetServerconfig setName(java.lang.String name) {
           this.name = name;
@@ -6077,16 +5989,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Addons#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
          * @param content the {@link com.google.api.services.container.model.SetAddonsConfigRequest}
          * @return the request
@@ -6113,16 +6021,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
            * @param content the {@link com.google.api.services.container.model.SetAddonsConfigRequest}
            * @since 1.13
@@ -6216,24 +6120,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Addons setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6277,16 +6182,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link CompleteIpRotation#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://developers.google.com/console/help/new/#projectnumber).
-        This field has
+         *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
          *        been deprecated and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
          * @param content the {@link com.google.api.services.container.model.CompleteIPRotationRequest}
          * @return the request
          */
@@ -6312,16 +6213,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://developers.google.com/console/help/new/#projectnumber).
-        This field has
+         *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
          *        been deprecated and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
            * @param content the {@link com.google.api.services.container.model.CompleteIPRotationRequest}
            * @since 1.13
            */
@@ -6414,24 +6311,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public CompleteIpRotation setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6467,17 +6365,11 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
         }
         /**
          * Creates a cluster, consisting of the specified number and type of Google Compute Engine
-         * instances.
-         *
-         * By default, the cluster is created in the project's [default network](/compute/docs/networks-and-
-         * firewalls#networks).
-         *
-         * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
-         * each node to allow the containers on that node to communicate with all other instances in the
-         * cluster.
-         *
-         * Finally, an entry is added to the project's global metadata indicating which CIDR range the
-         * cluster is using.
+         * instances. By default, the cluster is created in the project's [default
+         * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is
+         * added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow
+         * the containers on that node to communicate with all other instances in the cluster. Finally, an
+         * entry is added to the project's global metadata indicating which CIDR range the cluster is using.
          *
          * Create a request for the method "clusters.create".
          *
@@ -6485,14 +6377,11 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the parent field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the parent field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the parent field.
          * @param content the {@link com.google.api.services.container.model.CreateClusterRequest}
          * @return the request
          */
@@ -6508,15 +6397,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Creates a cluster, consisting of the specified number and type of Google Compute Engine
-           * instances.
-           *
-           * By default, the cluster is created in the project's [default network](/compute/docs/networks-
-           * and-firewalls#networks).
-           *
-           * One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for
-           * each node to allow the containers on that node to communicate with all other instances in the
-           * cluster.
-           *
+           * instances. By default, the cluster is created in the project's [default
+           * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall
+           * is added for the cluster. After cluster creation, the Kubelet creates routes for each node to
+           * allow the containers on that node to communicate with all other instances in the cluster.
            * Finally, an entry is added to the project's global metadata indicating which CIDR range the
            * cluster is using.
            *
@@ -6529,14 +6413,11 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the parent field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the parent field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the parent field.
            * @param content the {@link com.google.api.services.container.model.CreateClusterRequest}
            * @since 1.13
            */
@@ -6628,24 +6509,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the parent
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the parent field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the parent
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the parent field.
            */
           public Create setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6658,12 +6540,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Deletes the cluster, including the Kubernetes endpoint and all worker nodes.
-         *
-         * Firewalls and routes that were configured during cluster creation are also deleted.
-         *
-         * Other Google Compute Engine resources that might be in use by the cluster, such as load balancer
-         * resources, are not deleted if they weren't present when the cluster was initially created.
+         * Deletes the cluster, including the Kubernetes endpoint and all worker nodes. Firewalls and routes
+         * that were configured during cluster creation are also deleted. Other Google Compute Engine
+         * resources that might be in use by the cluster, such as load balancer resources, are not deleted
+         * if they weren't present when the cluster was initially created.
          *
          * Create a request for the method "clusters.delete".
          *
@@ -6671,16 +6551,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster to delete.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to delete. This field has been deprecated and replaced by the
          *        name field.
          * @return the request
          */
@@ -6695,13 +6571,10 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}";
 
           /**
-           * Deletes the cluster, including the Kubernetes endpoint and all worker nodes.
-           *
-           * Firewalls and routes that were configured during cluster creation are also deleted.
-           *
-           * Other Google Compute Engine resources that might be in use by the cluster, such as load
-           * balancer resources, are not deleted if they weren't present when the cluster was initially
-           * created.
+           * Deletes the cluster, including the Kubernetes endpoint and all worker nodes. Firewalls and
+           * routes that were configured during cluster creation are also deleted. Other Google Compute
+           * Engine resources that might be in use by the cluster, such as load balancer resources, are not
+           * deleted if they weren't present when the cluster was initially created.
            *
            * Create a request for the method "clusters.delete".
            *
@@ -6712,16 +6585,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to delete.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to delete. This field has been deprecated and replaced by the
          *        name field.
            * @since 1.13
            */
@@ -6814,24 +6683,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Delete setZone(java.lang.String zone) {
             this.zone = zone;
@@ -6863,13 +6733,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to delete. Specified in the format
-           * 'projects/locations/clusters'.
+           * `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to delete. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -6877,7 +6747,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to delete. Specified in the format
-           * 'projects/locations/clusters'.
+           * `projects/locations/clusters`.
            */
           public Delete setName(java.lang.String name) {
             this.name = name;
@@ -6898,16 +6768,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster to retrieve.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to retrieve. This field has been deprecated and replaced by the
          *        name field.
          * @return the request
          */
@@ -6932,16 +6798,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to retrieve.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to retrieve. This field has been deprecated and replaced by the
          *        name field.
            * @since 1.13
            */
@@ -7044,24 +6906,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7093,13 +6956,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to retrieve. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, cluster) of the cluster to retrieve. Specified in the format
-         'projects/locations/clusters'.
+         `projects/locations/clusters`.
            */
           public java.lang.String getName() {
             return name;
@@ -7107,7 +6970,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, cluster) of the cluster to retrieve. Specified in the
-           * format 'projects/locations/clusters'.
+           * format `projects/locations/clusters`.
            */
           public Get setName(java.lang.String name) {
             this.name = name;
@@ -7128,16 +6991,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link LegacyAbac#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster to update.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to update. This field has been deprecated and replaced by the
          *        name field.
          * @param content the {@link com.google.api.services.container.model.SetLegacyAbacRequest}
          * @return the request
@@ -7164,16 +7023,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to update.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to update. This field has been deprecated and replaced by the
          *        name field.
            * @param content the {@link com.google.api.services.container.model.SetLegacyAbacRequest}
            * @since 1.13
@@ -7267,24 +7122,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public LegacyAbac setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7328,15 +7184,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the parent field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides, or "-" for all zones.
-        This field has been deprecated and replaced by the
-         *        parent field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides, or "-" for all zones. This field has been deprecated and replaced by the parent
+         *        field.
          * @return the request
          */
         public List list(java.lang.String projectId, java.lang.String zone) throws java.io.IOException {
@@ -7360,15 +7213,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the parent field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides, or "-" for all zones.
-        This field has been deprecated and replaced by the
-         *        parent field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides, or "-" for all zones. This field has been deprecated and replaced by the parent
+         *        field.
            * @since 1.13
            */
           protected List(java.lang.String projectId, java.lang.String zone) {
@@ -7469,25 +7319,27 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides, or "-" for all zones. This field has been deprecated and
-           * replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides, or "-" for all zones. This field has been deprecated and replaced by the
+           * parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides, or "-" for all zones. This field has been deprecated and replaced by the
-         parent field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides, or "-"
+         for all zones. This field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides, or "-" for all zones. This field has been deprecated and
-           * replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides, or "-" for all zones. This field has been deprecated and replaced by the
+           * parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7496,13 +7348,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The parent (project and location) where the clusters will be listed. Specified in the
-           * format 'projects/locations'. Location "-" matches all zones and all regions.
+           * format `projects/locations`. Location "-" matches all zones and all regions.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The parent (project and location) where the clusters will be listed. Specified in the format
-         'projects/locations'. Location "-" matches all zones and all regions.
+         `projects/locations`. Location "-" matches all zones and all regions.
            */
           public java.lang.String getParent() {
             return parent;
@@ -7510,7 +7362,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The parent (project and location) where the clusters will be listed. Specified in the
-           * format 'projects/locations'. Location "-" matches all zones and all regions.
+           * format `projects/locations`. Location "-" matches all zones and all regions.
            */
           public List setParent(java.lang.String parent) {
             this.parent = parent;
@@ -7523,8 +7375,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-         * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
+         * Sets the locations for a specific cluster. Deprecated. Use
+         * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-
+         * engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
          *
          * Create a request for the method "clusters.locations".
          *
@@ -7532,16 +7385,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Locations#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
          * @param content the {@link com.google.api.services.container.model.SetLocationsRequest}
          * @return the request
@@ -7557,8 +7406,9 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           private static final String REST_PATH = "v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/locations";
 
           /**
-           * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update
-           * ](/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
+           * Sets the locations for a specific cluster. Deprecated. Use
+           * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-
+           * engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
            *
            * Create a request for the method "clusters.locations".
            *
@@ -7569,16 +7419,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
            * @param content the {@link com.google.api.services.container.model.SetLocationsRequest}
            * @since 1.13
@@ -7672,24 +7518,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Locations setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7733,16 +7580,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Logging#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
          * @param content the {@link com.google.api.services.container.model.SetLoggingServiceRequest}
          * @return the request
@@ -7769,16 +7612,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
            * @param content the {@link com.google.api.services.container.model.SetLoggingServiceRequest}
            * @since 1.13
@@ -7872,24 +7711,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Logging setZone(java.lang.String zone) {
             this.zone = zone;
@@ -7933,16 +7773,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Master#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
          * @param content the {@link com.google.api.services.container.model.UpdateMasterRequest}
          * @return the request
@@ -7969,16 +7805,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
            * @param content the {@link com.google.api.services.container.model.UpdateMasterRequest}
            * @since 1.13
@@ -8072,24 +7904,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Master setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8133,16 +7966,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Monitoring#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
          * @param content the {@link com.google.api.services.container.model.SetMonitoringServiceRequest}
          * @return the request
@@ -8169,16 +7998,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
            * @param content the {@link com.google.api.services.container.model.SetMonitoringServiceRequest}
            * @since 1.13
@@ -8272,24 +8097,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Monitoring setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8333,16 +8159,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link ResourceLabels#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://developers.google.com/console/help/new/#projectnumber).
-        This field has
+         *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
          *        been deprecated and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
          * @param content the {@link com.google.api.services.container.model.SetLabelsRequest}
          * @return the request
          */
@@ -8368,16 +8190,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://developers.google.com/console/help/new/#projectnumber).
-        This field has
+         *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
          *        been deprecated and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
            * @param content the {@link com.google.api.services.container.model.SetLabelsRequest}
            * @since 1.13
            */
@@ -8470,24 +8288,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public ResourceLabels setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8533,9 +8352,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * @param projectId Required. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
          * @param zone Required. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides.
          * @param clusterId Required. The name of the cluster to update.
          * @param content the {@link com.google.api.services.container.model.SetMaintenancePolicyRequest}
          * @return the request
@@ -8564,9 +8382,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * @param projectId Required. The Google Developers Console [project ID or project
          *        number](https://support.google.com/cloud/answer/6158840).
            * @param zone Required. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides.
            * @param clusterId Required. The name of the cluster to update.
            * @param content the {@link com.google.api.services.container.model.SetMaintenancePolicyRequest}
            * @since 1.13
@@ -8657,22 +8474,24 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides.
+           * Required. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Required. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which the
-         cluster resides.
+          /** Required. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Required. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides.
+           * Required. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides.
            */
           public SetMaintenancePolicy setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8710,16 +8529,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link SetMasterAuth#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
          * @param content the {@link com.google.api.services.container.model.SetMasterAuthRequest}
          * @return the request
@@ -8747,16 +8562,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
            * @param content the {@link com.google.api.services.container.model.SetMasterAuthRequest}
            * @since 1.13
@@ -8850,24 +8661,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public SetMasterAuth setZone(java.lang.String zone) {
             this.zone = zone;
@@ -8911,16 +8723,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link SetNetworkPolicy#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://developers.google.com/console/help/new/#projectnumber).
-        This field has
+         *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
          *        been deprecated and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
          * @param content the {@link com.google.api.services.container.model.SetNetworkPolicyRequest}
          * @return the request
          */
@@ -8946,16 +8754,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://developers.google.com/console/help/new/#projectnumber).
-        This field has
+         *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
          *        been deprecated and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
            * @param content the {@link com.google.api.services.container.model.SetNetworkPolicyRequest}
            * @since 1.13
            */
@@ -9048,24 +8852,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public SetNetworkPolicy setZone(java.lang.String zone) {
             this.zone = zone;
@@ -9108,16 +8913,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link StartIpRotation#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://developers.google.com/console/help/new/#projectnumber).
-        This field has
+         *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
          *        been deprecated and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
          * @param content the {@link com.google.api.services.container.model.StartIPRotationRequest}
          * @return the request
          */
@@ -9143,16 +8944,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://developers.google.com/console/help/new/#projectnumber).
-        This field has
+         *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
          *        been deprecated and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster.
-        This field has been deprecated and replaced by the name field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
            * @param content the {@link com.google.api.services.container.model.StartIPRotationRequest}
            * @since 1.13
            */
@@ -9245,24 +9042,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public StartIpRotation setZone(java.lang.String zone) {
             this.zone = zone;
@@ -9305,16 +9103,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
          * @param content the {@link com.google.api.services.container.model.UpdateClusterRequest}
          * @return the request
@@ -9341,16 +9135,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to upgrade.
-        This field has been deprecated and replaced by the
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
          *        name field.
            * @param content the {@link com.google.api.services.container.model.UpdateClusterRequest}
            * @since 1.13
@@ -9444,24 +9234,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Update setZone(java.lang.String zone) {
             this.zone = zone;
@@ -9526,19 +9317,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Autoscaling#execute()} method to invoke the remote operation.
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://support.google.com/cloud/answer/6158840).
-          This field has been deprecated
+           *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
            *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to upgrade.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
            *        name field.
-           * @param nodePoolId Deprecated. The name of the node pool to upgrade.
-          This field has been deprecated and replaced by the
+           * @param nodePoolId Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced by the
            *        name field.
            * @param content the {@link com.google.api.services.container.model.SetNodePoolAutoscalingRequest}
            * @return the request
@@ -9565,19 +9351,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://support.google.com/cloud/answer/6158840).
-          This field has been deprecated
+           *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
            *        and replaced by the name field.
              * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-             * @param clusterId Deprecated. The name of the cluster to upgrade.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
            *        name field.
-             * @param nodePoolId Deprecated. The name of the node pool to upgrade.
-          This field has been deprecated and replaced by the
+             * @param nodePoolId Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced by the
            *        name field.
              * @param content the {@link com.google.api.services.container.model.SetNodePoolAutoscalingRequest}
              * @since 1.13
@@ -9673,14 +9454,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -9688,8 +9470,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Autoscaling setZone(java.lang.String zone) {
               this.zone = zone;
@@ -9756,16 +9538,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://developers.google.com/console/help/new/#projectnumber).
-          This field has
+           *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
            *        been deprecated and replaced by the parent field.
            * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the parent field.
-           * @param clusterId Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the parent
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the parent field.
+           * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
            *        field.
            * @param content the {@link com.google.api.services.container.model.CreateNodePoolRequest}
            * @return the request
@@ -9792,16 +9570,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://developers.google.com/console/help/new/#projectnumber).
-          This field has
+           *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
            *        been deprecated and replaced by the parent field.
              * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the parent field.
-             * @param clusterId Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the parent
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the parent field.
+             * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
            *        field.
              * @param content the {@link com.google.api.services.container.model.CreateNodePoolRequest}
              * @since 1.13
@@ -9896,14 +9670,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the parent field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the parent field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -9911,8 +9686,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             public Create setZone(java.lang.String zone) {
               this.zone = zone;
@@ -9956,18 +9731,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://developers.google.com/console/help/new/#projectnumber).
-          This field has
+           *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
            *        been deprecated and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the name field.
-           * @param nodePoolId Deprecated. The name of the node pool to delete.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
+           * @param nodePoolId Deprecated. The name of the node pool to delete. This field has been deprecated and replaced by the
            *        name field.
            * @return the request
            */
@@ -9993,18 +9763,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://developers.google.com/console/help/new/#projectnumber).
-          This field has
+           *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
            *        been deprecated and replaced by the name field.
              * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-             * @param clusterId Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the name field.
-             * @param nodePoolId Deprecated. The name of the node pool to delete.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
+             * @param nodePoolId Deprecated. The name of the node pool to delete. This field has been deprecated and replaced by the
            *        name field.
              * @since 1.13
              */
@@ -10099,14 +9864,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -10114,8 +9880,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Delete setZone(java.lang.String zone) {
               this.zone = zone;
@@ -10169,13 +9935,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to delete.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The name (project, location, cluster, node pool id) of the node pool to delete. Specified in the
-           format 'projects/locations/clusters/nodePools'.
+           format `projects/locations/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
@@ -10183,7 +9949,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to delete.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             public Delete setName(java.lang.String name) {
               this.name = name;
@@ -10204,18 +9970,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://developers.google.com/console/help/new/#projectnumber).
-          This field has
+           *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
            *        been deprecated and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the name field.
-           * @param nodePoolId Deprecated. The name of the node pool.
-          This field has been deprecated and replaced by the name
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
+           * @param nodePoolId Deprecated. The name of the node pool. This field has been deprecated and replaced by the name
            *        field.
            * @return the request
            */
@@ -10240,18 +10001,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://developers.google.com/console/help/new/#projectnumber).
-          This field has
+           *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
            *        been deprecated and replaced by the name field.
              * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-             * @param clusterId Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the name field.
-             * @param nodePoolId Deprecated. The name of the node pool.
-          This field has been deprecated and replaced by the name
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the name field.
+             * @param nodePoolId Deprecated. The name of the node pool. This field has been deprecated and replaced by the name
            *        field.
              * @since 1.13
              */
@@ -10356,14 +10112,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -10371,8 +10128,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Get setZone(java.lang.String zone) {
               this.zone = zone;
@@ -10426,13 +10183,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to get.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The name (project, location, cluster, node pool id) of the node pool to get. Specified in the
-           format 'projects/locations/clusters/nodePools'.
+           format `projects/locations/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
@@ -10440,7 +10197,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The name (project, location, cluster, node pool id) of the node pool to get.
-             * Specified in the format 'projects/locations/clusters/nodePools'.
+             * Specified in the format `projects/locations/clusters/nodePools`.
              */
             public Get setName(java.lang.String name) {
               this.name = name;
@@ -10461,16 +10218,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://developers.google.com/console/help/new/#projectnumber).
-          This field has
+           *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
            *        been deprecated and replaced by the parent field.
            * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the parent field.
-           * @param clusterId Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the parent
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the parent field.
+           * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
            *        field.
            * @return the request
            */
@@ -10495,16 +10248,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://developers.google.com/console/help/new/#projectnumber).
-          This field has
+           *        number](https://developers.google.com/console/help/new/#projectnumber). This field has
            *        been deprecated and replaced by the parent field.
              * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the parent field.
-             * @param clusterId Deprecated. The name of the cluster.
-          This field has been deprecated and replaced by the parent
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the parent field.
+             * @param clusterId Deprecated. The name of the cluster. This field has been deprecated and replaced by the parent
            *        field.
              * @since 1.13
              */
@@ -10608,14 +10357,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the parent field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the parent field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -10623,8 +10373,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the parent field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the parent field.
              */
             public List setZone(java.lang.String zone) {
               this.zone = zone;
@@ -10656,13 +10406,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The parent (project, location, cluster id) where the node pools will be listed.
-             * Specified in the format 'projects/locations/clusters'.
+             * Specified in the format `projects/locations/clusters`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** The parent (project, location, cluster id) where the node pools will be listed. Specified in the
-           format 'projects/locations/clusters'.
+           format `projects/locations/clusters`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -10670,7 +10420,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * The parent (project, location, cluster id) where the node pools will be listed.
-             * Specified in the format 'projects/locations/clusters'.
+             * Specified in the format `projects/locations/clusters`.
              */
             public List setParent(java.lang.String parent) {
               this.parent = parent;
@@ -10692,19 +10442,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://support.google.com/cloud/answer/6158840).
-          This field has been deprecated
+           *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
            *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to rollback.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to rollback. This field has been deprecated and replaced by the
            *        name field.
-           * @param nodePoolId Deprecated. The name of the node pool to rollback.
-          This field has been deprecated and replaced by
+           * @param nodePoolId Deprecated. The name of the node pool to rollback. This field has been deprecated and replaced by
            *        the name field.
            * @param content the {@link com.google.api.services.container.model.RollbackNodePoolUpgradeRequest}
            * @return the request
@@ -10732,19 +10477,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://support.google.com/cloud/answer/6158840).
-          This field has been deprecated
+           *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
            *        and replaced by the name field.
              * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-             * @param clusterId Deprecated. The name of the cluster to rollback.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster to rollback. This field has been deprecated and replaced by the
            *        name field.
-             * @param nodePoolId Deprecated. The name of the node pool to rollback.
-          This field has been deprecated and replaced by
+             * @param nodePoolId Deprecated. The name of the node pool to rollback. This field has been deprecated and replaced by
            *        the name field.
              * @param content the {@link com.google.api.services.container.model.RollbackNodePoolUpgradeRequest}
              * @since 1.13
@@ -10840,14 +10580,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -10855,8 +10596,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Rollback setZone(java.lang.String zone) {
               this.zone = zone;
@@ -10923,19 +10664,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link SetManagement#execute()} method to invoke the remote operation.
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://support.google.com/cloud/answer/6158840).
-          This field has been deprecated
+           *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
            *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to update.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to update. This field has been deprecated and replaced by the
            *        name field.
-           * @param nodePoolId Deprecated. The name of the node pool to update.
-          This field has been deprecated and replaced by the
+           * @param nodePoolId Deprecated. The name of the node pool to update. This field has been deprecated and replaced by the
            *        name field.
            * @param content the {@link com.google.api.services.container.model.SetNodePoolManagementRequest}
            * @return the request
@@ -10962,19 +10698,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * the constructor. </p>
              *
              * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://support.google.com/cloud/answer/6158840).
-          This field has been deprecated
+           *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
            *        and replaced by the name field.
              * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-             * @param clusterId Deprecated. The name of the cluster to update.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster to update. This field has been deprecated and replaced by the
            *        name field.
-             * @param nodePoolId Deprecated. The name of the node pool to update.
-          This field has been deprecated and replaced by the
+             * @param nodePoolId Deprecated. The name of the node pool to update. This field has been deprecated and replaced by the
            *        name field.
              * @param content the {@link com.google.api.services.container.model.SetNodePoolManagementRequest}
              * @since 1.13
@@ -11070,14 +10801,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -11085,8 +10817,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public SetManagement setZone(java.lang.String zone) {
               this.zone = zone;
@@ -11153,19 +10885,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link SetSize#execute()} method to invoke the remote operation.
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://support.google.com/cloud/answer/6158840).
-          This field has been deprecated
+           *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
            *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to update.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to update. This field has been deprecated and replaced by the
            *        name field.
-           * @param nodePoolId Deprecated. The name of the node pool to update.
-          This field has been deprecated and replaced by the
+           * @param nodePoolId Deprecated. The name of the node pool to update. This field has been deprecated and replaced by the
            *        name field.
            * @param content the {@link com.google.api.services.container.model.SetNodePoolSizeRequest}
            * @return the request
@@ -11192,19 +10919,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://support.google.com/cloud/answer/6158840).
-          This field has been deprecated
+           *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
            *        and replaced by the name field.
              * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-             * @param clusterId Deprecated. The name of the cluster to update.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster to update. This field has been deprecated and replaced by the
            *        name field.
-             * @param nodePoolId Deprecated. The name of the node pool to update.
-          This field has been deprecated and replaced by the
+             * @param nodePoolId Deprecated. The name of the node pool to update. This field has been deprecated and replaced by the
            *        name field.
              * @param content the {@link com.google.api.services.container.model.SetNodePoolSizeRequest}
              * @since 1.13
@@ -11300,14 +11022,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -11315,8 +11038,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public SetSize setZone(java.lang.String zone) {
               this.zone = zone;
@@ -11383,19 +11106,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://support.google.com/cloud/answer/6158840).
-          This field has been deprecated
+           *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
            *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-           * @param clusterId Deprecated. The name of the cluster to upgrade.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+           * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
            *        name field.
-           * @param nodePoolId Deprecated. The name of the node pool to upgrade.
-          This field has been deprecated and replaced by the
+           * @param nodePoolId Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced by the
            *        name field.
            * @param content the {@link com.google.api.services.container.model.UpdateNodePoolRequest}
            * @return the request
@@ -11422,19 +11140,14 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId Deprecated. The Google Developers Console [project ID or project
-           *        number](https://support.google.com/cloud/answer/6158840).
-          This field has been deprecated
+           *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
            *        and replaced by the name field.
              * @param zone Deprecated. The name of the Google Compute Engine
-          [zone](/compute/docs/zones#available) in which the
-           *        cluster
-          resides.
-          This field has been deprecated and replaced by the name field.
-             * @param clusterId Deprecated. The name of the cluster to upgrade.
-          This field has been deprecated and replaced by the
+           *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           *        resides. This field has been deprecated and replaced by the name field.
+             * @param clusterId Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by the
            *        name field.
-             * @param nodePoolId Deprecated. The name of the node pool to upgrade.
-          This field has been deprecated and replaced by the
+             * @param nodePoolId Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced by the
            *        name field.
              * @param content the {@link com.google.api.services.container.model.UpdateNodePoolRequest}
              * @since 1.13
@@ -11530,14 +11243,15 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             @com.google.api.client.util.Key
             private java.lang.String zone;
 
-            /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-           the cluster resides. This field has been deprecated and replaced by the name field.
+            /** Deprecated. The name of the Google Compute Engine
+           [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+           field has been deprecated and replaced by the name field.
              */
             public java.lang.String getZone() {
               return zone;
@@ -11545,8 +11259,8 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * Deprecated. The name of the Google Compute Engine
-             * [zone](/compute/docs/zones#available) in which the cluster resides. This field has
-             * been deprecated and replaced by the name field.
+             * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+             * resides. This field has been deprecated and replaced by the name field.
              */
             public Update setZone(java.lang.String zone) {
               this.zone = zone;
@@ -11636,15 +11350,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        operation resides.
-        This field has been deprecated and replaced by the name field.
-         * @param operationId Deprecated. The server-assigned `name` of the operation.
-        This field has been deprecated and replaced
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param operationId Deprecated. The server-assigned `name` of the operation. This field has been deprecated and replaced
          *        by the name field.
          * @param content the {@link com.google.api.services.container.model.CancelOperationRequest}
          * @return the request
@@ -11671,15 +11382,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        operation resides.
-        This field has been deprecated and replaced by the name field.
-           * @param operationId Deprecated. The server-assigned `name` of the operation.
-        This field has been deprecated and replaced
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param operationId Deprecated. The server-assigned `name` of the operation. This field has been deprecated and replaced
          *        by the name field.
            * @param content the {@link com.google.api.services.container.model.CancelOperationRequest}
            * @since 1.13
@@ -11773,24 +11481,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the operation resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the operation resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the operation resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Cancel setZone(java.lang.String zone) {
             this.zone = zone;
@@ -11834,16 +11543,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-         * @param operationId Deprecated. The server-assigned `name` of the operation.
-        This field has been deprecated and replaced
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+         * @param operationId Deprecated. The server-assigned `name` of the operation. This field has been deprecated and replaced
          *        by the name field.
          * @return the request
          */
@@ -11868,16 +11573,12 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the name field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) in which the
-         *        cluster
-        resides.
-        This field has been deprecated and replaced by the name field.
-           * @param operationId Deprecated. The server-assigned `name` of the operation.
-        This field has been deprecated and replaced
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+         *        resides. This field has been deprecated and replaced by the name field.
+           * @param operationId Deprecated. The server-assigned `name` of the operation. This field has been deprecated and replaced
          *        by the name field.
            * @since 1.13
            */
@@ -11980,24 +11681,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
-         the cluster resides. This field has been deprecated and replaced by the name field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This
+         field has been deprecated and replaced by the name field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * in which the cluster resides. This field has been deprecated and replaced by the name
-           * field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster
+           * resides. This field has been deprecated and replaced by the name field.
            */
           public Get setZone(java.lang.String zone) {
             this.zone = zone;
@@ -12029,13 +11731,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, operation id) of the operation to get. Specified in the
-           * format 'projects/locations/operations'.
+           * format `projects/locations/operations`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name (project, location, operation id) of the operation to get. Specified in the format
-         'projects/locations/operations'.
+         `projects/locations/operations`.
            */
           public java.lang.String getName() {
             return name;
@@ -12043,7 +11745,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The name (project, location, operation id) of the operation to get. Specified in the
-           * format 'projects/locations/operations'.
+           * format `projects/locations/operations`.
            */
           public Get setName(java.lang.String name) {
             this.name = name;
@@ -12064,14 +11766,11 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the parent field.
          * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) to return
-         *        operations for, or `-` for
-        all zones. This field has been deprecated and replaced by the
-         *        parent field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or
+         *        `-` for all zones. This field has been deprecated and replaced by the parent field.
          * @return the request
          */
         public List list(java.lang.String projectId, java.lang.String zone) throws java.io.IOException {
@@ -12095,14 +11794,11 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Deprecated. The Google Developers Console [project ID or project
-         *        number](https://support.google.com/cloud/answer/6158840).
-        This field has been deprecated
+         *        number](https://support.google.com/cloud/answer/6158840). This field has been deprecated
          *        and replaced by the parent field.
            * @param zone Deprecated. The name of the Google Compute Engine
-        [zone](/compute/docs/zones#available) to return
-         *        operations for, or `-` for
-        all zones. This field has been deprecated and replaced by the
-         *        parent field.
+         *        [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or
+         *        `-` for all zones. This field has been deprecated and replaced by the parent field.
            * @since 1.13
            */
           protected List(java.lang.String projectId, java.lang.String zone) {
@@ -12203,25 +11899,25 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * to return operations for, or `-` for all zones. This field has been deprecated and
-           * replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for,
+           * or `-` for all zones. This field has been deprecated and replaced by the parent field.
            */
           @com.google.api.client.util.Key
           private java.lang.String zone;
 
-          /** Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
-         operations for, or `-` for all zones. This field has been deprecated and replaced by the parent
-         field.
+          /** Deprecated. The name of the Google Compute Engine
+         [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for, or `-` for
+         all zones. This field has been deprecated and replaced by the parent field.
            */
           public java.lang.String getZone() {
             return zone;
           }
 
           /**
-           * Deprecated. The name of the Google Compute Engine [zone](/compute/docs/zones#available)
-           * to return operations for, or `-` for all zones. This field has been deprecated and
-           * replaced by the parent field.
+           * Deprecated. The name of the Google Compute Engine
+           * [zone](https://cloud.google.com/compute/docs/zones#available) to return operations for,
+           * or `-` for all zones. This field has been deprecated and replaced by the parent field.
            */
           public List setZone(java.lang.String zone) {
             this.zone = zone;
@@ -12230,13 +11926,13 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The parent (project and location) where the operations will be listed. Specified in the
-           * format 'projects/locations'. Location "-" matches all zones and all regions.
+           * format `projects/locations`. Location "-" matches all zones and all regions.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The parent (project and location) where the operations will be listed. Specified in the format
-         'projects/locations'. Location "-" matches all zones and all regions.
+         `projects/locations`. Location "-" matches all zones and all regions.
            */
           public java.lang.String getParent() {
             return parent;
@@ -12244,7 +11940,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * The parent (project and location) where the operations will be listed. Specified in the
-           * format 'projects/locations'. Location "-" matches all zones and all regions.
+           * format `projects/locations`. Location "-" matches all zones and all regions.
            */
           public List setParent(java.lang.String parent) {
             this.parent = parent;

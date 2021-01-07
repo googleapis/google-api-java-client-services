@@ -80,10 +80,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
    * systems make use of the `etag` in the read-modify-write cycle to perform alert updates in order
    * to avoid race conditions: An `etag` is returned in the response which contains alerts, and
    * systems are expected to put that etag in the request to update alert to ensure that their
-   * change will be applied to the same version of the alert.
-   *
-   * If no `etag` is provided in the call to update alert, then the existing alert is overwritten
-   * blindly.
+   * change will be applied to the same version of the alert. If no `etag` is provided in the call
+   * to update alert, then the existing alert is overwritten blindly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,12 +104,9 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A unique identifier for the system that reported the alert. This is output only after
-   * alert is created.
-   *
-   * Supported sources are any of the following:
-   *
-   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout * State
-   * sponsored attack * Google identity
+   * alert is created. Supported sources are any of the following: * Google Operations * Mobile
+   * device management * Gmail phishing * Domain wide takeout * State sponsored attack * Google
+   * identity
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,10 +246,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
    * systems make use of the `etag` in the read-modify-write cycle to perform alert updates in order
    * to avoid race conditions: An `etag` is returned in the response which contains alerts, and
    * systems are expected to put that etag in the request to update alert to ensure that their
-   * change will be applied to the same version of the alert.
-   *
-   * If no `etag` is provided in the call to update alert, then the existing alert is overwritten
-   * blindly.
+   * change will be applied to the same version of the alert. If no `etag` is provided in the call
+   * to update alert, then the existing alert is overwritten blindly.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -267,10 +260,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
    * systems make use of the `etag` in the read-modify-write cycle to perform alert updates in order
    * to avoid race conditions: An `etag` is returned in the response which contains alerts, and
    * systems are expected to put that etag in the request to update alert to ensure that their
-   * change will be applied to the same version of the alert.
-   *
-   * If no `etag` is provided in the call to update alert, then the existing alert is overwritten
-   * blindly.
+   * change will be applied to the same version of the alert. If no `etag` is provided in the call
+   * to update alert, then the existing alert is overwritten blindly.
    * @param etag etag or {@code null} for none
    */
   public Alert setEtag(java.lang.String etag) {
@@ -316,12 +307,9 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A unique identifier for the system that reported the alert. This is output only after
-   * alert is created.
-   *
-   * Supported sources are any of the following:
-   *
-   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout * State
-   * sponsored attack * Google identity
+   * alert is created. Supported sources are any of the following: * Google Operations * Mobile
+   * device management * Gmail phishing * Domain wide takeout * State sponsored attack * Google
+   * identity
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -330,12 +318,9 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. A unique identifier for the system that reported the alert. This is output only after
-   * alert is created.
-   *
-   * Supported sources are any of the following:
-   *
-   * * Google Operations * Mobile device management * Gmail phishing * Domain wide takeout * State
-   * sponsored attack * Google identity
+   * alert is created. Supported sources are any of the following: * Google Operations * Mobile
+   * device management * Gmail phishing * Domain wide takeout * State sponsored attack * Google
+   * identity
    * @param source source or {@code null} for none
    */
   public Alert setSource(java.lang.String source) {

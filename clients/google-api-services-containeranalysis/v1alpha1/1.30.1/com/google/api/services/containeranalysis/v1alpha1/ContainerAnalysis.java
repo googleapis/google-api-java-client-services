@@ -46,7 +46,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Container Analysis API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Container Analysis API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -170,8 +170,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent This field contains the project Id for example:
-      "projects/{project_id}
+       * @param parent This field contains the project Id for example: "projects/{project_id}
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.Note}
        * @return the request
        */
@@ -199,8 +198,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent This field contains the project Id for example:
-      "projects/{project_id}
+         * @param parent This field contains the project Id for example: "projects/{project_id}
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.Note}
          * @since 1.13
          */
@@ -269,9 +267,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * This field contains the project Id for example: "projects/{project_id}
-         */
+        /** This field contains the project Id for example: "projects/{project_id} */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -281,9 +277,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return parent;
         }
 
-        /**
-         * This field contains the project Id for example: "projects/{project_id}
-         */
+        /** This field contains the project Id for example: "projects/{project_id} */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -343,8 +337,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the note in the form of
-      "providers/{provider_id}/notes/{NOTE_ID}"
+       * @param name The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -371,8 +364,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the note in the form of
-      "providers/{provider_id}/notes/{NOTE_ID}"
+         * @param name The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -440,9 +432,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
-         */
+        /** The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}" */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -452,9 +442,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return name;
         }
 
-        /**
-         * The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
-         */
+        /** The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}" */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -478,8 +466,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the note in the form of
-      "providers/{provider_id}/notes/{NOTE_ID}"
+       * @param name The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -506,8 +493,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the note in the form of
-      "providers/{provider_id}/notes/{NOTE_ID}"
+         * @param name The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -585,9 +571,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
-         */
+        /** The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}" */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -597,9 +581,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return name;
         }
 
-        /**
-         * The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
-         */
+        /** The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}" */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -631,8 +613,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.GetIamPolicyRequest}
        * @return the request
@@ -668,8 +649,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.GetIamPolicyRequest}
          * @since 1.13
@@ -989,8 +969,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the note.
-      Should be of the form "projects/{provider_id}/notes/{note_id}".
+       * @param name The name of the note. Should be of the form "projects/{provider_id}/notes/{note_id}".
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.Note}
        * @return the request
        */
@@ -1018,8 +997,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the note.
-      Should be of the form "projects/{provider_id}/notes/{note_id}".
+         * @param name The name of the note. Should be of the form "projects/{provider_id}/notes/{note_id}".
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.Note}
          * @since 1.13
          */
@@ -1151,8 +1129,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.SetIamPolicyRequest}
        * @return the request
@@ -1190,8 +1167,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -1309,8 +1285,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.TestIamPermissionsRequest}
        * @return the request
@@ -1345,8 +1320,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -1479,8 +1453,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the containeranalysis server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param name The name field will contain the note name for example:
-          "provider/{provider_id}/notes/{note_id}"
+         * @param name The name field will contain the note name for example: "provider/{provider_id}/notes/{note_id}"
          * @return the request
          */
         public List list(java.lang.String name) throws java.io.IOException {
@@ -1508,8 +1481,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name field will contain the note name for example:
-          "provider/{provider_id}/notes/{note_id}"
+           * @param name The name field will contain the note name for example: "provider/{provider_id}/notes/{note_id}"
            * @since 1.13
            */
           protected List(java.lang.String name) {
@@ -1816,21 +1788,17 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /**
-         * The name of the project.  Should be of the form "projects/{project_id}". @Deprecated
-         */
+        /** The name of the project. Should be of the form "projects/{project_id}". @Deprecated */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the project.  Should be of the form "projects/{project_id}". @Deprecated
+        /** The name of the project. Should be of the form "projects/{project_id}". @Deprecated
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * The name of the project.  Should be of the form "projects/{project_id}". @Deprecated
-         */
+        /** The name of the project. Should be of the form "projects/{project_id}". @Deprecated */
         public Create setName(java.lang.String name) {
           this.name = name;
           return this;
@@ -1850,8 +1818,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the occurrence in the form of
-      "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+       * @param name The name of the occurrence in the form of "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1879,8 +1846,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the occurrence in the form of
-      "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+         * @param name The name of the occurrence in the form of "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1988,8 +1954,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the occurrence of the form
-      "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+       * @param name The name of the occurrence of the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2016,8 +1981,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the occurrence of the form
-      "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+         * @param name The name of the occurrence of the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2143,8 +2107,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.GetIamPolicyRequest}
        * @return the request
@@ -2180,8 +2143,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.GetIamPolicyRequest}
          * @since 1.13
@@ -2292,8 +2254,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link GetNotes#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the occurrence in the form
-      "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+       * @param name The name of the occurrence in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
        * @return the request
        */
       public GetNotes getNotes(java.lang.String name) throws java.io.IOException {
@@ -2320,8 +2281,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * GetNotes#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the occurrence in the form
-      "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
+         * @param name The name of the occurrence in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
          * @since 1.13
          */
         protected GetNotes(java.lang.String name) {
@@ -2818,8 +2778,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the occurrence.
-      Should be of the form
+       * @param name The name of the occurrence. Should be of the form
        *        "projects/{project_id}/occurrences/{OCCURRENCE_ID}".
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.Occurrence}
        * @return the request
@@ -2848,8 +2807,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the occurrence.
-      Should be of the form
+         * @param name The name of the occurrence. Should be of the form
        *        "projects/{project_id}/occurrences/{OCCURRENCE_ID}".
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.Occurrence}
          * @since 1.13
@@ -2985,8 +2943,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.SetIamPolicyRequest}
        * @return the request
@@ -3024,8 +2981,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -3143,8 +3099,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.TestIamPermissionsRequest}
        * @return the request
@@ -3179,8 +3134,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -3437,7 +3391,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         }
       }
       /**
-       * Updates an existing operation returns an error if operation  does not exist. The only valid
+       * Updates an existing operation returns an error if operation does not exist. The only valid
        * operations are to update mark the done bit change the result.
        *
        * Create a request for the method "operations.patch".
@@ -3445,8 +3399,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the Operation.
-      Should be of the form "projects/{provider_id}/operations/{operation_id}".
+       * @param name The name of the Operation. Should be of the form "projects/{provider_id}/operations/{operation_id}".
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.UpdateOperationRequest}
        * @return the request
        */
@@ -3464,7 +3417,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Updates an existing operation returns an error if operation  does not exist. The only valid
+         * Updates an existing operation returns an error if operation does not exist. The only valid
          * operations are to update mark the done bit change the result.
          *
          * Create a request for the method "operations.patch".
@@ -3475,8 +3428,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the Operation.
-      Should be of the form "projects/{provider_id}/operations/{operation_id}".
+         * @param name The name of the Operation. Should be of the form "projects/{provider_id}/operations/{operation_id}".
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.UpdateOperationRequest}
          * @since 1.13
          */
@@ -3608,8 +3560,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the ScanConfig in the form
-      projects/{project_id}/scanConfigs/{scan_config_id}
+       * @param name The name of the ScanConfig in the form projects/{project_id}/scanConfigs/{scan_config_id}
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -3636,8 +3587,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the ScanConfig in the form
-      projects/{project_id}/scanConfigs/{scan_config_id}
+         * @param name The name of the ScanConfig in the form projects/{project_id}/scanConfigs/{scan_config_id}
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -3940,8 +3890,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The scan config to update of the form
-      projects/{project_id}/scanConfigs/{scan_config_id}.
+       * @param name The scan config to update of the form projects/{project_id}/scanConfigs/{scan_config_id}.
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.ScanConfig}
        * @return the request
        */
@@ -3969,8 +3918,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The scan config to update of the form
-      projects/{project_id}/scanConfigs/{scan_config_id}.
+         * @param name The scan config to update of the form projects/{project_id}/scanConfigs/{scan_config_id}.
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.ScanConfig}
          * @since 1.13
          */
@@ -4137,9 +4085,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the project.
-      Should be of the form "providers/{provider_id}".
-      @Deprecated
+       * @param name The name of the project. Should be of the form "providers/{provider_id}". @Deprecated
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.Note}
        * @return the request
        */
@@ -4167,9 +4113,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the project.
-      Should be of the form "providers/{provider_id}".
-      @Deprecated
+         * @param name The name of the project. Should be of the form "providers/{provider_id}". @Deprecated
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.Note}
          * @since 1.13
          */
@@ -4279,9 +4223,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /**
-         * This field contains the project Id for example: "projects/{project_id}
-         */
+        /** This field contains the project Id for example: "projects/{project_id} */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -4291,9 +4233,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return parent;
         }
 
-        /**
-         * This field contains the project Id for example: "projects/{project_id}
-         */
+        /** This field contains the project Id for example: "projects/{project_id} */
         public Create setParent(java.lang.String parent) {
           this.parent = parent;
           return this;
@@ -4312,8 +4252,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the note in the form of
-      "providers/{provider_id}/notes/{NOTE_ID}"
+       * @param name The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4340,8 +4279,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the note in the form of
-      "providers/{provider_id}/notes/{NOTE_ID}"
+         * @param name The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -4409,9 +4347,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
-         */
+        /** The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}" */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -4421,9 +4357,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return name;
         }
 
-        /**
-         * The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
-         */
+        /** The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}" */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4447,8 +4381,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the note in the form of
-      "providers/{provider_id}/notes/{NOTE_ID}"
+       * @param name The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4475,8 +4408,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the note in the form of
-      "providers/{provider_id}/notes/{NOTE_ID}"
+         * @param name The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4554,9 +4486,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
-         */
+        /** The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}" */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -4566,9 +4496,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return name;
         }
 
-        /**
-         * The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}"
-         */
+        /** The name of the note in the form of "providers/{provider_id}/notes/{NOTE_ID}" */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4600,8 +4528,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.GetIamPolicyRequest}
        * @return the request
@@ -4637,8 +4564,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.GetIamPolicyRequest}
          * @since 1.13
@@ -4749,9 +4675,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name The name field will contain the project Id for example:
-      "providers/{provider_id}
-      @Deprecated
+       * @param name The name field will contain the project Id for example: "providers/{provider_id} @Deprecated
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -4778,9 +4702,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name field will contain the project Id for example:
-      "providers/{provider_id}
-      @Deprecated
+         * @param name The name field will contain the project Id for example: "providers/{provider_id} @Deprecated
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -4962,8 +4884,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the note.
-      Should be of the form "projects/{provider_id}/notes/{note_id}".
+       * @param name The name of the note. Should be of the form "projects/{provider_id}/notes/{note_id}".
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.Note}
        * @return the request
        */
@@ -4991,8 +4912,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the note.
-      Should be of the form "projects/{provider_id}/notes/{note_id}".
+         * @param name The name of the note. Should be of the form "projects/{provider_id}/notes/{note_id}".
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.Note}
          * @since 1.13
          */
@@ -5124,8 +5044,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.SetIamPolicyRequest}
        * @return the request
@@ -5163,8 +5082,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -5282,8 +5200,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.TestIamPermissionsRequest}
        * @return the request
@@ -5318,8 +5235,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1alpha1.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -5452,8 +5368,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the containeranalysis server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param name The name field will contain the note name for example:
-          "provider/{provider_id}/notes/{note_id}"
+         * @param name The name field will contain the note name for example: "provider/{provider_id}/notes/{note_id}"
          * @return the request
          */
         public List list(java.lang.String name) throws java.io.IOException {
@@ -5481,8 +5396,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name field will contain the note name for example:
-          "provider/{provider_id}/notes/{note_id}"
+           * @param name The name field will contain the note name for example: "provider/{provider_id}/notes/{note_id}"
            * @since 1.13
            */
           protected List(java.lang.String name) {

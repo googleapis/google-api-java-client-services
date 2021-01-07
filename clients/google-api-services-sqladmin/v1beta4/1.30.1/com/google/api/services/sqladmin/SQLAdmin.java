@@ -20,12 +20,12 @@ package com.google.api.services.sqladmin;
  * Service definition for SQLAdmin (v1beta4).
  *
  * <p>
- * Creates and manages Cloud SQL instances, which provide fully managed MySQL or PostgreSQL databases.
+ * API for Cloud SQL database instance management
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/sql/docs/reference/latest" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/cloud-sql/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.3 of the Cloud SQL Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud SQL Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -55,7 +55,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://sqladmin.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -63,7 +63,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "sql/v1beta4/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/sqladmin/v1beta4";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -163,7 +163,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Delete extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/backupRuns/{id}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}";
 
       /**
        * Deletes the backup taken by a backup run.
@@ -189,8 +189,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -219,8 +234,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -297,7 +317,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Get extends SQLAdminRequest<com.google.api.services.sqladmin.model.BackupRun> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/backupRuns/{id}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}";
 
       /**
        * Retrieves a resource containing information about a backup run.
@@ -332,8 +352,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -362,8 +397,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -441,7 +481,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Insert extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/backupRuns";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/backupRuns";
 
       /**
        * Creates a new backup run on demand. This method is applicable only to Second Generation
@@ -467,8 +507,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -497,8 +552,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -559,7 +619,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends SQLAdminRequest<com.google.api.services.sqladmin.model.BackupRunsListResponse> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/backupRuns";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/backupRuns";
 
       /**
        * Lists all backup runs associated with a given instance and configuration in the reverse
@@ -593,8 +653,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -623,8 +698,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -744,7 +824,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Delete extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/databases/{database}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}";
 
       /**
        * Deletes a database from a Cloud SQL instance.
@@ -770,8 +850,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -800,8 +895,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -878,7 +978,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Get extends SQLAdminRequest<com.google.api.services.sqladmin.model.Database> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/databases/{database}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}";
 
       /**
        * Retrieves a resource containing information about a database inside a Cloud SQL instance.
@@ -913,8 +1013,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -943,8 +1058,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -1021,7 +1141,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Insert extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/databases";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/databases";
 
       /**
        * Inserts a resource containing information about a database inside a Cloud SQL instance.
@@ -1046,8 +1166,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -1076,8 +1211,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -1137,7 +1277,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends SQLAdminRequest<com.google.api.services.sqladmin.model.DatabasesListResponse> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/databases";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/databases";
 
       /**
        * Lists databases in the specified Cloud SQL instance.
@@ -1170,8 +1310,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1200,8 +1355,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -1242,8 +1402,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates a resource containing information about a database inside a Cloud SQL instance. This
-     * method supports patch semantics.
+     * Partially updates a resource containing information about a database inside a Cloud SQL instance.
+     * This method supports patch semantics.
      *
      * Create a request for the method "databases.patch".
      *
@@ -1264,11 +1424,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Patch extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/databases/{database}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}";
 
       /**
-       * Updates a resource containing information about a database inside a Cloud SQL instance. This
-       * method supports patch semantics.
+       * Partially updates a resource containing information about a database inside a Cloud SQL
+       * instance. This method supports patch semantics.
        *
        * Create a request for the method "databases.patch".
        *
@@ -1292,8 +1452,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -1322,8 +1497,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -1401,7 +1581,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Update extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/databases/{database}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}";
 
       /**
        * Updates a resource containing information about a database inside a Cloud SQL instance.
@@ -1428,8 +1608,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -1458,8 +1653,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -1556,7 +1756,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends SQLAdminRequest<com.google.api.services.sqladmin.model.FlagsListResponse> {
 
-      private static final String REST_PATH = "flags";
+      private static final String REST_PATH = "sql/v1beta4/flags";
 
       /**
        * List all available database flags for Cloud SQL instances.
@@ -1585,8 +1785,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1615,8 +1830,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -1693,7 +1913,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class AddServerCa extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/addServerCa";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/addServerCa";
 
       /**
        * Add a new trusted Certificate Authority (CA) version for the specified instance. Required to
@@ -1720,8 +1940,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public AddServerCa set$Xgafv(java.lang.String $Xgafv) {
+        return (AddServerCa) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public AddServerCa setAccessToken(java.lang.String accessToken) {
+        return (AddServerCa) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public AddServerCa setAlt(java.lang.String alt) {
         return (AddServerCa) super.setAlt(alt);
+      }
+
+      @Override
+      public AddServerCa setCallback(java.lang.String callback) {
+        return (AddServerCa) super.setCallback(callback);
       }
 
       @Override
@@ -1750,8 +1985,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public AddServerCa setUserIp(java.lang.String userIp) {
-        return (AddServerCa) super.setUserIp(userIp);
+      public AddServerCa setUploadType(java.lang.String uploadType) {
+        return (AddServerCa) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public AddServerCa setUploadProtocol(java.lang.String uploadProtocol) {
+        return (AddServerCa) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -1792,7 +2032,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Creates a Cloud SQL instance as a clone of the source instance.
+     * Creates a Cloud SQL instance as a clone of the source instance. Using this operation might cause
+     * your instance to restart.
      *
      * Create a request for the method "instances.clone".
      *
@@ -1812,10 +2053,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Clone extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/clone";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/clone";
 
       /**
-       * Creates a Cloud SQL instance as a clone of the source instance.
+       * Creates a Cloud SQL instance as a clone of the source instance. Using this operation might
+       * cause your instance to restart.
        *
        * Create a request for the method "instances.clone".
        *
@@ -1837,8 +2079,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Clone set$Xgafv(java.lang.String $Xgafv) {
+        return (Clone) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Clone setAccessToken(java.lang.String accessToken) {
+        return (Clone) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Clone setAlt(java.lang.String alt) {
         return (Clone) super.setAlt(alt);
+      }
+
+      @Override
+      public Clone setCallback(java.lang.String callback) {
+        return (Clone) super.setCallback(callback);
       }
 
       @Override
@@ -1867,8 +2124,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Clone setUserIp(java.lang.String userIp) {
-        return (Clone) super.setUserIp(userIp);
+      public Clone setUploadType(java.lang.String uploadType) {
+        return (Clone) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Clone setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Clone) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the source as well as the clone Cloud SQL instance. */
@@ -1934,7 +2196,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Delete extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}";
 
       /**
        * Deletes a Cloud SQL instance.
@@ -1958,8 +2220,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -1988,8 +2265,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance to be deleted. */
@@ -2050,7 +2332,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class DemoteMaster extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/demoteMaster";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/demoteMaster";
 
       /**
        * Demotes the stand-alone instance to be a Cloud SQL read replica for an external database
@@ -2076,8 +2358,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public DemoteMaster set$Xgafv(java.lang.String $Xgafv) {
+        return (DemoteMaster) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DemoteMaster setAccessToken(java.lang.String accessToken) {
+        return (DemoteMaster) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public DemoteMaster setAlt(java.lang.String alt) {
         return (DemoteMaster) super.setAlt(alt);
+      }
+
+      @Override
+      public DemoteMaster setCallback(java.lang.String callback) {
+        return (DemoteMaster) super.setCallback(callback);
       }
 
       @Override
@@ -2106,8 +2403,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public DemoteMaster setUserIp(java.lang.String userIp) {
-        return (DemoteMaster) super.setUserIp(userIp);
+      public DemoteMaster setUploadType(java.lang.String uploadType) {
+        return (DemoteMaster) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DemoteMaster setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DemoteMaster) super.setUploadProtocol(uploadProtocol);
       }
 
       /** ID of the project that contains the instance. */
@@ -2168,7 +2470,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Export extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/export";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/export";
 
       /**
        * Exports data from a Cloud SQL instance to a Cloud Storage bucket as a SQL dump or CSV file.
@@ -2193,8 +2495,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Export set$Xgafv(java.lang.String $Xgafv) {
+        return (Export) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Export setAccessToken(java.lang.String accessToken) {
+        return (Export) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Export setAlt(java.lang.String alt) {
         return (Export) super.setAlt(alt);
+      }
+
+      @Override
+      public Export setCallback(java.lang.String callback) {
+        return (Export) super.setCallback(callback);
       }
 
       @Override
@@ -2223,8 +2540,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Export setUserIp(java.lang.String userIp) {
-        return (Export) super.setUserIp(userIp);
+      public Export setUploadType(java.lang.String uploadType) {
+        return (Export) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Export setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Export) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance to be exported. */
@@ -2265,7 +2587,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Failover the instance to its failover replica instance.
+     * Failover the instance to its failover replica instance. Using this operation might cause your
+     * instance to restart.
      *
      * Create a request for the method "instances.failover".
      *
@@ -2285,10 +2608,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Failover extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/failover";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/failover";
 
       /**
-       * Failover the instance to its failover replica instance.
+       * Failover the instance to its failover replica instance. Using this operation might cause your
+       * instance to restart.
        *
        * Create a request for the method "instances.failover".
        *
@@ -2310,8 +2634,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Failover set$Xgafv(java.lang.String $Xgafv) {
+        return (Failover) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Failover setAccessToken(java.lang.String accessToken) {
+        return (Failover) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Failover setAlt(java.lang.String alt) {
         return (Failover) super.setAlt(alt);
+      }
+
+      @Override
+      public Failover setCallback(java.lang.String callback) {
+        return (Failover) super.setCallback(callback);
       }
 
       @Override
@@ -2340,8 +2679,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Failover setUserIp(java.lang.String userIp) {
-        return (Failover) super.setUserIp(userIp);
+      public Failover setUploadType(java.lang.String uploadType) {
+        return (Failover) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Failover setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Failover) super.setUploadProtocol(uploadProtocol);
       }
 
       /** ID of the project that contains the read replica. */
@@ -2401,7 +2745,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Get extends SQLAdminRequest<com.google.api.services.sqladmin.model.DatabaseInstance> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}";
 
       /**
        * Retrieves a resource containing information about a Cloud SQL instance.
@@ -2434,8 +2778,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -2464,8 +2823,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -2526,7 +2890,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class SQLAdminImport extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/import";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/import";
 
       /**
        * Imports data into a Cloud SQL instance from a SQL dump or CSV file in Cloud Storage.
@@ -2551,8 +2915,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public SQLAdminImport set$Xgafv(java.lang.String $Xgafv) {
+        return (SQLAdminImport) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SQLAdminImport setAccessToken(java.lang.String accessToken) {
+        return (SQLAdminImport) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public SQLAdminImport setAlt(java.lang.String alt) {
         return (SQLAdminImport) super.setAlt(alt);
+      }
+
+      @Override
+      public SQLAdminImport setCallback(java.lang.String callback) {
+        return (SQLAdminImport) super.setCallback(callback);
       }
 
       @Override
@@ -2581,8 +2960,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public SQLAdminImport setUserIp(java.lang.String userIp) {
-        return (SQLAdminImport) super.setUserIp(userIp);
+      public SQLAdminImport setUploadType(java.lang.String uploadType) {
+        return (SQLAdminImport) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SQLAdminImport setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SQLAdminImport) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -2642,7 +3026,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Insert extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances";
 
       /**
        * Creates a new Cloud SQL instance.
@@ -2665,8 +3049,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -2695,8 +3094,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -2725,7 +3129,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Lists instances under a given project in the alphabetical order of the instance name.
+     * Lists instances under a given project.
      *
      * Create a request for the method "instances.list".
      *
@@ -2743,10 +3147,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends SQLAdminRequest<com.google.api.services.sqladmin.model.InstancesListResponse> {
 
-      private static final String REST_PATH = "projects/{project}/instances";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances";
 
       /**
-       * Lists instances under a given project in the alphabetical order of the instance name.
+       * Lists instances under a given project.
        *
        * Create a request for the method "instances.list".
        *
@@ -2774,8 +3178,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -2804,8 +3223,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project for which to list Cloud SQL instances. */
@@ -2824,17 +3248,35 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** An expression for filtering the results of the request, such as by name or label. */
+      /**
+       * A filter expression that filters resources listed in the response. The expression is in the
+       * form of field:value. For example, 'instanceType:CLOUD_SQL_INSTANCE'. Fields can be nested
+       * as needed as per their JSON representation, such as 'settings.userLabels.auto_start:true'.
+       * Multiple filter queries are space-separated. For example. 'state:RUNNABLE
+       * instanceType:CLOUD_SQL_INSTANCE'. By default, each expression is an AND expression.
+       * However, you can include AND and OR expressions explicitly.
+       */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** An expression for filtering the results of the request, such as by name or label.
+      /** A filter expression that filters resources listed in the response. The expression is in the form of
+     field:value. For example, 'instanceType:CLOUD_SQL_INSTANCE'. Fields can be nested as needed as per
+     their JSON representation, such as 'settings.userLabels.auto_start:true'. Multiple filter queries
+     are space-separated. For example. 'state:RUNNABLE instanceType:CLOUD_SQL_INSTANCE'. By default,
+     each expression is an AND expression. However, you can include AND and OR expressions explicitly.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
-      /** An expression for filtering the results of the request, such as by name or label. */
+      /**
+       * A filter expression that filters resources listed in the response. The expression is in the
+       * form of field:value. For example, 'instanceType:CLOUD_SQL_INSTANCE'. Fields can be nested
+       * as needed as per their JSON representation, such as 'settings.userLabels.auto_start:true'.
+       * Multiple filter queries are space-separated. For example. 'state:RUNNABLE
+       * instanceType:CLOUD_SQL_INSTANCE'. By default, each expression is an AND expression.
+       * However, you can include AND and OR expressions explicitly.
+       */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
         return this;
@@ -2904,7 +3346,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class ListServerCas extends SQLAdminRequest<com.google.api.services.sqladmin.model.InstancesListServerCasResponse> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/listServerCas";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/listServerCas";
 
       /**
        * Lists all of the trusted Certificate Authorities (CAs) for the specified instance. There can be
@@ -2941,8 +3383,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public ListServerCas set$Xgafv(java.lang.String $Xgafv) {
+        return (ListServerCas) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListServerCas setAccessToken(java.lang.String accessToken) {
+        return (ListServerCas) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ListServerCas setAlt(java.lang.String alt) {
         return (ListServerCas) super.setAlt(alt);
+      }
+
+      @Override
+      public ListServerCas setCallback(java.lang.String callback) {
+        return (ListServerCas) super.setCallback(callback);
       }
 
       @Override
@@ -2971,8 +3428,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public ListServerCas setUserIp(java.lang.String userIp) {
-        return (ListServerCas) super.setUserIp(userIp);
+      public ListServerCas setUploadType(java.lang.String uploadType) {
+        return (ListServerCas) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListServerCas setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListServerCas) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -3013,9 +3475,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates settings of a Cloud SQL instance. Caution: This is not a partial update, so you must
-     * include values for all the settings that you want to retain. For partial updates, use patch..
-     * This method supports patch semantics.
+     * Updates settings of a Cloud SQL instance. This method supports patch semantics.
      *
      * Create a request for the method "instances.patch".
      *
@@ -3035,12 +3495,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Patch extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}";
 
       /**
-       * Updates settings of a Cloud SQL instance. Caution: This is not a partial update, so you must
-       * include values for all the settings that you want to retain. For partial updates, use patch..
-       * This method supports patch semantics.
+       * Updates settings of a Cloud SQL instance. This method supports patch semantics.
        *
        * Create a request for the method "instances.patch".
        *
@@ -3062,8 +3520,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -3092,8 +3565,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -3134,7 +3612,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Promotes the read replica instance to be a stand-alone Cloud SQL instance.
+     * Promotes the read replica instance to be a stand-alone Cloud SQL instance. Using this operation
+     * might cause your instance to restart.
      *
      * Create a request for the method "instances.promoteReplica".
      *
@@ -3153,10 +3632,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class PromoteReplica extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/promoteReplica";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/promoteReplica";
 
       /**
-       * Promotes the read replica instance to be a stand-alone Cloud SQL instance.
+       * Promotes the read replica instance to be a stand-alone Cloud SQL instance. Using this operation
+       * might cause your instance to restart.
        *
        * Create a request for the method "instances.promoteReplica".
        *
@@ -3177,8 +3657,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public PromoteReplica set$Xgafv(java.lang.String $Xgafv) {
+        return (PromoteReplica) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public PromoteReplica setAccessToken(java.lang.String accessToken) {
+        return (PromoteReplica) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public PromoteReplica setAlt(java.lang.String alt) {
         return (PromoteReplica) super.setAlt(alt);
+      }
+
+      @Override
+      public PromoteReplica setCallback(java.lang.String callback) {
+        return (PromoteReplica) super.setCallback(callback);
       }
 
       @Override
@@ -3207,8 +3702,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public PromoteReplica setUserIp(java.lang.String userIp) {
-        return (PromoteReplica) super.setUserIp(userIp);
+      public PromoteReplica setUploadType(java.lang.String uploadType) {
+        return (PromoteReplica) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public PromoteReplica setUploadProtocol(java.lang.String uploadProtocol) {
+        return (PromoteReplica) super.setUploadProtocol(uploadProtocol);
       }
 
       /** ID of the project that contains the read replica. */
@@ -3268,7 +3768,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class ResetSslConfig extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/resetSslConfig";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/resetSslConfig";
 
       /**
        * Deletes all client certificates and generates a new server SSL certificate for the instance.
@@ -3292,8 +3792,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public ResetSslConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (ResetSslConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ResetSslConfig setAccessToken(java.lang.String accessToken) {
+        return (ResetSslConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public ResetSslConfig setAlt(java.lang.String alt) {
         return (ResetSslConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public ResetSslConfig setCallback(java.lang.String callback) {
+        return (ResetSslConfig) super.setCallback(callback);
       }
 
       @Override
@@ -3322,8 +3837,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public ResetSslConfig setUserIp(java.lang.String userIp) {
-        return (ResetSslConfig) super.setUserIp(userIp);
+      public ResetSslConfig setUploadType(java.lang.String uploadType) {
+        return (ResetSslConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ResetSslConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ResetSslConfig) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -3383,7 +3903,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Restart extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/restart";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/restart";
 
       /**
        * Restarts a Cloud SQL instance.
@@ -3407,8 +3927,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Restart set$Xgafv(java.lang.String $Xgafv) {
+        return (Restart) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Restart setAccessToken(java.lang.String accessToken) {
+        return (Restart) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Restart setAlt(java.lang.String alt) {
         return (Restart) super.setAlt(alt);
+      }
+
+      @Override
+      public Restart setCallback(java.lang.String callback) {
+        return (Restart) super.setCallback(callback);
       }
 
       @Override
@@ -3437,8 +3972,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Restart setUserIp(java.lang.String userIp) {
-        return (Restart) super.setUserIp(userIp);
+      public Restart setUploadType(java.lang.String uploadType) {
+        return (Restart) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Restart setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Restart) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance to be restarted. */
@@ -3479,7 +4019,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Restores a backup of a Cloud SQL instance.
+     * Restores a backup of a Cloud SQL instance. Using this operation might cause your instance to
+     * restart.
      *
      * Create a request for the method "instances.restoreBackup".
      *
@@ -3499,10 +4040,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class RestoreBackup extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/restoreBackup";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/restoreBackup";
 
       /**
-       * Restores a backup of a Cloud SQL instance.
+       * Restores a backup of a Cloud SQL instance. Using this operation might cause your instance to
+       * restart.
        *
        * Create a request for the method "instances.restoreBackup".
        *
@@ -3524,8 +4066,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public RestoreBackup set$Xgafv(java.lang.String $Xgafv) {
+        return (RestoreBackup) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RestoreBackup setAccessToken(java.lang.String accessToken) {
+        return (RestoreBackup) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public RestoreBackup setAlt(java.lang.String alt) {
         return (RestoreBackup) super.setAlt(alt);
+      }
+
+      @Override
+      public RestoreBackup setCallback(java.lang.String callback) {
+        return (RestoreBackup) super.setCallback(callback);
       }
 
       @Override
@@ -3554,8 +4111,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public RestoreBackup setUserIp(java.lang.String userIp) {
-        return (RestoreBackup) super.setUserIp(userIp);
+      public RestoreBackup setUploadType(java.lang.String uploadType) {
+        return (RestoreBackup) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RestoreBackup setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RestoreBackup) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -3617,7 +4179,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class RotateServerCa extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/rotateServerCa";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/rotateServerCa";
 
       /**
        * Rotates the server certificate to one signed by the Certificate Authority (CA) version
@@ -3643,8 +4205,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public RotateServerCa set$Xgafv(java.lang.String $Xgafv) {
+        return (RotateServerCa) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RotateServerCa setAccessToken(java.lang.String accessToken) {
+        return (RotateServerCa) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public RotateServerCa setAlt(java.lang.String alt) {
         return (RotateServerCa) super.setAlt(alt);
+      }
+
+      @Override
+      public RotateServerCa setCallback(java.lang.String callback) {
+        return (RotateServerCa) super.setCallback(callback);
       }
 
       @Override
@@ -3673,8 +4250,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public RotateServerCa setUserIp(java.lang.String userIp) {
-        return (RotateServerCa) super.setUserIp(userIp);
+      public RotateServerCa setUploadType(java.lang.String uploadType) {
+        return (RotateServerCa) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RotateServerCa setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RotateServerCa) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -3734,7 +4316,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class StartReplica extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/startReplica";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/startReplica";
 
       /**
        * Starts the replication in the read replica instance.
@@ -3758,8 +4340,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public StartReplica set$Xgafv(java.lang.String $Xgafv) {
+        return (StartReplica) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public StartReplica setAccessToken(java.lang.String accessToken) {
+        return (StartReplica) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public StartReplica setAlt(java.lang.String alt) {
         return (StartReplica) super.setAlt(alt);
+      }
+
+      @Override
+      public StartReplica setCallback(java.lang.String callback) {
+        return (StartReplica) super.setCallback(callback);
       }
 
       @Override
@@ -3788,8 +4385,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public StartReplica setUserIp(java.lang.String userIp) {
-        return (StartReplica) super.setUserIp(userIp);
+      public StartReplica setUploadType(java.lang.String uploadType) {
+        return (StartReplica) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public StartReplica setUploadProtocol(java.lang.String uploadProtocol) {
+        return (StartReplica) super.setUploadProtocol(uploadProtocol);
       }
 
       /** ID of the project that contains the read replica. */
@@ -3849,7 +4451,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class StopReplica extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/stopReplica";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/stopReplica";
 
       /**
        * Stops the replication in the read replica instance.
@@ -3873,8 +4475,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public StopReplica set$Xgafv(java.lang.String $Xgafv) {
+        return (StopReplica) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public StopReplica setAccessToken(java.lang.String accessToken) {
+        return (StopReplica) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public StopReplica setAlt(java.lang.String alt) {
         return (StopReplica) super.setAlt(alt);
+      }
+
+      @Override
+      public StopReplica setCallback(java.lang.String callback) {
+        return (StopReplica) super.setCallback(callback);
       }
 
       @Override
@@ -3903,8 +4520,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public StopReplica setUserIp(java.lang.String userIp) {
-        return (StopReplica) super.setUserIp(userIp);
+      public StopReplica setUploadType(java.lang.String uploadType) {
+        return (StopReplica) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public StopReplica setUploadProtocol(java.lang.String uploadProtocol) {
+        return (StopReplica) super.setUploadProtocol(uploadProtocol);
       }
 
       /** ID of the project that contains the read replica. */
@@ -3965,7 +4587,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class TruncateLog extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/truncateLog";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/truncateLog";
 
       /**
        * Truncate MySQL general and slow query log tables
@@ -3990,8 +4612,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public TruncateLog set$Xgafv(java.lang.String $Xgafv) {
+        return (TruncateLog) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TruncateLog setAccessToken(java.lang.String accessToken) {
+        return (TruncateLog) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public TruncateLog setAlt(java.lang.String alt) {
         return (TruncateLog) super.setAlt(alt);
+      }
+
+      @Override
+      public TruncateLog setCallback(java.lang.String callback) {
+        return (TruncateLog) super.setCallback(callback);
       }
 
       @Override
@@ -4020,8 +4657,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public TruncateLog setUserIp(java.lang.String userIp) {
-        return (TruncateLog) super.setUserIp(userIp);
+      public TruncateLog setUploadType(java.lang.String uploadType) {
+        return (TruncateLog) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TruncateLog setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TruncateLog) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the Cloud SQL project. */
@@ -4062,8 +4704,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates settings of a Cloud SQL instance. Caution: This is not a partial update, so you must
-     * include values for all the settings that you want to retain. For partial updates, use patch.
+     * Updates settings of a Cloud SQL instance. Using this operation might cause your instance to
+     * restart.
      *
      * Create a request for the method "instances.update".
      *
@@ -4083,11 +4725,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Update extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}";
 
       /**
-       * Updates settings of a Cloud SQL instance. Caution: This is not a partial update, so you must
-       * include values for all the settings that you want to retain. For partial updates, use patch.
+       * Updates settings of a Cloud SQL instance. Using this operation might cause your instance to
+       * restart.
        *
        * Create a request for the method "instances.update".
        *
@@ -4109,8 +4751,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -4139,8 +4796,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -4223,7 +4885,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Get extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/operations/{operation}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/operations/{operation}";
 
       /**
        * Retrieves an instance operation that has been performed on an instance.
@@ -4256,8 +4918,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -4286,8 +4963,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -4337,18 +5019,17 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param project Project ID of the project that contains the instance.
-     * @param instance Cloud SQL instance ID. This does not include the project ID.
      * @return the request
      */
-    public List list(java.lang.String project, java.lang.String instance) throws java.io.IOException {
-      List result = new List(project, instance);
+    public List list(java.lang.String project) throws java.io.IOException {
+      List result = new List(project);
       initialize(result);
       return result;
     }
 
     public class List extends SQLAdminRequest<com.google.api.services.sqladmin.model.OperationsListResponse> {
 
-      private static final String REST_PATH = "projects/{project}/operations";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/operations";
 
       /**
        * Lists all instance operations that have been performed on the given Cloud SQL instance in the
@@ -4362,13 +5043,11 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Project ID of the project that contains the instance.
-       * @param instance Cloud SQL instance ID. This does not include the project ID.
        * @since 1.13
        */
-      protected List(java.lang.String project, java.lang.String instance) {
+      protected List(java.lang.String project) {
         super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.OperationsListResponse.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
-        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
       }
 
       @Override
@@ -4382,8 +5061,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -4412,8 +5106,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -4493,6 +5192,507 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SQLAdmin sqladmin = new SQLAdmin(...);}
+   *   {@code SQLAdmin.Projects.List request = sqladmin.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * An accessor for creating requests from the Instances collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code SQLAdmin sqladmin = new SQLAdmin(...);}
+     *   {@code SQLAdmin.Instances.List request = sqladmin.instances().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Instances instances() {
+      return new Instances();
+    }
+
+    /**
+     * The "instances" collection of methods.
+     */
+    public class Instances {
+
+      /**
+       * Reschedules the maintenance on the given instance.
+       *
+       * Create a request for the method "instances.rescheduleMaintenance".
+       *
+       * This request holds the parameters needed by the sqladmin server.  After setting any optional
+       * parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesRescheduleMaintenanceRequestBody}
+       * @return the request
+       */
+      public RescheduleMaintenance rescheduleMaintenance(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesRescheduleMaintenanceRequestBody content) throws java.io.IOException {
+        RescheduleMaintenance result = new RescheduleMaintenance(project, instance, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RescheduleMaintenance extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+        private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/rescheduleMaintenance";
+
+        /**
+         * Reschedules the maintenance on the given instance.
+         *
+         * Create a request for the method "instances.rescheduleMaintenance".
+         *
+         * This request holds the parameters needed by the the sqladmin server.  After setting any
+         * optional parameters, call the {@link RescheduleMaintenance#execute()} method to invoke the
+         * remote operation. <p> {@link RescheduleMaintenance#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param project ID of the project that contains the instance.
+         * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @param content the {@link com.google.api.services.sqladmin.model.SqlInstancesRescheduleMaintenanceRequestBody}
+         * @since 1.13
+         */
+        protected RescheduleMaintenance(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlInstancesRescheduleMaintenanceRequestBody content) {
+          super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        }
+
+        @Override
+        public RescheduleMaintenance set$Xgafv(java.lang.String $Xgafv) {
+          return (RescheduleMaintenance) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RescheduleMaintenance setAccessToken(java.lang.String accessToken) {
+          return (RescheduleMaintenance) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RescheduleMaintenance setAlt(java.lang.String alt) {
+          return (RescheduleMaintenance) super.setAlt(alt);
+        }
+
+        @Override
+        public RescheduleMaintenance setCallback(java.lang.String callback) {
+          return (RescheduleMaintenance) super.setCallback(callback);
+        }
+
+        @Override
+        public RescheduleMaintenance setFields(java.lang.String fields) {
+          return (RescheduleMaintenance) super.setFields(fields);
+        }
+
+        @Override
+        public RescheduleMaintenance setKey(java.lang.String key) {
+          return (RescheduleMaintenance) super.setKey(key);
+        }
+
+        @Override
+        public RescheduleMaintenance setOauthToken(java.lang.String oauthToken) {
+          return (RescheduleMaintenance) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RescheduleMaintenance setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RescheduleMaintenance) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RescheduleMaintenance setQuotaUser(java.lang.String quotaUser) {
+          return (RescheduleMaintenance) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RescheduleMaintenance setUploadType(java.lang.String uploadType) {
+          return (RescheduleMaintenance) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RescheduleMaintenance setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RescheduleMaintenance) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** ID of the project that contains the instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** ID of the project that contains the instance.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** ID of the project that contains the instance. */
+        public RescheduleMaintenance setProject(java.lang.String project) {
+          this.project = project;
+          return this;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String instance;
+
+        /** Cloud SQL instance ID. This does not include the project ID.
+         */
+        public java.lang.String getInstance() {
+          return instance;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        public RescheduleMaintenance setInstance(java.lang.String instance) {
+          this.instance = instance;
+          return this;
+        }
+
+        @Override
+        public RescheduleMaintenance set(String parameterName, Object value) {
+          return (RescheduleMaintenance) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Start External primary instance migration.
+       *
+       * Create a request for the method "instances.startExternalSync".
+       *
+       * This request holds the parameters needed by the sqladmin server.  After setting any optional
+       * parameters, call the {@link StartExternalSync#execute()} method to invoke the remote operation.
+       *
+       * @param project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @return the request
+       */
+      public StartExternalSync startExternalSync(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+        StartExternalSync result = new StartExternalSync(project, instance);
+        initialize(result);
+        return result;
+      }
+
+      public class StartExternalSync extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+        private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/startExternalSync";
+
+        /**
+         * Start External primary instance migration.
+         *
+         * Create a request for the method "instances.startExternalSync".
+         *
+         * This request holds the parameters needed by the the sqladmin server.  After setting any
+         * optional parameters, call the {@link StartExternalSync#execute()} method to invoke the remote
+         * operation. <p> {@link StartExternalSync#initialize(com.google.api.client.googleapis.services.Ab
+         * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param project ID of the project that contains the instance.
+         * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @since 1.13
+         */
+        protected StartExternalSync(java.lang.String project, java.lang.String instance) {
+          super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.Operation.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        }
+
+        @Override
+        public StartExternalSync set$Xgafv(java.lang.String $Xgafv) {
+          return (StartExternalSync) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public StartExternalSync setAccessToken(java.lang.String accessToken) {
+          return (StartExternalSync) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public StartExternalSync setAlt(java.lang.String alt) {
+          return (StartExternalSync) super.setAlt(alt);
+        }
+
+        @Override
+        public StartExternalSync setCallback(java.lang.String callback) {
+          return (StartExternalSync) super.setCallback(callback);
+        }
+
+        @Override
+        public StartExternalSync setFields(java.lang.String fields) {
+          return (StartExternalSync) super.setFields(fields);
+        }
+
+        @Override
+        public StartExternalSync setKey(java.lang.String key) {
+          return (StartExternalSync) super.setKey(key);
+        }
+
+        @Override
+        public StartExternalSync setOauthToken(java.lang.String oauthToken) {
+          return (StartExternalSync) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public StartExternalSync setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (StartExternalSync) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public StartExternalSync setQuotaUser(java.lang.String quotaUser) {
+          return (StartExternalSync) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public StartExternalSync setUploadType(java.lang.String uploadType) {
+          return (StartExternalSync) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public StartExternalSync setUploadProtocol(java.lang.String uploadProtocol) {
+          return (StartExternalSync) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** ID of the project that contains the instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** ID of the project that contains the instance.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** ID of the project that contains the instance. */
+        public StartExternalSync setProject(java.lang.String project) {
+          this.project = project;
+          return this;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String instance;
+
+        /** Cloud SQL instance ID. This does not include the project ID.
+         */
+        public java.lang.String getInstance() {
+          return instance;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        public StartExternalSync setInstance(java.lang.String instance) {
+          this.instance = instance;
+          return this;
+        }
+
+        /** External sync mode */
+        @com.google.api.client.util.Key
+        private java.lang.String syncMode;
+
+        /** External sync mode
+         */
+        public java.lang.String getSyncMode() {
+          return syncMode;
+        }
+
+        /** External sync mode */
+        public StartExternalSync setSyncMode(java.lang.String syncMode) {
+          this.syncMode = syncMode;
+          return this;
+        }
+
+        @Override
+        public StartExternalSync set(String parameterName, Object value) {
+          return (StartExternalSync) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Verify External primary instance external sync settings.
+       *
+       * Create a request for the method "instances.verifyExternalSyncSettings".
+       *
+       * This request holds the parameters needed by the sqladmin server.  After setting any optional
+       * parameters, call the {@link VerifyExternalSyncSettings#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param project Project ID of the project that contains the instance.
+       * @param instance Cloud SQL instance ID. This does not include the project ID.
+       * @return the request
+       */
+      public VerifyExternalSyncSettings verifyExternalSyncSettings(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+        VerifyExternalSyncSettings result = new VerifyExternalSyncSettings(project, instance);
+        initialize(result);
+        return result;
+      }
+
+      public class VerifyExternalSyncSettings extends SQLAdminRequest<com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsResponse> {
+
+        private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/verifyExternalSyncSettings";
+
+        /**
+         * Verify External primary instance external sync settings.
+         *
+         * Create a request for the method "instances.verifyExternalSyncSettings".
+         *
+         * This request holds the parameters needed by the the sqladmin server.  After setting any
+         * optional parameters, call the {@link VerifyExternalSyncSettings#execute()} method to invoke the
+         * remote operation. <p> {@link VerifyExternalSyncSettings#initialize(com.google.api.client.google
+         * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param project Project ID of the project that contains the instance.
+         * @param instance Cloud SQL instance ID. This does not include the project ID.
+         * @since 1.13
+         */
+        protected VerifyExternalSyncSettings(java.lang.String project, java.lang.String instance) {
+          super(SQLAdmin.this, "POST", REST_PATH, null, com.google.api.services.sqladmin.model.SqlInstancesVerifyExternalSyncSettingsResponse.class);
+          this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+          this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        }
+
+        @Override
+        public VerifyExternalSyncSettings set$Xgafv(java.lang.String $Xgafv) {
+          return (VerifyExternalSyncSettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setAccessToken(java.lang.String accessToken) {
+          return (VerifyExternalSyncSettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setAlt(java.lang.String alt) {
+          return (VerifyExternalSyncSettings) super.setAlt(alt);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setCallback(java.lang.String callback) {
+          return (VerifyExternalSyncSettings) super.setCallback(callback);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setFields(java.lang.String fields) {
+          return (VerifyExternalSyncSettings) super.setFields(fields);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setKey(java.lang.String key) {
+          return (VerifyExternalSyncSettings) super.setKey(key);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setOauthToken(java.lang.String oauthToken) {
+          return (VerifyExternalSyncSettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (VerifyExternalSyncSettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setQuotaUser(java.lang.String quotaUser) {
+          return (VerifyExternalSyncSettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setUploadType(java.lang.String uploadType) {
+          return (VerifyExternalSyncSettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public VerifyExternalSyncSettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (VerifyExternalSyncSettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Project ID of the project that contains the instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String project;
+
+        /** Project ID of the project that contains the instance.
+         */
+        public java.lang.String getProject() {
+          return project;
+        }
+
+        /** Project ID of the project that contains the instance. */
+        public VerifyExternalSyncSettings setProject(java.lang.String project) {
+          this.project = project;
+          return this;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        @com.google.api.client.util.Key
+        private java.lang.String instance;
+
+        /** Cloud SQL instance ID. This does not include the project ID.
+         */
+        public java.lang.String getInstance() {
+          return instance;
+        }
+
+        /** Cloud SQL instance ID. This does not include the project ID. */
+        public VerifyExternalSyncSettings setInstance(java.lang.String instance) {
+          this.instance = instance;
+          return this;
+        }
+
+        /** External sync mode */
+        @com.google.api.client.util.Key
+        private java.lang.String syncMode;
+
+        /** External sync mode
+         */
+        public java.lang.String getSyncMode() {
+          return syncMode;
+        }
+
+        /** External sync mode */
+        public VerifyExternalSyncSettings setSyncMode(java.lang.String syncMode) {
+          this.syncMode = syncMode;
+          return this;
+        }
+
+        /** Flag to enable verifying connection only */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean verifyConnectionOnly;
+
+        /** Flag to enable verifying connection only
+         */
+        public java.lang.Boolean getVerifyConnectionOnly() {
+          return verifyConnectionOnly;
+        }
+
+        /** Flag to enable verifying connection only */
+        public VerifyExternalSyncSettings setVerifyConnectionOnly(java.lang.Boolean verifyConnectionOnly) {
+          this.verifyConnectionOnly = verifyConnectionOnly;
+          return this;
+        }
+
+        @Override
+        public VerifyExternalSyncSettings set(String parameterName, Object value) {
+          return (VerifyExternalSyncSettings) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the SslCerts collection.
    *
    * <p>The typical use is:</p>
@@ -4535,7 +5735,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class CreateEphemeral extends SQLAdminRequest<com.google.api.services.sqladmin.model.SslCert> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/createEphemeral";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/createEphemeral";
 
       /**
        * Generates a short-lived X509 certificate containing the provided public key and signed by a
@@ -4562,8 +5762,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public CreateEphemeral set$Xgafv(java.lang.String $Xgafv) {
+        return (CreateEphemeral) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CreateEphemeral setAccessToken(java.lang.String accessToken) {
+        return (CreateEphemeral) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public CreateEphemeral setAlt(java.lang.String alt) {
         return (CreateEphemeral) super.setAlt(alt);
+      }
+
+      @Override
+      public CreateEphemeral setCallback(java.lang.String callback) {
+        return (CreateEphemeral) super.setCallback(callback);
       }
 
       @Override
@@ -4592,8 +5807,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public CreateEphemeral setUserIp(java.lang.String userIp) {
-        return (CreateEphemeral) super.setUserIp(userIp);
+      public CreateEphemeral setUploadType(java.lang.String uploadType) {
+        return (CreateEphemeral) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CreateEphemeral setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CreateEphemeral) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the Cloud SQL project. */
@@ -4655,7 +5875,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Delete extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}";
 
       /**
        * Deletes the SSL certificate. For First Generation instances, the certificate remains valid
@@ -4682,8 +5902,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -4712,8 +5947,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -4791,7 +6031,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Get extends SQLAdminRequest<com.google.api.services.sqladmin.model.SslCert> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}";
 
       /**
        * Retrieves a particular SSL certificate. Does not include the private key (required for usage).
@@ -4827,8 +6067,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -4857,8 +6112,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -4936,7 +6196,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Insert extends SQLAdminRequest<com.google.api.services.sqladmin.model.SslCertsInsertResponse> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/sslCerts";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/sslCerts";
 
       /**
        * Creates an SSL certificate and returns it along with the private key and server certificate
@@ -4962,8 +6222,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -4992,8 +6267,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -5053,7 +6333,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends SQLAdminRequest<com.google.api.services.sqladmin.model.SslCertsListResponse> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/sslCerts";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/sslCerts";
 
       /**
        * Lists all of the current SSL certificates for the instance.
@@ -5086,8 +6366,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -5116,8 +6411,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -5200,7 +6500,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends SQLAdminRequest<com.google.api.services.sqladmin.model.TiersListResponse> {
 
-      private static final String REST_PATH = "projects/{project}/tiers";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/tiers";
 
       /**
        * Lists all available machine types (tiers) for Cloud SQL, for example, db-n1-standard-1. For
@@ -5232,8 +6532,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -5262,8 +6577,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project for which to list tiers. */
@@ -5320,19 +6640,17 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Project ID of the project that contains the instance.
      * @param instance Database instance ID. This does not include the project ID.
-     * @param host Host of the user in the instance.
-     * @param name Name of the user in the instance.
      * @return the request
      */
-    public Delete delete(java.lang.String project, java.lang.String instance, java.lang.String host, java.lang.String name) throws java.io.IOException {
-      Delete result = new Delete(project, instance, host, name);
+    public Delete delete(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+      Delete result = new Delete(project, instance);
       initialize(result);
       return result;
     }
 
     public class Delete extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/users";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/users";
 
       /**
        * Deletes a user from a Cloud SQL instance.
@@ -5347,21 +6665,32 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Database instance ID. This does not include the project ID.
-       * @param host Host of the user in the instance.
-       * @param name Name of the user in the instance.
        * @since 1.13
        */
-      protected Delete(java.lang.String project, java.lang.String instance, java.lang.String host, java.lang.String name) {
+      protected Delete(java.lang.String project, java.lang.String instance) {
         super(SQLAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.sqladmin.model.Operation.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
         this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
-        this.host = com.google.api.client.util.Preconditions.checkNotNull(host, "Required parameter host must be specified.");
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
       }
 
       @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -5390,8 +6719,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -5484,7 +6818,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class Insert extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/users";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/users";
 
       /**
        * Creates a new user in a Cloud SQL instance.
@@ -5509,8 +6843,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -5539,8 +6888,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -5600,7 +6954,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
     public class List extends SQLAdminRequest<com.google.api.services.sqladmin.model.UsersListResponse> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/users";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/users";
 
       /**
        * Lists users in the specified Cloud SQL instance.
@@ -5633,8 +6987,23 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -5663,8 +7032,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -5714,19 +7088,18 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Project ID of the project that contains the instance.
      * @param instance Database instance ID. This does not include the project ID.
-     * @param name Name of the user in the instance.
      * @param content the {@link com.google.api.services.sqladmin.model.User}
      * @return the request
      */
-    public Update update(java.lang.String project, java.lang.String instance, java.lang.String name, com.google.api.services.sqladmin.model.User content) throws java.io.IOException {
-      Update result = new Update(project, instance, name, content);
+    public Update update(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.User content) throws java.io.IOException {
+      Update result = new Update(project, instance, content);
       initialize(result);
       return result;
     }
 
     public class Update extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
 
-      private static final String REST_PATH = "projects/{project}/instances/{instance}/users";
+      private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/users";
 
       /**
        * Updates an existing user in a Cloud SQL instance.
@@ -5741,20 +7114,33 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Database instance ID. This does not include the project ID.
-       * @param name Name of the user in the instance.
        * @param content the {@link com.google.api.services.sqladmin.model.User}
        * @since 1.13
        */
-      protected Update(java.lang.String project, java.lang.String instance, java.lang.String name, com.google.api.services.sqladmin.model.User content) {
+      protected Update(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.User content) {
         super(SQLAdmin.this, "PUT", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
         this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
       }
 
       @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -5783,8 +7169,13 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Project ID of the project that contains the instance. */
@@ -5819,6 +7210,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Host of the user in the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String host;
+
+      /** Optional. Host of the user in the instance.
+       */
+      public java.lang.String getHost() {
+        return host;
+      }
+
+      /** Optional. Host of the user in the instance. */
+      public Update setHost(java.lang.String host) {
+        this.host = host;
+        return this;
+      }
+
       /** Name of the user in the instance. */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -5832,29 +7239,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Name of the user in the instance. */
       public Update setName(java.lang.String name) {
         this.name = name;
-        return this;
-      }
-
-      /**
-       * Host of the user in the instance. For a MySQL instance, it's required; For a PostgreSQL
-       * instance, it's optional.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String host;
-
-      /** Host of the user in the instance. For a MySQL instance, it's required; For a PostgreSQL instance,
-     it's optional.
-       */
-      public java.lang.String getHost() {
-        return host;
-      }
-
-      /**
-       * Host of the user in the instance. For a MySQL instance, it's required; For a PostgreSQL
-       * instance, it's optional.
-       */
-      public Update setHost(java.lang.String host) {
-        this.host = host;
         return this;
       }
 

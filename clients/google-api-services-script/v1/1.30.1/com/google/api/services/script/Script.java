@@ -20,8 +20,7 @@ package com.google.api.services.script;
  * Service definition for Script (v1).
  *
  * <p>
- * Manages and executes Google Apps Script projects.
-
+ * Manages and executes Google Apps Script projects. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Apps Script API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Apps Script API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -246,9 +245,7 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The maximum number of returned processes per page of results. Defaults to 50.
-       */
+      /** The maximum number of returned processes per page of results. Defaults to 50. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
@@ -258,9 +255,7 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
         return pageSize;
       }
 
-      /**
-       * The maximum number of returned processes per page of results. Defaults to 50.
-       */
+      /** The maximum number of returned processes per page of results. Defaults to 50. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -602,9 +597,7 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
         return (ListScriptProcesses) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The maximum number of returned processes per page of results. Defaults to 50.
-       */
+      /** The maximum number of returned processes per page of results. Defaults to 50. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
@@ -614,9 +607,7 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
         return pageSize;
       }
 
-      /**
-       * The maximum number of returned processes per page of results. Defaults to 50.
-       */
+      /** The maximum number of returned processes per page of results. Defaults to 50. */
       public ListScriptProcesses setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -2694,24 +2685,21 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
 
     /**
      * Runs a function in an Apps Script project. The script project must be deployed for use with the
-     * Apps Script API and the calling application must share the same Cloud Platform project.
-     *
-     * This method requires authorization with an OAuth 2.0 token that includes at least one of the
-     * scopes listed in the [Authorization](#authorization-scopes) section; script projects that do not
-     * require authorization cannot be executed through this API. To find the correct scopes to include
-     * in the authentication token, open the project in the script editor, then select **File > Project
-     * properties** and click the **Scopes** tab.
-     *
-     * The error `403, PERMISSION_DENIED: The caller does not have permission` indicates that the Cloud
-     * Platform project used to authorize the request is not the same as the one used by the script.
+     * Apps Script API and the calling application must share the same Cloud Platform project. This
+     * method requires authorization with an OAuth 2.0 token that includes at least one of the scopes
+     * listed in the [Authorization](#authorization-scopes) section; script projects that do not require
+     * authorization cannot be executed through this API. To find the correct scopes to include in the
+     * authentication token, open the project in the script editor, then select **File > Project
+     * properties** and click the **Scopes** tab. The error `403, PERMISSION_DENIED: The caller does not
+     * have permission` indicates that the Cloud Platform project used to authorize the request is not
+     * the same as the one used by the script.
      *
      * Create a request for the method "scripts.run".
      *
      * This request holds the parameters needed by the script server.  After setting any optional
      * parameters, call the {@link Run#execute()} method to invoke the remote operation.
      *
-     * @param scriptId The script ID of the script to be executed. To find the script ID, open
-    the project in the script
+     * @param scriptId The script ID of the script to be executed. To find the script ID, open the project in the script
      *        editor and select **File > Project properties**.
      * @param content the {@link com.google.api.services.script.model.ExecutionRequest}
      * @return the request
@@ -2728,17 +2716,14 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Runs a function in an Apps Script project. The script project must be deployed for use with the
-       * Apps Script API and the calling application must share the same Cloud Platform project.
-       *
-       * This method requires authorization with an OAuth 2.0 token that includes at least one of the
-       * scopes listed in the [Authorization](#authorization-scopes) section; script projects that do
-       * not require authorization cannot be executed through this API. To find the correct scopes to
+       * Apps Script API and the calling application must share the same Cloud Platform project. This
+       * method requires authorization with an OAuth 2.0 token that includes at least one of the scopes
+       * listed in the [Authorization](#authorization-scopes) section; script projects that do not
+       * require authorization cannot be executed through this API. To find the correct scopes to
        * include in the authentication token, open the project in the script editor, then select **File
-       * > Project properties** and click the **Scopes** tab.
-       *
-       * The error `403, PERMISSION_DENIED: The caller does not have permission` indicates that the
-       * Cloud Platform project used to authorize the request is not the same as the one used by the
-       * script.
+       * > Project properties** and click the **Scopes** tab. The error `403, PERMISSION_DENIED: The
+       * caller does not have permission` indicates that the Cloud Platform project used to authorize
+       * the request is not the same as the one used by the script.
        *
        * Create a request for the method "scripts.run".
        *
@@ -2747,8 +2732,7 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
        * Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param scriptId The script ID of the script to be executed. To find the script ID, open
-    the project in the script
+       * @param scriptId The script ID of the script to be executed. To find the script ID, open the project in the script
      *        editor and select **File > Project properties**.
        * @param content the {@link com.google.api.services.script.model.ExecutionRequest}
        * @since 1.13

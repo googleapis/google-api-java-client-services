@@ -37,7 +37,7 @@ public final class SqlExternalSyncSettingError extends com.google.api.client.jso
   private java.lang.String detail;
 
   /**
-   * This is always sql#migrationSettingError.
+   * This is always *sql#migrationSettingError*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class SqlExternalSyncSettingError extends com.google.api.client.jso
   }
 
   /**
-   * This is always sql#migrationSettingError.
+   * This is always *sql#migrationSettingError*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -76,7 +76,7 @@ public final class SqlExternalSyncSettingError extends com.google.api.client.jso
   }
 
   /**
-   * This is always sql#migrationSettingError.
+   * This is always *sql#migrationSettingError*.
    * @param kind kind or {@code null} for none
    */
   public SqlExternalSyncSettingError setKind(java.lang.String kind) {

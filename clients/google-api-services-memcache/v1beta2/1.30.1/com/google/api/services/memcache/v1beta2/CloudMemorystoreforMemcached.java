@@ -46,7 +46,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Memorystore for Memcached API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Memorystore for Memcached API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -508,16 +508,15 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
       public class Instances {
 
         /**
-         * ApplyParameters will update current set of Parameters to the set of specified nodes of the
-         * Memcached Instance.
+         * ApplyParameters will restart the set of specified nodes in order to update them to the current
+         * set of parameters for the Memcached Instance.
          *
          * Create a request for the method "instances.applyParameters".
          *
          * This request holds the parameters needed by the memcache server.  After setting any optional
          * parameters, call the {@link ApplyParameters#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the Memcached instance for which parameter group updates
-        should be
+         * @param name Required. Resource name of the Memcached instance for which parameter group updates should be
          *        applied.
          * @param content the {@link com.google.api.services.memcache.v1beta2.model.ApplyParametersRequest}
          * @return the request
@@ -536,8 +535,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * ApplyParameters will update current set of Parameters to the set of specified nodes of the
-           * Memcached Instance.
+           * ApplyParameters will restart the set of specified nodes in order to update them to the current
+           * set of parameters for the Memcached Instance.
            *
            * Create a request for the method "instances.applyParameters".
            *
@@ -547,8 +546,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name Required. Resource name of the Memcached instance for which parameter group updates
-        should be
+           * @param name Required. Resource name of the Memcached instance for which parameter group updates should be
          *        applied.
            * @param content the {@link com.google.api.services.memcache.v1beta2.model.ApplyParametersRequest}
            * @since 1.13
@@ -652,7 +650,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
         }
         /**
-         * Creates a new Instance in a given project and location.
+         * Creates a new Instance in a given location.
          *
          * Create a request for the method "instances.create".
          *
@@ -660,8 +658,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP region
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region
          * @param content the {@link com.google.api.services.memcache.v1beta2.model.Instance}
          * @return the request
          */
@@ -679,7 +676,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new Instance in a given project and location.
+           * Creates a new Instance in a given location.
            *
            * Create a request for the method "instances.create".
            *
@@ -690,8 +687,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP region
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region
            * @param content the {@link com.google.api.services.memcache.v1beta2.model.Instance}
            * @since 1.13
            */
@@ -792,21 +788,19 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
           /**
            * Required. The logical name of the Memcached instance in the user project with the
-           * following restrictions:
-           *
-           * * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
-           * letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must
-           * be unique within the user project / location
+           * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
+           * Must start with a letter. * Must be between 1-40 characters. * Must end with a number
+           * or a letter. * Must be unique within the user project / location If any of the above
+           * are not met, will raise an invalid argument error.
            */
           @com.google.api.client.util.Key
           private java.lang.String instanceId;
 
           /** Required. The logical name of the Memcached instance in the user project with the following
-         restrictions:
-
-         * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be
-         between 1-40 characters. * Must end with a number or a letter. * Must be unique within the user
-         project / location
+         restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
+         letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must be unique
+         within the user project / location If any of the above are not met, will raise an invalid argument
+         error.
            */
           public java.lang.String getInstanceId() {
             return instanceId;
@@ -814,11 +808,10 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
           /**
            * Required. The logical name of the Memcached instance in the user project with the
-           * following restrictions:
-           *
-           * * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
-           * letter. * Must be between 1-40 characters. * Must end with a number or a letter. * Must
-           * be unique within the user project / location
+           * following restrictions: * Must contain only lowercase letters, numbers, and hyphens. *
+           * Must start with a letter. * Must be between 1-40 characters. * Must end with a number
+           * or a letter. * Must be unique within the user project / location If any of the above
+           * are not met, will raise an invalid argument error.
            */
           public Create setInstanceId(java.lang.String instanceId) {
             this.instanceId = instanceId;
@@ -838,9 +831,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * This request holds the parameters needed by the memcache server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Memcached instance resource name in the format:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         * @param name Required. Memcached instance resource name in the format:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region
          * @return the request
          */
@@ -868,9 +860,8 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Memcached instance resource name in the format:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+           * @param name Required. Memcached instance resource name in the format:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region
            * @since 1.13
            */
@@ -940,14 +931,14 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
 
           /**
-           * Memcached instance resource name in the format:
+           * Required. Memcached instance resource name in the format:
            * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
            * `location_id` refers to a GCP region
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Memcached instance resource name in the format:
+          /** Required. Memcached instance resource name in the format:
          `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where `location_id` refers
          to a GCP region
            */
@@ -956,7 +947,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
 
           /**
-           * Memcached instance resource name in the format:
+           * Required. Memcached instance resource name in the format:
            * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
            * `location_id` refers to a GCP region
            */
@@ -984,8 +975,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. Memcached instance resource name in the format:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region
          * @return the request
          */
@@ -1013,8 +1003,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Memcached instance resource name in the format:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        where
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
          *        `location_id` refers to a GCP region
            * @since 1.13
            */
@@ -1130,194 +1119,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
         }
         /**
-         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
-         * does not have a policy set.
-         *
-         * Create a request for the method "instances.getIamPolicy".
-         *
-         * This request holds the parameters needed by the memcache server.  After setting any optional
-         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
-         *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
-         *        the appropriate value for this field.
-         * @return the request
-         */
-        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
-          GetIamPolicy result = new GetIamPolicy(resource);
-          initialize(result);
-          return result;
-        }
-
-        public class GetIamPolicy extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Policy> {
-
-          private static final String REST_PATH = "v1beta2/{+resource}:getIamPolicy";
-
-          private final java.util.regex.Pattern RESOURCE_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-
-          /**
-           * Gets the access control policy for a resource. Returns an empty policy if the resource exists
-           * and does not have a policy set.
-           *
-           * Create a request for the method "instances.getIamPolicy".
-           *
-           * This request holds the parameters needed by the the memcache server.  After setting any
-           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
-           * operation. <p> {@link
-           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
-         *        the appropriate value for this field.
-           * @since 1.13
-           */
-          protected GetIamPolicy(java.lang.String resource) {
-            super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1beta2.model.Policy.class);
-            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                  "Parameter resource must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
-            return (GetIamPolicy) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (GetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public GetIamPolicy setAlt(java.lang.String alt) {
-            return (GetIamPolicy) super.setAlt(alt);
-          }
-
-          @Override
-          public GetIamPolicy setCallback(java.lang.String callback) {
-            return (GetIamPolicy) super.setCallback(callback);
-          }
-
-          @Override
-          public GetIamPolicy setFields(java.lang.String fields) {
-            return (GetIamPolicy) super.setFields(fields);
-          }
-
-          @Override
-          public GetIamPolicy setKey(java.lang.String key) {
-            return (GetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (GetIamPolicy) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
-            return (GetIamPolicy) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public GetIamPolicy setUploadType(java.lang.String uploadType) {
-            return (GetIamPolicy) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
-            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String resource;
-
-          /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
-         the appropriate value for this field.
-           */
-          public java.lang.String getResource() {
-            return resource;
-          }
-
-          /**
-           * REQUIRED: The resource for which the policy is being requested. See the operation
-           * documentation for the appropriate value for this field.
-           */
-          public GetIamPolicy setResource(java.lang.String resource) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                  "Parameter resource must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-            this.resource = resource;
-            return this;
-          }
-
-          /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           */
-          @com.google.api.client.util.Key("options.requestedPolicyVersion")
-          private java.lang.Integer optionsRequestedPolicyVersion;
-
-          /** Optional. The policy format version to be returned.
-
-         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-         Requests for policies with any conditional bindings must specify version 3. Policies without any
-         conditional bindings may specify any valid value or leave the field unset.
-           */
-          public java.lang.Integer getOptionsRequestedPolicyVersion() {
-            return optionsRequestedPolicyVersion;
-          }
-
-          /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
-           */
-          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-            return this;
-          }
-
-          @Override
-          public GetIamPolicy set(String parameterName, Object value) {
-            return (GetIamPolicy) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Lists Instances in a given project and location.
+         * Lists Instances in a given location.
          *
          * Create a request for the method "instances.list".
          *
@@ -1325,8 +1127,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP region
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1343,7 +1144,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists Instances in a given project and location.
+           * Lists Instances in a given location.
            *
            * Create a request for the method "instances.list".
            *
@@ -1353,8 +1154,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the instance location using the form:
-         *        `projects/{project_id}/locations/{location_id}`
-        where `location_id` refers to a GCP region
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1502,42 +1302,35 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
 
           /**
-           * The maximum number of items to return.
-           *
-           * If not specified, a default value of 1000 will be used by the service. Regardless of
-           * the page_size value, the response may include a partial list and a caller should only
-           * rely on response's next_page_token to determine if there are more instances left to be
-           * queried.
+           * The maximum number of items to return. If not specified, a default value of 1000 will
+           * be used by the service. Regardless of the page_size value, the response may include a
+           * partial list and a caller should only rely on response's next_page_token to determine
+           * if there are more instances left to be queried.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of items to return.
-
-         If not specified, a default value of 1000 will be used by the service. Regardless of the page_size
-         value, the response may include a partial list and a caller should only rely on response's
-         next_page_token to determine if there are more instances left to be queried.
+          /** The maximum number of items to return. If not specified, a default value of 1000 will be used by
+         the service. Regardless of the page_size value, the response may include a partial list and a
+         caller should only rely on response's next_page_token to determine if there are more instances left
+         to be queried.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of items to return.
-           *
-           * If not specified, a default value of 1000 will be used by the service. Regardless of
-           * the page_size value, the response may include a partial list and a caller should only
-           * rely on response's next_page_token to determine if there are more instances left to be
-           * queried.
+           * The maximum number of items to return. If not specified, a default value of 1000 will
+           * be used by the service. Regardless of the page_size value, the response may include a
+           * partial list and a caller should only rely on response's next_page_token to determine
+           * if there are more instances left to be queried.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /**
-           * The next_page_token value returned from a previous List request, if any.
-           */
+          /** The next_page_token value returned from a previous List request, if any. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
@@ -1547,9 +1340,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
             return pageToken;
           }
 
-          /**
-           * The next_page_token value returned from a previous List request, if any.
-           */
+          /** The next_page_token value returned from a previous List request, if any. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -1568,16 +1359,11 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * This request holds the parameters needed by the memcache server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Unique name of the resource in this scope including project and
-        location using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        Note: Memcached
-         *        instances are managed and addressed at regional level so
-        location_id here refers to a GCP
-         *        region; however, users may choose which
-        zones Memcached nodes within an instances should
-         *        be provisioned in.
-        Refer to [zones] field for more details.
+         * @param name Required. Unique name of the resource in this scope including project and location using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
+         *        instances are managed and addressed at regional level so location_id here refers to a GCP
+         *        region; however, users may choose which zones Memcached nodes within an instances should
+         *        be provisioned in. Refer to [zones] field for more details.
          * @param content the {@link com.google.api.services.memcache.v1beta2.model.Instance}
          * @return the request
          */
@@ -1605,16 +1391,11 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Unique name of the resource in this scope including project and
-        location using the form:
-         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-        Note: Memcached
-         *        instances are managed and addressed at regional level so
-        location_id here refers to a GCP
-         *        region; however, users may choose which
-        zones Memcached nodes within an instances should
-         *        be provisioned in.
-        Refer to [zones] field for more details.
+           * @param name Required. Unique name of the resource in this scope including project and location using the form:
+         *        `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached
+         *        instances are managed and addressed at regional level so location_id here refers to a GCP
+         *        region; however, users may choose which zones Memcached nodes within an instances should
+         *        be provisioned in. Refer to [zones] field for more details.
            * @param content the {@link com.google.api.services.memcache.v1beta2.model.Instance}
            * @since 1.13
            */
@@ -1686,7 +1467,6 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           /**
            * Required. Unique name of the resource in this scope including project and location
            * using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-           *
            * Note: Memcached instances are managed and addressed at regional level so location_id
            * here refers to a GCP region; however, users may choose which zones Memcached nodes
            * within an instances should be provisioned in. Refer to [zones] field for more details.
@@ -1695,11 +1475,10 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           private java.lang.String name;
 
           /** Required. Unique name of the resource in this scope including project and location using the form:
-         `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-
-         Note: Memcached instances are managed and addressed at regional level so location_id here refers to
-         a GCP region; however, users may choose which zones Memcached nodes within an instances should be
-         provisioned in. Refer to [zones] field for more details.
+         `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances
+         are managed and addressed at regional level so location_id here refers to a GCP region; however,
+         users may choose which zones Memcached nodes within an instances should be provisioned in. Refer to
+         [zones] field for more details.
            */
           public java.lang.String getName() {
             return name;
@@ -1708,7 +1487,6 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           /**
            * Required. Unique name of the resource in this scope including project and location
            * using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
-           *
            * Note: Memcached instances are managed and addressed at regional level so location_id
            * here refers to a GCP region; however, users may choose which zones Memcached nodes
            * within an instances should be provisioned in. Refer to [zones] field for more details.
@@ -1723,21 +1501,17 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
             return this;
           }
 
-          /**
-           * Required. Mask of fields to update. *   `displayName`
-           */
+          /** Required. Mask of fields to update. * `displayName` */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Mask of fields to update. *   `displayName`
+          /** Required. Mask of fields to update. * `displayName`
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * Required. Mask of fields to update. *   `displayName`
-           */
+          /** Required. Mask of fields to update. * `displayName` */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -1746,302 +1520,6 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
-         *
-         * Create a request for the method "instances.setIamPolicy".
-         *
-         * This request holds the parameters needed by the memcache server.  After setting any optional
-         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
-         *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
-         *        the appropriate value for this field.
-         * @param content the {@link com.google.api.services.memcache.v1beta2.model.SetIamPolicyRequest}
-         * @return the request
-         */
-        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.memcache.v1beta2.model.SetIamPolicyRequest content) throws java.io.IOException {
-          SetIamPolicy result = new SetIamPolicy(resource, content);
-          initialize(result);
-          return result;
-        }
-
-        public class SetIamPolicy extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Policy> {
-
-          private static final String REST_PATH = "v1beta2/{+resource}:setIamPolicy";
-
-          private final java.util.regex.Pattern RESOURCE_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-
-          /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
-           *
-           * Create a request for the method "instances.setIamPolicy".
-           *
-           * This request holds the parameters needed by the the memcache server.  After setting any
-           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
-           * operation. <p> {@link
-           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-           * must be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
-         *        the appropriate value for this field.
-           * @param content the {@link com.google.api.services.memcache.v1beta2.model.SetIamPolicyRequest}
-           * @since 1.13
-           */
-          protected SetIamPolicy(java.lang.String resource, com.google.api.services.memcache.v1beta2.model.SetIamPolicyRequest content) {
-            super(CloudMemorystoreforMemcached.this, "POST", REST_PATH, content, com.google.api.services.memcache.v1beta2.model.Policy.class);
-            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                  "Parameter resource must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-          }
-
-          @Override
-          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
-            return (SetIamPolicy) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
-            return (SetIamPolicy) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public SetIamPolicy setAlt(java.lang.String alt) {
-            return (SetIamPolicy) super.setAlt(alt);
-          }
-
-          @Override
-          public SetIamPolicy setCallback(java.lang.String callback) {
-            return (SetIamPolicy) super.setCallback(callback);
-          }
-
-          @Override
-          public SetIamPolicy setFields(java.lang.String fields) {
-            return (SetIamPolicy) super.setFields(fields);
-          }
-
-          @Override
-          public SetIamPolicy setKey(java.lang.String key) {
-            return (SetIamPolicy) super.setKey(key);
-          }
-
-          @Override
-          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
-            return (SetIamPolicy) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
-            return (SetIamPolicy) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public SetIamPolicy setUploadType(java.lang.String uploadType) {
-            return (SetIamPolicy) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
-            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String resource;
-
-          /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
-         the appropriate value for this field.
-           */
-          public java.lang.String getResource() {
-            return resource;
-          }
-
-          /**
-           * REQUIRED: The resource for which the policy is being specified. See the operation
-           * documentation for the appropriate value for this field.
-           */
-          public SetIamPolicy setResource(java.lang.String resource) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                  "Parameter resource must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-            this.resource = resource;
-            return this;
-          }
-
-          @Override
-          public SetIamPolicy set(String parameterName, Object value) {
-            return (SetIamPolicy) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
-         *
-         * Create a request for the method "instances.testIamPermissions".
-         *
-         * This request holds the parameters needed by the memcache server.  After setting any optional
-         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
-         *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
-         *        documentation for the appropriate value for this field.
-         * @param content the {@link com.google.api.services.memcache.v1beta2.model.TestIamPermissionsRequest}
-         * @return the request
-         */
-        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.memcache.v1beta2.model.TestIamPermissionsRequest content) throws java.io.IOException {
-          TestIamPermissions result = new TestIamPermissions(resource, content);
-          initialize(result);
-          return result;
-        }
-
-        public class TestIamPermissions extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.TestIamPermissionsResponse> {
-
-          private static final String REST_PATH = "v1beta2/{+resource}:testIamPermissions";
-
-          private final java.util.regex.Pattern RESOURCE_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-
-          /**
-           * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
-           *
-           * Create a request for the method "instances.testIamPermissions".
-           *
-           * This request holds the parameters needed by the the memcache server.  After setting any
-           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
-           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
-           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
-           *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
-         *        documentation for the appropriate value for this field.
-           * @param content the {@link com.google.api.services.memcache.v1beta2.model.TestIamPermissionsRequest}
-           * @since 1.13
-           */
-          protected TestIamPermissions(java.lang.String resource, com.google.api.services.memcache.v1beta2.model.TestIamPermissionsRequest content) {
-            super(CloudMemorystoreforMemcached.this, "POST", REST_PATH, content, com.google.api.services.memcache.v1beta2.model.TestIamPermissionsResponse.class);
-            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                  "Parameter resource must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-          }
-
-          @Override
-          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
-            return (TestIamPermissions) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
-            return (TestIamPermissions) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public TestIamPermissions setAlt(java.lang.String alt) {
-            return (TestIamPermissions) super.setAlt(alt);
-          }
-
-          @Override
-          public TestIamPermissions setCallback(java.lang.String callback) {
-            return (TestIamPermissions) super.setCallback(callback);
-          }
-
-          @Override
-          public TestIamPermissions setFields(java.lang.String fields) {
-            return (TestIamPermissions) super.setFields(fields);
-          }
-
-          @Override
-          public TestIamPermissions setKey(java.lang.String key) {
-            return (TestIamPermissions) super.setKey(key);
-          }
-
-          @Override
-          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
-            return (TestIamPermissions) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
-            return (TestIamPermissions) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public TestIamPermissions setUploadType(java.lang.String uploadType) {
-            return (TestIamPermissions) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
-            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String resource;
-
-          /** REQUIRED: The resource for which the policy detail is being requested. See the operation
-         documentation for the appropriate value for this field.
-           */
-          public java.lang.String getResource() {
-            return resource;
-          }
-
-          /**
-           * REQUIRED: The resource for which the policy detail is being requested. See the
-           * operation documentation for the appropriate value for this field.
-           */
-          public TestIamPermissions setResource(java.lang.String resource) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
-                  "Parameter resource must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-            this.resource = resource;
-            return this;
-          }
-
-          @Override
-          public TestIamPermissions set(String parameterName, Object value) {
-            return (TestIamPermissions) super.set(parameterName, value);
           }
         }
         /**
@@ -2054,8 +1532,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * This request holds the parameters needed by the memcache server.  After setting any optional
          * parameters, call the {@link UpdateParameters#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the Memcached instance for which the parameters should be
-        updated.
+         * @param name Required. Resource name of the Memcached instance for which the parameters should be updated.
          * @param content the {@link com.google.api.services.memcache.v1beta2.model.UpdateParametersRequest}
          * @return the request
          */
@@ -2085,8 +1562,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * tractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the Memcached instance for which the parameters should be
-        updated.
+           * @param name Required. Resource name of the Memcached instance for which the parameters should be updated.
            * @param content the {@link com.google.api.services.memcache.v1beta2.model.UpdateParametersRequest}
            * @since 1.13
            */
@@ -2210,9 +1686,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -2241,13 +1717,13 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -2486,7 +1962,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -2511,7 +1987,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -2627,13 +2103,12 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -2658,13 +2133,12 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *

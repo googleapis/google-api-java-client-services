@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-genomics",
-    "version": "v1alpha2-rev20200226-1.30.9"
+    "version": "v1alpha2-rev20200804-1.31.0"
   }
 }

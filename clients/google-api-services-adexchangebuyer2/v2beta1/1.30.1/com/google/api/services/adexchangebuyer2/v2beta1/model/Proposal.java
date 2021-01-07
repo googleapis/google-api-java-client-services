@@ -18,14 +18,9 @@ package com.google.api.services.adexchangebuyer2.v2beta1.model;
 
 /**
  * Note: this resource requires whitelisting for access. Please contact your account manager for
- * access to Marketplace resources.
- *
- * Represents a proposal in the Marketplace. A proposal is the unit of negotiation between a seller
- * and a buyer and contains deals which are served.
- *
- * Note: you can not update, create, or otherwise modify Private Auction or Preferred Deals deals
- * through the API.
- *
+ * access to Marketplace resources. Represents a proposal in the Marketplace. A proposal is the unit
+ * of negotiation between a seller and a buyer and contains deals which are served. Note: you can
+ * not update, create, or otherwise modify Private Auction or Preferred Deals deals through the API.
  * Fields are updatable unless noted otherwise.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -47,10 +42,8 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   private Buyer billedBuyer;
 
   /**
-   * Reference to the buyer on the proposal.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * Reference to the buyer on the proposal. Note: This field may be set only when creating the
+   * resource. Modifying this field while updating the resource will result in an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,10 +164,8 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   private java.lang.String proposalState;
 
   /**
-   * Reference to the seller on the proposal.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * Reference to the seller on the proposal. Note: This field may be set only when creating the
+   * resource. Modifying this field while updating the resource will result in an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,10 +209,8 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reference to the buyer on the proposal.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * Reference to the buyer on the proposal. Note: This field may be set only when creating the
+   * resource. Modifying this field while updating the resource will result in an error.
    * @return value or {@code null} for none
    */
   public Buyer getBuyer() {
@@ -229,10 +218,8 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reference to the buyer on the proposal.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * Reference to the buyer on the proposal. Note: This field may be set only when creating the
+   * resource. Modifying this field while updating the resource will result in an error.
    * @param buyer buyer or {@code null} for none
    */
   public Proposal setBuyer(Buyer buyer) {
@@ -472,10 +459,8 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reference to the seller on the proposal.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * Reference to the seller on the proposal. Note: This field may be set only when creating the
+   * resource. Modifying this field while updating the resource will result in an error.
    * @return value or {@code null} for none
    */
   public Seller getSeller() {
@@ -483,10 +468,8 @@ public final class Proposal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reference to the seller on the proposal.
-   *
-   * Note: This field may be set only when creating the resource. Modifying this field while
-   * updating the resource will result in an error.
+   * Reference to the seller on the proposal. Note: This field may be set only when creating the
+   * resource. Modifying this field while updating the resource will result in an error.
    * @param seller seller or {@code null} for none
    */
   public Proposal setSeller(Seller seller) {

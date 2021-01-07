@@ -46,7 +46,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Access Context Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Access Context Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -256,8 +256,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the accesscontextmanager server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name for the access policy to delete.
-    Format `accessPolicies/{policy_id}`
+     * @param name Required. Resource name for the access policy to delete. Format `accessPolicies/{policy_id}`
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -285,8 +284,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name for the access policy to delete.
-    Format `accessPolicies/{policy_id}`
+       * @param name Required. Resource name for the access policy to delete. Format `accessPolicies/{policy_id}`
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -355,25 +353,21 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Required. Resource name for the access policy to delete.
-       *
-       * Format `accessPolicies/{policy_id}`
+       * Required. Resource name for the access policy to delete. Format
+       * `accessPolicies/{policy_id}`
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name for the access policy to delete.
-
-     Format `accessPolicies/{policy_id}`
+      /** Required. Resource name for the access policy to delete. Format `accessPolicies/{policy_id}`
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Resource name for the access policy to delete.
-       *
-       * Format `accessPolicies/{policy_id}`
+       * Required. Resource name for the access policy to delete. Format
+       * `accessPolicies/{policy_id}`
        */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -398,8 +392,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the accesscontextmanager server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name for the access policy to get.
-    Format `accessPolicies/{policy_id}`
+     * @param name Required. Resource name for the access policy to get. Format `accessPolicies/{policy_id}`
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -426,8 +419,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name for the access policy to get.
-    Format `accessPolicies/{policy_id}`
+       * @param name Required. Resource name for the access policy to get. Format `accessPolicies/{policy_id}`
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -506,25 +498,19 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Required. Resource name for the access policy to get.
-       *
-       * Format `accessPolicies/{policy_id}`
+       * Required. Resource name for the access policy to get. Format `accessPolicies/{policy_id}`
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name for the access policy to get.
-
-     Format `accessPolicies/{policy_id}`
+      /** Required. Resource name for the access policy to get. Format `accessPolicies/{policy_id}`
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Resource name for the access policy to get.
-       *
-       * Format `accessPolicies/{policy_id}`
+       * Required. Resource name for the access policy to get. Format `accessPolicies/{policy_id}`
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -683,25 +669,22 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Required. Resource name for the container to list AccessPolicy instances from.
-       *
-       * Format: `organizations/{org_id}`
+       * Required. Resource name for the container to list AccessPolicy instances from. Format:
+       * `organizations/{org_id}`
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Resource name for the container to list AccessPolicy instances from.
-
-     Format: `organizations/{org_id}`
+      /** Required. Resource name for the container to list AccessPolicy instances from. Format:
+     `organizations/{org_id}`
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Required. Resource name for the container to list AccessPolicy instances from.
-       *
-       * Format: `organizations/{org_id}`
+       * Required. Resource name for the container to list AccessPolicy instances from. Format:
+       * `organizations/{org_id}`
        */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
@@ -723,8 +706,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the accesscontextmanager server.  After setting any
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Output only. Resource name of the `AccessPolicy`. Format:
-    `accessPolicies/{policy_id}`
+     * @param name Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
      * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.AccessPolicy}
      * @return the request
      */
@@ -754,8 +736,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. Resource name of the `AccessPolicy`. Format:
-    `accessPolicies/{policy_id}`
+       * @param name Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
        * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.AccessPolicy}
        * @since 1.13
        */
@@ -824,9 +805,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
-       */
+      /** Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}` */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
@@ -836,9 +815,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         return name;
       }
 
-      /**
-       * Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
-       */
+      /** Output only. Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}` */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -901,9 +878,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name for the access policy which owns this Access
-      Level.
-      Format:
+       * @param parent Required. Resource name for the access policy which owns this Access Level. Format:
        *        `accessPolicies/{policy_id}`
        * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.AccessLevel}
        * @return the request
@@ -934,9 +909,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name for the access policy which owns this Access
-      Level.
-      Format:
+         * @param parent Required. Resource name for the access policy which owns this Access Level. Format:
        *        `accessPolicies/{policy_id}`
          * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.AccessLevel}
          * @since 1.13
@@ -1007,25 +980,22 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the access policy which owns this Access Level.
-         *
-         * Format: `accessPolicies/{policy_id}`
+         * Required. Resource name for the access policy which owns this Access Level. Format:
+         * `accessPolicies/{policy_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name for the access policy which owns this Access Level.
-
-       Format: `accessPolicies/{policy_id}`
+        /** Required. Resource name for the access policy which owns this Access Level. Format:
+       `accessPolicies/{policy_id}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Resource name for the access policy which owns this Access Level.
-         *
-         * Format: `accessPolicies/{policy_id}`
+         * Required. Resource name for the access policy which owns this Access Level. Format:
+         * `accessPolicies/{policy_id}`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1051,8 +1021,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name for the Access Level.
-      Format:
+       * @param name Required. Resource name for the Access Level. Format:
        *        `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
        * @return the request
        */
@@ -1081,8 +1050,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name for the Access Level.
-      Format:
+         * @param name Required. Resource name for the Access Level. Format:
        *        `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
          * @since 1.13
          */
@@ -1152,25 +1120,22 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the Access Level.
-         *
-         * Format: `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
+         * Required. Resource name for the Access Level. Format:
+         * `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name for the Access Level.
-
-       Format: `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
+        /** Required. Resource name for the Access Level. Format:
+       `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name for the Access Level.
-         *
-         * Format: `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
+         * Required. Resource name for the Access Level. Format:
+         * `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1195,8 +1160,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name for the Access Level.
-      Format:
+       * @param name Required. Resource name for the Access Level. Format:
        *        `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
        * @return the request
        */
@@ -1224,8 +1188,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name for the Access Level.
-      Format:
+         * @param name Required. Resource name for the Access Level. Format:
        *        `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
          * @since 1.13
          */
@@ -1305,25 +1268,22 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the Access Level.
-         *
-         * Format: `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
+         * Required. Resource name for the Access Level. Format:
+         * `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name for the Access Level.
-
-       Format: `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
+        /** Required. Resource name for the Access Level. Format:
+       `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name for the Access Level.
-         *
-         * Format: `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
+         * Required. Resource name for the Access Level. Format:
+         * `accessPolicies/{policy_id}/accessLevels/{access_level_id}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1379,8 +1339,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name for the access policy to list Access Levels from.
-      Format:
+       * @param parent Required. Resource name for the access policy to list Access Levels from. Format:
        *        `accessPolicies/{policy_id}`
        * @return the request
        */
@@ -1408,8 +1367,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name for the access policy to list Access Levels from.
-      Format:
+         * @param parent Required. Resource name for the access policy to list Access Levels from. Format:
        *        `accessPolicies/{policy_id}`
          * @since 1.13
          */
@@ -1489,25 +1447,22 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the access policy to list Access Levels from.
-         *
-         * Format: `accessPolicies/{policy_id}`
+         * Required. Resource name for the access policy to list Access Levels from. Format:
+         * `accessPolicies/{policy_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name for the access policy to list Access Levels from.
-
-       Format: `accessPolicies/{policy_id}`
+        /** Required. Resource name for the access policy to list Access Levels from. Format:
+       `accessPolicies/{policy_id}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Resource name for the access policy to list Access Levels from.
-         *
-         * Format: `accessPolicies/{policy_id}`
+         * Required. Resource name for the access policy to list Access Levels from. Format:
+         * `accessPolicies/{policy_id}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1544,9 +1499,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /**
-         * Number of Access Levels to include in the list. Default 100.
-         */
+        /** Number of Access Levels to include in the list. Default 100. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
@@ -1556,9 +1509,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           return pageSize;
         }
 
-        /**
-         * Number of Access Levels to include in the list. Default 100.
-         */
+        /** Number of Access Levels to include in the list. Default 100. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -1602,11 +1553,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name for the Access Level. The `short_name` component
-      must begin with a letter
+       * @param name Required. Resource name for the Access Level. The `short_name` component must begin with a letter
        *        and only include alphanumeric and '_'. Format:
-       *        `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length
-       // of the
+       *        `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the
        *        `short_name` component is 50 characters.
        * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.AccessLevel}
        * @return the request
@@ -1637,11 +1586,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name for the Access Level. The `short_name` component
-      must begin with a letter
+         * @param name Required. Resource name for the Access Level. The `short_name` component must begin with a letter
        *        and only include alphanumeric and '_'. Format:
-       *        `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length
-       // of the
+       *        `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the
        *        `short_name` component is 50 characters.
          * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.AccessLevel}
          * @since 1.13
@@ -1798,9 +1745,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name for the access policy which owns this Service
-      Perimeter.
-      Format:
+       * @param parent Required. Resource name for the access policy which owns this Service Perimeter. Format:
        *        `accessPolicies/{policy_id}`
        * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.ServicePerimeter}
        * @return the request
@@ -1831,9 +1776,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name for the access policy which owns this Service
-      Perimeter.
-      Format:
+         * @param parent Required. Resource name for the access policy which owns this Service Perimeter. Format:
        *        `accessPolicies/{policy_id}`
          * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.ServicePerimeter}
          * @since 1.13
@@ -1904,25 +1847,22 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the access policy which owns this Service Perimeter.
-         *
-         * Format: `accessPolicies/{policy_id}`
+         * Required. Resource name for the access policy which owns this Service Perimeter. Format:
+         * `accessPolicies/{policy_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name for the access policy which owns this Service Perimeter.
-
-       Format: `accessPolicies/{policy_id}`
+        /** Required. Resource name for the access policy which owns this Service Perimeter. Format:
+       `accessPolicies/{policy_id}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Resource name for the access policy which owns this Service Perimeter.
-         *
-         * Format: `accessPolicies/{policy_id}`
+         * Required. Resource name for the access policy which owns this Service Perimeter. Format:
+         * `accessPolicies/{policy_id}`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1948,8 +1888,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name for the Service Perimeter.
-      Format:
+       * @param name Required. Resource name for the Service Perimeter. Format:
        *        `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
        * @return the request
        */
@@ -1978,8 +1917,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name for the Service Perimeter.
-      Format:
+         * @param name Required. Resource name for the Service Perimeter. Format:
        *        `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
          * @since 1.13
          */
@@ -2049,25 +1987,22 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the Service Perimeter.
-         *
-         * Format: `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
+         * Required. Resource name for the Service Perimeter. Format:
+         * `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name for the Service Perimeter.
-
-       Format: `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
+        /** Required. Resource name for the Service Perimeter. Format:
+       `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name for the Service Perimeter.
-         *
-         * Format: `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
+         * Required. Resource name for the Service Perimeter. Format:
+         * `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2092,8 +2027,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name for the Service Perimeter.
-      Format:
+       * @param name Required. Resource name for the Service Perimeter. Format:
        *        `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
        * @return the request
        */
@@ -2121,8 +2055,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name for the Service Perimeter.
-      Format:
+         * @param name Required. Resource name for the Service Perimeter. Format:
        *        `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
          * @since 1.13
          */
@@ -2202,25 +2135,22 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the Service Perimeter.
-         *
-         * Format: `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
+         * Required. Resource name for the Service Perimeter. Format:
+         * `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name for the Service Perimeter.
-
-       Format: `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
+        /** Required. Resource name for the Service Perimeter. Format:
+       `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name for the Service Perimeter.
-         *
-         * Format: `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
+         * Required. Resource name for the Service Perimeter. Format:
+         * `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2245,8 +2175,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Resource name for the access policy to list Service Perimeters from.
-      Format:
+       * @param parent Required. Resource name for the access policy to list Service Perimeters from. Format:
        *        `accessPolicies/{policy_id}`
        * @return the request
        */
@@ -2274,8 +2203,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Resource name for the access policy to list Service Perimeters from.
-      Format:
+         * @param parent Required. Resource name for the access policy to list Service Perimeters from. Format:
        *        `accessPolicies/{policy_id}`
          * @since 1.13
          */
@@ -2355,25 +2283,22 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the access policy to list Service Perimeters from.
-         *
-         * Format: `accessPolicies/{policy_id}`
+         * Required. Resource name for the access policy to list Service Perimeters from. Format:
+         * `accessPolicies/{policy_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Resource name for the access policy to list Service Perimeters from.
-
-       Format: `accessPolicies/{policy_id}`
+        /** Required. Resource name for the access policy to list Service Perimeters from. Format:
+       `accessPolicies/{policy_id}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Resource name for the access policy to list Service Perimeters from.
-         *
-         * Format: `accessPolicies/{policy_id}`
+         * Required. Resource name for the access policy to list Service Perimeters from. Format:
+         * `accessPolicies/{policy_id}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2385,9 +2310,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /**
-         * Number of Service Perimeters to include in the list. Default 100.
-         */
+        /** Number of Service Perimeters to include in the list. Default 100. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
@@ -2397,9 +2320,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           return pageSize;
         }
 
-        /**
-         * Number of Service Perimeters to include in the list. Default 100.
-         */
+        /** Number of Service Perimeters to include in the list. Default 100. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
@@ -2443,10 +2364,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the accesscontextmanager server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name for the ServicePerimeter.  The `short_name`
-      component must begin with a
-       *        letter and only include alphanumeric and '_'.
-      Format:
+       * @param name Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
+       *        letter and only include alphanumeric and '_'. Format:
        *        `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
        * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.ServicePerimeter}
        * @return the request
@@ -2478,10 +2397,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name for the ServicePerimeter.  The `short_name`
-      component must begin with a
-       *        letter and only include alphanumeric and '_'.
-      Format:
+         * @param name Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
+       *        letter and only include alphanumeric and '_'. Format:
        *        `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
          * @param content the {@link com.google.api.services.accesscontextmanager.v1beta.model.ServicePerimeter}
          * @since 1.13
@@ -2552,14 +2469,14 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the ServicePerimeter.  The `short_name` component must begin
+         * Required. Resource name for the ServicePerimeter. The `short_name` component must begin
          * with a letter and only include alphanumeric and '_'. Format:
          * `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name for the ServicePerimeter.  The `short_name` component must begin with a
+        /** Required. Resource name for the ServicePerimeter. The `short_name` component must begin with a
        letter and only include alphanumeric and '_'. Format:
        `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
          */
@@ -2568,7 +2485,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Resource name for the ServicePerimeter.  The `short_name` component must begin
+         * Required. Resource name for the ServicePerimeter. The `short_name` component must begin
          * with a letter and only include alphanumeric and '_'. Format:
          * `accessPolicies/{policy_id}/servicePerimeters/{short_name}`
          */
@@ -2628,7 +2545,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -2653,7 +2570,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".

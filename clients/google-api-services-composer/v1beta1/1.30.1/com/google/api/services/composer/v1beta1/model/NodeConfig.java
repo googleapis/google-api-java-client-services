@@ -49,14 +49,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Optional. The Compute Engine [zone](/compute/docs/regions-zones) in which to deploy the VMs
    * used to run the Apache Airflow software, specified as a [relative resource
    * name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/zones/{zoneId}".
-   *
-   * This `location` must belong to the enclosing environment's project and location. If both this
-   * field and `nodeConfig.machineType` are specified, `nodeConfig.machineType` must belong to this
-   * `location`; if both are unspecified, the service will pick a zone in the Compute Engine region
-   * corresponding to the Cloud Composer location, and propagate that choice to both fields. If only
-   * one field (`location` or `nodeConfig.machineType`) is specified, the location information from
-   * the specified field will be propagated to the unspecified field.
+   * "projects/{projectId}/zones/{zoneId}". This `location` must belong to the enclosing
+   * environment's project and location. If both this field and `nodeConfig.machineType` are
+   * specified, `nodeConfig.machineType` must belong to this `location`; if both are unspecified,
+   * the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer
+   * location, and propagate that choice to both fields. If only one field (`location` or
+   * `nodeConfig.machineType`) is specified, the location information from the specified field will
+   * be propagated to the unspecified field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,19 +65,16 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Optional. The Compute Engine [machine type](/compute/docs/machine-types) used for cluster
    * instances, specified as a [relative resource
    * name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}".
-   *
-   * The `machineType` must belong to the enclosing environment's project and location. If both this
-   * field and `nodeConfig.location` are specified, this `machineType` must belong to the
+   * "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}". The `machineType` must
+   * belong to the enclosing environment's project and location. If both this field and
+   * `nodeConfig.location` are specified, this `machineType` must belong to the
    * `nodeConfig.location`; if both are unspecified, the service will pick a zone in the Compute
    * Engine region corresponding to the Cloud Composer location, and propagate that choice to both
    * fields. If exactly one of this field and `nodeConfig.location` is specified, the location
-   * information from the specified field will be propagated to the unspecified field.
-   *
-   * The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
-   * types#sharedcore).
-   *
-   * If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1".
+   * information from the specified field will be propagated to the unspecified field. The
+   * `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
+   * types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to
+   * "n1-standard-1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +83,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Compute Engine network to be used for machine communications, specified as a
    * [relative resource name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/global/networks/{networkId}".
-   *
-   * If unspecified, the default network in the environment's project is used. If a [Custom Subnet
+   * "projects/{projectId}/global/networks/{networkId}". If unspecified, the default network in the
+   * environment's project is used. If a [Custom Subnet
    * Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also
    * be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
    * `nodeConfig.subnetwork`.
@@ -118,10 +113,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Compute Engine subnetwork to be used for machine communications, specified as a
    * [relative resource name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}"
-   *
-   * If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork
-   * must belong to the enclosing environment's project and location.
+   * "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}" If a subnetwork is
+   * provided, `nodeConfig.network` must also be provided, and the subnetwork must belong to the
+   * enclosing environment's project and location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,14 +170,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Optional. The Compute Engine [zone](/compute/docs/regions-zones) in which to deploy the VMs
    * used to run the Apache Airflow software, specified as a [relative resource
    * name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/zones/{zoneId}".
-   *
-   * This `location` must belong to the enclosing environment's project and location. If both this
-   * field and `nodeConfig.machineType` are specified, `nodeConfig.machineType` must belong to this
-   * `location`; if both are unspecified, the service will pick a zone in the Compute Engine region
-   * corresponding to the Cloud Composer location, and propagate that choice to both fields. If only
-   * one field (`location` or `nodeConfig.machineType`) is specified, the location information from
-   * the specified field will be propagated to the unspecified field.
+   * "projects/{projectId}/zones/{zoneId}". This `location` must belong to the enclosing
+   * environment's project and location. If both this field and `nodeConfig.machineType` are
+   * specified, `nodeConfig.machineType` must belong to this `location`; if both are unspecified,
+   * the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer
+   * location, and propagate that choice to both fields. If only one field (`location` or
+   * `nodeConfig.machineType`) is specified, the location information from the specified field will
+   * be propagated to the unspecified field.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -194,14 +187,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Optional. The Compute Engine [zone](/compute/docs/regions-zones) in which to deploy the VMs
    * used to run the Apache Airflow software, specified as a [relative resource
    * name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/zones/{zoneId}".
-   *
-   * This `location` must belong to the enclosing environment's project and location. If both this
-   * field and `nodeConfig.machineType` are specified, `nodeConfig.machineType` must belong to this
-   * `location`; if both are unspecified, the service will pick a zone in the Compute Engine region
-   * corresponding to the Cloud Composer location, and propagate that choice to both fields. If only
-   * one field (`location` or `nodeConfig.machineType`) is specified, the location information from
-   * the specified field will be propagated to the unspecified field.
+   * "projects/{projectId}/zones/{zoneId}". This `location` must belong to the enclosing
+   * environment's project and location. If both this field and `nodeConfig.machineType` are
+   * specified, `nodeConfig.machineType` must belong to this `location`; if both are unspecified,
+   * the service will pick a zone in the Compute Engine region corresponding to the Cloud Composer
+   * location, and propagate that choice to both fields. If only one field (`location` or
+   * `nodeConfig.machineType`) is specified, the location information from the specified field will
+   * be propagated to the unspecified field.
    * @param location location or {@code null} for none
    */
   public NodeConfig setLocation(java.lang.String location) {
@@ -213,19 +205,16 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Optional. The Compute Engine [machine type](/compute/docs/machine-types) used for cluster
    * instances, specified as a [relative resource
    * name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}".
-   *
-   * The `machineType` must belong to the enclosing environment's project and location. If both this
-   * field and `nodeConfig.location` are specified, this `machineType` must belong to the
+   * "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}". The `machineType` must
+   * belong to the enclosing environment's project and location. If both this field and
+   * `nodeConfig.location` are specified, this `machineType` must belong to the
    * `nodeConfig.location`; if both are unspecified, the service will pick a zone in the Compute
    * Engine region corresponding to the Cloud Composer location, and propagate that choice to both
    * fields. If exactly one of this field and `nodeConfig.location` is specified, the location
-   * information from the specified field will be propagated to the unspecified field.
-   *
-   * The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
-   * types#sharedcore).
-   *
-   * If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1".
+   * information from the specified field will be propagated to the unspecified field. The
+   * `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
+   * types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to
+   * "n1-standard-1".
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -236,19 +225,16 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Optional. The Compute Engine [machine type](/compute/docs/machine-types) used for cluster
    * instances, specified as a [relative resource
    * name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}".
-   *
-   * The `machineType` must belong to the enclosing environment's project and location. If both this
-   * field and `nodeConfig.location` are specified, this `machineType` must belong to the
+   * "projects/{projectId}/zones/{zoneId}/machineTypes/{machineTypeId}". The `machineType` must
+   * belong to the enclosing environment's project and location. If both this field and
+   * `nodeConfig.location` are specified, this `machineType` must belong to the
    * `nodeConfig.location`; if both are unspecified, the service will pick a zone in the Compute
    * Engine region corresponding to the Cloud Composer location, and propagate that choice to both
    * fields. If exactly one of this field and `nodeConfig.location` is specified, the location
-   * information from the specified field will be propagated to the unspecified field.
-   *
-   * The `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
-   * types#sharedcore).
-   *
-   * If this field is unspecified, the `machineTypeId` defaults to "n1-standard-1".
+   * information from the specified field will be propagated to the unspecified field. The
+   * `machineTypeId` must not be a [shared-core machine type](/compute/docs/machine-
+   * types#sharedcore). If this field is unspecified, the `machineTypeId` defaults to
+   * "n1-standard-1".
    * @param machineType machineType or {@code null} for none
    */
   public NodeConfig setMachineType(java.lang.String machineType) {
@@ -259,9 +245,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Compute Engine network to be used for machine communications, specified as a
    * [relative resource name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/global/networks/{networkId}".
-   *
-   * If unspecified, the default network in the environment's project is used. If a [Custom Subnet
+   * "projects/{projectId}/global/networks/{networkId}". If unspecified, the default network in the
+   * environment's project is used. If a [Custom Subnet
    * Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also
    * be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
    * `nodeConfig.subnetwork`.
@@ -274,9 +259,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Compute Engine network to be used for machine communications, specified as a
    * [relative resource name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/global/networks/{networkId}".
-   *
-   * If unspecified, the default network in the environment's project is used. If a [Custom Subnet
+   * "projects/{projectId}/global/networks/{networkId}". If unspecified, the default network in the
+   * environment's project is used. If a [Custom Subnet
    * Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also
    * be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
    * `nodeConfig.subnetwork`.
@@ -330,10 +314,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Compute Engine subnetwork to be used for machine communications, specified as a
    * [relative resource name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}"
-   *
-   * If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork
-   * must belong to the enclosing environment's project and location.
+   * "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}" If a subnetwork is
+   * provided, `nodeConfig.network` must also be provided, and the subnetwork must belong to the
+   * enclosing environment's project and location.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -343,10 +326,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Compute Engine subnetwork to be used for machine communications, specified as a
    * [relative resource name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}"
-   *
-   * If a subnetwork is provided, `nodeConfig.network` must also be provided, and the subnetwork
-   * must belong to the enclosing environment's project and location.
+   * "projects/{projectId}/regions/{regionId}/subnetworks/{subnetworkId}" If a subnetwork is
+   * provided, `nodeConfig.network` must also be provided, and the subnetwork must belong to the
+   * enclosing environment's project and location.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public NodeConfig setSubnetwork(java.lang.String subnetwork) {

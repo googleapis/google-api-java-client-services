@@ -46,7 +46,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud OS Config API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud OS Config API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -299,18 +299,15 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
 
         /**
          * Required. The logical name of the guest policy in the project with the following
-         * restrictions:
-         *
-         * * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter.
-         * * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique
-         * within the project.
+         * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start
+         * with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. *
+         * Must be unique within the project.
          */
         @com.google.api.client.util.Key
         private java.lang.String guestPolicyId;
 
-        /** Required. The logical name of the guest policy in the project with the following restrictions:
-
-       * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be
+        /** Required. The logical name of the guest policy in the project with the following restrictions: *
+       Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be
        between 1-63 characters. * Must end with a number or a letter. * Must be unique within the project.
          */
         public java.lang.String getGuestPolicyId() {
@@ -319,11 +316,9 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
 
         /**
          * Required. The logical name of the guest policy in the project with the following
-         * restrictions:
-         *
-         * * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter.
-         * * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique
-         * within the project.
+         * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start
+         * with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. *
+         * Must be unique within the project.
          */
         public Create setGuestPolicyId(java.lang.String guestPolicyId) {
           this.guestPolicyId = guestPolicyId;
@@ -343,7 +338,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the osconfig server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the guest policy  using one of the following forms:
+       * @param name Required. The resource name of the guest policy using one of the following forms:
        *        `projects/{project_number}/guestPolicies/{guest_policy_id}`.
        * @return the request
        */
@@ -371,7 +366,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the guest policy  using one of the following forms:
+         * @param name Required. The resource name of the guest policy using one of the following forms:
        *        `projects/{project_number}/guestPolicies/{guest_policy_id}`.
          * @since 1.13
          */
@@ -441,13 +436,13 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The resource name of the guest policy  using one of the following forms:
+         * Required. The resource name of the guest policy using one of the following forms:
          * `projects/{project_number}/guestPolicies/{guest_policy_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the guest policy  using one of the following forms:
+        /** Required. The resource name of the guest policy using one of the following forms:
        `projects/{project_number}/guestPolicies/{guest_policy_id}`.
          */
         public java.lang.String getName() {
@@ -455,7 +450,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The resource name of the guest policy  using one of the following forms:
+         * Required. The resource name of the guest policy using one of the following forms:
          * `projects/{project_number}/guestPolicies/{guest_policy_id}`.
          */
         public Delete setName(java.lang.String name) {
@@ -814,8 +809,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the osconfig server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Unique name of the resource in this project using one of the following
-      forms:
+       * @param name Required. Unique name of the resource in this project using one of the following forms:
        *        `projects/{project_number}/guestPolicies/{guest_policy_id}`.
        * @param content the {@link com.google.api.services.osconfig.v1beta.model.GuestPolicy}
        * @return the request
@@ -844,8 +838,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Unique name of the resource in this project using one of the following
-      forms:
+         * @param name Required. Unique name of the resource in this project using one of the following forms:
        *        `projects/{project_number}/guestPolicies/{guest_policy_id}`.
          * @param content the {@link com.google.api.services.osconfig.v1beta.model.GuestPolicy}
          * @since 1.13
@@ -943,9 +936,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /**
-         * Field mask that controls which fields of the guest policy should be updated.
-         */
+        /** Field mask that controls which fields of the guest policy should be updated. */
         @com.google.api.client.util.Key
         private String updateMask;
 
@@ -955,9 +946,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
           return updateMask;
         }
 
-        /**
-         * Field mask that controls which fields of the guest policy should be updated.
-         */
+        /** Field mask that controls which fields of the guest policy should be updated. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;
@@ -1158,8 +1147,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the osconfig server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the patch deployment in the form
-      `projects/patchDeployments`.
+       * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1186,8 +1174,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the patch deployment in the form
-      `projects/patchDeployments`.
+         * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1295,8 +1282,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the osconfig server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the patch deployment in the form
-      `projects/patchDeployments`.
+       * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1322,8 +1308,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the patch deployment in the form
-      `projects/patchDeployments`.
+         * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2413,17 +2398,17 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
             return this;
           }
 
-          /** The maximum number of instance details records to return.  Default is 100. */
+          /** The maximum number of instance details records to return. Default is 100. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of instance details records to return.  Default is 100.
+          /** The maximum number of instance details records to return. Default is 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The maximum number of instance details records to return.  Default is 100. */
+          /** The maximum number of instance details records to return. Default is 100. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;

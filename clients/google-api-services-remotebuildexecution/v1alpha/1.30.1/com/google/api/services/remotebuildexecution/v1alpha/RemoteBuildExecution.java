@@ -46,7 +46,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Remote Build Execution API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Remote Build Execution API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -172,8 +172,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the remotebuildexecution server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Resource name of the project containing the instance.
-      Format: `projects/[PROJECT_ID]`.
+       * @param parent Resource name of the project containing the instance. Format: `projects/[PROJECT_ID]`.
        * @param content the {@link com.google.api.services.remotebuildexecution.v1alpha.model.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequest}
        * @return the request
        */
@@ -203,8 +202,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Resource name of the project containing the instance.
-      Format: `projects/[PROJECT_ID]`.
+         * @param parent Resource name of the project containing the instance. Format: `projects/[PROJECT_ID]`.
          * @param content the {@link com.google.api.services.remotebuildexecution.v1alpha.model.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequest}
          * @since 1.13
          */
@@ -313,8 +311,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the remotebuildexecution server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the instance to delete.
-      Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+       * @param name Name of the instance to delete. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -343,8 +340,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the instance to delete.
-      Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+         * @param name Name of the instance to delete. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -450,8 +446,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the remotebuildexecution server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the instance to retrieve.
-      Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+       * @param name Name of the instance to retrieve. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -478,8 +473,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the instance to retrieve.
-      Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+         * @param name Name of the instance to retrieve. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -597,8 +591,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the remotebuildexecution server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Resource name of the project.
-      Format: `projects/[PROJECT_ID]`.
+       * @param parent Resource name of the project. Format: `projects/[PROJECT_ID]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -625,8 +618,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Resource name of the project.
-      Format: `projects/[PROJECT_ID]`.
+         * @param parent Resource name of the project. Format: `projects/[PROJECT_ID]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -704,9 +696,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Resource name of the project. Format: `projects/[PROJECT_ID]`.
-         */
+        /** Resource name of the project. Format: `projects/[PROJECT_ID]`. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -716,9 +706,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           return parent;
         }
 
-        /**
-         * Resource name of the project. Format: `projects/[PROJECT_ID]`.
-         */
+        /** Resource name of the project. Format: `projects/[PROJECT_ID]`. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -732,6 +720,231 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the specified instance. Returns a long running operation which contains the updated
+       * instance in the response on completion.
+       *
+       * Create a request for the method "instances.patch".
+       *
+       * This request holds the parameters needed by the remotebuildexecution server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Output only. Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+       *        Name should not be populated when creating an instance since it is provided in the
+       *        `instance_id` field.
+       * @param content the {@link com.google.api.services.remotebuildexecution.v1alpha.model.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.remotebuildexecution.v1alpha.model.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends RemoteBuildExecutionRequest<com.google.api.services.remotebuildexecution.v1alpha.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
+
+        /**
+         * Updates the specified instance. Returns a long running operation which contains the updated
+         * instance in the response on completion.
+         *
+         * Create a request for the method "instances.patch".
+         *
+         * This request holds the parameters needed by the the remotebuildexecution server.  After setting
+         * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Output only. Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+       *        Name should not be populated when creating an instance since it is provided in the
+       *        `instance_id` field.
+         * @param content the {@link com.google.api.services.remotebuildexecution.v1alpha.model.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.remotebuildexecution.v1alpha.model.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance content) {
+          super(RemoteBuildExecution.this, "PATCH", REST_PATH, content, com.google.api.services.remotebuildexecution.v1alpha.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/instances/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Output only. Instance resource name formatted as:
+         * `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when
+         * creating an instance since it is provided in the `instance_id` field.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Output only. Instance resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+       Name should not be populated when creating an instance since it is provided in the `instance_id`
+       field.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Output only. Instance resource name formatted as:
+         * `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`. Name should not be populated when
+         * creating an instance since it is provided in the `instance_id` field.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/instances/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Deprecated, use instance.logging_enabled instead. Whether to enable Stackdriver logging
+         * for this instance.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean loggingEnabled;
+
+        /** Deprecated, use instance.logging_enabled instead. Whether to enable Stackdriver logging for this
+       instance.
+         */
+        public java.lang.Boolean getLoggingEnabled() {
+          return loggingEnabled;
+        }
+
+        /**
+         * Deprecated, use instance.logging_enabled instead. Whether to enable Stackdriver logging
+         * for this instance.
+         */
+        public Patch setLoggingEnabled(java.lang.Boolean loggingEnabled) {
+          this.loggingEnabled = loggingEnabled;
+          return this;
+        }
+
+        /**
+         * Deprecated, use instance.Name instead. Name of the instance to update. Format:
+         * `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name1;
+
+        /** Deprecated, use instance.Name instead. Name of the instance to update. Format:
+       `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+         */
+        public java.lang.String getName1() {
+          return name1;
+        }
+
+        /**
+         * Deprecated, use instance.Name instead. Name of the instance to update. Format:
+         * `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+         */
+        public Patch setName1(java.lang.String name1) {
+          this.name1 = name1;
+          return this;
+        }
+
+        /**
+         * The update mask applies to instance. For the `FieldMask` definition, see
+         * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+         * If an empty update_mask is provided, only the non-default valued field in the worker pool
+         * field will be updated. Note that in order to update a field to the default value (zero,
+         * false, empty string) an explicit update_mask must be provided.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** The update mask applies to instance. For the `FieldMask` definition, see
+       https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If an empty
+       update_mask is provided, only the non-default valued field in the worker pool field will be
+       updated. Note that in order to update a field to the default value (zero, false, empty string) an
+       explicit update_mask must be provided.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * The update mask applies to instance. For the `FieldMask` definition, see
+         * https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+         * If an empty update_mask is provided, only the non-default valued field in the worker pool
+         * field will be updated. Note that in order to update a field to the default value (zero,
+         * false, empty string) an explicit update_mask must be provided.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 
@@ -765,8 +978,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the remotebuildexecution server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Resource name of the instance in which to create the new worker pool.
-        Format:
+         * @param parent Resource name of the instance in which to create the new worker pool. Format:
          *        `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
          * @param content the {@link com.google.api.services.remotebuildexecution.v1alpha.model.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest}
          * @return the request
@@ -797,8 +1009,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Resource name of the instance in which to create the new worker pool.
-        Format:
+           * @param parent Resource name of the instance in which to create the new worker pool. Format:
          *        `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
            * @param content the {@link com.google.api.services.remotebuildexecution.v1alpha.model.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest}
            * @since 1.13
@@ -911,8 +1122,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the remotebuildexecution server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the worker pool to delete.
-        Format:
+         * @param name Name of the worker pool to delete. Format:
          *        `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`.
          * @return the request
          */
@@ -942,8 +1152,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the worker pool to delete.
-        Format:
+           * @param name Name of the worker pool to delete. Format:
          *        `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`.
            * @since 1.13
            */
@@ -1053,8 +1262,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the remotebuildexecution server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the worker pool to retrieve.
-        Format:
+         * @param name Name of the worker pool to retrieve. Format:
          *        `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`.
          * @return the request
          */
@@ -1082,8 +1290,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the worker pool to retrieve.
-        Format:
+           * @param name Name of the worker pool to retrieve. Format:
          *        `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`.
            * @since 1.13
            */
@@ -1203,8 +1410,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the remotebuildexecution server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Resource name of the instance.
-        Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+         * @param parent Resource name of the instance. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1231,8 +1437,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Resource name of the instance.
-        Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+           * @param parent Resource name of the instance. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1342,20 +1547,12 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * values are case-insensitive. The comparison operator must be either `:`, `=`, `!=`,
            * `>`, `>=`, `<=` or `<`. The `:` operator can be used with string fields to match
            * substrings. For non-string fields it is equivalent to the `=` operator. The `:*`
-           * comparison can be used to test  whether a key has been defined.
-           *
-           * You can also filter on nested fields.
-           *
-           * To filter on multiple expressions, you can separate expression using `AND` and `OR`
-           * operators, using parentheses to specify precedence. If neither operator is specified,
-           * `AND` is assumed.
-           *
-           * Examples:
-           *
-           * Include only pools with more than 100 reserved workers: `(worker_count > 100)
-           * (worker_config.reserved = true)`
-           *
-           * Include only pools with a certain label or machines of the n1-standard family:
+           * comparison can be used to test whether a key has been defined. You can also filter on
+           * nested fields. To filter on multiple expressions, you can separate expression using
+           * `AND` and `OR` operators, using parentheses to specify precedence. If neither operator
+           * is specified, `AND` is assumed. Examples: Include only pools with more than 100
+           * reserved workers: `(worker_count > 100) (worker_config.reserved = true)` Include only
+           * pools with a certain label or machines of the n1-standard family:
            * `worker_config.labels.key1 : * OR worker_config.machine_type: n1-standard`
            */
           @com.google.api.client.util.Key
@@ -1366,20 +1563,12 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          The value must be a string, a number, or a boolean. String values are case-insensitive. The
          comparison operator must be either `:`, `=`, `!=`, `>`, `>=`, `<=` or `<`. The `:` operator can be
          used with string fields to match substrings. For non-string fields it is equivalent to the `=`
-         operator. The `:*` comparison can be used to test  whether a key has been defined.
-
-         You can also filter on nested fields.
-
-         To filter on multiple expressions, you can separate expression using `AND` and `OR` operators,
-         using parentheses to specify precedence. If neither operator is specified, `AND` is assumed.
-
-         Examples:
-
-         Include only pools with more than 100 reserved workers: `(worker_count > 100)
-         (worker_config.reserved = true)`
-
-         Include only pools with a certain label or machines of the n1-standard family:
-         `worker_config.labels.key1 : * OR worker_config.machine_type: n1-standard`
+         operator. The `:*` comparison can be used to test whether a key has been defined. You can also
+         filter on nested fields. To filter on multiple expressions, you can separate expression using `AND`
+         and `OR` operators, using parentheses to specify precedence. If neither operator is specified,
+         `AND` is assumed. Examples: Include only pools with more than 100 reserved workers: `(worker_count
+         > 100) (worker_config.reserved = true)` Include only pools with a certain label or machines of the
+         n1-standard family: `worker_config.labels.key1 : * OR worker_config.machine_type: n1-standard`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -1392,20 +1581,12 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * values are case-insensitive. The comparison operator must be either `:`, `=`, `!=`,
            * `>`, `>=`, `<=` or `<`. The `:` operator can be used with string fields to match
            * substrings. For non-string fields it is equivalent to the `=` operator. The `:*`
-           * comparison can be used to test  whether a key has been defined.
-           *
-           * You can also filter on nested fields.
-           *
-           * To filter on multiple expressions, you can separate expression using `AND` and `OR`
-           * operators, using parentheses to specify precedence. If neither operator is specified,
-           * `AND` is assumed.
-           *
-           * Examples:
-           *
-           * Include only pools with more than 100 reserved workers: `(worker_count > 100)
-           * (worker_config.reserved = true)`
-           *
-           * Include only pools with a certain label or machines of the n1-standard family:
+           * comparison can be used to test whether a key has been defined. You can also filter on
+           * nested fields. To filter on multiple expressions, you can separate expression using
+           * `AND` and `OR` operators, using parentheses to specify precedence. If neither operator
+           * is specified, `AND` is assumed. Examples: Include only pools with more than 100
+           * reserved workers: `(worker_count > 100) (worker_config.reserved = true)` Include only
+           * pools with a certain label or machines of the n1-standard family:
            * `worker_config.labels.key1 : * OR worker_config.machine_type: n1-standard`
            */
           public List setFilter(java.lang.String filter) {
@@ -1429,10 +1610,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name WorkerPool resource name formatted as:
-         *        `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`.
-        name should not be
-         *        populated when creating a worker pool since it is
-        provided in the `poolId` field.
+         *        `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be
+         *        populated when creating a worker pool since it is provided in the `poolId` field.
          * @param content the {@link com.google.api.services.remotebuildexecution.v1alpha.model.GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest}
          * @return the request
          */
@@ -1463,10 +1642,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name WorkerPool resource name formatted as:
-         *        `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`.
-        name should not be
-         *        populated when creating a worker pool since it is
-        provided in the `poolId` field.
+         *        `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be
+         *        populated when creating a worker pool since it is provided in the `poolId` field.
            * @param content the {@link com.google.api.services.remotebuildexecution.v1alpha.model.GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest}
            * @since 1.13
            */
@@ -1595,7 +1772,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
     public class Operations {
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -1620,7 +1797,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".

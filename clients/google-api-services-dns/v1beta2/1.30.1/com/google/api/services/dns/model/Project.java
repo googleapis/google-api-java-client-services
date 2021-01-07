@@ -21,7 +21,7 @@ package com.google.api.services.dns.model;
  * ManagedZones. Projects can be created only in the APIs console.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,7 +38,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#project".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +75,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#project".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -84,7 +82,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#project".
    * @param kind kind or {@code null} for none
    */
   public Project setKind(java.lang.String kind) {

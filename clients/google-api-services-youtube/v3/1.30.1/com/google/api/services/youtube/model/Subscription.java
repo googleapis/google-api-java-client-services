@@ -17,12 +17,12 @@
 package com.google.api.services.youtube.model;
 
 /**
- * A subscription resource contains information about a YouTube user subscription. A subscription
+ * A subscription resource contains information about a YouTube user subscription.  A subscription
  * notifies a user when new videos are added to a channel or when another user takes one of several
  * actions on YouTube, such as uploading a video, rating a video, or commenting on a video.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -68,7 +68,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private SubscriptionSnippet snippet;
 
   /**
-   * The subscriberSnippet object contains basic details about the sbuscriber.
+   * The subscriberSnippet object contains basic details about the subscriber.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The subscriberSnippet object contains basic details about the sbuscriber.
+   * The subscriberSnippet object contains basic details about the subscriber.
    * @return value or {@code null} for none
    */
   public SubscriptionSubscriberSnippet getSubscriberSnippet() {
@@ -170,7 +170,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The subscriberSnippet object contains basic details about the sbuscriber.
+   * The subscriberSnippet object contains basic details about the subscriber.
    * @param subscriberSnippet subscriberSnippet or {@code null} for none
    */
   public Subscription setSubscriberSnippet(SubscriptionSubscriberSnippet subscriberSnippet) {

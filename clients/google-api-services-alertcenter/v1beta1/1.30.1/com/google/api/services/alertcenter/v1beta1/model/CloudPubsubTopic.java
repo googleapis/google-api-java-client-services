@@ -17,10 +17,9 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * A reference to a Cloud Pubsub topic.
- *
- * To register for notifications, the owner of the topic must grant `alerts-api-push-
- * notifications@system.gserviceaccount.com` the  `projects.topics.publish` permission.
+ * A reference to a Cloud Pubsub topic. To register for notifications, the owner of the topic must
+ * grant `alerts-api-push-notifications@system.gserviceaccount.com` the `projects.topics.publish`
+ * permission.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation

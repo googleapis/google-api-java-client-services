@@ -82,8 +82,8 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   private java.lang.String labelFingerprint;
 
   /**
-   * Labels to apply to this TargetVpnGateway resource. These can be later modified by the setLabels
-   * method. Each label key/value must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,8 +296,8 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Labels to apply to this TargetVpnGateway resource. These can be later modified by the setLabels
-   * method. Each label key/value must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -305,8 +305,8 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Labels to apply to this TargetVpnGateway resource. These can be later modified by the setLabels
-   * method. Each label key/value must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
    * @param labels labels or {@code null} for none
    */
   public TargetVpnGateway setLabels(java.util.Map<String, java.lang.String> labels) {

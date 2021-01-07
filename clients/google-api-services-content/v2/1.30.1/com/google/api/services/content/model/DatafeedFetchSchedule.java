@@ -91,10 +91,8 @@ public final class DatafeedFetchSchedule extends com.google.api.client.json.Gene
   private java.lang.String username;
 
   /**
-   * The day of the week the feed file should be fetched.
-   *
-   * Acceptable values are:   - "monday"  - "tuesday"  - "wednesday"  - "thursday"  - "friday"  -
-   * "saturday"  - "sunday"
+   * The day of the week the feed file should be fetched. Acceptable values are: - "`monday`" -
+   * "`tuesday`" - "`wednesday`" - "`thursday`" - "`friday`" - "`saturday`" - "`sunday`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,10 +239,8 @@ public final class DatafeedFetchSchedule extends com.google.api.client.json.Gene
   }
 
   /**
-   * The day of the week the feed file should be fetched.
-   *
-   * Acceptable values are:   - "monday"  - "tuesday"  - "wednesday"  - "thursday"  - "friday"  -
-   * "saturday"  - "sunday"
+   * The day of the week the feed file should be fetched. Acceptable values are: - "`monday`" -
+   * "`tuesday`" - "`wednesday`" - "`thursday`" - "`friday`" - "`saturday`" - "`sunday`"
    * @return value or {@code null} for none
    */
   public java.lang.String getWeekday() {
@@ -252,10 +248,8 @@ public final class DatafeedFetchSchedule extends com.google.api.client.json.Gene
   }
 
   /**
-   * The day of the week the feed file should be fetched.
-   *
-   * Acceptable values are:   - "monday"  - "tuesday"  - "wednesday"  - "thursday"  - "friday"  -
-   * "saturday"  - "sunday"
+   * The day of the week the feed file should be fetched. Acceptable values are: - "`monday`" -
+   * "`tuesday`" - "`wednesday`" - "`thursday`" - "`friday`" - "`saturday`" - "`sunday`"
    * @param weekday weekday or {@code null} for none
    */
   public DatafeedFetchSchedule setWeekday(java.lang.String weekday) {

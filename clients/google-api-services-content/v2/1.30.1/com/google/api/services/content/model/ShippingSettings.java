@@ -40,7 +40,7 @@ public final class ShippingSettings extends com.google.api.client.json.GenericJs
   private java.math.BigInteger accountId;
 
   /**
-   * A list of postal code groups that can be referred to in services. Optional.
+   * A list of postal code groups that can be referred to in `services`. Optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class ShippingSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A list of postal code groups that can be referred to in services. Optional.
+   * A list of postal code groups that can be referred to in `services`. Optional.
    * @return value or {@code null} for none
    */
   public java.util.List<PostalCodeGroup> getPostalCodeGroups() {
@@ -93,7 +93,7 @@ public final class ShippingSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A list of postal code groups that can be referred to in services. Optional.
+   * A list of postal code groups that can be referred to in `services`. Optional.
    * @param postalCodeGroups postalCodeGroups or {@code null} for none
    */
   public ShippingSettings setPostalCodeGroups(java.util.List<PostalCodeGroup> postalCodeGroups) {

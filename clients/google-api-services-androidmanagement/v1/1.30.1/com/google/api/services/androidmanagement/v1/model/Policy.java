@@ -474,6 +474,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Policies managing personal usage on a company-owned device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PersonalUsagePolicies personalUsagePolicies;
+
+  /**
    * This mode controls which apps are available to the user in the Play Store and the behavior on
    * the device when apps are removed from the policy.
    * The value may be {@code null}.
@@ -1644,6 +1651,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setPersistentPreferredActivities(java.util.List<PersistentPreferredActivity> persistentPreferredActivities) {
     this.persistentPreferredActivities = persistentPreferredActivities;
+    return this;
+  }
+
+  /**
+   * Policies managing personal usage on a company-owned device.
+   * @return value or {@code null} for none
+   */
+  public PersonalUsagePolicies getPersonalUsagePolicies() {
+    return personalUsagePolicies;
+  }
+
+  /**
+   * Policies managing personal usage on a company-owned device.
+   * @param personalUsagePolicies personalUsagePolicies or {@code null} for none
+   */
+  public Policy setPersonalUsagePolicies(PersonalUsagePolicies personalUsagePolicies) {
+    this.personalUsagePolicies = personalUsagePolicies;
     return this;
   }
 

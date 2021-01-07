@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Branding properties for images associated with the channel.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -167,7 +167,9 @@ public final class ImageSettings extends com.google.api.client.json.GenericJson 
 
   /**
    * The URL for the 640px by 70px banner image that appears below the video player in the default
-   * view of the video watch page.
+   * view of the video watch page. The URL for the image that appears above the top-left corner of
+   * the video player. This is a 25-pixel-high image with a flexible width that cannot exceed 170
+   * pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,8 +184,6 @@ public final class ImageSettings extends com.google.api.client.json.GenericJson 
   private java.lang.String trackingImageUrl;
 
   /**
-   * The URL for the image that appears above the top-left corner of the video player. This is a 25
-   * -pixel-high image with a flexible width that cannot exceed 170 pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -520,7 +520,9 @@ public final class ImageSettings extends com.google.api.client.json.GenericJson 
 
   /**
    * The URL for the 640px by 70px banner image that appears below the video player in the default
-   * view of the video watch page.
+   * view of the video watch page. The URL for the image that appears above the top-left corner of
+   * the video player. This is a 25-pixel-high image with a flexible width that cannot exceed 170
+   * pixels.
    * @return value or {@code null} for none
    */
   public LocalizedProperty getSmallBrandedBannerImageUrl() {
@@ -529,7 +531,9 @@ public final class ImageSettings extends com.google.api.client.json.GenericJson 
 
   /**
    * The URL for the 640px by 70px banner image that appears below the video player in the default
-   * view of the video watch page.
+   * view of the video watch page. The URL for the image that appears above the top-left corner of
+   * the video player. This is a 25-pixel-high image with a flexible width that cannot exceed 170
+   * pixels.
    * @param smallBrandedBannerImageUrl smallBrandedBannerImageUrl or {@code null} for none
    */
   public ImageSettings setSmallBrandedBannerImageUrl(LocalizedProperty smallBrandedBannerImageUrl) {
@@ -557,8 +561,6 @@ public final class ImageSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URL for the image that appears above the top-left corner of the video player. This is a 25
-   * -pixel-high image with a flexible width that cannot exceed 170 pixels.
    * @return value or {@code null} for none
    */
   public java.lang.String getWatchIconImageUrl() {
@@ -566,8 +568,6 @@ public final class ImageSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URL for the image that appears above the top-left corner of the video player. This is a 25
-   * -pixel-high image with a flexible width that cannot exceed 170 pixels.
    * @param watchIconImageUrl watchIconImageUrl or {@code null} for none
    */
   public ImageSettings setWatchIconImageUrl(java.lang.String watchIconImageUrl) {

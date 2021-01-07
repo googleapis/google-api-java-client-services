@@ -31,10 +31,8 @@ package com.google.api.services.content.model;
 public final class OrderReturn extends com.google.api.client.json.GenericJson {
 
   /**
-   * The actor that created the refund.
-   *
-   * Acceptable values are:   - "customer"  - "googleBot"  - "googleCustomerService"  -
-   * "googlePayments"  - "googleSabre"  - "merchant"
+   * The actor that created the refund. Acceptable values are: - "`customer`" - "`googleBot`" -
+   * "`googleCustomerService`" - "`googlePayments`" - "`googleSabre`" - "`merchant`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,12 +53,11 @@ public final class OrderReturn extends com.google.api.client.json.GenericJson {
   private java.lang.Long quantity;
 
   /**
-   * The reason for the return.
-   *
-   * Acceptable values are:   - "customerDiscretionaryReturn"  - "customerInitiatedMerchantCancel"
-   * - "deliveredTooLate"  - "expiredItem"  - "invalidCoupon"  - "malformedShippingAddress"  -
-   * "other"  - "productArrivedDamaged"  - "productNotAsDescribed"  - "qualityNotAsExpected"  -
-   * "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"  - "wrongProductShipped"
+   * The reason for the return. Acceptable values are: - "`customerDiscretionaryReturn`" -
+   * "`customerInitiatedMerchantCancel`" - "`deliveredTooLate`" - "`expiredItem`" -
+   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`other`" - "`productArrivedDamaged`" -
+   * "`productNotAsDescribed`" - "`qualityNotAsExpected`" - "`undeliverableShippingAddress`" -
+   * "`unsupportedPoBoxAddress`" - "`wrongProductShipped`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,10 +71,8 @@ public final class OrderReturn extends com.google.api.client.json.GenericJson {
   private java.lang.String reasonText;
 
   /**
-   * The actor that created the refund.
-   *
-   * Acceptable values are:   - "customer"  - "googleBot"  - "googleCustomerService"  -
-   * "googlePayments"  - "googleSabre"  - "merchant"
+   * The actor that created the refund. Acceptable values are: - "`customer`" - "`googleBot`" -
+   * "`googleCustomerService`" - "`googlePayments`" - "`googleSabre`" - "`merchant`"
    * @return value or {@code null} for none
    */
   public java.lang.String getActor() {
@@ -85,10 +80,8 @@ public final class OrderReturn extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The actor that created the refund.
-   *
-   * Acceptable values are:   - "customer"  - "googleBot"  - "googleCustomerService"  -
-   * "googlePayments"  - "googleSabre"  - "merchant"
+   * The actor that created the refund. Acceptable values are: - "`customer`" - "`googleBot`" -
+   * "`googleCustomerService`" - "`googlePayments`" - "`googleSabre`" - "`merchant`"
    * @param actor actor or {@code null} for none
    */
   public OrderReturn setActor(java.lang.String actor) {
@@ -131,12 +124,11 @@ public final class OrderReturn extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The reason for the return.
-   *
-   * Acceptable values are:   - "customerDiscretionaryReturn"  - "customerInitiatedMerchantCancel"
-   * - "deliveredTooLate"  - "expiredItem"  - "invalidCoupon"  - "malformedShippingAddress"  -
-   * "other"  - "productArrivedDamaged"  - "productNotAsDescribed"  - "qualityNotAsExpected"  -
-   * "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"  - "wrongProductShipped"
+   * The reason for the return. Acceptable values are: - "`customerDiscretionaryReturn`" -
+   * "`customerInitiatedMerchantCancel`" - "`deliveredTooLate`" - "`expiredItem`" -
+   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`other`" - "`productArrivedDamaged`" -
+   * "`productNotAsDescribed`" - "`qualityNotAsExpected`" - "`undeliverableShippingAddress`" -
+   * "`unsupportedPoBoxAddress`" - "`wrongProductShipped`"
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -144,12 +136,11 @@ public final class OrderReturn extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The reason for the return.
-   *
-   * Acceptable values are:   - "customerDiscretionaryReturn"  - "customerInitiatedMerchantCancel"
-   * - "deliveredTooLate"  - "expiredItem"  - "invalidCoupon"  - "malformedShippingAddress"  -
-   * "other"  - "productArrivedDamaged"  - "productNotAsDescribed"  - "qualityNotAsExpected"  -
-   * "undeliverableShippingAddress"  - "unsupportedPoBoxAddress"  - "wrongProductShipped"
+   * The reason for the return. Acceptable values are: - "`customerDiscretionaryReturn`" -
+   * "`customerInitiatedMerchantCancel`" - "`deliveredTooLate`" - "`expiredItem`" -
+   * "`invalidCoupon`" - "`malformedShippingAddress`" - "`other`" - "`productArrivedDamaged`" -
+   * "`productNotAsDescribed`" - "`qualityNotAsExpected`" - "`undeliverableShippingAddress`" -
+   * "`unsupportedPoBoxAddress`" - "`wrongProductShipped`"
    * @param reason reason or {@code null} for none
    */
   public OrderReturn setReason(java.lang.String reason) {

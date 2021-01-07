@@ -20,15 +20,11 @@ package com.google.api.services.serviceconsumermanagement.v1beta1.model;
  * `Service` is the root object of Google service configuration schema. It describes basic
  * information about a service, such as the name and the title, and delegates other aspects to sub-
  * sections. Each sub-section is either a proto message or a repeated proto message that configures
- * a specific aspect, such as auth. See each proto message definition for details.
- *
- * Example:
- *
- *     type: google.api.Service     config_version: 3     name: calendar.googleapis.com     title:
- * Google Calendar API     apis:     - name: google.calendar.v3.Calendar     authentication:
- * providers:       - id: google_calendar_auth         jwks_uri:
- * https://www.googleapis.com/oauth2/v1/certs         issuer: https://securetoken.google.com
- * rules:       - selector: "*"         requirements:           provider_id: google_calendar_auth
+ * a specific aspect, such as auth. See each proto message definition for details. Example: type:
+ * google.api.Service config_version: 3 name: calendar.googleapis.com title: Google Calendar API
+ * apis: - name: google.calendar.v3.Calendar authentication: providers: - id: google_calendar_auth
+ * jwks_uri: https://www.googleapis.com/oauth2/v1/certs issuer: https://securetoken.google.com
+ * rules: - selector: "*" requirements: provider_id: google_calendar_auth
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed
@@ -79,11 +75,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private Billing billing;
 
   /**
-   * The semantic version of the service configuration. The config version affects the
-   * interpretation of the service configuration. For example, certain features are enabled by
-   * default for certain config versions.
-   *
-   * The latest config version is `3`.
+   * This field is obsolete. Its value must be set to `3`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +110,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private Documentation documentation;
 
   /**
-   * Configuration for network endpoints.  If this is empty, then an endpoint with the same name as
+   * Configuration for network endpoints. If this is empty, then an endpoint with the same name as
    * the service is automatically generated to service all defined APIs.
    * The value may be {@code null}.
    */
@@ -132,11 +124,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of all enum types included in this API service.  Enums referenced directly or indirectly
-   * by the `apis` are automatically included.  Enums which are not referenced but shall be included
-   * should be listed here by name. Example:
-   *
-   *     enums:     - name: google.someapi.v1.SomeEnum
+   * A list of all enum types included in this API service. Enums referenced directly or indirectly
+   * by the `apis` are automatically included. Enums which are not referenced but shall be included
+   * should be listed here by name. Example: enums: - name: google.someapi.v1.SomeEnum
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,11 +264,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of all proto message types included in this API service. Types referenced directly or
-   * indirectly by the `apis` are automatically included.  Messages which are not referenced but
+   * indirectly by the `apis` are automatically included. Messages which are not referenced but
    * shall be included, such as types used by the `google.protobuf.Any` type, should be listed here
-   * by name. Example:
-   *
-   *     types:     - name: google.protobuf.Int32
+   * by name. Example: types: - name: google.protobuf.Int32
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -366,11 +354,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The semantic version of the service configuration. The config version affects the
-   * interpretation of the service configuration. For example, certain features are enabled by
-   * default for certain config versions.
-   *
-   * The latest config version is `3`.
+   * This field is obsolete. Its value must be set to `3`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConfigVersion() {
@@ -378,11 +362,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The semantic version of the service configuration. The config version affects the
-   * interpretation of the service configuration. For example, certain features are enabled by
-   * default for certain config versions.
-   *
-   * The latest config version is `3`.
+   * This field is obsolete. Its value must be set to `3`.
    * @param configVersion configVersion or {@code null} for none
    */
   public Service setConfigVersion(java.lang.Long configVersion) {
@@ -459,7 +439,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for network endpoints.  If this is empty, then an endpoint with the same name as
+   * Configuration for network endpoints. If this is empty, then an endpoint with the same name as
    * the service is automatically generated to service all defined APIs.
    * @return value or {@code null} for none
    */
@@ -468,7 +448,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for network endpoints.  If this is empty, then an endpoint with the same name as
+   * Configuration for network endpoints. If this is empty, then an endpoint with the same name as
    * the service is automatically generated to service all defined APIs.
    * @param endpoints endpoints or {@code null} for none
    */
@@ -478,11 +458,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of all enum types included in this API service.  Enums referenced directly or indirectly
-   * by the `apis` are automatically included.  Enums which are not referenced but shall be included
-   * should be listed here by name. Example:
-   *
-   *     enums:     - name: google.someapi.v1.SomeEnum
+   * A list of all enum types included in this API service. Enums referenced directly or indirectly
+   * by the `apis` are automatically included. Enums which are not referenced but shall be included
+   * should be listed here by name. Example: enums: - name: google.someapi.v1.SomeEnum
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceConsumerManagementEnum> getEnums() {
@@ -490,11 +468,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of all enum types included in this API service.  Enums referenced directly or indirectly
-   * by the `apis` are automatically included.  Enums which are not referenced but shall be included
-   * should be listed here by name. Example:
-   *
-   *     enums:     - name: google.someapi.v1.SomeEnum
+   * A list of all enum types included in this API service. Enums referenced directly or indirectly
+   * by the `apis` are automatically included. Enums which are not referenced but shall be included
+   * should be listed here by name. Example: enums: - name: google.someapi.v1.SomeEnum
    * @param enums enums or {@code null} for none
    */
   public Service setEnums(java.util.List<ServiceConsumerManagementEnum> enums) {
@@ -758,11 +734,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of all proto message types included in this API service. Types referenced directly or
-   * indirectly by the `apis` are automatically included.  Messages which are not referenced but
+   * indirectly by the `apis` are automatically included. Messages which are not referenced but
    * shall be included, such as types used by the `google.protobuf.Any` type, should be listed here
-   * by name. Example:
-   *
-   *     types:     - name: google.protobuf.Int32
+   * by name. Example: types: - name: google.protobuf.Int32
    * @return value or {@code null} for none
    */
   public java.util.List<Type> getTypes() {
@@ -771,11 +745,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of all proto message types included in this API service. Types referenced directly or
-   * indirectly by the `apis` are automatically included.  Messages which are not referenced but
+   * indirectly by the `apis` are automatically included. Messages which are not referenced but
    * shall be included, such as types used by the `google.protobuf.Any` type, should be listed here
-   * by name. Example:
-   *
-   *     types:     - name: google.protobuf.Int32
+   * by name. Example: types: - name: google.protobuf.Int32
    * @param types types or {@code null} for none
    */
   public Service setTypes(java.util.List<Type> types) {

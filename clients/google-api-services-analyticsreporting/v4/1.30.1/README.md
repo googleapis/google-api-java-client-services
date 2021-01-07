@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-analyticsreporting</artifactId>
-      <version>v4-rev20200210-1.30.9</version>
+      <version>v4-rev20200902-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-analyticsreporting:v4-rev20200210-1.30.9'
+  compile 'com.google.apis:google-api-services-analyticsreporting:v4-rev20200902-1.30.10'
 }
 ```
 

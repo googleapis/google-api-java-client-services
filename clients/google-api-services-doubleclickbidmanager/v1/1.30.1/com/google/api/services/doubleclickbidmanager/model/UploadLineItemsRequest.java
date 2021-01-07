@@ -45,7 +45,7 @@ public final class UploadLineItemsRequest extends com.google.api.client.json.Gen
   private java.lang.String format;
 
   /**
-   * Line items in CSV to upload. Refer to  Entity Write File Format for more information on file
+   * Line items in CSV to upload. Refer to Entity Write File Format for more information on file
    * format.
    * The value may be {@code null}.
    */
@@ -87,7 +87,7 @@ public final class UploadLineItemsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Line items in CSV to upload. Refer to  Entity Write File Format for more information on file
+   * Line items in CSV to upload. Refer to Entity Write File Format for more information on file
    * format.
    * @return value or {@code null} for none
    */
@@ -96,7 +96,7 @@ public final class UploadLineItemsRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Line items in CSV to upload. Refer to  Entity Write File Format for more information on file
+   * Line items in CSV to upload. Refer to Entity Write File Format for more information on file
    * format.
    * @param lineItems lineItems or {@code null} for none
    */

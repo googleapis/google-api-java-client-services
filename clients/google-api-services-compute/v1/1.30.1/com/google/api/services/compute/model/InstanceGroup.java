@@ -102,7 +102,9 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   private java.util.List<NamedPort> namedPorts;
 
   /**
-   * The URL of the network to which all instances in the instance group belong.
+   * [Output Only] The URL of the network to which all instances in the instance group belong. If
+   * your instance has multiple network interfaces, then the network and subnetwork fields only
+   * refer to the network and subnet used by your primary interface (nic0).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +133,9 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   private java.lang.Integer size;
 
   /**
-   * [Output Only] The URL of the subnetwork to which all instances in the instance group belong.
+   * [Output Only] The URL of the subnetwork to which all instances in the instance group belong. If
+   * your instance has multiple network interfaces, then the network and subnetwork fields only
+   * refer to the network and subnet used by your primary interface (nic0).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -308,7 +312,9 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URL of the network to which all instances in the instance group belong.
+   * [Output Only] The URL of the network to which all instances in the instance group belong. If
+   * your instance has multiple network interfaces, then the network and subnetwork fields only
+   * refer to the network and subnet used by your primary interface (nic0).
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -316,7 +322,9 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URL of the network to which all instances in the instance group belong.
+   * [Output Only] The URL of the network to which all instances in the instance group belong. If
+   * your instance has multiple network interfaces, then the network and subnetwork fields only
+   * refer to the network and subnet used by your primary interface (nic0).
    * @param network network or {@code null} for none
    */
   public InstanceGroup setNetwork(java.lang.String network) {
@@ -378,7 +386,9 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The URL of the subnetwork to which all instances in the instance group belong.
+   * [Output Only] The URL of the subnetwork to which all instances in the instance group belong. If
+   * your instance has multiple network interfaces, then the network and subnetwork fields only
+   * refer to the network and subnet used by your primary interface (nic0).
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -386,7 +396,9 @@ public final class InstanceGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] The URL of the subnetwork to which all instances in the instance group belong.
+   * [Output Only] The URL of the subnetwork to which all instances in the instance group belong. If
+   * your instance has multiple network interfaces, then the network and subnetwork fields only
+   * refer to the network and subnet used by your primary interface (nic0).
    * @param subnetwork subnetwork or {@code null} for none
    */
   public InstanceGroup setSubnetwork(java.lang.String subnetwork) {

@@ -37,22 +37,22 @@ public final class DemoteMasterMySqlReplicaConfiguration extends com.google.api.
   private java.lang.String caCertificate;
 
   /**
-   * PEM representation of the slave's x509 certificate.
+   * PEM representation of the replica's x509 certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientCertificate;
 
   /**
-   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
-   * client's certificate. The format of the slave's private key can be either PKCS #1 or PKCS #8.
+   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
+   * client's certificate. The format of the replica's private key can be either PKCS #1 or PKCS #8.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientKey;
 
   /**
-   * This is always sql#demoteMasterMysqlReplicaConfiguration.
+   * This is always *sql#demoteMasterMysqlReplicaConfiguration*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class DemoteMasterMySqlReplicaConfiguration extends com.google.api.
   }
 
   /**
-   * PEM representation of the slave's x509 certificate.
+   * PEM representation of the replica's x509 certificate.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientCertificate() {
@@ -98,7 +98,7 @@ public final class DemoteMasterMySqlReplicaConfiguration extends com.google.api.
   }
 
   /**
-   * PEM representation of the slave's x509 certificate.
+   * PEM representation of the replica's x509 certificate.
    * @param clientCertificate clientCertificate or {@code null} for none
    */
   public DemoteMasterMySqlReplicaConfiguration setClientCertificate(java.lang.String clientCertificate) {
@@ -107,8 +107,8 @@ public final class DemoteMasterMySqlReplicaConfiguration extends com.google.api.
   }
 
   /**
-   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
-   * client's certificate. The format of the slave's private key can be either PKCS #1 or PKCS #8.
+   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
+   * client's certificate. The format of the replica's private key can be either PKCS #1 or PKCS #8.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientKey() {
@@ -116,8 +116,8 @@ public final class DemoteMasterMySqlReplicaConfiguration extends com.google.api.
   }
 
   /**
-   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
-   * client's certificate. The format of the slave's private key can be either PKCS #1 or PKCS #8.
+   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
+   * client's certificate. The format of the replica's private key can be either PKCS #1 or PKCS #8.
    * @param clientKey clientKey or {@code null} for none
    */
   public DemoteMasterMySqlReplicaConfiguration setClientKey(java.lang.String clientKey) {
@@ -126,7 +126,7 @@ public final class DemoteMasterMySqlReplicaConfiguration extends com.google.api.
   }
 
   /**
-   * This is always sql#demoteMasterMysqlReplicaConfiguration.
+   * This is always *sql#demoteMasterMysqlReplicaConfiguration*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -134,7 +134,7 @@ public final class DemoteMasterMySqlReplicaConfiguration extends com.google.api.
   }
 
   /**
-   * This is always sql#demoteMasterMysqlReplicaConfiguration.
+   * This is always *sql#demoteMasterMysqlReplicaConfiguration*.
    * @param kind kind or {@code null} for none
    */
   public DemoteMasterMySqlReplicaConfiguration setKind(java.lang.String kind) {

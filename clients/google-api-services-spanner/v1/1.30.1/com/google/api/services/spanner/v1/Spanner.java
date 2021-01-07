@@ -46,7 +46,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Spanner API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Spanner API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -170,8 +170,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the spanner server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the requested instance configuration. Values are of
-      the form
+       * @param name Required. The name of the requested instance configuration. Values are of the form
        *        `projects//instanceConfigs/`.
        * @return the request
        */
@@ -198,8 +197,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the requested instance configuration. Values are of
-      the form
+         * @param name Required. The name of the requested instance configuration. Values are of the form
        *        `projects//instanceConfigs/`.
          * @since 1.13
          */
@@ -319,10 +317,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the spanner server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project for which a list of supported instance
-      configurations is
-       *        requested. Values are of the form
-      `projects/`.
+       * @param parent Required. The name of the project for which a list of supported instance configurations is
+       *        requested. Values are of the form `projects/`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -348,10 +344,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project for which a list of supported instance
-      configurations is
-       *        requested. Values are of the form
-      `projects/`.
+         * @param parent Required. The name of the project for which a list of supported instance configurations is
+       *        requested. Values are of the form `projects/`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -534,34 +528,23 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        * Creates an instance and begins preparing it to begin serving. The returned long-running operation
        * can be used to track the progress of preparing the new instance. The instance name is assigned by
        * the caller. If the named instance already exists, `CreateInstance` returns `ALREADY_EXISTS`.
-       *
-       * Immediately upon completion of this request:
-       *
-       *   * The instance is readable via the API, with all requested attributes     but no allocated
-       * resources. Its state is `CREATING`.
-       *
-       * Until completion of the returned operation:
-       *
-       *   * Cancelling the operation renders the instance immediately unreadable     via the API.   * The
-       * instance can be deleted.   * All other attempts to modify the instance are rejected.
-       *
-       * Upon completion of the returned operation:
-       *
-       *   * Billing for all successfully-allocated resources begins (some types     may have lower than
-       * the requested levels).   * Databases can be created in the instance.   * The instance's allocated
-       * resource levels are readable via the API.   * The instance's state becomes `READY`.
-       *
-       * The returned long-running operation will have a name of the format `/operations/` and can be used
-       * to track creation of the instance.  The metadata field type is CreateInstanceMetadata. The
-       * response field type is Instance, if successful.
+       * Immediately upon completion of this request: * The instance is readable via the API, with all
+       * requested attributes but no allocated resources. Its state is `CREATING`. Until completion of the
+       * returned operation: * Cancelling the operation renders the instance immediately unreadable via
+       * the API. * The instance can be deleted. * All other attempts to modify the instance are rejected.
+       * Upon completion of the returned operation: * Billing for all successfully-allocated resources
+       * begins (some types may have lower than the requested levels). * Databases can be created in the
+       * instance. * The instance's allocated resource levels are readable via the API. * The instance's
+       * state becomes `READY`. The returned long-running operation will have a name of the format
+       * `/operations/` and can be used to track creation of the instance. The metadata field type is
+       * CreateInstanceMetadata. The response field type is Instance, if successful.
        *
        * Create a request for the method "instances.create".
        *
        * This request holds the parameters needed by the spanner server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project in which to create the instance. Values
-      are of the form
+       * @param parent Required. The name of the project in which to create the instance. Values are of the form
        *        `projects/`.
        * @param content the {@link com.google.api.services.spanner.v1.model.CreateInstanceRequest}
        * @return the request
@@ -583,27 +566,17 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Creates an instance and begins preparing it to begin serving. The returned long-running
          * operation can be used to track the progress of preparing the new instance. The instance name is
          * assigned by the caller. If the named instance already exists, `CreateInstance` returns
-         * `ALREADY_EXISTS`.
-         *
-         * Immediately upon completion of this request:
-         *
-         *   * The instance is readable via the API, with all requested attributes     but no allocated
-         * resources. Its state is `CREATING`.
-         *
-         * Until completion of the returned operation:
-         *
-         *   * Cancelling the operation renders the instance immediately unreadable     via the API.   *
-         * The instance can be deleted.   * All other attempts to modify the instance are rejected.
-         *
-         * Upon completion of the returned operation:
-         *
-         *   * Billing for all successfully-allocated resources begins (some types     may have lower than
-         * the requested levels).   * Databases can be created in the instance.   * The instance's
-         * allocated resource levels are readable via the API.   * The instance's state becomes `READY`.
-         *
-         * The returned long-running operation will have a name of the format `/operations/` and can be
-         * used to track creation of the instance.  The metadata field type is CreateInstanceMetadata. The
-         * response field type is Instance, if successful.
+         * `ALREADY_EXISTS`. Immediately upon completion of this request: * The instance is readable via
+         * the API, with all requested attributes but no allocated resources. Its state is `CREATING`.
+         * Until completion of the returned operation: * Cancelling the operation renders the instance
+         * immediately unreadable via the API. * The instance can be deleted. * All other attempts to
+         * modify the instance are rejected. Upon completion of the returned operation: * Billing for all
+         * successfully-allocated resources begins (some types may have lower than the requested levels).
+         * * Databases can be created in the instance. * The instance's allocated resource levels are
+         * readable via the API. * The instance's state becomes `READY`. The returned long-running
+         * operation will have a name of the format `/operations/` and can be used to track creation of
+         * the instance. The metadata field type is CreateInstanceMetadata. The response field type is
+         * Instance, if successful.
          *
          * Create a request for the method "instances.create".
          *
@@ -612,8 +585,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project in which to create the instance. Values
-      are of the form
+         * @param parent Required. The name of the project in which to create the instance. Values are of the form
        *        `projects/`.
          * @param content the {@link com.google.api.services.spanner.v1.model.CreateInstanceRequest}
          * @since 1.13
@@ -717,24 +689,17 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Deletes an instance.
-       *
-       * Immediately upon completion of the request:
-       *
-       *   * Billing ceases for all of the instance's reserved resources.
-       *
-       * Soon afterward:
-       *
-       *   * The instance and *all of its databases* immediately and     irrevocably disappear from the
-       * API. All data in the databases     is permanently deleted.
+       * Deletes an instance. Immediately upon completion of the request: * Billing ceases for all of the
+       * instance's reserved resources. Soon afterward: * The instance and *all of its databases*
+       * immediately and irrevocably disappear from the API. All data in the databases is permanently
+       * deleted.
        *
        * Create a request for the method "instances.delete".
        *
        * This request holds the parameters needed by the spanner server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the instance to be deleted. Values are of the form
-      `projects//instances/`
+       * @param name Required. The name of the instance to be deleted. Values are of the form `projects//instances/`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -751,16 +716,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
 
         /**
-         * Deletes an instance.
-         *
-         * Immediately upon completion of the request:
-         *
-         *   * Billing ceases for all of the instance's reserved resources.
-         *
-         * Soon afterward:
-         *
-         *   * The instance and *all of its databases* immediately and     irrevocably disappear from the
-         * API. All data in the databases     is permanently deleted.
+         * Deletes an instance. Immediately upon completion of the request: * Billing ceases for all of
+         * the instance's reserved resources. Soon afterward: * The instance and *all of its databases*
+         * immediately and irrevocably disappear from the API. All data in the databases is permanently
+         * deleted.
          *
          * Create a request for the method "instances.delete".
          *
@@ -769,8 +728,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the instance to be deleted. Values are of the form
-      `projects//instances/`
+         * @param name Required. The name of the instance to be deleted. Values are of the form `projects//instances/`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -878,8 +836,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the spanner server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the requested instance. Values are of the form
-      `projects//instances/`.
+       * @param name Required. The name of the requested instance. Values are of the form `projects//instances/`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -905,8 +862,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the requested instance. Values are of the form
-      `projects//instances/`.
+         * @param name Required. The name of the requested instance. Values are of the form `projects//instances/`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1041,9 +997,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Gets the access control policy for an instance resource. Returns an empty policy if an instance
-       * exists but does not have a policy set.
-       *
-       * Authorization requires `spanner.instances.getIamPolicy` on resource.
+       * exists but does not have a policy set. Authorization requires `spanner.instances.getIamPolicy` on
+       * resource.
        *
        * Create a request for the method "instances.getIamPolicy".
        *
@@ -1071,9 +1026,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Gets the access control policy for an instance resource. Returns an empty policy if an instance
-         * exists but does not have a policy set.
-         *
-         * Authorization requires `spanner.instances.getIamPolicy` on resource.
+         * exists but does not have a policy set. Authorization requires `spanner.instances.getIamPolicy`
+         * on resource.
          *
          * Create a request for the method "instances.getIamPolicy".
          *
@@ -1198,8 +1152,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
        * This request holds the parameters needed by the spanner server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project for which a list of instances is
-      requested. Values are of the form
+       * @param parent Required. The name of the project for which a list of instances is requested. Values are of the form
        *        `projects/`.
        * @return the request
        */
@@ -1226,8 +1179,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project for which a list of instances is
-      requested. Values are of the form
+         * @param parent Required. The name of the project for which a list of instances is requested. Values are of the form
        *        `projects/`.
          * @since 1.13
          */
@@ -1336,14 +1288,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * An expression for filtering the results of the request. Filter rules are case
-         * insensitive. The fields eligible for filtering are:
-         *
-         * * `name` * `display_name` * `labels.key` where key is the name of a label
-         *
-         * Some examples of using filters are:
-         *
-         * * `name:*` --> The instance has a name. * `name:Howl` --> The instance's name contains
-         * the string "howl". * `name:HOWL` --> Equivalent to above. * `NAME:howl` --> Equivalent to
+         * insensitive. The fields eligible for filtering are: * `name` * `display_name` *
+         * `labels.key` where key is the name of a label Some examples of using filters are: *
+         * `name:*` --> The instance has a name. * `name:Howl` --> The instance's name contains the
+         * string "howl". * `name:HOWL` --> Equivalent to above. * `NAME:howl` --> Equivalent to
          * above. * `labels.env:*` --> The instance has the label "env". * `labels.env:dev` --> The
          * instance has the label "env" and the value of the label contains the string "dev". *
          * `name:howl labels.env:dev` --> The instance's name contains "howl" and it has the label
@@ -1353,17 +1301,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         private java.lang.String filter;
 
         /** An expression for filtering the results of the request. Filter rules are case insensitive. The
-       fields eligible for filtering are:
-
-       * `name` * `display_name` * `labels.key` where key is the name of a label
-
-       Some examples of using filters are:
-
-       * `name:*` --> The instance has a name. * `name:Howl` --> The instance's name contains the string
-       "howl". * `name:HOWL` --> Equivalent to above. * `NAME:howl` --> Equivalent to above. *
-       `labels.env:*` --> The instance has the label "env". * `labels.env:dev` --> The instance has the
-       label "env" and the value of the label contains the string "dev". * `name:howl labels.env:dev` -->
-       The instance's name contains "howl" and it has the label "env" with its value containing "dev".
+       fields eligible for filtering are: * `name` * `display_name` * `labels.key` where key is the name
+       of a label Some examples of using filters are: * `name:*` --> The instance has a name. *
+       `name:Howl` --> The instance's name contains the string "howl". * `name:HOWL` --> Equivalent to
+       above. * `NAME:howl` --> Equivalent to above. * `labels.env:*` --> The instance has the label
+       "env". * `labels.env:dev` --> The instance has the label "env" and the value of the label contains
+       the string "dev". * `name:howl labels.env:dev` --> The instance's name contains "howl" and it has
+       the label "env" with its value containing "dev".
          */
         public java.lang.String getFilter() {
           return filter;
@@ -1371,14 +1315,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * An expression for filtering the results of the request. Filter rules are case
-         * insensitive. The fields eligible for filtering are:
-         *
-         * * `name` * `display_name` * `labels.key` where key is the name of a label
-         *
-         * Some examples of using filters are:
-         *
-         * * `name:*` --> The instance has a name. * `name:Howl` --> The instance's name contains
-         * the string "howl". * `name:HOWL` --> Equivalent to above. * `NAME:howl` --> Equivalent to
+         * insensitive. The fields eligible for filtering are: * `name` * `display_name` *
+         * `labels.key` where key is the name of a label Some examples of using filters are: *
+         * `name:*` --> The instance has a name. * `name:Howl` --> The instance's name contains the
+         * string "howl". * `name:HOWL` --> Equivalent to above. * `NAME:howl` --> Equivalent to
          * above. * `labels.env:*` --> The instance has the label "env". * `labels.env:dev` --> The
          * instance has the label "env" and the value of the label contains the string "dev". *
          * `name:howl labels.env:dev` --> The instance's name contains "howl" and it has the label
@@ -1442,43 +1382,28 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Updates an instance, and begins allocating or releasing resources as requested. The returned
        * long-running operation can be used to track the progress of updating the instance. If the named
-       * instance does not exist, returns `NOT_FOUND`.
-       *
-       * Immediately upon completion of this request:
-       *
-       *   * For resource types for which a decrease in the instance's allocation     has been requested,
-       * billing is based on the newly-requested level.
-       *
-       * Until completion of the returned operation:
-       *
-       *   * Cancelling the operation sets its metadata's     cancel_time, and begins     restoring
-       * resources to their pre-request values. The operation     is guaranteed to succeed at undoing all
-       * resource changes,     after which point it terminates with a `CANCELLED` status.   * All other
-       * attempts to modify the instance are rejected.   * Reading the instance via the API continues to
-       * give the pre-request     resource levels.
-       *
-       * Upon completion of the returned operation:
-       *
-       *   * Billing begins for all successfully-allocated resources (some types     may have lower than
-       * the requested levels).   * All newly-reserved resources are available for serving the instance's
-       * tables.   * The instance's new resource levels are readable via the API.
-       *
-       * The returned long-running operation will have a name of the format `/operations/` and can be used
-       * to track the instance modification.  The metadata field type is UpdateInstanceMetadata. The
-       * response field type is Instance, if successful.
-       *
-       * Authorization requires `spanner.instances.update` permission on resource name.
+       * instance does not exist, returns `NOT_FOUND`. Immediately upon completion of this request: * For
+       * resource types for which a decrease in the instance's allocation has been requested, billing is
+       * based on the newly-requested level. Until completion of the returned operation: * Cancelling the
+       * operation sets its metadata's cancel_time, and begins restoring resources to their pre-request
+       * values. The operation is guaranteed to succeed at undoing all resource changes, after which point
+       * it terminates with a `CANCELLED` status. * All other attempts to modify the instance are
+       * rejected. * Reading the instance via the API continues to give the pre-request resource levels.
+       * Upon completion of the returned operation: * Billing begins for all successfully-allocated
+       * resources (some types may have lower than the requested levels). * All newly-reserved resources
+       * are available for serving the instance's tables. * The instance's new resource levels are
+       * readable via the API. The returned long-running operation will have a name of the format
+       * `/operations/` and can be used to track the instance modification. The metadata field type is
+       * UpdateInstanceMetadata. The response field type is Instance, if successful. Authorization
+       * requires `spanner.instances.update` permission on resource name.
        *
        * Create a request for the method "instances.patch".
        *
        * This request holds the parameters needed by the spanner server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. A unique identifier for the instance, which cannot be changed
-      after the instance is
-       *        created. Values are of the form
-      `projects//instances/a-z*[a-z0-9]`. The final
-      segment of
+       * @param name Required. A unique identifier for the instance, which cannot be changed after the instance is
+       *        created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final segment of
        *        the name must be between 2 and 64 characters in length.
        * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstanceRequest}
        * @return the request
@@ -1499,31 +1424,19 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Updates an instance, and begins allocating or releasing resources as requested. The returned
          * long-running operation can be used to track the progress of updating the instance. If the named
-         * instance does not exist, returns `NOT_FOUND`.
-         *
-         * Immediately upon completion of this request:
-         *
-         *   * For resource types for which a decrease in the instance's allocation     has been
-         * requested, billing is based on the newly-requested level.
-         *
-         * Until completion of the returned operation:
-         *
-         *   * Cancelling the operation sets its metadata's     cancel_time, and begins     restoring
-         * resources to their pre-request values. The operation     is guaranteed to succeed at undoing
-         * all resource changes,     after which point it terminates with a `CANCELLED` status.   * All
-         * other attempts to modify the instance are rejected.   * Reading the instance via the API
-         * continues to give the pre-request     resource levels.
-         *
-         * Upon completion of the returned operation:
-         *
-         *   * Billing begins for all successfully-allocated resources (some types     may have lower than
-         * the requested levels).   * All newly-reserved resources are available for serving the
-         * instance's     tables.   * The instance's new resource levels are readable via the API.
-         *
-         * The returned long-running operation will have a name of the format `/operations/` and can be
-         * used to track the instance modification.  The metadata field type is UpdateInstanceMetadata.
-         * The response field type is Instance, if successful.
-         *
+         * instance does not exist, returns `NOT_FOUND`. Immediately upon completion of this request: *
+         * For resource types for which a decrease in the instance's allocation has been requested,
+         * billing is based on the newly-requested level. Until completion of the returned operation: *
+         * Cancelling the operation sets its metadata's cancel_time, and begins restoring resources to
+         * their pre-request values. The operation is guaranteed to succeed at undoing all resource
+         * changes, after which point it terminates with a `CANCELLED` status. * All other attempts to
+         * modify the instance are rejected. * Reading the instance via the API continues to give the pre-
+         * request resource levels. Upon completion of the returned operation: * Billing begins for all
+         * successfully-allocated resources (some types may have lower than the requested levels). * All
+         * newly-reserved resources are available for serving the instance's tables. * The instance's new
+         * resource levels are readable via the API. The returned long-running operation will have a name
+         * of the format `/operations/` and can be used to track the instance modification. The metadata
+         * field type is UpdateInstanceMetadata. The response field type is Instance, if successful.
          * Authorization requires `spanner.instances.update` permission on resource name.
          *
          * Create a request for the method "instances.patch".
@@ -1533,11 +1446,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. A unique identifier for the instance, which cannot be changed
-      after the instance is
-       *        created. Values are of the form
-      `projects//instances/a-z*[a-z0-9]`. The final
-      segment of
+         * @param name Required. A unique identifier for the instance, which cannot be changed after the instance is
+       *        created. Values are of the form `projects//instances/a-z*[a-z0-9]`. The final segment of
        *        the name must be between 2 and 64 characters in length.
          * @param content the {@link com.google.api.services.spanner.v1.model.UpdateInstanceRequest}
          * @since 1.13
@@ -1645,7 +1555,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       }
       /**
        * Sets the access control policy on an instance resource. Replaces any existing policy.
-       *
        * Authorization requires `spanner.instances.setIamPolicy` on resource.
        *
        * Create a request for the method "instances.setIamPolicy".
@@ -1674,7 +1583,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
         /**
          * Sets the access control policy on an instance resource. Replaces any existing policy.
-         *
          * Authorization requires `spanner.instances.setIamPolicy` on resource.
          *
          * Create a request for the method "instances.setIamPolicy".
@@ -1793,11 +1701,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Returns permissions that the caller has on the specified instance resource.
-       *
-       * Attempting this RPC on a non-existent Cloud Spanner instance resource will result in a NOT_FOUND
-       * error if the user has `spanner.instances.list` permission on the containing Google Cloud Project.
-       * Otherwise returns an empty set of permissions.
+       * Returns permissions that the caller has on the specified instance resource. Attempting this RPC
+       * on a non-existent Cloud Spanner instance resource will result in a NOT_FOUND error if the user
+       * has `spanner.instances.list` permission on the containing Google Cloud Project. Otherwise returns
+       * an empty set of permissions.
        *
        * Create a request for the method "instances.testIamPermissions".
        *
@@ -1824,11 +1731,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+$");
 
         /**
-         * Returns permissions that the caller has on the specified instance resource.
-         *
-         * Attempting this RPC on a non-existent Cloud Spanner instance resource will result in a
-         * NOT_FOUND error if the user has `spanner.instances.list` permission on the containing Google
-         * Cloud Project. Otherwise returns an empty set of permissions.
+         * Returns permissions that the caller has on the specified instance resource. Attempting this RPC
+         * on a non-existent Cloud Spanner instance resource will result in a NOT_FOUND error if the user
+         * has `spanner.instances.list` permission on the containing Google Cloud Project. Otherwise
+         * returns an empty set of permissions.
          *
          * Create a request for the method "instances.testIamPermissions".
          *
@@ -1979,8 +1885,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The instance of the backup operations. Values are of
-        the form `projects//instances/`.
+         * @param parent Required. The instance of the backup operations. Values are of the form `projects//instances/`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2011,8 +1916,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The instance of the backup operations. Values are of
-        the form `projects//instances/`.
+           * @param parent Required. The instance of the backup operations. Values are of the form `projects//instances/`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2118,65 +2022,47 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * An expression that filters the list of returned backup operations.
-           *
-           * A filter expression consists of a field name, a comparison operator, and a value for
-           * filtering. The value must be a string, a number, or a boolean. The comparison operator
-           * must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains
-           * operator. Filter rules are not case sensitive.
-           *
-           * The following fields in the operation are eligible for filtering:
-           *
-           * * `name` - The name of the long-running operation * `done` - False if the operation is
-           * in progress, else true. * `metadata.@type` - the type of metadata. For example, the
-           * type string for CreateBackupMetadata is
+           * An expression that filters the list of returned backup operations. A filter expression
+           * consists of a field name, a comparison operator, and a value for filtering. The value
+           * must be a string, a number, or a boolean. The comparison operator must be one of: `<`,
+           * `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules
+           * are not case sensitive. The following fields in the operation are eligible for
+           * filtering: * `name` - The name of the long-running operation * `done` - False if the
+           * operation is in progress, else true. * `metadata.@type` - the type of metadata. For
+           * example, the type string for CreateBackupMetadata is
            * `type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata`. *
            * `metadata.` - any field in metadata.value. * `error` - Error associated with the long-
            * running operation. * `response.@type` - the type of response. * `response.` - any field
-           * in response.value.
-           *
-           * You can combine multiple expressions by enclosing each expression in parentheses. By
-           * default, expressions are combined with AND logic, but you can specify AND, OR, and NOT
-           * logic explicitly.
-           *
-           * Here are a few examples:
-           *
-           * * `done:true` - The operation is complete. * `metadata.database:prod` - The database
-           * the backup was taken from has a name containing the string "prod". * `(metadata.@type=t
-           * ype.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND`
-           * `(metadata.name:howl) AND` `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\")
-           * AND` `(error:*)` - Returns operations where: * The operation's metadata type is
-           * CreateBackupMetadata. * The backup name contains the string "howl". * The operation
-           * started before 2018-03-28T14:50:00Z. * The operation resulted in an error.
+           * in response.value. You can combine multiple expressions by enclosing each expression in
+           * parentheses. By default, expressions are combined with AND logic, but you can specify
+           * AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
+           * operation is complete. * `metadata.database:prod` - The database the backup was taken
+           * from has a name containing the string "prod". * `(metadata.@type=type.googleapis.com/go
+           * ogle.spanner.admin.database.v1.CreateBackupMetadata) AND` \ `(metadata.name:howl) AND`
+           * \ `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \ `(error:*)` -
+           * Returns operations where: * The operation's metadata type is CreateBackupMetadata. *
+           * The backup name contains the string "howl". * The operation started before
+           * 2018-03-28T14:50:00Z. * The operation resulted in an error.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** An expression that filters the list of returned backup operations.
-
-         A filter expression consists of a field name, a comparison operator, and a value for filtering. The
-         value must be a string, a number, or a boolean. The comparison operator must be one of: `<`, `>`,
-         `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules are not case
-         sensitive.
-
-         The following fields in the operation are eligible for filtering:
-
-         * `name` - The name of the long-running operation * `done` - False if the operation is in progress,
-         else true. * `metadata.@type` - the type of metadata. For example, the type string for
-         CreateBackupMetadata is
+          /** An expression that filters the list of returned backup operations. A filter expression consists of
+         a field name, a comparison operator, and a value for filtering. The value must be a string, a
+         number, or a boolean. The comparison operator must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or
+         `:`. Colon `:` is the contains operator. Filter rules are not case sensitive. The following fields
+         in the operation are eligible for filtering: * `name` - The name of the long-running operation *
+         `done` - False if the operation is in progress, else true. * `metadata.@type` - the type of
+         metadata. For example, the type string for CreateBackupMetadata is
          `type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata`. * `metadata.` - any
          field in metadata.value. * `error` - Error associated with the long-running operation. *
-         `response.@type` - the type of response. * `response.` - any field in response.value.
-
-         You can combine multiple expressions by enclosing each expression in parentheses. By default,
-         expressions are combined with AND logic, but you can specify AND, OR, and NOT logic explicitly.
-
-         Here are a few examples:
-
-         * `done:true` - The operation is complete. * `metadata.database:prod` - The database the backup was
-         taken from has a name containing the string "prod". *
-         `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND`
-         `(metadata.name:howl) AND` `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND`
+         `response.@type` - the type of response. * `response.` - any field in response.value. You can
+         combine multiple expressions by enclosing each expression in parentheses. By default, expressions
+         are combined with AND logic, but you can specify AND, OR, and NOT logic explicitly. Here are a few
+         examples: * `done:true` - The operation is complete. * `metadata.database:prod` - The database the
+         backup was taken from has a name containing the string "prod". *
+         `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND` \
+         `(metadata.name:howl) AND` \ `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \
          `(error:*)` - Returns operations where: * The operation's metadata type is CreateBackupMetadata. *
          The backup name contains the string "howl". * The operation started before 2018-03-28T14:50:00Z. *
          The operation resulted in an error.
@@ -2186,36 +2072,27 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * An expression that filters the list of returned backup operations.
-           *
-           * A filter expression consists of a field name, a comparison operator, and a value for
-           * filtering. The value must be a string, a number, or a boolean. The comparison operator
-           * must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains
-           * operator. Filter rules are not case sensitive.
-           *
-           * The following fields in the operation are eligible for filtering:
-           *
-           * * `name` - The name of the long-running operation * `done` - False if the operation is
-           * in progress, else true. * `metadata.@type` - the type of metadata. For example, the
-           * type string for CreateBackupMetadata is
+           * An expression that filters the list of returned backup operations. A filter expression
+           * consists of a field name, a comparison operator, and a value for filtering. The value
+           * must be a string, a number, or a boolean. The comparison operator must be one of: `<`,
+           * `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules
+           * are not case sensitive. The following fields in the operation are eligible for
+           * filtering: * `name` - The name of the long-running operation * `done` - False if the
+           * operation is in progress, else true. * `metadata.@type` - the type of metadata. For
+           * example, the type string for CreateBackupMetadata is
            * `type.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata`. *
            * `metadata.` - any field in metadata.value. * `error` - Error associated with the long-
            * running operation. * `response.@type` - the type of response. * `response.` - any field
-           * in response.value.
-           *
-           * You can combine multiple expressions by enclosing each expression in parentheses. By
-           * default, expressions are combined with AND logic, but you can specify AND, OR, and NOT
-           * logic explicitly.
-           *
-           * Here are a few examples:
-           *
-           * * `done:true` - The operation is complete. * `metadata.database:prod` - The database
-           * the backup was taken from has a name containing the string "prod". * `(metadata.@type=t
-           * ype.googleapis.com/google.spanner.admin.database.v1.CreateBackupMetadata) AND`
-           * `(metadata.name:howl) AND` `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\")
-           * AND` `(error:*)` - Returns operations where: * The operation's metadata type is
-           * CreateBackupMetadata. * The backup name contains the string "howl". * The operation
-           * started before 2018-03-28T14:50:00Z. * The operation resulted in an error.
+           * in response.value. You can combine multiple expressions by enclosing each expression in
+           * parentheses. By default, expressions are combined with AND logic, but you can specify
+           * AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
+           * operation is complete. * `metadata.database:prod` - The database the backup was taken
+           * from has a name containing the string "prod". * `(metadata.@type=type.googleapis.com/go
+           * ogle.spanner.admin.database.v1.CreateBackupMetadata) AND` \ `(metadata.name:howl) AND`
+           * \ `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \ `(error:*)` -
+           * Returns operations where: * The operation's metadata type is CreateBackupMetadata. *
+           * The backup name contains the string "howl". * The operation started before
+           * 2018-03-28T14:50:00Z. * The operation resulted in an error.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -2308,15 +2185,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The name of the instance in which the backup will be
-        created. This must be the same
-         *        instance that contains the database the
-        backup will be created from. The backup will be
-         *        stored in the
-        location(s) specified in the instance configuration of this
-        instance. Values
-         *        are of the form
-        `projects//instances/`.
+         * @param parent Required. The name of the instance in which the backup will be created. This must be the same
+         *        instance that contains the database the backup will be created from. The backup will be
+         *        stored in the location(s) specified in the instance configuration of this instance. Values
+         *        are of the form `projects//instances/`.
          * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
          * @return the request
          */
@@ -2348,15 +2220,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The name of the instance in which the backup will be
-        created. This must be the same
-         *        instance that contains the database the
-        backup will be created from. The backup will be
-         *        stored in the
-        location(s) specified in the instance configuration of this
-        instance. Values
-         *        are of the form
-        `projects//instances/`.
+           * @param parent Required. The name of the instance in which the backup will be created. This must be the same
+         *        instance that contains the database the backup will be created from. The backup will be
+         *        stored in the location(s) specified in the instance configuration of this instance. Values
+         *        are of the form `projects//instances/`.
            * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
            * @since 1.13
            */
@@ -2495,9 +2362,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the backup to delete.
-        Values are of the form
-        `projects//instances//backups/`.
+         * @param name Required. Name of the backup to delete. Values are of the form `projects//instances//backups/`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2523,9 +2388,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the backup to delete.
-        Values are of the form
-        `projects//instances//backups/`.
+           * @param name Required. Name of the backup to delete. Values are of the form `projects//instances//backups/`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -2633,9 +2496,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the backup.
-        Values are of the form
-        `projects//instances//backups/`.
+         * @param name Required. Name of the backup. Values are of the form `projects//instances//backups/`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2661,9 +2522,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the backup.
-        Values are of the form
-        `projects//instances//backups/`.
+           * @param name Required. Name of the backup. Values are of the form `projects//instances//backups/`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2773,10 +2632,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
         /**
          * Gets the access control policy for a database or backup resource. Returns an empty policy if a
-         * database or backup exists but does not have a policy set.
-         *
-         * Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups,
-         * authorization requires `spanner.backups.getIamPolicy` permission on resource.
+         * database or backup exists but does not have a policy set. Authorization requires
+         * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
+         * `spanner.backups.getIamPolicy` permission on resource.
          *
          * Create a request for the method "backups.getIamPolicy".
          *
@@ -2804,10 +2662,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Gets the access control policy for a database or backup resource. Returns an empty policy if a
-           * database or backup exists but does not have a policy set.
-           *
-           * Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups,
-           * authorization requires `spanner.backups.getIamPolicy` permission on resource.
+           * database or backup exists but does not have a policy set. Authorization requires
+           * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
+           * `spanner.backups.getIamPolicy` permission on resource.
            *
            * Create a request for the method "backups.getIamPolicy".
            *
@@ -2933,8 +2790,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The instance to list backups from.  Values are of the
-        form `projects//instances/`.
+         * @param parent Required. The instance to list backups from. Values are of the form `projects//instances/`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2961,8 +2817,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The instance to list backups from.  Values are of the
-        form `projects//instances/`.
+           * @param parent Required. The instance to list backups from. Values are of the form `projects//instances/`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3041,20 +2896,20 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. The instance to list backups from.  Values are of the form
+           * Required. The instance to list backups from. Values are of the form
            * `projects//instances/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The instance to list backups from.  Values are of the form `projects//instances/`.
+          /** Required. The instance to list backups from. Values are of the form `projects//instances/`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The instance to list backups from.  Values are of the form
+           * Required. The instance to list backups from. Values are of the form
            * `projects//instances/`.
            */
           public List setParent(java.lang.String parent) {
@@ -3068,94 +2923,65 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * An expression that filters the list of returned backups.
-           *
-           * A filter expression consists of a field name, a comparison operator, and a value for
-           * filtering. The value must be a string, a number, or a boolean. The comparison operator
-           * must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains
-           * operator. Filter rules are not case sensitive.
-           *
-           * The following fields in the Backup are eligible for filtering:
-           *
-           * * `name` * `database` * `state` * `create_time` (and values are of the format YYYY-MM-
+           * An expression that filters the list of returned backups. A filter expression consists
+           * of a field name, a comparison operator, and a value for filtering. The value must be a
+           * string, a number, or a boolean. The comparison operator must be one of: `<`, `>`, `<=`,
+           * `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules are not case
+           * sensitive. The following fields in the Backup are eligible for filtering: * `name` *
+           * `database` * `state` * `create_time` (and values are of the format YYYY-MM-
            * DDTHH:MM:SSZ) * `expire_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) *
-           * `size_bytes`
-           *
-           * You can combine multiple expressions by enclosing each expression in parentheses. By
-           * default, expressions are combined with AND logic, but you can specify AND, OR, and NOT
-           * logic explicitly.
-           *
-           * Here are a few examples:
-           *
-           * * `name:Howl` - The backup's name contains the string "howl". * `database:prod` - The
-           * database's name contains the string "prod". * `state:CREATING` - The backup is pending
-           * creation. * `state:READY` - The backup is fully created and ready for use. *
-           * `(name:howl) AND (create_time < \"2018-03-28T14:50:00Z\")` - The backup name contains
-           * the string "howl" and `create_time` of the backup is before 2018-03-28T14:50:00Z. *
-           * `expire_time < \"2018-03-28T14:50:00Z\"` - The backup `expire_time` is before
-           * 2018-03-28T14:50:00Z. * `size_bytes > 10000000000` - The backup's size is greater than
-           * 10GB
+           * `size_bytes` You can combine multiple expressions by enclosing each expression in
+           * parentheses. By default, expressions are combined with AND logic, but you can specify
+           * AND, OR, and NOT logic explicitly. Here are a few examples: * `name:Howl` - The
+           * backup's name contains the string "howl". * `database:prod` - The database's name
+           * contains the string "prod". * `state:CREATING` - The backup is pending creation. *
+           * `state:READY` - The backup is fully created and ready for use. * `(name:howl) AND
+           * (create_time < \"2018-03-28T14:50:00Z\")` - The backup name contains the string "howl"
+           * and `create_time` of the backup is before 2018-03-28T14:50:00Z. * `expire_time <
+           * \"2018-03-28T14:50:00Z\"` - The backup `expire_time` is before 2018-03-28T14:50:00Z. *
+           * `size_bytes > 10000000000` - The backup's size is greater than 10GB
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** An expression that filters the list of returned backups.
-
-         A filter expression consists of a field name, a comparison operator, and a value for filtering. The
-         value must be a string, a number, or a boolean. The comparison operator must be one of: `<`, `>`,
-         `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules are not case
-         sensitive.
-
-         The following fields in the Backup are eligible for filtering:
-
-         * `name` * `database` * `state` * `create_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ)
-         * `expire_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) * `size_bytes`
-
-         You can combine multiple expressions by enclosing each expression in parentheses. By default,
-         expressions are combined with AND logic, but you can specify AND, OR, and NOT logic explicitly.
-
-         Here are a few examples:
-
-         * `name:Howl` - The backup's name contains the string "howl". * `database:prod` - The database's
-         name contains the string "prod". * `state:CREATING` - The backup is pending creation. *
-         `state:READY` - The backup is fully created and ready for use. * `(name:howl) AND (create_time <
-         \"2018-03-28T14:50:00Z\")` - The backup name contains the string "howl" and `create_time` of the
-         backup is before 2018-03-28T14:50:00Z. * `expire_time < \"2018-03-28T14:50:00Z\"` - The backup
-         `expire_time` is before 2018-03-28T14:50:00Z. * `size_bytes > 10000000000` - The backup's size is
-         greater than 10GB
+          /** An expression that filters the list of returned backups. A filter expression consists of a field
+         name, a comparison operator, and a value for filtering. The value must be a string, a number, or a
+         boolean. The comparison operator must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:`
+         is the contains operator. Filter rules are not case sensitive. The following fields in the Backup
+         are eligible for filtering: * `name` * `database` * `state` * `create_time` (and values are of the
+         format YYYY-MM-DDTHH:MM:SSZ) * `expire_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) *
+         `size_bytes` You can combine multiple expressions by enclosing each expression in parentheses. By
+         default, expressions are combined with AND logic, but you can specify AND, OR, and NOT logic
+         explicitly. Here are a few examples: * `name:Howl` - The backup's name contains the string "howl".
+         * `database:prod` - The database's name contains the string "prod". * `state:CREATING` - The backup
+         is pending creation. * `state:READY` - The backup is fully created and ready for use. *
+         `(name:howl) AND (create_time < \"2018-03-28T14:50:00Z\")` - The backup name contains the string
+         "howl" and `create_time` of the backup is before 2018-03-28T14:50:00Z. * `expire_time <
+         \"2018-03-28T14:50:00Z\"` - The backup `expire_time` is before 2018-03-28T14:50:00Z. * `size_bytes
+         > 10000000000` - The backup's size is greater than 10GB
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * An expression that filters the list of returned backups.
-           *
-           * A filter expression consists of a field name, a comparison operator, and a value for
-           * filtering. The value must be a string, a number, or a boolean. The comparison operator
-           * must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains
-           * operator. Filter rules are not case sensitive.
-           *
-           * The following fields in the Backup are eligible for filtering:
-           *
-           * * `name` * `database` * `state` * `create_time` (and values are of the format YYYY-MM-
+           * An expression that filters the list of returned backups. A filter expression consists
+           * of a field name, a comparison operator, and a value for filtering. The value must be a
+           * string, a number, or a boolean. The comparison operator must be one of: `<`, `>`, `<=`,
+           * `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules are not case
+           * sensitive. The following fields in the Backup are eligible for filtering: * `name` *
+           * `database` * `state` * `create_time` (and values are of the format YYYY-MM-
            * DDTHH:MM:SSZ) * `expire_time` (and values are of the format YYYY-MM-DDTHH:MM:SSZ) *
-           * `size_bytes`
-           *
-           * You can combine multiple expressions by enclosing each expression in parentheses. By
-           * default, expressions are combined with AND logic, but you can specify AND, OR, and NOT
-           * logic explicitly.
-           *
-           * Here are a few examples:
-           *
-           * * `name:Howl` - The backup's name contains the string "howl". * `database:prod` - The
-           * database's name contains the string "prod". * `state:CREATING` - The backup is pending
-           * creation. * `state:READY` - The backup is fully created and ready for use. *
-           * `(name:howl) AND (create_time < \"2018-03-28T14:50:00Z\")` - The backup name contains
-           * the string "howl" and `create_time` of the backup is before 2018-03-28T14:50:00Z. *
-           * `expire_time < \"2018-03-28T14:50:00Z\"` - The backup `expire_time` is before
-           * 2018-03-28T14:50:00Z. * `size_bytes > 10000000000` - The backup's size is greater than
-           * 10GB
+           * `size_bytes` You can combine multiple expressions by enclosing each expression in
+           * parentheses. By default, expressions are combined with AND logic, but you can specify
+           * AND, OR, and NOT logic explicitly. Here are a few examples: * `name:Howl` - The
+           * backup's name contains the string "howl". * `database:prod` - The database's name
+           * contains the string "prod". * `state:CREATING` - The backup is pending creation. *
+           * `state:READY` - The backup is fully created and ready for use. * `(name:howl) AND
+           * (create_time < \"2018-03-28T14:50:00Z\")` - The backup name contains the string "howl"
+           * and `create_time` of the backup is before 2018-03-28T14:50:00Z. * `expire_time <
+           * \"2018-03-28T14:50:00Z\"` - The backup `expire_time` is before 2018-03-28T14:50:00Z. *
+           * `size_bytes > 10000000000` - The backup's size is greater than 10GB
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -3221,21 +3047,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only for the CreateBackup operation.
-        Required for the UpdateBackup operation.
-        A globally
-         *        unique identifier for the backup which cannot be
-        changed. Values are of the form
-         *        `projects//instances//backups/a-z*[a-z0-9]`
-        The final segment of the name must be between
-         *        2 and 60 characters
-        in length.
-        The backup is stored in the location(s) specified in the
-         *        instance
-        configuration of the instance containing the backup, identified
-        by the prefix of
-         *        the backup name of the form
-        `projects//instances/`.
+         * @param name Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
+         *        unique identifier for the backup which cannot be changed. Values are of the form
+         *        `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between
+         *        2 and 60 characters in length. The backup is stored in the location(s) specified in the
+         *        instance configuration of the instance containing the backup, identified by the prefix of
+         *        the backup name of the form `projects//instances/`.
          * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
          * @return the request
          */
@@ -3262,21 +3079,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only for the CreateBackup operation.
-        Required for the UpdateBackup operation.
-        A globally
-         *        unique identifier for the backup which cannot be
-        changed. Values are of the form
-         *        `projects//instances//backups/a-z*[a-z0-9]`
-        The final segment of the name must be between
-         *        2 and 60 characters
-        in length.
-        The backup is stored in the location(s) specified in the
-         *        instance
-        configuration of the instance containing the backup, identified
-        by the prefix of
-         *        the backup name of the form
-        `projects//instances/`.
+           * @param name Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
+         *        unique identifier for the backup which cannot be changed. Values are of the form
+         *        `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between
+         *        2 and 60 characters in length. The backup is stored in the location(s) specified in the
+         *        instance configuration of the instance containing the backup, identified by the prefix of
+         *        the backup name of the form `projects//instances/`.
            * @param content the {@link com.google.api.services.spanner.v1.model.Backup}
            * @since 1.13
            */
@@ -3346,43 +3154,34 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Output only for the CreateBackup operation. Required for the UpdateBackup operation.
-           *
-           * A globally unique identifier for the backup which cannot be changed. Values are of the
+           * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A
+           * globally unique identifier for the backup which cannot be changed. Values are of the
            * form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be
-           * between 2 and 60 characters in length.
-           *
-           * The backup is stored in the location(s) specified in the instance configuration of the
-           * instance containing the backup, identified by the prefix of the backup name of the form
-           * `projects//instances/`.
+           * between 2 and 60 characters in length. The backup is stored in the location(s)
+           * specified in the instance configuration of the instance containing the backup,
+           * identified by the prefix of the backup name of the form `projects//instances/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only for the CreateBackup operation. Required for the UpdateBackup operation.
-
-         A globally unique identifier for the backup which cannot be changed. Values are of the form
+          /** Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
+         unique identifier for the backup which cannot be changed. Values are of the form
          `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60
-         characters in length.
-
-         The backup is stored in the location(s) specified in the instance configuration of the instance
-         containing the backup, identified by the prefix of the backup name of the form
-         `projects//instances/`.
+         characters in length. The backup is stored in the location(s) specified in the instance
+         configuration of the instance containing the backup, identified by the prefix of the backup name of
+         the form `projects//instances/`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only for the CreateBackup operation. Required for the UpdateBackup operation.
-           *
-           * A globally unique identifier for the backup which cannot be changed. Values are of the
+           * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A
+           * globally unique identifier for the backup which cannot be changed. Values are of the
            * form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be
-           * between 2 and 60 characters in length.
-           *
-           * The backup is stored in the location(s) specified in the instance configuration of the
-           * instance containing the backup, identified by the prefix of the backup name of the form
-           * `projects//instances/`.
+           * between 2 and 60 characters in length. The backup is stored in the location(s)
+           * specified in the instance configuration of the instance containing the backup,
+           * identified by the prefix of the backup name of the form `projects//instances/`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3430,7 +3229,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
         /**
          * Sets the access control policy on a database or backup resource. Replaces any existing policy.
-         *
          * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
          * authorization requires `spanner.backups.setIamPolicy` permission on resource.
          *
@@ -3460,7 +3258,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Sets the access control policy on a database or backup resource. Replaces any existing policy.
-           *
            * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
            * authorization requires `spanner.backups.setIamPolicy` permission on resource.
            *
@@ -3580,13 +3377,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Returns permissions that the caller has on the specified database or backup resource.
-         *
-         * Attempting this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error if
-         * the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
-         * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
-         * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
-         * containing instance.
+         * Returns permissions that the caller has on the specified database or backup resource. Attempting
+         * this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error if the user
+         * has `spanner.databases.list` permission on the containing Cloud Spanner instance. Otherwise
+         * returns an empty set of permissions. Calling this method on a backup that does not exist will
+         * result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the containing
+         * instance.
          *
          * Create a request for the method "backups.testIamPermissions".
          *
@@ -3614,7 +3410,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Returns permissions that the caller has on the specified database or backup resource.
-           *
            * Attempting this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error
            * if the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
            * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
@@ -3758,9 +3553,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         public class Operations {
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-           * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-           * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
            * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -3788,13 +3583,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/backups/[^/]+/operations/[^/]+$");
 
             /**
-             * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-             * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-             * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-             * other methods to check whether the cancellation succeeded or whether the operation completed
-             * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-             * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-             * corresponding to `Code.CANCELLED`.
+             * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+             * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+             * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+             * methods to check whether the cancellation succeeded or whether the operation completed despite
+             * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * `Code.CANCELLED`.
              *
              * Create a request for the method "operations.cancel".
              *
@@ -4030,7 +3825,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -4055,7 +3850,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/backups/[^/]+/operations/[^/]+$");
 
             /**
-             * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
              * operation result at intervals as recommended by the API service.
              *
              * Create a request for the method "operations.get".
@@ -4171,13 +3966,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-           * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+           * the binding to use different resource name schemes, such as `users/operations`. To override the
+           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -4202,13 +3996,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`.
-             *
-             * NOTE: the `name` binding allows API services to override the binding to use different resource
-             * name schemes, such as `users/operations`. To override the binding, API services can add a
-             * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-             * compatibility, the default name includes the operations collection id, however overriding users
-             * must ensure the name binding is the parent resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+             * override the binding to use different resource name schemes, such as `users/operations`. To
+             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+             * their service configuration. For backwards compatibility, the default name includes the
+             * operations collection id, however overriding users must ensure the name binding is the parent
+             * resource, without the operations collection id.
              *
              * Create a request for the method "operations.list".
              *
@@ -4403,8 +4196,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The instance of the database operations.
-        Values are of the form `projects//instances/`.
+         * @param parent Required. The instance of the database operations. Values are of the form `projects//instances/`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4433,8 +4225,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The instance of the database operations.
-        Values are of the form `projects//instances/`.
+           * @param parent Required. The instance of the database operations. Values are of the form `projects//instances/`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4540,110 +4331,80 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * An expression that filters the list of returned operations.
-           *
-           * A filter expression consists of a field name, a comparison operator, and a value for
-           * filtering. The value must be a string, a number, or a boolean. The comparison operator
-           * must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains
-           * operator. Filter rules are not case sensitive.
-           *
-           * The following fields in the Operation are eligible for filtering:
-           *
-           * * `name` - The name of the long-running operation * `done` - False if the operation is
-           * in progress, else true. * `metadata.@type` - the type of metadata. For example, the
-           * type string for RestoreDatabaseMetadata is
+           * An expression that filters the list of returned operations. A filter expression
+           * consists of a field name, a comparison operator, and a value for filtering. The value
+           * must be a string, a number, or a boolean. The comparison operator must be one of: `<`,
+           * `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules
+           * are not case sensitive. The following fields in the Operation are eligible for
+           * filtering: * `name` - The name of the long-running operation * `done` - False if the
+           * operation is in progress, else true. * `metadata.@type` - the type of metadata. For
+           * example, the type string for RestoreDatabaseMetadata is
            * `type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata`. *
            * `metadata.` - any field in metadata.value. * `error` - Error associated with the long-
            * running operation. * `response.@type` - the type of response. * `response.` - any field
-           * in response.value.
-           *
-           * You can combine multiple expressions by enclosing each expression in parentheses. By
-           * default, expressions are combined with AND logic. However, you can specify AND, OR, and
-           * NOT logic explicitly.
-           *
-           * Here are a few examples:
-           *
-           * * `done:true` - The operation is complete. * `(metadata.@type=type.googleapis.com/googl
-           * e.spanner.admin.database.v1.RestoreDatabaseMetadata) AND`
-           * `(metadata.source_type:BACKUP) AND` `(metadata.backup_info.backup:backup_howl) AND`
-           * `(metadata.name:restored_howl) AND` `(metadata.progress.start_time <
-           * \"2018-03-28T14:50:00Z\") AND` `(error:*)` - Return operations where: * The operation's
-           * metadata type is RestoreDatabaseMetadata. * The database is restored from a backup. *
-           * The backup name contains "backup_howl". * The restored database's name contains
-           * "restored_howl". * The operation started before 2018-03-28T14:50:00Z. * The operation
-           * resulted in an error.
+           * in response.value. You can combine multiple expressions by enclosing each expression in
+           * parentheses. By default, expressions are combined with AND logic. However, you can
+           * specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
+           * operation is complete. * `(metadata.@type=type.googleapis.com/google.spanner.admin.data
+           * base.v1.RestoreDatabaseMetadata) AND` \ `(metadata.source_type:BACKUP) AND` \
+           * `(metadata.backup_info.backup:backup_howl) AND` \ `(metadata.name:restored_howl) AND` \
+           * `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \ `(error:*)` - Return
+           * operations where: * The operation's metadata type is RestoreDatabaseMetadata. * The
+           * database is restored from a backup. * The backup name contains "backup_howl". * The
+           * restored database's name contains "restored_howl". * The operation started before
+           * 2018-03-28T14:50:00Z. * The operation resulted in an error.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** An expression that filters the list of returned operations.
-
-         A filter expression consists of a field name, a comparison operator, and a value for filtering. The
-         value must be a string, a number, or a boolean. The comparison operator must be one of: `<`, `>`,
-         `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules are not case
-         sensitive.
-
-         The following fields in the Operation are eligible for filtering:
-
-         * `name` - The name of the long-running operation * `done` - False if the operation is in progress,
-         else true. * `metadata.@type` - the type of metadata. For example, the type string for
-         RestoreDatabaseMetadata is
+          /** An expression that filters the list of returned operations. A filter expression consists of a field
+         name, a comparison operator, and a value for filtering. The value must be a string, a number, or a
+         boolean. The comparison operator must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:`
+         is the contains operator. Filter rules are not case sensitive. The following fields in the
+         Operation are eligible for filtering: * `name` - The name of the long-running operation * `done` -
+         False if the operation is in progress, else true. * `metadata.@type` - the type of metadata. For
+         example, the type string for RestoreDatabaseMetadata is
          `type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata`. * `metadata.` - any
          field in metadata.value. * `error` - Error associated with the long-running operation. *
-         `response.@type` - the type of response. * `response.` - any field in response.value.
-
-         You can combine multiple expressions by enclosing each expression in parentheses. By default,
-         expressions are combined with AND logic. However, you can specify AND, OR, and NOT logic
-         explicitly.
-
-         Here are a few examples:
-
-         * `done:true` - The operation is complete. *
+         `response.@type` - the type of response. * `response.` - any field in response.value. You can
+         combine multiple expressions by enclosing each expression in parentheses. By default, expressions
+         are combined with AND logic. However, you can specify AND, OR, and NOT logic explicitly. Here are a
+         few examples: * `done:true` - The operation is complete. *
          `(metadata.@type=type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata) AND`
-         `(metadata.source_type:BACKUP) AND` `(metadata.backup_info.backup:backup_howl) AND`
-         `(metadata.name:restored_howl) AND` `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND`
-         `(error:*)` - Return operations where: * The operation's metadata type is RestoreDatabaseMetadata.
-         * The database is restored from a backup. * The backup name contains "backup_howl". * The restored
-         database's name contains "restored_howl". * The operation started before 2018-03-28T14:50:00Z. *
-         The operation resulted in an error.
+         \ `(metadata.source_type:BACKUP) AND` \ `(metadata.backup_info.backup:backup_howl) AND` \
+         `(metadata.name:restored_howl) AND` \ `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\")
+         AND` \ `(error:*)` - Return operations where: * The operation's metadata type is
+         RestoreDatabaseMetadata. * The database is restored from a backup. * The backup name contains
+         "backup_howl". * The restored database's name contains "restored_howl". * The operation started
+         before 2018-03-28T14:50:00Z. * The operation resulted in an error.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * An expression that filters the list of returned operations.
-           *
-           * A filter expression consists of a field name, a comparison operator, and a value for
-           * filtering. The value must be a string, a number, or a boolean. The comparison operator
-           * must be one of: `<`, `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains
-           * operator. Filter rules are not case sensitive.
-           *
-           * The following fields in the Operation are eligible for filtering:
-           *
-           * * `name` - The name of the long-running operation * `done` - False if the operation is
-           * in progress, else true. * `metadata.@type` - the type of metadata. For example, the
-           * type string for RestoreDatabaseMetadata is
+           * An expression that filters the list of returned operations. A filter expression
+           * consists of a field name, a comparison operator, and a value for filtering. The value
+           * must be a string, a number, or a boolean. The comparison operator must be one of: `<`,
+           * `>`, `<=`, `>=`, `!=`, `=`, or `:`. Colon `:` is the contains operator. Filter rules
+           * are not case sensitive. The following fields in the Operation are eligible for
+           * filtering: * `name` - The name of the long-running operation * `done` - False if the
+           * operation is in progress, else true. * `metadata.@type` - the type of metadata. For
+           * example, the type string for RestoreDatabaseMetadata is
            * `type.googleapis.com/google.spanner.admin.database.v1.RestoreDatabaseMetadata`. *
            * `metadata.` - any field in metadata.value. * `error` - Error associated with the long-
            * running operation. * `response.@type` - the type of response. * `response.` - any field
-           * in response.value.
-           *
-           * You can combine multiple expressions by enclosing each expression in parentheses. By
-           * default, expressions are combined with AND logic. However, you can specify AND, OR, and
-           * NOT logic explicitly.
-           *
-           * Here are a few examples:
-           *
-           * * `done:true` - The operation is complete. * `(metadata.@type=type.googleapis.com/googl
-           * e.spanner.admin.database.v1.RestoreDatabaseMetadata) AND`
-           * `(metadata.source_type:BACKUP) AND` `(metadata.backup_info.backup:backup_howl) AND`
-           * `(metadata.name:restored_howl) AND` `(metadata.progress.start_time <
-           * \"2018-03-28T14:50:00Z\") AND` `(error:*)` - Return operations where: * The operation's
-           * metadata type is RestoreDatabaseMetadata. * The database is restored from a backup. *
-           * The backup name contains "backup_howl". * The restored database's name contains
-           * "restored_howl". * The operation started before 2018-03-28T14:50:00Z. * The operation
-           * resulted in an error.
+           * in response.value. You can combine multiple expressions by enclosing each expression in
+           * parentheses. By default, expressions are combined with AND logic. However, you can
+           * specify AND, OR, and NOT logic explicitly. Here are a few examples: * `done:true` - The
+           * operation is complete. * `(metadata.@type=type.googleapis.com/google.spanner.admin.data
+           * base.v1.RestoreDatabaseMetadata) AND` \ `(metadata.source_type:BACKUP) AND` \
+           * `(metadata.backup_info.backup:backup_howl) AND` \ `(metadata.name:restored_howl) AND` \
+           * `(metadata.progress.start_time < \"2018-03-28T14:50:00Z\") AND` \ `(error:*)` - Return
+           * operations where: * The operation's metadata type is RestoreDatabaseMetadata. * The
+           * database is restored from a backup. * The backup name contains "backup_howl". * The
+           * restored database's name contains "restored_howl". * The operation started before
+           * 2018-03-28T14:50:00Z. * The operation resulted in an error.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -4734,8 +4495,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The name of the instance that will serve the new database.
-        Values are of the form
+         * @param parent Required. The name of the instance that will serve the new database. Values are of the form
          *        `projects//instances/`.
          * @param content the {@link com.google.api.services.spanner.v1.model.CreateDatabaseRequest}
          * @return the request
@@ -4766,8 +4526,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The name of the instance that will serve the new database.
-        Values are of the form
+           * @param parent Required. The name of the instance that will serve the new database. Values are of the form
          *        `projects//instances/`.
            * @param content the {@link com.google.api.services.spanner.v1.model.CreateDatabaseRequest}
            * @since 1.13
@@ -5157,7 +4916,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link GetDdl#execute()} method to invoke the remote operation.
          *
-         * @param database Required. The database whose schema we wish to get.
+         * @param database Required. The database whose schema we wish to get. Values are of the form
+         *        `projects//instances//databases/`
          * @return the request
          */
         public GetDdl getDdl(java.lang.String database) throws java.io.IOException {
@@ -5184,7 +4944,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * GetDdl#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param database Required. The database whose schema we wish to get.
+           * @param database Required. The database whose schema we wish to get. Values are of the form
+         *        `projects//instances//databases/`
            * @since 1.13
            */
           protected GetDdl(java.lang.String database) {
@@ -5262,17 +5023,24 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             return (GetDdl) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The database whose schema we wish to get. */
+          /**
+           * Required. The database whose schema we wish to get. Values are of the form
+           * `projects//instances//databases/`
+           */
           @com.google.api.client.util.Key
           private java.lang.String database;
 
-          /** Required. The database whose schema we wish to get.
+          /** Required. The database whose schema we wish to get. Values are of the form
+         `projects//instances//databases/`
            */
           public java.lang.String getDatabase() {
             return database;
           }
 
-          /** Required. The database whose schema we wish to get. */
+          /**
+           * Required. The database whose schema we wish to get. Values are of the form
+           * `projects//instances//databases/`
+           */
           public GetDdl setDatabase(java.lang.String database) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
@@ -5290,10 +5058,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
         /**
          * Gets the access control policy for a database or backup resource. Returns an empty policy if a
-         * database or backup exists but does not have a policy set.
-         *
-         * Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups,
-         * authorization requires `spanner.backups.getIamPolicy` permission on resource.
+         * database or backup exists but does not have a policy set. Authorization requires
+         * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
+         * `spanner.backups.getIamPolicy` permission on resource.
          *
          * Create a request for the method "databases.getIamPolicy".
          *
@@ -5321,10 +5088,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Gets the access control policy for a database or backup resource. Returns an empty policy if a
-           * database or backup exists but does not have a policy set.
-           *
-           * Authorization requires `spanner.databases.getIamPolicy` permission on resource. For backups,
-           * authorization requires `spanner.backups.getIamPolicy` permission on resource.
+           * database or backup exists but does not have a policy set. Authorization requires
+           * `spanner.databases.getIamPolicy` permission on resource. For backups, authorization requires
+           * `spanner.backups.getIamPolicy` permission on resource.
            *
            * Create a request for the method "databases.getIamPolicy".
            *
@@ -5449,8 +5215,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The instance whose databases should be listed.
-        Values are of the form
+         * @param parent Required. The instance whose databases should be listed. Values are of the form
          *        `projects//instances/`.
          * @return the request
          */
@@ -5477,8 +5242,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The instance whose databases should be listed.
-        Values are of the form
+           * @param parent Required. The instance whose databases should be listed. Values are of the form
          *        `projects//instances/`.
            * @since 1.13
            */
@@ -5651,12 +5415,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The name of the instance in which to create the
-        restored database. This instance must be
-         *        in the same project and
-        have the same instance configuration as the instance containing
-         *        the source backup. Values are of the form
-        `projects//instances/`.
+         * @param parent Required. The name of the instance in which to create the restored database. This instance must be
+         *        in the same project and have the same instance configuration as the instance containing
+         *        the source backup. Values are of the form `projects//instances/`.
          * @param content the {@link com.google.api.services.spanner.v1.model.RestoreDatabaseRequest}
          * @return the request
          */
@@ -5692,12 +5453,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The name of the instance in which to create the
-        restored database. This instance must be
-         *        in the same project and
-        have the same instance configuration as the instance containing
-         *        the source backup. Values are of the form
-        `projects//instances/`.
+           * @param parent Required. The name of the instance in which to create the restored database. This instance must be
+         *        in the same project and have the same instance configuration as the instance containing
+         *        the source backup. Values are of the form `projects//instances/`.
            * @param content the {@link com.google.api.services.spanner.v1.model.RestoreDatabaseRequest}
            * @since 1.13
            */
@@ -5804,7 +5562,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
         /**
          * Sets the access control policy on a database or backup resource. Replaces any existing policy.
-         *
          * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
          * authorization requires `spanner.backups.setIamPolicy` permission on resource.
          *
@@ -5834,7 +5591,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Sets the access control policy on a database or backup resource. Replaces any existing policy.
-           *
            * Authorization requires `spanner.databases.setIamPolicy` permission on resource. For backups,
            * authorization requires `spanner.backups.setIamPolicy` permission on resource.
            *
@@ -5954,13 +5710,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Returns permissions that the caller has on the specified database or backup resource.
-         *
-         * Attempting this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error if
-         * the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
-         * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
-         * exist will result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the
-         * containing instance.
+         * Returns permissions that the caller has on the specified database or backup resource. Attempting
+         * this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error if the user
+         * has `spanner.databases.list` permission on the containing Cloud Spanner instance. Otherwise
+         * returns an empty set of permissions. Calling this method on a backup that does not exist will
+         * result in a NOT_FOUND error if the user has `spanner.backups.list` permission on the containing
+         * instance.
          *
          * Create a request for the method "databases.testIamPermissions".
          *
@@ -5988,7 +5743,6 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Returns permissions that the caller has on the specified database or backup resource.
-           *
            * Attempting this RPC on a non-existent Cloud Spanner database will result in a NOT_FOUND error
            * if the user has `spanner.databases.list` permission on the containing Cloud Spanner instance.
            * Otherwise returns an empty set of permissions. Calling this method on a backup that does not
@@ -6114,7 +5868,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
          * Updates the schema of a Cloud Spanner database by creating/altering/dropping tables, columns,
          * indexes, etc. The returned long-running operation will have a name of the format `/operations/`
          * and can be used to track execution of the schema change(s). The metadata field type is
-         * UpdateDatabaseDdlMetadata.  The operation has no response.
+         * UpdateDatabaseDdlMetadata. The operation has no response.
          *
          * Create a request for the method "databases.updateDdl".
          *
@@ -6142,7 +5896,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * Updates the schema of a Cloud Spanner database by creating/altering/dropping tables, columns,
            * indexes, etc. The returned long-running operation will have a name of the format `/operations/`
            * and can be used to track execution of the schema change(s). The metadata field type is
-           * UpdateDatabaseDdlMetadata.  The operation has no response.
+           * UpdateDatabaseDdlMetadata. The operation has no response.
            *
            * Create a request for the method "databases.updateDdl".
            *
@@ -6269,9 +6023,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         public class Operations {
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-           * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-           * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
            * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -6299,13 +6053,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/operations/[^/]+$");
 
             /**
-             * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-             * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-             * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-             * other methods to check whether the cancellation succeeded or whether the operation completed
-             * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-             * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-             * corresponding to `Code.CANCELLED`.
+             * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+             * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+             * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+             * methods to check whether the cancellation succeeded or whether the operation completed despite
+             * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * `Code.CANCELLED`.
              *
              * Create a request for the method "operations.cancel".
              *
@@ -6541,7 +6295,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -6566,7 +6320,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/operations/[^/]+$");
 
             /**
-             * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
              * operation result at intervals as recommended by the API service.
              *
              * Create a request for the method "operations.get".
@@ -6682,13 +6436,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-           * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+           * the binding to use different resource name schemes, such as `users/operations`. To override the
+           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -6713,13 +6466,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`.
-             *
-             * NOTE: the `name` binding allows API services to override the binding to use different resource
-             * name schemes, such as `users/operations`. To override the binding, API services can add a
-             * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-             * compatibility, the default name includes the operations collection id, however overriding users
-             * must ensure the name binding is the parent resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+             * override the binding to use different resource name schemes, such as `users/operations`. To
+             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+             * their service configuration. For backwards compatibility, the default name includes the
+             * operations collection id, however overriding users must ensure the name binding is the parent
+             * resource, without the operations collection id.
              *
              * Create a request for the method "operations.list".
              *
@@ -6903,10 +6655,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         public class Sessions {
 
           /**
-           * Creates multiple new sessions.
-           *
-           * This API can be used to initialize a session cache on the clients. See https://goo.gl/TgSFN2 for
-           * best practices on session cache management.
+           * Creates multiple new sessions. This API can be used to initialize a session cache on the clients.
+           * See https://goo.gl/TgSFN2 for best practices on session cache management.
            *
            * Create a request for the method "sessions.batchCreate".
            *
@@ -6931,10 +6681,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
                 java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
 
             /**
-             * Creates multiple new sessions.
-             *
-             * This API can be used to initialize a session cache on the clients. See https://goo.gl/TgSFN2
-             * for best practices on session cache management.
+             * Creates multiple new sessions. This API can be used to initialize a session cache on the
+             * clients. See https://goo.gl/TgSFN2 for best practices on session cache management.
              *
              * Create a request for the method "sessions.batchCreate".
              *
@@ -7174,11 +6922,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
           /**
            * Commits a transaction. The request includes the mutations to be applied to rows in the database.
-           *
            * `Commit` might return an `ABORTED` error. This can occur at any time; commonly, the cause is
            * conflicts with concurrent transactions. However, it can also happen for a variety of other
            * reasons. If `Commit` returns `ABORTED`, the caller should re-attempt the transaction from the
-           * beginning, re-using the same session.
+           * beginning, re-using the same session. On very rare occasions, `Commit` might return `UNKNOWN`.
+           * This can happen, for example, if the client job experiences a 1+ hour networking failure. At that
+           * point, Cloud Spanner has lost track of the transaction outcome and we recommend that you perform
+           * another read from the database to see the state of things as they are now.
            *
            * Create a request for the method "sessions.commit".
            *
@@ -7204,12 +6954,14 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * Commits a transaction. The request includes the mutations to be applied to rows in the
-             * database.
-             *
-             * `Commit` might return an `ABORTED` error. This can occur at any time; commonly, the cause is
-             * conflicts with concurrent transactions. However, it can also happen for a variety of other
-             * reasons. If `Commit` returns `ABORTED`, the caller should re-attempt the transaction from the
-             * beginning, re-using the same session.
+             * database. `Commit` might return an `ABORTED` error. This can occur at any time; commonly, the
+             * cause is conflicts with concurrent transactions. However, it can also happen for a variety of
+             * other reasons. If `Commit` returns `ABORTED`, the caller should re-attempt the transaction from
+             * the beginning, re-using the same session. On very rare occasions, `Commit` might return
+             * `UNKNOWN`. This can happen, for example, if the client job experiences a 1+ hour networking
+             * failure. At that point, Cloud Spanner has lost track of the transaction outcome and we
+             * recommend that you perform another read from the database to see the state of things as they
+             * are now.
              *
              * Create a request for the method "sessions.commit".
              *
@@ -7316,16 +7068,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Creates a new session. A session can be used to perform transactions that read and/or modify data
            * in a Cloud Spanner database. Sessions are meant to be reused for many consecutive transactions.
-           *
            * Sessions can only execute one transaction at a time. To execute multiple concurrent read-write
            * /write-only transactions, create multiple sessions. Note that standalone reads and queries use a
-           * transaction internally, and count toward the one transaction limit.
-           *
-           * Active sessions use additional server resources, so it is a good idea to delete idle and unneeded
-           * sessions. Aside from explicit deletes, Cloud Spanner may delete sessions for which no operations
-           * are sent for more than an hour. If a session is deleted, requests to it return `NOT_FOUND`.
-           *
-           * Idle sessions can be kept alive by sending a trivial SQL query periodically, e.g., `"SELECT 1"`.
+           * transaction internally, and count toward the one transaction limit. Active sessions use
+           * additional server resources, so it is a good idea to delete idle and unneeded sessions. Aside
+           * from explicit deletes, Cloud Spanner may delete sessions for which no operations are sent for
+           * more than an hour. If a session is deleted, requests to it return `NOT_FOUND`. Idle sessions can
+           * be kept alive by sending a trivial SQL query periodically, e.g., `"SELECT 1"`.
            *
            * Create a request for the method "sessions.create".
            *
@@ -7352,19 +7101,14 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Creates a new session. A session can be used to perform transactions that read and/or modify
              * data in a Cloud Spanner database. Sessions are meant to be reused for many consecutive
-             * transactions.
-             *
-             * Sessions can only execute one transaction at a time. To execute multiple concurrent read-write
-             * /write-only transactions, create multiple sessions. Note that standalone reads and queries use
-             * a transaction internally, and count toward the one transaction limit.
-             *
+             * transactions. Sessions can only execute one transaction at a time. To execute multiple
+             * concurrent read-write/write-only transactions, create multiple sessions. Note that standalone
+             * reads and queries use a transaction internally, and count toward the one transaction limit.
              * Active sessions use additional server resources, so it is a good idea to delete idle and
              * unneeded sessions. Aside from explicit deletes, Cloud Spanner may delete sessions for which no
              * operations are sent for more than an hour. If a session is deleted, requests to it return
-             * `NOT_FOUND`.
-             *
-             * Idle sessions can be kept alive by sending a trivial SQL query periodically, e.g., `"SELECT
-             * 1"`.
+             * `NOT_FOUND`. Idle sessions can be kept alive by sending a trivial SQL query periodically, e.g.,
+             * `"SELECT 1"`.
              *
              * Create a request for the method "sessions.create".
              *
@@ -7600,13 +7344,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
           /**
            * Executes a batch of SQL DML statements. This method allows many statements to be run with lower
-           * latency than submitting them sequentially with ExecuteSql.
-           *
-           * Statements are executed in sequential order. A request can succeed even if a statement fails. The
-           * ExecuteBatchDmlResponse.status field in the response provides information about the statement
-           * that failed. Clients must inspect this field to determine whether an error occurred.
-           *
-           * Execution stops after the first failed statement; the remaining statements are not executed.
+           * latency than submitting them sequentially with ExecuteSql. Statements are executed in sequential
+           * order. A request can succeed even if a statement fails. The ExecuteBatchDmlResponse.status field
+           * in the response provides information about the statement that failed. Clients must inspect this
+           * field to determine whether an error occurred. Execution stops after the first failed statement;
+           * the remaining statements are not executed.
            *
            * Create a request for the method "sessions.executeBatchDml".
            *
@@ -7632,13 +7374,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * Executes a batch of SQL DML statements. This method allows many statements to be run with lower
-             * latency than submitting them sequentially with ExecuteSql.
-             *
-             * Statements are executed in sequential order. A request can succeed even if a statement fails.
-             * The ExecuteBatchDmlResponse.status field in the response provides information about the
-             * statement that failed. Clients must inspect this field to determine whether an error occurred.
-             *
-             * Execution stops after the first failed statement; the remaining statements are not executed.
+             * latency than submitting them sequentially with ExecuteSql. Statements are executed in
+             * sequential order. A request can succeed even if a statement fails. The
+             * ExecuteBatchDmlResponse.status field in the response provides information about the statement
+             * that failed. Clients must inspect this field to determine whether an error occurred. Execution
+             * stops after the first failed statement; the remaining statements are not executed.
              *
              * Create a request for the method "sessions.executeBatchDml".
              *
@@ -7746,12 +7486,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Executes an SQL statement, returning all results in a single reply. This method cannot be used to
            * return a result set larger than 10 MiB; if the query yields more data than that, the query fails
-           * with a `FAILED_PRECONDITION` error.
-           *
-           * Operations inside read-write transactions might return `ABORTED`. If this occurs, the application
-           * should restart the transaction from the beginning. See Transaction for more details.
-           *
-           * Larger result sets can be fetched in streaming fashion by calling ExecuteStreamingSql instead.
+           * with a `FAILED_PRECONDITION` error. Operations inside read-write transactions might return
+           * `ABORTED`. If this occurs, the application should restart the transaction from the beginning. See
+           * Transaction for more details. Larger result sets can be fetched in streaming fashion by calling
+           * ExecuteStreamingSql instead.
            *
            * Create a request for the method "sessions.executeSql".
            *
@@ -7778,13 +7516,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Executes an SQL statement, returning all results in a single reply. This method cannot be used
              * to return a result set larger than 10 MiB; if the query yields more data than that, the query
-             * fails with a `FAILED_PRECONDITION` error.
-             *
-             * Operations inside read-write transactions might return `ABORTED`. If this occurs, the
-             * application should restart the transaction from the beginning. See Transaction for more
-             * details.
-             *
-             * Larger result sets can be fetched in streaming fashion by calling ExecuteStreamingSql instead.
+             * fails with a `FAILED_PRECONDITION` error. Operations inside read-write transactions might
+             * return `ABORTED`. If this occurs, the application should restart the transaction from the
+             * beginning. See Transaction for more details. Larger result sets can be fetched in streaming
+             * fashion by calling ExecuteStreamingSql instead.
              *
              * Create a request for the method "sessions.executeSql".
              *
@@ -8299,27 +8034,18 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * An expression for filtering the results of the request. Filter rules are case
-             * insensitive. The fields eligible for filtering are:
-             *
-             * * `labels.key` where key is the name of a label
-             *
-             * Some examples of using filters are:
-             *
-             * * `labels.env:*` --> The session has the label "env". * `labels.env:dev` --> The
-             * session has the label "env" and the value of the label contains the string "dev".
+             * insensitive. The fields eligible for filtering are: * `labels.key` where key is the
+             * name of a label Some examples of using filters are: * `labels.env:*` --> The session
+             * has the label "env". * `labels.env:dev` --> The session has the label "env" and the
+             * value of the label contains the string "dev".
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** An expression for filtering the results of the request. Filter rules are case insensitive. The
-           fields eligible for filtering are:
-
-           * `labels.key` where key is the name of a label
-
-           Some examples of using filters are:
-
-           * `labels.env:*` --> The session has the label "env". * `labels.env:dev` --> The session has the
-           label "env" and the value of the label contains the string "dev".
+           fields eligible for filtering are: * `labels.key` where key is the name of a label Some examples of
+           using filters are: * `labels.env:*` --> The session has the label "env". * `labels.env:dev` --> The
+           session has the label "env" and the value of the label contains the string "dev".
              */
             public java.lang.String getFilter() {
               return filter;
@@ -8327,14 +8053,10 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * An expression for filtering the results of the request. Filter rules are case
-             * insensitive. The fields eligible for filtering are:
-             *
-             * * `labels.key` where key is the name of a label
-             *
-             * Some examples of using filters are:
-             *
-             * * `labels.env:*` --> The session has the label "env". * `labels.env:dev` --> The
-             * session has the label "env" and the value of the label contains the string "dev".
+             * insensitive. The fields eligible for filtering are: * `labels.key` where key is the
+             * name of a label Some examples of using filters are: * `labels.env:*` --> The session
+             * has the label "env". * `labels.env:dev` --> The session has the label "env" and the
+             * value of the label contains the string "dev".
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -8392,15 +8114,14 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Creates a set of partition tokens that can be used to execute a query operation in parallel.
-           * Each of the returned partition tokens can be used by ExecuteStreamingSql to specify a subset of
-           * the query result to read.  The same session and read-only transaction must be used by the
+           * Creates a set of partition tokens that can be used to execute a query operation in parallel. Each
+           * of the returned partition tokens can be used by ExecuteStreamingSql to specify a subset of the
+           * query result to read. The same session and read-only transaction must be used by the
            * PartitionQueryRequest used to create the partition tokens and the ExecuteSqlRequests that use the
-           * partition tokens.
-           *
-           * Partition tokens become invalid when the session used to create them is deleted, is idle for too
-           * long, begins a new transaction, or becomes too old.  When any of these happen, it is not possible
-           * to resume the query, and the whole operation must be restarted from the beginning.
+           * partition tokens. Partition tokens become invalid when the session used to create them is
+           * deleted, is idle for too long, begins a new transaction, or becomes too old. When any of these
+           * happen, it is not possible to resume the query, and the whole operation must be restarted from
+           * the beginning.
            *
            * Create a request for the method "sessions.partitionQuery".
            *
@@ -8427,13 +8148,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Creates a set of partition tokens that can be used to execute a query operation in parallel.
              * Each of the returned partition tokens can be used by ExecuteStreamingSql to specify a subset of
-             * the query result to read.  The same session and read-only transaction must be used by the
+             * the query result to read. The same session and read-only transaction must be used by the
              * PartitionQueryRequest used to create the partition tokens and the ExecuteSqlRequests that use
-             * the partition tokens.
-             *
-             * Partition tokens become invalid when the session used to create them is deleted, is idle for
-             * too long, begins a new transaction, or becomes too old.  When any of these happen, it is not
-             * possible to resume the query, and the whole operation must be restarted from the beginning.
+             * the partition tokens. Partition tokens become invalid when the session used to create them is
+             * deleted, is idle for too long, begins a new transaction, or becomes too old. When any of these
+             * happen, it is not possible to resume the query, and the whole operation must be restarted from
+             * the beginning.
              *
              * Create a request for the method "sessions.partitionQuery".
              *
@@ -8539,15 +8259,14 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             }
           }
           /**
-           * Creates a set of partition tokens that can be used to execute a read operation in parallel.  Each
+           * Creates a set of partition tokens that can be used to execute a read operation in parallel. Each
            * of the returned partition tokens can be used by StreamingRead to specify a subset of the read
-           * result to read.  The same session and read-only transaction must be used by the
+           * result to read. The same session and read-only transaction must be used by the
            * PartitionReadRequest used to create the partition tokens and the ReadRequests that use the
-           * partition tokens.  There are no ordering guarantees on rows returned among the returned partition
+           * partition tokens. There are no ordering guarantees on rows returned among the returned partition
            * tokens, or even within each individual StreamingRead call issued with a partition_token.
-           *
            * Partition tokens become invalid when the session used to create them is deleted, is idle for too
-           * long, begins a new transaction, or becomes too old.  When any of these happen, it is not possible
+           * long, begins a new transaction, or becomes too old. When any of these happen, it is not possible
            * to resume the read, and the whole operation must be restarted from the beginning.
            *
            * Create a request for the method "sessions.partitionRead".
@@ -8575,15 +8294,14 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Creates a set of partition tokens that can be used to execute a read operation in parallel.
              * Each of the returned partition tokens can be used by StreamingRead to specify a subset of the
-             * read result to read.  The same session and read-only transaction must be used by the
+             * read result to read. The same session and read-only transaction must be used by the
              * PartitionReadRequest used to create the partition tokens and the ReadRequests that use the
-             * partition tokens.  There are no ordering guarantees on rows returned among the returned
+             * partition tokens. There are no ordering guarantees on rows returned among the returned
              * partition tokens, or even within each individual StreamingRead call issued with a
-             * partition_token.
-             *
-             * Partition tokens become invalid when the session used to create them is deleted, is idle for
-             * too long, begins a new transaction, or becomes too old.  When any of these happen, it is not
-             * possible to resume the read, and the whole operation must be restarted from the beginning.
+             * partition_token. Partition tokens become invalid when the session used to create them is
+             * deleted, is idle for too long, begins a new transaction, or becomes too old. When any of these
+             * happen, it is not possible to resume the read, and the whole operation must be restarted from
+             * the beginning.
              *
              * Create a request for the method "sessions.partitionRead".
              *
@@ -8690,13 +8408,11 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
           /**
            * Reads rows from the database using key lookups and scans, as a simple key/value style alternative
-           * to ExecuteSql.  This method cannot be used to return a result set larger than 10 MiB; if the read
-           * matches more data than that, the read fails with a `FAILED_PRECONDITION` error.
-           *
-           * Reads inside read-write transactions might return `ABORTED`. If this occurs, the application
-           * should restart the transaction from the beginning. See Transaction for more details.
-           *
-           * Larger result sets can be yielded in streaming fashion by calling StreamingRead instead.
+           * to ExecuteSql. This method cannot be used to return a result set larger than 10 MiB; if the read
+           * matches more data than that, the read fails with a `FAILED_PRECONDITION` error. Reads inside
+           * read-write transactions might return `ABORTED`. If this occurs, the application should restart
+           * the transaction from the beginning. See Transaction for more details. Larger result sets can be
+           * yielded in streaming fashion by calling StreamingRead instead.
            *
            * Create a request for the method "sessions.read".
            *
@@ -8722,14 +8438,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
             /**
              * Reads rows from the database using key lookups and scans, as a simple key/value style
-             * alternative to ExecuteSql.  This method cannot be used to return a result set larger than 10
+             * alternative to ExecuteSql. This method cannot be used to return a result set larger than 10
              * MiB; if the read matches more data than that, the read fails with a `FAILED_PRECONDITION`
-             * error.
-             *
-             * Reads inside read-write transactions might return `ABORTED`. If this occurs, the application
-             * should restart the transaction from the beginning. See Transaction for more details.
-             *
-             * Larger result sets can be yielded in streaming fashion by calling StreamingRead instead.
+             * error. Reads inside read-write transactions might return `ABORTED`. If this occurs, the
+             * application should restart the transaction from the beginning. See Transaction for more
+             * details. Larger result sets can be yielded in streaming fashion by calling StreamingRead
+             * instead.
              *
              * Create a request for the method "sessions.read".
              *
@@ -8836,10 +8550,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Rolls back a transaction, releasing any locks it holds. It is a good idea to call this for any
            * transaction that includes one or more Read or ExecuteSql requests and ultimately decides not to
-           * commit.
-           *
-           * `Rollback` returns `OK` if it successfully aborts the transaction, the transaction was already
-           * aborted, or the transaction is not found. `Rollback` never returns `ABORTED`.
+           * commit. `Rollback` returns `OK` if it successfully aborts the transaction, the transaction was
+           * already aborted, or the transaction is not found. `Rollback` never returns `ABORTED`.
            *
            * Create a request for the method "sessions.rollback".
            *
@@ -8866,10 +8578,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Rolls back a transaction, releasing any locks it holds. It is a good idea to call this for any
              * transaction that includes one or more Read or ExecuteSql requests and ultimately decides not to
-             * commit.
-             *
-             * `Rollback` returns `OK` if it successfully aborts the transaction, the transaction was already
-             * aborted, or the transaction is not found. `Rollback` never returns `ABORTED`.
+             * commit. `Rollback` returns `OK` if it successfully aborts the transaction, the transaction was
+             * already aborted, or the transaction is not found. `Rollback` never returns `ABORTED`.
              *
              * Create a request for the method "sessions.rollback".
              *
@@ -9133,9 +8843,9 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -9163,13 +8873,13 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -9405,7 +9115,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -9430,7 +9140,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -9546,13 +9256,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -9577,13 +9286,12 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *

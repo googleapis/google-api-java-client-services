@@ -1,14 +1,14 @@
-# Google Cloud Deployment Manager Alpha API Client Library for Java
+# Cloud Deployment Manager V2 API Client Library for Java
 
-The Deployment Manager API allows users to declaratively configure, deploy and run complex solutions on the Google Cloud Platform.
+The Google Cloud Deployment Manager v2 API provides services for configuring, deploying, and viewing Google Cloud services and APIs via templates which specify deployments of Cloud resources.
 
-This page contains information about getting started with the Google Cloud Deployment Manager Alpha API
+This page contains information about getting started with the Cloud Deployment Manager V2 API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Google Cloud Deployment Manager Alpha API][javadoc]
+* Browse the [Javadoc reference for the Cloud Deployment Manager V2 API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Google Cloud Deployment Manager Alpha API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Cloud Deployment Manager V2 API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-deploymentmanager</artifactId>
-      <version>alpha-rev20181207-1.30.9</version>
+      <version>alpha-rev20201113-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-deploymentmanager:alpha-rev20181207-1.30.9'
+  compile 'com.google.apis:google-api-services-deploymentmanager:alpha-rev20201113-1.30.10'
 }
 ```
 

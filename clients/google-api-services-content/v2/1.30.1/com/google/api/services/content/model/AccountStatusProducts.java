@@ -31,9 +31,7 @@ package com.google.api.services.content.model;
 public final class AccountStatusProducts extends com.google.api.client.json.GenericJson {
 
   /**
-   * The channel the data applies to.
-   *
-   * Acceptable values are:   - "local"  - "online"
+   * The channel the data applies to. Acceptable values are: - "`local`" - "`online`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,9 +72,7 @@ public final class AccountStatusProducts extends com.google.api.client.json.Gene
   private AccountStatusStatistics statistics;
 
   /**
-   * The channel the data applies to.
-   *
-   * Acceptable values are:   - "local"  - "online"
+   * The channel the data applies to. Acceptable values are: - "`local`" - "`online`"
    * @return value or {@code null} for none
    */
   public java.lang.String getChannel() {
@@ -84,9 +80,7 @@ public final class AccountStatusProducts extends com.google.api.client.json.Gene
   }
 
   /**
-   * The channel the data applies to.
-   *
-   * Acceptable values are:   - "local"  - "online"
+   * The channel the data applies to. Acceptable values are: - "`local`" - "`online`"
    * @param channel channel or {@code null} for none
    */
   public AccountStatusProducts setChannel(java.lang.String channel) {

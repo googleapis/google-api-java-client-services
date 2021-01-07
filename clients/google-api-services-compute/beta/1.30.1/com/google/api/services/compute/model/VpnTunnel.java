@@ -19,7 +19,7 @@ package com.google.api.services.compute.model;
 /**
  * Represents a Cloud VPN Tunnel resource.
  *
- * For more information about VPN, read the the Cloud VPN Overview. (== resource_for
+ * For more information about VPN, read the  the Cloud VPN Overview. (== resource_for
  * {$api_version}.vpnTunnels ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -89,7 +89,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.String labelFingerprint;
 
   /**
-   * Labels to apply to this VpnTunnel. These can be later modified by the setLabels method. Each
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
    * label key/value pair must comply with RFC1035. Label values may be empty.
    * The value may be {@code null}.
    */
@@ -416,7 +416,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels to apply to this VpnTunnel. These can be later modified by the setLabels method. Each
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
    * label key/value pair must comply with RFC1035. Label values may be empty.
    * @return value or {@code null} for none
    */
@@ -425,7 +425,7 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels to apply to this VpnTunnel. These can be later modified by the setLabels method. Each
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
    * label key/value pair must comply with RFC1035. Label values may be empty.
    * @param labels labels or {@code null} for none
    */

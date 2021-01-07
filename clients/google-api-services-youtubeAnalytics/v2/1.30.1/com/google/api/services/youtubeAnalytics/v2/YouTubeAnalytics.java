@@ -46,7 +46,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the YouTube Analytics API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the YouTube Analytics API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -259,27 +259,23 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       @com.google.api.client.util.Key
       private java.lang.String onBehalfOfContentOwner;
 
       /** This parameter can only be used in a properly authorized request. **Note:** This parameter is
      intended exclusively for YouTube content partners that own and manage many different YouTube
-     channels.
-
-     The `onBehalfOfContentOwner` parameter indicates that the request's authorization credentials
-     identify a YouTube user who is acting on behalf of the content owner specified in the parameter
-     value. It allows content owners to authenticate once and get access to all their video and channel
-     data, without having to provide authentication credentials for each individual channel. The account
-     that the user authenticates with must be linked to the specified YouTube content owner.
+     channels. The `onBehalfOfContentOwner` parameter indicates that the request's authorization
+     credentials identify a YouTube user who is acting on behalf of the content owner specified in the
+     parameter value. It allows content owners to authenticate once and get access to all their video
+     and channel data, without having to provide authentication credentials for each individual channel.
+     The account that the user authenticates with must be linked to the specified YouTube content owner.
        */
       public java.lang.String getOnBehalfOfContentOwner() {
         return onBehalfOfContentOwner;
@@ -288,14 +284,12 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       public Delete setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
@@ -404,27 +398,23 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       @com.google.api.client.util.Key
       private java.lang.String onBehalfOfContentOwner;
 
       /** This parameter can only be used in a properly authorized request. **Note:** This parameter is
      intended exclusively for YouTube content partners that own and manage many different YouTube
-     channels.
-
-     The `onBehalfOfContentOwner` parameter indicates that the request's authorization credentials
-     identify a YouTube user who is acting on behalf of the content owner specified in the parameter
-     value. It allows content owners to authenticate once and get access to all their video and channel
-     data, without having to provide authentication credentials for each individual channel. The account
-     that the user authenticates with must be linked to the specified YouTube content owner.
+     channels. The `onBehalfOfContentOwner` parameter indicates that the request's authorization
+     credentials identify a YouTube user who is acting on behalf of the content owner specified in the
+     parameter value. It allows content owners to authenticate once and get access to all their video
+     and channel data, without having to provide authentication credentials for each individual channel.
+     The account that the user authenticates with must be linked to the specified YouTube content owner.
        */
       public java.lang.String getOnBehalfOfContentOwner() {
         return onBehalfOfContentOwner;
@@ -433,14 +423,12 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       public Insert setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
@@ -579,27 +567,23 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       @com.google.api.client.util.Key
       private java.lang.String onBehalfOfContentOwner;
 
       /** This parameter can only be used in a properly authorized request. **Note:** This parameter is
      intended exclusively for YouTube content partners that own and manage many different YouTube
-     channels.
-
-     The `onBehalfOfContentOwner` parameter indicates that the request's authorization credentials
-     identify a YouTube user who is acting on behalf of the content owner specified in the parameter
-     value. It allows content owners to authenticate once and get access to all their video and channel
-     data, without having to provide authentication credentials for each individual channel. The account
-     that the user authenticates with must be linked to the specified YouTube content owner.
+     channels. The `onBehalfOfContentOwner` parameter indicates that the request's authorization
+     credentials identify a YouTube user who is acting on behalf of the content owner specified in the
+     parameter value. It allows content owners to authenticate once and get access to all their video
+     and channel data, without having to provide authentication credentials for each individual channel.
+     The account that the user authenticates with must be linked to the specified YouTube content owner.
        */
       public java.lang.String getOnBehalfOfContentOwner() {
         return onBehalfOfContentOwner;
@@ -608,14 +592,12 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       public List setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
@@ -742,9 +724,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The `id` parameter specifies the YouTube group ID of the group that is being deleted.
-       */
+      /** The `id` parameter specifies the YouTube group ID of the group that is being deleted. */
       @com.google.api.client.util.Key
       private java.lang.String id;
 
@@ -754,9 +734,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
         return id;
       }
 
-      /**
-       * The `id` parameter specifies the YouTube group ID of the group that is being deleted.
-       */
+      /** The `id` parameter specifies the YouTube group ID of the group that is being deleted. */
       public Delete setId(java.lang.String id) {
         this.id = id;
         return this;
@@ -765,27 +743,23 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       @com.google.api.client.util.Key
       private java.lang.String onBehalfOfContentOwner;
 
       /** This parameter can only be used in a properly authorized request. **Note:** This parameter is
      intended exclusively for YouTube content partners that own and manage many different YouTube
-     channels.
-
-     The `onBehalfOfContentOwner` parameter indicates that the request's authorization credentials
-     identify a YouTube user who is acting on behalf of the content owner specified in the parameter
-     value. It allows content owners to authenticate once and get access to all their video and channel
-     data, without having to provide authentication credentials for each individual channel. The account
-     that the user authenticates with must be linked to the specified YouTube content owner.
+     channels. The `onBehalfOfContentOwner` parameter indicates that the request's authorization
+     credentials identify a YouTube user who is acting on behalf of the content owner specified in the
+     parameter value. It allows content owners to authenticate once and get access to all their video
+     and channel data, without having to provide authentication credentials for each individual channel.
+     The account that the user authenticates with must be linked to the specified YouTube content owner.
        */
       public java.lang.String getOnBehalfOfContentOwner() {
         return onBehalfOfContentOwner;
@@ -794,14 +768,12 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       public Delete setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
@@ -910,27 +882,23 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       @com.google.api.client.util.Key
       private java.lang.String onBehalfOfContentOwner;
 
       /** This parameter can only be used in a properly authorized request. **Note:** This parameter is
      intended exclusively for YouTube content partners that own and manage many different YouTube
-     channels.
-
-     The `onBehalfOfContentOwner` parameter indicates that the request's authorization credentials
-     identify a YouTube user who is acting on behalf of the content owner specified in the parameter
-     value. It allows content owners to authenticate once and get access to all their video and channel
-     data, without having to provide authentication credentials for each individual channel. The account
-     that the user authenticates with must be linked to the specified YouTube content owner.
+     channels. The `onBehalfOfContentOwner` parameter indicates that the request's authorization
+     credentials identify a YouTube user who is acting on behalf of the content owner specified in the
+     parameter value. It allows content owners to authenticate once and get access to all their video
+     and channel data, without having to provide authentication credentials for each individual channel.
+     The account that the user authenticates with must be linked to the specified YouTube content owner.
        */
       public java.lang.String getOnBehalfOfContentOwner() {
         return onBehalfOfContentOwner;
@@ -939,14 +907,12 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       public Insert setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
@@ -1066,20 +1032,17 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * The `id` parameter specifies a comma-separated list of the YouTube group ID(s) for the
        * resource(s) that are being retrieved. Each group must be owned by the authenticated user.
-       * In a `group` resource, the `id` property specifies the group's YouTube group ID.
-       *
-       * Note that if you do not specify a value for the `id` parameter, then you must set the
-       * `mine` parameter to `true`.
+       * In a `group` resource, the `id` property specifies the group's YouTube group ID. Note that
+       * if you do not specify a value for the `id` parameter, then you must set the `mine`
+       * parameter to `true`.
        */
       @com.google.api.client.util.Key
       private java.lang.String id;
 
       /** The `id` parameter specifies a comma-separated list of the YouTube group ID(s) for the resource(s)
      that are being retrieved. Each group must be owned by the authenticated user. In a `group`
-     resource, the `id` property specifies the group's YouTube group ID.
-
-     Note that if you do not specify a value for the `id` parameter, then you must set the `mine`
-     parameter to `true`.
+     resource, the `id` property specifies the group's YouTube group ID. Note that if you do not specify
+     a value for the `id` parameter, then you must set the `mine` parameter to `true`.
        */
       public java.lang.String getId() {
         return id;
@@ -1088,10 +1051,9 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * The `id` parameter specifies a comma-separated list of the YouTube group ID(s) for the
        * resource(s) that are being retrieved. Each group must be owned by the authenticated user.
-       * In a `group` resource, the `id` property specifies the group's YouTube group ID.
-       *
-       * Note that if you do not specify a value for the `id` parameter, then you must set the
-       * `mine` parameter to `true`.
+       * In a `group` resource, the `id` property specifies the group's YouTube group ID. Note that
+       * if you do not specify a value for the `id` parameter, then you must set the `mine`
+       * parameter to `true`.
        */
       public List setId(java.lang.String id) {
         this.id = id;
@@ -1124,27 +1086,23 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       @com.google.api.client.util.Key
       private java.lang.String onBehalfOfContentOwner;
 
       /** This parameter can only be used in a properly authorized request. **Note:** This parameter is
      intended exclusively for YouTube content partners that own and manage many different YouTube
-     channels.
-
-     The `onBehalfOfContentOwner` parameter indicates that the request's authorization credentials
-     identify a YouTube user who is acting on behalf of the content owner specified in the parameter
-     value. It allows content owners to authenticate once and get access to all their video and channel
-     data, without having to provide authentication credentials for each individual channel. The account
-     that the user authenticates with must be linked to the specified YouTube content owner.
+     channels. The `onBehalfOfContentOwner` parameter indicates that the request's authorization
+     credentials identify a YouTube user who is acting on behalf of the content owner specified in the
+     parameter value. It allows content owners to authenticate once and get access to all their video
+     and channel data, without having to provide authentication credentials for each individual channel.
+     The account that the user authenticates with must be linked to the specified YouTube content owner.
        */
       public java.lang.String getOnBehalfOfContentOwner() {
         return onBehalfOfContentOwner;
@@ -1153,14 +1111,12 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       public List setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
@@ -1294,27 +1250,23 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       @com.google.api.client.util.Key
       private java.lang.String onBehalfOfContentOwner;
 
       /** This parameter can only be used in a properly authorized request. **Note:** This parameter is
      intended exclusively for YouTube content partners that own and manage many different YouTube
-     channels.
-
-     The `onBehalfOfContentOwner` parameter indicates that the request's authorization credentials
-     identify a YouTube user who is acting on behalf of the content owner specified in the parameter
-     value. It allows content owners to authenticate once and get access to all their video and channel
-     data, without having to provide authentication credentials for each individual channel. The account
-     that the user authenticates with must be linked to the specified YouTube content owner.
+     channels. The `onBehalfOfContentOwner` parameter indicates that the request's authorization
+     credentials identify a YouTube user who is acting on behalf of the content owner specified in the
+     parameter value. It allows content owners to authenticate once and get access to all their video
+     and channel data, without having to provide authentication credentials for each individual channel.
+     The account that the user authenticates with must be linked to the specified YouTube content owner.
        */
       public java.lang.String getOnBehalfOfContentOwner() {
         return onBehalfOfContentOwner;
@@ -1323,14 +1275,12 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       /**
        * This parameter can only be used in a properly authorized request. **Note:** This parameter
        * is intended exclusively for YouTube content partners that own and manage many different
-       * YouTube channels.
-       *
-       * The `onBehalfOfContentOwner` parameter indicates that the request's authorization
-       * credentials identify a YouTube user who is acting on behalf of the content owner specified
-       * in the parameter value. It allows content owners to authenticate once and get access to all
-       * their video and channel data, without having to provide authentication credentials for each
-       * individual channel. The account that the user authenticates with must be linked to the
-       * specified YouTube content owner.
+       * YouTube channels. The `onBehalfOfContentOwner` parameter indicates that the request's
+       * authorization credentials identify a YouTube user who is acting on behalf of the content
+       * owner specified in the parameter value. It allows content owners to authenticate once and
+       * get access to all their video and channel data, without having to provide authentication
+       * credentials for each individual channel. The account that the user authenticates with must
+       * be linked to the specified YouTube content owner.
        */
       public Update setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
@@ -1552,7 +1502,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
        * A list of filters that should be applied when retrieving YouTube Analytics data. The
        * [Available Reports](/youtube/analytics/v2/available_reports) document identifies the
        * dimensions that can be used to filter each report, and the
-       * [Dimensions](/youtube/analytics/v2/dimsmets/dims)  document defines those dimensions. If a
+       * [Dimensions](/youtube/analytics/v2/dimsmets/dims) document defines those dimensions. If a
        * request uses multiple filters, join them together with a semicolon (`;`), and the returned
        * result table will satisfy both filters. For example, a filters parameter value of
        * `video==dMH0bHeiRNg;country==IT` restricts the result set to include data for the given
@@ -1563,7 +1513,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
 
       /** A list of filters that should be applied when retrieving YouTube Analytics data. The [Available
      Reports](/youtube/analytics/v2/available_reports) document identifies the dimensions that can be
-     used to filter each report, and the [Dimensions](/youtube/analytics/v2/dimsmets/dims)  document
+     used to filter each report, and the [Dimensions](/youtube/analytics/v2/dimsmets/dims) document
      defines those dimensions. If a request uses multiple filters, join them together with a semicolon
      (`;`), and the returned result table will satisfy both filters. For example, a filters parameter
      value of `video==dMH0bHeiRNg;country==IT` restricts the result set to include data for the given
@@ -1577,7 +1527,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
        * A list of filters that should be applied when retrieving YouTube Analytics data. The
        * [Available Reports](/youtube/analytics/v2/available_reports) document identifies the
        * dimensions that can be used to filter each report, and the
-       * [Dimensions](/youtube/analytics/v2/dimsmets/dims)  document defines those dimensions. If a
+       * [Dimensions](/youtube/analytics/v2/dimsmets/dims) document defines those dimensions. If a
        * request uses multiple filters, join them together with a semicolon (`;`), and the returned
        * result table will satisfy both filters. For example, a filters parameter value of
        * `video==dMH0bHeiRNg;country==IT` restricts the result set to include data for the given
@@ -1590,9 +1540,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
 
       /**
        * Identifies the YouTube channel or content owner for which you are retrieving YouTube
-       * Analytics data.
-       *
-       * - To request data for a YouTube user, set the `ids` parameter value to
+       * Analytics data. - To request data for a YouTube user, set the `ids` parameter value to
        * `channel==CHANNEL_ID`, where `CHANNEL_ID` specifies the unique YouTube channel ID. - To
        * request data for a YouTube CMS content owner, set the `ids` parameter value to
        * `contentOwner==OWNER_NAME`, where `OWNER_NAME` is the CMS name of the content owner.
@@ -1602,12 +1550,10 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       private java.lang.String ids;
 
       /** Identifies the YouTube channel or content owner for which you are retrieving YouTube Analytics
-     data.
-
-     - To request data for a YouTube user, set the `ids` parameter value to `channel==CHANNEL_ID`, where
-     `CHANNEL_ID` specifies the unique YouTube channel ID. - To request data for a YouTube CMS content
-     owner, set the `ids` parameter value to `contentOwner==OWNER_NAME`, where `OWNER_NAME` is the CMS
-     name of the content owner. required: true, pattern: [a-zA-Z]+==[a-zA-Z0-9_+-]+
+     data. - To request data for a YouTube user, set the `ids` parameter value to `channel==CHANNEL_ID`,
+     where `CHANNEL_ID` specifies the unique YouTube channel ID. - To request data for a YouTube CMS
+     content owner, set the `ids` parameter value to `contentOwner==OWNER_NAME`, where `OWNER_NAME` is
+     the CMS name of the content owner. required: true, pattern: [a-zA-Z]+==[a-zA-Z0-9_+-]+
        */
       public java.lang.String getIds() {
         return ids;
@@ -1615,9 +1561,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
 
       /**
        * Identifies the YouTube channel or content owner for which you are retrieving YouTube
-       * Analytics data.
-       *
-       * - To request data for a YouTube user, set the `ids` parameter value to
+       * Analytics data. - To request data for a YouTube user, set the `ids` parameter value to
        * `channel==CHANNEL_ID`, where `CHANNEL_ID` specifies the unique YouTube channel ID. - To
        * request data for a YouTube CMS content owner, set the `ids` parameter value to
        * `contentOwner==OWNER_NAME`, where `OWNER_NAME` is the CMS name of the content owner.
@@ -1651,9 +1595,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
         return this;
       }
 
-      /**
-       * The maximum number of rows to include in the response.", minValue: 1
-       */
+      /** The maximum number of rows to include in the response.", minValue: 1 */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
@@ -1663,9 +1605,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
         return maxResults;
       }
 
-      /**
-       * The maximum number of rows to include in the response.", minValue: 1
-       */
+      /** The maximum number of rows to include in the response.", minValue: 1 */
       public Query setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -1673,8 +1613,8 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
 
       /**
        * A comma-separated list of YouTube Analytics metrics, such as `views` or `likes,dislikes`.
-       * See the [Available Reports](/youtube/analytics/v2/available_reports)  document for a list
-       * of the reports that you can retrieve and the metrics available in each report, and see the
+       * See the [Available Reports](/youtube/analytics/v2/available_reports) document for a list of
+       * the reports that you can retrieve and the metrics available in each report, and see the
        * [Metrics](/youtube/analytics/v2/dimsmets/mets) document for definitions of those metrics.
        * required: true, pattern: [0-9a-zA-Z,]+
        */
@@ -1682,7 +1622,7 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
       private java.lang.String metrics;
 
       /** A comma-separated list of YouTube Analytics metrics, such as `views` or `likes,dislikes`. See the
-     [Available Reports](/youtube/analytics/v2/available_reports)  document for a list of the reports
+     [Available Reports](/youtube/analytics/v2/available_reports) document for a list of the reports
      that you can retrieve and the metrics available in each report, and see the
      [Metrics](/youtube/analytics/v2/dimsmets/mets) document for definitions of those metrics. required:
      true, pattern: [0-9a-zA-Z,]+
@@ -1693,8 +1633,8 @@ public class YouTubeAnalytics extends com.google.api.client.googleapis.services.
 
       /**
        * A comma-separated list of YouTube Analytics metrics, such as `views` or `likes,dislikes`.
-       * See the [Available Reports](/youtube/analytics/v2/available_reports)  document for a list
-       * of the reports that you can retrieve and the metrics available in each report, and see the
+       * See the [Available Reports](/youtube/analytics/v2/available_reports) document for a list of
+       * the reports that you can retrieve and the metrics available in each report, and see the
        * [Metrics](/youtube/analytics/v2/dimsmets/mets) document for definitions of those metrics.
        * required: true, pattern: [0-9a-zA-Z,]+
        */

@@ -46,7 +46,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Storage JSON API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Storage JSON API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -6369,6 +6369,32 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
        */
       public Copy setDestinationObject(java.lang.String destinationObject) {
         this.destinationObject = destinationObject;
+        return this;
+      }
+
+      /**
+       * Resource name of the Cloud KMS key, of the form projects/my-
+       * project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the
+       * object. Overrides the object metadata's kms_key_name value, if any.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String destinationKmsKeyName;
+
+      /** Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-
+     kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata's
+     kms_key_name value, if any.
+       */
+      public java.lang.String getDestinationKmsKeyName() {
+        return destinationKmsKeyName;
+      }
+
+      /**
+       * Resource name of the Cloud KMS key, of the form projects/my-
+       * project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the
+       * object. Overrides the object metadata's kms_key_name value, if any.
+       */
+      public Copy setDestinationKmsKeyName(java.lang.String destinationKmsKeyName) {
+        this.destinationKmsKeyName = destinationKmsKeyName;
         return this;
       }
 

@@ -31,7 +31,7 @@ package com.google.api.services.content.model;
 public final class PosStore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posStore".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posStore`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
   private java.lang.String storeCode;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posStore".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posStore`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -60,7 +60,7 @@ public final class PosStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#posStore".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#posStore`"
    * @param kind kind or {@code null} for none
    */
   public PosStore setKind(java.lang.String kind) {

@@ -29,6 +29,81 @@ package com.google.api.services.cloudbuild.v1.model;
 @SuppressWarnings("javadoc")
 public final class CancelBuildRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Required. ID of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
+   * The name of the `Build` to retrieve. Format:
+   * `projects/{project}/locations/{location}/builds/{build}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * Required. ID of the project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectId;
+
+  /**
+   * Required. ID of the build.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Required. ID of the build.
+   * @param id id or {@code null} for none
+   */
+  public CancelBuildRequest setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * The name of the `Build` to retrieve. Format:
+   * `projects/{project}/locations/{location}/builds/{build}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The name of the `Build` to retrieve. Format:
+   * `projects/{project}/locations/{location}/builds/{build}`
+   * @param name name or {@code null} for none
+   */
+  public CancelBuildRequest setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * Required. ID of the project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectId() {
+    return projectId;
+  }
+
+  /**
+   * Required. ID of the project.
+   * @param projectId projectId or {@code null} for none
+   */
+  public CancelBuildRequest setProjectId(java.lang.String projectId) {
+    this.projectId = projectId;
+    return this;
+  }
+
   @Override
   public CancelBuildRequest set(String fieldName, Object value) {
     return (CancelBuildRequest) super.set(fieldName, value);

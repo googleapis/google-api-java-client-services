@@ -20,11 +20,7 @@ package com.google.api.services.datafusion.v1beta1;
  * Service definition for DataFusion (v1beta1).
  *
  * <p>
- * Cloud Data Fusion is a fully-managed, cloud native, enterprise data integration service for
-    quickly building and managing data pipelines. It provides a graphical interface to increase
-    time efficiency and reduce complexity, and allows business users, developers, and data
-    scientists to easily and reliably build scalable data integration solutions to cleanse,
-    prepare, blend, transfer and transform data without having to wrestle with infrastructure.
+ * Cloud Data Fusion is a fully-managed, cloud native, enterprise data integration service for quickly building and managing data pipelines. It provides a graphical interface to increase time efficiency and reduce complexity, and allows business users, developers, and data scientists to easily and reliably build scalable data integration solutions to cleanse, prepare, blend, transfer and transform data without having to wrestle with infrastructure.
  * </p>
  *
  * <p>
@@ -50,7 +46,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Data Fusion API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Data Fusion API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -453,9 +449,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /**
-         * If true, the returned list will include locations which are not yet revealed.
-         */
+        /** If true, the returned list will include locations which are not yet revealed. */
         @com.google.api.client.util.Key
         private java.lang.Boolean includeUnrevealedLocations;
 
@@ -465,9 +459,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           return includeUnrevealedLocations;
         }
 
-        /**
-         * If true, the returned list will include locations which are not yet revealed.
-         */
+        /** If true, the returned list will include locations which are not yet revealed. */
         public List setIncludeUnrevealedLocations(java.lang.Boolean includeUnrevealedLocations) {
           this.includeUnrevealedLocations = includeUnrevealedLocations;
           return this;
@@ -539,8 +531,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The instance's project and location in the format
-        projects/{project}/locations/{location}.
+         * @param parent The instance's project and location in the format projects/{project}/locations/{location}.
          * @param content the {@link com.google.api.services.datafusion.v1beta1.model.Instance}
          * @return the request
          */
@@ -568,8 +559,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The instance's project and location in the format
-        projects/{project}/locations/{location}.
+           * @param parent The instance's project and location in the format projects/{project}/locations/{location}.
            * @param content the {@link com.google.api.services.datafusion.v1beta1.model.Instance}
            * @since 1.13
            */
@@ -980,8 +970,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @return the request
          */
@@ -1010,8 +999,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @since 1.13
            */
@@ -1119,34 +1107,33 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned.
-
-         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-         Requests for policies with any conditional bindings must specify version 3. Policies without any
-         conditional bindings may specify any valid value or leave the field unset.
+          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+         must specify version 3. Policies without any conditional bindings may specify any valid value or
+         leave the field unset. To learn which resources support conditions in their IAM policies, see the
+         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1166,12 +1153,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project and location for which to retrieve instance information
-        in the format
-         *        projects/{project}/locations/{location}. If the location is
-        specified as '-' (wildcard),
-         *        then all regions available to the project
-        are queried, and the results are aggregated.
+         * @param parent The project and location for which to retrieve instance information in the format
+         *        projects/{project}/locations/{location}. If the location is specified as '-' (wildcard),
+         *        then all regions available to the project are queried, and the results are aggregated.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1197,12 +1181,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project and location for which to retrieve instance information
-        in the format
-         *        projects/{project}/locations/{location}. If the location is
-        specified as '-' (wildcard),
-         *        then all regions available to the project
-        are queried, and the results are aggregated.
+           * @param parent The project and location for which to retrieve instance information in the format
+         *        projects/{project}/locations/{location}. If the location is specified as '-' (wildcard),
+         *        then all regions available to the project are queried, and the results are aggregated.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1329,17 +1310,17 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Sort results. Supported values are "name", "name desc",  or "" (unsorted). */
+          /** Sort results. Supported values are "name", "name desc", or "" (unsorted). */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Sort results. Supported values are "name", "name desc",  or "" (unsorted).
+          /** Sort results. Supported values are "name", "name desc", or "" (unsorted).
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Sort results. Supported values are "name", "name desc",  or "" (unsorted). */
+          /** Sort results. Supported values are "name", "name desc", or "" (unsorted). */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -1700,17 +1681,15 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "instances.setIamPolicy".
          *
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.datafusion.v1beta1.model.SetIamPolicyRequest}
          * @return the request
@@ -1729,9 +1708,8 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "instances.setIamPolicy".
            *
@@ -1741,8 +1719,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.datafusion.v1beta1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -1847,18 +1824,16 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "instances.testIamPermissions".
          *
          * This request holds the parameters needed by the datafusion server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.datafusion.v1beta1.model.TestIamPermissionsRequest}
          * @return the request
@@ -1878,10 +1853,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "instances.testIamPermissions".
            *
@@ -1891,8 +1865,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.datafusion.v1beta1.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -2004,10 +1977,8 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Upgrade#execute()} method to invoke the remote operation.
          *
          * @param name Name of the Data Fusion instance which need to be upgraded in the form of
-         *        projects/{project}/locations/{location}/instances/{instance}
-        Instance will be upgraded
-         *        with the latest stable version of the Data
-        Fusion.
+         *        projects/{project}/locations/{location}/instances/{instance} Instance will be upgraded
+         *        with the latest stable version of the Data Fusion.
          * @param content the {@link com.google.api.services.datafusion.v1beta1.model.UpgradeInstanceRequest}
          * @return the request
          */
@@ -2036,10 +2007,8 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Name of the Data Fusion instance which need to be upgraded in the form of
-         *        projects/{project}/locations/{location}/instances/{instance}
-        Instance will be upgraded
-         *        with the latest stable version of the Data
-        Fusion.
+         *        projects/{project}/locations/{location}/instances/{instance} Instance will be upgraded
+         *        with the latest stable version of the Data Fusion.
            * @param content the {@link com.google.api.services.datafusion.v1beta1.model.UpgradeInstanceRequest}
            * @since 1.13
            */
@@ -2167,9 +2136,9 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -2198,13 +2167,13 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -2443,7 +2412,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -2468,7 +2437,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -2584,13 +2553,12 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
         }
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-         * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+         * the binding to use different resource name schemes, such as `users/operations`. To override the
+         * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+         * configuration. For backwards compatibility, the default name includes the operations collection
+         * id, however overriding users must ensure the name binding is the parent resource, without the
+         * operations collection id.
          *
          * Create a request for the method "operations.list".
          *
@@ -2615,13 +2583,12 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a
-           * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+           * override the binding to use different resource name schemes, such as `users/operations`. To
+           * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+           * their service configuration. For backwards compatibility, the default name includes the
+           * operations collection id, however overriding users must ensure the name binding is the parent
+           * resource, without the operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -2772,6 +2739,239 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
 
           /** The standard list page token. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Versions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DataFusion datafusion = new DataFusion(...);}
+       *   {@code DataFusion.Versions.List request = datafusion.versions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Versions versions() {
+        return new Versions();
+      }
+
+      /**
+       * The "versions" collection of methods.
+       */
+      public class Versions {
+
+        /**
+         * Lists possible versions for Data Fusion instances in the specified project and location.
+         *
+         * Create a request for the method "versions.list".
+         *
+         * This request holds the parameters needed by the datafusion server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location for which to retrieve instance information in the format
+         *        projects/{project}/locations/{location}.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.ListAvailableVersionsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/versions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists possible versions for Data Fusion instances in the specified project and location.
+           *
+           * Create a request for the method "versions.list".
+           *
+           * This request holds the parameters needed by the the datafusion server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location for which to retrieve instance information in the format
+         *        projects/{project}/locations/{location}.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DataFusion.this, "GET", REST_PATH, null, com.google.api.services.datafusion.v1beta1.model.ListAvailableVersionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location for which to retrieve instance information in the
+           * format projects/{project}/locations/{location}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location for which to retrieve instance information in the format
+         projects/{project}/locations/{location}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location for which to retrieve instance information in the
+           * format projects/{project}/locations/{location}.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Whether or not to return the latest patch of every available minor version. If true,
+           * only the latest patch will be returned. Ex. if allowed versions is [6.1.1, 6.1.2,
+           * 6.2.0] then response will be [6.1.2, 6.2.0]
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean latestPatchOnly;
+
+          /** Whether or not to return the latest patch of every available minor version. If true, only the
+         latest patch will be returned. Ex. if allowed versions is [6.1.1, 6.1.2, 6.2.0] then response will
+         be [6.1.2, 6.2.0]
+           */
+          public java.lang.Boolean getLatestPatchOnly() {
+            return latestPatchOnly;
+          }
+
+          /**
+           * Whether or not to return the latest patch of every available minor version. If true,
+           * only the latest patch will be returned. Ex. if allowed versions is [6.1.1, 6.1.2,
+           * 6.2.0] then response will be [6.1.2, 6.2.0]
+           */
+          public List setLatestPatchOnly(java.lang.Boolean latestPatchOnly) {
+            this.latestPatchOnly = latestPatchOnly;
+            return this;
+          }
+
+          /** The maximum number of items to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of items to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of items to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The next_page_token value to use if there are additional results to retrieve for this
+           * list request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value to use if there are additional results to retrieve for this list request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The next_page_token value to use if there are additional results to retrieve for this
+           * list request.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

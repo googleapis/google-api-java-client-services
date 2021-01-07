@@ -1,6 +1,6 @@
 # Books API Client Library for Java
 
-Searches for books and manages your Google Books library.
+The Google Books API allows clients to access the Google Books repository.
 
 This page contains information about getting started with the Books API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-books</artifactId>
-      <version>v1-rev20200204-1.30.9</version>
+      <version>v1-rev20201021-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-books:v1-rev20200204-1.30.9'
+  compile 'com.google.apis:google-api-services-books:v1-rev20201021-1.30.10'
 }
 ```
 

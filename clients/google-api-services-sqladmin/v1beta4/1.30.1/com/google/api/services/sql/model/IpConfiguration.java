@@ -30,8 +30,8 @@ package com.google.api.services.sql.model;
 public final class IpConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of external networks that are allowed to connect to the instance using the IP. In CIDR
-   * notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
+   * The list of external networks that are allowed to connect to the instance using the IP. In
+   * 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether the instance should be assigned an IP address or not.
+   * Whether the instance is assigned a public IP address or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
 
   /**
    * The resource link for the VPC network from which the Cloud SQL instance is accessible for
-   * private IP. For example, /projects/myProject/global/networks/default. This setting can be
+   * private IP. For example, projects/myProject/global/networks/default*. This setting can be
    * updated, but it cannot be removed after it is set.
    * The value may be {@code null}.
    */
@@ -60,15 +60,15 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   private java.lang.String privateNetwork;
 
   /**
-   * Whether SSL connections over IP should be enforced or not.
+   * Whether SSL connections over IP are enforced or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requireSsl;
 
   /**
-   * The list of external networks that are allowed to connect to the instance using the IP. In CIDR
-   * notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
+   * The list of external networks that are allowed to connect to the instance using the IP. In
+   * 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).
    * @return value or {@code null} for none
    */
   public java.util.List<AclEntry> getAuthorizedNetworks() {
@@ -76,8 +76,8 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The list of external networks that are allowed to connect to the instance using the IP. In CIDR
-   * notation, also known as 'slash' notation (e.g. 192.168.100.0/24).
+   * The list of external networks that are allowed to connect to the instance using the IP. In
+   * 'CIDR' notation, also known as 'slash' notation (for example: *192.168.100.0/24*).
    * @param authorizedNetworks authorizedNetworks or {@code null} for none
    */
   public IpConfiguration setAuthorizedNetworks(java.util.List<AclEntry> authorizedNetworks) {
@@ -86,7 +86,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether the instance should be assigned an IP address or not.
+   * Whether the instance is assigned a public IP address or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIpv4Enabled() {
@@ -94,7 +94,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether the instance should be assigned an IP address or not.
+   * Whether the instance is assigned a public IP address or not.
    * @param ipv4Enabled ipv4Enabled or {@code null} for none
    */
   public IpConfiguration setIpv4Enabled(java.lang.Boolean ipv4Enabled) {
@@ -104,7 +104,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
 
   /**
    * The resource link for the VPC network from which the Cloud SQL instance is accessible for
-   * private IP. For example, /projects/myProject/global/networks/default. This setting can be
+   * private IP. For example, projects/myProject/global/networks/default*. This setting can be
    * updated, but it cannot be removed after it is set.
    * @return value or {@code null} for none
    */
@@ -114,7 +114,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
 
   /**
    * The resource link for the VPC network from which the Cloud SQL instance is accessible for
-   * private IP. For example, /projects/myProject/global/networks/default. This setting can be
+   * private IP. For example, projects/myProject/global/networks/default*. This setting can be
    * updated, but it cannot be removed after it is set.
    * @param privateNetwork privateNetwork or {@code null} for none
    */
@@ -124,7 +124,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether SSL connections over IP should be enforced or not.
+   * Whether SSL connections over IP are enforced or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequireSsl() {
@@ -132,7 +132,7 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Whether SSL connections over IP should be enforced or not.
+   * Whether SSL connections over IP are enforced or not.
    * @param requireSsl requireSsl or {@code null} for none
    */
   public IpConfiguration setRequireSsl(java.lang.Boolean requireSsl) {

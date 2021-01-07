@@ -73,7 +73,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   private java.lang.String saleId;
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * The value may be {@code null}.
    */
@@ -197,7 +197,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * @return value or {@code null} for none
    */
@@ -206,7 +206,7 @@ public final class PosSaleRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The identifier of the merchant's store. Either a storeCode inserted via the API or
+   * Required. The identifier of the merchant's store. Either a `storeCode` inserted via the API or
    * the code of the store in Google My Business.
    * @param storeCode storeCode or {@code null} for none
    */

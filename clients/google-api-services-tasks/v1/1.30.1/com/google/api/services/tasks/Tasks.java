@@ -20,12 +20,12 @@ package com.google.api.services.tasks;
  * Service definition for Tasks (v1).
  *
  * <p>
- * Manages your tasks and task lists.
+ * The Google Tasks API lets you manage your tasks and task lists.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/google-apps/tasks/firstapp" target="_blank">API Documentation</a>
+ * <a href="" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Tasks API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Tasks API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -55,7 +55,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://tasks.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -63,7 +63,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "tasks/v1/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/tasks/v1";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -161,7 +161,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Delete extends TasksRequest<Void> {
 
-      private static final String REST_PATH = "users/@me/lists/{tasklist}";
+      private static final String REST_PATH = "tasks/v1/users/@me/lists/{tasklist}";
 
       /**
        * Deletes the authenticated user's specified task list.
@@ -182,8 +182,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -212,8 +227,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -256,7 +276,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Get extends TasksRequest<com.google.api.services.tasks.model.TaskList> {
 
-      private static final String REST_PATH = "users/@me/lists/{tasklist}";
+      private static final String REST_PATH = "tasks/v1/users/@me/lists/{tasklist}";
 
       /**
        * Returns the authenticated user's specified task list.
@@ -287,8 +307,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -317,8 +352,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -343,8 +383,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Creates a new task list and adds it to the authenticated user's task lists. Fails with HTTP code
-     * 403 or 429 after reaching the storage limit of 2,000 lists.
+     * Creates a new task list and adds it to the authenticated user's task lists.
      *
      * Create a request for the method "tasklists.insert".
      *
@@ -362,11 +401,10 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Insert extends TasksRequest<com.google.api.services.tasks.model.TaskList> {
 
-      private static final String REST_PATH = "users/@me/lists";
+      private static final String REST_PATH = "tasks/v1/users/@me/lists";
 
       /**
-       * Creates a new task list and adds it to the authenticated user's task lists. Fails with HTTP
-       * code 403 or 429 after reaching the storage limit of 2,000 lists.
+       * Creates a new task list and adds it to the authenticated user's task lists.
        *
        * Create a request for the method "tasklists.insert".
        *
@@ -383,8 +421,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -413,8 +466,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -440,7 +498,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class List extends TasksRequest<com.google.api.services.tasks.model.TaskLists> {
 
-      private static final String REST_PATH = "users/@me/lists";
+      private static final String REST_PATH = "tasks/v1/users/@me/lists";
 
       /**
        * Returns all the authenticated user's task lists.
@@ -469,8 +527,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -499,8 +572,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /**
@@ -508,11 +586,11 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
        * allowed: 100).
        */
       @com.google.api.client.util.Key
-      private java.lang.Long maxResults;
+      private java.lang.Integer maxResults;
 
       /** Maximum number of task lists returned on one page. Optional. The default is 20 (max allowed: 100).
        */
-      public java.lang.Long getMaxResults() {
+      public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
@@ -520,7 +598,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
        * Maximum number of task lists returned on one page. Optional. The default is 20 (max
        * allowed: 100).
        */
-      public List setMaxResults(java.lang.Long maxResults) {
+      public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
       }
@@ -566,7 +644,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Patch extends TasksRequest<com.google.api.services.tasks.model.TaskList> {
 
-      private static final String REST_PATH = "users/@me/lists/{tasklist}";
+      private static final String REST_PATH = "tasks/v1/users/@me/lists/{tasklist}";
 
       /**
        * Updates the authenticated user's specified task list. This method supports patch semantics.
@@ -588,8 +666,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -618,8 +711,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -663,7 +761,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Update extends TasksRequest<com.google.api.services.tasks.model.TaskList> {
 
-      private static final String REST_PATH = "users/@me/lists/{tasklist}";
+      private static final String REST_PATH = "tasks/v1/users/@me/lists/{tasklist}";
 
       /**
        * Updates the authenticated user's specified task list.
@@ -685,8 +783,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -715,8 +828,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -783,7 +901,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Clear extends TasksRequest<Void> {
 
-      private static final String REST_PATH = "lists/{tasklist}/clear";
+      private static final String REST_PATH = "tasks/v1/lists/{tasklist}/clear";
 
       /**
        * Clears all completed tasks from the specified task list. The affected tasks will be marked as
@@ -805,8 +923,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Clear set$Xgafv(java.lang.String $Xgafv) {
+        return (Clear) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Clear setAccessToken(java.lang.String accessToken) {
+        return (Clear) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Clear setAlt(java.lang.String alt) {
         return (Clear) super.setAlt(alt);
+      }
+
+      @Override
+      public Clear setCallback(java.lang.String callback) {
+        return (Clear) super.setCallback(callback);
       }
 
       @Override
@@ -835,8 +968,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Clear setUserIp(java.lang.String userIp) {
-        return (Clear) super.setUserIp(userIp);
+      public Clear setUploadType(java.lang.String uploadType) {
+        return (Clear) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Clear setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Clear) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -880,7 +1018,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Delete extends TasksRequest<Void> {
 
-      private static final String REST_PATH = "lists/{tasklist}/tasks/{task}";
+      private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks/{task}";
 
       /**
        * Deletes the specified task from the task list.
@@ -903,8 +1041,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Delete setAlt(java.lang.String alt) {
         return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
       }
 
       @Override
@@ -933,8 +1086,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -994,7 +1152,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Get extends TasksRequest<com.google.api.services.tasks.model.Task> {
 
-      private static final String REST_PATH = "lists/{tasklist}/tasks/{task}";
+      private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks/{task}";
 
       /**
        * Returns the specified task.
@@ -1027,8 +1185,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -1057,8 +1230,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -1099,8 +1277,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Creates a new task on the specified task list. Fails with HTTP code 403 or 429 after reaching the
-     * storage limit of 100,000 tasks per account.
+     * Creates a new task on the specified task list.
      *
      * Create a request for the method "tasks.insert".
      *
@@ -1119,11 +1296,10 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Insert extends TasksRequest<com.google.api.services.tasks.model.Task> {
 
-      private static final String REST_PATH = "lists/{tasklist}/tasks";
+      private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks";
 
       /**
-       * Creates a new task on the specified task list. Fails with HTTP code 403 or 429 after reaching
-       * the storage limit of 100,000 tasks per account.
+       * Creates a new task on the specified task list.
        *
        * Create a request for the method "tasks.insert".
        *
@@ -1142,8 +1318,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -1172,8 +1363,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -1262,7 +1458,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class List extends TasksRequest<com.google.api.services.tasks.model.Tasks> {
 
-      private static final String REST_PATH = "lists/{tasklist}/tasks";
+      private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks";
 
       /**
        * Returns all tasks in the specified task list.
@@ -1293,8 +1489,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1323,8 +1534,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -1440,11 +1656,11 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
        * allowed: 100).
        */
       @com.google.api.client.util.Key
-      private java.lang.Long maxResults;
+      private java.lang.Integer maxResults;
 
       /** Maximum number of task lists returned on one page. Optional. The default is 20 (max allowed: 100).
        */
-      public java.lang.Long getMaxResults() {
+      public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
@@ -1452,7 +1668,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
        * Maximum number of task lists returned on one page. Optional. The default is 20 (max
        * allowed: 100).
        */
-      public List setMaxResults(java.lang.Long maxResults) {
+      public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
         return this;
       }
@@ -1475,12 +1691,15 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Flag indicating whether completed tasks are returned in the result. Optional. The default
-       * is True.
+       * is True. Note that showHidden must also be True to show tasks completed in first party
+       * clients, such as the web UI and Google's mobile apps.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showCompleted;
 
       /** Flag indicating whether completed tasks are returned in the result. Optional. The default is True.
+     Note that showHidden must also be True to show tasks completed in first party clients, such as the
+     web UI and Google's mobile apps.
        */
       public java.lang.Boolean getShowCompleted() {
         return showCompleted;
@@ -1488,7 +1707,8 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Flag indicating whether completed tasks are returned in the result. Optional. The default
-       * is True.
+       * is True. Note that showHidden must also be True to show tasks completed in first party
+       * clients, such as the web UI and Google's mobile apps.
        */
       public List setShowCompleted(java.lang.Boolean showCompleted) {
         this.showCompleted = showCompleted;
@@ -1588,7 +1808,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Move extends TasksRequest<com.google.api.services.tasks.model.Task> {
 
-      private static final String REST_PATH = "lists/{tasklist}/tasks/{task}/move";
+      private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks/{task}/move";
 
       /**
        * Moves the specified task to another position in the task list. This can include putting it as a
@@ -1612,8 +1832,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Move set$Xgafv(java.lang.String $Xgafv) {
+        return (Move) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Move setAccessToken(java.lang.String accessToken) {
+        return (Move) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Move setAlt(java.lang.String alt) {
         return (Move) super.setAlt(alt);
+      }
+
+      @Override
+      public Move setCallback(java.lang.String callback) {
+        return (Move) super.setCallback(callback);
       }
 
       @Override
@@ -1642,8 +1877,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Move setUserIp(java.lang.String userIp) {
-        return (Move) super.setUserIp(userIp);
+      public Move setUploadType(java.lang.String uploadType) {
+        return (Move) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Move setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Move) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -1750,7 +1990,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Patch extends TasksRequest<com.google.api.services.tasks.model.Task> {
 
-      private static final String REST_PATH = "lists/{tasklist}/tasks/{task}";
+      private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks/{task}";
 
       /**
        * Updates the specified task. This method supports patch semantics.
@@ -1774,8 +2014,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Patch setAlt(java.lang.String alt) {
         return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
       }
 
       @Override
@@ -1804,8 +2059,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Patch setUserIp(java.lang.String userIp) {
-        return (Patch) super.setUserIp(userIp);
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */
@@ -1866,7 +2126,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Update extends TasksRequest<com.google.api.services.tasks.model.Task> {
 
-      private static final String REST_PATH = "lists/{tasklist}/tasks/{task}";
+      private static final String REST_PATH = "tasks/v1/lists/{tasklist}/tasks/{task}";
 
       /**
        * Updates the specified task.
@@ -1890,8 +2150,23 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -1920,8 +2195,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Task list identifier. */

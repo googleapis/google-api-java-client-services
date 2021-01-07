@@ -38,7 +38,8 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
   private java.lang.String country;
 
   /**
-   * The destination the issue applies to.
+   * The destination the issue applies to. If this field is empty then the issue applies to all
+   * available destinations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +67,7 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
   private java.lang.String id;
 
   /**
-   * Severity of the issue.
-   *
-   * Acceptable values are:   - "critical"  - "error"  - "suggestion"
+   * Severity of the issue. Acceptable values are: - "`critical`" - "`error`" - "`suggestion`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +98,8 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
   }
 
   /**
-   * The destination the issue applies to.
+   * The destination the issue applies to. If this field is empty then the issue applies to all
+   * available destinations.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -107,7 +107,8 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
   }
 
   /**
-   * The destination the issue applies to.
+   * The destination the issue applies to. If this field is empty then the issue applies to all
+   * available destinations.
    * @param destination destination or {@code null} for none
    */
   public AccountStatusAccountLevelIssue setDestination(java.lang.String destination) {
@@ -167,9 +168,7 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
   }
 
   /**
-   * Severity of the issue.
-   *
-   * Acceptable values are:   - "critical"  - "error"  - "suggestion"
+   * Severity of the issue. Acceptable values are: - "`critical`" - "`error`" - "`suggestion`"
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -177,9 +176,7 @@ public final class AccountStatusAccountLevelIssue extends com.google.api.client.
   }
 
   /**
-   * Severity of the issue.
-   *
-   * Acceptable values are:   - "critical"  - "error"  - "suggestion"
+   * Severity of the issue. Acceptable values are: - "`critical`" - "`error`" - "`suggestion`"
    * @param severity severity or {@code null} for none
    */
   public AccountStatusAccountLevelIssue setSeverity(java.lang.String severity) {

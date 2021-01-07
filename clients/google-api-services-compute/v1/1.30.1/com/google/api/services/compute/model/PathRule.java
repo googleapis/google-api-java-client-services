@@ -44,7 +44,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
    * If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if
    * service is set, routeAction cannot contain any  weightedBackendServices. Only one of
-   * routeAction or urlRedirect must be set.
+   * routeAction or urlRedirect must be set. UrlMaps for external HTTP(S) load balancers support
+   * only the urlRewrite action within a pathRule's routeAction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +65,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
 
   /**
    * When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +98,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
    * If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if
    * service is set, routeAction cannot contain any  weightedBackendServices. Only one of
-   * routeAction or urlRedirect must be set.
+   * routeAction or urlRedirect must be set. UrlMaps for external HTTP(S) load balancers support
+   * only the urlRewrite action within a pathRule's routeAction.
    * @return value or {@code null} for none
    */
   public HttpRouteAction getRouteAction() {
@@ -108,7 +111,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
    * rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
    * If routeAction specifies any  weightedBackendServices, service must not be set. Conversely if
    * service is set, routeAction cannot contain any  weightedBackendServices. Only one of
-   * routeAction or urlRedirect must be set.
+   * routeAction or urlRedirect must be set. UrlMaps for external HTTP(S) load balancers support
+   * only the urlRewrite action within a pathRule's routeAction.
    * @param routeAction routeAction or {@code null} for none
    */
   public PathRule setRouteAction(HttpRouteAction routeAction) {
@@ -145,7 +149,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
 
   /**
    * When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * @return value or {@code null} for none
    */
   public HttpRedirectAction getUrlRedirect() {
@@ -154,7 +159,8 @@ public final class PathRule extends com.google.api.client.json.GenericJson {
 
   /**
    * When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If
-   * urlRedirect is specified, service or routeAction must not be set.
+   * urlRedirect is specified, service or routeAction must not be set. Not supported when the URL
+   * map is bound to target gRPC proxy.
    * @param urlRedirect urlRedirect or {@code null} for none
    */
   public PathRule setUrlRedirect(HttpRedirectAction urlRedirect) {

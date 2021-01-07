@@ -37,17 +37,25 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.lang.Long count;
 
   /**
-   * List of zones to exclude for regional requests.
+   * The instance defining the VM instances to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> excludedZones;
+  private Instance instance;
+
+  /**
+   * The instance properties defining the VM instances to be created. Required if
+   * sourceInstanceTemplate is not provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceProperties instanceProperties;
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Instance instance;
+  private LocationPolicy locationPolicy;
 
   /**
    * The minimum number of instances to create. If no min_count is specified then count is used as
@@ -58,6 +66,20 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.lang.Long minCount;
 
   /**
+   * Instance name pattern. Name pattern includes a parameter to specify the auto-incrementing
+   * portion of the name, in a form of consecutive hash (#) chars, each of them corresponding to one
+   * digit of an instance name. For example: name_pattern = inst-####-prod will generate names
+   * starting with inst-0001-prod, inst-0002-prod, up to required count. If there exist instances
+   * matching the name pattern in the same project and zone, the initial instance number will be
+   * equal to the maximum existing instance number + 1 (e.g. if there exists an instance with name
+   * inst-0030-prod, then the generated names will start with inst-0031-prod). The name pattern
+   * placeholder #...# can contain up to 18 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String namePattern;
+
+  /**
    * List of predefined names. The number of names provided must be equal to count.
    * The value may be {@code null}.
    */
@@ -65,11 +87,16 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.util.List<java.lang.String> predefinedNames;
 
   /**
-   * Specifies the instance template from which to create the instance. This field is optional. This
-   * field is optional. It can be a full or partial URL. For example, the following are all valid
-   * URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project/global/i
-   * nstanceTemplates/instanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate
-   * - global/instanceTemplates/instanceTemplate
+   * Specifies the instance template from which to create instances. You may combine
+   * sourceInstanceTemplate with instanceProperties to override specific values from an existing
+   * instance template. Bulk API follows the semantics of JSON Merge Patch described by RFC 7396.
+   *
+   * It can be a full or partial URL. For example, the following are all valid URLs to an instance
+   * template:   - https://www.googleapis.com/compute/v1/projects/project/global/instanceTemplates/i
+   * nstanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate  -
+   * global/instanceTemplates/instanceTemplate
+   *
+   * This field is optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,23 +120,7 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * List of zones to exclude for regional requests.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getExcludedZones() {
-    return excludedZones;
-  }
-
-  /**
-   * List of zones to exclude for regional requests.
-   * @param excludedZones excludedZones or {@code null} for none
-   */
-  public BulkInsertInstanceResource setExcludedZones(java.util.List<java.lang.String> excludedZones) {
-    this.excludedZones = excludedZones;
-    return this;
-  }
-
-  /**
+   * The instance defining the VM instances to be created.
    * @return value or {@code null} for none
    */
   public Instance getInstance() {
@@ -117,10 +128,45 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
+   * The instance defining the VM instances to be created.
    * @param instance instance or {@code null} for none
    */
   public BulkInsertInstanceResource setInstance(Instance instance) {
     this.instance = instance;
+    return this;
+  }
+
+  /**
+   * The instance properties defining the VM instances to be created. Required if
+   * sourceInstanceTemplate is not provided.
+   * @return value or {@code null} for none
+   */
+  public InstanceProperties getInstanceProperties() {
+    return instanceProperties;
+  }
+
+  /**
+   * The instance properties defining the VM instances to be created. Required if
+   * sourceInstanceTemplate is not provided.
+   * @param instanceProperties instanceProperties or {@code null} for none
+   */
+  public BulkInsertInstanceResource setInstanceProperties(InstanceProperties instanceProperties) {
+    this.instanceProperties = instanceProperties;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public LocationPolicy getLocationPolicy() {
+    return locationPolicy;
+  }
+
+  /**
+   * @param locationPolicy locationPolicy or {@code null} for none
+   */
+  public BulkInsertInstanceResource setLocationPolicy(LocationPolicy locationPolicy) {
+    this.locationPolicy = locationPolicy;
     return this;
   }
 
@@ -144,6 +190,37 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
+   * Instance name pattern. Name pattern includes a parameter to specify the auto-incrementing
+   * portion of the name, in a form of consecutive hash (#) chars, each of them corresponding to one
+   * digit of an instance name. For example: name_pattern = inst-####-prod will generate names
+   * starting with inst-0001-prod, inst-0002-prod, up to required count. If there exist instances
+   * matching the name pattern in the same project and zone, the initial instance number will be
+   * equal to the maximum existing instance number + 1 (e.g. if there exists an instance with name
+   * inst-0030-prod, then the generated names will start with inst-0031-prod). The name pattern
+   * placeholder #...# can contain up to 18 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNamePattern() {
+    return namePattern;
+  }
+
+  /**
+   * Instance name pattern. Name pattern includes a parameter to specify the auto-incrementing
+   * portion of the name, in a form of consecutive hash (#) chars, each of them corresponding to one
+   * digit of an instance name. For example: name_pattern = inst-####-prod will generate names
+   * starting with inst-0001-prod, inst-0002-prod, up to required count. If there exist instances
+   * matching the name pattern in the same project and zone, the initial instance number will be
+   * equal to the maximum existing instance number + 1 (e.g. if there exists an instance with name
+   * inst-0030-prod, then the generated names will start with inst-0031-prod). The name pattern
+   * placeholder #...# can contain up to 18 characters.
+   * @param namePattern namePattern or {@code null} for none
+   */
+  public BulkInsertInstanceResource setNamePattern(java.lang.String namePattern) {
+    this.namePattern = namePattern;
+    return this;
+  }
+
+  /**
    * List of predefined names. The number of names provided must be equal to count.
    * @return value or {@code null} for none
    */
@@ -161,11 +238,16 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * Specifies the instance template from which to create the instance. This field is optional. This
-   * field is optional. It can be a full or partial URL. For example, the following are all valid
-   * URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project/global/i
-   * nstanceTemplates/instanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate
-   * - global/instanceTemplates/instanceTemplate
+   * Specifies the instance template from which to create instances. You may combine
+   * sourceInstanceTemplate with instanceProperties to override specific values from an existing
+   * instance template. Bulk API follows the semantics of JSON Merge Patch described by RFC 7396.
+   *
+   * It can be a full or partial URL. For example, the following are all valid URLs to an instance
+   * template:   - https://www.googleapis.com/compute/v1/projects/project/global/instanceTemplates/i
+   * nstanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate  -
+   * global/instanceTemplates/instanceTemplate
+   *
+   * This field is optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceInstanceTemplate() {
@@ -173,11 +255,16 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * Specifies the instance template from which to create the instance. This field is optional. This
-   * field is optional. It can be a full or partial URL. For example, the following are all valid
-   * URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project/global/i
-   * nstanceTemplates/instanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate
-   * - global/instanceTemplates/instanceTemplate
+   * Specifies the instance template from which to create instances. You may combine
+   * sourceInstanceTemplate with instanceProperties to override specific values from an existing
+   * instance template. Bulk API follows the semantics of JSON Merge Patch described by RFC 7396.
+   *
+   * It can be a full or partial URL. For example, the following are all valid URLs to an instance
+   * template:   - https://www.googleapis.com/compute/v1/projects/project/global/instanceTemplates/i
+   * nstanceTemplate  - projects/project/global/instanceTemplates/instanceTemplate  -
+   * global/instanceTemplates/instanceTemplate
+   *
+   * This field is optional.
    * @param sourceInstanceTemplate sourceInstanceTemplate or {@code null} for none
    */
   public BulkInsertInstanceResource setSourceInstanceTemplate(java.lang.String sourceInstanceTemplate) {

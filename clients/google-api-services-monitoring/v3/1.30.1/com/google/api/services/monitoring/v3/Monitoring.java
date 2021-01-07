@@ -46,7 +46,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Monitoring API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Monitoring API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -171,9 +171,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param name Required. The project in which to create the alerting policy. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
-      Note that this field names the parent container in which
-       *        the alerting policy will be written, not the name of the created policy. The alerting
+       *        projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
+       *        the alerting policy will be written, not the name of the created policy. |name| must be a
+       *        host project of a workspace, otherwise INVALID_ARGUMENT error will return. The alerting
        *        policy that is returned will have a name that contains a normalized representation of this
        *        name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID],
        *        identifying the policy in the container.
@@ -205,9 +205,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The project in which to create the alerting policy. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
-      Note that this field names the parent container in which
-       *        the alerting policy will be written, not the name of the created policy. The alerting
+       *        projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
+       *        the alerting policy will be written, not the name of the created policy. |name| must be a
+       *        host project of a workspace, otherwise INVALID_ARGUMENT error will return. The alerting
        *        policy that is returned will have a name that contains a normalized representation of this
        *        name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID],
        *        identifying the policy in the container.
@@ -282,7 +282,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * Required. The project in which to create the alerting policy. The format is:
          * projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
-         * the alerting policy will be written, not the name of the created policy. The alerting
+         * the alerting policy will be written, not the name of the created policy. |name| must be a
+         * host project of a workspace, otherwise INVALID_ARGUMENT error will return. The alerting
          * policy that is returned will have a name that contains a normalized representation of
          * this name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID],
          * identifying the policy in the container.
@@ -292,10 +293,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /** Required. The project in which to create the alerting policy. The format is:
        projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which the
-       alerting policy will be written, not the name of the created policy. The alerting policy that is
-       returned will have a name that contains a normalized representation of this name as a prefix but
-       adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID], identifying the policy in the
-       container.
+       alerting policy will be written, not the name of the created policy. |name| must be a host project
+       of a workspace, otherwise INVALID_ARGUMENT error will return. The alerting policy that is returned
+       will have a name that contains a normalized representation of this name as a prefix but adds a
+       suffix of the form /alertPolicies/[ALERT_POLICY_ID], identifying the policy in the container.
          */
         public java.lang.String getName() {
           return name;
@@ -304,7 +305,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * Required. The project in which to create the alerting policy. The format is:
          * projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
-         * the alerting policy will be written, not the name of the created policy. The alerting
+         * the alerting policy will be written, not the name of the created policy. |name| must be a
+         * host project of a workspace, otherwise INVALID_ARGUMENT error will return. The alerting
          * policy that is returned will have a name that contains a normalized representation of
          * this name as a prefix but adds a suffix of the form /alertPolicies/[ALERT_POLICY_ID],
          * identifying the policy in the container.
@@ -333,8 +335,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The alerting policy to delete. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
-      For more information, see
+       *        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] For more information, see
        *        AlertPolicy.
        * @return the request
        */
@@ -363,8 +364,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The alerting policy to delete. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
-      For more information, see
+       *        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] For more information, see
        *        AlertPolicy.
          * @since 1.13
          */
@@ -617,7 +617,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists the existing alerting policies for the project.
+       * Lists the existing alerting policies for the workspace.
        *
        * Create a request for the method "alertPolicies.list".
        *
@@ -625,8 +625,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param name Required. The project whose alert policies are to be listed. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
-      Note that this field names the parent container in which
+       *        projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
        *        the alerting policies to be listed are stored. To retrieve a single alerting policy by
        *        name, use the GetAlertPolicy operation, instead.
        * @return the request
@@ -645,7 +644,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists the existing alerting policies for the project.
+         * Lists the existing alerting policies for the workspace.
          *
          * Create a request for the method "alertPolicies.list".
          *
@@ -655,8 +654,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The project whose alert policies are to be listed. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
-      Note that this field names the parent container in which
+       *        projects/[PROJECT_ID_OR_NUMBER] Note that this field names the parent container in which
        *        the alerting policies to be listed are stored. To retrieve a single alerting policy by
        *        name, use the GetAlertPolicy operation, instead.
          * @since 1.13
@@ -883,8 +881,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Required if the policy exists. The resource name for this policy. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
-      [ALERT_POLICY_ID] is
+       *        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is
        *        assigned by Stackdriver Monitoring when the policy is created. When calling the
        *        alertPolicies.create method, do not include the name field in the alerting policy passed
        *        as part of the request.
@@ -918,8 +915,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required if the policy exists. The resource name for this policy. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]
-      [ALERT_POLICY_ID] is
+       *        projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID] [ALERT_POLICY_ID] is
        *        assigned by Stackdriver Monitoring when the policy is created. When calling the
        *        alertPolicies.create method, do not include the name field in the alerting policy passed
        *        as part of the request.
@@ -1118,8 +1114,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name The project in which to create the time series. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]
+       * @param name The project in which to create the time series. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @param content the {@link com.google.api.services.monitoring.v3.model.CreateCollectdTimeSeriesRequest}
        * @return the request
        */
@@ -1148,8 +1143,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The project in which to create the time series. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]
+         * @param name The project in which to create the time series. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @param content the {@link com.google.api.services.monitoring.v3.model.CreateCollectdTimeSeriesRequest}
          * @since 1.13
          */
@@ -1280,8 +1274,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project in which to create the group. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]
+       * @param name Required. The project in which to create the group. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @param content the {@link com.google.api.services.monitoring.v3.model.Group}
        * @return the request
        */
@@ -1309,8 +1302,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project in which to create the group. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]
+         * @param name Required. The project in which to create the group. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @param content the {@link com.google.api.services.monitoring.v3.model.Group}
          * @since 1.13
          */
@@ -1435,8 +1427,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The group to delete. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
+       * @param name Required. The group to delete. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1463,8 +1454,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The group to delete. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
+         * @param name Required. The group to delete. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1598,8 +1588,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The group to retrieve. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
+       * @param name Required. The group to retrieve. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1625,8 +1614,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The group to retrieve. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
+         * @param name Required. The group to retrieve. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1744,8 +1732,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project whose groups are to be listed. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]
+       * @param name Required. The project whose groups are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -1771,8 +1758,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project whose groups are to be listed. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]
+         * @param name Required. The project whose groups are to be listed. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -2013,8 +1999,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
        * @param name Output only. The name of this group. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
-      When creating a group, this field is
+       *        projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] When creating a group, this field is
        *        ignored and a new name is created consisting of the project specified in the call to
        *        CreateGroup and a unique [GROUP_ID] that is generated automatically.
        * @param content the {@link com.google.api.services.monitoring.v3.model.Group}
@@ -2045,8 +2030,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Output only. The name of this group. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID]
-      When creating a group, this field is
+       *        projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] When creating a group, this field is
        *        ignored and a new name is created consisting of the project specified in the call to
        *        CreateGroup and a unique [GROUP_ID] that is generated automatically.
          * @param content the {@link com.google.api.services.monitoring.v3.model.Group}
@@ -2627,8 +2611,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The metric descriptor on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
-      An example of [METRIC_ID]
+       *        projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID] An example of [METRIC_ID]
        *        is: "custom.googleapis.com/my_test_metric".
        * @return the request
        */
@@ -2658,8 +2641,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The metric descriptor on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
-      An example of [METRIC_ID]
+       *        projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID] An example of [METRIC_ID]
        *        is: "custom.googleapis.com/my_test_metric".
          * @since 1.13
          */
@@ -2773,8 +2755,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The metric descriptor on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
-      An example value of
+       *        projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID] An example value of
        *        [METRIC_ID] is "compute.googleapis.com/instance/disk/read_bytes_count".
        * @return the request
        */
@@ -2802,8 +2783,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The metric descriptor on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID]
-      An example value of
+       *        projects/[PROJECT_ID_OR_NUMBER]/metricDescriptors/[METRIC_ID] An example value of
        *        [METRIC_ID] is "compute.googleapis.com/instance/disk/read_bytes_count".
          * @since 1.13
          */
@@ -3170,8 +3150,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The monitored resource descriptor to get. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE]
-      The
+       *        projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE] The
        *        [RESOURCE_TYPE] is a predefined type, such as cloudsql_database.
        * @return the request
        */
@@ -3199,8 +3178,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The monitored resource descriptor to get. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE]
-      The
+       *        projects/[PROJECT_ID_OR_NUMBER]/monitoredResourceDescriptors/[RESOURCE_TYPE] The
        *        [RESOURCE_TYPE] is a predefined type, such as cloudsql_database.
          * @since 1.13
          */
@@ -3716,9 +3694,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param name Required. The REST resource name of the parent from which to retrieve the notification channel
-       *        descriptors. The expected syntax is:
-      projects/[PROJECT_ID_OR_NUMBER]
-      Note that this names
+       *        descriptors. The expected syntax is: projects/[PROJECT_ID_OR_NUMBER] Note that this names
        *        the parent container in which to look for the descriptors; to retrieve a single descriptor
        *        by name, use the GetNotificationChannelDescriptor operation, instead.
        * @return the request
@@ -3748,9 +3724,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The REST resource name of the parent from which to retrieve the notification channel
-       *        descriptors. The expected syntax is:
-      projects/[PROJECT_ID_OR_NUMBER]
-      Note that this names
+       *        descriptors. The expected syntax is: projects/[PROJECT_ID_OR_NUMBER] Note that this names
        *        the parent container in which to look for the descriptors; to retrieve a single descriptor
        *        by name, use the GetNotificationChannelDescriptor operation, instead.
          * @since 1.13
@@ -3947,8 +3921,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
-      This names the container into which the channel will be
+       *        projects/[PROJECT_ID_OR_NUMBER] This names the container into which the channel will be
        *        written, this does not name the newly created channel. The resulting channel's name will
        *        have a normalized version of this field as a prefix, but will add
        *        /notificationChannels/[CHANNEL_ID] to identify the channel.
@@ -3981,8 +3954,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
-      This names the container into which the channel will be
+       *        projects/[PROJECT_ID_OR_NUMBER] This names the container into which the channel will be
        *        written, this does not name the newly created channel. The resulting channel's name will
        *        have a normalized version of this field as a prefix, but will add
        *        /notificationChannels/[CHANNEL_ID] to identify the channel.
@@ -4594,8 +4566,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
-      This names the container in which to look for the
+       *        projects/[PROJECT_ID_OR_NUMBER] This names the container in which to look for the
        *        notification channels; it does not name a specific channel. To query a specific channel by
        *        REST resource name, use the GetNotificationChannel operation.
        * @return the request
@@ -4624,8 +4595,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
-      This names the container in which to look for the
+       *        projects/[PROJECT_ID_OR_NUMBER] This names the container in which to look for the
        *        notification channels; it does not name a specific channel. To query a specific channel by
        *        REST resource name, use the GetNotificationChannel operation.
          * @since 1.13
@@ -4854,8 +4824,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name The full REST resource name for this channel. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
-      The [CHANNEL_ID] is
+       *        projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
        *        automatically assigned by the server on creation.
        * @param content the {@link com.google.api.services.monitoring.v3.model.NotificationChannel}
        * @return the request
@@ -4885,8 +4854,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The full REST resource name for this channel. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]
-      The [CHANNEL_ID] is
+       *        projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is
        *        automatically assigned by the server on creation.
          * @param content the {@link com.google.api.services.monitoring.v3.model.NotificationChannel}
          * @since 1.13
@@ -5589,7 +5557,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
          * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
          * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
-         * specified, then this field is ignored.
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
          */
         @com.google.api.client.util.Key("aggregation.alignmentPeriod")
         private String aggregationAlignmentPeriod;
@@ -5598,7 +5567,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        the time series into consistent blocks of time. This will be done before the per-series aligner can
        be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than
        ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner
-       is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.
+       is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value
+       of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for
+       alerting policies.
          */
         public String getAggregationAlignmentPeriod() {
           return aggregationAlignmentPeriod;
@@ -5610,7 +5581,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
          * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
          * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
-         * specified, then this field is ignored.
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
          */
         public List setAggregationAlignmentPeriod(String aggregationAlignmentPeriod) {
           this.aggregationAlignmentPeriod = aggregationAlignmentPeriod;
@@ -5904,6 +5876,182 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.alignmentPeriod")
+        private String secondaryAggregationAlignmentPeriod;
+
+        /** The alignment_period specifies a time interval, in seconds, that is used to divide the data in all
+       the time series into consistent blocks of time. This will be done before the per-series aligner can
+       be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than
+       ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner
+       is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value
+       of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for
+       alerting policies.
+         */
+        public String getSecondaryAggregationAlignmentPeriod() {
+          return secondaryAggregationAlignmentPeriod;
+        }
+
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        public List setSecondaryAggregationAlignmentPeriod(String secondaryAggregationAlignmentPeriod) {
+          this.secondaryAggregationAlignmentPeriod = secondaryAggregationAlignmentPeriod;
+          return this;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.crossSeriesReducer")
+        private java.lang.String secondaryAggregationCrossSeriesReducer;
+
+        /** The reduction operation to be used to combine time series into a single time series, where the
+       value of each data point in the resulting series is a function of all the already aligned values in
+       the input time series.Not all reducer operations can be applied to all time series. The valid
+       choices depend on the metric_kind and the value_type of the original time series. Reduction can
+       yield a time series with a different metric_kind or value_type than the input time series.Time
+       series data must first be aligned (see per_series_aligner) in order to perform cross-time series
+       reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and
+       must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+       returned.
+         */
+        public java.lang.String getSecondaryAggregationCrossSeriesReducer() {
+          return secondaryAggregationCrossSeriesReducer;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        public List setSecondaryAggregationCrossSeriesReducer(java.lang.String secondaryAggregationCrossSeriesReducer) {
+          this.secondaryAggregationCrossSeriesReducer = secondaryAggregationCrossSeriesReducer;
+          return this;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.groupByFields")
+        private java.util.List<java.lang.String> secondaryAggregationGroupByFields;
+
+        /** The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine
+       how the time series are partitioned into subsets prior to applying the aggregation operation. Each
+       subset contains time series that have the same value for each of the grouping fields. Each
+       individual time series is a member of exactly one subset. The cross_series_reducer is applied to
+       each subset of time series. It is not possible to reduce across different resource types, so this
+       field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated
+       away. If group_by_fields is not specified and all the time series have the same resource type, then
+       the time series are aggregated into a single output time series. If cross_series_reducer is not
+       defined, this field is ignored.
+         */
+        public java.util.List<java.lang.String> getSecondaryAggregationGroupByFields() {
+          return secondaryAggregationGroupByFields;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        public List setSecondaryAggregationGroupByFields(java.util.List<java.lang.String> secondaryAggregationGroupByFields) {
+          this.secondaryAggregationGroupByFields = secondaryAggregationGroupByFields;
+          return this;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.perSeriesAligner")
+        private java.lang.String secondaryAggregationPerSeriesAligner;
+
+        /** An Aligner describes how to bring the data points in a single time series into temporal alignment.
+       Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be
+       mathematically grouped together, resulting in a single data point for each alignment_period with
+       end timestamp at the end of the period.Not all alignment operations may be applied to all time
+       series. The valid choices depend on the metric_kind and value_type of the original time series.
+       Alignment can change the metric_kind or the value_type of the time series.Time series data must be
+       aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then
+       per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be
+       specified; otherwise, an error is returned.
+         */
+        public java.lang.String getSecondaryAggregationPerSeriesAligner() {
+          return secondaryAggregationPerSeriesAligner;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        public List setSecondaryAggregationPerSeriesAligner(java.lang.String secondaryAggregationPerSeriesAligner) {
+          this.secondaryAggregationPerSeriesAligner = secondaryAggregationPerSeriesAligner;
+          return this;
+        }
+
         /** Required. Specifies which information is returned about the time series. */
         @com.google.api.client.util.Key
         private java.lang.String view;
@@ -5926,8 +6074,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Queries time series using the time series query language. This method does not require a
-       * Workspace.
+       * Queries time series using Monitoring Query Language. This method does not require a Workspace.
        *
        * Create a request for the method "timeSeries.query".
        *
@@ -5953,8 +6100,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Queries time series using the time series query language. This method does not require a
-         * Workspace.
+         * Queries time series using Monitoring Query Language. This method does not require a Workspace.
          *
          * Create a request for the method "timeSeries.query".
          *
@@ -6731,9 +6877,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        *
        * @param name A unique resource name for this Uptime check configuration. The format is:
        *        projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
-      This field should be
-       *        omitted when creating the Uptime check configuration; on create, the resource name is
-       *        assigned by the server and included in the response.
+       *        [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the Uptime check.This
+       *        field should be omitted when creating the Uptime check configuration; on create, the
+       *        resource name is assigned by the server and included in the response.
        * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
        * @return the request
        */
@@ -6765,9 +6911,9 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          *
          * @param name A unique resource name for this Uptime check configuration. The format is:
        *        projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
-      This field should be
-       *        omitted when creating the Uptime check configuration; on create, the resource name is
-       *        assigned by the server and included in the response.
+       *        [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the Uptime check.This
+       *        field should be omitted when creating the Uptime check configuration; on create, the
+       *        resource name is assigned by the server and included in the response.
          * @param content the {@link com.google.api.services.monitoring.v3.model.UptimeCheckConfig}
          * @since 1.13
          */
@@ -6838,17 +6984,19 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * A unique resource name for this Uptime check configuration. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] This field should be
-         * omitted when creating the Uptime check configuration; on create, the resource name is
-         * assigned by the server and included in the response.
+         * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
+         * [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the Uptime
+         * check.This field should be omitted when creating the Uptime check configuration; on
+         * create, the resource name is assigned by the server and included in the response.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** A unique resource name for this Uptime check configuration. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] This field should be omitted
-       when creating the Uptime check configuration; on create, the resource name is assigned by the
-       server and included in the response.
+       projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] [PROJECT_ID_OR_NUMBER] is the
+       Workspace host project associated with the Uptime check.This field should be omitted when creating
+       the Uptime check configuration; on create, the resource name is assigned by the server and included
+       in the response.
          */
         public java.lang.String getName() {
           return name;
@@ -6856,9 +7004,10 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * A unique resource name for this Uptime check configuration. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID] This field should be
-         * omitted when creating the Uptime check configuration; on create, the resource name is
-         * assigned by the server and included in the response.
+         * projects/[PROJECT_ID_OR_NUMBER]/uptimeCheckConfigs/[UPTIME_CHECK_ID]
+         * [PROJECT_ID_OR_NUMBER] is the Workspace host project associated with the Uptime
+         * check.This field should be omitted when creating the Uptime check configuration; on
+         * create, the resource name is assigned by the server and included in the response.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6933,8 +7082,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the monitoring server.  After setting any optional
      * parameters, call the {@link Create#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. Resource name of the parent workspace. The format is:
-    projects/[PROJECT_ID_OR_NUMBER]
+     * @param parent Required. Resource name of the parent workspace. The format is: projects/[PROJECT_ID_OR_NUMBER]
      * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
      * @return the request
      */
@@ -6962,8 +7110,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. Resource name of the parent workspace. The format is:
-    projects/[PROJECT_ID_OR_NUMBER]
+       * @param parent Required. Resource name of the parent workspace. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
        * @since 1.13
        */
@@ -7381,8 +7528,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
      * @param parent Required. Resource name of the parent containing the listed services, either a project or a
-     *        Monitoring Workspace. The formats are:
-    projects/[PROJECT_ID_OR_NUMBER]
+     *        Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
      *        workspaces/[HOST_PROJECT_ID_OR_NUMBER]
      * @return the request
      */
@@ -7410,8 +7556,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param parent Required. Resource name of the parent containing the listed services, either a project or a
-     *        Monitoring Workspace. The formats are:
-    projects/[PROJECT_ID_OR_NUMBER]
+     *        Monitoring Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]
      *        workspaces/[HOST_PROJECT_ID_OR_NUMBER]
        * @since 1.13
        */
@@ -7523,22 +7668,28 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
       /**
        * A filter specifying what Services to return. The filter currently supports the following
-       * fields: - `identifier_case` - `app_engine.module_id` - `cloud_endpoints.service` -
-       * `cluster_istio.location` - `cluster_istio.cluster_name` - `cluster_istio.service_namespace`
-       * - `cluster_istio.service_name` identifier_case refers to which option in the identifier
-       * oneof is populated. For example, the filter identifier_case = "CUSTOM" would match all
-       * services with a value for the custom field. Valid options are "CUSTOM", "APP_ENGINE",
-       * "CLOUD_ENDPOINTS", and "CLUSTER_ISTIO".
+       * fields: - `identifier_case` - `app_engine.module_id` - `cloud_endpoints.service` (reserved
+       * for future use) - `mesh_istio.mesh_uid` - `mesh_istio.service_namespace` -
+       * `mesh_istio.service_name` - `cluster_istio.location` (deprecated) -
+       * `cluster_istio.cluster_name` (deprecated) - `cluster_istio.service_namespace` (deprecated)
+       * - `cluster_istio.service_name` (deprecated) identifier_case refers to which option in the
+       * identifier oneof is populated. For example, the filter identifier_case = "CUSTOM" would
+       * match all services with a value for the custom field. Valid options are "CUSTOM",
+       * "APP_ENGINE", "MESH_ISTIO", plus "CLUSTER_ISTIO" (deprecated) and "CLOUD_ENDPOINTS"
+       * (reserved for future use).
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** A filter specifying what Services to return. The filter currently supports the following fields: -
-     `identifier_case` - `app_engine.module_id` - `cloud_endpoints.service` - `cluster_istio.location` -
-     `cluster_istio.cluster_name` - `cluster_istio.service_namespace` - `cluster_istio.service_name`
+     `identifier_case` - `app_engine.module_id` - `cloud_endpoints.service` (reserved for future use) -
+     `mesh_istio.mesh_uid` - `mesh_istio.service_namespace` - `mesh_istio.service_name` -
+     `cluster_istio.location` (deprecated) - `cluster_istio.cluster_name` (deprecated) -
+     `cluster_istio.service_namespace` (deprecated) - `cluster_istio.service_name` (deprecated)
      identifier_case refers to which option in the identifier oneof is populated. For example, the
      filter identifier_case = "CUSTOM" would match all services with a value for the custom field. Valid
-     options are "CUSTOM", "APP_ENGINE", "CLOUD_ENDPOINTS", and "CLUSTER_ISTIO".
+     options are "CUSTOM", "APP_ENGINE", "MESH_ISTIO", plus "CLUSTER_ISTIO" (deprecated) and
+     "CLOUD_ENDPOINTS" (reserved for future use).
        */
       public java.lang.String getFilter() {
         return filter;
@@ -7546,12 +7697,15 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
       /**
        * A filter specifying what Services to return. The filter currently supports the following
-       * fields: - `identifier_case` - `app_engine.module_id` - `cloud_endpoints.service` -
-       * `cluster_istio.location` - `cluster_istio.cluster_name` - `cluster_istio.service_namespace`
-       * - `cluster_istio.service_name` identifier_case refers to which option in the identifier
-       * oneof is populated. For example, the filter identifier_case = "CUSTOM" would match all
-       * services with a value for the custom field. Valid options are "CUSTOM", "APP_ENGINE",
-       * "CLOUD_ENDPOINTS", and "CLUSTER_ISTIO".
+       * fields: - `identifier_case` - `app_engine.module_id` - `cloud_endpoints.service` (reserved
+       * for future use) - `mesh_istio.mesh_uid` - `mesh_istio.service_namespace` -
+       * `mesh_istio.service_name` - `cluster_istio.location` (deprecated) -
+       * `cluster_istio.cluster_name` (deprecated) - `cluster_istio.service_namespace` (deprecated)
+       * - `cluster_istio.service_name` (deprecated) identifier_case refers to which option in the
+       * identifier oneof is populated. For example, the filter identifier_case = "CUSTOM" would
+       * match all services with a value for the custom field. Valid options are "CUSTOM",
+       * "APP_ENGINE", "MESH_ISTIO", plus "CLUSTER_ISTIO" (deprecated) and "CLOUD_ENDPOINTS"
+       * (reserved for future use).
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -7620,8 +7774,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the monitoring server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Resource name for this Service. The format is:
-    projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+     * @param name Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
      * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
      * @return the request
      */
@@ -7649,8 +7802,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Resource name for this Service. The format is:
-    projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+       * @param name Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        * @param content the {@link com.google.api.services.monitoring.v3.model.Service}
        * @since 1.13
        */
@@ -8274,8 +8426,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. Resource name of the parent containing the listed SLOs, either a project or a Monitoring
-       *        Workspace. The formats are:
-      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+       *        Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        *        workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
        * @return the request
        */
@@ -8303,8 +8454,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. Resource name of the parent containing the listed SLOs, either a project or a Monitoring
-       *        Workspace. The formats are:
-      projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+       *        Workspace. The formats are: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
        *        workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
          * @since 1.13
          */

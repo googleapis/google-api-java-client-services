@@ -20,8 +20,7 @@ package com.google.api.services.acceleratedmobilepageurl.v1;
  * Service definition for Acceleratedmobilepageurl (v1).
  *
  * <p>
- * Retrieves the list of AMP URLs (and equivalent AMP Cache URLs) for a given list of public URL(s).
-
+ * Retrieves the list of AMP URLs (and equivalent AMP Cache URLs) for a given list of public URL(s). 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class Acceleratedmobilepageurl extends com.google.api.client.googleapis.s
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Accelerated Mobile Pages (AMP) URL API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Accelerated Mobile Pages (AMP) URL API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

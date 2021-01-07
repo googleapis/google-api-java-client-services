@@ -50,7 +50,7 @@ public final class Seats extends com.google.api.client.json.GenericJson {
    * This is a required property and is exclusive to subscriptions with FLEXIBLE or TRIAL plans.
    * This property sets the maximum number of licensed users allowed on a subscription. This
    * quantity can be increased up to the maximum limit defined in the reseller's contract. The
-   * minimum quantity is the current number of users in the customer account. Note: G Suite
+   * minimum quantity is the current number of users in the customer account. *Note: *G Suite
    * subscriptions automatically assign a license to every user.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class Seats extends com.google.api.client.json.GenericJson {
    * ANNUAL_YEARLY_PAY plans. This property sets the maximum number of licenses assignable to users
    * on a subscription. The reseller can add more licenses, but once set, the numberOfSeats cannot
    * be reduced until renewal. The reseller is invoiced based on the numberOfSeats value regardless
-   * of how many of these user licenses are assigned. Note: G Suite subscriptions automatically
+   * of how many of these user licenses are assigned. *Note: *G Suite subscriptions automatically
    * assign a license to every user.
    * The value may be {@code null}.
    */
@@ -111,7 +111,7 @@ public final class Seats extends com.google.api.client.json.GenericJson {
    * This is a required property and is exclusive to subscriptions with FLEXIBLE or TRIAL plans.
    * This property sets the maximum number of licensed users allowed on a subscription. This
    * quantity can be increased up to the maximum limit defined in the reseller's contract. The
-   * minimum quantity is the current number of users in the customer account. Note: G Suite
+   * minimum quantity is the current number of users in the customer account. *Note: *G Suite
    * subscriptions automatically assign a license to every user.
    * @return value or {@code null} for none
    */
@@ -123,7 +123,7 @@ public final class Seats extends com.google.api.client.json.GenericJson {
    * This is a required property and is exclusive to subscriptions with FLEXIBLE or TRIAL plans.
    * This property sets the maximum number of licensed users allowed on a subscription. This
    * quantity can be increased up to the maximum limit defined in the reseller's contract. The
-   * minimum quantity is the current number of users in the customer account. Note: G Suite
+   * minimum quantity is the current number of users in the customer account. *Note: *G Suite
    * subscriptions automatically assign a license to every user.
    * @param maximumNumberOfSeats maximumNumberOfSeats or {@code null} for none
    */
@@ -137,7 +137,7 @@ public final class Seats extends com.google.api.client.json.GenericJson {
    * ANNUAL_YEARLY_PAY plans. This property sets the maximum number of licenses assignable to users
    * on a subscription. The reseller can add more licenses, but once set, the numberOfSeats cannot
    * be reduced until renewal. The reseller is invoiced based on the numberOfSeats value regardless
-   * of how many of these user licenses are assigned. Note: G Suite subscriptions automatically
+   * of how many of these user licenses are assigned. *Note: *G Suite subscriptions automatically
    * assign a license to every user.
    * @return value or {@code null} for none
    */
@@ -150,7 +150,7 @@ public final class Seats extends com.google.api.client.json.GenericJson {
    * ANNUAL_YEARLY_PAY plans. This property sets the maximum number of licenses assignable to users
    * on a subscription. The reseller can add more licenses, but once set, the numberOfSeats cannot
    * be reduced until renewal. The reseller is invoiced based on the numberOfSeats value regardless
-   * of how many of these user licenses are assigned. Note: G Suite subscriptions automatically
+   * of how many of these user licenses are assigned. *Note: *G Suite subscriptions automatically
    * assign a license to every user.
    * @param numberOfSeats numberOfSeats or {@code null} for none
    */

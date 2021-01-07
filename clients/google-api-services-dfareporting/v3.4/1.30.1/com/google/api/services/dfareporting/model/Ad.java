@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Contains properties of a Campaign Manager ad.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -140,7 +140,7 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   /**
    * Creative rotation for this ad. Applicable when type is AD_SERVING_DEFAULT_AD,
    * AD_SERVING_STANDARD_AD, or AD_SERVING_TRACKING. When type is AD_SERVING_DEFAULT_AD, this field
-   * should have exactly one creativeAssignment.
+   * should have exactly one creativeAssignment .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,8 +179,6 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean dynamicClickTracker;
 
   /**
-   * Date and time that this ad should stop serving. Must be later than the start time. This is a
-   * required field on insertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -291,8 +289,6 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean sslRequired;
 
   /**
-   * Date and time that this ad should start serving. If creating an ad, this field must be a time
-   * in the future. This is a required field on insertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -324,8 +320,8 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   private TechnologyTargeting technologyTargeting;
 
   /**
-   * Type of ad. This is a required field on insertion. Note that default ads
-   * (AD_SERVING_DEFAULT_AD) cannot be created directly (see Creative resource).
+   * Type of ad. This is a required field on insertion. Note that default ads (
+   * AD_SERVING_DEFAULT_AD) cannot be created directly (see Creative resource).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -590,7 +586,7 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   /**
    * Creative rotation for this ad. Applicable when type is AD_SERVING_DEFAULT_AD,
    * AD_SERVING_STANDARD_AD, or AD_SERVING_TRACKING. When type is AD_SERVING_DEFAULT_AD, this field
-   * should have exactly one creativeAssignment.
+   * should have exactly one creativeAssignment .
    * @return value or {@code null} for none
    */
   public CreativeRotation getCreativeRotation() {
@@ -600,7 +596,7 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   /**
    * Creative rotation for this ad. Applicable when type is AD_SERVING_DEFAULT_AD,
    * AD_SERVING_STANDARD_AD, or AD_SERVING_TRACKING. When type is AD_SERVING_DEFAULT_AD, this field
-   * should have exactly one creativeAssignment.
+   * should have exactly one creativeAssignment .
    * @param creativeRotation creativeRotation or {@code null} for none
    */
   public Ad setCreativeRotation(CreativeRotation creativeRotation) {
@@ -685,8 +681,6 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date and time that this ad should stop serving. Must be later than the start time. This is a
-   * required field on insertion.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getEndTime() {
@@ -694,8 +688,6 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date and time that this ad should stop serving. Must be later than the start time. This is a
-   * required field on insertion.
    * @param endTime endTime or {@code null} for none
    */
   public Ad setEndTime(com.google.api.client.util.DateTime endTime) {
@@ -954,8 +946,6 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date and time that this ad should start serving. If creating an ad, this field must be a time
-   * in the future. This is a required field on insertion.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getStartTime() {
@@ -963,8 +953,6 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Date and time that this ad should start serving. If creating an ad, this field must be a time
-   * in the future. This is a required field on insertion.
    * @param startTime startTime or {@code null} for none
    */
   public Ad setStartTime(com.google.api.client.util.DateTime startTime) {
@@ -1032,8 +1020,8 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of ad. This is a required field on insertion. Note that default ads
-   * (AD_SERVING_DEFAULT_AD) cannot be created directly (see Creative resource).
+   * Type of ad. This is a required field on insertion. Note that default ads (
+   * AD_SERVING_DEFAULT_AD) cannot be created directly (see Creative resource).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -1041,8 +1029,8 @@ public final class Ad extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of ad. This is a required field on insertion. Note that default ads
-   * (AD_SERVING_DEFAULT_AD) cannot be created directly (see Creative resource).
+   * Type of ad. This is a required field on insertion. Note that default ads (
+   * AD_SERVING_DEFAULT_AD) cannot be created directly (see Creative resource).
    * @param type type or {@code null} for none
    */
   public Ad setType(java.lang.String type) {

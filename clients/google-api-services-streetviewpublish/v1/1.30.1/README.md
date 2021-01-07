@@ -1,7 +1,6 @@
 # Street View Publish API Client Library for Java
 
-Publishes 360 photos to Google Maps, along with position, orientation, and connectivity metadata. Apps can offer an interface for positioning, connecting, and uploading user-generated Street View images.
-
+Publishes 360 photos to Google Maps, along with position, orientation, and connectivity metadata. Apps can offer an interface for positioning, connecting, and uploading user-generated Street View images. 
 
 This page contains information about getting started with the Street View Publish API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-streetviewpublish</artifactId>
-      <version>v1-rev20200224-1.30.9</version>
+      <version>v1-rev20201012-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-streetviewpublish:v1-rev20200224-1.30.9'
+  compile 'com.google.apis:google-api-services-streetviewpublish:v1-rev20201012-1.30.10'
 }
 ```
 

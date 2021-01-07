@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-redis</artifactId>
-      <version>v1beta1-rev20200320-1.30.9</version>
+      <version>v1beta1-rev20201110-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-redis:v1beta1-rev20200320-1.30.9'
+  compile 'com.google.apis:google-api-services-redis:v1beta1-rev20201110-1.30.10'
 }
 ```
 

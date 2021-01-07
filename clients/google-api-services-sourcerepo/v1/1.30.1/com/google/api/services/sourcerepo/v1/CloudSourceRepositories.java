@@ -46,7 +46,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Source Repositories API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Source Repositories API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -150,8 +150,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
      * This request holds the parameters needed by the sourcerepo server.  After setting any optional
      * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
      *
-     * @param name The name of the requested project. Values are of the form
-    `projects/`.
+     * @param name The name of the requested project. Values are of the form `projects/`.
      * @return the request
      */
     public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -178,8 +177,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
        * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The name of the requested project. Values are of the form
-    `projects/`.
+       * @param name The name of the requested project. Values are of the form `projects/`.
        * @since 1.13
        */
       protected GetConfig(java.lang.String name) {
@@ -257,9 +255,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         return (GetConfig) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The name of the requested project. Values are of the form `projects/`.
-       */
+      /** The name of the requested project. Values are of the form `projects/`. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
@@ -269,9 +265,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         return name;
       }
 
-      /**
-       * The name of the requested project. Values are of the form `projects/`.
-       */
+      /** The name of the requested project. Values are of the form `projects/`. */
       public GetConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -295,8 +289,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
      * This request holds the parameters needed by the sourcerepo server.  After setting any optional
      * parameters, call the {@link UpdateConfig#execute()} method to invoke the remote operation.
      *
-     * @param name The name of the requested project. Values are of the form
-    `projects/`.
+     * @param name The name of the requested project. Values are of the form `projects/`.
      * @param content the {@link com.google.api.services.sourcerepo.v1.model.UpdateProjectConfigRequest}
      * @return the request
      */
@@ -324,8 +317,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
        * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The name of the requested project. Values are of the form
-    `projects/`.
+       * @param name The name of the requested project. Values are of the form `projects/`.
        * @param content the {@link com.google.api.services.sourcerepo.v1.model.UpdateProjectConfigRequest}
        * @since 1.13
        */
@@ -394,9 +386,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         return (UpdateConfig) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The name of the requested project. Values are of the form `projects/`.
-       */
+      /** The name of the requested project. Values are of the form `projects/`. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
@@ -406,9 +396,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         return name;
       }
 
-      /**
-       * The name of the requested project. Values are of the form `projects/`.
-       */
+      /** The name of the requested project. Values are of the form `projects/`. */
       public UpdateConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -446,17 +434,15 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
     public class Repos {
 
       /**
-       * Creates a repo in the given project with the given name.
-       *
-       * If the named repository already exists, `CreateRepo` returns `ALREADY_EXISTS`.
+       * Creates a repo in the given project with the given name. If the named repository already exists,
+       * `CreateRepo` returns `ALREADY_EXISTS`.
        *
        * Create a request for the method "repos.create".
        *
        * This request holds the parameters needed by the sourcerepo server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The project in which to create the repo. Values are of the form
-      `projects/`.
+       * @param parent The project in which to create the repo. Values are of the form `projects/`.
        * @param content the {@link com.google.api.services.sourcerepo.v1.model.Repo}
        * @return the request
        */
@@ -474,9 +460,8 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a repo in the given project with the given name.
-         *
-         * If the named repository already exists, `CreateRepo` returns `ALREADY_EXISTS`.
+         * Creates a repo in the given project with the given name. If the named repository already
+         * exists, `CreateRepo` returns `ALREADY_EXISTS`.
          *
          * Create a request for the method "repos.create".
          *
@@ -486,8 +471,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The project in which to create the repo. Values are of the form
-      `projects/`.
+         * @param parent The project in which to create the repo. Values are of the form `projects/`.
          * @param content the {@link com.google.api.services.sourcerepo.v1.model.Repo}
          * @since 1.13
          */
@@ -556,9 +540,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The project in which to create the repo. Values are of the form `projects/`.
-         */
+        /** The project in which to create the repo. Values are of the form `projects/`. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -568,9 +550,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return parent;
         }
 
-        /**
-         * The project in which to create the repo. Values are of the form `projects/`.
-         */
+        /** The project in which to create the repo. Values are of the form `projects/`. */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -594,8 +574,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
        * This request holds the parameters needed by the sourcerepo server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the repo to delete. Values are of the form
-      `projects//repos/`.
+       * @param name The name of the repo to delete. Values are of the form `projects//repos/`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -609,7 +588,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Deletes a repo.
@@ -622,8 +601,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the repo to delete. Values are of the form
-      `projects//repos/`.
+         * @param name The name of the repo to delete. Values are of the form `projects//repos/`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -632,7 +610,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -691,9 +669,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The name of the repo to delete. Values are of the form `projects//repos/`.
-         */
+        /** The name of the repo to delete. Values are of the form `projects//repos/`. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -703,14 +679,12 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return name;
         }
 
-        /**
-         * The name of the repo to delete. Values are of the form `projects//repos/`.
-         */
+        /** The name of the repo to delete. Values are of the form `projects//repos/`. */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.name = name;
           return this;
@@ -729,8 +703,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
        * This request holds the parameters needed by the sourcerepo server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the requested repository. Values are of the form
-      `projects//repos/`.
+       * @param name The name of the requested repository. Values are of the form `projects//repos/`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -744,7 +717,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Returns information about a repo.
@@ -756,8 +729,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the requested repository. Values are of the form
-      `projects//repos/`.
+         * @param name The name of the requested repository. Values are of the form `projects//repos/`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -766,7 +738,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -835,9 +807,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The name of the requested repository. Values are of the form `projects//repos/`.
-         */
+        /** The name of the requested repository. Values are of the form `projects//repos/`. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -847,14 +817,12 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return name;
         }
 
-        /**
-         * The name of the requested repository. Values are of the form `projects//repos/`.
-         */
+        /** The name of the requested repository. Values are of the form `projects//repos/`. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.name = name;
           return this;
@@ -874,8 +842,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
        * This request holds the parameters needed by the sourcerepo server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @return the request
        */
@@ -890,7 +857,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
 
         private final java.util.regex.Pattern RESOURCE_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists
@@ -904,8 +871,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @since 1.13
          */
@@ -915,7 +881,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -1006,41 +972,40 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.resource = resource;
           return this;
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned.
-
-       Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-       Requests for policies with any conditional bindings must specify version 3. Policies without any
-       conditional bindings may specify any valid value or leave the field unset.
+        /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+       must specify version 3. Policies without any conditional bindings may specify any valid value or
+       leave the field unset. To learn which resources support conditions in their IAM policies, see the
+       [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
           this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1053,16 +1018,15 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         }
       }
       /**
-       * Returns all repos belonging to a project. The sizes of the repos are not set by ListRepos.  To
-       * get the size of a repo, use GetRepo.
+       * Returns all repos belonging to a project. The sizes of the repos are not set by ListRepos. To get
+       * the size of a repo, use GetRepo.
        *
        * Create a request for the method "repos.list".
        *
        * This request holds the parameters needed by the sourcerepo server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name The project ID whose repos should be listed. Values are of the form
-      `projects/`.
+       * @param name The project ID whose repos should be listed. Values are of the form `projects/`.
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -1079,7 +1043,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Returns all repos belonging to a project. The sizes of the repos are not set by ListRepos.  To
+         * Returns all repos belonging to a project. The sizes of the repos are not set by ListRepos. To
          * get the size of a repo, use GetRepo.
          *
          * Create a request for the method "repos.list".
@@ -1089,8 +1053,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The project ID whose repos should be listed. Values are of the form
-      `projects/`.
+         * @param name The project ID whose repos should be listed. Values are of the form `projects/`.
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -1168,9 +1131,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The project ID whose repos should be listed. Values are of the form `projects/`.
-         */
+        /** The project ID whose repos should be listed. Values are of the form `projects/`. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -1180,9 +1141,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return name;
         }
 
-        /**
-         * The project ID whose repos should be listed. Values are of the form `projects/`.
-         */
+        /** The project ID whose repos should be listed. Values are of the form `projects/`. */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1254,8 +1213,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
        * This request holds the parameters needed by the sourcerepo server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the requested repository. Values are of the form
-      `projects//repos/`.
+       * @param name The name of the requested repository. Values are of the form `projects//repos/`.
        * @param content the {@link com.google.api.services.sourcerepo.v1.model.UpdateRepoRequest}
        * @return the request
        */
@@ -1270,7 +1228,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Updates information about a repo.
@@ -1283,8 +1241,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the requested repository. Values are of the form
-      `projects//repos/`.
+         * @param name The name of the requested repository. Values are of the form `projects//repos/`.
          * @param content the {@link com.google.api.services.sourcerepo.v1.model.UpdateRepoRequest}
          * @since 1.13
          */
@@ -1294,7 +1251,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -1353,9 +1310,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The name of the requested repository. Values are of the form `projects//repos/`.
-         */
+        /** The name of the requested repository. Values are of the form `projects//repos/`. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -1365,14 +1320,12 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return name;
         }
 
-        /**
-         * The name of the requested repository. Values are of the form `projects//repos/`.
-         */
+        /** The name of the requested repository. Values are of the form `projects//repos/`. */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.name = name;
           return this;
@@ -1391,8 +1344,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
        * This request holds the parameters needed by the sourcerepo server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.sourcerepo.v1.model.SetIamPolicyRequest}
        * @return the request
@@ -1408,7 +1360,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
 
         private final java.util.regex.Pattern RESOURCE_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.
@@ -1421,8 +1373,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.sourcerepo.v1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -1433,7 +1384,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -1514,7 +1465,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.resource = resource;
           return this;
@@ -1526,17 +1477,14 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         }
       }
       /**
-       * Synchronize a connected repo.
-       *
-       * The response contains SyncRepoMetadata in the metadata field.
+       * Synchronize a connected repo. The response contains SyncRepoMetadata in the metadata field.
        *
        * Create a request for the method "repos.sync".
        *
        * This request holds the parameters needed by the sourcerepo server.  After setting any optional
        * parameters, call the {@link Sync#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the repo to synchronize. Values are of the form
-      `projects//repos/`.
+       * @param name The name of the repo to synchronize. Values are of the form `projects//repos/`.
        * @param content the {@link com.google.api.services.sourcerepo.v1.model.SyncRepoRequest}
        * @return the request
        */
@@ -1551,12 +1499,10 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+name}:sync";
 
         private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
-         * Synchronize a connected repo.
-         *
-         * The response contains SyncRepoMetadata in the metadata field.
+         * Synchronize a connected repo. The response contains SyncRepoMetadata in the metadata field.
          *
          * Create a request for the method "repos.sync".
          *
@@ -1565,8 +1511,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
          * {@link Sync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the repo to synchronize. Values are of the form
-      `projects//repos/`.
+         * @param name The name of the repo to synchronize. Values are of the form `projects//repos/`.
          * @param content the {@link com.google.api.services.sourcerepo.v1.model.SyncRepoRequest}
          * @since 1.13
          */
@@ -1576,7 +1521,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -1635,9 +1580,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return (Sync) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The name of the repo to synchronize. Values are of the form `projects//repos/`.
-         */
+        /** The name of the repo to synchronize. Values are of the form `projects//repos/`. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
@@ -1647,14 +1590,12 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           return name;
         }
 
-        /**
-         * The name of the repo to synchronize. Values are of the form `projects//repos/`.
-         */
+        /** The name of the repo to synchronize. Values are of the form `projects//repos/`. */
         public Sync setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.name = name;
           return this;
@@ -1674,8 +1615,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
        * This request holds the parameters needed by the sourcerepo server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.sourcerepo.v1.model.TestIamPermissionsRequest}
        * @return the request
@@ -1691,7 +1631,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
         private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
 
         private final java.util.regex.Pattern RESOURCE_PATTERN =
-            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.+$");
+            java.util.regex.Pattern.compile("^projects/[^/]+/repos/.*$");
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
@@ -1705,8 +1645,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.sourcerepo.v1.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -1717,7 +1656,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
         }
 
@@ -1798,7 +1737,7 @@ public class CloudSourceRepositories extends com.google.api.client.googleapis.se
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
                 "Parameter resource must conform to the pattern " +
-                "^projects/[^/]+/repos/.+$");
+                "^projects/[^/]+/repos/.*$");
           }
           this.resource = resource;
           return this;

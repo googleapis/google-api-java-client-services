@@ -120,7 +120,6 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    * default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt
    * to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or
    * SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
-   * TODO(b/131765817): Update documentation when NVME is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("interface")
@@ -378,7 +377,6 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    * default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt
    * to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or
    * SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
-   * TODO(b/131765817): Update documentation when NVME is supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterface() {
@@ -390,7 +388,6 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    * default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt
    * to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or
    * SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
-   * TODO(b/131765817): Update documentation when NVME is supported.
    * @param interface__ interface__ or {@code null} for none
    */
   public AttachedDisk setInterface(java.lang.String interface__) {

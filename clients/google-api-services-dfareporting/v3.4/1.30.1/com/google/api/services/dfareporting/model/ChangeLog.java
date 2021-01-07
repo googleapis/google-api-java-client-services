@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Describes a change that a user has made to a resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -45,7 +45,6 @@ public final class ChangeLog extends com.google.api.client.json.GenericJson {
   private java.lang.String action;
 
   /**
-   * Time when the object was modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +164,6 @@ public final class ChangeLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time when the object was modified.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getChangeTime() {
@@ -173,7 +171,6 @@ public final class ChangeLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time when the object was modified.
    * @param changeTime changeTime or {@code null} for none
    */
   public ChangeLog setChangeTime(com.google.api.client.util.DateTime changeTime) {

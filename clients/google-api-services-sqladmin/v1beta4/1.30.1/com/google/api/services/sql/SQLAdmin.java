@@ -46,7 +46,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud SQL Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud SQL Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -152,8 +152,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Project ID of the project that contains the instance.
      * @param instance Cloud SQL instance ID. This does not include the project ID.
-     * @param id The ID of the Backup Run to delete. To find a Backup Run ID, use the list
-    method.
+     * @param id The ID of the Backup Run to delete. To find a Backup Run ID, use the list method.
      * @return the request
      */
     public Delete delete(java.lang.String project, java.lang.String instance, java.lang.Long id) throws java.io.IOException {
@@ -178,8 +177,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Project ID of the project that contains the instance.
        * @param instance Cloud SQL instance ID. This does not include the project ID.
-       * @param id The ID of the Backup Run to delete. To find a Backup Run ID, use the list
-    method.
+       * @param id The ID of the Backup Run to delete. To find a Backup Run ID, use the list method.
        * @since 1.13
        */
       protected Delete(java.lang.String project, java.lang.String instance, java.lang.Long id) {
@@ -276,9 +274,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /**
-       * The ID of the Backup Run to delete. To find a Backup Run ID, use the list method.
-       */
+      /** The ID of the Backup Run to delete. To find a Backup Run ID, use the list method. */
       @com.google.api.client.util.Key
       private java.lang.Long id;
 
@@ -288,9 +284,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return id;
       }
 
-      /**
-       * The ID of the Backup Run to delete. To find a Backup Run ID, use the list method.
-       */
+      /** The ID of the Backup Run to delete. To find a Backup Run ID, use the list method. */
       public Delete setId(java.lang.Long id) {
         this.id = id;
         return this;
@@ -2041,8 +2035,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link Clone#execute()} method to invoke the remote operation.
      *
      * @param project Project ID of the source as well as the clone Cloud SQL instance.
-     * @param instance The ID of the Cloud SQL instance to be cloned (source). This does not
-    include the project ID.
+     * @param instance The ID of the Cloud SQL instance to be cloned (source). This does not include the project ID.
      * @param content the {@link com.google.api.services.sql.model.InstancesCloneRequest}
      * @return the request
      */
@@ -2068,8 +2061,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param project Project ID of the source as well as the clone Cloud SQL instance.
-       * @param instance The ID of the Cloud SQL instance to be cloned (source). This does not
-    include the project ID.
+       * @param instance The ID of the Cloud SQL instance to be cloned (source). This does not include the project ID.
        * @param content the {@link com.google.api.services.sql.model.InstancesCloneRequest}
        * @since 1.13
        */
@@ -2869,7 +2861,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Imports data into a Cloud SQL instance from a SQL dump  or CSV file in Cloud Storage.
+     * Imports data into a Cloud SQL instance from a SQL dump or CSV file in Cloud Storage.
      *
      * Create a request for the method "instances.import".
      *
@@ -2892,7 +2884,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/import";
 
       /**
-       * Imports data into a Cloud SQL instance from a SQL dump  or CSV file in Cloud Storage.
+       * Imports data into a Cloud SQL instance from a SQL dump or CSV file in Cloud Storage.
        *
        * Create a request for the method "instances.import".
        *
@@ -3013,8 +3005,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the sql server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param project Project ID of the project to which the newly created Cloud SQL instances
-    should belong.
+     * @param project Project ID of the project to which the newly created Cloud SQL instances should belong.
      * @param content the {@link com.google.api.services.sql.model.DatabaseInstance}
      * @return the request
      */
@@ -3038,8 +3029,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project Project ID of the project to which the newly created Cloud SQL instances
-    should belong.
+       * @param project Project ID of the project to which the newly created Cloud SQL instances should belong.
        * @param content the {@link com.google.api.services.sql.model.DatabaseInstance}
        * @since 1.13
        */
@@ -3252,7 +3242,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * A filter expression that filters resources listed in the response. The expression is in the
        * form of field:value. For example, 'instanceType:CLOUD_SQL_INSTANCE'. Fields can be nested
        * as needed as per their JSON representation, such as 'settings.userLabels.auto_start:true'.
-       *
        * Multiple filter queries are space-separated. For example. 'state:RUNNABLE
        * instanceType:CLOUD_SQL_INSTANCE'. By default, each expression is an AND expression.
        * However, you can include AND and OR expressions explicitly.
@@ -3262,11 +3251,9 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
       /** A filter expression that filters resources listed in the response. The expression is in the form of
      field:value. For example, 'instanceType:CLOUD_SQL_INSTANCE'. Fields can be nested as needed as per
-     their JSON representation, such as 'settings.userLabels.auto_start:true'.
-
-     Multiple filter queries are space-separated. For example. 'state:RUNNABLE
-     instanceType:CLOUD_SQL_INSTANCE'. By default, each expression is an AND expression. However, you
-     can include AND and OR expressions explicitly.
+     their JSON representation, such as 'settings.userLabels.auto_start:true'. Multiple filter queries
+     are space-separated. For example. 'state:RUNNABLE instanceType:CLOUD_SQL_INSTANCE'. By default,
+     each expression is an AND expression. However, you can include AND and OR expressions explicitly.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -3276,7 +3263,6 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * A filter expression that filters resources listed in the response. The expression is in the
        * form of field:value. For example, 'instanceType:CLOUD_SQL_INSTANCE'. Fields can be nested
        * as needed as per their JSON representation, such as 'settings.userLabels.auto_start:true'.
-       *
        * Multiple filter queries are space-separated. For example. 'state:RUNNABLE
        * instanceType:CLOUD_SQL_INSTANCE'. By default, each expression is an AND expression.
        * However, you can include AND and OR expressions explicitly.
@@ -5379,7 +5365,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the sql server.  After setting any optional
        * parameters, call the {@link StartExternalSync#execute()} method to invoke the remote operation.
        *
-       * @param project ID of the project that contains the first generation instance.
+       * @param project ID of the project that contains the instance.
        * @param instance Cloud SQL instance ID. This does not include the project ID.
        * @return the request
        */
@@ -5404,7 +5390,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
          * eClientRequest)} must be called to initialize this instance immediately after invoking the
          * constructor. </p>
          *
-         * @param project ID of the project that contains the first generation instance.
+         * @param project ID of the project that contains the instance.
          * @param instance Cloud SQL instance ID. This does not include the project ID.
          * @since 1.13
          */
@@ -5469,17 +5455,17 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return (StartExternalSync) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** ID of the project that contains the first generation instance. */
+        /** ID of the project that contains the instance. */
         @com.google.api.client.util.Key
         private java.lang.String project;
 
-        /** ID of the project that contains the first generation instance.
+        /** ID of the project that contains the instance.
          */
         public java.lang.String getProject() {
           return project;
         }
 
-        /** ID of the project that contains the first generation instance. */
+        /** ID of the project that contains the instance. */
         public StartExternalSync setProject(java.lang.String project) {
           this.project = project;
           return this;
@@ -6011,7 +5997,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Retrieves a particular SSL certificate.  Does not include the private key (required for usage).
+     * Retrieves a particular SSL certificate. Does not include the private key (required for usage).
      * The private key must be saved from the response to initial creation.
      *
      * Create a request for the method "sslCerts.get".
@@ -6035,7 +6021,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "sql/v1beta4/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}";
 
       /**
-       * Retrieves a particular SSL certificate.  Does not include the private key (required for usage).
+       * Retrieves a particular SSL certificate. Does not include the private key (required for usage).
        * The private key must be saved from the response to initial creation.
        *
        * Create a request for the method "sslCerts.get".
@@ -6177,7 +6163,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Creates an SSL certificate and returns it along with the private key and server certificate
-     * authority.  The new certificate will not be usable until the instance is restarted.
+     * authority. The new certificate will not be usable until the instance is restarted.
      *
      * Create a request for the method "sslCerts.insert".
      *
@@ -6201,7 +6187,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Creates an SSL certificate and returns it along with the private key and server certificate
-       * authority.  The new certificate will not be usable until the instance is restarted.
+       * authority. The new certificate will not be usable until the instance is restarted.
        *
        * Create a request for the method "sslCerts.insert".
        *

@@ -46,7 +46,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the App Engine Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the App Engine Admin API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -5442,8 +5442,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)basic scaling or manual
          * scaling in the standard environment: serving_status (https://cloud.google.com/appengine/docs
-         * /admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)Flexible
-         * environment serving_status (https://cloud.google.com/appengine/docs/admin-
+         * /admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)
+         * manual_scaling.instances (https://cloud.google.com/appengine/docs/admin-
+         * api/reference/rest/v1/apps.services.versions#manualscaling)Flexible environment serving_status
+         * (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)automatic scaling in
          * the flexible environment: automatic_scaling.min_total_instances
          * (https://cloud.google.com/appengine/docs/admin-
@@ -5453,7 +5455,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
          * automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-
          * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
          * automatic_scaling.cpu_utilization.target_utilization (https://cloud.google.com/appengine/docs
-         * /admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+         * /admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)manual
+         * scaling in the flexible environment: manual_scaling.instances
+         * (https://cloud.google.com/appengine/docs/admin-
+         * api/reference/rest/v1/apps.services.versions#manualscaling)
          *
          * Create a request for the method "versions.patch".
          *
@@ -5499,8 +5504,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * (https://cloud.google.com/appengine/docs/admin-
            * api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)basic scaling or manual
            * scaling in the standard environment: serving_status (https://cloud.google.com/appengine/docs
-           * /admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)Flexible
-           * environment serving_status (https://cloud.google.com/appengine/docs/admin-
+           * /admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)
+           * manual_scaling.instances (https://cloud.google.com/appengine/docs/admin-
+           * api/reference/rest/v1/apps.services.versions#manualscaling)Flexible environment serving_status
+           * (https://cloud.google.com/appengine/docs/admin-
            * api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)automatic scaling in
            * the flexible environment: automatic_scaling.min_total_instances
            * (https://cloud.google.com/appengine/docs/admin-
@@ -5510,7 +5517,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
            * automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-
            * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
            * automatic_scaling.cpu_utilization.target_utilization (https://cloud.google.com/appengine/docs
-           * /admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+           * /admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)manual
+           * scaling in the flexible environment: manual_scaling.instances
+           * (https://cloud.google.com/appengine/docs/admin-
+           * api/reference/rest/v1/apps.services.versions#manualscaling)
            *
            * Create a request for the method "versions.patch".
            *

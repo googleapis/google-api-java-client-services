@@ -51,12 +51,9 @@ public final class RuleViolationInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Resource recipients.
-   *
-   * For Drive, they are grantees that the Drive file was shared with at the time of rule
-   * triggering. Valid values include user emails, group emails, domains, or 'anyone' if the file
-   * was publicly accessible. If the file was private the recipients list will be empty.
-   *
+   * Resource recipients. For Drive, they are grantees that the Drive file was shared with at the
+   * time of rule triggering. Valid values include user emails, group emails, domains, or 'anyone'
+   * if the file was publicly accessible. If the file was private the recipients list will be empty.
    * For Gmail, they are emails of the users or groups that the Gmail message was sent to.
    * The value may be {@code null}.
    */
@@ -141,12 +138,9 @@ public final class RuleViolationInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Resource recipients.
-   *
-   * For Drive, they are grantees that the Drive file was shared with at the time of rule
-   * triggering. Valid values include user emails, group emails, domains, or 'anyone' if the file
-   * was publicly accessible. If the file was private the recipients list will be empty.
-   *
+   * Resource recipients. For Drive, they are grantees that the Drive file was shared with at the
+   * time of rule triggering. Valid values include user emails, group emails, domains, or 'anyone'
+   * if the file was publicly accessible. If the file was private the recipients list will be empty.
    * For Gmail, they are emails of the users or groups that the Gmail message was sent to.
    * @return value or {@code null} for none
    */
@@ -155,12 +149,9 @@ public final class RuleViolationInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Resource recipients.
-   *
-   * For Drive, they are grantees that the Drive file was shared with at the time of rule
-   * triggering. Valid values include user emails, group emails, domains, or 'anyone' if the file
-   * was publicly accessible. If the file was private the recipients list will be empty.
-   *
+   * Resource recipients. For Drive, they are grantees that the Drive file was shared with at the
+   * time of rule triggering. Valid values include user emails, group emails, domains, or 'anyone'
+   * if the file was publicly accessible. If the file was private the recipients list will be empty.
    * For Gmail, they are emails of the users or groups that the Gmail message was sent to.
    * @param recipients recipients or {@code null} for none
    */

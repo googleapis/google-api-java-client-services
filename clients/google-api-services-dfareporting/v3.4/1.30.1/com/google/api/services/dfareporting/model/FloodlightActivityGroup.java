@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Contains properties of a Floodlight activity group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -111,8 +111,8 @@ public final class FloodlightActivityGroup extends com.google.api.client.json.Ge
    * Value of the type= parameter in the floodlight tag, which the ad servers use to identify the
    * activity group that the activity belongs to. This is optional: if empty, a new tag string will
    * be generated for you. This string must be 1 to 8 characters long, with valid characters being
-   * [a-z][A-Z][0-9][-][ _ ]. This tag string must also be unique among activity groups of the same
-   * floodlight configuration. This field is read-only after insertion.
+   * a-z0-9[ _ ]. This tag string must also be unique among activity groups of the same floodlight
+   * configuration. This field is read-only after insertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -314,8 +314,8 @@ public final class FloodlightActivityGroup extends com.google.api.client.json.Ge
    * Value of the type= parameter in the floodlight tag, which the ad servers use to identify the
    * activity group that the activity belongs to. This is optional: if empty, a new tag string will
    * be generated for you. This string must be 1 to 8 characters long, with valid characters being
-   * [a-z][A-Z][0-9][-][ _ ]. This tag string must also be unique among activity groups of the same
-   * floodlight configuration. This field is read-only after insertion.
+   * a-z0-9[ _ ]. This tag string must also be unique among activity groups of the same floodlight
+   * configuration. This field is read-only after insertion.
    * @return value or {@code null} for none
    */
   public java.lang.String getTagString() {
@@ -326,8 +326,8 @@ public final class FloodlightActivityGroup extends com.google.api.client.json.Ge
    * Value of the type= parameter in the floodlight tag, which the ad servers use to identify the
    * activity group that the activity belongs to. This is optional: if empty, a new tag string will
    * be generated for you. This string must be 1 to 8 characters long, with valid characters being
-   * [a-z][A-Z][0-9][-][ _ ]. This tag string must also be unique among activity groups of the same
-   * floodlight configuration. This field is read-only after insertion.
+   * a-z0-9[ _ ]. This tag string must also be unique among activity groups of the same floodlight
+   * configuration. This field is read-only after insertion.
    * @param tagString tagString or {@code null} for none
    */
   public FloodlightActivityGroup setTagString(java.lang.String tagString) {

@@ -215,9 +215,10 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceDiskId;
 
   /**
-   * URL of the source image used to create this image. This can be a full or valid partial URL. You
-   * must provide exactly one of: - this property, or   - the rawDisk.source property, or   - the
-   * sourceDisk property   in order to create an image.
+   * URL of the source image used to create this image.
+   *
+   * In order to create an image, you must provide the full or partial URL of one of the following:
+   * - The selfLink URL   - This property   - The rawDisk.source URL   - The sourceDisk URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,9 +242,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceImageId;
 
   /**
-   * URL of the source snapshot used to create this image. This can be a full or valid partial URL.
-   * You must provide exactly one of: - this property, or   - the sourceImage property, or   - the
-   * rawDisk.source property, or   - the sourceDisk property   in order to create an image.
+   * URL of the source snapshot used to create this image.
+   *
+   * In order to create an image, you must provide the full or partial URL of one of the following:
+   * - The selfLink URL   - This property  - The sourceImage URL   - The rawDisk.source URL   - The
+   * sourceDisk URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -745,9 +748,10 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source image used to create this image. This can be a full or valid partial URL. You
-   * must provide exactly one of: - this property, or   - the rawDisk.source property, or   - the
-   * sourceDisk property   in order to create an image.
+   * URL of the source image used to create this image.
+   *
+   * In order to create an image, you must provide the full or partial URL of one of the following:
+   * - The selfLink URL   - This property   - The rawDisk.source URL   - The sourceDisk URL
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceImage() {
@@ -755,9 +759,10 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source image used to create this image. This can be a full or valid partial URL. You
-   * must provide exactly one of: - this property, or   - the rawDisk.source property, or   - the
-   * sourceDisk property   in order to create an image.
+   * URL of the source image used to create this image.
+   *
+   * In order to create an image, you must provide the full or partial URL of one of the following:
+   * - The selfLink URL   - This property   - The rawDisk.source URL   - The sourceDisk URL
    * @param sourceImage sourceImage or {@code null} for none
    */
   public Image setSourceImage(java.lang.String sourceImage) {
@@ -806,9 +811,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source snapshot used to create this image. This can be a full or valid partial URL.
-   * You must provide exactly one of: - this property, or   - the sourceImage property, or   - the
-   * rawDisk.source property, or   - the sourceDisk property   in order to create an image.
+   * URL of the source snapshot used to create this image.
+   *
+   * In order to create an image, you must provide the full or partial URL of one of the following:
+   * - The selfLink URL   - This property  - The sourceImage URL   - The rawDisk.source URL   - The
+   * sourceDisk URL
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -816,9 +823,11 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URL of the source snapshot used to create this image. This can be a full or valid partial URL.
-   * You must provide exactly one of: - this property, or   - the sourceImage property, or   - the
-   * rawDisk.source property, or   - the sourceDisk property   in order to create an image.
+   * URL of the source snapshot used to create this image.
+   *
+   * In order to create an image, you must provide the full or partial URL of one of the following:
+   * - The selfLink URL   - This property  - The sourceImage URL   - The rawDisk.source URL   - The
+   * sourceDisk URL
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public Image setSourceSnapshot(java.lang.String sourceSnapshot) {

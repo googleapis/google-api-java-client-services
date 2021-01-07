@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Detailed settings of a stream.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -39,15 +39,15 @@ public final class LiveStreamContentDetails extends com.google.api.client.json.G
   /**
    * Indicates whether the stream is reusable, which means that it can be bound to multiple
    * broadcasts. It is common for broadcasters to reuse the same stream for many different
-   * broadcasts if those broadcasts occur at different times.
+   * broadcasts if those broadcasts occur at different times. If you set this value to false, then
+   * the stream will not be reusable, which means that it can only be bound to one broadcast. Non-
+   * reusable streams differ from reusable streams in the following ways:
    *
-   * If you set this value to false, then the stream will not be reusable, which means that it can
-   * only be bound to one broadcast. Non-reusable streams differ from reusable streams in the
-   * following ways:   - A non-reusable stream can only be bound to one broadcast.  - A non-reusable
-   * stream might be deleted by an automated process after the broadcast ends.  - The
-   * liveStreams.list method does not list non-reusable streams if you call the method and set the
-   * mine parameter to true. The only way to use that method to retrieve the resource for a non-
-   * reusable stream is to use the id parameter to identify the stream.
+   *   A non-reusable stream can only be bound to one broadcast.   A non-reusable stream might be
+   * deleted by an automated process     after the broadcast ends.   The      liveStreams.list
+   * method does not list non-reusable streams     if you call the method and set the mine parameter
+   * to     true. The only way to use that method to retrieve the     resource for a non-reusable
+   * stream is to use the id     parameter to identify the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,15 +73,15 @@ public final class LiveStreamContentDetails extends com.google.api.client.json.G
   /**
    * Indicates whether the stream is reusable, which means that it can be bound to multiple
    * broadcasts. It is common for broadcasters to reuse the same stream for many different
-   * broadcasts if those broadcasts occur at different times.
+   * broadcasts if those broadcasts occur at different times. If you set this value to false, then
+   * the stream will not be reusable, which means that it can only be bound to one broadcast. Non-
+   * reusable streams differ from reusable streams in the following ways:
    *
-   * If you set this value to false, then the stream will not be reusable, which means that it can
-   * only be bound to one broadcast. Non-reusable streams differ from reusable streams in the
-   * following ways:   - A non-reusable stream can only be bound to one broadcast.  - A non-reusable
-   * stream might be deleted by an automated process after the broadcast ends.  - The
-   * liveStreams.list method does not list non-reusable streams if you call the method and set the
-   * mine parameter to true. The only way to use that method to retrieve the resource for a non-
-   * reusable stream is to use the id parameter to identify the stream.
+   *   A non-reusable stream can only be bound to one broadcast.   A non-reusable stream might be
+   * deleted by an automated process     after the broadcast ends.   The      liveStreams.list
+   * method does not list non-reusable streams     if you call the method and set the mine parameter
+   * to     true. The only way to use that method to retrieve the     resource for a non-reusable
+   * stream is to use the id     parameter to identify the stream.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsReusable() {
@@ -91,15 +91,15 @@ public final class LiveStreamContentDetails extends com.google.api.client.json.G
   /**
    * Indicates whether the stream is reusable, which means that it can be bound to multiple
    * broadcasts. It is common for broadcasters to reuse the same stream for many different
-   * broadcasts if those broadcasts occur at different times.
+   * broadcasts if those broadcasts occur at different times. If you set this value to false, then
+   * the stream will not be reusable, which means that it can only be bound to one broadcast. Non-
+   * reusable streams differ from reusable streams in the following ways:
    *
-   * If you set this value to false, then the stream will not be reusable, which means that it can
-   * only be bound to one broadcast. Non-reusable streams differ from reusable streams in the
-   * following ways:   - A non-reusable stream can only be bound to one broadcast.  - A non-reusable
-   * stream might be deleted by an automated process after the broadcast ends.  - The
-   * liveStreams.list method does not list non-reusable streams if you call the method and set the
-   * mine parameter to true. The only way to use that method to retrieve the resource for a non-
-   * reusable stream is to use the id parameter to identify the stream.
+   *   A non-reusable stream can only be bound to one broadcast.   A non-reusable stream might be
+   * deleted by an automated process     after the broadcast ends.   The      liveStreams.list
+   * method does not list non-reusable streams     if you call the method and set the mine parameter
+   * to     true. The only way to use that method to retrieve the     resource for a non-reusable
+   * stream is to use the id     parameter to identify the stream.
    * @param isReusable isReusable or {@code null} for none
    */
   public LiveStreamContentDetails setIsReusable(java.lang.Boolean isReusable) {

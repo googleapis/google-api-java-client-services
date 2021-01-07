@@ -30,9 +30,22 @@ package com.google.api.services.compute.model;
 public final class Binding extends com.google.api.client.json.GenericJson {
 
   /**
-   * The condition that is associated with this binding. NOTE: An unsatisfied condition will not
-   * allow user access via current binding. Different bindings, including their conditions, are
-   * examined independently.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bindingId;
+
+  /**
+   * The condition that is associated with this binding.
+   *
+   * If the condition evaluates to `true`, then this binding applies to the current request.
+   *
+   * If the condition evaluates to `false`, then this binding does not apply to the current request.
+   * However, a different role binding might grant the same role to one or more of the members in
+   * this binding.
+   *
+   * To learn which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,9 +102,31 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   private java.lang.String role;
 
   /**
-   * The condition that is associated with this binding. NOTE: An unsatisfied condition will not
-   * allow user access via current binding. Different bindings, including their conditions, are
-   * examined independently.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBindingId() {
+    return bindingId;
+  }
+
+  /**
+   * @param bindingId bindingId or {@code null} for none
+   */
+  public Binding setBindingId(java.lang.String bindingId) {
+    this.bindingId = bindingId;
+    return this;
+  }
+
+  /**
+   * The condition that is associated with this binding.
+   *
+   * If the condition evaluates to `true`, then this binding applies to the current request.
+   *
+   * If the condition evaluates to `false`, then this binding does not apply to the current request.
+   * However, a different role binding might grant the same role to one or more of the members in
+   * this binding.
+   *
+   * To learn which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * @return value or {@code null} for none
    */
   public Expr getCondition() {
@@ -99,9 +134,16 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The condition that is associated with this binding. NOTE: An unsatisfied condition will not
-   * allow user access via current binding. Different bindings, including their conditions, are
-   * examined independently.
+   * The condition that is associated with this binding.
+   *
+   * If the condition evaluates to `true`, then this binding applies to the current request.
+   *
+   * If the condition evaluates to `false`, then this binding does not apply to the current request.
+   * However, a different role binding might grant the same role to one or more of the members in
+   * this binding.
+   *
+   * To learn which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * @param condition condition or {@code null} for none
    */
   public Binding setCondition(Expr condition) {

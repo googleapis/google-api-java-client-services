@@ -68,7 +68,7 @@ public final class ProductTax extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
-   * Set to true if tax is charged on shipping.
+   * Should be set to true if tax is charged on shipping.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +164,7 @@ public final class ProductTax extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set to true if tax is charged on shipping.
+   * Should be set to true if tax is charged on shipping.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTaxShip() {
@@ -172,7 +172,7 @@ public final class ProductTax extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set to true if tax is charged on shipping.
+   * Should be set to true if tax is charged on shipping.
    * @param taxShip taxShip or {@code null} for none
    */
   public ProductTax setTaxShip(java.lang.Boolean taxShip) {

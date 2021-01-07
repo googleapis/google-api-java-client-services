@@ -46,7 +46,7 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Billing Budget API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Billing Budget API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -171,8 +171,7 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the billingbudgets server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the billing account to create the budget in. Values
-      are of the form
+       * @param parent Required. The name of the billing account to create the budget in. Values are of the form
        *        `billingAccounts/{billingAccountId}`.
        * @param content the {@link com.google.api.services.billingbudgets.v1beta1.model.GoogleCloudBillingBudgetsV1beta1CreateBudgetRequest}
        * @return the request
@@ -202,8 +201,7 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the billing account to create the budget in. Values
-      are of the form
+         * @param parent Required. The name of the billing account to create the budget in. Values are of the form
        *        `billingAccounts/{billingAccountId}`.
          * @param content the {@link com.google.api.services.billingbudgets.v1beta1.model.GoogleCloudBillingBudgetsV1beta1CreateBudgetRequest}
          * @since 1.13
@@ -445,11 +443,9 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Returns a budget.
-       *
-       * WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this
-       * API. When reading from the API, you will not see these fields in the return value, though they
-       * may have been set in the Cloud Console.
+       * Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't
+       * available on this API. When reading from the API, you will not see these fields in the return
+       * value, though they may have been set in the Cloud Console.
        *
        * Create a request for the method "budgets.get".
        *
@@ -474,11 +470,9 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+/budgets/[^/]+$");
 
         /**
-         * Returns a budget.
-         *
-         * WARNING: There are some fields exposed on the Google Cloud Console that aren't available on
-         * this API. When reading from the API, you will not see these fields in the return value, though
-         * they may have been set in the Cloud Console.
+         * Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that
+         * aren't available on this API. When reading from the API, you will not see these fields in the
+         * return value, though they may have been set in the Cloud Console.
          *
          * Create a request for the method "budgets.get".
          *
@@ -600,19 +594,16 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Returns a list of budgets for a billing account.
-       *
-       * WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this
-       * API. When reading from the API, you will not see these fields in the return value, though they
-       * may have been set in the Cloud Console.
+       * Returns a list of budgets for a billing account. WARNING: There are some fields exposed on the
+       * Google Cloud Console that aren't available on this API. When reading from the API, you will not
+       * see these fields in the return value, though they may have been set in the Cloud Console.
        *
        * Create a request for the method "budgets.list".
        *
        * This request holds the parameters needed by the billingbudgets server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. Name of billing account to list budgets under. Values
-      are of the form
+       * @param parent Required. Name of billing account to list budgets under. Values are of the form
        *        `billingAccounts/{billingAccountId}`.
        * @return the request
        */
@@ -630,11 +621,9 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
 
         /**
-         * Returns a list of budgets for a billing account.
-         *
-         * WARNING: There are some fields exposed on the Google Cloud Console that aren't available on
-         * this API. When reading from the API, you will not see these fields in the return value, though
-         * they may have been set in the Cloud Console.
+         * Returns a list of budgets for a billing account. WARNING: There are some fields exposed on the
+         * Google Cloud Console that aren't available on this API. When reading from the API, you will not
+         * see these fields in the return value, though they may have been set in the Cloud Console.
          *
          * Create a request for the method "budgets.list".
          *
@@ -643,8 +632,7 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of billing account to list budgets under. Values
-      are of the form
+         * @param parent Required. Name of billing account to list budgets under. Values are of the form
        *        `billingAccounts/{billingAccountId}`.
          * @since 1.13
          */
@@ -805,20 +793,17 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Updates a budget and returns the updated budget.
-       *
-       * WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this
-       * API. Budget fields that are not exposed in this API will not be changed by this method.
+       * Updates a budget and returns the updated budget. WARNING: There are some fields exposed on the
+       * Google Cloud Console that aren't available on this API. Budget fields that are not exposed in
+       * this API will not be changed by this method.
        *
        * Create a request for the method "budgets.patch".
        *
        * This request holds the parameters needed by the billingbudgets server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Output only. Resource name of the budget.
-      The resource name implies the scope of a budget. Values
-       *        are of the form
-      `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
+       * @param name Output only. Resource name of the budget. The resource name implies the scope of a budget. Values
+       *        are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
        * @param content the {@link com.google.api.services.billingbudgets.v1beta1.model.GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequest}
        * @return the request
        */
@@ -836,10 +821,9 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+/budgets/[^/]+$");
 
         /**
-         * Updates a budget and returns the updated budget.
-         *
-         * WARNING: There are some fields exposed on the Google Cloud Console that aren't available on
-         * this API. Budget fields that are not exposed in this API will not be changed by this method.
+         * Updates a budget and returns the updated budget. WARNING: There are some fields exposed on the
+         * Google Cloud Console that aren't available on this API. Budget fields that are not exposed in
+         * this API will not be changed by this method.
          *
          * Create a request for the method "budgets.patch".
          *
@@ -849,10 +833,8 @@ public class CloudBillingBudget extends com.google.api.client.googleapis.service
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Output only. Resource name of the budget.
-      The resource name implies the scope of a budget. Values
-       *        are of the form
-      `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
+         * @param name Output only. Resource name of the budget. The resource name implies the scope of a budget. Values
+       *        are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
          * @param content the {@link com.google.api.services.billingbudgets.v1beta1.model.GoogleCloudBillingBudgetsV1beta1UpdateBudgetRequest}
          * @since 1.13
          */

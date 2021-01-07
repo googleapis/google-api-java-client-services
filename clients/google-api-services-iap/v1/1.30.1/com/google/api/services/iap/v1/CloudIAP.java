@@ -46,7 +46,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Identity-Aware Proxy API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Identity-Aware Proxy API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -175,8 +175,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the iap server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. GCP Project number/id under which the brand is to be created.
-      In the following format:
+       * @param parent Required. GCP Project number/id under which the brand is to be created. In the following format:
        *        projects/{project_number/id}.
        * @param content the {@link com.google.api.services.iap.v1.model.Brand}
        * @return the request
@@ -209,8 +208,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. GCP Project number/id under which the brand is to be created.
-      In the following format:
+         * @param parent Required. GCP Project number/id under which the brand is to be created. In the following format:
        *        projects/{project_number/id}.
          * @param content the {@link com.google.api.services.iap.v1.model.Brand}
          * @since 1.13
@@ -321,8 +319,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the iap server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Name of the brand to be fetched.
-      In the following format:
+       * @param name Required. Name of the brand to be fetched. In the following format:
        *        projects/{project_number/id}/brands/{brand}.
        * @return the request
        */
@@ -349,8 +346,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the brand to be fetched.
-      In the following format:
+         * @param name Required. Name of the brand to be fetched. In the following format:
        *        projects/{project_number/id}/brands/{brand}.
          * @since 1.13
          */
@@ -470,8 +466,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the iap server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. GCP Project number/id.
-      In the following format: projects/{project_number/id}.
+       * @param parent Required. GCP Project number/id. In the following format: projects/{project_number/id}.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -497,8 +492,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. GCP Project number/id.
-      In the following format: projects/{project_number/id}.
+         * @param parent Required. GCP Project number/id. In the following format: projects/{project_number/id}.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -636,10 +630,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the iap server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Path to create the client in.
-        In the following format:
-         *        projects/{project_number/id}/brands/{brand}.
-        The project must belong to a GSuite account.
+         * @param parent Required. Path to create the client in. In the following format:
+         *        projects/{project_number/id}/brands/{brand}. The project must belong to a G Suite account.
          * @param content the {@link com.google.api.services.iap.v1.model.IdentityAwareProxyClient}
          * @return the request
          */
@@ -667,10 +659,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Path to create the client in.
-        In the following format:
-         *        projects/{project_number/id}/brands/{brand}.
-        The project must belong to a GSuite account.
+           * @param parent Required. Path to create the client in. In the following format:
+         *        projects/{project_number/id}/brands/{brand}. The project must belong to a G Suite account.
            * @param content the {@link com.google.api.services.iap.v1.model.IdentityAwareProxyClient}
            * @since 1.13
            */
@@ -741,14 +731,14 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. Path to create the client in. In the following format:
-           * projects/{project_number/id}/brands/{brand}. The project must belong to a GSuite
+           * projects/{project_number/id}/brands/{brand}. The project must belong to a G Suite
            * account.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Path to create the client in. In the following format:
-         projects/{project_number/id}/brands/{brand}. The project must belong to a GSuite account.
+         projects/{project_number/id}/brands/{brand}. The project must belong to a G Suite account.
            */
           public java.lang.String getParent() {
             return parent;
@@ -756,7 +746,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. Path to create the client in. In the following format:
-           * projects/{project_number/id}/brands/{brand}. The project must belong to a GSuite
+           * projects/{project_number/id}/brands/{brand}. The project must belong to a G Suite
            * account.
            */
           public Create setParent(java.lang.String parent) {
@@ -784,8 +774,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the iap server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the Identity Aware Proxy client to be deleted.
-        In the following format:
+         * @param name Required. Name of the Identity Aware Proxy client to be deleted. In the following format:
          *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
          * @return the request
          */
@@ -814,8 +803,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the Identity Aware Proxy client to be deleted.
-        In the following format:
+           * @param name Required. Name of the Identity Aware Proxy client to be deleted. In the following format:
          *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
            * @since 1.13
            */
@@ -927,8 +915,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the iap server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the Identity Aware Proxy client to be fetched.
-        In the following format:
+         * @param name Required. Name of the Identity Aware Proxy client to be fetched. In the following format:
          *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
          * @return the request
          */
@@ -955,8 +942,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the Identity Aware Proxy client to be fetched.
-        In the following format:
+           * @param name Required. Name of the Identity Aware Proxy client to be fetched. In the following format:
          *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
            * @since 1.13
            */
@@ -1078,8 +1064,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the iap server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Full brand path.
-        In the following format: projects/{project_number/id}/brands/{brand}.
+         * @param parent Required. Full brand path. In the following format: projects/{project_number/id}/brands/{brand}.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1105,8 +1090,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Full brand path.
-        In the following format: projects/{project_number/id}/brands/{brand}.
+           * @param parent Required. Full brand path. In the following format: projects/{project_number/id}/brands/{brand}.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1239,19 +1223,15 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * A page token, received from a previous `ListIdentityAwareProxyClients` call. Provide
-           * this to retrieve the subsequent page.
-           *
-           * When paginating, all other parameters provided to `ListIdentityAwareProxyClients` must
-           * match the call that provided the page token.
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListIdentityAwareProxyClients` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** A page token, received from a previous `ListIdentityAwareProxyClients` call. Provide this to
-         retrieve the subsequent page.
-
-         When paginating, all other parameters provided to `ListIdentityAwareProxyClients` must match the
-         call that provided the page token.
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListIdentityAwareProxyClients` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -1259,10 +1239,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * A page token, received from a previous `ListIdentityAwareProxyClients` call. Provide
-           * this to retrieve the subsequent page.
-           *
-           * When paginating, all other parameters provided to `ListIdentityAwareProxyClients` must
-           * match the call that provided the page token.
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListIdentityAwareProxyClients` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -1283,8 +1261,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the iap server.  After setting any optional
          * parameters, call the {@link ResetSecret#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the Identity Aware Proxy client to that will have its
-        secret reset. In the
+         * @param name Required. Name of the Identity Aware Proxy client to that will have its secret reset. In the
          *        following format:
          *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
          * @param content the {@link com.google.api.services.iap.v1.model.ResetIdentityAwareProxyClientSecretRequest}
@@ -1315,8 +1292,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
            * ResetSecret#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the Identity Aware Proxy client to that will have its
-        secret reset. In the
+           * @param name Required. Name of the Identity Aware Proxy client to that will have its secret reset. In the
          *        following format:
          *        projects/{project_number/id}/brands/{brand}/identityAwareProxyClients/{client_id}.
            * @param content the {@link com.google.api.services.iap.v1.model.ResetIdentityAwareProxyClientSecretRequest}
@@ -1458,8 +1434,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the iap server.  After setting any optional
      * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.iap.v1.model.GetIamPolicyRequest}
      * @return the request
@@ -1490,8 +1465,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.iap.v1.model.GetIamPolicyRequest}
        * @since 1.13
@@ -1602,10 +1576,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the iap server.  After setting any optional
      * parameters, call the {@link GetIapSettings#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name for which to retrieve the settings.
-    Authorization: Requires the
-     *        `getSettings` permission for the associated
-    resource.
+     * @param name Required. The resource name for which to retrieve the settings. Authorization: Requires the
+     *        `getSettings` permission for the associated resource.
      * @return the request
      */
     public GetIapSettings getIapSettings(java.lang.String name) throws java.io.IOException {
@@ -1632,10 +1604,8 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * ientRequest)} must be called to initialize this instance immediately after invoking the
        * constructor. </p>
        *
-       * @param name Required. The resource name for which to retrieve the settings.
-    Authorization: Requires the
-     *        `getSettings` permission for the associated
-    resource.
+       * @param name Required. The resource name for which to retrieve the settings. Authorization: Requires the
+     *        `getSettings` permission for the associated resource.
        * @since 1.13
        */
       protected GetIapSettings(java.lang.String name) {
@@ -1756,8 +1726,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the iap server.  After setting any optional
      * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.iap.v1.model.SetIamPolicyRequest}
      * @return the request
@@ -1788,8 +1757,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.iap.v1.model.SetIamPolicyRequest}
        * @since 1.13
@@ -1902,8 +1870,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the iap server.  After setting any optional
      * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
      *
-     * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
      * @param content the {@link com.google.api.services.iap.v1.model.TestIamPermissionsRequest}
      * @return the request
@@ -1934,8 +1901,7 @@ public class CloudIAP extends com.google.api.client.googleapis.services.json.Abs
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.iap.v1.model.TestIamPermissionsRequest}
        * @since 1.13

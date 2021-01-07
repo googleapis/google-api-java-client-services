@@ -46,7 +46,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the G Suite Vault API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the G Suite Vault API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -375,6 +375,124 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Close set(String parameterName, Object value) {
         return (Close) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Counts the artifacts within the context of a matter and returns a detailed breakdown of metrics.
+     *
+     * Create a request for the method "matters.count".
+     *
+     * This request holds the parameters needed by the vault server.  After setting any optional
+     * parameters, call the {@link Count#execute()} method to invoke the remote operation.
+     *
+     * @param matterId The matter ID.
+     * @param content the {@link com.google.api.services.vault.v1.model.CountArtifactsRequest}
+     * @return the request
+     */
+    public Count count(java.lang.String matterId, com.google.api.services.vault.v1.model.CountArtifactsRequest content) throws java.io.IOException {
+      Count result = new Count(matterId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Count extends VaultRequest<com.google.api.services.vault.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/matters/{matterId}:count";
+
+      /**
+       * Counts the artifacts within the context of a matter and returns a detailed breakdown of
+       * metrics.
+       *
+       * Create a request for the method "matters.count".
+       *
+       * This request holds the parameters needed by the the vault server.  After setting any optional
+       * parameters, call the {@link Count#execute()} method to invoke the remote operation. <p> {@link
+       * Count#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param matterId The matter ID.
+       * @param content the {@link com.google.api.services.vault.v1.model.CountArtifactsRequest}
+       * @since 1.13
+       */
+      protected Count(java.lang.String matterId, com.google.api.services.vault.v1.model.CountArtifactsRequest content) {
+        super(Vault.this, "POST", REST_PATH, content, com.google.api.services.vault.v1.model.Operation.class);
+        this.matterId = com.google.api.client.util.Preconditions.checkNotNull(matterId, "Required parameter matterId must be specified.");
+      }
+
+      @Override
+      public Count set$Xgafv(java.lang.String $Xgafv) {
+        return (Count) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Count setAccessToken(java.lang.String accessToken) {
+        return (Count) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Count setAlt(java.lang.String alt) {
+        return (Count) super.setAlt(alt);
+      }
+
+      @Override
+      public Count setCallback(java.lang.String callback) {
+        return (Count) super.setCallback(callback);
+      }
+
+      @Override
+      public Count setFields(java.lang.String fields) {
+        return (Count) super.setFields(fields);
+      }
+
+      @Override
+      public Count setKey(java.lang.String key) {
+        return (Count) super.setKey(key);
+      }
+
+      @Override
+      public Count setOauthToken(java.lang.String oauthToken) {
+        return (Count) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Count setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Count) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Count setQuotaUser(java.lang.String quotaUser) {
+        return (Count) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Count setUploadType(java.lang.String uploadType) {
+        return (Count) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Count setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Count) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The matter ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String matterId;
+
+      /** The matter ID.
+       */
+      public java.lang.String getMatterId() {
+        return matterId;
+      }
+
+      /** The matter ID. */
+      public Count setMatterId(java.lang.String matterId) {
+        this.matterId = matterId;
+        return this;
+      }
+
+      @Override
+      public Count set(String parameterName, Object value) {
+        return (Count) super.set(parameterName, value);
       }
     }
     /**
@@ -834,9 +952,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The number of matters to return in the response. Default and maximum are 100.
-       */
+      /** The number of matters to return in the response. Default and maximum are 100. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
@@ -846,9 +962,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
         return pageSize;
       }
 
-      /**
-       * The number of matters to return in the response. Default and maximum are 100.
-       */
+      /** The number of matters to return in the response. Default and maximum are 100. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -1268,7 +1382,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Updates the specified matter. This updates only the name and description of the matter,
-     * identified by matter id. Changes to any other fields are ignored. Returns the default view of the
+     * identified by matter ID. Changes to any other fields are ignored. Returns the default view of the
      * matter.
      *
      * Create a request for the method "matters.update".
@@ -1292,7 +1406,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Updates the specified matter. This updates only the name and description of the matter,
-       * identified by matter id. Changes to any other fields are ignored. Returns the default view of
+       * identified by matter ID. Changes to any other fields are ignored. Returns the default view of
        * the matter.
        *
        * Create a request for the method "matters.update".
@@ -3490,8 +3604,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter id of the parent matter for which the saved query is to be
-      created.
+       * @param matterId The matter ID of the parent matter for which the saved query is to be created.
        * @param content the {@link com.google.api.services.vault.v1.model.SavedQuery}
        * @return the request
        */
@@ -3515,8 +3628,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter id of the parent matter for which the saved query is to be
-      created.
+         * @param matterId The matter ID of the parent matter for which the saved query is to be created.
          * @param content the {@link com.google.api.services.vault.v1.model.SavedQuery}
          * @since 1.13
          */
@@ -3580,21 +3692,17 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The matter id of the parent matter for which the saved query is to be created.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be created. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
-        /** The matter id of the parent matter for which the saved query is to be created.
+        /** The matter ID of the parent matter for which the saved query is to be created.
          */
         public java.lang.String getMatterId() {
           return matterId;
         }
 
-        /**
-         * The matter id of the parent matter for which the saved query is to be created.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be created. */
         public Create setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;
@@ -3613,9 +3721,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter id of the parent matter for which the saved query is to be
-      deleted.
-       * @param savedQueryId Id of the saved query to be deleted.
+       * @param matterId The matter ID of the parent matter for which the saved query is to be deleted.
+       * @param savedQueryId ID of the saved query to be deleted.
        * @return the request
        */
       public Delete delete(java.lang.String matterId, java.lang.String savedQueryId) throws java.io.IOException {
@@ -3638,9 +3745,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter id of the parent matter for which the saved query is to be
-      deleted.
-         * @param savedQueryId Id of the saved query to be deleted.
+         * @param matterId The matter ID of the parent matter for which the saved query is to be deleted.
+         * @param savedQueryId ID of the saved query to be deleted.
          * @since 1.13
          */
         protected Delete(java.lang.String matterId, java.lang.String savedQueryId) {
@@ -3704,37 +3810,33 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The matter id of the parent matter for which the saved query is to be deleted.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be deleted. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
-        /** The matter id of the parent matter for which the saved query is to be deleted.
+        /** The matter ID of the parent matter for which the saved query is to be deleted.
          */
         public java.lang.String getMatterId() {
           return matterId;
         }
 
-        /**
-         * The matter id of the parent matter for which the saved query is to be deleted.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be deleted. */
         public Delete setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;
         }
 
-        /** Id of the saved query to be deleted. */
+        /** ID of the saved query to be deleted. */
         @com.google.api.client.util.Key
         private java.lang.String savedQueryId;
 
-        /** Id of the saved query to be deleted.
+        /** ID of the saved query to be deleted.
          */
         public java.lang.String getSavedQueryId() {
           return savedQueryId;
         }
 
-        /** Id of the saved query to be deleted. */
+        /** ID of the saved query to be deleted. */
         public Delete setSavedQueryId(java.lang.String savedQueryId) {
           this.savedQueryId = savedQueryId;
           return this;
@@ -3753,9 +3855,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter id of the parent matter for which the saved query is to be
-      retrieved.
-       * @param savedQueryId Id of the saved query to be retrieved.
+       * @param matterId The matter ID of the parent matter for which the saved query is to be retrieved.
+       * @param savedQueryId ID of the saved query to be retrieved.
        * @return the request
        */
       public Get get(java.lang.String matterId, java.lang.String savedQueryId) throws java.io.IOException {
@@ -3778,9 +3879,8 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter id of the parent matter for which the saved query is to be
-      retrieved.
-         * @param savedQueryId Id of the saved query to be retrieved.
+         * @param matterId The matter ID of the parent matter for which the saved query is to be retrieved.
+         * @param savedQueryId ID of the saved query to be retrieved.
          * @since 1.13
          */
         protected Get(java.lang.String matterId, java.lang.String savedQueryId) {
@@ -3854,37 +3954,33 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The matter id of the parent matter for which the saved query is to be retrieved.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be retrieved. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
-        /** The matter id of the parent matter for which the saved query is to be retrieved.
+        /** The matter ID of the parent matter for which the saved query is to be retrieved.
          */
         public java.lang.String getMatterId() {
           return matterId;
         }
 
-        /**
-         * The matter id of the parent matter for which the saved query is to be retrieved.
-         */
+        /** The matter ID of the parent matter for which the saved query is to be retrieved. */
         public Get setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;
         }
 
-        /** Id of the saved query to be retrieved. */
+        /** ID of the saved query to be retrieved. */
         @com.google.api.client.util.Key
         private java.lang.String savedQueryId;
 
-        /** Id of the saved query to be retrieved.
+        /** ID of the saved query to be retrieved.
          */
         public java.lang.String getSavedQueryId() {
           return savedQueryId;
         }
 
-        /** Id of the saved query to be retrieved. */
+        /** ID of the saved query to be retrieved. */
         public Get setSavedQueryId(java.lang.String savedQueryId) {
           this.savedQueryId = savedQueryId;
           return this;
@@ -3904,8 +4000,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
        * This request holds the parameters needed by the vault server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param matterId The matter id of the parent matter for which the saved queries are to be
-      retrieved.
+       * @param matterId The matter ID of the parent matter for which the saved queries are to be retrieved.
        * @return the request
        */
       public List list(java.lang.String matterId) throws java.io.IOException {
@@ -3929,8 +4024,7 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param matterId The matter id of the parent matter for which the saved queries are to be
-      retrieved.
+         * @param matterId The matter ID of the parent matter for which the saved queries are to be retrieved.
          * @since 1.13
          */
         protected List(java.lang.String matterId) {
@@ -4003,21 +4097,17 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The matter id of the parent matter for which the saved queries are to be retrieved.
-         */
+        /** The matter ID of the parent matter for which the saved queries are to be retrieved. */
         @com.google.api.client.util.Key
         private java.lang.String matterId;
 
-        /** The matter id of the parent matter for which the saved queries are to be retrieved.
+        /** The matter ID of the parent matter for which the saved queries are to be retrieved.
          */
         public java.lang.String getMatterId() {
           return matterId;
         }
 
-        /**
-         * The matter id of the parent matter for which the saved queries are to be retrieved.
-         */
+        /** The matter ID of the parent matter for which the saved queries are to be retrieved. */
         public List setMatterId(java.lang.String matterId) {
           this.matterId = matterId;
           return this;
@@ -4091,6 +4181,148 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
    */
   public class Operations {
 
+    /**
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+     * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+     * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+     * methods to check whether the cancellation succeeded or whether the operation completed despite
+     * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+     * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+     * `Code.CANCELLED`.
+     *
+     * Create a request for the method "operations.cancel".
+     *
+     * This request holds the parameters needed by the vault server.  After setting any optional
+     * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+     *
+     * @param name The name of the operation resource to be cancelled.
+     * @param content the {@link com.google.api.services.vault.v1.model.CancelOperationRequest}
+     * @return the request
+     */
+    public Cancel cancel(java.lang.String name, com.google.api.services.vault.v1.model.CancelOperationRequest content) throws java.io.IOException {
+      Cancel result = new Cancel(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Cancel extends VaultRequest<com.google.api.services.vault.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/{+name}:cancel";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^operations/.*$");
+
+      /**
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * `Code.CANCELLED`.
+       *
+       * Create a request for the method "operations.cancel".
+       *
+       * This request holds the parameters needed by the the vault server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The name of the operation resource to be cancelled.
+       * @param content the {@link com.google.api.services.vault.v1.model.CancelOperationRequest}
+       * @since 1.13
+       */
+      protected Cancel(java.lang.String name, com.google.api.services.vault.v1.model.CancelOperationRequest content) {
+        super(Vault.this, "POST", REST_PATH, content, com.google.api.services.vault.v1.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations/.*$");
+        }
+      }
+
+      @Override
+      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancel) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancel setAccessToken(java.lang.String accessToken) {
+        return (Cancel) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Cancel setAlt(java.lang.String alt) {
+        return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setCallback(java.lang.String callback) {
+        return (Cancel) super.setCallback(callback);
+      }
+
+      @Override
+      public Cancel setFields(java.lang.String fields) {
+        return (Cancel) super.setFields(fields);
+      }
+
+      @Override
+      public Cancel setKey(java.lang.String key) {
+        return (Cancel) super.setKey(key);
+      }
+
+      @Override
+      public Cancel setOauthToken(java.lang.String oauthToken) {
+        return (Cancel) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Cancel) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Cancel setQuotaUser(java.lang.String quotaUser) {
+        return (Cancel) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancel) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the operation resource to be cancelled. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation resource to be cancelled.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation resource to be cancelled. */
+      public Cancel setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations/.*$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Cancel set(String parameterName, Object value) {
+        return (Cancel) super.set(parameterName, value);
+      }
+    }
     /**
      * Deletes a long-running operation. This method indicates that the client is no longer interested
      * in the operation result. It does not cancel the operation. If the server doesn't support this
@@ -4221,6 +4453,344 @@ public class Vault extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
+     * operation result at intervals as recommended by the API service.
+     *
+     * Create a request for the method "operations.get".
+     *
+     * This request holds the parameters needed by the vault server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name The name of the operation resource.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends VaultRequest<com.google.api.services.vault.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^operations/.*$");
+
+      /**
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
+       * operation result at intervals as recommended by the API service.
+       *
+       * Create a request for the method "operations.get".
+       *
+       * This request holds the parameters needed by the the vault server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The name of the operation resource.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(Vault.this, "GET", REST_PATH, null, com.google.api.services.vault.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations/.*$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the operation resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation resource. */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations/.*$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists operations that match the specified filter in the request. If the server doesn't support
+     * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+     * the binding to use different resource name schemes, such as `users/operations`. To override the
+     * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+     * configuration. For backwards compatibility, the default name includes the operations collection
+     * id, however overriding users must ensure the name binding is the parent resource, without the
+     * operations collection id.
+     *
+     * Create a request for the method "operations.list".
+     *
+     * This request holds the parameters needed by the vault server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param name The name of the operation's parent resource.
+     * @return the request
+     */
+    public List list(java.lang.String name) throws java.io.IOException {
+      List result = new List(name);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends VaultRequest<com.google.api.services.vault.v1.model.ListOperationsResponse> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^operations$");
+
+      /**
+       * Lists operations that match the specified filter in the request. If the server doesn't support
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+       * override the binding to use different resource name schemes, such as `users/operations`. To
+       * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+       * their service configuration. For backwards compatibility, the default name includes the
+       * operations collection id, however overriding users must ensure the name binding is the parent
+       * resource, without the operations collection id.
+       *
+       * Create a request for the method "operations.list".
+       *
+       * This request holds the parameters needed by the the vault server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The name of the operation's parent resource.
+       * @since 1.13
+       */
+      protected List(java.lang.String name) {
+        super(Vault.this, "GET", REST_PATH, null, com.google.api.services.vault.v1.model.ListOperationsResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the operation's parent resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation's parent resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation's parent resource. */
+      public List setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^operations$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** The standard list filter. */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The standard list filter.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /** The standard list filter. */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /** The standard list page size. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The standard list page size.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** The standard list page size. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The standard list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The standard list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
       }
     }
 

@@ -20,12 +20,12 @@ package com.google.api.services.doubleclicksearch;
  * Service definition for Doubleclicksearch (v2).
  *
  * <p>
- * Reports and modifies your advertising data in DoubleClick Search (for example, campaigns, ad groups, keywords, and conversions).
+ * The Search Ads 360 API allows developers to automate uploading conversions and downloading reports from Search Ads 360.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/doubleclick-search/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/search-ads" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -46,7 +46,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Search Ads 360 API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Search Ads 360 API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -55,7 +55,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://doubleclicksearch.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -63,7 +63,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
    *
    * @since 1.7
    */
-  public static final String DEFAULT_SERVICE_PATH = "doubleclicksearch/v2/";
+  public static final String DEFAULT_SERVICE_PATH = "";
 
   /**
    * The default encoded batch path of the service. This is determined when the library is
@@ -71,7 +71,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
    *
    * @since 1.23
    */
-  public static final String DEFAULT_BATCH_PATH = "batch/doubleclicksearch/v2";
+  public static final String DEFAULT_BATCH_PATH = "batch";
 
   /**
    * The default encoded base URL of the service. This is determined when the library is generated
@@ -173,7 +173,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
 
     public class Get extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.ConversionList> {
 
-      private static final String REST_PATH = "agency/{agencyId}/advertiser/{advertiserId}/engine/{engineAccountId}/conversion";
+      private static final String REST_PATH = "doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/engine/{engineAccountId}/conversion";
 
       /**
        * Retrieves a list of conversions from a DoubleClick Search engine account.
@@ -223,8 +223,23 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -253,8 +268,13 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** Numeric ID of the agency. */
@@ -463,7 +483,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
 
     public class Insert extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.ConversionList> {
 
-      private static final String REST_PATH = "conversion";
+      private static final String REST_PATH = "doubleclicksearch/v2/conversion";
 
       /**
        * Inserts a batch of new conversions into DoubleClick Search.
@@ -484,8 +504,23 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Insert setAlt(java.lang.String alt) {
         return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
       }
 
       @Override
@@ -514,8 +549,13 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Insert setUserIp(java.lang.String userIp) {
-        return (Insert) super.setUserIp(userIp);
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -542,7 +582,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
 
     public class Update extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.ConversionList> {
 
-      private static final String REST_PATH = "conversion";
+      private static final String REST_PATH = "doubleclicksearch/v2/conversion";
 
       /**
        * Updates a batch of conversions in DoubleClick Search.
@@ -563,8 +603,23 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Update setAlt(java.lang.String alt) {
         return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
       }
 
       @Override
@@ -593,8 +648,13 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Update setUserIp(java.lang.String userIp) {
-        return (Update) super.setUserIp(userIp);
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -622,7 +682,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
 
     public class UpdateAvailability extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.UpdateAvailabilityResponse> {
 
-      private static final String REST_PATH = "conversion/updateAvailability";
+      private static final String REST_PATH = "doubleclicksearch/v2/conversion/updateAvailability";
 
       /**
        * Updates the availabilities of a batch of floodlight activities in DoubleClick Search.
@@ -643,8 +703,23 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public UpdateAvailability set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateAvailability) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateAvailability setAccessToken(java.lang.String accessToken) {
+        return (UpdateAvailability) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public UpdateAvailability setAlt(java.lang.String alt) {
         return (UpdateAvailability) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateAvailability setCallback(java.lang.String callback) {
+        return (UpdateAvailability) super.setCallback(callback);
       }
 
       @Override
@@ -673,8 +748,13 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public UpdateAvailability setUserIp(java.lang.String userIp) {
-        return (UpdateAvailability) super.setUserIp(userIp);
+      public UpdateAvailability setUploadType(java.lang.String uploadType) {
+        return (UpdateAvailability) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateAvailability setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateAvailability) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -724,7 +804,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
 
     public class Generate extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.Report> {
 
-      private static final String REST_PATH = "reports/generate";
+      private static final String REST_PATH = "doubleclicksearch/v2/reports/generate";
 
       /**
        * Generates and returns a report immediately.
@@ -745,8 +825,23 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Generate set$Xgafv(java.lang.String $Xgafv) {
+        return (Generate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Generate setAccessToken(java.lang.String accessToken) {
+        return (Generate) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Generate setAlt(java.lang.String alt) {
         return (Generate) super.setAlt(alt);
+      }
+
+      @Override
+      public Generate setCallback(java.lang.String callback) {
+        return (Generate) super.setCallback(callback);
       }
 
       @Override
@@ -775,8 +870,13 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Generate setUserIp(java.lang.String userIp) {
-        return (Generate) super.setUserIp(userIp);
+      public Generate setUploadType(java.lang.String uploadType) {
+        return (Generate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Generate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Generate) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -803,7 +903,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
 
     public class Get extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.Report> {
 
-      private static final String REST_PATH = "reports/{reportId}";
+      private static final String REST_PATH = "doubleclicksearch/v2/reports/{reportId}";
 
       /**
        * Polls for the status of a report request.
@@ -835,8 +935,23 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Get setAlt(java.lang.String alt) {
         return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
       }
 
       @Override
@@ -865,8 +980,13 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Get setUserIp(java.lang.String userIp) {
-        return (Get) super.setUserIp(userIp);
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
       /** ID of the report request being polled. */
@@ -911,7 +1031,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
 
     public class GetFile extends DoubleclicksearchRequest<Void> {
 
-      private static final String REST_PATH = "reports/{reportId}/files/{reportFragment}";
+      private static final String REST_PATH = "doubleclicksearch/v2/reports/{reportId}/files/{reportFragment}";
 
       /**
        * Downloads a report file encoded in UTF-8.
@@ -970,8 +1090,23 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public GetFile set$Xgafv(java.lang.String $Xgafv) {
+        return (GetFile) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetFile setAccessToken(java.lang.String accessToken) {
+        return (GetFile) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public GetFile setAlt(java.lang.String alt) {
         return (GetFile) super.setAlt(alt);
+      }
+
+      @Override
+      public GetFile setCallback(java.lang.String callback) {
+        return (GetFile) super.setCallback(callback);
       }
 
       @Override
@@ -1000,8 +1135,13 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public GetFile setUserIp(java.lang.String userIp) {
-        return (GetFile) super.setUserIp(userIp);
+      public GetFile setUploadType(java.lang.String uploadType) {
+        return (GetFile) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetFile setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetFile) super.setUploadProtocol(uploadProtocol);
       }
 
       /** ID of the report. */
@@ -1062,7 +1202,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
 
     public class Request extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.Report> {
 
-      private static final String REST_PATH = "reports";
+      private static final String REST_PATH = "doubleclicksearch/v2/reports";
 
       /**
        * Inserts a report request into the reporting system.
@@ -1083,8 +1223,23 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public Request set$Xgafv(java.lang.String $Xgafv) {
+        return (Request) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Request setAccessToken(java.lang.String accessToken) {
+        return (Request) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public Request setAlt(java.lang.String alt) {
         return (Request) super.setAlt(alt);
+      }
+
+      @Override
+      public Request setCallback(java.lang.String callback) {
+        return (Request) super.setCallback(callback);
       }
 
       @Override
@@ -1113,8 +1268,13 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public Request setUserIp(java.lang.String userIp) {
-        return (Request) super.setUserIp(userIp);
+      public Request setUploadType(java.lang.String uploadType) {
+        return (Request) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Request setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Request) super.setUploadProtocol(uploadProtocol);
       }
 
       @Override
@@ -1165,7 +1325,7 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
 
     public class List extends DoubleclicksearchRequest<com.google.api.services.doubleclicksearch.model.SavedColumnList> {
 
-      private static final String REST_PATH = "agency/{agencyId}/advertiser/{advertiserId}/savedcolumns";
+      private static final String REST_PATH = "doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/savedcolumns";
 
       /**
        * Retrieve the list of saved columns for a specified advertiser.
@@ -1199,8 +1359,23 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
       public List setAlt(java.lang.String alt) {
         return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
       }
 
       @Override
@@ -1229,8 +1404,13 @@ public class Doubleclicksearch extends com.google.api.client.googleapis.services
       }
 
       @Override
-      public List setUserIp(java.lang.String userIp) {
-        return (List) super.setUserIp(userIp);
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
       }
 
       /** DS ID of the agency. */

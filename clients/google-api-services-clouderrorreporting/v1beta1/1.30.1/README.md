@@ -1,7 +1,6 @@
 # Error Reporting API Client Library for Java
 
-Groups and counts similar errors from cloud services and applications, reports new errors, and provides access to error groups and their associated errors.
-
+Groups and counts similar errors from cloud services and applications, reports new errors, and provides access to error groups and their associated errors. 
 
 This page contains information about getting started with the Error Reporting API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-clouderrorreporting</artifactId>
-      <version>v1beta1-rev20200226-1.30.9</version>
+      <version>v1beta1-rev20200827-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-clouderrorreporting:v1beta1-rev20200226-1.30.9'
+  compile 'com.google.apis:google-api-services-clouderrorreporting:v1beta1-rev20200827-1.30.10'
 }
 ```
 

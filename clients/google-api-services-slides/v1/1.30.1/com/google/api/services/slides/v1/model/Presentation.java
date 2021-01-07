@@ -52,12 +52,11 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
 
   /**
    * The slide masters in the presentation. A slide master contains all common page elements and the
-   * common properties for a set of layouts. They serve three purposes:
-   *
-   * - Placeholder shapes on a master contain the default text styles and shape   properties of all
-   * placeholder shapes on pages that use that master. - The master page properties define the
-   * common page properties inherited by   its layouts. - Any other shapes on the master slide will
-   * appear on all slides using that   master, regardless of their layout.
+   * common properties for a set of layouts. They serve three purposes: - Placeholder shapes on a
+   * master contain the default text styles and shape properties of all placeholder shapes on pages
+   * that use that master. - The master page properties define the common page properties inherited
+   * by its layouts. - Any other shapes on the master slide appear on all slides using that master,
+   * regardless of their layout.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,15 +69,12 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The notes master in the presentation. It serves three purposes:
-   *
-   * - Placeholder shapes on a notes master contain the default text styles and   shape properties
-   * of all placeholder shapes on notes pages. Specifically,   a `SLIDE_IMAGE` placeholder shape
-   * contains the slide thumbnail, and a   `BODY` placeholder shape contains the speaker notes. -
-   * The notes master page properties define the common page properties   inherited by all notes
-   * pages. - Any other shapes on the notes master will appear on all notes pages.
-   *
-   * The notes master is read-only.
+   * The notes master in the presentation. It serves three purposes: - Placeholder shapes on a notes
+   * master contain the default text styles and shape properties of all placeholder shapes on notes
+   * pages. Specifically, a `SLIDE_IMAGE` placeholder shape contains the slide thumbnail, and a
+   * `BODY` placeholder shape contains the speaker notes. - The notes master page properties define
+   * the common page properties inherited by all notes pages. - Any other shapes on the notes master
+   * appears on all notes pages. The notes master is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,14 +97,12 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   /**
    * The revision ID of the presentation. Can be used in update requests to assert that the
    * presentation revision hasn't changed since the last read operation. Only populated if the user
-   * has edit access to the presentation.
-   *
-   * The format of the revision ID may change over time, so it should be treated opaquely. A
-   * returned revision ID is only guaranteed to be valid for 24 hours after it has been returned and
-   * cannot be shared across users. If the revision ID is unchanged between calls, then the
-   * presentation has not changed. Conversely, a changed ID (for the same presentation and user)
-   * usually means the presentation has been updated; however, a changed ID can also be due to
-   * internal factors such as ID format changes.
+   * has edit access to the presentation. The format of the revision ID may change over time, so it
+   * should be treated opaquely. A returned revision ID is only guaranteed to be valid for 24 hours
+   * after it has been returned and cannot be shared across users. If the revision ID is unchanged
+   * between calls, then the presentation has not changed. Conversely, a changed ID (for the same
+   * presentation and user) usually means the presentation has been updated; however, a changed ID
+   * can also be due to internal factors such as ID format changes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,12 +166,11 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
 
   /**
    * The slide masters in the presentation. A slide master contains all common page elements and the
-   * common properties for a set of layouts. They serve three purposes:
-   *
-   * - Placeholder shapes on a master contain the default text styles and shape   properties of all
-   * placeholder shapes on pages that use that master. - The master page properties define the
-   * common page properties inherited by   its layouts. - Any other shapes on the master slide will
-   * appear on all slides using that   master, regardless of their layout.
+   * common properties for a set of layouts. They serve three purposes: - Placeholder shapes on a
+   * master contain the default text styles and shape properties of all placeholder shapes on pages
+   * that use that master. - The master page properties define the common page properties inherited
+   * by its layouts. - Any other shapes on the master slide appear on all slides using that master,
+   * regardless of their layout.
    * @return value or {@code null} for none
    */
   public java.util.List<Page> getMasters() {
@@ -186,12 +179,11 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
 
   /**
    * The slide masters in the presentation. A slide master contains all common page elements and the
-   * common properties for a set of layouts. They serve three purposes:
-   *
-   * - Placeholder shapes on a master contain the default text styles and shape   properties of all
-   * placeholder shapes on pages that use that master. - The master page properties define the
-   * common page properties inherited by   its layouts. - Any other shapes on the master slide will
-   * appear on all slides using that   master, regardless of their layout.
+   * common properties for a set of layouts. They serve three purposes: - Placeholder shapes on a
+   * master contain the default text styles and shape properties of all placeholder shapes on pages
+   * that use that master. - The master page properties define the common page properties inherited
+   * by its layouts. - Any other shapes on the master slide appear on all slides using that master,
+   * regardless of their layout.
    * @param masters masters or {@code null} for none
    */
   public Presentation setMasters(java.util.List<Page> masters) {
@@ -200,15 +192,12 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The notes master in the presentation. It serves three purposes:
-   *
-   * - Placeholder shapes on a notes master contain the default text styles and   shape properties
-   * of all placeholder shapes on notes pages. Specifically,   a `SLIDE_IMAGE` placeholder shape
-   * contains the slide thumbnail, and a   `BODY` placeholder shape contains the speaker notes. -
-   * The notes master page properties define the common page properties   inherited by all notes
-   * pages. - Any other shapes on the notes master will appear on all notes pages.
-   *
-   * The notes master is read-only.
+   * The notes master in the presentation. It serves three purposes: - Placeholder shapes on a notes
+   * master contain the default text styles and shape properties of all placeholder shapes on notes
+   * pages. Specifically, a `SLIDE_IMAGE` placeholder shape contains the slide thumbnail, and a
+   * `BODY` placeholder shape contains the speaker notes. - The notes master page properties define
+   * the common page properties inherited by all notes pages. - Any other shapes on the notes master
+   * appears on all notes pages. The notes master is read-only.
    * @return value or {@code null} for none
    */
   public Page getNotesMaster() {
@@ -216,15 +205,12 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The notes master in the presentation. It serves three purposes:
-   *
-   * - Placeholder shapes on a notes master contain the default text styles and   shape properties
-   * of all placeholder shapes on notes pages. Specifically,   a `SLIDE_IMAGE` placeholder shape
-   * contains the slide thumbnail, and a   `BODY` placeholder shape contains the speaker notes. -
-   * The notes master page properties define the common page properties   inherited by all notes
-   * pages. - Any other shapes on the notes master will appear on all notes pages.
-   *
-   * The notes master is read-only.
+   * The notes master in the presentation. It serves three purposes: - Placeholder shapes on a notes
+   * master contain the default text styles and shape properties of all placeholder shapes on notes
+   * pages. Specifically, a `SLIDE_IMAGE` placeholder shape contains the slide thumbnail, and a
+   * `BODY` placeholder shape contains the speaker notes. - The notes master page properties define
+   * the common page properties inherited by all notes pages. - Any other shapes on the notes master
+   * appears on all notes pages. The notes master is read-only.
    * @param notesMaster notesMaster or {@code null} for none
    */
   public Presentation setNotesMaster(Page notesMaster) {
@@ -269,14 +255,12 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   /**
    * The revision ID of the presentation. Can be used in update requests to assert that the
    * presentation revision hasn't changed since the last read operation. Only populated if the user
-   * has edit access to the presentation.
-   *
-   * The format of the revision ID may change over time, so it should be treated opaquely. A
-   * returned revision ID is only guaranteed to be valid for 24 hours after it has been returned and
-   * cannot be shared across users. If the revision ID is unchanged between calls, then the
-   * presentation has not changed. Conversely, a changed ID (for the same presentation and user)
-   * usually means the presentation has been updated; however, a changed ID can also be due to
-   * internal factors such as ID format changes.
+   * has edit access to the presentation. The format of the revision ID may change over time, so it
+   * should be treated opaquely. A returned revision ID is only guaranteed to be valid for 24 hours
+   * after it has been returned and cannot be shared across users. If the revision ID is unchanged
+   * between calls, then the presentation has not changed. Conversely, a changed ID (for the same
+   * presentation and user) usually means the presentation has been updated; however, a changed ID
+   * can also be due to internal factors such as ID format changes.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionId() {
@@ -286,14 +270,12 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   /**
    * The revision ID of the presentation. Can be used in update requests to assert that the
    * presentation revision hasn't changed since the last read operation. Only populated if the user
-   * has edit access to the presentation.
-   *
-   * The format of the revision ID may change over time, so it should be treated opaquely. A
-   * returned revision ID is only guaranteed to be valid for 24 hours after it has been returned and
-   * cannot be shared across users. If the revision ID is unchanged between calls, then the
-   * presentation has not changed. Conversely, a changed ID (for the same presentation and user)
-   * usually means the presentation has been updated; however, a changed ID can also be due to
-   * internal factors such as ID format changes.
+   * has edit access to the presentation. The format of the revision ID may change over time, so it
+   * should be treated opaquely. A returned revision ID is only guaranteed to be valid for 24 hours
+   * after it has been returned and cannot be shared across users. If the revision ID is unchanged
+   * between calls, then the presentation has not changed. Conversely, a changed ID (for the same
+   * presentation and user) usually means the presentation has been updated; however, a changed ID
+   * can also be due to internal factors such as ID format changes.
    * @param revisionId revisionId or {@code null} for none
    */
   public Presentation setRevisionId(java.lang.String revisionId) {

@@ -42,7 +42,8 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
    * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
    * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
-   * location bucket (see Dataproc staging bucket).
+   * location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts
+   * /configuring-clusters/staging-bucket)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +86,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * executable on a master or worker node, as shown below using curl (you can also use wget):
    * ROLE=$(curl -H Metadata-Flavor:Google
    * http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ "${ROLE}" ==
-   * 'Master' ]]; then   ... master specific actions ... else   ... worker specific actions ... fi
+   * 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,6 +105,13 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private InstanceGroupConfig masterConfig;
+
+  /**
+   * Optional. Metastore configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MetastoreConfig metastoreConfig;
 
   /**
    * Optional. The Compute Engine config settings for additional worker instances in a cluster.
@@ -125,6 +133,18 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private SoftwareConfig softwareConfig;
+
+  /**
+   * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
+   * and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * Compute Engine zone where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
+   * (or none) if you specify a bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tempBucket;
 
   /**
    * Optional. The Compute Engine config settings for worker instances in a cluster.
@@ -157,7 +177,8 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
    * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
    * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
-   * location bucket (see Dataproc staging bucket).
+   * location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts
+   * /configuring-clusters/staging-bucket)).
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigBucket() {
@@ -169,7 +190,8 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
    * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
    * Engine zone where your cluster is deployed, and then create and manage this project-level, per-
-   * location bucket (see Dataproc staging bucket).
+   * location bucket (see Dataproc staging bucket (https://cloud.google.com/dataproc/docs/concepts
+   * /configuring-clusters/staging-bucket)).
    * @param configBucket configBucket or {@code null} for none
    */
   public ClusterConfig setConfigBucket(java.lang.String configBucket) {
@@ -257,7 +279,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * executable on a master or worker node, as shown below using curl (you can also use wget):
    * ROLE=$(curl -H Metadata-Flavor:Google
    * http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ "${ROLE}" ==
-   * 'Master' ]]; then   ... master specific actions ... else   ... worker specific actions ... fi
+   * 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi
    * @return value or {@code null} for none
    */
   public java.util.List<NodeInitializationAction> getInitializationActions() {
@@ -270,7 +292,7 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    * executable on a master or worker node, as shown below using curl (you can also use wget):
    * ROLE=$(curl -H Metadata-Flavor:Google
    * http://metadata/computeMetadata/v1beta2/instance/attributes/dataproc-role) if [[ "${ROLE}" ==
-   * 'Master' ]]; then   ... master specific actions ... else   ... worker specific actions ... fi
+   * 'Master' ]]; then ... master specific actions ... else ... worker specific actions ... fi
    * @param initializationActions initializationActions or {@code null} for none
    */
   public ClusterConfig setInitializationActions(java.util.List<NodeInitializationAction> initializationActions) {
@@ -309,6 +331,23 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setMasterConfig(InstanceGroupConfig masterConfig) {
     this.masterConfig = masterConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Metastore configuration.
+   * @return value or {@code null} for none
+   */
+  public MetastoreConfig getMetastoreConfig() {
+    return metastoreConfig;
+  }
+
+  /**
+   * Optional. Metastore configuration.
+   * @param metastoreConfig metastoreConfig or {@code null} for none
+   */
+  public ClusterConfig setMetastoreConfig(MetastoreConfig metastoreConfig) {
+    this.metastoreConfig = metastoreConfig;
     return this;
   }
 
@@ -360,6 +399,33 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setSoftwareConfig(SoftwareConfig softwareConfig) {
     this.softwareConfig = softwareConfig;
+    return this;
+  }
+
+  /**
+   * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
+   * and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * Compute Engine zone where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
+   * (or none) if you specify a bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTempBucket() {
+    return tempBucket;
+  }
+
+  /**
+   * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs data, such as Spark
+   * and MapReduce history files. If you do not specify a temp bucket, Dataproc will determine a
+   * Cloud Storage location (US, ASIA, or EU) for your cluster's temp bucket according to the
+   * Compute Engine zone where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but you can use any TTL
+   * (or none) if you specify a bucket.
+   * @param tempBucket tempBucket or {@code null} for none
+   */
+  public ClusterConfig setTempBucket(java.lang.String tempBucket) {
+    this.tempBucket = tempBucket;
     return this;
   }
 

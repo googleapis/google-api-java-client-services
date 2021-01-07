@@ -46,7 +46,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Dataflow API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Dataflow API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -410,6 +410,932 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
     }
 
     /**
+     * An accessor for creating requests from the CatalogTemplates collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dataflow dataflow = new Dataflow(...);}
+     *   {@code Dataflow.CatalogTemplates.List request = dataflow.catalogTemplates().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public CatalogTemplates catalogTemplates() {
+      return new CatalogTemplates();
+    }
+
+    /**
+     * The "catalogTemplates" collection of methods.
+     */
+    public class CatalogTemplates {
+
+      /**
+       * Creates a new TemplateVersion (Important: not new Template) entry in the spanner table. Requires
+       * project_id and display_name (template).
+       *
+       * Create a request for the method "catalogTemplates.commit".
+       *
+       * This request holds the parameters needed by the dataflow server.  After setting any optional
+       * parameters, call the {@link Commit#execute()} method to invoke the remote operation.
+       *
+       * @param name The location of the template, name includes project_id and display_name. Commit using
+       *        project_id(pid1) and display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1}
+       * @param content the {@link com.google.api.services.dataflow.model.CommitTemplateVersionRequest}
+       * @return the request
+       */
+      public Commit commit(java.lang.String name, com.google.api.services.dataflow.model.CommitTemplateVersionRequest content) throws java.io.IOException {
+        Commit result = new Commit(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Commit extends DataflowRequest<com.google.api.services.dataflow.model.TemplateVersion> {
+
+        private static final String REST_PATH = "v1b3/{+name}:commit";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/catalogTemplates/[^/]+$");
+
+        /**
+         * Creates a new TemplateVersion (Important: not new Template) entry in the spanner table.
+         * Requires project_id and display_name (template).
+         *
+         * Create a request for the method "catalogTemplates.commit".
+         *
+         * This request holds the parameters needed by the the dataflow server.  After setting any
+         * optional parameters, call the {@link Commit#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Commit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The location of the template, name includes project_id and display_name. Commit using
+       *        project_id(pid1) and display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1}
+         * @param content the {@link com.google.api.services.dataflow.model.CommitTemplateVersionRequest}
+         * @since 1.13
+         */
+        protected Commit(java.lang.String name, com.google.api.services.dataflow.model.CommitTemplateVersionRequest content) {
+          super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.TemplateVersion.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/catalogTemplates/[^/]+$");
+          }
+        }
+
+        @Override
+        public Commit set$Xgafv(java.lang.String $Xgafv) {
+          return (Commit) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Commit setAccessToken(java.lang.String accessToken) {
+          return (Commit) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Commit setAlt(java.lang.String alt) {
+          return (Commit) super.setAlt(alt);
+        }
+
+        @Override
+        public Commit setCallback(java.lang.String callback) {
+          return (Commit) super.setCallback(callback);
+        }
+
+        @Override
+        public Commit setFields(java.lang.String fields) {
+          return (Commit) super.setFields(fields);
+        }
+
+        @Override
+        public Commit setKey(java.lang.String key) {
+          return (Commit) super.setKey(key);
+        }
+
+        @Override
+        public Commit setOauthToken(java.lang.String oauthToken) {
+          return (Commit) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Commit setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Commit) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Commit setQuotaUser(java.lang.String quotaUser) {
+          return (Commit) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Commit setUploadType(java.lang.String uploadType) {
+          return (Commit) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Commit setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Commit) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The location of the template, name includes project_id and display_name. Commit using
+         * project_id(pid1) and display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The location of the template, name includes project_id and display_name. Commit using
+       project_id(pid1) and display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * The location of the template, name includes project_id and display_name. Commit using
+         * project_id(pid1) and display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1}
+         */
+        public Commit setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/catalogTemplates/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Commit set(String parameterName, Object value) {
+          return (Commit) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an existing Template. Do nothing if Template does not exist.
+       *
+       * Create a request for the method "catalogTemplates.delete".
+       *
+       * This request holds the parameters needed by the dataflow server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name name includes project_id and display_name. Delete by project_id(pid1) and display_name(tid1).
+       *        Format: projects/{pid1}/catalogTemplates/{tid1}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends DataflowRequest<com.google.api.services.dataflow.model.Empty> {
+
+        private static final String REST_PATH = "v1b3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/catalogTemplates/[^/]+$");
+
+        /**
+         * Deletes an existing Template. Do nothing if Template does not exist.
+         *
+         * Create a request for the method "catalogTemplates.delete".
+         *
+         * This request holds the parameters needed by the the dataflow server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name name includes project_id and display_name. Delete by project_id(pid1) and display_name(tid1).
+       *        Format: projects/{pid1}/catalogTemplates/{tid1}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Dataflow.this, "DELETE", REST_PATH, null, com.google.api.services.dataflow.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/catalogTemplates/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * name includes project_id and display_name. Delete by project_id(pid1) and
+         * display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** name includes project_id and display_name. Delete by project_id(pid1) and display_name(tid1).
+       Format: projects/{pid1}/catalogTemplates/{tid1}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * name includes project_id and display_name. Delete by project_id(pid1) and
+         * display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/catalogTemplates/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get TemplateVersion using project_id and display_name with an optional version_id field. Get
+       * latest (has tag "latest") TemplateVersion if version_id not set.
+       *
+       * Create a request for the method "catalogTemplates.get".
+       *
+       * This request holds the parameters needed by the dataflow server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Resource name includes project_id and display_name. version_id is optional. Get the latest
+       *        TemplateVersion if version_id not set. Get by project_id(pid1) and display_name(tid1):
+       *        Format: projects/{pid1}/catalogTemplates/{tid1} Get by project_id(pid1),
+       *        display_name(tid1), and version_id(vid1): Format:
+       *        projects/{pid1}/catalogTemplates/{tid1@vid}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DataflowRequest<com.google.api.services.dataflow.model.TemplateVersion> {
+
+        private static final String REST_PATH = "v1b3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/catalogTemplates/[^/]+$");
+
+        /**
+         * Get TemplateVersion using project_id and display_name with an optional version_id field. Get
+         * latest (has tag "latest") TemplateVersion if version_id not set.
+         *
+         * Create a request for the method "catalogTemplates.get".
+         *
+         * This request holds the parameters needed by the the dataflow server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Resource name includes project_id and display_name. version_id is optional. Get the latest
+       *        TemplateVersion if version_id not set. Get by project_id(pid1) and display_name(tid1):
+       *        Format: projects/{pid1}/catalogTemplates/{tid1} Get by project_id(pid1),
+       *        display_name(tid1), and version_id(vid1): Format:
+       *        projects/{pid1}/catalogTemplates/{tid1@vid}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.TemplateVersion.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/catalogTemplates/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name includes project_id and display_name. version_id is optional. Get the
+         * latest TemplateVersion if version_id not set. Get by project_id(pid1) and
+         * display_name(tid1): Format: projects/{pid1}/catalogTemplates/{tid1} Get by
+         * project_id(pid1), display_name(tid1), and version_id(vid1): Format:
+         * projects/{pid1}/catalogTemplates/{tid1@vid}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Resource name includes project_id and display_name. version_id is optional. Get the latest
+       TemplateVersion if version_id not set. Get by project_id(pid1) and display_name(tid1): Format:
+       projects/{pid1}/catalogTemplates/{tid1} Get by project_id(pid1), display_name(tid1), and
+       version_id(vid1): Format: projects/{pid1}/catalogTemplates/{tid1@vid}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Resource name includes project_id and display_name. version_id is optional. Get the
+         * latest TemplateVersion if version_id not set. Get by project_id(pid1) and
+         * display_name(tid1): Format: projects/{pid1}/catalogTemplates/{tid1} Get by
+         * project_id(pid1), display_name(tid1), and version_id(vid1): Format:
+         * projects/{pid1}/catalogTemplates/{tid1@vid}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/catalogTemplates/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the label of the TemplateVersion. Label can be duplicated in Template, so either add or
+       * remove the label in the TemplateVersion.
+       *
+       * Create a request for the method "catalogTemplates.label".
+       *
+       * This request holds the parameters needed by the dataflow server.  After setting any optional
+       * parameters, call the {@link Label#execute()} method to invoke the remote operation.
+       *
+       * @param name Resource name includes project_id, display_name, and version_id. Updates by project_id(pid1),
+       *        display_name(tid1), and version_id(vid1): Format:
+       *        projects/{pid1}/catalogTemplates/{tid1@vid}
+       * @param content the {@link com.google.api.services.dataflow.model.ModifyTemplateVersionLabelRequest}
+       * @return the request
+       */
+      public Label label(java.lang.String name, com.google.api.services.dataflow.model.ModifyTemplateVersionLabelRequest content) throws java.io.IOException {
+        Label result = new Label(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Label extends DataflowRequest<com.google.api.services.dataflow.model.ModifyTemplateVersionLabelResponse> {
+
+        private static final String REST_PATH = "v1b3/{+name}:label";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/catalogTemplates/[^/]+$");
+
+        /**
+         * Updates the label of the TemplateVersion. Label can be duplicated in Template, so either add or
+         * remove the label in the TemplateVersion.
+         *
+         * Create a request for the method "catalogTemplates.label".
+         *
+         * This request holds the parameters needed by the the dataflow server.  After setting any
+         * optional parameters, call the {@link Label#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Label#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Resource name includes project_id, display_name, and version_id. Updates by project_id(pid1),
+       *        display_name(tid1), and version_id(vid1): Format:
+       *        projects/{pid1}/catalogTemplates/{tid1@vid}
+         * @param content the {@link com.google.api.services.dataflow.model.ModifyTemplateVersionLabelRequest}
+         * @since 1.13
+         */
+        protected Label(java.lang.String name, com.google.api.services.dataflow.model.ModifyTemplateVersionLabelRequest content) {
+          super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.ModifyTemplateVersionLabelResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/catalogTemplates/[^/]+$");
+          }
+        }
+
+        @Override
+        public Label set$Xgafv(java.lang.String $Xgafv) {
+          return (Label) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Label setAccessToken(java.lang.String accessToken) {
+          return (Label) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Label setAlt(java.lang.String alt) {
+          return (Label) super.setAlt(alt);
+        }
+
+        @Override
+        public Label setCallback(java.lang.String callback) {
+          return (Label) super.setCallback(callback);
+        }
+
+        @Override
+        public Label setFields(java.lang.String fields) {
+          return (Label) super.setFields(fields);
+        }
+
+        @Override
+        public Label setKey(java.lang.String key) {
+          return (Label) super.setKey(key);
+        }
+
+        @Override
+        public Label setOauthToken(java.lang.String oauthToken) {
+          return (Label) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Label setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Label) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Label setQuotaUser(java.lang.String quotaUser) {
+          return (Label) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Label setUploadType(java.lang.String uploadType) {
+          return (Label) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Label setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Label) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name includes project_id, display_name, and version_id. Updates by
+         * project_id(pid1), display_name(tid1), and version_id(vid1): Format:
+         * projects/{pid1}/catalogTemplates/{tid1@vid}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Resource name includes project_id, display_name, and version_id. Updates by project_id(pid1),
+       display_name(tid1), and version_id(vid1): Format: projects/{pid1}/catalogTemplates/{tid1@vid}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Resource name includes project_id, display_name, and version_id. Updates by
+         * project_id(pid1), display_name(tid1), and version_id(vid1): Format:
+         * projects/{pid1}/catalogTemplates/{tid1@vid}
+         */
+        public Label setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/catalogTemplates/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Label set(String parameterName, Object value) {
+          return (Label) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the tag of the TemplateVersion, and tag is unique in Template. If tag exists in another
+       * TemplateVersion in the Template, updates the tag to this TemplateVersion will remove it from the
+       * old TemplateVersion and add it to this TemplateVersion. If request is remove_only (remove_only =
+       * true), remove the tag from this TemplateVersion.
+       *
+       * Create a request for the method "catalogTemplates.tag".
+       *
+       * This request holds the parameters needed by the dataflow server.  After setting any optional
+       * parameters, call the {@link Tag#execute()} method to invoke the remote operation.
+       *
+       * @param name Resource name includes project_id, display_name, and version_id. Updates by project_id(pid1),
+       *        display_name(tid1), and version_id(vid1): Format:
+       *        projects/{pid1}/catalogTemplates/{tid1@vid}
+       * @param content the {@link com.google.api.services.dataflow.model.ModifyTemplateVersionTagRequest}
+       * @return the request
+       */
+      public Tag tag(java.lang.String name, com.google.api.services.dataflow.model.ModifyTemplateVersionTagRequest content) throws java.io.IOException {
+        Tag result = new Tag(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Tag extends DataflowRequest<com.google.api.services.dataflow.model.ModifyTemplateVersionTagResponse> {
+
+        private static final String REST_PATH = "v1b3/{+name}:tag";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/catalogTemplates/[^/]+$");
+
+        /**
+         * Updates the tag of the TemplateVersion, and tag is unique in Template. If tag exists in another
+         * TemplateVersion in the Template, updates the tag to this TemplateVersion will remove it from
+         * the old TemplateVersion and add it to this TemplateVersion. If request is remove_only
+         * (remove_only = true), remove the tag from this TemplateVersion.
+         *
+         * Create a request for the method "catalogTemplates.tag".
+         *
+         * This request holds the parameters needed by the the dataflow server.  After setting any
+         * optional parameters, call the {@link Tag#execute()} method to invoke the remote operation. <p>
+         * {@link Tag#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Resource name includes project_id, display_name, and version_id. Updates by project_id(pid1),
+       *        display_name(tid1), and version_id(vid1): Format:
+       *        projects/{pid1}/catalogTemplates/{tid1@vid}
+         * @param content the {@link com.google.api.services.dataflow.model.ModifyTemplateVersionTagRequest}
+         * @since 1.13
+         */
+        protected Tag(java.lang.String name, com.google.api.services.dataflow.model.ModifyTemplateVersionTagRequest content) {
+          super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.ModifyTemplateVersionTagResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/catalogTemplates/[^/]+$");
+          }
+        }
+
+        @Override
+        public Tag set$Xgafv(java.lang.String $Xgafv) {
+          return (Tag) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Tag setAccessToken(java.lang.String accessToken) {
+          return (Tag) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Tag setAlt(java.lang.String alt) {
+          return (Tag) super.setAlt(alt);
+        }
+
+        @Override
+        public Tag setCallback(java.lang.String callback) {
+          return (Tag) super.setCallback(callback);
+        }
+
+        @Override
+        public Tag setFields(java.lang.String fields) {
+          return (Tag) super.setFields(fields);
+        }
+
+        @Override
+        public Tag setKey(java.lang.String key) {
+          return (Tag) super.setKey(key);
+        }
+
+        @Override
+        public Tag setOauthToken(java.lang.String oauthToken) {
+          return (Tag) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Tag setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Tag) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Tag setQuotaUser(java.lang.String quotaUser) {
+          return (Tag) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Tag setUploadType(java.lang.String uploadType) {
+          return (Tag) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Tag setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Tag) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Resource name includes project_id, display_name, and version_id. Updates by
+         * project_id(pid1), display_name(tid1), and version_id(vid1): Format:
+         * projects/{pid1}/catalogTemplates/{tid1@vid}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Resource name includes project_id, display_name, and version_id. Updates by project_id(pid1),
+       display_name(tid1), and version_id(vid1): Format: projects/{pid1}/catalogTemplates/{tid1@vid}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Resource name includes project_id, display_name, and version_id. Updates by
+         * project_id(pid1), display_name(tid1), and version_id(vid1): Format:
+         * projects/{pid1}/catalogTemplates/{tid1@vid}
+         */
+        public Tag setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/catalogTemplates/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Tag set(String parameterName, Object value) {
+          return (Tag) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the TemplateVersions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dataflow dataflow = new Dataflow(...);}
+       *   {@code Dataflow.TemplateVersions.List request = dataflow.templateVersions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TemplateVersions templateVersions() {
+        return new TemplateVersions();
+      }
+
+      /**
+       * The "templateVersions" collection of methods.
+       */
+      public class TemplateVersions {
+
+        /**
+         * Creates a new Template with TemplateVersion. Requires project_id(projects) and template
+         * display_name(catalogTemplates). The template display_name is set by the user.
+         *
+         * Create a request for the method "templateVersions.create".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent project and template that the TemplateVersion will be created under. Create using
+         *        project_id(pid1) and display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1}
+         * @param content the {@link com.google.api.services.dataflow.model.CreateTemplateVersionRequest}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataflow.model.CreateTemplateVersionRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataflowRequest<com.google.api.services.dataflow.model.TemplateVersion> {
+
+          private static final String REST_PATH = "v1b3/{+parent}/templateVersions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/catalogTemplates/[^/]+$");
+
+          /**
+           * Creates a new Template with TemplateVersion. Requires project_id(projects) and template
+           * display_name(catalogTemplates). The template display_name is set by the user.
+           *
+           * Create a request for the method "templateVersions.create".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent project and template that the TemplateVersion will be created under. Create using
+         *        project_id(pid1) and display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1}
+           * @param content the {@link com.google.api.services.dataflow.model.CreateTemplateVersionRequest}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataflow.model.CreateTemplateVersionRequest content) {
+            super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.TemplateVersion.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/catalogTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent project and template that the TemplateVersion will be created under. Create
+           * using project_id(pid1) and display_name(tid1). Format:
+           * projects/{pid1}/catalogTemplates/{tid1}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent project and template that the TemplateVersion will be created under. Create using
+         project_id(pid1) and display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent project and template that the TemplateVersion will be created under. Create
+           * using project_id(pid1) and display_name(tid1). Format:
+           * projects/{pid1}/catalogTemplates/{tid1}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/catalogTemplates/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Jobs collection.
      *
      * <p>The typical use is:</p>
@@ -657,9 +1583,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Creates a Cloud Dataflow job.
-       *
-       * To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint]
+       * Creates a Cloud Dataflow job. To create a job, we recommend using
+       * `projects.locations.jobs.create` with a [regional endpoint]
        * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
        * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
        *
@@ -683,9 +1608,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         private static final String REST_PATH = "v1b3/projects/{projectId}/jobs";
 
         /**
-         * Creates a Cloud Dataflow job.
-         *
-         * To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint]
+         * Creates a Cloud Dataflow job. To create a job, we recommend using
+         * `projects.locations.jobs.create` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
          *
@@ -838,12 +1762,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Gets the state of the specified Cloud Dataflow job.
-       *
-       * To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional
-       * endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
-       * `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running in
-       * `us-central1`.
+       * Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend using
+       * `projects.locations.jobs.get` with a [regional endpoint]
+       * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get`
+       * is not recommended, as you can only get the state of jobs that are running in `us-central1`.
        *
        * Create a request for the method "jobs.get".
        *
@@ -865,12 +1787,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         private static final String REST_PATH = "v1b3/projects/{projectId}/jobs/{jobId}";
 
         /**
-         * Gets the state of the specified Cloud Dataflow job.
-         *
-         * To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional
-         * endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
-         * `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running
-         * in `us-central1`.
+         * Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend
+         * using `projects.locations.jobs.get` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get`
+         * is not recommended, as you can only get the state of jobs that are running in `us-central1`.
          *
          * Create a request for the method "jobs.get".
          *
@@ -1031,10 +1951,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Request the job status.
-       *
-       * To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a
-       * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+       * Request the job status. To request the status of a job, we recommend using
+       * `projects.locations.jobs.getMetrics` with a [regional endpoint]
+       * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
        * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
        * are running in `us-central1`.
        *
@@ -1044,7 +1963,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link GetMetrics#execute()} method to invoke the remote operation.
        *
        * @param projectId A project id.
-       * @param jobId The job to get messages for.
+       * @param jobId The job to get metrics for.
        * @return the request
        */
       public GetMetrics getMetrics(java.lang.String projectId, java.lang.String jobId) throws java.io.IOException {
@@ -1058,10 +1977,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         private static final String REST_PATH = "v1b3/projects/{projectId}/jobs/{jobId}/metrics";
 
         /**
-         * Request the job status.
-         *
-         * To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a
-         * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * Request the job status. To request the status of a job, we recommend using
+         * `projects.locations.jobs.getMetrics` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
          * are running in `us-central1`.
          *
@@ -1074,7 +1992,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param projectId A project id.
-         * @param jobId The job to get messages for.
+         * @param jobId The job to get metrics for.
          * @since 1.13
          */
         protected GetMetrics(java.lang.String projectId, java.lang.String jobId) {
@@ -1164,17 +2082,17 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** The job to get messages for. */
+        /** The job to get metrics for. */
         @com.google.api.client.util.Key
         private java.lang.String jobId;
 
-        /** The job to get messages for.
+        /** The job to get metrics for.
          */
         public java.lang.String getJobId() {
           return jobId;
         }
 
-        /** The job to get messages for. */
+        /** The job to get metrics for. */
         public GetMetrics setJobId(java.lang.String jobId) {
           this.jobId = jobId;
           return this;
@@ -1232,12 +2150,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * List the jobs of a project.
-       *
-       * To list the jobs of a project in a region, we recommend using `projects.locations.jobs.get` with
-       * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To
-       * list the all jobs across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list`
-       * is not recommended, as you can only get the list of jobs that are running in `us-central1`.
+       * List the jobs of a project. To list the jobs of a project in a region, we recommend using
+       * `projects.locations.jobs.list` with a [regional endpoint]
+       * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs across
+       * all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended, as
+       * you can only get the list of jobs that are running in `us-central1`.
        *
        * Create a request for the method "jobs.list".
        *
@@ -1258,13 +2175,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         private static final String REST_PATH = "v1b3/projects/{projectId}/jobs";
 
         /**
-         * List the jobs of a project.
-         *
-         * To list the jobs of a project in a region, we recommend using `projects.locations.jobs.get`
-         * with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
-         * endpoints). To list the all jobs across all regions, use `projects.jobs.aggregated`. Using
-         * `projects.jobs.list` is not recommended, as you can only get the list of jobs that are running
-         * in `us-central1`.
+         * List the jobs of a project. To list the jobs of a project in a region, we recommend using
+         * `projects.locations.jobs.list` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs
+         * across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not
+         * recommended, as you can only get the list of jobs that are running in `us-central1`.
          *
          * Create a request for the method "jobs.list".
          *
@@ -1606,10 +2521,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Updates the state of an existing Cloud Dataflow job.
-       *
-       * To update the state of an existing job, we recommend using `projects.locations.jobs.update` with
-       * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+       * Updates the state of an existing Cloud Dataflow job. To update the state of an existing job, we
+       * recommend using `projects.locations.jobs.update` with a [regional endpoint]
+       * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
        * `projects.jobs.update` is not recommended, as you can only update the state of jobs that are
        * running in `us-central1`.
        *
@@ -1634,12 +2548,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         private static final String REST_PATH = "v1b3/projects/{projectId}/jobs/{jobId}";
 
         /**
-         * Updates the state of an existing Cloud Dataflow job.
-         *
-         * To update the state of an existing job, we recommend using `projects.locations.jobs.update`
-         * with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
-         * endpoints). Using `projects.jobs.update` is not recommended, as you can only update the state
-         * of jobs that are running in `us-central1`.
+         * Updates the state of an existing Cloud Dataflow job. To update the state of an existing job, we
+         * recommend using `projects.locations.jobs.update` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * `projects.jobs.update` is not recommended, as you can only update the state of jobs that are
+         * running in `us-central1`.
          *
          * Create a request for the method "jobs.update".
          *
@@ -2093,10 +3006,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
       public class Messages {
 
         /**
-         * Request the job status.
-         *
-         * To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with a
-         * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * Request the job status. To request the status of a job, we recommend using
+         * `projects.locations.jobs.messages.list` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs that
          * are running in `us-central1`.
          *
@@ -2120,12 +3032,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1b3/projects/{projectId}/jobs/{jobId}/messages";
 
           /**
-           * Request the job status.
-           *
-           * To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with
-           * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints).
-           * Using `projects.jobs.messages.list` is not recommended, as you can only request the status of
-           * jobs that are running in `us-central1`.
+           * Request the job status. To request the status of a job, we recommend using
+           * `projects.locations.jobs.messages.list` with a [regional endpoint]
+           * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+           * `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs
+           * that are running in `us-central1`.
            *
            * Create a request for the method "messages.list".
            *
@@ -2304,14 +3215,14 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * If specified, determines the maximum number of messages to return.  If unspecified, the
+           * If specified, determines the maximum number of messages to return. If unspecified, the
            * service may choose an appropriate default, or may return an arbitrarily large number of
            * results.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** If specified, determines the maximum number of messages to return.  If unspecified, the service may
+          /** If specified, determines the maximum number of messages to return. If unspecified, the service may
          choose an appropriate default, or may return an arbitrarily large number of results.
            */
           public java.lang.Integer getPageSize() {
@@ -2319,7 +3230,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * If specified, determines the maximum number of messages to return.  If unspecified, the
+           * If specified, determines the maximum number of messages to return. If unspecified, the
            * service may choose an appropriate default, or may return an arbitrarily large number of
            * results.
            */
@@ -2707,8 +3618,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link WorkerMessages#execute()} method to invoke the remote operation.
        *
        * @param projectId The project to send the WorkerMessages to.
-       * @param location The [regional endpoint]
-      (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+       * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
        *        contains the job.
        * @param content the {@link com.google.api.services.dataflow.model.SendWorkerMessagesRequest}
        * @return the request
@@ -2735,8 +3645,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * the constructor. </p>
          *
          * @param projectId The project to send the WorkerMessages to.
-         * @param location The [regional endpoint]
-      (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
        *        contains the job.
          * @param content the {@link com.google.api.services.dataflow.model.SendWorkerMessagesRequest}
          * @since 1.13
@@ -2876,10 +3785,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Launch#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-         * @param location Required. The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-
-         *        endpoints) to
-        which to direct the request. E.g., us-central1, us-west1.
+         * @param location Required. The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         *        endpoints) to which to direct the request. E.g., us-central1, us-west1.
          * @param content the {@link com.google.api.services.dataflow.model.LaunchFlexTemplateRequest}
          * @return the request
          */
@@ -2905,10 +3812,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-           * @param location Required. The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-
-         *        endpoints) to
-        which to direct the request. E.g., us-central1, us-west1.
+           * @param location Required. The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+         *        endpoints) to which to direct the request. E.g., us-central1, us-west1.
            * @param content the {@link com.google.api.services.dataflow.model.LaunchFlexTemplateRequest}
            * @since 1.13
            */
@@ -3040,9 +3945,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
       public class Jobs {
 
         /**
-         * Creates a Cloud Dataflow job.
-         *
-         * To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint]
+         * Creates a Cloud Dataflow job. To create a job, we recommend using
+         * `projects.locations.jobs.create` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
          *
@@ -3052,8 +3956,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param projectId The ID of the Cloud Platform project that the job belongs to.
-         * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
          *        contains this job.
          * @param content the {@link com.google.api.services.dataflow.model.Job}
          * @return the request
@@ -3069,9 +3972,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs";
 
           /**
-           * Creates a Cloud Dataflow job.
-           *
-           * To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint]
+           * Creates a Cloud Dataflow job. To create a job, we recommend using
+           * `projects.locations.jobs.create` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
            * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`.
            *
@@ -3084,8 +3986,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId The ID of the Cloud Platform project that the job belongs to.
-           * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
          *        contains this job.
            * @param content the {@link com.google.api.services.dataflow.model.Job}
            * @since 1.13
@@ -3228,12 +4129,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Gets the state of the specified Cloud Dataflow job.
-         *
-         * To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional
-         * endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
-         * `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running in
-         * `us-central1`.
+         * Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend using
+         * `projects.locations.jobs.get` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get`
+         * is not recommended, as you can only get the state of jobs that are running in `us-central1`.
          *
          * Create a request for the method "jobs.get".
          *
@@ -3241,8 +4140,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param projectId The ID of the Cloud Platform project that the job belongs to.
-         * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
          *        contains this job.
          * @param jobId The job ID.
          * @return the request
@@ -3258,12 +4156,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}";
 
           /**
-           * Gets the state of the specified Cloud Dataflow job.
-           *
-           * To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional
-           * endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
-           * `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running
-           * in `us-central1`.
+           * Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend
+           * using `projects.locations.jobs.get` with a [regional endpoint]
+           * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get`
+           * is not recommended, as you can only get the state of jobs that are running in `us-central1`.
            *
            * Create a request for the method "jobs.get".
            *
@@ -3273,8 +4169,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId The ID of the Cloud Platform project that the job belongs to.
-           * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
          *        contains this job.
            * @param jobId The job ID.
            * @since 1.13
@@ -3428,10 +4323,232 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Request the job status.
+         * Request detailed information about the execution status of the job. EXPERIMENTAL. This API is
+         * subject to change or removal without notice.
          *
-         * To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a
-         * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * Create a request for the method "jobs.getExecutionDetails".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link GetExecutionDetails#execute()} method to invoke the remote operation.
+         *
+         * @param projectId A project id.
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains the job specified by job_id.
+         * @param jobId The job to get execution details for.
+         * @return the request
+         */
+        public GetExecutionDetails getExecutionDetails(java.lang.String projectId, java.lang.String location, java.lang.String jobId) throws java.io.IOException {
+          GetExecutionDetails result = new GetExecutionDetails(projectId, location, jobId);
+          initialize(result);
+          return result;
+        }
+
+        public class GetExecutionDetails extends DataflowRequest<com.google.api.services.dataflow.model.JobExecutionDetails> {
+
+          private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/executionDetails";
+
+          /**
+           * Request detailed information about the execution status of the job. EXPERIMENTAL. This API is
+           * subject to change or removal without notice.
+           *
+           * Create a request for the method "jobs.getExecutionDetails".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link GetExecutionDetails#execute()} method to invoke the remote
+           * operation. <p> {@link GetExecutionDetails#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param projectId A project id.
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         *        contains the job specified by job_id.
+           * @param jobId The job to get execution details for.
+           * @since 1.13
+           */
+          protected GetExecutionDetails(java.lang.String projectId, java.lang.String location, java.lang.String jobId) {
+            super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.JobExecutionDetails.class);
+            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetExecutionDetails set$Xgafv(java.lang.String $Xgafv) {
+            return (GetExecutionDetails) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetExecutionDetails setAccessToken(java.lang.String accessToken) {
+            return (GetExecutionDetails) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetExecutionDetails setAlt(java.lang.String alt) {
+            return (GetExecutionDetails) super.setAlt(alt);
+          }
+
+          @Override
+          public GetExecutionDetails setCallback(java.lang.String callback) {
+            return (GetExecutionDetails) super.setCallback(callback);
+          }
+
+          @Override
+          public GetExecutionDetails setFields(java.lang.String fields) {
+            return (GetExecutionDetails) super.setFields(fields);
+          }
+
+          @Override
+          public GetExecutionDetails setKey(java.lang.String key) {
+            return (GetExecutionDetails) super.setKey(key);
+          }
+
+          @Override
+          public GetExecutionDetails setOauthToken(java.lang.String oauthToken) {
+            return (GetExecutionDetails) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetExecutionDetails setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetExecutionDetails) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetExecutionDetails setQuotaUser(java.lang.String quotaUser) {
+            return (GetExecutionDetails) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetExecutionDetails setUploadType(java.lang.String uploadType) {
+            return (GetExecutionDetails) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetExecutionDetails setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetExecutionDetails) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** A project id. */
+          @com.google.api.client.util.Key
+          private java.lang.String projectId;
+
+          /** A project id.
+           */
+          public java.lang.String getProjectId() {
+            return projectId;
+          }
+
+          /** A project id. */
+          public GetExecutionDetails setProjectId(java.lang.String projectId) {
+            this.projectId = projectId;
+            return this;
+          }
+
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains the job specified by job_id.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         contains the job specified by job_id.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /**
+           * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+           * endpoints) that contains the job specified by job_id.
+           */
+          public GetExecutionDetails setLocation(java.lang.String location) {
+            this.location = location;
+            return this;
+          }
+
+          /** The job to get execution details for. */
+          @com.google.api.client.util.Key
+          private java.lang.String jobId;
+
+          /** The job to get execution details for.
+           */
+          public java.lang.String getJobId() {
+            return jobId;
+          }
+
+          /** The job to get execution details for. */
+          public GetExecutionDetails setJobId(java.lang.String jobId) {
+            this.jobId = jobId;
+            return this;
+          }
+
+          /**
+           * If specified, determines the maximum number of stages to return. If unspecified, the
+           * service may choose an appropriate default, or may return an arbitrarily large number of
+           * results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** If specified, determines the maximum number of stages to return. If unspecified, the service may
+         choose an appropriate default, or may return an arbitrarily large number of results.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * If specified, determines the maximum number of stages to return. If unspecified, the
+           * service may choose an appropriate default, or may return an arbitrarily large number of
+           * results.
+           */
+          public GetExecutionDetails setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * If supplied, this should be the value of next_page_token returned by an earlier call.
+           * This will cause the next page of results to be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** If supplied, this should be the value of next_page_token returned by an earlier call. This will
+         cause the next page of results to be returned.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * If supplied, this should be the value of next_page_token returned by an earlier call.
+           * This will cause the next page of results to be returned.
+           */
+          public GetExecutionDetails setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public GetExecutionDetails set(String parameterName, Object value) {
+            return (GetExecutionDetails) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Request the job status. To request the status of a job, we recommend using
+         * `projects.locations.jobs.getMetrics` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
          * are running in `us-central1`.
          *
@@ -3441,10 +4558,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link GetMetrics#execute()} method to invoke the remote operation.
          *
          * @param projectId A project id.
-         * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
          *        contains the job specified by job_id.
-         * @param jobId The job to get messages for.
+         * @param jobId The job to get metrics for.
          * @return the request
          */
         public GetMetrics getMetrics(java.lang.String projectId, java.lang.String location, java.lang.String jobId) throws java.io.IOException {
@@ -3458,10 +4574,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/metrics";
 
           /**
-           * Request the job status.
-           *
-           * To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a
-           * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+           * Request the job status. To request the status of a job, we recommend using
+           * `projects.locations.jobs.getMetrics` with a [regional endpoint]
+           * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
            * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
            * are running in `us-central1`.
            *
@@ -3474,10 +4589,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId A project id.
-           * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
          *        contains the job specified by job_id.
-           * @param jobId The job to get messages for.
+           * @param jobId The job to get metrics for.
            * @since 1.13
            */
           protected GetMetrics(java.lang.String projectId, java.lang.String location, java.lang.String jobId) {
@@ -3591,17 +4705,17 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** The job to get messages for. */
+          /** The job to get metrics for. */
           @com.google.api.client.util.Key
           private java.lang.String jobId;
 
-          /** The job to get messages for.
+          /** The job to get metrics for.
            */
           public java.lang.String getJobId() {
             return jobId;
           }
 
-          /** The job to get messages for. */
+          /** The job to get metrics for. */
           public GetMetrics setJobId(java.lang.String jobId) {
             this.jobId = jobId;
             return this;
@@ -3636,12 +4750,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * List the jobs of a project.
-         *
-         * To list the jobs of a project in a region, we recommend using `projects.locations.jobs.get` with
-         * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To
-         * list the all jobs across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list`
-         * is not recommended, as you can only get the list of jobs that are running in `us-central1`.
+         * List the jobs of a project. To list the jobs of a project in a region, we recommend using
+         * `projects.locations.jobs.list` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs across
+         * all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended, as
+         * you can only get the list of jobs that are running in `us-central1`.
          *
          * Create a request for the method "jobs.list".
          *
@@ -3649,8 +4762,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param projectId The project which owns the jobs.
-         * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
          *        contains this job.
          * @return the request
          */
@@ -3665,13 +4777,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs";
 
           /**
-           * List the jobs of a project.
-           *
-           * To list the jobs of a project in a region, we recommend using `projects.locations.jobs.get`
-           * with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
-           * endpoints). To list the all jobs across all regions, use `projects.jobs.aggregated`. Using
-           * `projects.jobs.list` is not recommended, as you can only get the list of jobs that are running
-           * in `us-central1`.
+           * List the jobs of a project. To list the jobs of a project in a region, we recommend using
+           * `projects.locations.jobs.list` with a [regional endpoint]
+           * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs
+           * across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not
+           * recommended, as you can only get the list of jobs that are running in `us-central1`.
            *
            * Create a request for the method "jobs.list".
            *
@@ -3681,8 +4791,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId The project which owns the jobs.
-           * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
          *        contains this job.
            * @since 1.13
            */
@@ -4036,10 +5145,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Updates the state of an existing Cloud Dataflow job.
-         *
-         * To update the state of an existing job, we recommend using `projects.locations.jobs.update` with
-         * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+         * Updates the state of an existing Cloud Dataflow job. To update the state of an existing job, we
+         * recommend using `projects.locations.jobs.update` with a [regional endpoint]
+         * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.update` is not recommended, as you can only update the state of jobs that are
          * running in `us-central1`.
          *
@@ -4049,8 +5157,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
          * @param projectId The ID of the Cloud Platform project that the job belongs to.
-         * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
          *        contains this job.
          * @param jobId The job ID.
          * @param content the {@link com.google.api.services.dataflow.model.Job}
@@ -4067,12 +5174,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}";
 
           /**
-           * Updates the state of an existing Cloud Dataflow job.
-           *
-           * To update the state of an existing job, we recommend using `projects.locations.jobs.update`
-           * with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
-           * endpoints). Using `projects.jobs.update` is not recommended, as you can only update the state
-           * of jobs that are running in `us-central1`.
+           * Updates the state of an existing Cloud Dataflow job. To update the state of an existing job, we
+           * recommend using `projects.locations.jobs.update` with a [regional endpoint]
+           * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+           * `projects.jobs.update` is not recommended, as you can only update the state of jobs that are
+           * running in `us-central1`.
            *
            * Create a request for the method "jobs.update".
            *
@@ -4083,8 +5189,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId The ID of the Cloud Platform project that the job belongs to.
-           * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
          *        contains this job.
            * @param jobId The job ID.
            * @param content the {@link com.google.api.services.dataflow.model.Job}
@@ -4242,8 +5347,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
            *
            * @param projectId The project id.
-           * @param location The [regional endpoint]
-          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
            *        contains the job specified by job_id.
            * @param jobId The job id.
            * @param content the {@link com.google.api.services.dataflow.model.GetDebugConfigRequest}
@@ -4271,8 +5375,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId The project id.
-             * @param location The [regional endpoint]
-          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+             * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
            *        contains the job specified by job_id.
              * @param jobId The job id.
              * @param content the {@link com.google.api.services.dataflow.model.GetDebugConfigRequest}
@@ -4409,8 +5512,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link SendCapture#execute()} method to invoke the remote operation.
            *
            * @param projectId The project id.
-           * @param location The [regional endpoint]
-          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
            *        contains the job specified by job_id.
            * @param jobId The job id.
            * @param content the {@link com.google.api.services.dataflow.model.SendDebugCaptureRequest}
@@ -4438,8 +5540,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId The project id.
-             * @param location The [regional endpoint]
-          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+             * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
            *        contains the job specified by job_id.
              * @param jobId The job id.
              * @param content the {@link com.google.api.services.dataflow.model.SendDebugCaptureRequest}
@@ -4590,10 +5691,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         public class Messages {
 
           /**
-           * Request the job status.
-           *
-           * To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with a
-           * [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+           * Request the job status. To request the status of a job, we recommend using
+           * `projects.locations.jobs.messages.list` with a [regional endpoint]
+           * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
            * `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs that
            * are running in `us-central1`.
            *
@@ -4603,8 +5703,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param projectId A project id.
-           * @param location The [regional endpoint]
-          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
            *        contains the job specified by job_id.
            * @param jobId The job to get messages about.
            * @return the request
@@ -4620,12 +5719,11 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/messages";
 
             /**
-             * Request the job status.
-             *
-             * To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with
-             * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints).
-             * Using `projects.jobs.messages.list` is not recommended, as you can only request the status of
-             * jobs that are running in `us-central1`.
+             * Request the job status. To request the status of a job, we recommend using
+             * `projects.locations.jobs.messages.list` with a [regional endpoint]
+             * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
+             * `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs
+             * that are running in `us-central1`.
              *
              * Create a request for the method "messages.list".
              *
@@ -4635,8 +5733,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId A project id.
-             * @param location The [regional endpoint]
-          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+             * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
            *        contains the job specified by job_id.
              * @param jobId The job to get messages about.
              * @since 1.13
@@ -4808,14 +5905,14 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * If specified, determines the maximum number of messages to return.  If unspecified,
+             * If specified, determines the maximum number of messages to return. If unspecified,
              * the service may choose an appropriate default, or may return an arbitrarily large
              * number of results.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** If specified, determines the maximum number of messages to return.  If unspecified, the service may
+            /** If specified, determines the maximum number of messages to return. If unspecified, the service may
            choose an appropriate default, or may return an arbitrarily large number of results.
              */
             public java.lang.Integer getPageSize() {
@@ -4823,7 +5920,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * If specified, determines the maximum number of messages to return.  If unspecified,
+             * If specified, determines the maximum number of messages to return. If unspecified,
              * the service may choose an appropriate default, or may return an arbitrarily large
              * number of results.
              */
@@ -5071,6 +6168,302 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
         }
         /**
+         * An accessor for creating requests from the Stages collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dataflow dataflow = new Dataflow(...);}
+         *   {@code Dataflow.Stages.List request = dataflow.stages().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Stages stages() {
+          return new Stages();
+        }
+
+        /**
+         * The "stages" collection of methods.
+         */
+        public class Stages {
+
+          /**
+           * Request detailed information about the execution status of a stage of the job. EXPERIMENTAL. This
+           * API is subject to change or removal without notice.
+           *
+           * Create a request for the method "stages.getExecutionDetails".
+           *
+           * This request holds the parameters needed by the dataflow server.  After setting any optional
+           * parameters, call the {@link GetExecutionDetails#execute()} method to invoke the remote operation.
+           *
+           * @param projectId A project id.
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the job specified by job_id.
+           * @param jobId The job to get execution details for.
+           * @param stageId The stage for which to fetch information.
+           * @return the request
+           */
+          public GetExecutionDetails getExecutionDetails(java.lang.String projectId, java.lang.String location, java.lang.String jobId, java.lang.String stageId) throws java.io.IOException {
+            GetExecutionDetails result = new GetExecutionDetails(projectId, location, jobId, stageId);
+            initialize(result);
+            return result;
+          }
+
+          public class GetExecutionDetails extends DataflowRequest<com.google.api.services.dataflow.model.StageExecutionDetails> {
+
+            private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/stages/{stageId}/executionDetails";
+
+            /**
+             * Request detailed information about the execution status of a stage of the job. EXPERIMENTAL.
+             * This API is subject to change or removal without notice.
+             *
+             * Create a request for the method "stages.getExecutionDetails".
+             *
+             * This request holds the parameters needed by the the dataflow server.  After setting any
+             * optional parameters, call the {@link GetExecutionDetails#execute()} method to invoke the remote
+             * operation. <p> {@link GetExecutionDetails#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param projectId A project id.
+             * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the job specified by job_id.
+             * @param jobId The job to get execution details for.
+             * @param stageId The stage for which to fetch information.
+             * @since 1.13
+             */
+            protected GetExecutionDetails(java.lang.String projectId, java.lang.String location, java.lang.String jobId, java.lang.String stageId) {
+              super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.StageExecutionDetails.class);
+              this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+              this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+              this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+              this.stageId = com.google.api.client.util.Preconditions.checkNotNull(stageId, "Required parameter stageId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetExecutionDetails set$Xgafv(java.lang.String $Xgafv) {
+              return (GetExecutionDetails) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetExecutionDetails setAccessToken(java.lang.String accessToken) {
+              return (GetExecutionDetails) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetExecutionDetails setAlt(java.lang.String alt) {
+              return (GetExecutionDetails) super.setAlt(alt);
+            }
+
+            @Override
+            public GetExecutionDetails setCallback(java.lang.String callback) {
+              return (GetExecutionDetails) super.setCallback(callback);
+            }
+
+            @Override
+            public GetExecutionDetails setFields(java.lang.String fields) {
+              return (GetExecutionDetails) super.setFields(fields);
+            }
+
+            @Override
+            public GetExecutionDetails setKey(java.lang.String key) {
+              return (GetExecutionDetails) super.setKey(key);
+            }
+
+            @Override
+            public GetExecutionDetails setOauthToken(java.lang.String oauthToken) {
+              return (GetExecutionDetails) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetExecutionDetails setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetExecutionDetails) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetExecutionDetails setQuotaUser(java.lang.String quotaUser) {
+              return (GetExecutionDetails) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetExecutionDetails setUploadType(java.lang.String uploadType) {
+              return (GetExecutionDetails) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetExecutionDetails setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetExecutionDetails) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** A project id. */
+            @com.google.api.client.util.Key
+            private java.lang.String projectId;
+
+            /** A project id.
+             */
+            public java.lang.String getProjectId() {
+              return projectId;
+            }
+
+            /** A project id. */
+            public GetExecutionDetails setProjectId(java.lang.String projectId) {
+              this.projectId = projectId;
+              return this;
+            }
+
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the job specified by job_id.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String location;
+
+            /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           contains the job specified by job_id.
+             */
+            public java.lang.String getLocation() {
+              return location;
+            }
+
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the job specified by job_id.
+             */
+            public GetExecutionDetails setLocation(java.lang.String location) {
+              this.location = location;
+              return this;
+            }
+
+            /** The job to get execution details for. */
+            @com.google.api.client.util.Key
+            private java.lang.String jobId;
+
+            /** The job to get execution details for.
+             */
+            public java.lang.String getJobId() {
+              return jobId;
+            }
+
+            /** The job to get execution details for. */
+            public GetExecutionDetails setJobId(java.lang.String jobId) {
+              this.jobId = jobId;
+              return this;
+            }
+
+            /** The stage for which to fetch information. */
+            @com.google.api.client.util.Key
+            private java.lang.String stageId;
+
+            /** The stage for which to fetch information.
+             */
+            public java.lang.String getStageId() {
+              return stageId;
+            }
+
+            /** The stage for which to fetch information. */
+            public GetExecutionDetails setStageId(java.lang.String stageId) {
+              this.stageId = stageId;
+              return this;
+            }
+
+            /** Upper time bound of work items to include, by start time. */
+            @com.google.api.client.util.Key
+            private String endTime;
+
+            /** Upper time bound of work items to include, by start time.
+             */
+            public String getEndTime() {
+              return endTime;
+            }
+
+            /** Upper time bound of work items to include, by start time. */
+            public GetExecutionDetails setEndTime(String endTime) {
+              this.endTime = endTime;
+              return this;
+            }
+
+            /**
+             * If specified, determines the maximum number of work items to return. If unspecified,
+             * the service may choose an appropriate default, or may return an arbitrarily large
+             * number of results.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** If specified, determines the maximum number of work items to return. If unspecified, the service
+           may choose an appropriate default, or may return an arbitrarily large number of results.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * If specified, determines the maximum number of work items to return. If unspecified,
+             * the service may choose an appropriate default, or may return an arbitrarily large
+             * number of results.
+             */
+            public GetExecutionDetails setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * If supplied, this should be the value of next_page_token returned by an earlier call.
+             * This will cause the next page of results to be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** If supplied, this should be the value of next_page_token returned by an earlier call. This will
+           cause the next page of results to be returned.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * If supplied, this should be the value of next_page_token returned by an earlier call.
+             * This will cause the next page of results to be returned.
+             */
+            public GetExecutionDetails setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Lower time bound of work items to include, by start time. */
+            @com.google.api.client.util.Key
+            private String startTime;
+
+            /** Lower time bound of work items to include, by start time.
+             */
+            public String getStartTime() {
+              return startTime;
+            }
+
+            /** Lower time bound of work items to include, by start time. */
+            public GetExecutionDetails setStartTime(String startTime) {
+              this.startTime = startTime;
+              return this;
+            }
+
+            @Override
+            public GetExecutionDetails set(String parameterName, Object value) {
+              return (GetExecutionDetails) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the WorkItems collection.
          *
          * <p>The typical use is:</p>
@@ -5099,8 +6492,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link Lease#execute()} method to invoke the remote operation.
            *
            * @param projectId Identifies the project this worker belongs to.
-           * @param location The [regional endpoint]
-          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
            *        contains the WorkItem's job.
            * @param jobId Identifies the workflow job this worker belongs to.
            * @param content the {@link com.google.api.services.dataflow.model.LeaseWorkItemRequest}
@@ -5128,8 +6520,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId Identifies the project this worker belongs to.
-             * @param location The [regional endpoint]
-          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+             * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
            *        contains the WorkItem's job.
              * @param jobId Identifies the workflow job this worker belongs to.
              * @param content the {@link com.google.api.services.dataflow.model.LeaseWorkItemRequest}
@@ -5266,8 +6657,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link ReportStatus#execute()} method to invoke the remote operation.
            *
            * @param projectId The project which owns the WorkItem's job.
-           * @param location The [regional endpoint]
-          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
            *        contains the WorkItem's job.
            * @param jobId The job which the WorkItem is part of.
            * @param content the {@link com.google.api.services.dataflow.model.ReportWorkItemStatusRequest}
@@ -5295,8 +6685,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param projectId The project which owns the WorkItem's job.
-             * @param location The [regional endpoint]
-          (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+             * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
            *        contains the WorkItem's job.
              * @param jobId The job which the WorkItem is part of.
              * @param content the {@link com.google.api.services.dataflow.model.ReportWorkItemStatusRequest}
@@ -5957,8 +7346,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Validate#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-         * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
          *        which to direct the request.
          * @return the request
          */
@@ -5986,8 +7374,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-           * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
          *        which to direct the request.
            * @since 1.13
            */
@@ -6153,8 +7540,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-         * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
          *        which to direct the request.
          * @param content the {@link com.google.api.services.dataflow.model.CreateJobFromTemplateRequest}
          * @return the request
@@ -6181,8 +7567,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-           * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
          *        which to direct the request.
            * @param content the {@link com.google.api.services.dataflow.model.CreateJobFromTemplateRequest}
            * @since 1.13
@@ -6301,8 +7686,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-         * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
          *        which to direct the request.
          * @return the request
          */
@@ -6327,8 +7711,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-           * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
          *        which to direct the request.
            * @since 1.13
            */
@@ -6495,8 +7878,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Launch#execute()} method to invoke the remote operation.
          *
          * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-         * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+         * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
          *        which to direct the request.
          * @param content the {@link com.google.api.services.dataflow.model.LaunchTemplateParameters}
          * @return the request
@@ -6523,8 +7905,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param projectId Required. The ID of the Cloud Platform project that the job belongs to.
-           * @param location The [regional endpoint]
-        (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to
          *        which to direct the request.
            * @param content the {@link com.google.api.services.dataflow.model.LaunchTemplateParameters}
            * @since 1.13
@@ -6698,9 +8079,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /**
-           * If true, the request is validated but not actually executed. Defaults to false.
-           */
+          /** If true, the request is validated but not actually executed. Defaults to false. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
@@ -6710,9 +8089,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return validateOnly;
           }
 
-          /**
-           * If true, the request is validated but not actually executed. Defaults to false.
-           */
+          /** If true, the request is validated but not actually executed. Defaults to false. */
           public Launch setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
             return this;
@@ -7055,6 +8432,223 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /** The location to list snapshots in. */
         public List setLocation(java.lang.String location) {
           this.location = location;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the TemplateVersions collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dataflow dataflow = new Dataflow(...);}
+     *   {@code Dataflow.TemplateVersions.List request = dataflow.templateVersions().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public TemplateVersions templateVersions() {
+      return new TemplateVersions();
+    }
+
+    /**
+     * The "templateVersions" collection of methods.
+     */
+    public class TemplateVersions {
+
+      /**
+       * List TemplateVersions using project_id and an optional display_name field. List all the
+       * TemplateVersions in the Template if display set. List all the TemplateVersions in the Project if
+       * display_name not set.
+       *
+       * Create a request for the method "templateVersions.list".
+       *
+       * This request holds the parameters needed by the dataflow server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent parent includes project_id, and display_name is optional. List by project_id(pid1) and
+       *        display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1} List by
+       *        project_id(pid1). Format: projects/{pid1}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends DataflowRequest<com.google.api.services.dataflow.model.ListTemplateVersionsResponse> {
+
+        private static final String REST_PATH = "v1b3/{+parent}/templateVersions";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * List TemplateVersions using project_id and an optional display_name field. List all the
+         * TemplateVersions in the Template if display set. List all the TemplateVersions in the Project
+         * if display_name not set.
+         *
+         * Create a request for the method "templateVersions.list".
+         *
+         * This request holds the parameters needed by the the dataflow server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent parent includes project_id, and display_name is optional. List by project_id(pid1) and
+       *        display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1} List by
+       *        project_id(pid1). Format: projects/{pid1}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ListTemplateVersionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * parent includes project_id, and display_name is optional. List by project_id(pid1) and
+         * display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1} List by
+         * project_id(pid1). Format: projects/{pid1}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** parent includes project_id, and display_name is optional. List by project_id(pid1) and
+       display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1} List by project_id(pid1).
+       Format: projects/{pid1}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * parent includes project_id, and display_name is optional. List by project_id(pid1) and
+         * display_name(tid1). Format: projects/{pid1}/catalogTemplates/{tid1} List by
+         * project_id(pid1). Format: projects/{pid1}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** The maximum number of TemplateVersions to return per page. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of TemplateVersions to return per page.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** The maximum number of TemplateVersions to return per page. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The page token, received from a previous ListTemplateVersions call. Provide this to
+         * retrieve the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The page token, received from a previous ListTemplateVersions call. Provide this to retrieve the
+       subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The page token, received from a previous ListTemplateVersions call. Provide this to
+         * retrieve the subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
           return this;
         }
 
@@ -7595,9 +9189,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /**
-         * If true, the request is validated but not actually executed. Defaults to false.
-         */
+        /** If true, the request is validated but not actually executed. Defaults to false. */
         @com.google.api.client.util.Key
         private java.lang.Boolean validateOnly;
 
@@ -7607,9 +9199,7 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return validateOnly;
         }
 
-        /**
-         * If true, the request is validated but not actually executed. Defaults to false.
-         */
+        /** If true, the request is validated but not actually executed. Defaults to false. */
         public Launch setValidateOnly(java.lang.Boolean validateOnly) {
           this.validateOnly = validateOnly;
           return this;

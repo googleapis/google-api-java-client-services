@@ -30,14 +30,14 @@ package com.google.api.services.sql.model;
 public final class SslCertsInsertRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * User supplied name.  Must be a distinct name from the other certificates for this instance.
+   * User supplied name. Must be a distinct name from the other certificates for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String commonName;
 
   /**
-   * User supplied name.  Must be a distinct name from the other certificates for this instance.
+   * User supplied name. Must be a distinct name from the other certificates for this instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommonName() {
@@ -45,7 +45,7 @@ public final class SslCertsInsertRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * User supplied name.  Must be a distinct name from the other certificates for this instance.
+   * User supplied name. Must be a distinct name from the other certificates for this instance.
    * @param commonName commonName or {@code null} for none
    */
   public SslCertsInsertRequest setCommonName(java.lang.String commonName) {

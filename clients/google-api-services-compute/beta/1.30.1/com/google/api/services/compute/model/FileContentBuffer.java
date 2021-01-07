@@ -37,6 +37,7 @@ public final class FileContentBuffer extends com.google.api.client.json.GenericJ
   private java.lang.String content;
 
   /**
+   * The file type of source file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,6 +89,7 @@ public final class FileContentBuffer extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The file type of source file.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileType() {
@@ -95,6 +97,7 @@ public final class FileContentBuffer extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The file type of source file.
    * @param fileType fileType or {@code null} for none
    */
   public FileContentBuffer setFileType(java.lang.String fileType) {

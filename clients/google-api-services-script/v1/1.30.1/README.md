@@ -1,7 +1,6 @@
 # Apps Script API Client Library for Java
 
-Manages and executes Google Apps Script projects.
-
+Manages and executes Google Apps Script projects. 
 
 This page contains information about getting started with the Apps Script API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-script</artifactId>
-      <version>v1-rev20200215-1.30.9</version>
+      <version>v1-rev20200811-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-script:v1-rev20200215-1.30.9'
+  compile 'com.google.apis:google-api-services-script:v1-rev20200811-1.30.10'
 }
 ```
 

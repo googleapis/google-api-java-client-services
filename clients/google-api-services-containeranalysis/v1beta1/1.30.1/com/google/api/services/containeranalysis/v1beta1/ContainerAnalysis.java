@@ -46,7 +46,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Container Analysis API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Container Analysis API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -171,8 +171,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the notes are
+       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the notes are
        *        to be created.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.BatchCreateNotesRequest}
        * @return the request
@@ -201,8 +200,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the notes are
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the notes are
        *        to be created.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.BatchCreateNotesRequest}
          * @since 1.13
@@ -313,8 +311,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the note is to
+       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the note is to
        *        be created.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Note}
        * @return the request
@@ -343,8 +340,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the note is to
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the note is to
        *        be created.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Note}
          * @since 1.13
@@ -471,8 +467,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the note in the form of
-      `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+       * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -499,8 +494,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the note in the form of
-      `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -606,8 +600,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the note in the form of
-      `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+       * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -634,8 +627,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the note in the form of
-      `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -746,9 +738,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
       /**
        * Gets the access control policy for a note or an occurrence resource. Requires
        * `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission
-       * if the resource is a note or occurrence, respectively.
-       *
-       * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+       * if the resource is a note or occurrence, respectively. The resource takes the format
+       * `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
        * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
        *
        * Create a request for the method "notes.getIamPolicy".
@@ -757,8 +748,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.GetIamPolicyRequest}
        * @return the request
@@ -779,9 +769,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         /**
          * Gets the access control policy for a note or an occurrence resource. Requires
          * `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy`
-         * permission if the resource is a note or occurrence, respectively.
-         *
-         * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+         * permission if the resource is a note or occurrence, respectively. The resource takes the format
+         * `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
          *
          * Create a request for the method "notes.getIamPolicy".
@@ -792,8 +781,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.GetIamPolicyRequest}
          * @since 1.13
@@ -904,8 +892,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project to list notes for in the form of
-      `projects/[PROJECT_ID]`.
+       * @param parent Required. The name of the project to list notes for in the form of `projects/[PROJECT_ID]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -932,8 +919,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project to list notes for in the form of
-      `projects/[PROJECT_ID]`.
+         * @param parent Required. The name of the project to list notes for in the form of `projects/[PROJECT_ID]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1106,8 +1092,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the note in the form of
-      `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+       * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Note}
        * @return the request
        */
@@ -1135,8 +1120,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the note in the form of
-      `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
+         * @param name Required. The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Note}
          * @since 1.13
          */
@@ -1254,9 +1238,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
       /**
        * Sets the access control policy on the specified note or occurrence. Requires
        * `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission
-       * if the resource is a note or an occurrence, respectively.
-       *
-       * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+       * if the resource is a note or an occurrence, respectively. The resource takes the format
+       * `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
        * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
        *
        * Create a request for the method "notes.setIamPolicy".
@@ -1265,8 +1248,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.SetIamPolicyRequest}
        * @return the request
@@ -1287,9 +1269,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         /**
          * Sets the access control policy on the specified note or occurrence. Requires
          * `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy`
-         * permission if the resource is a note or an occurrence, respectively.
-         *
-         * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+         * permission if the resource is a note or an occurrence, respectively. The resource takes the
+         * format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
          *
          * Create a request for the method "notes.setIamPolicy".
@@ -1300,8 +1281,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -1406,9 +1386,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
       }
       /**
        * Returns the permissions that a caller has on the specified note or occurrence. Requires list
-       * permission on the project (for example, `containeranalysis.notes.list`).
-       *
-       * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+       * permission on the project (for example, `containeranalysis.notes.list`). The resource takes the
+       * format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
        * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
        *
        * Create a request for the method "notes.testIamPermissions".
@@ -1417,8 +1396,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.TestIamPermissionsRequest}
        * @return the request
@@ -1438,9 +1416,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
 
         /**
          * Returns the permissions that a caller has on the specified note or occurrence. Requires list
-         * permission on the project (for example, `containeranalysis.notes.list`).
-         *
-         * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+         * permission on the project (for example, `containeranalysis.notes.list`). The resource takes the
+         * format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
          *
          * Create a request for the method "notes.testIamPermissions".
@@ -1451,8 +1428,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -1806,8 +1782,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link BatchCreate#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the
+       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
        *        occurrences are to be created.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.BatchCreateOccurrencesRequest}
        * @return the request
@@ -1836,8 +1811,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * BatchCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the
        *        occurrences are to be created.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.BatchCreateOccurrencesRequest}
          * @since 1.13
@@ -1948,8 +1922,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the occurrence
+       * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the occurrence
        *        is to be created.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Occurrence}
        * @return the request
@@ -1978,8 +1951,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which
-      the occurrence
+         * @param parent Required. The name of the project in the form of `projects/[PROJECT_ID]`, under which the occurrence
        *        is to be created.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.Occurrence}
          * @since 1.13
@@ -2373,9 +2345,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
       /**
        * Gets the access control policy for a note or an occurrence resource. Requires
        * `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission
-       * if the resource is a note or occurrence, respectively.
-       *
-       * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+       * if the resource is a note or occurrence, respectively. The resource takes the format
+       * `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
        * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
        *
        * Create a request for the method "occurrences.getIamPolicy".
@@ -2384,8 +2355,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.GetIamPolicyRequest}
        * @return the request
@@ -2406,9 +2376,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         /**
          * Gets the access control policy for a note or an occurrence resource. Requires
          * `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy`
-         * permission if the resource is a note or occurrence, respectively.
-         *
-         * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+         * permission if the resource is a note or occurrence, respectively. The resource takes the format
+         * `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
          *
          * Create a request for the method "occurrences.getIamPolicy".
@@ -2419,8 +2388,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.GetIamPolicyRequest}
          * @since 1.13
@@ -2846,8 +2814,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the containeranalysis server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project to list occurrences for in the form of
-      `projects/[PROJECT_ID]`.
+       * @param parent Required. The name of the project to list occurrences for in the form of `projects/[PROJECT_ID]`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2874,8 +2841,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project to list occurrences for in the form of
-      `projects/[PROJECT_ID]`.
+         * @param parent Required. The name of the project to list occurrences for in the form of `projects/[PROJECT_ID]`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3199,9 +3165,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
       /**
        * Sets the access control policy on the specified note or occurrence. Requires
        * `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy` permission
-       * if the resource is a note or an occurrence, respectively.
-       *
-       * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+       * if the resource is a note or an occurrence, respectively. The resource takes the format
+       * `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
        * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
        *
        * Create a request for the method "occurrences.setIamPolicy".
@@ -3210,8 +3175,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.SetIamPolicyRequest}
        * @return the request
@@ -3232,9 +3196,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         /**
          * Sets the access control policy on the specified note or occurrence. Requires
          * `containeranalysis.notes.setIamPolicy` or `containeranalysis.occurrences.setIamPolicy`
-         * permission if the resource is a note or an occurrence, respectively.
-         *
-         * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+         * permission if the resource is a note or an occurrence, respectively. The resource takes the
+         * format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
          *
          * Create a request for the method "occurrences.setIamPolicy".
@@ -3245,8 +3208,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -3351,9 +3313,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
       }
       /**
        * Returns the permissions that a caller has on the specified note or occurrence. Requires list
-       * permission on the project (for example, `containeranalysis.notes.list`).
-       *
-       * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+       * permission on the project (for example, `containeranalysis.notes.list`). The resource takes the
+       * format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
        * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
        *
        * Create a request for the method "occurrences.testIamPermissions".
@@ -3362,8 +3323,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
        * operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.TestIamPermissionsRequest}
        * @return the request
@@ -3383,9 +3343,8 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
 
         /**
          * Returns the permissions that a caller has on the specified note or occurrence. Requires list
-         * permission on the project (for example, `containeranalysis.notes.list`).
-         *
-         * The resource takes the format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
+         * permission on the project (for example, `containeranalysis.notes.list`). The resource takes the
+         * format `projects/[PROJECT_ID]/notes/[NOTE_ID]` for notes and
          * `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]` for occurrences.
          *
          * Create a request for the method "occurrences.testIamPermissions".
@@ -3396,8 +3355,7 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
          * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
          * after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.containeranalysis.v1beta1.model.TestIamPermissionsRequest}
          * @since 1.13

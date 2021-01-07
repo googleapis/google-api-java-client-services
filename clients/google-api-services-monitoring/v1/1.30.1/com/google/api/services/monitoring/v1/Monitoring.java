@@ -46,7 +46,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Monitoring API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Monitoring API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -173,8 +173,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
-      The [PROJECT_ID_OR_NUMBER] must match the dashboard
+       *        projects/[PROJECT_ID_OR_NUMBER] The [PROJECT_ID_OR_NUMBER] must match the dashboard
        *        resource name.
        * @param content the {@link com.google.api.services.monitoring.v1.model.Dashboard}
        * @return the request
@@ -206,8 +205,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
-      The [PROJECT_ID_OR_NUMBER] must match the dashboard
+       *        projects/[PROJECT_ID_OR_NUMBER] The [PROJECT_ID_OR_NUMBER] must match the dashboard
        *        resource name.
          * @param content the {@link com.google.api.services.monitoring.v1.model.Dashboard}
          * @since 1.13
@@ -463,10 +461,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the Dashboard. The format is one of:
-      dashboards/[DASHBOARD_ID] (for
-       *        system dashboards)
-      projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID]  (for custom
+       * @param name Required. The resource name of the Dashboard. The format is one of: dashboards/[DASHBOARD_ID] (for
+       *        system dashboards) projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID] (for custom
        *        dashboards).
        * @return the request
        */
@@ -495,10 +491,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the Dashboard. The format is one of:
-      dashboards/[DASHBOARD_ID] (for
-       *        system dashboards)
-      projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID]  (for custom
+         * @param name Required. The resource name of the Dashboard. The format is one of: dashboards/[DASHBOARD_ID] (for
+       *        system dashboards) projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID] (for custom
        *        dashboards).
          * @since 1.13
          */
@@ -580,13 +574,13 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * Required. The resource name of the Dashboard. The format is one of:
          * dashboards/[DASHBOARD_ID] (for system dashboards)
-         * projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID]  (for custom dashboards).
+         * projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID] (for custom dashboards).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The resource name of the Dashboard. The format is one of: dashboards/[DASHBOARD_ID] (for
-       system dashboards) projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID]  (for custom
+       system dashboards) projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID] (for custom
        dashboards).
          */
         public java.lang.String getName() {
@@ -596,7 +590,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         /**
          * Required. The resource name of the Dashboard. The format is one of:
          * dashboards/[DASHBOARD_ID] (for system dashboards)
-         * projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID]  (for custom dashboards).
+         * projects/[PROJECT_ID_OR_NUMBER]/dashboards/[DASHBOARD_ID] (for custom dashboards).
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -622,8 +616,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The scope of the dashboards to list. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]
+       * @param parent Required. The scope of the dashboards to list. The format is: projects/[PROJECT_ID_OR_NUMBER]
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -651,8 +644,7 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The scope of the dashboards to list. The format is:
-      projects/[PROJECT_ID_OR_NUMBER]
+         * @param parent Required. The scope of the dashboards to list. The format is: projects/[PROJECT_ID_OR_NUMBER]
          * @since 1.13
          */
         protected List(java.lang.String parent) {

@@ -131,7 +131,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Read-only external display name for a product's SKU assigned to a customer in the subscription.
    * SKU names are subject to change at Google's discretion. For products and SKUs available in this
-   * version of the API, see  Product and SKU IDs.
+   * version of the API, see Product and SKU IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,13 +158,12 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * Read-only field containing an enumerable of all the current suspension reasons for a
    * subscription. It is possible for a subscription to have many concurrent, overlapping suspension
    * reasons. A subscription's STATUS is SUSPENDED until all pending suspensions are removed.
-   *
-   * Possible options include:   - PENDING_TOS_ACCEPTANCE - The customer has not logged in and
-   * accepted the G Suite Resold Terms of Services.   - RENEWAL_WITH_TYPE_CANCEL - The customer's
-   * commitment ended and their service was cancelled at the end of their term.   -
-   * RESELLER_INITIATED - A manual suspension invoked by a Reseller.   - TRIAL_ENDED - The
-   * customer's trial expired without a plan selected.   - OTHER - The customer is suspended for an
-   * internal Google reason (e.g. abuse or otherwise).
+   * Possible options include: - PENDING_TOS_ACCEPTANCE - The customer has not logged in and
+   * accepted the G Suite Resold Terms of Services. - RENEWAL_WITH_TYPE_CANCEL - The customer's
+   * commitment ended and their service was cancelled at the end of their term. - RESELLER_INITIATED
+   * - A manual suspension invoked by a Reseller. - TRIAL_ENDED - The customer's trial expired
+   * without a plan selected. - OTHER - The customer is suspended for an internal Google reason
+   * (e.g. abuse or otherwise).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -421,7 +420,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Read-only external display name for a product's SKU assigned to a customer in the subscription.
    * SKU names are subject to change at Google's discretion. For products and SKUs available in this
-   * version of the API, see  Product and SKU IDs.
+   * version of the API, see Product and SKU IDs.
    * @return value or {@code null} for none
    */
   public java.lang.String getSkuName() {
@@ -431,7 +430,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Read-only external display name for a product's SKU assigned to a customer in the subscription.
    * SKU names are subject to change at Google's discretion. For products and SKUs available in this
-   * version of the API, see  Product and SKU IDs.
+   * version of the API, see Product and SKU IDs.
    * @param skuName skuName or {@code null} for none
    */
   public Subscription setSkuName(java.lang.String skuName) {
@@ -483,13 +482,12 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * Read-only field containing an enumerable of all the current suspension reasons for a
    * subscription. It is possible for a subscription to have many concurrent, overlapping suspension
    * reasons. A subscription's STATUS is SUSPENDED until all pending suspensions are removed.
-   *
-   * Possible options include:   - PENDING_TOS_ACCEPTANCE - The customer has not logged in and
-   * accepted the G Suite Resold Terms of Services.   - RENEWAL_WITH_TYPE_CANCEL - The customer's
-   * commitment ended and their service was cancelled at the end of their term.   -
-   * RESELLER_INITIATED - A manual suspension invoked by a Reseller.   - TRIAL_ENDED - The
-   * customer's trial expired without a plan selected.   - OTHER - The customer is suspended for an
-   * internal Google reason (e.g. abuse or otherwise).
+   * Possible options include: - PENDING_TOS_ACCEPTANCE - The customer has not logged in and
+   * accepted the G Suite Resold Terms of Services. - RENEWAL_WITH_TYPE_CANCEL - The customer's
+   * commitment ended and their service was cancelled at the end of their term. - RESELLER_INITIATED
+   * - A manual suspension invoked by a Reseller. - TRIAL_ENDED - The customer's trial expired
+   * without a plan selected. - OTHER - The customer is suspended for an internal Google reason
+   * (e.g. abuse or otherwise).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSuspensionReasons() {
@@ -500,13 +498,12 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * Read-only field containing an enumerable of all the current suspension reasons for a
    * subscription. It is possible for a subscription to have many concurrent, overlapping suspension
    * reasons. A subscription's STATUS is SUSPENDED until all pending suspensions are removed.
-   *
-   * Possible options include:   - PENDING_TOS_ACCEPTANCE - The customer has not logged in and
-   * accepted the G Suite Resold Terms of Services.   - RENEWAL_WITH_TYPE_CANCEL - The customer's
-   * commitment ended and their service was cancelled at the end of their term.   -
-   * RESELLER_INITIATED - A manual suspension invoked by a Reseller.   - TRIAL_ENDED - The
-   * customer's trial expired without a plan selected.   - OTHER - The customer is suspended for an
-   * internal Google reason (e.g. abuse or otherwise).
+   * Possible options include: - PENDING_TOS_ACCEPTANCE - The customer has not logged in and
+   * accepted the G Suite Resold Terms of Services. - RENEWAL_WITH_TYPE_CANCEL - The customer's
+   * commitment ended and their service was cancelled at the end of their term. - RESELLER_INITIATED
+   * - A manual suspension invoked by a Reseller. - TRIAL_ENDED - The customer's trial expired
+   * without a plan selected. - OTHER - The customer is suspended for an internal Google reason
+   * (e.g. abuse or otherwise).
    * @param suspensionReasons suspensionReasons or {@code null} for none
    */
   public Subscription setSuspensionReasons(java.util.List<java.lang.String> suspensionReasons) {
@@ -570,7 +567,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   public static final class Plan extends com.google.api.client.json.GenericJson {
 
     /**
-     * In this version of the API, annual commitment plan's interval is one year.  Note: When
+     * In this version of the API, annual commitment plan's interval is one year. *Note: *When
      * billingMethod value is OFFLINE, the subscription property object plan.commitmentInterval is
      * omitted in all API responses.
      * The value may be {@code null}.
@@ -589,23 +586,22 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
     /**
      * The planName property is required. This is the name of the subscription's plan. For more
-     * information about the Google payment plans, see the API concepts.
-     *
-     * Possible values are:   - ANNUAL_MONTHLY_PAY — The annual commitment plan with monthly payments.
-     * Caution: ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses.   - ANNUAL_YEARLY_PAY —
-     * The annual commitment plan with yearly payments   - FLEXIBLE — The flexible plan   - TRIAL —
-     * The 30-day free trial plan. A subscription in trial will be suspended after the 30th free day
-     * if no payment plan is assigned. Calling changePlan will assign a payment plan to a trial but
-     * will not activate the plan. A trial will automatically begin its assigned payment plan after
-     * its 30th free day or immediately after calling startPaidService.   - FREE — The free plan is
-     * exclusive to the Cloud Identity SKU and does not incur any billing.
+     * information about the Google payment plans, see the API concepts. Possible values are: -
+     * ANNUAL_MONTHLY_PAY — The annual commitment plan with monthly payments. *Caution:
+     * *ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses. - ANNUAL_YEARLY_PAY — The
+     * annual commitment plan with yearly payments - FLEXIBLE — The flexible plan - TRIAL — The 30-day
+     * free trial plan. A subscription in trial will be suspended after the 30th free day if no
+     * payment plan is assigned. Calling changePlan will assign a payment plan to a trial but will not
+     * activate the plan. A trial will automatically begin its assigned payment plan after its 30th
+     * free day or immediately after calling startPaidService. - FREE — The free plan is exclusive to
+     * the Cloud Identity SKU and does not incur any billing.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String planName;
 
     /**
-     * In this version of the API, annual commitment plan's interval is one year.  Note: When
+     * In this version of the API, annual commitment plan's interval is one year. *Note: *When
      * billingMethod value is OFFLINE, the subscription property object plan.commitmentInterval is
      * omitted in all API responses.
      * @return value or {@code null} for none
@@ -615,7 +611,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * In this version of the API, annual commitment plan's interval is one year.  Note: When
+     * In this version of the API, annual commitment plan's interval is one year. *Note: *When
      * billingMethod value is OFFLINE, the subscription property object plan.commitmentInterval is
      * omitted in all API responses.
      * @param commitmentInterval commitmentInterval or {@code null} for none
@@ -648,16 +644,15 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
     /**
      * The planName property is required. This is the name of the subscription's plan. For more
-     * information about the Google payment plans, see the API concepts.
-     *
-     * Possible values are:   - ANNUAL_MONTHLY_PAY — The annual commitment plan with monthly payments.
-     * Caution: ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses.   - ANNUAL_YEARLY_PAY —
-     * The annual commitment plan with yearly payments   - FLEXIBLE — The flexible plan   - TRIAL —
-     * The 30-day free trial plan. A subscription in trial will be suspended after the 30th free day
-     * if no payment plan is assigned. Calling changePlan will assign a payment plan to a trial but
-     * will not activate the plan. A trial will automatically begin its assigned payment plan after
-     * its 30th free day or immediately after calling startPaidService.   - FREE — The free plan is
-     * exclusive to the Cloud Identity SKU and does not incur any billing.
+     * information about the Google payment plans, see the API concepts. Possible values are: -
+     * ANNUAL_MONTHLY_PAY — The annual commitment plan with monthly payments. *Caution:
+     * *ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses. - ANNUAL_YEARLY_PAY — The
+     * annual commitment plan with yearly payments - FLEXIBLE — The flexible plan - TRIAL — The 30-day
+     * free trial plan. A subscription in trial will be suspended after the 30th free day if no
+     * payment plan is assigned. Calling changePlan will assign a payment plan to a trial but will not
+     * activate the plan. A trial will automatically begin its assigned payment plan after its 30th
+     * free day or immediately after calling startPaidService. - FREE — The free plan is exclusive to
+     * the Cloud Identity SKU and does not incur any billing.
      * @return value or {@code null} for none
      */
     public java.lang.String getPlanName() {
@@ -666,16 +661,15 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
     /**
      * The planName property is required. This is the name of the subscription's plan. For more
-     * information about the Google payment plans, see the API concepts.
-     *
-     * Possible values are:   - ANNUAL_MONTHLY_PAY — The annual commitment plan with monthly payments.
-     * Caution: ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses.   - ANNUAL_YEARLY_PAY —
-     * The annual commitment plan with yearly payments   - FLEXIBLE — The flexible plan   - TRIAL —
-     * The 30-day free trial plan. A subscription in trial will be suspended after the 30th free day
-     * if no payment plan is assigned. Calling changePlan will assign a payment plan to a trial but
-     * will not activate the plan. A trial will automatically begin its assigned payment plan after
-     * its 30th free day or immediately after calling startPaidService.   - FREE — The free plan is
-     * exclusive to the Cloud Identity SKU and does not incur any billing.
+     * information about the Google payment plans, see the API concepts. Possible values are: -
+     * ANNUAL_MONTHLY_PAY — The annual commitment plan with monthly payments. *Caution:
+     * *ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses. - ANNUAL_YEARLY_PAY — The
+     * annual commitment plan with yearly payments - FLEXIBLE — The flexible plan - TRIAL — The 30-day
+     * free trial plan. A subscription in trial will be suspended after the 30th free day if no
+     * payment plan is assigned. Calling changePlan will assign a payment plan to a trial but will not
+     * activate the plan. A trial will automatically begin its assigned payment plan after its 30th
+     * free day or immediately after calling startPaidService. - FREE — The free plan is exclusive to
+     * the Cloud Identity SKU and does not incur any billing.
      * @param planName planName or {@code null} for none
      */
     public Plan setPlanName(java.lang.String planName) {
@@ -694,7 +688,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * In this version of the API, annual commitment plan's interval is one year.  Note: When
+     * In this version of the API, annual commitment plan's interval is one year. *Note: *When
      * billingMethod value is OFFLINE, the subscription property object plan.commitmentInterval is
      * omitted in all API responses.
      */

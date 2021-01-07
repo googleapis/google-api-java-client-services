@@ -17,9 +17,8 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * Proto for all phishing alerts with common payload. Supported types are any of the following:
- *
- * * User reported phishing * User reported spam spike * Suspicious message reported * Phishing
+ * Proto for all phishing alerts with common payload. Supported types are any of the following: *
+ * User reported phishing * User reported spam spike * Suspicious message reported * Phishing
  * reclassification * Malware reclassification * Gmail potential employee spoofing
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

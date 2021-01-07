@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Contains properties of a Planning order document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -74,7 +74,6 @@ public final class OrderDocument extends com.google.api.client.json.GenericJson 
   private LastModifiedInfo createdInfo;
 
   /**
-   * Effective date of this order document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +101,6 @@ public final class OrderDocument extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> lastSentRecipients;
 
   /**
-   * Timestamp of the last email sent with this order document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,7 +253,6 @@ public final class OrderDocument extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Effective date of this order document.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getEffectiveDate() {
@@ -263,7 +260,6 @@ public final class OrderDocument extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Effective date of this order document.
    * @param effectiveDate effectiveDate or {@code null} for none
    */
   public OrderDocument setEffectiveDate(com.google.api.client.util.DateTime effectiveDate) {
@@ -323,7 +319,6 @@ public final class OrderDocument extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Timestamp of the last email sent with this order document.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getLastSentTime() {
@@ -331,7 +326,6 @@ public final class OrderDocument extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Timestamp of the last email sent with this order document.
    * @param lastSentTime lastSentTime or {@code null} for none
    */
   public OrderDocument setLastSentTime(com.google.api.client.util.DateTime lastSentTime) {

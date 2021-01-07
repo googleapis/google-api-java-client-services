@@ -53,18 +53,12 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   private java.lang.Integer bootDiskSizeGb;
 
   /**
-   * The host operating system image to use.
-   *
-   * Currently, only Container-Optimized OS images can be used.
-   *
-   * The default value is `projects/cos-cloud/global/images/family/cos-stable`, which selects the
-   * latest stable release of Container-Optimized OS.
-   *
-   * This option is provided to allow testing against the beta release of the operating system to
-   * ensure that the new version does not interact negatively with production pipelines.
-   *
-   * To test a pipeline against the beta release of Container-Optimized OS, use the value `projects
-   * /cos-cloud/global/images/family/cos-beta`.
+   * The host operating system image to use. Currently, only Container-Optimized OS images can be
+   * used. The default value is `projects/cos-cloud/global/images/family/cos-stable`, which selects
+   * the latest stable release of Container-Optimized OS. This option is provided to allow testing
+   * against the beta release of the operating system to ensure that the new version does not
+   * interact negatively with production pipelines. To test a pipeline against the beta release of
+   * Container-Optimized OS, use the value `projects/cos-cloud/global/images/family/cos-beta`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,10 +68,9 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    * The CPU platform to request. An instance based on a newer platform can be allocated, but never
    * one with fewer capabilities. The value of this parameter must be a valid Compute Engine CPU
    * platform name (such as "Intel Skylake"). This parameter is only useful for carefully optimized
-   * work loads where the CPU platform has a significant impact.
-   *
-   * For more information about the effect of this parameter, see
-   * https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform.
+   * work loads where the CPU platform has a significant impact. For more information about the
+   * effect of this parameter, see https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,6 +90,18 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The Compute Engine Disk Images to use as a Docker cache. The disks will be mounted into the
+   * Docker folder in a way that the images present in the cache will not need to be pulled. The
+   * digests of the cached images must match those of the tags used or the latest version will still
+   * be pulled. The root directory of the ext4 image must contain `image` and `overlay2` directories
+   * copied from the Docker directory of a VM where the desired Docker images have already been
+   * pulled. Only a single image is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> dockerCacheImages;
+
+  /**
    * Whether Stackdriver monitoring should be enabled on the VM.
    * The value may be {@code null}.
    */
@@ -106,12 +111,9 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   /**
    * Optional set of labels to apply to the VM and any attached disk resources. These labels must
    * adhere to the [name and value restrictions](https://cloud.google.com/compute/docs/labeling-
-   * resources) on VM labels imposed by Compute Engine.
-   *
-   * Labels keys with the prefix 'google-' are reserved for use by Google.
-   *
-   * Labels applied at creation time to the VM. Applied on a best-effort basis to attached disk
-   * resources shortly after VM creation.
+   * resources) on VM labels imposed by Compute Engine. Labels keys with the prefix 'google-' are
+   * reserved for use by Google. Labels applied at creation time to the VM. Applied on a best-effort
+   * basis to attached disk resources shortly after VM creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,6 +164,13 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   private ServiceAccount serviceAccount;
 
   /**
+   * The list of disks and other storage to create or attach to the VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Volume> volumes;
+
+  /**
    * The list of accelerators to attach to the VM.
    * @return value or {@code null} for none
    */
@@ -200,18 +209,12 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The host operating system image to use.
-   *
-   * Currently, only Container-Optimized OS images can be used.
-   *
-   * The default value is `projects/cos-cloud/global/images/family/cos-stable`, which selects the
-   * latest stable release of Container-Optimized OS.
-   *
-   * This option is provided to allow testing against the beta release of the operating system to
-   * ensure that the new version does not interact negatively with production pipelines.
-   *
-   * To test a pipeline against the beta release of Container-Optimized OS, use the value `projects
-   * /cos-cloud/global/images/family/cos-beta`.
+   * The host operating system image to use. Currently, only Container-Optimized OS images can be
+   * used. The default value is `projects/cos-cloud/global/images/family/cos-stable`, which selects
+   * the latest stable release of Container-Optimized OS. This option is provided to allow testing
+   * against the beta release of the operating system to ensure that the new version does not
+   * interact negatively with production pipelines. To test a pipeline against the beta release of
+   * Container-Optimized OS, use the value `projects/cos-cloud/global/images/family/cos-beta`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBootImage() {
@@ -219,18 +222,12 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The host operating system image to use.
-   *
-   * Currently, only Container-Optimized OS images can be used.
-   *
-   * The default value is `projects/cos-cloud/global/images/family/cos-stable`, which selects the
-   * latest stable release of Container-Optimized OS.
-   *
-   * This option is provided to allow testing against the beta release of the operating system to
-   * ensure that the new version does not interact negatively with production pipelines.
-   *
-   * To test a pipeline against the beta release of Container-Optimized OS, use the value `projects
-   * /cos-cloud/global/images/family/cos-beta`.
+   * The host operating system image to use. Currently, only Container-Optimized OS images can be
+   * used. The default value is `projects/cos-cloud/global/images/family/cos-stable`, which selects
+   * the latest stable release of Container-Optimized OS. This option is provided to allow testing
+   * against the beta release of the operating system to ensure that the new version does not
+   * interact negatively with production pipelines. To test a pipeline against the beta release of
+   * Container-Optimized OS, use the value `projects/cos-cloud/global/images/family/cos-beta`.
    * @param bootImage bootImage or {@code null} for none
    */
   public VirtualMachine setBootImage(java.lang.String bootImage) {
@@ -242,10 +239,9 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    * The CPU platform to request. An instance based on a newer platform can be allocated, but never
    * one with fewer capabilities. The value of this parameter must be a valid Compute Engine CPU
    * platform name (such as "Intel Skylake"). This parameter is only useful for carefully optimized
-   * work loads where the CPU platform has a significant impact.
-   *
-   * For more information about the effect of this parameter, see
-   * https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform.
+   * work loads where the CPU platform has a significant impact. For more information about the
+   * effect of this parameter, see https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getCpuPlatform() {
@@ -256,10 +252,9 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    * The CPU platform to request. An instance based on a newer platform can be allocated, but never
    * one with fewer capabilities. The value of this parameter must be a valid Compute Engine CPU
    * platform name (such as "Intel Skylake"). This parameter is only useful for carefully optimized
-   * work loads where the CPU platform has a significant impact.
-   *
-   * For more information about the effect of this parameter, see
-   * https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform.
+   * work loads where the CPU platform has a significant impact. For more information about the
+   * effect of this parameter, see https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform.
    * @param cpuPlatform cpuPlatform or {@code null} for none
    */
   public VirtualMachine setCpuPlatform(java.lang.String cpuPlatform) {
@@ -285,6 +280,33 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * The Compute Engine Disk Images to use as a Docker cache. The disks will be mounted into the
+   * Docker folder in a way that the images present in the cache will not need to be pulled. The
+   * digests of the cached images must match those of the tags used or the latest version will still
+   * be pulled. The root directory of the ext4 image must contain `image` and `overlay2` directories
+   * copied from the Docker directory of a VM where the desired Docker images have already been
+   * pulled. Only a single image is supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDockerCacheImages() {
+    return dockerCacheImages;
+  }
+
+  /**
+   * The Compute Engine Disk Images to use as a Docker cache. The disks will be mounted into the
+   * Docker folder in a way that the images present in the cache will not need to be pulled. The
+   * digests of the cached images must match those of the tags used or the latest version will still
+   * be pulled. The root directory of the ext4 image must contain `image` and `overlay2` directories
+   * copied from the Docker directory of a VM where the desired Docker images have already been
+   * pulled. Only a single image is supported.
+   * @param dockerCacheImages dockerCacheImages or {@code null} for none
+   */
+  public VirtualMachine setDockerCacheImages(java.util.List<java.lang.String> dockerCacheImages) {
+    this.dockerCacheImages = dockerCacheImages;
+    return this;
+  }
+
+  /**
    * Whether Stackdriver monitoring should be enabled on the VM.
    * @return value or {@code null} for none
    */
@@ -304,12 +326,9 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   /**
    * Optional set of labels to apply to the VM and any attached disk resources. These labels must
    * adhere to the [name and value restrictions](https://cloud.google.com/compute/docs/labeling-
-   * resources) on VM labels imposed by Compute Engine.
-   *
-   * Labels keys with the prefix 'google-' are reserved for use by Google.
-   *
-   * Labels applied at creation time to the VM. Applied on a best-effort basis to attached disk
-   * resources shortly after VM creation.
+   * resources) on VM labels imposed by Compute Engine. Labels keys with the prefix 'google-' are
+   * reserved for use by Google. Labels applied at creation time to the VM. Applied on a best-effort
+   * basis to attached disk resources shortly after VM creation.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -319,12 +338,9 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
   /**
    * Optional set of labels to apply to the VM and any attached disk resources. These labels must
    * adhere to the [name and value restrictions](https://cloud.google.com/compute/docs/labeling-
-   * resources) on VM labels imposed by Compute Engine.
-   *
-   * Labels keys with the prefix 'google-' are reserved for use by Google.
-   *
-   * Labels applied at creation time to the VM. Applied on a best-effort basis to attached disk
-   * resources shortly after VM creation.
+   * resources) on VM labels imposed by Compute Engine. Labels keys with the prefix 'google-' are
+   * reserved for use by Google. Labels applied at creation time to the VM. Applied on a best-effort
+   * basis to attached disk resources shortly after VM creation.
    * @param labels labels or {@code null} for none
    */
   public VirtualMachine setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -432,6 +448,23 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    */
   public VirtualMachine setServiceAccount(ServiceAccount serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * The list of disks and other storage to create or attach to the VM.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Volume> getVolumes() {
+    return volumes;
+  }
+
+  /**
+   * The list of disks and other storage to create or attach to the VM.
+   * @param volumes volumes or {@code null} for none
+   */
+  public VirtualMachine setVolumes(java.util.List<Volume> volumes) {
+    this.volumes = volumes;
     return this;
   }
 

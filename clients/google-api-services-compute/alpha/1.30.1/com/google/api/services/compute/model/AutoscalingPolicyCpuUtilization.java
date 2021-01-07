@@ -30,12 +30,12 @@ package com.google.api.services.compute.model;
 public final class AutoscalingPolicyCpuUtilization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates which method of prediction is used for CPU utilization metric, if any. Current set of
-   * possible values: * NONE: No predictions are made based on the scaling metric when calculating
-   * the number of VM instances. * STANDARD: Standard predictive autoscaling predicts the future
-   * values of the scaling metric and then scales a MIG to ensure that new VM instances are ready in
-   * time to cover the predicted peak. New values might be added in the future. Some of the values
-   * might not be available in all API versions.
+   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+   *
+   * * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
+   * demand based on real-time metrics. * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves
+   * availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated
+   * demand.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,12 +58,12 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
   private java.lang.Double utilizationTarget;
 
   /**
-   * Indicates which method of prediction is used for CPU utilization metric, if any. Current set of
-   * possible values: * NONE: No predictions are made based on the scaling metric when calculating
-   * the number of VM instances. * STANDARD: Standard predictive autoscaling predicts the future
-   * values of the scaling metric and then scales a MIG to ensure that new VM instances are ready in
-   * time to cover the predicted peak. New values might be added in the future. Some of the values
-   * might not be available in all API versions.
+   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+   *
+   * * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
+   * demand based on real-time metrics. * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves
+   * availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated
+   * demand.
    * @return value or {@code null} for none
    */
   public java.lang.String getPredictiveMethod() {
@@ -71,12 +71,12 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
   }
 
   /**
-   * Indicates which method of prediction is used for CPU utilization metric, if any. Current set of
-   * possible values: * NONE: No predictions are made based on the scaling metric when calculating
-   * the number of VM instances. * STANDARD: Standard predictive autoscaling predicts the future
-   * values of the scaling metric and then scales a MIG to ensure that new VM instances are ready in
-   * time to cover the predicted peak. New values might be added in the future. Some of the values
-   * might not be available in all API versions.
+   * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:
+   *
+   * * NONE (default). No predictive method is used. The autoscaler scales the group to meet current
+   * demand based on real-time metrics. * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves
+   * availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated
+   * demand.
    * @param predictiveMethod predictiveMethod or {@code null} for none
    */
   public AutoscalingPolicyCpuUtilization setPredictiveMethod(java.lang.String predictiveMethod) {

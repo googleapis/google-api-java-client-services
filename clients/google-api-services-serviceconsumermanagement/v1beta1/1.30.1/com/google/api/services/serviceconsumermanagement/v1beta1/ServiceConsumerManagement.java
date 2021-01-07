@@ -46,7 +46,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Service Consumer Management API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Service Consumer Management API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,7 +143,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -168,7 +168,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           java.util.regex.Pattern.compile("^operations/[^/]+$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -334,11 +334,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
        * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the quota metric, returned by a
-      ListConsumerQuotaMetrics call.
-      An example name
-       *        would be:
-      `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googl
+       * @param name The resource name of the quota metric, returned by a ListConsumerQuotaMetrics call. An example name
+       *        would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googl
        *        eapis.com%2Fcpus`
        * @return the request
        */
@@ -366,11 +363,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the quota metric, returned by a
-      ListConsumerQuotaMetrics call.
-      An example name
-       *        would be:
-      `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googl
+         * @param name The resource name of the quota metric, returned by a ListConsumerQuotaMetrics call. An example name
+       *        would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googl
        *        eapis.com%2Fcpus`
          * @since 1.13
          */
@@ -450,17 +444,15 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * The resource name of the quota metric, returned by a ListConsumerQuotaMetrics call.
-         *
-         * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetr
-         * ics/compute.googleapis.com%2Fcpus`
+         * The resource name of the quota metric, returned by a ListConsumerQuotaMetrics call. An
+         * example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics
+         * /compute.googleapis.com%2Fcpus`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the quota metric, returned by a ListConsumerQuotaMetrics call.
-
-       An example name would be:
+        /** The resource name of the quota metric, returned by a ListConsumerQuotaMetrics call. An example name
+       would be:
        `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus`
          */
         public java.lang.String getName() {
@@ -468,10 +460,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * The resource name of the quota metric, returned by a ListConsumerQuotaMetrics call.
-         *
-         * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetr
-         * ics/compute.googleapis.com%2Fcpus`
+         * The resource name of the quota metric, returned by a ListConsumerQuotaMetrics call. An
+         * example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics
+         * /compute.googleapis.com%2Fcpus`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -514,8 +505,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * any optional parameters, call the {@link ImportProducerOverrides#execute()} method to invoke the
        * remote operation.
        *
-       * @param parent The resource name of the consumer.
-      An example name would be:
+       * @param parent The resource name of the consumer. An example name would be:
        *        `services/compute.googleapis.com/projects/123`
        * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ImportProducerOverridesRequest}
        * @return the request
@@ -545,8 +535,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
          * immediately after invoking the constructor. </p>
          *
-         * @param parent The resource name of the consumer.
-      An example name would be:
+         * @param parent The resource name of the consumer. An example name would be:
        *        `services/compute.googleapis.com/projects/123`
          * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1ImportProducerOverridesRequest}
          * @since 1.13
@@ -617,25 +606,22 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * The resource name of the consumer.
-         *
-         * An example name would be: `services/compute.googleapis.com/projects/123`
+         * The resource name of the consumer. An example name would be:
+         * `services/compute.googleapis.com/projects/123`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The resource name of the consumer.
-
-       An example name would be: `services/compute.googleapis.com/projects/123`
+        /** The resource name of the consumer. An example name would be:
+       `services/compute.googleapis.com/projects/123`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The resource name of the consumer.
-         *
-         * An example name would be: `services/compute.googleapis.com/projects/123`
+         * The resource name of the consumer. An example name would be:
+         * `services/compute.googleapis.com/projects/123`
          */
         public ImportProducerOverrides setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -663,8 +649,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
        * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
        * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Parent of the quotas resource.
-      An example parent would be:
+       * @param parent Parent of the quotas resource. An example parent would be:
        *        `services/serviceconsumermanagement.googleapis.com/projects/123`
        * @return the request
        */
@@ -696,8 +681,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Parent of the quotas resource.
-      An example parent would be:
+         * @param parent Parent of the quotas resource. An example parent would be:
        *        `services/serviceconsumermanagement.googleapis.com/projects/123`
          * @since 1.13
          */
@@ -777,26 +761,21 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
         }
 
         /**
-         * Parent of the quotas resource.
-         *
-         * An example parent would be:
+         * Parent of the quotas resource. An example parent would be:
          * `services/serviceconsumermanagement.googleapis.com/projects/123`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Parent of the quotas resource.
-
-       An example parent would be: `services/serviceconsumermanagement.googleapis.com/projects/123`
+        /** Parent of the quotas resource. An example parent would be:
+       `services/serviceconsumermanagement.googleapis.com/projects/123`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Parent of the quotas resource.
-         *
-         * An example parent would be:
+         * Parent of the quotas resource. An example parent would be:
          * `services/serviceconsumermanagement.googleapis.com/projects/123`
          */
         public List setParent(java.lang.String parent) {
@@ -825,9 +804,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           return this;
         }
 
-        /**
-         * Token identifying which result to start with; returned by a previous list call.
-         */
+        /** Token identifying which result to start with; returned by a previous list call. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
@@ -837,9 +814,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
           return pageToken;
         }
 
-        /**
-         * Token identifying which result to start with; returned by a previous list call.
-         */
+        /** Token identifying which result to start with; returned by a previous list call. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -895,11 +870,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
          * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
          * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the quota limit, returned by a
-        ListConsumerQuotaMetrics or
-         *        GetConsumerQuotaMetric call.
-        An example name would be:
-        `services/compute.googleapis.com/pr
+         * @param name The resource name of the quota limit, returned by a ListConsumerQuotaMetrics or
+         *        GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/pr
          *        ojects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
          * @return the request
          */
@@ -927,11 +899,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the quota limit, returned by a
-        ListConsumerQuotaMetrics or
-         *        GetConsumerQuotaMetric call.
-        An example name would be:
-        `services/compute.googleapis.com/pr
+           * @param name The resource name of the quota limit, returned by a ListConsumerQuotaMetrics or
+         *        GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/pr
          *        ojects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
            * @since 1.13
            */
@@ -1012,19 +981,16 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
           /**
            * The resource name of the quota limit, returned by a ListConsumerQuotaMetrics or
-           * GetConsumerQuotaMetric call.
-           *
-           * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMe
-           * trics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           * GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com
+           * /projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
+           * gion`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The resource name of the quota limit, returned by a ListConsumerQuotaMetrics or
-         GetConsumerQuotaMetric call.
-
-         An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/comput
-         e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+         GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/projects/12
+         3/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
            */
           public java.lang.String getName() {
             return name;
@@ -1032,10 +998,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
           /**
            * The resource name of the quota limit, returned by a ListConsumerQuotaMetrics or
-           * GetConsumerQuotaMetric call.
-           *
-           * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMe
-           * trics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           * GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com
+           * /projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
+           * gion`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1101,11 +1066,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
            * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
            * any optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `services/compute.googleapis.com/pr
+           * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/pr
            *        ojects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
            * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1QuotaOverride}
            * @return the request
@@ -1138,11 +1100,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `services/compute.googleapis.com/pr
+             * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/pr
            *        ojects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1QuotaOverride}
              * @since 1.13
@@ -1214,19 +1173,16 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapi
+             * s.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
-           GetConsumerQuotaMetric call.
-
-           An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/projects/12
+           3/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              */
             public java.lang.String getParent() {
               return parent;
@@ -1234,10 +1190,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapi
+             * s.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1291,9 +1246,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
            * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
            * any optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the override to delete.
-          An example name would be:
-          `services/compute.googleapis.
+           * @param name The resource name of the override to delete. An example name would be: `services/compute.googleapis.
            *        com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/producerOverrides/4a3f2c1d`
            * @return the request
@@ -1322,9 +1275,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the override to delete.
-          An example name would be:
-          `services/compute.googleapis.
+             * @param name The resource name of the override to delete. An example name would be: `services/compute.googleapis.
            *        com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/producerOverrides/4a3f2c1d`
              * @since 1.13
@@ -1395,30 +1346,25 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             }
 
             /**
-             * The resource name of the override to delete.
-             *
-             * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/producerOverrides/4a
-             * 3f2c1d`
+             * The resource name of the override to delete. An example name would be: `services/comp
+             * ute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/producerOverrides/4a3f2c1d`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the override to delete.
-
-           An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/producerOverrides/4a3f2c1d`
+            /** The resource name of the override to delete. An example name would be: `services/compute.googleapis
+           .com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/pro
+           ducerOverrides/4a3f2c1d`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The resource name of the override to delete.
-             *
-             * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/producerOverrides/4a
-             * 3f2c1d`
+             * The resource name of the override to delete. An example name would be: `services/comp
+             * ute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/producerOverrides/4a3f2c1d`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -1472,11 +1418,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
            * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
            * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `services/compute.googleapis.com/pr
+           * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/pr
            *        ojects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
            * @return the request
            */
@@ -1504,11 +1447,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `services/compute.googleapis.com/pr
+             * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/pr
            *        ojects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              * @since 1.13
              */
@@ -1589,19 +1529,16 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapi
+             * s.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
-           GetConsumerQuotaMetric call.
-
-           An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapis.com/projects/12
+           3/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              */
             public java.lang.String getParent() {
               return parent;
@@ -1609,10 +1546,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `services/compute.googleapi
+             * s.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1640,9 +1576,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
               return this;
             }
 
-            /**
-             * Token identifying which result to start with; returned by a previous list call.
-             */
+            /** Token identifying which result to start with; returned by a previous list call. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
@@ -1652,9 +1586,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
               return pageToken;
             }
 
-            /**
-             * Token identifying which result to start with; returned by a previous list call.
-             */
+            /** Token identifying which result to start with; returned by a previous list call. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -1673,9 +1605,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
            * This request holds the parameters needed by the serviceconsumermanagement server.  After setting
            * any optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the override to update.
-          An example name would be:
-          `services/compute.googleapis.
+           * @param name The resource name of the override to update. An example name would be: `services/compute.googleapis.
            *        com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/producerOverrides/4a3f2c1d`
            * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1QuotaOverride}
@@ -1705,9 +1635,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the override to update.
-          An example name would be:
-          `services/compute.googleapis.
+             * @param name The resource name of the override to update. An example name would be: `services/compute.googleapis.
            *        com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/producerOverrides/4a3f2c1d`
              * @param content the {@link com.google.api.services.serviceconsumermanagement.v1beta1.model.V1Beta1QuotaOverride}
@@ -1779,30 +1707,25 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
             }
 
             /**
-             * The resource name of the override to update.
-             *
-             * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/producerOverrides/4a
-             * 3f2c1d`
+             * The resource name of the override to update. An example name would be: `services/comp
+             * ute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/producerOverrides/4a3f2c1d`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the override to update.
-
-           An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/producerOverrides/4a3f2c1d`
+            /** The resource name of the override to update. An example name would be: `services/compute.googleapis
+           .com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/pro
+           ducerOverrides/4a3f2c1d`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The resource name of the override to update.
-             *
-             * An example name would be: `services/compute.googleapis.com/projects/123/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/producerOverrides/4a
-             * 3f2c1d`
+             * The resource name of the override to update. An example name would be: `services/comp
+             * ute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/producerOverrides/4a3f2c1d`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

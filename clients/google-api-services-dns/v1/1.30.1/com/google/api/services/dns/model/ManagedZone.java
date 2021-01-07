@@ -21,7 +21,7 @@ package com.google.api.services.dns.model;
  * is a resource that represents a DNS zone hosted by the Cloud DNS service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -76,7 +76,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#managedZone".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,6 +127,15 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ManagedZonePrivateVisibilityConfig privateVisibilityConfig;
+
+  /**
+   * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS
+   * will resolve reverse lookup queries using automatically configured records for VPC resources.
+   * This only applies to networks listed under private_visibility_config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedZoneReverseLookupConfig reverseLookupConfig;
 
   /**
    * The zone's visibility: public zones are exposed to the Internet, while private zones are
@@ -246,7 +254,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#managedZone".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -254,7 +261,6 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#managedZone".
    * @param kind kind or {@code null} for none
    */
   public ManagedZone setKind(java.lang.String kind) {
@@ -371,6 +377,27 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
    */
   public ManagedZone setPrivateVisibilityConfig(ManagedZonePrivateVisibilityConfig privateVisibilityConfig) {
     this.privateVisibilityConfig = privateVisibilityConfig;
+    return this;
+  }
+
+  /**
+   * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS
+   * will resolve reverse lookup queries using automatically configured records for VPC resources.
+   * This only applies to networks listed under private_visibility_config.
+   * @return value or {@code null} for none
+   */
+  public ManagedZoneReverseLookupConfig getReverseLookupConfig() {
+    return reverseLookupConfig;
+  }
+
+  /**
+   * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS
+   * will resolve reverse lookup queries using automatically configured records for VPC resources.
+   * This only applies to networks listed under private_visibility_config.
+   * @param reverseLookupConfig reverseLookupConfig or {@code null} for none
+   */
+  public ManagedZone setReverseLookupConfig(ManagedZoneReverseLookupConfig reverseLookupConfig) {
+    this.reverseLookupConfig = reverseLookupConfig;
     return this;
   }
 

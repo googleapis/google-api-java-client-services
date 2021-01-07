@@ -20,8 +20,7 @@ package com.google.api.services.streetviewpublish.v1;
  * Service definition for StreetViewPublish (v1).
  *
  * <p>
- * Publishes 360 photos to Google Maps, along with position, orientation, and connectivity metadata. Apps can offer an interface for positioning, connecting, and uploading user-generated Street View images.
-
+ * Publishes 360 photos to Google Maps, along with position, orientation, and connectivity metadata. Apps can offer an interface for positioning, connecting, and uploading user-generated Street View images. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Street View Publish API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Street View Publish API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -145,16 +144,12 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
     /**
      * After the client finishes uploading the photo with the returned UploadRef, CreatePhoto publishes
-     * the uploaded Photo to Street View on Google Maps.
-     *
-     * Currently, the only way to set heading, pitch, and roll in CreatePhoto is through the [Photo
-     * Sphere XMP metadata](https://developers.google.com/streetview/spherical-metadata) in the photo
-     * bytes. CreatePhoto ignores the  `pose.heading`, `pose.pitch`, `pose.roll`, `pose.altitude`, and
-     * `pose.level` fields in Pose.
-     *
-     * This method returns the following error codes:
-     *
-     * * google.rpc.Code.INVALID_ARGUMENT if the request is malformed or if the uploaded photo is not a
+     * the uploaded Photo to Street View on Google Maps. Currently, the only way to set heading, pitch,
+     * and roll in CreatePhoto is through the [Photo Sphere XMP
+     * metadata](https://developers.google.com/streetview/spherical-metadata) in the photo bytes.
+     * CreatePhoto ignores the `pose.heading`, `pose.pitch`, `pose.roll`, `pose.altitude`, and
+     * `pose.level` fields in Pose. This method returns the following error codes: *
+     * google.rpc.Code.INVALID_ARGUMENT if the request is malformed or if the uploaded photo is not a
      * 360 photo. * google.rpc.Code.NOT_FOUND if the upload reference does not exist. *
      * google.rpc.Code.RESOURCE_EXHAUSTED if the account has reached the storage limit.
      *
@@ -178,17 +173,13 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * After the client finishes uploading the photo with the returned UploadRef, CreatePhoto
-       * publishes the uploaded Photo to Street View on Google Maps.
-       *
-       * Currently, the only way to set heading, pitch, and roll in CreatePhoto is through the [Photo
-       * Sphere XMP metadata](https://developers.google.com/streetview/spherical-metadata) in the photo
-       * bytes. CreatePhoto ignores the  `pose.heading`, `pose.pitch`, `pose.roll`, `pose.altitude`, and
-       * `pose.level` fields in Pose.
-       *
-       * This method returns the following error codes:
-       *
-       * * google.rpc.Code.INVALID_ARGUMENT if the request is malformed or if the uploaded photo is not
-       * a 360 photo. * google.rpc.Code.NOT_FOUND if the upload reference does not exist. *
+       * publishes the uploaded Photo to Street View on Google Maps. Currently, the only way to set
+       * heading, pitch, and roll in CreatePhoto is through the [Photo Sphere XMP
+       * metadata](https://developers.google.com/streetview/spherical-metadata) in the photo bytes.
+       * CreatePhoto ignores the `pose.heading`, `pose.pitch`, `pose.roll`, `pose.altitude`, and
+       * `pose.level` fields in Pose. This method returns the following error codes: *
+       * google.rpc.Code.INVALID_ARGUMENT if the request is malformed or if the uploaded photo is not a
+       * 360 photo. * google.rpc.Code.NOT_FOUND if the upload reference does not exist. *
        * google.rpc.Code.RESOURCE_EXHAUSTED if the account has reached the storage limit.
        *
        * Create a request for the method "photo.create".
@@ -267,11 +258,8 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Deletes a Photo and its metadata.
-     *
-     * This method returns the following error codes:
-     *
-     * * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested photo. *
+     * Deletes a Photo and its metadata. This method returns the following error codes: *
+     * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested photo. *
      * google.rpc.Code.NOT_FOUND if the photo ID does not exist.
      *
      * Create a request for the method "photo.delete".
@@ -293,12 +281,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/photo/{photoId}";
 
       /**
-       * Deletes a Photo and its metadata.
-       *
-       * This method returns the following error codes:
-       *
-       * * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested photo.
-       * * google.rpc.Code.NOT_FOUND if the photo ID does not exist.
+       * Deletes a Photo and its metadata. This method returns the following error codes: *
+       * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested photo. *
+       * google.rpc.Code.NOT_FOUND if the photo ID does not exist.
        *
        * Create a request for the method "photo.delete".
        *
@@ -393,11 +378,8 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Gets the metadata of the specified Photo.
-     *
-     * This method returns the following error codes:
-     *
-     * * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested Photo. *
+     * Gets the metadata of the specified Photo. This method returns the following error codes: *
+     * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested Photo. *
      * google.rpc.Code.NOT_FOUND if the requested Photo does not exist. * google.rpc.Code.UNAVAILABLE if
      * the requested Photo is still being indexed.
      *
@@ -420,13 +402,10 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/photo/{photoId}";
 
       /**
-       * Gets the metadata of the specified Photo.
-       *
-       * This method returns the following error codes:
-       *
-       * * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested Photo.
-       * * google.rpc.Code.NOT_FOUND if the requested Photo does not exist. *
-       * google.rpc.Code.UNAVAILABLE if the requested Photo is still being indexed.
+       * Gets the metadata of the specified Photo. This method returns the following error codes: *
+       * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested Photo. *
+       * google.rpc.Code.NOT_FOUND if the requested Photo does not exist. * google.rpc.Code.UNAVAILABLE
+       * if the requested Photo is still being indexed.
        *
        * Create a request for the method "photo.get".
        *
@@ -579,21 +558,15 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Creates an upload session to start uploading photo bytes.  The method uses the upload URL of the
-     * returned UploadRef to upload the bytes for the Photo.
-     *
-     * In addition to the photo requirements shown in
-     * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, the photo must meet the
-     * following requirements:
-     *
-     * * Photo Sphere XMP metadata must be included in the photo metadata. See
+     * Creates an upload session to start uploading photo bytes. The method uses the upload URL of the
+     * returned UploadRef to upload the bytes for the Photo. In addition to the photo requirements shown
+     * in https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, the photo must meet the
+     * following requirements: * Photo Sphere XMP metadata must be included in the photo metadata. See
      * https://developers.google.com/streetview/spherical-metadata for the required fields. * The pixel
      * size of the photo must meet the size requirements listed in
      * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, and the photo must be a full
-     * 360 horizontally.
-     *
-     * After the upload completes, the method uses UploadRef with CreatePhoto to create the Photo object
-     * entry.
+     * 360 horizontally. After the upload completes, the method uses UploadRef with CreatePhoto to
+     * create the Photo object entry.
      *
      * Create a request for the method "photo.startUpload".
      *
@@ -615,21 +588,15 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/photo:startUpload";
 
       /**
-       * Creates an upload session to start uploading photo bytes.  The method uses the upload URL of
-       * the returned UploadRef to upload the bytes for the Photo.
-       *
-       * In addition to the photo requirements shown in
-       * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, the photo must meet the
-       * following requirements:
-       *
-       * * Photo Sphere XMP metadata must be included in the photo metadata. See
-       * https://developers.google.com/streetview/spherical-metadata for the required fields. * The
-       * pixel size of the photo must meet the size requirements listed in
+       * Creates an upload session to start uploading photo bytes. The method uses the upload URL of the
+       * returned UploadRef to upload the bytes for the Photo. In addition to the photo requirements
+       * shown in https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, the photo must
+       * meet the following requirements: * Photo Sphere XMP metadata must be included in the photo
+       * metadata. See https://developers.google.com/streetview/spherical-metadata for the required
+       * fields. * The pixel size of the photo must meet the size requirements listed in
        * https://support.google.com/maps/answer/7012050?hl=en_topic=6275604, and the photo must be a
-       * full 360 horizontally.
-       *
-       * After the upload completes, the method uses UploadRef with CreatePhoto to create the Photo
-       * object entry.
+       * full 360 horizontally. After the upload completes, the method uses UploadRef with CreatePhoto
+       * to create the Photo object entry.
        *
        * Create a request for the method "photo.startUpload".
        *
@@ -708,17 +675,12 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
     }
     /**
      * Updates the metadata of a Photo, such as pose, place association, connections, etc. Changing the
-     * pixels of a photo is not supported.
-     *
-     * Only the fields specified in the updateMask field are used. If `updateMask` is not present, the
-     * update applies to all fields.
-     *
-     * This method returns the following error codes:
-     *
-     * * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested photo. *
-     * google.rpc.Code.INVALID_ARGUMENT if the request is malformed. * google.rpc.Code.NOT_FOUND if the
-     * requested photo does not exist. * google.rpc.Code.UNAVAILABLE if the requested Photo is still
-     * being indexed.
+     * pixels of a photo is not supported. Only the fields specified in the updateMask field are used.
+     * If `updateMask` is not present, the update applies to all fields. This method returns the
+     * following error codes: * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create
+     * the requested photo. * google.rpc.Code.INVALID_ARGUMENT if the request is malformed. *
+     * google.rpc.Code.NOT_FOUND if the requested photo does not exist. * google.rpc.Code.UNAVAILABLE if
+     * the requested Photo is still being indexed.
      *
      * Create a request for the method "photo.update".
      *
@@ -741,17 +703,12 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * Updates the metadata of a Photo, such as pose, place association, connections, etc. Changing
-       * the pixels of a photo is not supported.
-       *
-       * Only the fields specified in the updateMask field are used. If `updateMask` is not present, the
-       * update applies to all fields.
-       *
-       * This method returns the following error codes:
-       *
-       * * google.rpc.Code.PERMISSION_DENIED if the requesting user did not create the requested photo.
-       * * google.rpc.Code.INVALID_ARGUMENT if the request is malformed. * google.rpc.Code.NOT_FOUND if
-       * the requested photo does not exist. * google.rpc.Code.UNAVAILABLE if the requested Photo is
-       * still being indexed.
+       * the pixels of a photo is not supported. Only the fields specified in the updateMask field are
+       * used. If `updateMask` is not present, the update applies to all fields. This method returns the
+       * following error codes: * google.rpc.Code.PERMISSION_DENIED if the requesting user did not
+       * create the requested photo. * google.rpc.Code.INVALID_ARGUMENT if the request is malformed. *
+       * google.rpc.Code.NOT_FOUND if the requested photo does not exist. * google.rpc.Code.UNAVAILABLE
+       * if the requested Photo is still being indexed.
        *
        * Create a request for the method "photo.update".
        *
@@ -845,14 +802,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        * Required. Mask that identifies fields on the photo metadata to update. If not present, the
        * old Photo metadata is entirely replaced with the new Photo metadata in this request. The
        * update fails if invalid fields are specified. Multiple fields can be specified in a comma-
-       * delimited list.
-       *
-       * The following fields are valid:
-       *
-       * * `pose.heading` * `pose.latLngPair` * `pose.pitch` * `pose.roll` * `pose.level` *
-       * `pose.altitude` * `connections` * `places`
-       *
-       * Note: When updateMask contains repeated fields, the entire set of repeated values get
+       * delimited list. The following fields are valid: * `pose.heading` * `pose.latLngPair` *
+       * `pose.pitch` * `pose.roll` * `pose.level` * `pose.altitude` * `connections` * `places`
+       * *Note:* When updateMask contains repeated fields, the entire set of repeated values get
        * replaced with the new contents. For example, if updateMask contains `connections` and
        * `UpdatePhotoRequest.photo.connections` is empty, all connections are removed.
        */
@@ -861,16 +813,12 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /** Required. Mask that identifies fields on the photo metadata to update. If not present, the old
      Photo metadata is entirely replaced with the new Photo metadata in this request. The update fails
-     if invalid fields are specified. Multiple fields can be specified in a comma-delimited list.
-
-     The following fields are valid:
-
-     * `pose.heading` * `pose.latLngPair` * `pose.pitch` * `pose.roll` * `pose.level` * `pose.altitude`
-     * `connections` * `places`
-
-     Note: When updateMask contains repeated fields, the entire set of repeated values get replaced with
-     the new contents. For example, if updateMask contains `connections` and
-     `UpdatePhotoRequest.photo.connections` is empty, all connections are removed.
+     if invalid fields are specified. Multiple fields can be specified in a comma-delimited list. The
+     following fields are valid: * `pose.heading` * `pose.latLngPair` * `pose.pitch` * `pose.roll` *
+     `pose.level` * `pose.altitude` * `connections` * `places` *Note:* When updateMask contains repeated
+     fields, the entire set of repeated values get replaced with the new contents. For example, if
+     updateMask contains `connections` and `UpdatePhotoRequest.photo.connections` is empty, all
+     connections are removed.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -880,14 +828,9 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
        * Required. Mask that identifies fields on the photo metadata to update. If not present, the
        * old Photo metadata is entirely replaced with the new Photo metadata in this request. The
        * update fails if invalid fields are specified. Multiple fields can be specified in a comma-
-       * delimited list.
-       *
-       * The following fields are valid:
-       *
-       * * `pose.heading` * `pose.latLngPair` * `pose.pitch` * `pose.roll` * `pose.level` *
-       * `pose.altitude` * `connections` * `places`
-       *
-       * Note: When updateMask contains repeated fields, the entire set of repeated values get
+       * delimited list. The following fields are valid: * `pose.heading` * `pose.latLngPair` *
+       * `pose.pitch` * `pose.roll` * `pose.level` * `pose.altitude` * `connections` * `places`
+       * *Note:* When updateMask contains repeated fields, the entire set of repeated values get
        * replaced with the new contents. For example, if updateMask contains `connections` and
        * `UpdatePhotoRequest.photo.connections` is empty, all connections are removed.
        */
@@ -925,13 +868,11 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
   public class Photos {
 
     /**
-     * Deletes a list of Photos and their metadata.
-     *
-     * Note that if BatchDeletePhotos fails, either critical fields are missing or there is an
-     * authentication error. Even if BatchDeletePhotos succeeds, individual photos in the batch may have
-     * failures. These failures are specified in each PhotoResponse.status in
-     * BatchDeletePhotosResponse.results. See DeletePhoto for specific failures that can occur per
-     * photo.
+     * Deletes a list of Photos and their metadata. Note that if BatchDeletePhotos fails, either
+     * critical fields are missing or there is an authentication error. Even if BatchDeletePhotos
+     * succeeds, individual photos in the batch may have failures. These failures are specified in each
+     * PhotoResponse.status in BatchDeletePhotosResponse.results. See DeletePhoto for specific failures
+     * that can occur per photo.
      *
      * Create a request for the method "photos.batchDelete".
      *
@@ -953,13 +894,11 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/photos:batchDelete";
 
       /**
-       * Deletes a list of Photos and their metadata.
-       *
-       * Note that if BatchDeletePhotos fails, either critical fields are missing or there is an
-       * authentication error. Even if BatchDeletePhotos succeeds, individual photos in the batch may
-       * have failures. These failures are specified in each PhotoResponse.status in
-       * BatchDeletePhotosResponse.results. See DeletePhoto for specific failures that can occur per
-       * photo.
+       * Deletes a list of Photos and their metadata. Note that if BatchDeletePhotos fails, either
+       * critical fields are missing or there is an authentication error. Even if BatchDeletePhotos
+       * succeeds, individual photos in the batch may have failures. These failures are specified in
+       * each PhotoResponse.status in BatchDeletePhotosResponse.results. See DeletePhoto for specific
+       * failures that can occur per photo.
        *
        * Create a request for the method "photos.batchDelete".
        *
@@ -1037,12 +976,11 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Gets the metadata of the specified Photo batch.
-     *
-     * Note that if BatchGetPhotos fails, either critical fields are missing or there is an
-     * authentication error. Even if BatchGetPhotos succeeds, individual photos in the batch may have
-     * failures. These failures are specified in each PhotoResponse.status in
-     * BatchGetPhotosResponse.results. See GetPhoto for specific failures that can occur per photo.
+     * Gets the metadata of the specified Photo batch. Note that if BatchGetPhotos fails, either
+     * critical fields are missing or there is an authentication error. Even if BatchGetPhotos succeeds,
+     * individual photos in the batch may have failures. These failures are specified in each
+     * PhotoResponse.status in BatchGetPhotosResponse.results. See GetPhoto for specific failures that
+     * can occur per photo.
      *
      * Create a request for the method "photos.batchGet".
      *
@@ -1062,12 +1000,11 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/photos:batchGet";
 
       /**
-       * Gets the metadata of the specified Photo batch.
-       *
-       * Note that if BatchGetPhotos fails, either critical fields are missing or there is an
-       * authentication error. Even if BatchGetPhotos succeeds, individual photos in the batch may have
-       * failures. These failures are specified in each PhotoResponse.status in
-       * BatchGetPhotosResponse.results. See GetPhoto for specific failures that can occur per photo.
+       * Gets the metadata of the specified Photo batch. Note that if BatchGetPhotos fails, either
+       * critical fields are missing or there is an authentication error. Even if BatchGetPhotos
+       * succeeds, individual photos in the batch may have failures. These failures are specified in
+       * each PhotoResponse.status in BatchGetPhotosResponse.results. See GetPhoto for specific failures
+       * that can occur per photo.
        *
        * Create a request for the method "photos.batchGet".
        *
@@ -1226,21 +1163,14 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
     }
     /**
      * Updates the metadata of Photos, such as pose, place association, connections, etc. Changing the
-     * pixels of photos is not supported.
-     *
-     * Note that if BatchUpdatePhotos fails, either critical fields are missing or there is an
-     * authentication error. Even if BatchUpdatePhotos succeeds, individual photos in the batch may have
-     * failures. These failures are specified in each PhotoResponse.status in
-     * BatchUpdatePhotosResponse.results. See UpdatePhoto for specific failures that can occur per
-     * photo.
-     *
-     * Only the fields specified in updateMask field are used. If `updateMask` is not present, the
-     * update applies to all fields.
-     *
-     * The number of UpdatePhotoRequest messages in a BatchUpdatePhotosRequest must not exceed 20.
-     *
-     * Note: To update Pose.altitude, Pose.latLngPair has to be filled as well. Otherwise, the request
-     * will fail.
+     * pixels of photos is not supported. Note that if BatchUpdatePhotos fails, either critical fields
+     * are missing or there is an authentication error. Even if BatchUpdatePhotos succeeds, individual
+     * photos in the batch may have failures. These failures are specified in each PhotoResponse.status
+     * in BatchUpdatePhotosResponse.results. See UpdatePhoto for specific failures that can occur per
+     * photo. Only the fields specified in updateMask field are used. If `updateMask` is not present,
+     * the update applies to all fields. The number of UpdatePhotoRequest messages in a
+     * BatchUpdatePhotosRequest must not exceed 20. *Note:* To update Pose.altitude, Pose.latLngPair has
+     * to be filled as well. Otherwise, the request will fail.
      *
      * Create a request for the method "photos.batchUpdate".
      *
@@ -1263,21 +1193,14 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
 
       /**
        * Updates the metadata of Photos, such as pose, place association, connections, etc. Changing the
-       * pixels of photos is not supported.
-       *
-       * Note that if BatchUpdatePhotos fails, either critical fields are missing or there is an
-       * authentication error. Even if BatchUpdatePhotos succeeds, individual photos in the batch may
-       * have failures. These failures are specified in each PhotoResponse.status in
-       * BatchUpdatePhotosResponse.results. See UpdatePhoto for specific failures that can occur per
-       * photo.
-       *
-       * Only the fields specified in updateMask field are used. If `updateMask` is not present, the
-       * update applies to all fields.
-       *
-       * The number of UpdatePhotoRequest messages in a BatchUpdatePhotosRequest must not exceed 20.
-       *
-       * Note: To update Pose.altitude, Pose.latLngPair has to be filled as well. Otherwise, the request
-       * will fail.
+       * pixels of photos is not supported. Note that if BatchUpdatePhotos fails, either critical fields
+       * are missing or there is an authentication error. Even if BatchUpdatePhotos succeeds, individual
+       * photos in the batch may have failures. These failures are specified in each
+       * PhotoResponse.status in BatchUpdatePhotosResponse.results. See UpdatePhoto for specific
+       * failures that can occur per photo. Only the fields specified in updateMask field are used. If
+       * `updateMask` is not present, the update applies to all fields. The number of UpdatePhotoRequest
+       * messages in a BatchUpdatePhotosRequest must not exceed 20. *Note:* To update Pose.altitude,
+       * Pose.latLngPair has to be filled as well. Otherwise, the request will fail.
        *
        * Create a request for the method "photos.batchUpdate".
        *
@@ -1355,9 +1278,8 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Lists all the Photos that belong to the user.
-     *
-     * Note: Recently created photos that are still being indexed are not returned in the response.
+     * Lists all the Photos that belong to the user. *Note:* Recently created photos that are still
+     * being indexed are not returned in the response.
      *
      * Create a request for the method "photos.list".
      *
@@ -1377,9 +1299,8 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       private static final String REST_PATH = "v1/photos";
 
       /**
-       * Lists all the Photos that belong to the user.
-       *
-       * Note: Recently created photos that are still being indexed are not returned in the response.
+       * Lists all the Photos that belong to the user. *Note:* Recently created photos that are still
+       * being indexed are not returned in the response.
        *
        * Create a request for the method "photos.list".
        *
@@ -1461,25 +1382,22 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
       }
 
       /**
-       * Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
-       *
-       * The only filter supported at the moment is `placeId`.
+       * Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
+       * only filter supported at the moment is `placeId`.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
-
-     The only filter supported at the moment is `placeId`.
+      /** Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The only
+     filter supported at the moment is `placeId`.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
-       *
-       * The only filter supported at the moment is `placeId`.
+       * Required. The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`. The
+       * only filter supported at the moment is `placeId`.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1541,9 +1459,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The nextPageToken value returned from a previous ListPhotos request, if any.
-       */
+      /** The nextPageToken value returned from a previous ListPhotos request, if any. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
@@ -1553,9 +1469,7 @@ public class StreetViewPublish extends com.google.api.client.googleapis.services
         return pageToken;
       }
 
-      /**
-       * The nextPageToken value returned from a previous ListPhotos request, if any.
-       */
+      /** The nextPageToken value returned from a previous ListPhotos request, if any. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;

@@ -41,6 +41,14 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> accessibleTrackIds;
 
   /**
+   * Controls whether the app can communicate with itself across a device’s work and personal
+   * profiles, subject to user consent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectedWorkAndPersonalApp;
+
+  /**
    * The default policy for all permissions requested by the app. If specified, this overrides the
    * policy-level default_permission_policy which applies to all apps. It does not override the
    * permission_grants which applies to all apps.
@@ -82,8 +90,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * Managed configuration applied to the app. The format for the configuration is dictated by the
    * ManagedProperty values supported by the app. Each field name in the managed configuration must
    * match the key field of the ManagedProperty. The field value must be compatible with the type of
-   * the ManagedProperty:  typeJSON value BOOLtrue or false STRINGstring INTEGERnumber CHOICEstring
-   * MULTISELECTarray of strings HIDDENstring BUNDLE_ARRAYarray of objects
+   * the ManagedProperty: *type* *JSON value* BOOL true or false STRING string INTEGER number CHOICE
+   * string MULTISELECT array of strings HIDDEN string BUNDLE_ARRAY array of objects
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,6 +151,25 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   public ApplicationPolicy setAccessibleTrackIds(java.util.List<java.lang.String> accessibleTrackIds) {
     this.accessibleTrackIds = accessibleTrackIds;
+    return this;
+  }
+
+  /**
+   * Controls whether the app can communicate with itself across a device’s work and personal
+   * profiles, subject to user consent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectedWorkAndPersonalApp() {
+    return connectedWorkAndPersonalApp;
+  }
+
+  /**
+   * Controls whether the app can communicate with itself across a device’s work and personal
+   * profiles, subject to user consent.
+   * @param connectedWorkAndPersonalApp connectedWorkAndPersonalApp or {@code null} for none
+   */
+  public ApplicationPolicy setConnectedWorkAndPersonalApp(java.lang.String connectedWorkAndPersonalApp) {
+    this.connectedWorkAndPersonalApp = connectedWorkAndPersonalApp;
     return this;
   }
 
@@ -241,8 +268,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * Managed configuration applied to the app. The format for the configuration is dictated by the
    * ManagedProperty values supported by the app. Each field name in the managed configuration must
    * match the key field of the ManagedProperty. The field value must be compatible with the type of
-   * the ManagedProperty:  typeJSON value BOOLtrue or false STRINGstring INTEGERnumber CHOICEstring
-   * MULTISELECTarray of strings HIDDENstring BUNDLE_ARRAYarray of objects
+   * the ManagedProperty: *type* *JSON value* BOOL true or false STRING string INTEGER number CHOICE
+   * string MULTISELECT array of strings HIDDEN string BUNDLE_ARRAY array of objects
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getManagedConfiguration() {
@@ -253,8 +280,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * Managed configuration applied to the app. The format for the configuration is dictated by the
    * ManagedProperty values supported by the app. Each field name in the managed configuration must
    * match the key field of the ManagedProperty. The field value must be compatible with the type of
-   * the ManagedProperty:  typeJSON value BOOLtrue or false STRINGstring INTEGERnumber CHOICEstring
-   * MULTISELECTarray of strings HIDDENstring BUNDLE_ARRAYarray of objects
+   * the ManagedProperty: *type* *JSON value* BOOL true or false STRING string INTEGER number CHOICE
+   * string MULTISELECT array of strings HIDDEN string BUNDLE_ARRAY array of objects
    * @param managedConfiguration managedConfiguration or {@code null} for none
    */
   public ApplicationPolicy setManagedConfiguration(java.util.Map<String, java.lang.Object> managedConfiguration) {

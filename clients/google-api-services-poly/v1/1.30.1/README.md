@@ -1,7 +1,6 @@
 # Poly API Client Library for Java
 
-The Poly API provides read access to assets hosted on poly.google.com to all, and upload access to poly.google.com for whitelisted accounts.
-
+The Poly API provides read access to assets hosted on poly.google.com to all, and upload access to poly.google.com for whitelisted accounts. 
 
 This page contains information about getting started with the Poly API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-poly</artifactId>
-      <version>v1-rev20200210-1.30.9</version>
+      <version>v1-rev20201006-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-poly:v1-rev20200210-1.30.9'
+  compile 'com.google.apis:google-api-services-poly:v1-rev20201006-1.30.10'
 }
 ```
 

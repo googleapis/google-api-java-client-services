@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Flight
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,7 +31,6 @@ package com.google.api.services.dfareporting.model;
 public final class Flight extends com.google.api.client.json.GenericJson {
 
   /**
-   * Inventory item flight end date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +44,6 @@ public final class Flight extends com.google.api.client.json.GenericJson {
   private java.lang.Long rateOrCost;
 
   /**
-   * Inventory item flight start date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +57,6 @@ public final class Flight extends com.google.api.client.json.GenericJson {
   private java.lang.Long units;
 
   /**
-   * Inventory item flight end date.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getEndDate() {
@@ -67,7 +64,6 @@ public final class Flight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Inventory item flight end date.
    * @param endDate endDate or {@code null} for none
    */
   public Flight setEndDate(com.google.api.client.util.DateTime endDate) {
@@ -93,7 +89,6 @@ public final class Flight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Inventory item flight start date.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getStartDate() {
@@ -101,7 +96,6 @@ public final class Flight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Inventory item flight start date.
    * @param startDate startDate or {@code null} for none
    */
   public Flight setStartDate(com.google.api.client.util.DateTime startDate) {

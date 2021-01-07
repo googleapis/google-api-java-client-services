@@ -1,7 +1,6 @@
 # Cloud Pub/Sub API Client Library for Java
 
-Provides reliable, many-to-many, asynchronous messaging between applications.
-
+Provides reliable, many-to-many, asynchronous messaging between applications. 
 
 This page contains information about getting started with the Cloud Pub/Sub API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-pubsub</artifactId>
-      <version>v1-rev20200312-1.30.9</version>
+      <version>v1-rev20201110-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-pubsub:v1-rev20200312-1.30.9'
+  compile 'com.google.apis:google-api-services-pubsub:v1-rev20201110-1.30.10'
 }
 ```
 

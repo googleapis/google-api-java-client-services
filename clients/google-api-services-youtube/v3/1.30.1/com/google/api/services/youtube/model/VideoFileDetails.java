@@ -22,7 +22,7 @@ package com.google.api.services.youtube.model;
  * information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -55,8 +55,10 @@ public final class VideoFileDetails extends com.google.api.client.json.GenericJs
 
   /**
    * The date and time when the uploaded video file was created. The value is specified in ISO 8601
-   * format. Currently, the following ISO 8601 formats are supported: - Date only: YYYY-MM-DD  -
-   * Naive time: YYYY-MM-DDTHH:MM:SS  - Time with timezone: YYYY-MM-DDTHH:MM:SS+HH:MM
+   * format. Currently, the following ISO 8601 formats are supported:
+   *
+   * Date only: YYYY-MM-DD Naive time: YYYY-MM-DDTHH:MM:SS Time with timezone: YYYY-MM-
+   * DDTHH:MM:SS+HH:MM
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,8 +159,10 @@ public final class VideoFileDetails extends com.google.api.client.json.GenericJs
 
   /**
    * The date and time when the uploaded video file was created. The value is specified in ISO 8601
-   * format. Currently, the following ISO 8601 formats are supported: - Date only: YYYY-MM-DD  -
-   * Naive time: YYYY-MM-DDTHH:MM:SS  - Time with timezone: YYYY-MM-DDTHH:MM:SS+HH:MM
+   * format. Currently, the following ISO 8601 formats are supported:
+   *
+   * Date only: YYYY-MM-DD Naive time: YYYY-MM-DDTHH:MM:SS Time with timezone: YYYY-MM-
+   * DDTHH:MM:SS+HH:MM
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTime() {
@@ -167,8 +171,10 @@ public final class VideoFileDetails extends com.google.api.client.json.GenericJs
 
   /**
    * The date and time when the uploaded video file was created. The value is specified in ISO 8601
-   * format. Currently, the following ISO 8601 formats are supported: - Date only: YYYY-MM-DD  -
-   * Naive time: YYYY-MM-DDTHH:MM:SS  - Time with timezone: YYYY-MM-DDTHH:MM:SS+HH:MM
+   * format. Currently, the following ISO 8601 formats are supported:
+   *
+   * Date only: YYYY-MM-DD Naive time: YYYY-MM-DDTHH:MM:SS Time with timezone: YYYY-MM-
+   * DDTHH:MM:SS+HH:MM
    * @param creationTime creationTime or {@code null} for none
    */
   public VideoFileDetails setCreationTime(java.lang.String creationTime) {

@@ -20,8 +20,7 @@ package com.google.api.services.servicedirectory.v1beta1;
  * Service definition for ServiceDirectory (v1beta1).
  *
  * <p>
- * Service Directory is a platform for discovering, publishing, and connecting services.
-
+ * Service Directory is a platform for discovering, publishing, and connecting services. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Service Directory API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Service Directory API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -516,8 +515,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the servicedirectory server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name of the project and location the namespace
-        will be created in.
+         * @param parent Required. The resource name of the project and location the namespace will be created in.
          * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.Namespace}
          * @return the request
          */
@@ -545,8 +543,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name of the project and location the namespace
-        will be created in.
+           * @param parent Required. The resource name of the project and location the namespace will be created in.
            * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.Namespace}
            * @since 1.13
            */
@@ -955,8 +952,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
          * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.GetIamPolicyRequest}
          * @return the request
@@ -985,8 +981,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.GetIamPolicyRequest}
            * @since 1.13
@@ -1097,8 +1092,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the servicedirectory server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name of the project and location whose namespaces we'd like to
-        list.
+         * @param parent Required. The resource name of the project and location whose namespaces we'd like to list.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1124,8 +1118,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name of the project and location whose namespaces we'd like to
-        list.
+           * @param parent Required. The resource name of the project and location whose namespaces we'd like to list.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1231,17 +1224,14 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Optional. The filter to list result by.
-           *
-           * General filter string syntax: () can be "name", or "labels." for map field. can be "<,
-           * >, <=, >=, !=, =, :". Of which ":" means HAS, and is roughly the same as "=". must be
-           * the same data type as field. can be "AND, OR, NOT".
-           *
-           * Examples of valid filters: * "labels.owner" returns Namespaces that have a label with
-           * the key "owner" this is the same as "labels:owner". * "labels.protocol=gRPC" returns
-           * Namespaces that have key/value "protocol=gRPC". * "name>projects/my-project/locations
-           * /us-east/namespaces/namespace-c" returns Namespaces that have name that is
-           * alphabetically later than the string, so "namespace-e" will be returned but
+           * Optional. The filter to list result by. General filter string syntax: () can be "name",
+           * or "labels." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS,
+           * and is roughly the same as "=". must be the same data type as field. can be "AND, OR,
+           * NOT". Examples of valid filters: * "labels.owner" returns Namespaces that have a label
+           * with the key "owner" this is the same as "labels:owner". * "labels.protocol=gRPC"
+           * returns Namespaces that have key/value "protocol=gRPC". * "name>projects/my-
+           * project/locations/us-east/namespaces/namespace-c" returns Namespaces that have name
+           * that is alphabetically later than the string, so "namespace-e" will be returned but
            * "namespace-a" will not be. * "labels.owner!=sd AND labels.foo=bar" returns Namespaces
            * that have "owner" in label key but value is not "sd" AND have key/value foo=bar. *
            * "doesnotexist.foo=bar" returns an empty list. Note that Namespace doesn't have a field
@@ -1251,18 +1241,15 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filter to list result by.
-
-         General filter string syntax: () can be "name", or "labels." for map field. can be "<, >, <=, >=,
-         !=, =, :". Of which ":" means HAS, and is roughly the same as "=". must be the same data type as
-         field. can be "AND, OR, NOT".
-
-         Examples of valid filters: * "labels.owner" returns Namespaces that have a label with the key
-         "owner" this is the same as "labels:owner". * "labels.protocol=gRPC" returns Namespaces that have
-         key/value "protocol=gRPC". * "name>projects/my-project/locations/us-east/namespaces/namespace-c"
-         returns Namespaces that have name that is alphabetically later than the string, so "namespace-e"
-         will be returned but "namespace-a" will not be. * "labels.owner!=sd AND labels.foo=bar" returns
-         Namespaces that have "owner" in label key but value is not "sd" AND have key/value foo=bar. *
+          /** Optional. The filter to list result by. General filter string syntax: () can be "name", or
+         "labels." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and is roughly
+         the same as "=". must be the same data type as field. can be "AND, OR, NOT". Examples of valid
+         filters: * "labels.owner" returns Namespaces that have a label with the key "owner" this is the
+         same as "labels:owner". * "labels.protocol=gRPC" returns Namespaces that have key/value
+         "protocol=gRPC". * "name>projects/my-project/locations/us-east/namespaces/namespace-c" returns
+         Namespaces that have name that is alphabetically later than the string, so "namespace-e" will be
+         returned but "namespace-a" will not be. * "labels.owner!=sd AND labels.foo=bar" returns Namespaces
+         that have "owner" in label key but value is not "sd" AND have key/value foo=bar. *
          "doesnotexist.foo=bar" returns an empty list. Note that Namespace doesn't have a field called
          "doesnotexist". Since the filter does not match any Namespaces, it returns no results.
            */
@@ -1271,17 +1258,14 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Optional. The filter to list result by.
-           *
-           * General filter string syntax: () can be "name", or "labels." for map field. can be "<,
-           * >, <=, >=, !=, =, :". Of which ":" means HAS, and is roughly the same as "=". must be
-           * the same data type as field. can be "AND, OR, NOT".
-           *
-           * Examples of valid filters: * "labels.owner" returns Namespaces that have a label with
-           * the key "owner" this is the same as "labels:owner". * "labels.protocol=gRPC" returns
-           * Namespaces that have key/value "protocol=gRPC". * "name>projects/my-project/locations
-           * /us-east/namespaces/namespace-c" returns Namespaces that have name that is
-           * alphabetically later than the string, so "namespace-e" will be returned but
+           * Optional. The filter to list result by. General filter string syntax: () can be "name",
+           * or "labels." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS,
+           * and is roughly the same as "=". must be the same data type as field. can be "AND, OR,
+           * NOT". Examples of valid filters: * "labels.owner" returns Namespaces that have a label
+           * with the key "owner" this is the same as "labels:owner". * "labels.protocol=gRPC"
+           * returns Namespaces that have key/value "protocol=gRPC". * "name>projects/my-
+           * project/locations/us-east/namespaces/namespace-c" returns Namespaces that have name
+           * that is alphabetically later than the string, so "namespace-e" will be returned but
            * "namespace-a" will not be. * "labels.owner!=sd AND labels.foo=bar" returns Namespaces
            * that have "owner" in label key but value is not "sd" AND have key/value foo=bar. *
            * "doesnotexist.foo=bar" returns an empty list. Note that Namespace doesn't have a field
@@ -1294,31 +1278,27 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Optional. The order to list result by.
-           *
-           * General order by string syntax: () (,) allows values {"name"} ascending or descending
-           * order by . If this is left blank, "asc" is used. Note that an empty order_by string
-           * result in default order, which is order by name in ascending order.
+           * Optional. The order to list result by. General order by string syntax: () (,) allows
+           * values {"name"} ascending or descending order by . If this is left blank, "asc" is
+           * used. Note that an empty order_by string result in default order, which is order by
+           * name in ascending order.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. The order to list result by.
-
-         General order by string syntax: () (,) allows values {"name"} ascending or descending order by . If
-         this is left blank, "asc" is used. Note that an empty order_by string result in default order,
-         which is order by name in ascending order.
+          /** Optional. The order to list result by. General order by string syntax: () (,) allows values
+         {"name"} ascending or descending order by . If this is left blank, "asc" is used. Note that an
+         empty order_by string result in default order, which is order by name in ascending order.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * Optional. The order to list result by.
-           *
-           * General order by string syntax: () (,) allows values {"name"} ascending or descending
-           * order by . If this is left blank, "asc" is used. Note that an empty order_by string
-           * result in default order, which is order by name in ascending order.
+           * Optional. The order to list result by. General order by string syntax: () (,) allows
+           * values {"name"} ascending or descending order by . If this is left blank, "asc" is
+           * used. Note that an empty order_by string result in default order, which is order by
+           * name in ascending order.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -1370,8 +1350,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the servicedirectory server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name for the namespace in the format
-        'projects/locations/namespaces'.
+         * @param name Immutable. The resource name for the namespace in the format 'projects/locations/namespaces'.
          * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.Namespace}
          * @return the request
          */
@@ -1399,8 +1378,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name for the namespace in the format
-        'projects/locations/namespaces'.
+           * @param name Immutable. The resource name for the namespace in the format 'projects/locations/namespaces'.
            * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.Namespace}
            * @since 1.13
            */
@@ -1526,8 +1504,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
          * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.SetIamPolicyRequest}
          * @return the request
@@ -1556,8 +1533,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -1669,8 +1645,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
          * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.TestIamPermissionsRequest}
          * @return the request
@@ -1699,8 +1674,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -2263,8 +2237,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
            * operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.GetIamPolicyRequest}
            * @return the request
@@ -2293,8 +2266,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.GetIamPolicyRequest}
              * @since 1.13
@@ -2405,8 +2377,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the servicedirectory server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource name of the namespace whose services we'd
-          like to list.
+           * @param parent Required. The resource name of the namespace whose services we'd like to list.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2432,8 +2403,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource name of the namespace whose services we'd
-          like to list.
+             * @param parent Required. The resource name of the namespace whose services we'd like to list.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2511,9 +2481,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The resource name of the namespace whose services we'd like to list.
-             */
+            /** Required. The resource name of the namespace whose services we'd like to list. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
@@ -2523,9 +2491,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               return parent;
             }
 
-            /**
-             * Required. The resource name of the namespace whose services we'd like to list.
-             */
+            /** Required. The resource name of the namespace whose services we'd like to list. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2537,35 +2503,29 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Optional. The filter to list result by.
-             *
-             * General filter string syntax: () can be "name", or "metadata." for map field. can be
-             * "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and is roughly the same as "=".
-             * must be the same data type as field. can be "AND, OR, NOT".
-             *
-             * Examples of valid filters: * "metadata.owner" returns Services that have a label with
-             * the key "owner" this is the same as "metadata:owner". * "metadata.protocol=gRPC"
-             * returns Services that have key/value "protocol=gRPC". * "name>projects/my-
-             * project/locations/us-east/namespaces/my-namespace/services/service-c" returns
-             * Services that have name that is alphabetically later than the string, so "service-e"
-             * will be returned but "service-a" will not be. * "metadata.owner!=sd AND
-             * metadata.foo=bar" returns Services that have "owner" in label key but value is not
-             * "sd" AND have key/value foo=bar. * "doesnotexist.foo=bar" returns an empty list. Note
-             * that Service doesn't have a field called "doesnotexist". Since the filter does not
-             * match any Services, it returns no results.
+             * Optional. The filter to list result by. General filter string syntax: () can be
+             * "name", or "metadata." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":"
+             * means HAS, and is roughly the same as "=". must be the same data type as field. can
+             * be "AND, OR, NOT". Examples of valid filters: * "metadata.owner" returns Services
+             * that have a label with the key "owner" this is the same as "metadata:owner". *
+             * "metadata.protocol=gRPC" returns Services that have key/value "protocol=gRPC". *
+             * "name>projects/my-project/locations/us-east/namespaces/my-
+             * namespace/services/service-c" returns Services that have name that is alphabetically
+             * later than the string, so "service-e" will be returned but "service-a" will not be. *
+             * "metadata.owner!=sd AND metadata.foo=bar" returns Services that have "owner" in label
+             * key but value is not "sd" AND have key/value foo=bar. * "doesnotexist.foo=bar"
+             * returns an empty list. Note that Service doesn't have a field called "doesnotexist".
+             * Since the filter does not match any Services, it returns no results.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. The filter to list result by.
-
-           General filter string syntax: () can be "name", or "metadata." for map field. can be "<, >, <=, >=,
-           !=, =, :". Of which ":" means HAS, and is roughly the same as "=". must be the same data type as
-           field. can be "AND, OR, NOT".
-
-           Examples of valid filters: * "metadata.owner" returns Services that have a label with the key
-           "owner" this is the same as "metadata:owner". * "metadata.protocol=gRPC" returns Services that have
-           key/value "protocol=gRPC". * "name>projects/my-project/locations/us-east/namespaces/my-
+            /** Optional. The filter to list result by. General filter string syntax: () can be "name", or
+           "metadata." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and is roughly
+           the same as "=". must be the same data type as field. can be "AND, OR, NOT". Examples of valid
+           filters: * "metadata.owner" returns Services that have a label with the key "owner" this is the
+           same as "metadata:owner". * "metadata.protocol=gRPC" returns Services that have key/value
+           "protocol=gRPC". * "name>projects/my-project/locations/us-east/namespaces/my-
            namespace/services/service-c" returns Services that have name that is alphabetically later than the
            string, so "service-e" will be returned but "service-a" will not be. * "metadata.owner!=sd AND
            metadata.foo=bar" returns Services that have "owner" in label key but value is not "sd" AND have
@@ -2577,22 +2537,19 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Optional. The filter to list result by.
-             *
-             * General filter string syntax: () can be "name", or "metadata." for map field. can be
-             * "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and is roughly the same as "=".
-             * must be the same data type as field. can be "AND, OR, NOT".
-             *
-             * Examples of valid filters: * "metadata.owner" returns Services that have a label with
-             * the key "owner" this is the same as "metadata:owner". * "metadata.protocol=gRPC"
-             * returns Services that have key/value "protocol=gRPC". * "name>projects/my-
-             * project/locations/us-east/namespaces/my-namespace/services/service-c" returns
-             * Services that have name that is alphabetically later than the string, so "service-e"
-             * will be returned but "service-a" will not be. * "metadata.owner!=sd AND
-             * metadata.foo=bar" returns Services that have "owner" in label key but value is not
-             * "sd" AND have key/value foo=bar. * "doesnotexist.foo=bar" returns an empty list. Note
-             * that Service doesn't have a field called "doesnotexist". Since the filter does not
-             * match any Services, it returns no results.
+             * Optional. The filter to list result by. General filter string syntax: () can be
+             * "name", or "metadata." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":"
+             * means HAS, and is roughly the same as "=". must be the same data type as field. can
+             * be "AND, OR, NOT". Examples of valid filters: * "metadata.owner" returns Services
+             * that have a label with the key "owner" this is the same as "metadata:owner". *
+             * "metadata.protocol=gRPC" returns Services that have key/value "protocol=gRPC". *
+             * "name>projects/my-project/locations/us-east/namespaces/my-
+             * namespace/services/service-c" returns Services that have name that is alphabetically
+             * later than the string, so "service-e" will be returned but "service-a" will not be. *
+             * "metadata.owner!=sd AND metadata.foo=bar" returns Services that have "owner" in label
+             * key but value is not "sd" AND have key/value foo=bar. * "doesnotexist.foo=bar"
+             * returns an empty list. Note that Service doesn't have a field called "doesnotexist".
+             * Since the filter does not match any Services, it returns no results.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -2664,8 +2621,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the servicedirectory server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The resource name for the service in the format
-          'projects/locations/namespaces/services'.
+           * @param name Immutable. The resource name for the service in the format 'projects/locations/namespaces/services'.
            * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.Service}
            * @return the request
            */
@@ -2693,8 +2649,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The resource name for the service in the format
-          'projects/locations/namespaces/services'.
+             * @param name Immutable. The resource name for the service in the format 'projects/locations/namespaces/services'.
              * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.Service}
              * @since 1.13
              */
@@ -2954,8 +2909,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
            * operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.SetIamPolicyRequest}
            * @return the request
@@ -2984,8 +2938,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -3097,8 +3050,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
            * operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.TestIamPermissionsRequest}
            * @return the request
@@ -3127,8 +3079,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.servicedirectory.v1beta1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -3690,8 +3641,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * This request holds the parameters needed by the servicedirectory server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the service whose endpoints we'd like to
-            list.
+             * @param parent Required. The resource name of the service whose endpoints we'd like to list.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -3717,8 +3667,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the service whose endpoints we'd like to
-            list.
+               * @param parent Required. The resource name of the service whose endpoints we'd like to list.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -3796,9 +3745,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The resource name of the service whose endpoints we'd like to list.
-               */
+              /** Required. The resource name of the service whose endpoints we'd like to list. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
@@ -3808,9 +3755,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                 return parent;
               }
 
-              /**
-               * Required. The resource name of the service whose endpoints we'd like to list.
-               */
+              /** Required. The resource name of the service whose endpoints we'd like to list. */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3822,22 +3767,18 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               }
 
               /**
-               * Optional. The filter to list result by.
-               *
-               * General filter string syntax: () can be "name", "address", "port" or "metadata."
-               * for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and is
-               * roughly the same as "=". must be the same data type as field. can be "AND, OR,
-               * NOT".
-               *
-               * Examples of valid filters: * "metadata.owner" returns Endpoints that have a label
-               * with the key "owner" this is the same as "metadata:owner". *
-               * "metadata.protocol=gRPC" returns Endpoints that have key/value "protocol=gRPC". *
-               * "address=192.108.1.105" returns Endpoints that have this address. * "port>8080"
-               * returns Endpoints that have port number larger than 8080. * "name>projects/my-
-               * project/locations/us-east/namespaces/my-namespace/services/my-
-               * service/endpoints/endpoint-c" returns Endpoints that have name that is
-               * alphabetically later than the string, so "endpoint-e" will be returned but
-               * "endpoint-a" will not be. * "metadata.owner!=sd AND metadata.foo=bar" returns
+               * Optional. The filter to list result by. General filter string syntax: () can be
+               * "name", "address", "port" or "metadata." for map field. can be "<, >, <=, >=, !=,
+               * =, :". Of which ":" means HAS, and is roughly the same as "=". must be the same
+               * data type as field. can be "AND, OR, NOT". Examples of valid filters: *
+               * "metadata.owner" returns Endpoints that have a label with the key "owner" this is
+               * the same as "metadata:owner". * "metadata.protocol=gRPC" returns Endpoints that
+               * have key/value "protocol=gRPC". * "address=192.108.1.105" returns Endpoints that
+               * have this address. * "port>8080" returns Endpoints that have port number larger
+               * than 8080. * "name>projects/my-project/locations/us-east/namespaces/my-
+               * namespace/services/my-service/endpoints/endpoint-c" returns Endpoints that have
+               * name that is alphabetically later than the string, so "endpoint-e" will be returned
+               * but "endpoint-a" will not be. * "metadata.owner!=sd AND metadata.foo=bar" returns
                * Endpoints that have "owner" in label key but value is not "sd" AND have key/value
                * foo=bar. * "doesnotexist.foo=bar" returns an empty list. Note that Endpoint doesn't
                * have a field called "doesnotexist". Since the filter does not match any Endpoints,
@@ -3846,44 +3787,37 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Optional. The filter to list result by.
-
-             General filter string syntax: () can be "name", "address", "port" or "metadata." for map field. can
-             be "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and is roughly the same as "=". must be the
-             same data type as field. can be "AND, OR, NOT".
-
-             Examples of valid filters: * "metadata.owner" returns Endpoints that have a label with the key
-             "owner" this is the same as "metadata:owner". * "metadata.protocol=gRPC" returns Endpoints that
-             have key/value "protocol=gRPC". * "address=192.108.1.105" returns Endpoints that have this address.
-             * "port>8080" returns Endpoints that have port number larger than 8080. * "name>projects/my-
-             project/locations/us-east/namespaces/my-namespace/services/my-service/endpoints/endpoint-c" returns
-             Endpoints that have name that is alphabetically later than the string, so "endpoint-e" will be
-             returned but "endpoint-a" will not be. * "metadata.owner!=sd AND metadata.foo=bar" returns
-             Endpoints that have "owner" in label key but value is not "sd" AND have key/value foo=bar. *
-             "doesnotexist.foo=bar" returns an empty list. Note that Endpoint doesn't have a field called
-             "doesnotexist". Since the filter does not match any Endpoints, it returns no results.
+              /** Optional. The filter to list result by. General filter string syntax: () can be "name", "address",
+             "port" or "metadata." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and
+             is roughly the same as "=". must be the same data type as field. can be "AND, OR, NOT". Examples of
+             valid filters: * "metadata.owner" returns Endpoints that have a label with the key "owner" this is
+             the same as "metadata:owner". * "metadata.protocol=gRPC" returns Endpoints that have key/value
+             "protocol=gRPC". * "address=192.108.1.105" returns Endpoints that have this address. * "port>8080"
+             returns Endpoints that have port number larger than 8080. * "name>projects/my-project/locations/us-
+             east/namespaces/my-namespace/services/my-service/endpoints/endpoint-c" returns Endpoints that have
+             name that is alphabetically later than the string, so "endpoint-e" will be returned but
+             "endpoint-a" will not be. * "metadata.owner!=sd AND metadata.foo=bar" returns Endpoints that have
+             "owner" in label key but value is not "sd" AND have key/value foo=bar. * "doesnotexist.foo=bar"
+             returns an empty list. Note that Endpoint doesn't have a field called "doesnotexist". Since the
+             filter does not match any Endpoints, it returns no results.
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Optional. The filter to list result by.
-               *
-               * General filter string syntax: () can be "name", "address", "port" or "metadata."
-               * for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and is
-               * roughly the same as "=". must be the same data type as field. can be "AND, OR,
-               * NOT".
-               *
-               * Examples of valid filters: * "metadata.owner" returns Endpoints that have a label
-               * with the key "owner" this is the same as "metadata:owner". *
-               * "metadata.protocol=gRPC" returns Endpoints that have key/value "protocol=gRPC". *
-               * "address=192.108.1.105" returns Endpoints that have this address. * "port>8080"
-               * returns Endpoints that have port number larger than 8080. * "name>projects/my-
-               * project/locations/us-east/namespaces/my-namespace/services/my-
-               * service/endpoints/endpoint-c" returns Endpoints that have name that is
-               * alphabetically later than the string, so "endpoint-e" will be returned but
-               * "endpoint-a" will not be. * "metadata.owner!=sd AND metadata.foo=bar" returns
+               * Optional. The filter to list result by. General filter string syntax: () can be
+               * "name", "address", "port" or "metadata." for map field. can be "<, >, <=, >=, !=,
+               * =, :". Of which ":" means HAS, and is roughly the same as "=". must be the same
+               * data type as field. can be "AND, OR, NOT". Examples of valid filters: *
+               * "metadata.owner" returns Endpoints that have a label with the key "owner" this is
+               * the same as "metadata:owner". * "metadata.protocol=gRPC" returns Endpoints that
+               * have key/value "protocol=gRPC". * "address=192.108.1.105" returns Endpoints that
+               * have this address. * "port>8080" returns Endpoints that have port number larger
+               * than 8080. * "name>projects/my-project/locations/us-east/namespaces/my-
+               * namespace/services/my-service/endpoints/endpoint-c" returns Endpoints that have
+               * name that is alphabetically later than the string, so "endpoint-e" will be returned
+               * but "endpoint-a" will not be. * "metadata.owner!=sd AND metadata.foo=bar" returns
                * Endpoints that have "owner" in label key but value is not "sd" AND have key/value
                * foo=bar. * "doesnotexist.foo=bar" returns an empty list. Note that Endpoint doesn't
                * have a field called "doesnotexist". Since the filter does not match any Endpoints,

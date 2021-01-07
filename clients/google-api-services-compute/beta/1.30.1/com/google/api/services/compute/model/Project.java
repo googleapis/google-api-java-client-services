@@ -124,8 +124,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private UsageExportLocation usageExportLocation;
 
   /**
-   * [Output Only] The role this project has in a shared VPC configuration. Currently only HOST
-   * projects are differentiated.
+   * [Output Only] The role this project has in a shared VPC configuration. Currently, only projects
+   * with the host role, which is specified by the value HOST, are differentiated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -350,8 +350,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The role this project has in a shared VPC configuration. Currently only HOST
-   * projects are differentiated.
+   * [Output Only] The role this project has in a shared VPC configuration. Currently, only projects
+   * with the host role, which is specified by the value HOST, are differentiated.
    * @return value or {@code null} for none
    */
   public java.lang.String getXpnProjectStatus() {
@@ -359,8 +359,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The role this project has in a shared VPC configuration. Currently only HOST
-   * projects are differentiated.
+   * [Output Only] The role this project has in a shared VPC configuration. Currently, only projects
+   * with the host role, which is specified by the value HOST, are differentiated.
    * @param xpnProjectStatus xpnProjectStatus or {@code null} for none
    */
   public Project setXpnProjectStatus(java.lang.String xpnProjectStatus) {

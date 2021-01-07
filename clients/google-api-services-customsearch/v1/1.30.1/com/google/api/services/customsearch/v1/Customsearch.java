@@ -46,7 +46,7 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Custom Search API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Custom Search API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,8 +143,8 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
   public class Cse {
 
     /**
-     * Returns metadata about the search performed, metadata about the custom search engine used for the
-     * search, and the search results.
+     * Returns metadata about the search performed, metadata about the engine used for the search, and
+     * the search results.
      *
      * Create a request for the method "cse.list".
      *
@@ -164,8 +164,8 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "customsearch/v1";
 
       /**
-       * Returns metadata about the search performed, metadata about the custom search engine used for
-       * the search, and the search results.
+       * Returns metadata about the search performed, metadata about the engine used for the search, and
+       * the search results.
        *
        * Create a request for the method "cse.list".
        *
@@ -245,100 +245,149 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Turns off the translation between zh-CN and zh-TW. */
+      /**
+       * Enables or disables [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
+       * default value for this parameter is 0 (zero), meaning that the feature is enabled.
+       * Supported values are: * `1`: Disabled * `0`: Enabled (default)
+       */
       @com.google.api.client.util.Key
       private java.lang.String c2coff;
 
-      /** Turns off the translation between zh-CN and zh-TW.
+      /** Enables or disables [Simplified and Traditional Chinese Search](https://developers.google.com
+     /custom-search/docs/xml_results#chineseSearch). The default value for this parameter is 0 (zero),
+     meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`: Enabled (default)
        */
       public java.lang.String getC2coff() {
         return c2coff;
       }
 
-      /** Turns off the translation between zh-CN and zh-TW. */
+      /**
+       * Enables or disables [Simplified and Traditional Chinese
+       * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
+       * default value for this parameter is 0 (zero), meaning that the feature is enabled.
+       * Supported values are: * `1`: Disabled * `0`: Enabled (default)
+       */
       public List setC2coff(java.lang.String c2coff) {
         this.c2coff = c2coff;
         return this;
       }
 
-      /** Country restrict(s). */
+      /**
+       * Restricts search results to documents originating in a particular country. You may use
+       * [Boolean operators](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
+       * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
+       * the document's URL * the geographic location of the Web server's IP address See the
+       * [Country Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#countryCollections) page for a list of valid values for
+       * this parameter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String cr;
 
-      /** Country restrict(s).
+      /** Restricts search results to documents originating in a particular country. You may use [Boolean
+     operators](https://developers.google.com/custom-
+     search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google Search
+     determines the country of a document by analyzing: * the top-level domain (TLD) of the document's
+     URL * the geographic location of the Web server's IP address See the [Country Parameter
+     Values](https://developers.google.com/custom-search/docs/xml_results_appendices#countryCollections)
+     page for a list of valid values for this parameter.
        */
       public java.lang.String getCr() {
         return cr;
       }
 
-      /** Country restrict(s). */
+      /**
+       * Restricts search results to documents originating in a particular country. You may use
+       * [Boolean operators](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
+       * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
+       * the document's URL * the geographic location of the Web server's IP address See the
+       * [Country Parameter Values](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#countryCollections) page for a list of valid values for
+       * this parameter.
+       */
       public List setCr(java.lang.String cr) {
         this.cr = cr;
         return this;
       }
 
-      /** The custom search engine ID to scope this search query */
+      /** The Programmable Search Engine ID to use for this request. */
       @com.google.api.client.util.Key
       private java.lang.String cx;
 
-      /** The custom search engine ID to scope this search query
+      /** The Programmable Search Engine ID to use for this request.
        */
       public java.lang.String getCx() {
         return cx;
       }
 
-      /** The custom search engine ID to scope this search query */
+      /** The Programmable Search Engine ID to use for this request. */
       public List setCx(java.lang.String cx) {
         this.cx = cx;
         return this;
       }
 
-      /** Specifies all search results are from a time period */
+      /**
+       * Restricts results to URLs based on date. Supported values include: * `d[number]`: requests
+       * results from the specified number of past days. * `w[number]`: requests results from the
+       * specified number of past weeks. * `m[number]`: requests results from the specified number
+       * of past months. * `y[number]`: requests results from the specified number of past years.
+       */
       @com.google.api.client.util.Key
       private java.lang.String dateRestrict;
 
-      /** Specifies all search results are from a time period
+      /** Restricts results to URLs based on date. Supported values include: * `d[number]`: requests results
+     from the specified number of past days. * `w[number]`: requests results from the specified number
+     of past weeks. * `m[number]`: requests results from the specified number of past months. *
+     `y[number]`: requests results from the specified number of past years.
        */
       public java.lang.String getDateRestrict() {
         return dateRestrict;
       }
 
-      /** Specifies all search results are from a time period */
+      /**
+       * Restricts results to URLs based on date. Supported values include: * `d[number]`: requests
+       * results from the specified number of past days. * `w[number]`: requests results from the
+       * specified number of past weeks. * `m[number]`: requests results from the specified number
+       * of past months. * `y[number]`: requests results from the specified number of past years.
+       */
       public List setDateRestrict(java.lang.String dateRestrict) {
         this.dateRestrict = dateRestrict;
         return this;
       }
 
-      /** Identifies a phrase that all documents in the search results must contain */
+      /** Identifies a phrase that all documents in the search results must contain. */
       @com.google.api.client.util.Key
       private java.lang.String exactTerms;
 
-      /** Identifies a phrase that all documents in the search results must contain
+      /** Identifies a phrase that all documents in the search results must contain.
        */
       public java.lang.String getExactTerms() {
         return exactTerms;
       }
 
-      /** Identifies a phrase that all documents in the search results must contain */
+      /** Identifies a phrase that all documents in the search results must contain. */
       public List setExactTerms(java.lang.String exactTerms) {
         this.exactTerms = exactTerms;
         return this;
       }
 
       /**
-       * Identifies a word or phrase that should not appear in any documents in the search results
+       * Identifies a word or phrase that should not appear in any documents in the search results.
        */
       @com.google.api.client.util.Key
       private java.lang.String excludeTerms;
 
-      /** Identifies a word or phrase that should not appear in any documents in the search results
+      /** Identifies a word or phrase that should not appear in any documents in the search results.
        */
       public java.lang.String getExcludeTerms() {
         return excludeTerms;
       }
 
       /**
-       * Identifies a word or phrase that should not appear in any documents in the search results
+       * Identifies a word or phrase that should not appear in any documents in the search results.
        */
       public List setExcludeTerms(java.lang.String excludeTerms) {
         this.excludeTerms = excludeTerms;
@@ -346,145 +395,231 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Returns images of a specified type. Some of the allowed values are: bmp, gif, png, jpg,
-       * svg, pdf, ...
+       * Restricts results to files of a specified extension. A list of file types indexable by
+       * Google can be found in Search Console [Help
+       * Center](https://support.google.com/webmasters/answer/35287).
        */
       @com.google.api.client.util.Key
       private java.lang.String fileType;
 
-      /** Returns images of a specified type. Some of the allowed values are: bmp, gif, png, jpg, svg, pdf,
-     ...
+      /** Restricts results to files of a specified extension. A list of file types indexable by Google can
+     be found in Search Console [Help Center](https://support.google.com/webmasters/answer/35287).
        */
       public java.lang.String getFileType() {
         return fileType;
       }
 
       /**
-       * Returns images of a specified type. Some of the allowed values are: bmp, gif, png, jpg,
-       * svg, pdf, ...
+       * Restricts results to files of a specified extension. A list of file types indexable by
+       * Google can be found in Search Console [Help
+       * Center](https://support.google.com/webmasters/answer/35287).
        */
       public List setFileType(java.lang.String fileType) {
         this.fileType = fileType;
         return this;
       }
 
-      /** Controls turning on (1) or off (0) the duplicate content filter. */
+      /**
+       * Controls turning on or off the duplicate content filter. * See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering)
+       * for more information about Google's search results filters. Note that host crowding
+       * filtering applies only to multi-site searches. * By default, Google applies filtering to
+       * all search results to improve the quality of those results. Acceptable values are: * `0`:
+       * Turns off duplicate content filter. * `1`: Turns on duplicate content filter.
+       */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Controls turning on (1) or off (0) the duplicate content filter.
+      /** Controls turning on or off the duplicate content filter. * See [Automatic
+     Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+     more information about Google's search results filters. Note that host crowding filtering applies
+     only to multi-site searches. * By default, Google applies filtering to all search results to
+     improve the quality of those results. Acceptable values are: * `0`: Turns off duplicate content
+     filter. * `1`: Turns on duplicate content filter.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
-      /** Controls turning on (1) or off (0) the duplicate content filter. */
+      /**
+       * Controls turning on or off the duplicate content filter. * See [Automatic
+       * Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering)
+       * for more information about Google's search results filters. Note that host crowding
+       * filtering applies only to multi-site searches. * By default, Google applies filtering to
+       * all search results to improve the quality of those results. Acceptable values are: * `0`:
+       * Turns off duplicate content filter. * `1`: Turns on duplicate content filter.
+       */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
         return this;
       }
 
-      /** Geolocation of end user. */
+      /**
+       * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
+       * parameter boosts search results whose country of origin matches the parameter value. See
+       * the [Country Codes](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
+       * Specifying a `gl` parameter value should lead to more relevant results. This is
+       * particularly true for international customers and, even more specifically, for customers in
+       * English- speaking countries other than the United States.
+       */
       @com.google.api.client.util.Key
       private java.lang.String gl;
 
-      /** Geolocation of end user.
+      /** Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
+     parameter boosts search results whose country of origin matches the parameter value. See the
+     [Country Codes](https://developers.google.com/custom-
+     search/docs/xml_results_appendices#countryCodes) page for a list of valid values. * Specifying a
+     `gl` parameter value should lead to more relevant results. This is particularly true for
+     international customers and, even more specifically, for customers in English- speaking countries
+     other than the United States.
        */
       public java.lang.String getGl() {
         return gl;
       }
 
-      /** Geolocation of end user. */
+      /**
+       * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
+       * parameter boosts search results whose country of origin matches the parameter value. See
+       * the [Country Codes](https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
+       * Specifying a `gl` parameter value should lead to more relevant results. This is
+       * particularly true for international customers and, even more specifically, for customers in
+       * English- speaking countries other than the United States.
+       */
       public List setGl(java.lang.String gl) {
         this.gl = gl;
         return this;
       }
 
-      /** The local Google domain to use to perform the search. */
+      /**
+       * **Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for
+       * example, google.com, google.de, or google.fr) to use to perform the search.
+       */
       @com.google.api.client.util.Key
       private java.lang.String googlehost;
 
-      /** The local Google domain to use to perform the search.
+      /**** Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for example,
+    ** google.com, google.de, or google.fr) to use to perform the search.
+    **
+
        */
       public java.lang.String getGooglehost() {
         return googlehost;
       }
 
-      /** The local Google domain to use to perform the search. */
+      /**
+       * **Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for
+       * example, google.com, google.de, or google.fr) to use to perform the search.
+       */
       public List setGooglehost(java.lang.String googlehost) {
         this.googlehost = googlehost;
         return this;
       }
 
       /**
-       * Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
+       * Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        */
       @com.google.api.client.util.Key
       private java.lang.String highRange;
 
-      /** Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
+      /** Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append an
+     inclusive search range of `lowRange...highRange` to the query.
        */
       public java.lang.String getHighRange() {
         return highRange;
       }
 
       /**
-       * Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
+       * Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        */
       public List setHighRange(java.lang.String highRange) {
         this.highRange = highRange;
         return this;
       }
 
-      /** Sets the user interface language. */
+      /**
+       * Sets the user interface language. * Explicitly setting this parameter improves the
+       * performance and the quality of your search results. * See the [Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
+       * Interface Languages)[https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+       */
       @com.google.api.client.util.Key
       private java.lang.String hl;
 
-      /** Sets the user interface language.
+      /** Sets the user interface language. * Explicitly setting this parameter improves the performance and
+     the quality of your search results. * See the [Interface Languages](https://developers.google.com
+     /custom-search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+     Results Presentation](https://developers.google.com/custom-
+     search/docs/xml_results#wsInternationalizing) for more information, and (Supported Interface
+     Languages)[https://developers.google.com/custom-
+     search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
        */
       public java.lang.String getHl() {
         return hl;
       }
 
-      /** Sets the user interface language. */
+      /**
+       * Sets the user interface language. * Explicitly setting this parameter improves the
+       * performance and the quality of your search results. * See the [Interface
+       * Languages](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       * Results Presentation](https://developers.google.com/custom-
+       * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
+       * Interface Languages)[https://developers.google.com/custom-
+       * search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+       */
       public List setHl(java.lang.String hl) {
         this.hl = hl;
         return this;
       }
 
-      /** Appends the extra hidden query terms to the query. */
+      /**
+       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * operator.
+       */
       @com.google.api.client.util.Key
       private java.lang.String hq;
 
-      /** Appends the extra hidden query terms to the query.
+      /** Appends the specified query terms to the query, as if they were combined with a logical AND
+     operator.
        */
       public java.lang.String getHq() {
         return hq;
       }
 
-      /** Appends the extra hidden query terms to the query. */
+      /**
+       * Appends the specified query terms to the query, as if they were combined with a logical AND
+       * operator.
+       */
       public List setHq(java.lang.String hq) {
         this.hq = hq;
         return this;
       }
 
       /**
-       * Returns black and white, grayscale, transparent-background or color images: mono, gray,
-       * trans, and color.
+       * Returns black and white, grayscale, transparent, or color images. Acceptable values are: *
+       * `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
        */
       @com.google.api.client.util.Key
       private java.lang.String imgColorType;
 
-      /** Returns black and white, grayscale, transparent-background or color images: mono, gray, trans, and
-     color.
+      /** Returns black and white, grayscale, transparent, or color images. Acceptable values are: *
+     `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
        */
       public java.lang.String getImgColorType() {
         return imgColorType;
       }
 
       /**
-       * Returns black and white, grayscale, transparent-background or color images: mono, gray,
-       * trans, and color.
+       * Returns black and white, grayscale, transparent, or color images. Acceptable values are: *
+       * `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
        */
       public List setImgColorType(java.lang.String imgColorType) {
         this.imgColorType = imgColorType;
@@ -492,22 +627,25 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Returns images of a specific dominant color: red, orange, yellow, green, teal, blue,
-       * purple, pink, white, gray, black and brown.
+       * Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"`
+       * * `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` *
+       * `"teal"` * `"white"` * `"yellow"`
        */
       @com.google.api.client.util.Key
       private java.lang.String imgDominantColor;
 
-      /** Returns images of a specific dominant color: red, orange, yellow, green, teal, blue, purple, pink,
-     white, gray, black and brown.
+      /** Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"` *
+     `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` * `"teal"` *
+     `"white"` * `"yellow"`
        */
       public java.lang.String getImgDominantColor() {
         return imgDominantColor;
       }
 
       /**
-       * Returns images of a specific dominant color: red, orange, yellow, green, teal, blue,
-       * purple, pink, white, gray, black and brown.
+       * Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"`
+       * * `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` *
+       * `"teal"` * `"white"` * `"yellow"`
        */
       public List setImgDominantColor(java.lang.String imgDominantColor) {
         this.imgDominantColor = imgDominantColor;
@@ -515,22 +653,22 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Returns images of a specified size, where size can be one of: icon, small, medium, large,
-       * xlarge, xxlarge, and huge.
+       * Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` *
+       * `"large"` * `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
        */
       @com.google.api.client.util.Key
       private java.lang.String imgSize;
 
-      /** Returns images of a specified size, where size can be one of: icon, small, medium, large, xlarge,
-     xxlarge, and huge.
+      /** Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` * `"large"` *
+     `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
        */
       public java.lang.String getImgSize() {
         return imgSize;
       }
 
       /**
-       * Returns images of a specified size, where size can be one of: icon, small, medium, large,
-       * xlarge, xxlarge, and huge.
+       * Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` *
+       * `"large"` * `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
        */
       public List setImgSize(java.lang.String imgSize) {
         this.imgSize = imgSize;
@@ -538,90 +676,135 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Returns images of a type, which can be one of: clipart, face, lineart, stock, photo, and
-       * animated.
+       * Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` *
+       * `"stock"` * `"photo"` * `"animated"`
        */
       @com.google.api.client.util.Key
       private java.lang.String imgType;
 
-      /** Returns images of a type, which can be one of: clipart, face, lineart, stock, photo, and animated.
+      /** Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` * `"stock"`
+     * `"photo"` * `"animated"`
        */
       public java.lang.String getImgType() {
         return imgType;
       }
 
       /**
-       * Returns images of a type, which can be one of: clipart, face, lineart, stock, photo, and
-       * animated.
+       * Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` *
+       * `"stock"` * `"photo"` * `"animated"`
        */
       public List setImgType(java.lang.String imgType) {
         this.imgType = imgType;
         return this;
       }
 
-      /** Specifies that all search results should contain a link to a particular URL */
+      /** Specifies that all search results should contain a link to a particular URL. */
       @com.google.api.client.util.Key
       private java.lang.String linkSite;
 
-      /** Specifies that all search results should contain a link to a particular URL
+      /** Specifies that all search results should contain a link to a particular URL.
        */
       public java.lang.String getLinkSite() {
         return linkSite;
       }
 
-      /** Specifies that all search results should contain a link to a particular URL */
+      /** Specifies that all search results should contain a link to a particular URL. */
       public List setLinkSite(java.lang.String linkSite) {
         this.linkSite = linkSite;
         return this;
       }
 
       /**
-       * Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
+       * Specifies the starting value for a search range. Use `lowRange` and `highRange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        */
       @com.google.api.client.util.Key
       private java.lang.String lowRange;
 
-      /** Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
+      /** Specifies the starting value for a search range. Use `lowRange` and `highRange` to append an
+     inclusive search range of `lowRange...highRange` to the query.
        */
       public java.lang.String getLowRange() {
         return lowRange;
       }
 
       /**
-       * Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
+       * Specifies the starting value for a search range. Use `lowRange` and `highRange` to append
+       * an inclusive search range of `lowRange...highRange` to the query.
        */
       public List setLowRange(java.lang.String lowRange) {
         this.lowRange = lowRange;
         return this;
       }
 
-      /** The language restriction for the search results */
+      /**
+       * Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`).
+       * Acceptable values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`:
+       * Catalan * `"lang_cs"`: Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`:
+       * Greek * `"lang_en"`: English * `"lang_es"`: Spanish * `"lang_et"`: Estonian * `"lang_fi"`:
+       * Finnish * `"lang_fr"`: French * `"lang_hr"`: Croatian * `"lang_hu"`: Hungarian *
+       * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic * `"lang_it"`: Italian * `"lang_iw"`:
+       * Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean * `"lang_lt"`: Lithuanian *
+       * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian * `"lang_pl"`: Polish *
+       * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`: Russian * `"lang_sk"`:
+       * Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian * `"lang_sv"`: Swedish *
+       * `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) * `"lang_zh-TW"`: Chinese
+       * (Traditional)
+       */
       @com.google.api.client.util.Key
       private java.lang.String lr;
 
-      /** The language restriction for the search results
+      /** Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`). Acceptable
+     values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`: Catalan * `"lang_cs"`:
+     Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`: Greek * `"lang_en"`: English *
+     `"lang_es"`: Spanish * `"lang_et"`: Estonian * `"lang_fi"`: Finnish * `"lang_fr"`: French *
+     `"lang_hr"`: Croatian * `"lang_hu"`: Hungarian * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic *
+     `"lang_it"`: Italian * `"lang_iw"`: Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean *
+     `"lang_lt"`: Lithuanian * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian *
+     `"lang_pl"`: Polish * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`: Russian *
+     `"lang_sk"`: Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian * `"lang_sv"`: Swedish *
+     `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) * `"lang_zh-TW"`: Chinese (Traditional)
        */
       public java.lang.String getLr() {
         return lr;
       }
 
-      /** The language restriction for the search results */
+      /**
+       * Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`).
+       * Acceptable values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`:
+       * Catalan * `"lang_cs"`: Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`:
+       * Greek * `"lang_en"`: English * `"lang_es"`: Spanish * `"lang_et"`: Estonian * `"lang_fi"`:
+       * Finnish * `"lang_fr"`: French * `"lang_hr"`: Croatian * `"lang_hu"`: Hungarian *
+       * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic * `"lang_it"`: Italian * `"lang_iw"`:
+       * Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean * `"lang_lt"`: Lithuanian *
+       * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian * `"lang_pl"`: Polish *
+       * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`: Russian * `"lang_sk"`:
+       * Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian * `"lang_sv"`: Swedish *
+       * `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) * `"lang_zh-TW"`: Chinese
+       * (Traditional)
+       */
       public List setLr(java.lang.String lr) {
         this.lr = lr;
         return this;
       }
 
-      /** Number of search results to return */
+      /**
+       * Number of search results to return. * Valid values are integers between 1 and 10,
+       * inclusive.
+       */
       @com.google.api.client.util.Key
       private java.lang.Integer num;
 
-      /** Number of search results to return
+      /** Number of search results to return. * Valid values are integers between 1 and 10, inclusive.
        */
       public java.lang.Integer getNum() {
         return num;
       }
 
-      /** Number of search results to return */
+      /**
+       * Number of search results to return. * Valid values are integers between 1 and 10,
+       * inclusive.
+       */
       public List setNum(java.lang.Integer num) {
         this.num = num;
         return this;
@@ -629,13 +812,13 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /**
        * Provides additional search terms to check for in a document, where each document in the
-       * search results must contain at least one of the additional search terms
+       * search results must contain at least one of the additional search terms.
        */
       @com.google.api.client.util.Key
       private java.lang.String orTerms;
 
       /** Provides additional search terms to check for in a document, where each document in the search
-     results must contain at least one of the additional search terms
+     results must contain at least one of the additional search terms.
        */
       public java.lang.String getOrTerms() {
         return orTerms;
@@ -643,7 +826,7 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
 
       /**
        * Provides additional search terms to check for in a document, where each document in the
-       * search results must contain at least one of the additional search terms
+       * search results must contain at least one of the additional search terms.
        */
       public List setOrTerms(java.lang.String orTerms) {
         this.orTerms = orTerms;
@@ -667,19 +850,19 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Specifies that all search results should be pages that are related to the specified URL
+       * Specifies that all search results should be pages that are related to the specified URL.
        */
       @com.google.api.client.util.Key
       private java.lang.String relatedSite;
 
-      /** Specifies that all search results should be pages that are related to the specified URL
+      /** Specifies that all search results should be pages that are related to the specified URL.
        */
       public java.lang.String getRelatedSite() {
         return relatedSite;
       }
 
       /**
-       * Specifies that all search results should be pages that are related to the specified URL
+       * Specifies that all search results should be pages that are related to the specified URL.
        */
       public List setRelatedSite(java.lang.String relatedSite) {
         this.relatedSite = relatedSite;
@@ -687,129 +870,178 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain, cc_attribute,
-       * cc_sharealike, cc_noncommercial, cc_nonderived and combinations of these. See
-       * https://wiki.creativecommons.org/wiki/CC_Search_integration for typical combinations.
+       * Filters based on licensing. Supported values include: `cc_publicdomain`, `cc_attribute`,
+       * `cc_sharealike`, `cc_noncommercial`, `cc_nonderived` and combinations of these. See
+       * [typical combinations](https://wiki.creativecommons.org/wiki/CC_Search_integration).
        */
       @com.google.api.client.util.Key
       private java.lang.String rights;
 
-      /** Filters based on licensing. Supported values include: cc_publicdomain, cc_attribute, cc_sharealike,
-     cc_noncommercial, cc_nonderived and combinations of these. See
-     https://wiki.creativecommons.org/wiki/CC_Search_integration for typical combinations.
+      /** Filters based on licensing. Supported values include: `cc_publicdomain`, `cc_attribute`,
+     `cc_sharealike`, `cc_noncommercial`, `cc_nonderived` and combinations of these. See [typical
+     combinations](https://wiki.creativecommons.org/wiki/CC_Search_integration).
        */
       public java.lang.String getRights() {
         return rights;
       }
 
       /**
-       * Filters based on licensing. Supported values include: cc_publicdomain, cc_attribute,
-       * cc_sharealike, cc_noncommercial, cc_nonderived and combinations of these. See
-       * https://wiki.creativecommons.org/wiki/CC_Search_integration for typical combinations.
+       * Filters based on licensing. Supported values include: `cc_publicdomain`, `cc_attribute`,
+       * `cc_sharealike`, `cc_noncommercial`, `cc_nonderived` and combinations of these. See
+       * [typical combinations](https://wiki.creativecommons.org/wiki/CC_Search_integration).
        */
       public List setRights(java.lang.String rights) {
         this.rights = rights;
         return this;
       }
 
-      /** Search safety level (active, off) (high, medium are same as active) */
+      /**
+       * Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. *
+       * `"off"`: Disables SafeSearch filtering. (default)
+       */
       @com.google.api.client.util.Key
       private java.lang.String safe;
 
-      /** Search safety level (active, off) (high, medium are same as active)
+      /** Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. * `"off"`:
+     Disables SafeSearch filtering. (default)
        */
       public java.lang.String getSafe() {
         return safe;
       }
 
-      /** Search safety level (active, off) (high, medium are same as active) */
+      /**
+       * Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. *
+       * `"off"`: Disables SafeSearch filtering. (default)
+       */
       public List setSafe(java.lang.String safe) {
         this.safe = safe;
         return this;
       }
 
-      /** Specifies the search type: image. */
+      /**
+       * Specifies the search type: `image`. If unspecified, results are limited to webpages.
+       * Acceptable values are: * `"image"`: custom image search.
+       */
       @com.google.api.client.util.Key
       private java.lang.String searchType;
 
-      /** Specifies the search type: image.
+      /** Specifies the search type: `image`. If unspecified, results are limited to webpages. Acceptable
+     values are: * `"image"`: custom image search.
        */
       public java.lang.String getSearchType() {
         return searchType;
       }
 
-      /** Specifies the search type: image. */
+      /**
+       * Specifies the search type: `image`. If unspecified, results are limited to webpages.
+       * Acceptable values are: * `"image"`: custom image search.
+       */
       public List setSearchType(java.lang.String searchType) {
         this.searchType = searchType;
         return this;
       }
 
-      /** Specifies all search results should be pages from a given site */
+      /**
+       * Specifies a given site which should always be included or excluded from results (see
+       * `siteSearchFilter` parameter, below).
+       */
       @com.google.api.client.util.Key
       private java.lang.String siteSearch;
 
-      /** Specifies all search results should be pages from a given site
+      /** Specifies a given site which should always be included or excluded from results (see
+     `siteSearchFilter` parameter, below).
        */
       public java.lang.String getSiteSearch() {
         return siteSearch;
       }
 
-      /** Specifies all search results should be pages from a given site */
+      /**
+       * Specifies a given site which should always be included or excluded from results (see
+       * `siteSearchFilter` parameter, below).
+       */
       public List setSiteSearch(java.lang.String siteSearch) {
         this.siteSearch = siteSearch;
         return this;
       }
 
       /**
-       * Controls whether to include (i) or exclude (e) results from the site named in the
-       * siteSearch parameter
+       * Controls whether to include or exclude results from the site named in the `siteSearch`
+       * parameter. Acceptable values are: * `"e"`: exclude * `"i"`: include
        */
       @com.google.api.client.util.Key
       private java.lang.String siteSearchFilter;
 
-      /** Controls whether to include (i) or exclude (e) results from the site named in the siteSearch
-     parameter
+      /** Controls whether to include or exclude results from the site named in the `siteSearch` parameter.
+     Acceptable values are: * `"e"`: exclude * `"i"`: include
        */
       public java.lang.String getSiteSearchFilter() {
         return siteSearchFilter;
       }
 
       /**
-       * Controls whether to include (i) or exclude (e) results from the site named in the
-       * siteSearch parameter
+       * Controls whether to include or exclude results from the site named in the `siteSearch`
+       * parameter. Acceptable values are: * `"e"`: exclude * `"i"`: include
        */
       public List setSiteSearchFilter(java.lang.String siteSearchFilter) {
         this.siteSearchFilter = siteSearchFilter;
         return this;
       }
 
-      /** The sort expression to apply to the results */
+      /**
+       * The sort expression to apply to the results. The sort parameter specifies that the results
+       * be sorted according to the specified expression i.e. sort by date. [Example:
+       * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+       * attribute).
+       */
       @com.google.api.client.util.Key
       private java.lang.String sort;
 
-      /** The sort expression to apply to the results
+      /** The sort expression to apply to the results. The sort parameter specifies that the results be
+     sorted according to the specified expression i.e. sort by date. [Example:
+     sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-attribute).
        */
       public java.lang.String getSort() {
         return sort;
       }
 
-      /** The sort expression to apply to the results */
+      /**
+       * The sort expression to apply to the results. The sort parameter specifies that the results
+       * be sorted according to the specified expression i.e. sort by date. [Example:
+       * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+       * attribute).
+       */
       public List setSort(java.lang.String sort) {
         this.sort = sort;
         return this;
       }
 
-      /** The index of the first result to return */
+      /**
+       * The index of the first result to return. The default number of results per page is 10, so
+       * `=11` would start at the top of the second page of results. **Note**: The JSON API will
+       * never return more than 100 results, even if more than 100 documents match the query, so
+       * setting the sum of `start + num` to a number greater than 100 will produce an error. Also
+       * note that the maximum value for `num` is 10.
+       */
       @com.google.api.client.util.Key
       private java.lang.Long start;
 
-      /** The index of the first result to return
+      /** The index of the first result to return. The default number of results per page is 10, so `=11`
+     would start at the top of the second page of results. **Note**: The JSON API will never return more
+     than 100 results, even if more than 100 documents match the query, so setting the sum of `start +
+     num` to a number greater than 100 will produce an error. Also note that the maximum value for `num`
+     is 10.
        */
       public java.lang.Long getStart() {
         return start;
       }
 
-      /** The index of the first result to return */
+      /**
+       * The index of the first result to return. The default number of results per page is 10, so
+       * `=11` would start at the top of the second page of results. **Note**: The JSON API will
+       * never return more than 100 results, even if more than 100 documents match the query, so
+       * setting the sum of `start + num` to a number greater than 100 will produce an error. Also
+       * note that the maximum value for `num` is 10.
+       */
       public List setStart(java.lang.Long start) {
         this.start = start;
         return this;
@@ -821,707 +1053,944 @@ public class Customsearch extends com.google.api.client.googleapis.services.json
       }
     }
 
-  }
-
-  /**
-   * An accessor for creating requests from the Siterestrict collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code Customsearch customsearch = new Customsearch(...);}
-   *   {@code Customsearch.Siterestrict.List request = customsearch.siterestrict().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Siterestrict siterestrict() {
-    return new Siterestrict();
-  }
-
-  /**
-   * The "siterestrict" collection of methods.
-   */
-  public class Siterestrict {
-
     /**
-     * Returns metadata about the search performed, metadata about the custom search engine used for the
-     * search, and the search results. Uses a small set of url patterns.
+     * An accessor for creating requests from the Siterestrict collection.
      *
-     * Create a request for the method "siterestrict.list".
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Customsearch customsearch = new Customsearch(...);}
+     *   {@code Customsearch.Siterestrict.List request = customsearch.siterestrict().list(parameters ...)}
+     * </pre>
      *
-     * This request holds the parameters needed by the customsearch server.  After setting any optional
-     * parameters, call the {@link List#execute()} method to invoke the remote operation.
-     *
-     * @return the request
+     * @return the resource collection
      */
-    public List list() throws java.io.IOException {
-      List result = new List();
-      initialize(result);
-      return result;
+    public Siterestrict siterestrict() {
+      return new Siterestrict();
     }
 
-    public class List extends CustomsearchRequest<com.google.api.services.customsearch.v1.model.Search> {
-
-      private static final String REST_PATH = "customsearch/v1/siterestrict";
+    /**
+     * The "siterestrict" collection of methods.
+     */
+    public class Siterestrict {
 
       /**
-       * Returns metadata about the search performed, metadata about the custom search engine used for
-       * the search, and the search results. Uses a small set of url patterns.
+       * Returns metadata about the search performed, metadata about the engine used for the search, and
+       * the search results. Uses a small set of url patterns.
        *
        * Create a request for the method "siterestrict.list".
        *
-       * This request holds the parameters needed by the the customsearch server.  After setting any
-       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       * This request holds the parameters needed by the customsearch server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @since 1.13
+       * @return the request
        */
-      protected List() {
-        super(Customsearch.this, "GET", REST_PATH, null, com.google.api.services.customsearch.v1.model.Search.class);
+      public List list() throws java.io.IOException {
+        List result = new List();
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CustomsearchRequest<com.google.api.services.customsearch.v1.model.Search> {
+
+        private static final String REST_PATH = "customsearch/v1/siterestrict";
+
+        /**
+         * Returns metadata about the search performed, metadata about the engine used for the search, and
+         * the search results. Uses a small set of url patterns.
+         *
+         * Create a request for the method "siterestrict.list".
+         *
+         * This request holds the parameters needed by the the customsearch server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @since 1.13
+         */
+        protected List() {
+          super(Customsearch.this, "GET", REST_PATH, null, com.google.api.services.customsearch.v1.model.Search.class);
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Enables or disables [Simplified and Traditional Chinese
+         * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
+         * default value for this parameter is 0 (zero), meaning that the feature is enabled.
+         * Supported values are: * `1`: Disabled * `0`: Enabled (default)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String c2coff;
+
+        /** Enables or disables [Simplified and Traditional Chinese Search](https://developers.google.com
+       /custom-search/docs/xml_results#chineseSearch). The default value for this parameter is 0 (zero),
+       meaning that the feature is enabled. Supported values are: * `1`: Disabled * `0`: Enabled (default)
+         */
+        public java.lang.String getC2coff() {
+          return c2coff;
+        }
+
+        /**
+         * Enables or disables [Simplified and Traditional Chinese
+         * Search](https://developers.google.com/custom-search/docs/xml_results#chineseSearch). The
+         * default value for this parameter is 0 (zero), meaning that the feature is enabled.
+         * Supported values are: * `1`: Disabled * `0`: Enabled (default)
+         */
+        public List setC2coff(java.lang.String c2coff) {
+          this.c2coff = c2coff;
+          return this;
+        }
+
+        /**
+         * Restricts search results to documents originating in a particular country. You may use
+         * [Boolean operators](https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
+         * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
+         * the document's URL * the geographic location of the Web server's IP address See the
+         * [Country Parameter Values](https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#countryCollections) page for a list of valid values
+         * for this parameter.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String cr;
+
+        /** Restricts search results to documents originating in a particular country. You may use [Boolean
+       operators](https://developers.google.com/custom-
+       search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google Search
+       determines the country of a document by analyzing: * the top-level domain (TLD) of the document's
+       URL * the geographic location of the Web server's IP address See the [Country Parameter
+       Values](https://developers.google.com/custom-search/docs/xml_results_appendices#countryCollections)
+       page for a list of valid values for this parameter.
+         */
+        public java.lang.String getCr() {
+          return cr;
+        }
+
+        /**
+         * Restricts search results to documents originating in a particular country. You may use
+         * [Boolean operators](https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#booleanOperators) in the cr parameter's value. Google
+         * Search determines the country of a document by analyzing: * the top-level domain (TLD) of
+         * the document's URL * the geographic location of the Web server's IP address See the
+         * [Country Parameter Values](https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#countryCollections) page for a list of valid values
+         * for this parameter.
+         */
+        public List setCr(java.lang.String cr) {
+          this.cr = cr;
+          return this;
+        }
+
+        /** The Programmable Search Engine ID to use for this request. */
+        @com.google.api.client.util.Key
+        private java.lang.String cx;
+
+        /** The Programmable Search Engine ID to use for this request.
+         */
+        public java.lang.String getCx() {
+          return cx;
+        }
+
+        /** The Programmable Search Engine ID to use for this request. */
+        public List setCx(java.lang.String cx) {
+          this.cx = cx;
+          return this;
+        }
+
+        /**
+         * Restricts results to URLs based on date. Supported values include: * `d[number]`:
+         * requests results from the specified number of past days. * `w[number]`: requests results
+         * from the specified number of past weeks. * `m[number]`: requests results from the
+         * specified number of past months. * `y[number]`: requests results from the specified
+         * number of past years.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dateRestrict;
+
+        /** Restricts results to URLs based on date. Supported values include: * `d[number]`: requests results
+       from the specified number of past days. * `w[number]`: requests results from the specified number
+       of past weeks. * `m[number]`: requests results from the specified number of past months. *
+       `y[number]`: requests results from the specified number of past years.
+         */
+        public java.lang.String getDateRestrict() {
+          return dateRestrict;
+        }
+
+        /**
+         * Restricts results to URLs based on date. Supported values include: * `d[number]`:
+         * requests results from the specified number of past days. * `w[number]`: requests results
+         * from the specified number of past weeks. * `m[number]`: requests results from the
+         * specified number of past months. * `y[number]`: requests results from the specified
+         * number of past years.
+         */
+        public List setDateRestrict(java.lang.String dateRestrict) {
+          this.dateRestrict = dateRestrict;
+          return this;
+        }
+
+        /** Identifies a phrase that all documents in the search results must contain. */
+        @com.google.api.client.util.Key
+        private java.lang.String exactTerms;
+
+        /** Identifies a phrase that all documents in the search results must contain.
+         */
+        public java.lang.String getExactTerms() {
+          return exactTerms;
+        }
+
+        /** Identifies a phrase that all documents in the search results must contain. */
+        public List setExactTerms(java.lang.String exactTerms) {
+          this.exactTerms = exactTerms;
+          return this;
+        }
+
+        /**
+         * Identifies a word or phrase that should not appear in any documents in the search
+         * results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String excludeTerms;
+
+        /** Identifies a word or phrase that should not appear in any documents in the search results.
+         */
+        public java.lang.String getExcludeTerms() {
+          return excludeTerms;
+        }
+
+        /**
+         * Identifies a word or phrase that should not appear in any documents in the search
+         * results.
+         */
+        public List setExcludeTerms(java.lang.String excludeTerms) {
+          this.excludeTerms = excludeTerms;
+          return this;
+        }
+
+        /**
+         * Restricts results to files of a specified extension. A list of file types indexable by
+         * Google can be found in Search Console [Help
+         * Center](https://support.google.com/webmasters/answer/35287).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String fileType;
+
+        /** Restricts results to files of a specified extension. A list of file types indexable by Google can
+       be found in Search Console [Help Center](https://support.google.com/webmasters/answer/35287).
+         */
+        public java.lang.String getFileType() {
+          return fileType;
+        }
+
+        /**
+         * Restricts results to files of a specified extension. A list of file types indexable by
+         * Google can be found in Search Console [Help
+         * Center](https://support.google.com/webmasters/answer/35287).
+         */
+        public List setFileType(java.lang.String fileType) {
+          this.fileType = fileType;
+          return this;
+        }
+
+        /**
+         * Controls turning on or off the duplicate content filter. * See [Automatic
+         * Filtering](https://developers.google.com/custom-
+         * search/docs/xml_results#automaticFiltering) for more information about Google's search
+         * results filters. Note that host crowding filtering applies only to multi-site searches. *
+         * By default, Google applies filtering to all search results to improve the quality of
+         * those results. Acceptable values are: * `0`: Turns off duplicate content filter. * `1`:
+         * Turns on duplicate content filter.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Controls turning on or off the duplicate content filter. * See [Automatic
+       Filtering](https://developers.google.com/custom-search/docs/xml_results#automaticFiltering) for
+       more information about Google's search results filters. Note that host crowding filtering applies
+       only to multi-site searches. * By default, Google applies filtering to all search results to
+       improve the quality of those results. Acceptable values are: * `0`: Turns off duplicate content
+       filter. * `1`: Turns on duplicate content filter.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Controls turning on or off the duplicate content filter. * See [Automatic
+         * Filtering](https://developers.google.com/custom-
+         * search/docs/xml_results#automaticFiltering) for more information about Google's search
+         * results filters. Note that host crowding filtering applies only to multi-site searches. *
+         * By default, Google applies filtering to all search results to improve the quality of
+         * those results. Acceptable values are: * `0`: Turns off duplicate content filter. * `1`:
+         * Turns on duplicate content filter.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The
+         * `gl` parameter boosts search results whose country of origin matches the parameter value.
+         * See the [Country Codes](https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
+         * Specifying a `gl` parameter value should lead to more relevant results. This is
+         * particularly true for international customers and, even more specifically, for customers
+         * in English- speaking countries other than the United States.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String gl;
+
+        /** Geolocation of end user. * The `gl` parameter value is a two-letter country code. The `gl`
+       parameter boosts search results whose country of origin matches the parameter value. See the
+       [Country Codes](https://developers.google.com/custom-
+       search/docs/xml_results_appendices#countryCodes) page for a list of valid values. * Specifying a
+       `gl` parameter value should lead to more relevant results. This is particularly true for
+       international customers and, even more specifically, for customers in English- speaking countries
+       other than the United States.
+         */
+        public java.lang.String getGl() {
+          return gl;
+        }
+
+        /**
+         * Geolocation of end user. * The `gl` parameter value is a two-letter country code. The
+         * `gl` parameter boosts search results whose country of origin matches the parameter value.
+         * See the [Country Codes](https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#countryCodes) page for a list of valid values. *
+         * Specifying a `gl` parameter value should lead to more relevant results. This is
+         * particularly true for international customers and, even more specifically, for customers
+         * in English- speaking countries other than the United States.
+         */
+        public List setGl(java.lang.String gl) {
+          this.gl = gl;
+          return this;
+        }
+
+        /**
+         * **Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for
+         * example, google.com, google.de, or google.fr) to use to perform the search.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String googlehost;
+
+        /**** Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for example,
+      ** google.com, google.de, or google.fr) to use to perform the search.
+      **
+
+         */
+        public java.lang.String getGooglehost() {
+          return googlehost;
+        }
+
+        /**
+         * **Deprecated**. Use the `gl` parameter for a similar effect. The local Google domain (for
+         * example, google.com, google.de, or google.fr) to use to perform the search.
+         */
+        public List setGooglehost(java.lang.String googlehost) {
+          this.googlehost = googlehost;
+          return this;
+        }
+
+        /**
+         * Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append
+         * an inclusive search range of `lowRange...highRange` to the query.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String highRange;
+
+        /** Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append an
+       inclusive search range of `lowRange...highRange` to the query.
+         */
+        public java.lang.String getHighRange() {
+          return highRange;
+        }
+
+        /**
+         * Specifies the ending value for a search range. * Use `lowRange` and `highRange` to append
+         * an inclusive search range of `lowRange...highRange` to the query.
+         */
+        public List setHighRange(java.lang.String highRange) {
+          this.highRange = highRange;
+          return this;
+        }
+
+        /**
+         * Sets the user interface language. * Explicitly setting this parameter improves the
+         * performance and the quality of your search results. * See the [Interface
+         * Languages](https://developers.google.com/custom-
+         * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+         * Results Presentation](https://developers.google.com/custom-
+         * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
+         * Interface Languages)[https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String hl;
+
+        /** Sets the user interface language. * Explicitly setting this parameter improves the performance and
+       the quality of your search results. * See the [Interface Languages](https://developers.google.com
+       /custom-search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+       Results Presentation](https://developers.google.com/custom-
+       search/docs/xml_results#wsInternationalizing) for more information, and (Supported Interface
+       Languages)[https://developers.google.com/custom-
+       search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+         */
+        public java.lang.String getHl() {
+          return hl;
+        }
+
+        /**
+         * Sets the user interface language. * Explicitly setting this parameter improves the
+         * performance and the quality of your search results. * See the [Interface
+         * Languages](https://developers.google.com/custom-
+         * search/docs/xml_results#wsInterfaceLanguages) section of [Internationalizing Queries and
+         * Results Presentation](https://developers.google.com/custom-
+         * search/docs/xml_results#wsInternationalizing) for more information, and (Supported
+         * Interface Languages)[https://developers.google.com/custom-
+         * search/docs/xml_results_appendices#interfaceLanguages] for a list of supported languages.
+         */
+        public List setHl(java.lang.String hl) {
+          this.hl = hl;
+          return this;
+        }
+
+        /**
+         * Appends the specified query terms to the query, as if they were combined with a logical
+         * AND operator.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String hq;
+
+        /** Appends the specified query terms to the query, as if they were combined with a logical AND
+       operator.
+         */
+        public java.lang.String getHq() {
+          return hq;
+        }
+
+        /**
+         * Appends the specified query terms to the query, as if they were combined with a logical
+         * AND operator.
+         */
+        public List setHq(java.lang.String hq) {
+          this.hq = hq;
+          return this;
+        }
+
+        /**
+         * Returns black and white, grayscale, transparent, or color images. Acceptable values are:
+         * * `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String imgColorType;
+
+        /** Returns black and white, grayscale, transparent, or color images. Acceptable values are: *
+       `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
+         */
+        public java.lang.String getImgColorType() {
+          return imgColorType;
+        }
+
+        /**
+         * Returns black and white, grayscale, transparent, or color images. Acceptable values are:
+         * * `"color"` * `"gray"` * `"mono"`: black and white * `"trans"`: transparent background
+         */
+        public List setImgColorType(java.lang.String imgColorType) {
+          this.imgColorType = imgColorType;
+          return this;
+        }
+
+        /**
+         * Returns images of a specific dominant color. Acceptable values are: * `"black"` *
+         * `"blue"` * `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` *
+         * `"red"` * `"teal"` * `"white"` * `"yellow"`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String imgDominantColor;
+
+        /** Returns images of a specific dominant color. Acceptable values are: * `"black"` * `"blue"` *
+       `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` * `"red"` * `"teal"` *
+       `"white"` * `"yellow"`
+         */
+        public java.lang.String getImgDominantColor() {
+          return imgDominantColor;
+        }
+
+        /**
+         * Returns images of a specific dominant color. Acceptable values are: * `"black"` *
+         * `"blue"` * `"brown"` * `"gray"` * `"green"` * `"orange"` * `"pink"` * `"purple"` *
+         * `"red"` * `"teal"` * `"white"` * `"yellow"`
+         */
+        public List setImgDominantColor(java.lang.String imgDominantColor) {
+          this.imgDominantColor = imgDominantColor;
+          return this;
+        }
+
+        /**
+         * Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` *
+         * `"large"` * `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String imgSize;
+
+        /** Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` * `"large"` *
+       `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
+         */
+        public java.lang.String getImgSize() {
+          return imgSize;
+        }
+
+        /**
+         * Returns images of a specified size. Acceptable values are: * `"huge"` * `"icon"` *
+         * `"large"` * `"medium"` * `"small"` * `"xlarge"` * `"xxlarge"`
+         */
+        public List setImgSize(java.lang.String imgSize) {
+          this.imgSize = imgSize;
+          return this;
+        }
+
+        /**
+         * Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` *
+         * `"stock"` * `"photo"` * `"animated"`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String imgType;
+
+        /** Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` * `"stock"`
+       * `"photo"` * `"animated"`
+         */
+        public java.lang.String getImgType() {
+          return imgType;
+        }
+
+        /**
+         * Returns images of a type. Acceptable values are: * `"clipart"` * `"face"` * `"lineart"` *
+         * `"stock"` * `"photo"` * `"animated"`
+         */
+        public List setImgType(java.lang.String imgType) {
+          this.imgType = imgType;
+          return this;
+        }
+
+        /** Specifies that all search results should contain a link to a particular URL. */
+        @com.google.api.client.util.Key
+        private java.lang.String linkSite;
+
+        /** Specifies that all search results should contain a link to a particular URL.
+         */
+        public java.lang.String getLinkSite() {
+          return linkSite;
+        }
+
+        /** Specifies that all search results should contain a link to a particular URL. */
+        public List setLinkSite(java.lang.String linkSite) {
+          this.linkSite = linkSite;
+          return this;
+        }
+
+        /**
+         * Specifies the starting value for a search range. Use `lowRange` and `highRange` to append
+         * an inclusive search range of `lowRange...highRange` to the query.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String lowRange;
+
+        /** Specifies the starting value for a search range. Use `lowRange` and `highRange` to append an
+       inclusive search range of `lowRange...highRange` to the query.
+         */
+        public java.lang.String getLowRange() {
+          return lowRange;
+        }
+
+        /**
+         * Specifies the starting value for a search range. Use `lowRange` and `highRange` to append
+         * an inclusive search range of `lowRange...highRange` to the query.
+         */
+        public List setLowRange(java.lang.String lowRange) {
+          this.lowRange = lowRange;
+          return this;
+        }
+
+        /**
+         * Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`).
+         * Acceptable values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`:
+         * Catalan * `"lang_cs"`: Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`:
+         * Greek * `"lang_en"`: English * `"lang_es"`: Spanish * `"lang_et"`: Estonian *
+         * `"lang_fi"`: Finnish * `"lang_fr"`: French * `"lang_hr"`: Croatian * `"lang_hu"`:
+         * Hungarian * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic * `"lang_it"`: Italian *
+         * `"lang_iw"`: Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean * `"lang_lt"`:
+         * Lithuanian * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian *
+         * `"lang_pl"`: Polish * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`:
+         * Russian * `"lang_sk"`: Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian *
+         * `"lang_sv"`: Swedish * `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) *
+         * `"lang_zh-TW"`: Chinese (Traditional)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String lr;
+
+        /** Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`). Acceptable
+       values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`: Catalan * `"lang_cs"`:
+       Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`: Greek * `"lang_en"`: English *
+       `"lang_es"`: Spanish * `"lang_et"`: Estonian * `"lang_fi"`: Finnish * `"lang_fr"`: French *
+       `"lang_hr"`: Croatian * `"lang_hu"`: Hungarian * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic *
+       `"lang_it"`: Italian * `"lang_iw"`: Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean *
+       `"lang_lt"`: Lithuanian * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian *
+       `"lang_pl"`: Polish * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`: Russian *
+       `"lang_sk"`: Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian * `"lang_sv"`: Swedish *
+       `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) * `"lang_zh-TW"`: Chinese (Traditional)
+         */
+        public java.lang.String getLr() {
+          return lr;
+        }
+
+        /**
+         * Restricts the search to documents written in a particular language (e.g., `lr=lang_ja`).
+         * Acceptable values are: * `"lang_ar"`: Arabic * `"lang_bg"`: Bulgarian * `"lang_ca"`:
+         * Catalan * `"lang_cs"`: Czech * `"lang_da"`: Danish * `"lang_de"`: German * `"lang_el"`:
+         * Greek * `"lang_en"`: English * `"lang_es"`: Spanish * `"lang_et"`: Estonian *
+         * `"lang_fi"`: Finnish * `"lang_fr"`: French * `"lang_hr"`: Croatian * `"lang_hu"`:
+         * Hungarian * `"lang_id"`: Indonesian * `"lang_is"`: Icelandic * `"lang_it"`: Italian *
+         * `"lang_iw"`: Hebrew * `"lang_ja"`: Japanese * `"lang_ko"`: Korean * `"lang_lt"`:
+         * Lithuanian * `"lang_lv"`: Latvian * `"lang_nl"`: Dutch * `"lang_no"`: Norwegian *
+         * `"lang_pl"`: Polish * `"lang_pt"`: Portuguese * `"lang_ro"`: Romanian * `"lang_ru"`:
+         * Russian * `"lang_sk"`: Slovak * `"lang_sl"`: Slovenian * `"lang_sr"`: Serbian *
+         * `"lang_sv"`: Swedish * `"lang_tr"`: Turkish * `"lang_zh-CN"`: Chinese (Simplified) *
+         * `"lang_zh-TW"`: Chinese (Traditional)
+         */
+        public List setLr(java.lang.String lr) {
+          this.lr = lr;
+          return this;
+        }
+
+        /**
+         * Number of search results to return. * Valid values are integers between 1 and 10,
+         * inclusive.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer num;
+
+        /** Number of search results to return. * Valid values are integers between 1 and 10, inclusive.
+         */
+        public java.lang.Integer getNum() {
+          return num;
+        }
+
+        /**
+         * Number of search results to return. * Valid values are integers between 1 and 10,
+         * inclusive.
+         */
+        public List setNum(java.lang.Integer num) {
+          this.num = num;
+          return this;
+        }
+
+        /**
+         * Provides additional search terms to check for in a document, where each document in the
+         * search results must contain at least one of the additional search terms.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orTerms;
+
+        /** Provides additional search terms to check for in a document, where each document in the search
+       results must contain at least one of the additional search terms.
+         */
+        public java.lang.String getOrTerms() {
+          return orTerms;
+        }
+
+        /**
+         * Provides additional search terms to check for in a document, where each document in the
+         * search results must contain at least one of the additional search terms.
+         */
+        public List setOrTerms(java.lang.String orTerms) {
+          this.orTerms = orTerms;
+          return this;
+        }
+
+        /** Query */
+        @com.google.api.client.util.Key
+        private java.lang.String q;
+
+        /** Query
+         */
+        public java.lang.String getQ() {
+          return q;
+        }
+
+        /** Query */
+        public List setQ(java.lang.String q) {
+          this.q = q;
+          return this;
+        }
+
+        /**
+         * Specifies that all search results should be pages that are related to the specified URL.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String relatedSite;
+
+        /** Specifies that all search results should be pages that are related to the specified URL.
+         */
+        public java.lang.String getRelatedSite() {
+          return relatedSite;
+        }
+
+        /**
+         * Specifies that all search results should be pages that are related to the specified URL.
+         */
+        public List setRelatedSite(java.lang.String relatedSite) {
+          this.relatedSite = relatedSite;
+          return this;
+        }
+
+        /**
+         * Filters based on licensing. Supported values include: `cc_publicdomain`, `cc_attribute`,
+         * `cc_sharealike`, `cc_noncommercial`, `cc_nonderived` and combinations of these. See
+         * [typical combinations](https://wiki.creativecommons.org/wiki/CC_Search_integration).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String rights;
+
+        /** Filters based on licensing. Supported values include: `cc_publicdomain`, `cc_attribute`,
+       `cc_sharealike`, `cc_noncommercial`, `cc_nonderived` and combinations of these. See [typical
+       combinations](https://wiki.creativecommons.org/wiki/CC_Search_integration).
+         */
+        public java.lang.String getRights() {
+          return rights;
+        }
+
+        /**
+         * Filters based on licensing. Supported values include: `cc_publicdomain`, `cc_attribute`,
+         * `cc_sharealike`, `cc_noncommercial`, `cc_nonderived` and combinations of these. See
+         * [typical combinations](https://wiki.creativecommons.org/wiki/CC_Search_integration).
+         */
+        public List setRights(java.lang.String rights) {
+          this.rights = rights;
+          return this;
+        }
+
+        /**
+         * Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. *
+         * `"off"`: Disables SafeSearch filtering. (default)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String safe;
+
+        /** Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. * `"off"`:
+       Disables SafeSearch filtering. (default)
+         */
+        public java.lang.String getSafe() {
+          return safe;
+        }
+
+        /**
+         * Search safety level. Acceptable values are: * `"active"`: Enables SafeSearch filtering. *
+         * `"off"`: Disables SafeSearch filtering. (default)
+         */
+        public List setSafe(java.lang.String safe) {
+          this.safe = safe;
+          return this;
+        }
+
+        /**
+         * Specifies the search type: `image`. If unspecified, results are limited to webpages.
+         * Acceptable values are: * `"image"`: custom image search.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String searchType;
+
+        /** Specifies the search type: `image`. If unspecified, results are limited to webpages. Acceptable
+       values are: * `"image"`: custom image search.
+         */
+        public java.lang.String getSearchType() {
+          return searchType;
+        }
+
+        /**
+         * Specifies the search type: `image`. If unspecified, results are limited to webpages.
+         * Acceptable values are: * `"image"`: custom image search.
+         */
+        public List setSearchType(java.lang.String searchType) {
+          this.searchType = searchType;
+          return this;
+        }
+
+        /**
+         * Specifies a given site which should always be included or excluded from results (see
+         * `siteSearchFilter` parameter, below).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String siteSearch;
+
+        /** Specifies a given site which should always be included or excluded from results (see
+       `siteSearchFilter` parameter, below).
+         */
+        public java.lang.String getSiteSearch() {
+          return siteSearch;
+        }
+
+        /**
+         * Specifies a given site which should always be included or excluded from results (see
+         * `siteSearchFilter` parameter, below).
+         */
+        public List setSiteSearch(java.lang.String siteSearch) {
+          this.siteSearch = siteSearch;
+          return this;
+        }
+
+        /**
+         * Controls whether to include or exclude results from the site named in the `siteSearch`
+         * parameter. Acceptable values are: * `"e"`: exclude * `"i"`: include
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String siteSearchFilter;
+
+        /** Controls whether to include or exclude results from the site named in the `siteSearch` parameter.
+       Acceptable values are: * `"e"`: exclude * `"i"`: include
+         */
+        public java.lang.String getSiteSearchFilter() {
+          return siteSearchFilter;
+        }
+
+        /**
+         * Controls whether to include or exclude results from the site named in the `siteSearch`
+         * parameter. Acceptable values are: * `"e"`: exclude * `"i"`: include
+         */
+        public List setSiteSearchFilter(java.lang.String siteSearchFilter) {
+          this.siteSearchFilter = siteSearchFilter;
+          return this;
+        }
+
+        /**
+         * The sort expression to apply to the results. The sort parameter specifies that the
+         * results be sorted according to the specified expression i.e. sort by date. [Example:
+         * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+         * attribute).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String sort;
+
+        /** The sort expression to apply to the results. The sort parameter specifies that the results be
+       sorted according to the specified expression i.e. sort by date. [Example:
+       sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-attribute).
+         */
+        public java.lang.String getSort() {
+          return sort;
+        }
+
+        /**
+         * The sort expression to apply to the results. The sort parameter specifies that the
+         * results be sorted according to the specified expression i.e. sort by date. [Example:
+         * sort=date](https://developers.google.com/custom-search/docs/structured_search#sort-by-
+         * attribute).
+         */
+        public List setSort(java.lang.String sort) {
+          this.sort = sort;
+          return this;
+        }
+
+        /**
+         * The index of the first result to return. The default number of results per page is 10, so
+         * `=11` would start at the top of the second page of results. **Note**: The JSON API will
+         * never return more than 100 results, even if more than 100 documents match the query, so
+         * setting the sum of `start + num` to a number greater than 100 will produce an error. Also
+         * note that the maximum value for `num` is 10.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long start;
+
+        /** The index of the first result to return. The default number of results per page is 10, so `=11`
+       would start at the top of the second page of results. **Note**: The JSON API will never return more
+       than 100 results, even if more than 100 documents match the query, so setting the sum of `start +
+       num` to a number greater than 100 will produce an error. Also note that the maximum value for `num`
+       is 10.
+         */
+        public java.lang.Long getStart() {
+          return start;
+        }
+
+        /**
+         * The index of the first result to return. The default number of results per page is 10, so
+         * `=11` would start at the top of the second page of results. **Note**: The JSON API will
+         * never return more than 100 results, even if more than 100 documents match the query, so
+         * setting the sum of `start + num` to a number greater than 100 will produce an error. Also
+         * note that the maximum value for `num` is 10.
+         */
+        public List setStart(java.lang.Long start) {
+          this.start = start;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
       }
 
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public List set$Xgafv(java.lang.String $Xgafv) {
-        return (List) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public List setAlt(java.lang.String alt) {
-        return (List) super.setAlt(alt);
-      }
-
-      @Override
-      public List setCallback(java.lang.String callback) {
-        return (List) super.setCallback(callback);
-      }
-
-      @Override
-      public List setFields(java.lang.String fields) {
-        return (List) super.setFields(fields);
-      }
-
-      @Override
-      public List setKey(java.lang.String key) {
-        return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (List) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public List setQuotaUser(java.lang.String quotaUser) {
-        return (List) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public List setUploadType(java.lang.String uploadType) {
-        return (List) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public List setUploadProtocol(java.lang.String uploadProtocol) {
-        return (List) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** Turns off the translation between zh-CN and zh-TW. */
-      @com.google.api.client.util.Key
-      private java.lang.String c2coff;
-
-      /** Turns off the translation between zh-CN and zh-TW.
-       */
-      public java.lang.String getC2coff() {
-        return c2coff;
-      }
-
-      /** Turns off the translation between zh-CN and zh-TW. */
-      public List setC2coff(java.lang.String c2coff) {
-        this.c2coff = c2coff;
-        return this;
-      }
-
-      /** Country restrict(s). */
-      @com.google.api.client.util.Key
-      private java.lang.String cr;
-
-      /** Country restrict(s).
-       */
-      public java.lang.String getCr() {
-        return cr;
-      }
-
-      /** Country restrict(s). */
-      public List setCr(java.lang.String cr) {
-        this.cr = cr;
-        return this;
-      }
-
-      /** The custom search engine ID to scope this search query */
-      @com.google.api.client.util.Key
-      private java.lang.String cx;
-
-      /** The custom search engine ID to scope this search query
-       */
-      public java.lang.String getCx() {
-        return cx;
-      }
-
-      /** The custom search engine ID to scope this search query */
-      public List setCx(java.lang.String cx) {
-        this.cx = cx;
-        return this;
-      }
-
-      /** Specifies all search results are from a time period */
-      @com.google.api.client.util.Key
-      private java.lang.String dateRestrict;
-
-      /** Specifies all search results are from a time period
-       */
-      public java.lang.String getDateRestrict() {
-        return dateRestrict;
-      }
-
-      /** Specifies all search results are from a time period */
-      public List setDateRestrict(java.lang.String dateRestrict) {
-        this.dateRestrict = dateRestrict;
-        return this;
-      }
-
-      /** Identifies a phrase that all documents in the search results must contain */
-      @com.google.api.client.util.Key
-      private java.lang.String exactTerms;
-
-      /** Identifies a phrase that all documents in the search results must contain
-       */
-      public java.lang.String getExactTerms() {
-        return exactTerms;
-      }
-
-      /** Identifies a phrase that all documents in the search results must contain */
-      public List setExactTerms(java.lang.String exactTerms) {
-        this.exactTerms = exactTerms;
-        return this;
-      }
-
-      /**
-       * Identifies a word or phrase that should not appear in any documents in the search results
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String excludeTerms;
-
-      /** Identifies a word or phrase that should not appear in any documents in the search results
-       */
-      public java.lang.String getExcludeTerms() {
-        return excludeTerms;
-      }
-
-      /**
-       * Identifies a word or phrase that should not appear in any documents in the search results
-       */
-      public List setExcludeTerms(java.lang.String excludeTerms) {
-        this.excludeTerms = excludeTerms;
-        return this;
-      }
-
-      /**
-       * Returns images of a specified type. Some of the allowed values are: bmp, gif, png, jpg,
-       * svg, pdf, ...
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String fileType;
-
-      /** Returns images of a specified type. Some of the allowed values are: bmp, gif, png, jpg, svg, pdf,
-     ...
-       */
-      public java.lang.String getFileType() {
-        return fileType;
-      }
-
-      /**
-       * Returns images of a specified type. Some of the allowed values are: bmp, gif, png, jpg,
-       * svg, pdf, ...
-       */
-      public List setFileType(java.lang.String fileType) {
-        this.fileType = fileType;
-        return this;
-      }
-
-      /** Controls turning on (1) or off (0) the duplicate content filter. */
-      @com.google.api.client.util.Key
-      private java.lang.String filter;
-
-      /** Controls turning on (1) or off (0) the duplicate content filter.
-       */
-      public java.lang.String getFilter() {
-        return filter;
-      }
-
-      /** Controls turning on (1) or off (0) the duplicate content filter. */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
-        return this;
-      }
-
-      /** Geolocation of end user. */
-      @com.google.api.client.util.Key
-      private java.lang.String gl;
-
-      /** Geolocation of end user.
-       */
-      public java.lang.String getGl() {
-        return gl;
-      }
-
-      /** Geolocation of end user. */
-      public List setGl(java.lang.String gl) {
-        this.gl = gl;
-        return this;
-      }
-
-      /** The local Google domain to use to perform the search. */
-      @com.google.api.client.util.Key
-      private java.lang.String googlehost;
-
-      /** The local Google domain to use to perform the search.
-       */
-      public java.lang.String getGooglehost() {
-        return googlehost;
-      }
-
-      /** The local Google domain to use to perform the search. */
-      public List setGooglehost(java.lang.String googlehost) {
-        this.googlehost = googlehost;
-        return this;
-      }
-
-      /**
-       * Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String highRange;
-
-      /** Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
-       */
-      public java.lang.String getHighRange() {
-        return highRange;
-      }
-
-      /**
-       * Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
-       */
-      public List setHighRange(java.lang.String highRange) {
-        this.highRange = highRange;
-        return this;
-      }
-
-      /** Sets the user interface language. */
-      @com.google.api.client.util.Key
-      private java.lang.String hl;
-
-      /** Sets the user interface language.
-       */
-      public java.lang.String getHl() {
-        return hl;
-      }
-
-      /** Sets the user interface language. */
-      public List setHl(java.lang.String hl) {
-        this.hl = hl;
-        return this;
-      }
-
-      /** Appends the extra hidden query terms to the query. */
-      @com.google.api.client.util.Key
-      private java.lang.String hq;
-
-      /** Appends the extra hidden query terms to the query.
-       */
-      public java.lang.String getHq() {
-        return hq;
-      }
-
-      /** Appends the extra hidden query terms to the query. */
-      public List setHq(java.lang.String hq) {
-        this.hq = hq;
-        return this;
-      }
-
-      /**
-       * Returns black and white, grayscale, transparent-background or color images: mono, gray,
-       * trans, and color.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String imgColorType;
-
-      /** Returns black and white, grayscale, transparent-background or color images: mono, gray, trans, and
-     color.
-       */
-      public java.lang.String getImgColorType() {
-        return imgColorType;
-      }
-
-      /**
-       * Returns black and white, grayscale, transparent-background or color images: mono, gray,
-       * trans, and color.
-       */
-      public List setImgColorType(java.lang.String imgColorType) {
-        this.imgColorType = imgColorType;
-        return this;
-      }
-
-      /**
-       * Returns images of a specific dominant color: red, orange, yellow, green, teal, blue,
-       * purple, pink, white, gray, black and brown.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String imgDominantColor;
-
-      /** Returns images of a specific dominant color: red, orange, yellow, green, teal, blue, purple, pink,
-     white, gray, black and brown.
-       */
-      public java.lang.String getImgDominantColor() {
-        return imgDominantColor;
-      }
-
-      /**
-       * Returns images of a specific dominant color: red, orange, yellow, green, teal, blue,
-       * purple, pink, white, gray, black and brown.
-       */
-      public List setImgDominantColor(java.lang.String imgDominantColor) {
-        this.imgDominantColor = imgDominantColor;
-        return this;
-      }
-
-      /**
-       * Returns images of a specified size, where size can be one of: icon, small, medium, large,
-       * xlarge, xxlarge, and huge.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String imgSize;
-
-      /** Returns images of a specified size, where size can be one of: icon, small, medium, large, xlarge,
-     xxlarge, and huge.
-       */
-      public java.lang.String getImgSize() {
-        return imgSize;
-      }
-
-      /**
-       * Returns images of a specified size, where size can be one of: icon, small, medium, large,
-       * xlarge, xxlarge, and huge.
-       */
-      public List setImgSize(java.lang.String imgSize) {
-        this.imgSize = imgSize;
-        return this;
-      }
-
-      /**
-       * Returns images of a type, which can be one of: clipart, face, lineart, stock, photo, and
-       * animated.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String imgType;
-
-      /** Returns images of a type, which can be one of: clipart, face, lineart, stock, photo, and animated.
-       */
-      public java.lang.String getImgType() {
-        return imgType;
-      }
-
-      /**
-       * Returns images of a type, which can be one of: clipart, face, lineart, stock, photo, and
-       * animated.
-       */
-      public List setImgType(java.lang.String imgType) {
-        this.imgType = imgType;
-        return this;
-      }
-
-      /** Specifies that all search results should contain a link to a particular URL */
-      @com.google.api.client.util.Key
-      private java.lang.String linkSite;
-
-      /** Specifies that all search results should contain a link to a particular URL
-       */
-      public java.lang.String getLinkSite() {
-        return linkSite;
-      }
-
-      /** Specifies that all search results should contain a link to a particular URL */
-      public List setLinkSite(java.lang.String linkSite) {
-        this.linkSite = linkSite;
-        return this;
-      }
-
-      /**
-       * Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String lowRange;
-
-      /** Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
-       */
-      public java.lang.String getLowRange() {
-        return lowRange;
-      }
-
-      /**
-       * Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
-       */
-      public List setLowRange(java.lang.String lowRange) {
-        this.lowRange = lowRange;
-        return this;
-      }
-
-      /** The language restriction for the search results */
-      @com.google.api.client.util.Key
-      private java.lang.String lr;
-
-      /** The language restriction for the search results
-       */
-      public java.lang.String getLr() {
-        return lr;
-      }
-
-      /** The language restriction for the search results */
-      public List setLr(java.lang.String lr) {
-        this.lr = lr;
-        return this;
-      }
-
-      /** Number of search results to return */
-      @com.google.api.client.util.Key
-      private java.lang.Integer num;
-
-      /** Number of search results to return
-       */
-      public java.lang.Integer getNum() {
-        return num;
-      }
-
-      /** Number of search results to return */
-      public List setNum(java.lang.Integer num) {
-        this.num = num;
-        return this;
-      }
-
-      /**
-       * Provides additional search terms to check for in a document, where each document in the
-       * search results must contain at least one of the additional search terms
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String orTerms;
-
-      /** Provides additional search terms to check for in a document, where each document in the search
-     results must contain at least one of the additional search terms
-       */
-      public java.lang.String getOrTerms() {
-        return orTerms;
-      }
-
-      /**
-       * Provides additional search terms to check for in a document, where each document in the
-       * search results must contain at least one of the additional search terms
-       */
-      public List setOrTerms(java.lang.String orTerms) {
-        this.orTerms = orTerms;
-        return this;
-      }
-
-      /** Query */
-      @com.google.api.client.util.Key
-      private java.lang.String q;
-
-      /** Query
-       */
-      public java.lang.String getQ() {
-        return q;
-      }
-
-      /** Query */
-      public List setQ(java.lang.String q) {
-        this.q = q;
-        return this;
-      }
-
-      /**
-       * Specifies that all search results should be pages that are related to the specified URL
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String relatedSite;
-
-      /** Specifies that all search results should be pages that are related to the specified URL
-       */
-      public java.lang.String getRelatedSite() {
-        return relatedSite;
-      }
-
-      /**
-       * Specifies that all search results should be pages that are related to the specified URL
-       */
-      public List setRelatedSite(java.lang.String relatedSite) {
-        this.relatedSite = relatedSite;
-        return this;
-      }
-
-      /**
-       * Filters based on licensing. Supported values include: cc_publicdomain, cc_attribute,
-       * cc_sharealike, cc_noncommercial, cc_nonderived and combinations of these. See
-       * https://wiki.creativecommons.org/wiki/CC_Search_integration for typical combinations.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String rights;
-
-      /** Filters based on licensing. Supported values include: cc_publicdomain, cc_attribute, cc_sharealike,
-     cc_noncommercial, cc_nonderived and combinations of these. See
-     https://wiki.creativecommons.org/wiki/CC_Search_integration for typical combinations.
-       */
-      public java.lang.String getRights() {
-        return rights;
-      }
-
-      /**
-       * Filters based on licensing. Supported values include: cc_publicdomain, cc_attribute,
-       * cc_sharealike, cc_noncommercial, cc_nonderived and combinations of these. See
-       * https://wiki.creativecommons.org/wiki/CC_Search_integration for typical combinations.
-       */
-      public List setRights(java.lang.String rights) {
-        this.rights = rights;
-        return this;
-      }
-
-      /** Search safety level (active, off) (high, medium are same as active) */
-      @com.google.api.client.util.Key
-      private java.lang.String safe;
-
-      /** Search safety level (active, off) (high, medium are same as active)
-       */
-      public java.lang.String getSafe() {
-        return safe;
-      }
-
-      /** Search safety level (active, off) (high, medium are same as active) */
-      public List setSafe(java.lang.String safe) {
-        this.safe = safe;
-        return this;
-      }
-
-      /** Specifies the search type: image. */
-      @com.google.api.client.util.Key
-      private java.lang.String searchType;
-
-      /** Specifies the search type: image.
-       */
-      public java.lang.String getSearchType() {
-        return searchType;
-      }
-
-      /** Specifies the search type: image. */
-      public List setSearchType(java.lang.String searchType) {
-        this.searchType = searchType;
-        return this;
-      }
-
-      /** Specifies all search results should be pages from a given site */
-      @com.google.api.client.util.Key
-      private java.lang.String siteSearch;
-
-      /** Specifies all search results should be pages from a given site
-       */
-      public java.lang.String getSiteSearch() {
-        return siteSearch;
-      }
-
-      /** Specifies all search results should be pages from a given site */
-      public List setSiteSearch(java.lang.String siteSearch) {
-        this.siteSearch = siteSearch;
-        return this;
-      }
-
-      /**
-       * Controls whether to include (i) or exclude (e) results from the site named in the
-       * siteSearch parameter
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String siteSearchFilter;
-
-      /** Controls whether to include (i) or exclude (e) results from the site named in the siteSearch
-     parameter
-       */
-      public java.lang.String getSiteSearchFilter() {
-        return siteSearchFilter;
-      }
-
-      /**
-       * Controls whether to include (i) or exclude (e) results from the site named in the
-       * siteSearch parameter
-       */
-      public List setSiteSearchFilter(java.lang.String siteSearchFilter) {
-        this.siteSearchFilter = siteSearchFilter;
-        return this;
-      }
-
-      /** The sort expression to apply to the results */
-      @com.google.api.client.util.Key
-      private java.lang.String sort;
-
-      /** The sort expression to apply to the results
-       */
-      public java.lang.String getSort() {
-        return sort;
-      }
-
-      /** The sort expression to apply to the results */
-      public List setSort(java.lang.String sort) {
-        this.sort = sort;
-        return this;
-      }
-
-      /** The index of the first result to return */
-      @com.google.api.client.util.Key
-      private java.lang.Long start;
-
-      /** The index of the first result to return
-       */
-      public java.lang.Long getStart() {
-        return start;
-      }
-
-      /** The index of the first result to return */
-      public List setStart(java.lang.Long start) {
-        this.start = start;
-        return this;
-      }
-
-      @Override
-      public List set(String parameterName, Object value) {
-        return (List) super.set(parameterName, value);
-      }
     }
-
   }
 
   /**

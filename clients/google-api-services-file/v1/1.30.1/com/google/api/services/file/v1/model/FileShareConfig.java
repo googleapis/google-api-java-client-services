@@ -44,6 +44,15 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * The resource name of the backup, in the format
+   * projects/{project_number}/locations/{location_id}/backups/{backup_id}, that this file share has
+   * been restored from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceBackup;
+
+  /**
    * File share capacity in gigabytes (GB). Cloud Filestore defines 1 GB as 1024^3 bytes.
    * @return value or {@code null} for none
    */
@@ -74,6 +83,27 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
    */
   public FileShareConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The resource name of the backup, in the format
+   * projects/{project_number}/locations/{location_id}/backups/{backup_id}, that this file share has
+   * been restored from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceBackup() {
+    return sourceBackup;
+  }
+
+  /**
+   * The resource name of the backup, in the format
+   * projects/{project_number}/locations/{location_id}/backups/{backup_id}, that this file share has
+   * been restored from.
+   * @param sourceBackup sourceBackup or {@code null} for none
+   */
+  public FileShareConfig setSourceBackup(java.lang.String sourceBackup) {
+    this.sourceBackup = sourceBackup;
     return this;
   }
 

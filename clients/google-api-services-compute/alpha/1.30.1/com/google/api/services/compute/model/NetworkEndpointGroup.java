@@ -19,8 +19,12 @@ package com.google.api.services.compute.model;
 /**
  * Represents a collection of network endpoints.
  *
- * For more information read Network endpoint groups overview. (== resource_for
- * {$api_version}.networkEndpointGroups ==) Next ID: 21
+ * A network endpoint group (NEG) defines how a set of endpoints should be reached, whether they are
+ * reachable, and where they are located. For more information about using NEGs, see  Setting up
+ * internet NEGs,  Setting up zonal NEGs, or  Setting up serverless NEGs. (== resource_for
+ * {$api_version}.networkEndpointGroups ==) (== resource_for
+ * {$api_version}.globalNetworkEndpointGroups ==) (== resource_for
+ * {$api_version}.regionNetworkEndpointGroups ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -127,7 +131,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String network;
 
   /**
-   * Type of network endpoints in this network endpoint group.
+   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT,
+   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -407,7 +412,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Type of network endpoints in this network endpoint group.
+   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT,
+   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkEndpointType() {
@@ -415,7 +421,8 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Type of network endpoints in this network endpoint group.
+   * Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP_PORT,
+   * NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, or SERVERLESS.
    * @param networkEndpointType networkEndpointType or {@code null} for none
    */
   public NetworkEndpointGroup setNetworkEndpointType(java.lang.String networkEndpointType) {

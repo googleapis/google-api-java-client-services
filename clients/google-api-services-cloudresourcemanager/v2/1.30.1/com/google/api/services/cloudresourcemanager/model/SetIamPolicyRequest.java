@@ -41,8 +41,8 @@ public final class SetIamPolicyRequest extends com.google.api.client.json.Generi
 
   /**
    * OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the
-   * mask will be modified. If no mask is provided, the following default mask is used: paths:
-   * "bindings, etag" This field is only used by Cloud IAM.
+   * mask will be modified. If no mask is provided, the following default mask is used: `paths:
+   * "bindings, etag"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class SetIamPolicyRequest extends com.google.api.client.json.Generi
 
   /**
    * OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the
-   * mask will be modified. If no mask is provided, the following default mask is used: paths:
-   * "bindings, etag" This field is only used by Cloud IAM.
+   * mask will be modified. If no mask is provided, the following default mask is used: `paths:
+   * "bindings, etag"`
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -81,8 +81,8 @@ public final class SetIamPolicyRequest extends com.google.api.client.json.Generi
 
   /**
    * OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the
-   * mask will be modified. If no mask is provided, the following default mask is used: paths:
-   * "bindings, etag" This field is only used by Cloud IAM.
+   * mask will be modified. If no mask is provided, the following default mask is used: `paths:
+   * "bindings, etag"`
    * @param updateMask updateMask or {@code null} for none
    */
   public SetIamPolicyRequest setUpdateMask(String updateMask) {

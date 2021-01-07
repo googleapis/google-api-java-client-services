@@ -46,7 +46,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud OS Config API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud OS Config API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -330,8 +330,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the osconfig server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the patch deployment in the form
-      `projects/patchDeployments`.
+       * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -358,8 +357,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the patch deployment in the form
-      `projects/patchDeployments`.
+         * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -467,8 +465,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the osconfig server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the patch deployment in the form
-      `projects/patchDeployments`.
+       * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -494,8 +491,7 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the patch deployment in the form
-      `projects/patchDeployments`.
+         * @param name Required. The resource name of the patch deployment in the form `projects/patchDeployments`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1585,17 +1581,17 @@ public class SystemsManagement extends com.google.api.client.googleapis.services
             return this;
           }
 
-          /** The maximum number of instance details records to return.  Default is 100. */
+          /** The maximum number of instance details records to return. Default is 100. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of instance details records to return.  Default is 100.
+          /** The maximum number of instance details records to return. Default is 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The maximum number of instance details records to return.  Default is 100. */
+          /** The maximum number of instance details records to return. Default is 100. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;

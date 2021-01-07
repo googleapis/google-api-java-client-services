@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-speech",
-    "version": "v1-rev20200326-1.30.9"
+    "version": "v1-rev20200824-1.31.0"
   }
 }

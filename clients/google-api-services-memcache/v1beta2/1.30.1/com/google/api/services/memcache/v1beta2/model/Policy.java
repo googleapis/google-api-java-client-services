@@ -25,9 +25,11 @@ package com.google.api.services.memcache.v1beta2.model;
  * Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role or a
  * user-created custom role.
  *
- * Optionally, a `binding` can specify a `condition`, which is a logical expression that allows
- * access to a resource only if the expression evaluates to `true`. A condition can add constraints
- * based on attributes of the request, the resource, or both.
+ * For some types of Google Cloud resources, a `binding` can also specify a `condition`, which is a
+ * logical expression that allows access to a resource only if the expression evaluates to `true`. A
+ * condition can add constraints based on attributes of the request, the resource, or both. To learn
+ * which resources support conditions in their IAM policies, see the [IAM
+ * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
  *
  * **JSON example:**
  *
@@ -35,8 +37,8 @@ package com.google.api.services.memcache.v1beta2.model;
  * "members": [             "user:mike@example.com",             "group:admins@example.com",
  * "domain:google.com",             "serviceAccount:my-project-id@appspot.gserviceaccount.com"
  * ]         },         {           "role": "roles/resourcemanager.organizationViewer",
- * "members": ["user:eve@example.com"],           "condition": {             "title": "expirable
- * access",             "description": "Does not grant access after Sep 2020",
+ * "members": [             "user:eve@example.com"           ],           "condition": {
+ * "title": "expirable access",             "description": "Does not grant access after Sep 2020",
  * "expression": "request.time < timestamp('2020-10-01T00:00:00.000Z')",           }         }
  * ],       "etag": "BwWWja0YfJA=",       "version": 3     }
  *
@@ -125,6 +127,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    *
    * If a policy does not include any conditions, operations on that policy may specify any valid
    * version or leave the field unset.
+   *
+   * To learn which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,6 +272,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    *
    * If a policy does not include any conditions, operations on that policy may specify any valid
    * version or leave the field unset.
+   *
+   * To learn which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersion() {
@@ -291,6 +299,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    *
    * If a policy does not include any conditions, operations on that policy may specify any valid
    * version or leave the field unset.
+   *
+   * To learn which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * @param version version or {@code null} for none
    */
   public Policy setVersion(java.lang.Integer version) {

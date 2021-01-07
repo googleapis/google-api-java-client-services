@@ -42,11 +42,15 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String iPv4Range;
 
   /**
-   * When set to true, the VPC network is created in "auto" mode. When set to false, the VPC network
-   * is created in "custom" mode.
+   * Must be set to create a VPC network. If not set, a legacy network is created.
+   *
+   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
+   * is created in custom mode.
    *
    * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
    * range as described in Auto mode VPC network IP ranges.
+   *
+   * For custom mode VPC networks, you can add subnets using the subnetworks insert method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,6 +90,14 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
+   * value is 1500 bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer mtu;
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
@@ -149,11 +161,15 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set to true, the VPC network is created in "auto" mode. When set to false, the VPC network
-   * is created in "custom" mode.
+   * Must be set to create a VPC network. If not set, a legacy network is created.
+   *
+   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
+   * is created in custom mode.
    *
    * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
    * range as described in Auto mode VPC network IP ranges.
+   *
+   * For custom mode VPC networks, you can add subnets using the subnetworks insert method.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoCreateSubnetworks() {
@@ -161,11 +177,15 @@ public final class Network extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set to true, the VPC network is created in "auto" mode. When set to false, the VPC network
-   * is created in "custom" mode.
+   * Must be set to create a VPC network. If not set, a legacy network is created.
+   *
+   * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
+   * is created in custom mode.
    *
    * An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined
    * range as described in Auto mode VPC network IP ranges.
+   *
+   * For custom mode VPC networks, you can add subnets using the subnetworks insert method.
    * @param autoCreateSubnetworks autoCreateSubnetworks or {@code null} for none
    */
   public Network setAutoCreateSubnetworks(java.lang.Boolean autoCreateSubnetworks) {
@@ -255,6 +275,25 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
+   * value is 1500 bytes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMtu() {
+    return mtu;
+  }
+
+  /**
+   * Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum
+   * value is 1500 bytes.
+   * @param mtu mtu or {@code null} for none
+   */
+  public Network setMtu(java.lang.Integer mtu) {
+    this.mtu = mtu;
     return this;
   }
 

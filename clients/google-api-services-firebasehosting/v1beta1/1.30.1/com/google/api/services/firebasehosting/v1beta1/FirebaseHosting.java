@@ -46,7 +46,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Firebase Hosting API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Firebase Hosting API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -163,7 +163,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
     public class Operations {
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -188,7 +188,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -325,6 +325,318 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
     public class Sites {
 
       /**
+       * Gets the Hosting metadata for a specific site.
+       *
+       * Create a request for the method "sites.getConfig".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The site for which to get the SiteConfig, in the format: sites/ site-name/config
+       * @return the request
+       */
+      public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
+        GetConfig result = new GetConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetConfig extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.SiteConfig> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/config$");
+
+        /**
+         * Gets the Hosting metadata for a specific site.
+         *
+         * Create a request for the method "sites.getConfig".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link GetConfig#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The site for which to get the SiteConfig, in the format: sites/ site-name/config
+         * @since 1.13
+         */
+        protected GetConfig(java.lang.String name) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.SiteConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/sites/[^/]+/config$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetConfig setAccessToken(java.lang.String accessToken) {
+          return (GetConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetConfig setAlt(java.lang.String alt) {
+          return (GetConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetConfig setCallback(java.lang.String callback) {
+          return (GetConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetConfig setFields(java.lang.String fields) {
+          return (GetConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetConfig setKey(java.lang.String key) {
+          return (GetConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetConfig setUploadType(java.lang.String uploadType) {
+          return (GetConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The site for which to get the SiteConfig, in the format: sites/ site-
+         * name/config
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The site for which to get the SiteConfig, in the format: sites/ site-name/config
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The site for which to get the SiteConfig, in the format: sites/ site-
+         * name/config
+         */
+        public GetConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/sites/[^/]+/config$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetConfig set(String parameterName, Object value) {
+          return (GetConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Sets the Hosting metadata for a specific site.
+       *
+       * Create a request for the method "sites.updateConfig".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link UpdateConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The site for which to update the SiteConfig, in the format: sites/ site-name/config
+       * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.SiteConfig}
+       * @return the request
+       */
+      public UpdateConfig updateConfig(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.SiteConfig content) throws java.io.IOException {
+        UpdateConfig result = new UpdateConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateConfig extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.SiteConfig> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/config$");
+
+        /**
+         * Sets the Hosting metadata for a specific site.
+         *
+         * Create a request for the method "sites.updateConfig".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link UpdateConfig#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The site for which to update the SiteConfig, in the format: sites/ site-name/config
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.SiteConfig}
+         * @since 1.13
+         */
+        protected UpdateConfig(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.SiteConfig content) {
+          super(FirebaseHosting.this, "PATCH", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.SiteConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/sites/[^/]+/config$");
+          }
+        }
+
+        @Override
+        public UpdateConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateConfig setAlt(java.lang.String alt) {
+          return (UpdateConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateConfig setCallback(java.lang.String callback) {
+          return (UpdateConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateConfig setFields(java.lang.String fields) {
+          return (UpdateConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateConfig setKey(java.lang.String key) {
+          return (UpdateConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The site for which to update the SiteConfig, in the format: sites/ site-
+         * name/config
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The site for which to update the SiteConfig, in the format: sites/ site-name/config
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The site for which to update the SiteConfig, in the format: sites/ site-
+         * name/config
+         */
+        public UpdateConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/sites/[^/]+/config$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * A set of field names from your [site configuration](../sites.SiteConfig) that you want to
+         * update. A field will be overwritten if, and only if, it's in the mask. If a mask is not
+         * provided then a default mask of only [`max_versions`](../sites.SiteConfig.max_versions)
+         * will be used.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** A set of field names from your [site configuration](../sites.SiteConfig) that you want to update. A
+       field will be overwritten if, and only if, it's in the mask. If a mask is not provided then a
+       default mask of only [`max_versions`](../sites.SiteConfig.max_versions) will be used.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * A set of field names from your [site configuration](../sites.SiteConfig) that you want to
+         * update. A field will be overwritten if, and only if, it's in the mask. If a mask is not
+         * provided then a default mask of only [`max_versions`](../sites.SiteConfig.max_versions)
+         * will be used.
+         */
+        public UpdateConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateConfig set(String parameterName, Object value) {
+          return (UpdateConfig) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the Channels collection.
        *
        * <p>The typical use is:</p>
@@ -343,6 +655,750 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * The "channels" collection of methods.
        */
       public class Channels {
+
+        /**
+         * Creates a new channel in the specified site.
+         *
+         * Create a request for the method "channels.create".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The site in which this channel should be created.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Channel content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/channels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+          /**
+           * Creates a new channel in the specified site.
+           *
+           * Create a request for the method "channels.create".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The site in which this channel should be created.
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Channel content) {
+            super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The site in which this channel should be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The site in which this channel should be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The site in which this channel should be created. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. Immutable. A unique id within the site to identify the channel. */
+          @com.google.api.client.util.Key
+          private java.lang.String channelId;
+
+          /** Required. Immutable. A unique id within the site to identify the channel.
+           */
+          public java.lang.String getChannelId() {
+            return channelId;
+          }
+
+          /** Required. Immutable. A unique id within the site to identify the channel. */
+          public Create setChannelId(java.lang.String channelId) {
+            this.channelId = channelId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a channel of a site. The `live` channel cannot be deleted.
+         *
+         * Create a request for the method "channels.delete".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The fully-qualified identifier for the site.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Empty> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+
+          /**
+           * Deletes a channel of a site. The `live` channel cannot be deleted.
+           *
+           * Create a request for the method "channels.delete".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The fully-qualified identifier for the site.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(FirebaseHosting.this, "DELETE", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The fully-qualified identifier for the site. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The fully-qualified identifier for the site.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The fully-qualified identifier for the site. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves information for the specified channel of a site.
+         *
+         * Create a request for the method "channels.get".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The fully-qualified identifier for the channel.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+
+          /**
+           * Retrieves information for the specified channel of a site.
+           *
+           * Create a request for the method "channels.get".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The fully-qualified identifier for the channel.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The fully-qualified identifier for the channel. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The fully-qualified identifier for the channel.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The fully-qualified identifier for the channel. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the channels for the specified site. All sites have a default "live" channel.
+         *
+         * Create a request for the method "channels.list".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The site from which to list channels.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.ListChannelsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/channels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+          /**
+           * Lists the channels for the specified site. All sites have a default "live" channel.
+           *
+           * Create a request for the method "channels.list".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The site from which to list channels.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.ListChannelsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The site from which to list channels. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The site from which to list channels.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The site from which to list channels. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of versions to return. The service may return fewer than this value.
+           * If unspecified, at most 25 channels will be returned. The maximum value is 100;
+           * valuupdateses above 100 will be coerced to 100
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of versions to return. The service may return fewer than this value. If
+         unspecified, at most 25 channels will be returned. The maximum value is 100; valuupdateses above
+         100 will be coerced to 100
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of versions to return. The service may return fewer than this value.
+           * If unspecified, at most 25 channels will be returned. The maximum value is 100;
+           * valuupdateses above 100 will be coerced to 100
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token from a previous request, if provided. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token from a previous request, if provided.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token from a previous request, if provided. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates information for the specified channel of a site. This method will implicitly create a
+         * channel if it doesn't exist.
+         *
+         * Create a request for the method "channels.patch".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The fully-qualified identifier of the Channel.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Channel content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+
+          /**
+           * Updates information for the specified channel of a site. This method will implicitly create a
+           * channel if it doesn't exist.
+           *
+           * Create a request for the method "channels.patch".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The fully-qualified identifier of the Channel.
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Channel content) {
+            super(FirebaseHosting.this, "PATCH", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The fully-qualified identifier of the Channel. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The fully-qualified identifier of the Channel.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The fully-qualified identifier of the Channel. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** A comma-separated list of fields to be updated in this request. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** A comma-separated list of fields to be updated in this request.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** A comma-separated list of fields to be updated in this request. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Releases collection.
@@ -373,8 +1429,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the firebasehosting server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The site that the release belongs to, in the format:
-          sites/site-name
+           * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
            * @return the request
            */
@@ -403,8 +1458,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The site that the release belongs to, in the format:
-          sites/site-name
+             * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
              * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
              * @since 1.13
              */
@@ -473,21 +1527,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The site that the release belongs to, in the format: sites/site-name
-             */
+            /** Required. The site that the release belongs to, in the format: sites/ site-name */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** The site that the release belongs to, in the format: sites/site-name
+            /** Required. The site that the release belongs to, in the format: sites/ site-name
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * The site that the release belongs to, in the format: sites/site-name
-             */
+            /** Required. The site that the release belongs to, in the format: sites/ site-name */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -499,32 +1549,27 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The unique identifier for a version, in the format: /sites/site-
-             * name/versions/versionID The site-name in this version identifier must match the site-
-             * name in the `parent` parameter.
-             *
-             * This query parameter must be empty if the `type` field in the request body is
-             * `SITE_DISABLE`.
+             * The unique identifier for a version, in the format: /sites/site-name
+             * /versions/versionID The site-name in this version identifier must match the site-name
+             * in the `parent` parameter. This query parameter must be empty if the `type` field in
+             * the request body is `SITE_DISABLE`.
              */
             @com.google.api.client.util.Key
             private java.lang.String versionName;
 
-            /** The unique identifier for a version, in the format: /sites/site-name/versions/versionID The site-
-           name in this version identifier must match the site-name in the `parent` parameter.
-
-           This query parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
+            /** The unique identifier for a version, in the format: /sites/site-name /versions/versionID The site-
+           name in this version identifier must match the site-name in the `parent` parameter. This query
+           parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
              */
             public java.lang.String getVersionName() {
               return versionName;
             }
 
             /**
-             * The unique identifier for a version, in the format: /sites/site-
-             * name/versions/versionID The site-name in this version identifier must match the site-
-             * name in the `parent` parameter.
-             *
-             * This query parameter must be empty if the `type` field in the request body is
-             * `SITE_DISABLE`.
+             * The unique identifier for a version, in the format: /sites/site-name
+             * /versions/versionID The site-name in this version identifier must match the site-name
+             * in the `parent` parameter. This query parameter must be empty if the `type` field in
+             * the request body is `SITE_DISABLE`.
              */
             public Create setVersionName(java.lang.String versionName) {
               this.versionName = versionName;
@@ -544,8 +1589,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the firebasehosting server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent for which to list files, in the format:
-          sites/site-name
+           * @param parent Required. The parent for which to list files, in the format: sites/site-name
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -571,8 +1615,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent for which to list files, in the format:
-          sites/site-name
+             * @param parent Required. The parent for which to list files, in the format: sites/site-name
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -650,9 +1693,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The parent for which to list files, in the format: sites/site-name
-             */
+            /** Required. The parent for which to list files, in the format: sites/site-name */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
@@ -662,9 +1703,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               return parent;
             }
 
-            /**
-             * Required. The parent for which to list files, in the format: sites/site-name
-             */
+            /** Required. The parent for which to list files, in the format: sites/site-name */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -716,6 +1755,742 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
       }
       /**
+       * An accessor for creating requests from the Domains collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code FirebaseHosting firebasehosting = new FirebaseHosting(...);}
+       *   {@code FirebaseHosting.Domains.List request = firebasehosting.domains().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Domains domains() {
+        return new Domains();
+      }
+
+      /**
+       * The "domains" collection of methods.
+       */
+      public class Domains {
+
+        /**
+         * Creates a domain mapping on the specified site.
+         *
+         * Create a request for the method "domains.create".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent to create the domain association for, in the format: sites/site-name
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Domain}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Domain content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Domain> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/domains";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+          /**
+           * Creates a domain mapping on the specified site.
+           *
+           * Create a request for the method "domains.create".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent to create the domain association for, in the format: sites/site-name
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Domain}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Domain content) {
+            super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Domain.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent to create the domain association for, in the format: sites/site-
+           * name
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent to create the domain association for, in the format: sites/site-name
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent to create the domain association for, in the format: sites/site-
+           * name
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the existing domain mapping on the specified site.
+         *
+         * Create a request for the method "domains.delete".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the domain association to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Empty> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/domains/[^/]+$");
+
+          /**
+           * Deletes the existing domain mapping on the specified site.
+           *
+           * Create a request for the method "domains.delete".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the domain association to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(FirebaseHosting.this, "DELETE", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/domains/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the domain association to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the domain association to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the domain association to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/domains/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a domain mapping on the specified site.
+         *
+         * Create a request for the method "domains.get".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the domain configuration to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Domain> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/domains/[^/]+$");
+
+          /**
+           * Gets a domain mapping on the specified site.
+           *
+           * Create a request for the method "domains.get".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the domain configuration to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Domain.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/domains/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the domain configuration to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the domain configuration to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the domain configuration to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/domains/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the domains for the specified site.
+         *
+         * Create a request for the method "domains.list".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent for which to list domains, in the format: sites/ site-name
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.ListDomainsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/domains";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+          /**
+           * Lists the domains for the specified site.
+           *
+           * Create a request for the method "domains.list".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent for which to list domains, in the format: sites/ site-name
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.ListDomainsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent for which to list domains, in the format: sites/ site-name */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent for which to list domains, in the format: sites/ site-name
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent for which to list domains, in the format: sites/ site-name */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The page size to return. Defaults to 50. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The page size to return. Defaults to 50.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The page size to return. Defaults to 50. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token from a previous request, if provided. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token from a previous request, if provided.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token from a previous request, if provided. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the specified domain mapping, creating the mapping as if it does not exist.
+         *
+         * Create a request for the method "domains.update".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the domain association to update or create, if an association doesn't already
+         *        exist.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Domain}
+         * @return the request
+         */
+        public Update update(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Domain content) throws java.io.IOException {
+          Update result = new Update(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Update extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Domain> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/domains/[^/]+$");
+
+          /**
+           * Updates the specified domain mapping, creating the mapping as if it does not exist.
+           *
+           * Create a request for the method "domains.update".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the domain association to update or create, if an association doesn't already
+         *        exist.
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Domain}
+           * @since 1.13
+           */
+          protected Update(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Domain content) {
+            super(FirebaseHosting.this, "PUT", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Domain.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/domains/[^/]+$");
+            }
+          }
+
+          @Override
+          public Update set$Xgafv(java.lang.String $Xgafv) {
+            return (Update) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Update setAccessToken(java.lang.String accessToken) {
+            return (Update) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Update setAlt(java.lang.String alt) {
+            return (Update) super.setAlt(alt);
+          }
+
+          @Override
+          public Update setCallback(java.lang.String callback) {
+            return (Update) super.setCallback(callback);
+          }
+
+          @Override
+          public Update setFields(java.lang.String fields) {
+            return (Update) super.setFields(fields);
+          }
+
+          @Override
+          public Update setKey(java.lang.String key) {
+            return (Update) super.setKey(key);
+          }
+
+          @Override
+          public Update setOauthToken(java.lang.String oauthToken) {
+            return (Update) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Update) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Update setQuotaUser(java.lang.String quotaUser) {
+            return (Update) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Update setUploadType(java.lang.String uploadType) {
+            return (Update) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Update setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Update) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the domain association to update or create, if an association
+           * doesn't already exist.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the domain association to update or create, if an association doesn't already
+         exist.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the domain association to update or create, if an association
+           * doesn't already exist.
+           */
+          public Update setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/domains/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Update set(String parameterName, Object value) {
+            return (Update) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Releases collection.
        *
        * <p>The typical use is:</p>
@@ -744,8 +2519,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The site that the release belongs to, in the format:
-        sites/site-name
+         * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
          * @return the request
          */
@@ -774,8 +2548,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The site that the release belongs to, in the format:
-        sites/site-name
+           * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
            * @since 1.13
            */
@@ -844,21 +2617,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The site that the release belongs to, in the format: sites/site-name
-           */
+          /** Required. The site that the release belongs to, in the format: sites/ site-name */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The site that the release belongs to, in the format: sites/site-name
+          /** Required. The site that the release belongs to, in the format: sites/ site-name
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * The site that the release belongs to, in the format: sites/site-name
-           */
+          /** Required. The site that the release belongs to, in the format: sites/ site-name */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -870,32 +2639,27 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The unique identifier for a version, in the format: /sites/site-name/versions/versionID
-           * The site-name in this version identifier must match the site-name in the `parent`
-           * parameter.
-           *
-           * This query parameter must be empty if the `type` field in the request body is
-           * `SITE_DISABLE`.
+           * The unique identifier for a version, in the format: /sites/site-name
+           * /versions/versionID The site-name in this version identifier must match the site-name
+           * in the `parent` parameter. This query parameter must be empty if the `type` field in
+           * the request body is `SITE_DISABLE`.
            */
           @com.google.api.client.util.Key
           private java.lang.String versionName;
 
-          /** The unique identifier for a version, in the format: /sites/site-name/versions/versionID The site-
-         name in this version identifier must match the site-name in the `parent` parameter.
-
-         This query parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
+          /** The unique identifier for a version, in the format: /sites/site-name /versions/versionID The site-
+         name in this version identifier must match the site-name in the `parent` parameter. This query
+         parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
            */
           public java.lang.String getVersionName() {
             return versionName;
           }
 
           /**
-           * The unique identifier for a version, in the format: /sites/site-name/versions/versionID
-           * The site-name in this version identifier must match the site-name in the `parent`
-           * parameter.
-           *
-           * This query parameter must be empty if the `type` field in the request body is
-           * `SITE_DISABLE`.
+           * The unique identifier for a version, in the format: /sites/site-name
+           * /versions/versionID The site-name in this version identifier must match the site-name
+           * in the `parent` parameter. This query parameter must be empty if the `type` field in
+           * the request body is `SITE_DISABLE`.
            */
           public Create setVersionName(java.lang.String versionName) {
             this.versionName = versionName;
@@ -915,8 +2679,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent for which to list files, in the format:
-        sites/site-name
+         * @param parent Required. The parent for which to list files, in the format: sites/site-name
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -942,8 +2705,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent for which to list files, in the format:
-        sites/site-name
+           * @param parent Required. The parent for which to list files, in the format: sites/site-name
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1021,9 +2783,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The parent for which to list files, in the format: sites/site-name
-           */
+          /** Required. The parent for which to list files, in the format: sites/site-name */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
@@ -1033,9 +2793,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return parent;
           }
 
-          /**
-           * Required. The parent for which to list files, in the format: sites/site-name
-           */
+          /** Required. The parent for which to list files, in the format: sites/site-name */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1085,6 +2843,1223 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
       }
+      /**
+       * An accessor for creating requests from the Versions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code FirebaseHosting firebasehosting = new FirebaseHosting(...);}
+       *   {@code FirebaseHosting.Versions.List request = firebasehosting.versions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Versions versions() {
+        return new Versions();
+      }
+
+      /**
+       * The "versions" collection of methods.
+       */
+      public class Versions {
+
+        /**
+         * Creates a new version on the target site using the content of the specified version.
+         *
+         * Create a request for the method "versions.clone".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Clone#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The target site where the cloned version will reside, in the format: `sites/{site}`
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest}
+         * @return the request
+         */
+        public Clone clone(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest content) throws java.io.IOException {
+          Clone result = new Clone(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Clone extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/versions:clone";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+          /**
+           * Creates a new version on the target site using the content of the specified version.
+           *
+           * Create a request for the method "versions.clone".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Clone#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Clone#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The target site where the cloned version will reside, in the format: `sites/{site}`
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest}
+           * @since 1.13
+           */
+          protected Clone(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest content) {
+            super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public Clone set$Xgafv(java.lang.String $Xgafv) {
+            return (Clone) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Clone setAccessToken(java.lang.String accessToken) {
+            return (Clone) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Clone setAlt(java.lang.String alt) {
+            return (Clone) super.setAlt(alt);
+          }
+
+          @Override
+          public Clone setCallback(java.lang.String callback) {
+            return (Clone) super.setCallback(callback);
+          }
+
+          @Override
+          public Clone setFields(java.lang.String fields) {
+            return (Clone) super.setFields(fields);
+          }
+
+          @Override
+          public Clone setKey(java.lang.String key) {
+            return (Clone) super.setKey(key);
+          }
+
+          @Override
+          public Clone setOauthToken(java.lang.String oauthToken) {
+            return (Clone) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Clone setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Clone) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Clone setQuotaUser(java.lang.String quotaUser) {
+            return (Clone) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Clone setUploadType(java.lang.String uploadType) {
+            return (Clone) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Clone setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Clone) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The target site where the cloned version will reside, in the format:
+           * `sites/{site}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The target site where the cloned version will reside, in the format: `sites/{site}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The target site where the cloned version will reside, in the format:
+           * `sites/{site}`
+           */
+          public Clone setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Clone set(String parameterName, Object value) {
+            return (Clone) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new version for a site.
+         *
+         * Create a request for the method "versions.create".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent to create the version for, in the format: sites/ site-name
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Version content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Version> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/versions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+          /**
+           * Creates a new version for a site.
+           *
+           * Create a request for the method "versions.create".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent to create the version for, in the format: sites/ site-name
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Version content) {
+            super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Version.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent to create the version for, in the format: sites/ site-name */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent to create the version for, in the format: sites/ site-name
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent to create the version for, in the format: sites/ site-name */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The self-reported size of the version. This value is used for a pre-emptive quota check
+           * for legacy version uploads.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Long sizeBytes;
+
+          /** The self-reported size of the version. This value is used for a pre-emptive quota check for legacy
+         version uploads.
+           */
+          public java.lang.Long getSizeBytes() {
+            return sizeBytes;
+          }
+
+          /**
+           * The self-reported size of the version. This value is used for a pre-emptive quota check
+           * for legacy version uploads.
+           */
+          public Create setSizeBytes(java.lang.Long sizeBytes) {
+            this.sizeBytes = sizeBytes;
+            return this;
+          }
+
+          /**
+           * A unique id for the new version. This is was only specified for legacy version
+           * creations, and should be blank.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String versionId;
+
+          /** A unique id for the new version. This is was only specified for legacy version creations, and
+         should be blank.
+           */
+          public java.lang.String getVersionId() {
+            return versionId;
+          }
+
+          /**
+           * A unique id for the new version. This is was only specified for legacy version
+           * creations, and should be blank.
+           */
+          public Create setVersionId(java.lang.String versionId) {
+            this.versionId = versionId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the specified version.
+         *
+         * Create a request for the method "versions.delete".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Empty> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+
+          /**
+           * Deletes the specified version.
+           *
+           * Create a request for the method "versions.delete".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(FirebaseHosting.this, "DELETE", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the version to be deleted, in the format: sites/ site-
+           * name/versions/versionID
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the version to be deleted, in the format: sites/ site-
+           * name/versions/versionID
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the versions that have been created on the specified site. Will include filtering in the
+         * future.
+         *
+         * Create a request for the method "versions.list".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent for which to list files, in the format: sites/site-name
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.ListVersionsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/versions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
+
+          /**
+           * Lists the versions that have been created on the specified site. Will include filtering in the
+           * future.
+           *
+           * Create a request for the method "versions.list".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent for which to list files, in the format: sites/site-name
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.ListVersionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent for which to list files, in the format: sites/site-name */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent for which to list files, in the format: sites/site-name
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent for which to list files, in the format: sites/site-name */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The filter string used to return a subset of versions in the response. Currently
+           * supported fields for filtering are: name, status, and create_time. Filter processing
+           * will be implemented in accordance with go/filtering.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** The filter string used to return a subset of versions in the response. Currently supported fields
+         for filtering are: name, status, and create_time. Filter processing will be implemented in
+         accordance with go/filtering.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * The filter string used to return a subset of versions in the response. Currently
+           * supported fields for filtering are: name, status, and create_time. Filter processing
+           * will be implemented in accordance with go/filtering.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The maximum number of versions to return. The service may return fewer than this value.
+           * If unspecified, at most 25 versions will be returned. The maximum value is 100; values
+           * above 100 will be coerced to 100
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of versions to return. The service may return fewer than this value. If
+         unspecified, at most 25 versions will be returned. The maximum value is 100; values above 100 will
+         be coerced to 100
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of versions to return. The service may return fewer than this value.
+           * If unspecified, at most 25 versions will be returned. The maximum value is 100; values
+           * above 100 will be coerced to 100
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token from a previous request, if provided. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token from a previous request, if provided.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token from a previous request, if provided. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the specified metadata for a version. Note that this method will fail with
+         * `FAILED_PRECONDITION` in the event of an invalid state transition. The only valid transition for
+         * a version is currently from a `CREATED` status to a `FINALIZED` status. Use
+         * [`DeleteVersion`](../sites.versions/delete) to set the status of a version to `DELETED`.
+         *
+         * Create a request for the method "versions.patch".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name The unique identifier for a version, in the format: sites/site-name /versions/versionID This name is
+         *        provided in the response body when you call the
+         *        [`CreateVersion`](../sites.versions/create) endpoint.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Version content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Version> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+
+          /**
+           * Updates the specified metadata for a version. Note that this method will fail with
+           * `FAILED_PRECONDITION` in the event of an invalid state transition. The only valid transition
+           * for a version is currently from a `CREATED` status to a `FINALIZED` status. Use
+           * [`DeleteVersion`](../sites.versions/delete) to set the status of a version to `DELETED`.
+           *
+           * Create a request for the method "versions.patch".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The unique identifier for a version, in the format: sites/site-name /versions/versionID This name is
+         *        provided in the response body when you call the
+         *        [`CreateVersion`](../sites.versions/create) endpoint.
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Version content) {
+            super(FirebaseHosting.this, "PATCH", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Version.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The unique identifier for a version, in the format: sites/site-name /versions/versionID
+           * This name is provided in the response body when you call the
+           * [`CreateVersion`](../sites.versions/create) endpoint.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The unique identifier for a version, in the format: sites/site-name /versions/versionID This name
+         is provided in the response body when you call the [`CreateVersion`](../sites.versions/create)
+         endpoint.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * The unique identifier for a version, in the format: sites/site-name /versions/versionID
+           * This name is provided in the response body when you call the
+           * [`CreateVersion`](../sites.versions/create) endpoint.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * A set of field names from your [version](../sites.versions) that you want to update. A
+           * field will be overwritten if, and only if, it's in the mask. If a mask is not provided
+           * then a default mask of only [`status`](../sites.versions#Version.FIELDS.status) will be
+           * used.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** A set of field names from your [version](../sites.versions) that you want to update. A field will
+         be overwritten if, and only if, it's in the mask. If a mask is not provided then a default mask of
+         only [`status`](../sites.versions#Version.FIELDS.status) will be used.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * A set of field names from your [version](../sites.versions) that you want to update. A
+           * field will be overwritten if, and only if, it's in the mask. If a mask is not provided
+           * then a default mask of only [`status`](../sites.versions#Version.FIELDS.status) will be
+           * used.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Adds content files to a version. Each file must be under 2 GB.
+         *
+         * Create a request for the method "versions.populateFiles".
+         *
+         * This request holds the parameters needed by the firebasehosting server.  After setting any
+         * optional parameters, call the {@link PopulateFiles#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The version to add files to, in the format: sites/site-name /versions/versionID
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesRequest}
+         * @return the request
+         */
+        public PopulateFiles populateFiles(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesRequest content) throws java.io.IOException {
+          PopulateFiles result = new PopulateFiles(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class PopulateFiles extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}:populateFiles";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+
+          /**
+           * Adds content files to a version. Each file must be under 2 GB.
+           *
+           * Create a request for the method "versions.populateFiles".
+           *
+           * This request holds the parameters needed by the the firebasehosting server.  After setting any
+           * optional parameters, call the {@link PopulateFiles#execute()} method to invoke the remote
+           * operation. <p> {@link PopulateFiles#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param parent Required. The version to add files to, in the format: sites/site-name /versions/versionID
+           * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesRequest}
+           * @since 1.13
+           */
+          protected PopulateFiles(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesRequest content) {
+            super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+            }
+          }
+
+          @Override
+          public PopulateFiles set$Xgafv(java.lang.String $Xgafv) {
+            return (PopulateFiles) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public PopulateFiles setAccessToken(java.lang.String accessToken) {
+            return (PopulateFiles) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public PopulateFiles setAlt(java.lang.String alt) {
+            return (PopulateFiles) super.setAlt(alt);
+          }
+
+          @Override
+          public PopulateFiles setCallback(java.lang.String callback) {
+            return (PopulateFiles) super.setCallback(callback);
+          }
+
+          @Override
+          public PopulateFiles setFields(java.lang.String fields) {
+            return (PopulateFiles) super.setFields(fields);
+          }
+
+          @Override
+          public PopulateFiles setKey(java.lang.String key) {
+            return (PopulateFiles) super.setKey(key);
+          }
+
+          @Override
+          public PopulateFiles setOauthToken(java.lang.String oauthToken) {
+            return (PopulateFiles) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public PopulateFiles setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (PopulateFiles) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public PopulateFiles setQuotaUser(java.lang.String quotaUser) {
+            return (PopulateFiles) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public PopulateFiles setUploadType(java.lang.String uploadType) {
+            return (PopulateFiles) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public PopulateFiles setUploadProtocol(java.lang.String uploadProtocol) {
+            return (PopulateFiles) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The version to add files to, in the format: sites/site-name
+           * /versions/versionID
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The version to add files to, in the format: sites/site-name /versions/versionID
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The version to add files to, in the format: sites/site-name
+           * /versions/versionID
+           */
+          public PopulateFiles setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public PopulateFiles set(String parameterName, Object value) {
+            return (PopulateFiles) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Files collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code FirebaseHosting firebasehosting = new FirebaseHosting(...);}
+         *   {@code FirebaseHosting.Files.List request = firebasehosting.files().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Files files() {
+          return new Files();
+        }
+
+        /**
+         * The "files" collection of methods.
+         */
+        public class Files {
+
+          /**
+           * Lists the remaining files to be uploaded for the specified version.
+           *
+           * Create a request for the method "files.list".
+           *
+           * This request holds the parameters needed by the firebasehosting server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent to list files for, in the format: sites/site-name /versions/versionID
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.ListVersionFilesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/files";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+
+            /**
+             * Lists the remaining files to be uploaded for the specified version.
+             *
+             * Create a request for the method "files.list".
+             *
+             * This request holds the parameters needed by the the firebasehosting server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent to list files for, in the format: sites/site-name /versions/versionID
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.ListVersionFilesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent to list files for, in the format: sites/site-name
+             * /versions/versionID
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent to list files for, in the format: sites/site-name /versions/versionID
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent to list files for, in the format: sites/site-name
+             * /versions/versionID
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** The page size to return. Defaults to 1000. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The page size to return. Defaults to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** The page size to return. Defaults to 1000. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * The next_page_token from a previous request, if provided. This will be the encoded
+             * version of a firebase.hosting.proto.metadata.ListFilesPageToken.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token from a previous request, if provided. This will be the encoded version of a
+           firebase.hosting.proto.metadata.ListFilesPageToken.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * The next_page_token from a previous request, if provided. This will be the encoded
+             * version of a firebase.hosting.proto.metadata.ListFilesPageToken.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** The type of files in the version that should be listed. */
+            @com.google.api.client.util.Key
+            private java.lang.String status;
+
+            /** The type of files in the version that should be listed.
+             */
+            public java.lang.String getStatus() {
+              return status;
+            }
+
+            /** The type of files in the version that should be listed. */
+            public List setStatus(java.lang.String status) {
+              this.status = status;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
   }
 
@@ -1116,8 +4091,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
      * This request holds the parameters needed by the firebasehosting server.  After setting any
      * optional parameters, call the {@link GetConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The site for which to get the SiteConfig, in the format:
-    sites/site-name/config
+     * @param name Required. The site for which to get the SiteConfig, in the format: sites/ site-name/config
      * @return the request
      */
     public GetConfig getConfig(java.lang.String name) throws java.io.IOException {
@@ -1144,8 +4118,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * GetConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The site for which to get the SiteConfig, in the format:
-    sites/site-name/config
+       * @param name Required. The site for which to get the SiteConfig, in the format: sites/ site-name/config
        * @since 1.13
        */
       protected GetConfig(java.lang.String name) {
@@ -1224,19 +4197,19 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Required. The site for which to get the SiteConfig, in the format: sites/site-name/config
+       * Required. The site for which to get the SiteConfig, in the format: sites/ site-name/config
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The site for which to get the SiteConfig, in the format: sites/site-name/config
+      /** Required. The site for which to get the SiteConfig, in the format: sites/ site-name/config
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The site for which to get the SiteConfig, in the format: sites/site-name/config
+       * Required. The site for which to get the SiteConfig, in the format: sites/ site-name/config
        */
       public GetConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1262,8 +4235,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
      * optional parameters, call the {@link UpdateConfig#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Required. The site for which to update the SiteConfig, in the format:
-    sites/site-name/config
+     * @param name Required. The site for which to update the SiteConfig, in the format: sites/ site-name/config
      * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.SiteConfig}
      * @return the request
      */
@@ -1291,8 +4263,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * UpdateConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The site for which to update the SiteConfig, in the format:
-    sites/site-name/config
+       * @param name Required. The site for which to update the SiteConfig, in the format: sites/ site-name/config
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.SiteConfig}
        * @since 1.13
        */
@@ -1362,20 +4333,20 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Required. The site for which to update the SiteConfig, in the format: sites/site-
+       * Required. The site for which to update the SiteConfig, in the format: sites/ site-
        * name/config
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The site for which to update the SiteConfig, in the format: sites/site-name/config
+      /** Required. The site for which to update the SiteConfig, in the format: sites/ site-name/config
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The site for which to update the SiteConfig, in the format: sites/site-
+       * Required. The site for which to update the SiteConfig, in the format: sites/ site-
        * name/config
        */
       public UpdateConfig setName(java.lang.String name) {
@@ -1443,6 +4414,750 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
     public class Channels {
 
       /**
+       * Creates a new channel in the specified site.
+       *
+       * Create a request for the method "channels.create".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The site in which this channel should be created.
+       * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Channel content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/channels";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+$");
+
+        /**
+         * Creates a new channel in the specified site.
+         *
+         * Create a request for the method "channels.create".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The site in which this channel should be created.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.firebasehosting.v1beta1.model.Channel content) {
+          super(FirebaseHosting.this, "POST", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The site in which this channel should be created. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The site in which this channel should be created.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The site in which this channel should be created. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Required. Immutable. A unique id within the site to identify the channel. */
+        @com.google.api.client.util.Key
+        private java.lang.String channelId;
+
+        /** Required. Immutable. A unique id within the site to identify the channel.
+         */
+        public java.lang.String getChannelId() {
+          return channelId;
+        }
+
+        /** Required. Immutable. A unique id within the site to identify the channel. */
+        public Create setChannelId(java.lang.String channelId) {
+          this.channelId = channelId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a channel of a site. The `live` channel cannot be deleted.
+       *
+       * Create a request for the method "channels.delete".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully-qualified identifier for the site.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Empty> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+/channels/[^/]+$");
+
+        /**
+         * Deletes a channel of a site. The `live` channel cannot be deleted.
+         *
+         * Create a request for the method "channels.delete".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The fully-qualified identifier for the site.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(FirebaseHosting.this, "DELETE", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The fully-qualified identifier for the site. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully-qualified identifier for the site.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The fully-qualified identifier for the site. */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves information for the specified channel of a site.
+       *
+       * Create a request for the method "channels.get".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully-qualified identifier for the channel.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+/channels/[^/]+$");
+
+        /**
+         * Retrieves information for the specified channel of a site.
+         *
+         * Create a request for the method "channels.get".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The fully-qualified identifier for the channel.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The fully-qualified identifier for the channel. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully-qualified identifier for the channel.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The fully-qualified identifier for the channel. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists the channels for the specified site. All sites have a default "live" channel.
+       *
+       * Create a request for the method "channels.list".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The site from which to list channels.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.ListChannelsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/channels";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+$");
+
+        /**
+         * Lists the channels for the specified site. All sites have a default "live" channel.
+         *
+         * Create a request for the method "channels.list".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The site from which to list channels.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(FirebaseHosting.this, "GET", REST_PATH, null, com.google.api.services.firebasehosting.v1beta1.model.ListChannelsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The site from which to list channels. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The site from which to list channels.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The site from which to list channels. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^sites/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The maximum number of versions to return. The service may return fewer than this value.
+         * If unspecified, at most 25 channels will be returned. The maximum value is 100;
+         * valuupdateses above 100 will be coerced to 100
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of versions to return. The service may return fewer than this value. If
+       unspecified, at most 25 channels will be returned. The maximum value is 100; valuupdateses above
+       100 will be coerced to 100
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of versions to return. The service may return fewer than this value.
+         * If unspecified, at most 25 channels will be returned. The maximum value is 100;
+         * valuupdateses above 100 will be coerced to 100
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** The next_page_token from a previous request, if provided. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The next_page_token from a previous request, if provided.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** The next_page_token from a previous request, if provided. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates information for the specified channel of a site. This method will implicitly create a
+       * channel if it doesn't exist.
+       *
+       * Create a request for the method "channels.patch".
+       *
+       * This request holds the parameters needed by the firebasehosting server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name The fully-qualified identifier of the Channel.
+       * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Channel content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends FirebaseHostingRequest<com.google.api.services.firebasehosting.v1beta1.model.Channel> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^sites/[^/]+/channels/[^/]+$");
+
+        /**
+         * Updates information for the specified channel of a site. This method will implicitly create a
+         * channel if it doesn't exist.
+         *
+         * Create a request for the method "channels.patch".
+         *
+         * This request holds the parameters needed by the the firebasehosting server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The fully-qualified identifier of the Channel.
+         * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Channel}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.firebasehosting.v1beta1.model.Channel content) {
+          super(FirebaseHosting.this, "PATCH", REST_PATH, content, com.google.api.services.firebasehosting.v1beta1.model.Channel.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The fully-qualified identifier of the Channel. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The fully-qualified identifier of the Channel.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The fully-qualified identifier of the Channel. */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sites/[^/]+/channels/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** A comma-separated list of fields to be updated in this request. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** A comma-separated list of fields to be updated in this request.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** A comma-separated list of fields to be updated in this request. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the Releases collection.
        *
        * <p>The typical use is:</p>
@@ -1471,8 +5186,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The site that the release belongs to, in the format:
-        sites/site-name
+         * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
          * @return the request
          */
@@ -1501,8 +5215,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The site that the release belongs to, in the format:
-        sites/site-name
+           * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
            * @since 1.13
            */
@@ -1571,21 +5284,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The site that the release belongs to, in the format: sites/site-name
-           */
+          /** Required. The site that the release belongs to, in the format: sites/ site-name */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The site that the release belongs to, in the format: sites/site-name
+          /** Required. The site that the release belongs to, in the format: sites/ site-name
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * The site that the release belongs to, in the format: sites/site-name
-           */
+          /** Required. The site that the release belongs to, in the format: sites/ site-name */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1597,32 +5306,27 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The unique identifier for a version, in the format: /sites/site-name/versions/versionID
-           * The site-name in this version identifier must match the site-name in the `parent`
-           * parameter.
-           *
-           * This query parameter must be empty if the `type` field in the request body is
-           * `SITE_DISABLE`.
+           * The unique identifier for a version, in the format: /sites/site-name
+           * /versions/versionID The site-name in this version identifier must match the site-name
+           * in the `parent` parameter. This query parameter must be empty if the `type` field in
+           * the request body is `SITE_DISABLE`.
            */
           @com.google.api.client.util.Key
           private java.lang.String versionName;
 
-          /** The unique identifier for a version, in the format: /sites/site-name/versions/versionID The site-
-         name in this version identifier must match the site-name in the `parent` parameter.
-
-         This query parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
+          /** The unique identifier for a version, in the format: /sites/site-name /versions/versionID The site-
+         name in this version identifier must match the site-name in the `parent` parameter. This query
+         parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
            */
           public java.lang.String getVersionName() {
             return versionName;
           }
 
           /**
-           * The unique identifier for a version, in the format: /sites/site-name/versions/versionID
-           * The site-name in this version identifier must match the site-name in the `parent`
-           * parameter.
-           *
-           * This query parameter must be empty if the `type` field in the request body is
-           * `SITE_DISABLE`.
+           * The unique identifier for a version, in the format: /sites/site-name
+           * /versions/versionID The site-name in this version identifier must match the site-name
+           * in the `parent` parameter. This query parameter must be empty if the `type` field in
+           * the request body is `SITE_DISABLE`.
            */
           public Create setVersionName(java.lang.String versionName) {
             this.versionName = versionName;
@@ -1642,8 +5346,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent for which to list files, in the format:
-        sites/site-name
+         * @param parent Required. The parent for which to list files, in the format: sites/site-name
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1669,8 +5372,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent for which to list files, in the format:
-        sites/site-name
+           * @param parent Required. The parent for which to list files, in the format: sites/site-name
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1748,9 +5450,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The parent for which to list files, in the format: sites/site-name
-           */
+          /** Required. The parent for which to list files, in the format: sites/site-name */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
@@ -1760,9 +5460,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return parent;
           }
 
-          /**
-           * Required. The parent for which to list files, in the format: sites/site-name
-           */
+          /** Required. The parent for which to list files, in the format: sites/site-name */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1841,8 +5539,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent to create the domain association for, in the format:
-      sites/site-name
+       * @param parent Required. The parent to create the domain association for, in the format: sites/site-name
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Domain}
        * @return the request
        */
@@ -1870,8 +5567,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent to create the domain association for, in the format:
-      sites/site-name
+         * @param parent Required. The parent to create the domain association for, in the format: sites/site-name
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Domain}
          * @since 1.13
          */
@@ -2245,8 +5941,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent for which to list domains, in the format:
-      sites/site-name
+       * @param parent Required. The parent for which to list domains, in the format: sites/ site-name
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2272,8 +5967,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent for which to list domains, in the format:
-      sites/site-name
+         * @param parent Required. The parent for which to list domains, in the format: sites/ site-name
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2351,21 +6045,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent for which to list domains, in the format: sites/site-name
-         */
+        /** Required. The parent for which to list domains, in the format: sites/ site-name */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent for which to list domains, in the format: sites/site-name
+        /** Required. The parent for which to list domains, in the format: sites/ site-name
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent for which to list domains, in the format: sites/site-name
-         */
+        /** Required. The parent for which to list domains, in the format: sites/ site-name */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2421,8 +6111,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the domain association to update or create, if an
-      association doesn't already
+       * @param name Required. The name of the domain association to update or create, if an association doesn't already
        *        exist.
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Domain}
        * @return the request
@@ -2451,8 +6140,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the domain association to update or create, if an
-      association doesn't already
+         * @param name Required. The name of the domain association to update or create, if an association doesn't already
        *        exist.
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Domain}
          * @since 1.13
@@ -2586,8 +6274,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The site that the release belongs to, in the format:
-      sites/site-name
+       * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
        * @return the request
        */
@@ -2616,8 +6303,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The site that the release belongs to, in the format:
-      sites/site-name
+         * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
          * @since 1.13
          */
@@ -2686,21 +6372,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * The site that the release belongs to, in the format: sites/site-name
-         */
+        /** Required. The site that the release belongs to, in the format: sites/ site-name */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The site that the release belongs to, in the format: sites/site-name
+        /** Required. The site that the release belongs to, in the format: sites/ site-name
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * The site that the release belongs to, in the format: sites/site-name
-         */
+        /** Required. The site that the release belongs to, in the format: sites/ site-name */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2712,31 +6394,26 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * The unique identifier for a version, in the format: /sites/site-name/versions/versionID
+         * The unique identifier for a version, in the format: /sites/site-name /versions/versionID
          * The site-name in this version identifier must match the site-name in the `parent`
-         * parameter.
-         *
-         * This query parameter must be empty if the `type` field in the request body is
+         * parameter. This query parameter must be empty if the `type` field in the request body is
          * `SITE_DISABLE`.
          */
         @com.google.api.client.util.Key
         private java.lang.String versionName;
 
-        /** The unique identifier for a version, in the format: /sites/site-name/versions/versionID The site-
-       name in this version identifier must match the site-name in the `parent` parameter.
-
-       This query parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
+        /** The unique identifier for a version, in the format: /sites/site-name /versions/versionID The site-
+       name in this version identifier must match the site-name in the `parent` parameter. This query
+       parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
          */
         public java.lang.String getVersionName() {
           return versionName;
         }
 
         /**
-         * The unique identifier for a version, in the format: /sites/site-name/versions/versionID
+         * The unique identifier for a version, in the format: /sites/site-name /versions/versionID
          * The site-name in this version identifier must match the site-name in the `parent`
-         * parameter.
-         *
-         * This query parameter must be empty if the `type` field in the request body is
+         * parameter. This query parameter must be empty if the `type` field in the request body is
          * `SITE_DISABLE`.
          */
         public Create setVersionName(java.lang.String versionName) {
@@ -2757,8 +6434,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent for which to list files, in the format:
-      sites/site-name
+       * @param parent Required. The parent for which to list files, in the format: sites/site-name
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2784,8 +6460,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent for which to list files, in the format:
-      sites/site-name
+         * @param parent Required. The parent for which to list files, in the format: sites/site-name
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2863,9 +6538,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent for which to list files, in the format: sites/site-name
-         */
+        /** Required. The parent for which to list files, in the format: sites/site-name */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -2875,9 +6548,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return parent;
         }
 
-        /**
-         * Required. The parent for which to list files, in the format: sites/site-name
-         */
+        /** Required. The parent for which to list files, in the format: sites/site-name */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2955,8 +6626,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Clone#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The target site where the cloned version will reside,
-      in the format: `sites/{site}`
+       * @param parent Required. The target site where the cloned version will reside, in the format: `sites/{site}`
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest}
        * @return the request
        */
@@ -2984,8 +6654,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Clone#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The target site where the cloned version will reside,
-      in the format: `sites/{site}`
+         * @param parent Required. The target site where the cloned version will reside, in the format: `sites/{site}`
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CloneVersionRequest}
          * @since 1.13
          */
@@ -3094,8 +6763,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent to create the version for, in the format:
-      sites/site-name
+       * @param parent Required. The parent to create the version for, in the format: sites/ site-name
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
        * @return the request
        */
@@ -3123,8 +6791,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent to create the version for, in the format:
-      sites/site-name
+         * @param parent Required. The parent to create the version for, in the format: sites/ site-name
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
          * @since 1.13
          */
@@ -3193,21 +6860,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent to create the version for, in the format: sites/site-name
-         */
+        /** Required. The parent to create the version for, in the format: sites/ site-name */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent to create the version for, in the format: sites/site-name
+        /** Required. The parent to create the version for, in the format: sites/ site-name
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent to create the version for, in the format: sites/site-name
-         */
+        /** Required. The parent to create the version for, in the format: sites/ site-name */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3242,19 +6905,22 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * A unique id for the new version. This is only specified for legacy version creations.
+         * A unique id for the new version. This is was only specified for legacy version creations,
+         * and should be blank.
          */
         @com.google.api.client.util.Key
         private java.lang.String versionId;
 
-        /** A unique id for the new version. This is only specified for legacy version creations.
+        /** A unique id for the new version. This is was only specified for legacy version creations, and
+       should be blank.
          */
         public java.lang.String getVersionId() {
           return versionId;
         }
 
         /**
-         * A unique id for the new version. This is only specified for legacy version creations.
+         * A unique id for the new version. This is was only specified for legacy version creations,
+         * and should be blank.
          */
         public Create setVersionId(java.lang.String versionId) {
           this.versionId = versionId;
@@ -3274,8 +6940,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the version to be deleted, in the format:
-      sites/site-name/versions/versionID
+       * @param name Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3302,8 +6967,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the version to be deleted, in the format:
-      sites/site-name/versions/versionID
+         * @param name Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -3372,20 +7036,20 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. The name of the version to be deleted, in the format: sites/site-
+         * Required. The name of the version to be deleted, in the format: sites/ site-
          * name/versions/versionID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the version to be deleted, in the format: sites/site-name/versions/versionID
+        /** Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The name of the version to be deleted, in the format: sites/site-
+         * Required. The name of the version to be deleted, in the format: sites/ site-
          * name/versions/versionID
          */
         public Delete setName(java.lang.String name) {
@@ -3412,8 +7076,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent for which to list files, in the format:
-      sites/site-name
+       * @param parent Required. The parent for which to list files, in the format: sites/site-name
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3440,8 +7103,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent for which to list files, in the format:
-      sites/site-name
+         * @param parent Required. The parent for which to list files, in the format: sites/site-name
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3519,9 +7181,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent for which to list files, in the format: sites/site-name
-         */
+        /** Required. The parent for which to list files, in the format: sites/site-name */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
@@ -3531,9 +7191,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return parent;
         }
 
-        /**
-         * Required. The parent for which to list files, in the format: sites/site-name
-         */
+        /** Required. The parent for which to list files, in the format: sites/site-name */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3628,9 +7286,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The unique identifier for a version, in the format:
-      sites/site-name/versions/versionID
-      This name is
+       * @param name The unique identifier for a version, in the format: sites/site-name /versions/versionID This name is
        *        provided in the response body when you call the
        *        [`CreateVersion`](../sites.versions/create) endpoint.
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
@@ -3663,9 +7319,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The unique identifier for a version, in the format:
-      sites/site-name/versions/versionID
-      This name is
+         * @param name The unique identifier for a version, in the format: sites/site-name /versions/versionID This name is
        *        provided in the response body when you call the
        *        [`CreateVersion`](../sites.versions/create) endpoint.
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
@@ -3737,15 +7391,15 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * The unique identifier for a version, in the format: sites/site-name/versions/versionID
+         * The unique identifier for a version, in the format: sites/site-name /versions/versionID
          * This name is provided in the response body when you call the
          * [`CreateVersion`](../sites.versions/create) endpoint.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The unique identifier for a version, in the format: sites/site-name/versions/versionID This name is
-       provided in the response body when you call the [`CreateVersion`](../sites.versions/create)
+        /** The unique identifier for a version, in the format: sites/site-name /versions/versionID This name
+       is provided in the response body when you call the [`CreateVersion`](../sites.versions/create)
        endpoint.
          */
         public java.lang.String getName() {
@@ -3753,7 +7407,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * The unique identifier for a version, in the format: sites/site-name/versions/versionID
+         * The unique identifier for a version, in the format: sites/site-name /versions/versionID
          * This name is provided in the response body when you call the
          * [`CreateVersion`](../sites.versions/create) endpoint.
          */
@@ -3801,7 +7455,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Adds content files to a version.
+       * Adds content files to a version. Each file must be under 2 GB.
        *
        * Create a request for the method "versions.populateFiles".
        *
@@ -3809,8 +7463,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link PopulateFiles#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The version to add files to, in the format:
-      sites/site-name/versions/versionID
+       * @param parent Required. The version to add files to, in the format: sites/site-name /versions/versionID
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesRequest}
        * @return the request
        */
@@ -3828,7 +7481,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^sites/[^/]+/versions/[^/]+$");
 
         /**
-         * Adds content files to a version.
+         * Adds content files to a version. Each file must be under 2 GB.
          *
          * Create a request for the method "versions.populateFiles".
          *
@@ -3838,8 +7491,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param parent Required. The version to add files to, in the format:
-      sites/site-name/versions/versionID
+         * @param parent Required. The version to add files to, in the format: sites/site-name /versions/versionID
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesRequest}
          * @since 1.13
          */
@@ -3909,19 +7561,19 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. The version to add files to, in the format: sites/site-name/versions/versionID
+         * Required. The version to add files to, in the format: sites/site-name /versions/versionID
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The version to add files to, in the format: sites/site-name/versions/versionID
+        /** Required. The version to add files to, in the format: sites/site-name /versions/versionID
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The version to add files to, in the format: sites/site-name/versions/versionID
+         * Required. The version to add files to, in the format: sites/site-name /versions/versionID
          */
         public PopulateFiles setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3967,8 +7619,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent to list files for, in the format:
-        sites/site-name/versions/versionID
+         * @param parent Required. The parent to list files for, in the format: sites/site-name /versions/versionID
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3994,8 +7645,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent to list files for, in the format:
-        sites/site-name/versions/versionID
+           * @param parent Required. The parent to list files for, in the format: sites/site-name /versions/versionID
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4074,21 +7724,21 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent to list files for, in the format: sites/site-
-           * name/versions/versionID
+           * Required. The parent to list files for, in the format: sites/site-name
+           * /versions/versionID
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent to list files for, in the format: sites/site-name/versions/versionID
+          /** Required. The parent to list files for, in the format: sites/site-name /versions/versionID
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent to list files for, in the format: sites/site-
-           * name/versions/versionID
+           * Required. The parent to list files for, in the format: sites/site-name
+           * /versions/versionID
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

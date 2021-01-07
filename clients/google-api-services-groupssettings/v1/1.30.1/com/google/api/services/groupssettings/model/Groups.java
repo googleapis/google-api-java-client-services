@@ -231,13 +231,13 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   private java.lang.String primaryLanguage;
 
   /**
-   * Specifies who should the default reply go to. Possible values are: - REPLY_TO_CUSTOM: For
-   * replies to messages, use the group's custom email address. When the group's ReplyTo property is
-   * set to REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when
-   * replying to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the
-   * customReplyTo property must have a value. Otherwise an error is returned.   - REPLY_TO_SENDER:
-   * The reply sent to author of message.  - REPLY_TO_LIST: This reply message is sent to the group.
-   * - REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the
+   * Specifies who receives the default reply. Possible values are: - REPLY_TO_CUSTOM: For replies
+   * to messages, use the group's custom email address. When the group's ReplyTo property is set to
+   * REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when replying
+   * to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo
+   * property must have a value. Otherwise an error is returned.   - REPLY_TO_SENDER: The reply sent
+   * to author of message.  - REPLY_TO_LIST: This reply message is sent to the group.  -
+   * REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the
    * group's managers.  - REPLY_TO_IGNORE: Group users individually decide where the message reply
    * is sent.  - REPLY_TO_MANAGERS: This reply message is sent to the group's managers, which
    * includes all managers and the group owner.
@@ -1073,13 +1073,13 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies who should the default reply go to. Possible values are: - REPLY_TO_CUSTOM: For
-   * replies to messages, use the group's custom email address. When the group's ReplyTo property is
-   * set to REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when
-   * replying to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the
-   * customReplyTo property must have a value. Otherwise an error is returned.   - REPLY_TO_SENDER:
-   * The reply sent to author of message.  - REPLY_TO_LIST: This reply message is sent to the group.
-   * - REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the
+   * Specifies who receives the default reply. Possible values are: - REPLY_TO_CUSTOM: For replies
+   * to messages, use the group's custom email address. When the group's ReplyTo property is set to
+   * REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when replying
+   * to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo
+   * property must have a value. Otherwise an error is returned.   - REPLY_TO_SENDER: The reply sent
+   * to author of message.  - REPLY_TO_LIST: This reply message is sent to the group.  -
+   * REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the
    * group's managers.  - REPLY_TO_IGNORE: Group users individually decide where the message reply
    * is sent.  - REPLY_TO_MANAGERS: This reply message is sent to the group's managers, which
    * includes all managers and the group owner.
@@ -1090,13 +1090,13 @@ public final class Groups extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies who should the default reply go to. Possible values are: - REPLY_TO_CUSTOM: For
-   * replies to messages, use the group's custom email address. When the group's ReplyTo property is
-   * set to REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when
-   * replying to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the
-   * customReplyTo property must have a value. Otherwise an error is returned.   - REPLY_TO_SENDER:
-   * The reply sent to author of message.  - REPLY_TO_LIST: This reply message is sent to the group.
-   * - REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the
+   * Specifies who receives the default reply. Possible values are: - REPLY_TO_CUSTOM: For replies
+   * to messages, use the group's custom email address. When the group's ReplyTo property is set to
+   * REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when replying
+   * to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo
+   * property must have a value. Otherwise an error is returned.   - REPLY_TO_SENDER: The reply sent
+   * to author of message.  - REPLY_TO_LIST: This reply message is sent to the group.  -
+   * REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the
    * group's managers.  - REPLY_TO_IGNORE: Group users individually decide where the message reply
    * is sent.  - REPLY_TO_MANAGERS: This reply message is sent to the group's managers, which
    * includes all managers and the group owner.

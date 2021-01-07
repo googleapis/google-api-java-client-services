@@ -17,32 +17,32 @@
 package com.google.api.services.deploymentmanager.model;
 
 /**
- * Defines an Identity and Access Management (IAM) policy. It is used to specify access control
- * policies for Cloud Platform resources.
- *
- * A `Policy` consists of a list of `bindings`. A `binding` binds a list of `members` to a `role`,
- * where the members can be user accounts, Google groups, Google domains, and service accounts. A
- * `role` is a named list of permissions defined by IAM.
- *
- * **JSON Example**
- *
- * { "bindings": [ { "role": "roles/owner", "members": [ "user:mike@example.com",
- * "group:admins@example.com", "domain:google.com", "serviceAccount:my-other-
- * app@appspot.gserviceaccount.com" ] }, { "role": "roles/viewer", "members":
- * ["user:sean@example.com"] } ] }
- *
- * **YAML Example**
- *
- * bindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com -
- * serviceAccount:my-other-app@appspot.gserviceaccount.com role: roles/owner - members: -
- * user:sean@example.com role: roles/viewer
- *
- * For a description of IAM and its features, see the [IAM developer's
- * guide](https://cloud.google.com/iam/docs).
+ * An Identity and Access Management (IAM) policy, which specifies access controls for Google Cloud
+ * resources. A `Policy` is a collection of `bindings`. A `binding` binds one or more `members` to a
+ * single `role`. Members can be user accounts, service accounts, Google groups, and domains (such
+ * as G Suite). A `role` is a named list of permissions; each `role` can be an IAM predefined role
+ * or a user-created custom role. For some types of Google Cloud resources, a `binding` can also
+ * specify a `condition`, which is a logical expression that allows access to a resource only if the
+ * expression evaluates to `true`. A condition can add constraints based on attributes of the
+ * request, the resource, or both. To learn which resources support conditions in their IAM
+ * policies, see the [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-
+ * policies). **JSON example:** { "bindings": [ { "role": "roles/resourcemanager.organizationAdmin",
+ * "members": [ "user:mike@example.com", "group:admins@example.com", "domain:google.com",
+ * "serviceAccount:my-project-id@appspot.gserviceaccount.com" ] }, { "role":
+ * "roles/resourcemanager.organizationViewer", "members": [ "user:eve@example.com" ], "condition": {
+ * "title": "expirable access", "description": "Does not grant access after Sep 2020", "expression":
+ * "request.time < timestamp('2020-10-01T00:00:00.000Z')", } } ], "etag": "BwWWja0YfJA=", "version":
+ * 3 } **YAML example:** bindings: - members: - user:mike@example.com - group:admins@example.com -
+ * domain:google.com - serviceAccount:my-project-id@appspot.gserviceaccount.com role:
+ * roles/resourcemanager.organizationAdmin - members: - user:eve@example.com role:
+ * roles/resourcemanager.organizationViewer condition: title: expirable access description: Does not
+ * grant access after Sep 2020 expression: request.time < timestamp('2020-10-01T00:00:00.000Z') -
+ * etag: BwWWja0YfJA= - version: 3 For a description of IAM and its features, see the [IAM
+ * documentation](https://cloud.google.com/iam/docs/).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud Deployment Manager API V2Beta Methods.
- * For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud Deployment Manager V2 API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -65,7 +65,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associates a list of `members` to a `role`. `bindings` with no members will result in an error.
+   * Associates a list of `members` to a `role`. Optionally, may specify a `condition` that
+   * determines how and when the `bindings` are applied. Each of the `bindings` must contain at
+   * least one member.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,34 +85,28 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * `etag` in the read-modify-write cycle to perform policy updates in order to avoid race
    * conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected
    * to put that etag in the request to `setIamPolicy` to ensure that their change will be applied
-   * to the same version of the policy.
-   *
-   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
-   * blindly.
+   * to the same version of the policy. **Important:** If you use IAM Conditions, you must include
+   * the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you
+   * to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the
+   * version `3` policy are lost.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean iamOwned;
-
-  /**
-   * If more than one rule is specified, the rules are applied in the following manner: - All
-   * matching LOG rules are always applied. - If any DENY/DENY_WITH_LOG rule matches, permission is
-   * denied. Logging will be applied if one or more matching rule requires logging. - Otherwise, if
-   * any ALLOW/ALLOW_WITH_LOG rule matches, permission is granted. Logging will be applied if one or
-   * more matching rule requires logging. - Otherwise, if no rule applies, permission is denied.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Rule> rules;
-
-  /**
-   * Deprecated.
+   * Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify
+   * an invalid value are rejected. Any operation that affects conditional role bindings must
+   * specify version `3`. This requirement applies to the following operations: * Getting a policy
+   * that includes a conditional role binding * Adding a conditional role binding to a policy *
+   * Changing a conditional role binding in a policy * Removing any role binding, with or without a
+   * condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you
+   * must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then
+   * IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the
+   * conditions in the version `3` policy are lost. If a policy does not include any conditions,
+   * operations on that policy may specify any valid version or leave the field unset. To learn
+   * which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +130,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associates a list of `members` to a `role`. `bindings` with no members will result in an error.
+   * Associates a list of `members` to a `role`. Optionally, may specify a `condition` that
+   * determines how and when the `bindings` are applied. Each of the `bindings` must contain at
+   * least one member.
    * @return value or {@code null} for none
    */
   public java.util.List<Binding> getBindings() {
@@ -142,7 +140,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Associates a list of `members` to a `role`. `bindings` with no members will result in an error.
+   * Associates a list of `members` to a `role`. Optionally, may specify a `condition` that
+   * determines how and when the `bindings` are applied. Each of the `bindings` must contain at
+   * least one member.
    * @param bindings bindings or {@code null} for none
    */
   public Policy setBindings(java.util.List<Binding> bindings) {
@@ -156,10 +156,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * `etag` in the read-modify-write cycle to perform policy updates in order to avoid race
    * conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected
    * to put that etag in the request to `setIamPolicy` to ensure that their change will be applied
-   * to the same version of the policy.
-   *
-   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
-   * blindly.
+   * to the same version of the policy. **Important:** If you use IAM Conditions, you must include
+   * the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you
+   * to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the
+   * version `3` policy are lost.
    * @see #decodeEtag()
    * @return value or {@code null} for none
    */
@@ -173,10 +173,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * `etag` in the read-modify-write cycle to perform policy updates in order to avoid race
    * conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected
    * to put that etag in the request to `setIamPolicy` to ensure that their change will be applied
-   * to the same version of the policy.
-   *
-   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
-   * blindly.
+   * to the same version of the policy. **Important:** If you use IAM Conditions, you must include
+   * the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you
+   * to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the
+   * version `3` policy are lost.
    * @see #getEtag()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -192,10 +192,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * `etag` in the read-modify-write cycle to perform policy updates in order to avoid race
    * conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected
    * to put that etag in the request to `setIamPolicy` to ensure that their change will be applied
-   * to the same version of the policy.
-   *
-   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
-   * blindly.
+   * to the same version of the policy. **Important:** If you use IAM Conditions, you must include
+   * the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you
+   * to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the
+   * version `3` policy are lost.
    * @see #encodeEtag()
    * @param etag etag or {@code null} for none
    */
@@ -210,10 +210,10 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * `etag` in the read-modify-write cycle to perform policy updates in order to avoid race
    * conditions: An `etag` is returned in the response to `getIamPolicy`, and systems are expected
    * to put that etag in the request to `setIamPolicy` to ensure that their change will be applied
-   * to the same version of the policy.
-   *
-   * If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
-   * blindly.
+   * to the same version of the policy. **Important:** If you use IAM Conditions, you must include
+   * the `etag` field whenever you call `setIamPolicy`. If you omit this field, then IAM allows you
+   * to overwrite a version `3` policy with a version `1` policy, and all of the conditions in the
+   * version `3` policy are lost.
    * @see #setEtag()
    *
    * <p>
@@ -228,47 +228,18 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIamOwned() {
-    return iamOwned;
-  }
-
-  /**
-   * @param iamOwned iamOwned or {@code null} for none
-   */
-  public Policy setIamOwned(java.lang.Boolean iamOwned) {
-    this.iamOwned = iamOwned;
-    return this;
-  }
-
-  /**
-   * If more than one rule is specified, the rules are applied in the following manner: - All
-   * matching LOG rules are always applied. - If any DENY/DENY_WITH_LOG rule matches, permission is
-   * denied. Logging will be applied if one or more matching rule requires logging. - Otherwise, if
-   * any ALLOW/ALLOW_WITH_LOG rule matches, permission is granted. Logging will be applied if one or
-   * more matching rule requires logging. - Otherwise, if no rule applies, permission is denied.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Rule> getRules() {
-    return rules;
-  }
-
-  /**
-   * If more than one rule is specified, the rules are applied in the following manner: - All
-   * matching LOG rules are always applied. - If any DENY/DENY_WITH_LOG rule matches, permission is
-   * denied. Logging will be applied if one or more matching rule requires logging. - Otherwise, if
-   * any ALLOW/ALLOW_WITH_LOG rule matches, permission is granted. Logging will be applied if one or
-   * more matching rule requires logging. - Otherwise, if no rule applies, permission is denied.
-   * @param rules rules or {@code null} for none
-   */
-  public Policy setRules(java.util.List<Rule> rules) {
-    this.rules = rules;
-    return this;
-  }
-
-  /**
-   * Deprecated.
+   * Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify
+   * an invalid value are rejected. Any operation that affects conditional role bindings must
+   * specify version `3`. This requirement applies to the following operations: * Getting a policy
+   * that includes a conditional role binding * Adding a conditional role binding to a policy *
+   * Changing a conditional role binding in a policy * Removing any role binding, with or without a
+   * condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you
+   * must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then
+   * IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the
+   * conditions in the version `3` policy are lost. If a policy does not include any conditions,
+   * operations on that policy may specify any valid version or leave the field unset. To learn
+   * which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersion() {
@@ -276,7 +247,18 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated.
+   * Specifies the format of the policy. Valid values are `0`, `1`, and `3`. Requests that specify
+   * an invalid value are rejected. Any operation that affects conditional role bindings must
+   * specify version `3`. This requirement applies to the following operations: * Getting a policy
+   * that includes a conditional role binding * Adding a conditional role binding to a policy *
+   * Changing a conditional role binding in a policy * Removing any role binding, with or without a
+   * condition, from a policy that includes conditions **Important:** If you use IAM Conditions, you
+   * must include the `etag` field whenever you call `setIamPolicy`. If you omit this field, then
+   * IAM allows you to overwrite a version `3` policy with a version `1` policy, and all of the
+   * conditions in the version `3` policy are lost. If a policy does not include any conditions,
+   * operations on that policy may specify any valid version or leave the field unset. To learn
+   * which resources support conditions in their IAM policies, see the [IAM
+   * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
    * @param version version or {@code null} for none
    */
   public Policy setVersion(java.lang.Integer version) {

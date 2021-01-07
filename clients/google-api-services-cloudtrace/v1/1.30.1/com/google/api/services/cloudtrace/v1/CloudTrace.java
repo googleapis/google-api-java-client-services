@@ -20,8 +20,7 @@ package com.google.api.services.cloudtrace.v1;
  * Service definition for CloudTrace (v1).
  *
  * <p>
- * Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Cloud Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus.
-
+ * Sends application trace data to Cloud Trace for viewing. Trace data is collected for all App Engine applications by default. Trace data from other applications can be provided using this API. This library is used to interact with the Cloud Trace API directly. If you are looking to instrument your application for Cloud Trace, we recommend using OpenCensus. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Trace API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Trace API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -144,11 +143,10 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
   public class Projects {
 
     /**
-     * Sends new traces to Stackdriver Trace or updates existing traces. If the ID of a trace that you
-     * send matches that of an existing trace, any fields in the existing trace and its spans are
-     * overwritten by the provided values, and any new fields provided are merged with the existing
-     * trace data. If the ID does not match, a new trace is created. In this case, writing traces is not
-     * considered an active developer method since traces are machine generated.
+     * Sends new traces to Cloud Trace or updates existing traces. If the ID of a trace that you send
+     * matches that of an existing trace, any fields in the existing trace and its spans are overwritten
+     * by the provided values, and any new fields provided are merged with the existing trace data. If
+     * the ID does not match, a new trace is created.
      *
      * Create a request for the method "projects.patchTraces".
      *
@@ -170,11 +168,10 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
       private static final String REST_PATH = "v1/projects/{projectId}/traces";
 
       /**
-       * Sends new traces to Stackdriver Trace or updates existing traces. If the ID of a trace that you
-       * send matches that of an existing trace, any fields in the existing trace and its spans are
+       * Sends new traces to Cloud Trace or updates existing traces. If the ID of a trace that you send
+       * matches that of an existing trace, any fields in the existing trace and its spans are
        * overwritten by the provided values, and any new fields provided are merged with the existing
-       * trace data. If the ID does not match, a new trace is created. In this case, writing traces is
-       * not considered an active developer method since traces are machine generated.
+       * trace data. If the ID does not match, a new trace is created.
        *
        * Create a request for the method "projects.patchTraces".
        *
@@ -291,8 +288,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
     public class Traces {
 
       /**
-       * Gets a single trace by its ID. In this case, getting for traces is considered an active developer
-       * method, even though it is technically a read-only method.
+       * Gets a single trace by its ID.
        *
        * Create a request for the method "traces.get".
        *
@@ -314,8 +310,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/traces/{traceId}";
 
         /**
-         * Gets a single trace by its ID. In this case, getting for traces is considered an active
-         * developer method, even though it is technically a read-only method.
+         * Gets a single trace by its ID.
          *
          * Create a request for the method "traces.get".
          *
@@ -437,9 +432,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Returns of a list of traces that match the specified filter conditions. In this case, listing for
-       * traces is considered an active developer method, even though it is technically a read-only
-       * method.
+       * Returns of a list of traces that match the specified filter conditions.
        *
        * Create a request for the method "traces.list".
        *
@@ -460,9 +453,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/traces";
 
         /**
-         * Returns of a list of traces that match the specified filter conditions. In this case, listing
-         * for traces is considered an active developer method, even though it is technically a read-only
-         * method.
+         * Returns of a list of traces that match the specified filter conditions.
          *
          * Create a request for the method "traces.list".
          *
@@ -584,39 +575,33 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Optional. A filter against labels for the request.
-         *
-         * By default, searches use prefix matching. To specify exact match, prepend a plus symbol
-         * (`+`) to the search term. Multiple terms are ANDed. Syntax:
-         *
-         * *   `root:NAME_PREFIX` or `NAME_PREFIX`: Return traces where any root span starts with
-         * `NAME_PREFIX`. *   `+root:NAME` or `+NAME`: Return traces where any root span's name is
-         * exactly `NAME`. *   `span:NAME_PREFIX`: Return traces where any span starts with
-         * `NAME_PREFIX`. *   `+span:NAME`: Return traces where any span's name is exactly `NAME`. *
-         * `latency:DURATION`: Return traces whose overall latency is greater or equal to than
-         * `DURATION`. Accepted units are nanoseconds (`ns`), milliseconds (`ms`), and seconds
-         * (`s`). Default is `ms`. For example, `latency:24ms` returns traces whose overall latency
-         * is greater than or equal to 24 milliseconds. *   `label:LABEL_KEY`: Return all traces
-         * containing the specified label key (exact match, case-sensitive) regardless of the
-         * key:value pair's value (including empty values). *   `LABEL_KEY:VALUE_PREFIX`: Return all
-         * traces containing the specified label key (exact match, case-sensitive) whose value
+         * Optional. A filter against labels for the request. By default, searches use prefix
+         * matching. To specify exact match, prepend a plus symbol (`+`) to the search term.
+         * Multiple terms are ANDed. Syntax: * `root:NAME_PREFIX` or `NAME_PREFIX`: Return traces
+         * where any root span starts with `NAME_PREFIX`. * `+root:NAME` or `+NAME`: Return traces
+         * where any root span's name is exactly `NAME`. * `span:NAME_PREFIX`: Return traces where
+         * any span starts with `NAME_PREFIX`. * `+span:NAME`: Return traces where any span's name
+         * is exactly `NAME`. * `latency:DURATION`: Return traces whose overall latency is greater
+         * or equal to than `DURATION`. Accepted units are nanoseconds (`ns`), milliseconds (`ms`),
+         * and seconds (`s`). Default is `ms`. For example, `latency:24ms` returns traces whose
+         * overall latency is greater than or equal to 24 milliseconds. * `label:LABEL_KEY`: Return
+         * all traces containing the specified label key (exact match, case-sensitive) regardless of
+         * the key:value pair's value (including empty values). * `LABEL_KEY:VALUE_PREFIX`: Return
+         * all traces containing the specified label key (exact match, case-sensitive) whose value
          * starts with `VALUE_PREFIX`. Both a key and a value must be specified. *
          * `+LABEL_KEY:VALUE`: Return all traces containing a key:value pair exactly matching the
-         * specified text. Both a key and a value must be specified. *   `method:VALUE`: Equivalent
-         * to `/http/method:VALUE`. *   `url:VALUE`: Equivalent to `/http/url:VALUE`.
+         * specified text. Both a key and a value must be specified. * `method:VALUE`: Equivalent to
+         * `/http/method:VALUE`. * `url:VALUE`: Equivalent to `/http/url:VALUE`.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. A filter against labels for the request.
-
-       By default, searches use prefix matching. To specify exact match, prepend a plus symbol (`+`) to
-       the search term. Multiple terms are ANDed. Syntax:
-
-       *   `root:NAME_PREFIX` or `NAME_PREFIX`: Return traces where any root span starts with
-       `NAME_PREFIX`. *   `+root:NAME` or `+NAME`: Return traces where any root span's name is exactly
-       `NAME`. *   `span:NAME_PREFIX`: Return traces where any span starts with `NAME_PREFIX`. *
-       `+span:NAME`: Return traces where any span's name is exactly `NAME`. *   `latency:DURATION`: Return
+        /** Optional. A filter against labels for the request. By default, searches use prefix matching. To
+       specify exact match, prepend a plus symbol (`+`) to the search term. Multiple terms are ANDed.
+       Syntax: * `root:NAME_PREFIX` or `NAME_PREFIX`: Return traces where any root span starts with
+       `NAME_PREFIX`. * `+root:NAME` or `+NAME`: Return traces where any root span's name is exactly
+       `NAME`. * `span:NAME_PREFIX`: Return traces where any span starts with `NAME_PREFIX`. *
+       `+span:NAME`: Return traces where any span's name is exactly `NAME`. * `latency:DURATION`: Return
        traces whose overall latency is greater or equal to than `DURATION`. Accepted units are nanoseconds
        (`ns`), milliseconds (`ms`), and seconds (`s`). Default is `ms`. For example, `latency:24ms`
        returns traces whose overall latency is greater than or equal to 24 milliseconds. *
@@ -625,34 +610,31 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
        `LABEL_KEY:VALUE_PREFIX`: Return all traces containing the specified label key (exact match, case-
        sensitive) whose value starts with `VALUE_PREFIX`. Both a key and a value must be specified. *
        `+LABEL_KEY:VALUE`: Return all traces containing a key:value pair exactly matching the specified
-       text. Both a key and a value must be specified. *   `method:VALUE`: Equivalent to
-       `/http/method:VALUE`. *   `url:VALUE`: Equivalent to `/http/url:VALUE`.
+       text. Both a key and a value must be specified. * `method:VALUE`: Equivalent to
+       `/http/method:VALUE`. * `url:VALUE`: Equivalent to `/http/url:VALUE`.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Optional. A filter against labels for the request.
-         *
-         * By default, searches use prefix matching. To specify exact match, prepend a plus symbol
-         * (`+`) to the search term. Multiple terms are ANDed. Syntax:
-         *
-         * *   `root:NAME_PREFIX` or `NAME_PREFIX`: Return traces where any root span starts with
-         * `NAME_PREFIX`. *   `+root:NAME` or `+NAME`: Return traces where any root span's name is
-         * exactly `NAME`. *   `span:NAME_PREFIX`: Return traces where any span starts with
-         * `NAME_PREFIX`. *   `+span:NAME`: Return traces where any span's name is exactly `NAME`. *
-         * `latency:DURATION`: Return traces whose overall latency is greater or equal to than
-         * `DURATION`. Accepted units are nanoseconds (`ns`), milliseconds (`ms`), and seconds
-         * (`s`). Default is `ms`. For example, `latency:24ms` returns traces whose overall latency
-         * is greater than or equal to 24 milliseconds. *   `label:LABEL_KEY`: Return all traces
-         * containing the specified label key (exact match, case-sensitive) regardless of the
-         * key:value pair's value (including empty values). *   `LABEL_KEY:VALUE_PREFIX`: Return all
-         * traces containing the specified label key (exact match, case-sensitive) whose value
+         * Optional. A filter against labels for the request. By default, searches use prefix
+         * matching. To specify exact match, prepend a plus symbol (`+`) to the search term.
+         * Multiple terms are ANDed. Syntax: * `root:NAME_PREFIX` or `NAME_PREFIX`: Return traces
+         * where any root span starts with `NAME_PREFIX`. * `+root:NAME` or `+NAME`: Return traces
+         * where any root span's name is exactly `NAME`. * `span:NAME_PREFIX`: Return traces where
+         * any span starts with `NAME_PREFIX`. * `+span:NAME`: Return traces where any span's name
+         * is exactly `NAME`. * `latency:DURATION`: Return traces whose overall latency is greater
+         * or equal to than `DURATION`. Accepted units are nanoseconds (`ns`), milliseconds (`ms`),
+         * and seconds (`s`). Default is `ms`. For example, `latency:24ms` returns traces whose
+         * overall latency is greater than or equal to 24 milliseconds. * `label:LABEL_KEY`: Return
+         * all traces containing the specified label key (exact match, case-sensitive) regardless of
+         * the key:value pair's value (including empty values). * `LABEL_KEY:VALUE_PREFIX`: Return
+         * all traces containing the specified label key (exact match, case-sensitive) whose value
          * starts with `VALUE_PREFIX`. Both a key and a value must be specified. *
          * `+LABEL_KEY:VALUE`: Return all traces containing a key:value pair exactly matching the
-         * specified text. Both a key and a value must be specified. *   `method:VALUE`: Equivalent
-         * to `/http/method:VALUE`. *   `url:VALUE`: Equivalent to `/http/url:VALUE`.
+         * specified text. Both a key and a value must be specified. * `method:VALUE`: Equivalent to
+         * `/http/method:VALUE`. * `url:VALUE`: Equivalent to `/http/url:VALUE`.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -660,45 +642,31 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Optional. Field used to sort the returned traces. Can be one of the following:
-         *
-         * *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration`
-         * (difference between `end_time` and `start_time` fields of the root span) *   `start`
-         * (`start_time` field of the root span)
-         *
-         * Descending order can be specified by appending `desc` to the sort field (for example,
-         * `name desc`).
-         *
-         * Only one sort field is permitted.
+         * Optional. Field used to sort the returned traces. Can be one of the following: *
+         * `trace_id` * `name` (`name` field of root span in the trace) * `duration` (difference
+         * between `end_time` and `start_time` fields of the root span) * `start` (`start_time`
+         * field of the root span) Descending order can be specified by appending `desc` to the sort
+         * field (for example, `name desc`). Only one sort field is permitted.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional. Field used to sort the returned traces. Can be one of the following:
-
-       *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration` (difference
-       between `end_time` and `start_time` fields of the root span) *   `start` (`start_time` field of the
-       root span)
-
-       Descending order can be specified by appending `desc` to the sort field (for example, `name desc`).
-
-       Only one sort field is permitted.
+        /** Optional. Field used to sort the returned traces. Can be one of the following: * `trace_id` *
+       `name` (`name` field of root span in the trace) * `duration` (difference between `end_time` and
+       `start_time` fields of the root span) * `start` (`start_time` field of the root span) Descending
+       order can be specified by appending `desc` to the sort field (for example, `name desc`). Only one
+       sort field is permitted.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
         /**
-         * Optional. Field used to sort the returned traces. Can be one of the following:
-         *
-         * *   `trace_id` *   `name` (`name` field of root span in the trace) *   `duration`
-         * (difference between `end_time` and `start_time` fields of the root span) *   `start`
-         * (`start_time` field of the root span)
-         *
-         * Descending order can be specified by appending `desc` to the sort field (for example,
-         * `name desc`).
-         *
-         * Only one sort field is permitted.
+         * Optional. Field used to sort the returned traces. Can be one of the following: *
+         * `trace_id` * `name` (`name` field of root span in the trace) * `duration` (difference
+         * between `end_time` and `start_time` fields of the root span) * `start` (`start_time`
+         * field of the root span) Descending order can be specified by appending `desc` to the sort
+         * field (for example, `name desc`). Only one sort field is permitted.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -707,14 +675,14 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. Maximum number of traces to return. If not specified or <= 0, the
-         * implementation selects a reasonable value.  The implementation may return fewer traces
+         * implementation selects a reasonable value. The implementation may return fewer traces
          * than the requested page size.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. Maximum number of traces to return. If not specified or <= 0, the implementation selects
-       a reasonable value.  The implementation may return fewer traces than the requested page size.
+       a reasonable value. The implementation may return fewer traces than the requested page size.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -722,7 +690,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. Maximum number of traces to return. If not specified or <= 0, the
-         * implementation selects a reasonable value.  The implementation may return fewer traces
+         * implementation selects a reasonable value. The implementation may return fewer traces
          * than the requested page size.
          */
         public List setPageSize(java.lang.Integer pageSize) {
@@ -776,9 +744,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /**
-         * Optional. Type of data returned for traces in the list. Default is `MINIMAL`.
-         */
+        /** Optional. Type of data returned for traces in the list. Default is `MINIMAL`. */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
@@ -788,9 +754,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
           return view;
         }
 
-        /**
-         * Optional. Type of data returned for traces in the list. Default is `MINIMAL`.
-         */
+        /** Optional. Type of data returned for traces in the list. Default is `MINIMAL`. */
         public List setView(java.lang.String view) {
           this.view = view;
           return this;

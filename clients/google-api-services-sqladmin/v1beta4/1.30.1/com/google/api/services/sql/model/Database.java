@@ -30,14 +30,14 @@ package com.google.api.services.sql.model;
 public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
-   * The MySQL charset value.
+   * The Cloud SQL charset value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String charset;
 
   /**
-   * The MySQL collation value.
+   * The Cloud SQL collation value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String instance;
 
   /**
-   * This is always sql#database.
+   * This is always *sql#database*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private SqlServerDatabaseDetails sqlserverDatabaseDetails;
 
   /**
-   * The MySQL charset value.
+   * The Cloud SQL charset value.
    * @return value or {@code null} for none
    */
   public java.lang.String getCharset() {
@@ -102,7 +102,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MySQL charset value.
+   * The Cloud SQL charset value.
    * @param charset charset or {@code null} for none
    */
   public Database setCharset(java.lang.String charset) {
@@ -111,7 +111,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MySQL collation value.
+   * The Cloud SQL collation value.
    * @return value or {@code null} for none
    */
   public java.lang.String getCollation() {
@@ -119,7 +119,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MySQL collation value.
+   * The Cloud SQL collation value.
    * @param collation collation or {@code null} for none
    */
   public Database setCollation(java.lang.String collation) {
@@ -162,7 +162,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always sql#database.
+   * This is always *sql#database*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -170,7 +170,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always sql#database.
+   * This is always *sql#database*.
    * @param kind kind or {@code null} for none
    */
   public Database setKind(java.lang.String kind) {

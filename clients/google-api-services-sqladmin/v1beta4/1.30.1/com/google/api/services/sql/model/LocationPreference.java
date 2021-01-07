@@ -17,10 +17,10 @@
 package com.google.api.services.sql.model;
 
 /**
- * Preferred location. This specifies where a Cloud SQL instance should preferably be located,
- * either in a specific Compute Engine zone, or co-located with an App Engine application. Note that
- * if the preferred location is not available, the instance will be located as close as possible
- * within the region. Only one location may be specified.
+ * Preferred location. This specifies where a Cloud SQL instance is located, either in a specific
+ * Compute Engine zone, or co-located with an App Engine application. Note that if the preferred
+ * location is not available, the instance will be located as close as possible within the region.
+ * Only one location may be specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -33,28 +33,28 @@ package com.google.api.services.sql.model;
 public final class LocationPreference extends com.google.api.client.json.GenericJson {
 
   /**
-   * The AppEngine application to follow, it must be in the same region as the Cloud SQL instance.
+   * The App Engine application to follow, it must be in the same region as the Cloud SQL instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String followGaeApplication;
 
   /**
-   * This is always sql#locationPreference.
+   * This is always *sql#locationPreference*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The preferred Compute Engine zone (e.g. us-central1-a, us-central1-b, etc.).
+   * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * The AppEngine application to follow, it must be in the same region as the Cloud SQL instance.
+   * The App Engine application to follow, it must be in the same region as the Cloud SQL instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getFollowGaeApplication() {
@@ -62,7 +62,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The AppEngine application to follow, it must be in the same region as the Cloud SQL instance.
+   * The App Engine application to follow, it must be in the same region as the Cloud SQL instance.
    * @param followGaeApplication followGaeApplication or {@code null} for none
    */
   public LocationPreference setFollowGaeApplication(java.lang.String followGaeApplication) {
@@ -71,7 +71,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * This is always sql#locationPreference.
+   * This is always *sql#locationPreference*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -79,7 +79,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * This is always sql#locationPreference.
+   * This is always *sql#locationPreference*.
    * @param kind kind or {@code null} for none
    */
   public LocationPreference setKind(java.lang.String kind) {
@@ -88,7 +88,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The preferred Compute Engine zone (e.g. us-central1-a, us-central1-b, etc.).
+   * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -96,7 +96,7 @@ public final class LocationPreference extends com.google.api.client.json.Generic
   }
 
   /**
-   * The preferred Compute Engine zone (e.g. us-central1-a, us-central1-b, etc.).
+   * The preferred Compute Engine zone (for example: us-central1-a, us-central1-b, etc.).
    * @param zone zone or {@code null} for none
    */
   public LocationPreference setZone(java.lang.String zone) {

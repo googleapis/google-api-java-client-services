@@ -46,7 +46,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the BigQuery Data Transfer API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the BigQuery Data Transfer API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -174,8 +174,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link CheckValidCreds#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. The data source in the form:
-      `projects/{project_id}/dataSources/{data_source_id}` or
+       * @param name Required. The data source in the form: `projects/{project_id}/dataSources/{data_source_id}` or
        *        `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`.
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.CheckValidCredsRequest}
        * @return the request
@@ -207,8 +206,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name Required. The data source in the form:
-      `projects/{project_id}/dataSources/{data_source_id}` or
+         * @param name Required. The data source in the form: `projects/{project_id}/dataSources/{data_source_id}` or
        *        `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.CheckValidCredsRequest}
          * @since 1.13
@@ -474,10 +472,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The BigQuery project id for which data sources should be returned.
-      Must be in the form:
-       *        `projects/{project_id}` or
-      `projects/{project_id}/locations/{location_id}
+       * @param parent Required. The BigQuery project id for which data sources should be returned. Must be in the form:
+       *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -504,10 +500,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The BigQuery project id for which data sources should be returned.
-      Must be in the form:
-       *        `projects/{project_id}` or
-      `projects/{project_id}/locations/{location_id}
+         * @param parent Required. The BigQuery project id for which data sources should be returned. Must be in the form:
+       *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1043,8 +1037,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * optional parameters, call the {@link CheckValidCreds#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. The data source in the form:
-        `projects/{project_id}/dataSources/{data_source_id}` or
+         * @param name Required. The data source in the form: `projects/{project_id}/dataSources/{data_source_id}` or
          *        `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.CheckValidCredsRequest}
          * @return the request
@@ -1076,8 +1069,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name Required. The data source in the form:
-        `projects/{project_id}/dataSources/{data_source_id}` or
+           * @param name Required. The data source in the form: `projects/{project_id}/dataSources/{data_source_id}` or
          *        `projects/{project_id}/locations/{location_id}/dataSources/{data_source_id}`.
            * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.CheckValidCredsRequest}
            * @since 1.13
@@ -1343,10 +1335,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The BigQuery project id for which data sources should be returned.
-        Must be in the form:
-         *        `projects/{project_id}` or
-        `projects/{project_id}/locations/{location_id}
+         * @param parent Required. The BigQuery project id for which data sources should be returned. Must be in the form:
+         *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1373,10 +1363,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The BigQuery project id for which data sources should be returned.
-        Must be in the form:
-         *        `projects/{project_id}` or
-        `projects/{project_id}/locations/{location_id}
+           * @param parent Required. The BigQuery project id for which data sources should be returned. Must be in the form:
+         *        `projects/{project_id}` or `projects/{project_id}/locations/{location_id}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1561,12 +1549,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The BigQuery project id where the transfer configuration should be created.
-        Must be in the
-         *        format projects/{project_id}/locations/{location_id} or
-        projects/{project_id}. If
-         *        specified location and location of the
-        destination bigquery dataset do not match - the
+         * @param parent Required. The BigQuery project id where the transfer configuration should be created. Must be in the
+         *        format projects/{project_id}/locations/{location_id} or projects/{project_id}. If
+         *        specified location and location of the destination bigquery dataset do not match - the
          *        request will fail.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
          * @return the request
@@ -1595,12 +1580,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The BigQuery project id where the transfer configuration should be created.
-        Must be in the
-         *        format projects/{project_id}/locations/{location_id} or
-        projects/{project_id}. If
-         *        specified location and location of the
-        destination bigquery dataset do not match - the
+           * @param parent Required. The BigQuery project id where the transfer configuration should be created. Must be in the
+         *        format projects/{project_id}/locations/{location_id} or projects/{project_id}. If
+         *        specified location and location of the destination bigquery dataset do not match - the
          *        request will fail.
            * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
            * @since 1.13
@@ -1707,15 +1689,14 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Optional OAuth2 authorization code to use with this transfer configuration. This is
            * required if new credentials are needed, as indicated by `CheckValidCreds`. In order to
            * obtain authorization_code, please make a request to
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-           *
-           * * client_id should be OAuth client_id of BigQuery DTS API for the given data source
-           * returned by ListDataSources method. * data_source_scopes are the scopes returned by
-           * ListDataSources method. * redirect_uri is an optional parameter. If not specified, then
-           * authorization code is posted to the opener of authorization flow window. Otherwise it
-           * will be sent to the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means
-           * that authorization code should be returned in the title bar of the browser, with the
-           * page text prompting the user to copy the code and paste it in the application.
+           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri= * client_id
+           * should be OAuth client_id of BigQuery DTS API for the given data source returned by
+           * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+           * method. * redirect_uri is an optional parameter. If not specified, then authorization
+           * code is posted to the opener of authorization flow window. Otherwise it will be sent to
+           * the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that authorization
+           * code should be returned in the title bar of the browser, with the page text prompting
+           * the user to copy the code and paste it in the application.
            */
           @com.google.api.client.util.Key
           private java.lang.String authorizationCode;
@@ -1723,7 +1704,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           /** Optional OAuth2 authorization code to use with this transfer configuration. This is required if new
          credentials are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code,
          please make a request to https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-
          * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by
          ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. *
          redirect_uri is an optional parameter. If not specified, then authorization code is posted to the
@@ -1740,15 +1720,14 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Optional OAuth2 authorization code to use with this transfer configuration. This is
            * required if new credentials are needed, as indicated by `CheckValidCreds`. In order to
            * obtain authorization_code, please make a request to
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-           *
-           * * client_id should be OAuth client_id of BigQuery DTS API for the given data source
-           * returned by ListDataSources method. * data_source_scopes are the scopes returned by
-           * ListDataSources method. * redirect_uri is an optional parameter. If not specified, then
-           * authorization code is posted to the opener of authorization flow window. Otherwise it
-           * will be sent to the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means
-           * that authorization code should be returned in the title bar of the browser, with the
-           * page text prompting the user to copy the code and paste it in the application.
+           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri= * client_id
+           * should be OAuth client_id of BigQuery DTS API for the given data source returned by
+           * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+           * method. * redirect_uri is an optional parameter. If not specified, then authorization
+           * code is posted to the opener of authorization flow window. Otherwise it will be sent to
+           * the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that authorization
+           * code should be returned in the title bar of the browser, with the page text prompting
+           * the user to copy the code and paste it in the application.
            */
           public Create setAuthorizationCode(java.lang.String authorizationCode) {
             this.authorizationCode = authorizationCode;
@@ -2121,10 +2100,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The BigQuery project id for which data sources
-        should be returned: `projects/{project_id}`
-         *        or
-        `projects/{project_id}/locations/{location_id}`
+         * @param parent Required. The BigQuery project id for which data sources should be returned: `projects/{project_id}`
+         *        or `projects/{project_id}/locations/{location_id}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2151,10 +2128,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The BigQuery project id for which data sources
-        should be returned: `projects/{project_id}`
-         *        or
-        `projects/{project_id}/locations/{location_id}`
+           * @param parent Required. The BigQuery project id for which data sources should be returned: `projects/{project_id}`
+         *        or `projects/{project_id}/locations/{location_id}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2333,16 +2308,11 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the transfer config.
-        Transfer config names have the form of
-         *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`.
-        The name is
-         *        automatically generated based on the config_id specified in
-        CreateTransferConfigRequest
-         *        along with project_id and region. If config_id
-        is not provided, usually a uuid, even
-         *        though it is not guaranteed or
-        required, will be generated for config_id.
+         * @param name The resource name of the transfer config. Transfer config names have the form of
+         *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
+         *        automatically generated based on the config_id specified in CreateTransferConfigRequest
+         *        along with project_id and region. If config_id is not provided, usually a uuid, even
+         *        though it is not guaranteed or required, will be generated for config_id.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
          * @return the request
          */
@@ -2370,16 +2340,11 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the transfer config.
-        Transfer config names have the form of
-         *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`.
-        The name is
-         *        automatically generated based on the config_id specified in
-        CreateTransferConfigRequest
-         *        along with project_id and region. If config_id
-        is not provided, usually a uuid, even
-         *        though it is not guaranteed or
-        required, will be generated for config_id.
+           * @param name The resource name of the transfer config. Transfer config names have the form of
+         *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
+         *        automatically generated based on the config_id specified in CreateTransferConfigRequest
+         *        along with project_id and region. If config_id is not provided, usually a uuid, even
+         *        though it is not guaranteed or required, will be generated for config_id.
            * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
            * @since 1.13
            */
@@ -2489,15 +2454,14 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Optional OAuth2 authorization code to use with this transfer configuration. If it is
            * provided, the transfer configuration will be associated with the authorizing user. In
            * order to obtain authorization_code, please make a request to
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-           *
-           * * client_id should be OAuth client_id of BigQuery DTS API for the given data source
-           * returned by ListDataSources method. * data_source_scopes are the scopes returned by
-           * ListDataSources method. * redirect_uri is an optional parameter. If not specified, then
-           * authorization code is posted to the opener of authorization flow window. Otherwise it
-           * will be sent to the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means
-           * that authorization code should be returned in the title bar of the browser, with the
-           * page text prompting the user to copy the code and paste it in the application.
+           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri= * client_id
+           * should be OAuth client_id of BigQuery DTS API for the given data source returned by
+           * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+           * method. * redirect_uri is an optional parameter. If not specified, then authorization
+           * code is posted to the opener of authorization flow window. Otherwise it will be sent to
+           * the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that authorization
+           * code should be returned in the title bar of the browser, with the page text prompting
+           * the user to copy the code and paste it in the application.
            */
           @com.google.api.client.util.Key
           private java.lang.String authorizationCode;
@@ -2505,15 +2469,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           /** Optional OAuth2 authorization code to use with this transfer configuration. If it is provided, the
          transfer configuration will be associated with the authorizing user. In order to obtain
          authorization_code, please make a request to
-         https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-
-         * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by
-         ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. *
-         redirect_uri is an optional parameter. If not specified, then authorization code is posted to the
-         opener of authorization flow window. Otherwise it will be sent to the redirect uri. A special value
-         of urn:ietf:wg:oauth:2.0:oob means that authorization code should be returned in the title bar of
-         the browser, with the page text prompting the user to copy the code and paste it in the
-         application.
+         https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri= * client_id should be
+         OAuth client_id of BigQuery DTS API for the given data source returned by ListDataSources method. *
+         data_source_scopes are the scopes returned by ListDataSources method. * redirect_uri is an optional
+         parameter. If not specified, then authorization code is posted to the opener of authorization flow
+         window. Otherwise it will be sent to the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob
+         means that authorization code should be returned in the title bar of the browser, with the page
+         text prompting the user to copy the code and paste it in the application.
            */
           public java.lang.String getAuthorizationCode() {
             return authorizationCode;
@@ -2523,15 +2485,14 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Optional OAuth2 authorization code to use with this transfer configuration. If it is
            * provided, the transfer configuration will be associated with the authorizing user. In
            * order to obtain authorization_code, please make a request to
-           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-           *
-           * * client_id should be OAuth client_id of BigQuery DTS API for the given data source
-           * returned by ListDataSources method. * data_source_scopes are the scopes returned by
-           * ListDataSources method. * redirect_uri is an optional parameter. If not specified, then
-           * authorization code is posted to the opener of authorization flow window. Otherwise it
-           * will be sent to the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means
-           * that authorization code should be returned in the title bar of the browser, with the
-           * page text prompting the user to copy the code and paste it in the application.
+           * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri= * client_id
+           * should be OAuth client_id of BigQuery DTS API for the given data source returned by
+           * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+           * method. * redirect_uri is an optional parameter. If not specified, then authorization
+           * code is posted to the opener of authorization flow window. Otherwise it will be sent to
+           * the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that authorization
+           * code should be returned in the title bar of the browser, with the page text prompting
+           * the user to copy the code and paste it in the application.
            */
           public Patch setAuthorizationCode(java.lang.String authorizationCode) {
             this.authorizationCode = authorizationCode;
@@ -2780,8 +2741,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * optional parameters, call the {@link StartManualRuns#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Transfer configuration name in the form:
-        `projects/{project_id}/transferConfigs/{config_id}` or
+         * @param parent Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or
          *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
          * @return the request
@@ -2812,8 +2772,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent Transfer configuration name in the form:
-        `projects/{project_id}/transferConfigs/{config_id}` or
+           * @param parent Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or
          *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
            * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
            * @since 1.13
@@ -3243,8 +3202,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved.
-          Format of
+           * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved. Format of
            *        transfer configuration resource name is:
            *        `projects/{project_id}/transferConfigs/{config_id}` or
            *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
@@ -3274,8 +3232,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
              * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved.
-          Format of
+             * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved. Format of
            *        transfer configuration resource name is:
            *        `projects/{project_id}/transferConfigs/{config_id}` or
            *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
@@ -3743,12 +3700,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The BigQuery project id where the transfer configuration should be created.
-      Must be in the
-       *        format projects/{project_id}/locations/{location_id} or
-      projects/{project_id}. If
-       *        specified location and location of the
-      destination bigquery dataset do not match - the
+       * @param parent Required. The BigQuery project id where the transfer configuration should be created. Must be in the
+       *        format projects/{project_id}/locations/{location_id} or projects/{project_id}. If
+       *        specified location and location of the destination bigquery dataset do not match - the
        *        request will fail.
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
        * @return the request
@@ -3777,12 +3731,9 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The BigQuery project id where the transfer configuration should be created.
-      Must be in the
-       *        format projects/{project_id}/locations/{location_id} or
-      projects/{project_id}. If
-       *        specified location and location of the
-      destination bigquery dataset do not match - the
+         * @param parent Required. The BigQuery project id where the transfer configuration should be created. Must be in the
+       *        format projects/{project_id}/locations/{location_id} or projects/{project_id}. If
+       *        specified location and location of the destination bigquery dataset do not match - the
        *        request will fail.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
          * @since 1.13
@@ -3889,15 +3840,14 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Optional OAuth2 authorization code to use with this transfer configuration. This is
          * required if new credentials are needed, as indicated by `CheckValidCreds`. In order to
          * obtain authorization_code, please make a request to
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-         *
-         * * client_id should be OAuth client_id of BigQuery DTS API for the given data source
-         * returned by ListDataSources method. * data_source_scopes are the scopes returned by
-         * ListDataSources method. * redirect_uri is an optional parameter. If not specified, then
-         * authorization code is posted to the opener of authorization flow window. Otherwise it
-         * will be sent to the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that
-         * authorization code should be returned in the title bar of the browser, with the page text
-         * prompting the user to copy the code and paste it in the application.
+         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri= * client_id
+         * should be OAuth client_id of BigQuery DTS API for the given data source returned by
+         * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+         * method. * redirect_uri is an optional parameter. If not specified, then authorization
+         * code is posted to the opener of authorization flow window. Otherwise it will be sent to
+         * the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that authorization
+         * code should be returned in the title bar of the browser, with the page text prompting the
+         * user to copy the code and paste it in the application.
          */
         @com.google.api.client.util.Key
         private java.lang.String authorizationCode;
@@ -3905,7 +3855,6 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         /** Optional OAuth2 authorization code to use with this transfer configuration. This is required if new
        credentials are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code,
        please make a request to https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-
        * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by
        ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. *
        redirect_uri is an optional parameter. If not specified, then authorization code is posted to the
@@ -3922,15 +3871,14 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Optional OAuth2 authorization code to use with this transfer configuration. This is
          * required if new credentials are needed, as indicated by `CheckValidCreds`. In order to
          * obtain authorization_code, please make a request to
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-         *
-         * * client_id should be OAuth client_id of BigQuery DTS API for the given data source
-         * returned by ListDataSources method. * data_source_scopes are the scopes returned by
-         * ListDataSources method. * redirect_uri is an optional parameter. If not specified, then
-         * authorization code is posted to the opener of authorization flow window. Otherwise it
-         * will be sent to the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that
-         * authorization code should be returned in the title bar of the browser, with the page text
-         * prompting the user to copy the code and paste it in the application.
+         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri= * client_id
+         * should be OAuth client_id of BigQuery DTS API for the given data source returned by
+         * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+         * method. * redirect_uri is an optional parameter. If not specified, then authorization
+         * code is posted to the opener of authorization flow window. Otherwise it will be sent to
+         * the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that authorization
+         * code should be returned in the title bar of the browser, with the page text prompting the
+         * user to copy the code and paste it in the application.
          */
         public Create setAuthorizationCode(java.lang.String authorizationCode) {
           this.authorizationCode = authorizationCode;
@@ -4303,10 +4251,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The BigQuery project id for which data sources
-      should be returned: `projects/{project_id}`
-       *        or
-      `projects/{project_id}/locations/{location_id}`
+       * @param parent Required. The BigQuery project id for which data sources should be returned: `projects/{project_id}`
+       *        or `projects/{project_id}/locations/{location_id}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4333,10 +4279,8 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The BigQuery project id for which data sources
-      should be returned: `projects/{project_id}`
-       *        or
-      `projects/{project_id}/locations/{location_id}`
+         * @param parent Required. The BigQuery project id for which data sources should be returned: `projects/{project_id}`
+       *        or `projects/{project_id}/locations/{location_id}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -4515,16 +4459,11 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the transfer config.
-      Transfer config names have the form of
-       *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`.
-      The name is
-       *        automatically generated based on the config_id specified in
-      CreateTransferConfigRequest
-       *        along with project_id and region. If config_id
-      is not provided, usually a uuid, even
-       *        though it is not guaranteed or
-      required, will be generated for config_id.
+       * @param name The resource name of the transfer config. Transfer config names have the form of
+       *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
+       *        automatically generated based on the config_id specified in CreateTransferConfigRequest
+       *        along with project_id and region. If config_id is not provided, usually a uuid, even
+       *        though it is not guaranteed or required, will be generated for config_id.
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
        * @return the request
        */
@@ -4552,16 +4491,11 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the transfer config.
-      Transfer config names have the form of
-       *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`.
-      The name is
-       *        automatically generated based on the config_id specified in
-      CreateTransferConfigRequest
-       *        along with project_id and region. If config_id
-      is not provided, usually a uuid, even
-       *        though it is not guaranteed or
-      required, will be generated for config_id.
+         * @param name The resource name of the transfer config. Transfer config names have the form of
+       *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
+       *        automatically generated based on the config_id specified in CreateTransferConfigRequest
+       *        along with project_id and region. If config_id is not provided, usually a uuid, even
+       *        though it is not guaranteed or required, will be generated for config_id.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
          * @since 1.13
          */
@@ -4671,15 +4605,14 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Optional OAuth2 authorization code to use with this transfer configuration. If it is
          * provided, the transfer configuration will be associated with the authorizing user. In
          * order to obtain authorization_code, please make a request to
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-         *
-         * * client_id should be OAuth client_id of BigQuery DTS API for the given data source
-         * returned by ListDataSources method. * data_source_scopes are the scopes returned by
-         * ListDataSources method. * redirect_uri is an optional parameter. If not specified, then
-         * authorization code is posted to the opener of authorization flow window. Otherwise it
-         * will be sent to the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that
-         * authorization code should be returned in the title bar of the browser, with the page text
-         * prompting the user to copy the code and paste it in the application.
+         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri= * client_id
+         * should be OAuth client_id of BigQuery DTS API for the given data source returned by
+         * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+         * method. * redirect_uri is an optional parameter. If not specified, then authorization
+         * code is posted to the opener of authorization flow window. Otherwise it will be sent to
+         * the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that authorization
+         * code should be returned in the title bar of the browser, with the page text prompting the
+         * user to copy the code and paste it in the application.
          */
         @com.google.api.client.util.Key
         private java.lang.String authorizationCode;
@@ -4687,15 +4620,13 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         /** Optional OAuth2 authorization code to use with this transfer configuration. If it is provided, the
        transfer configuration will be associated with the authorizing user. In order to obtain
        authorization_code, please make a request to
-       https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-
-       * client_id should be OAuth client_id of BigQuery DTS API for the given data source returned by
-       ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. *
-       redirect_uri is an optional parameter. If not specified, then authorization code is posted to the
-       opener of authorization flow window. Otherwise it will be sent to the redirect uri. A special value
-       of urn:ietf:wg:oauth:2.0:oob means that authorization code should be returned in the title bar of
-       the browser, with the page text prompting the user to copy the code and paste it in the
-       application.
+       https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri= * client_id should be
+       OAuth client_id of BigQuery DTS API for the given data source returned by ListDataSources method. *
+       data_source_scopes are the scopes returned by ListDataSources method. * redirect_uri is an optional
+       parameter. If not specified, then authorization code is posted to the opener of authorization flow
+       window. Otherwise it will be sent to the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob
+       means that authorization code should be returned in the title bar of the browser, with the page
+       text prompting the user to copy the code and paste it in the application.
          */
         public java.lang.String getAuthorizationCode() {
           return authorizationCode;
@@ -4705,15 +4636,14 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Optional OAuth2 authorization code to use with this transfer configuration. If it is
          * provided, the transfer configuration will be associated with the authorizing user. In
          * order to obtain authorization_code, please make a request to
-         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri=
-         *
-         * * client_id should be OAuth client_id of BigQuery DTS API for the given data source
-         * returned by ListDataSources method. * data_source_scopes are the scopes returned by
-         * ListDataSources method. * redirect_uri is an optional parameter. If not specified, then
-         * authorization code is posted to the opener of authorization flow window. Otherwise it
-         * will be sent to the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that
-         * authorization code should be returned in the title bar of the browser, with the page text
-         * prompting the user to copy the code and paste it in the application.
+         * https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?client_id==_uri= * client_id
+         * should be OAuth client_id of BigQuery DTS API for the given data source returned by
+         * ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources
+         * method. * redirect_uri is an optional parameter. If not specified, then authorization
+         * code is posted to the opener of authorization flow window. Otherwise it will be sent to
+         * the redirect uri. A special value of urn:ietf:wg:oauth:2.0:oob means that authorization
+         * code should be returned in the title bar of the browser, with the page text prompting the
+         * user to copy the code and paste it in the application.
          */
         public Patch setAuthorizationCode(java.lang.String authorizationCode) {
           this.authorizationCode = authorizationCode;
@@ -4962,8 +4892,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link StartManualRuns#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Transfer configuration name in the form:
-      `projects/{project_id}/transferConfigs/{config_id}` or
+       * @param parent Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or
        *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
        * @return the request
@@ -4994,8 +4923,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param parent Transfer configuration name in the form:
-      `projects/{project_id}/transferConfigs/{config_id}` or
+         * @param parent Transfer configuration name in the form: `projects/{project_id}/transferConfigs/{config_id}` or
        *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.StartManualTransferRunsRequest}
          * @since 1.13
@@ -5425,8 +5353,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved.
-        Format of
+         * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved. Format of
          *        transfer configuration resource name is:
          *        `projects/{project_id}/transferConfigs/{config_id}` or
          *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.
@@ -5456,8 +5383,7 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved.
-        Format of
+           * @param parent Required. Name of transfer configuration for which transfer runs should be retrieved. Format of
          *        transfer configuration resource name is:
          *        `projects/{project_id}/transferConfigs/{config_id}` or
          *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`.

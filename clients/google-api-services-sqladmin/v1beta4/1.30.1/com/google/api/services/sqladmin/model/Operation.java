@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * An Operation resource. For successful operations that return an Operation resource, only the
+ * An Operation resource. For successful operations that return an Operation resource, only the
  * fields relevant to the operation are populated in the resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,11 +32,11 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation finished in UTC timezone in RFC 3339 format, for example
-   * 2012-11-15T16:19:00.094Z.
+   * *2012-11-15T16:19:00.094Z*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime endTime;
+  private String endTime;
 
   /**
    * If errors occurred during processing of this operation, this field will be populated.
@@ -61,14 +61,14 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation was enqueued in UTC timezone in RFC 3339 format, for example
-   * 2012-11-15T16:19:00.094Z.
+   * *2012-11-15T16:19:00.094Z*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime insertTime;
+  private String insertTime;
 
   /**
-   * This is always sql#operation.
+   * This is always *sql#operation*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +83,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The type of the operation. Valid values are CREATE, DELETE, UPDATE, RESTART, IMPORT, EXPORT,
-   * BACKUP_VOLUME, RESTORE_VOLUME, CREATE_USER, DELETE_USER, CREATE_DATABASE, DELETE_DATABASE .
+   * The type of the operation. Valid values are: *CREATE* *DELETE* *UPDATE* *RESTART* *IMPORT*
+   * *EXPORT* *BACKUP_VOLUME* *RESTORE_VOLUME* *CREATE_USER* *DELETE_USER* *CREATE_DATABASE*
+   * *DELETE_DATABASE*
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,14 +100,15 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation actually started in UTC timezone in RFC 3339 format, for example
-   * 2012-11-15T16:19:00.094Z.
+   * *2012-11-15T16:19:00.094Z*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime startTime;
+  private String startTime;
 
   /**
-   * The status of an operation. Valid values are PENDING, RUNNING, DONE, UNKNOWN.
+   * The status of an operation. Valid values are: *PENDING* *RUNNING* *DONE*
+   * *SQL_OPERATION_STATUS_UNSPECIFIED*
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,19 +143,19 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation finished in UTC timezone in RFC 3339 format, for example
-   * 2012-11-15T16:19:00.094Z.
+   * *2012-11-15T16:19:00.094Z*.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getEndTime() {
+  public String getEndTime() {
     return endTime;
   }
 
   /**
    * The time this operation finished in UTC timezone in RFC 3339 format, for example
-   * 2012-11-15T16:19:00.094Z.
+   * *2012-11-15T16:19:00.094Z*.
    * @param endTime endTime or {@code null} for none
    */
-  public Operation setEndTime(com.google.api.client.util.DateTime endTime) {
+  public Operation setEndTime(String endTime) {
     this.endTime = endTime;
     return this;
   }
@@ -211,25 +213,25 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation was enqueued in UTC timezone in RFC 3339 format, for example
-   * 2012-11-15T16:19:00.094Z.
+   * *2012-11-15T16:19:00.094Z*.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getInsertTime() {
+  public String getInsertTime() {
     return insertTime;
   }
 
   /**
    * The time this operation was enqueued in UTC timezone in RFC 3339 format, for example
-   * 2012-11-15T16:19:00.094Z.
+   * *2012-11-15T16:19:00.094Z*.
    * @param insertTime insertTime or {@code null} for none
    */
-  public Operation setInsertTime(com.google.api.client.util.DateTime insertTime) {
+  public Operation setInsertTime(String insertTime) {
     this.insertTime = insertTime;
     return this;
   }
 
   /**
-   * This is always sql#operation.
+   * This is always *sql#operation*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -237,7 +239,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This is always sql#operation.
+   * This is always *sql#operation*.
    * @param kind kind or {@code null} for none
    */
   public Operation setKind(java.lang.String kind) {
@@ -265,8 +267,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the operation. Valid values are CREATE, DELETE, UPDATE, RESTART, IMPORT, EXPORT,
-   * BACKUP_VOLUME, RESTORE_VOLUME, CREATE_USER, DELETE_USER, CREATE_DATABASE, DELETE_DATABASE .
+   * The type of the operation. Valid values are: *CREATE* *DELETE* *UPDATE* *RESTART* *IMPORT*
+   * *EXPORT* *BACKUP_VOLUME* *RESTORE_VOLUME* *CREATE_USER* *DELETE_USER* *CREATE_DATABASE*
+   * *DELETE_DATABASE*
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationType() {
@@ -274,8 +277,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of the operation. Valid values are CREATE, DELETE, UPDATE, RESTART, IMPORT, EXPORT,
-   * BACKUP_VOLUME, RESTORE_VOLUME, CREATE_USER, DELETE_USER, CREATE_DATABASE, DELETE_DATABASE .
+   * The type of the operation. Valid values are: *CREATE* *DELETE* *UPDATE* *RESTART* *IMPORT*
+   * *EXPORT* *BACKUP_VOLUME* *RESTORE_VOLUME* *CREATE_USER* *DELETE_USER* *CREATE_DATABASE*
+   * *DELETE_DATABASE*
    * @param operationType operationType or {@code null} for none
    */
   public Operation setOperationType(java.lang.String operationType) {
@@ -302,25 +306,26 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * The time this operation actually started in UTC timezone in RFC 3339 format, for example
-   * 2012-11-15T16:19:00.094Z.
+   * *2012-11-15T16:19:00.094Z*.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getStartTime() {
+  public String getStartTime() {
     return startTime;
   }
 
   /**
    * The time this operation actually started in UTC timezone in RFC 3339 format, for example
-   * 2012-11-15T16:19:00.094Z.
+   * *2012-11-15T16:19:00.094Z*.
    * @param startTime startTime or {@code null} for none
    */
-  public Operation setStartTime(com.google.api.client.util.DateTime startTime) {
+  public Operation setStartTime(String startTime) {
     this.startTime = startTime;
     return this;
   }
 
   /**
-   * The status of an operation. Valid values are PENDING, RUNNING, DONE, UNKNOWN.
+   * The status of an operation. Valid values are: *PENDING* *RUNNING* *DONE*
+   * *SQL_OPERATION_STATUS_UNSPECIFIED*
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -328,7 +333,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The status of an operation. Valid values are PENDING, RUNNING, DONE, UNKNOWN.
+   * The status of an operation. Valid values are: *PENDING* *RUNNING* *DONE*
+   * *SQL_OPERATION_STATUS_UNSPECIFIED*
    * @param status status or {@code null} for none
    */
   public Operation setStatus(java.lang.String status) {

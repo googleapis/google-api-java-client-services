@@ -20,8 +20,7 @@ package com.google.api.services.firestore.v1beta2;
  * Service definition for Firestore (v1beta2).
  *
  * <p>
- * Accesses the NoSQL document database built for automatic scaling, high performance, and ease of application development.
-
+ * Accesses the NoSQL document database built for automatic scaling, high performance, and ease of application development. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Firestore API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Firestore API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -176,8 +175,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the firestore server.  After setting any optional
        * parameters, call the {@link ExportDocuments#execute()} method to invoke the remote operation.
        *
-       * @param name Database to export. Should be of the form:
-      `projects/{project_id}/databases/{database_id}`.
+       * @param name Database to export. Should be of the form: `projects/{project_id}/databases/{database_id}`.
        * @param content the {@link com.google.api.services.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ExportDocumentsRequest}
        * @return the request
        */
@@ -210,8 +208,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name Database to export. Should be of the form:
-      `projects/{project_id}/databases/{database_id}`.
+         * @param name Database to export. Should be of the form: `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ExportDocumentsRequest}
          * @since 1.13
          */
@@ -323,8 +320,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the firestore server.  After setting any optional
        * parameters, call the {@link ImportDocuments#execute()} method to invoke the remote operation.
        *
-       * @param name Database to import into. Should be of the form:
-      `projects/{project_id}/databases/{database_id}`.
+       * @param name Database to import into. Should be of the form: `projects/{project_id}/databases/{database_id}`.
        * @param content the {@link com.google.api.services.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ImportDocumentsRequest}
        * @return the request
        */
@@ -355,8 +351,7 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
          * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name Database to import into. Should be of the form:
-      `projects/{project_id}/databases/{database_id}`.
+         * @param name Database to import into. Should be of the form: `projects/{project_id}/databases/{database_id}`.
          * @param content the {@link com.google.api.services.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2ImportDocumentsRequest}
          * @since 1.13
          */
@@ -648,10 +643,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Lists the field configuration and metadata for this database.
-           *
-           * Currently, FirestoreAdmin.ListFields only supports listing fields that have been explicitly
-           * overridden. To issue this query, call FirestoreAdmin.ListFields with the filter set to
+           * Lists the field configuration and metadata for this database. Currently,
+           * FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To
+           * issue this query, call FirestoreAdmin.ListFields with the filter set to
            * `indexConfig.usesAncestorConfig:false`.
            *
            * Create a request for the method "fields.list".
@@ -677,10 +671,9 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/collectionGroups/[^/]+$");
 
             /**
-             * Lists the field configuration and metadata for this database.
-             *
-             * Currently, FirestoreAdmin.ListFields only supports listing fields that have been explicitly
-             * overridden. To issue this query, call FirestoreAdmin.ListFields with the filter set to
+             * Lists the field configuration and metadata for this database. Currently,
+             * FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To
+             * issue this query, call FirestoreAdmin.ListFields with the filter set to
              * `indexConfig.usesAncestorConfig:false`.
              *
              * Create a request for the method "fields.list".
@@ -873,13 +866,11 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            * Updates a field configuration. Currently, field updates apply only to single field index
            * configuration. However, calls to FirestoreAdmin.UpdateField should provide a field mask to avoid
            * changing any configuration that the caller isn't aware of. The field mask should be specified as:
-           * `{ paths: "index_config" }`.
-           *
-           * This call returns a google.longrunning.Operation which may be used to track the status of the
-           * field update. The metadata for the operation will be the type FieldOperationMetadata.
-           *
-           * To configure the default field settings for the database, use the special `Field` with resource
-           * name: `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`.
+           * `{ paths: "index_config" }`. This call returns a google.longrunning.Operation which may be used
+           * to track the status of the field update. The metadata for the operation will be the type
+           * FieldOperationMetadata. To configure the default field settings for the database, use the special
+           * `Field` with resource name:
+           * `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`.
            *
            * Create a request for the method "fields.patch".
            *
@@ -888,35 +879,19 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            *
            * @param name A field name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{fi
-           *        eld_path}`
-          A field path may be a simple field name, e.g. `address` or a path to fields
-           *        within map_value , e.g. `address.city`,
-          or a special field path. The only valid special
-           *        field is `*`, which
-          represents any field.
-          Field paths may be quoted using ` (backtick).
-           *        The only character that needs
-          to be escaped within a quoted field path is the backtick
-           *        character itself,
-          escaped using a backslash. Special characters in field paths that
-          must
-           *        be quoted include: `*`, `.`,
-          ``` (backtick), `[`, `]`, as well as any ascii symbolic
-           *        characters.
-          Examples:
-          (Note: Comments here are written in markdown syntax, so there is an
-           *        additional layer of backticks to represent a code block)
-          `\`address.city\`` represents a
-           *        field named `address.city`, not the map key
-          `city` in the field `address`.
-          `\`*\``
-           *        represents a field named `*`, not any field.
-          A special `Field` contains the default
-           *        indexing settings for all fields.
-          This field's resource name is:
+           *        eld_path}` A field path may be a simple field name, e.g. `address` or a path to fields
+           *        within map_value , e.g. `address.city`, or a special field path. The only valid special
+           *        field is `*`, which represents any field. Field paths may be quoted using ` (backtick).
+           *        The only character that needs to be escaped within a quoted field path is the backtick
+           *        character itself, escaped using a backslash. Special characters in field paths that must
+           *        be quoted include: `*`, `.`, ``` (backtick), `[`, `]`, as well as any ascii symbolic
+           *        characters. Examples: (Note: Comments here are written in markdown syntax, so there is an
+           *        additional layer of backticks to represent a code block) `\`address.city\`` represents a
+           *        field named `address.city`, not the map key `city` in the field `address`. `\`*\``
+           *        represents a field named `*`, not any field. A special `Field` contains the default
+           *        indexing settings for all fields. This field's resource name is:
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`
-           *        Indexes defined on this `Field` will be applied to all fields which do not
-          have their own
+           *        Indexes defined on this `Field` will be applied to all fields which do not have their own
            *        `Field` index configuration.
            * @param content the {@link com.google.api.services.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2Field}
            * @return the request
@@ -938,13 +913,11 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              * Updates a field configuration. Currently, field updates apply only to single field index
              * configuration. However, calls to FirestoreAdmin.UpdateField should provide a field mask to
              * avoid changing any configuration that the caller isn't aware of. The field mask should be
-             * specified as: `{ paths: "index_config" }`.
-             *
-             * This call returns a google.longrunning.Operation which may be used to track the status of the
-             * field update. The metadata for the operation will be the type FieldOperationMetadata.
-             *
-             * To configure the default field settings for the database, use the special `Field` with resource
-             * name: `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`.
+             * specified as: `{ paths: "index_config" }`. This call returns a google.longrunning.Operation
+             * which may be used to track the status of the field update. The metadata for the operation will
+             * be the type FieldOperationMetadata. To configure the default field settings for the database,
+             * use the special `Field` with resource name:
+             * `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`.
              *
              * Create a request for the method "fields.patch".
              *
@@ -956,35 +929,19 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
              *
              * @param name A field name of the form
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{fi
-           *        eld_path}`
-          A field path may be a simple field name, e.g. `address` or a path to fields
-           *        within map_value , e.g. `address.city`,
-          or a special field path. The only valid special
-           *        field is `*`, which
-          represents any field.
-          Field paths may be quoted using ` (backtick).
-           *        The only character that needs
-          to be escaped within a quoted field path is the backtick
-           *        character itself,
-          escaped using a backslash. Special characters in field paths that
-          must
-           *        be quoted include: `*`, `.`,
-          ``` (backtick), `[`, `]`, as well as any ascii symbolic
-           *        characters.
-          Examples:
-          (Note: Comments here are written in markdown syntax, so there is an
-           *        additional layer of backticks to represent a code block)
-          `\`address.city\`` represents a
-           *        field named `address.city`, not the map key
-          `city` in the field `address`.
-          `\`*\``
-           *        represents a field named `*`, not any field.
-          A special `Field` contains the default
-           *        indexing settings for all fields.
-          This field's resource name is:
+           *        eld_path}` A field path may be a simple field name, e.g. `address` or a path to fields
+           *        within map_value , e.g. `address.city`, or a special field path. The only valid special
+           *        field is `*`, which represents any field. Field paths may be quoted using ` (backtick).
+           *        The only character that needs to be escaped within a quoted field path is the backtick
+           *        character itself, escaped using a backslash. Special characters in field paths that must
+           *        be quoted include: `*`, `.`, ``` (backtick), `[`, `]`, as well as any ascii symbolic
+           *        characters. Examples: (Note: Comments here are written in markdown syntax, so there is an
+           *        additional layer of backticks to represent a code block) `\`address.city\`` represents a
+           *        field named `address.city`, not the map key `city` in the field `address`. `\`*\``
+           *        represents a field named `*`, not any field. A special `Field` contains the default
+           *        indexing settings for all fields. This field's resource name is:
            *        `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`
-           *        Indexes defined on this `Field` will be applied to all fields which do not
-          have their own
+           *        Indexes defined on this `Field` will be applied to all fields which do not have their own
            *        `Field` index configuration.
              * @param content the {@link com.google.api.services.firestore.v1beta2.model.GoogleFirestoreAdminV1beta2Field}
              * @since 1.13
@@ -1056,24 +1013,18 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * A field name of the form `projects/{project_id}/databases/{database_id}/collectionGro
-             * ups/{collection_id}/fields/{field_path}`
-             *
-             * A field path may be a simple field name, e.g. `address` or a path to fields within
-             * map_value , e.g. `address.city`, or a special field path. The only valid special
-             * field is `*`, which represents any field.
-             *
+             * ups/{collection_id}/fields/{field_path}` A field path may be a simple field name,
+             * e.g. `address` or a path to fields within map_value , e.g. `address.city`, or a
+             * special field path. The only valid special field is `*`, which represents any field.
              * Field paths may be quoted using ` (backtick). The only character that needs to be
              * escaped within a quoted field path is the backtick character itself, escaped using a
              * backslash. Special characters in field paths that must be quoted include: `*`, `.`,
-             * ``` (backtick), `[`, `]`, as well as any ascii symbolic characters.
-             *
-             * Examples: (Note: Comments here are written in markdown syntax, so there is an
-             * additional layer of backticks to represent a code block) `\`address.city\``
-             * represents a field named `address.city`, not the map key `city` in the field
-             * `address`. `\`*\`` represents a field named `*`, not any field.
-             *
-             * A special `Field` contains the default indexing settings for all fields. This field's
-             * resource name is:
+             * ``` (backtick), `[`, `]`, as well as any ascii symbolic characters. Examples: (Note:
+             * Comments here are written in markdown syntax, so there is an additional layer of
+             * backticks to represent a code block) `\`address.city\`` represents a field named
+             * `address.city`, not the map key `city` in the field `address`. `\`*\`` represents a
+             * field named `*`, not any field. A special `Field` contains the default indexing
+             * settings for all fields. This field's resource name is:
              * `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`
              * Indexes defined on this `Field` will be applied to all fields which do not have their
              * own `Field` index configuration.
@@ -1082,24 +1033,18 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             private java.lang.String name;
 
             /** A field name of the form `projects/{project_id}/databases/{database_id}/collectionGroups/{collectio
-           n_id}/fields/{field_path}`
-
-           A field path may be a simple field name, e.g. `address` or a path to fields within map_value , e.g.
-           `address.city`, or a special field path. The only valid special field is `*`, which represents any
-           field.
-
-           Field paths may be quoted using ` (backtick). The only character that needs to be escaped within a
-           quoted field path is the backtick character itself, escaped using a backslash. Special characters
-           in field paths that must be quoted include: `*`, `.`, ``` (backtick), `[`, `]`, as well as any
-           ascii symbolic characters.
-
-           Examples: (Note: Comments here are written in markdown syntax, so there is an additional layer of
-           backticks to represent a code block) `\`address.city\`` represents a field named `address.city`,
-           not the map key `city` in the field `address`. `\`*\`` represents a field named `*`, not any field.
-
-           A special `Field` contains the default indexing settings for all fields. This field's resource name
-           is: `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields` Indexes
-           defined on this `Field` will be applied to all fields which do not have their own `Field` index
+           n_id}/fields/{field_path}` A field path may be a simple field name, e.g. `address` or a path to
+           fields within map_value , e.g. `address.city`, or a special field path. The only valid special
+           field is `*`, which represents any field. Field paths may be quoted using ` (backtick). The only
+           character that needs to be escaped within a quoted field path is the backtick character itself,
+           escaped using a backslash. Special characters in field paths that must be quoted include: `*`, `.`,
+           ``` (backtick), `[`, `]`, as well as any ascii symbolic characters. Examples: (Note: Comments here
+           are written in markdown syntax, so there is an additional layer of backticks to represent a code
+           block) `\`address.city\`` represents a field named `address.city`, not the map key `city` in the
+           field `address`. `\`*\`` represents a field named `*`, not any field. A special `Field` contains
+           the default indexing settings for all fields. This field's resource name is:
+           `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields` Indexes defined
+           on this `Field` will be applied to all fields which do not have their own `Field` index
            configuration.
              */
             public java.lang.String getName() {
@@ -1108,24 +1053,18 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
             /**
              * A field name of the form `projects/{project_id}/databases/{database_id}/collectionGro
-             * ups/{collection_id}/fields/{field_path}`
-             *
-             * A field path may be a simple field name, e.g. `address` or a path to fields within
-             * map_value , e.g. `address.city`, or a special field path. The only valid special
-             * field is `*`, which represents any field.
-             *
+             * ups/{collection_id}/fields/{field_path}` A field path may be a simple field name,
+             * e.g. `address` or a path to fields within map_value , e.g. `address.city`, or a
+             * special field path. The only valid special field is `*`, which represents any field.
              * Field paths may be quoted using ` (backtick). The only character that needs to be
              * escaped within a quoted field path is the backtick character itself, escaped using a
              * backslash. Special characters in field paths that must be quoted include: `*`, `.`,
-             * ``` (backtick), `[`, `]`, as well as any ascii symbolic characters.
-             *
-             * Examples: (Note: Comments here are written in markdown syntax, so there is an
-             * additional layer of backticks to represent a code block) `\`address.city\``
-             * represents a field named `address.city`, not the map key `city` in the field
-             * `address`. `\`*\`` represents a field named `*`, not any field.
-             *
-             * A special `Field` contains the default indexing settings for all fields. This field's
-             * resource name is:
+             * ``` (backtick), `[`, `]`, as well as any ascii symbolic characters. Examples: (Note:
+             * Comments here are written in markdown syntax, so there is an additional layer of
+             * backticks to represent a code block) `\`address.city\`` represents a field named
+             * `address.city`, not the map key `city` in the field `address`. `\`*\`` represents a
+             * field named `*`, not any field. A special `Field` contains the default indexing
+             * settings for all fields. This field's resource name is:
              * `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields`
              * Indexes defined on this `Field` will be applied to all fields which do not have their
              * own `Field` index configuration.

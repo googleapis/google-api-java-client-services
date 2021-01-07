@@ -46,7 +46,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Resource Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Resource Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -145,23 +145,18 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     /**
      * Creates a Folder in the resource hierarchy. Returns an Operation which can be used to track the
      * progress of the folder creation workflow. Upon success the Operation.response field will be
-     * populated with the created Folder.
-     *
-     * In order to succeed, the addition of this new Folder must not violate the Folder naming, height
-     * or fanout constraints.
-     *
-     * + The Folder's display_name must be distinct from all other Folder's that share its parent. + The
-     * addition of the Folder must not cause the active Folder hierarchy to exceed a height of 4. Note,
-     * the full active + deleted Folder hierarchy is allowed to reach a height of 8; this provides
-     * additional headroom when moving folders that contain deleted folders. + The addition of the
-     * Folder must not cause the total number of Folders under its parent to exceed 100.
-     *
-     * If the operation fails due to a folder constraint violation, some errors may be returned by the
-     * CreateFolder request, with status code FAILED_PRECONDITION and an error description. Other folder
-     * constraint violations will be communicated in the Operation, with the specific
-     * PreconditionFailure returned via the details list in the Operation.error field.
-     *
-     * The caller must have `resourcemanager.folders.create` permission on the identified parent.
+     * populated with the created Folder. In order to succeed, the addition of this new Folder must not
+     * violate the Folder naming, height or fanout constraints. + The Folder's display_name must be
+     * distinct from all other Folders that share its parent. + The addition of the Folder must not
+     * cause the active Folder hierarchy to exceed a height of 10. Note, the full active + deleted
+     * Folder hierarchy is allowed to reach a height of 20; this provides additional headroom when
+     * moving folders that contain deleted folders. + The addition of the Folder must not cause the
+     * total number of Folders under its parent to exceed 300. If the operation fails due to a folder
+     * constraint violation, some errors may be returned by the CreateFolder request, with status code
+     * FAILED_PRECONDITION and an error description. Other folder constraint violations will be
+     * communicated in the Operation, with the specific PreconditionFailure returned via the details
+     * list in the Operation.error field. The caller must have `resourcemanager.folders.create`
+     * permission on the identified parent.
      *
      * Create a request for the method "folders.create".
      *
@@ -184,23 +179,18 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Creates a Folder in the resource hierarchy. Returns an Operation which can be used to track the
        * progress of the folder creation workflow. Upon success the Operation.response field will be
-       * populated with the created Folder.
-       *
-       * In order to succeed, the addition of this new Folder must not violate the Folder naming, height
-       * or fanout constraints.
-       *
-       * + The Folder's display_name must be distinct from all other Folder's that share its parent. +
-       * The addition of the Folder must not cause the active Folder hierarchy to exceed a height of 4.
-       * Note, the full active + deleted Folder hierarchy is allowed to reach a height of 8; this
-       * provides additional headroom when moving folders that contain deleted folders. + The addition
-       * of the Folder must not cause the total number of Folders under its parent to exceed 100.
-       *
-       * If the operation fails due to a folder constraint violation, some errors may be returned by the
-       * CreateFolder request, with status code FAILED_PRECONDITION and an error description. Other
-       * folder constraint violations will be communicated in the Operation, with the specific
-       * PreconditionFailure returned via the details list in the Operation.error field.
-       *
-       * The caller must have `resourcemanager.folders.create` permission on the identified parent.
+       * populated with the created Folder. In order to succeed, the addition of this new Folder must
+       * not violate the Folder naming, height or fanout constraints. + The Folder's display_name must
+       * be distinct from all other Folders that share its parent. + The addition of the Folder must not
+       * cause the active Folder hierarchy to exceed a height of 10. Note, the full active + deleted
+       * Folder hierarchy is allowed to reach a height of 20; this provides additional headroom when
+       * moving folders that contain deleted folders. + The addition of the Folder must not cause the
+       * total number of Folders under its parent to exceed 300. If the operation fails due to a folder
+       * constraint violation, some errors may be returned by the CreateFolder request, with status code
+       * FAILED_PRECONDITION and an error description. Other folder constraint violations will be
+       * communicated in the Operation, with the specific PreconditionFailure returned via the details
+       * list in the Operation.error field. The caller must have `resourcemanager.folders.create`
+       * permission on the identified parent.
        *
        * Create a request for the method "folders.create".
        *
@@ -312,8 +302,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. the resource name of the Folder to be deleted.
-    Must be of the form `folders/{folder_id}`.
+     * @param name Required. the resource name of the Folder to be deleted. Must be of the form `folders/{folder_id}`.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -344,8 +333,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. the resource name of the Folder to be deleted.
-    Must be of the form `folders/{folder_id}`.
+       * @param name Required. the resource name of the Folder to be deleted. Must be of the form `folders/{folder_id}`.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -455,8 +443,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the Folder to retrieve.
-    Must be of the form `folders/{folder_id}`.
+     * @param name Required. The resource name of the Folder to retrieve. Must be of the form `folders/{folder_id}`.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -485,8 +472,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the Folder to retrieve.
-    Must be of the form `folders/{folder_id}`.
+       * @param name Required. The resource name of the Folder to retrieve. Must be of the form `folders/{folder_id}`.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -608,8 +594,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.GetIamPolicyRequest}
      * @return the request
@@ -641,8 +626,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.GetIamPolicyRequest}
        * @since 1.13
@@ -965,8 +949,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Move#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the Folder to move.
-    Must be of the form folders/{folder_id}
+     * @param name Required. The resource name of the Folder to move. Must be of the form folders/{folder_id}
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.MoveFolderRequest}
      * @return the request
      */
@@ -1003,8 +986,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the Folder to move.
-    Must be of the form folders/{folder_id}
+       * @param name Required. The resource name of the Folder to move. Must be of the form folders/{folder_id}
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.MoveFolderRequest}
        * @since 1.13
        */
@@ -1106,14 +1088,11 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     /**
      * Updates a Folder, changing its display_name. Changes to the folder display_name will be rejected
      * if they violate either the display_name formatting rules or naming constraints described in the
-     * CreateFolder documentation.
-     *
-     * The Folder's display name must start and end with a letter or digit, may contain letters, digits,
-     * spaces, hyphens and underscores and can be no longer than 30 characters. This is captured by the
-     * regular expression: [\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?. The caller must have
-     * `resourcemanager.folders.update` permission on the identified folder.
-     *
-     * If the update fails due to the unique name constraint then a PreconditionFailure explaining this
+     * CreateFolder documentation. The Folder's display name must start and end with a letter or digit,
+     * may contain letters, digits, spaces, hyphens and underscores and can be between 3 and 30
+     * characters. This is captured by the regular expression: `\p{L}\p{N}{1,28}[\p{L}\p{N}]`. The
+     * caller must have `resourcemanager.folders.update` permission on the identified folder. If the
+     * update fails due to the unique name constraint then a PreconditionFailure explaining this
      * violation will be returned in the Status.details field.
      *
      * Create a request for the method "folders.patch".
@@ -1121,8 +1100,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Output only. The resource name of the Folder.
-    Its format is `folders/{folder_id}`, for example:
+     * @param name Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for example:
      *        "folders/1234".
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.Folder}
      * @return the request
@@ -1143,15 +1121,12 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Updates a Folder, changing its display_name. Changes to the folder display_name will be
        * rejected if they violate either the display_name formatting rules or naming constraints
-       * described in the CreateFolder documentation.
-       *
-       * The Folder's display name must start and end with a letter or digit, may contain letters,
-       * digits, spaces, hyphens and underscores and can be no longer than 30 characters. This is
-       * captured by the regular expression: [\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?. The
-       * caller must have `resourcemanager.folders.update` permission on the identified folder.
-       *
-       * If the update fails due to the unique name constraint then a PreconditionFailure explaining
-       * this violation will be returned in the Status.details field.
+       * described in the CreateFolder documentation. The Folder's display name must start and end with
+       * a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be
+       * between 3 and 30 characters. This is captured by the regular expression:
+       * `\p{L}\p{N}{1,28}[\p{L}\p{N}]`. The caller must have `resourcemanager.folders.update`
+       * permission on the identified folder. If the update fails due to the unique name constraint then
+       * a PreconditionFailure explaining this violation will be returned in the Status.details field.
        *
        * Create a request for the method "folders.patch".
        *
@@ -1161,8 +1136,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. The resource name of the Folder.
-    Its format is `folders/{folder_id}`, for example:
+       * @param name Output only. The resource name of the Folder. Its format is `folders/{folder_id}`, for example:
      *        "folders/1234".
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.Folder}
        * @since 1.13
@@ -1260,9 +1234,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return this;
       }
 
-      /**
-       * Required. Fields to be updated. Only the `display_name` can be updated.
-       */
+      /** Required. Fields to be updated. Only the `display_name` can be updated. */
       @com.google.api.client.util.Key
       private String updateMask;
 
@@ -1272,9 +1244,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return updateMask;
       }
 
-      /**
-       * Required. Fields to be updated. Only the `display_name` can be updated.
-       */
+      /** Required. Fields to be updated. Only the `display_name` can be updated. */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -1287,10 +1257,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     }
     /**
      * Search for folders that match specific filter criteria. Search provides an eventually consistent
-     * view of the folders a user has access to which meet the specified filter criteria.
-     *
-     * This will only return folders on which the caller has the permission
-     * `resourcemanager.folders.get`.
+     * view of the folders a user has access to which meet the specified filter criteria. This will only
+     * return folders on which the caller has the permission `resourcemanager.folders.get`.
      *
      * Create a request for the method "folders.search".
      *
@@ -1313,7 +1281,6 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Search for folders that match specific filter criteria. Search provides an eventually
        * consistent view of the folders a user has access to which meet the specified filter criteria.
-       *
        * This will only return folders on which the caller has the permission
        * `resourcemanager.folders.get`.
        *
@@ -1403,8 +1370,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.SetIamPolicyRequest}
      * @return the request
@@ -1435,8 +1401,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.SetIamPolicyRequest}
        * @since 1.13
@@ -1541,9 +1506,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     }
     /**
      * Returns permissions that a caller has on the specified Folder. The `resource` field should be the
-     * Folder's resource name, e.g. "folders/1234".
-     *
-     * There are no permissions required for making this API call.
+     * Folder's resource name, e.g. "folders/1234". There are no permissions required for making this
+     * API call.
      *
      * Create a request for the method "folders.testIamPermissions".
      *
@@ -1551,8 +1515,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.TestIamPermissionsRequest}
      * @return the request
@@ -1572,9 +1535,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Returns permissions that a caller has on the specified Folder. The `resource` field should be
-       * the Folder's resource name, e.g. "folders/1234".
-       *
-       * There are no permissions required for making this API call.
+       * the Folder's resource name, e.g. "folders/1234". There are no permissions required for making
+       * this API call.
        *
        * Create a request for the method "folders.testIamPermissions".
        *
@@ -1584,8 +1546,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.TestIamPermissionsRequest}
        * @since 1.13
@@ -1700,8 +1661,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the Folder to undelete.
-    Must be of the form `folders/{folder_id}`.
+     * @param name Required. The resource name of the Folder to undelete. Must be of the form `folders/{folder_id}`.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.UndeleteFolderRequest}
      * @return the request
      */
@@ -1733,8 +1693,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the Folder to undelete.
-    Must be of the form `folders/{folder_id}`.
+       * @param name Required. The resource name of the Folder to undelete. Must be of the form `folders/{folder_id}`.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.UndeleteFolderRequest}
        * @since 1.13
        */
@@ -1859,7 +1818,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -1884,7 +1843,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".

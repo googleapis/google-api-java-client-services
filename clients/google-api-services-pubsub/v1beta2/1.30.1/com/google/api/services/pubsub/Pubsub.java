@@ -20,8 +20,7 @@ package com.google.api.services.pubsub;
  * Service definition for Pubsub (v1beta2).
  *
  * <p>
- * Provides reliable, many-to-many, asynchronous messaging between applications.
-
+ * Provides reliable, many-to-many, asynchronous messaging between applications. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Pub/Sub API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Pub/Sub API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -165,10 +164,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Acknowledges the messages associated with the `ack_ids` in the `AcknowledgeRequest`. The Pub/Sub
-       * system can remove the relevant messages from the subscription.
-       *
-       * Acknowledging a message whose ack deadline has expired may succeed, but such a message may be
-       * redelivered later. Acknowledging a message more than once will not result in an error.
+       * system can remove the relevant messages from the subscription. Acknowledging a message whose ack
+       * deadline has expired may succeed, but such a message may be redelivered later. Acknowledging a
+       * message more than once will not result in an error.
        *
        * Create a request for the method "subscriptions.acknowledge".
        *
@@ -194,10 +192,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Acknowledges the messages associated with the `ack_ids` in the `AcknowledgeRequest`. The
-         * Pub/Sub system can remove the relevant messages from the subscription.
-         *
-         * Acknowledging a message whose ack deadline has expired may succeed, but such a message may be
-         * redelivered later. Acknowledging a message more than once will not result in an error.
+         * Pub/Sub system can remove the relevant messages from the subscription. Acknowledging a message
+         * whose ack deadline has expired may succeed, but such a message may be redelivered later.
+         * Acknowledging a message more than once will not result in an error.
          *
          * Create a request for the method "subscriptions.acknowledge".
          *
@@ -304,11 +301,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       }
       /**
        * Creates a subscription to a given topic. If the subscription already exists, returns
-       * `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns `NOT_FOUND`.
-       *
-       * If the name is not provided in the request, the server will assign a random name for this
-       * subscription on the same project as the topic. Note that for REST API requests, you must specify
-       * a name.
+       * `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns `NOT_FOUND`. If the name is
+       * not provided in the request, the server will assign a random name for this subscription on the
+       * same project as the topic. Note that for REST API requests, you must specify a name.
        *
        * Create a request for the method "subscriptions.create".
        *
@@ -316,14 +311,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
        * @param name The name of the subscription. It must have the format
-       *        `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
-      start with a
-       *        letter, and contain only letters (`[A-Za-z]`), numbers
-      (`[0-9]`), dashes (`-`),
-       *        underscores (`_`), periods (`.`), tildes (`~`),
-      plus (`+`) or percent signs (`%`). It must
-       *        be between 3 and 255 characters
-      in length, and it must not start with `"goog"`.
+       *        `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a
+       *        letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+       *        underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must
+       *        be between 3 and 255 characters in length, and it must not start with `"goog"`.
        * @param content the {@link com.google.api.services.pubsub.model.Subscription}
        * @return the request
        */
@@ -342,11 +333,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Creates a subscription to a given topic. If the subscription already exists, returns
-         * `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns `NOT_FOUND`.
-         *
-         * If the name is not provided in the request, the server will assign a random name for this
-         * subscription on the same project as the topic. Note that for REST API requests, you must
-         * specify a name.
+         * `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns `NOT_FOUND`. If the name is
+         * not provided in the request, the server will assign a random name for this subscription on the
+         * same project as the topic. Note that for REST API requests, you must specify a name.
          *
          * Create a request for the method "subscriptions.create".
          *
@@ -356,14 +345,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name The name of the subscription. It must have the format
-       *        `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
-      start with a
-       *        letter, and contain only letters (`[A-Za-z]`), numbers
-      (`[0-9]`), dashes (`-`),
-       *        underscores (`_`), periods (`.`), tildes (`~`),
-      plus (`+`) or percent signs (`%`). It must
-       *        be between 3 and 255 characters
-      in length, and it must not start with `"goog"`.
+       *        `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a
+       *        letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+       *        underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must
+       *        be between 3 and 255 characters in length, and it must not start with `"goog"`.
          * @param content the {@link com.google.api.services.pubsub.model.Subscription}
          * @since 1.13
          */
@@ -755,8 +740,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @return the request
        */
@@ -785,8 +769,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @since 1.13
          */
@@ -894,34 +877,33 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned.
-
-       Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-       Requests for policies with any conditional bindings must specify version 3. Policies without any
-       conditional bindings may specify any valid value or leave the field unset.
+        /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+       must specify version 3. Policies without any conditional bindings may specify any valid value or
+       leave the field unset. To learn which resources support conditions in their IAM policies, see the
+       [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
           this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1250,12 +1232,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Modifies the `PushConfig` for a specified subscription.
-       *
-       * This may be used to change a push subscription to a pull one (signified by an empty `PushConfig`)
-       * or vice versa, or change the endpoint URL and other attributes of a push subscription. Messages
-       * will accumulate for delivery continuously through the call regardless of changes to the
-       * `PushConfig`.
+       * Modifies the `PushConfig` for a specified subscription. This may be used to change a push
+       * subscription to a pull one (signified by an empty `PushConfig`) or vice versa, or change the
+       * endpoint URL and other attributes of a push subscription. Messages will accumulate for delivery
+       * continuously through the call regardless of changes to the `PushConfig`.
        *
        * Create a request for the method "subscriptions.modifyPushConfig".
        *
@@ -1280,12 +1260,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+/subscriptions/[^/]+$");
 
         /**
-         * Modifies the `PushConfig` for a specified subscription.
-         *
-         * This may be used to change a push subscription to a pull one (signified by an empty
-         * `PushConfig`) or vice versa, or change the endpoint URL and other attributes of a push
-         * subscription. Messages will accumulate for delivery continuously through the call regardless of
-         * changes to the `PushConfig`.
+         * Modifies the `PushConfig` for a specified subscription. This may be used to change a push
+         * subscription to a pull one (signified by an empty `PushConfig`) or vice versa, or change the
+         * endpoint URL and other attributes of a push subscription. Messages will accumulate for delivery
+         * continuously through the call regardless of changes to the `PushConfig`.
          *
          * Create a request for the method "subscriptions.modifyPushConfig".
          *
@@ -1525,17 +1503,15 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
-       *
-       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "subscriptions.setIamPolicy".
        *
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
        * @return the request
@@ -1554,9 +1530,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+/subscriptions/[^/]+$");
 
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "subscriptions.setIamPolicy".
          *
@@ -1566,8 +1541,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
          * @since 1.13
@@ -1672,18 +1646,16 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       }
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-       * this will return an empty set of permissions, not a NOT_FOUND error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+       * designed to be used for building permission-aware UIs and command-line tools, not for
+       * authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "subscriptions.testIamPermissions".
        *
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
        * @return the request
@@ -1703,10 +1675,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
-         * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+         * operation is designed to be used for building permission-aware UIs and command-line tools, not
+         * for authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "subscriptions.testIamPermissions".
          *
@@ -1716,8 +1687,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -1850,15 +1820,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the topic. It must have the format
-      `"projects/{project}/topics/{topic}"`. `{topic}` must
-       *        start with a letter,
-      and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes
-       *        (`-`),
-      underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
-      signs (`%`).
-       *        It must be between 3 and 255 characters in length, and it
-      must not start with `"goog"`.
+       * @param name The name of the topic. It must have the format `"projects/{project}/topics/{topic}"`. `{topic}` must
+       *        start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes
+       *        (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`).
+       *        It must be between 3 and 255 characters in length, and it must not start with `"goog"`.
        * @param content the {@link com.google.api.services.pubsub.model.Topic}
        * @return the request
        */
@@ -1885,15 +1850,10 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the topic. It must have the format
-      `"projects/{project}/topics/{topic}"`. `{topic}` must
-       *        start with a letter,
-      and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes
-       *        (`-`),
-      underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
-      signs (`%`).
-       *        It must be between 3 and 255 characters in length, and it
-      must not start with `"goog"`.
+         * @param name The name of the topic. It must have the format `"projects/{project}/topics/{topic}"`. `{topic}` must
+       *        start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes
+       *        (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`).
+       *        It must be between 3 and 255 characters in length, and it must not start with `"goog"`.
          * @param content the {@link com.google.api.services.pubsub.model.Topic}
          * @since 1.13
          */
@@ -2284,8 +2244,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @return the request
        */
@@ -2314,8 +2273,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @since 1.13
          */
@@ -2423,34 +2381,33 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned.
-
-       Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-       Requests for policies with any conditional bindings must specify version 3. Policies without any
-       conditional bindings may specify any valid value or leave the field unset.
+        /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+       must specify version 3. Policies without any conditional bindings may specify any valid value or
+       leave the field unset. To learn which resources support conditions in their IAM policies, see the
+       [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
           this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -2643,8 +2600,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       }
       /**
        * Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic does not exist. The
-       * message payload must not be empty; it must contain  either a non-empty data field, or at least
-       * one attribute.
+       * message payload must not be empty; it must contain either a non-empty data field, or at least one
+       * attribute.
        *
        * Create a request for the method "topics.publish".
        *
@@ -2670,7 +2627,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic does not exist. The
-         * message payload must not be empty; it must contain  either a non-empty data field, or at least
+         * message payload must not be empty; it must contain either a non-empty data field, or at least
          * one attribute.
          *
          * Create a request for the method "topics.publish".
@@ -2777,17 +2734,15 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
-       *
-       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "topics.setIamPolicy".
        *
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
        * @return the request
@@ -2806,9 +2761,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+/topics/[^/]+$");
 
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "topics.setIamPolicy".
          *
@@ -2818,8 +2772,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.pubsub.model.SetIamPolicyRequest}
          * @since 1.13
@@ -2924,18 +2877,16 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       }
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-       * this will return an empty set of permissions, not a NOT_FOUND error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+       * designed to be used for building permission-aware UIs and command-line tools, not for
+       * authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "topics.testIamPermissions".
        *
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
        * @return the request
@@ -2955,10 +2906,9 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
-         * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+         * operation is designed to be used for building permission-aware UIs and command-line tools, not
+         * for authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "topics.testIamPermissions".
          *
@@ -2968,8 +2918,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.pubsub.model.TestIamPermissionsRequest}
          * @since 1.13

@@ -20,8 +20,7 @@ package com.google.api.services.pubsub;
  * Service definition for Pubsub (v1beta1a).
  *
  * <p>
- * Provides reliable, many-to-many, asynchronous messaging between applications.
-
+ * Provides reliable, many-to-many, asynchronous messaging between applications. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Pub/Sub API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Pub/Sub API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -250,9 +249,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
     }
     /**
      * Creates a subscription on a given topic for a given subscriber. If the subscription already
-     * exists, returns ALREADY_EXISTS. If the corresponding topic doesn't exist, returns NOT_FOUND.
-     *
-     * If the name is not provided in the request, the server will assign a random name for this
+     * exists, returns ALREADY_EXISTS. If the corresponding topic doesn't exist, returns NOT_FOUND. If
+     * the name is not provided in the request, the server will assign a random name for this
      * subscription on the same project as the topic.
      *
      * Create a request for the method "subscriptions.create".
@@ -275,9 +273,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Creates a subscription on a given topic for a given subscriber. If the subscription already
-       * exists, returns ALREADY_EXISTS. If the corresponding topic doesn't exist, returns NOT_FOUND.
-       *
-       * If the name is not provided in the request, the server will assign a random name for this
+       * exists, returns ALREADY_EXISTS. If the corresponding topic doesn't exist, returns NOT_FOUND. If
+       * the name is not provided in the request, the server will assign a random name for this
        * subscription on the same project as the topic.
        *
        * Create a request for the method "subscriptions.create".
@@ -739,9 +736,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         return this;
       }
 
-      /**
-       * The value obtained in the last ListSubscriptionsResponse for continuation.
-       */
+      /** The value obtained in the last ListSubscriptionsResponse for continuation. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
@@ -751,9 +746,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         return pageToken;
       }
 
-      /**
-       * The value obtained in the last ListSubscriptionsResponse for continuation.
-       */
+      /** The value obtained in the last ListSubscriptionsResponse for continuation. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -1701,9 +1694,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         return this;
       }
 
-      /**
-       * The value obtained in the last ListTopicsResponse for continuation.
-       */
+      /** The value obtained in the last ListTopicsResponse for continuation. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
@@ -1713,9 +1704,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         return pageToken;
       }
 
-      /**
-       * The value obtained in the last ListTopicsResponse for continuation.
-       */
+      /** The value obtained in the last ListTopicsResponse for continuation. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -1743,7 +1732,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
-     * Adds a message to the topic.  Returns NOT_FOUND if the topic does not exist.
+     * Adds a message to the topic. Returns NOT_FOUND if the topic does not exist.
      *
      * Create a request for the method "topics.publish".
      *
@@ -1764,7 +1753,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v1beta1a/topics/publish";
 
       /**
-       * Adds a message to the topic.  Returns NOT_FOUND if the topic does not exist.
+       * Adds a message to the topic. Returns NOT_FOUND if the topic does not exist.
        *
        * Create a request for the method "topics.publish".
        *

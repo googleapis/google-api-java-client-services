@@ -46,7 +46,7 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Firebase Cloud Messaging API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Firebase Cloud Messaging API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -170,12 +170,9 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
        * This request holds the parameters needed by the fcm server.  After setting any optional
        * parameters, call the {@link Send#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. It contains the Firebase project id (i.e. the unique identifier
-      for your Firebase
-       *        project), in the format of `projects/{project_id}`.
-      For legacy support, the numeric
-       *        project number with no padding is also
-      supported in the format of
+       * @param parent Required. It contains the Firebase project id (i.e. the unique identifier for your Firebase
+       *        project), in the format of `projects/{project_id}`. For legacy support, the numeric
+       *        project number with no padding is also supported in the format of
        *        `projects/{project_number}`.
        * @param content the {@link com.google.api.services.fcm.v1.model.SendMessageRequest}
        * @return the request
@@ -203,12 +200,9 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
          * Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. It contains the Firebase project id (i.e. the unique identifier
-      for your Firebase
-       *        project), in the format of `projects/{project_id}`.
-      For legacy support, the numeric
-       *        project number with no padding is also
-      supported in the format of
+         * @param parent Required. It contains the Firebase project id (i.e. the unique identifier for your Firebase
+       *        project), in the format of `projects/{project_id}`. For legacy support, the numeric
+       *        project number with no padding is also supported in the format of
        *        `projects/{project_number}`.
          * @param content the {@link com.google.api.services.fcm.v1.model.SendMessageRequest}
          * @since 1.13

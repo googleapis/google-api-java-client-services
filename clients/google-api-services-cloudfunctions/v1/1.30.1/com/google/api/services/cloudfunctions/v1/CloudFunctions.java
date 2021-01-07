@@ -46,7 +46,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Functions API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Functions API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,7 +143,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -168,7 +168,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           java.util.regex.Pattern.compile("^operations/[^/]+$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -284,13 +284,12 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
     }
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`.
-     *
-     * NOTE: the `name` binding allows API services to override the binding to use different resource
-     * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-     * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-     * compatibility, the default name includes the operations collection id, however overriding users
-     * must ensure the name binding is the parent resource, without the operations collection id.
+     * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+     * the binding to use different resource name schemes, such as `users/operations`. To override the
+     * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+     * configuration. For backwards compatibility, the default name includes the operations collection
+     * id, however overriding users must ensure the name binding is the parent resource, without the
+     * operations collection id.
      *
      * Create a request for the method "operations.list".
      *
@@ -311,13 +310,12 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * NOTE: the `name` binding allows API services to override the binding to use different resource
-       * name schemes, such as `users/operations`. To override the binding, API services can add a
-       * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-       * compatibility, the default name includes the operations collection id, however overriding users
-       * must ensure the name binding is the parent resource, without the operations collection id.
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+       * override the binding to use different resource name schemes, such as `users/operations`. To
+       * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+       * their service configuration. For backwards compatibility, the default name includes the
+       * operations collection id, however overriding users must ensure the name binding is the parent
+       * resource, without the operations collection id.
        *
        * Create a request for the method "operations.list".
        *
@@ -398,14 +396,14 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
       }
 
       /**
-       * Required. A filter for matching the requested operations. The supported formats of filter
+       * Required. A filter for matching the requested operations. The supported formats of *filter*
        * are: To query for a specific function: project:*,location:*,function:* To query for all of
        * the latest operations for a project: project:*,latest:true
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Required. A filter for matching the requested operations. The supported formats of filter are: To
+      /** Required. A filter for matching the requested operations. The supported formats of *filter* are: To
      query for a specific function: project:*,location:*,function:* To query for all of the latest
      operations for a project: project:*,latest:true
        */
@@ -414,7 +412,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
       }
 
       /**
-       * Required. A filter for matching the requested operations. The supported formats of filter
+       * Required. A filter for matching the requested operations. The supported formats of *filter*
        * are: To query for a specific function: project:*,location:*,function:* To query for all of
        * the latest operations for a project: project:*,latest:true
        */
@@ -886,8 +884,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param location Required. The project and location in which the function should be created, specified
-        in the format
+         * @param location Required. The project and location in which the function should be created, specified in the format
          *        `projects/locations`
          * @param content the {@link com.google.api.services.cloudfunctions.v1.model.CloudFunction}
          * @return the request
@@ -917,8 +914,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param location Required. The project and location in which the function should be created, specified
-        in the format
+           * @param location Required. The project and location in which the function should be created, specified in the format
          *        `projects/locations`
            * @param content the {@link com.google.api.services.cloudfunctions.v1.model.CloudFunction}
            * @since 1.13
@@ -1163,8 +1159,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * optional parameters, call the {@link GenerateDownloadUrl#execute()} method to invoke the remote
          * operation.
          *
-         * @param name The name of function for which source code Google Cloud Storage signed
-        URL should be generated.
+         * @param name The name of function for which source code Google Cloud Storage signed URL should be generated.
          * @param content the {@link com.google.api.services.cloudfunctions.v1.model.GenerateDownloadUrlRequest}
          * @return the request
          */
@@ -1194,8 +1189,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The name of function for which source code Google Cloud Storage signed
-        URL should be generated.
+           * @param name The name of function for which source code Google Cloud Storage signed URL should be generated.
            * @param content the {@link com.google.api.services.cloudfunctions.v1.model.GenerateDownloadUrlRequest}
            * @since 1.13
            */
@@ -1300,22 +1294,14 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * Returns a signed URL for uploading a function source code. For more information about the signed
          * URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls. Once the
          * function source code upload is complete, the used signed URL should be provided in CreateFunction
-         * or UpdateFunction request as a reference to the function source code.
-         *
-         * When uploading source code to the generated signed URL, please follow these restrictions:
-         *
-         * * Source file type should be a zip file. * Source file size should not exceed 100MB limit. * No
-         * credentials should be attached - the signed URLs provide access to the   target bucket using
-         * internal service identity; if credentials were   attached, the identity from the credentials
-         * would be used, but that   identity does not have permissions to upload files to the URL.
-         *
-         * When making a HTTP PUT request, these two headers need to be specified:
-         *
-         * * `content-type: application/zip` * `x-goog-content-length-range: 0,104857600`
-         *
-         * And this header SHOULD NOT be specified:
-         *
-         * * `Authorization: Bearer YOUR_TOKEN`
+         * or UpdateFunction request as a reference to the function source code. When uploading source code
+         * to the generated signed URL, please follow these restrictions: * Source file type should be a zip
+         * file. * Source file size should not exceed 100MB limit. * No credentials should be attached - the
+         * signed URLs provide access to the target bucket using internal service identity; if credentials
+         * were attached, the identity from the credentials would be used, but that identity does not have
+         * permissions to upload files to the URL. When making a HTTP PUT request, these two headers need to
+         * be specified: * `content-type: application/zip` * `x-goog-content-length-range: 0,104857600` And
+         * this header SHOULD NOT be specified: * `Authorization: Bearer YOUR_TOKEN`
          *
          * Create a request for the method "functions.generateUploadUrl".
          *
@@ -1323,8 +1309,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * optional parameters, call the {@link GenerateUploadUrl#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent The project and location in which the Google Cloud Storage signed URL
-        should be generated, specified
+         * @param parent The project and location in which the Google Cloud Storage signed URL should be generated, specified
          *        in the format `projects/locations`.
          * @param content the {@link com.google.api.services.cloudfunctions.v1.model.GenerateUploadUrlRequest}
          * @return the request
@@ -1346,22 +1331,15 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * Returns a signed URL for uploading a function source code. For more information about the
            * signed URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls. Once
            * the function source code upload is complete, the used signed URL should be provided in
-           * CreateFunction or UpdateFunction request as a reference to the function source code.
-           *
-           * When uploading source code to the generated signed URL, please follow these restrictions:
-           *
-           * * Source file type should be a zip file. * Source file size should not exceed 100MB limit. * No
-           * credentials should be attached - the signed URLs provide access to the   target bucket using
-           * internal service identity; if credentials were   attached, the identity from the credentials
-           * would be used, but that   identity does not have permissions to upload files to the URL.
-           *
-           * When making a HTTP PUT request, these two headers need to be specified:
-           *
-           * * `content-type: application/zip` * `x-goog-content-length-range: 0,104857600`
-           *
-           * And this header SHOULD NOT be specified:
-           *
-           * * `Authorization: Bearer YOUR_TOKEN`
+           * CreateFunction or UpdateFunction request as a reference to the function source code. When
+           * uploading source code to the generated signed URL, please follow these restrictions: * Source
+           * file type should be a zip file. * Source file size should not exceed 100MB limit. * No
+           * credentials should be attached - the signed URLs provide access to the target bucket using
+           * internal service identity; if credentials were attached, the identity from the credentials
+           * would be used, but that identity does not have permissions to upload files to the URL. When
+           * making a HTTP PUT request, these two headers need to be specified: * `content-type:
+           * application/zip` * `x-goog-content-length-range: 0,104857600` And this header SHOULD NOT be
+           * specified: * `Authorization: Bearer YOUR_TOKEN`
            *
            * Create a request for the method "functions.generateUploadUrl".
            *
@@ -1371,8 +1349,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * stractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent The project and location in which the Google Cloud Storage signed URL
-        should be generated, specified
+           * @param parent The project and location in which the Google Cloud Storage signed URL should be generated, specified
          *        in the format `projects/locations`.
            * @param content the {@link com.google.api.services.cloudfunctions.v1.model.GenerateUploadUrlRequest}
            * @since 1.13
@@ -1623,8 +1600,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @return the request
          */
@@ -1653,8 +1629,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @since 1.13
            */
@@ -1762,34 +1737,33 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned.
-
-         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-         Requests for policies with any conditional bindings must specify version 3. Policies without any
-         conditional bindings may specify any valid value or leave the field unset.
+          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+         must specify version 3. Policies without any conditional bindings may specify any valid value or
+         leave the field unset. To learn which resources support conditions in their IAM policies, see the
+         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1809,14 +1783,10 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The project and location from which the function should be listed,
-        specified in the format
-         *        `projects/locations`
-        If you want to list functions in all locations, use "-" in place of a
-         *        location. When listing functions in all locations, if one or more
-        location(s) are
-         *        unreachable, the response will contain functions from all
-        reachable locations along with
+         * @param parent The project and location from which the function should be listed, specified in the format
+         *        `projects/locations` If you want to list functions in all locations, use "-" in place of a
+         *        location. When listing functions in all locations, if one or more location(s) are
+         *        unreachable, the response will contain functions from all reachable locations along with
          *        the names of any unreachable locations.
          * @return the request
          */
@@ -1843,14 +1813,10 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The project and location from which the function should be listed,
-        specified in the format
-         *        `projects/locations`
-        If you want to list functions in all locations, use "-" in place of a
-         *        location. When listing functions in all locations, if one or more
-        location(s) are
-         *        unreachable, the response will contain functions from all
-        reachable locations along with
+           * @param parent The project and location from which the function should be listed, specified in the format
+         *        `projects/locations` If you want to list functions in all locations, use "-" in place of a
+         *        location. When listing functions in all locations, if one or more location(s) are
+         *        unreachable, the response will contain functions from all reachable locations along with
          *        the names of any unreachable locations.
            * @since 1.13
            */
@@ -2020,8 +1986,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the cloudfunctions server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name A user-defined name of the function. Function names must be unique
-        globally and match pattern
+         * @param name A user-defined name of the function. Function names must be unique globally and match pattern
          *        `projects/locations/functions`
          * @param content the {@link com.google.api.services.cloudfunctions.v1.model.CloudFunction}
          * @return the request
@@ -2050,8 +2015,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name A user-defined name of the function. Function names must be unique
-        globally and match pattern
+           * @param name A user-defined name of the function. Function names must be unique globally and match pattern
          *        `projects/locations/functions`
            * @param content the {@link com.google.api.services.cloudfunctions.v1.model.CloudFunction}
            * @since 1.13
@@ -2179,8 +2143,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.cloudfunctions.v1.model.SetIamPolicyRequest}
          * @return the request
@@ -2209,8 +2172,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudfunctions.v1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -2323,8 +2285,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
          * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
          * operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.cloudfunctions.v1.model.TestIamPermissionsRequest}
          * @return the request
@@ -2354,8 +2315,7 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudfunctions.v1.model.TestIamPermissionsRequest}
            * @since 1.13

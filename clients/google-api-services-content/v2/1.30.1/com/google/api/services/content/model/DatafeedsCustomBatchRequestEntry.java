@@ -59,9 +59,8 @@ public final class DatafeedsCustomBatchRequestEntry extends com.google.api.clien
   private java.math.BigInteger merchantId;
 
   /**
-   * The method of the batch entry.
-   *
-   * Acceptable values are:   - "delete"  - "fetchNow"  - "get"  - "insert"  - "update"
+   * The method of the batch entry. Acceptable values are: - "`delete`" - "`fetchNow`" - "`get`" -
+   * "`insert`" - "`update`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,9 +135,8 @@ public final class DatafeedsCustomBatchRequestEntry extends com.google.api.clien
   }
 
   /**
-   * The method of the batch entry.
-   *
-   * Acceptable values are:   - "delete"  - "fetchNow"  - "get"  - "insert"  - "update"
+   * The method of the batch entry. Acceptable values are: - "`delete`" - "`fetchNow`" - "`get`" -
+   * "`insert`" - "`update`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -146,9 +144,8 @@ public final class DatafeedsCustomBatchRequestEntry extends com.google.api.clien
   }
 
   /**
-   * The method of the batch entry.
-   *
-   * Acceptable values are:   - "delete"  - "fetchNow"  - "get"  - "insert"  - "update"
+   * The method of the batch entry. Acceptable values are: - "`delete`" - "`fetchNow`" - "`get`" -
+   * "`insert`" - "`update`"
    * @param method method or {@code null} for none
    */
   public DatafeedsCustomBatchRequestEntry setMethod(java.lang.String method) {

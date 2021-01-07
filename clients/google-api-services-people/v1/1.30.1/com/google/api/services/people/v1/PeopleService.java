@@ -46,7 +46,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the People API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the People API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -884,8 +884,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
      * This request holds the parameters needed by the people server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param resourceName The resource name for the contact group, assigned by the server. An ASCII
-    string, in the form of
+     * @param resourceName The resource name for the contact group, assigned by the server. An ASCII string, in the form of
      *        `contactGroups/{contact_group_id}`.
      * @param content the {@link com.google.api.services.people.v1.model.UpdateContactGroupRequest}
      * @return the request
@@ -913,8 +912,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resourceName The resource name for the contact group, assigned by the server. An ASCII
-    string, in the form of
+       * @param resourceName The resource name for the contact group, assigned by the server. An ASCII string, in the form of
      *        `contactGroups/{contact_group_id}`.
        * @param content the {@link com.google.api.services.people.v1.model.UpdateContactGroupRequest}
        * @since 1.13
@@ -1039,11 +1037,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     public class Members {
 
       /**
-       * Modify the members of a contact group owned by the authenticated user.
-       *
-       * The only system contact groups that can have members added are `contactGroups/myContacts` and
-       * `contactGroups/starred`. Other system contact groups are deprecated and can only have contacts
-       * removed.
+       * Modify the members of a contact group owned by the authenticated user. The only system contact
+       * groups that can have members added are `contactGroups/myContacts` and `contactGroups/starred`.
+       * Other system contact groups are deprecated and can only have contacts removed.
        *
        * Create a request for the method "members.modify".
        *
@@ -1068,11 +1064,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^contactGroups/[^/]+$");
 
         /**
-         * Modify the members of a contact group owned by the authenticated user.
-         *
-         * The only system contact groups that can have members added are `contactGroups/myContacts` and
-         * `contactGroups/starred`. Other system contact groups are deprecated and can only have contacts
-         * removed.
+         * Modify the members of a contact group owned by the authenticated user. The only system contact
+         * groups that can have members added are `contactGroups/myContacts` and `contactGroups/starred`.
+         * Other system contact groups are deprecated and can only have contacts removed.
          *
          * Create a request for the method "members.modify".
          *
@@ -1181,6 +1175,400 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the OtherContacts collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code PeopleService people = new PeopleService(...);}
+   *   {@code PeopleService.OtherContacts.List request = people.otherContacts().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public OtherContacts otherContacts() {
+    return new OtherContacts();
+  }
+
+  /**
+   * The "otherContacts" collection of methods.
+   */
+  public class OtherContacts {
+
+    /**
+     * Copies an "Other contact" to a new contact in the user's "myContacts" group
+     *
+     * Create a request for the method "otherContacts.copyOtherContactToMyContactsGroup".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link CopyOtherContactToMyContactsGroup#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param resourceName Required. The resource name of the "Other contact" to copy.
+     * @param content the {@link com.google.api.services.people.v1.model.CopyOtherContactToMyContactsGroupRequest}
+     * @return the request
+     */
+    public CopyOtherContactToMyContactsGroup copyOtherContactToMyContactsGroup(java.lang.String resourceName, com.google.api.services.people.v1.model.CopyOtherContactToMyContactsGroupRequest content) throws java.io.IOException {
+      CopyOtherContactToMyContactsGroup result = new CopyOtherContactToMyContactsGroup(resourceName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class CopyOtherContactToMyContactsGroup extends PeopleServiceRequest<com.google.api.services.people.v1.model.Person> {
+
+      private static final String REST_PATH = "v1/{+resourceName}:copyOtherContactToMyContactsGroup";
+
+      private final java.util.regex.Pattern RESOURCE_NAME_PATTERN =
+          java.util.regex.Pattern.compile("^otherContacts/[^/]+$");
+
+      /**
+       * Copies an "Other contact" to a new contact in the user's "myContacts" group
+       *
+       * Create a request for the method "otherContacts.copyOtherContactToMyContactsGroup".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link CopyOtherContactToMyContactsGroup#execute()} method to invoke the
+       * remote operation. <p> {@link CopyOtherContactToMyContactsGroup#initialize(com.google.api.client
+       * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param resourceName Required. The resource name of the "Other contact" to copy.
+       * @param content the {@link com.google.api.services.people.v1.model.CopyOtherContactToMyContactsGroupRequest}
+       * @since 1.13
+       */
+      protected CopyOtherContactToMyContactsGroup(java.lang.String resourceName, com.google.api.services.people.v1.model.CopyOtherContactToMyContactsGroupRequest content) {
+        super(PeopleService.this, "POST", REST_PATH, content, com.google.api.services.people.v1.model.Person.class);
+        this.resourceName = com.google.api.client.util.Preconditions.checkNotNull(resourceName, "Required parameter resourceName must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^otherContacts/[^/]+$");
+        }
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup set$Xgafv(java.lang.String $Xgafv) {
+        return (CopyOtherContactToMyContactsGroup) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setAccessToken(java.lang.String accessToken) {
+        return (CopyOtherContactToMyContactsGroup) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setAlt(java.lang.String alt) {
+        return (CopyOtherContactToMyContactsGroup) super.setAlt(alt);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setCallback(java.lang.String callback) {
+        return (CopyOtherContactToMyContactsGroup) super.setCallback(callback);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setFields(java.lang.String fields) {
+        return (CopyOtherContactToMyContactsGroup) super.setFields(fields);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setKey(java.lang.String key) {
+        return (CopyOtherContactToMyContactsGroup) super.setKey(key);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setOauthToken(java.lang.String oauthToken) {
+        return (CopyOtherContactToMyContactsGroup) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CopyOtherContactToMyContactsGroup) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setQuotaUser(java.lang.String quotaUser) {
+        return (CopyOtherContactToMyContactsGroup) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setUploadType(java.lang.String uploadType) {
+        return (CopyOtherContactToMyContactsGroup) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CopyOtherContactToMyContactsGroup) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The resource name of the "Other contact" to copy. */
+      @com.google.api.client.util.Key
+      private java.lang.String resourceName;
+
+      /** Required. The resource name of the "Other contact" to copy.
+       */
+      public java.lang.String getResourceName() {
+        return resourceName;
+      }
+
+      /** Required. The resource name of the "Other contact" to copy. */
+      public CopyOtherContactToMyContactsGroup setResourceName(java.lang.String resourceName) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_NAME_PATTERN.matcher(resourceName).matches(),
+              "Parameter resourceName must conform to the pattern " +
+              "^otherContacts/[^/]+$");
+        }
+        this.resourceName = resourceName;
+        return this;
+      }
+
+      @Override
+      public CopyOtherContactToMyContactsGroup set(String parameterName, Object value) {
+        return (CopyOtherContactToMyContactsGroup) super.set(parameterName, value);
+      }
+    }
+    /**
+     * List all "Other contacts", that is contacts that are not in a contact group. "Other contacts" are
+     * typically auto created contacts from interactions.
+     *
+     * Create a request for the method "otherContacts.list".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends PeopleServiceRequest<com.google.api.services.people.v1.model.ListOtherContactsResponse> {
+
+      private static final String REST_PATH = "v1/otherContacts";
+
+      /**
+       * List all "Other contacts", that is contacts that are not in a contact group. "Other contacts"
+       * are typically auto created contacts from interactions.
+       *
+       * Create a request for the method "otherContacts.list".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(PeopleService.this, "GET", REST_PATH, null, com.google.api.services.people.v1.model.ListOtherContactsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The number of "Other contacts" to include in the response. Valid values are
+       * between 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The number of "Other contacts" to include in the response. Valid values are between 1 and
+     1000, inclusive. Defaults to 100 if not set or set to 0.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The number of "Other contacts" to include in the response. Valid values are
+       * between 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListOtherContacts` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListOtherContacts` must match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous `ListOtherContacts` call. Provide this to retrieve
+     the subsequent page. When paginating, all other parameters provided to `ListOtherContacts` must
+     match the call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListOtherContacts` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListOtherContacts` must match the call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are: * emailAddresses
+       * * names * phoneNumbers
+       */
+      @com.google.api.client.util.Key
+      private String readMask;
+
+      /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
+     specified by separating them with commas. Valid values are: * emailAddresses * names * phoneNumbers
+       */
+      public String getReadMask() {
+        return readMask;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are: * emailAddresses
+       * * names * phoneNumbers
+       */
+      public List setReadMask(String readMask) {
+        this.readMask = readMask;
+        return this;
+      }
+
+      /**
+       * Optional. Whether the response should include `next_sync_token`, which can be used to get
+       * all changes since the last request. For subsequent sync requests use the `sync_token` param
+       * instead. Initial sync requests that specify `request_sync_token` have an additional rate
+       * limit.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean requestSyncToken;
+
+      /** Optional. Whether the response should include `next_sync_token`, which can be used to get all
+     changes since the last request. For subsequent sync requests use the `sync_token` param instead.
+     Initial sync requests that specify `request_sync_token` have an additional rate limit.
+       */
+      public java.lang.Boolean getRequestSyncToken() {
+        return requestSyncToken;
+      }
+
+      /**
+       * Optional. Whether the response should include `next_sync_token`, which can be used to get
+       * all changes since the last request. For subsequent sync requests use the `sync_token` param
+       * instead. Initial sync requests that specify `request_sync_token` have an additional rate
+       * limit.
+       */
+      public List setRequestSyncToken(java.lang.Boolean requestSyncToken) {
+        this.requestSyncToken = requestSyncToken;
+        return this;
+      }
+
+      /**
+       * Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to
+       * retrieve only the resources changed since the last request. Sync requests that specify
+       * `sync_token` have an additional rate limit. When syncing, all other parameters provided to
+       * `ListOtherContacts` must match the call that provided the sync token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String syncToken;
+
+      /** Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to retrieve
+     only the resources changed since the last request. Sync requests that specify `sync_token` have an
+     additional rate limit. When syncing, all other parameters provided to `ListOtherContacts` must
+     match the call that provided the sync token.
+       */
+      public java.lang.String getSyncToken() {
+        return syncToken;
+      }
+
+      /**
+       * Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to
+       * retrieve only the resources changed since the last request. Sync requests that specify
+       * `sync_token` have an additional rate limit. When syncing, all other parameters provided to
+       * `ListOtherContacts` must match the call that provided the sync token.
+       */
+      public List setSyncToken(java.lang.String syncToken) {
+        this.syncToken = syncToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the People collection.
    *
    * <p>The typical use is:</p>
@@ -1201,7 +1589,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
   public class People {
 
     /**
-     * Create a new contact and return the person resource for that contact.
+     * Create a new contact and return the person resource for that contact. The request returns a 400
+     * error if more than one field is specified on a field that is a singleton for contact sources: *
+     * biographies * birthdays * genders * names
      *
      * Create a request for the method "people.createContact".
      *
@@ -1222,7 +1612,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/people:createContact";
 
       /**
-       * Create a new contact and return the person resource for that contact.
+       * Create a new contact and return the person resource for that contact. The request returns a 400
+       * error if more than one field is specified on a field that is a singleton for contact sources: *
+       * biographies * birthdays * genders * names
        *
        * Create a request for the method "people.createContact".
        *
@@ -1292,6 +1684,66 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       @Override
       public CreateContact setUploadProtocol(java.lang.String uploadProtocol) {
         return (CreateContact) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Defaults to all fields if not set.
+       * Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
+       * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+       * interests * locales * locations * memberships * metadata * miscKeywords * names * nicknames
+       * * occupations * organizations * phoneNumbers * photos * relations * sipAddresses * skills *
+       * urls * userDefined
+       */
+      @com.google.api.client.util.Key
+      private String personFields;
+
+      /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
+     specified by separating them with commas. Defaults to all fields if not set. Valid values are: *
+     addresses * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+     emailAddresses * events * externalIds * genders * imClients * interests * locales * locations *
+     memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
+     phoneNumbers * photos * relations * sipAddresses * skills * urls * userDefined
+       */
+      public String getPersonFields() {
+        return personFields;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Defaults to all fields if not set.
+       * Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
+       * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+       * interests * locales * locations * memberships * metadata * miscKeywords * names * nicknames
+       * * occupations * organizations * phoneNumbers * photos * relations * sipAddresses * skills *
+       * urls * userDefined
+       */
+      public CreateContact setPersonFields(String personFields) {
+        this.personFields = personFields;
+        return this;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> sources;
+
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+     READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      public java.util.List<java.lang.String> getSources() {
+        return sources;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      public CreateContact setSources(java.util.List<java.lang.String> sources) {
+        this.sources = sources;
+        return this;
       }
 
       @Override
@@ -1555,25 +2007,21 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Optional. A field mask to restrict which fields on the person are returned. Multiple fields
        * can be specified by separating them with commas. Defaults to empty if not set, which will
-       * skip the post mutate get. Valid values are:
-       *
-       * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
-       * emailAddresses * events * genders * imClients * interests * locales * memberships *
-       * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
-       * skills * taglines * urls * userDefined
+       * skip the post mutate get. Valid values are: * addresses * ageRanges * biographies *
+       * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds
+       * * genders * imClients * interests * locales * locations * memberships * metadata *
+       * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
+       * relations * sipAddresses * skills * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String personFields;
 
       /** Optional. A field mask to restrict which fields on the person are returned. Multiple fields can be
      specified by separating them with commas. Defaults to empty if not set, which will skip the post
-     mutate get. Valid values are:
-
-     * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses *
-     events * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
-     occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
-     relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
+     mutate get. Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
+     clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients * interests
+     * locales * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+     organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
@@ -1582,16 +2030,37 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Optional. A field mask to restrict which fields on the person are returned. Multiple fields
        * can be specified by separating them with commas. Defaults to empty if not set, which will
-       * skip the post mutate get. Valid values are:
-       *
-       * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
-       * emailAddresses * events * genders * imClients * interests * locales * memberships *
-       * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
-       * skills * taglines * urls * userDefined
+       * skip the post mutate get. Valid values are: * addresses * ageRanges * biographies *
+       * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds
+       * * genders * imClients * interests * locales * locations * memberships * metadata *
+       * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos *
+       * relations * sipAddresses * skills * urls * userDefined
        */
       public DeleteContactPhoto setPersonFields(String personFields) {
         this.personFields = personFields;
+        return this;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> sources;
+
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+     READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      public java.util.List<java.lang.String> getSources() {
+        return sources;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      public DeleteContactPhoto setSources(java.util.List<java.lang.String> sources) {
+        this.sources = sources;
         return this;
       }
 
@@ -1602,24 +2071,17 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Provides information about a person by specifying a resource name. Use `people/me` to indicate
-     * the authenticated user.
-     *
-     * The request throws a 400 error if 'personFields' is not specified.
+     * the authenticated user. The request returns a 400 error if 'personFields' is not specified.
      *
      * Create a request for the method "people.get".
      *
      * This request holds the parameters needed by the people server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param resourceName Required. The resource name of the person to provide information about.
-    - To get information about
-     *        the authenticated user, specify `people/me`.
-    - To get information about a google account,
-     *        specify
-     `people/{account_id}`.
-    - To get information about a contact, specify the resource
-     *        name that
-      identifies the contact as returned by
+     * @param resourceName Required. The resource name of the person to provide information about. - To get information about
+     *        the authenticated user, specify `people/me`. - To get information about a google account,
+     *        specify `people/{account_id}`. - To get information about a contact, specify the resource
+     *        name that identifies the contact as returned by
      *        [`people.connections.list`](/people/api/rest/v1/people.connections/list).
      * @return the request
      */
@@ -1638,9 +2100,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Provides information about a person by specifying a resource name. Use `people/me` to indicate
-       * the authenticated user.
-       *
-       * The request throws a 400 error if 'personFields' is not specified.
+       * the authenticated user. The request returns a 400 error if 'personFields' is not specified.
        *
        * Create a request for the method "people.get".
        *
@@ -1649,15 +2109,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resourceName Required. The resource name of the person to provide information about.
-    - To get information about
-     *        the authenticated user, specify `people/me`.
-    - To get information about a google account,
-     *        specify
-     `people/{account_id}`.
-    - To get information about a contact, specify the resource
-     *        name that
-      identifies the contact as returned by
+       * @param resourceName Required. The resource name of the person to provide information about. - To get information about
+     *        the authenticated user, specify `people/me`. - To get information about a google account,
+     *        specify `people/{account_id}`. - To get information about a contact, specify the resource
+     *        name that identifies the contact as returned by
      *        [`people.connections.list`](/people/api/rest/v1/people.connections/list).
        * @since 1.13
        */
@@ -1737,21 +2192,19 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. The resource name of the person to provide information about.
-       *
-       * - To get information about the authenticated user, specify `people/me`. - To get
-       * information about a google account, specify `people/{account_id}`. - To get information
-       * about a contact, specify the resource name that identifies the contact as returned by
+       * Required. The resource name of the person to provide information about. - To get
+       * information about the authenticated user, specify `people/me`. - To get information about a
+       * google account, specify `people/{account_id}`. - To get information about a contact,
+       * specify the resource name that identifies the contact as returned by
        * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
        */
       @com.google.api.client.util.Key
       private java.lang.String resourceName;
 
-      /** Required. The resource name of the person to provide information about.
-
-     - To get information about the authenticated user, specify `people/me`. - To get information about
-     a google account, specify `people/{account_id}`. - To get information about a contact, specify the
-     resource name that identifies the contact as returned by
+      /** Required. The resource name of the person to provide information about. - To get information about
+     the authenticated user, specify `people/me`. - To get information about a google account, specify
+     `people/{account_id}`. - To get information about a contact, specify the resource name that
+     identifies the contact as returned by
      [`people.connections.list`](/people/api/rest/v1/people.connections/list).
        */
       public java.lang.String getResourceName() {
@@ -1759,11 +2212,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. The resource name of the person to provide information about.
-       *
-       * - To get information about the authenticated user, specify `people/me`. - To get
-       * information about a google account, specify `people/{account_id}`. - To get information
-       * about a contact, specify the resource name that identifies the contact as returned by
+       * Required. The resource name of the person to provide information about. - To get
+       * information about the authenticated user, specify `people/me`. - To get information about a
+       * google account, specify `people/{account_id}`. - To get information about a contact,
+       * specify the resource name that identifies the contact as returned by
        * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
        */
       public Get setResourceName(java.lang.String resourceName) {
@@ -1778,24 +2230,21 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. A field mask to restrict which fields on the person are returned. Multiple fields
-       * can be specified by separating them with commas. Valid values are:
-       *
-       * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
-       * emailAddresses * events * genders * imClients * interests * locales * memberships *
-       * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
-       * skills * taglines * urls * userDefined
+       * can be specified by separating them with commas. Valid values are: * addresses * ageRanges
+       * * biographies * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses *
+       * events * externalIds * genders * imClients * interests * locales * locations * memberships
+       * * metadata * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers
+       * * photos * relations * sipAddresses * skills * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String personFields;
 
       /** Required. A field mask to restrict which fields on the person are returned. Multiple fields can be
-     specified by separating them with commas. Valid values are:
-
-     * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses *
-     events * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
-     occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
-     relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
+     specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
+     birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+     genders * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
+     names * nicknames * occupations * organizations * phoneNumbers * photos * relations * sipAddresses
+     * skills * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
@@ -1803,13 +2252,11 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. A field mask to restrict which fields on the person are returned. Multiple fields
-       * can be specified by separating them with commas. Valid values are:
-       *
-       * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
-       * emailAddresses * events * genders * imClients * interests * locales * memberships *
-       * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
-       * skills * taglines * urls * userDefined
+       * can be specified by separating them with commas. Valid values are: * addresses * ageRanges
+       * * biographies * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses *
+       * events * externalIds * genders * imClients * interests * locales * locations * memberships
+       * * metadata * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers
+       * * photos * relations * sipAddresses * skills * urls * userDefined
        */
       public Get setPersonFields(String personFields) {
         this.personFields = personFields;
@@ -1839,6 +2286,29 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_PROFILE and
+       * READ_SOURCE_TYPE_CONTACT if not set.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> sources;
+
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_PROFILE and
+     READ_SOURCE_TYPE_CONTACT if not set.
+       */
+      public java.util.List<java.lang.String> getSources() {
+        return sources;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_PROFILE and
+       * READ_SOURCE_TYPE_CONTACT if not set.
+       */
+      public Get setSources(java.util.List<java.lang.String> sources) {
+        this.sources = sources;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -1846,9 +2316,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     }
     /**
      * Provides information about a list of specific people by specifying a list of requested resource
-     * names. Use `people/me` to indicate the authenticated user.
-     *
-     * The request throws a 400 error if 'personFields' is not specified.
+     * names. Use `people/me` to indicate the authenticated user. The request returns a 400 error if
+     * 'personFields' is not specified.
      *
      * Create a request for the method "people.getBatchGet".
      *
@@ -1869,9 +2338,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Provides information about a list of specific people by specifying a list of requested resource
-       * names. Use `people/me` to indicate the authenticated user.
-       *
-       * The request throws a 400 error if 'personFields' is not specified.
+       * names. Use `people/me` to indicate the authenticated user. The request returns a 400 error if
+       * 'personFields' is not specified.
        *
        * Create a request for the method "people.getBatchGet".
        *
@@ -1954,24 +2422,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
-       * fields can be specified by separating them with commas. Valid values are:
-       *
-       * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
-       * emailAddresses * events * genders * imClients * interests * locales * memberships *
-       * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
-       * skills * taglines * urls * userDefined
+       * fields can be specified by separating them with commas. Valid values are: * addresses *
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+       * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+       * userDefined
        */
       @com.google.api.client.util.Key
       private String personFields;
 
       /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
-     specified by separating them with commas. Valid values are:
-
-     * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses *
-     events * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
-     occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
-     relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
+     specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
+     birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+     genders * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
+     names * nicknames * occupations * organizations * phoneNumbers * photos * relations * sipAddresses
+     * skills * urls * userDefined
        */
       public String getPersonFields() {
         return personFields;
@@ -1979,13 +2445,12 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. A field mask to restrict which fields on each person are returned. Multiple
-       * fields can be specified by separating them with commas. Valid values are:
-       *
-       * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
-       * emailAddresses * events * genders * imClients * interests * locales * memberships *
-       * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-       * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
-       * skills * taglines * urls * userDefined
+       * fields can be specified by separating them with commas. Valid values are: * addresses *
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+       * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+       * userDefined
        */
       public GetBatchGet setPersonFields(String personFields) {
         this.personFields = personFields;
@@ -2016,43 +2481,62 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. The resource names of the people to provide information about.
-       *
-       * - To get information about the authenticated user, specify `people/me`. - To get
-       * information about a google account, specify `people/{account_id}`. - To get information
-       * about a contact, specify the resource name that identifies the contact as returned by
-       * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
-       *
-       * You can include up to 50 resource names in one request.
+       * Required. The resource names of the people to provide information about. It's repeatable.
+       * The URL query parameter should be resourceNames==&... - To get information about the
+       * authenticated user, specify `people/me`. - To get information about a google account,
+       * specify `people/{account_id}`. - To get information about a contact, specify the resource
+       * name that identifies the contact as returned by
+       * [`people.connections.list`](/people/api/rest/v1/people.connections/list). You can include
+       * up to 50 resource names in one request.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> resourceNames;
 
-      /** Required. The resource names of the people to provide information about.
-
-     - To get information about the authenticated user, specify `people/me`. - To get information about
-     a google account, specify `people/{account_id}`. - To get information about a contact, specify the
-     resource name that identifies the contact as returned by
-     [`people.connections.list`](/people/api/rest/v1/people.connections/list).
-
-     You can include up to 50 resource names in one request.
+      /** Required. The resource names of the people to provide information about. It's repeatable. The URL
+     query parameter should be resourceNames==&... - To get information about the authenticated user,
+     specify `people/me`. - To get information about a google account, specify `people/{account_id}`. -
+     To get information about a contact, specify the resource name that identifies the contact as
+     returned by [`people.connections.list`](/people/api/rest/v1/people.connections/list). You can
+     include up to 50 resource names in one request.
        */
       public java.util.List<java.lang.String> getResourceNames() {
         return resourceNames;
       }
 
       /**
-       * Required. The resource names of the people to provide information about.
-       *
-       * - To get information about the authenticated user, specify `people/me`. - To get
-       * information about a google account, specify `people/{account_id}`. - To get information
-       * about a contact, specify the resource name that identifies the contact as returned by
-       * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
-       *
-       * You can include up to 50 resource names in one request.
+       * Required. The resource names of the people to provide information about. It's repeatable.
+       * The URL query parameter should be resourceNames==&... - To get information about the
+       * authenticated user, specify `people/me`. - To get information about a google account,
+       * specify `people/{account_id}`. - To get information about a contact, specify the resource
+       * name that identifies the contact as returned by
+       * [`people.connections.list`](/people/api/rest/v1/people.connections/list). You can include
+       * up to 50 resource names in one request.
        */
       public GetBatchGet setResourceNames(java.util.List<java.lang.String> resourceNames) {
         this.resourceNames = resourceNames;
+        return this;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> sources;
+
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+     READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      public java.util.List<java.lang.String> getSources() {
+        return sources;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      public GetBatchGet setSources(java.util.List<java.lang.String> sources) {
+        this.sources = sources;
         return this;
       }
 
@@ -2062,27 +2546,569 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
+     * Provides a list of domain profiles and domain contacts in the authenticated user's domain
+     * directory.
+     *
+     * Create a request for the method "people.listDirectoryPeople".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link ListDirectoryPeople#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public ListDirectoryPeople listDirectoryPeople() throws java.io.IOException {
+      ListDirectoryPeople result = new ListDirectoryPeople();
+      initialize(result);
+      return result;
+    }
+
+    public class ListDirectoryPeople extends PeopleServiceRequest<com.google.api.services.people.v1.model.ListDirectoryPeopleResponse> {
+
+      private static final String REST_PATH = "v1/people:listDirectoryPeople";
+
+      /**
+       * Provides a list of domain profiles and domain contacts in the authenticated user's domain
+       * directory.
+       *
+       * Create a request for the method "people.listDirectoryPeople".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link ListDirectoryPeople#execute()} method to invoke the remote
+       * operation. <p> {@link ListDirectoryPeople#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected ListDirectoryPeople() {
+        super(PeopleService.this, "GET", REST_PATH, null, com.google.api.services.people.v1.model.ListDirectoryPeopleResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ListDirectoryPeople set$Xgafv(java.lang.String $Xgafv) {
+        return (ListDirectoryPeople) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ListDirectoryPeople setAccessToken(java.lang.String accessToken) {
+        return (ListDirectoryPeople) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ListDirectoryPeople setAlt(java.lang.String alt) {
+        return (ListDirectoryPeople) super.setAlt(alt);
+      }
+
+      @Override
+      public ListDirectoryPeople setCallback(java.lang.String callback) {
+        return (ListDirectoryPeople) super.setCallback(callback);
+      }
+
+      @Override
+      public ListDirectoryPeople setFields(java.lang.String fields) {
+        return (ListDirectoryPeople) super.setFields(fields);
+      }
+
+      @Override
+      public ListDirectoryPeople setKey(java.lang.String key) {
+        return (ListDirectoryPeople) super.setKey(key);
+      }
+
+      @Override
+      public ListDirectoryPeople setOauthToken(java.lang.String oauthToken) {
+        return (ListDirectoryPeople) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ListDirectoryPeople setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ListDirectoryPeople) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ListDirectoryPeople setQuotaUser(java.lang.String quotaUser) {
+        return (ListDirectoryPeople) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ListDirectoryPeople setUploadType(java.lang.String uploadType) {
+        return (ListDirectoryPeople) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ListDirectoryPeople setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ListDirectoryPeople) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. Additional data to merge into the directory sources if they are connected through
+       * verified join keys such as email addresses or phone numbers.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> mergeSources;
+
+      /** Optional. Additional data to merge into the directory sources if they are connected through
+     verified join keys such as email addresses or phone numbers.
+       */
+      public java.util.List<java.lang.String> getMergeSources() {
+        return mergeSources;
+      }
+
+      /**
+       * Optional. Additional data to merge into the directory sources if they are connected through
+       * verified join keys such as email addresses or phone numbers.
+       */
+      public ListDirectoryPeople setMergeSources(java.util.List<java.lang.String> mergeSources) {
+        this.mergeSources = mergeSources;
+        return this;
+      }
+
+      /**
+       * Optional. The number of people to include in the response. Valid values are between 1 and
+       * 1000, inclusive. Defaults to 100 if not set or set to 0.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The number of people to include in the response. Valid values are between 1 and 1000,
+     inclusive. Defaults to 100 if not set or set to 0.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The number of people to include in the response. Valid values are between 1 and
+       * 1000, inclusive. Defaults to 100 if not set or set to 0.
+       */
+      public ListDirectoryPeople setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListDirectoryPeople` call. Provide this
+       * to retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListDirectoryPeople` must match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous `ListDirectoryPeople` call. Provide this to
+     retrieve the subsequent page. When paginating, all other parameters provided to
+     `ListDirectoryPeople` must match the call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListDirectoryPeople` call. Provide this
+       * to retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListDirectoryPeople` must match the call that provided the page token.
+       */
+      public ListDirectoryPeople setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are: * addresses *
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+       * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+       * userDefined
+       */
+      @com.google.api.client.util.Key
+      private String readMask;
+
+      /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
+     specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
+     birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+     genders * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
+     names * nicknames * occupations * organizations * phoneNumbers * photos * relations * sipAddresses
+     * skills * urls * userDefined
+       */
+      public String getReadMask() {
+        return readMask;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are: * addresses *
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+       * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+       * userDefined
+       */
+      public ListDirectoryPeople setReadMask(String readMask) {
+        this.readMask = readMask;
+        return this;
+      }
+
+      /**
+       * Optional. Whether the response should include `next_sync_token`, which can be used to get
+       * all changes since the last request. For subsequent sync requests use the `sync_token` param
+       * instead.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean requestSyncToken;
+
+      /** Optional. Whether the response should include `next_sync_token`, which can be used to get all
+     changes since the last request. For subsequent sync requests use the `sync_token` param instead.
+       */
+      public java.lang.Boolean getRequestSyncToken() {
+        return requestSyncToken;
+      }
+
+      /**
+       * Optional. Whether the response should include `next_sync_token`, which can be used to get
+       * all changes since the last request. For subsequent sync requests use the `sync_token` param
+       * instead.
+       */
+      public ListDirectoryPeople setRequestSyncToken(java.lang.Boolean requestSyncToken) {
+        this.requestSyncToken = requestSyncToken;
+        return this;
+      }
+
+      /** Required. Directory sources to return. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> sources;
+
+      /** Required. Directory sources to return.
+       */
+      public java.util.List<java.lang.String> getSources() {
+        return sources;
+      }
+
+      /** Required. Directory sources to return. */
+      public ListDirectoryPeople setSources(java.util.List<java.lang.String> sources) {
+        this.sources = sources;
+        return this;
+      }
+
+      /**
+       * Optional. A sync token, received from a previous `ListDirectoryPeople` call. Provide this
+       * to retrieve only the resources changed since the last request. When syncing, all other
+       * parameters provided to `ListDirectoryPeople` must match the call that provided the sync
+       * token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String syncToken;
+
+      /** Optional. A sync token, received from a previous `ListDirectoryPeople` call. Provide this to
+     retrieve only the resources changed since the last request. When syncing, all other parameters
+     provided to `ListDirectoryPeople` must match the call that provided the sync token.
+       */
+      public java.lang.String getSyncToken() {
+        return syncToken;
+      }
+
+      /**
+       * Optional. A sync token, received from a previous `ListDirectoryPeople` call. Provide this
+       * to retrieve only the resources changed since the last request. When syncing, all other
+       * parameters provided to `ListDirectoryPeople` must match the call that provided the sync
+       * token.
+       */
+      public ListDirectoryPeople setSyncToken(java.lang.String syncToken) {
+        this.syncToken = syncToken;
+        return this;
+      }
+
+      @Override
+      public ListDirectoryPeople set(String parameterName, Object value) {
+        return (ListDirectoryPeople) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Provides a list of domain profiles and domain contacts in the authenticated user's domain
+     * directory that match the search query.
+     *
+     * Create a request for the method "people.searchDirectoryPeople".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link SearchDirectoryPeople#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public SearchDirectoryPeople searchDirectoryPeople() throws java.io.IOException {
+      SearchDirectoryPeople result = new SearchDirectoryPeople();
+      initialize(result);
+      return result;
+    }
+
+    public class SearchDirectoryPeople extends PeopleServiceRequest<com.google.api.services.people.v1.model.SearchDirectoryPeopleResponse> {
+
+      private static final String REST_PATH = "v1/people:searchDirectoryPeople";
+
+      /**
+       * Provides a list of domain profiles and domain contacts in the authenticated user's domain
+       * directory that match the search query.
+       *
+       * Create a request for the method "people.searchDirectoryPeople".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link SearchDirectoryPeople#execute()} method to invoke the remote
+       * operation. <p> {@link SearchDirectoryPeople#initialize(com.google.api.client.googleapis.service
+       * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected SearchDirectoryPeople() {
+        super(PeopleService.this, "GET", REST_PATH, null, com.google.api.services.people.v1.model.SearchDirectoryPeopleResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public SearchDirectoryPeople set$Xgafv(java.lang.String $Xgafv) {
+        return (SearchDirectoryPeople) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SearchDirectoryPeople setAccessToken(java.lang.String accessToken) {
+        return (SearchDirectoryPeople) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SearchDirectoryPeople setAlt(java.lang.String alt) {
+        return (SearchDirectoryPeople) super.setAlt(alt);
+      }
+
+      @Override
+      public SearchDirectoryPeople setCallback(java.lang.String callback) {
+        return (SearchDirectoryPeople) super.setCallback(callback);
+      }
+
+      @Override
+      public SearchDirectoryPeople setFields(java.lang.String fields) {
+        return (SearchDirectoryPeople) super.setFields(fields);
+      }
+
+      @Override
+      public SearchDirectoryPeople setKey(java.lang.String key) {
+        return (SearchDirectoryPeople) super.setKey(key);
+      }
+
+      @Override
+      public SearchDirectoryPeople setOauthToken(java.lang.String oauthToken) {
+        return (SearchDirectoryPeople) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SearchDirectoryPeople setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SearchDirectoryPeople) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SearchDirectoryPeople setQuotaUser(java.lang.String quotaUser) {
+        return (SearchDirectoryPeople) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SearchDirectoryPeople setUploadType(java.lang.String uploadType) {
+        return (SearchDirectoryPeople) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SearchDirectoryPeople setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SearchDirectoryPeople) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. Additional data to merge into the directory sources if they are connected through
+       * verified join keys such as email addresses or phone numbers.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> mergeSources;
+
+      /** Optional. Additional data to merge into the directory sources if they are connected through
+     verified join keys such as email addresses or phone numbers.
+       */
+      public java.util.List<java.lang.String> getMergeSources() {
+        return mergeSources;
+      }
+
+      /**
+       * Optional. Additional data to merge into the directory sources if they are connected through
+       * verified join keys such as email addresses or phone numbers.
+       */
+      public SearchDirectoryPeople setMergeSources(java.util.List<java.lang.String> mergeSources) {
+        this.mergeSources = mergeSources;
+        return this;
+      }
+
+      /**
+       * Optional. The number of people to include in the response. Valid values are between 1 and
+       * 500, inclusive. Defaults to 100 if not set or set to 0.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The number of people to include in the response. Valid values are between 1 and 500,
+     inclusive. Defaults to 100 if not set or set to 0.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The number of people to include in the response. Valid values are between 1 and
+       * 500, inclusive. Defaults to 100 if not set or set to 0.
+       */
+      public SearchDirectoryPeople setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `SearchDirectoryPeople` call. Provide this
+       * to retrieve the subsequent page. When paginating, all other parameters provided to
+       * `SearchDirectoryPeople` must match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous `SearchDirectoryPeople` call. Provide this to
+     retrieve the subsequent page. When paginating, all other parameters provided to
+     `SearchDirectoryPeople` must match the call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `SearchDirectoryPeople` call. Provide this
+       * to retrieve the subsequent page. When paginating, all other parameters provided to
+       * `SearchDirectoryPeople` must match the call that provided the page token.
+       */
+      public SearchDirectoryPeople setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required. Prefix query that matches fields in the person. Does NOT use the read_mask for
+       * determining what fields to match.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Required. Prefix query that matches fields in the person. Does NOT use the read_mask for
+     determining what fields to match.
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Required. Prefix query that matches fields in the person. Does NOT use the read_mask for
+       * determining what fields to match.
+       */
+      public SearchDirectoryPeople setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are: * addresses *
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+       * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+       * userDefined
+       */
+      @com.google.api.client.util.Key
+      private String readMask;
+
+      /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
+     specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
+     birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+     genders * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
+     names * nicknames * occupations * organizations * phoneNumbers * photos * relations * sipAddresses
+     * skills * urls * userDefined
+       */
+      public String getReadMask() {
+        return readMask;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are: * addresses *
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+       * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+       * userDefined
+       */
+      public SearchDirectoryPeople setReadMask(String readMask) {
+        this.readMask = readMask;
+        return this;
+      }
+
+      /** Required. Directory sources to return. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> sources;
+
+      /** Required. Directory sources to return.
+       */
+      public java.util.List<java.lang.String> getSources() {
+        return sources;
+      }
+
+      /** Required. Directory sources to return. */
+      public SearchDirectoryPeople setSources(java.util.List<java.lang.String> sources) {
+        this.sources = sources;
+        return this;
+      }
+
+      @Override
+      public SearchDirectoryPeople set(String parameterName, Object value) {
+        return (SearchDirectoryPeople) super.set(parameterName, value);
+      }
+    }
+    /**
      * Update contact data for an existing contact person. Any non-contact data will not be modified.
-     *
-     * The request throws a 400 error if `updatePersonFields` is not specified.
-     *
-     * The request throws a 400 error if `person.metadata.sources` is not specified for the contact to
-     * be updated.
-     *
-     * The request throws a 400 error with an error with reason `"failedPrecondition"` if
-     * `person.metadata.sources.etag` is different than the contact's etag, which indicates the contact
-     * has changed since its data was read. Clients should get the latest person and re-apply their
-     * updates to the latest person.
+     * Any non-contact data in the person to update will be ignored. All fields specified in the
+     * `update_mask` will be replaced. The server returns a 400 error if `person.metadata.sources` is
+     * not specified for the contact to be updated or if there is no contact source. The server returns
+     * a 400 error with reason `"failedPrecondition"` if `person.metadata.sources.etag` is different
+     * than the contact's etag, which indicates the contact has changed since its data was read. Clients
+     * should get the latest person and merge their updates into the latest person. The server returns a
+     * 400 error if `memberships` are being updated and there are no contact group memberships specified
+     * on the person. The server returns a 400 error if more than one field is specified on a field that
+     * is a singleton for contact sources: * biographies * birthdays * genders * names
      *
      * Create a request for the method "people.updateContact".
      *
      * This request holds the parameters needed by the people server.  After setting any optional
      * parameters, call the {@link UpdateContact#execute()} method to invoke the remote operation.
      *
-     * @param resourceName The resource name for the person, assigned by the server. An ASCII string
-    with a max length of 27
-     *        characters, in the form of
-    `people/{person_id}`.
+     * @param resourceName The resource name for the person, assigned by the server. An ASCII string with a max length of 27
+     *        characters, in the form of `people/{person_id}`.
      * @param content the {@link com.google.api.services.people.v1.model.Person}
      * @return the request
      */
@@ -2101,16 +3127,16 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
       /**
        * Update contact data for an existing contact person. Any non-contact data will not be modified.
-       *
-       * The request throws a 400 error if `updatePersonFields` is not specified.
-       *
-       * The request throws a 400 error if `person.metadata.sources` is not specified for the contact to
-       * be updated.
-       *
-       * The request throws a 400 error with an error with reason `"failedPrecondition"` if
-       * `person.metadata.sources.etag` is different than the contact's etag, which indicates the
-       * contact has changed since its data was read. Clients should get the latest person and re-apply
-       * their updates to the latest person.
+       * Any non-contact data in the person to update will be ignored. All fields specified in the
+       * `update_mask` will be replaced. The server returns a 400 error if `person.metadata.sources` is
+       * not specified for the contact to be updated or if there is no contact source. The server
+       * returns a 400 error with reason `"failedPrecondition"` if `person.metadata.sources.etag` is
+       * different than the contact's etag, which indicates the contact has changed since its data was
+       * read. Clients should get the latest person and merge their updates into the latest person. The
+       * server returns a 400 error if `memberships` are being updated and there are no contact group
+       * memberships specified on the person. The server returns a 400 error if more than one field is
+       * specified on a field that is a singleton for contact sources: * biographies * birthdays *
+       * genders * names
        *
        * Create a request for the method "people.updateContact".
        *
@@ -2120,10 +3146,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
        * equest)} must be called to initialize this instance immediately after invoking the constructor.
        * </p>
        *
-       * @param resourceName The resource name for the person, assigned by the server. An ASCII string
-    with a max length of 27
-     *        characters, in the form of
-    `people/{person_id}`.
+       * @param resourceName The resource name for the person, assigned by the server. An ASCII string with a max length of 27
+     *        characters, in the form of `people/{person_id}`.
        * @param content the {@link com.google.api.services.people.v1.model.Person}
        * @since 1.13
        */
@@ -2221,23 +3245,82 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
+       * Optional. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Defaults to all fields if not set.
+       * Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
+       * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+       * interests * locales * locations * memberships * metadata * miscKeywords * names * nicknames
+       * * occupations * organizations * phoneNumbers * photos * relations * sipAddresses * skills *
+       * urls * userDefined
+       */
+      @com.google.api.client.util.Key
+      private String personFields;
+
+      /** Optional. A field mask to restrict which fields on each person are returned. Multiple fields can be
+     specified by separating them with commas. Defaults to all fields if not set. Valid values are: *
+     addresses * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+     emailAddresses * events * externalIds * genders * imClients * interests * locales * locations *
+     memberships * metadata * miscKeywords * names * nicknames * occupations * organizations *
+     phoneNumbers * photos * relations * sipAddresses * skills * urls * userDefined
+       */
+      public String getPersonFields() {
+        return personFields;
+      }
+
+      /**
+       * Optional. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Defaults to all fields if not set.
+       * Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls *
+       * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients *
+       * interests * locales * locations * memberships * metadata * miscKeywords * names * nicknames
+       * * occupations * organizations * phoneNumbers * photos * relations * sipAddresses * skills *
+       * urls * userDefined
+       */
+      public UpdateContact setPersonFields(String personFields) {
+        this.personFields = personFields;
+        return this;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> sources;
+
+      /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+     READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      public java.util.List<java.lang.String> getSources() {
+        return sources;
+      }
+
+      /**
+       * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       * READ_SOURCE_TYPE_PROFILE if not set.
+       */
+      public UpdateContact setSources(java.util.List<java.lang.String> sources) {
+        this.sources = sources;
+        return this;
+      }
+
+      /**
        * Required. A field mask to restrict which fields on the person are updated. Multiple fields
        * can be specified by separating them with commas. All updated fields will be replaced. Valid
-       * values are:
-       *
-       * * addresses * biographies * birthdays * emailAddresses * events * genders * imClients *
-       * interests * locales * memberships * names * nicknames * occupations * organizations *
-       * phoneNumbers * relations * residences * sipAddresses * urls * userDefined
+       * values are: * addresses * biographies * birthdays * calendarUrls * clientData *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * locations * memberships * miscKeywords * names * nicknames * occupations * organizations *
+       * phoneNumbers * relations * sipAddresses * urls * userDefined
        */
       @com.google.api.client.util.Key
       private String updatePersonFields;
 
       /** Required. A field mask to restrict which fields on the person are updated. Multiple fields can be
-     specified by separating them with commas. All updated fields will be replaced. Valid values are:
-
-     * addresses * biographies * birthdays * emailAddresses * events * genders * imClients * interests *
-     locales * memberships * names * nicknames * occupations * organizations * phoneNumbers * relations
-     * residences * sipAddresses * urls * userDefined
+     specified by separating them with commas. All updated fields will be replaced. Valid values are: *
+     addresses * biographies * birthdays * calendarUrls * clientData * emailAddresses * events *
+     externalIds * genders * imClients * interests * locales * locations * memberships * miscKeywords *
+     names * nicknames * occupations * organizations * phoneNumbers * relations * sipAddresses * urls *
+     userDefined
        */
       public String getUpdatePersonFields() {
         return updatePersonFields;
@@ -2246,11 +3329,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Required. A field mask to restrict which fields on the person are updated. Multiple fields
        * can be specified by separating them with commas. All updated fields will be replaced. Valid
-       * values are:
-       *
-       * * addresses * biographies * birthdays * emailAddresses * events * genders * imClients *
-       * interests * locales * memberships * names * nicknames * occupations * organizations *
-       * phoneNumbers * relations * residences * sipAddresses * urls * userDefined
+       * values are: * addresses * biographies * birthdays * calendarUrls * clientData *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * locations * memberships * miscKeywords * names * nicknames * occupations * organizations *
+       * phoneNumbers * relations * sipAddresses * urls * userDefined
        */
       public UpdateContact setUpdatePersonFields(String updatePersonFields) {
         this.updatePersonFields = updatePersonFields;
@@ -2415,9 +3497,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
     public class Connections {
 
       /**
-       * Provides a list of the authenticated user's contacts merged with any connected profiles.
-       *
-       * The request throws a 400 error if 'personFields' is not specified.
+       * Provides a list of the authenticated user's contacts. The request returns a 400 error if
+       * `personFields` is not specified. The request returns a 410 error if `sync_token` is specified and
+       * is expired. Sync tokens expire after 7 days. A request without `sync_token` should be made and
+       * all contacts should be synced.
        *
        * Create a request for the method "connections.list".
        *
@@ -2441,9 +3524,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^people/[^/]+$");
 
         /**
-         * Provides a list of the authenticated user's contacts merged with any connected profiles.
-         *
-         * The request throws a 400 error if 'personFields' is not specified.
+         * Provides a list of the authenticated user's contacts. The request returns a 400 error if
+         * `personFields` is not specified. The request returns a 410 error if `sync_token` is specified
+         * and is expired. Sync tokens expire after 7 days. A request without `sync_token` should be made
+         * and all contacts should be synced.
          *
          * Create a request for the method "connections.list".
          *
@@ -2553,13 +3637,13 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. The number of connections to include in the response. Valid values are between
-         * 1 and 2000, inclusive. Defaults to 100 if not set or set to 0.
+         * 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The number of connections to include in the response. Valid values are between 1 and
-       2000, inclusive. Defaults to 100 if not set or set to 0.
+       1000, inclusive. Defaults to 100 if not set or set to 0.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -2567,7 +3651,7 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. The number of connections to include in the response. Valid values are between
-         * 1 and 2000, inclusive. Defaults to 100 if not set or set to 0.
+         * 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -2576,19 +3660,15 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. A page token, received from a previous `ListConnections` call. Provide this to
-         * retrieve the subsequent page.
-         *
-         * When paginating, all other parameters provided to `ListConnections` must match the call
-         * that provided the page token.
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListConnections` must match the call that provided the page token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
         /** Optional. A page token, received from a previous `ListConnections` call. Provide this to retrieve
-       the subsequent page.
-
-       When paginating, all other parameters provided to `ListConnections` must match the call that
-       provided the page token.
+       the subsequent page. When paginating, all other parameters provided to `ListConnections` must match
+       the call that provided the page token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
@@ -2596,10 +3676,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. A page token, received from a previous `ListConnections` call. Provide this to
-         * retrieve the subsequent page.
-         *
-         * When paginating, all other parameters provided to `ListConnections` must match the call
-         * that provided the page token.
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListConnections` must match the call that provided the page token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -2608,24 +3686,22 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. A field mask to restrict which fields on each person are returned. Multiple
-         * fields can be specified by separating them with commas. Valid values are:
-         *
-         * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
-         * emailAddresses * events * genders * imClients * interests * locales * memberships *
-         * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-         * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
-         * skills * taglines * urls * userDefined
+         * fields can be specified by separating them with commas. Valid values are: * addresses *
+         * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+         * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+         * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+         * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+         * userDefined
          */
         @com.google.api.client.util.Key
         private String personFields;
 
         /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
-       specified by separating them with commas. Valid values are:
-
-       * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos * emailAddresses *
-       events * genders * imClients * interests * locales * memberships * metadata * names * nicknames *
-       occupations * organizations * phoneNumbers * photos * relations * relationshipInterests *
-       relationshipStatuses * residences * sipAddresses * skills * taglines * urls * userDefined
+       specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
+       birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+       genders * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
+       names * nicknames * occupations * organizations * phoneNumbers * photos * relations * sipAddresses
+       * skills * urls * userDefined
          */
         public String getPersonFields() {
           return personFields;
@@ -2633,13 +3709,12 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. A field mask to restrict which fields on each person are returned. Multiple
-         * fields can be specified by separating them with commas. Valid values are:
-         *
-         * * addresses * ageRanges * biographies * birthdays * braggingRights * coverPhotos *
-         * emailAddresses * events * genders * imClients * interests * locales * memberships *
-         * metadata * names * nicknames * occupations * organizations * phoneNumbers * photos *
-         * relations * relationshipInterests * relationshipStatuses * residences * sipAddresses *
-         * skills * taglines * urls * userDefined
+         * fields can be specified by separating them with commas. Valid values are: * addresses *
+         * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+         * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+         * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+         * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+         * userDefined
          */
         public List setPersonFields(String personFields) {
           this.personFields = personFields;
@@ -2670,27 +3745,27 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Optional. Whether the response should include `next_sync_token`, which can be used to get
-         * all changes since the last request. For subsequent sync requests use the `sync_token`
-         * param instead. Initial sync requests that specify `request_sync_token` have an additional
-         * rate limit.
+         * Optional. Whether the response should include `next_sync_token` on the last page, which
+         * can be used to get all changes since the last request. For subsequent sync requests use
+         * the `sync_token` param instead. Initial sync requests that specify `request_sync_token`
+         * have an additional rate limit.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean requestSyncToken;
 
-        /** Optional. Whether the response should include `next_sync_token`, which can be used to get all
-       changes since the last request. For subsequent sync requests use the `sync_token` param instead.
-       Initial sync requests that specify `request_sync_token` have an additional rate limit.
+        /** Optional. Whether the response should include `next_sync_token` on the last page, which can be used
+       to get all changes since the last request. For subsequent sync requests use the `sync_token` param
+       instead. Initial sync requests that specify `request_sync_token` have an additional rate limit.
          */
         public java.lang.Boolean getRequestSyncToken() {
           return requestSyncToken;
         }
 
         /**
-         * Optional. Whether the response should include `next_sync_token`, which can be used to get
-         * all changes since the last request. For subsequent sync requests use the `sync_token`
-         * param instead. Initial sync requests that specify `request_sync_token` have an additional
-         * rate limit.
+         * Optional. Whether the response should include `next_sync_token` on the last page, which
+         * can be used to get all changes since the last request. For subsequent sync requests use
+         * the `sync_token` param instead. Initial sync requests that specify `request_sync_token`
+         * have an additional rate limit.
          */
         public List setRequestSyncToken(java.lang.Boolean requestSyncToken) {
           this.requestSyncToken = requestSyncToken;
@@ -2721,22 +3796,41 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         }
 
         /**
+         * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+         * READ_SOURCE_TYPE_PROFILE if not set.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> sources;
+
+        /** Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+       READ_SOURCE_TYPE_PROFILE if not set.
+         */
+        public java.util.List<java.lang.String> getSources() {
+          return sources;
+        }
+
+        /**
+         * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT and
+         * READ_SOURCE_TYPE_PROFILE if not set.
+         */
+        public List setSources(java.util.List<java.lang.String> sources) {
+          this.sources = sources;
+          return this;
+        }
+
+        /**
          * Optional. A sync token, received from a previous `ListConnections` call. Provide this to
          * retrieve only the resources changed since the last request. Sync requests that specify
-         * `sync_token` have an additional rate limit.
-         *
-         * When syncing, all other parameters provided to `ListConnections` must match the call that
-         * provided the sync token.
+         * `sync_token` have an additional rate limit. When syncing, all other parameters provided
+         * to `ListConnections` must match the call that provided the sync token.
          */
         @com.google.api.client.util.Key
         private java.lang.String syncToken;
 
         /** Optional. A sync token, received from a previous `ListConnections` call. Provide this to retrieve
        only the resources changed since the last request. Sync requests that specify `sync_token` have an
-       additional rate limit.
-
-       When syncing, all other parameters provided to `ListConnections` must match the call that provided
-       the sync token.
+       additional rate limit. When syncing, all other parameters provided to `ListConnections` must match
+       the call that provided the sync token.
          */
         public java.lang.String getSyncToken() {
           return syncToken;
@@ -2745,10 +3839,8 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         /**
          * Optional. A sync token, received from a previous `ListConnections` call. Provide this to
          * retrieve only the resources changed since the last request. Sync requests that specify
-         * `sync_token` have an additional rate limit.
-         *
-         * When syncing, all other parameters provided to `ListConnections` must match the call that
-         * provided the sync token.
+         * `sync_token` have an additional rate limit. When syncing, all other parameters provided
+         * to `ListConnections` must match the call that provided the sync token.
          */
         public List setSyncToken(java.lang.String syncToken) {
           this.syncToken = syncToken;

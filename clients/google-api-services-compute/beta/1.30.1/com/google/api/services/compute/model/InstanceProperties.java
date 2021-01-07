@@ -30,25 +30,33 @@ package com.google.api.services.compute.model;
 public final class InstanceProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enables instances created based on this template to send packets with source IP addresses other
-   * than their own and receive packets with destination IP addresses other than their own. If these
-   * instances will be used as an IP gateway or it will be set as the next-hop in a Route resource,
-   * specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation
-   * for more information.
+   * Enables instances created based on these properties to send packets with source IP addresses
+   * other than their own and receive packets with destination IP addresses other than their own. If
+   * these instances will be used as an IP gateway or it will be set as the next-hop in a Route
+   * resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding
+   * documentation for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean canIpForward;
 
   /**
-   * An optional text description for the instances that are created from this instance template.
+   * Specifies the Confidential Instance options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialInstanceConfig confidentialInstanceConfig;
+
+  /**
+   * An optional text description for the instances that are created from these properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * An array of disks that are associated with the instances that are created from this template.
+   * An array of disks that are associated with the instances that are created from these
+   * properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +77,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private DisplayDevice displayDevice;
 
   /**
-   * A list of guest accelerator cards' type and count to use for instances created from the
-   * instance template.
+   * A list of guest accelerator cards' type and count to use for instances created from these
+   * properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,33 +91,33 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Labels to apply to instances that are created from this template.
+   * Labels to apply to instances that are created from these properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The machine type to use for instances that are created from this template.
+   * The machine type to use for instances that are created from these properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * The metadata key/value pairs to assign to instances that are created from this template. These
-   * pairs can consist of custom metadata or predefined keys. See Project and instance metadata for
-   * more information.
+   * The metadata key/value pairs to assign to instances that are created from these properties.
+   * These pairs can consist of custom metadata or predefined keys. See Project and instance
+   * metadata for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Metadata metadata;
 
   /**
-   * Minimum cpu/platform to be used by this instance. The instance may be scheduled on the
-   * specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms,
-   * such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more
-   * information, read Specifying a Minimum CPU Platform.
+   * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or
+   * newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as
+   * minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information,
+   * read Specifying a Minimum CPU Platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,29 +131,29 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
-   * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
-   * as default.
+   * The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as
+   * default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privateIpv6GoogleAccess;
 
   /**
-   * Specifies the reservations that this instance can consume from.
+   * Specifies the reservations that instances can consume from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ReservationAffinity reservationAffinity;
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from this template.
+   * Resource policies (names, not ULRs) applied to instances created from these properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
-   * Specifies the scheduling options for the instances that are created from this template.
+   * Specifies the scheduling options for the instances that are created from these properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,8 +161,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * A list of service accounts with specified scopes. Access tokens for these service accounts are
-   * available to the instances that are created from this template. Use metadata queries to obtain
-   * the access tokens for these instances.
+   * available to the instances that are created from these properties. Use metadata queries to
+   * obtain the access tokens for these instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,27 +175,27 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private ShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
-   * Specifies the Shielded VM options for the instances that are created from this template.
+   * Specifies the Shielded VM options for the instances that are created from these properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ShieldedVmConfig shieldedVmConfig;
 
   /**
-   * A list of tags to apply to the instances that are created from this template. The tags identify
-   * valid sources or targets for network firewalls. The setTags method can modify this list of
-   * tags. Each tag within the list must comply with RFC1035.
+   * A list of tags to apply to the instances that are created from these properties. The tags
+   * identify valid sources or targets for network firewalls. The setTags method can modify this
+   * list of tags. Each tag within the list must comply with RFC1035.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Tags tags;
 
   /**
-   * Enables instances created based on this template to send packets with source IP addresses other
-   * than their own and receive packets with destination IP addresses other than their own. If these
-   * instances will be used as an IP gateway or it will be set as the next-hop in a Route resource,
-   * specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation
-   * for more information.
+   * Enables instances created based on these properties to send packets with source IP addresses
+   * other than their own and receive packets with destination IP addresses other than their own. If
+   * these instances will be used as an IP gateway or it will be set as the next-hop in a Route
+   * resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding
+   * documentation for more information.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanIpForward() {
@@ -195,11 +203,11 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Enables instances created based on this template to send packets with source IP addresses other
-   * than their own and receive packets with destination IP addresses other than their own. If these
-   * instances will be used as an IP gateway or it will be set as the next-hop in a Route resource,
-   * specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation
-   * for more information.
+   * Enables instances created based on these properties to send packets with source IP addresses
+   * other than their own and receive packets with destination IP addresses other than their own. If
+   * these instances will be used as an IP gateway or it will be set as the next-hop in a Route
+   * resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding
+   * documentation for more information.
    * @param canIpForward canIpForward or {@code null} for none
    */
   public InstanceProperties setCanIpForward(java.lang.Boolean canIpForward) {
@@ -208,7 +216,24 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * An optional text description for the instances that are created from this instance template.
+   * Specifies the Confidential Instance options.
+   * @return value or {@code null} for none
+   */
+  public ConfidentialInstanceConfig getConfidentialInstanceConfig() {
+    return confidentialInstanceConfig;
+  }
+
+  /**
+   * Specifies the Confidential Instance options.
+   * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
+   */
+  public InstanceProperties setConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
+    this.confidentialInstanceConfig = confidentialInstanceConfig;
+    return this;
+  }
+
+  /**
+   * An optional text description for the instances that are created from these properties.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -216,7 +241,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * An optional text description for the instances that are created from this instance template.
+   * An optional text description for the instances that are created from these properties.
    * @param description description or {@code null} for none
    */
   public InstanceProperties setDescription(java.lang.String description) {
@@ -225,7 +250,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * An array of disks that are associated with the instances that are created from this template.
+   * An array of disks that are associated with the instances that are created from these
+   * properties.
    * @return value or {@code null} for none
    */
   public java.util.List<AttachedDisk> getDisks() {
@@ -233,7 +259,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * An array of disks that are associated with the instances that are created from this template.
+   * An array of disks that are associated with the instances that are created from these
+   * properties.
    * @param disks disks or {@code null} for none
    */
   public InstanceProperties setDisks(java.util.List<AttachedDisk> disks) {
@@ -261,8 +288,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of guest accelerator cards' type and count to use for instances created from the
-   * instance template.
+   * A list of guest accelerator cards' type and count to use for instances created from these
+   * properties.
    * @return value or {@code null} for none
    */
   public java.util.List<AcceleratorConfig> getGuestAccelerators() {
@@ -270,8 +297,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of guest accelerator cards' type and count to use for instances created from the
-   * instance template.
+   * A list of guest accelerator cards' type and count to use for instances created from these
+   * properties.
    * @param guestAccelerators guestAccelerators or {@code null} for none
    */
   public InstanceProperties setGuestAccelerators(java.util.List<AcceleratorConfig> guestAccelerators) {
@@ -280,7 +307,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Labels to apply to instances that are created from this template.
+   * Labels to apply to instances that are created from these properties.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -288,7 +315,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Labels to apply to instances that are created from this template.
+   * Labels to apply to instances that are created from these properties.
    * @param labels labels or {@code null} for none
    */
   public InstanceProperties setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -297,7 +324,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The machine type to use for instances that are created from this template.
+   * The machine type to use for instances that are created from these properties.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -305,7 +332,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The machine type to use for instances that are created from this template.
+   * The machine type to use for instances that are created from these properties.
    * @param machineType machineType or {@code null} for none
    */
   public InstanceProperties setMachineType(java.lang.String machineType) {
@@ -314,9 +341,9 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The metadata key/value pairs to assign to instances that are created from this template. These
-   * pairs can consist of custom metadata or predefined keys. See Project and instance metadata for
-   * more information.
+   * The metadata key/value pairs to assign to instances that are created from these properties.
+   * These pairs can consist of custom metadata or predefined keys. See Project and instance
+   * metadata for more information.
    * @return value or {@code null} for none
    */
   public Metadata getMetadata() {
@@ -324,9 +351,9 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The metadata key/value pairs to assign to instances that are created from this template. These
-   * pairs can consist of custom metadata or predefined keys. See Project and instance metadata for
-   * more information.
+   * The metadata key/value pairs to assign to instances that are created from these properties.
+   * These pairs can consist of custom metadata or predefined keys. See Project and instance
+   * metadata for more information.
    * @param metadata metadata or {@code null} for none
    */
   public InstanceProperties setMetadata(Metadata metadata) {
@@ -335,10 +362,10 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Minimum cpu/platform to be used by this instance. The instance may be scheduled on the
-   * specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms,
-   * such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more
-   * information, read Specifying a Minimum CPU Platform.
+   * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or
+   * newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as
+   * minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information,
+   * read Specifying a Minimum CPU Platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -346,10 +373,10 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Minimum cpu/platform to be used by this instance. The instance may be scheduled on the
-   * specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms,
-   * such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more
-   * information, read Specifying a Minimum CPU Platform.
+   * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or
+   * newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as
+   * minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information,
+   * read Specifying a Minimum CPU Platform.
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public InstanceProperties setMinCpuPlatform(java.lang.String minCpuPlatform) {
@@ -375,8 +402,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
-   * as default.
+   * The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as
+   * default.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateIpv6GoogleAccess() {
@@ -384,8 +411,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * The private IPv6 google access type for the VM. If not specified, use  INHERIT_FROM_SUBNETWORK
-   * as default.
+   * The private IPv6 google access type for VMs. If not specified, use  INHERIT_FROM_SUBNETWORK as
+   * default.
    * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
    */
   public InstanceProperties setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
@@ -394,7 +421,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies the reservations that this instance can consume from.
+   * Specifies the reservations that instances can consume from.
    * @return value or {@code null} for none
    */
   public ReservationAffinity getReservationAffinity() {
@@ -402,7 +429,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies the reservations that this instance can consume from.
+   * Specifies the reservations that instances can consume from.
    * @param reservationAffinity reservationAffinity or {@code null} for none
    */
   public InstanceProperties setReservationAffinity(ReservationAffinity reservationAffinity) {
@@ -411,7 +438,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from this template.
+   * Resource policies (names, not ULRs) applied to instances created from these properties.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourcePolicies() {
@@ -419,7 +446,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Resource policies (names, not ULRs) applied to instances created from this template.
+   * Resource policies (names, not ULRs) applied to instances created from these properties.
    * @param resourcePolicies resourcePolicies or {@code null} for none
    */
   public InstanceProperties setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
@@ -428,7 +455,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies the scheduling options for the instances that are created from this template.
+   * Specifies the scheduling options for the instances that are created from these properties.
    * @return value or {@code null} for none
    */
   public Scheduling getScheduling() {
@@ -436,7 +463,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies the scheduling options for the instances that are created from this template.
+   * Specifies the scheduling options for the instances that are created from these properties.
    * @param scheduling scheduling or {@code null} for none
    */
   public InstanceProperties setScheduling(Scheduling scheduling) {
@@ -446,8 +473,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * A list of service accounts with specified scopes. Access tokens for these service accounts are
-   * available to the instances that are created from this template. Use metadata queries to obtain
-   * the access tokens for these instances.
+   * available to the instances that are created from these properties. Use metadata queries to
+   * obtain the access tokens for these instances.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceAccount> getServiceAccounts() {
@@ -456,8 +483,8 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
 
   /**
    * A list of service accounts with specified scopes. Access tokens for these service accounts are
-   * available to the instances that are created from this template. Use metadata queries to obtain
-   * the access tokens for these instances.
+   * available to the instances that are created from these properties. Use metadata queries to
+   * obtain the access tokens for these instances.
    * @param serviceAccounts serviceAccounts or {@code null} for none
    */
   public InstanceProperties setServiceAccounts(java.util.List<ServiceAccount> serviceAccounts) {
@@ -481,7 +508,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies the Shielded VM options for the instances that are created from this template.
+   * Specifies the Shielded VM options for the instances that are created from these properties.
    * @return value or {@code null} for none
    */
   public ShieldedVmConfig getShieldedVmConfig() {
@@ -489,7 +516,7 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies the Shielded VM options for the instances that are created from this template.
+   * Specifies the Shielded VM options for the instances that are created from these properties.
    * @param shieldedVmConfig shieldedVmConfig or {@code null} for none
    */
   public InstanceProperties setShieldedVmConfig(ShieldedVmConfig shieldedVmConfig) {
@@ -498,9 +525,9 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of tags to apply to the instances that are created from this template. The tags identify
-   * valid sources or targets for network firewalls. The setTags method can modify this list of
-   * tags. Each tag within the list must comply with RFC1035.
+   * A list of tags to apply to the instances that are created from these properties. The tags
+   * identify valid sources or targets for network firewalls. The setTags method can modify this
+   * list of tags. Each tag within the list must comply with RFC1035.
    * @return value or {@code null} for none
    */
   public Tags getTags() {
@@ -508,9 +535,9 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * A list of tags to apply to the instances that are created from this template. The tags identify
-   * valid sources or targets for network firewalls. The setTags method can modify this list of
-   * tags. Each tag within the list must comply with RFC1035.
+   * A list of tags to apply to the instances that are created from these properties. The tags
+   * identify valid sources or targets for network firewalls. The setTags method can modify this
+   * list of tags. Each tag within the list must comply with RFC1035.
    * @param tags tags or {@code null} for none
    */
   public InstanceProperties setTags(Tags tags) {

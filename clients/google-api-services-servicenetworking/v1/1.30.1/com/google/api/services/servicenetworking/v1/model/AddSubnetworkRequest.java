@@ -58,22 +58,13 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.String description;
 
   /**
-   * Required. The prefix length of the subnet's IP address range.  Use CIDR range notation, such as
+   * Required. The prefix length of the subnet's IP address range. Use CIDR range notation, such as
    * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
    * a pool of available ranges in the service consumer's allocated range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer ipPrefixLength;
-
-  /**
-   * Optional. The private IPv6 google access type for the VMs in this subnet. For information about
-   * the access types that can be set using this field, see
-   * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String privateIpv6GoogleAccess;
 
   /**
    * Required. The name of a [region](/compute/docs/regions-zones) for the subnet, such `europe-
@@ -92,6 +83,13 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String requestedAddress;
+
+  /**
+   * Optional. A list of secondary IP ranges to be created within the new subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SecondaryIpRangeSpec> secondaryIpRangeSpecs;
 
   /**
    * Required. A name for the new subnet. For information about the naming requirements, see
@@ -172,7 +170,7 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The prefix length of the subnet's IP address range.  Use CIDR range notation, such as
+   * Required. The prefix length of the subnet's IP address range. Use CIDR range notation, such as
    * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
    * a pool of available ranges in the service consumer's allocated range.
    * @return value or {@code null} for none
@@ -182,34 +180,13 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The prefix length of the subnet's IP address range.  Use CIDR range notation, such as
+   * Required. The prefix length of the subnet's IP address range. Use CIDR range notation, such as
    * `30` to provision a subnet with an `x.x.x.x/30` CIDR range. The IP address range is drawn from
    * a pool of available ranges in the service consumer's allocated range.
    * @param ipPrefixLength ipPrefixLength or {@code null} for none
    */
   public AddSubnetworkRequest setIpPrefixLength(java.lang.Integer ipPrefixLength) {
     this.ipPrefixLength = ipPrefixLength;
-    return this;
-  }
-
-  /**
-   * Optional. The private IPv6 google access type for the VMs in this subnet. For information about
-   * the access types that can be set using this field, see
-   * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPrivateIpv6GoogleAccess() {
-    return privateIpv6GoogleAccess;
-  }
-
-  /**
-   * Optional. The private IPv6 google access type for the VMs in this subnet. For information about
-   * the access types that can be set using this field, see
-   * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
-   * @param privateIpv6GoogleAccess privateIpv6GoogleAccess or {@code null} for none
-   */
-  public AddSubnetworkRequest setPrivateIpv6GoogleAccess(java.lang.String privateIpv6GoogleAccess) {
-    this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
     return this;
   }
 
@@ -252,6 +229,23 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
    */
   public AddSubnetworkRequest setRequestedAddress(java.lang.String requestedAddress) {
     this.requestedAddress = requestedAddress;
+    return this;
+  }
+
+  /**
+   * Optional. A list of secondary IP ranges to be created within the new subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SecondaryIpRangeSpec> getSecondaryIpRangeSpecs() {
+    return secondaryIpRangeSpecs;
+  }
+
+  /**
+   * Optional. A list of secondary IP ranges to be created within the new subnetwork.
+   * @param secondaryIpRangeSpecs secondaryIpRangeSpecs or {@code null} for none
+   */
+  public AddSubnetworkRequest setSecondaryIpRangeSpecs(java.util.List<SecondaryIpRangeSpec> secondaryIpRangeSpecs) {
+    this.secondaryIpRangeSpecs = secondaryIpRangeSpecs;
     return this;
   }
 

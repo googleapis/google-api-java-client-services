@@ -20,7 +20,7 @@ package com.google.api.services.youtube.model;
  * Basic details about a caption track, such as its language and name.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the YouTube Data API. For a detailed explanation see:
+ * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -66,7 +66,8 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * Indicates whether the caption track is a draft. If the value is true, then the track is not
-   * publicly visible. The default value is false.
+   * publicly visible. The default value is false. @mutable youtube.captions.insert
+   * youtube.captions.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +90,7 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
   private java.lang.Boolean isLarge;
 
   /**
-   * The language of the caption track. The property value is a BCP-47 language tag.
+   * The language of the caption track. The property value is a BCP-47  language tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,11 +98,11 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * The date and time when the caption track was last updated. The value is specified in ISO 8601
-   * (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private com.google.api.client.util.DateTime lastUpdated;
+  private java.lang.String lastUpdated;
 
   /**
    * The name of the caption track. The name is intended to be visible to the user as an option
@@ -127,6 +128,7 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * The ID that YouTube uses to uniquely identify the video associated with the caption track.
+   * @mutable youtube.captions.insert
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,7 +218,8 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * Indicates whether the caption track is a draft. If the value is true, then the track is not
-   * publicly visible. The default value is false.
+   * publicly visible. The default value is false. @mutable youtube.captions.insert
+   * youtube.captions.update
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDraft() {
@@ -225,7 +228,8 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * Indicates whether the caption track is a draft. If the value is true, then the track is not
-   * publicly visible. The default value is false.
+   * publicly visible. The default value is false. @mutable youtube.captions.insert
+   * youtube.captions.update
    * @param isDraft isDraft or {@code null} for none
    */
   public CaptionSnippet setIsDraft(java.lang.Boolean isDraft) {
@@ -272,7 +276,7 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The language of the caption track. The property value is a BCP-47 language tag.
+   * The language of the caption track. The property value is a BCP-47  language tag.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguage() {
@@ -280,7 +284,7 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The language of the caption track. The property value is a BCP-47 language tag.
+   * The language of the caption track. The property value is a BCP-47  language tag.
    * @param language language or {@code null} for none
    */
   public CaptionSnippet setLanguage(java.lang.String language) {
@@ -290,19 +294,19 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * The date and time when the caption track was last updated. The value is specified in ISO 8601
-   * (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * format.
    * @return value or {@code null} for none
    */
-  public com.google.api.client.util.DateTime getLastUpdated() {
+  public java.lang.String getLastUpdated() {
     return lastUpdated;
   }
 
   /**
    * The date and time when the caption track was last updated. The value is specified in ISO 8601
-   * (YYYY-MM-DDThh:mm:ss.sZ) format.
+   * format.
    * @param lastUpdated lastUpdated or {@code null} for none
    */
-  public CaptionSnippet setLastUpdated(com.google.api.client.util.DateTime lastUpdated) {
+  public CaptionSnippet setLastUpdated(java.lang.String lastUpdated) {
     this.lastUpdated = lastUpdated;
     return this;
   }
@@ -362,6 +366,7 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * The ID that YouTube uses to uniquely identify the video associated with the caption track.
+   * @mutable youtube.captions.insert
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoId() {
@@ -370,6 +375,7 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
 
   /**
    * The ID that YouTube uses to uniquely identify the video associated with the caption track.
+   * @mutable youtube.captions.insert
    * @param videoId videoId or {@code null} for none
    */
   public CaptionSnippet setVideoId(java.lang.String videoId) {

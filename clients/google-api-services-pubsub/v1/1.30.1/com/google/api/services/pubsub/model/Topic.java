@@ -31,16 +31,14 @@ public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
-   * on this topic.
-   *
-   * The expected format is `projects/locations/keyRings/cryptoKeys`.
+   * on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyName;
 
   /**
-   * See  Creating and managing labels.
+   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +64,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
-   * on this topic.
-   *
-   * The expected format is `projects/locations/keyRings/cryptoKeys`.
+   * on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -77,9 +73,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
 
   /**
    * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
-   * on this topic.
-   *
-   * The expected format is `projects/locations/keyRings/cryptoKeys`.
+   * on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public Topic setKmsKeyName(java.lang.String kmsKeyName) {
@@ -88,7 +82,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See  Creating and managing labels.
+   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -96,7 +90,7 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * See  Creating and managing labels.
+   * See [Creating and managing labels] (https://cloud.google.com/pubsub/docs/labels).
    * @param labels labels or {@code null} for none
    */
   public Topic setLabels(java.util.Map<String, java.lang.String> labels) {

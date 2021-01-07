@@ -46,7 +46,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Resource Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Resource Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -150,10 +150,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the Organization to fetch. This is the organization's
-    relative path in the API,
-     *        formatted as "organizations/[organizationId]".
-    For example, "organizations/1234".
+     * @param name The resource name of the Organization to fetch. This is the organization's relative path in the API,
+     *        formatted as "organizations/[organizationId]". For example, "organizations/1234".
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -180,10 +178,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the Organization to fetch. This is the organization's
-    relative path in the API,
-     *        formatted as "organizations/[organizationId]".
-    For example, "organizations/1234".
+       * @param name The resource name of the Organization to fetch. This is the organization's relative path in the API,
+     *        formatted as "organizations/[organizationId]". For example, "organizations/1234".
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -328,8 +324,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.GetIamPolicyRequest}
      * @return the request
@@ -360,8 +355,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.GetIamPolicyRequest}
        * @since 1.13
@@ -572,31 +566,21 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * An optional query string used to filter the Organizations to return in the response. Filter
-       * rules are case-insensitive.
-       *
-       * Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the
-       * domain is a G Suite domain, for example:
-       *
-       * * Filter `owner.directorycustomerid:123456789` returns Organization resources with
+       * rules are case-insensitive. Organizations may be filtered by `owner.directoryCustomerId` or
+       * by `domain`, where the domain is a G Suite domain, for example: * Filter
+       * `owner.directorycustomerid:123456789` returns Organization resources with
        * `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
-       * Organization resources corresponding to the domain `google.com`.
-       *
-       * This field is optional.
+       * Organization resources corresponding to the domain `google.com`. This field is optional.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** An optional query string used to filter the Organizations to return in the response. Filter rules
-     are case-insensitive.
-
-     Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the domain is a
-     G Suite domain, for example:
-
-     * Filter `owner.directorycustomerid:123456789` returns Organization resources with
-     `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
-     Organization resources corresponding to the domain `google.com`.
-
-     This field is optional.
+     are case-insensitive. Organizations may be filtered by `owner.directoryCustomerId` or by `domain`,
+     where the domain is a G Suite domain, for example: * Filter `owner.directorycustomerid:123456789`
+     returns Organization resources with `owner.directory_customer_id` equal to `123456789`. * Filter
+     `domain:google.com` returns Organization resources corresponding to the domain `google.com`. This
+     field is optional.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -604,25 +588,18 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * An optional query string used to filter the Organizations to return in the response. Filter
-       * rules are case-insensitive.
-       *
-       * Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the
-       * domain is a G Suite domain, for example:
-       *
-       * * Filter `owner.directorycustomerid:123456789` returns Organization resources with
+       * rules are case-insensitive. Organizations may be filtered by `owner.directoryCustomerId` or
+       * by `domain`, where the domain is a G Suite domain, for example: * Filter
+       * `owner.directorycustomerid:123456789` returns Organization resources with
        * `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
-       * Organization resources corresponding to the domain `google.com`.
-       *
-       * This field is optional.
+       * Organization resources corresponding to the domain `google.com`. This field is optional.
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
         return this;
       }
 
-      /**
-       * The maximum number of Organizations to return in the response. This field is optional.
-       */
+      /** The maximum number of Organizations to return in the response. This field is optional. */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
@@ -632,9 +609,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return pageSize;
       }
 
-      /**
-       * The maximum number of Organizations to return in the response. This field is optional.
-       */
+      /** The maximum number of Organizations to return in the response. This field is optional. */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -678,8 +653,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.SetIamPolicyRequest}
      * @return the request
@@ -709,8 +683,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.SetIamPolicyRequest}
        * @since 1.13
@@ -823,8 +796,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.TestIamPermissionsRequest}
      * @return the request
@@ -854,8 +826,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.TestIamPermissionsRequest}
        * @since 1.13
@@ -966,10 +937,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param name Output only. The resource name of the organization. This is the
-    organization's relative path in the
-     *        API. Its format is
-    "organizations/[organization_id]". For example, "organizations/1234".
+     * @param name Output only. The resource name of the organization. This is the organization's relative path in the
+     *        API. Its format is "organizations/[organization_id]". For example, "organizations/1234".
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.Organization}
      * @return the request
      */
@@ -997,10 +966,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. The resource name of the organization. This is the
-    organization's relative path in the
-     *        API. Its format is
-    "organizations/[organization_id]". For example, "organizations/1234".
+       * @param name Output only. The resource name of the organization. This is the organization's relative path in the
+     *        API. Its format is "organizations/[organization_id]". For example, "organizations/1234".
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.Organization}
        * @since 1.13
        */
@@ -1128,17 +1095,12 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
   public class Projects {
 
     /**
-     * Creates a Project resource.
-     *
-     * Initially, the Project resource is owned by its creator exclusively. The creator can later grant
-     * permission to others to read or update the Project.
-     *
-     * Several APIs are activated automatically for the Project, including Google Cloud Storage. The
-     * parent is identified by a specified ResourceId, which must include both an ID and a type, such as
-     * project, folder, or organization.
-     *
-     * This method does not associate the new project with a billing account. You can set or update the
-     * billing account associated with a project using the [`projects.updateBillingInfo`]
+     * Creates a Project resource. Initially, the Project resource is owned by its creator exclusively.
+     * The creator can later grant permission to others to read or update the Project. Several APIs are
+     * activated automatically for the Project, including Google Cloud Storage. The parent is identified
+     * by a specified ResourceId, which must include both an ID and a type, such as project, folder, or
+     * organization. This method does not associate the new project with a billing account. You can set
+     * or update the billing account associated with a project using the [`projects.updateBillingInfo`]
      * (/billing/reference/rest/v1/projects/updateBillingInfo) method.
      *
      * Create a request for the method "projects.create".
@@ -1160,18 +1122,13 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1beta1/projects";
 
       /**
-       * Creates a Project resource.
-       *
-       * Initially, the Project resource is owned by its creator exclusively. The creator can later
-       * grant permission to others to read or update the Project.
-       *
+       * Creates a Project resource. Initially, the Project resource is owned by its creator
+       * exclusively. The creator can later grant permission to others to read or update the Project.
        * Several APIs are activated automatically for the Project, including Google Cloud Storage. The
        * parent is identified by a specified ResourceId, which must include both an ID and a type, such
-       * as project, folder, or organization.
-       *
-       * This method does not associate the new project with a billing account. You can set or update
-       * the billing account associated with a project using the [`projects.updateBillingInfo`]
-       * (/billing/reference/rest/v1/projects/updateBillingInfo) method.
+       * as project, folder, or organization. This method does not associate the new project with a
+       * billing account. You can set or update the billing account associated with a project using the
+       * [`projects.updateBillingInfo`] (/billing/reference/rest/v1/projects/updateBillingInfo) method.
        *
        * Create a request for the method "projects.create".
        *
@@ -1266,19 +1223,13 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     }
     /**
      * Marks the Project identified by the specified `project_id` (for example, `my-project-123`) for
-     * deletion. This method will only affect the Project if it has a lifecycle state of ACTIVE.
-     *
-     * This method changes the Project's lifecycle state from ACTIVE to DELETE_REQUESTED. The deletion
-     * starts at an unspecified time, at which point the project is no longer accessible.
-     *
-     * Until the deletion completes, you can check the lifecycle state checked by retrieving the Project
-     * with GetProject, and the Project remains visible to ListProjects. However, you cannot update the
-     * project.
-     *
-     * After the deletion completes, the Project is not retrievable by the  GetProject and ListProjects
-     * methods.
-     *
-     * The caller must have modify permissions for this Project.
+     * deletion. This method will only affect the Project if it has a lifecycle state of ACTIVE. This
+     * method changes the Project's lifecycle state from ACTIVE to DELETE_REQUESTED. The deletion starts
+     * at an unspecified time, at which point the project is no longer accessible. Until the deletion
+     * completes, you can check the lifecycle state checked by retrieving the Project with GetProject,
+     * and the Project remains visible to ListProjects. However, you cannot update the project. After
+     * the deletion completes, the Project is not retrievable by the GetProject and ListProjects
+     * methods. The caller must have delete permissions for this Project.
      *
      * Create a request for the method "projects.delete".
      *
@@ -1286,7 +1237,6 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
      * @param projectId The Project ID (for example, `foo-bar-123`).
-    Required.
      * @return the request
      */
     public Delete delete(java.lang.String projectId) throws java.io.IOException {
@@ -1301,19 +1251,13 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Marks the Project identified by the specified `project_id` (for example, `my-project-123`) for
-       * deletion. This method will only affect the Project if it has a lifecycle state of ACTIVE.
-       *
-       * This method changes the Project's lifecycle state from ACTIVE to DELETE_REQUESTED. The deletion
-       * starts at an unspecified time, at which point the project is no longer accessible.
-       *
-       * Until the deletion completes, you can check the lifecycle state checked by retrieving the
-       * Project with GetProject, and the Project remains visible to ListProjects. However, you cannot
-       * update the project.
-       *
-       * After the deletion completes, the Project is not retrievable by the  GetProject and
-       * ListProjects methods.
-       *
-       * The caller must have modify permissions for this Project.
+       * deletion. This method will only affect the Project if it has a lifecycle state of ACTIVE. This
+       * method changes the Project's lifecycle state from ACTIVE to DELETE_REQUESTED. The deletion
+       * starts at an unspecified time, at which point the project is no longer accessible. Until the
+       * deletion completes, you can check the lifecycle state checked by retrieving the Project with
+       * GetProject, and the Project remains visible to ListProjects. However, you cannot update the
+       * project. After the deletion completes, the Project is not retrievable by the GetProject and
+       * ListProjects methods. The caller must have delete permissions for this Project.
        *
        * Create a request for the method "projects.delete".
        *
@@ -1324,7 +1268,6 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param projectId The Project ID (for example, `foo-bar-123`).
-    Required.
        * @since 1.13
        */
       protected Delete(java.lang.String projectId) {
@@ -1387,27 +1330,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The Project ID (for example, `foo-bar-123`).
-       *
-       * Required.
-       */
+      /** The Project ID (for example, `foo-bar-123`). */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
       /** The Project ID (for example, `foo-bar-123`).
-
-     Required.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /**
-       * The Project ID (for example, `foo-bar-123`).
-       *
-       * Required.
-       */
+      /** The Project ID (for example, `foo-bar-123`). */
       public Delete setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -1420,7 +1353,6 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     }
     /**
      * Retrieves the Project identified by the specified `project_id` (for example, `my-project-123`).
-     *
      * The caller must have read permissions for this Project.
      *
      * Create a request for the method "projects.get".
@@ -1428,8 +1360,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param projectId The Project ID (for example, `my-project-123`).
-    Required.
+     * @param projectId Required. The Project ID (for example, `my-project-123`).
      * @return the request
      */
     public Get get(java.lang.String projectId) throws java.io.IOException {
@@ -1444,7 +1375,6 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Retrieves the Project identified by the specified `project_id` (for example, `my-project-123`).
-       *
        * The caller must have read permissions for this Project.
        *
        * Create a request for the method "projects.get".
@@ -1455,8 +1385,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The Project ID (for example, `my-project-123`).
-    Required.
+       * @param projectId Required. The Project ID (for example, `my-project-123`).
        * @since 1.13
        */
       protected Get(java.lang.String projectId) {
@@ -1529,27 +1458,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The Project ID (for example, `my-project-123`).
-       *
-       * Required.
-       */
+      /** Required. The Project ID (for example, `my-project-123`). */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The Project ID (for example, `my-project-123`).
-
-     Required.
+      /** Required. The Project ID (for example, `my-project-123`).
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /**
-       * The Project ID (for example, `my-project-123`).
-       *
-       * Required.
-       */
+      /** Required. The Project ID (for example, `my-project-123`). */
       public Get setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -1562,9 +1481,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     }
     /**
      * Gets a list of ancestors in the resource hierarchy for the Project identified by the specified
-     * `project_id` (for example, `my-project-123`).
-     *
-     * The caller must have read permissions for this Project.
+     * `project_id` (for example, `my-project-123`). The caller must have read permissions for this
+     * Project.
      *
      * Create a request for the method "projects.getAncestry".
      *
@@ -1572,8 +1490,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link GetAncestry#execute()} method to invoke the remote
      * operation.
      *
-     * @param projectId The Project ID (for example, `my-project-123`).
-    Required.
+     * @param projectId Required. The Project ID (for example, `my-project-123`).
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.GetAncestryRequest}
      * @return the request
      */
@@ -1589,9 +1506,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Gets a list of ancestors in the resource hierarchy for the Project identified by the specified
-       * `project_id` (for example, `my-project-123`).
-       *
-       * The caller must have read permissions for this Project.
+       * `project_id` (for example, `my-project-123`). The caller must have read permissions for this
+       * Project.
        *
        * Create a request for the method "projects.getAncestry".
        *
@@ -1601,8 +1517,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * GetAncestry#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The Project ID (for example, `my-project-123`).
-    Required.
+       * @param projectId Required. The Project ID (for example, `my-project-123`).
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.GetAncestryRequest}
        * @since 1.13
        */
@@ -1666,27 +1581,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (GetAncestry) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The Project ID (for example, `my-project-123`).
-       *
-       * Required.
-       */
+      /** Required. The Project ID (for example, `my-project-123`). */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The Project ID (for example, `my-project-123`).
-
-     Required.
+      /** Required. The Project ID (for example, `my-project-123`).
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /**
-       * The Project ID (for example, `my-project-123`).
-       *
-       * Required.
-       */
+      /** Required. The Project ID (for example, `my-project-123`). */
       public GetAncestry setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -1699,10 +1604,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     }
     /**
      * Returns the IAM access control policy for the specified Project. Permission is denied if the
-     * policy or the resource does not exist.
-     *
-     * For additional information about resource structure and identification, see [Resource
-     * Names](/apis/design/resource_names).
+     * policy or the resource does not exist. For additional information about resource structure and
+     * identification, see [Resource Names](/apis/design/resource_names).
      *
      * Create a request for the method "projects.getIamPolicy".
      *
@@ -1710,8 +1613,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.GetIamPolicyRequest}
      * @return the request
@@ -1728,10 +1630,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Returns the IAM access control policy for the specified Project. Permission is denied if the
-       * policy or the resource does not exist.
-       *
-       * For additional information about resource structure and identification, see [Resource
-       * Names](/apis/design/resource_names).
+       * policy or the resource does not exist. For additional information about resource structure and
+       * identification, see [Resource Names](/apis/design/resource_names).
        *
        * Create a request for the method "projects.getIamPolicy".
        *
@@ -1741,8 +1641,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.GetIamPolicyRequest}
        * @since 1.13
@@ -1837,17 +1736,14 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     }
     /**
      * Lists Projects that the caller has the `resourcemanager.projects.get` permission on and satisfy
-     * the specified filter.
-     *
-     * This method returns Projects in an unspecified order. This method is eventually consistent with
-     * project mutations; this means that a newly created project may not appear in the results or
-     * recent updates to an existing project may not be reflected in the results. To retrieve the latest
-     * state of a project, use the GetProject method.
-     *
-     * NOTE: If the request filter contains a `parent.type` and `parent.id` and the caller has the
+     * the specified filter. This method returns Projects in an unspecified order. This method is
+     * eventually consistent with project mutations; this means that a newly created project may not
+     * appear in the results or recent updates to an existing project may not be reflected in the
+     * results. To retrieve the latest state of a project, use the GetProject method. NOTE: If the
+     * request filter contains a `parent.type` and `parent.id` and the caller has the
      * `resourcemanager.projects.list` permission on the parent, the results will be drawn from an
      * alternate index which provides more consistent results. In future versions of this API, this List
-     * method will be split into List and Search to properly capture the behavorial difference.
+     * method will be split into List and Search to properly capture the behavioral difference.
      *
      * Create a request for the method "projects.list".
      *
@@ -1868,17 +1764,14 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Lists Projects that the caller has the `resourcemanager.projects.get` permission on and satisfy
-       * the specified filter.
-       *
-       * This method returns Projects in an unspecified order. This method is eventually consistent with
-       * project mutations; this means that a newly created project may not appear in the results or
-       * recent updates to an existing project may not be reflected in the results. To retrieve the
-       * latest state of a project, use the GetProject method.
-       *
-       * NOTE: If the request filter contains a `parent.type` and `parent.id` and the caller has the
+       * the specified filter. This method returns Projects in an unspecified order. This method is
+       * eventually consistent with project mutations; this means that a newly created project may not
+       * appear in the results or recent updates to an existing project may not be reflected in the
+       * results. To retrieve the latest state of a project, use the GetProject method. NOTE: If the
+       * request filter contains a `parent.type` and `parent.id` and the caller has the
        * `resourcemanager.projects.list` permission on the parent, the results will be drawn from an
        * alternate index which provides more consistent results. In future versions of this API, this
-       * List method will be split into List and Search to properly capture the behavorial difference.
+       * List method will be split into List and Search to properly capture the behavioral difference.
        *
        * Create a request for the method "projects.list".
        *
@@ -1960,96 +1853,66 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * An expression for filtering the results of the request.  Filter rules are case insensitive.
-       * The fields eligible for filtering are:
-       *
-       * + `name` + `id` + `labels.` (where *key* is the name of a label) + `parent.type` +
-       * `parent.id`
-       *
-       * Some examples of using labels as filters:
-       *
-       * | Filter           | Description                                         |
-       * |------------------|-----------------------------------------------------| | name:how*
-       * | The project's name starts with "how".               | | name:Howl        | The project's
-       * name is `Howl` or `howl`.             | | name:HOWL        | Equivalent to above.
-       * | | NAME:howl        | Equivalent to above.                                | |
-       * labels.color:*   | The project has the label `color`.                  | | labels.color:red
-       * | The project's label `color` has the value `red`.    | | labels.color:redlabels.size:big
-       * |The project's label `color` has the value `red` and its label `size` has the value `big`.
-       * |
-       *
-       * If no filter is specified, the call will return projects for which the user has the
-       * `resourcemanager.projects.get` permission.
-       *
-       * NOTE: To perform a by-parent query (eg., what projects are directly in a Folder), the
-       * caller must have the `resourcemanager.projects.list` permission on the parent and the
-       * filter must contain both a `parent.type` and a `parent.id` restriction (example:
-       * "parent.type:folder parent.id:123"). In this case an alternate search index is used which
-       * provides more consistent results.
-       *
+       * An expression for filtering the results of the request. Filter rules are case insensitive.
+       * If multiple fields are included in a filter query, the query will return results that match
+       * any of the fields. Some eligible fields for filtering are: + `name` + `id` + `labels.`
+       * (where *key* is the name of a label) + `parent.type` + `parent.id` Some examples of using
+       * labels as filters: | Filter | Description |
+       * |------------------|-----------------------------------------------------| | name:how* |
+       * The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
+       * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
+       * labels.color:* | The project has the label `color`. | | labels.color:red | The project's
+       * label `color` has the value `red`. | | labels.color:red labels.size:big |The project's
+       * label `color` has the value `red` and its label `size` has the value `big`. | If no filter
+       * is specified, the call will return projects for which the user has the
+       * `resourcemanager.projects.get` permission. NOTE: To perform a by-parent query (eg., what
+       * projects are directly in a Folder), the caller must have the
+       * `resourcemanager.projects.list` permission on the parent and the filter must contain both a
+       * `parent.type` and a `parent.id` restriction (example: "parent.type:folder parent.id:123").
+       * In this case an alternate search index is used which provides more consistent results.
        * Optional.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** An expression for filtering the results of the request.  Filter rules are case insensitive. The
-     fields eligible for filtering are:
-
-     + `name` + `id` + `labels.` (where *key* is the name of a label) + `parent.type` + `parent.id`
-
-     Some examples of using labels as filters:
-
-     | Filter           | Description                                         |
-     |------------------|-----------------------------------------------------| | name:how*        | The
-     project's name starts with "how".               | | name:Howl        | The project's name is `Howl`
-     or `howl`.             | | name:HOWL        | Equivalent to above.                                |
-     | NAME:howl        | Equivalent to above.                                | | labels.color:*   | The
-     project has the label `color`.                  | | labels.color:red | The project's label `color`
-     has the value `red`.    | | labels.color:redlabels.size:big |The project's label `color` has the
-     value `red` and its label `size` has the value `big`.              |
-
-     If no filter is specified, the call will return projects for which the user has the
-     `resourcemanager.projects.get` permission.
-
-     NOTE: To perform a by-parent query (eg., what projects are directly in a Folder), the caller must
-     have the `resourcemanager.projects.list` permission on the parent and the filter must contain both
-     a `parent.type` and a `parent.id` restriction (example: "parent.type:folder parent.id:123"). In
-     this case an alternate search index is used which provides more consistent results.
-
-     Optional.
+      /** An expression for filtering the results of the request. Filter rules are case insensitive. If
+     multiple fields are included in a filter query, the query will return results that match any of the
+     fields. Some eligible fields for filtering are: + `name` + `id` + `labels.` (where *key* is the
+     name of a label) + `parent.type` + `parent.id` Some examples of using labels as filters: | Filter |
+     Description | |------------------|-----------------------------------------------------| |
+     name:how* | The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
+     `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
+     labels.color:* | The project has the label `color`. | | labels.color:red | The project's label
+     `color` has the value `red`. | | labels.color:red labels.size:big |The project's label `color` has
+     the value `red` and its label `size` has the value `big`. | If no filter is specified, the call
+     will return projects for which the user has the `resourcemanager.projects.get` permission. NOTE: To
+     perform a by-parent query (eg., what projects are directly in a Folder), the caller must have the
+     `resourcemanager.projects.list` permission on the parent and the filter must contain both a
+     `parent.type` and a `parent.id` restriction (example: "parent.type:folder parent.id:123"). In this
+     case an alternate search index is used which provides more consistent results. Optional.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * An expression for filtering the results of the request.  Filter rules are case insensitive.
-       * The fields eligible for filtering are:
-       *
-       * + `name` + `id` + `labels.` (where *key* is the name of a label) + `parent.type` +
-       * `parent.id`
-       *
-       * Some examples of using labels as filters:
-       *
-       * | Filter           | Description                                         |
-       * |------------------|-----------------------------------------------------| | name:how*
-       * | The project's name starts with "how".               | | name:Howl        | The project's
-       * name is `Howl` or `howl`.             | | name:HOWL        | Equivalent to above.
-       * | | NAME:howl        | Equivalent to above.                                | |
-       * labels.color:*   | The project has the label `color`.                  | | labels.color:red
-       * | The project's label `color` has the value `red`.    | | labels.color:redlabels.size:big
-       * |The project's label `color` has the value `red` and its label `size` has the value `big`.
-       * |
-       *
-       * If no filter is specified, the call will return projects for which the user has the
-       * `resourcemanager.projects.get` permission.
-       *
-       * NOTE: To perform a by-parent query (eg., what projects are directly in a Folder), the
-       * caller must have the `resourcemanager.projects.list` permission on the parent and the
-       * filter must contain both a `parent.type` and a `parent.id` restriction (example:
-       * "parent.type:folder parent.id:123"). In this case an alternate search index is used which
-       * provides more consistent results.
-       *
+       * An expression for filtering the results of the request. Filter rules are case insensitive.
+       * If multiple fields are included in a filter query, the query will return results that match
+       * any of the fields. Some eligible fields for filtering are: + `name` + `id` + `labels.`
+       * (where *key* is the name of a label) + `parent.type` + `parent.id` Some examples of using
+       * labels as filters: | Filter | Description |
+       * |------------------|-----------------------------------------------------| | name:how* |
+       * The project's name starts with "how". | | name:Howl | The project's name is `Howl` or
+       * `howl`. | | name:HOWL | Equivalent to above. | | NAME:howl | Equivalent to above. | |
+       * labels.color:* | The project has the label `color`. | | labels.color:red | The project's
+       * label `color` has the value `red`. | | labels.color:red labels.size:big |The project's
+       * label `color` has the value `red` and its label `size` has the value `big`. | If no filter
+       * is specified, the call will return projects for which the user has the
+       * `resourcemanager.projects.get` permission. NOTE: To perform a by-parent query (eg., what
+       * projects are directly in a Folder), the caller must have the
+       * `resourcemanager.projects.list` permission on the parent and the filter must contain both a
+       * `parent.type` and a `parent.id` restriction (example: "parent.type:folder parent.id:123").
+       * In this case an alternate search index is used which provides more consistent results.
        * Optional.
        */
       public List setFilter(java.lang.String filter) {
@@ -2059,17 +1922,13 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * The maximum number of Projects to return in the response. The server can return fewer
-       * Projects than requested. If unspecified, server picks an appropriate default.
-       *
-       * Optional.
+       * Projects than requested. If unspecified, server picks an appropriate default. Optional.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** The maximum number of Projects to return in the response. The server can return fewer Projects than
-     requested. If unspecified, server picks an appropriate default.
-
-     Optional.
+     requested. If unspecified, server picks an appropriate default. Optional.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -2077,9 +1936,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * The maximum number of Projects to return in the response. The server can return fewer
-       * Projects than requested. If unspecified, server picks an appropriate default.
-       *
-       * Optional.
+       * Projects than requested. If unspecified, server picks an appropriate default. Optional.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -2088,17 +1945,13 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * A pagination token returned from a previous call to ListProjects that indicates from where
-       * listing should continue.
-       *
-       * Optional.
+       * listing should continue. Optional.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** A pagination token returned from a previous call to ListProjects that indicates from where listing
-     should continue.
-
-     Optional.
+     should continue. Optional.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -2106,9 +1959,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * A pagination token returned from a previous call to ListProjects that indicates from where
-       * listing should continue.
-       *
-       * Optional.
+       * listing should continue. Optional.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -2121,42 +1972,28 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Sets the IAM access control policy for the specified Project. Overwrites any existing policy.
-     *
-     * The following constraints apply when using `setIamPolicy()`:
-     *
-     * + Project does not support `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding` of
-     * a `Policy`.
-     *
-     * + The owner role can be granted to a `user`, `serviceAccount`, or a group that is part of an
-     * organization. For example, group@myownpersonaldomain.com could be added as an owner to a project
-     * in the myownpersonaldomain.com organization, but not the examplepetstore.com organization.
-     *
-     * + Service accounts can be made owners of a project directly without any restrictions. However, to
-     * be added as an owner, a user must be invited via Cloud Platform console and must accept the
-     * invitation.
-     *
-     * + A user cannot be granted the owner role using `setIamPolicy()`. The user must be granted the
-     * owner role using the Cloud Platform Console and must explicitly accept the invitation.
-     *
-     * + Invitations to grant the owner role cannot be sent using `setIamPolicy()`; they must be sent
-     * only using the Cloud Platform Console.
-     *
-     * + Membership changes that leave the project without any owners that have accepted the Terms of
-     * Service (ToS) will be rejected.
-     *
-     * + If the project is not part of an organization, there must be at least one owner who has
-     * accepted the Terms of Service (ToS) agreement in the policy. Calling `setIamPolicy()` to remove
-     * the last ToS-accepted owner from the policy will fail. This restriction also applies to legacy
-     * projects that no longer have owners who have accepted the ToS. Edits to IAM policies will be
-     * rejected until the lack of a ToS-accepting owner is rectified.
-     *
-     * + This method will replace the existing policy, and cannot be used to append additional IAM
-     * settings.
-     *
-     * Note: Removing service accounts from policies or changing their roles can render services
-     * completely inoperable. It is important to understand how the service account is being used before
-     * removing or updating its roles.
+     * Sets the IAM access control policy for the specified Project. CAUTION: This method will replace
+     * the existing policy, and cannot be used to append additional IAM settings. NOTE: Removing service
+     * accounts from policies or changing their roles can render services completely inoperable. It is
+     * important to understand how the service account is being used before removing or updating its
+     * roles. The following constraints apply when using `setIamPolicy()`: + Project does not support
+     * `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding` of a `Policy`. + The owner
+     * role can be granted to a `user`, `serviceAccount`, or a group that is part of an organization.
+     * For example, group@myownpersonaldomain.com could be added as an owner to a project in the
+     * myownpersonaldomain.com organization, but not the examplepetstore.com organization. + Service
+     * accounts can be made owners of a project directly without any restrictions. However, to be added
+     * as an owner, a user must be invited via Cloud Platform console and must accept the invitation. +
+     * A user cannot be granted the owner role using `setIamPolicy()`. The user must be granted the
+     * owner role using the Cloud Platform Console and must explicitly accept the invitation. +
+     * Invitations to grant the owner role cannot be sent using `setIamPolicy()`; they must be sent only
+     * using the Cloud Platform Console. + Membership changes that leave the project without any owners
+     * that have accepted the Terms of Service (ToS) will be rejected. + If the project is not part of
+     * an organization, there must be at least one owner who has accepted the Terms of Service (ToS)
+     * agreement in the policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner from the
+     * policy will fail. This restriction also applies to legacy projects that no longer have owners who
+     * have accepted the ToS. Edits to IAM policies will be rejected until the lack of a ToS-accepting
+     * owner is rectified. Authorization requires the Google IAM permission
+     * `resourcemanager.projects.setIamPolicy` on the project
      *
      * Create a request for the method "projects.setIamPolicy".
      *
@@ -2164,8 +2001,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.SetIamPolicyRequest}
      * @return the request
@@ -2181,43 +2017,29 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1beta1/projects/{resource}:setIamPolicy";
 
       /**
-       * Sets the IAM access control policy for the specified Project. Overwrites any existing policy.
-       *
-       * The following constraints apply when using `setIamPolicy()`:
-       *
-       * + Project does not support `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding`
-       * of a `Policy`.
-       *
-       * + The owner role can be granted to a `user`, `serviceAccount`, or a group that is part of an
-       * organization. For example, group@myownpersonaldomain.com could be added as an owner to a
-       * project in the myownpersonaldomain.com organization, but not the examplepetstore.com
-       * organization.
-       *
-       * + Service accounts can be made owners of a project directly without any restrictions. However,
-       * to be added as an owner, a user must be invited via Cloud Platform console and must accept the
-       * invitation.
-       *
-       * + A user cannot be granted the owner role using `setIamPolicy()`. The user must be granted the
-       * owner role using the Cloud Platform Console and must explicitly accept the invitation.
-       *
-       * + Invitations to grant the owner role cannot be sent using `setIamPolicy()`; they must be sent
-       * only using the Cloud Platform Console.
-       *
-       * + Membership changes that leave the project without any owners that have accepted the Terms of
-       * Service (ToS) will be rejected.
-       *
-       * + If the project is not part of an organization, there must be at least one owner who has
-       * accepted the Terms of Service (ToS) agreement in the policy. Calling `setIamPolicy()` to remove
-       * the last ToS-accepted owner from the policy will fail. This restriction also applies to legacy
-       * projects that no longer have owners who have accepted the ToS. Edits to IAM policies will be
-       * rejected until the lack of a ToS-accepting owner is rectified.
-       *
-       * + This method will replace the existing policy, and cannot be used to append additional IAM
-       * settings.
-       *
-       * Note: Removing service accounts from policies or changing their roles can render services
-       * completely inoperable. It is important to understand how the service account is being used
-       * before removing or updating its roles.
+       * Sets the IAM access control policy for the specified Project. CAUTION: This method will replace
+       * the existing policy, and cannot be used to append additional IAM settings. NOTE: Removing
+       * service accounts from policies or changing their roles can render services completely
+       * inoperable. It is important to understand how the service account is being used before removing
+       * or updating its roles. The following constraints apply when using `setIamPolicy()`: + Project
+       * does not support `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding` of a
+       * `Policy`. + The owner role can be granted to a `user`, `serviceAccount`, or a group that is
+       * part of an organization. For example, group@myownpersonaldomain.com could be added as an owner
+       * to a project in the myownpersonaldomain.com organization, but not the examplepetstore.com
+       * organization. + Service accounts can be made owners of a project directly without any
+       * restrictions. However, to be added as an owner, a user must be invited via Cloud Platform
+       * console and must accept the invitation. + A user cannot be granted the owner role using
+       * `setIamPolicy()`. The user must be granted the owner role using the Cloud Platform Console and
+       * must explicitly accept the invitation. + Invitations to grant the owner role cannot be sent
+       * using `setIamPolicy()`; they must be sent only using the Cloud Platform Console. + Membership
+       * changes that leave the project without any owners that have accepted the Terms of Service (ToS)
+       * will be rejected. + If the project is not part of an organization, there must be at least one
+       * owner who has accepted the Terms of Service (ToS) agreement in the policy. Calling
+       * `setIamPolicy()` to remove the last ToS-accepted owner from the policy will fail. This
+       * restriction also applies to legacy projects that no longer have owners who have accepted the
+       * ToS. Edits to IAM policies will be rejected until the lack of a ToS-accepting owner is
+       * rectified. Authorization requires the Google IAM permission
+       * `resourcemanager.projects.setIamPolicy` on the project
        *
        * Create a request for the method "projects.setIamPolicy".
        *
@@ -2227,8 +2049,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-    See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
      *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.SetIamPolicyRequest}
        * @since 1.13
@@ -2330,8 +2151,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
      * operation.
      *
-     * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.TestIamPermissionsRequest}
      * @return the request
@@ -2357,8 +2177,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-    See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
      *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.TestIamPermissionsRequest}
        * @since 1.13
@@ -2454,17 +2273,15 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     /**
      * Restores the Project identified by the specified `project_id` (for example, `my-project-123`).
      * You can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED. After
-     * deletion starts, the Project cannot be restored.
-     *
-     * The caller must have modify permissions for this Project.
+     * deletion starts, the Project cannot be restored. The caller must have undelete permissions for
+     * this Project.
      *
      * Create a request for the method "projects.undelete".
      *
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
      *
-     * @param projectId The project ID (for example, `foo-bar-123`).
-    Required.
+     * @param projectId Required. The project ID (for example, `foo-bar-123`).
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.UndeleteProjectRequest}
      * @return the request
      */
@@ -2481,9 +2298,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * Restores the Project identified by the specified `project_id` (for example, `my-project-123`).
        * You can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED.
-       * After deletion starts, the Project cannot be restored.
-       *
-       * The caller must have modify permissions for this Project.
+       * After deletion starts, the Project cannot be restored. The caller must have undelete
+       * permissions for this Project.
        *
        * Create a request for the method "projects.undelete".
        *
@@ -2493,8 +2309,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param projectId The project ID (for example, `foo-bar-123`).
-    Required.
+       * @param projectId Required. The project ID (for example, `foo-bar-123`).
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.UndeleteProjectRequest}
        * @since 1.13
        */
@@ -2558,27 +2373,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Undelete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The project ID (for example, `foo-bar-123`).
-       *
-       * Required.
-       */
+      /** Required. The project ID (for example, `foo-bar-123`). */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The project ID (for example, `foo-bar-123`).
-
-     Required.
+      /** Required. The project ID (for example, `foo-bar-123`).
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /**
-       * The project ID (for example, `foo-bar-123`).
-       *
-       * Required.
-       */
+      /** Required. The project ID (for example, `foo-bar-123`). */
       public Undelete setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
@@ -2591,9 +2396,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     }
     /**
      * Updates the attributes of the Project identified by the specified `project_id` (for example, `my-
-     * project-123`).
-     *
-     * The caller must have modify permissions for this Project.
+     * project-123`). The caller must have modify permissions for this Project.
      *
      * Create a request for the method "projects.update".
      *
@@ -2601,7 +2404,6 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
      * @param projectId The project ID (for example, `my-project-123`).
-    Required.
      * @param content the {@link com.google.api.services.cloudresourcemanager.model.Project}
      * @return the request
      */
@@ -2617,9 +2419,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Updates the attributes of the Project identified by the specified `project_id` (for example,
-       * `my-project-123`).
-       *
-       * The caller must have modify permissions for this Project.
+       * `my-project-123`). The caller must have modify permissions for this Project.
        *
        * Create a request for the method "projects.update".
        *
@@ -2630,7 +2430,6 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
        * @param projectId The project ID (for example, `my-project-123`).
-    Required.
        * @param content the {@link com.google.api.services.cloudresourcemanager.model.Project}
        * @since 1.13
        */
@@ -2694,27 +2493,17 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The project ID (for example, `my-project-123`).
-       *
-       * Required.
-       */
+      /** The project ID (for example, `my-project-123`). */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
       /** The project ID (for example, `my-project-123`).
-
-     Required.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /**
-       * The project ID (for example, `my-project-123`).
-       *
-       * Required.
-       */
+      /** The project ID (for example, `my-project-123`). */
       public Update setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;

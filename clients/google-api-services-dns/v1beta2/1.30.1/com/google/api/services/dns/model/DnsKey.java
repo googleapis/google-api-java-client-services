@@ -20,7 +20,7 @@ package com.google.api.services.dns.model;
  * A DNSSEC key pair.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -95,7 +95,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   private java.lang.Integer keyTag;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#dnsKey".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -273,7 +272,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#dnsKey".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -281,7 +279,6 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#dnsKey".
    * @param kind kind or {@code null} for none
    */
   public DnsKey setKind(java.lang.String kind) {

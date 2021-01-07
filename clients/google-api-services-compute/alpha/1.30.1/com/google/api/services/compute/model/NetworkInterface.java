@@ -69,6 +69,28 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String fingerprint;
 
   /**
+   * [Output Only] The prefix length of the primary internal IPv6 range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer internalIpv6PrefixLength;
+
+  /**
+   * An array of IPv6 access configurations for this interface. Currently, only one IPv6 access
+   * config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this
+   * instance will have no external IPv6 Internet access.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AccessConfig> ipv6AccessConfigs;
+
+  static {
+    // hack to force ProGuard to consider AccessConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AccessConfig.class);
+  }
+
+  /**
    * [Output Only] An IPv6 internal network address for this network interface.
    * The value may be {@code null}.
    */
@@ -111,6 +133,31 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String networkIP;
+
+  /**
+   * The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nicType;
+
+  /**
+   * The networking queue count that's specified by users for the network interface. Both Rx and Tx
+   * queues will be set to this number. It'll be empty if not specified by the users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer queueCount;
+
+  /**
+   * The stack type for this network interface to identify whether the IPv6 feature is enabled or
+   * not. If not specified, IPV4_ONLY will be used.
+   *
+   * This field can be both set at instance creation and update network interface operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stackType;
 
   /**
    * The URL of the Subnetwork resource for this instance. If the network resource is in legacy
@@ -223,6 +270,44 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * [Output Only] The prefix length of the primary internal IPv6 range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInternalIpv6PrefixLength() {
+    return internalIpv6PrefixLength;
+  }
+
+  /**
+   * [Output Only] The prefix length of the primary internal IPv6 range.
+   * @param internalIpv6PrefixLength internalIpv6PrefixLength or {@code null} for none
+   */
+  public NetworkInterface setInternalIpv6PrefixLength(java.lang.Integer internalIpv6PrefixLength) {
+    this.internalIpv6PrefixLength = internalIpv6PrefixLength;
+    return this;
+  }
+
+  /**
+   * An array of IPv6 access configurations for this interface. Currently, only one IPv6 access
+   * config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this
+   * instance will have no external IPv6 Internet access.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AccessConfig> getIpv6AccessConfigs() {
+    return ipv6AccessConfigs;
+  }
+
+  /**
+   * An array of IPv6 access configurations for this interface. Currently, only one IPv6 access
+   * config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this
+   * instance will have no external IPv6 Internet access.
+   * @param ipv6AccessConfigs ipv6AccessConfigs or {@code null} for none
+   */
+  public NetworkInterface setIpv6AccessConfigs(java.util.List<AccessConfig> ipv6AccessConfigs) {
+    this.ipv6AccessConfigs = ipv6AccessConfigs;
+    return this;
+  }
+
+  /**
    * [Output Only] An IPv6 internal network address for this network interface.
    * @return value or {@code null} for none
    */
@@ -322,6 +407,65 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setNetworkIP(java.lang.String networkIP) {
     this.networkIP = networkIP;
+    return this;
+  }
+
+  /**
+   * The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNicType() {
+    return nicType;
+  }
+
+  /**
+   * The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
+   * @param nicType nicType or {@code null} for none
+   */
+  public NetworkInterface setNicType(java.lang.String nicType) {
+    this.nicType = nicType;
+    return this;
+  }
+
+  /**
+   * The networking queue count that's specified by users for the network interface. Both Rx and Tx
+   * queues will be set to this number. It'll be empty if not specified by the users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getQueueCount() {
+    return queueCount;
+  }
+
+  /**
+   * The networking queue count that's specified by users for the network interface. Both Rx and Tx
+   * queues will be set to this number. It'll be empty if not specified by the users.
+   * @param queueCount queueCount or {@code null} for none
+   */
+  public NetworkInterface setQueueCount(java.lang.Integer queueCount) {
+    this.queueCount = queueCount;
+    return this;
+  }
+
+  /**
+   * The stack type for this network interface to identify whether the IPv6 feature is enabled or
+   * not. If not specified, IPV4_ONLY will be used.
+   *
+   * This field can be both set at instance creation and update network interface operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStackType() {
+    return stackType;
+  }
+
+  /**
+   * The stack type for this network interface to identify whether the IPv6 feature is enabled or
+   * not. If not specified, IPV4_ONLY will be used.
+   *
+   * This field can be both set at instance creation and update network interface operations.
+   * @param stackType stackType or {@code null} for none
+   */
+  public NetworkInterface setStackType(java.lang.String stackType) {
+    this.stackType = stackType;
     return this;
   }
 

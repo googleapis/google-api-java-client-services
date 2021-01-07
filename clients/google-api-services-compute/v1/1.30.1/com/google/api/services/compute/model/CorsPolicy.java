@@ -56,7 +56,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Specifies the regualar expression patterns that match allowed origins. For regular expression
    * grammar please see en.cppreference.com/w/cpp/regex/ecmascript An origin is allowed if it
-   * matches either allow_origins or allow_origin_regex.
+   * matches either an item in allowOrigins or an item in allowOriginRegexes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the list of origins that will be allowed to do CORS requests. An origin is allowed if
-   * it matches either allow_origins or allow_origin_regex.
+   * it matches either an item in allowOrigins or an item in allowOriginRegexes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Specifies the regualar expression patterns that match allowed origins. For regular expression
    * grammar please see en.cppreference.com/w/cpp/regex/ecmascript An origin is allowed if it
-   * matches either allow_origins or allow_origin_regex.
+   * matches either an item in allowOrigins or an item in allowOriginRegexes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowOriginRegexes() {
@@ -161,7 +161,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
   /**
    * Specifies the regualar expression patterns that match allowed origins. For regular expression
    * grammar please see en.cppreference.com/w/cpp/regex/ecmascript An origin is allowed if it
-   * matches either allow_origins or allow_origin_regex.
+   * matches either an item in allowOrigins or an item in allowOriginRegexes.
    * @param allowOriginRegexes allowOriginRegexes or {@code null} for none
    */
   public CorsPolicy setAllowOriginRegexes(java.util.List<java.lang.String> allowOriginRegexes) {
@@ -171,7 +171,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the list of origins that will be allowed to do CORS requests. An origin is allowed if
-   * it matches either allow_origins or allow_origin_regex.
+   * it matches either an item in allowOrigins or an item in allowOriginRegexes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowOrigins() {
@@ -180,7 +180,7 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the list of origins that will be allowed to do CORS requests. An origin is allowed if
-   * it matches either allow_origins or allow_origin_regex.
+   * it matches either an item in allowOrigins or an item in allowOriginRegexes.
    * @param allowOrigins allowOrigins or {@code null} for none
    */
   public CorsPolicy setAllowOrigins(java.util.List<java.lang.String> allowOrigins) {

@@ -46,7 +46,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Data Loss Prevention (DLP) API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Data Loss Prevention (DLP) API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -291,23 +291,39 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         return this;
       }
 
-      /**
-       * The geographic location to list info types. Reserved for future extensions.
-       */
+      /** Deprecated. This field has no effect. */
       @com.google.api.client.util.Key
       private java.lang.String locationId;
 
-      /** The geographic location to list info types. Reserved for future extensions.
+      /** Deprecated. This field has no effect.
        */
       public java.lang.String getLocationId() {
         return locationId;
       }
 
-      /**
-       * The geographic location to list info types. Reserved for future extensions.
-       */
+      /** Deprecated. This field has no effect. */
       public List setLocationId(java.lang.String locationId) {
         this.locationId = locationId;
+        return this;
+      }
+
+      /**
+       * The parent resource name. The format of this value is as follows: locations/ LOCATION_ID
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The parent resource name. The format of this value is as follows: locations/ LOCATION_ID
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * The parent resource name. The format of this value is as follows: locations/ LOCATION_ID
+       */
+      public List setParent(java.lang.String parent) {
+        this.parent = parent;
         return this;
       }
 
@@ -368,19 +384,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param locationId The geographic location to list info types. Reserved for future
-      extensions.
+       * @param parent The parent resource name. The format of this value is as follows: locations/ LOCATION_ID
        * @return the request
        */
-      public List list(java.lang.String locationId) throws java.io.IOException {
-        List result = new List(locationId);
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
         initialize(result);
         return result;
       }
 
       public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse> {
 
-        private static final String REST_PATH = "v2/locations/{locationId}/infoTypes";
+        private static final String REST_PATH = "v2/{+parent}/infoTypes";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^locations/[^/]+$");
 
         /**
          * Returns a list of the sensitive information types that the DLP API supports. See
@@ -393,13 +411,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param locationId The geographic location to list info types. Reserved for future
-      extensions.
+         * @param parent The parent resource name. The format of this value is as follows: locations/ LOCATION_ID
          * @since 1.13
          */
-        protected List(java.lang.String locationId) {
+        protected List(java.lang.String parent) {
           super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse.class);
-          this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^locations/[^/]+$");
+          }
         }
 
         @Override
@@ -468,22 +490,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * The geographic location to list info types. Reserved for future extensions.
+         * The parent resource name. The format of this value is as follows: locations/ LOCATION_ID
          */
         @com.google.api.client.util.Key
-        private java.lang.String locationId;
+        private java.lang.String parent;
 
-        /** The geographic location to list info types. Reserved for future extensions.
+        /** The parent resource name. The format of this value is as follows: locations/ LOCATION_ID
          */
-        public java.lang.String getLocationId() {
-          return locationId;
+        public java.lang.String getParent() {
+          return parent;
         }
 
         /**
-         * The geographic location to list info types. Reserved for future extensions.
+         * The parent resource name. The format of this value is as follows: locations/ LOCATION_ID
          */
-        public List setLocationId(java.lang.String locationId) {
-          this.locationId = locationId;
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^locations/[^/]+$");
+          }
+          this.parent = parent;
           return this;
         }
 
@@ -530,6 +557,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          */
         public List setLanguageCode(java.lang.String languageCode) {
           this.languageCode = languageCode;
+          return this;
+        }
+
+        /** Deprecated. This field has no effect. */
+        @com.google.api.client.util.Key
+        private java.lang.String locationId;
+
+        /** Deprecated. This field has no effect.
+         */
+        public java.lang.String getLocationId() {
+          return locationId;
+        }
+
+        /** Deprecated. This field has no effect. */
+        public List setLocationId(java.lang.String locationId) {
+          this.locationId = locationId;
           return this;
         }
 
@@ -592,8 +635,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
        * @return the request
        */
@@ -622,8 +673,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @since 1.13
          */
@@ -693,21 +752,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -733,10 +816,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and deidentify template to be deleted,
-      for example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @return the request
        */
@@ -764,10 +845,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and deidentify template to be deleted,
-      for example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @since 1.13
          */
@@ -881,10 +960,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and deidentify template to be read, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and deidentify template to be read, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @return the request
        */
@@ -912,10 +989,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and deidentify template to be read, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be read, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @since 1.13
          */
@@ -1039,8 +1114,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1067,8 +1150,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1147,21 +1238,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1173,24 +1288,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where deidentifications templates will be retrieved from. Use `-`
-         * for all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where deidentifications templates will be retrieved from. Use `-` for all
-       locations. Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where deidentifications templates will be retrieved from. Use `-`
-         * for all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -1199,13 +1307,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -1214,14 +1317,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc,update_time, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-       the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-       corresponds to template's display name.
+       Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the template was created. - `update_time`: corresponds to time the template was
+       last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+       display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -1230,13 +1329,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -1301,10 +1395,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and deidentify template to be updated, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and deidentify template to be updated, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
        * @return the request
@@ -1333,10 +1425,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and deidentify template to be updated, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and deidentify template to be updated, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
          * @since 1.13
@@ -1473,8 +1563,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
        * @return the request
        */
@@ -1502,8 +1600,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @since 1.13
          */
@@ -1573,21 +1679,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1613,10 +1743,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @return the request
        */
@@ -1644,10 +1772,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @since 1.13
          */
@@ -1760,10 +1886,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @return the request
        */
@@ -1791,10 +1915,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @since 1.13
          */
@@ -1917,8 +2039,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1944,8 +2074,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2024,21 +2162,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2050,24 +2212,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where inspection templates will be retrieved from. Use `-` for
-         * all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where inspection templates will be retrieved from. Use `-` for all
-       locations. Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where inspection templates will be retrieved from. Use `-` for
-         * all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -2076,13 +2231,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -2091,14 +2241,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc,update_time, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-       the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-       corresponds to template's display name.
+       Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the template was created. - `update_time`: corresponds to time the template was
+       last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+       display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -2107,13 +2253,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -2178,10 +2319,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
        * @return the request
@@ -2210,10 +2349,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
          * @since 1.13
@@ -2371,25 +2508,31 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location to store the deidentification template. Reserved
-        for future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyTemplate> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/deidentifyTemplates";
+          private static final String REST_PATH = "v2/{+parent}/deidentifyTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a DeidentifyTemplate for re-using frequently used configuration for de-identifying
@@ -2403,22 +2546,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location to store the deidentification template. Reserved
-        for future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyTemplate.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -2477,51 +2625,53 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the deidentification template. Reserved for future
-           * extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the deidentification template. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the deidentification template. Reserved for future
-           * extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -2539,10 +2689,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and deidentify template to be deleted,
-        for example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @return the request
          */
@@ -2570,10 +2718,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and deidentify template to be deleted,
-        for example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @since 1.13
            */
@@ -2687,10 +2833,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and deidentify template to be read, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be read, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @return the request
          */
@@ -2718,10 +2862,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and deidentify template to be read, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and deidentify template to be read, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @since 1.13
            */
@@ -2845,25 +2987,30 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location where deidentifications templates will be retrieved
-        from. Use `-` for all
-         *        locations. Reserved for future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDeidentifyTemplatesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/deidentifyTemplates";
+          private static final String REST_PATH = "v2/{+parent}/deidentifyTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to
@@ -2876,22 +3023,26 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location where deidentifications templates will be retrieved
-        from. Use `-` for all
-         *        locations. Reserved for future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDeidentifyTemplatesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -2960,50 +3111,67 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where deidentifications templates will be retrieved from. Use
-           * `-` for all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where deidentifications templates will be retrieved from. Use `-` for all
-         locations. Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where deidentifications templates will be retrieved from. Use
-           * `-` for all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -3012,29 +3180,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc,update_time, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-         the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-         corresponds to template's display name.
+         Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the template was created. - `update_time`: corresponds to time the template was
+         last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+         display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -3043,15 +3202,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -3116,10 +3270,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and deidentify template to be updated, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and deidentify template to be updated, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
          * @return the request
@@ -3148,10 +3300,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and deidentify template to be updated, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and deidentify template to be updated, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
            * @since 1.13
@@ -3288,25 +3438,31 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location to store the inspection template. Reserved for
-        future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectTemplate> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/inspectTemplates";
+          private static final String REST_PATH = "v2/{+parent}/inspectTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Creates an InspectTemplate for re-using frequently used configuration for inspecting content,
@@ -3319,22 +3475,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location to store the inspection template. Reserved for
-        future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectTemplate.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -3393,51 +3554,53 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the inspection template. Reserved for future
-           * extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the inspection template. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the inspection template. Reserved for future
-           * extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -3455,10 +3618,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @return the request
          */
@@ -3486,10 +3647,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @since 1.13
            */
@@ -3602,10 +3761,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @return the request
          */
@@ -3633,10 +3790,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @since 1.13
            */
@@ -3759,25 +3914,30 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location where inspection templates will be retrieved from.
-        Use `-` for all
-         *        locations. Reserved for future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInspectTemplatesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/inspectTemplates";
+          private static final String REST_PATH = "v2/{+parent}/inspectTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
@@ -3789,22 +3949,26 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location where inspection templates will be retrieved from.
-        Use `-` for all
-         *        locations. Reserved for future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInspectTemplatesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -3873,50 +4037,67 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where inspection templates will be retrieved from. Use `-` for
-           * all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where inspection templates will be retrieved from. Use `-` for all
-         locations. Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where inspection templates will be retrieved from. Use `-` for
-           * all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -3925,29 +4106,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc,update_time, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-         the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-         corresponds to template's display name.
+         Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the template was created. - `update_time`: corresponds to time the template was
+         last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+         display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -3956,15 +4128,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -4027,10 +4194,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
          * @return the request
@@ -4059,10 +4224,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
            * @since 1.13
@@ -4199,25 +4362,31 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location to store the stored infoType. Reserved for
-        future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2StoredInfoType> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/storedInfoTypes";
+          private static final String REST_PATH = "v2/{+parent}/storedInfoTypes";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a pre-built stored infoType to be used for inspection. See
@@ -4230,22 +4399,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location to store the stored infoType. Reserved for
-        future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2StoredInfoType.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -4304,49 +4478,53 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -4364,10 +4542,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @return the request
          */
@@ -4395,10 +4571,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @since 1.13
            */
@@ -4512,10 +4686,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be read, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @return the request
          */
@@ -4543,10 +4715,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and storedInfoType to be read, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @since 1.13
            */
@@ -4670,25 +4840,30 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location where stored infoTypes will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListStoredInfoTypesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/storedInfoTypes";
+          private static final String REST_PATH = "v2/{+parent}/storedInfoTypes";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
@@ -4701,22 +4876,26 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location where stored infoTypes will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListStoredInfoTypesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -4785,50 +4964,67 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^organizations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where stored infoTypes will be retrieved from. Use `-` for all locations.
-         Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -4837,29 +5033,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, display_name, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the most recent version of the resource was
-           * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
-           * resource name. - `display_name`: corresponds to info type's display name.
+           * characters are insignificant. Example: `name asc, display_name, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the most recent version of
+           * the resource was created. - `state`: corresponds to the state of the resource. -
+           * `name`: corresponds to resource name. - `display_name`: corresponds to info type's
+           * display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc, display_name, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the most recent version of the resource was created. -
-         `state`: corresponds to the state of the resource. - `name`: corresponds to resource name. -
-         `display_name`: corresponds to info type's display name.
+         Example: `name asc, display_name, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the most recent version of the resource was created. - `state`: corresponds to
+         the state of the resource. - `name`: corresponds to resource name. - `display_name`: corresponds to
+         info type's display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -4868,15 +5056,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, display_name, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the most recent version of the resource was
-           * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
-           * resource name. - `display_name`: corresponds to info type's display name.
+           * characters are insignificant. Example: `name asc, display_name, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the most recent version of
+           * the resource was created. - `state`: corresponds to the state of the resource. -
+           * `name`: corresponds to resource name. - `display_name`: corresponds to info type's
+           * display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -4940,10 +5124,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and storedInfoType to be updated, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
          * @return the request
@@ -4973,10 +5155,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and storedInfoType to be updated, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
            * @since 1.13
@@ -5114,8 +5294,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
        * @return the request
        */
@@ -5143,8 +5331,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @since 1.13
          */
@@ -5214,21 +5410,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5254,10 +5474,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @return the request
        */
@@ -5285,10 +5503,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @since 1.13
          */
@@ -5402,10 +5618,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and storedInfoType to be read, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @return the request
        */
@@ -5433,10 +5647,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be read, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @since 1.13
          */
@@ -5560,8 +5772,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5588,8 +5808,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5668,21 +5896,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5694,24 +5946,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where stored infoTypes will be retrieved from. Use `-` for all locations.
-       Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -5720,29 +5965,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, display_name, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the most recent version of the resource was created.
-         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
-         * name. - `display_name`: corresponds to info type's display name.
+         * are insignificant. Example: `name asc, display_name, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the most recent version of the resource was
+         * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
+         * resource name. - `display_name`: corresponds to info type's display name.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc, display_name, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the most recent version of the resource was created. -
-       `state`: corresponds to the state of the resource. - `name`: corresponds to resource name. -
-       `display_name`: corresponds to info type's display name.
+       Example: `name asc, display_name, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the most recent version of the resource was created. - `state`: corresponds to
+       the state of the resource. - `name`: corresponds to resource name. - `display_name`: corresponds to
+       info type's display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -5751,15 +5987,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, display_name, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the most recent version of the resource was created.
-         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
-         * name. - `display_name`: corresponds to info type's display name.
+         * are insignificant. Example: `name asc, display_name, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the most recent version of the resource was
+         * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
+         * resource name. - `display_name`: corresponds to info type's display name.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -5788,9 +6019,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
-         */
+        /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
@@ -5800,9 +6029,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return pageToken;
         }
 
-        /**
-         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
-         */
+        /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -5823,10 +6050,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and storedInfoType to be updated, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
        * @return the request
@@ -5856,10 +6081,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and storedInfoType to be updated, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
          * @since 1.13
@@ -6012,7 +6235,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       /**
        * De-identifies potentially sensitive info from a ContentItem. This method has limits on input size
        * and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn more.
-       *
        * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
        * choose what detectors to run. By default this may be all types, but may change over time as
        * detectors are updated.
@@ -6022,7 +6244,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource name, for example projects/my-project-id.
+       * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
        * @return the request
        */
@@ -6042,9 +6270,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * De-identifies potentially sensitive info from a ContentItem. This method has limits on input
          * size and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn
-         * more.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
+         * more. When no InfoTypes or CustomInfoTypes are specified in this request, the system will
          * automatically choose what detectors to run. By default this may be all types, but may change
          * over time as detectors are updated.
          *
@@ -6056,7 +6282,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
          * @since 1.13
          */
@@ -6125,17 +6357,38 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Deidentify) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * Parent resource name. The format of this value varies depending on whether you have
+         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         * following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource name, for example projects/my-project-id.
+        /** Parent resource name. The format of this value varies depending on whether you have [specified a
+       processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+       specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * Parent resource name. The format of this value varies depending on whether you have
+         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         * following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
+         */
         public Deidentify setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6153,21 +6406,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       }
       /**
        * Finds potentially sensitive info in content. This method has limits on input size, processing
-       * time, and output size.
-       *
-       * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
-       * choose what detectors to run. By default this may be all types, but may change over time as
-       * detectors are updated.
-       *
-       * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and
-       * https://cloud.google.com/dlp/docs/inspecting-text,
+       * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
+       * system will automatically choose what detectors to run. By default this may be all types, but may
+       * change over time as detectors are updated. For how to guides, see
+       * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
+       * /inspecting-text,
        *
        * Create a request for the method "content.inspect".
        *
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource name, for example projects/my-project-id.
+       * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
        * @return the request
        */
@@ -6186,14 +6442,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Finds potentially sensitive info in content. This method has limits on input size, processing
-         * time, and output size.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
-         * automatically choose what detectors to run. By default this may be all types, but may change
-         * over time as detectors are updated.
-         *
-         * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and
-         * https://cloud.google.com/dlp/docs/inspecting-text,
+         * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
+         * system will automatically choose what detectors to run. By default this may be all types, but
+         * may change over time as detectors are updated. For how to guides, see
+         * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
+         * /inspecting-text,
          *
          * Create a request for the method "content.inspect".
          *
@@ -6203,7 +6456,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Inspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
          * @since 1.13
          */
@@ -6272,17 +6531,38 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Inspect) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * Parent resource name. The format of this value varies depending on whether you have
+         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         * following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource name, for example projects/my-project-id.
+        /** Parent resource name. The format of this value varies depending on whether you have [specified a
+       processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+       specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * Parent resource name. The format of this value varies depending on whether you have
+         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         * following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
+         */
         public Inspect setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6308,7 +6588,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name.
+       * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
        * @return the request
        */
@@ -6338,7 +6624,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Reidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name.
+         * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
          * @since 1.13
          */
@@ -6407,17 +6699,40 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Reidentify) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name. */
+        /**
+         * Required. Parent resource name. The format of this value varies depending on whether you
+         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+         * location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name.
+        /** Required. Parent resource name. The format of this value varies depending on whether you have
+       [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
+       Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+       west3` location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name. */
+        /**
+         * Required. Parent resource name. The format of this value varies depending on whether you
+         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+         * location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
+         */
         public Reidentify setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6465,8 +6780,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
        * @return the request
        */
@@ -6495,8 +6818,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @since 1.13
          */
@@ -6566,21 +6897,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -6606,10 +6961,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and deidentify template to be deleted,
-      for example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @return the request
        */
@@ -6637,10 +6990,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and deidentify template to be deleted,
-      for example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @since 1.13
          */
@@ -6754,10 +7105,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and deidentify template to be read, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and deidentify template to be read, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @return the request
        */
@@ -6785,10 +7134,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and deidentify template to be read, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be read, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @since 1.13
          */
@@ -6912,8 +7259,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -6940,8 +7295,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -7020,21 +7383,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -7046,24 +7433,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where deidentifications templates will be retrieved from. Use `-`
-         * for all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where deidentifications templates will be retrieved from. Use `-` for all
-       locations. Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where deidentifications templates will be retrieved from. Use `-`
-         * for all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -7072,13 +7452,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -7087,14 +7462,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc,update_time, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-       the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-       corresponds to template's display name.
+       Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the template was created. - `update_time`: corresponds to time the template was
+       last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+       display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -7103,13 +7474,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -7174,10 +7540,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and deidentify template to be updated, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and deidentify template to be updated, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
        * @return the request
@@ -7206,10 +7570,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and deidentify template to be updated, for
-      example
-       *        `organizations/433245324/deidentifyTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and deidentify template to be updated, for example
+       *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
        *        id/deidentifyTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
          * @since 1.13
@@ -7474,18 +7836,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       /**
        * Creates a new job to inspect storage or calculate risk metrics. See
        * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-       * /compute-risk-analysis to learn more.
-       *
-       * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the system will automatically
-       * choose what detectors to run. By default this may be all types, but may change over time as
-       * detectors are updated.
+       * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
+       * inspect jobs, the system will automatically choose what detectors to run. By default this may be
+       * all types, but may change over time as detectors are updated.
        *
        * Create a request for the method "dlpJobs.create".
        *
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
        * @return the request
        */
@@ -7505,11 +7871,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Creates a new job to inspect storage or calculate risk metrics. See
          * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-         * /compute-risk-analysis to learn more.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the system will
-         * automatically choose what detectors to run. By default this may be all types, but may change
-         * over time as detectors are updated.
+         * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
+         * inspect jobs, the system will automatically choose what detectors to run. By default this may
+         * be all types, but may change over time as detectors are updated.
          *
          * Create a request for the method "dlpJobs.create".
          *
@@ -7518,7 +7882,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
          * @since 1.13
          */
@@ -7587,17 +7957,40 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. The format of this value varies depending on whether you
+         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+         * location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id.
+        /** Required. Parent resource name. The format of this value varies depending on whether you have
+       [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
+       Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+       west3` location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. The format of this value varies depending on whether you
+         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+         * location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
+         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7895,7 +8288,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -7923,7 +8322,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8001,17 +8406,40 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. The format of this value varies depending on whether you
+         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+         * location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id.
+        /** Required. Parent resource name. The format of this value varies depending on whether you have
+       [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
+       Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+       west3` location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. The format of this value varies depending on whether you
+         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+         * location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8023,105 +8451,76 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Allows filtering.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-         * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
-         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
-         * name of the trigger that created job. - 'end_time` - Corresponds to time the job
-         * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
-         * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
-         * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
-         * finished. * The operator must be `=` or `!=`.
-         *
-         * Examples:
-         *
-         * * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage
-         * OR inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR
-         * state = canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+         * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+         * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+         * {operator} {value}`. * Supported fields/values for inspect jobs: - `state` -
+         * PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
+         * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger that
+         * created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+         * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
+         * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
+         * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
+         * `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done *
+         * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+         * cloud_storage AND (state = done OR state = canceled) * end_time >
+         * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+         * characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-       `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-       has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state`
-       - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
-       - `trigger_name` - The resource name of the trigger that created job. - 'end_time` - Corresponds to
-       time the job finished. - 'start_time` - Corresponds to time the job finished. * Supported fields
-       for risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to
-       time the job finished. - 'start_time` - Corresponds to time the job finished. * The operator must
-       be `=` or `!=`.
-
-       Examples:
-
+        /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+       Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+       implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+       fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
+       `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the
+       trigger that created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+       Corresponds to time the job finished. * Supported fields for risk analysis jobs: - `state` -
+       RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job finished. -
+       'start_time` - Corresponds to time the job finished. * The operator must be `=` or `!=`. Examples:
        * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage OR
        inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR state =
-       canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-
-       The length of this field should be no more than 500 characters.
+       canceled) * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
+       than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-         * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
-         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
-         * name of the trigger that created job. - 'end_time` - Corresponds to time the job
-         * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
-         * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
-         * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
-         * finished. * The operator must be `=` or `!=`.
-         *
-         * Examples:
-         *
-         * * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage
-         * OR inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR
-         * state = canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-         *
-         * The length of this field should be no more than 500 characters.
+         * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+         * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+         * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+         * {operator} {value}`. * Supported fields/values for inspect jobs: - `state` -
+         * PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
+         * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger that
+         * created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+         * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
+         * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
+         * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
+         * `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done *
+         * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+         * cloud_storage AND (state = done OR state = canceled) * end_time >
+         * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+         * characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /**
-         * The geographic location where jobs will be retrieved from. Use `-` for all locations.
-         * Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where jobs will be retrieved from. Use `-` for all locations. Reserved for
-       future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where jobs will be retrieved from. Use `-` for all locations.
-         * Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -8130,14 +8529,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, end_time asc, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to
-         * time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
+         * are insignificant. Example: `name asc, end_time asc, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the job was created. - `end_time`: corresponds
+         * to time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
          * `state`
          */
         @com.google.api.client.util.Key
@@ -8145,13 +8539,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc, end_time asc, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to time the job
-       ended. - `name`: corresponds to job's name. - `state`: corresponds to `state`
+       Example: `name asc, end_time asc, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the job was created. - `end_time`: corresponds to time the job ended. - `name`:
+       corresponds to job's name. - `state`: corresponds to `state`
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -8160,14 +8550,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, end_time asc, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to
-         * time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
+         * are insignificant. Example: `name asc, end_time asc, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the job was created. - `end_time`: corresponds
+         * to time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
          * `state`
          */
         public List setOrderBy(java.lang.String orderBy) {
@@ -8253,18 +8638,22 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
       /**
        * Redacts potentially sensitive info from an image. This method has limits on input size,
        * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-data-
-       * images to learn more.
-       *
-       * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
-       * choose what detectors to run. By default this may be all types, but may change over time as
-       * detectors are updated.
+       * images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request, the
+       * system will automatically choose what detectors to run. By default this may be all types, but may
+       * change over time as detectors are updated.
        *
        * Create a request for the method "image.redact".
        *
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Redact#execute()} method to invoke the remote operation.
        *
-       * @param parent The parent resource name, for example projects/my-project-id.
+       * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
        * @return the request
        */
@@ -8284,11 +8673,9 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Redacts potentially sensitive info from an image. This method has limits on input size,
          * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-
-         * data-images to learn more.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
-         * automatically choose what detectors to run. By default this may be all types, but may change
-         * over time as detectors are updated.
+         * data-images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request,
+         * the system will automatically choose what detectors to run. By default this may be all types,
+         * but may change over time as detectors are updated.
          *
          * Create a request for the method "image.redact".
          *
@@ -8297,7 +8684,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Redact#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
+         * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+       *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+       *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
          * @since 1.13
          */
@@ -8366,17 +8759,38 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Redact) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * Parent resource name. The format of this value varies depending on whether you have
+         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         * following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The parent resource name, for example projects/my-project-id.
+        /** Parent resource name. The format of this value varies depending on whether you have [specified a
+       processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+       specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+       specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+       location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** The parent resource name, for example projects/my-project-id. */
+        /**
+         * Parent resource name. The format of this value varies depending on whether you have
+         * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         * + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         * Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         * following example `parent` string specifies a parent project with the identifier
+         * `example-project`, and specifies the `europe-west3` location for processing data:
+         * parent=projects/example-project/locations/europe-west3
+         */
         public Redact setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8423,8 +8837,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
        * @return the request
        */
@@ -8452,8 +8874,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @since 1.13
          */
@@ -8523,21 +8953,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -8563,10 +9017,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @return the request
        */
@@ -8594,10 +9046,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @since 1.13
          */
@@ -8710,10 +9160,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @return the request
        */
@@ -8741,10 +9189,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @since 1.13
          */
@@ -8867,8 +9313,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -8894,8 +9348,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -8974,21 +9436,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -9000,24 +9486,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where inspection templates will be retrieved from. Use `-` for
-         * all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where inspection templates will be retrieved from. Use `-` for all
-       locations. Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where inspection templates will be retrieved from. Use `-` for
-         * all locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -9026,13 +9505,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -9041,14 +9515,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc,update_time, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-       the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-       corresponds to template's display name.
+       Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the template was created. - `update_time`: corresponds to time the template was
+       last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+       display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -9057,13 +9527,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the template was created. - `update_time`:
+         * are insignificant. Example: `name asc,update_time, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the template was created. - `update_time`:
          * corresponds to time the template was last updated. - `name`: corresponds to template's
          * name. - `display_name`: corresponds to template's display name.
          */
@@ -9128,10 +9593,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
        * @return the request
@@ -9160,10 +9623,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-      example
-       *        `organizations/433245324/inspectTemplates/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+       *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
        *        id/inspectTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
          * @since 1.13
@@ -9300,8 +9761,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the trigger to activate, for example
-      `projects/dlp-test-
+       * @param name Required. Resource name of the trigger to activate, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest}
        * @return the request
@@ -9331,8 +9791,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the trigger to activate, for example
-      `projects/dlp-test-
+         * @param name Required. Resource name of the trigger to activate, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest}
          * @since 1.13
@@ -9444,7 +9903,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
        * @return the request
        */
@@ -9472,7 +9937,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
          * @since 1.13
          */
@@ -9541,17 +10012,40 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. The format of this value varies depending on whether you
+         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+         * location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id.
+        /** Required. Parent resource name. The format of this value varies depending on whether you have
+       [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
+       Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+       west3` location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name, for example projects/my-project-id. */
+        /**
+         * Required. Parent resource name. The format of this value varies depending on whether you
+         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+         * location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
+         */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9575,8 +10069,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+       * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
        * @return the request
        */
@@ -9604,8 +10097,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
          * @since 1.13
          */
@@ -9715,8 +10207,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+       * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
        * @return the request
        */
@@ -9743,8 +10234,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
          * @since 1.13
          */
@@ -9864,7 +10354,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example `projects/my-project-id`.
+       * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -9890,7 +10386,13 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example `projects/my-project-id`.
+         * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+       *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+       *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+       *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+       *        following example `parent` string specifies a parent project with the identifier `example-
+       *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+       *        /example-project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -9968,17 +10470,40 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent resource name, for example `projects/my-project-id`. */
+        /**
+         * Required. Parent resource name. The format of this value varies depending on whether you
+         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+         * location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example `projects/my-project-id`.
+        /** Required. Parent resource name. The format of this value varies depending on whether you have
+       [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
+       Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+       no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+       string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+       west3` location for processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent resource name, for example `projects/my-project-id`. */
+        /**
+         * Required. Parent resource name. The format of this value varies depending on whether you
+         * have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+         * location): + Projects scope, location specified:
+         * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         * specifies a parent project with the identifier `example-project`, and specifies the
+         * `europe-west3` location for processing data: parent=projects/example-project/locations
+         * /europe-west3
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9990,99 +10515,68 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Allows filtering.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-         * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
-         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
-         * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
-         * 'error_count' - Number of errors that have occurred while running. * The operator must be
-         * `=` or `!=` for status and inspected_storage.
-         *
-         * Examples:
-         *
-         * * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
+         * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+         * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+         * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+         * {operator} {value}`. * Supported fields/values for inspect jobs: - `status` -
+         * HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
+         * 'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks.
+         * Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred while
+         * running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
+         * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
          * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-         * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-         *
-         * The length of this field should be no more than 500 characters.
+         * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+         * length of this field should be no more than 500 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Allows filtering.
-
-       Supported syntax:
-
-       * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-       `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-       has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: -
-       `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
-       'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks. Nanoseconds are
-       ignored. - 'error_count' - Number of errors that have occurred while running. * The operator must
-       be `=` or `!=` for status and inspected_storage.
-
-       Examples:
-
-       * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
+        /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+       Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+       implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+       fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
+       DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
+       quotation marks. Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred
+       while running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
+       inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
        inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = PAUSED OR state =
-       HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-
-       The length of this field should be no more than 500 characters.
+       HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
+       than 500 characters.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Allows filtering.
-         *
-         * Supported syntax:
-         *
-         * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-         * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-         * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-         * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
-         * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
-         * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
-         * 'error_count' - Number of errors that have occurred while running. * The operator must be
-         * `=` or `!=` for status and inspected_storage.
-         *
-         * Examples:
-         *
-         * * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
+         * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+         * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+         * sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field}
+         * {operator} {value}`. * Supported fields/values for inspect jobs: - `status` -
+         * HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
+         * 'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks.
+         * Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred while
+         * running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
+         * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
          * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-         * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-         *
-         * The length of this field should be no more than 500 characters.
+         * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+         * length of this field should be no more than 500 characters.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /**
-         * The geographic location where job triggers will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where job triggers will be retrieved from. Use `-` for all locations.
-       Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where job triggers will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -10091,33 +10585,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
          * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-         * space characters are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the JobTrigger was created. - `update_time`:
-         * corresponds to time the JobTrigger was last updated. - `last_run_time`: corresponds to
-         * the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's name. -
-         * `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds to
-         * JobTrigger's status.
+         * space characters are insignificant. Example: `name asc,update_time, create_time desc`
+         * Supported fields are: - `create_time`: corresponds to time the JobTrigger was created. -
+         * `update_time`: corresponds to time the JobTrigger was last updated. - `last_run_time`:
+         * corresponds to the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's
+         * name. - `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds
+         * to JobTrigger's status.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc` postfix. This
        list is case-insensitive, default sorting order is ascending, redundant space characters are
-       insignificant.
-
-       Example: `name asc,update_time, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the JobTrigger was created. - `update_time`: corresponds to
-       time the JobTrigger was last updated. - `last_run_time`: corresponds to the last time the
-       JobTrigger ran. - `name`: corresponds to JobTrigger's name. - `display_name`: corresponds to
-       JobTrigger's display name. - `status`: corresponds to JobTrigger's status.
+       insignificant. Example: `name asc,update_time, create_time desc` Supported fields are: -
+       `create_time`: corresponds to time the JobTrigger was created. - `update_time`: corresponds to time
+       the JobTrigger was last updated. - `last_run_time`: corresponds to the last time the JobTrigger
+       ran. - `name`: corresponds to JobTrigger's name. - `display_name`: corresponds to JobTrigger's
+       display name. - `status`: corresponds to JobTrigger's status.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -10126,17 +10610,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
          * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-         * space characters are insignificant.
-         *
-         * Example: `name asc,update_time, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the JobTrigger was created. - `update_time`:
-         * corresponds to time the JobTrigger was last updated. - `last_run_time`: corresponds to
-         * the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's name. -
-         * `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds to
-         * JobTrigger's status.
+         * space characters are insignificant. Example: `name asc,update_time, create_time desc`
+         * Supported fields are: - `create_time`: corresponds to time the JobTrigger was created. -
+         * `update_time`: corresponds to time the JobTrigger was last updated. - `last_run_time`:
+         * corresponds to the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's
+         * name. - `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds
+         * to JobTrigger's status.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -10195,8 +10674,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+       * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateJobTriggerRequest}
        * @return the request
@@ -10225,8 +10703,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-      `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
        *        project/jobTriggers/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateJobTriggerRequest}
          * @since 1.13
@@ -10374,7 +10851,6 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * De-identifies potentially sensitive info from a ContentItem. This method has limits on input size
          * and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn more.
-         *
          * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
          * choose what detectors to run. By default this may be all types, but may change over time as
          * detectors are updated.
@@ -10384,31 +10860,33 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Deidentify#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location to process de-identification. Reserved for future
-        extensions.
+         * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
          * @return the request
          */
-        public Deidentify deidentify(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest content) throws java.io.IOException {
-          Deidentify result = new Deidentify(parent, locationId, content);
+        public Deidentify deidentify(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest content) throws java.io.IOException {
+          Deidentify result = new Deidentify(parent, content);
           initialize(result);
           return result;
         }
 
         public class Deidentify extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/content:deidentify";
+          private static final String REST_PATH = "v2/{+parent}/content:deidentify";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * De-identifies potentially sensitive info from a ContentItem. This method has limits on input
            * size and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn
-           * more.
-           *
-           * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
+           * more. When no InfoTypes or CustomInfoTypes are specified in this request, the system will
            * automatically choose what detectors to run. By default this may be all types, but may change
            * over time as detectors are updated.
            *
@@ -10420,21 +10898,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Deidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location to process de-identification. Reserved for future
-        extensions.
+           * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest}
            * @since 1.13
            */
-          protected Deidentify(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest content) {
+          protected Deidentify(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyContentResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -10492,44 +10973,47 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Deidentify) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * Parent resource name. The format of this value varies depending on whether you have
+           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+           * location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name, for example projects/my-project-id.
+          /** Parent resource name. The format of this value varies depending on whether you have [specified a
+         processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+         specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * Parent resource name. The format of this value varies depending on whether you have
+           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+           * location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           public Deidentify setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to process de-identification. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to process de-identification. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to process de-identification. Reserved for future extensions.
-           */
-          public Deidentify setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -10540,52 +11024,47 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
         /**
          * Finds potentially sensitive info in content. This method has limits on input size, processing
-         * time, and output size.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
-         * choose what detectors to run. By default this may be all types, but may change over time as
-         * detectors are updated.
-         *
-         * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and
-         * https://cloud.google.com/dlp/docs/inspecting-text,
+         * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
+         * system will automatically choose what detectors to run. By default this may be all types, but may
+         * change over time as detectors are updated. For how to guides, see
+         * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
+         * /inspecting-text,
          *
          * Create a request for the method "content.inspect".
          *
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Inspect#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location to process content inspection. Reserved for future
-        extensions.
-        When
-         *        inspecting images location is restricted to 'global', 'us', 'asia',
-        and 'europe'.
+         * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
          * @return the request
          */
-        public Inspect inspect(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest content) throws java.io.IOException {
-          Inspect result = new Inspect(parent, locationId, content);
+        public Inspect inspect(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest content) throws java.io.IOException {
+          Inspect result = new Inspect(parent, content);
           initialize(result);
           return result;
         }
 
         public class Inspect extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/content:inspect";
+          private static final String REST_PATH = "v2/{+parent}/content:inspect";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Finds potentially sensitive info in content. This method has limits on input size, processing
-           * time, and output size.
-           *
-           * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
-           * automatically choose what detectors to run. By default this may be all types, but may change
-           * over time as detectors are updated.
-           *
-           * For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and
-           * https://cloud.google.com/dlp/docs/inspecting-text,
+           * time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the
+           * system will automatically choose what detectors to run. By default this may be all types, but
+           * may change over time as detectors are updated. For how to guides, see
+           * https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs
+           * /inspecting-text,
            *
            * Create a request for the method "content.inspect".
            *
@@ -10595,24 +11074,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Inspect#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location to process content inspection. Reserved for future
-        extensions.
-        When
-         *        inspecting images location is restricted to 'global', 'us', 'asia',
-        and 'europe'.
+           * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest}
            * @since 1.13
            */
-          protected Inspect(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest content) {
+          protected Inspect(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectContentResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -10670,47 +11149,47 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Inspect) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * Parent resource name. The format of this value varies depending on whether you have
+           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+           * location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name, for example projects/my-project-id.
+          /** Parent resource name. The format of this value varies depending on whether you have [specified a
+         processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+         specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * Parent resource name. The format of this value varies depending on whether you have
+           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+           * location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           public Inspect setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to process content inspection. Reserved for future extensions.
-           * When inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to process content inspection. Reserved for future extensions. When
-         inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to process content inspection. Reserved for future extensions.
-           * When inspecting images location is restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          public Inspect setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -10729,24 +11208,28 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Reidentify#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name.
-         * @param locationId The geographic location to process content reidentification.  Reserved for
-        future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
          * @return the request
          */
-        public Reidentify reidentify(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest content) throws java.io.IOException {
-          Reidentify result = new Reidentify(parent, locationId, content);
+        public Reidentify reidentify(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest content) throws java.io.IOException {
+          Reidentify result = new Reidentify(parent, content);
           initialize(result);
           return result;
         }
 
         public class Reidentify extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/content:reidentify";
+          private static final String REST_PATH = "v2/{+parent}/content:reidentify";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Re-identifies content that has been de-identified. See
@@ -10761,21 +11244,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Reidentify#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name.
-           * @param locationId The geographic location to process content reidentification.  Reserved for
-        future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest}
            * @since 1.13
            */
-          protected Reidentify(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest content) {
+          protected Reidentify(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ReidentifyContentResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -10833,46 +11319,47 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Reidentify) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource name. */
+          /**
+           * Required. Parent resource name. The format of this value varies depending on whether
+           * you have [specified a processing location](https://cloud.google.com/dlp/docs
+           * /specifying-location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name.
+          /** Required. Parent resource name. The format of this value varies depending on whether you have
+         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
+         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+         west3` location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource name. */
+          /**
+           * Required. Parent resource name. The format of this value varies depending on whether
+           * you have [specified a processing location](https://cloud.google.com/dlp/docs
+           * /specifying-location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           public Reidentify setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to process content reidentification.  Reserved for future
-           * extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to process content reidentification.  Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to process content reidentification.  Reserved for future
-           * extensions.
-           */
-          public Reidentify setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -10913,25 +11400,31 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location to store the deidentification template. Reserved
-        for future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyTemplate> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/deidentifyTemplates";
+          private static final String REST_PATH = "v2/{+parent}/deidentifyTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a DeidentifyTemplate for re-using frequently used configuration for de-identifying
@@ -10945,22 +11438,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location to store the deidentification template. Reserved
-        for future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDeidentifyTemplateRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DeidentifyTemplate.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -11019,51 +11517,53 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the deidentification template. Reserved for future
-           * extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the deidentification template. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the deidentification template. Reserved for future
-           * extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -11081,10 +11581,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and deidentify template to be deleted,
-        for example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @return the request
          */
@@ -11112,10 +11610,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and deidentify template to be deleted,
-        for example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and deidentify template to be deleted, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @since 1.13
            */
@@ -11229,10 +11725,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and deidentify template to be read, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and deidentify template to be read, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @return the request
          */
@@ -11260,10 +11754,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and deidentify template to be read, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and deidentify template to be read, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @since 1.13
            */
@@ -11387,25 +11879,30 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location where deidentifications templates will be retrieved
-        from. Use `-` for all
-         *        locations. Reserved for future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDeidentifyTemplatesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/deidentifyTemplates";
+          private static final String REST_PATH = "v2/{+parent}/deidentifyTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to
@@ -11418,22 +11915,26 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location where deidentifications templates will be retrieved
-        from. Use `-` for all
-         *        locations. Reserved for future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDeidentifyTemplatesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -11502,50 +12003,67 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where deidentifications templates will be retrieved from. Use
-           * `-` for all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where deidentifications templates will be retrieved from. Use `-` for all
-         locations. Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where deidentifications templates will be retrieved from. Use
-           * `-` for all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -11554,29 +12072,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc,update_time, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-         the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-         corresponds to template's display name.
+         Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the template was created. - `update_time`: corresponds to time the template was
+         last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+         display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -11585,15 +12094,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -11658,10 +12162,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and deidentify template to be updated, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and deidentify template to be updated, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
          * @return the request
@@ -11690,10 +12192,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and deidentify template to be updated, for
-        example
-         *        `organizations/433245324/deidentifyTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and deidentify template to be updated, for example
+         *        `organizations/433245324/deidentifyTemplates/432452342` or projects/project-
          *        id/deidentifyTemplates/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest}
            * @since 1.13
@@ -11958,44 +12458,44 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Creates a new job to inspect storage or calculate risk metrics. See
          * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-         * /compute-risk-analysis to learn more.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the system will automatically
-         * choose what detectors to run. By default this may be all types, but may change over time as
-         * detectors are updated.
+         * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
+         * inspect jobs, the system will automatically choose what detectors to run. By default this may be
+         * all types, but may change over time as detectors are updated.
          *
          * Create a request for the method "dlpJobs.create".
          *
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location to store and process the job. Reserved for
-        future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DlpJob> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/dlpJobs";
+          private static final String REST_PATH = "v2/{+parent}/dlpJobs";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a new job to inspect storage or calculate risk metrics. See
            * https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs
-           * /compute-risk-analysis to learn more.
-           *
-           * When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the system will
-           * automatically choose what detectors to run. By default this may be all types, but may change
-           * over time as detectors are updated.
+           * /compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in
+           * inspect jobs, the system will automatically choose what detectors to run. By default this may
+           * be all types, but may change over time as detectors are updated.
            *
            * Create a request for the method "dlpJobs.create".
            *
@@ -12004,21 +12504,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location to store and process the job. Reserved for
-        future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateDlpJobRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2DlpJob.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -12076,44 +12579,47 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. The format of this value varies depending on whether
+           * you have [specified a processing location](https://cloud.google.com/dlp/docs
+           * /specifying-location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id.
+          /** Required. Parent resource name. The format of this value varies depending on whether you have
+         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
+         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+         west3` location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. The format of this value varies depending on whether
+           * you have [specified a processing location](https://cloud.google.com/dlp/docs
+           * /specifying-location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store and process the job. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store and process the job. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store and process the job. Reserved for future extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -12541,8 +13047,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link HybridInspect#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the job to execute a hybrid inspect on, for example
-        `projects/dlp-test-
+         * @param name Required. Resource name of the job to execute a hybrid inspect on, for example `projects/dlp-test-
          *        project/dlpJob/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectDlpJobRequest}
          * @return the request
@@ -12574,8 +13079,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * equest)} must be called to initialize this instance immediately after invoking the constructor.
            * </p>
            *
-           * @param name Required. Resource name of the job to execute a hybrid inspect on, for example
-        `projects/dlp-test-
+           * @param name Required. Resource name of the job to execute a hybrid inspect on, for example `projects/dlp-test-
          *        project/dlpJob/53234423`.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectDlpJobRequest}
            * @since 1.13
@@ -12688,24 +13192,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location where jobs will be retrieved from.
-        Use `-` for all locations. Reserved for
-         *        future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDlpJobsResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/dlpJobs";
+          private static final String REST_PATH = "v2/{+parent}/dlpJobs";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Lists DlpJobs that match the specified filter in the request. See
@@ -12719,21 +13226,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location where jobs will be retrieved from.
-        Use `-` for all locations. Reserved for
-         *        future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListDlpJobsResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -12801,157 +13310,142 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. The format of this value varies depending on whether
+           * you have [specified a processing location](https://cloud.google.com/dlp/docs
+           * /specifying-location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id.
+          /** Required. Parent resource name. The format of this value varies depending on whether you have
+         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
+         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+         west3` location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. The format of this value varies depending on whether
+           * you have [specified a processing location](https://cloud.google.com/dlp/docs
+           * /specifying-location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
           /**
-           * The geographic location where jobs will be retrieved from. Use `-` for all locations.
-           * Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location where jobs will be retrieved from. Use `-` for all locations. Reserved for
-         future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location where jobs will be retrieved from. Use `-` for all locations.
-           * Reserved for future extensions.
-           */
-          public List setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
-            return this;
-          }
-
-          /**
-           * Allows filtering.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-           * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
-           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
-           * name of the trigger that created job. - 'end_time` - Corresponds to time the job
-           * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
-           * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
-           * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
-           * finished. * The operator must be `=` or `!=`.
-           *
-           * Examples:
-           *
-           * * inspected_storage = cloud_storage AND state = done * inspected_storage =
-           * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-           * (state = done OR state = canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-           *
-           * The length of this field should be no more than 500 characters.
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state` -
+           * PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
+           * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger
+           * that created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+           * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
+           * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
+           * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
+           * `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done *
+           * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+           * cloud_storage AND (state = done OR state = canceled) * end_time >
+           * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+           * characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering.
-
-         Supported syntax:
-
-         * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-         `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-         has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state`
-         - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY
-         - `trigger_name` - The resource name of the trigger that created job. - 'end_time` - Corresponds to
-         time the job finished. - 'start_time` - Corresponds to time the job finished. * Supported fields
-         for risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to
-         time the job finished. - 'start_time` - Corresponds to time the job finished. * The operator must
-         be `=` or `!=`.
-
-         Examples:
-
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+         implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
+         `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the
+         trigger that created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+         Corresponds to time the job finished. * Supported fields for risk analysis jobs: - `state` -
+         RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job finished. -
+         'start_time` - Corresponds to time the job finished. * The operator must be `=` or `!=`. Examples:
          * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage OR
          inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR state =
-         canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-
-         The length of this field should be no more than 500 characters.
+         canceled) * end_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
+         than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-           * fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED -
-           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource
-           * name of the trigger that created job. - 'end_time` - Corresponds to time the job
-           * finished. - 'start_time` - Corresponds to time the job finished. * Supported fields for
-           * risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` -
-           * Corresponds to time the job finished. - 'start_time` - Corresponds to time the job
-           * finished. * The operator must be `=` or `!=`.
-           *
-           * Examples:
-           *
-           * * inspected_storage = cloud_storage AND state = done * inspected_storage =
-           * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-           * (state = done OR state = canceled) * end_time > \"2017-12-12T00:00:00+00:00\"
-           *
-           * The length of this field should be no more than 500 characters.
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state` -
+           * PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` -
+           * DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The resource name of the trigger
+           * that created job. - 'end_time` - Corresponds to time the job finished. - 'start_time` -
+           * Corresponds to time the job finished. * Supported fields for risk analysis jobs: -
+           * `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to time the job
+           * finished. - 'start_time` - Corresponds to time the job finished. * The operator must be
+           * `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done *
+           * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage =
+           * cloud_storage AND (state = done OR state = canceled) * end_time >
+           * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500
+           * characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
+          /** Deprecated. This field has no effect. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationId;
+
+          /** Deprecated. This field has no effect.
+           */
+          public java.lang.String getLocationId() {
+            return locationId;
+          }
+
+          /** Deprecated. This field has no effect. */
+          public List setLocationId(java.lang.String locationId) {
+            this.locationId = locationId;
+            return this;
+          }
+
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, end_time asc, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to
-           * time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
-           * `state`
+           * characters are insignificant. Example: `name asc, end_time asc, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the job was created. -
+           * `end_time`: corresponds to time the job ended. - `name`: corresponds to job's name. -
+           * `state`: corresponds to `state`
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc, end_time asc, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to time the job
-         ended. - `name`: corresponds to job's name. - `state`: corresponds to `state`
+         Example: `name asc, end_time asc, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the job was created. - `end_time`: corresponds to time the job ended. - `name`:
+         corresponds to job's name. - `state`: corresponds to `state`
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -12960,15 +13454,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, end_time asc, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the job was created. - `end_time`: corresponds to
-           * time the job ended. - `name`: corresponds to job's name. - `state`: corresponds to
-           * `state`
+           * characters are insignificant. Example: `name asc, end_time asc, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the job was created. -
+           * `end_time`: corresponds to time the job ended. - `name`: corresponds to job's name. -
+           * `state`: corresponds to `state`
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -13053,46 +13542,44 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Redacts potentially sensitive info from an image. This method has limits on input size,
          * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-data-
-         * images to learn more.
-         *
-         * When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically
-         * choose what detectors to run. By default this may be all types, but may change over time as
-         * detectors are updated.
+         * images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request, the
+         * system will automatically choose what detectors to run. By default this may be all types, but may
+         * change over time as detectors are updated.
          *
          * Create a request for the method "image.redact".
          *
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Redact#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location to process the request. Reserved for future
-        extensions.
-        Location is
-         *        restricted to 'global', 'us', 'asia', and 'europe'.
+         * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
          * @return the request
          */
-        public Redact redact(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest content) throws java.io.IOException {
-          Redact result = new Redact(parent, locationId, content);
+        public Redact redact(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest content) throws java.io.IOException {
+          Redact result = new Redact(parent, content);
           initialize(result);
           return result;
         }
 
         public class Redact extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/image:redact";
+          private static final String REST_PATH = "v2/{+parent}/image:redact";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Redacts potentially sensitive info from an image. This method has limits on input size,
            * processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-
-           * data-images to learn more.
-           *
-           * When no InfoTypes or CustomInfoTypes are specified in this request, the system will
-           * automatically choose what detectors to run. By default this may be all types, but may change
-           * over time as detectors are updated.
+           * data-images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request,
+           * the system will automatically choose what detectors to run. By default this may be all types,
+           * but may change over time as detectors are updated.
            *
            * Create a request for the method "image.redact".
            *
@@ -13101,23 +13588,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Redact#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location to process the request. Reserved for future
-        extensions.
-        Location is
-         *        restricted to 'global', 'us', 'asia', and 'europe'.
+           * @param parent Parent resource name. The format of this value varies depending on whether you have [specified a
+         *        processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
+         *        scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         *        no location specified (defaults to global): `projects/`PROJECT_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest}
            * @since 1.13
            */
-          protected Redact(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest content) {
+          protected Redact(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2RedactImageResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -13175,47 +13663,47 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Redact) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * Parent resource name. The format of this value varies depending on whether you have
+           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+           * location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent resource name, for example projects/my-project-id.
+          /** Parent resource name. The format of this value varies depending on whether you have [specified a
+         processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+         specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+         specifies a parent project with the identifier `example-project`, and specifies the `europe-west3`
+         location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent resource name, for example projects/my-project-id. */
+          /**
+           * Parent resource name. The format of this value varies depending on whether you have
+           * [specified a processing location](https://cloud.google.com/dlp/docs/specifying-
+           * location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           public Redact setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to process the request. Reserved for future extensions.
-           * Location is restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to process the request. Reserved for future extensions. Location is
-         restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to process the request. Reserved for future extensions.
-           * Location is restricted to 'global', 'us', 'asia', and 'europe'.
-           */
-          public Redact setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -13255,25 +13743,31 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location to store the inspection template. Reserved for
-        future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectTemplate> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/inspectTemplates";
+          private static final String REST_PATH = "v2/{+parent}/inspectTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Creates an InspectTemplate for re-using frequently used configuration for inspecting content,
@@ -13286,22 +13780,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location to store the inspection template. Reserved for
-        future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateInspectTemplateRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2InspectTemplate.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -13360,51 +13859,53 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the inspection template. Reserved for future
-           * extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the inspection template. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the inspection template. Reserved for future
-           * extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -13422,10 +13923,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @return the request
          */
@@ -13453,10 +13952,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and inspectTemplate to be deleted, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @since 1.13
            */
@@ -13569,10 +14066,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @return the request
          */
@@ -13600,10 +14095,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and inspectTemplate to be read, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and inspectTemplate to be read, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @since 1.13
            */
@@ -13726,25 +14219,30 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location where inspection templates will be retrieved from.
-        Use `-` for all
-         *        locations. Reserved for future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInspectTemplatesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/inspectTemplates";
+          private static final String REST_PATH = "v2/{+parent}/inspectTemplates";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
@@ -13756,22 +14254,26 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location where inspection templates will be retrieved from.
-        Use `-` for all
-         *        locations. Reserved for future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInspectTemplatesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -13840,50 +14342,67 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where inspection templates will be retrieved from. Use `-` for
-           * all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where inspection templates will be retrieved from. Use `-` for all
-         locations. Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where inspection templates will be retrieved from. Use `-` for
-           * all locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -13892,29 +14411,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc,update_time, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the template was created. - `update_time`: corresponds to time
-         the template was last updated. - `name`: corresponds to template's name. - `display_name`:
-         corresponds to template's display name.
+         Example: `name asc,update_time, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the template was created. - `update_time`: corresponds to time the template was
+         last updated. - `name`: corresponds to template's name. - `display_name`: corresponds to template's
+         display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -13923,15 +14433,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the template was created. - `update_time`:
-           * corresponds to time the template was last updated. - `name`: corresponds to template's
-           * name. - `display_name`: corresponds to template's display name.
+           * characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the template was created. -
+           * `update_time`: corresponds to time the template was last updated. - `name`: corresponds
+           * to template's name. - `display_name`: corresponds to template's display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -13994,10 +14499,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
          * @return the request
@@ -14026,10 +14529,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and inspectTemplate to be updated, for
-        example
-         *        `organizations/433245324/inspectTemplates/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and inspectTemplate to be updated, for example
+         *        `organizations/433245324/inspectTemplates/432452342` or projects/project-
          *        id/inspectTemplates/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateInspectTemplateRequest}
            * @since 1.13
@@ -14166,8 +14667,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the trigger to activate, for example
-        `projects/dlp-test-
+         * @param name Required. Resource name of the trigger to activate, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest}
          * @return the request
@@ -14197,8 +14697,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the trigger to activate, for example
-        `projects/dlp-test-
+           * @param name Required. Resource name of the trigger to activate, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ActivateJobTriggerRequest}
            * @since 1.13
@@ -14310,24 +14809,28 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id.
-         * @param locationId The geographic location to store the job trigger. Reserved for
-        future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2JobTrigger> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/jobTriggers";
+          private static final String REST_PATH = "v2/{+parent}/jobTriggers";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on
@@ -14340,21 +14843,24 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id.
-           * @param locationId The geographic location to store the job trigger. Reserved for
-        future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateJobTriggerRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2JobTrigger.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -14412,44 +14918,47 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. The format of this value varies depending on whether
+           * you have [specified a processing location](https://cloud.google.com/dlp/docs
+           * /specifying-location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id.
+          /** Required. Parent resource name. The format of this value varies depending on whether you have
+         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
+         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+         west3` location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource name, for example projects/my-project-id. */
+          /**
+           * Required. Parent resource name. The format of this value varies depending on whether
+           * you have [specified a processing location](https://cloud.google.com/dlp/docs
+           * /specifying-location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the job trigger. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the job trigger. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the job trigger. Reserved for future extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -14466,8 +14975,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
          * @return the request
          */
@@ -14495,8 +15003,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+           * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
            * @since 1.13
            */
@@ -14606,8 +15113,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
          * @return the request
          */
@@ -14634,8 +15140,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+           * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
            * @since 1.13
            */
@@ -14758,8 +15263,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link HybridInspect#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        `projects/dlp-
+         * @param name Required. Resource name of the trigger to execute a hybrid inspect on, for example `projects/dlp-
          *        test-project/jobTriggers/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectJobTriggerRequest}
          * @return the request
@@ -14791,8 +15295,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * equest)} must be called to initialize this instance immediately after invoking the constructor.
            * </p>
            *
-           * @param name Required. Resource name of the trigger to execute a hybrid inspect on, for example
-        `projects/dlp-
+           * @param name Required. Resource name of the trigger to execute a hybrid inspect on, for example `projects/dlp-
          *        test-project/jobTriggers/53234423`.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2HybridInspectJobTriggerRequest}
            * @since 1.13
@@ -14903,24 +15406,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example `projects/my-project-id`.
-         * @param locationId The geographic location where job triggers will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListJobTriggersResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/jobTriggers";
+          private static final String REST_PATH = "v2/{+parent}/jobTriggers";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
@@ -14932,21 +15438,23 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example `projects/my-project-id`.
-           * @param locationId The geographic location where job triggers will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on whether you have
+         *        [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location):
+         *        + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+         *        Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The
+         *        following example `parent` string specifies a parent project with the identifier `example-
+         *        project`, and specifies the `europe-west3` location for processing data: parent=projects
+         *        /example-project/locations/europe-west3
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListJobTriggersResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -15014,156 +15522,138 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent resource name, for example `projects/my-project-id`. */
+          /**
+           * Required. Parent resource name. The format of this value varies depending on whether
+           * you have [specified a processing location](https://cloud.google.com/dlp/docs
+           * /specifying-location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example `projects/my-project-id`.
+          /** Required. Parent resource name. The format of this value varies depending on whether you have
+         [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): +
+         Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope,
+         no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent`
+         string specifies a parent project with the identifier `example-project`, and specifies the `europe-
+         west3` location for processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent resource name, for example `projects/my-project-id`. */
+          /**
+           * Required. Parent resource name. The format of this value varies depending on whether
+           * you have [specified a processing location](https://cloud.google.com/dlp/docs
+           * /specifying-location): + Projects scope, location specified:
+           * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+           * (defaults to global): `projects/`PROJECT_ID The following example `parent` string
+           * specifies a parent project with the identifier `example-project`, and specifies the
+           * `europe-west3` location for processing data: parent=projects/example-project/locations
+           * /europe-west3
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
           /**
-           * The geographic location where job triggers will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location where job triggers will be retrieved from. Use `-` for all locations.
-         Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location where job triggers will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
-          public List setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
-            return this;
-          }
-
-          /**
-           * Allows filtering.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-           * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
-           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
-           * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
-           * 'error_count' - Number of errors that have occurred while running. * The operator must
-           * be `=` or `!=` for status and inspected_storage.
-           *
-           * Examples:
-           *
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `status` -
+           * HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
+           * 'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks.
+           * Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred while
+           * running. * The operator must be `=` or `!=` for status and inspected_storage. Examples:
            * * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
            * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-           *
-           * The length of this field should be no more than 500 characters.
+           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+           * length of this field should be no more than 500 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Allows filtering.
-
-         Supported syntax:
-
-         * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by
-         `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction
-         has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: -
-         `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
-         'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks. Nanoseconds are
-         ignored. - 'error_count' - Number of errors that have occurred while running. * The operator must
-         be `=` or `!=` for status and inspected_storage.
-
-         Examples:
-
-         * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
+          /** Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. *
+         Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions
+         implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
+         fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED - `inspected_storage` -
+         DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339 formatted timestamp, surrounded by
+         quotation marks. Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred
+         while running. * The operator must be `=` or `!=` for status and inspected_storage. Examples: *
+         inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage = cloud_storage OR
          inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = PAUSED OR state =
-         HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-
-         The length of this field should be no more than 500 characters.
+         HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The length of this field should be no more
+         than 500 characters.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Allows filtering.
-           *
-           * Supported syntax:
-           *
-           * * Filter expressions are made up of one or more restrictions. * Restrictions can be
-           * combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses
-           * `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported
-           * fields/values for inspect jobs: - `status` - HEALTHY|PAUSED|CANCELLED -
-           * `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - 'last_run_time` - RFC 3339
-           * formatted timestamp, surrounded by quotation marks. Nanoseconds are ignored. -
-           * 'error_count' - Number of errors that have occurred while running. * The operator must
-           * be `=` or `!=` for status and inspected_storage.
-           *
-           * Examples:
-           *
+           * Allows filtering. Supported syntax: * Filter expressions are made up of one or more
+           * restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A
+           * sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+           * `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `status` -
+           * HEALTHY|PAUSED|CANCELLED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY -
+           * 'last_run_time` - RFC 3339 formatted timestamp, surrounded by quotation marks.
+           * Nanoseconds are ignored. - 'error_count' - Number of errors that have occurred while
+           * running. * The operator must be `=` or `!=` for status and inspected_storage. Examples:
            * * inspected_storage = cloud_storage AND status = HEALTHY * inspected_storage =
            * cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND
-           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\"
-           *
-           * The length of this field should be no more than 500 characters.
+           * (state = PAUSED OR state = HEALTHY) * last_run_time > \"2017-12-12T00:00:00+00:00\" The
+           * length of this field should be no more than 500 characters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
+          /** Deprecated. This field has no effect. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationId;
+
+          /** Deprecated. This field has no effect.
+           */
+          public java.lang.String getLocationId() {
+            return locationId;
+          }
+
+          /** Deprecated. This field has no effect. */
+          public List setLocationId(java.lang.String locationId) {
+            this.locationId = locationId;
+            return this;
+          }
+
           /**
            * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
            * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the JobTrigger was created. - `update_time`:
-           * corresponds to time the JobTrigger was last updated. - `last_run_time`: corresponds to
-           * the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's name. -
-           * `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds to
-           * JobTrigger's status.
+           * space characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the JobTrigger was created.
+           * - `update_time`: corresponds to time the JobTrigger was last updated. -
+           * `last_run_time`: corresponds to the last time the JobTrigger ran. - `name`: corresponds
+           * to JobTrigger's name. - `display_name`: corresponds to JobTrigger's display name. -
+           * `status`: corresponds to JobTrigger's status.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc` postfix. This
          list is case-insensitive, default sorting order is ascending, redundant space characters are
-         insignificant.
-
-         Example: `name asc,update_time, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the JobTrigger was created. - `update_time`: corresponds to
-         time the JobTrigger was last updated. - `last_run_time`: corresponds to the last time the
-         JobTrigger ran. - `name`: corresponds to JobTrigger's name. - `display_name`: corresponds to
-         JobTrigger's display name. - `status`: corresponds to JobTrigger's status.
+         insignificant. Example: `name asc,update_time, create_time desc` Supported fields are: -
+         `create_time`: corresponds to time the JobTrigger was created. - `update_time`: corresponds to time
+         the JobTrigger was last updated. - `last_run_time`: corresponds to the last time the JobTrigger
+         ran. - `name`: corresponds to JobTrigger's name. - `display_name`: corresponds to JobTrigger's
+         display name. - `status`: corresponds to JobTrigger's status.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -15172,17 +15662,12 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of triggeredJob fields to order by, followed by `asc` or `desc`
            * postfix. This list is case-insensitive, default sorting order is ascending, redundant
-           * space characters are insignificant.
-           *
-           * Example: `name asc,update_time, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the JobTrigger was created. - `update_time`:
-           * corresponds to time the JobTrigger was last updated. - `last_run_time`: corresponds to
-           * the last time the JobTrigger ran. - `name`: corresponds to JobTrigger's name. -
-           * `display_name`: corresponds to JobTrigger's display name. - `status`: corresponds to
-           * JobTrigger's status.
+           * space characters are insignificant. Example: `name asc,update_time, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the JobTrigger was created.
+           * - `update_time`: corresponds to time the JobTrigger was last updated. -
+           * `last_run_time`: corresponds to the last time the JobTrigger ran. - `name`: corresponds
+           * to JobTrigger's name. - `display_name`: corresponds to JobTrigger's display name. -
+           * `status`: corresponds to JobTrigger's status.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -15241,8 +15726,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+         * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateJobTriggerRequest}
          * @return the request
@@ -15271,8 +15755,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the project and the triggeredJob, for example
-        `projects/dlp-test-
+           * @param name Required. Resource name of the project and the triggeredJob, for example `projects/dlp-test-
          *        project/jobTriggers/53234423`.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateJobTriggerRequest}
            * @since 1.13
@@ -15406,25 +15889,31 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location to store the stored infoType. Reserved for
-        future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @return the request
          */
-        public Create create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) throws java.io.IOException {
-          Create result = new Create(parent, locationId, content);
+        public Create create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
         public class Create extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2StoredInfoType> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/storedInfoTypes";
+          private static final String REST_PATH = "v2/{+parent}/storedInfoTypes";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Creates a pre-built stored infoType to be used for inspection. See
@@ -15437,22 +15926,27 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location to store the stored infoType. Reserved for
-        future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, java.lang.String locationId, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) {
+          protected Create(java.lang.String parent, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest content) {
             super(DLP.this, "POST", REST_PATH, content, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2StoredInfoType.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -15511,49 +16005,53 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
-            return this;
-          }
-
-          /**
-           * The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String locationId;
-
-          /** The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          public java.lang.String getLocationId() {
-            return locationId;
-          }
-
-          /**
-           * The geographic location to store the stored infoType. Reserved for future extensions.
-           */
-          public Create setLocationId(java.lang.String locationId) {
-            this.locationId = locationId;
             return this;
           }
 
@@ -15571,10 +16069,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @return the request
          */
@@ -15602,10 +16098,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @since 1.13
            */
@@ -15719,10 +16213,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be read, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @return the request
          */
@@ -15750,10 +16242,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the organization and storedInfoType to be read, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @since 1.13
            */
@@ -15877,25 +16367,30 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-         * @param locationId The geographic location where stored infoTypes will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
          * @return the request
          */
-        public List list(java.lang.String parent, java.lang.String locationId) throws java.io.IOException {
-          List result = new List(parent, locationId);
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
           initialize(result);
           return result;
         }
 
         public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListStoredInfoTypesResponse> {
 
-          private static final String REST_PATH = "v2/{+parent}/locations/{locationId}/storedInfoTypes";
+          private static final String REST_PATH = "v2/{+parent}/storedInfoTypes";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to
@@ -15908,22 +16403,26 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource name, for example projects/my-project-id or
-        organizations/my-org-id.
-           * @param locationId The geographic location where stored infoTypes will be retrieved from.
-        Use `-` for all locations.
-         *        Reserved for future extensions.
+           * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+         *        request (project or organization) and whether you have [specified a processing
+         *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+         *        `parent` string specifies a parent project with the identifier `example-project`, and
+         *        specifies the `europe-west3` location for processing data: parent=projects/example-
+         *        project/locations/europe-west3
            * @since 1.13
            */
-          protected List(java.lang.String parent, java.lang.String locationId) {
+          protected List(java.lang.String parent) {
             super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListStoredInfoTypesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
-            this.locationId = com.google.api.client.util.Preconditions.checkNotNull(locationId, "Required parameter locationId must be specified.");
           }
 
           @Override
@@ -15992,50 +16491,67 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+          /** Required. Parent resource name. The format of this value varies depending on the scope of the
+         request (project or organization) and whether you have [specified a processing
+         location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+         specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+         (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+         `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+         (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+         parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+         processing data: parent=projects/example-project/locations/europe-west3
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource name, for example projects/my-project-id or organizations
-           * /my-org-id.
+           * Required. Parent resource name. The format of this value varies depending on the scope
+           * of the request (project or organization) and whether you have [specified a processing
+           * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+           * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+           * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+           * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations
+           * scope, no location specified (defaults to global): `organizations/`ORG_ID The following
+           * example `parent` string specifies a parent project with the identifier `example-
+           * project`, and specifies the `europe-west3` location for processing data:
+           * parent=projects/example-project/locations/europe-west3
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;
           }
 
-          /**
-           * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           @com.google.api.client.util.Key
           private java.lang.String locationId;
 
-          /** The geographic location where stored infoTypes will be retrieved from. Use `-` for all locations.
-         Reserved for future extensions.
+          /** Deprecated. This field has no effect.
            */
           public java.lang.String getLocationId() {
             return locationId;
           }
 
-          /**
-           * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-           * locations. Reserved for future extensions.
-           */
+          /** Deprecated. This field has no effect. */
           public List setLocationId(java.lang.String locationId) {
             this.locationId = locationId;
             return this;
@@ -16044,29 +16560,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, display_name, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the most recent version of the resource was
-           * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
-           * resource name. - `display_name`: corresponds to info type's display name.
+           * characters are insignificant. Example: `name asc, display_name, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the most recent version of
+           * the resource was created. - `state`: corresponds to the state of the resource. -
+           * `name`: corresponds to resource name. - `display_name`: corresponds to info type's
+           * display name.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
          insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-         Example: `name asc, display_name, create_time desc`
-
-         Supported fields are:
-
-         - `create_time`: corresponds to time the most recent version of the resource was created. -
-         `state`: corresponds to the state of the resource. - `name`: corresponds to resource name. -
-         `display_name`: corresponds to info type's display name.
+         Example: `name asc, display_name, create_time desc` Supported fields are: - `create_time`:
+         corresponds to time the most recent version of the resource was created. - `state`: corresponds to
+         the state of the resource. - `name`: corresponds to resource name. - `display_name`: corresponds to
+         info type's display name.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -16075,15 +16583,11 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           /**
            * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
            * list is case-insensitive, default sorting order is ascending, redundant space
-           * characters are insignificant.
-           *
-           * Example: `name asc, display_name, create_time desc`
-           *
-           * Supported fields are:
-           *
-           * - `create_time`: corresponds to time the most recent version of the resource was
-           * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
-           * resource name. - `display_name`: corresponds to info type's display name.
+           * characters are insignificant. Example: `name asc, display_name, create_time desc`
+           * Supported fields are: - `create_time`: corresponds to time the most recent version of
+           * the resource was created. - `state`: corresponds to the state of the resource. -
+           * `name`: corresponds to resource name. - `display_name`: corresponds to info type's
+           * display name.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -16147,10 +16651,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of organization and storedInfoType to be updated, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+         * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
          * @return the request
@@ -16180,10 +16682,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of organization and storedInfoType to be updated, for
-        example
-         *        `organizations/433245324/storedInfoTypes/432452342` or
-        projects/project-
+           * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+         *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
          *        id/storedInfoTypes/432452342.
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
            * @since 1.13
@@ -16321,8 +16821,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
        * @return the request
        */
@@ -16350,8 +16858,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateStoredInfoTypeRequest}
          * @since 1.13
          */
@@ -16421,21 +16937,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -16461,10 +17001,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @return the request
        */
@@ -16492,10 +17030,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be deleted, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @since 1.13
          */
@@ -16609,10 +17145,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the organization and storedInfoType to be read, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @return the request
        */
@@ -16640,10 +17174,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the organization and storedInfoType to be read, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of the organization and storedInfoType to be read, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @since 1.13
          */
@@ -16767,8 +17299,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+       * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -16795,8 +17335,16 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name, for example projects/my-project-id or
-      organizations/my-org-id.
+         * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
+       *        request (project or organization) and whether you have [specified a processing
+       *        location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+       *        location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+       *        location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+       *        location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+       *        no location specified (defaults to global): `organizations/`ORG_ID The following example
+       *        `parent` string specifies a parent project with the identifier `example-project`, and
+       *        specifies the `europe-west3` location for processing data: parent=projects/example-
+       *        project/locations/europe-west3
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -16875,21 +17423,45 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name, for example projects/my-project-id or organizations/my-org-id.
+        /** Required. Parent resource name. The format of this value varies depending on the scope of the
+       request (project or organization) and whether you have [specified a processing
+       location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location
+       specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified
+       (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified:
+       `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified
+       (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a
+       parent project with the identifier `example-project`, and specifies the `europe-west3` location for
+       processing data: parent=projects/example-project/locations/europe-west3
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name, for example projects/my-project-id or organizations
-         * /my-org-id.
+         * Required. Parent resource name. The format of this value varies depending on the scope of
+         * the request (project or organization) and whether you have [specified a processing
+         * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope,
+         * location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no
+         * location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+         * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope,
+         * no location specified (defaults to global): `organizations/`ORG_ID The following example
+         * `parent` string specifies a parent project with the identifier `example-project`, and
+         * specifies the `europe-west3` location for processing data: parent=projects/example-
+         * project/locations/europe-west3
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -16901,24 +17473,17 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         @com.google.api.client.util.Key
         private java.lang.String locationId;
 
-        /** The geographic location where stored infoTypes will be retrieved from. Use `-` for all locations.
-       Reserved for future extensions.
+        /** Deprecated. This field has no effect.
          */
         public java.lang.String getLocationId() {
           return locationId;
         }
 
-        /**
-         * The geographic location where stored infoTypes will be retrieved from. Use `-` for all
-         * locations. Reserved for future extensions.
-         */
+        /** Deprecated. This field has no effect. */
         public List setLocationId(java.lang.String locationId) {
           this.locationId = locationId;
           return this;
@@ -16927,29 +17492,20 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, display_name, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the most recent version of the resource was created.
-         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
-         * name. - `display_name`: corresponds to info type's display name.
+         * are insignificant. Example: `name asc, display_name, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the most recent version of the resource was
+         * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
+         * resource name. - `display_name`: corresponds to info type's display name.
          */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
         /** Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-
        insensitive, default sorting order is ascending, redundant space characters are insignificant.
-
-       Example: `name asc, display_name, create_time desc`
-
-       Supported fields are:
-
-       - `create_time`: corresponds to time the most recent version of the resource was created. -
-       `state`: corresponds to the state of the resource. - `name`: corresponds to resource name. -
-       `display_name`: corresponds to info type's display name.
+       Example: `name asc, display_name, create_time desc` Supported fields are: - `create_time`:
+       corresponds to time the most recent version of the resource was created. - `state`: corresponds to
+       the state of the resource. - `name`: corresponds to resource name. - `display_name`: corresponds to
+       info type's display name.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
@@ -16958,15 +17514,10 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
         /**
          * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This
          * list is case-insensitive, default sorting order is ascending, redundant space characters
-         * are insignificant.
-         *
-         * Example: `name asc, display_name, create_time desc`
-         *
-         * Supported fields are:
-         *
-         * - `create_time`: corresponds to time the most recent version of the resource was created.
-         * - `state`: corresponds to the state of the resource. - `name`: corresponds to resource
-         * name. - `display_name`: corresponds to info type's display name.
+         * are insignificant. Example: `name asc, display_name, create_time desc` Supported fields
+         * are: - `create_time`: corresponds to time the most recent version of the resource was
+         * created. - `state`: corresponds to the state of the resource. - `name`: corresponds to
+         * resource name. - `display_name`: corresponds to info type's display name.
          */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
@@ -16995,9 +17546,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return this;
         }
 
-        /**
-         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
-         */
+        /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
@@ -17007,9 +17556,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           return pageToken;
         }
 
-        /**
-         * Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`.
-         */
+        /** Page token to continue retrieval. Comes from previous call to `ListStoredInfoTypes`. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -17030,10 +17577,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the dlp server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of organization and storedInfoType to be updated, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+       * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
        * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
        * @return the request
@@ -17063,10 +17608,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of organization and storedInfoType to be updated, for
-      example
-       *        `organizations/433245324/storedInfoTypes/432452342` or
-      projects/project-
+         * @param name Required. Resource name of organization and storedInfoType to be updated, for example
+       *        `organizations/433245324/storedInfoTypes/432452342` or projects/project-
        *        id/storedInfoTypes/432452342.
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2UpdateStoredInfoTypeRequest}
          * @since 1.13

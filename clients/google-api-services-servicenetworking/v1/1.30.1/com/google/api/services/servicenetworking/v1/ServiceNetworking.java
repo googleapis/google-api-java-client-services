@@ -46,7 +46,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Service Networking API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Service Networking API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,9 +143,9 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
   public class Operations {
 
     /**
-     * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-     * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-     * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+     * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+     * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
      * methods to check whether the cancellation succeeded or whether the operation completed despite
      * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
      * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -174,13 +174,13 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
           java.util.regex.Pattern.compile("^operations/.*$");
 
       /**
-       * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-       * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-       * other methods to check whether the cancellation succeeded or whether the operation completed
-       * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-       * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-       * corresponding to `Code.CANCELLED`.
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * `Code.CANCELLED`.
        *
        * Create a request for the method "operations.cancel".
        *
@@ -419,7 +419,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -444,7 +444,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
           java.util.regex.Pattern.compile("^operations/[^/]+$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -561,13 +561,12 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
     }
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`.
-     *
-     * NOTE: the `name` binding allows API services to override the binding to use different resource
-     * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-     * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-     * compatibility, the default name includes the operations collection id, however overriding users
-     * must ensure the name binding is the parent resource, without the operations collection id.
+     * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+     * the binding to use different resource name schemes, such as `users/operations`. To override the
+     * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+     * configuration. For backwards compatibility, the default name includes the operations collection
+     * id, however overriding users must ensure the name binding is the parent resource, without the
+     * operations collection id.
      *
      * Create a request for the method "operations.list".
      *
@@ -592,13 +591,12 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
 
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * NOTE: the `name` binding allows API services to override the binding to use different resource
-       * name schemes, such as `users/operations`. To override the binding, API services can add a
-       * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-       * compatibility, the default name includes the operations collection id, however overriding users
-       * must ensure the name binding is the parent resource, without the operations collection id.
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+       * override the binding to use different resource name schemes, such as `users/operations`. To
+       * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+       * their service configuration. For backwards compatibility, the default name includes the
+       * operations collection id, however overriding users must ensure the name binding is the parent
+       * resource, without the operations collection id.
        *
        * Create a request for the method "operations.list".
        *
@@ -789,8 +787,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * bits of ipV4 network mask). The method checks against the assigned allocated ranges to find a
      * non-conflicting IP address range. The method will reuse a subnet if subsequent calls contain the
      * same subnet name, region, and prefix length. This method will make producer's tenant project to
-     * be a shared VPC service project as needed. The response from the `get` operation will be of type
-     * `Subnetwork` if the operation successfully completes.
+     * be a shared VPC service project as needed.
      *
      * Create a request for the method "services.addSubnetwork".
      *
@@ -798,16 +795,11 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link AddSubnetwork#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. A tenant project in the service producer organization, in the
-    following format:
-     *        services/{service}/{collection-id}/{resource-id}.
-    {collection-id} is the cloud resource
-     *        collection type that represents the
-    tenant project. Only `projects` are supported.
-     *        {resource-id} is the tenant project numeric id, such as
-    `123456`. {service} the name of
-     *        the peering service, such as
-    `service-peering.example.com`. This service must already be
+     * @param parent Required. A tenant project in the service producer organization, in the following format:
+     *        services/{service}/{collection-id}/{resource-id}. {collection-id} is the cloud resource
+     *        collection type that represents the tenant project. Only `projects` are supported.
+     *        {resource-id} is the tenant project numeric id, such as `123456`. {service} the name of
+     *        the peering service, such as `service-peering.example.com`. This service must already be
      *        enabled in the service consumer's project.
      * @param content the {@link com.google.api.services.servicenetworking.v1.model.AddSubnetworkRequest}
      * @return the request
@@ -831,8 +823,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * leading bits of ipV4 network mask). The method checks against the assigned allocated ranges to
        * find a non-conflicting IP address range. The method will reuse a subnet if subsequent calls
        * contain the same subnet name, region, and prefix length. This method will make producer's
-       * tenant project to be a shared VPC service project as needed. The response from the `get`
-       * operation will be of type `Subnetwork` if the operation successfully completes.
+       * tenant project to be a shared VPC service project as needed.
        *
        * Create a request for the method "services.addSubnetwork".
        *
@@ -842,16 +833,11 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param parent Required. A tenant project in the service producer organization, in the
-    following format:
-     *        services/{service}/{collection-id}/{resource-id}.
-    {collection-id} is the cloud resource
-     *        collection type that represents the
-    tenant project. Only `projects` are supported.
-     *        {resource-id} is the tenant project numeric id, such as
-    `123456`. {service} the name of
-     *        the peering service, such as
-    `service-peering.example.com`. This service must already be
+       * @param parent Required. A tenant project in the service producer organization, in the following format:
+     *        services/{service}/{collection-id}/{resource-id}. {collection-id} is the cloud resource
+     *        collection type that represents the tenant project. Only `projects` are supported.
+     *        {resource-id} is the tenant project numeric id, such as `123456`. {service} the name of
+     *        the peering service, such as `service-peering.example.com`. This service must already be
      *        enabled in the service consumer's project.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.AddSubnetworkRequest}
        * @since 1.13
@@ -974,10 +960,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link DisableVpcServiceControls#execute()} method to invoke the
      * remote operation.
      *
-     * @param parent The service that is managing peering connectivity for a service producer's
-    organization. For Google
-     *        services that support this functionality, this
-    value is
+     * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+     *        services that support this functionality, this value is
      *        `services/servicenetworking.googleapis.com`.
      * @param content the {@link com.google.api.services.servicenetworking.v1.model.DisableVpcServiceControlsRequest}
      * @return the request
@@ -1006,10 +990,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * gleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param parent The service that is managing peering connectivity for a service producer's
-    organization. For Google
-     *        services that support this functionality, this
-    value is
+       * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+     *        services that support this functionality, this value is
      *        `services/servicenetworking.googleapis.com`.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.DisableVpcServiceControlsRequest}
        * @since 1.13
@@ -1124,10 +1106,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link EnableVpcServiceControls#execute()} method to invoke the
      * remote operation.
      *
-     * @param parent The service that is managing peering connectivity for a service producer's
-    organization. For Google
-     *        services that support this functionality, this
-    value is
+     * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+     *        services that support this functionality, this value is
      *        `services/servicenetworking.googleapis.com`.
      * @param content the {@link com.google.api.services.servicenetworking.v1.model.EnableVpcServiceControlsRequest}
      * @return the request
@@ -1156,10 +1136,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * leapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param parent The service that is managing peering connectivity for a service producer's
-    organization. For Google
-     *        services that support this functionality, this
-    value is
+       * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+     *        services that support this functionality, this value is
      *        `services/servicenetworking.googleapis.com`.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.EnableVpcServiceControlsRequest}
        * @since 1.13
@@ -1267,9 +1245,9 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
     }
     /**
      * Service producers can use this method to find a currently unused range within consumer allocated
-     * ranges.   This returned range is not reserved, and not guaranteed to remain unused. It will
+     * ranges. This returned range is not reserved, and not guaranteed to remain unused. It will
      * validate previously provided allocated ranges, find non-conflicting sub-range of requested size
-     * (expressed in number of leading bits of ipv4 network mask, as in CIDR range notation). Operation
+     * (expressed in number of leading bits of ipv4 network mask, as in CIDR range notation).
      *
      * Create a request for the method "services.searchRange".
      *
@@ -1277,8 +1255,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * optional parameters, call the {@link SearchRange#execute()} method to invoke the remote
      * operation.
      *
-     * @param parent Required. This is in a form services/{service}. {service} the name of the private
-    access management
+     * @param parent Required. This is in a form services/{service}. {service} the name of the private access management
      *        service, for example 'service-peering.example.com'.
      * @param content the {@link com.google.api.services.servicenetworking.v1.model.SearchRangeRequest}
      * @return the request
@@ -1298,10 +1275,9 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
 
       /**
        * Service producers can use this method to find a currently unused range within consumer
-       * allocated ranges.   This returned range is not reserved, and not guaranteed to remain unused.
-       * It will validate previously provided allocated ranges, find non-conflicting sub-range of
-       * requested size (expressed in number of leading bits of ipv4 network mask, as in CIDR range
-       * notation). Operation
+       * allocated ranges. This returned range is not reserved, and not guaranteed to remain unused. It
+       * will validate previously provided allocated ranges, find non-conflicting sub-range of requested
+       * size (expressed in number of leading bits of ipv4 network mask, as in CIDR range notation).
        *
        * Create a request for the method "services.searchRange".
        *
@@ -1311,8 +1287,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * SearchRange#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. This is in a form services/{service}. {service} the name of the private
-    access management
+       * @param parent Required. This is in a form services/{service}. {service} the name of the private access management
      *        service, for example 'service-peering.example.com'.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.SearchRangeRequest}
        * @since 1.13
@@ -1416,8 +1391,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
       }
     }
     /**
-     * Service producers use this method to validate if the consumer provided network, project and the
-     * requested range is valid. This allows them to use a fail-fast mechanism for consumer requests,
+     * Service producers use this method to validate if the consumer provided network, project and
+     * requested range are valid. This allows them to use a fail-fast mechanism for consumer requests,
      * and not have to wait for AddSubnetwork operation completion to determine if user request is
      * invalid.
      *
@@ -1426,10 +1401,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * This request holds the parameters needed by the servicenetworking server.  After setting any
      * optional parameters, call the {@link Validate#execute()} method to invoke the remote operation.
      *
-     * @param parent Required. This is in a form services/{service} where {service} is the name of the
-    private access
-     *        management service. For example
-    'service-peering.example.com'.
+     * @param parent Required. This is in a form services/{service} where {service} is the name of the private access
+     *        management service. For example 'service-peering.example.com'.
      * @param content the {@link com.google.api.services.servicenetworking.v1.model.ValidateConsumerConfigRequest}
      * @return the request
      */
@@ -1447,8 +1420,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
           java.util.regex.Pattern.compile("^services/[^/]+$");
 
       /**
-       * Service producers use this method to validate if the consumer provided network, project and the
-       * requested range is valid. This allows them to use a fail-fast mechanism for consumer requests,
+       * Service producers use this method to validate if the consumer provided network, project and
+       * requested range are valid. This allows them to use a fail-fast mechanism for consumer requests,
        * and not have to wait for AddSubnetwork operation completion to determine if user request is
        * invalid.
        *
@@ -1460,10 +1433,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * Validate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Required. This is in a form services/{service} where {service} is the name of the
-    private access
-     *        management service. For example
-    'service-peering.example.com'.
+       * @param parent Required. This is in a form services/{service} where {service} is the name of the private access
+     *        management service. For example 'service-peering.example.com'.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.ValidateConsumerConfigRequest}
        * @since 1.13
        */
@@ -1592,18 +1563,14 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * invokes this method. The administrator must assign one or more allocated IP ranges for
        * provisioning subnetworks in the service producer's VPC network. This connection is used for all
        * supported services in the service producer's organization, so it only needs to be invoked once.
-       * The response from the `get` operation will be of type `Connection` if the operation successfully
-       * completes.
        *
        * Create a request for the method "connections.create".
        *
        * This request holds the parameters needed by the servicenetworking server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The service that is managing peering connectivity for a service producer's
-      organization. For Google
-       *        services that support this functionality, this
-      value is
+       * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+       *        services that support this functionality, this value is
        *        `services/servicenetworking.googleapis.com`.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.Connection}
        * @return the request
@@ -1627,8 +1594,6 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * invokes this method. The administrator must assign one or more allocated IP ranges for
          * provisioning subnetworks in the service producer's VPC network. This connection is used for all
          * supported services in the service producer's organization, so it only needs to be invoked once.
-         * The response from the `get` operation will be of type `Connection` if the operation
-         * successfully completes.
          *
          * Create a request for the method "connections.create".
          *
@@ -1638,10 +1603,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The service that is managing peering connectivity for a service producer's
-      organization. For Google
-       *        services that support this functionality, this
-      value is
+         * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+       *        services that support this functionality, this value is
        *        `services/servicenetworking.googleapis.com`.
          * @param content the {@link com.google.api.services.servicenetworking.v1.model.Connection}
          * @since 1.13
@@ -1755,14 +1718,10 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the servicenetworking server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The service that is managing peering connectivity for a service producer's
-      organization. For Google
-       *        services that support this functionality, this
-      value is
-       *        `services/servicenetworking.googleapis.com`.
-      If you specify `services/-` as the parameter
-       *        value, all configured peering
-      services are listed.
+       * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+       *        services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`. If you specify `services/-` as the parameter
+       *        value, all configured peering services are listed.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1789,14 +1748,10 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The service that is managing peering connectivity for a service producer's
-      organization. For Google
-       *        services that support this functionality, this
-      value is
-       *        `services/servicenetworking.googleapis.com`.
-      If you specify `services/-` as the parameter
-       *        value, all configured peering
-      services are listed.
+         * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
+       *        services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`. If you specify `services/-` as the parameter
+       *        value, all configured peering services are listed.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1946,22 +1901,17 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         }
       }
       /**
-       * Updates the allocated ranges that are assigned to a connection. The response from the `get`
-       * operation will be of type `Connection` if the operation successfully completes.
+       * Updates the allocated ranges that are assigned to a connection.
        *
        * Create a request for the method "connections.patch".
        *
        * This request holds the parameters needed by the servicenetworking server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The private service connection that connects to a service producer
-      organization. The name includes
-       *        both the private service name and the VPC
-      network peering name in the format of
-       *        `services/{peering_service_name}/connections/{vpc_peering_name}`. For
-      Google services that
-       *        support this functionality, this is
-      `services/servicenetworking.googleapis.com/connections
+       * @param name The private service connection that connects to a service producer organization. The name includes
+       *        both the private service name and the VPC network peering name in the format of
+       *        `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that
+       *        support this functionality, this is `services/servicenetworking.googleapis.com/connections
        *        /servicenetworking-googleapis-com`.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.Connection}
        * @return the request
@@ -1980,8 +1930,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^services/[^/]+/connections/[^/]+$");
 
         /**
-         * Updates the allocated ranges that are assigned to a connection. The response from the `get`
-         * operation will be of type `Connection` if the operation successfully completes.
+         * Updates the allocated ranges that are assigned to a connection.
          *
          * Create a request for the method "connections.patch".
          *
@@ -1991,14 +1940,10 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The private service connection that connects to a service producer
-      organization. The name includes
-       *        both the private service name and the VPC
-      network peering name in the format of
-       *        `services/{peering_service_name}/connections/{vpc_peering_name}`. For
-      Google services that
-       *        support this functionality, this is
-      `services/servicenetworking.googleapis.com/connections
+         * @param name The private service connection that connects to a service producer organization. The name includes
+       *        both the private service name and the VPC network peering name in the format of
+       *        `services/{peering_service_name}/connections/{vpc_peering_name}`. For Google services that
+       *        support this functionality, this is `services/servicenetworking.googleapis.com/connections
        *        /servicenetworking-googleapis-com`.
          * @param content the {@link com.google.api.services.servicenetworking.v1.model.Connection}
          * @since 1.13
@@ -2105,9 +2050,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
           return this;
         }
 
-        /**
-         * If a previously defined allocated range is removed, force flag must be set to true.
-         */
+        /** If a previously defined allocated range is removed, force flag must be set to true. */
         @com.google.api.client.util.Key
         private java.lang.Boolean force;
 
@@ -2117,9 +2060,7 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
           return force;
         }
 
-        /**
-         * If a previously defined allocated range is removed, force flag must be set to true.
-         */
+        /** If a previously defined allocated range is removed, force flag must be set to true. */
         public Patch setForce(java.lang.Boolean force) {
           this.force = force;
           return this;
@@ -2156,6 +2097,1721 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
 
     }
     /**
+     * An accessor for creating requests from the DnsRecordSets collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+     *   {@code ServiceNetworking.DnsRecordSets.List request = servicenetworking.dnsRecordSets().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public DnsRecordSets dnsRecordSets() {
+      return new DnsRecordSets();
+    }
+
+    /**
+     * The "dnsRecordSets" collection of methods.
+     */
+    public class DnsRecordSets {
+
+      /**
+       * Service producers can use this method to add DNS record sets to private DNS zones in the shared
+       * producer host project.
+       *
+       * Create a request for the method "dnsRecordSets.add".
+       *
+       * This request holds the parameters needed by the servicenetworking server.  After setting any
+       * optional parameters, call the {@link Add#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+       * @param content the {@link com.google.api.services.servicenetworking.v1.model.AddDnsRecordSetRequest}
+       * @return the request
+       */
+      public Add add(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.AddDnsRecordSetRequest content) throws java.io.IOException {
+        Add result = new Add(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Add extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/dnsRecordSets:add";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+$");
+
+        /**
+         * Service producers can use this method to add DNS record sets to private DNS zones in the shared
+         * producer host project.
+         *
+         * Create a request for the method "dnsRecordSets.add".
+         *
+         * This request holds the parameters needed by the the servicenetworking server.  After setting
+         * any optional parameters, call the {@link Add#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Add#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+         * @param content the {@link com.google.api.services.servicenetworking.v1.model.AddDnsRecordSetRequest}
+         * @since 1.13
+         */
+        protected Add(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.AddDnsRecordSetRequest content) {
+          super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+        }
+
+        @Override
+        public Add set$Xgafv(java.lang.String $Xgafv) {
+          return (Add) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Add setAccessToken(java.lang.String accessToken) {
+          return (Add) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Add setAlt(java.lang.String alt) {
+          return (Add) super.setAlt(alt);
+        }
+
+        @Override
+        public Add setCallback(java.lang.String callback) {
+          return (Add) super.setCallback(callback);
+        }
+
+        @Override
+        public Add setFields(java.lang.String fields) {
+          return (Add) super.setFields(fields);
+        }
+
+        @Override
+        public Add setKey(java.lang.String key) {
+          return (Add) super.setKey(key);
+        }
+
+        @Override
+        public Add setOauthToken(java.lang.String oauthToken) {
+          return (Add) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Add setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Add) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Add setQuotaUser(java.lang.String quotaUser) {
+          return (Add) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Add setUploadType(java.lang.String uploadType) {
+          return (Add) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Add setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Add) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The service that is managing peering connectivity for a service producer's organization.
+       For Google services that support this functionality, this value is
+       `services/servicenetworking.googleapis.com`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        public Add setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Add set(String parameterName, Object value) {
+          return (Add) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Service producers can use this method to remove DNS record sets from private DNS zones in the
+       * shared producer host project.
+       *
+       * Create a request for the method "dnsRecordSets.remove".
+       *
+       * This request holds the parameters needed by the servicenetworking server.  After setting any
+       * optional parameters, call the {@link Remove#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+       * @param content the {@link com.google.api.services.servicenetworking.v1.model.RemoveDnsRecordSetRequest}
+       * @return the request
+       */
+      public Remove remove(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.RemoveDnsRecordSetRequest content) throws java.io.IOException {
+        Remove result = new Remove(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Remove extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/dnsRecordSets:remove";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+$");
+
+        /**
+         * Service producers can use this method to remove DNS record sets from private DNS zones in the
+         * shared producer host project.
+         *
+         * Create a request for the method "dnsRecordSets.remove".
+         *
+         * This request holds the parameters needed by the the servicenetworking server.  After setting
+         * any optional parameters, call the {@link Remove#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Remove#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+         * @param content the {@link com.google.api.services.servicenetworking.v1.model.RemoveDnsRecordSetRequest}
+         * @since 1.13
+         */
+        protected Remove(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.RemoveDnsRecordSetRequest content) {
+          super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+        }
+
+        @Override
+        public Remove set$Xgafv(java.lang.String $Xgafv) {
+          return (Remove) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Remove setAccessToken(java.lang.String accessToken) {
+          return (Remove) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Remove setAlt(java.lang.String alt) {
+          return (Remove) super.setAlt(alt);
+        }
+
+        @Override
+        public Remove setCallback(java.lang.String callback) {
+          return (Remove) super.setCallback(callback);
+        }
+
+        @Override
+        public Remove setFields(java.lang.String fields) {
+          return (Remove) super.setFields(fields);
+        }
+
+        @Override
+        public Remove setKey(java.lang.String key) {
+          return (Remove) super.setKey(key);
+        }
+
+        @Override
+        public Remove setOauthToken(java.lang.String oauthToken) {
+          return (Remove) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Remove setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Remove) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Remove setQuotaUser(java.lang.String quotaUser) {
+          return (Remove) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Remove setUploadType(java.lang.String uploadType) {
+          return (Remove) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Remove setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Remove) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The service that is managing peering connectivity for a service producer's organization.
+       For Google services that support this functionality, this value is
+       `services/servicenetworking.googleapis.com`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        public Remove setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Remove set(String parameterName, Object value) {
+          return (Remove) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Service producers can use this method to update DNS record sets from private DNS zones in the
+       * shared producer host project.
+       *
+       * Create a request for the method "dnsRecordSets.update".
+       *
+       * This request holds the parameters needed by the servicenetworking server.  After setting any
+       * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+       * @param content the {@link com.google.api.services.servicenetworking.v1.model.UpdateDnsRecordSetRequest}
+       * @return the request
+       */
+      public Update update(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.UpdateDnsRecordSetRequest content) throws java.io.IOException {
+        Update result = new Update(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Update extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/dnsRecordSets:update";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+$");
+
+        /**
+         * Service producers can use this method to update DNS record sets from private DNS zones in the
+         * shared producer host project.
+         *
+         * Create a request for the method "dnsRecordSets.update".
+         *
+         * This request holds the parameters needed by the the servicenetworking server.  After setting
+         * any optional parameters, call the {@link Update#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+         * @param content the {@link com.google.api.services.servicenetworking.v1.model.UpdateDnsRecordSetRequest}
+         * @since 1.13
+         */
+        protected Update(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.UpdateDnsRecordSetRequest content) {
+          super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+        }
+
+        @Override
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Update setAlt(java.lang.String alt) {
+          return (Update) super.setAlt(alt);
+        }
+
+        @Override
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
+        }
+
+        @Override
+        public Update setFields(java.lang.String fields) {
+          return (Update) super.setFields(fields);
+        }
+
+        @Override
+        public Update setKey(java.lang.String key) {
+          return (Update) super.setKey(key);
+        }
+
+        @Override
+        public Update setOauthToken(java.lang.String oauthToken) {
+          return (Update) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Update) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Update setQuotaUser(java.lang.String quotaUser) {
+          return (Update) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The service that is managing peering connectivity for a service producer's organization.
+       For Google services that support this functionality, this value is
+       `services/servicenetworking.googleapis.com`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        public Update setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Update set(String parameterName, Object value) {
+          return (Update) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the DnsZones collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+     *   {@code ServiceNetworking.DnsZones.List request = servicenetworking.dnsZones().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public DnsZones dnsZones() {
+      return new DnsZones();
+    }
+
+    /**
+     * The "dnsZones" collection of methods.
+     */
+    public class DnsZones {
+
+      /**
+       * Service producers can use this method to add private DNS zones in the shared producer host
+       * project and matching peering zones in the consumer project.
+       *
+       * Create a request for the method "dnsZones.add".
+       *
+       * This request holds the parameters needed by the servicenetworking server.  After setting any
+       * optional parameters, call the {@link Add#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+       * @param content the {@link com.google.api.services.servicenetworking.v1.model.AddDnsZoneRequest}
+       * @return the request
+       */
+      public Add add(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.AddDnsZoneRequest content) throws java.io.IOException {
+        Add result = new Add(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Add extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/dnsZones:add";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+$");
+
+        /**
+         * Service producers can use this method to add private DNS zones in the shared producer host
+         * project and matching peering zones in the consumer project.
+         *
+         * Create a request for the method "dnsZones.add".
+         *
+         * This request holds the parameters needed by the the servicenetworking server.  After setting
+         * any optional parameters, call the {@link Add#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Add#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+         * @param content the {@link com.google.api.services.servicenetworking.v1.model.AddDnsZoneRequest}
+         * @since 1.13
+         */
+        protected Add(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.AddDnsZoneRequest content) {
+          super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+        }
+
+        @Override
+        public Add set$Xgafv(java.lang.String $Xgafv) {
+          return (Add) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Add setAccessToken(java.lang.String accessToken) {
+          return (Add) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Add setAlt(java.lang.String alt) {
+          return (Add) super.setAlt(alt);
+        }
+
+        @Override
+        public Add setCallback(java.lang.String callback) {
+          return (Add) super.setCallback(callback);
+        }
+
+        @Override
+        public Add setFields(java.lang.String fields) {
+          return (Add) super.setFields(fields);
+        }
+
+        @Override
+        public Add setKey(java.lang.String key) {
+          return (Add) super.setKey(key);
+        }
+
+        @Override
+        public Add setOauthToken(java.lang.String oauthToken) {
+          return (Add) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Add setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Add) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Add setQuotaUser(java.lang.String quotaUser) {
+          return (Add) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Add setUploadType(java.lang.String uploadType) {
+          return (Add) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Add setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Add) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The service that is managing peering connectivity for a service producer's organization.
+       For Google services that support this functionality, this value is
+       `services/servicenetworking.googleapis.com`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        public Add setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Add set(String parameterName, Object value) {
+          return (Add) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Service producers can use this method to remove private DNS zones in the shared producer host
+       * project and matching peering zones in the consumer project.
+       *
+       * Create a request for the method "dnsZones.remove".
+       *
+       * This request holds the parameters needed by the servicenetworking server.  After setting any
+       * optional parameters, call the {@link Remove#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+       * @param content the {@link com.google.api.services.servicenetworking.v1.model.RemoveDnsZoneRequest}
+       * @return the request
+       */
+      public Remove remove(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.RemoveDnsZoneRequest content) throws java.io.IOException {
+        Remove result = new Remove(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Remove extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+parent}/dnsZones:remove";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^services/[^/]+$");
+
+        /**
+         * Service producers can use this method to remove private DNS zones in the shared producer host
+         * project and matching peering zones in the consumer project.
+         *
+         * Create a request for the method "dnsZones.remove".
+         *
+         * This request holds the parameters needed by the the servicenetworking server.  After setting
+         * any optional parameters, call the {@link Remove#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Remove#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
+       *        `services/servicenetworking.googleapis.com`.
+         * @param content the {@link com.google.api.services.servicenetworking.v1.model.RemoveDnsZoneRequest}
+         * @since 1.13
+         */
+        protected Remove(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.RemoveDnsZoneRequest content) {
+          super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+        }
+
+        @Override
+        public Remove set$Xgafv(java.lang.String $Xgafv) {
+          return (Remove) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Remove setAccessToken(java.lang.String accessToken) {
+          return (Remove) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Remove setAlt(java.lang.String alt) {
+          return (Remove) super.setAlt(alt);
+        }
+
+        @Override
+        public Remove setCallback(java.lang.String callback) {
+          return (Remove) super.setCallback(callback);
+        }
+
+        @Override
+        public Remove setFields(java.lang.String fields) {
+          return (Remove) super.setFields(fields);
+        }
+
+        @Override
+        public Remove setKey(java.lang.String key) {
+          return (Remove) super.setKey(key);
+        }
+
+        @Override
+        public Remove setOauthToken(java.lang.String oauthToken) {
+          return (Remove) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Remove setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Remove) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Remove setQuotaUser(java.lang.String quotaUser) {
+          return (Remove) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Remove setUploadType(java.lang.String uploadType) {
+          return (Remove) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Remove setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Remove) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The service that is managing peering connectivity for a service producer's organization.
+       For Google services that support this functionality, this value is
+       `services/servicenetworking.googleapis.com`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
+         * `services/servicenetworking.googleapis.com`.
+         */
+        public Remove setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Remove set(String parameterName, Object value) {
+          return (Remove) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Projects collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+     *   {@code ServiceNetworking.Projects.List request = servicenetworking.projects().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Projects projects() {
+      return new Projects();
+    }
+
+    /**
+     * The "projects" collection of methods.
+     */
+    public class Projects {
+
+      /**
+       * An accessor for creating requests from the Global collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+       *   {@code ServiceNetworking.Global.List request = servicenetworking.global().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Global global() {
+        return new Global();
+      }
+
+      /**
+       * The "global" collection of methods.
+       */
+      public class Global {
+
+        /**
+         * An accessor for creating requests from the Networks collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+         *   {@code ServiceNetworking.Networks.List request = servicenetworking.networks().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Networks networks() {
+          return new Networks();
+        }
+
+        /**
+         * The "networks" collection of methods.
+         */
+        public class Networks {
+
+          /**
+           * Service producers use this method to get the configuration of their connection including the
+           * import/export of custom routes and subnetwork routes with public IP.
+           *
+           * Create a request for the method "networks.get".
+           *
+           * This request holds the parameters needed by the servicenetworking server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the consumer config to retrieve in the format:
+           *        `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+           *        peering service that is managing connectivity for the service producer's organization. For
+           *        Google services that support this functionality, this value is
+           *        `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+           *        contains the service consumer's VPC network. {network} is the name of the service
+           *        consumer's VPC network.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.ConsumerConfig> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+
+            /**
+             * Service producers use this method to get the configuration of their connection including the
+             * import/export of custom routes and subnetwork routes with public IP.
+             *
+             * Create a request for the method "networks.get".
+             *
+             * This request holds the parameters needed by the the servicenetworking server.  After setting
+             * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the consumer config to retrieve in the format:
+           *        `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+           *        peering service that is managing connectivity for the service producer's organization. For
+           *        Google services that support this functionality, this value is
+           *        `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+           *        contains the service consumer's VPC network. {network} is the name of the service
+           *        consumer's VPC network.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(ServiceNetworking.this, "GET", REST_PATH, null, com.google.api.services.servicenetworking.v1.model.ConsumerConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the consumer config to retrieve in the format:
+             * `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+             * peering service that is managing connectivity for the service producer's
+             * organization. For Google services that support this functionality, this value is
+             * `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+             * contains the service consumer's VPC network. {network} is the name of the service
+             * consumer's VPC network.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the consumer config to retrieve in the format:
+           `services/{service}/projects/{project}/global/networks/{network}`. {service} is the peering service
+           that is managing connectivity for the service producer's organization. For Google services that
+           support this functionality, this value is `servicenetworking.googleapis.com`. {project} is a
+           project number e.g. `12345` that contains the service consumer's VPC network. {network} is the name
+           of the service consumer's VPC network.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the consumer config to retrieve in the format:
+             * `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+             * peering service that is managing connectivity for the service producer's
+             * organization. For Google services that support this functionality, this value is
+             * `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+             * contains the service consumer's VPC network. {network} is the name of the service
+             * consumer's VPC network.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Service producers use this method to update the configuration of their connection including the
+           * import/export of custom routes and subnetwork routes with public IP.
+           *
+           * Create a request for the method "networks.updateConsumerConfig".
+           *
+           * This request holds the parameters needed by the servicenetworking server.  After setting any
+           * optional parameters, call the {@link UpdateConsumerConfig#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. Parent resource identifying the connection for which the consumer config is being updated
+           *        in the format: `services/{service}/projects/{project}/global/networks/{network}` {service}
+           *        is the peering service that is managing connectivity for the service producer's
+           *        organization. For Google services that support this functionality, this value is
+           *        `servicenetworking.googleapis.com`. {project} is the number of the project that contains
+           *        the service consumer's VPC network e.g. `12345`. {network} is the name of the service
+           *        consumer's VPC network.
+           * @param content the {@link com.google.api.services.servicenetworking.v1.model.UpdateConsumerConfigRequest}
+           * @return the request
+           */
+          public UpdateConsumerConfig updateConsumerConfig(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.UpdateConsumerConfigRequest content) throws java.io.IOException {
+            UpdateConsumerConfig result = new UpdateConsumerConfig(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UpdateConsumerConfig extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}:updateConsumerConfig";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+
+            /**
+             * Service producers use this method to update the configuration of their connection including the
+             * import/export of custom routes and subnetwork routes with public IP.
+             *
+             * Create a request for the method "networks.updateConsumerConfig".
+             *
+             * This request holds the parameters needed by the the servicenetworking server.  After setting
+             * any optional parameters, call the {@link UpdateConsumerConfig#execute()} method to invoke the
+             * remote operation. <p> {@link UpdateConsumerConfig#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent resource identifying the connection for which the consumer config is being updated
+           *        in the format: `services/{service}/projects/{project}/global/networks/{network}` {service}
+           *        is the peering service that is managing connectivity for the service producer's
+           *        organization. For Google services that support this functionality, this value is
+           *        `servicenetworking.googleapis.com`. {project} is the number of the project that contains
+           *        the service consumer's VPC network e.g. `12345`. {network} is the name of the service
+           *        consumer's VPC network.
+             * @param content the {@link com.google.api.services.servicenetworking.v1.model.UpdateConsumerConfigRequest}
+             * @since 1.13
+             */
+            protected UpdateConsumerConfig(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.UpdateConsumerConfigRequest content) {
+              super(ServiceNetworking.this, "PATCH", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+              }
+            }
+
+            @Override
+            public UpdateConsumerConfig set$Xgafv(java.lang.String $Xgafv) {
+              return (UpdateConsumerConfig) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UpdateConsumerConfig setAccessToken(java.lang.String accessToken) {
+              return (UpdateConsumerConfig) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UpdateConsumerConfig setAlt(java.lang.String alt) {
+              return (UpdateConsumerConfig) super.setAlt(alt);
+            }
+
+            @Override
+            public UpdateConsumerConfig setCallback(java.lang.String callback) {
+              return (UpdateConsumerConfig) super.setCallback(callback);
+            }
+
+            @Override
+            public UpdateConsumerConfig setFields(java.lang.String fields) {
+              return (UpdateConsumerConfig) super.setFields(fields);
+            }
+
+            @Override
+            public UpdateConsumerConfig setKey(java.lang.String key) {
+              return (UpdateConsumerConfig) super.setKey(key);
+            }
+
+            @Override
+            public UpdateConsumerConfig setOauthToken(java.lang.String oauthToken) {
+              return (UpdateConsumerConfig) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UpdateConsumerConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UpdateConsumerConfig) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UpdateConsumerConfig setQuotaUser(java.lang.String quotaUser) {
+              return (UpdateConsumerConfig) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UpdateConsumerConfig setUploadType(java.lang.String uploadType) {
+              return (UpdateConsumerConfig) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UpdateConsumerConfig setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UpdateConsumerConfig) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Parent resource identifying the connection for which the consumer config is
+             * being updated in the format:
+             * `services/{service}/projects/{project}/global/networks/{network}` {service} is the
+             * peering service that is managing connectivity for the service producer's
+             * organization. For Google services that support this functionality, this value is
+             * `servicenetworking.googleapis.com`. {project} is the number of the project that
+             * contains the service consumer's VPC network e.g. `12345`. {network} is the name of
+             * the service consumer's VPC network.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent resource identifying the connection for which the consumer config is being updated
+           in the format: `services/{service}/projects/{project}/global/networks/{network}` {service} is the
+           peering service that is managing connectivity for the service producer's organization. For Google
+           services that support this functionality, this value is `servicenetworking.googleapis.com`.
+           {project} is the number of the project that contains the service consumer's VPC network e.g.
+           `12345`. {network} is the name of the service consumer's VPC network.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Parent resource identifying the connection for which the consumer config is
+             * being updated in the format:
+             * `services/{service}/projects/{project}/global/networks/{network}` {service} is the
+             * peering service that is managing connectivity for the service producer's
+             * organization. For Google services that support this functionality, this value is
+             * `servicenetworking.googleapis.com`. {project} is the number of the project that
+             * contains the service consumer's VPC network e.g. `12345`. {network} is the name of
+             * the service consumer's VPC network.
+             */
+            public UpdateConsumerConfig setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public UpdateConsumerConfig set(String parameterName, Object value) {
+              return (UpdateConsumerConfig) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the PeeredDnsDomains collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ServiceNetworking servicenetworking = new ServiceNetworking(...);}
+           *   {@code ServiceNetworking.PeeredDnsDomains.List request = servicenetworking.peeredDnsDomains().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public PeeredDnsDomains peeredDnsDomains() {
+            return new PeeredDnsDomains();
+          }
+
+          /**
+           * The "peeredDnsDomains" collection of methods.
+           */
+          public class PeeredDnsDomains {
+
+            /**
+             * Creates a peered DNS domain which sends requests for records in given namespace originating in
+             * the service producer VPC network to the consumer VPC network to be resolved.
+             *
+             * Create a request for the method "peeredDnsDomains.create".
+             *
+             * This request holds the parameters needed by the servicenetworking server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Parent resource identifying the connection for which the peered DNS domain will be created
+             *        in the format: `services/{service}/projects/{project}/global/networks/{network}` {service}
+             *        is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. {project} is the number of the project that contains
+             *        the service consumer's VPC network e.g. `12345`. {network} is the name of the service
+             *        consumer's VPC network.
+             * @param content the {@link com.google.api.services.servicenetworking.v1.model.PeeredDnsDomain}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.PeeredDnsDomain content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+parent}/peeredDnsDomains";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+
+              /**
+               * Creates a peered DNS domain which sends requests for records in given namespace originating in
+               * the service producer VPC network to the consumer VPC network to be resolved.
+               *
+               * Create a request for the method "peeredDnsDomains.create".
+               *
+               * This request holds the parameters needed by the the servicenetworking server.  After setting
+               * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Parent resource identifying the connection for which the peered DNS domain will be created
+             *        in the format: `services/{service}/projects/{project}/global/networks/{network}` {service}
+             *        is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. {project} is the number of the project that contains
+             *        the service consumer's VPC network e.g. `12345`. {network} is the name of the service
+             *        consumer's VPC network.
+               * @param content the {@link com.google.api.services.servicenetworking.v1.model.PeeredDnsDomain}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.servicenetworking.v1.model.PeeredDnsDomain content) {
+                super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1.model.Operation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Parent resource identifying the connection for which the peered DNS
+               * domain will be created in the format:
+               * `services/{service}/projects/{project}/global/networks/{network}` {service} is the
+               * peering service that is managing connectivity for the service producer's
+               * organization. For Google services that support this functionality, this value is
+               * `servicenetworking.googleapis.com`. {project} is the number of the project that
+               * contains the service consumer's VPC network e.g. `12345`. {network} is the name of
+               * the service consumer's VPC network.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Parent resource identifying the connection for which the peered DNS domain will be
+             created in the format: `services/{service}/projects/{project}/global/networks/{network}` {service}
+             is the peering service that is managing connectivity for the service producer's organization. For
+             Google services that support this functionality, this value is `servicenetworking.googleapis.com`.
+             {project} is the number of the project that contains the service consumer's VPC network e.g.
+             `12345`. {network} is the name of the service consumer's VPC network.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Parent resource identifying the connection for which the peered DNS
+               * domain will be created in the format:
+               * `services/{service}/projects/{project}/global/networks/{network}` {service} is the
+               * peering service that is managing connectivity for the service producer's
+               * organization. For Google services that support this functionality, this value is
+               * `servicenetworking.googleapis.com`. {project} is the number of the project that
+               * contains the service consumer's VPC network e.g. `12345`. {network} is the name of
+               * the service consumer's VPC network.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes a peered DNS domain.
+             *
+             * Create a request for the method "peeredDnsDomains.delete".
+             *
+             * This request holds the parameters needed by the servicenetworking server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the peered DNS domain to delete in the format:
+             *        `services/{service}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`.
+             *        {service} is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. {project} is the number of the project that contains
+             *        the service consumer's VPC network e.g. `12345`. {network} is the name of the service
+             *        consumer's VPC network. {name} is the name of the peered DNS domain.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+/peeredDnsDomains/[^/]+$");
+
+              /**
+               * Deletes a peered DNS domain.
+               *
+               * Create a request for the method "peeredDnsDomains.delete".
+               *
+               * This request holds the parameters needed by the the servicenetworking server.  After setting
+               * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the peered DNS domain to delete in the format:
+             *        `services/{service}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`.
+             *        {service} is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. {project} is the number of the project that contains
+             *        the service consumer's VPC network e.g. `12345`. {network} is the name of the service
+             *        consumer's VPC network. {name} is the name of the peered DNS domain.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(ServiceNetworking.this, "DELETE", REST_PATH, null, com.google.api.services.servicenetworking.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+/peeredDnsDomains/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the peered DNS domain to delete in the format: `services/{ser
+               * vice}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`.
+               * {service} is the peering service that is managing connectivity for the service
+               * producer's organization. For Google services that support this functionality, this
+               * value is `servicenetworking.googleapis.com`. {project} is the number of the project
+               * that contains the service consumer's VPC network e.g. `12345`. {network} is the
+               * name of the service consumer's VPC network. {name} is the name of the peered DNS
+               * domain.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the peered DNS domain to delete in the format:
+             `services/{service}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`.
+             {service} is the peering service that is managing connectivity for the service producer's
+             organization. For Google services that support this functionality, this value is
+             `servicenetworking.googleapis.com`. {project} is the number of the project that contains the
+             service consumer's VPC network e.g. `12345`. {network} is the name of the service consumer's VPC
+             network. {name} is the name of the peered DNS domain.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the peered DNS domain to delete in the format: `services/{ser
+               * vice}/projects/{project}/global/networks/{network}/peeredDnsDomains/{name}`.
+               * {service} is the peering service that is managing connectivity for the service
+               * producer's organization. For Google services that support this functionality, this
+               * value is `servicenetworking.googleapis.com`. {project} is the number of the project
+               * that contains the service consumer's VPC network e.g. `12345`. {network} is the
+               * name of the service consumer's VPC network. {name} is the name of the peered DNS
+               * domain.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+/peeredDnsDomains/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists peered DNS domains for a connection.
+             *
+             * Create a request for the method "peeredDnsDomains.list".
+             *
+             * This request holds the parameters needed by the servicenetworking server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Parent resource identifying the connection which owns this collection of peered DNS
+             *        domains in the format: `services/{service}/projects/{project}/global/networks/{network}`.
+             *        {service} is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+             *        contains the service consumer's VPC network. {network} is the name of the service
+             *        consumer's VPC network.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ServiceNetworkingRequest<com.google.api.services.servicenetworking.v1.model.ListPeeredDnsDomainsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/peeredDnsDomains";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+
+              /**
+               * Lists peered DNS domains for a connection.
+               *
+               * Create a request for the method "peeredDnsDomains.list".
+               *
+               * This request holds the parameters needed by the the servicenetworking server.  After setting
+               * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Parent resource identifying the connection which owns this collection of peered DNS
+             *        domains in the format: `services/{service}/projects/{project}/global/networks/{network}`.
+             *        {service} is the peering service that is managing connectivity for the service producer's
+             *        organization. For Google services that support this functionality, this value is
+             *        `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+             *        contains the service consumer's VPC network. {network} is the name of the service
+             *        consumer's VPC network.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ServiceNetworking.this, "GET", REST_PATH, null, com.google.api.services.servicenetworking.v1.model.ListPeeredDnsDomainsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. Parent resource identifying the connection which owns this collection of
+               * peered DNS domains in the format:
+               * `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+               * peering service that is managing connectivity for the service producer's
+               * organization. For Google services that support this functionality, this value is
+               * `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+               * contains the service consumer's VPC network. {network} is the name of the service
+               * consumer's VPC network.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Parent resource identifying the connection which owns this collection of peered DNS
+             domains in the format: `services/{service}/projects/{project}/global/networks/{network}`. {service}
+             is the peering service that is managing connectivity for the service producer's organization. For
+             Google services that support this functionality, this value is `servicenetworking.googleapis.com`.
+             {project} is a project number e.g. `12345` that contains the service consumer's VPC network.
+             {network} is the name of the service consumer's VPC network.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. Parent resource identifying the connection which owns this collection of
+               * peered DNS domains in the format:
+               * `services/{service}/projects/{project}/global/networks/{network}`. {service} is the
+               * peering service that is managing connectivity for the service producer's
+               * organization. For Google services that support this functionality, this value is
+               * `servicenetworking.googleapis.com`. {project} is a project number e.g. `12345` that
+               * contains the service consumer's VPC network. {network} is the name of the service
+               * consumer's VPC network.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^services/[^/]+/projects/[^/]+/global/networks/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+      }
+    }
+    /**
      * An accessor for creating requests from the Roles collection.
      *
      * <p>The typical use is:</p>
@@ -2177,18 +3833,16 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
 
       /**
        * Service producers can use this method to add roles in the shared VPC host project. Each role is
-       * bound to the provided member. Each role must be selected from within a whitelisted set of roles.
-       * Each role is applied at only the granularity specified in the whitelist.
+       * bound to the provided member. Each role must be selected from within an allowlisted set of roles.
+       * Each role is applied at only the granularity specified in the allowlist.
        *
        * Create a request for the method "roles.add".
        *
        * This request holds the parameters needed by the servicenetworking server.  After setting any
        * optional parameters, call the {@link Add#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. This is in a form services/{service} where {service} is the name of the
-      private access
-       *        management service. For example
-      'service-peering.example.com'.
+       * @param parent Required. This is in a form services/{service} where {service} is the name of the private access
+       *        management service. For example 'service-peering.example.com'.
        * @param content the {@link com.google.api.services.servicenetworking.v1.model.AddRolesRequest}
        * @return the request
        */
@@ -2207,8 +3861,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
 
         /**
          * Service producers can use this method to add roles in the shared VPC host project. Each role is
-         * bound to the provided member. Each role must be selected from within a whitelisted set of
-         * roles. Each role is applied at only the granularity specified in the whitelist.
+         * bound to the provided member. Each role must be selected from within an allowlisted set of
+         * roles. Each role is applied at only the granularity specified in the allowlist.
          *
          * Create a request for the method "roles.add".
          *
@@ -2218,10 +3872,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * Add#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. This is in a form services/{service} where {service} is the name of the
-      private access
-       *        management service. For example
-      'service-peering.example.com'.
+         * @param parent Required. This is in a form services/{service} where {service} is the name of the private access
+       *        management service. For example 'service-peering.example.com'.
          * @param content the {@link com.google.api.services.servicenetworking.v1.model.AddRolesRequest}
          * @since 1.13
          */

@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Contains properties of a Planning project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -82,7 +82,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String clientName;
 
   /**
-   * End date of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +123,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String overview;
 
   /**
-   * Start date of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -310,7 +308,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * End date of the project.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getEndDate() {
@@ -318,7 +315,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * End date of the project.
    * @param endDate endDate or {@code null} for none
    */
   public Project setEndDate(com.google.api.client.util.DateTime endDate) {
@@ -412,7 +408,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Start date of the project.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getStartDate() {
@@ -420,7 +415,6 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Start date of the project.
    * @param startDate startDate or {@code null} for none
    */
   public Project setStartDate(com.google.api.client.util.DateTime startDate) {

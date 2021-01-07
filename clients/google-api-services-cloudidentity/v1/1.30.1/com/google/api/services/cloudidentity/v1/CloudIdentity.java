@@ -46,7 +46,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Identity API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Identity API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -120,6 +120,3318 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
   @Override
   protected void initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest<?> httpClientRequest) throws java.io.IOException {
     super.initialize(httpClientRequest);
+  }
+
+  /**
+   * An accessor for creating requests from the Devices collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+   *   {@code CloudIdentity.Devices.List request = cloudidentity.devices().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Devices devices() {
+    return new Devices();
+  }
+
+  /**
+   * The "devices" collection of methods.
+   */
+  public class Devices {
+
+    /**
+     * Cancels an unfinished device wipe. This operation can be used to cancel device wipe in the gap
+     * between the wipe operation returning success and the device being wiped. This operation is
+     * possible when the device is in a "pending wipe" state. The device enters the "pending wipe" state
+     * when a wipe device command is issued, but has not yet been sent to the device. The cancel wipe
+     * will fail if the wipe command has already been issued to the device.
+     *
+     * Create a request for the method "devices.cancelWipe".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link CancelWipe#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceRequest}
+     * @return the request
+     */
+    public CancelWipe cancelWipe(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceRequest content) throws java.io.IOException {
+      CancelWipe result = new CancelWipe(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class CancelWipe extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}:cancelWipe";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^devices/[^/]+$");
+
+      /**
+       * Cancels an unfinished device wipe. This operation can be used to cancel device wipe in the gap
+       * between the wipe operation returning success and the device being wiped. This operation is
+       * possible when the device is in a "pending wipe" state. The device enters the "pending wipe"
+       * state when a wipe device command is issued, but has not yet been sent to the device. The cancel
+       * wipe will fail if the wipe command has already been issued to the device.
+       *
+       * Create a request for the method "devices.cancelWipe".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link CancelWipe#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * CancelWipe#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceRequest}
+       * @since 1.13
+       */
+      protected CancelWipe(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceRequest content) {
+        super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^devices/[^/]+$");
+        }
+      }
+
+      @Override
+      public CancelWipe set$Xgafv(java.lang.String $Xgafv) {
+        return (CancelWipe) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CancelWipe setAccessToken(java.lang.String accessToken) {
+        return (CancelWipe) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CancelWipe setAlt(java.lang.String alt) {
+        return (CancelWipe) super.setAlt(alt);
+      }
+
+      @Override
+      public CancelWipe setCallback(java.lang.String callback) {
+        return (CancelWipe) super.setCallback(callback);
+      }
+
+      @Override
+      public CancelWipe setFields(java.lang.String fields) {
+        return (CancelWipe) super.setFields(fields);
+      }
+
+      @Override
+      public CancelWipe setKey(java.lang.String key) {
+        return (CancelWipe) super.setKey(key);
+      }
+
+      @Override
+      public CancelWipe setOauthToken(java.lang.String oauthToken) {
+        return (CancelWipe) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CancelWipe setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CancelWipe) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CancelWipe setQuotaUser(java.lang.String quotaUser) {
+        return (CancelWipe) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CancelWipe setUploadType(java.lang.String uploadType) {
+        return (CancelWipe) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CancelWipe setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CancelWipe) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the
+       * Device.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+     format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the
+       * Device.
+       */
+      public CancelWipe setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^devices/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public CancelWipe set(String parameterName, Object value) {
+        return (CancelWipe) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a device. Only company-owned device may be created.
+     *
+     * Create a request for the method "devices.create".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1Device}
+     * @return the request
+     */
+    public Create create(com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1Device content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/devices";
+
+      /**
+       * Creates a device. Only company-owned device may be created.
+       *
+       * Create a request for the method "devices.create".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1Device}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1Device content) {
+        super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer. If you're using this API for your own organization, use `customers/my_customer`
+       * If you're using this API to manage another organization, use `customers/{customer_id}`,
+       * where customer_id is the customer to whom the device belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+     you're using this API for your own organization, use `customers/my_customer` If you're using this
+     API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+     customer to whom the device belongs.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer. If you're using this API for your own organization, use `customers/my_customer`
+       * If you're using this API to manage another organization, use `customers/{customer_id}`,
+       * where customer_id is the customer to whom the device belongs.
+       */
+      public Create setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes the specified device.
+     *
+     * Create a request for the method "devices.delete".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^devices/[^/]+$");
+
+      /**
+       * Deletes the specified device.
+       *
+       * Create a request for the method "devices.delete".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(CloudIdentity.this, "DELETE", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^devices/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the
+       * Device.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+     format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Device in format: `devices/{device_id}`, where device_id is the unique ID assigned to the
+       * Device.
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^devices/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer. If you're using this API for your own organization, use `customers/my_customer`
+       * If you're using this API to manage another organization, use `customers/{customer_id}`,
+       * where customer_id is the customer to whom the device belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+     you're using this API for your own organization, use `customers/my_customer` If you're using this
+     API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+     customer to whom the device belongs.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer. If you're using this API for your own organization, use `customers/my_customer`
+       * If you're using this API to manage another organization, use `customers/{customer_id}`,
+       * where customer_id is the customer to whom the device belongs.
+       */
+      public Delete setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves the specified device.
+     *
+     * Create a request for the method "devices.get".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in the
+     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1Device> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^devices/[^/]+$");
+
+      /**
+       * Retrieves the specified device.
+       *
+       * Create a request for the method "devices.get".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in the
+     *        format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1Device.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^devices/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Device in the format: `devices/{device_id}`, where device_id is the unique ID assigned to
+       * the Device.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in the
+     format: `devices/{device_id}`, where device_id is the unique ID assigned to the Device.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Device in the format: `devices/{device_id}`, where device_id is the unique ID assigned to
+       * the Device.
+       */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^devices/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Customer in the format: `customers/{customer_id}`, where customer_id is the customer to
+       * whom the device belongs. If you're using this API for your own organization, use
+       * `customers/my_customer`. If you're using this API to manage another organization, use
+       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Customer in
+     the format: `customers/{customer_id}`, where customer_id is the customer to whom the device
+     belongs. If you're using this API for your own organization, use `customers/my_customer`. If you're
+     using this API to manage another organization, use `customers/{customer_id}`, where customer_id is
+     the customer to whom the device belongs.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Customer in the format: `customers/{customer_id}`, where customer_id is the customer to
+       * whom the device belongs. If you're using this API for your own organization, use
+       * `customers/my_customer`. If you're using this API to manage another organization, use
+       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       */
+      public Get setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists/Searches devices.
+     *
+     * Create a request for the method "devices.list".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ListDevicesResponse> {
+
+      private static final String REST_PATH = "v1/devices";
+
+      /**
+       * Lists/Searches devices.
+       *
+       * Create a request for the method "devices.list".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ListDevicesResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer in the format: `customers/{customer_id}`, where customer_id is the customer to
+       * whom the device belongs. If you're using this API for your own organization, use
+       * `customers/my_customer`. If you're using this API to manage another organization, use
+       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String customer;
+
+      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer in
+     the format: `customers/{customer_id}`, where customer_id is the customer to whom the device
+     belongs. If you're using this API for your own organization, use `customers/my_customer`. If you're
+     using this API to manage another organization, use `customers/{customer_id}`, where customer_id is
+     the customer to whom the device belongs.
+       */
+      public java.lang.String getCustomer() {
+        return customer;
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * customer in the format: `customers/{customer_id}`, where customer_id is the customer to
+       * whom the device belongs. If you're using this API for your own organization, use
+       * `customers/my_customer`. If you're using this API to manage another organization, use
+       * `customers/{customer_id}`, where customer_id is the customer to whom the device belongs.
+       */
+      public List setCustomer(java.lang.String customer) {
+        this.customer = customer;
+        return this;
+      }
+
+      /**
+       * Optional. Additional restrictions when fetching list of devices. For a list of search
+       * fields, refer to [Mobile device search fields](https://developers.google.com/admin-
+       * sdk/directory/v1/search-operators). Multiple search fields are separated by the space
+       * character.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional. Additional restrictions when fetching list of devices. For a list of search fields, refer
+     to [Mobile device search fields](https://developers.google.com/admin-sdk/directory/v1/search-
+     operators). Multiple search fields are separated by the space character.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Optional. Additional restrictions when fetching list of devices. For a list of search
+       * fields, refer to [Mobile device search fields](https://developers.google.com/admin-
+       * sdk/directory/v1/search-operators). Multiple search fields are separated by the space
+       * character.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Optional. Order specification for devices in the response. Only one of the following field
+       * names may be used to specify the order: `create_time`, `last_sync_time`, `model`,
+       * `os_version`, `device_type` and `serial_number`. `desc` may be specified optionally at the
+       * end to specify results to be sorted in descending order. Default order is ascending.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Optional. Order specification for devices in the response. Only one of the following field names
+     may be used to specify the order: `create_time`, `last_sync_time`, `model`, `os_version`,
+     `device_type` and `serial_number`. `desc` may be specified optionally at the end to specify results
+     to be sorted in descending order. Default order is ascending.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Optional. Order specification for devices in the response. Only one of the following field
+       * names may be used to specify the order: `create_time`, `last_sync_time`, `model`,
+       * `os_version`, `device_type` and `serial_number`. `desc` may be specified optionally at the
+       * end to specify results to be sorted in descending order. Default order is ascending.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Optional. The maximum number of Devices to return. If unspecified, at most 20 Devices will
+       * be returned. The maximum value is 100; values above 100 will be coerced to 100.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of Devices to return. If unspecified, at most 20 Devices will be
+     returned. The maximum value is 100; values above 100 will be coerced to 100.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of Devices to return. If unspecified, at most 20 Devices will
+       * be returned. The maximum value is 100; values above 100 will be coerced to 100.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListDevices` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListDevices` must match the call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous `ListDevices` call. Provide this to retrieve the
+     subsequent page. When paginating, all other parameters provided to `ListDevices` must match the
+     call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListDevices` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListDevices` must match the call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /** Optional. The view to use for the List request. */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Optional. The view to use for the List request.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /** Optional. The view to use for the List request. */
+      public List setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Wipes all data on the specified device.
+     *
+     * Create a request for the method "devices.wipe".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Wipe#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+     *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+     *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+     * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceRequest}
+     * @return the request
+     */
+    public Wipe wipe(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceRequest content) throws java.io.IOException {
+      Wipe result = new Wipe(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Wipe extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}:wipe";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^devices/[^/]+$");
+
+      /**
+       * Wipes all data on the specified device.
+       *
+       * Create a request for the method "devices.wipe".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Wipe#execute()} method to invoke the remote operation. <p>
+       * {@link Wipe#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+     *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+     *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceRequest}
+       * @since 1.13
+       */
+      protected Wipe(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceRequest content) {
+        super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^devices/[^/]+$");
+        }
+      }
+
+      @Override
+      public Wipe set$Xgafv(java.lang.String $Xgafv) {
+        return (Wipe) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Wipe setAccessToken(java.lang.String accessToken) {
+        return (Wipe) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Wipe setAlt(java.lang.String alt) {
+        return (Wipe) super.setAlt(alt);
+      }
+
+      @Override
+      public Wipe setCallback(java.lang.String callback) {
+        return (Wipe) super.setCallback(callback);
+      }
+
+      @Override
+      public Wipe setFields(java.lang.String fields) {
+        return (Wipe) super.setFields(fields);
+      }
+
+      @Override
+      public Wipe setKey(java.lang.String key) {
+        return (Wipe) super.setKey(key);
+      }
+
+      @Override
+      public Wipe setOauthToken(java.lang.String oauthToken) {
+        return (Wipe) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Wipe setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Wipe) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Wipe setQuotaUser(java.lang.String quotaUser) {
+        return (Wipe) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Wipe setUploadType(java.lang.String uploadType) {
+        return (Wipe) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Wipe setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Wipe) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+       * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+       * User.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+     format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
+     assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+       * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+       * User.
+       */
+      public Wipe setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^devices/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Wipe set(String parameterName, Object value) {
+        return (Wipe) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the DeviceUsers collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+     *   {@code CloudIdentity.DeviceUsers.List request = cloudidentity.deviceUsers().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public DeviceUsers deviceUsers() {
+      return new DeviceUsers();
+    }
+
+    /**
+     * The "deviceUsers" collection of methods.
+     */
+    public class DeviceUsers {
+
+      /**
+       * Approves device to access user data.
+       *
+       * Create a request for the method "deviceUsers.approve".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest}
+       * @return the request
+       */
+      public Approve approve(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest content) throws java.io.IOException {
+        Approve result = new Approve(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Approve extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:approve";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+$");
+
+        /**
+         * Approves device to access user data.
+         *
+         * Create a request for the method "deviceUsers.approve".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Approve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest}
+         * @since 1.13
+         */
+        protected Approve(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Approve set$Xgafv(java.lang.String $Xgafv) {
+          return (Approve) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Approve setAccessToken(java.lang.String accessToken) {
+          return (Approve) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Approve setAlt(java.lang.String alt) {
+          return (Approve) super.setAlt(alt);
+        }
+
+        @Override
+        public Approve setCallback(java.lang.String callback) {
+          return (Approve) super.setCallback(callback);
+        }
+
+        @Override
+        public Approve setFields(java.lang.String fields) {
+          return (Approve) super.setFields(fields);
+        }
+
+        @Override
+        public Approve setKey(java.lang.String key) {
+          return (Approve) super.setKey(key);
+        }
+
+        @Override
+        public Approve setOauthToken(java.lang.String oauthToken) {
+          return (Approve) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Approve setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Approve) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Approve setQuotaUser(java.lang.String quotaUser) {
+          return (Approve) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Approve setUploadType(java.lang.String uploadType) {
+          return (Approve) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Approve setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Approve) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
+       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        public Approve setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Approve set(String parameterName, Object value) {
+          return (Approve) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Blocks device from accessing user data
+       *
+       * Create a request for the method "deviceUsers.block".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Block#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest}
+       * @return the request
+       */
+      public Block block(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest content) throws java.io.IOException {
+        Block result = new Block(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Block extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:block";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+$");
+
+        /**
+         * Blocks device from accessing user data
+         *
+         * Create a request for the method "deviceUsers.block".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Block#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Block#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest}
+         * @since 1.13
+         */
+        protected Block(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Block set$Xgafv(java.lang.String $Xgafv) {
+          return (Block) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Block setAccessToken(java.lang.String accessToken) {
+          return (Block) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Block setAlt(java.lang.String alt) {
+          return (Block) super.setAlt(alt);
+        }
+
+        @Override
+        public Block setCallback(java.lang.String callback) {
+          return (Block) super.setCallback(callback);
+        }
+
+        @Override
+        public Block setFields(java.lang.String fields) {
+          return (Block) super.setFields(fields);
+        }
+
+        @Override
+        public Block setKey(java.lang.String key) {
+          return (Block) super.setKey(key);
+        }
+
+        @Override
+        public Block setOauthToken(java.lang.String oauthToken) {
+          return (Block) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Block setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Block) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Block setQuotaUser(java.lang.String quotaUser) {
+          return (Block) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Block setUploadType(java.lang.String uploadType) {
+          return (Block) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Block setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Block) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
+       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        public Block setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Block set(String parameterName, Object value) {
+          return (Block) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Cancels an unfinished user account wipe. This operation can be used to cancel device wipe in the
+       * gap between the wipe operation returning success and the device being wiped.
+       *
+       * Create a request for the method "deviceUsers.cancelWipe".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link CancelWipe#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest}
+       * @return the request
+       */
+      public CancelWipe cancelWipe(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest content) throws java.io.IOException {
+        CancelWipe result = new CancelWipe(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class CancelWipe extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:cancelWipe";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+$");
+
+        /**
+         * Cancels an unfinished user account wipe. This operation can be used to cancel device wipe in
+         * the gap between the wipe operation returning success and the device being wiped.
+         *
+         * Create a request for the method "deviceUsers.cancelWipe".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link CancelWipe#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * CancelWipe#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest}
+         * @since 1.13
+         */
+        protected CancelWipe(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+        }
+
+        @Override
+        public CancelWipe set$Xgafv(java.lang.String $Xgafv) {
+          return (CancelWipe) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public CancelWipe setAccessToken(java.lang.String accessToken) {
+          return (CancelWipe) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public CancelWipe setAlt(java.lang.String alt) {
+          return (CancelWipe) super.setAlt(alt);
+        }
+
+        @Override
+        public CancelWipe setCallback(java.lang.String callback) {
+          return (CancelWipe) super.setCallback(callback);
+        }
+
+        @Override
+        public CancelWipe setFields(java.lang.String fields) {
+          return (CancelWipe) super.setFields(fields);
+        }
+
+        @Override
+        public CancelWipe setKey(java.lang.String key) {
+          return (CancelWipe) super.setKey(key);
+        }
+
+        @Override
+        public CancelWipe setOauthToken(java.lang.String oauthToken) {
+          return (CancelWipe) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public CancelWipe setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (CancelWipe) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public CancelWipe setQuotaUser(java.lang.String quotaUser) {
+          return (CancelWipe) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public CancelWipe setUploadType(java.lang.String uploadType) {
+          return (CancelWipe) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public CancelWipe setUploadProtocol(java.lang.String uploadProtocol) {
+          return (CancelWipe) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
+       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        public CancelWipe setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public CancelWipe set(String parameterName, Object value) {
+          return (CancelWipe) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes the specified DeviceUser. This also revokes the user's access to device data.
+       *
+       * Create a request for the method "deviceUsers.delete".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+$");
+
+        /**
+         * Deletes the specified DeviceUser. This also revokes the user's access to device data.
+         *
+         * Create a request for the method "deviceUsers.delete".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudIdentity.this, "DELETE", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
+       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+       you're using this API for your own organization, use `customers/my_customer` If you're using this
+       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+       customer to whom the device belongs.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        public Delete setCustomer(java.lang.String customer) {
+          this.customer = customer;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves the specified DeviceUser
+       *
+       * Create a request for the method "deviceUsers.get".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1DeviceUser> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+$");
+
+        /**
+         * Retrieves the specified DeviceUser
+         *
+         * Create a request for the method "deviceUsers.get".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1DeviceUser.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
+       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+       you're using this API for your own organization, use `customers/my_customer` If you're using this
+       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+       customer to whom the device belongs.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        public Get setCustomer(java.lang.String customer) {
+          this.customer = customer;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists/Searches DeviceUsers.
+       *
+       * Create a request for the method "deviceUsers.list".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. To list all DeviceUsers, set this to "devices/-". To list all DeviceUsers owned by a
+       *        device, set this to the resource name of the device. Format: devices/{device}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ListDeviceUsersResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/deviceUsers";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^devices/[^/]+$");
+
+        /**
+         * Lists/Searches DeviceUsers.
+         *
+         * Create a request for the method "deviceUsers.list".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. To list all DeviceUsers, set this to "devices/-". To list all DeviceUsers owned by a
+       *        device, set this to the resource name of the device. Format: devices/{device}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ListDeviceUsersResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^devices/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. To list all DeviceUsers, set this to "devices/-". To list all DeviceUsers owned
+         * by a device, set this to the resource name of the device. Format: devices/{device}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. To list all DeviceUsers, set this to "devices/-". To list all DeviceUsers owned by a
+       device, set this to the resource name of the device. Format: devices/{device}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. To list all DeviceUsers, set this to "devices/-". To list all DeviceUsers owned
+         * by a device, set this to the resource name of the device. Format: devices/{device}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^devices/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+       you're using this API for your own organization, use `customers/my_customer` If you're using this
+       API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+       customer to whom the device belongs.
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * customer. If you're using this API for your own organization, use `customers/my_customer`
+         * If you're using this API to manage another organization, use `customers/{customer_id}`,
+         * where customer_id is the customer to whom the device belongs.
+         */
+        public List setCustomer(java.lang.String customer) {
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * Optional. Additional restrictions when fetching list of devices. For a list of search
+         * fields, refer to [Mobile device search fields](https://developers.google.com/admin-
+         * sdk/directory/v1/search-operators). Multiple search fields are separated by the space
+         * character.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Additional restrictions when fetching list of devices. For a list of search fields, refer
+       to [Mobile device search fields](https://developers.google.com/admin-sdk/directory/v1/search-
+       operators). Multiple search fields are separated by the space character.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Additional restrictions when fetching list of devices. For a list of search
+         * fields, refer to [Mobile device search fields](https://developers.google.com/admin-
+         * sdk/directory/v1/search-operators). Multiple search fields are separated by the space
+         * character.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** Optional. Order specification for devices in the response. */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. Order specification for devices in the response.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /** Optional. Order specification for devices in the response. */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of DeviceUsers to return. If unspecified, at most 5
+         * DeviceUsers will be returned. The maximum value is 20; values above 20 will be coerced to
+         * 20.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of DeviceUsers to return. If unspecified, at most 5 DeviceUsers will
+       be returned. The maximum value is 20; values above 20 will be coerced to 20.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of DeviceUsers to return. If unspecified, at most 5
+         * DeviceUsers will be returned. The maximum value is 20; values above 20 will be coerced to
+         * 20.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListDeviceUsers` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListBooks` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListDeviceUsers` call. Provide this to retrieve
+       the subsequent page. When paginating, all other parameters provided to `ListBooks` must match the
+       call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListDeviceUsers` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListBooks` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Looks up resource names of the DeviceUsers associated with the caller's credentials, as well as
+       * the properties provided in the request. This method must be called with end-user credentials with
+       * the scope: https://www.googleapis.com/auth/cloud-identity.devices.lookup If multiple properties
+       * are provided, only DeviceUsers having all of these properties are considered as matches - i.e.
+       * the query behaves like an AND. Different platforms require different amounts of information from
+       * the caller to ensure that the DeviceUser is uniquely identified. - iOS: No properties need to be
+       * passed, the caller's credentials are sufficient to identify the corresponding DeviceUser. -
+       * Android: Specifying the 'android_id' field is required. - Desktop: Specifying the
+       * 'raw_resource_id' field is required.
+       *
+       * Create a request for the method "deviceUsers.lookup".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
+       *
+       * @param parent Must be set to "devices/-/deviceUsers" to search across all DeviceUser belonging to the user.
+       * @return the request
+       */
+      public Lookup lookup(java.lang.String parent) throws java.io.IOException {
+        Lookup result = new Lookup(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class Lookup extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}:lookup";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers$");
+
+        /**
+         * Looks up resource names of the DeviceUsers associated with the caller's credentials, as well as
+         * the properties provided in the request. This method must be called with end-user credentials
+         * with the scope: https://www.googleapis.com/auth/cloud-identity.devices.lookup If multiple
+         * properties are provided, only DeviceUsers having all of these properties are considered as
+         * matches - i.e. the query behaves like an AND. Different platforms require different amounts of
+         * information from the caller to ensure that the DeviceUser is uniquely identified. - iOS: No
+         * properties need to be passed, the caller's credentials are sufficient to identify the
+         * corresponding DeviceUser. - Android: Specifying the 'android_id' field is required. - Desktop:
+         * Specifying the 'raw_resource_id' field is required.
+         *
+         * Create a request for the method "deviceUsers.lookup".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Must be set to "devices/-/deviceUsers" to search across all DeviceUser belonging to the user.
+         * @since 1.13
+         */
+        protected Lookup(java.lang.String parent) {
+          super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Lookup set$Xgafv(java.lang.String $Xgafv) {
+          return (Lookup) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Lookup setAccessToken(java.lang.String accessToken) {
+          return (Lookup) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Lookup setAlt(java.lang.String alt) {
+          return (Lookup) super.setAlt(alt);
+        }
+
+        @Override
+        public Lookup setCallback(java.lang.String callback) {
+          return (Lookup) super.setCallback(callback);
+        }
+
+        @Override
+        public Lookup setFields(java.lang.String fields) {
+          return (Lookup) super.setFields(fields);
+        }
+
+        @Override
+        public Lookup setKey(java.lang.String key) {
+          return (Lookup) super.setKey(key);
+        }
+
+        @Override
+        public Lookup setOauthToken(java.lang.String oauthToken) {
+          return (Lookup) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Lookup setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Lookup) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Lookup setQuotaUser(java.lang.String quotaUser) {
+          return (Lookup) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Lookup setUploadType(java.lang.String uploadType) {
+          return (Lookup) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Lookup setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Lookup) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Must be set to "devices/-/deviceUsers" to search across all DeviceUser belonging to the
+         * user.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Must be set to "devices/-/deviceUsers" to search across all DeviceUser belonging to the user.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Must be set to "devices/-/deviceUsers" to search across all DeviceUser belonging to the
+         * user.
+         */
+        public Lookup setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Android Id returned by [Settings.Secure#ANDROID_ID](https://developer.android.com/referen
+         * ce/android/provider/Settings.Secure.html#ANDROID_ID).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String androidId;
+
+        /** Android Id returned by [Settings.Secure#ANDROID_ID](https://developer.android.com/reference/android
+       /provider/Settings.Secure.html#ANDROID_ID).
+         */
+        public java.lang.String getAndroidId() {
+          return androidId;
+        }
+
+        /**
+         * Android Id returned by [Settings.Secure#ANDROID_ID](https://developer.android.com/referen
+         * ce/android/provider/Settings.Secure.html#ANDROID_ID).
+         */
+        public Lookup setAndroidId(java.lang.String androidId) {
+          this.androidId = androidId;
+          return this;
+        }
+
+        /**
+         * The maximum number of DeviceUsers to return. If unspecified, at most 20 DeviceUsers will
+         * be returned. The maximum value is 20; values above 20 will be coerced to 20.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of DeviceUsers to return. If unspecified, at most 20 DeviceUsers will be
+       returned. The maximum value is 20; values above 20 will be coerced to 20.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of DeviceUsers to return. If unspecified, at most 20 DeviceUsers will
+         * be returned. The maximum value is 20; values above 20 will be coerced to 20.
+         */
+        public Lookup setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous `LookupDeviceUsers` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to
+         * `LookupDeviceUsers` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous `LookupDeviceUsers` call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `LookupDeviceUsers` must match
+       the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous `LookupDeviceUsers` call. Provide this to retrieve
+         * the subsequent page. When paginating, all other parameters provided to
+         * `LookupDeviceUsers` must match the call that provided the page token.
+         */
+        public Lookup setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Raw Resource Id used by Google Endpoint Verification. If the user is enrolled into Google
+         * Endpoint Verification, this id will be saved as the 'device_resource_id' field in the
+         * following platform dependent files. Mac: ~/.secureConnect/context_aware_config.json
+         * Windows: C:\Users\%USERPROFILE%\.secureConnect\context_aware_config.json Linux:
+         * ~/.secureConnect/context_aware_config.json
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String rawResourceId;
+
+        /** Raw Resource Id used by Google Endpoint Verification. If the user is enrolled into Google Endpoint
+       Verification, this id will be saved as the 'device_resource_id' field in the following platform
+       dependent files. Mac: ~/.secureConnect/context_aware_config.json Windows:
+       C:\Users\%USERPROFILE%\.secureConnect\context_aware_config.json Linux:
+       ~/.secureConnect/context_aware_config.json
+         */
+        public java.lang.String getRawResourceId() {
+          return rawResourceId;
+        }
+
+        /**
+         * Raw Resource Id used by Google Endpoint Verification. If the user is enrolled into Google
+         * Endpoint Verification, this id will be saved as the 'device_resource_id' field in the
+         * following platform dependent files. Mac: ~/.secureConnect/context_aware_config.json
+         * Windows: C:\Users\%USERPROFILE%\.secureConnect\context_aware_config.json Linux:
+         * ~/.secureConnect/context_aware_config.json
+         */
+        public Lookup setRawResourceId(java.lang.String rawResourceId) {
+          this.rawResourceId = rawResourceId;
+          return this;
+        }
+
+        /**
+         * The user whose DeviceUser's resource name will be fetched. Must be set to 'me' to fetch
+         * the DeviceUser's resource name for the calling user.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String userId;
+
+        /** The user whose DeviceUser's resource name will be fetched. Must be set to 'me' to fetch the
+       DeviceUser's resource name for the calling user.
+         */
+        public java.lang.String getUserId() {
+          return userId;
+        }
+
+        /**
+         * The user whose DeviceUser's resource name will be fetched. Must be set to 'me' to fetch
+         * the DeviceUser's resource name for the calling user.
+         */
+        public Lookup setUserId(java.lang.String userId) {
+          this.userId = userId;
+          return this;
+        }
+
+        @Override
+        public Lookup set(String parameterName, Object value) {
+          return (Lookup) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Wipes the user's account on a device. Other data on the device that is not associated with the
+       * user's work account is not affected. For example, if a Gmail app is installed on a device that is
+       * used for personal and work purposes, and the user is logged in to the Gmail app with their
+       * personal account as well as their work account, wiping the "deviceUser" by their work
+       * administrator will not affect their personal account within Gmail or other apps such as Photos.
+       *
+       * Create a request for the method "deviceUsers.wipe".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link Wipe#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest}
+       * @return the request
+       */
+      public Wipe wipe(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest content) throws java.io.IOException {
+        Wipe result = new Wipe(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Wipe extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+        private static final String REST_PATH = "v1/{+name}:wipe";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+$");
+
+        /**
+         * Wipes the user's account on a device. Other data on the device that is not associated with the
+         * user's work account is not affected. For example, if a Gmail app is installed on a device that
+         * is used for personal and work purposes, and the user is logged in to the Gmail app with their
+         * personal account as well as their work account, wiping the "deviceUser" by their work
+         * administrator will not affect their personal account within Gmail or other apps such as Photos.
+         *
+         * Create a request for the method "deviceUsers.wipe".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link Wipe#execute()} method to invoke the remote operation. <p>
+         * {@link Wipe#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       *        format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique
+       *        ID assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest}
+         * @since 1.13
+         */
+        protected Wipe(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Wipe set$Xgafv(java.lang.String $Xgafv) {
+          return (Wipe) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Wipe setAccessToken(java.lang.String accessToken) {
+          return (Wipe) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Wipe setAlt(java.lang.String alt) {
+          return (Wipe) super.setAlt(alt);
+        }
+
+        @Override
+        public Wipe setCallback(java.lang.String callback) {
+          return (Wipe) super.setCallback(callback);
+        }
+
+        @Override
+        public Wipe setFields(java.lang.String fields) {
+          return (Wipe) super.setFields(fields);
+        }
+
+        @Override
+        public Wipe setKey(java.lang.String key) {
+          return (Wipe) super.setKey(key);
+        }
+
+        @Override
+        public Wipe setOauthToken(java.lang.String oauthToken) {
+          return (Wipe) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Wipe setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Wipe) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Wipe setQuotaUser(java.lang.String quotaUser) {
+          return (Wipe) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Wipe setUploadType(java.lang.String uploadType) {
+          return (Wipe) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Wipe setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Wipe) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in
+       format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is the unique ID
+       assigned to the Device, and device_user_id is the unique ID assigned to the User.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * Device in format: `devices/{device_id}/deviceUsers/{device_user_id}`, where device_id is
+         * the unique ID assigned to the Device, and device_user_id is the unique ID assigned to the
+         * User.
+         */
+        public Wipe setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^devices/[^/]+/deviceUsers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Wipe set(String parameterName, Object value) {
+          return (Wipe) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the ClientStates collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+       *   {@code CloudIdentity.ClientStates.List request = cloudidentity.clientStates().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ClientStates clientStates() {
+        return new ClientStates();
+      }
+
+      /**
+       * The "clientStates" collection of methods.
+       */
+      public class ClientStates {
+
+        /**
+         * Gets the client state for the device user
+         *
+         * Create a request for the method "clientStates.get".
+         *
+         * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in
+         *        format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`,
+         *        where device_id is the unique ID assigned to the Device, device_user_id is the unique ID
+         *        assigned to the User and partner_id identifies the partner storing the data. To get the
+         *        client state for devices belonging to your own organization, the `partnerId` is in the
+         *        format: `customerId-*anystring*`. Where the `customerId` is your organization's customer
+         *        ID and `anystring` is any suffix. This suffix is used in setting up Custom Access Levels
+         *        in Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
+         *        managed by your own organization.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ClientState> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+/clientStates/[^/]+$");
+
+          /**
+           * Gets the client state for the device user
+           *
+           * Create a request for the method "clientStates.get".
+           *
+           * This request holds the parameters needed by the the cloudidentity server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState in
+         *        format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`,
+         *        where device_id is the unique ID assigned to the Device, device_user_id is the unique ID
+         *        assigned to the User and partner_id identifies the partner storing the data. To get the
+         *        client state for devices belonging to your own organization, the `partnerId` is in the
+         *        format: `customerId-*anystring*`. Where the `customerId` is your organization's customer
+         *        ID and `anystring` is any suffix. This suffix is used in setting up Custom Access Levels
+         *        in Context-Aware Access. You may use `my_customer` instead of the customer ID for devices
+         *        managed by your own organization.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ClientState.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^devices/[^/]+/deviceUsers/[^/]+/clientStates/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * ClientState in format:
+           * `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
+           * device_id is the unique ID assigned to the Device, device_user_id is the unique ID
+           * assigned to the User and partner_id identifies the partner storing the data. To get the
+           * client state for devices belonging to your own organization, the `partnerId` is in the
+           * format: `customerId-*anystring*`. Where the `customerId` is your organization's
+           * customer ID and `anystring` is any suffix. This suffix is used in setting up Custom
+           * Access Levels in Context-Aware Access. You may use `my_customer` instead of the
+           * customer ID for devices managed by your own organization.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState
+         in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
+         device_id is the unique ID assigned to the Device, device_user_id is the unique ID assigned to the
+         User and partner_id identifies the partner storing the data. To get the client state for devices
+         belonging to your own organization, the `partnerId` is in the format: `customerId-*anystring*`.
+         Where the `customerId` is your organization's customer ID and `anystring` is any suffix. This
+         suffix is used in setting up Custom Access Levels in Context-Aware Access. You may use
+         `my_customer` instead of the customer ID for devices managed by your own organization.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * ClientState in format:
+           * `devices/{device_id}/deviceUsers/{device_user_id}/clientStates/{partner_id}`, where
+           * device_id is the unique ID assigned to the Device, device_user_id is the unique ID
+           * assigned to the User and partner_id identifies the partner storing the data. To get the
+           * client state for devices belonging to your own organization, the `partnerId` is in the
+           * format: `customerId-*anystring*`. Where the `customerId` is your organization's
+           * customer ID and `anystring` is any suffix. This suffix is used in setting up Custom
+           * Access Levels in Context-Aware Access. You may use `my_customer` instead of the
+           * customer ID for devices managed by your own organization.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^devices/[^/]+/deviceUsers/[^/]+/clientStates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * customer. If you're using this API for your own organization, use
+           * `customers/my_customer` If you're using this API to manage another organization, use
+           * `customers/{customer_id}`, where customer_id is the customer to whom the device
+           * belongs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+         you're using this API for your own organization, use `customers/my_customer` If you're using this
+         API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+         customer to whom the device belongs.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /**
+           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * customer. If you're using this API for your own organization, use
+           * `customers/my_customer` If you're using this API to manage another organization, use
+           * `customers/{customer_id}`, where customer_id is the customer to whom the device
+           * belongs.
+           */
+          public Get setCustomer(java.lang.String customer) {
+            this.customer = customer;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the client states for the given search query.
+         *
+         * Create a request for the method "clientStates.list".
+         *
+         * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. To list all ClientStates, set this to "devices/-/deviceUsers/-". To list all ClientStates
+         *        owned by a DeviceUser, set this to the resource name of the DeviceUser. Format:
+         *        devices/{device}/deviceUsers/{deviceUser}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ListClientStatesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/clientStates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+$");
+
+          /**
+           * Lists the client states for the given search query.
+           *
+           * Create a request for the method "clientStates.list".
+           *
+           * This request holds the parameters needed by the the cloudidentity server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. To list all ClientStates, set this to "devices/-/deviceUsers/-". To list all ClientStates
+         *        owned by a DeviceUser, set this to the resource name of the DeviceUser. Format:
+         *        devices/{device}/deviceUsers/{deviceUser}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ListClientStatesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^devices/[^/]+/deviceUsers/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. To list all ClientStates, set this to "devices/-/deviceUsers/-". To list all
+           * ClientStates owned by a DeviceUser, set this to the resource name of the DeviceUser.
+           * Format: devices/{device}/deviceUsers/{deviceUser}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. To list all ClientStates, set this to "devices/-/deviceUsers/-". To list all ClientStates
+         owned by a DeviceUser, set this to the resource name of the DeviceUser. Format:
+         devices/{device}/deviceUsers/{deviceUser}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. To list all ClientStates, set this to "devices/-/deviceUsers/-". To list all
+           * ClientStates owned by a DeviceUser, set this to the resource name of the DeviceUser.
+           * Format: devices/{device}/deviceUsers/{deviceUser}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^devices/[^/]+/deviceUsers/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * customer. If you're using this API for your own organization, use
+           * `customers/my_customer` If you're using this API to manage another organization, use
+           * `customers/{customer_id}`, where customer_id is the customer to whom the device
+           * belongs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+         you're using this API for your own organization, use `customers/my_customer` If you're using this
+         API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+         customer to whom the device belongs.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /**
+           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * customer. If you're using this API for your own organization, use
+           * `customers/my_customer` If you're using this API to manage another organization, use
+           * `customers/{customer_id}`, where customer_id is the customer to whom the device
+           * belongs.
+           */
+          public List setCustomer(java.lang.String customer) {
+            this.customer = customer;
+            return this;
+          }
+
+          /** Optional. Additional restrictions when fetching list of client states. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Additional restrictions when fetching list of client states.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Additional restrictions when fetching list of client states. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Order specification for client states in the response. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Order specification for client states in the response.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Order specification for client states in the response. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListClientStates` call. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListClientStates` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListClientStates` call. Provide this to retrieve
+         the subsequent page. When paginating, all other parameters provided to `ListClientStates` must
+         match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListClientStates` call. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListClientStates` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the client state for the device user
+         *
+         * Create a request for the method "clientStates.patch".
+         *
+         * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState
+         *        in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`,
+         *        where partner_id corresponds to the partner storing the data. For partners belonging to
+         *        the "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all
+         *        other callers, this is a string of the form: `{customer_id}-suffix`, where `customer_id`
+         *        is your customer ID. The *suffix* is any string the caller specifies. This string will be
+         *        displayed verbatim in the administration console. This suffix is used in setting up Custom
+         *        Access Levels in Context-Aware Access. Your organization's customer ID can be obtained
+         *        from the URL: `GET https://www.googleapis.com/admin/directory/v1/customers/my_customer`
+         *        The `id` field in the response contains the customer ID starting with the letter 'C'. The
+         *        customer ID to be used in this API is the string after the letter 'C' (not including 'C')
+         * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ClientState}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ClientState content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^devices/[^/]+/deviceUsers/[^/]+/clientStates/[^/]+$");
+
+          /**
+           * Updates the client state for the device user
+           *
+           * Create a request for the method "clientStates.patch".
+           *
+           * This request holds the parameters needed by the the cloudidentity server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the ClientState
+         *        in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`,
+         *        where partner_id corresponds to the partner storing the data. For partners belonging to
+         *        the "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all
+         *        other callers, this is a string of the form: `{customer_id}-suffix`, where `customer_id`
+         *        is your customer ID. The *suffix* is any string the caller specifies. This string will be
+         *        displayed verbatim in the administration console. This suffix is used in setting up Custom
+         *        Access Levels in Context-Aware Access. Your organization's customer ID can be obtained
+         *        from the URL: `GET https://www.googleapis.com/admin/directory/v1/customers/my_customer`
+         *        The `id` field in the response contains the customer ID starting with the letter 'C'. The
+         *        customer ID to be used in this API is the string after the letter 'C' (not including 'C')
+           * @param content the {@link com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ClientState}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.cloudidentity.v1.model.GoogleAppsCloudidentityDevicesV1ClientState content) {
+            super(CloudIdentity.this, "PATCH", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^devices/[^/]+/deviceUsers/[^/]+/clientStates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of
+           * the ClientState in format:
+           * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where
+           * partner_id corresponds to the partner storing the data. For partners belonging to the
+           * "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other
+           * callers, this is a string of the form: `{customer_id}-suffix`, where `customer_id` is
+           * your customer ID. The *suffix* is any string the caller specifies. This string will be
+           * displayed verbatim in the administration console. This suffix is used in setting up
+           * Custom Access Levels in Context-Aware Access. Your organization's customer ID can be
+           * obtained from the URL: `GET
+           * https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id` field in
+           * the response contains the customer ID starting with the letter 'C'. The customer ID to
+           * be used in this API is the string after the letter 'C' (not including 'C')
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+         ClientState in format: `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`,
+         where partner_id corresponds to the partner storing the data. For partners belonging to the
+         "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other callers,
+         this is a string of the form: `{customer_id}-suffix`, where `customer_id` is your customer ID. The
+         *suffix* is any string the caller specifies. This string will be displayed verbatim in the
+         administration console. This suffix is used in setting up Custom Access Levels in Context-Aware
+         Access. Your organization's customer ID can be obtained from the URL: `GET
+         https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id` field in the response
+         contains the customer ID starting with the letter 'C'. The customer ID to be used in this API is
+         the string after the letter 'C' (not including 'C')
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of
+           * the ClientState in format:
+           * `devices/{device_id}/deviceUsers/{device_user_id}/clientState/{partner_id}`, where
+           * partner_id corresponds to the partner storing the data. For partners belonging to the
+           * "BeyondCorp Alliance", this is the partner ID specified to you by Google. For all other
+           * callers, this is a string of the form: `{customer_id}-suffix`, where `customer_id` is
+           * your customer ID. The *suffix* is any string the caller specifies. This string will be
+           * displayed verbatim in the administration console. This suffix is used in setting up
+           * Custom Access Levels in Context-Aware Access. Your organization's customer ID can be
+           * obtained from the URL: `GET
+           * https://www.googleapis.com/admin/directory/v1/customers/my_customer` The `id` field in
+           * the response contains the customer ID starting with the letter 'C'. The customer ID to
+           * be used in this API is the string after the letter 'C' (not including 'C')
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^devices/[^/]+/deviceUsers/[^/]+/clientStates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * customer. If you're using this API for your own organization, use
+           * `customers/my_customer` If you're using this API to manage another organization, use
+           * `customers/{customer_id}`, where customer_id is the customer to whom the device
+           * belongs.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String customer;
+
+          /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the customer. If
+         you're using this API for your own organization, use `customers/my_customer` If you're using this
+         API to manage another organization, use `customers/{customer_id}`, where customer_id is the
+         customer to whom the device belongs.
+           */
+          public java.lang.String getCustomer() {
+            return customer;
+          }
+
+          /**
+           * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
+           * customer. If you're using this API for your own organization, use
+           * `customers/my_customer` If you're using this API to manage another organization, use
+           * `customers/{customer_id}`, where customer_id is the customer to whom the device
+           * belongs.
+           */
+          public Patch setCustomer(java.lang.String customer) {
+            this.customer = customer;
+            return this;
+          }
+
+          /**
+           * Optional. Comma-separated list of fully qualified names of fields to be updated. If not
+           * specified, all updatable fields in ClientState are updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Comma-separated list of fully qualified names of fields to be updated. If not specified,
+         all updatable fields in ClientState are updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Comma-separated list of fully qualified names of fields to be updated. If not
+           * specified, all updatable fields in ClientState are updated.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
   }
 
   /**
@@ -236,23 +3548,37 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
+      /** Optional. The initial configuration option for the `Group`. */
+      @com.google.api.client.util.Key
+      private java.lang.String initialGroupConfig;
+
+      /** Optional. The initial configuration option for the `Group`.
+       */
+      public java.lang.String getInitialGroupConfig() {
+        return initialGroupConfig;
+      }
+
+      /** Optional. The initial configuration option for the `Group`. */
+      public Create setInitialGroupConfig(java.lang.String initialGroupConfig) {
+        this.initialGroupConfig = initialGroupConfig;
+        return this;
+      }
+
       @Override
       public Create set(String parameterName, Object value) {
         return (Create) super.set(parameterName, value);
       }
     }
     /**
-     * Deletes a Group.
+     * Deletes a `Group`.
      *
      * Create a request for the method "groups.delete".
      *
      * This request holds the parameters needed by the cloudidentity server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in the
-     *        format: `groups/{group_id}`, where `group_id` is the unique ID
-    assigned to the Group.
+     * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
+     *        retrieve. Must be of the form `groups/{group_id}`.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -269,7 +3595,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^groups/[^/]+$");
 
       /**
-       * Deletes a Group.
+       * Deletes a `Group`.
        *
        * Create a request for the method "groups.delete".
        *
@@ -279,10 +3605,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in the
-     *        format: `groups/{group_id}`, where `group_id` is the unique ID
-    assigned to the Group.
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
+     *        retrieve. Must be of the form `groups/{group_id}`.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -351,24 +3675,22 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
-       * in the format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the
-       * Group.
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * `Group` to retrieve. Must be of the form `groups/{group_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-     format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+      /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`
+     to retrieve. Must be of the form `groups/{group_id}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
-       * in the format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the
-       * Group.
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * `Group` to retrieve. Must be of the form `groups/{group_id}`.
        */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -386,17 +3708,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Retrieves a Group.
+     * Retrieves a `Group`.
      *
      * Create a request for the method "groups.get".
      *
      * This request holds the parameters needed by the cloudidentity server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in the
-     *        format: `groups/{group_id}`, where `group_id` is the unique ID
-    assigned to the Group.
+     * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
+     *        retrieve. Must be of the form `groups/{group_id}`.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -413,7 +3733,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^groups/[^/]+$");
 
       /**
-       * Retrieves a Group.
+       * Retrieves a `Group`.
        *
        * Create a request for the method "groups.get".
        *
@@ -422,10 +3742,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in the
-     *        format: `groups/{group_id}`, where `group_id` is the unique ID
-    assigned to the Group.
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group` to
+     *        retrieve. Must be of the form `groups/{group_id}`.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -504,24 +3822,22 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
-       * in the format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the
-       * Group.
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * `Group` to retrieve. Must be of the form `groups/{group_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in the
-     format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+      /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Group`
+     to retrieve. Must be of the form `groups/{group_id}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group
-       * in the format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the
-       * Group.
+       * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       * `Group` to retrieve. Must be of the form `groups/{group_id}`.
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -539,7 +3855,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Lists groups within a customer or a domain.
+     * Lists the `Group`s under a customer or namespace.
      *
      * Create a request for the method "groups.list".
      *
@@ -559,7 +3875,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/groups";
 
       /**
-       * Lists groups within a customer or a domain.
+       * Lists the `Group`s under a customer or namespace.
        *
        * Create a request for the method "groups.list".
        *
@@ -640,70 +3956,90 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
-       * view.
+       * The maximum number of results to return. Note that the number of results returned may be
+       * less than this value even if there are more available results. To fetch all results,
+       * clients must continue calling this method repeatedly until the response no longer contains
+       * a `next_page_token`. If unspecified, defaults to 200 for `View.BASIC` and to 50 for
+       * `View.FULL`. Must not be greater than 1000 for `View.BASIC` or 500 for `View.FULL`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.
+      /** The maximum number of results to return. Note that the number of results returned may be less than
+     this value even if there are more available results. To fetch all results, clients must continue
+     calling this method repeatedly until the response no longer contains a `next_page_token`. If
+     unspecified, defaults to 200 for `View.BASIC` and to 50 for `View.FULL`. Must not be greater than
+     1000 for `View.BASIC` or 500 for `View.FULL`.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
-       * view.
+       * The maximum number of results to return. Note that the number of results returned may be
+       * less than this value even if there are more available results. To fetch all results,
+       * clients must continue calling this method repeatedly until the response no longer contains
+       * a `next_page_token`. If unspecified, defaults to 200 for `View.BASIC` and to 50 for
+       * `View.FULL`. Must not be greater than 1000 for `View.BASIC` or 500 for `View.FULL`.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** The next_page_token value returned from a previous list request, if any. */
+      /** The `next_page_token` value returned from a previous list request, if any. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** The next_page_token value returned from a previous list request, if any.
+      /** The `next_page_token` value returned from a previous list request, if any.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** The next_page_token value returned from a previous list request, if any. */
+      /** The `next_page_token` value returned from a previous list request, if any. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
-      /** Required. Customer ID to list all groups from. */
+      /**
+       * Required. The parent resource under which to list all `Group`s. Must be of the form
+       * `identitysources/{identity_source_id}` for external- identity-mapped groups or
+       * `customers/{customer_id}` for Google Groups.
+       */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Required. Customer ID to list all groups from.
+      /** Required. The parent resource under which to list all `Group`s. Must be of the form
+     `identitysources/{identity_source_id}` for external- identity-mapped groups or
+     `customers/{customer_id}` for Google Groups.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
-      /** Required. Customer ID to list all groups from. */
+      /**
+       * Required. The parent resource under which to list all `Group`s. Must be of the form
+       * `identitysources/{identity_source_id}` for external- identity-mapped groups or
+       * `customers/{customer_id}` for Google Groups.
+       */
       public List setParent(java.lang.String parent) {
         this.parent = parent;
         return this;
       }
 
-      /** Group resource view to be returned. Defaults to [View.BASIC](). */
+      /** The level of detail to be returned. If unspecified, defaults to `View.BASIC`. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** Group resource view to be returned. Defaults to [View.BASIC]().
+      /** The level of detail to be returned. If unspecified, defaults to `View.BASIC`.
        */
       public java.lang.String getView() {
         return view;
       }
 
-      /** Group resource view to be returned. Defaults to [View.BASIC](). */
+      /** The level of detail to be returned. If unspecified, defaults to `View.BASIC`. */
       public List setView(java.lang.String view) {
         this.view = view;
         return this;
@@ -715,8 +4051,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Group by its
-     * EntityKey.
+     * Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Group` by
+     * its `EntityKey`.
      *
      * Create a request for the method "groups.lookup".
      *
@@ -736,8 +4072,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/groups:lookup";
 
       /**
-       * Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Group by its
-       * EntityKey.
+       * Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Group`
+       * by its `EntityKey`.
        *
        * Create a request for the method "groups.lookup".
        *
@@ -819,21 +4155,25 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The ID of the entity within the given namespace. The ID must be unique within its
-       * namespace.
+       * The ID of the entity. For Google-managed entities, the `id` should be the email address of
+       * an existing group or user. For external-identity-mapped entities, the `id` must be a string
+       * conforming to the Identity Source's requirements. Must be unique within a `namespace`.
        */
       @com.google.api.client.util.Key("groupKey.id")
       private java.lang.String groupKeyId;
 
-      /** The ID of the entity within the given namespace. The ID must be unique within its namespace.
+      /** The ID of the entity. For Google-managed entities, the `id` should be the email address of an
+     existing group or user. For external-identity-mapped entities, the `id` must be a string conforming
+     to the Identity Source's requirements. Must be unique within a `namespace`.
        */
       public java.lang.String getGroupKeyId() {
         return groupKeyId;
       }
 
       /**
-       * The ID of the entity within the given namespace. The ID must be unique within its
-       * namespace.
+       * The ID of the entity. For Google-managed entities, the `id` should be the email address of
+       * an existing group or user. For external-identity-mapped entities, the `id` must be a string
+       * conforming to the Identity Source's requirements. Must be unique within a `namespace`.
        */
       public Lookup setGroupKeyId(java.lang.String groupKeyId) {
         this.groupKeyId = groupKeyId;
@@ -841,33 +4181,30 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Namespaces provide isolation for IDs, so an ID only needs to be unique within its
-       * namespace.
-       *
-       * Namespaces are currently only created as part of IdentitySource creation from Admin
-       * Console. A namespace `"identitysources/{identity_source_id}"` is created corresponding to
-       * every Identity Source `identity_source_id`.
+       * The namespace in which the entity exists. If not specified, the `EntityKey` represents a
+       * Google-managed entity such as a Google user or a Google Group. If specified, the
+       * `EntityKey` represents an external-identity-mapped group. The namespace must correspond to
+       * an identity source created in Admin Console and must be in the form of
+       * `identitysources/{identity_source_id}.
        */
       @com.google.api.client.util.Key("groupKey.namespace")
       private java.lang.String groupKeyNamespace;
 
-      /** Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace.
-
-     Namespaces are currently only created as part of IdentitySource creation from Admin Console. A
-     namespace `"identitysources/{identity_source_id}"` is created corresponding to every Identity
-     Source `identity_source_id`.
+      /** The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-
+     managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an
+     external-identity-mapped group. The namespace must correspond to an identity source created in
+     Admin Console and must be in the form of `identitysources/{identity_source_id}.
        */
       public java.lang.String getGroupKeyNamespace() {
         return groupKeyNamespace;
       }
 
       /**
-       * Namespaces provide isolation for IDs, so an ID only needs to be unique within its
-       * namespace.
-       *
-       * Namespaces are currently only created as part of IdentitySource creation from Admin
-       * Console. A namespace `"identitysources/{identity_source_id}"` is created corresponding to
-       * every Identity Source `identity_source_id`.
+       * The namespace in which the entity exists. If not specified, the `EntityKey` represents a
+       * Google-managed entity such as a Google user or a Google Group. If specified, the
+       * `EntityKey` represents an external-identity-mapped group. The namespace must correspond to
+       * an identity source created in Admin Console and must be in the form of
+       * `identitysources/{identity_source_id}.
        */
       public Lookup setGroupKeyNamespace(java.lang.String groupKeyNamespace) {
         this.groupKeyNamespace = groupKeyNamespace;
@@ -880,18 +4217,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Updates a Group.
+     * Updates a `Group`.
      *
      * Create a request for the method "groups.patch".
      *
      * This request holds the parameters needed by the cloudidentity server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in
-     *        the format: `groups/{group_id}`, where group_id is the unique ID
-    assigned to the Group.
-     *        Must be left blank while creating a Group.
+     * @param name Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     *        `Group`. Shall be of the form `groups/{group_id}`.
      * @param content the {@link com.google.api.services.cloudidentity.v1.model.Group}
      * @return the request
      */
@@ -909,7 +4243,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
           java.util.regex.Pattern.compile("^groups/[^/]+$");
 
       /**
-       * Updates a Group.
+       * Updates a `Group`.
        *
        * Create a request for the method "groups.patch".
        *
@@ -919,11 +4253,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-    Group in
-     *        the format: `groups/{group_id}`, where group_id is the unique ID
-    assigned to the Group.
-     *        Must be left blank while creating a Group.
+       * @param name Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     *        `Group`. Shall be of the form `groups/{group_id}`.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.Group}
        * @since 1.13
        */
@@ -993,30 +4324,22 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Group in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the
-       * Group.
-       *
-       * Must be left blank while creating a Group.
+       * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+       * the `Group`. Shall be of the form `groups/{group_id}`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group in
-     the format: `groups/{group_id}`, where group_id is the unique ID assigned to the Group.
-
-     Must be left blank while creating a Group.
+      /** Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+     `Group`. Shall be of the form `groups/{group_id}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Output only. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-       * Group in the format: `groups/{group_id}`, where group_id is the unique ID assigned to the
-       * Group.
-       *
-       * Must be left blank while creating a Group.
+       * Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of
+       * the `Group`. Shall be of the form `groups/{group_id}`.
        */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1028,17 +4351,24 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         return this;
       }
 
-      /** Required. Editable fields: `display_name`, `description` */
+      /**
+       * Required. The fully-qualified names of fields to update. May only contain the following
+       * fields: `display_name`, `description`.
+       */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Required. Editable fields: `display_name`, `description`
+      /** Required. The fully-qualified names of fields to update. May only contain the following fields:
+     `display_name`, `description`.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** Required. Editable fields: `display_name`, `description` */
+      /**
+       * Required. The fully-qualified names of fields to update. May only contain the following
+       * fields: `display_name`, `description`.
+       */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -1050,7 +4380,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Searches for Groups.
+     * Searches for `Group`s matching a specified query.
      *
      * Create a request for the method "groups.search".
      *
@@ -1070,7 +4400,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "v1/groups:search";
 
       /**
-       * Searches for Groups.
+       * Searches for `Group`s matching a specified query.
        *
        * Create a request for the method "groups.search".
        *
@@ -1152,80 +4482,95 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
-       * view.
+       * The maximum number of results to return. Note that the number of results returned may be
+       * less than this value even if there are more available results. To fetch all results,
+       * clients must continue calling this method repeatedly until the response no longer contains
+       * a `next_page_token`. If unspecified, defaults to 200 for `GroupView.BASIC` and 50 for
+       * `GroupView.FULL`. Must not be greater than 1000 for `GroupView.BASIC` or 500 for
+       * `GroupView.FULL`.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.
+      /** The maximum number of results to return. Note that the number of results returned may be less than
+     this value even if there are more available results. To fetch all results, clients must continue
+     calling this method repeatedly until the response no longer contains a `next_page_token`. If
+     unspecified, defaults to 200 for `GroupView.BASIC` and 50 for `GroupView.FULL`. Must not be greater
+     than 1000 for `GroupView.BASIC` or 500 for `GroupView.FULL`.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
-       * view.
+       * The maximum number of results to return. Note that the number of results returned may be
+       * less than this value even if there are more available results. To fetch all results,
+       * clients must continue calling this method repeatedly until the response no longer contains
+       * a `next_page_token`. If unspecified, defaults to 200 for `GroupView.BASIC` and 50 for
+       * `GroupView.FULL`. Must not be greater than 1000 for `GroupView.BASIC` or 500 for
+       * `GroupView.FULL`.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /** The next_page_token value returned from a previous search request, if any. */
+      /** The `next_page_token` value returned from a previous search request, if any. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** The next_page_token value returned from a previous search request, if any.
+      /** The `next_page_token` value returned from a previous search request, if any.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** The next_page_token value returned from a previous search request, if any. */
+      /** The `next_page_token` value returned from a previous search request, if any. */
       public Search setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
       }
 
       /**
-       * Required. `Required`. Query string for performing search on groups. Users can search on
-       * parent and label attributes of groups. EXACT match ('==') is supported on parent, and
-       * CONTAINS match ('in') is supported on labels.
+       * Required. The search query. Must be specified in [Common Expression
+       * Language](https://opensource.google/projects/cel). May only contain equality operators on
+       * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
+       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Required. `Required`. Query string for performing search on groups. Users can search on parent and
-     label attributes of groups. EXACT match ('==') is supported on parent, and CONTAINS match ('in') is
-     supported on labels.
+      /** Required. The search query. Must be specified in [Common Expression
+     Language](https://opensource.google/projects/cel). May only contain equality operators on the
+     parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
+     'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Required. `Required`. Query string for performing search on groups. Users can search on
-       * parent and label attributes of groups. EXACT match ('==') is supported on parent, and
-       * CONTAINS match ('in') is supported on labels.
+       * Required. The search query. Must be specified in [Common Expression
+       * Language](https://opensource.google/projects/cel). May only contain equality operators on
+       * the parent and inclusion operators on labels (e.g., `parent == 'customers/{customer_id}' &&
+       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels`).
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
         return this;
       }
 
-      /** Group resource view to be returned. Defaults to [View.BASIC](). */
+      /** The level of detail to be returned. If unspecified, defaults to `View.BASIC`. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /** Group resource view to be returned. Defaults to [View.BASIC]().
+      /** The level of detail to be returned. If unspecified, defaults to `View.BASIC`.
        */
       public java.lang.String getView() {
         return view;
       }
 
-      /** Group resource view to be returned. Defaults to [View.BASIC](). */
+      /** The level of detail to be returned. If unspecified, defaults to `View.BASIC`. */
       public Search setView(java.lang.String view) {
         this.view = view;
         return this;
@@ -1258,18 +4603,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
     public class Memberships {
 
       /**
-       * Creates a Membership.
+       * Creates a `Membership`.
        *
        * Create a request for the method "memberships.create".
        *
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to
-       *        create Membership within. Format: `groups/{group_id}`, where
-      `group_id` is the unique ID
-       *        assigned to the Group.
+       * @param parent Required. The parent `Group` resource under which to create the `Membership`. Must be of the form
+       *        `groups/{group_id}`.
        * @param content the {@link com.google.api.services.cloudidentity.v1.model.Membership}
        * @return the request
        */
@@ -1287,7 +4629,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Creates a Membership.
+         * Creates a `Membership`.
          *
          * Create a request for the method "memberships.create".
          *
@@ -1297,11 +4639,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to
-       *        create Membership within. Format: `groups/{group_id}`, where
-      `group_id` is the unique ID
-       *        assigned to the Group.
+         * @param parent Required. The parent `Group` resource under which to create the `Membership`. Must be of the form
+       *        `groups/{group_id}`.
          * @param content the {@link com.google.api.services.cloudidentity.v1.model.Membership}
          * @since 1.13
          */
@@ -1371,25 +4710,22 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Group to create Membership within. Format: `groups/{group_id}`, where `group_id` is the
-         * unique ID assigned to the Group.
+         * Required. The parent `Group` resource under which to create the `Membership`. Must be of
+         * the form `groups/{group_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to
-       create Membership within. Format: `groups/{group_id}`, where `group_id` is the unique ID assigned
-       to the Group.
+        /** Required. The parent `Group` resource under which to create the `Membership`. Must be of the form
+       `groups/{group_id}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Group to create Membership within. Format: `groups/{group_id}`, where `group_id` is the
-         * unique ID assigned to the Group.
+         * Required. The parent `Group` resource under which to create the `Membership`. Must be of
+         * the form `groups/{group_id}`.
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1407,21 +4743,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Deletes a Membership.
+       * Deletes a `Membership`.
        *
        * Create a request for the method "memberships.delete".
        *
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Membership to
-       *        be deleted.
-      Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is
-      the
-       *        unique ID assigned to the Group to which Membership belongs to, and
-      member_id is the
-       *        unique ID assigned to the member.
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        `Membership` to delete. Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1438,7 +4769,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+/memberships/[^/]+$");
 
         /**
-         * Deletes a Membership.
+         * Deletes a `Membership`.
          *
          * Create a request for the method "memberships.delete".
          *
@@ -1448,14 +4779,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Membership to
-       *        be deleted.
-      Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is
-      the
-       *        unique ID assigned to the Group to which Membership belongs to, and
-      member_id is the
-       *        unique ID assigned to the member.
+         * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        `Membership` to delete. Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1524,33 +4850,24 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Membership to be deleted.
-         *
-         * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique ID
-         * assigned to the Group to which Membership belongs to, and member_id is the unique ID
-         * assigned to the member.
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` to delete. Must be of the form
+         * `groups/{group_id}/memberships/{membership_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to
-       be deleted.
-
-       Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique ID assigned to
-       the Group to which Membership belongs to, and member_id is the unique ID assigned to the member.
+        /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       `Membership` to delete. Must be of the form `groups/{group_id}/memberships/{membership_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Membership to be deleted.
-         *
-         * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique ID
-         * assigned to the Group to which Membership belongs to, and member_id is the unique ID
-         * assigned to the member.
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` to delete. Must be of the form
+         * `groups/{group_id}/memberships/{membership_id}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1568,21 +4885,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Retrieves a Membership.
+       * Retrieves a `Membership`.
        *
        * Create a request for the method "memberships.get".
        *
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Membership to
-       *        be retrieved.
-      Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is
-      the
-       *        unique id assigned to the Group to which Membership belongs to, and
-      `member_id` is the
-       *        unique ID assigned to the member.
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        `Membership` to retrieve. Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1599,7 +4911,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+/memberships/[^/]+$");
 
         /**
-         * Retrieves a Membership.
+         * Retrieves a `Membership`.
          *
          * Create a request for the method "memberships.get".
          *
@@ -1608,14 +4920,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Membership to
-       *        be retrieved.
-      Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is
-      the
-       *        unique id assigned to the Group to which Membership belongs to, and
-      `member_id` is the
-       *        unique ID assigned to the member.
+         * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        `Membership` to retrieve. Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1694,33 +5001,24 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Membership to be retrieved.
-         *
-         * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id
-         * assigned to the Group to which Membership belongs to, and `member_id` is the unique ID
-         * assigned to the member.
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` to retrieve. Must be of the form
+         * `groups/{group_id}/memberships/{membership_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Membership to
-       be retrieved.
-
-       Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id assigned to
-       the Group to which Membership belongs to, and `member_id` is the unique ID assigned to the member.
+        /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       `Membership` to retrieve. Must be of the form `groups/{group_id}/memberships/{membership_id}`.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Membership to be retrieved.
-         *
-         * Format: `groups/{group_id}/memberships/{member_id}`, where `group_id` is the unique id
-         * assigned to the Group to which Membership belongs to, and `member_id` is the unique ID
-         * assigned to the member.
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` to retrieve. Must be of the form
+         * `groups/{group_id}/memberships/{membership_id}`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1738,19 +5036,15 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Lists Memberships within a Group.
+       * Lists the `Membership`s within a `Group`.
        *
        * Create a request for the method "memberships.list".
        *
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to list
-       *        Memberships within.
-      Format: `groups/{group_id}`, where `group_id` is the unique ID
-       *        assigned to
-      the Group.
+       * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
+       *        form `groups/{group_id}`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1767,7 +5061,7 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Lists Memberships within a Group.
+         * Lists the `Membership`s within a `Group`.
          *
          * Create a request for the method "memberships.list".
          *
@@ -1776,12 +5070,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to list
-       *        Memberships within.
-      Format: `groups/{group_id}`, where `group_id` is the unique ID
-       *        assigned to
-      the Group.
+         * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
+       *        form `groups/{group_id}`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1860,28 +5150,22 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Group to list Memberships within.
-         *
-         * Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+         * Required. The parent `Group` resource under which to lookup the `Membership` name. Must
+         * be of the form `groups/{group_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to list
-       Memberships within.
-
-       Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+        /** Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
+       form `groups/{group_id}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Group to list Memberships within.
-         *
-         * Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+         * Required. The parent `Group` resource under which to lookup the `Membership` name. Must
+         * be of the form `groups/{group_id}`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1894,54 +5178,66 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
-         * view.
+         * The maximum number of results to return. Note that the number of results returned may be
+         * less than this value even if there are more available results. To fetch all results,
+         * clients must continue calling this method repeatedly until the response no longer
+         * contains a `next_page_token`. If unspecified, defaults to 200 for `GroupView.BASIC` and
+         * to 50 for `GroupView.FULL`. Must not be greater than 1000 for `GroupView.BASIC` or 500
+         * for `GroupView.FULL`.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL view.
+        /** The maximum number of results to return. Note that the number of results returned may be less than
+       this value even if there are more available results. To fetch all results, clients must continue
+       calling this method repeatedly until the response no longer contains a `next_page_token`. If
+       unspecified, defaults to 200 for `GroupView.BASIC` and to 50 for `GroupView.FULL`. Must not be
+       greater than 1000 for `GroupView.BASIC` or 500 for `GroupView.FULL`.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The default page size is 200 (max 1000) for the BASIC view, and 50 (max 500) for the FULL
-         * view.
+         * The maximum number of results to return. Note that the number of results returned may be
+         * less than this value even if there are more available results. To fetch all results,
+         * clients must continue calling this method repeatedly until the response no longer
+         * contains a `next_page_token`. If unspecified, defaults to 200 for `GroupView.BASIC` and
+         * to 50 for `GroupView.FULL`. Must not be greater than 1000 for `GroupView.BASIC` or 500
+         * for `GroupView.FULL`.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** The next_page_token value returned from a previous list request, if any. */
+        /** The `next_page_token` value returned from a previous search request, if any. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The next_page_token value returned from a previous list request, if any.
+        /** The `next_page_token` value returned from a previous search request, if any.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The next_page_token value returned from a previous list request, if any. */
+        /** The `next_page_token` value returned from a previous search request, if any. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
         }
 
-        /** Membership resource view to be returned. Defaults to View.BASIC. */
+        /** The level of detail to be returned. If unspecified, defaults to `View.BASIC`. */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
-        /** Membership resource view to be returned. Defaults to View.BASIC.
+        /** The level of detail to be returned. If unspecified, defaults to `View.BASIC`.
          */
         public java.lang.String getView() {
           return view;
         }
 
-        /** Membership resource view to be returned. Defaults to View.BASIC. */
+        /** The level of detail to be returned. If unspecified, defaults to `View.BASIC`. */
         public List setView(java.lang.String view) {
           this.view = view;
           return this;
@@ -1953,20 +5249,16 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Membership
-       * within a Group by member's EntityKey.
+       * Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a
+       * `Membership` by its `EntityKey`.
        *
        * Create a request for the method "memberships.lookup".
        *
        * This request holds the parameters needed by the cloudidentity server.  After setting any optional
        * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to
-       *        lookup Membership within.
-      Format: `groups/{group_id}`, where `group_id` is the unique ID
-       *        assigned to
-      the Group.
+       * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
+       *        form `groups/{group_id}`.
        * @return the request
        */
       public Lookup lookup(java.lang.String parent) throws java.io.IOException {
@@ -1983,8 +5275,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^groups/[^/]+$");
 
         /**
-         * Looks up [resource name](https://cloud.google.com/apis/design/resource_names) of a Membership
-         * within a Group by member's EntityKey.
+         * Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a
+         * `Membership` by its `EntityKey`.
          *
          * Create a request for the method "memberships.lookup".
          *
@@ -1994,12 +5286,8 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-      Group to
-       *        lookup Membership within.
-      Format: `groups/{group_id}`, where `group_id` is the unique ID
-       *        assigned to
-      the Group.
+         * @param parent Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
+       *        form `groups/{group_id}`.
          * @since 1.13
          */
         protected Lookup(java.lang.String parent) {
@@ -2078,28 +5366,22 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Group to lookup Membership within.
-         *
-         * Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+         * Required. The parent `Group` resource under which to lookup the `Membership` name. Must
+         * be of the form `groups/{group_id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the Group to
-       lookup Membership within.
-
-       Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+        /** Required. The parent `Group` resource under which to lookup the `Membership` name. Must be of the
+       form `groups/{group_id}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. [Resource name](https://cloud.google.com/apis/design/resource_names) of the
-         * Group to lookup Membership within.
-         *
-         * Format: `groups/{group_id}`, where `group_id` is the unique ID assigned to the Group.
+         * Required. The parent `Group` resource under which to lookup the `Membership` name. Must
+         * be of the form `groups/{group_id}`.
          */
         public Lookup setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2112,21 +5394,27 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * The ID of the entity within the given namespace. The ID must be unique within its
-         * namespace.
+         * The ID of the entity. For Google-managed entities, the `id` should be the email address
+         * of an existing group or user. For external-identity-mapped entities, the `id` must be a
+         * string conforming to the Identity Source's requirements. Must be unique within a
+         * `namespace`.
          */
         @com.google.api.client.util.Key("memberKey.id")
         private java.lang.String memberKeyId;
 
-        /** The ID of the entity within the given namespace. The ID must be unique within its namespace.
+        /** The ID of the entity. For Google-managed entities, the `id` should be the email address of an
+       existing group or user. For external-identity-mapped entities, the `id` must be a string conforming
+       to the Identity Source's requirements. Must be unique within a `namespace`.
          */
         public java.lang.String getMemberKeyId() {
           return memberKeyId;
         }
 
         /**
-         * The ID of the entity within the given namespace. The ID must be unique within its
-         * namespace.
+         * The ID of the entity. For Google-managed entities, the `id` should be the email address
+         * of an existing group or user. For external-identity-mapped entities, the `id` must be a
+         * string conforming to the Identity Source's requirements. Must be unique within a
+         * `namespace`.
          */
         public Lookup setMemberKeyId(java.lang.String memberKeyId) {
           this.memberKeyId = memberKeyId;
@@ -2134,33 +5422,30 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Namespaces provide isolation for IDs, so an ID only needs to be unique within its
-         * namespace.
-         *
-         * Namespaces are currently only created as part of IdentitySource creation from Admin
-         * Console. A namespace `"identitysources/{identity_source_id}"` is created corresponding to
-         * every Identity Source `identity_source_id`.
+         * The namespace in which the entity exists. If not specified, the `EntityKey` represents a
+         * Google-managed entity such as a Google user or a Google Group. If specified, the
+         * `EntityKey` represents an external-identity-mapped group. The namespace must correspond
+         * to an identity source created in Admin Console and must be in the form of
+         * `identitysources/{identity_source_id}.
          */
         @com.google.api.client.util.Key("memberKey.namespace")
         private java.lang.String memberKeyNamespace;
 
-        /** Namespaces provide isolation for IDs, so an ID only needs to be unique within its namespace.
-
-       Namespaces are currently only created as part of IdentitySource creation from Admin Console. A
-       namespace `"identitysources/{identity_source_id}"` is created corresponding to every Identity
-       Source `identity_source_id`.
+        /** The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-
+       managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an
+       external-identity-mapped group. The namespace must correspond to an identity source created in
+       Admin Console and must be in the form of `identitysources/{identity_source_id}.
          */
         public java.lang.String getMemberKeyNamespace() {
           return memberKeyNamespace;
         }
 
         /**
-         * Namespaces provide isolation for IDs, so an ID only needs to be unique within its
-         * namespace.
-         *
-         * Namespaces are currently only created as part of IdentitySource creation from Admin
-         * Console. A namespace `"identitysources/{identity_source_id}"` is created corresponding to
-         * every Identity Source `identity_source_id`.
+         * The namespace in which the entity exists. If not specified, the `EntityKey` represents a
+         * Google-managed entity such as a Google user or a Google Group. If specified, the
+         * `EntityKey` represents an external-identity-mapped group. The namespace must correspond
+         * to an identity source created in Admin Console and must be in the form of
+         * `identitysources/{identity_source_id}.
          */
         public Lookup setMemberKeyNamespace(java.lang.String memberKeyNamespace) {
           this.memberKeyNamespace = memberKeyNamespace;
@@ -2170,6 +5455,152 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
         @Override
         public Lookup set(String parameterName, Object value) {
           return (Lookup) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Modifies the `MembershipRole`s of a `Membership`.
+       *
+       * Create a request for the method "memberships.modifyMembershipRoles".
+       *
+       * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+       * parameters, call the {@link ModifyMembershipRoles#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        `Membership` whose roles are to be modified. Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesRequest}
+       * @return the request
+       */
+      public ModifyMembershipRoles modifyMembershipRoles(java.lang.String name, com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesRequest content) throws java.io.IOException {
+        ModifyMembershipRoles result = new ModifyMembershipRoles(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ModifyMembershipRoles extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:modifyMembershipRoles";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^groups/[^/]+/memberships/[^/]+$");
+
+        /**
+         * Modifies the `MembershipRole`s of a `Membership`.
+         *
+         * Create a request for the method "memberships.modifyMembershipRoles".
+         *
+         * This request holds the parameters needed by the the cloudidentity server.  After setting any
+         * optional parameters, call the {@link ModifyMembershipRoles#execute()} method to invoke the
+         * remote operation. <p> {@link ModifyMembershipRoles#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       *        `Membership` whose roles are to be modified. Must be of the form
+       *        `groups/{group_id}/memberships/{membership_id}`.
+         * @param content the {@link com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesRequest}
+         * @since 1.13
+         */
+        protected ModifyMembershipRoles(java.lang.String name, com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesRequest content) {
+          super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.ModifyMembershipRolesResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^groups/[^/]+/memberships/[^/]+$");
+          }
+        }
+
+        @Override
+        public ModifyMembershipRoles set$Xgafv(java.lang.String $Xgafv) {
+          return (ModifyMembershipRoles) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ModifyMembershipRoles setAccessToken(java.lang.String accessToken) {
+          return (ModifyMembershipRoles) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ModifyMembershipRoles setAlt(java.lang.String alt) {
+          return (ModifyMembershipRoles) super.setAlt(alt);
+        }
+
+        @Override
+        public ModifyMembershipRoles setCallback(java.lang.String callback) {
+          return (ModifyMembershipRoles) super.setCallback(callback);
+        }
+
+        @Override
+        public ModifyMembershipRoles setFields(java.lang.String fields) {
+          return (ModifyMembershipRoles) super.setFields(fields);
+        }
+
+        @Override
+        public ModifyMembershipRoles setKey(java.lang.String key) {
+          return (ModifyMembershipRoles) super.setKey(key);
+        }
+
+        @Override
+        public ModifyMembershipRoles setOauthToken(java.lang.String oauthToken) {
+          return (ModifyMembershipRoles) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ModifyMembershipRoles setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ModifyMembershipRoles) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ModifyMembershipRoles setQuotaUser(java.lang.String quotaUser) {
+          return (ModifyMembershipRoles) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ModifyMembershipRoles setUploadType(java.lang.String uploadType) {
+          return (ModifyMembershipRoles) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ModifyMembershipRoles setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ModifyMembershipRoles) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` whose roles are to be modified. Must be of the form
+         * `groups/{group_id}/memberships/{membership_id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+       `Membership` whose roles are to be modified. Must be of the form
+       `groups/{group_id}/memberships/{membership_id}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The [resource name](https://cloud.google.com/apis/design/resource_names) of the
+         * `Membership` whose roles are to be modified. Must be of the form
+         * `groups/{group_id}/memberships/{membership_id}`.
+         */
+        public ModifyMembershipRoles setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^groups/[^/]+/memberships/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ModifyMembershipRoles set(String parameterName, Object value) {
+          return (ModifyMembershipRoles) super.set(parameterName, value);
         }
       }
 

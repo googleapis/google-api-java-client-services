@@ -60,6 +60,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private DatabaseEncryption desiredDatabaseEncryption;
 
   /**
+   * The desired status of whether to disable default sNAT for this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DefaultSnatStatus desiredDefaultSnatStatus;
+
+  /**
    * The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as well.
    * The value may be {@code null}.
    */
@@ -74,25 +81,22 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private IntraNodeVisibilityConfig desiredIntraNodeVisibilityConfig;
 
   /**
-   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * cluster's nodes should be located. Changing the locations a cluster is in will result in nodes
-   * being either created or removed from the cluster, depending on whether locations are being
-   * added or removed.
-   *
-   * This list must always include the cluster's primary zone.
+   * The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. This list must always include the cluster's primary zone. Warning: changing
+   * cluster locations will update the locations of all node pools and will result in nodes being
+   * added and/or removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> desiredLocations;
 
   /**
-   * The logging service the cluster should use to write logs. Currently available options:
-   *
-   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * The logging service the cluster should use to write logs. Currently available options: *
+   * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
    * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
-   *
-   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an
+   * empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `logging.googleapis.com` for earlier versions.
    * The value may be {@code null}.
    */
@@ -107,28 +111,22 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private MasterAuthorizedNetworksConfig desiredMasterAuthorizedNetworksConfig;
 
   /**
-   * The Kubernetes version to change the master to.
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the default
-   * Kubernetes version
+   * The Kubernetes version to change the master to. Users may specify either explicit versions
+   * offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest":
+   * picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch
+   * in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version -
+   * "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the default Kubernetes version
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String desiredMasterVersion;
 
   /**
-   * The monitoring service the cluster should use to write metrics. Currently available options:
-   *
-   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
-   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
-   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
-   *
-   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * The monitoring service the cluster should use to write metrics. Currently available options: *
+   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
+   * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
+   * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `monitoring.googleapis.com` for earlier versions.
    * The value may be {@code null}.
    */
@@ -154,19 +152,30 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredNodePoolId;
 
   /**
-   * The Kubernetes version to change the nodes to (typically an upgrade).
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the Kubernetes
-   * master version
+   * The Kubernetes version to change the nodes to (typically an upgrade). Users may specify either
+   * explicit versions offered by Kubernetes Engine or version aliases, which have the following
+   * behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest
+   * valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in
+   * the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the
+   * Kubernetes master version
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String desiredNodeVersion;
+
+  /**
+   * The desired private cluster configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateClusterConfig desiredPrivateClusterConfig;
+
+  /**
+   * The desired release channel configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReleaseChannel desiredReleaseChannel;
 
   /**
    * The desired configuration for exporting resource usage.
@@ -265,6 +274,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The desired status of whether to disable default sNAT for this cluster.
+   * @return value or {@code null} for none
+   */
+  public DefaultSnatStatus getDesiredDefaultSnatStatus() {
+    return desiredDefaultSnatStatus;
+  }
+
+  /**
+   * The desired status of whether to disable default sNAT for this cluster.
+   * @param desiredDefaultSnatStatus desiredDefaultSnatStatus or {@code null} for none
+   */
+  public ClusterUpdate setDesiredDefaultSnatStatus(DefaultSnatStatus desiredDefaultSnatStatus) {
+    this.desiredDefaultSnatStatus = desiredDefaultSnatStatus;
+    return this;
+  }
+
+  /**
    * The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as well.
    * @return value or {@code null} for none
    */
@@ -299,12 +325,11 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * cluster's nodes should be located. Changing the locations a cluster is in will result in nodes
-   * being either created or removed from the cluster, depending on whether locations are being
-   * added or removed.
-   *
-   * This list must always include the cluster's primary zone.
+   * The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. This list must always include the cluster's primary zone. Warning: changing
+   * cluster locations will update the locations of all node pools and will result in nodes being
+   * added and/or removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDesiredLocations() {
@@ -312,12 +337,11 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired list of Google Compute Engine [zones](/compute/docs/zones#available) in which the
-   * cluster's nodes should be located. Changing the locations a cluster is in will result in nodes
-   * being either created or removed from the cluster, depending on whether locations are being
-   * added or removed.
-   *
-   * This list must always include the cluster's primary zone.
+   * The desired list of Google Compute Engine
+   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
+   * should be located. This list must always include the cluster's primary zone. Warning: changing
+   * cluster locations will update the locations of all node pools and will result in nodes being
+   * added and/or removed.
    * @param desiredLocations desiredLocations or {@code null} for none
    */
   public ClusterUpdate setDesiredLocations(java.util.List<java.lang.String> desiredLocations) {
@@ -326,13 +350,11 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The logging service the cluster should use to write logs. Currently available options:
-   *
-   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * The logging service the cluster should use to write logs. Currently available options: *
+   * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
    * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
-   *
-   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an
+   * empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `logging.googleapis.com` for earlier versions.
    * @return value or {@code null} for none
    */
@@ -341,13 +363,11 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The logging service the cluster should use to write logs. Currently available options:
-   *
-   * * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
+   * The logging service the cluster should use to write logs. Currently available options: *
+   * `logging.googleapis.com/kubernetes` - The Cloud Logging service with a Kubernetes-native
    * resource model * `logging.googleapis.com` - The legacy Cloud Logging service (no longer
-   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster.
-   *
-   * If left as an empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * available as of GKE 1.15). * `none` - no logs will be exported from the cluster. If left as an
+   * empty string,`logging.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `logging.googleapis.com` for earlier versions.
    * @param desiredLoggingService desiredLoggingService or {@code null} for none
    */
@@ -374,15 +394,11 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Kubernetes version to change the master to.
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the default
-   * Kubernetes version
+   * The Kubernetes version to change the master to. Users may specify either explicit versions
+   * offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest":
+   * picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch
+   * in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version -
+   * "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the default Kubernetes version
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredMasterVersion() {
@@ -390,15 +406,11 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Kubernetes version to change the master to.
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the default
-   * Kubernetes version
+   * The Kubernetes version to change the master to. Users may specify either explicit versions
+   * offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest":
+   * picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch
+   * in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version -
+   * "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the default Kubernetes version
    * @param desiredMasterVersion desiredMasterVersion or {@code null} for none
    */
   public ClusterUpdate setDesiredMasterVersion(java.lang.String desiredMasterVersion) {
@@ -407,13 +419,11 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The monitoring service the cluster should use to write metrics. Currently available options:
-   *
-   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
-   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
-   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
-   *
-   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * The monitoring service the cluster should use to write metrics. Currently available options: *
+   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
+   * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
+   * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `monitoring.googleapis.com` for earlier versions.
    * @return value or {@code null} for none
    */
@@ -422,13 +432,11 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The monitoring service the cluster should use to write metrics. Currently available options:
-   *
-   * * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-
-   * native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no
-   * longer available as of GKE 1.15). * `none` - No metrics will be exported from the cluster.
-   *
-   * If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
+   * The monitoring service the cluster should use to write metrics. Currently available options: *
+   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
+   * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
+   * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
    * `monitoring.googleapis.com` for earlier versions.
    * @param desiredMonitoringService desiredMonitoringService or {@code null} for none
    */
@@ -480,15 +488,12 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Kubernetes version to change the nodes to (typically an upgrade).
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the Kubernetes
-   * master version
+   * The Kubernetes version to change the nodes to (typically an upgrade). Users may specify either
+   * explicit versions offered by Kubernetes Engine or version aliases, which have the following
+   * behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest
+   * valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in
+   * the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the
+   * Kubernetes master version
    * @return value or {@code null} for none
    */
   public java.lang.String getDesiredNodeVersion() {
@@ -496,19 +501,50 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Kubernetes version to change the nodes to (typically an upgrade).
-   *
-   * Users may specify either explicit versions offered by Kubernetes Engine or version aliases,
-   * which have the following behavior:
-   *
-   * - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid
-   * patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the
-   * 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the Kubernetes
-   * master version
+   * The Kubernetes version to change the nodes to (typically an upgrade). Users may specify either
+   * explicit versions offered by Kubernetes Engine or version aliases, which have the following
+   * behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest
+   * valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in
+   * the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "-": picks the
+   * Kubernetes master version
    * @param desiredNodeVersion desiredNodeVersion or {@code null} for none
    */
   public ClusterUpdate setDesiredNodeVersion(java.lang.String desiredNodeVersion) {
     this.desiredNodeVersion = desiredNodeVersion;
+    return this;
+  }
+
+  /**
+   * The desired private cluster configuration.
+   * @return value or {@code null} for none
+   */
+  public PrivateClusterConfig getDesiredPrivateClusterConfig() {
+    return desiredPrivateClusterConfig;
+  }
+
+  /**
+   * The desired private cluster configuration.
+   * @param desiredPrivateClusterConfig desiredPrivateClusterConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredPrivateClusterConfig(PrivateClusterConfig desiredPrivateClusterConfig) {
+    this.desiredPrivateClusterConfig = desiredPrivateClusterConfig;
+    return this;
+  }
+
+  /**
+   * The desired release channel configuration.
+   * @return value or {@code null} for none
+   */
+  public ReleaseChannel getDesiredReleaseChannel() {
+    return desiredReleaseChannel;
+  }
+
+  /**
+   * The desired release channel configuration.
+   * @param desiredReleaseChannel desiredReleaseChannel or {@code null} for none
+   */
+  public ClusterUpdate setDesiredReleaseChannel(ReleaseChannel desiredReleaseChannel) {
+    this.desiredReleaseChannel = desiredReleaseChannel;
     return this;
   }
 

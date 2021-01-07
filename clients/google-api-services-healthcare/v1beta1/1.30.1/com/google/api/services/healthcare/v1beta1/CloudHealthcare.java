@@ -46,7 +46,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Healthcare API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Healthcare API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -510,16 +510,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         /**
          * Creates a new health dataset. Results are returned through the Operation interface which returns
          * either an `Operation.response` which contains a Dataset or `Operation.error`. The metadata field
-         * type is OperationMetadata. A Google Cloud Platform project can contain up to 500 datasets across
-         * all regions.
+         * type is OperationMetadata.
          *
          * Create a request for the method "datasets.create".
          *
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The name of the project where the server creates the dataset. For
-        example,
+         * @param parent The name of the project where the server creates the dataset. For example,
          *        `projects/{project_id}/locations/{location_id}`.
          * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Dataset}
          * @return the request
@@ -540,8 +538,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Creates a new health dataset. Results are returned through the Operation interface which
            * returns either an `Operation.response` which contains a Dataset or `Operation.error`. The
-           * metadata field type is OperationMetadata. A Google Cloud Platform project can contain up to 500
-           * datasets across all regions.
+           * metadata field type is OperationMetadata.
            *
            * Create a request for the method "datasets.create".
            *
@@ -551,8 +548,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The name of the project where the server creates the dataset. For
-        example,
+           * @param parent The name of the project where the server creates the dataset. For example,
          *        `projects/{project_id}/locations/{location_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Dataset}
            * @since 1.13
@@ -681,11 +677,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         /**
          * Creates a new dataset containing de-identified data from the source dataset. The metadata field
          * type is OperationMetadata. If the request is successful, the response field type is
-         * DeidentifySummary. If errors occur, error details field type is DeidentifyErrorDetails. The LRO
-         * result may still be successful if de-identification fails for some DICOM instances. The new de-
-         * identified dataset will not contain these failed resources. Failed resource totals are tracked in
-         * DeidentifySummary.failure_resource_count. Error details are also logged to Stackdriver Logging.
-         * For more information, see [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging).
+         * DeidentifySummary. The LRO result may still be successful if de-identification fails for some
+         * resources. The new de-identified dataset will not contain these failed resources. The number of
+         * resources processed are tracked in Operation.metadata. Error details are logged to Cloud Logging.
+         * For more information, see [Viewing logs](/healthcare/docs/how-tos/logging).
          *
          * Create a request for the method "datasets.deidentify".
          *
@@ -713,12 +708,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * Creates a new dataset containing de-identified data from the source dataset. The metadata field
            * type is OperationMetadata. If the request is successful, the response field type is
-           * DeidentifySummary. If errors occur, error details field type is DeidentifyErrorDetails. The LRO
-           * result may still be successful if de-identification fails for some DICOM instances. The new de-
-           * identified dataset will not contain these failed resources. Failed resource totals are tracked
-           * in DeidentifySummary.failure_resource_count. Error details are also logged to Stackdriver
-           * Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos/stackdriver-
-           * logging).
+           * DeidentifySummary. The LRO result may still be successful if de-identification fails for some
+           * resources. The new de-identified dataset will not contain these failed resources. The number of
+           * resources processed are tracked in Operation.metadata. Error details are logged to Cloud
+           * Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos/logging).
            *
            * Create a request for the method "datasets.deidentify".
            *
@@ -1127,8 +1120,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @return the request
          */
@@ -1157,8 +1149,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @since 1.13
            */
@@ -1266,34 +1257,33 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned.
-
-         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-         Requests for policies with any conditional bindings must specify version 3. Policies without any
-         conditional bindings may specify any valid value or leave the field unset.
+          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+         must specify version 3. Policies without any conditional bindings may specify any valid value or
+         leave the field unset. To learn which resources support conditions in their IAM policies, see the
+         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1313,8 +1303,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The name of the project whose datasets should be listed.
-        For example,
+         * @param parent The name of the project whose datasets should be listed. For example,
          *        `projects/{project_id}/locations/{location_id}`.
          * @return the request
          */
@@ -1341,8 +1330,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The name of the project whose datasets should be listed.
-        For example,
+           * @param parent The name of the project whose datasets should be listed. For example,
          *        `projects/{project_id}/locations/{location_id}`.
            * @since 1.13
            */
@@ -1500,7 +1488,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Resource name of the dataset, of the form
+         * @param name Resource name of the dataset, of the form
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
          * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Dataset}
          * @return the request
@@ -1529,7 +1517,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Resource name of the dataset, of the form
+           * @param name Resource name of the dataset, of the form
          *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Dataset}
            * @since 1.13
@@ -1600,13 +1588,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Output only. Resource name of the dataset, of the form
+           * Resource name of the dataset, of the form
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Resource name of the dataset, of the form
+          /** Resource name of the dataset, of the form
          `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public java.lang.String getName() {
@@ -1614,7 +1602,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Output only. Resource name of the dataset, of the form
+           * Resource name of the dataset, of the form
            * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
            */
           public Patch setName(java.lang.String name) {
@@ -1656,17 +1644,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "datasets.setIamPolicy".
          *
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
          * @return the request
@@ -1685,9 +1671,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "datasets.setIamPolicy".
            *
@@ -1697,8 +1682,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -1803,18 +1787,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "datasets.testIamPermissions".
          *
          * This request holds the parameters needed by the healthcare server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
          * @return the request
@@ -1834,10 +1816,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "datasets.testIamPermissions".
            *
@@ -1847,8 +1828,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -1973,6 +1953,724 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         public class AnnotationStores {
 
           /**
+           * Creates a new Annotation store within the parent dataset.
+           *
+           * Create a request for the method "annotationStores.create".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent The name of the dataset this Annotation store belongs to.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.AnnotationStore content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.AnnotationStore> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/annotationStores";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Creates a new Annotation store within the parent dataset.
+             *
+             * Create a request for the method "annotationStores.create".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent The name of the dataset this Annotation store belongs to.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.AnnotationStore content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.AnnotationStore.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The name of the dataset this Annotation store belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** The name of the dataset this Annotation store belongs to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** The name of the dataset this Annotation store belongs to. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The ID of the Annotation store that is being created. The string must match the
+             * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String annotationStoreId;
+
+            /** The ID of the Annotation store that is being created. The string must match the following regex:
+           `[\p{L}\p{N}_\-\.]{1,256}`.
+             */
+            public java.lang.String getAnnotationStoreId() {
+              return annotationStoreId;
+            }
+
+            /**
+             * The ID of the Annotation store that is being created. The string must match the
+             * following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
+             */
+            public Create setAnnotationStoreId(java.lang.String annotationStoreId) {
+              this.annotationStoreId = annotationStoreId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes the specified Annotation store and removes all annotations that are contained within it.
+           *
+           * Create a request for the method "annotationStores.delete".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the Annotation store to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Deletes the specified Annotation store and removes all annotations that are contained within
+             * it.
+             *
+             * Create a request for the method "annotationStores.delete".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the Annotation store to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The resource name of the Annotation store to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the Annotation store to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The resource name of the Annotation store to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Evaluate an Annotation store against a ground truth Annotation store. When the operation finishes
+           * successfully, a detailed response is returned of type EvaluateAnnotationStoreResponse, contained
+           * in the response. The metadata field type is OperationMetadata. Errors are logged to Cloud Logging
+           * (see [Viewing logs](/healthcare/docs/how-tos/logging)).
+           *
+           * Create a request for the method "annotationStores.evaluate".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Evaluate#execute()} method to invoke the remote operation.
+           *
+           * @param name The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loca
+           *        tions/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest}
+           * @return the request
+           */
+          public Evaluate evaluate(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest content) throws java.io.IOException {
+            Evaluate result = new Evaluate(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Evaluate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:evaluate";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Evaluate an Annotation store against a ground truth Annotation store. When the operation
+             * finishes successfully, a detailed response is returned of type EvaluateAnnotationStoreResponse,
+             * contained in the response. The metadata field type is OperationMetadata. Errors are logged to
+             * Cloud Logging (see [Viewing logs](/healthcare/docs/how-tos/logging)).
+             *
+             * Create a request for the method "annotationStores.evaluate".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Evaluate#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Evaluate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loca
+           *        tions/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest}
+             * @since 1.13
+             */
+            protected Evaluate(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.EvaluateAnnotationStoreRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Evaluate set$Xgafv(java.lang.String $Xgafv) {
+              return (Evaluate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Evaluate setAccessToken(java.lang.String accessToken) {
+              return (Evaluate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Evaluate setAlt(java.lang.String alt) {
+              return (Evaluate) super.setAlt(alt);
+            }
+
+            @Override
+            public Evaluate setCallback(java.lang.String callback) {
+              return (Evaluate) super.setCallback(callback);
+            }
+
+            @Override
+            public Evaluate setFields(java.lang.String fields) {
+              return (Evaluate) super.setFields(fields);
+            }
+
+            @Override
+            public Evaluate setKey(java.lang.String key) {
+              return (Evaluate) super.setKey(key);
+            }
+
+            @Override
+            public Evaluate setOauthToken(java.lang.String oauthToken) {
+              return (Evaluate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Evaluate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Evaluate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Evaluate setQuotaUser(java.lang.String quotaUser) {
+              return (Evaluate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Evaluate setUploadType(java.lang.String uploadType) {
+              return (Evaluate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Evaluate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Evaluate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The Annotation store to compare against `golden_store`, in the format of `projects/{p
+             * roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation
+             * _store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The Annotation store to compare against `golden_store`, in the format of `projects/{project_id}/loc
+           ations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The Annotation store to compare against `golden_store`, in the format of `projects/{p
+             * roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation
+             * _store_id}`.
+             */
+            public Evaluate setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Evaluate set(String parameterName, Object value) {
+              return (Evaluate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Export Annotations from the Annotation store. If the request is successful, a detailed response
+           * is returned of type ExportAnnotationsResponse, contained in the response field when the operation
+           * finishes. The metadata field type is OperationMetadata. Errors are logged to Cloud Logging (see
+           * [Viewing logs](/healthcare/docs/how-tos/logging)).
+           *
+           * Create a request for the method "annotationStores.export".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/l
+           *        ocations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest content) throws java.io.IOException {
+            Export result = new Export(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:export";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Export Annotations from the Annotation store. If the request is successful, a detailed response
+             * is returned of type ExportAnnotationsResponse, contained in the response field when the
+             * operation finishes. The metadata field type is OperationMetadata. Errors are logged to Cloud
+             * Logging (see [Viewing logs](/healthcare/docs/how-tos/logging)).
+             *
+             * Create a request for the method "annotationStores.export".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/l
+           *        ocations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExportAnnotationsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the Annotation store to export annotations to, in the format of `projects
+             * /{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotat
+             * ion_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the Annotation store to export annotations to, in the format of `projects/{project_id}/
+           locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The name of the Annotation store to export annotations to, in the format of `projects
+             * /{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotat
+             * ion_store_id}`.
+             */
+            public Export setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the specified Annotation store or returns NOT_FOUND if it does not exist.
+           *
+           * Create a request for the method "annotationStores.get".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name The resource name of the Annotation store to get.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.AnnotationStore> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Gets the specified Annotation store or returns NOT_FOUND if it does not exist.
+             *
+             * Create a request for the method "annotationStores.get".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The resource name of the Annotation store to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.AnnotationStore.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The resource name of the Annotation store to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The resource name of the Annotation store to get.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** The resource name of the Annotation store to get. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
@@ -1981,8 +2679,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -2011,8 +2708,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -2120,36 +2816,33 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -2162,17 +2855,536 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
+           * Import Annotations to the Annotation store by loading data from the specified sources. If the
+           * request is successful, a detailed response is returned as of type ImportAnnotationsResponse,
+           * contained in the response field when the operation finishes. The metadata field type is
+           * OperationMetadata. Errors are logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how-
+           * tos/logging)).
            *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Create a request for the method "annotationStores.import".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name The name of the Annotation store to which the server imports annotations, in the format `projects/{p
+           *        roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest}
+           * @return the request
+           */
+          public CloudHealthcareImport healthcareImport(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest content) throws java.io.IOException {
+            CloudHealthcareImport result = new CloudHealthcareImport(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CloudHealthcareImport extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:import";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Import Annotations to the Annotation store by loading data from the specified sources. If the
+             * request is successful, a detailed response is returned as of type ImportAnnotationsResponse,
+             * contained in the response field when the operation finishes. The metadata field type is
+             * OperationMetadata. Errors are logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how-
+             * tos/logging)).
+             *
+             * Create a request for the method "annotationStores.import".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the
+             * remote operation. <p> {@link CloudHealthcareImport#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name The name of the Annotation store to which the server imports annotations, in the format `projects/{p
+           *        roject_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest}
+             * @since 1.13
+             */
+            protected CloudHealthcareImport(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ImportAnnotationsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public CloudHealthcareImport set$Xgafv(java.lang.String $Xgafv) {
+              return (CloudHealthcareImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CloudHealthcareImport setAccessToken(java.lang.String accessToken) {
+              return (CloudHealthcareImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CloudHealthcareImport setAlt(java.lang.String alt) {
+              return (CloudHealthcareImport) super.setAlt(alt);
+            }
+
+            @Override
+            public CloudHealthcareImport setCallback(java.lang.String callback) {
+              return (CloudHealthcareImport) super.setCallback(callback);
+            }
+
+            @Override
+            public CloudHealthcareImport setFields(java.lang.String fields) {
+              return (CloudHealthcareImport) super.setFields(fields);
+            }
+
+            @Override
+            public CloudHealthcareImport setKey(java.lang.String key) {
+              return (CloudHealthcareImport) super.setKey(key);
+            }
+
+            @Override
+            public CloudHealthcareImport setOauthToken(java.lang.String oauthToken) {
+              return (CloudHealthcareImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CloudHealthcareImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CloudHealthcareImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CloudHealthcareImport setQuotaUser(java.lang.String quotaUser) {
+              return (CloudHealthcareImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CloudHealthcareImport setUploadType(java.lang.String uploadType) {
+              return (CloudHealthcareImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CloudHealthcareImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CloudHealthcareImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the Annotation store to which the server imports annotations, in the
+             * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotatio
+             * nStores/{annotation_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the Annotation store to which the server imports annotations, in the format `projects/{
+           project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The name of the Annotation store to which the server imports annotations, in the
+             * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotatio
+             * nStores/{annotation_store_id}`.
+             */
+            public CloudHealthcareImport setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public CloudHealthcareImport set(String parameterName, Object value) {
+              return (CloudHealthcareImport) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the Annotation stores in the given dataset for a source store.
+           *
+           * Create a request for the method "annotationStores.list".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Name of the dataset.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ListAnnotationStoresResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/annotationStores";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Lists the Annotation stores in the given dataset for a source store.
+             *
+             * Create a request for the method "annotationStores.list".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Name of the dataset.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ListAnnotationStoresResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Name of the dataset. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Name of the dataset.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Name of the dataset. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Restricts stores returned to those matching a filter. Syntax:
+             * https://cloud.google.com/appengine/docs/standard/python/search/query_strings Only
+             * filtering on labels is supported, for example `labels.key=value`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Restricts stores returned to those matching a filter. Syntax:
+           https://cloud.google.com/appengine/docs/standard/python/search/query_strings Only filtering on
+           labels is supported, for example `labels.key=value`.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Restricts stores returned to those matching a filter. Syntax:
+             * https://cloud.google.com/appengine/docs/standard/python/search/query_strings Only
+             * filtering on labels is supported, for example `labels.key=value`.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Limit on the number of Annotation stores to return in a single response. If zero the
+             * default page size of 100 is used.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Limit on the number of Annotation stores to return in a single response. If zero the default page
+           size of 100 is used.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Limit on the number of Annotation stores to return in a single response. If zero the
+             * default page size of 100 is used.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The next_page_token value returned from the previous List request, if any. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token value returned from the previous List request, if any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The next_page_token value returned from the previous List request, if any. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the specified Annotation store.
+           *
+           * Create a request for the method "annotationStores.patch".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Resource name of the Annotation store, of the form `projects/{project_id}/locations/{location_id}/da
+           *        tasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.AnnotationStore content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.AnnotationStore> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+            /**
+             * Updates the specified Annotation store.
+             *
+             * Create a request for the method "annotationStores.patch".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Resource name of the Annotation store, of the form `projects/{project_id}/locations/{location_id}/da
+           *        tasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnnotationStore}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.AnnotationStore content) {
+              super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.AnnotationStore.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Resource name of the Annotation store, of the form `projects/{project_id}/locations/{
+             * location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Resource name of the Annotation store, of the form `projects/{project_id}/locations/{location_id}/d
+           atasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Resource name of the Annotation store, of the form `projects/{project_id}/locations/{
+             * location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The update mask applies to the resource. For the `FieldMask` definition, see
+             * https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** The update mask applies to the resource. For the `FieldMask` definition, see
+           https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * The update mask applies to the resource. For the `FieldMask` definition, see
+             * https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "annotationStores.setIamPolicy".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
            * @return the request
@@ -2191,9 +3403,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "annotationStores.setIamPolicy".
              *
@@ -2203,8 +3414,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -2309,18 +3519,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "annotationStores.testIamPermissions".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
            * @return the request
@@ -2340,10 +3548,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "annotationStores.testIamPermissions".
              *
@@ -2353,8 +3560,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -2458,6 +3664,6620 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
 
+          /**
+           * An accessor for creating requests from the Annotations collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.Annotations.List request = healthcare.annotations().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Annotations annotations() {
+            return new Annotations();
+          }
+
+          /**
+           * The "annotations" collection of methods.
+           */
+          public class Annotations {
+
+            /**
+             * Creates a new Annotation record. It is valid to create Annotation objects for the same source
+             * more than once since a unique ID is assigned to each record by this service.
+             *
+             * Create a request for the method "annotations.create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent The name of the Annotation store this annotation belongs to. For example, `projects/my-
+             *        project/locations/us-central1/datasets/mydataset/annotationStores/myannotationstore`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.Annotation content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Annotation> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/annotations";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+              /**
+               * Creates a new Annotation record. It is valid to create Annotation objects for the same source
+               * more than once since a unique ID is assigned to each record by this service.
+               *
+               * Create a request for the method "annotations.create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent The name of the Annotation store this annotation belongs to. For example, `projects/my-
+             *        project/locations/us-central1/datasets/mydataset/annotationStores/myannotationstore`.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.Annotation content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Annotation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * The name of the Annotation store this annotation belongs to. For example, `projects
+               * /my-project/locations/us-
+               * central1/datasets/mydataset/annotationStores/myannotationstore`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** The name of the Annotation store this annotation belongs to. For example, `projects/my-
+             project/locations/us-central1/datasets/mydataset/annotationStores/myannotationstore`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * The name of the Annotation store this annotation belongs to. For example, `projects
+               * /my-project/locations/us-
+               * central1/datasets/mydataset/annotationStores/myannotationstore`.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes an Annotation or returns NOT_FOUND if it does not exist.
+             *
+             * Create a request for the method "annotations.delete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name The resource name of the Annotation to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+
+              /**
+               * Deletes an Annotation or returns NOT_FOUND if it does not exist.
+               *
+               * Create a request for the method "annotations.delete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The resource name of the Annotation to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The resource name of the Annotation to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The resource name of the Annotation to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The resource name of the Annotation to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets an Annotation.
+             *
+             * Create a request for the method "annotations.get".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name The resource name of the Annotation to retrieve.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Annotation> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+
+              /**
+               * Gets an Annotation.
+               *
+               * Create a request for the method "annotations.get".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The resource name of the Annotation to retrieve.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Annotation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The resource name of the Annotation to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The resource name of the Annotation to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The resource name of the Annotation to retrieve. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the Annotations in the given Annotation store for a source resource.
+             *
+             * Create a request for the method "annotations.list".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Name of the Annotation store to retrieve Annotations from.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ListAnnotationsResponse> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/annotations";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+
+              /**
+               * Lists the Annotations in the given Annotation store for a source resource.
+               *
+               * Create a request for the method "annotations.list".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Name of the Annotation store to retrieve Annotations from.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ListAnnotationsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Name of the Annotation store to retrieve Annotations from. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Name of the Annotation store to retrieve Annotations from.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Name of the Annotation store to retrieve Annotations from. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Restricts Annotations returned to those matching a filter. Functions available for
+               * filtering are: - `matches("annotation_source.cloud_healthcare_source.name",
+               * substring)`. Filter on `cloud_healthcare_source.name`. For example:
+               * `matches("annotation_source.cloud_healthcare_source.name", "some source")`. -
+               * `matches("annotation", substring)`. Filter on all fields of annotation. For
+               * example: `matches("annotation", "some-content")`. - `type("text")`,
+               * `type("image")`, `type("resource")`. Filter on the type of annotation `data`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Restricts Annotations returned to those matching a filter. Functions available for filtering are: -
+             `matches("annotation_source.cloud_healthcare_source.name", substring)`. Filter on
+             `cloud_healthcare_source.name`. For example:
+             `matches("annotation_source.cloud_healthcare_source.name", "some source")`. -
+             `matches("annotation", substring)`. Filter on all fields of annotation. For example:
+             `matches("annotation", "some-content")`. - `type("text")`, `type("image")`, `type("resource")`.
+             Filter on the type of annotation `data`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Restricts Annotations returned to those matching a filter. Functions available for
+               * filtering are: - `matches("annotation_source.cloud_healthcare_source.name",
+               * substring)`. Filter on `cloud_healthcare_source.name`. For example:
+               * `matches("annotation_source.cloud_healthcare_source.name", "some source")`. -
+               * `matches("annotation", substring)`. Filter on all fields of annotation. For
+               * example: `matches("annotation", "some-content")`. - `type("text")`,
+               * `type("image")`, `type("resource")`. Filter on the type of annotation `data`.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Limit on the number of Annotations to return in a single response. If zero the
+               * default page size of 100 is used.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Limit on the number of Annotations to return in a single response. If zero the default page size of
+             100 is used.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Limit on the number of Annotations to return in a single response. If zero the
+               * default page size of 100 is used.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** The next_page_token value returned from the previous List request, if any. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** The next_page_token value returned from the previous List request, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** The next_page_token value returned from the previous List request, if any. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /** Controls which fields are populated in the response. */
+              @com.google.api.client.util.Key
+              private java.lang.String view;
+
+              /** Controls which fields are populated in the response.
+               */
+              public java.lang.String getView() {
+                return view;
+              }
+
+              /** Controls which fields are populated in the response. */
+              public List setView(java.lang.String view) {
+                this.view = view;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the Annotation.
+             *
+             * Create a request for the method "annotations.patch".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets
+             *        /{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.Annotation content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Annotation> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+
+              /**
+               * Updates the Annotation.
+               *
+               * Create a request for the method "annotations.patch".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets
+             *        /{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Annotation}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.Annotation content) {
+                super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Annotation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Resource name of the Annotation, of the form `projects/{project_id}/locations/{loca
+               * tion_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{
+               * annotation_id}`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/dataset
+             s/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Resource name of the Annotation, of the form `projects/{project_id}/locations/{loca
+               * tion_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{
+               * annotation_id}`.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/annotationStores/[^/]+/annotations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * The update mask applies to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** The update mask applies to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * The update mask applies to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+        /**
+         * An accessor for creating requests from the ConsentStores collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+         *   {@code CloudHealthcare.ConsentStores.List request = healthcare.consentStores().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ConsentStores consentStores() {
+          return new ConsentStores();
+        }
+
+        /**
+         * The "consentStores" collection of methods.
+         */
+        public class ConsentStores {
+
+          /**
+           * Checks if a particular data_id of a User data mapping in the given Consent store is consented for
+           * a given use.
+           *
+           * Create a request for the method "consentStores.checkDataAccess".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link CheckDataAccess#execute()} method to invoke the remote operation.
+           *
+           * @param consentStore Name of the Consent store where the requested data_id is stored, of the form `projects/{project_id}/
+           *        locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.CheckDataAccessRequest}
+           * @return the request
+           */
+          public CheckDataAccess checkDataAccess(java.lang.String consentStore, com.google.api.services.healthcare.v1beta1.model.CheckDataAccessRequest content) throws java.io.IOException {
+            CheckDataAccess result = new CheckDataAccess(consentStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CheckDataAccess extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.CheckDataAccessResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+consentStore}:checkDataAccess";
+
+            private final java.util.regex.Pattern CONSENT_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Checks if a particular data_id of a User data mapping in the given Consent store is consented
+             * for a given use.
+             *
+             * Create a request for the method "consentStores.checkDataAccess".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link CheckDataAccess#execute()} method to invoke the remote
+             * operation. <p> {@link CheckDataAccess#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param consentStore Name of the Consent store where the requested data_id is stored, of the form `projects/{project_id}/
+           *        locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.CheckDataAccessRequest}
+             * @since 1.13
+             */
+            protected CheckDataAccess(java.lang.String consentStore, com.google.api.services.healthcare.v1beta1.model.CheckDataAccessRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.CheckDataAccessResponse.class);
+              this.consentStore = com.google.api.client.util.Preconditions.checkNotNull(consentStore, "Required parameter consentStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public CheckDataAccess set$Xgafv(java.lang.String $Xgafv) {
+              return (CheckDataAccess) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CheckDataAccess setAccessToken(java.lang.String accessToken) {
+              return (CheckDataAccess) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CheckDataAccess setAlt(java.lang.String alt) {
+              return (CheckDataAccess) super.setAlt(alt);
+            }
+
+            @Override
+            public CheckDataAccess setCallback(java.lang.String callback) {
+              return (CheckDataAccess) super.setCallback(callback);
+            }
+
+            @Override
+            public CheckDataAccess setFields(java.lang.String fields) {
+              return (CheckDataAccess) super.setFields(fields);
+            }
+
+            @Override
+            public CheckDataAccess setKey(java.lang.String key) {
+              return (CheckDataAccess) super.setKey(key);
+            }
+
+            @Override
+            public CheckDataAccess setOauthToken(java.lang.String oauthToken) {
+              return (CheckDataAccess) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CheckDataAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CheckDataAccess) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CheckDataAccess setQuotaUser(java.lang.String quotaUser) {
+              return (CheckDataAccess) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CheckDataAccess setUploadType(java.lang.String uploadType) {
+              return (CheckDataAccess) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CheckDataAccess setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CheckDataAccess) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Name of the Consent store where the requested data_id is stored, of the form `project
+             * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_s
+             * tore_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String consentStore;
+
+            /** Name of the Consent store where the requested data_id is stored, of the form `projects/{project_id}
+           /locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             */
+            public java.lang.String getConsentStore() {
+              return consentStore;
+            }
+
+            /**
+             * Name of the Consent store where the requested data_id is stored, of the form `project
+             * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_s
+             * tore_id}`.
+             */
+            public CheckDataAccess setConsentStore(java.lang.String consentStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.consentStore = consentStore;
+              return this;
+            }
+
+            @Override
+            public CheckDataAccess set(String parameterName, Object value) {
+              return (CheckDataAccess) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a new Consent store in the parent dataset. Attempting to create a consent store with the
+           * same ID as an existing store fails with an ALREADY_EXISTS error.
+           *
+           * Create a request for the method "consentStores.create".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the dataset this Consent store belongs to.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentStore}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.ConsentStore content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ConsentStore> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/consentStores";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Creates a new Consent store in the parent dataset. Attempting to create a consent store with
+             * the same ID as an existing store fails with an ALREADY_EXISTS error.
+             *
+             * Create a request for the method "consentStores.create".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the dataset this Consent store belongs to.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentStore}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.ConsentStore content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.ConsentStore.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the dataset this Consent store belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the dataset this Consent store belongs to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The name of the dataset this Consent store belongs to. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The ID of the consent store to create. The string must match the following regex:
+             * `[\p{L}\p{N}_\-\.]{1,256}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String consentStoreId;
+
+            /** The ID of the consent store to create. The string must match the following regex:
+           `[\p{L}\p{N}_\-\.]{1,256}`.
+             */
+            public java.lang.String getConsentStoreId() {
+              return consentStoreId;
+            }
+
+            /**
+             * The ID of the consent store to create. The string must match the following regex:
+             * `[\p{L}\p{N}_\-\.]{1,256}`.
+             */
+            public Create setConsentStoreId(java.lang.String consentStoreId) {
+              this.consentStoreId = consentStoreId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes the specified Consent store and removes all consent data in the specified consent store.
+           *
+           * Create a request for the method "consentStores.delete".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Consent store to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Deletes the specified Consent store and removes all consent data in the specified consent
+             * store.
+             *
+             * Create a request for the method "consentStores.delete".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Consent store to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name of the Consent store to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Consent store to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name of the Consent store to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Evaluates the end user's Consents for all matching User data mappings. Note: User data mappings
+           * are indexed asynchronously, so there might be a slight delay between the time a mapping is
+           * created or updated and when it is included in the results of EvaluateUserConsents.
+           *
+           * Create a request for the method "consentStores.evaluateUserConsents".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link EvaluateUserConsents#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param consentStore Name of the Consent store to retrieve user data mappings from.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateUserConsentsRequest}
+           * @return the request
+           */
+          public EvaluateUserConsents evaluateUserConsents(java.lang.String consentStore, com.google.api.services.healthcare.v1beta1.model.EvaluateUserConsentsRequest content) throws java.io.IOException {
+            EvaluateUserConsents result = new EvaluateUserConsents(consentStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class EvaluateUserConsents extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.EvaluateUserConsentsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+consentStore}:evaluateUserConsents";
+
+            private final java.util.regex.Pattern CONSENT_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Evaluates the end user's Consents for all matching User data mappings. Note: User data mappings
+             * are indexed asynchronously, so there might be a slight delay between the time a mapping is
+             * created or updated and when it is included in the results of EvaluateUserConsents.
+             *
+             * Create a request for the method "consentStores.evaluateUserConsents".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link EvaluateUserConsents#execute()} method to invoke the
+             * remote operation. <p> {@link EvaluateUserConsents#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param consentStore Name of the Consent store to retrieve user data mappings from.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.EvaluateUserConsentsRequest}
+             * @since 1.13
+             */
+            protected EvaluateUserConsents(java.lang.String consentStore, com.google.api.services.healthcare.v1beta1.model.EvaluateUserConsentsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.EvaluateUserConsentsResponse.class);
+              this.consentStore = com.google.api.client.util.Preconditions.checkNotNull(consentStore, "Required parameter consentStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public EvaluateUserConsents set$Xgafv(java.lang.String $Xgafv) {
+              return (EvaluateUserConsents) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public EvaluateUserConsents setAccessToken(java.lang.String accessToken) {
+              return (EvaluateUserConsents) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public EvaluateUserConsents setAlt(java.lang.String alt) {
+              return (EvaluateUserConsents) super.setAlt(alt);
+            }
+
+            @Override
+            public EvaluateUserConsents setCallback(java.lang.String callback) {
+              return (EvaluateUserConsents) super.setCallback(callback);
+            }
+
+            @Override
+            public EvaluateUserConsents setFields(java.lang.String fields) {
+              return (EvaluateUserConsents) super.setFields(fields);
+            }
+
+            @Override
+            public EvaluateUserConsents setKey(java.lang.String key) {
+              return (EvaluateUserConsents) super.setKey(key);
+            }
+
+            @Override
+            public EvaluateUserConsents setOauthToken(java.lang.String oauthToken) {
+              return (EvaluateUserConsents) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public EvaluateUserConsents setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (EvaluateUserConsents) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public EvaluateUserConsents setQuotaUser(java.lang.String quotaUser) {
+              return (EvaluateUserConsents) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public EvaluateUserConsents setUploadType(java.lang.String uploadType) {
+              return (EvaluateUserConsents) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public EvaluateUserConsents setUploadProtocol(java.lang.String uploadProtocol) {
+              return (EvaluateUserConsents) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Name of the Consent store to retrieve user data mappings from. */
+            @com.google.api.client.util.Key
+            private java.lang.String consentStore;
+
+            /** Name of the Consent store to retrieve user data mappings from.
+             */
+            public java.lang.String getConsentStore() {
+              return consentStore;
+            }
+
+            /** Name of the Consent store to retrieve user data mappings from. */
+            public EvaluateUserConsents setConsentStore(java.lang.String consentStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.consentStore = consentStore;
+              return this;
+            }
+
+            @Override
+            public EvaluateUserConsents set(String parameterName, Object value) {
+              return (EvaluateUserConsents) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the specified Consent store.
+           *
+           * Create a request for the method "consentStores.get".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Consent store to get.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ConsentStore> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Gets the specified Consent store.
+             *
+             * Create a request for the method "consentStores.get".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Consent store to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ConsentStore.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name of the Consent store to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Consent store to get.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name of the Consent store to get. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+           * does not have a policy set.
+           *
+           * Create a request for the method "consentStores.getIamPolicy".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+           *        the appropriate value for this field.
+           * @return the request
+           */
+          public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+            GetIamPolicy result = new GetIamPolicy(resource);
+            initialize(result);
+            return result;
+          }
+
+          public class GetIamPolicy extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Policy> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:getIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+             * and does not have a policy set.
+             *
+             * Create a request for the method "consentStores.getIamPolicy".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+           *        the appropriate value for this field.
+             * @since 1.13
+             */
+            protected GetIamPolicy(java.lang.String resource) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (GetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (GetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetIamPolicy setAlt(java.lang.String alt) {
+              return (GetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public GetIamPolicy setCallback(java.lang.String callback) {
+              return (GetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public GetIamPolicy setFields(java.lang.String fields) {
+              return (GetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public GetIamPolicy setKey(java.lang.String key) {
+              return (GetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (GetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (GetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (GetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+           the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            public GetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            /**
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            @com.google.api.client.util.Key("options.requestedPolicyVersion")
+            private java.lang.Integer optionsRequestedPolicyVersion;
+
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            public java.lang.Integer getOptionsRequestedPolicyVersion() {
+              return optionsRequestedPolicyVersion;
+            }
+
+            /**
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+              this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+              return this;
+            }
+
+            @Override
+            public GetIamPolicy set(String parameterName, Object value) {
+              return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the Consent stores in the given dataset.
+           *
+           * Create a request for the method "consentStores.list".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Name of the dataset.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ListConsentStoresResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/consentStores";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Lists the Consent stores in the given dataset.
+             *
+             * Create a request for the method "consentStores.list".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Name of the dataset.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ListConsentStoresResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the dataset. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Name of the dataset.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Name of the dataset. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Restricts the stores returned to those matching a filter. Syntax:
+             * https://cloud.google.com/appengine/docs/standard/python/search/query_strings. Only
+             * filtering on labels is supported. For example, `labels.key=value`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Restricts the stores returned to those matching a filter. Syntax:
+           https://cloud.google.com/appengine/docs/standard/python/search/query_strings. Only filtering on
+           labels is supported. For example, `labels.key=value`.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Restricts the stores returned to those matching a filter. Syntax:
+             * https://cloud.google.com/appengine/docs/standard/python/search/query_strings. Only
+             * filtering on labels is supported. For example, `labels.key=value`.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Limit on the number of Consent stores to return in a single response. If zero the
+             * default page size of 100 is used.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Limit on the number of Consent stores to return in a single response. If zero the default page size
+           of 100 is used.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Limit on the number of Consent stores to return in a single response. If zero the
+             * default page size of 100 is used.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Token to retrieve the next page of results or empty to get the first page. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Token to retrieve the next page of results or empty to get the first page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Token to retrieve the next page of results or empty to get the first page. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the specified Consent store.
+           *
+           * Create a request for the method "consentStores.patch".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Resource name of the Consent store, of the form `projects/{project_id}/locations/{location_id}/datas
+           *        ets/{dataset_id}/consentStores/{consent_store_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentStore}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ConsentStore content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ConsentStore> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Updates the specified Consent store.
+             *
+             * Create a request for the method "consentStores.patch".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Resource name of the Consent store, of the form `projects/{project_id}/locations/{location_id}/datas
+           *        ets/{dataset_id}/consentStores/{consent_store_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentStore}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ConsentStore content) {
+              super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.ConsentStore.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Resource name of the Consent store, of the form `projects/{project_id}/locations/{loc
+             * ation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Resource name of the Consent store, of the form `projects/{project_id}/locations/{location_id}/data
+           sets/{dataset_id}/consentStores/{consent_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Resource name of the Consent store, of the form `projects/{project_id}/locations/{loc
+             * ation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The update mask that applies to the resource. For the `FieldMask` definition, see
+             * https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask. The `labels` field is allowed to be
+             * updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** The update mask that applies to the resource. For the `FieldMask` definition, see
+           https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. The
+           `labels` field is allowed to be updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * The update mask that applies to the resource. For the `FieldMask` definition, see
+             * https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask. The `labels` field is allowed to be
+             * updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Queries all data_ids that are consented for a given use in the given Consent store and writes
+           * them to a specified destination. The returned Operation includes a progress counter for the
+           * number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing logs]
+           * (/healthcare/docs/how-tos/logging)). For example, the following sample log entry shows a `failed
+           * to evaluate consent policy` error that occurred during a QueryAccessibleData call to consent
+           * store `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent
+           * _store_id}`. ```json jsonPayload: { @type:
+           * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: { code:
+           * 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/locations/{
+           * location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}" }
+           * logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
+           * operation: { id:
+           * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/operations/{operation_id}"
+           * producer: "healthcare.googleapis.com/QueryAccessibleData" } receiveTimestamp: "TIMESTAMP"
+           * resource: { labels: { consent_store_id: "{consent_store_id}" dataset_id: "{dataset_id}" location:
+           * "{location_id}" project_id: "{project_id}" } type: "healthcare_consent_store" } severity: "ERROR"
+           * timestamp: "TIMESTAMP" ```
+           *
+           * Create a request for the method "consentStores.queryAccessibleData".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link QueryAccessibleData#execute()} method to invoke the remote operation.
+           *
+           * @param consentStore Name of the Consent store to retrieve user data mappings from.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.QueryAccessibleDataRequest}
+           * @return the request
+           */
+          public QueryAccessibleData queryAccessibleData(java.lang.String consentStore, com.google.api.services.healthcare.v1beta1.model.QueryAccessibleDataRequest content) throws java.io.IOException {
+            QueryAccessibleData result = new QueryAccessibleData(consentStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class QueryAccessibleData extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+consentStore}:queryAccessibleData";
+
+            private final java.util.regex.Pattern CONSENT_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Queries all data_ids that are consented for a given use in the given Consent store and writes
+             * them to a specified destination. The returned Operation includes a progress counter for the
+             * number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing logs]
+             * (/healthcare/docs/how-tos/logging)). For example, the following sample log entry shows a
+             * `failed to evaluate consent policy` error that occurred during a QueryAccessibleData call to
+             * consent store `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStore
+             * s/{consent_store_id}`. ```json jsonPayload: { @type:
+             * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: {
+             * code: 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/loc
+             * ations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_i
+             * d}" } logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
+             * operation: { id:
+             * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/operations/{operation_id}"
+             * producer: "healthcare.googleapis.com/QueryAccessibleData" } receiveTimestamp: "TIMESTAMP"
+             * resource: { labels: { consent_store_id: "{consent_store_id}" dataset_id: "{dataset_id}"
+             * location: "{location_id}" project_id: "{project_id}" } type: "healthcare_consent_store" }
+             * severity: "ERROR" timestamp: "TIMESTAMP" ```
+             *
+             * Create a request for the method "consentStores.queryAccessibleData".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link QueryAccessibleData#execute()} method to invoke the remote
+             * operation. <p> {@link QueryAccessibleData#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param consentStore Name of the Consent store to retrieve user data mappings from.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.QueryAccessibleDataRequest}
+             * @since 1.13
+             */
+            protected QueryAccessibleData(java.lang.String consentStore, com.google.api.services.healthcare.v1beta1.model.QueryAccessibleDataRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.consentStore = com.google.api.client.util.Preconditions.checkNotNull(consentStore, "Required parameter consentStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public QueryAccessibleData set$Xgafv(java.lang.String $Xgafv) {
+              return (QueryAccessibleData) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public QueryAccessibleData setAccessToken(java.lang.String accessToken) {
+              return (QueryAccessibleData) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public QueryAccessibleData setAlt(java.lang.String alt) {
+              return (QueryAccessibleData) super.setAlt(alt);
+            }
+
+            @Override
+            public QueryAccessibleData setCallback(java.lang.String callback) {
+              return (QueryAccessibleData) super.setCallback(callback);
+            }
+
+            @Override
+            public QueryAccessibleData setFields(java.lang.String fields) {
+              return (QueryAccessibleData) super.setFields(fields);
+            }
+
+            @Override
+            public QueryAccessibleData setKey(java.lang.String key) {
+              return (QueryAccessibleData) super.setKey(key);
+            }
+
+            @Override
+            public QueryAccessibleData setOauthToken(java.lang.String oauthToken) {
+              return (QueryAccessibleData) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public QueryAccessibleData setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (QueryAccessibleData) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public QueryAccessibleData setQuotaUser(java.lang.String quotaUser) {
+              return (QueryAccessibleData) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public QueryAccessibleData setUploadType(java.lang.String uploadType) {
+              return (QueryAccessibleData) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public QueryAccessibleData setUploadProtocol(java.lang.String uploadProtocol) {
+              return (QueryAccessibleData) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Name of the Consent store to retrieve user data mappings from. */
+            @com.google.api.client.util.Key
+            private java.lang.String consentStore;
+
+            /** Name of the Consent store to retrieve user data mappings from.
+             */
+            public java.lang.String getConsentStore() {
+              return consentStore;
+            }
+
+            /** Name of the Consent store to retrieve user data mappings from. */
+            public QueryAccessibleData setConsentStore(java.lang.String consentStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.consentStore = consentStore;
+              return this;
+            }
+
+            @Override
+            public QueryAccessibleData set(String parameterName, Object value) {
+              return (QueryAccessibleData) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           *
+           * Create a request for the method "consentStores.setIamPolicy".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+           *        the appropriate value for this field.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
+           * @return the request
+           */
+          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest content) throws java.io.IOException {
+            SetIamPolicy result = new SetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetIamPolicy extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Policy> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+             *
+             * Create a request for the method "consentStores.setIamPolicy".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+           *        the appropriate value for this field.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected SetIamPolicy(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (SetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (SetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetIamPolicy setAlt(java.lang.String alt) {
+              return (SetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public SetIamPolicy setCallback(java.lang.String callback) {
+              return (SetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public SetIamPolicy setFields(java.lang.String fields) {
+              return (SetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public SetIamPolicy setKey(java.lang.String key) {
+              return (SetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (SetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (SetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (SetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+           the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See the operation
+             * documentation for the appropriate value for this field.
+             */
+            public SetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetIamPolicy set(String parameterName, Object value) {
+              return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "consentStores.testIamPermissions".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+           *        documentation for the appropriate value for this field.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
+           * @return the request
+           */
+          public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+            TestIamPermissions result = new TestIamPermissions(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TestIamPermissions extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Returns permissions that a caller has on the specified resource. If the resource does not
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
+             *
+             * Create a request for the method "consentStores.testIamPermissions".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+             * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+           *        documentation for the appropriate value for this field.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
+             * @since 1.13
+             */
+            protected TestIamPermissions(java.lang.String resource, com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+              return (TestIamPermissions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+              return (TestIamPermissions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TestIamPermissions setAlt(java.lang.String alt) {
+              return (TestIamPermissions) super.setAlt(alt);
+            }
+
+            @Override
+            public TestIamPermissions setCallback(java.lang.String callback) {
+              return (TestIamPermissions) super.setCallback(callback);
+            }
+
+            @Override
+            public TestIamPermissions setFields(java.lang.String fields) {
+              return (TestIamPermissions) super.setFields(fields);
+            }
+
+            @Override
+            public TestIamPermissions setKey(java.lang.String key) {
+              return (TestIamPermissions) super.setKey(key);
+            }
+
+            @Override
+            public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+              return (TestIamPermissions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+              return (TestIamPermissions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TestIamPermissions setUploadType(java.lang.String uploadType) {
+              return (TestIamPermissions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See the
+             * operation documentation for the appropriate value for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+           documentation for the appropriate value for this field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See the
+             * operation documentation for the appropriate value for this field.
+             */
+            public TestIamPermissions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public TestIamPermissions set(String parameterName, Object value) {
+              return (TestIamPermissions) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the AttributeDefinitions collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.AttributeDefinitions.List request = healthcare.attributeDefinitions().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public AttributeDefinitions attributeDefinitions() {
+            return new AttributeDefinitions();
+          }
+
+          /**
+           * The "attributeDefinitions" collection of methods.
+           */
+          public class AttributeDefinitions {
+
+            /**
+             * Creates a new Attribute definition in the parent Consent store.
+             *
+             * Create a request for the method "attributeDefinitions.create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The name of the consent store that this Attribute definition belongs to.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AttributeDefinition}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.AttributeDefinition content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.AttributeDefinition> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/attributeDefinitions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Creates a new Attribute definition in the parent Consent store.
+               *
+               * Create a request for the method "attributeDefinitions.create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The name of the consent store that this Attribute definition belongs to.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AttributeDefinition}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.AttributeDefinition content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.AttributeDefinition.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the consent store that this Attribute definition belongs to.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the consent store that this Attribute definition belongs to.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The name of the consent store that this Attribute definition belongs to.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Required. The ID of the Attribute definition to create. The string must match the
+               * following regex: `_a-zA-Z{0,255}` and must not be a reserved keyword within the
+               * Common Expression Language as listed on https://github.com/google/cel-
+               * spec/blob/master/doc/langdef.md.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String attributeDefinitionId;
+
+              /** Required. The ID of the Attribute definition to create. The string must match the following regex:
+             `_a-zA-Z{0,255}` and must not be a reserved keyword within the Common Expression Language as listed
+             on https://github.com/google/cel-spec/blob/master/doc/langdef.md.
+               */
+              public java.lang.String getAttributeDefinitionId() {
+                return attributeDefinitionId;
+              }
+
+              /**
+               * Required. The ID of the Attribute definition to create. The string must match the
+               * following regex: `_a-zA-Z{0,255}` and must not be a reserved keyword within the
+               * Common Expression Language as listed on https://github.com/google/cel-
+               * spec/blob/master/doc/langdef.md.
+               */
+              public Create setAttributeDefinitionId(java.lang.String attributeDefinitionId) {
+                this.attributeDefinitionId = attributeDefinitionId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified Attribute definition. Fails if it is referenced by any User data mapping,
+             * or the latest revision of any Consent.
+             *
+             * Create a request for the method "attributeDefinitions.delete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Attribute definition to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+
+              /**
+               * Deletes the specified Attribute definition. Fails if it is referenced by any User data mapping,
+               * or the latest revision of any Consent.
+               *
+               * Create a request for the method "attributeDefinitions.delete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Attribute definition to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the Attribute definition to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Attribute definition to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the Attribute definition to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the specified Attribute definition.
+             *
+             * Create a request for the method "attributeDefinitions.get".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Attribute definition to get.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.AttributeDefinition> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+
+              /**
+               * Gets the specified Attribute definition.
+               *
+               * Create a request for the method "attributeDefinitions.get".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Attribute definition to get.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.AttributeDefinition.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the Attribute definition to get. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Attribute definition to get.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the Attribute definition to get. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the Attribute definitions in the given Consent store.
+             *
+             * Create a request for the method "attributeDefinitions.list".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the Consent store to retrieve attribute definitions from.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ListAttributeDefinitionsResponse> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/attributeDefinitions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Lists the Attribute definitions in the given Consent store.
+               *
+               * Create a request for the method "attributeDefinitions.list".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the Consent store to retrieve attribute definitions from.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ListAttributeDefinitionsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the Consent store to retrieve attribute definitions from. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the Consent store to retrieve attribute definitions from.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the Consent store to retrieve attribute definitions from. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Restricts the attributes returned to those matching a filter. Syntax:
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings. The
+               * only field available for filtering is `category`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Restricts the attributes returned to those matching a filter. Syntax:
+             https://cloud.google.com/appengine/docs/standard/python/search/query_strings. The only field
+             available for filtering is `category`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Restricts the attributes returned to those matching a filter. Syntax:
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings. The
+               * only field available for filtering is `category`.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Limit on the number of attribute definitions to return in a single response. If
+               * zero the default page size of 100 is used.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Limit on the number of attribute definitions to return in a single response. If zero the default
+             page size of 100 is used.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Limit on the number of attribute definitions to return in a single response. If
+               * zero the default page size of 100 is used.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** Token to retrieve the next page of results or empty to get the first page. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Token to retrieve the next page of results or empty to get the first page.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** Token to retrieve the next page of results or empty to get the first page. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the specified Attribute definition.
+             *
+             * Create a request for the method "attributeDefinitions.patch".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Resource name of the attribute definition, of the form `projects/{project_id}/locations/{location_id
+             *        }/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
+             *        efinition_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AttributeDefinition}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.AttributeDefinition content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.AttributeDefinition> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+
+              /**
+               * Updates the specified Attribute definition.
+               *
+               * Create a request for the method "attributeDefinitions.patch".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Resource name of the attribute definition, of the form `projects/{project_id}/locations/{location_id
+             *        }/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
+             *        efinition_id}`.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AttributeDefinition}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.AttributeDefinition content) {
+                super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.AttributeDefinition.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Resource name of the attribute definition, of the form `projects/{project_id}/locat
+               * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attribute
+               * Definitions/{attribute_definition_id}`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Resource name of the attribute definition, of the form `projects/{project_id}/locations/{location_i
+             d}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definitio
+             n_id}`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Resource name of the attribute definition, of the form `projects/{project_id}/locat
+               * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attribute
+               * Definitions/{attribute_definition_id}`.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * The update mask that applies to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. The `description`,
+               * `allowed_values`, `consent_default_values`, and `data_mapping_default_value` fields
+               * are allowed to be updated. The updated `allowed_values` must contain all values
+               * from the previous `allowed_values`.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** The update mask that applies to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. The
+             `description`, `allowed_values`, `consent_default_values`, and `data_mapping_default_value` fields
+             are allowed to be updated. The updated `allowed_values` must contain all values from the previous
+             `allowed_values`.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * The update mask that applies to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. The `description`,
+               * `allowed_values`, `consent_default_values`, and `data_mapping_default_value` fields
+               * are allowed to be updated. The updated `allowed_values` must contain all values
+               * from the previous `allowed_values`.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the ConsentArtifacts collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.ConsentArtifacts.List request = healthcare.consentArtifacts().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public ConsentArtifacts consentArtifacts() {
+            return new ConsentArtifacts();
+          }
+
+          /**
+           * The "consentArtifacts" collection of methods.
+           */
+          public class ConsentArtifacts {
+
+            /**
+             * Creates a new Consent artifact in the parent Consent store.
+             *
+             * Create a request for the method "consentArtifacts.create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The name of the Consent store this consent artifact belongs to.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentArtifact}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.ConsentArtifact content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ConsentArtifact> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/consentArtifacts";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Creates a new Consent artifact in the parent Consent store.
+               *
+               * Create a request for the method "consentArtifacts.create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The name of the Consent store this consent artifact belongs to.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ConsentArtifact}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.ConsentArtifact content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.ConsentArtifact.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the Consent store this consent artifact belongs to. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the Consent store this consent artifact belongs to.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The name of the Consent store this consent artifact belongs to. */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified Consent artifact. Fails if it is referenced by the latest revision of any
+             * Consent.
+             *
+             * Create a request for the method "consentArtifacts.delete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the consent artifact to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+
+              /**
+               * Deletes the specified Consent artifact. Fails if it is referenced by the latest revision of any
+               * Consent.
+               *
+               * Create a request for the method "consentArtifacts.delete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the consent artifact to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the consent artifact to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the consent artifact to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the consent artifact to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the specified Consent artifact.
+             *
+             * Create a request for the method "consentArtifacts.get".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the consent artifact to retrieve.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ConsentArtifact> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+
+              /**
+               * Gets the specified Consent artifact.
+               *
+               * Create a request for the method "consentArtifacts.get".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the consent artifact to retrieve.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ConsentArtifact.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the consent artifact to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the consent artifact to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the consent artifact to retrieve. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the Consent artifacts in the given Consent store.
+             *
+             * Create a request for the method "consentArtifacts.list".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the Consent store to retrieve consent artifacts from.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ListConsentArtifactsResponse> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/consentArtifacts";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Lists the Consent artifacts in the given Consent store.
+               *
+               * Create a request for the method "consentArtifacts.list".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the Consent store to retrieve consent artifacts from.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ListConsentArtifactsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the Consent store to retrieve consent artifacts from. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the Consent store to retrieve consent artifacts from.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the Consent store to retrieve consent artifacts from. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Restricts the artifacts returned to those matching a filter. Syntax:
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
+               * fields available for filtering are: - user_id - consent_content_version
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Restricts the artifacts returned to those matching a filter. Syntax:
+             https://cloud.google.com/appengine/docs/standard/python/search/query_strings The fields available
+             for filtering are: - user_id - consent_content_version
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Restricts the artifacts returned to those matching a filter. Syntax:
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
+               * fields available for filtering are: - user_id - consent_content_version
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Limit on the number of consent artifacts to return in a single response. If zero
+               * the default page size of 100 is used.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Limit on the number of consent artifacts to return in a single response. If zero the default page
+             size of 100 is used.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Limit on the number of consent artifacts to return in a single response. If zero
+               * the default page size of 100 is used.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** The next_page_token value returned from the previous List request, if any. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** The next_page_token value returned from the previous List request, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** The next_page_token value returned from the previous List request, if any. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the Consents collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.Consents.List request = healthcare.consents().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Consents consents() {
+            return new Consents();
+          }
+
+          /**
+           * The "consents" collection of methods.
+           */
+          public class Consents {
+
+            /**
+             * Activates the latest revision of the specified Consent by committing a new revision with `state`
+             * updated to `ACTIVE`. If the latest revision of the given consent is in the `ACTIVE` state, no new
+             * revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the given
+             * consent is in the `REJECTED` or `REVOKED` state.
+             *
+             * Create a request for the method "consents.activate".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the consent to activate, of the form `projects/{project_id}/locations
+             *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
+             *        }`. An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ActivateConsentRequest}
+             * @return the request
+             */
+            public Activate activate(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ActivateConsentRequest content) throws java.io.IOException {
+              Activate result = new Activate(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Activate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Consent> {
+
+              private static final String REST_PATH = "v1beta1/{+name}:activate";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Activates the latest revision of the specified Consent by committing a new revision with
+               * `state` updated to `ACTIVE`. If the latest revision of the given consent is in the `ACTIVE`
+               * state, no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision
+               * of the given consent is in the `REJECTED` or `REVOKED` state.
+               *
+               * Create a request for the method "consents.activate".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the consent to activate, of the form `projects/{project_id}/locations
+             *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
+             *        }`. An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ActivateConsentRequest}
+               * @since 1.13
+               */
+              protected Activate(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ActivateConsentRequest content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Consent.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public Activate set$Xgafv(java.lang.String $Xgafv) {
+                return (Activate) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Activate setAccessToken(java.lang.String accessToken) {
+                return (Activate) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Activate setAlt(java.lang.String alt) {
+                return (Activate) super.setAlt(alt);
+              }
+
+              @Override
+              public Activate setCallback(java.lang.String callback) {
+                return (Activate) super.setCallback(callback);
+              }
+
+              @Override
+              public Activate setFields(java.lang.String fields) {
+                return (Activate) super.setFields(fields);
+              }
+
+              @Override
+              public Activate setKey(java.lang.String key) {
+                return (Activate) super.setKey(key);
+              }
+
+              @Override
+              public Activate setOauthToken(java.lang.String oauthToken) {
+                return (Activate) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Activate) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Activate setQuotaUser(java.lang.String quotaUser) {
+                return (Activate) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Activate setUploadType(java.lang.String uploadType) {
+                return (Activate) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Activate) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the consent to activate, of the form `projects/{proj
+               * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
+               * id}/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the consent to activate, of the form `projects/{project_id}/location
+             s/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
+             INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the consent to activate, of the form `projects/{proj
+               * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
+               * id}/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              public Activate setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Activate set(String parameterName, Object value) {
+                return (Activate) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Creates a new Consent in the parent Consent store.
+             *
+             * Create a request for the method "consents.create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the consent store.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Consent}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.Consent content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Consent> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/consents";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Creates a new Consent in the parent Consent store.
+               *
+               * Create a request for the method "consents.create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the consent store.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Consent}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.Consent content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Consent.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the consent store. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the consent store.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the consent store. */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the Consent and its revisions. To keep a record of the Consent but mark it inactive, see
+             * [RevokeConsent]. To delete a revision of a Consent, see [DeleteConsentRevision]. This operation
+             * does not delete the related consent artifact.
+             *
+             * Create a request for the method "consents.delete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the consent to delete, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Deletes the Consent and its revisions. To keep a record of the Consent but mark it inactive,
+               * see [RevokeConsent]. To delete a revision of a Consent, see [DeleteConsentRevision]. This
+               * operation does not delete the related consent artifact.
+               *
+               * Create a request for the method "consents.delete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the consent to delete, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the consent to delete, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the consent to delete, of the form `projects/{project_id}/locations/
+             {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
+             INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the consent to delete, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified revision of a Consent. An INVALID_ARGUMENT error occurs if the specified
+             * revision is the latest revision.
+             *
+             * Create a request for the method "consents.deleteRevision".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link DeleteRevision#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the consent revision to delete, of the form `projects/{project_id}/lo
+             *        cations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{con
+             *        sent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is not
+             *        specified in the name.
+             * @return the request
+             */
+            public DeleteRevision deleteRevision(java.lang.String name) throws java.io.IOException {
+              DeleteRevision result = new DeleteRevision(name);
+              initialize(result);
+              return result;
+            }
+
+            public class DeleteRevision extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+              private static final String REST_PATH = "v1beta1/{+name}:deleteRevision";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Deletes the specified revision of a Consent. An INVALID_ARGUMENT error occurs if the specified
+               * revision is the latest revision.
+               *
+               * Create a request for the method "consents.deleteRevision".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link DeleteRevision#execute()} method to invoke the remote
+               * operation. <p> {@link DeleteRevision#initialize(com.google.api.client.googleapis.services.Abstr
+               * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param name Required. The resource name of the consent revision to delete, of the form `projects/{project_id}/lo
+             *        cations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{con
+             *        sent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is not
+             *        specified in the name.
+               * @since 1.13
+               */
+              protected DeleteRevision(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public DeleteRevision set$Xgafv(java.lang.String $Xgafv) {
+                return (DeleteRevision) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public DeleteRevision setAccessToken(java.lang.String accessToken) {
+                return (DeleteRevision) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public DeleteRevision setAlt(java.lang.String alt) {
+                return (DeleteRevision) super.setAlt(alt);
+              }
+
+              @Override
+              public DeleteRevision setCallback(java.lang.String callback) {
+                return (DeleteRevision) super.setCallback(callback);
+              }
+
+              @Override
+              public DeleteRevision setFields(java.lang.String fields) {
+                return (DeleteRevision) super.setFields(fields);
+              }
+
+              @Override
+              public DeleteRevision setKey(java.lang.String key) {
+                return (DeleteRevision) super.setKey(key);
+              }
+
+              @Override
+              public DeleteRevision setOauthToken(java.lang.String oauthToken) {
+                return (DeleteRevision) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public DeleteRevision setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (DeleteRevision) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public DeleteRevision setQuotaUser(java.lang.String quotaUser) {
+                return (DeleteRevision) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public DeleteRevision setUploadType(java.lang.String uploadType) {
+                return (DeleteRevision) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public DeleteRevision setUploadProtocol(java.lang.String uploadProtocol) {
+                return (DeleteRevision) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the consent revision to delete, of the form `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent
+               * _store_id}/consents/{consent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs
+               * if `revision_id` is not specified in the name.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the consent revision to delete, of the form `projects/{project_id}/l
+             ocations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}
+             @{revision_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is not specified in the name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the consent revision to delete, of the form `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent
+               * _store_id}/consents/{consent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs
+               * if `revision_id` is not specified in the name.
+               */
+              public DeleteRevision setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public DeleteRevision set(String parameterName, Object value) {
+                return (DeleteRevision) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the specified revision of a Consent, or the latest revision if `revision_id` is not
+             * specified in the resource name.
+             *
+             * Create a request for the method "consents.get".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the consent to retrieve, of the form `projects/{project_id}/locations
+             *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
+             *        }`. In order to retrieve a previous revision of the consent, also provide the revision ID:
+             *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consen
+             *        t_store_id}/consents/{consent_id}@{revision_id}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Consent> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Gets the specified revision of a Consent, or the latest revision if `revision_id` is not
+               * specified in the resource name.
+               *
+               * Create a request for the method "consents.get".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the consent to retrieve, of the form `projects/{project_id}/locations
+             *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
+             *        }`. In order to retrieve a previous revision of the consent, also provide the revision ID:
+             *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consen
+             *        t_store_id}/consents/{consent_id}@{revision_id}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Consent.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the consent to retrieve, of the form `projects/{proj
+               * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
+               * id}/consents/{consent_id}`. In order to retrieve a previous revision of the
+               * consent, also provide the revision ID: `projects/{project_id}/locations/{location_i
+               * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}@{re
+               * vision_id}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the consent to retrieve, of the form `projects/{project_id}/location
+             s/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. In
+             order to retrieve a previous revision of the consent, also provide the revision ID: `projects/{proj
+             ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{co
+             nsent_id}@{revision_id}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the consent to retrieve, of the form `projects/{proj
+               * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
+               * id}/consents/{consent_id}`. In order to retrieve a previous revision of the
+               * consent, also provide the revision ID: `projects/{project_id}/locations/{location_i
+               * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}@{re
+               * vision_id}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the Consent in the given Consent store, returning each consent's latest revision.
+             *
+             * Create a request for the method "consents.list".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the Consent store to retrieve consents from.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ListConsentsResponse> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/consents";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Lists the Consent in the given Consent store, returning each consent's latest revision.
+               *
+               * Create a request for the method "consents.list".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the Consent store to retrieve consents from.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ListConsentsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the Consent store to retrieve consents from. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the Consent store to retrieve consents from.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the Consent store to retrieve consents from. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Restricts the consents returned to those matching a filter. Syntax:
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
+               * fields available for filtering are: - user_id - consent_artifact - state -
+               * revision_create_time
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Restricts the consents returned to those matching a filter. Syntax:
+             https://cloud.google.com/appengine/docs/standard/python/search/query_strings The fields available
+             for filtering are: - user_id - consent_artifact - state - revision_create_time
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Restricts the consents returned to those matching a filter. Syntax:
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
+               * fields available for filtering are: - user_id - consent_artifact - state -
+               * revision_create_time
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Limit on the number of consents to return in a single response. If zero the default
+               * page size of 100 is used.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Limit on the number of consents to return in a single response. If zero the default page size of
+             100 is used.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Limit on the number of consents to return in a single response. If zero the default
+               * page size of 100 is used.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** The next_page_token value returned from the previous List request, if any. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** The next_page_token value returned from the previous List request, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** The next_page_token value returned from the previous List request, if any. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the revisions of the given Consent in reverse chronological order.
+             *
+             * Create a request for the method "consents.listRevisions".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ListRevisions#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the consent to retrieve revisions for.
+             * @return the request
+             */
+            public ListRevisions listRevisions(java.lang.String name) throws java.io.IOException {
+              ListRevisions result = new ListRevisions(name);
+              initialize(result);
+              return result;
+            }
+
+            public class ListRevisions extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ListConsentRevisionsResponse> {
+
+              private static final String REST_PATH = "v1beta1/{+name}:listRevisions";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Lists the revisions of the given Consent in reverse chronological order.
+               *
+               * Create a request for the method "consents.listRevisions".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ListRevisions#execute()} method to invoke the remote
+               * operation. <p> {@link ListRevisions#initialize(com.google.api.client.googleapis.services.Abstra
+               * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param name Required. The resource name of the consent to retrieve revisions for.
+               * @since 1.13
+               */
+              protected ListRevisions(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ListConsentRevisionsResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public ListRevisions set$Xgafv(java.lang.String $Xgafv) {
+                return (ListRevisions) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ListRevisions setAccessToken(java.lang.String accessToken) {
+                return (ListRevisions) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ListRevisions setAlt(java.lang.String alt) {
+                return (ListRevisions) super.setAlt(alt);
+              }
+
+              @Override
+              public ListRevisions setCallback(java.lang.String callback) {
+                return (ListRevisions) super.setCallback(callback);
+              }
+
+              @Override
+              public ListRevisions setFields(java.lang.String fields) {
+                return (ListRevisions) super.setFields(fields);
+              }
+
+              @Override
+              public ListRevisions setKey(java.lang.String key) {
+                return (ListRevisions) super.setKey(key);
+              }
+
+              @Override
+              public ListRevisions setOauthToken(java.lang.String oauthToken) {
+                return (ListRevisions) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ListRevisions setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ListRevisions) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ListRevisions setQuotaUser(java.lang.String quotaUser) {
+                return (ListRevisions) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ListRevisions setUploadType(java.lang.String uploadType) {
+                return (ListRevisions) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ListRevisions setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ListRevisions) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the consent to retrieve revisions for. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the consent to retrieve revisions for.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the consent to retrieve revisions for. */
+              public ListRevisions setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Restricts the revisions returned to those matching a filter. Syntax:
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings.
+               * Fields/functions available for filtering are: - user_id - consent_artifact - state
+               * - revision_create_time
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Restricts the revisions returned to those matching a filter. Syntax:
+             https://cloud.google.com/appengine/docs/standard/python/search/query_strings. Fields/functions
+             available for filtering are: - user_id - consent_artifact - state - revision_create_time
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Restricts the revisions returned to those matching a filter. Syntax:
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings.
+               * Fields/functions available for filtering are: - user_id - consent_artifact - state
+               * - revision_create_time
+               */
+              public ListRevisions setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Limit on the number of revisions to return in a single response. If zero the
+               * default page size of 100 is used.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Limit on the number of revisions to return in a single response. If zero the default page size of
+             100 is used.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Limit on the number of revisions to return in a single response. If zero the
+               * default page size of 100 is used.
+               */
+              public ListRevisions setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Token to retrieve the next page of results or empty if there are no more results in
+               * the list.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Token to retrieve the next page of results or empty if there are no more results in the list.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Token to retrieve the next page of results or empty if there are no more results in
+               * the list.
+               */
+              public ListRevisions setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public ListRevisions set(String parameterName, Object value) {
+                return (ListRevisions) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the latest revision of the specified Consent by committing a new revision with the
+             * changes. A FAILED_PRECONDITION error occurs if the latest revision of the given consent is in the
+             * `REJECTED` or `REVOKED` state.
+             *
+             * Create a request for the method "consents.patch".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
+             *        ataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Consent}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.Consent content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Consent> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Updates the latest revision of the specified Consent by committing a new revision with the
+               * changes. A FAILED_PRECONDITION error occurs if the latest revision of the given consent is in
+               * the `REJECTED` or `REVOKED` state.
+               *
+               * Create a request for the method "consents.patch".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
+             *        ataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Consent}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.Consent content) {
+                super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Consent.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Resource name of the Consent, of the form `projects/{project_id}/locations/{locatio
+               * n_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+               * .
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{
+             dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Resource name of the Consent, of the form `projects/{project_id}/locations/{locatio
+               * n_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+               * .
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * The update mask to apply to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. The `user_id`, `policies`, and
+               * `consent_artifact` fields can be updated.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** The update mask to apply to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. The
+             `user_id`, `policies`, and `consent_artifact` fields can be updated.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * The update mask to apply to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. The `user_id`, `policies`, and
+               * `consent_artifact` fields can be updated.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Rejects the latest revision of the specified Consent by committing a new revision with `state`
+             * updated to `REJECTED`. If the latest revision of the given consent is in the `REJECTED` state, no
+             * new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the given
+             * consent is in the `ACTIVE` or `REVOKED` state.
+             *
+             * Create a request for the method "consents.reject".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Reject#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the consent to reject, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RejectConsentRequest}
+             * @return the request
+             */
+            public Reject reject(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.RejectConsentRequest content) throws java.io.IOException {
+              Reject result = new Reject(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Reject extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Consent> {
+
+              private static final String REST_PATH = "v1beta1/{+name}:reject";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Rejects the latest revision of the specified Consent by committing a new revision with `state`
+               * updated to `REJECTED`. If the latest revision of the given consent is in the `REJECTED` state,
+               * no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the
+               * given consent is in the `ACTIVE` or `REVOKED` state.
+               *
+               * Create a request for the method "consents.reject".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Reject#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Reject#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the consent to reject, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RejectConsentRequest}
+               * @since 1.13
+               */
+              protected Reject(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.RejectConsentRequest content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Consent.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public Reject set$Xgafv(java.lang.String $Xgafv) {
+                return (Reject) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Reject setAccessToken(java.lang.String accessToken) {
+                return (Reject) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Reject setAlt(java.lang.String alt) {
+                return (Reject) super.setAlt(alt);
+              }
+
+              @Override
+              public Reject setCallback(java.lang.String callback) {
+                return (Reject) super.setCallback(callback);
+              }
+
+              @Override
+              public Reject setFields(java.lang.String fields) {
+                return (Reject) super.setFields(fields);
+              }
+
+              @Override
+              public Reject setKey(java.lang.String key) {
+                return (Reject) super.setKey(key);
+              }
+
+              @Override
+              public Reject setOauthToken(java.lang.String oauthToken) {
+                return (Reject) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Reject setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Reject) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Reject setQuotaUser(java.lang.String quotaUser) {
+                return (Reject) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Reject setUploadType(java.lang.String uploadType) {
+                return (Reject) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Reject setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Reject) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the consent to reject, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the consent to reject, of the form `projects/{project_id}/locations/
+             {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
+             INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the consent to reject, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              public Reject setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Reject set(String parameterName, Object value) {
+                return (Reject) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Revokes the latest revision of the specified Consent by committing a new revision with `state`
+             * updated to `REVOKED`. If the latest revision of the given consent is in the `REVOKED` state, no
+             * new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the given
+             * consent is in `DRAFT` or `REJECTED` state.
+             *
+             * Create a request for the method "consents.revoke".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the consent to revoke, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RevokeConsentRequest}
+             * @return the request
+             */
+            public Revoke revoke(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.RevokeConsentRequest content) throws java.io.IOException {
+              Revoke result = new Revoke(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Revoke extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Consent> {
+
+              private static final String REST_PATH = "v1beta1/{+name}:revoke";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Revokes the latest revision of the specified Consent by committing a new revision with `state`
+               * updated to `REVOKED`. If the latest revision of the given consent is in the `REVOKED` state, no
+               * new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the
+               * given consent is in `DRAFT` or `REJECTED` state.
+               *
+               * Create a request for the method "consents.revoke".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the consent to revoke, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.RevokeConsentRequest}
+               * @since 1.13
+               */
+              protected Revoke(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.RevokeConsentRequest content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Consent.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public Revoke set$Xgafv(java.lang.String $Xgafv) {
+                return (Revoke) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Revoke setAccessToken(java.lang.String accessToken) {
+                return (Revoke) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Revoke setAlt(java.lang.String alt) {
+                return (Revoke) super.setAlt(alt);
+              }
+
+              @Override
+              public Revoke setCallback(java.lang.String callback) {
+                return (Revoke) super.setCallback(callback);
+              }
+
+              @Override
+              public Revoke setFields(java.lang.String fields) {
+                return (Revoke) super.setFields(fields);
+              }
+
+              @Override
+              public Revoke setKey(java.lang.String key) {
+                return (Revoke) super.setKey(key);
+              }
+
+              @Override
+              public Revoke setOauthToken(java.lang.String oauthToken) {
+                return (Revoke) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Revoke setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Revoke) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Revoke setQuotaUser(java.lang.String quotaUser) {
+                return (Revoke) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Revoke setUploadType(java.lang.String uploadType) {
+                return (Revoke) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Revoke setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Revoke) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the consent to revoke, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the consent to revoke, of the form `projects/{project_id}/locations/
+             {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
+             INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the consent to revoke, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              public Revoke setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Revoke set(String parameterName, Object value) {
+                return (Revoke) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the UserDataMappings collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.UserDataMappings.List request = healthcare.userDataMappings().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public UserDataMappings userDataMappings() {
+            return new UserDataMappings();
+          }
+
+          /**
+           * The "userDataMappings" collection of methods.
+           */
+          public class UserDataMappings {
+
+            /**
+             * Archives the specified User data mapping.
+             *
+             * Create a request for the method "userDataMappings.archive".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Archive#execute()} method to invoke the remote operation.
+             *
+             * @param name The resource name of the user data mapping to archive.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ArchiveUserDataMappingRequest}
+             * @return the request
+             */
+            public Archive archive(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ArchiveUserDataMappingRequest content) throws java.io.IOException {
+              Archive result = new Archive(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Archive extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ArchiveUserDataMappingResponse> {
+
+              private static final String REST_PATH = "v1beta1/{+name}:archive";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+
+              /**
+               * Archives the specified User data mapping.
+               *
+               * Create a request for the method "userDataMappings.archive".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Archive#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Archive#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The resource name of the user data mapping to archive.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ArchiveUserDataMappingRequest}
+               * @since 1.13
+               */
+              protected Archive(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ArchiveUserDataMappingRequest content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.ArchiveUserDataMappingResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+              }
+
+              @Override
+              public Archive set$Xgafv(java.lang.String $Xgafv) {
+                return (Archive) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Archive setAccessToken(java.lang.String accessToken) {
+                return (Archive) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Archive setAlt(java.lang.String alt) {
+                return (Archive) super.setAlt(alt);
+              }
+
+              @Override
+              public Archive setCallback(java.lang.String callback) {
+                return (Archive) super.setCallback(callback);
+              }
+
+              @Override
+              public Archive setFields(java.lang.String fields) {
+                return (Archive) super.setFields(fields);
+              }
+
+              @Override
+              public Archive setKey(java.lang.String key) {
+                return (Archive) super.setKey(key);
+              }
+
+              @Override
+              public Archive setOauthToken(java.lang.String oauthToken) {
+                return (Archive) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Archive setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Archive) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Archive setQuotaUser(java.lang.String quotaUser) {
+                return (Archive) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Archive setUploadType(java.lang.String uploadType) {
+                return (Archive) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Archive setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Archive) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The resource name of the user data mapping to archive. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The resource name of the user data mapping to archive.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The resource name of the user data mapping to archive. */
+              public Archive setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Archive set(String parameterName, Object value) {
+                return (Archive) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Creates a new User data mapping in the parent Consent store.
+             *
+             * Create a request for the method "userDataMappings.create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the consent store.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.UserDataMapping}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.UserDataMapping content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.UserDataMapping> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/userDataMappings";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Creates a new User data mapping in the parent Consent store.
+               *
+               * Create a request for the method "userDataMappings.create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the consent store.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.UserDataMapping}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.healthcare.v1beta1.model.UserDataMapping content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.UserDataMapping.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the consent store. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the consent store.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the consent store. */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified User data mapping.
+             *
+             * Create a request for the method "userDataMappings.delete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the user data mapping to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+
+              /**
+               * Deletes the specified User data mapping.
+               *
+               * Create a request for the method "userDataMappings.delete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the user data mapping to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the user data mapping to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the user data mapping to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the user data mapping to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the specified User data mapping.
+             *
+             * Create a request for the method "userDataMappings.get".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the user data mapping to retrieve.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.UserDataMapping> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+
+              /**
+               * Gets the specified User data mapping.
+               *
+               * Create a request for the method "userDataMappings.get".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the user data mapping to retrieve.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.UserDataMapping.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the user data mapping to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the user data mapping to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the user data mapping to retrieve. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the User data mappings in the given Consent store.
+             *
+             * Create a request for the method "userDataMappings.list".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the Consent store to retrieve user data mappings from.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.ListUserDataMappingsResponse> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/userDataMappings";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Lists the User data mappings in the given Consent store.
+               *
+               * Create a request for the method "userDataMappings.list".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the Consent store to retrieve user data mappings from.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.ListUserDataMappingsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the Consent store to retrieve user data mappings from. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the Consent store to retrieve user data mappings from.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the Consent store to retrieve user data mappings from. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Restricts the user data mappings returned to those matching a filter. Syntax:
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
+               * fields available for filtering are: - data_id - user_id - archived - archive_time
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Restricts the user data mappings returned to those matching a filter. Syntax:
+             https://cloud.google.com/appengine/docs/standard/python/search/query_strings The fields available
+             for filtering are: - data_id - user_id - archived - archive_time
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Restricts the user data mappings returned to those matching a filter. Syntax:
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
+               * fields available for filtering are: - data_id - user_id - archived - archive_time
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Limit on the number of user data mappings to return in a single response. If zero
+               * the default page size of 100 is used.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Limit on the number of user data mappings to return in a single response. If zero the default page
+             size of 100 is used.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Limit on the number of user data mappings to return in a single response. If zero
+               * the default page size of 100 is used.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** Token to retrieve the next page of results or empty to get the first page. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Token to retrieve the next page of results or empty to get the first page.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** Token to retrieve the next page of results or empty to get the first page. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the specified User data mapping.
+             *
+             * Create a request for the method "userDataMappings.patch".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/d
+             *        atasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_
+             *        id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.UserDataMapping}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.UserDataMapping content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.UserDataMapping> {
+
+              private static final String REST_PATH = "v1beta1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+
+              /**
+               * Updates the specified User data mapping.
+               *
+               * Create a request for the method "userDataMappings.patch".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/d
+             *        atasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_
+             *        id}`.
+               * @param content the {@link com.google.api.services.healthcare.v1beta1.model.UserDataMapping}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.UserDataMapping content) {
+                super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.UserDataMapping.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Resource name of the User data mapping, of the form `projects/{project_id}/location
+               * s/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMapp
+               * ings/{user_data_mapping_id}`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/
+             datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Resource name of the User data mapping, of the form `projects/{project_id}/location
+               * s/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMapp
+               * ings/{user_data_mapping_id}`.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * The update mask that applies to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** The update mask that applies to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * The update mask that applies to the resource. For the `FieldMask` definition, see
+               * https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
         /**
          * An accessor for creating requests from the DicomStores collection.
@@ -2635,11 +10455,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * De-identifies data from the source store and writes it to the destination store. The metadata
            * field type is OperationMetadata. If the request is successful, the response field type is
-           * DeidentifyDicomStoreSummary. If errors occur, error details field type is DeidentifyErrorDetails.
-           * The LRO result may still be successful if de-identification fails for some DICOM instances. The
-           * output DICOM store will not contain these failed resources. Failed resource totals are tracked in
-           * DeidentifySummary.failure_resource_count. Error details are also logged to Stackdriver (see
-           * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)).
+           * DeidentifyDicomStoreSummary. The LRO result may still be successful if de-identification fails
+           * for some DICOM instances. The output DICOM store will not contain these failed resources. The
+           * number of resources processed are tracked in Operation.metadata. Error details are logged to
+           * Cloud Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos/logging).
            *
            * Create a request for the method "dicomStores.deidentify".
            *
@@ -2668,11 +10487,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * De-identifies data from the source store and writes it to the destination store. The metadata
              * field type is OperationMetadata. If the request is successful, the response field type is
-             * DeidentifyDicomStoreSummary. If errors occur, error details field type is
-             * DeidentifyErrorDetails. The LRO result may still be successful if de-identification fails for
-             * some DICOM instances. The output DICOM store will not contain these failed resources. Failed
-             * resource totals are tracked in DeidentifySummary.failure_resource_count. Error details are also
-             * logged to Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)).
+             * DeidentifyDicomStoreSummary. The LRO result may still be successful if de-identification fails
+             * for some DICOM instances. The output DICOM store will not contain these failed resources. The
+             * number of resources processed are tracked in Operation.metadata. Error details are logged to
+             * Cloud Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos/logging).
              *
              * Create a request for the method "dicomStores.deidentify".
              *
@@ -2917,16 +10735,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Exports data to the specified destination by copying it from the DICOM store. Errors are also
-           * logged to Stackdriver Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos
-           * /stackdriver-logging). The metadata field type is OperationMetadata.
+           * logged to Cloud Logging. For more information, see [Viewing logs](/healthcare/docs/how-
+           * tos/logging). The metadata field type is OperationMetadata.
            *
            * Create a request for the method "dicomStores.export".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param name The DICOM store resource name from which to export the data. For
-          example,
+           * @param name The DICOM store resource name from which to export the data. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportDicomDataRequest}
@@ -2947,8 +10764,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Exports data to the specified destination by copying it from the DICOM store. Errors are also
-             * logged to Stackdriver Logging. For more information, see [Viewing logs](/healthcare/docs/how-
-             * tos/stackdriver-logging). The metadata field type is OperationMetadata.
+             * logged to Cloud Logging. For more information, see [Viewing logs](/healthcare/docs/how-
+             * tos/logging). The metadata field type is OperationMetadata.
              *
              * Create a request for the method "dicomStores.export".
              *
@@ -2958,8 +10775,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The DICOM store resource name from which to export the data. For
-          example,
+             * @param name The DICOM store resource name from which to export the data. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportDicomDataRequest}
@@ -3212,8 +11028,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -3242,8 +11057,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -3351,36 +11165,33 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -3393,11 +11204,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Imports data into the DICOM store by copying it from the specified source. For errors, the
-           * Operation is populated with error details (in the form of ImportDicomDataErrorDetails in
-           * error.details), which hold finer-grained error information. Errors are also logged to Stackdriver
-           * Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging).
-           * The metadata field type is OperationMetadata.
+           * Imports data into the DICOM store by copying it from the specified source. Errors are logged to
+           * Cloud Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos/logging). The
+           * metadata field type is OperationMetadata.
            *
            * Create a request for the method "dicomStores.import".
            *
@@ -3405,8 +11214,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The name of the DICOM store resource into which the data is imported.
-          For example,
+           * @param name The name of the DICOM store resource into which the data is imported. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportDicomDataRequest}
@@ -3426,11 +11234,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
 
             /**
-             * Imports data into the DICOM store by copying it from the specified source. For errors, the
-             * Operation is populated with error details (in the form of ImportDicomDataErrorDetails in
-             * error.details), which hold finer-grained error information. Errors are also logged to
-             * Stackdriver Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos
-             * /stackdriver-logging). The metadata field type is OperationMetadata.
+             * Imports data into the DICOM store by copying it from the specified source. Errors are logged to
+             * Cloud Logging. For more information, see [Viewing logs](/healthcare/docs/how-tos/logging). The
+             * metadata field type is OperationMetadata.
              *
              * Create a request for the method "dicomStores.import".
              *
@@ -3440,8 +11246,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The name of the DICOM store resource into which the data is imported.
-          For example,
+             * @param name The name of the DICOM store resource into which the data is imported. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportDicomDataRequest}
@@ -3758,7 +11563,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Resource name of the DICOM store, of the form
+           * @param name Resource name of the DICOM store, of the form
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.DicomStore}
@@ -3788,7 +11593,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Resource name of the DICOM store, of the form
+             * @param name Resource name of the DICOM store, of the form
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.DicomStore}
@@ -3860,13 +11665,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Resource name of the DICOM store, of the form `projects/{project_id}/loc
-             * ations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{locat
+             * ion_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Resource name of the DICOM store, of the form
+            /** Resource name of the DICOM store, of the form
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public java.lang.String getName() {
@@ -3874,8 +11679,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Resource name of the DICOM store, of the form `projects/{project_id}/loc
-             * ations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+             * Resource name of the DICOM store, of the form `projects/{project_id}/locations/{locat
+             * ion_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3918,8 +11723,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * SearchForInstances returns a list of matching instances. See
-           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+           * SearchForInstances returns a list of matching instances. See [RetrieveTransaction](http://dicom.n
+           * ema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+           * implementation of SearchForInstances, see [Search
+           * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+           * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+           * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+           * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
            *
            * Create a request for the method "dicomStores.searchForInstances".
            *
@@ -3929,10 +11739,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-           * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-          `instances`,
-           *        `series/{series_uid}/instances`, or
-          `studies/{study_uid}/instances`.
+           * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+           *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
            * @return the request
            */
           public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -3952,8 +11760,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^instances$");
 
             /**
-             * SearchForInstances returns a list of matching instances. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+             * SearchForInstances returns a list of matching instances. See [RetrieveTransaction](http://dicom
+             * .nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+             * implementation of SearchForInstances, see [Search
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
              *
              * Create a request for the method "dicomStores.searchForInstances".
              *
@@ -3966,10 +11779,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-          `instances`,
-           *        `series/{series_uid}/instances`, or
-          `studies/{study_uid}/instances`.
+             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+           *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              * @since 1.13
              */
             protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -4115,8 +11926,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * SearchForSeries returns a list of matching series. See
-           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+           * SearchForSeries returns a list of matching series. See [RetrieveTransaction](http://dicom.nema.or
+           * g/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the implementation of
+           * SearchForSeries, see [Search
+           * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+           * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
+           * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+           * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
            *
            * Create a request for the method "dicomStores.searchForSeries".
            *
@@ -4147,8 +11963,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^series$");
 
             /**
-             * SearchForSeries returns a list of matching series. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+             * SearchForSeries returns a list of matching series. See [RetrieveTransaction](http://dicom.nema.
+             * org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the implementation
+             * of SearchForSeries, see [Search
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
+             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
              *
              * Create a request for the method "dicomStores.searchForSeries".
              *
@@ -4308,8 +12129,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * SearchForStudies returns a list of matching studies. See
-           * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+           * SearchForStudies returns a list of matching studies. See [RetrieveTransaction](http://dicom.nema.
+           * org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the implementation
+           * of SearchForStudies, see [Search
+           * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+           * Healthcare API conformance statement. For samples that show how to call SearchForStudies, see
+           * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+           * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
            *
            * Create a request for the method "dicomStores.searchForStudies".
            *
@@ -4339,8 +12165,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^studies$");
 
             /**
-             * SearchForStudies returns a list of matching studies. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+             * SearchForStudies returns a list of matching studies. See [RetrieveTransaction](http://dicom.nem
+             * a.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+             * implementation of SearchForStudies, see [Search
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call SearchForStudies, see
+             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
              *
              * Create a request for the method "dicomStores.searchForStudies".
              *
@@ -4492,17 +12323,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "dicomStores.setIamPolicy".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
            * @return the request
@@ -4521,9 +12350,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/dicomStores/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "dicomStores.setIamPolicy".
              *
@@ -4533,8 +12361,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -4639,7 +12466,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-           * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
+           * See [Store
+           * Transaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5). For
+           * details on the implementation of StoreInstances, see [Store
+           * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
+           * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
+           * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
+           * tos/dicomweb#storing_dicom_data).
            *
            * Create a request for the method "dicomStores.storeInstances".
            *
@@ -4649,8 +12482,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-           * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
-          `studies/[{study_uid}]`. Note that the
+           * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
            *        `study_uid` is optional.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
            * @return the request
@@ -4673,7 +12505,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-             * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
+             * See [Store
+             * Transaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5).
+             * For details on the implementation of StoreInstances, see [Store
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
+             * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
+             * tos/dicomweb#storing_dicom_data).
              *
              * Create a request for the method "dicomStores.storeInstances".
              *
@@ -4686,8 +12524,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
            *        ore_id}`.
-             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
-          `studies/[{study_uid}]`. Note that the
+             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
            *        `study_uid` is optional.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @since 1.13
@@ -4826,18 +12663,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "dicomStores.testIamPermissions".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
            * @return the request
@@ -4857,10 +12692,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "dicomStores.testIamPermissions".
              *
@@ -4870,8 +12704,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -4996,8 +12829,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           public class Studies {
 
             /**
-             * DeleteStudy deletes all instances within the given study. Delete requests are equivalent to the
-             * GET requests specified in the Retrieve transaction.
+             * DeleteStudyAsync deletes all instances within the given study using an operation. Delete requests
+             * are equivalent to the GET requests specified in the Retrieve transaction. The method returns an
+             * Operation which will be marked successful when the deletion is complete. Warning: Inserting
+             * instances into a study while a delete operation is running for that study could result in the new
+             * instances not appearing in search results until the deletion operation finishes.
              *
              * Create a request for the method "studies.delete".
              *
@@ -5014,7 +12850,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               return result;
             }
 
-            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
 
               private static final String REST_PATH = "v1beta1/{+parent}/dicomWeb/{+dicomWebPath}";
 
@@ -5025,8 +12861,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+$");
 
               /**
-               * DeleteStudy deletes all instances within the given study. Delete requests are equivalent to the
-               * GET requests specified in the Retrieve transaction.
+               * DeleteStudyAsync deletes all instances within the given study using an operation. Delete
+               * requests are equivalent to the GET requests specified in the Retrieve transaction. The method
+               * returns an Operation which will be marked successful when the deletion is complete. Warning:
+               * Inserting instances into a study while a delete operation is running for that study could
+               * result in the new instances not appearing in search results until the deletion operation
+               * finishes.
                *
                * Create a request for the method "studies.delete".
                *
@@ -5041,7 +12881,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @since 1.13
                */
               protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
-                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Operation.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5159,8 +12999,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * RetrieveStudyMetadata returns instance associated with the given study presented as metadata with
-             * the bulk data removed. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+             * the bulk data removed. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/outp
+             * ut/html/part18.html#sect_10.4). For details on the implementation of RetrieveStudyMetadata, see
+             * [Metadata resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the
+             * Cloud Healthcare API conformance statement. For samples that show how to call
+             * RetrieveStudyMetadata, see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
+             * tos/dicomweb#retrieving_metadata).
              *
              * Create a request for the method "studies.retrieveMetadata".
              *
@@ -5170,8 +13014,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example,
-            `studies/{study_uid}/metadata`.
+             * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example, `studies/{study_uid}/metadata`.
              * @return the request
              */
             public RetrieveMetadata retrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5192,8 +13035,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * RetrieveStudyMetadata returns instance associated with the given study presented as metadata
-               * with the bulk data removed. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+               * with the bulk data removed. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/curre
+               * nt/output/html/part18.html#sect_10.4). For details on the implementation of
+               * RetrieveStudyMetadata, see [Metadata
+               * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call RetrieveStudyMetadata,
+               * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
+               * tos/dicomweb#retrieving_metadata).
                *
                * Create a request for the method "studies.retrieveMetadata".
                *
@@ -5206,8 +13054,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example,
-            `studies/{study_uid}/metadata`.
+               * @param dicomWebPath The path of the RetrieveStudyMetadata DICOMweb request. For example, `studies/{study_uid}/metadata`.
                * @since 1.13
                */
               protected RetrieveMetadata(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5353,8 +13200,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * RetrieveStudy returns all instances within the given study. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+             * RetrieveStudy returns all instances within the given study. See [RetrieveTransaction](http://dico
+             * m.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+             * implementation of RetrieveStudy, see [DICOM study/series/instances](https://cloud.google.com/heal
+             * thcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance statement.
+             * For samples that show how to call RetrieveStudy, see [Retrieving DICOM
+             * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
              *
              * Create a request for the method "studies.retrieveStudy".
              *
@@ -5364,8 +13215,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example,
-            `studies/{study_uid}`.
+             * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
              * @return the request
              */
             public RetrieveStudy retrieveStudy(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5385,8 +13235,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+$");
 
               /**
-               * RetrieveStudy returns all instances within the given study. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+               * RetrieveStudy returns all instances within the given study. See [RetrieveTransaction](http://di
+               * com.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+               * implementation of RetrieveStudy, see [DICOM study/series/instances](https://cloud.google.com/he
+               * althcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
+               * statement. For samples that show how to call RetrieveStudy, see [Retrieving DICOM
+               * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
                *
                * Create a request for the method "studies.retrieveStudy".
                *
@@ -5399,8 +13253,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example,
-            `studies/{study_uid}`.
+               * @param dicomWebPath The path of the RetrieveStudy DICOMweb request. For example, `studies/{study_uid}`.
                * @since 1.13
                */
               protected RetrieveStudy(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5543,8 +13396,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * SearchForInstances returns a list of matching instances. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+             * SearchForInstances returns a list of matching instances. See [RetrieveTransaction](http://dicom.n
+             * ema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+             * implementation of SearchForInstances, see [Search
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
              *
              * Create a request for the method "studies.searchForInstances".
              *
@@ -5554,10 +13412,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-            `instances`,
-             *        `series/{series_uid}/instances`, or
-            `studies/{study_uid}/instances`.
+             * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+             *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
              * @return the request
              */
             public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -5577,8 +13433,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+/instances$");
 
               /**
-               * SearchForInstances returns a list of matching instances. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+               * SearchForInstances returns a list of matching instances. See [RetrieveTransaction](http://dicom
+               * .nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+               * implementation of SearchForInstances, see [Search
+               * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+               * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+               * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
                *
                * Create a request for the method "studies.searchForInstances".
                *
@@ -5591,10 +13452,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-            `instances`,
-             *        `series/{series_uid}/instances`, or
-            `studies/{study_uid}/instances`.
+               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+             *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                * @since 1.13
                */
               protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -5740,8 +13599,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * SearchForSeries returns a list of matching series. See
-             * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+             * SearchForSeries returns a list of matching series. See [RetrieveTransaction](http://dicom.nema.or
+             * g/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the implementation of
+             * SearchForSeries, see [Search
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
+             * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+             * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
              *
              * Create a request for the method "studies.searchForSeries".
              *
@@ -5772,8 +13636,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^studies/[^/]+/series$");
 
               /**
-               * SearchForSeries returns a list of matching series. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+               * SearchForSeries returns a list of matching series. See [RetrieveTransaction](http://dicom.nema.
+               * org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the implementation
+               * of SearchForSeries, see [Search
+               * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call SearchForSeries, see
+               * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+               * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
                *
                * Create a request for the method "studies.searchForSeries".
                *
@@ -5934,7 +13803,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-             * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
+             * See [Store
+             * Transaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5). For
+             * details on the implementation of StoreInstances, see [Store
+             * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
+             * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
+             * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
+             * tos/dicomweb#storing_dicom_data).
              *
              * Create a request for the method "studies.storeInstances".
              *
@@ -5944,8 +13819,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
-            `studies/[{study_uid}]`. Note that the
+             * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
              *        `study_uid` is optional.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
@@ -5968,7 +13842,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * StoreInstances stores DICOM instances associated with study instance unique identifiers (SUID).
-               * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5.
+               * See [Store
+               * Transaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.5).
+               * For details on the implementation of StoreInstances, see [Store
+               * transaction](https://cloud.google.com/healthcare/docs/dicom#store_transaction) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call StoreInstances, see
+               * [Storing DICOM data](https://cloud.google.com/healthcare/docs/how-
+               * tos/dicomweb#storing_dicom_data).
                *
                * Create a request for the method "studies.storeInstances".
                *
@@ -5981,8 +13861,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
              *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
              *        ore_id}`.
-               * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example,
-            `studies/[{study_uid}]`. Note that the
+               * @param dicomWebPath The path of the StoreInstances DICOMweb request. For example, `studies/[{study_uid}]`. Note that the
              *        `study_uid` is optional.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
@@ -6141,8 +14020,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             public class Series {
 
               /**
-               * DeleteSeries deletes all instances within the given study and series. Delete requests are
-               * equivalent to the GET requests specified in the Retrieve transaction.
+               * DeleteSeriesAsync deletes all instances within the given study and series using an operation.
+               * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. The
+               * method returns an Operation which will be marked successful when the deletion is complete.
+               * Warning: Inserting instances into a series while a delete operation is running for that series
+               * could result in the new instances not appearing in search results until the deletion operation
+               * finishes.
                *
                * Create a request for the method "series.delete".
                *
@@ -6152,8 +14035,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-               * @param dicomWebPath The path of the DeleteSeries request. For example,
-              `studies/{study_uid}/series/{series_uid}`.
+               * @param dicomWebPath The path of the DeleteSeries request. For example, `studies/{study_uid}/series/{series_uid}`.
                * @return the request
                */
               public Delete delete(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6162,7 +14044,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 return result;
               }
 
-              public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Empty> {
+              public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
 
                 private static final String REST_PATH = "v1beta1/{+parent}/dicomWeb/{+dicomWebPath}";
 
@@ -6173,8 +14055,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     java.util.regex.Pattern.compile("^studies/[^/]+/series/[^/]+$");
 
                 /**
-                 * DeleteSeries deletes all instances within the given study and series. Delete requests are
-                 * equivalent to the GET requests specified in the Retrieve transaction.
+                 * DeleteSeriesAsync deletes all instances within the given study and series using an operation.
+                 * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. The
+                 * method returns an Operation which will be marked successful when the deletion is complete.
+                 * Warning: Inserting instances into a series while a delete operation is running for that series
+                 * could result in the new instances not appearing in search results until the deletion operation
+                 * finishes.
                  *
                  * Create a request for the method "series.delete".
                  *
@@ -6187,12 +14073,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-                 * @param dicomWebPath The path of the DeleteSeries request. For example,
-              `studies/{study_uid}/series/{series_uid}`.
+                 * @param dicomWebPath The path of the DeleteSeries request. For example, `studies/{study_uid}/series/{series_uid}`.
                  * @since 1.13
                  */
                 protected Delete(java.lang.String parent, java.lang.String dicomWebPath) {
-                  super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Empty.class);
+                  super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.Operation.class);
                   this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6326,8 +14211,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
               /**
                * RetrieveSeriesMetadata returns instance associated with the given study and series, presented as
-               * metadata with the bulk data removed. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+               * metadata with the bulk data removed. See [RetrieveTransaction](http://dicom.nema.org/medical/dico
+               * m/current/output/html/part18.html#sect_10.4). For details on the implementation of
+               * RetrieveSeriesMetadata, see [Metadata
+               * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call RetrieveSeriesMetadata,
+               * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
+               * tos/dicomweb#retrieving_metadata).
                *
                * Create a request for the method "series.retrieveMetadata".
                *
@@ -6359,8 +14249,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * RetrieveSeriesMetadata returns instance associated with the given study and series, presented
-                 * as metadata with the bulk data removed. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                 * as metadata with the bulk data removed. See [RetrieveTransaction](http://dicom.nema.org/medical
+                 * /dicom/current/output/html/part18.html#sect_10.4). For details on the implementation of
+                 * RetrieveSeriesMetadata, see [Metadata
+                 * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+                 * Healthcare API conformance statement. For samples that show how to call RetrieveSeriesMetadata,
+                 * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#retrieving_metadata).
                  *
                  * Create a request for the method "series.retrieveMetadata".
                  *
@@ -6522,8 +14417,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
               }
               /**
-               * RetrieveSeries returns all instances within the given study and series. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+               * RetrieveSeries returns all instances within the given study and series. See [RetrieveTransaction]
+               * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+               * the implementation of RetrieveSeries, see [DICOM study/series/instances](https://cloud.google.com
+               * /healthcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
+               * statement. For samples that show how to call RetrieveSeries, see [Retrieving DICOM
+               * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
                *
                * Create a request for the method "series.retrieveSeries".
                *
@@ -6554,8 +14453,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     java.util.regex.Pattern.compile("^studies/[^/]+/series/[^/]+$");
 
                 /**
-                 * RetrieveSeries returns all instances within the given study and series. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                 * RetrieveSeries returns all instances within the given study and series. See [RetrieveTransactio
+                 * n](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details
+                 * on the implementation of RetrieveSeries, see [DICOM study/series/instances](https://cloud.googl
+                 * e.com/healthcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
+                 * statement. For samples that show how to call RetrieveSeries, see [Retrieving DICOM
+                 * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
                  *
                  * Create a request for the method "series.retrieveSeries".
                  *
@@ -6717,8 +14620,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
               }
               /**
-               * SearchForInstances returns a list of matching instances. See
-               * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+               * SearchForInstances returns a list of matching instances. See [RetrieveTransaction](http://dicom.n
+               * ema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+               * implementation of SearchForInstances, see [Search
+               * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+               * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+               * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+               * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
                *
                * Create a request for the method "series.searchForInstances".
                *
@@ -6728,10 +14636,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-              `instances`,
-               *        `series/{series_uid}/instances`, or
-              `studies/{study_uid}/instances`.
+               * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+               *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                * @return the request
                */
               public SearchForInstances searchForInstances(java.lang.String parent, java.lang.String dicomWebPath) throws java.io.IOException {
@@ -6751,8 +14657,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     java.util.regex.Pattern.compile("^studies/[^/]+/series/[^/]+/instances$");
 
                 /**
-                 * SearchForInstances returns a list of matching instances. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6.
+                 * SearchForInstances returns a list of matching instances. See [RetrieveTransaction](http://dicom
+                 * .nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+                 * implementation of SearchForInstances, see [Search
+                 * transaction](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in the Cloud
+                 * Healthcare API conformance statement. For samples that show how to call SearchForInstances, see
+                 * [Searching for studies, series, instances, and frames](https://cloud.google.com/healthcare/docs
+                 * /how-tos/dicomweb#searching_for_studies_series_instances_and_frames).
                  *
                  * Create a request for the method "series.searchForInstances".
                  *
@@ -6765,10 +14676,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                  * @param parent The name of the DICOM store that is being accessed. For example,
                *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_st
                *        ore_id}`.
-                 * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example,
-              `instances`,
-               *        `series/{series_uid}/instances`, or
-              `studies/{study_uid}/instances`.
+                 * @param dicomWebPath The path of the SearchForInstancesRequest DICOMweb request. For example, `instances`,
+               *        `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
                  * @since 1.13
                  */
                 protected SearchForInstances(java.lang.String parent, java.lang.String dicomWebPath) {
@@ -6938,7 +14847,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                 /**
                  * DeleteInstance deletes an instance associated with the given study, series, and SOP Instance UID.
-                 * Delete requests are equivalent to the GET requests specified in the Retrieve transaction.
+                 * Delete requests are equivalent to the GET requests specified in the Retrieve transaction. Study
+                 * and series search results can take a few seconds to be updated after an instance is deleted using
+                 * DeleteInstance. For samples that show how to call DeleteInstance, see [Deleting a study, series,
+                 * or instance](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#deleting_a_study_series_or_instance).
                  *
                  * Create a request for the method "instances.delete".
                  *
@@ -6971,6 +14884,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   /**
                    * DeleteInstance deletes an instance associated with the given study, series, and SOP Instance
                    * UID. Delete requests are equivalent to the GET requests specified in the Retrieve transaction.
+                   * Study and series search results can take a few seconds to be updated after an instance is
+                   * deleted using DeleteInstance. For samples that show how to call DeleteInstance, see [Deleting a
+                   * study, series, or instance](https://cloud.google.com/healthcare/docs/how-
+                   * tos/dicomweb#deleting_a_study_series_or_instance).
                    *
                    * Create a request for the method "instances.delete".
                    *
@@ -7123,7 +15040,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
                 /**
                  * RetrieveInstance returns instance associated with the given study, series, and SOP Instance UID.
-                 * See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                 * See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sec
+                 * t_10.4). For details on the implementation of RetrieveInstance, see [DICOM study/series/instances
+                 * ](https://cloud.google.com/healthcare/docs/dicom#dicom_studyseriesinstances) and [DICOM
+                 * instances](https://cloud.google.com/healthcare/docs/dicom#dicom_instances) in the Cloud
+                 * Healthcare API conformance statement. For samples that show how to call RetrieveInstance, see
+                 * [Retrieving an instance](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#retrieving_an_instance).
                  *
                  * Create a request for the method "instances.retrieveInstance".
                  *
@@ -7155,7 +15078,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveInstance returns instance associated with the given study, series, and SOP Instance
-                   * UID. See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                   * UID. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/output/html/part18.h
+                   * tml#sect_10.4). For details on the implementation of RetrieveInstance, see [DICOM study/series/
+                   * instances](https://cloud.google.com/healthcare/docs/dicom#dicom_studyseriesinstances) and
+                   * [DICOM instances](https://cloud.google.com/healthcare/docs/dicom#dicom_instances) in the Cloud
+                   * Healthcare API conformance statement. For samples that show how to call RetrieveInstance, see
+                   * [Retrieving an instance](https://cloud.google.com/healthcare/docs/how-
+                   * tos/dicomweb#retrieving_an_instance).
                    *
                    * Create a request for the method "instances.retrieveInstance".
                    *
@@ -7318,8 +15247,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
                 /**
                  * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
-                 * Instance UID presented as metadata with the bulk data removed. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                 * Instance UID presented as metadata with the bulk data removed. See [RetrieveTransaction](http://d
+                 * icom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+                 * implementation of RetrieveInstanceMetadata, see [Metadata
+                 * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+                 * Healthcare API conformance statement. For samples that show how to call RetrieveInstanceMetadata,
+                 * see [Retrieving metadata](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#retrieving_metadata).
                  *
                  * Create a request for the method "instances.retrieveMetadata".
                  *
@@ -7351,8 +15285,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveInstanceMetadata returns instance associated with the given study, series, and SOP
-                   * Instance UID presented as metadata with the bulk data removed. See
-                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                   * Instance UID presented as metadata with the bulk data removed. See [RetrieveTransaction](http:/
+                   * /dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+                   * implementation of RetrieveInstanceMetadata, see [Metadata
+                   * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources) in the Cloud
+                   * Healthcare API conformance statement. For samples that show how to call
+                   * RetrieveInstanceMetadata, see [Retrieving metadata](https://cloud.google.com/healthcare/docs
+                   * /how-tos/dicomweb#retrieving_metadata).
                    *
                    * Create a request for the method "instances.retrieveMetadata".
                    *
@@ -7515,8 +15454,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 }
                 /**
                  * RetrieveRenderedInstance returns instance associated with the given study, series, and SOP
-                 * Instance UID in an acceptable Rendered Media Type. See
-                 * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                 * Instance UID in an acceptable Rendered Media Type. See [RetrieveTransaction](http://dicom.nema.or
+                 * g/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the implementation of
+                 * RetrieveRenderedInstance, see [Rendered
+                 * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
+                 * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedInstance,
+                 * see [Retrieving consumer image formats](https://cloud.google.com/healthcare/docs/how-
+                 * tos/dicomweb#retrieving_consumer_image_formats).
                  *
                  * Create a request for the method "instances.retrieveRendered".
                  *
@@ -7548,8 +15492,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveRenderedInstance returns instance associated with the given study, series, and SOP
-                   * Instance UID in an acceptable Rendered Media Type. See
-                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                   * Instance UID in an acceptable Rendered Media Type. See [RetrieveTransaction](http://dicom.nema.
+                   * org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the implementation
+                   * of RetrieveRenderedInstance, see [Rendered
+                   * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
+                   * Healthcare API conformance statement. For samples that show how to call
+                   * RetrieveRenderedInstance, see [Retrieving consumer image
+                   * formats](https://cloud.google.com/healthcare/docs/how-
+                   * tos/dicomweb#retrieving_consumer_image_formats).
                    *
                    * Create a request for the method "instances.retrieveRendered".
                    *
@@ -7733,7 +15683,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                   /**
                    * RetrieveFrames returns instances associated with the given study, series, SOP Instance UID and
-                   * frame numbers. See http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                   * frame numbers. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/output/html/
+                   * part18.html#sect_10.4). For details on the implementation of RetrieveFrames, see [DICOM
+                   * frames](https://cloud.google.com/healthcare/docs/dicom#dicom_frames) in the Cloud Healthcare API
+                   * conformance statement. For samples that show how to call RetrieveFrames, see [Retrieving DICOM
+                   * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
                    *
                    * Create a request for the method "frames.retrieveFrames".
                    *
@@ -7765,8 +15719,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * RetrieveFrames returns instances associated with the given study, series, SOP Instance UID and
-                     * frame numbers. See
-                     * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                     * frame numbers. See [RetrieveTransaction](http://dicom.nema.org/medical/dicom/current/output/htm
+                     * l/part18.html#sect_10.4). For details on the implementation of RetrieveFrames, see [DICOM
+                     * frames](https://cloud.google.com/healthcare/docs/dicom#dicom_frames) in the Cloud Healthcare
+                     * API conformance statement. For samples that show how to call RetrieveFrames, see [Retrieving
+                     * DICOM data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieving_dicom_data).
                      *
                      * Create a request for the method "frames.retrieveFrames".
                      *
@@ -7929,8 +15886,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   }
                   /**
                    * RetrieveRenderedFrames returns instances associated with the given study, series, SOP Instance
-                   * UID and frame numbers in an acceptable Rendered Media Type. See
-                   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                   * UID and frame numbers in an acceptable Rendered Media Type. See [RetrieveTransaction](http://dico
+                   * m.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+                   * implementation of RetrieveRenderedFrames, see [Rendered
+                   * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
+                   * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedFrames,
+                   * see [Retrieving consumer image formats](https://cloud.google.com/healthcare/docs/how-
+                   * tos/dicomweb#retrieving_consumer_image_formats).
                    *
                    * Create a request for the method "frames.retrieveRendered".
                    *
@@ -7963,8 +15925,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
                     /**
                      * RetrieveRenderedFrames returns instances associated with the given study, series, SOP Instance
-                     * UID and frame numbers in an acceptable Rendered Media Type. See
-                     * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4.
+                     * UID and frame numbers in an acceptable Rendered Media Type. See [RetrieveTransaction](http://di
+                     * com.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4). For details on the
+                     * implementation of RetrieveRenderedFrames, see [Rendered
+                     * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources) in the Cloud
+                     * Healthcare API conformance statement. For samples that show how to call RetrieveRenderedFrames,
+                     * see [Retrieving consumer image formats](https://cloud.google.com/healthcare/docs/how-
+                     * tos/dicomweb#retrieving_consumer_image_formats).
                      *
                      * Create a request for the method "frames.retrieveRendered".
                      *
@@ -8311,9 +16278,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           /**
            * De-identifies data from the source store and writes it to the destination store. The metadata
            * field type is OperationMetadata. If the request is successful, the response field type is
-           * DeidentifyFhirStoreSummary. If errors occur, error details field type is DeidentifyErrorDetails.
-           * Errors are also logged to Stackdriver (see [Viewing logs](/healthcare/docs/how-tos/stackdriver-
-           * logging)).
+           * DeidentifyFhirStoreSummary. The number of resources processed are tracked in Operation.metadata.
+           * Error details are logged to Cloud Logging. For more information, see [Viewing
+           * logs](/healthcare/docs/how-tos/logging).
            *
            * Create a request for the method "fhirStores.deidentify".
            *
@@ -8342,9 +16309,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * De-identifies data from the source store and writes it to the destination store. The metadata
              * field type is OperationMetadata. If the request is successful, the response field type is
-             * DeidentifyFhirStoreSummary. If errors occur, error details field type is
-             * DeidentifyErrorDetails. Errors are also logged to Stackdriver (see [Viewing
-             * logs](/healthcare/docs/how-tos/stackdriver-logging)).
+             * DeidentifyFhirStoreSummary. The number of resources processed are tracked in
+             * Operation.metadata. Error details are logged to Cloud Logging. For more information, see
+             * [Viewing logs](/healthcare/docs/how-tos/logging).
              *
              * Create a request for the method "fhirStores.deidentify".
              *
@@ -8588,13 +16555,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Export resources from the FHIR store to the specified destination.
-           *
-           * This method returns an Operation that can be used to track the status of the export by calling
-           * GetOperation.
-           *
-           * Immediate fatal errors appear in the error field, errors are also logged to Stackdriver (see
-           * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). Otherwise, when the operation
+           * Export resources from the FHIR store to the specified destination. This method returns an
+           * Operation that can be used to track the status of the export by calling GetOperation. Immediate
+           * fatal errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing
+           * error logs in Cloud Logging](/healthcare/docs/how-tos/logging)). Otherwise, when the operation
            * finishes, a detailed response of type ExportResourcesResponse is returned in the response field.
            * The metadata field type for this operation is OperationMetadata.
            *
@@ -8603,8 +16567,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the FHIR store to export resource from. The name should be in
-          the format of
+           * @param name The name of the FHIR store to export resource from, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportResourcesRequest}
@@ -8624,13 +16587,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
             /**
-             * Export resources from the FHIR store to the specified destination.
-             *
-             * This method returns an Operation that can be used to track the status of the export by calling
-             * GetOperation.
-             *
-             * Immediate fatal errors appear in the error field, errors are also logged to Stackdriver (see
-             * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). Otherwise, when the operation
+             * Export resources from the FHIR store to the specified destination. This method returns an
+             * Operation that can be used to track the status of the export by calling GetOperation. Immediate
+             * fatal errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing
+             * error logs in Cloud Logging](/healthcare/docs/how-tos/logging)). Otherwise, when the operation
              * finishes, a detailed response of type ExportResourcesResponse is returned in the response
              * field. The metadata field type for this operation is OperationMetadata.
              *
@@ -8642,8 +16602,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the FHIR store to export resource from. The name should be in
-          the format of
+             * @param name The name of the FHIR store to export resource from, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportResourcesRequest}
@@ -8715,14 +16674,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to export resource from. The name should be in the format
-             * of `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{f
-             * hir_store_id}`.
+             * The name of the FHIR store to export resource from, in the format of `projects/{proje
+             * ct_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the FHIR store to export resource from. The name should be in the format of
+            /** The name of the FHIR store to export resource from, in the format of
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public java.lang.String getName() {
@@ -8730,9 +16688,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to export resource from. The name should be in the format
-             * of `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{f
-             * hir_store_id}`.
+             * The name of the FHIR store to export resource from, in the format of `projects/{proje
+             * ct_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public Export setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -8896,8 +16853,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -8926,8 +16882,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -9035,36 +16990,33 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -9081,53 +17033,41 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * optimized to load large quantities of data using import semantics that ignore some FHIR store
            * configuration options and are not suitable for all use cases. It is primarily intended to load
            * data into an empty FHIR store that is not being used by other clients. In cases where this method
-           * is not appropriate, consider using ExecuteBundle to load data.
-           *
-           * Every resource in the input must contain a client-supplied ID, and will be stored using that ID
-           * regardless of the enable_update_create setting on the FHIR store.
-           *
-           * The import process does not enforce referential integrity, regardless of the
-           * disable_referential_integrity setting on the FHIR store. This allows the import of resources with
-           * arbitrary interdependencies without considering grouping or ordering, but if the input data
-           * contains invalid references or if some resources fail to be imported, the FHIR store might be
-           * left in a state that violates referential integrity.
-           *
-           * The import process does not trigger PubSub notification or BigQuery streaming update, regardless
-           * of how those are configured on the FHIR store.
-           *
-           * If a resource with the specified ID already exists, the most recent version of the resource is
-           * overwritten without creating a new historical version, regardless of the
-           * disable_resource_versioning setting on the FHIR store. If transient failures occur during the
-           * import, it is possible that successfully imported resources will be overwritten more than once.
-           *
-           * The import operation is idempotent unless the input data contains multiple valid resources with
-           * the same ID but different contents. In that case, after the import completes, the store will
-           * contain exactly one resource with that ID but there is no ordering guarantee on which version of
-           * the contents it will have. The operation result counters do not count duplicate IDs as an error
-           * and will count one success for each resource in the input, which might result in a success count
-           * larger than the number of resources in the FHIR store. This often occurs when importing data
-           * organized in bundles produced by Patient-everything where each bundle contains its own copy of a
-           * resource such as Practitioner that might be referred to by many patients.
-           *
-           * If some resources fail to import, for example due to parsing errors, successfully imported
-           * resources are not rolled back.
-           *
-           * The location and format of the input data is specified by the parameters below. Note that if no
-           * format is specified, this method assumes the `BUNDLE` format. When using the `BUNDLE` format this
-           * method ignores the `Bundle.type` field, except that `history` bundles are rejected, and does not
-           * apply any of the bundle processing semantics for batch or transaction bundles. Unlike in
-           * ExecuteBundle, transaction bundles are not executed as a single transaction and bundle-internal
-           * references are not rewritten. The bundle is treated as a collection of resources to be written as
-           * provided in `Bundle.entry.resource`, ignoring `Bundle.entry.request`. As an example, this allows
-           * the import of `searchset` bundles produced by a FHIR search or Patient-everything operation.
-           *
-           * This method returns an Operation that can be used to track the status of the import by calling
-           * GetOperation.
-           *
-           * Immediate fatal errors appear in the error field, errors are also logged to Stackdriver (see
-           * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). Otherwise, when the operation
-           * finishes, a detailed response of type ImportResourcesResponse is returned in the response field.
-           * The metadata field type for this operation is OperationMetadata.
+           * is not appropriate, consider using ExecuteBundle to load data. Every resource in the input must
+           * contain a client-supplied ID. Each resource is stored using the supplied ID regardless of the
+           * enable_update_create setting on the FHIR store. The import process does not enforce referential
+           * integrity, regardless of the disable_referential_integrity setting on the FHIR store. This allows
+           * the import of resources with arbitrary interdependencies without considering grouping or
+           * ordering, but if the input data contains invalid references or if some resources fail to be
+           * imported, the FHIR store might be left in a state that violates referential integrity. The import
+           * process does not trigger Pub/Sub notification or BigQuery streaming update, regardless of how
+           * those are configured on the FHIR store. If a resource with the specified ID already exists, the
+           * most recent version of the resource is overwritten without creating a new historical version,
+           * regardless of the disable_resource_versioning setting on the FHIR store. If transient failures
+           * occur during the import, it is possible that successfully imported resources will be overwritten
+           * more than once. The import operation is idempotent unless the input data contains multiple valid
+           * resources with the same ID but different contents. In that case, after the import completes, the
+           * store contains exactly one resource with that ID but there is no ordering guarantee on which
+           * version of the contents it will have. The operation result counters do not count duplicate IDs as
+           * an error and count one success for each resource in the input, which might result in a success
+           * count larger than the number of resources in the FHIR store. This often occurs when importing
+           * data organized in bundles produced by Patient-everything where each bundle contains its own copy
+           * of a resource such as Practitioner that might be referred to by many patients. If some resources
+           * fail to import, for example due to parsing errors, successfully imported resources are not rolled
+           * back. The location and format of the input data are specified by the parameters in
+           * ImportResourcesRequest. Note that if no format is specified, this method assumes the `BUNDLE`
+           * format. When using the `BUNDLE` format this method ignores the `Bundle.type` field, except that
+           * `history` bundles are rejected, and does not apply any of the bundle processing semantics for
+           * batch or transaction bundles. Unlike in ExecuteBundle, transaction bundles are not executed as a
+           * single transaction and bundle-internal references are not rewritten. The bundle is treated as a
+           * collection of resources to be written as provided in `Bundle.entry.resource`, ignoring
+           * `Bundle.entry.request`. As an example, this allows the import of `searchset` bundles produced by
+           * a FHIR search or Patient-everything operation. This method returns an Operation that can be used
+           * to track the status of the import by calling GetOperation. Immediate fatal errors appear in the
+           * error field, errors are also logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how-
+           * tos/logging)). Otherwise, when the operation finishes, a detailed response of type
+           * ImportResourcesResponse is returned in the response field. The metadata field type for this
+           * operation is OperationMetadata.
            *
            * Create a request for the method "fhirStores.import".
            *
@@ -9135,8 +17075,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
            * operation.
            *
-           * @param name The name of the FHIR store to import FHIR resources to. The name should be
-          in the format of
+           * @param name The name of the FHIR store to import FHIR resources to, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportResourcesRequest}
@@ -9160,54 +17099,42 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * optimized to load large quantities of data using import semantics that ignore some FHIR store
              * configuration options and are not suitable for all use cases. It is primarily intended to load
              * data into an empty FHIR store that is not being used by other clients. In cases where this
-             * method is not appropriate, consider using ExecuteBundle to load data.
-             *
-             * Every resource in the input must contain a client-supplied ID, and will be stored using that ID
-             * regardless of the enable_update_create setting on the FHIR store.
-             *
-             * The import process does not enforce referential integrity, regardless of the
-             * disable_referential_integrity setting on the FHIR store. This allows the import of resources
-             * with arbitrary interdependencies without considering grouping or ordering, but if the input
-             * data contains invalid references or if some resources fail to be imported, the FHIR store might
-             * be left in a state that violates referential integrity.
-             *
-             * The import process does not trigger PubSub notification or BigQuery streaming update,
-             * regardless of how those are configured on the FHIR store.
-             *
-             * If a resource with the specified ID already exists, the most recent version of the resource is
-             * overwritten without creating a new historical version, regardless of the
-             * disable_resource_versioning setting on the FHIR store. If transient failures occur during the
-             * import, it is possible that successfully imported resources will be overwritten more than once.
-             *
-             * The import operation is idempotent unless the input data contains multiple valid resources with
-             * the same ID but different contents. In that case, after the import completes, the store will
-             * contain exactly one resource with that ID but there is no ordering guarantee on which version
-             * of the contents it will have. The operation result counters do not count duplicate IDs as an
-             * error and will count one success for each resource in the input, which might result in a
-             * success count larger than the number of resources in the FHIR store. This often occurs when
-             * importing data organized in bundles produced by Patient-everything where each bundle contains
-             * its own copy of a resource such as Practitioner that might be referred to by many patients.
-             *
-             * If some resources fail to import, for example due to parsing errors, successfully imported
-             * resources are not rolled back.
-             *
-             * The location and format of the input data is specified by the parameters below. Note that if no
-             * format is specified, this method assumes the `BUNDLE` format. When using the `BUNDLE` format
-             * this method ignores the `Bundle.type` field, except that `history` bundles are rejected, and
-             * does not apply any of the bundle processing semantics for batch or transaction bundles. Unlike
-             * in ExecuteBundle, transaction bundles are not executed as a single transaction and bundle-
-             * internal references are not rewritten. The bundle is treated as a collection of resources to be
-             * written as provided in `Bundle.entry.resource`, ignoring `Bundle.entry.request`. As an example,
-             * this allows the import of `searchset` bundles produced by a FHIR search or Patient-everything
-             * operation.
-             *
-             * This method returns an Operation that can be used to track the status of the import by calling
-             * GetOperation.
-             *
-             * Immediate fatal errors appear in the error field, errors are also logged to Stackdriver (see
-             * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)). Otherwise, when the operation
-             * finishes, a detailed response of type ImportResourcesResponse is returned in the response
-             * field. The metadata field type for this operation is OperationMetadata.
+             * method is not appropriate, consider using ExecuteBundle to load data. Every resource in the
+             * input must contain a client-supplied ID. Each resource is stored using the supplied ID
+             * regardless of the enable_update_create setting on the FHIR store. The import process does not
+             * enforce referential integrity, regardless of the disable_referential_integrity setting on the
+             * FHIR store. This allows the import of resources with arbitrary interdependencies without
+             * considering grouping or ordering, but if the input data contains invalid references or if some
+             * resources fail to be imported, the FHIR store might be left in a state that violates
+             * referential integrity. The import process does not trigger Pub/Sub notification or BigQuery
+             * streaming update, regardless of how those are configured on the FHIR store. If a resource with
+             * the specified ID already exists, the most recent version of the resource is overwritten without
+             * creating a new historical version, regardless of the disable_resource_versioning setting on the
+             * FHIR store. If transient failures occur during the import, it is possible that successfully
+             * imported resources will be overwritten more than once. The import operation is idempotent
+             * unless the input data contains multiple valid resources with the same ID but different
+             * contents. In that case, after the import completes, the store contains exactly one resource
+             * with that ID but there is no ordering guarantee on which version of the contents it will have.
+             * The operation result counters do not count duplicate IDs as an error and count one success for
+             * each resource in the input, which might result in a success count larger than the number of
+             * resources in the FHIR store. This often occurs when importing data organized in bundles
+             * produced by Patient-everything where each bundle contains its own copy of a resource such as
+             * Practitioner that might be referred to by many patients. If some resources fail to import, for
+             * example due to parsing errors, successfully imported resources are not rolled back. The
+             * location and format of the input data are specified by the parameters in
+             * ImportResourcesRequest. Note that if no format is specified, this method assumes the `BUNDLE`
+             * format. When using the `BUNDLE` format this method ignores the `Bundle.type` field, except that
+             * `history` bundles are rejected, and does not apply any of the bundle processing semantics for
+             * batch or transaction bundles. Unlike in ExecuteBundle, transaction bundles are not executed as
+             * a single transaction and bundle-internal references are not rewritten. The bundle is treated as
+             * a collection of resources to be written as provided in `Bundle.entry.resource`, ignoring
+             * `Bundle.entry.request`. As an example, this allows the import of `searchset` bundles produced
+             * by a FHIR search or Patient-everything operation. This method returns an Operation that can be
+             * used to track the status of the import by calling GetOperation. Immediate fatal errors appear
+             * in the error field, errors are also logged to Cloud Logging (see [Viewing
+             * logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a detailed
+             * response of type ImportResourcesResponse is returned in the response field. The metadata field
+             * type for this operation is OperationMetadata.
              *
              * Create a request for the method "fhirStores.import".
              *
@@ -9217,8 +17144,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param name The name of the FHIR store to import FHIR resources to. The name should be
-          in the format of
+             * @param name The name of the FHIR store to import FHIR resources to, in the format of
            *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
            *        e_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportResourcesRequest}
@@ -9290,14 +17216,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to import FHIR resources to. The name should be in the
-             * format of `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirSt
-             * ores/{fhir_store_id}`.
+             * The name of the FHIR store to import FHIR resources to, in the format of `projects/{p
+             * roject_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the FHIR store to import FHIR resources to. The name should be in the format of
+            /** The name of the FHIR store to import FHIR resources to, in the format of
            `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public java.lang.String getName() {
@@ -9305,9 +17230,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The name of the FHIR store to import FHIR resources to. The name should be in the
-             * format of `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirSt
-             * ores/{fhir_store_id}`.
+             * The name of the FHIR store to import FHIR resources to, in the format of `projects/{p
+             * roject_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
              */
             public CloudHealthcareImport setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -9484,21 +17408,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Limit on the number of FHIR stores to return in a single response.  If zero the
+             * Limit on the number of FHIR stores to return in a single response. If zero the
              * default page size of 100 is used.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Limit on the number of FHIR stores to return in a single response.  If zero the default page size
-           of 100 is used.
+            /** Limit on the number of FHIR stores to return in a single response. If zero the default page size of
+           100 is used.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Limit on the number of FHIR stores to return in a single response.  If zero the
+             * Limit on the number of FHIR stores to return in a single response. If zero the
              * default page size of 100 is used.
              */
             public List setPageSize(java.lang.Integer pageSize) {
@@ -9693,284 +17617,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Searches for resources in the given FHIR store according to criteria specified as query
-           * parameters.
-           *
-           * Implements the FHIR standard search interaction
-           * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
-           * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#search),
-           * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#search)) using the search semantics
-           * described in the FHIR Search specification
-           * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/search.html),
-           * [STU3](http://hl7.org/implement/standards/fhir/STU3/search.html),
-           * [R4](http://hl7.org/implement/standards/fhir/R4/search.html)).
-           *
-           * Supports three methods of search defined by the specification:
-           *
-           * *  `GET [base]?[parameters]` to search across all resources. *  `GET [base]/[type]?[parameters]`
-           * to search resources of a specified type. *  `POST [base]/[type]/_search?[parameters]` as an
-           * alternate form having the same semantics as the `GET` method.
-           *
-           * The `GET` methods do not support compartment searches. The `POST` method does not support
-           * `application/x-www-form-urlencoded` search parameters.
-           *
-           * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-           * of type `searchset`, containing the results of the search. Errors generated by the FHIR store
-           * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
-           * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-           * returned instead.
-           *
-           * The server's capability statement, retrieved through capabilities, indicates what search
-           * parameters are supported on each FHIR resource. A list of all search parameters defined by the
-           * specification can be found in the FHIR Search Parameter Registry
-           * ([STU3](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html),
-           * [R4](http://hl7.org/implement/standards/fhir/R4/searchparameter-registry.html)). FHIR search
-           * parameters for DSTU2 can be found on each resource's definition page.
-           *
-           * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
-           * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
-           *
-           * Supported search result parameters: `_sort`, `_count`, `_include`, `_revinclude`,
-           * `_summary=text`, `_summary=data`, and `_elements`.
-           *
-           * The maximum number of search results returned defaults to 100, which can be overridden by the
-           * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
-           * `Bundle` will contain pagination links.
-           *
-           * Resources with a total size larger than 5MB or a field count larger than 50,000 might not be
-           * fully searchable as the server might trim its generated search index in those cases.
-           *
-           * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
-           * time a resource is created or changes and when the change is reflected in search results.
-           *
-           * Create a request for the method "fhirStores.search".
-           *
-           * This request holds the parameters needed by the healthcare server.  After setting any optional
-           * parameters, call the {@link Search#execute()} method to invoke the remote operation.
-           *
-           * @param parent Name of the FHIR store to retrieve resources from.
-           * @return the request
-           */
-          public Search search(java.lang.String parent) throws java.io.IOException {
-            Search result = new Search(parent);
-            initialize(result);
-            return result;
-          }
-
-          public class Search extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
-
-            private static final String REST_PATH = "v1beta1/{+parent}/fhir";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-
-            /**
-             * Searches for resources in the given FHIR store according to criteria specified as query
-             * parameters.
-             *
-             * Implements the FHIR standard search interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#search),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#search)) using the search semantics
-             * described in the FHIR Search specification
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/search.html),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/search.html),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/search.html)).
-             *
-             * Supports three methods of search defined by the specification:
-             *
-             * *  `GET [base]?[parameters]` to search across all resources. *  `GET
-             * [base]/[type]?[parameters]` to search resources of a specified type. *  `POST
-             * [base]/[type]/_search?[parameters]` as an alternate form having the same semantics as the `GET`
-             * method.
-             *
-             * The `GET` methods do not support compartment searches. The `POST` method does not support
-             * `application/x-www-form-urlencoded` search parameters.
-             *
-             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-             * of type `searchset`, containing the results of the search. Errors generated by the FHIR store
-             * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
-             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might
-             * be returned instead.
-             *
-             * The server's capability statement, retrieved through capabilities, indicates what search
-             * parameters are supported on each FHIR resource. A list of all search parameters defined by the
-             * specification can be found in the FHIR Search Parameter Registry
-             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/searchparameter-registry.html)). FHIR search
-             * parameters for DSTU2 can be found on each resource's definition page.
-             *
-             * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
-             * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
-             *
-             * Supported search result parameters: `_sort`, `_count`, `_include`, `_revinclude`,
-             * `_summary=text`, `_summary=data`, and `_elements`.
-             *
-             * The maximum number of search results returned defaults to 100, which can be overridden by the
-             * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
-             * `Bundle` will contain pagination links.
-             *
-             * Resources with a total size larger than 5MB or a field count larger than 50,000 might not be
-             * fully searchable as the server might trim its generated search index in those cases.
-             *
-             * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
-             * time a resource is created or changes and when the change is reflected in search results.
-             *
-             * Create a request for the method "fhirStores.search".
-             *
-             * This request holds the parameters needed by the the healthcare server.  After setting any
-             * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param parent Name of the FHIR store to retrieve resources from.
-             * @since 1.13
-             */
-            protected Search(java.lang.String parent) {
-              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-              }
-            }
-
-            @Override
-            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-              return super.executeUsingHead();
-            }
-
-            @Override
-            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-              return super.buildHttpRequestUsingHead();
-            }
-
-            @Override
-            public Search set$Xgafv(java.lang.String $Xgafv) {
-              return (Search) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Search setAccessToken(java.lang.String accessToken) {
-              return (Search) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Search setAlt(java.lang.String alt) {
-              return (Search) super.setAlt(alt);
-            }
-
-            @Override
-            public Search setCallback(java.lang.String callback) {
-              return (Search) super.setCallback(callback);
-            }
-
-            @Override
-            public Search setFields(java.lang.String fields) {
-              return (Search) super.setFields(fields);
-            }
-
-            @Override
-            public Search setKey(java.lang.String key) {
-              return (Search) super.setKey(key);
-            }
-
-            @Override
-            public Search setOauthToken(java.lang.String oauthToken) {
-              return (Search) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Search) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Search setQuotaUser(java.lang.String quotaUser) {
-              return (Search) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Search setUploadType(java.lang.String uploadType) {
-              return (Search) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Search setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Search) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** Name of the FHIR store to retrieve resources from. */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Name of the FHIR store to retrieve resources from.
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /** Name of the FHIR store to retrieve resources from. */
-            public Search setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            /**
-             * The FHIR resource type to search, such as Patient or Observation. For a complete
-             * list, see the FHIR Resource Index
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String resourceType;
-
-            /** The FHIR resource type to search, such as Patient or Observation. For a complete list, see the FHIR
-           Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-           [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-           [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
-             */
-            public java.lang.String getResourceType() {
-              return resourceType;
-            }
-
-            /**
-             * The FHIR resource type to search, such as Patient or Observation. For a complete
-             * list, see the FHIR Resource Index
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
-             */
-            public Search setResourceType(java.lang.String resourceType) {
-              this.resourceType = resourceType;
-              return this;
-            }
-
-            @Override
-            public Search set(String parameterName, Object value) {
-              return (Search) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "fhirStores.setIamPolicy".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
            * @return the request
@@ -9989,9 +17644,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "fhirStores.setIamPolicy".
              *
@@ -10001,8 +17655,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -10107,18 +17760,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "fhirStores.testIamPermissions".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
            * @return the request
@@ -10138,10 +17789,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "fhirStores.testIamPermissions".
              *
@@ -10151,8 +17801,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -10277,35 +17926,514 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           public class Fhir {
 
             /**
+             * Translates a code from one value set to another by searching for appropriate concept maps.
+             * Implements the FHIR standard $translate operation ([DSTU2](https://www.hl7.org/fhir/DSTU2
+             * /operation-conceptmap-translate.html), [STU3](https://www.hl7.org/fhir/STU3/operation-conceptmap-
+             * translate.html), [R4](https://www.hl7.org/fhir/R4/operation-conceptmap-translate.html)). On
+             * success, the response body contains a JSON-encoded representation of a FHIR Parameters resource,
+             * which includes the translation result. Errors generated by the FHIR store contain a JSON-encoded
+             * `OperationOutcome` resource describing the reason for the error. If the request cannot be mapped
+             * to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+             *
+             * Create a request for the method "fhir.ConceptMap-search-translate".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ConceptMapSearchTranslate#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param parent The name for the FHIR store containing the concept map(s) to use for the translation.
+             * @return the request
+             */
+            public ConceptMapSearchTranslate conceptMapSearchTranslate(java.lang.String parent) throws java.io.IOException {
+              ConceptMapSearchTranslate result = new ConceptMapSearchTranslate(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class ConceptMapSearchTranslate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+parent}/fhir/ConceptMap/$translate";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+              /**
+               * Translates a code from one value set to another by searching for appropriate concept maps.
+               * Implements the FHIR standard $translate operation ([DSTU2](https://www.hl7.org/fhir/DSTU2
+               * /operation-conceptmap-translate.html), [STU3](https://www.hl7.org/fhir/STU3/operation-
+               * conceptmap-translate.html), [R4](https://www.hl7.org/fhir/R4/operation-conceptmap-
+               * translate.html)). On success, the response body contains a JSON-encoded representation of a
+               * FHIR Parameters resource, which includes the translation result. Errors generated by the FHIR
+               * store contain a JSON-encoded `OperationOutcome` resource describing the reason for the error.
+               * If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error
+               * might be returned instead.
+               *
+               * Create a request for the method "fhir.ConceptMap-search-translate".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ConceptMapSearchTranslate#execute()} method to invoke the
+               * remote operation. <p> {@link ConceptMapSearchTranslate#initialize(com.google.api.client.googlea
+               * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+               * immediately after invoking the constructor. </p>
+               *
+               * @param parent The name for the FHIR store containing the concept map(s) to use for the translation.
+               * @since 1.13
+               */
+              protected ConceptMapSearchTranslate(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public ConceptMapSearchTranslate set$Xgafv(java.lang.String $Xgafv) {
+                return (ConceptMapSearchTranslate) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ConceptMapSearchTranslate setAccessToken(java.lang.String accessToken) {
+                return (ConceptMapSearchTranslate) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ConceptMapSearchTranslate setAlt(java.lang.String alt) {
+                return (ConceptMapSearchTranslate) super.setAlt(alt);
+              }
+
+              @Override
+              public ConceptMapSearchTranslate setCallback(java.lang.String callback) {
+                return (ConceptMapSearchTranslate) super.setCallback(callback);
+              }
+
+              @Override
+              public ConceptMapSearchTranslate setFields(java.lang.String fields) {
+                return (ConceptMapSearchTranslate) super.setFields(fields);
+              }
+
+              @Override
+              public ConceptMapSearchTranslate setKey(java.lang.String key) {
+                return (ConceptMapSearchTranslate) super.setKey(key);
+              }
+
+              @Override
+              public ConceptMapSearchTranslate setOauthToken(java.lang.String oauthToken) {
+                return (ConceptMapSearchTranslate) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ConceptMapSearchTranslate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ConceptMapSearchTranslate) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ConceptMapSearchTranslate setQuotaUser(java.lang.String quotaUser) {
+                return (ConceptMapSearchTranslate) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ConceptMapSearchTranslate setUploadType(java.lang.String uploadType) {
+                return (ConceptMapSearchTranslate) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ConceptMapSearchTranslate setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ConceptMapSearchTranslate) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * The name for the FHIR store containing the concept map(s) to use for the
+               * translation.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** The name for the FHIR store containing the concept map(s) to use for the translation.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * The name for the FHIR store containing the concept map(s) to use for the
+               * translation.
+               */
+              public ConceptMapSearchTranslate setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** The code to translate. */
+              @com.google.api.client.util.Key
+              private java.lang.String code;
+
+              /** The code to translate.
+               */
+              public java.lang.String getCode() {
+                return code;
+              }
+
+              /** The code to translate. */
+              public ConceptMapSearchTranslate setCode(java.lang.String code) {
+                this.code = code;
+                return this;
+              }
+
+              /**
+               * The version of the concept map to use. If unset, the most current version is used.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String conceptMapVersion;
+
+              /** The version of the concept map to use. If unset, the most current version is used.
+               */
+              public java.lang.String getConceptMapVersion() {
+                return conceptMapVersion;
+              }
+
+              /**
+               * The version of the concept map to use. If unset, the most current version is used.
+               */
+              public ConceptMapSearchTranslate setConceptMapVersion(java.lang.String conceptMapVersion) {
+                this.conceptMapVersion = conceptMapVersion;
+                return this;
+              }
+
+              /**
+               * The source value set of the concept map to be used. If unset, target is used to
+               * search for concept maps.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String source;
+
+              /** The source value set of the concept map to be used. If unset, target is used to search for concept
+             maps.
+               */
+              public java.lang.String getSource() {
+                return source;
+              }
+
+              /**
+               * The source value set of the concept map to be used. If unset, target is used to
+               * search for concept maps.
+               */
+              public ConceptMapSearchTranslate setSource(java.lang.String source) {
+                this.source = source;
+                return this;
+              }
+
+              /** The system for the code to be translated. */
+              @com.google.api.client.util.Key
+              private java.lang.String system;
+
+              /** The system for the code to be translated.
+               */
+              public java.lang.String getSystem() {
+                return system;
+              }
+
+              /** The system for the code to be translated. */
+              public ConceptMapSearchTranslate setSystem(java.lang.String system) {
+                this.system = system;
+                return this;
+              }
+
+              /**
+               * The target value set of the concept map to be used. If unset, source is used to
+               * search for concept maps.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String target;
+
+              /** The target value set of the concept map to be used. If unset, source is used to search for concept
+             maps.
+               */
+              public java.lang.String getTarget() {
+                return target;
+              }
+
+              /**
+               * The target value set of the concept map to be used. If unset, source is used to
+               * search for concept maps.
+               */
+              public ConceptMapSearchTranslate setTarget(java.lang.String target) {
+                this.target = target;
+                return this;
+              }
+
+              /**
+               * The canonical url of the concept map to use. If unset, the source and target is
+               * used to search for concept maps.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String url;
+
+              /** The canonical url of the concept map to use. If unset, the source and target is used to search for
+             concept maps.
+               */
+              public java.lang.String getUrl() {
+                return url;
+              }
+
+              /**
+               * The canonical url of the concept map to use. If unset, the source and target is
+               * used to search for concept maps.
+               */
+              public ConceptMapSearchTranslate setUrl(java.lang.String url) {
+                this.url = url;
+                return this;
+              }
+
+              @Override
+              public ConceptMapSearchTranslate set(String parameterName, Object value) {
+                return (ConceptMapSearchTranslate) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Translates a code from one value set to another using a concept map. You can provide your own
+             * concept maps to translate any code system to another code system. Implements the FHIR standard
+             * $translate operation ([DSTU2](https://www.hl7.org/fhir/DSTU2/operation-conceptmap-
+             * translate.html), [STU3](https://www.hl7.org/fhir/STU3/operation-conceptmap-translate.html),
+             * [R4](https://www.hl7.org/fhir/R4/operation-conceptmap-translate.html)). On success, the response
+             * body contains a JSON-encoded representation of a FHIR Parameters resource, which includes the
+             * translation result. Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome`
+             * resource describing the reason for the error. If the request cannot be mapped to a valid API
+             * method on a FHIR store, a generic GCP error might be returned instead.
+             *
+             * Create a request for the method "fhir.ConceptMap-translate".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ConceptMapTranslate#execute()} method to invoke the remote operation.
+             *
+             * @param name The URL for the concept map to use for the translation.
+             * @return the request
+             */
+            public ConceptMapTranslate conceptMapTranslate(java.lang.String name) throws java.io.IOException {
+              ConceptMapTranslate result = new ConceptMapTranslate(name);
+              initialize(result);
+              return result;
+            }
+
+            public class ConceptMapTranslate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1beta1/{+name}/$translate";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/ConceptMap/[^/]+$");
+
+              /**
+               * Translates a code from one value set to another using a concept map. You can provide your own
+               * concept maps to translate any code system to another code system. Implements the FHIR standard
+               * $translate operation ([DSTU2](https://www.hl7.org/fhir/DSTU2/operation-conceptmap-
+               * translate.html), [STU3](https://www.hl7.org/fhir/STU3/operation-conceptmap-translate.html),
+               * [R4](https://www.hl7.org/fhir/R4/operation-conceptmap-translate.html)). On success, the
+               * response body contains a JSON-encoded representation of a FHIR Parameters resource, which
+               * includes the translation result. Errors generated by the FHIR store contain a JSON-encoded
+               * `OperationOutcome` resource describing the reason for the error. If the request cannot be
+               * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+               *
+               * Create a request for the method "fhir.ConceptMap-translate".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ConceptMapTranslate#execute()} method to invoke the remote
+               * operation. <p> {@link ConceptMapTranslate#initialize(com.google.api.client.googleapis.services.
+               * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param name The URL for the concept map to use for the translation.
+               * @since 1.13
+               */
+              protected ConceptMapTranslate(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/ConceptMap/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public ConceptMapTranslate set$Xgafv(java.lang.String $Xgafv) {
+                return (ConceptMapTranslate) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ConceptMapTranslate setAccessToken(java.lang.String accessToken) {
+                return (ConceptMapTranslate) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ConceptMapTranslate setAlt(java.lang.String alt) {
+                return (ConceptMapTranslate) super.setAlt(alt);
+              }
+
+              @Override
+              public ConceptMapTranslate setCallback(java.lang.String callback) {
+                return (ConceptMapTranslate) super.setCallback(callback);
+              }
+
+              @Override
+              public ConceptMapTranslate setFields(java.lang.String fields) {
+                return (ConceptMapTranslate) super.setFields(fields);
+              }
+
+              @Override
+              public ConceptMapTranslate setKey(java.lang.String key) {
+                return (ConceptMapTranslate) super.setKey(key);
+              }
+
+              @Override
+              public ConceptMapTranslate setOauthToken(java.lang.String oauthToken) {
+                return (ConceptMapTranslate) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ConceptMapTranslate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ConceptMapTranslate) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ConceptMapTranslate setQuotaUser(java.lang.String quotaUser) {
+                return (ConceptMapTranslate) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ConceptMapTranslate setUploadType(java.lang.String uploadType) {
+                return (ConceptMapTranslate) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ConceptMapTranslate setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ConceptMapTranslate) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** The URL for the concept map to use for the translation. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The URL for the concept map to use for the translation.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** The URL for the concept map to use for the translation. */
+              public ConceptMapTranslate setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/ConceptMap/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** The code to translate. */
+              @com.google.api.client.util.Key
+              private java.lang.String code;
+
+              /** The code to translate.
+               */
+              public java.lang.String getCode() {
+                return code;
+              }
+
+              /** The code to translate. */
+              public ConceptMapTranslate setCode(java.lang.String code) {
+                this.code = code;
+                return this;
+              }
+
+              /**
+               * The version of the concept map to use. If unset, the most current version is used.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String conceptMapVersion;
+
+              /** The version of the concept map to use. If unset, the most current version is used.
+               */
+              public java.lang.String getConceptMapVersion() {
+                return conceptMapVersion;
+              }
+
+              /**
+               * The version of the concept map to use. If unset, the most current version is used.
+               */
+              public ConceptMapTranslate setConceptMapVersion(java.lang.String conceptMapVersion) {
+                this.conceptMapVersion = conceptMapVersion;
+                return this;
+              }
+
+              /** The system for the code to be translated. */
+              @com.google.api.client.util.Key
+              private java.lang.String system;
+
+              /** The system for the code to be translated.
+               */
+              public java.lang.String getSystem() {
+                return system;
+              }
+
+              /** The system for the code to be translated. */
+              public ConceptMapTranslate setSystem(java.lang.String system) {
+                this.system = system;
+                return this;
+              }
+
+              @Override
+              public ConceptMapTranslate set(String parameterName, Object value) {
+                return (ConceptMapTranslate) super.set(parameterName, value);
+              }
+            }
+            /**
              * Retrieves the N most recent `Observation` resources for a subject matching search criteria
              * specified as query parameters, grouped by `Observation.code`, sorted from most recent to oldest.
-             *
              * Implements the FHIR extended operation Observation-lastn
-             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/observation-operations.html#lastn)).
-             *
-             * DSTU2 doesn't define the Observation-lastn method, but the server supports it the same way it
-             * supports STU3.
-             *
-             * Search terms are provided as query parameters following the same pattern as the search method.
-             * The following search parameters must be provided:
-             *
-             *     - `subject` or `patient` to specify a subject for the Observation.     - `code`, `category`
-             * or any of the composite parameters that include       `code`.
-             *
-             * Any other valid Observation search parameters can also be provided. This operation accepts an
-             * additional query parameter `max`, which specifies N, the maximum number of Observations to return
-             * from each group, with a default of 1.
-             *
-             * Searches with over 1000 results are rejected. Results are counted before grouping and limiting
-             * the results with `max`. To stay within the limit, constrain these searches using Observation
-             * search parameters such as `_lastUpdated` or `date`.
-             *
-             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-             * of type `searchset`, containing the results of the operation. Errors generated by the FHIR store
-             * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
-             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-             * returned instead.
+             * ([STU3](https://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/observation-operations.html#lastn)). DSTU2
+             * doesn't define the Observation-lastn method, but the server supports it the same way it supports
+             * STU3. Search terms are provided as query parameters following the same pattern as the search
+             * method. The following search parameters must be provided: - `subject` or `patient` to specify a
+             * subject for the Observation. - `code`, `category` or any of the composite parameters that include
+             * `code`. Any other valid Observation search parameters can also be provided. This operation
+             * accepts an additional query parameter `max`, which specifies N, the maximum number of
+             * Observations to return from each group, with a default of 1. Searches with over 1000 results are
+             * rejected. Results are counted before grouping and limiting the results with `max`. To stay within
+             * the limit, constrain these searches using Observation search parameters such as `_lastUpdated` or
+             * `date`. On success, the response body contains a JSON-encoded representation of a `Bundle`
+             * resource of type `searchset`, containing the results of the operation. Errors generated by the
+             * FHIR store contain a JSON-encoded `OperationOutcome` resource describing the reason for the
+             * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error
+             * might be returned instead.
              *
              * Create a request for the method "fhir.Observation-lastn".
              *
@@ -10331,34 +18459,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Retrieves the N most recent `Observation` resources for a subject matching search criteria
                * specified as query parameters, grouped by `Observation.code`, sorted from most recent to
-               * oldest.
-               *
-               * Implements the FHIR extended operation Observation-lastn
-               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/observation-operations.html#lastn)).
-               *
-               * DSTU2 doesn't define the Observation-lastn method, but the server supports it the same way it
-               * supports STU3.
-               *
-               * Search terms are provided as query parameters following the same pattern as the search method.
-               * The following search parameters must be provided:
-               *
-               *     - `subject` or `patient` to specify a subject for the Observation.     - `code`, `category`
-               * or any of the composite parameters that include       `code`.
-               *
-               * Any other valid Observation search parameters can also be provided. This operation accepts an
-               * additional query parameter `max`, which specifies N, the maximum number of Observations to
-               * return from each group, with a default of 1.
-               *
-               * Searches with over 1000 results are rejected. Results are counted before grouping and limiting
-               * the results with `max`. To stay within the limit, constrain these searches using Observation
-               * search parameters such as `_lastUpdated` or `date`.
-               *
-               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-               * of type `searchset`, containing the results of the operation. Errors generated by the FHIR
-               * store will contain a JSON-encoded `OperationOutcome` resource describing the reason for the
-               * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
-               * error might be returned instead.
+               * oldest. Implements the FHIR extended operation Observation-lastn
+               * ([STU3](https://hl7.org/implement/standards/fhir/STU3/observation-operations.html#lastn),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/observation-operations.html#lastn)). DSTU2
+               * doesn't define the Observation-lastn method, but the server supports it the same way it
+               * supports STU3. Search terms are provided as query parameters following the same pattern as the
+               * search method. The following search parameters must be provided: - `subject` or `patient` to
+               * specify a subject for the Observation. - `code`, `category` or any of the composite parameters
+               * that include `code`. Any other valid Observation search parameters can also be provided. This
+               * operation accepts an additional query parameter `max`, which specifies N, the maximum number of
+               * Observations to return from each group, with a default of 1. Searches with over 1000 results
+               * are rejected. Results are counted before grouping and limiting the results with `max`. To stay
+               * within the limit, constrain these searches using Observation search parameters such as
+               * `_lastUpdated` or `date`. On success, the response body contains a JSON-encoded representation
+               * of a `Bundle` resource of type `searchset`, containing the results of the operation. Errors
+               * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
+               * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
+               * generic GCP error might be returned instead.
                *
                * Create a request for the method "fhir.Observation-lastn".
                *
@@ -10473,11 +18590,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-             * of type `searchset`, containing the results of the operation. Errors generated by the FHIR store
-             * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
-             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-             * returned instead.
+             * Retrieves a Patient resource and resources related to that patient. Implements the FHIR extended
+             * operation Patient-everything ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/patient-
+             * operations.html#everything), [STU3](https://hl7.org/implement/standards/fhir/STU3/patient-
+             * operations.html#everything), [R4](https://hl7.org/implement/standards/fhir/R4/patient-
+             * operations.html#everything)). On success, the response body contains a JSON-encoded
+             * representation of a `Bundle` resource of type `searchset`, containing the results of the
+             * operation. Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource
+             * describing the reason for the error. If the request cannot be mapped to a valid API method on a
+             * FHIR store, a generic GCP error might be returned instead. The resources in scope for the
+             * response are: * The patient resource itself. * All the resources directly referenced by the
+             * patient resource. * Resources directly referencing the patient resource that meet the inclusion
+             * criteria. The inclusion criteria are based on the membership rules in the patient compartment
+             * definition ([DSTU2](https://hl7.org/fhir/DSTU2/compartment-patient.html),
+             * [STU3](http://www.hl7.org/fhir/stu3/compartmentdefinition-patient.html),
+             * [R4](https://hl7.org/fhir/R4/compartmentdefinition-patient.html)), which details the eligible
+             * resource types and referencing search parameters. For samples that show how to call `Patient-
+             * everything`, see [Getting all patient compartment resources](/healthcare/docs/how-tos/fhir-
+             * resources#getting_all_patient_compartment_resources).
              *
              * Create a request for the method "fhir.Patient-everything".
              *
@@ -10501,11 +18631,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Patient/[^/]+$");
 
               /**
-               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-               * of type `searchset`, containing the results of the operation. Errors generated by the FHIR
-               * store will contain a JSON-encoded `OperationOutcome` resource describing the reason for the
-               * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
-               * error might be returned instead.
+               * Retrieves a Patient resource and resources related to that patient. Implements the FHIR
+               * extended operation Patient-everything ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2
+               * /patient-operations.html#everything), [STU3](https://hl7.org/implement/standards/fhir/STU3
+               * /patient-operations.html#everything), [R4](https://hl7.org/implement/standards/fhir/R4/patient-
+               * operations.html#everything)). On success, the response body contains a JSON-encoded
+               * representation of a `Bundle` resource of type `searchset`, containing the results of the
+               * operation. Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome`
+               * resource describing the reason for the error. If the request cannot be mapped to a valid API
+               * method on a FHIR store, a generic GCP error might be returned instead. The resources in scope
+               * for the response are: * The patient resource itself. * All the resources directly referenced by
+               * the patient resource. * Resources directly referencing the patient resource that meet the
+               * inclusion criteria. The inclusion criteria are based on the membership rules in the patient
+               * compartment definition ([DSTU2](https://hl7.org/fhir/DSTU2/compartment-patient.html),
+               * [STU3](http://www.hl7.org/fhir/stu3/compartmentdefinition-patient.html),
+               * [R4](https://hl7.org/fhir/R4/compartmentdefinition-patient.html)), which details the eligible
+               * resource types and referencing search parameters. For samples that show how to call `Patient-
+               * everything`, see [Getting all patient compartment resources](/healthcare/docs/how-tos/fhir-
+               * resources#getting_all_patient_compartment_resources).
                *
                * Create a request for the method "fhir.Patient-everything".
                *
@@ -10631,36 +18774,84 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Used to retrieve the next or previous page of results when using pagination. Value
-               * should be set to the value of page_token set in next or previous page links' urls.
+               * Used to retrieve the next or previous page of results when using pagination. Set
+               * `_page_token` to the value of _page_token set in next or previous page links' url.
                * Next and previous page are returned in the response bundle's links field, where
-               * `link.relation` is "previous" or "next".
-               *
-               * Omit `page_token` if no previous request has been made.
+               * `link.relation` is "previous" or "next". Omit `_page_token` if no previous request
+               * has been made.
                */
               @com.google.api.client.util.Key("_page_token")
               private java.lang.String pageToken;
 
-              /** Used to retrieve the next or previous page of results when using pagination. Value should be set to
-             the value of page_token set in next or previous page links' urls. Next and previous page are
-             returned in the response bundle's links field, where `link.relation` is "previous" or "next".
-
-             Omit `page_token` if no previous request has been made.
+              /** Used to retrieve the next or previous page of results when using pagination. Set `_page_token` to
+             the value of _page_token set in next or previous page links' url. Next and previous page are
+             returned in the response bundle's links field, where `link.relation` is "previous" or "next". Omit
+             `_page_token` if no previous request has been made.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * Used to retrieve the next or previous page of results when using pagination. Value
-               * should be set to the value of page_token set in next or previous page links' urls.
+               * Used to retrieve the next or previous page of results when using pagination. Set
+               * `_page_token` to the value of _page_token set in next or previous page links' url.
                * Next and previous page are returned in the response bundle's links field, where
-               * `link.relation` is "previous" or "next".
-               *
-               * Omit `page_token` if no previous request has been made.
+               * `link.relation` is "previous" or "next". Omit `_page_token` if no previous request
+               * has been made.
                */
               public PatientEverything setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * If provided, only resources updated after this time are returned. The time uses the
+               * format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00`
+               * or `2017-01-01T00:00:00Z`. The time must be specified to the second and include a
+               * time zone.
+               */
+              @com.google.api.client.util.Key("_since")
+              private java.lang.String since;
+
+              /** If provided, only resources updated after this time are returned. The time uses the format YYYY-MM-
+             DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00` or `2017-01-01T00:00:00Z`. The
+             time must be specified to the second and include a time zone.
+               */
+              public java.lang.String getSince() {
+                return since;
+              }
+
+              /**
+               * If provided, only resources updated after this time are returned. The time uses the
+               * format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00`
+               * or `2017-01-01T00:00:00Z`. The time must be specified to the second and include a
+               * time zone.
+               */
+              public PatientEverything setSince(java.lang.String since) {
+                this.since = since;
+                return this;
+              }
+
+              /**
+               * String of comma-delimited FHIR resource types. If provided, only resources of the
+               * specified resource type(s) are returned.
+               */
+              @com.google.api.client.util.Key("_type")
+              private java.lang.String type;
+
+              /** String of comma-delimited FHIR resource types. If provided, only resources of the specified
+             resource type(s) are returned.
+               */
+              public java.lang.String getType() {
+                return type;
+              }
+
+              /**
+               * String of comma-delimited FHIR resource types. If provided, only resources of the
+               * specified resource type(s) are returned.
+               */
+              public PatientEverything setType(java.lang.String type) {
+                this.type = type;
                 return this;
               }
 
@@ -10718,9 +18909,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * Deletes all the historical versions of a resource (excluding the current version) from the FHIR
              * store. To remove all versions of a resource, first delete the current version and then call this
-             * method.
-             *
-             * This is not a FHIR standard operation.
+             * method. This is not a FHIR standard operation. For samples that show how to call `Resource-
+             * purge`, see [Deleting historical versions of a FHIR resource](/healthcare/docs/how-tos/fhir-
+             * resources#deleting_historical_versions_of_a_fhir_resource).
              *
              * Create a request for the method "fhir.Resource-purge".
              *
@@ -10746,9 +18937,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Deletes all the historical versions of a resource (excluding the current version) from the FHIR
                * store. To remove all versions of a resource, first delete the current version and then call
-               * this method.
-               *
-               * This is not a FHIR standard operation.
+               * this method. This is not a FHIR standard operation. For samples that show how to call
+               * `Resource-purge`, see [Deleting historical versions of a FHIR resource](/healthcare/docs/how-
+               * tos/fhir-resources#deleting_historical_versions_of_a_fhir_resource).
                *
                * Create a request for the method "fhir.Resource-purge".
                *
@@ -10854,18 +19045,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Gets the FHIR capability statement
-             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/capabilitystatement.html)), or the [conformance
-             * statement](http://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in the DSTU2 case for
-             * the store, which contains a description of functionality supported by the server.
-             *
-             * Implements the FHIR standard capabilities interaction
-             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#capabilities),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#capabilities)), or the [conformance
-             * interaction](http://hl7.org/implement/standards/fhir/DSTU2/http.html#conformance) in the DSTU2
-             * case.
-             *
-             * On success, the response body will contain a JSON-encoded representation of a
+             * ([STU3](https://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/capabilitystatement.html)), or the [conformance
+             * statement](https://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in the DSTU2 case for
+             * the store, which contains a description of functionality supported by the server. Implements the
+             * FHIR standard capabilities interaction
+             * ([STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#capabilities),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#capabilities)), or the [conformance
+             * interaction](https://hl7.org/implement/standards/fhir/DSTU2/http.html#conformance) in the DSTU2
+             * case. On success, the response body contains a JSON-encoded representation of a
              * `CapabilityStatement` resource.
              *
              * Create a request for the method "fhir.capabilities".
@@ -10891,18 +19079,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Gets the FHIR capability statement
-               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/capabilitystatement.html)), or the [conformance
-               * statement](http://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in the DSTU2 case
-               * for the store, which contains a description of functionality supported by the server.
-               *
-               * Implements the FHIR standard capabilities interaction
-               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#capabilities),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#capabilities)), or the [conformance
-               * interaction](http://hl7.org/implement/standards/fhir/DSTU2/http.html#conformance) in the DSTU2
-               * case.
-               *
-               * On success, the response body will contain a JSON-encoded representation of a
+               * ([STU3](https://hl7.org/implement/standards/fhir/STU3/capabilitystatement.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/capabilitystatement.html)), or the
+               * [conformance statement](https://hl7.org/implement/standards/fhir/DSTU2/conformance.html) in the
+               * DSTU2 case for the store, which contains a description of functionality supported by the
+               * server. Implements the FHIR standard capabilities interaction
+               * ([STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#capabilities),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#capabilities)), or the [conformance
+               * interaction](https://hl7.org/implement/standards/fhir/DSTU2/http.html#conformance) in the DSTU2
+               * case. On success, the response body contains a JSON-encoded representation of a
                * `CapabilityStatement` resource.
                *
                * Create a request for the method "fhir.capabilities".
@@ -11018,19 +19203,19 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Deletes FHIR resources that match a search query.
-             *
-             * Implements the FHIR standard conditional delete interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.12.1),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#3.1.0.7.1)). If multiple resources
-             * match, all of them will be deleted.
-             *
-             * Search terms are provided as query parameters following the same pattern as the search method.
-             *
-             * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
-             * the FHIR store, the deleted resources will be moved to a history repository that can still be
-             * retrieved through vread and related methods, unless they are removed by the purge method.
+             * Deletes FHIR resources that match a search query. Implements the FHIR standard conditional delete
+             * interaction ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.12.1),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#3.1.0.7.1)). If multiple resources
+             * match, all matching resources are deleted. Search terms are provided as query parameters
+             * following the same pattern as the search method. Note: Unless resource versioning is disabled by
+             * setting the disable_resource_versioning flag on the FHIR store, the deleted resources are moved
+             * to a history repository that can still be retrieved through vread and related methods, unless
+             * they are removed by the purge method. This method requires
+             * the`healthcare.fhirStores.searchResources` and `healthcare.fhirResources.delete` permissions on
+             * the parent FHIR store. For samples that show how to call `conditionalDelete`, see [Conditionally
+             * deleting a FHIR resource](/healthcare/docs/how-tos/fhir-
+             * resources#conditionally_deleting_a_fhir_resource).
              *
              * Create a request for the method "fhir.conditionalDelete".
              *
@@ -11038,12 +19223,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link ConditionalDelete#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The FHIR resource type to delete, such as Patient or Observation. For a
-            complete list, see the FHIR
-             *        Resource Index
-            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+             * @param type The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
              * @return the request
              */
             public ConditionalDelete conditionalDelete(java.lang.String parent, java.lang.String type) throws java.io.IOException {
@@ -11063,19 +19246,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^[^/]+$");
 
               /**
-               * Deletes FHIR resources that match a search query.
-               *
-               * Implements the FHIR standard conditional delete interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.12.1),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#3.1.0.7.1)). If multiple resources
-               * match, all of them will be deleted.
-               *
-               * Search terms are provided as query parameters following the same pattern as the search method.
-               *
-               * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
-               * the FHIR store, the deleted resources will be moved to a history repository that can still be
-               * retrieved through vread and related methods, unless they are removed by the purge method.
+               * Deletes FHIR resources that match a search query. Implements the FHIR standard conditional
+               * delete interaction
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.12.1),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.13.1),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#3.1.0.7.1)). If multiple resources
+               * match, all matching resources are deleted. Search terms are provided as query parameters
+               * following the same pattern as the search method. Note: Unless resource versioning is disabled
+               * by setting the disable_resource_versioning flag on the FHIR store, the deleted resources are
+               * moved to a history repository that can still be retrieved through vread and related methods,
+               * unless they are removed by the purge method. This method requires
+               * the`healthcare.fhirStores.searchResources` and `healthcare.fhirResources.delete` permissions on
+               * the parent FHIR store. For samples that show how to call `conditionalDelete`, see
+               * [Conditionally deleting a FHIR resource](/healthcare/docs/how-tos/fhir-
+               * resources#conditionally_deleting_a_fhir_resource).
                *
                * Create a request for the method "fhir.conditionalDelete".
                *
@@ -11086,12 +19270,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The FHIR resource type to delete, such as Patient or Observation. For a
-            complete list, see the FHIR
-             *        Resource Index
-            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               * @param type The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                * @since 1.13
                */
               protected ConditionalDelete(java.lang.String parent, java.lang.String type) {
@@ -11189,17 +19371,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * The FHIR resource type to delete, such as Patient or Observation. For a complete
                * list, see the FHIR Resource Index
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
               /** The FHIR resource type to delete, such as Patient or Observation. For a complete list, see the FHIR
-             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+             Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                */
               public java.lang.String getType() {
                 return type;
@@ -11208,9 +19390,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * The FHIR resource type to delete, such as Patient or Observation. For a complete
                * list, see the FHIR Resource Index
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                */
               public ConditionalDelete setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
@@ -11230,27 +19412,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             /**
              * If a resource is found based on the search criteria specified in the query parameters, updates
              * part of that resource by applying the operations specified in a [JSON
-             * Patch](http://jsonpatch.com/) document.
-             *
-             * Implements the FHIR standard conditional patch interaction
-             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)).
-             *
-             * DSTU2 doesn't define a conditional patch method, but the server supports it in the same way it
-             * supports STU3.
-             *
-             * Search terms are provided as query parameters following the same pattern as the search method.
-             *
-             * If the search criteria identify more than one match, the request will return a `412 Precondition
-             * Failed` error.
-             *
-             * The request body must contain a JSON Patch document, and the request headers must contain
-             * `Content-Type: application/json-patch+json`.
-             *
-             * On success, the response body will contain a JSON-encoded representation of the updated resource,
-             * including the server-assigned version ID. Errors generated by the FHIR store will contain a JSON-
-             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
-             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+             * Patch](http://jsonpatch.com/) document. Implements the FHIR standard conditional patch
+             * interaction ([STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#patch),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#patch)). DSTU2 doesn't define a
+             * conditional patch method, but the server supports it in the same way it supports STU3. Search
+             * terms are provided as query parameters following the same pattern as the search method. If the
+             * search criteria identify more than one match, the request returns a `412 Precondition Failed`
+             * error. The request body must contain a JSON Patch document, and the request headers must contain
+             * `Content-Type: application/json-patch+json`. On success, the response body contains a JSON-
+             * encoded representation of the updated resource, including the server-assigned version ID. Errors
+             * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
+             * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
+             * generic GCP error might be returned instead. This method requires
+             * the`healthcare.fhirStores.searchResources` permission on the parent FHIR store and the
+             * `healthcare.fhirResources.patch` permission on the requested FHIR store resource. For samples
+             * that show how to call `conditionalPatch`, see [Conditionally patching a FHIR
+             * resource](/healthcare/docs/how-tos/fhir-resources#conditionally_patching_a_fhir_resource).
              *
              * Create a request for the method "fhir.conditionalPatch".
              *
@@ -11258,12 +19435,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link ConditionalPatch#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The FHIR resource type to update, such as Patient or Observation. For a
-            complete list, see the FHIR
-             *        Resource Index
-            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+             * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
              */
@@ -11286,28 +19461,22 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * If a resource is found based on the search criteria specified in the query parameters, updates
                * part of that resource by applying the operations specified in a [JSON
-               * Patch](http://jsonpatch.com/) document.
-               *
-               * Implements the FHIR standard conditional patch interaction
-               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)).
-               *
-               * DSTU2 doesn't define a conditional patch method, but the server supports it in the same way it
-               * supports STU3.
-               *
-               * Search terms are provided as query parameters following the same pattern as the search method.
-               *
-               * If the search criteria identify more than one match, the request will return a `412
-               * Precondition Failed` error.
-               *
-               * The request body must contain a JSON Patch document, and the request headers must contain
-               * `Content-Type: application/json-patch+json`.
-               *
-               * On success, the response body will contain a JSON-encoded representation of the updated
-               * resource, including the server-assigned version ID. Errors generated by the FHIR store will
-               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
-               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-               * returned instead.
+               * Patch](http://jsonpatch.com/) document. Implements the FHIR standard conditional patch
+               * interaction ([STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#patch),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#patch)). DSTU2 doesn't define a
+               * conditional patch method, but the server supports it in the same way it supports STU3. Search
+               * terms are provided as query parameters following the same pattern as the search method. If the
+               * search criteria identify more than one match, the request returns a `412 Precondition Failed`
+               * error. The request body must contain a JSON Patch document, and the request headers must
+               * contain `Content-Type: application/json-patch+json`. On success, the response body contains a
+               * JSON-encoded representation of the updated resource, including the server-assigned version ID.
+               * Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource
+               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
+               * FHIR store, a generic GCP error might be returned instead. This method requires
+               * the`healthcare.fhirStores.searchResources` permission on the parent FHIR store and the
+               * `healthcare.fhirResources.patch` permission on the requested FHIR store resource. For samples
+               * that show how to call `conditionalPatch`, see [Conditionally patching a FHIR
+               * resource](/healthcare/docs/how-tos/fhir-resources#conditionally_patching_a_fhir_resource).
                *
                * Create a request for the method "fhir.conditionalPatch".
                *
@@ -11318,12 +19487,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The FHIR resource type to update, such as Patient or Observation. For a
-            complete list, see the FHIR
-             *        Resource Index
-            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
                */
@@ -11422,17 +19589,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * The FHIR resource type to update, such as Patient or Observation. For a complete
                * list, see the FHIR Resource Index
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
               /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
-             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+             Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                */
               public java.lang.String getType() {
                 return type;
@@ -11441,9 +19608,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * The FHIR resource type to update, such as Patient or Observation. For a complete
                * list, see the FHIR Resource Index
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
                */
               public ConditionalPatch setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
@@ -11462,29 +19629,26 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * If a resource is found based on the search criteria specified in the query parameters, updates
-             * the entire contents of that resource.
-             *
-             * Implements the FHIR standard conditional update interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.10.2),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cond-update),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#cond-update)).
-             *
-             * Search terms are provided as query parameters following the same pattern as the search method.
-             *
-             * If the search criteria identify more than one match, the request will return a `412 Precondition
-             * Failed` error. If the search criteria identify zero matches, and the supplied resource body
-             * contains an `id`, and the FHIR store has enable_update_create set, creates the resource with the
-             * client-specified ID. If the search criteria identify zero matches, and the supplied resource body
-             * does not contain an `id`, the resource will be created with a server-assigned ID as per the
-             * create method.
-             *
-             * The request body must contain a JSON-encoded FHIR resource, and the request headers must contain
-             * `Content-Type: application/fhir+json`.
-             *
-             * On success, the response body will contain a JSON-encoded representation of the updated resource,
-             * including the server-assigned version ID. Errors generated by the FHIR store will contain a JSON-
-             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
-             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+             * the entire contents of that resource. Implements the FHIR standard conditional update interaction
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.10.2),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#cond-update),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#cond-update)). Search terms are
+             * provided as query parameters following the same pattern as the search method. If the search
+             * criteria identify more than one match, the request returns a `412 Precondition Failed` error. If
+             * the search criteria identify zero matches, and the supplied resource body contains an `id`, and
+             * the FHIR store has enable_update_create set, creates the resource with the client-specified ID.
+             * If the search criteria identify zero matches, and the supplied resource body does not contain an
+             * `id`, the resource is created with a server-assigned ID as per the create method. The request
+             * body must contain a JSON-encoded FHIR resource, and the request headers must contain `Content-
+             * Type: application/fhir+json`. On success, the response body contains a JSON-encoded
+             * representation of the updated resource, including the server-assigned version ID. Errors
+             * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
+             * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
+             * generic GCP error might be returned instead. This method requires
+             * the`healthcare.fhirStores.searchResources` and `healthcare.fhirResources.update` permissions on
+             * the parent FHIR store. For samples that show how to call `conditionalUpdate`, see [Conditionally
+             * updating a FHIR resource](/healthcare/docs/how-tos/fhir-
+             * resources#conditionally_updating_a_fhir_resource).
              *
              * Create a request for the method "fhir.conditionalUpdate".
              *
@@ -11492,13 +19656,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link ConditionalUpdate#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The FHIR resource type to update, such as Patient or Observation. For a
-            complete list, see the FHIR
-             *        Resource Index
-            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
-            Must match the
+             * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
@@ -11521,30 +19682,26 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * If a resource is found based on the search criteria specified in the query parameters, updates
-               * the entire contents of that resource.
-               *
-               * Implements the FHIR standard conditional update interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.10.2),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cond-update),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#cond-update)).
-               *
-               * Search terms are provided as query parameters following the same pattern as the search method.
-               *
-               * If the search criteria identify more than one match, the request will return a `412
-               * Precondition Failed` error. If the search criteria identify zero matches, and the supplied
-               * resource body contains an `id`, and the FHIR store has enable_update_create set, creates the
-               * resource with the client-specified ID. If the search criteria identify zero matches, and the
-               * supplied resource body does not contain an `id`, the resource will be created with a server-
-               * assigned ID as per the create method.
-               *
+               * the entire contents of that resource. Implements the FHIR standard conditional update
+               * interaction ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.10.2),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#cond-update),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#cond-update)). Search terms are
+               * provided as query parameters following the same pattern as the search method. If the search
+               * criteria identify more than one match, the request returns a `412 Precondition Failed` error.
+               * If the search criteria identify zero matches, and the supplied resource body contains an `id`,
+               * and the FHIR store has enable_update_create set, creates the resource with the client-specified
+               * ID. If the search criteria identify zero matches, and the supplied resource body does not
+               * contain an `id`, the resource is created with a server-assigned ID as per the create method.
                * The request body must contain a JSON-encoded FHIR resource, and the request headers must
-               * contain `Content-Type: application/fhir+json`.
-               *
-               * On success, the response body will contain a JSON-encoded representation of the updated
-               * resource, including the server-assigned version ID. Errors generated by the FHIR store will
-               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
-               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-               * returned instead.
+               * contain `Content-Type: application/fhir+json`. On success, the response body contains a JSON-
+               * encoded representation of the updated resource, including the server-assigned version ID.
+               * Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource
+               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
+               * FHIR store, a generic GCP error might be returned instead. This method requires
+               * the`healthcare.fhirStores.searchResources` and `healthcare.fhirResources.update` permissions on
+               * the parent FHIR store. For samples that show how to call `conditionalUpdate`, see
+               * [Conditionally updating a FHIR resource](/healthcare/docs/how-tos/fhir-
+               * resources#conditionally_updating_a_fhir_resource).
                *
                * Create a request for the method "fhir.conditionalUpdate".
                *
@@ -11555,13 +19712,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The FHIR resource type to update, such as Patient or Observation. For a
-            complete list, see the FHIR
-             *        Resource Index
-            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
-            Must match the
+               * @param type The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
@@ -11661,18 +19815,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * The FHIR resource type to update, such as Patient or Observation. For a complete
                * list, see the FHIR Resource Index
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
-               * resource type in the provided content.
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match
+               * the resource type in the provided content.
                */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
               /** The FHIR resource type to update, such as Patient or Observation. For a complete list, see the FHIR
-             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the resource type
+             Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the resource type
              in the provided content.
                */
               public java.lang.String getType() {
@@ -11682,10 +19836,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * The FHIR resource type to update, such as Patient or Observation. For a complete
                * list, see the FHIR Resource Index
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
-               * resource type in the provided content.
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match
+               * the resource type in the provided content.
                */
               public ConditionalUpdate setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
@@ -11703,29 +19857,23 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Creates a FHIR resource.
-             *
-             * Implements the FHIR standard create interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#create),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#create)), which creates a new resource
-             * with a server-assigned resource ID.
-             *
-             * Also supports the FHIR standard conditional create interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#ccreate),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#ccreate),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#ccreate)), specified by supplying an
+             * Creates a FHIR resource. Implements the FHIR standard create interaction
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#create),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#create)), which creates a new resource
+             * with a server-assigned resource ID. Also supports the FHIR standard conditional create
+             * interaction ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#ccreate),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#ccreate),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#ccreate)), specified by supplying an
              * `If-None-Exist` header containing a FHIR search query. If no resources match this search query,
-             * the server processes the create operation as normal.
-             *
-             * The request body must contain a JSON-encoded FHIR resource, and the request headers must contain
-             * `Content-Type: application/fhir+json`.
-             *
-             * On success, the response body will contain a JSON-encoded representation of the resource as it
-             * was created on the server, including the server-assigned resource ID and version ID. Errors
-             * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
-             * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR store,
-             * a generic GCP error might be returned instead.
+             * the server processes the create operation as normal. The request body must contain a JSON-encoded
+             * FHIR resource, and the request headers must contain `Content-Type: application/fhir+json`. On
+             * success, the response body contains a JSON-encoded representation of the resource as it was
+             * created on the server, including the server-assigned resource ID and version ID. Errors generated
+             * by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the reason for
+             * the error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
+             * error might be returned instead. For samples that show how to call `create`, see [Creating a FHIR
+             * resource](/healthcare/docs/how-tos/fhir-resources#creating_a_fhir_resource).
              *
              * Create a request for the method "fhir.create".
              *
@@ -11733,13 +19881,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
              * @param parent The name of the FHIR store this resource belongs to.
-             * @param type The FHIR resource type to create, such as Patient or Observation. For a
-            complete list, see the FHIR
-             *        Resource Index
-            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
-            Must match the
+             * @param type The FHIR resource type to create, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
              * @return the request
@@ -11761,29 +19906,24 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^[^/]+$");
 
               /**
-               * Creates a FHIR resource.
-               *
-               * Implements the FHIR standard create interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#create),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#create)), which creates a new
-               * resource with a server-assigned resource ID.
-               *
-               * Also supports the FHIR standard conditional create interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#ccreate),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#ccreate),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#ccreate)), specified by supplying an
+               * Creates a FHIR resource. Implements the FHIR standard create interaction
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#create),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#create),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#create)), which creates a new
+               * resource with a server-assigned resource ID. Also supports the FHIR standard conditional create
+               * interaction ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#ccreate),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#ccreate),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#ccreate)), specified by supplying an
                * `If-None-Exist` header containing a FHIR search query. If no resources match this search query,
-               * the server processes the create operation as normal.
-               *
-               * The request body must contain a JSON-encoded FHIR resource, and the request headers must
-               * contain `Content-Type: application/fhir+json`.
-               *
-               * On success, the response body will contain a JSON-encoded representation of the resource as it
-               * was created on the server, including the server-assigned resource ID and version ID. Errors
-               * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
-               * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR
-               * store, a generic GCP error might be returned instead.
+               * the server processes the create operation as normal. The request body must contain a JSON-
+               * encoded FHIR resource, and the request headers must contain `Content-Type:
+               * application/fhir+json`. On success, the response body contains a JSON-encoded representation of
+               * the resource as it was created on the server, including the server-assigned resource ID and
+               * version ID. Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome`
+               * resource describing the reason for the error. If the request cannot be mapped to a valid API
+               * method on a FHIR store, a generic GCP error might be returned instead. For samples that show
+               * how to call `create`, see [Creating a FHIR resource](/healthcare/docs/how-tos/fhir-
+               * resources#creating_a_fhir_resource).
                *
                * Create a request for the method "fhir.create".
                *
@@ -11794,13 +19934,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param parent The name of the FHIR store this resource belongs to.
-               * @param type The FHIR resource type to create, such as Patient or Observation. For a
-            complete list, see the FHIR
-             *        Resource Index
-            ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             *        [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             *        [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
-            Must match the
+               * @param type The FHIR resource type to create, such as Patient or Observation. For a complete list, see the FHIR
+             *        Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             *        [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             *        [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
              *        resource type in the provided content.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
                * @since 1.13
@@ -11900,18 +20037,18 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * The FHIR resource type to create, such as Patient or Observation. For a complete
                * list, see the FHIR Resource Index
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
-               * resource type in the provided content.
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match
+               * the resource type in the provided content.
                */
               @com.google.api.client.util.Key
               private java.lang.String type;
 
               /** The FHIR resource type to create, such as Patient or Observation. For a complete list, see the FHIR
-             Resource Index ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-             [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-             [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the resource type
+             Resource Index ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+             [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+             [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the resource type
              in the provided content.
                */
               public java.lang.String getType() {
@@ -11921,10 +20058,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * The FHIR resource type to create, such as Patient or Observation. For a complete
                * list, see the FHIR Resource Index
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match the
-               * resource type in the provided content.
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must match
+               * the resource type in the provided content.
                */
               public Create setType(java.lang.String type) {
                 if (!getSuppressPatternChecks()) {
@@ -11942,16 +20079,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Deletes a FHIR resource.
-             *
-             * Implements the FHIR standard delete interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#delete),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#delete),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#delete)).
-             *
-             * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
-             * the FHIR store, the deleted resources will be moved to a history repository that can still be
-             * retrieved through vread and related methods, unless they are removed by the purge method.
+             * Deletes a FHIR resource. Implements the FHIR standard delete interaction
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#delete),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#delete),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#delete)). Note: Unless resource
+             * versioning is disabled by setting the disable_resource_versioning flag on the FHIR store, the
+             * deleted resources are moved to a history repository that can still be retrieved through vread and
+             * related methods, unless they are removed by the purge method. For samples that show how to call
+             * `delete`, see [Deleting a FHIR resource](/healthcare/docs/how-tos/fhir-
+             * resources#deleting_a_fhir_resource).
              *
              * Create a request for the method "fhir.delete".
              *
@@ -11975,16 +20111,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
 
               /**
-               * Deletes a FHIR resource.
-               *
-               * Implements the FHIR standard delete interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#delete),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#delete),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#delete)).
-               *
-               * Note: Unless resource versioning is disabled by setting the disable_resource_versioning flag on
-               * the FHIR store, the deleted resources will be moved to a history repository that can still be
-               * retrieved through vread and related methods, unless they are removed by the purge method.
+               * Deletes a FHIR resource. Implements the FHIR standard delete interaction
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#delete),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#delete),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#delete)). Note: Unless resource
+               * versioning is disabled by setting the disable_resource_versioning flag on the FHIR store, the
+               * deleted resources are moved to a history repository that can still be retrieved through vread
+               * and related methods, unless they are removed by the purge method. For samples that show how to
+               * call `delete`, see [Deleting a FHIR resource](/healthcare/docs/how-tos/fhir-
+               * resources#deleting_a_fhir_resource).
                *
                * Create a request for the method "fhir.delete".
                *
@@ -12089,31 +20224,32 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Executes all the requests in the given Bundle.
-             *
-             * Implements the FHIR standard batch/transaction interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#transaction),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#transaction)).
-             *
-             * Supports all interactions within a bundle, except search. This method accepts Bundles of type
-             * `batch` and `transaction`, processing them according to the batch processing rules
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.1),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#brules)) and transaction processing
-             * rules ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.2),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#trules)).
-             *
-             * The request body must contain a JSON-encoded FHIR `Bundle` resource, and the request headers must
-             * contain `Content-Type: application/fhir+json`.
-             *
-             * For a batch bundle or a successful transaction the response body will contain a JSON-encoded
-             * representation of a `Bundle` resource of type `batch-response` or `transaction-response`
-             * containing one entry for each entry in the request, with the outcome of processing the entry. In
-             * the case of an error for a transaction bundle, the response body will contain a JSON-encoded
-             * `OperationOutcome` resource describing the reason for the error. If the request cannot be mapped
-             * to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+             * Executes all the requests in the given Bundle. Implements the FHIR standard batch/transaction
+             * interaction ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#transaction),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#transaction),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#transaction)). Supports all
+             * interactions within a bundle, except search. This method accepts Bundles of type `batch` and
+             * `transaction`, processing them according to the batch processing rules
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.1),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#brules)) and transaction processing
+             * rules ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.2),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#trules)). The request body must
+             * contain a JSON-encoded FHIR `Bundle` resource, and the request headers must contain `Content-
+             * Type: application/fhir+json`. For a batch bundle or a successful transaction the response body
+             * contains a JSON-encoded representation of a `Bundle` resource of type `batch-response` or
+             * `transaction-response` containing one entry for each entry in the request, with the outcome of
+             * processing the entry. In the case of an error for a transaction bundle, the response body
+             * contains a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+             * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+             * returned instead. This method requires permission for executing the requests in the bundle. The
+             * `executeBundle` permission grants permission to execute the request in the bundle but you must
+             * grant sufficient permissions to execute the individual requests in the bundle. For example, if
+             * the bundle contains a `create` request, you must have permission to execute the `create` request.
+             * Logging is available for the `executeBundle` permission. For samples that show how to call
+             * `executeBundle`, see [Managing FHIR resources using FHIR bundles](/healthcare/docs/how-tos/fhir-
+             * bundles).
              *
              * Create a request for the method "fhir.executeBundle".
              *
@@ -12138,31 +20274,32 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
 
               /**
-               * Executes all the requests in the given Bundle.
-               *
-               * Implements the FHIR standard batch/transaction interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#transaction),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#transaction),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#transaction)).
-               *
-               * Supports all interactions within a bundle, except search. This method accepts Bundles of type
-               * `batch` and `transaction`, processing them according to the batch processing rules
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.1),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#brules)) and transaction processing
-               * rules ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.2),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#trules)).
-               *
-               * The request body must contain a JSON-encoded FHIR `Bundle` resource, and the request headers
-               * must contain `Content-Type: application/fhir+json`.
-               *
-               * For a batch bundle or a successful transaction the response body will contain a JSON-encoded
-               * representation of a `Bundle` resource of type `batch-response` or `transaction-response`
-               * containing one entry for each entry in the request, with the outcome of processing the entry.
-               * In the case of an error for a transaction bundle, the response body will contain a JSON-encoded
-               * `OperationOutcome` resource describing the reason for the error. If the request cannot be
-               * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+               * Executes all the requests in the given Bundle. Implements the FHIR standard batch/transaction
+               * interaction ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#transaction),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#transaction),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#transaction)). Supports all
+               * interactions within a bundle, except search. This method accepts Bundles of type `batch` and
+               * `transaction`, processing them according to the batch processing rules
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.1),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.1),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#brules)) and transaction processing
+               * rules ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#2.1.0.16.2),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#2.21.0.17.2),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#trules)). The request body must
+               * contain a JSON-encoded FHIR `Bundle` resource, and the request headers must contain `Content-
+               * Type: application/fhir+json`. For a batch bundle or a successful transaction the response body
+               * contains a JSON-encoded representation of a `Bundle` resource of type `batch-response` or
+               * `transaction-response` containing one entry for each entry in the request, with the outcome of
+               * processing the entry. In the case of an error for a transaction bundle, the response body
+               * contains a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+               * returned instead. This method requires permission for executing the requests in the bundle. The
+               * `executeBundle` permission grants permission to execute the request in the bundle but you must
+               * grant sufficient permissions to execute the individual requests in the bundle. For example, if
+               * the bundle contains a `create` request, you must have permission to execute the `create`
+               * request. Logging is available for the `executeBundle` permission. For samples that show how to
+               * call `executeBundle`, see [Managing FHIR resources using FHIR bundles](/healthcare/docs/how-tos
+               * /fhir-bundles).
                *
                * Create a request for the method "fhir.executeBundle".
                *
@@ -12269,18 +20406,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Lists all the versions of a resource (including the current version and deleted versions) from
-             * the FHIR store.
-             *
-             * Implements the per-resource form of the FHIR standard history interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#history),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#history),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#history)).
-             *
-             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-             * of type `history`, containing the version history sorted from most recent to oldest versions.
-             * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
-             * describing the reason for the error. If the request cannot be mapped to a valid API method on a
-             * FHIR store, a generic GCP error might be returned instead.
+             * the FHIR store. Implements the per-resource form of the FHIR standard history interaction
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#history),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#history),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#history)). On success, the response
+             * body contains a JSON-encoded representation of a `Bundle` resource of type `history`, containing
+             * the version history sorted from most recent to oldest versions. Errors generated by the FHIR
+             * store contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
+             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+             * returned instead. For samples that show how to call `history`, see [Listing FHIR resource
+             * versions](/healthcare/docs/how-tos/fhir-resources#listing_fhir_resource_versions).
              *
              * Create a request for the method "fhir.history".
              *
@@ -12305,18 +20440,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Lists all the versions of a resource (including the current version and deleted versions) from
-               * the FHIR store.
-               *
-               * Implements the per-resource form of the FHIR standard history interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#history),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#history),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#history)).
-               *
-               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-               * of type `history`, containing the version history sorted from most recent to oldest versions.
-               * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
-               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
-               * FHIR store, a generic GCP error might be returned instead.
+               * the FHIR store. Implements the per-resource form of the FHIR standard history interaction
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#history),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#history),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#history)). On success, the response
+               * body contains a JSON-encoded representation of a `Bundle` resource of type `history`,
+               * containing the version history sorted from most recent to oldest versions. Errors generated by
+               * the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the reason for the
+               * error. If the request cannot be mapped to a valid API method on a FHIR store, a generic GCP
+               * error might be returned instead. For samples that show how to call `history`, see [Listing FHIR
+               * resource versions](/healthcare/docs/how-tos/fhir-resources#listing_fhir_resource_versions).
                *
                * Create a request for the method "fhir.history".
                *
@@ -12428,23 +20561,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Only include resource versions that were current at some point during the time
                * period specified in the date time value. The date parameter format is yyyy-mm-
-               * ddThh:mm:ss[Z|(+|-)hh:mm]
-               *
-               * Clients may specify any of the following:
-               *
-               * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day:
-               * `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
+               * ddThh:mm:ss[Z|(+|-)hh:mm] Clients may specify any of the following: * An entire
+               * year: `_at=2019` * An entire month: `_at=2019-01` * A specific day:
+               * `_at=2019-01-20` * A specific second: `_at=2018-12-31T23:59:58Z`
                */
               @com.google.api.client.util.Key("_at")
               private java.lang.String at;
 
               /** Only include resource versions that were current at some point during the time period specified in
-             the date time value. The date parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm]
-
-             Clients may specify any of the following:
-
-             *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day: `_at=2019-01-20`
-             *  A specific second: `_at=2018-12-31T23:59:58Z`
+             the date time value. The date parameter format is yyyy-mm-ddThh:mm:ss[Z|(+|-)hh:mm] Clients may
+             specify any of the following: * An entire year: `_at=2019` * An entire month: `_at=2019-01` * A
+             specific day: `_at=2019-01-20` * A specific second: `_at=2018-12-31T23:59:58Z`
                */
               public java.lang.String getAt() {
                 return at;
@@ -12453,29 +20580,32 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /**
                * Only include resource versions that were current at some point during the time
                * period specified in the date time value. The date parameter format is yyyy-mm-
-               * ddThh:mm:ss[Z|(+|-)hh:mm]
-               *
-               * Clients may specify any of the following:
-               *
-               * *  An entire year: `_at=2019` *  An entire month: `_at=2019-01` *  A specific day:
-               * `_at=2019-01-20` *  A specific second: `_at=2018-12-31T23:59:58Z`
+               * ddThh:mm:ss[Z|(+|-)hh:mm] Clients may specify any of the following: * An entire
+               * year: `_at=2019` * An entire month: `_at=2019-01` * A specific day:
+               * `_at=2019-01-20` * A specific second: `_at=2018-12-31T23:59:58Z`
                */
               public History setAt(java.lang.String at) {
                 this.at = at;
                 return this;
               }
 
-              /** The maximum number of search results on a page. Defaults to 1000. */
+              /**
+               * The maximum number of search results on a page. Default value is 100. Maximum value
+               * is 1,000.
+               */
               @com.google.api.client.util.Key("_count")
               private java.lang.Integer count;
 
-              /** The maximum number of search results on a page. Defaults to 1000.
+              /** The maximum number of search results on a page. Default value is 100. Maximum value is 1,000.
                */
               public java.lang.Integer getCount() {
                 return count;
               }
 
-              /** The maximum number of search results on a page. Defaults to 1000. */
+              /**
+               * The maximum number of search results on a page. Default value is 100. Maximum value
+               * is 1,000.
+               */
               public History setCount(java.lang.Integer count) {
                 this.count = count;
                 return this;
@@ -12485,9 +20615,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Used to retrieve the first, previous, next, or last page of resource versions when
                * using pagination. Value should be set to the value of `_page_token` set in next or
                * previous page links' URLs. Next and previous page are returned in the response
-               * bundle's links field, where `link.relation` is "previous" or "next".
-               *
-               * Omit `_page_token` if no previous request has been made.
+               * bundle's links field, where `link.relation` is "previous" or "next". Omit
+               * `_page_token` if no previous request has been made.
                */
               @com.google.api.client.util.Key("_page_token")
               private java.lang.String pageToken;
@@ -12495,9 +20624,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               /** Used to retrieve the first, previous, next, or last page of resource versions when using
              pagination. Value should be set to the value of `_page_token` set in next or previous page links'
              URLs. Next and previous page are returned in the response bundle's links field, where
-             `link.relation` is "previous" or "next".
-
-             Omit `_page_token` if no previous request has been made.
+             `link.relation` is "previous" or "next". Omit `_page_token` if no previous request has been made.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
@@ -12507,9 +20634,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                * Used to retrieve the first, previous, next, or last page of resource versions when
                * using pagination. Value should be set to the value of `_page_token` set in next or
                * previous page links' URLs. Next and previous page are returned in the response
-               * bundle's links field, where `link.relation` is "previous" or "next".
-               *
-               * Omit `_page_token` if no previous request has been made.
+               * bundle's links field, where `link.relation` is "previous" or "next". Omit
+               * `_page_token` if no previous request has been made.
                */
               public History setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
@@ -12551,21 +20677,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Updates part of an existing resource by applying the operations specified in a [JSON
-             * Patch](http://jsonpatch.com/) document.
-             *
-             * Implements the FHIR standard patch interaction
-             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)).
-             *
-             * DSTU2 doesn't define a patch method, but the server supports it in the same way it supports STU3.
-             *
-             * The request body must contain a JSON Patch document, and the request headers must contain
-             * `Content-Type: application/json-patch+json`.
-             *
-             * On success, the response body will contain a JSON-encoded representation of the updated resource,
-             * including the server-assigned version ID. Errors generated by the FHIR store will contain a JSON-
-             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
-             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+             * Patch](http://jsonpatch.com/) document. Implements the FHIR standard patch interaction
+             * ([STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#patch),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#patch)). DSTU2 doesn't define a patch
+             * method, but the server supports it in the same way it supports STU3. The request body must
+             * contain a JSON Patch document, and the request headers must contain `Content-Type: application
+             * /json-patch+json`. On success, the response body contains a JSON-encoded representation of the
+             * updated resource, including the server-assigned version ID. Errors generated by the FHIR store
+             * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+             * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+             * returned instead. For samples that show how to call `patch`, see [Patching a FHIR
+             * resource](/healthcare/docs/how-tos/fhir-resources#patching_a_fhir_resource).
              *
              * Create a request for the method "fhir.patch".
              *
@@ -12591,23 +20713,17 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Updates part of an existing resource by applying the operations specified in a [JSON
-               * Patch](http://jsonpatch.com/) document.
-               *
-               * Implements the FHIR standard patch interaction
-               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#patch),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#patch)).
-               *
-               * DSTU2 doesn't define a patch method, but the server supports it in the same way it supports
-               * STU3.
-               *
-               * The request body must contain a JSON Patch document, and the request headers must contain
-               * `Content-Type: application/json-patch+json`.
-               *
-               * On success, the response body will contain a JSON-encoded representation of the updated
-               * resource, including the server-assigned version ID. Errors generated by the FHIR store will
-               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
-               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-               * returned instead.
+               * Patch](http://jsonpatch.com/) document. Implements the FHIR standard patch interaction
+               * ([STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#patch),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#patch)). DSTU2 doesn't define a
+               * patch method, but the server supports it in the same way it supports STU3. The request body
+               * must contain a JSON Patch document, and the request headers must contain `Content-Type:
+               * application/json-patch+json`. On success, the response body contains a JSON-encoded
+               * representation of the updated resource, including the server-assigned version ID. Errors
+               * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
+               * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
+               * generic GCP error might be returned instead. For samples that show how to call `patch`, see
+               * [Patching a FHIR resource](/healthcare/docs/how-tos/fhir-resources#patching_a_fhir_resource).
                *
                * Create a request for the method "fhir.patch".
                *
@@ -12713,23 +20829,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Gets the contents of a FHIR resource.
-             *
-             * Implements the FHIR standard read interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#read),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#read),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#read)).
-             *
-             * Also supports the FHIR standard conditional read interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#cread),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cread),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#cread)) specified by supplying an `If-
-             * Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag value.
-             *
-             * On success, the response body will contain a JSON-encoded representation of the resource. Errors
-             * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
-             * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR store,
-             * a generic GCP error might be returned instead.
+             * Gets the contents of a FHIR resource. Implements the FHIR standard read interaction
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#read),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#read),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#read)). Also supports the FHIR
+             * standard conditional read interaction
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#cread),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#cread),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#cread)) specified by supplying an `If-
+             * Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag value. On
+             * success, the response body contains a JSON-encoded representation of the resource. Errors
+             * generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource describing the
+             * reason for the error. If the request cannot be mapped to a valid API method on a FHIR store, a
+             * generic GCP error might be returned instead. For samples that show how to call `read`, see
+             * [Getting a FHIR resource](/healthcare/docs/how-tos/fhir-resources#getting_a_fhir_resource).
              *
              * Create a request for the method "fhir.read".
              *
@@ -12753,24 +20866,21 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
 
               /**
-               * Gets the contents of a FHIR resource.
-               *
-               * Implements the FHIR standard read interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#read),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#read),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#read)).
-               *
-               * Also supports the FHIR standard conditional read interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#cread),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#cread),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#cread)) specified by supplying an
+               * Gets the contents of a FHIR resource. Implements the FHIR standard read interaction
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#read),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#read),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#read)). Also supports the FHIR
+               * standard conditional read interaction
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#cread),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#cread),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#cread)) specified by supplying an
                * `If-Modified-Since` header with a date/time value or an `If-None-Match` header with an ETag
-               * value.
-               *
-               * On success, the response body will contain a JSON-encoded representation of the resource.
-               * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
+               * value. On success, the response body contains a JSON-encoded representation of the resource.
+               * Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource
                * describing the reason for the error. If the request cannot be mapped to a valid API method on a
-               * FHIR store, a generic GCP error might be returned instead.
+               * FHIR store, a generic GCP error might be returned instead. For samples that show how to call
+               * `read`, see [Getting a FHIR resource](/healthcare/docs/how-tos/fhir-
+               * resources#getting_a_fhir_resource).
                *
                * Create a request for the method "fhir.read".
                *
@@ -12885,54 +20995,40 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Searches for resources in the given FHIR store according to criteria specified as query
-             * parameters.
-             *
-             * Implements the FHIR standard search interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#search),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#search)) using the search semantics
+             * parameters. Implements the FHIR standard search interaction
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#search),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#search)) using the search semantics
              * described in the FHIR Search specification
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/search.html),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/search.html),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/search.html)).
-             *
-             * Supports three methods of search defined by the specification:
-             *
-             * *  `GET [base]?[parameters]` to search across all resources. *  `GET [base]/[type]?[parameters]`
-             * to search resources of a specified type. *  `POST [base]/[type]/_search?[parameters]` as an
-             * alternate form having the same semantics as the `GET` method.
-             *
-             * The `GET` methods do not support compartment searches. The `POST` method does not support
-             * `application/x-www-form-urlencoded` search parameters.
-             *
-             * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-             * of type `searchset`, containing the results of the search. Errors generated by the FHIR store
-             * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
-             * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-             * returned instead.
-             *
-             * The server's capability statement, retrieved through capabilities, indicates what search
-             * parameters are supported on each FHIR resource. A list of all search parameters defined by the
-             * specification can be found in the FHIR Search Parameter Registry
-             * ([STU3](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/searchparameter-registry.html)). FHIR search
-             * parameters for DSTU2 can be found on each resource's definition page.
-             *
-             * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
-             * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
-             *
-             * Supported search result parameters: `_sort`, `_count`, `_include`, `_revinclude`,
-             * `_summary=text`, `_summary=data`, and `_elements`.
-             *
-             * The maximum number of search results returned defaults to 100, which can be overridden by the
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/search.html),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/search.html),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/search.html)). Supports three methods of search
+             * defined by the specification: * `GET [base]?[parameters]` to search across all resources. * `GET
+             * [base]/[type]?[parameters]` to search resources of a specified type. * `POST
+             * [base]/[type]/_search?[parameters]` as an alternate form having the same semantics as the `GET`
+             * method. The `GET` methods do not support compartment searches. The `POST` method does not support
+             * `application/x-www-form-urlencoded` search parameters. On success, the response body contains a
+             * JSON-encoded representation of a `Bundle` resource of type `searchset`, containing the results of
+             * the search. Errors generated by the FHIR store contain a JSON-encoded `OperationOutcome` resource
+             * describing the reason for the error. If the request cannot be mapped to a valid API method on a
+             * FHIR store, a generic GCP error might be returned instead. The server's capability statement,
+             * retrieved through capabilities, indicates what search parameters are supported on each FHIR
+             * resource. A list of all search parameters defined by the specification can be found in the FHIR
+             * Search Parameter Registry ([STU3](https://hl7.org/implement/standards/fhir/STU3/searchparameter-
+             * registry.html), [R4](https://hl7.org/implement/standards/fhir/R4/searchparameter-registry.html)).
+             * FHIR search parameters for DSTU2 can be found on each resource's definition page. Supported
+             * search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`, `:above`,
+             * `:below`, `:[type]`, `:not`, and `:recurse`. Supported search result parameters: `_sort`,
+             * `_count`, `_include`, `_revinclude`, `_summary=text`, `_summary=data`, and `_elements`. The
+             * maximum number of search results returned defaults to 100, which can be overridden by the
              * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
-             * `Bundle` will contain pagination links.
-             *
-             * Resources with a total size larger than 5MB or a field count larger than 50,000 might not be
-             * fully searchable as the server might trim its generated search index in those cases.
-             *
-             * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
-             * time a resource is created or changes and when the change is reflected in search results.
+             * `Bundle` contains pagination links. Resources with a total size larger than 5MB or a field count
+             * larger than 50,000 might not be fully searchable as the server might trim its generated search
+             * index in those cases. Note: FHIR resources are indexed asynchronously, so there might be a slight
+             * delay between the time a resource is created or changes and when the change is reflected in
+             * search results. For samples and detailed information, see [Searching for FHIR
+             * resources](/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR search
+             * features](/healthcare/docs/how-tos/fhir-advanced-search).
              *
              * Create a request for the method "fhir.search".
              *
@@ -12958,55 +21054,41 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Searches for resources in the given FHIR store according to criteria specified as query
-               * parameters.
-               *
-               * Implements the FHIR standard search interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#search),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#search)) using the search semantics
+               * parameters. Implements the FHIR standard search interaction
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#search),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#search),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#search)) using the search semantics
                * described in the FHIR Search specification
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/search.html),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/search.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/search.html)).
-               *
-               * Supports three methods of search defined by the specification:
-               *
-               * *  `GET [base]?[parameters]` to search across all resources. *  `GET
-               * [base]/[type]?[parameters]` to search resources of a specified type. *  `POST
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/search.html),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/search.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/search.html)). Supports three methods of
+               * search defined by the specification: * `GET [base]?[parameters]` to search across all
+               * resources. * `GET [base]/[type]?[parameters]` to search resources of a specified type. * `POST
                * [base]/[type]/_search?[parameters]` as an alternate form having the same semantics as the `GET`
-               * method.
-               *
-               * The `GET` methods do not support compartment searches. The `POST` method does not support
-               * `application/x-www-form-urlencoded` search parameters.
-               *
-               * On success, the response body will contain a JSON-encoded representation of a `Bundle` resource
-               * of type `searchset`, containing the results of the search. Errors generated by the FHIR store
-               * will contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If
-               * the request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might
-               * be returned instead.
-               *
+               * method. The `GET` methods do not support compartment searches. The `POST` method does not
+               * support `application/x-www-form-urlencoded` search parameters. On success, the response body
+               * contains a JSON-encoded representation of a `Bundle` resource of type `searchset`, containing
+               * the results of the search. Errors generated by the FHIR store contain a JSON-encoded
+               * `OperationOutcome` resource describing the reason for the error. If the request cannot be
+               * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
                * The server's capability statement, retrieved through capabilities, indicates what search
                * parameters are supported on each FHIR resource. A list of all search parameters defined by the
                * specification can be found in the FHIR Search Parameter Registry
-               * ([STU3](http://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/searchparameter-registry.html)). FHIR search
-               * parameters for DSTU2 can be found on each resource's definition page.
-               *
-               * Supported search modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`,
-               * `:above`, `:below`, `:[type]`, `:not`, and `:recurse`.
-               *
-               * Supported search result parameters: `_sort`, `_count`, `_include`, `_revinclude`,
-               * `_summary=text`, `_summary=data`, and `_elements`.
-               *
-               * The maximum number of search results returned defaults to 100, which can be overridden by the
-               * `_count` parameter up to a maximum limit of 1000. If there are additional results, the returned
-               * `Bundle` will contain pagination links.
-               *
-               * Resources with a total size larger than 5MB or a field count larger than 50,000 might not be
-               * fully searchable as the server might trim its generated search index in those cases.
-               *
-               * Note: FHIR resources are indexed asynchronously, so there might be a slight delay between the
-               * time a resource is created or changes and when the change is reflected in search results.
+               * ([STU3](https://hl7.org/implement/standards/fhir/STU3/searchparameter-registry.html),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/searchparameter-registry.html)). FHIR search
+               * parameters for DSTU2 can be found on each resource's definition page. Supported search
+               * modifiers: `:missing`, `:exact`, `:contains`, `:text`, `:in`, `:not-in`, `:above`, `:below`,
+               * `:[type]`, `:not`, and `:recurse`. Supported search result parameters: `_sort`, `_count`,
+               * `_include`, `_revinclude`, `_summary=text`, `_summary=data`, and `_elements`. The maximum
+               * number of search results returned defaults to 100, which can be overridden by the `_count`
+               * parameter up to a maximum limit of 1000. If there are additional results, the returned `Bundle`
+               * contains pagination links. Resources with a total size larger than 5MB or a field count larger
+               * than 50,000 might not be fully searchable as the server might trim its generated search index
+               * in those cases. Note: FHIR resources are indexed asynchronously, so there might be a slight
+               * delay between the time a resource is created or changes and when the change is reflected in
+               * search results. For samples and detailed information, see [Searching for FHIR
+               * resources](/healthcare/docs/how-tos/fhir-search) and [Advanced FHIR search
+               * features](/healthcare/docs/how-tos/fhir-advanced-search).
                *
                * Create a request for the method "fhir.search".
                *
@@ -13112,24 +21194,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Updates the entire contents of a resource.
-             *
-             * Implements the FHIR standard update interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#update),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#update),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#update)).
-             *
-             * If the specified resource does not exist and the FHIR store has enable_update_create set, creates
-             * the resource with the client-specified ID.
-             *
-             * The request body must contain a JSON-encoded FHIR resource, and the request headers must contain
-             * `Content-Type: application/fhir+json`. The resource must contain an `id` element having an
-             * identical value to the ID in the REST path of the request.
-             *
-             * On success, the response body will contain a JSON-encoded representation of the updated resource,
-             * including the server-assigned version ID. Errors generated by the FHIR store will contain a JSON-
-             * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot be
-             * mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+             * Updates the entire contents of a resource. Implements the FHIR standard update interaction
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#update),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#update),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#update)). If the specified resource
+             * does not exist and the FHIR store has enable_update_create set, creates the resource with the
+             * client-specified ID. The request body must contain a JSON-encoded FHIR resource, and the request
+             * headers must contain `Content-Type: application/fhir+json`. The resource must contain an `id`
+             * element having an identical value to the ID in the REST path of the request. On success, the
+             * response body contains a JSON-encoded representation of the updated resource, including the
+             * server-assigned version ID. Errors generated by the FHIR store contain a JSON-encoded
+             * `OperationOutcome` resource describing the reason for the error. If the request cannot be mapped
+             * to a valid API method on a FHIR store, a generic GCP error might be returned instead. For samples
+             * that show how to call `update`, see [Updating a FHIR resource](/healthcare/docs/how-tos/fhir-
+             * resources#updating_a_fhir_resource).
              *
              * Create a request for the method "fhir.update".
              *
@@ -13154,25 +21232,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/[^/]+/[^/]+$");
 
               /**
-               * Updates the entire contents of a resource.
-               *
-               * Implements the FHIR standard update interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#update),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#update),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#update)).
-               *
-               * If the specified resource does not exist and the FHIR store has enable_update_create set,
-               * creates the resource with the client-specified ID.
-               *
-               * The request body must contain a JSON-encoded FHIR resource, and the request headers must
-               * contain `Content-Type: application/fhir+json`. The resource must contain an `id` element having
-               * an identical value to the ID in the REST path of the request.
-               *
-               * On success, the response body will contain a JSON-encoded representation of the updated
-               * resource, including the server-assigned version ID. Errors generated by the FHIR store will
-               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
-               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
-               * returned instead.
+               * Updates the entire contents of a resource. Implements the FHIR standard update interaction
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#update),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#update),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#update)). If the specified resource
+               * does not exist and the FHIR store has enable_update_create set, creates the resource with the
+               * client-specified ID. The request body must contain a JSON-encoded FHIR resource, and the
+               * request headers must contain `Content-Type: application/fhir+json`. The resource must contain
+               * an `id` element having an identical value to the ID in the REST path of the request. On
+               * success, the response body contains a JSON-encoded representation of the updated resource,
+               * including the server-assigned version ID. Errors generated by the FHIR store contain a JSON-
+               * encoded `OperationOutcome` resource describing the reason for the error. If the request cannot
+               * be mapped to a valid API method on a FHIR store, a generic GCP error might be returned instead.
+               * For samples that show how to call `update`, see [Updating a FHIR resource](/healthcare/docs
+               * /how-tos/fhir-resources#updating_a_fhir_resource).
                *
                * Create a request for the method "fhir.update".
                *
@@ -13279,16 +21352,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
             /**
              * Gets the contents of a version (current or historical) of a FHIR resource by version ID.
-             *
              * Implements the FHIR standard vread interaction
-             * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#vread),
-             * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#vread),
-             * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#vread)).
-             *
-             * On success, the response body will contain a JSON-encoded representation of the resource. Errors
-             * generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource describing
-             * the reason for the error. If the request cannot be mapped to a valid API method on a FHIR store,
-             * a generic GCP error might be returned instead.
+             * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#vread),
+             * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#vread),
+             * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#vread)). On success, the response body
+             * contains a JSON-encoded representation of the resource. Errors generated by the FHIR store
+             * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+             * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+             * returned instead. For samples that show how to call `vread`, see [Retrieving a FHIR resource
+             * version](/healthcare/docs/how-tos/fhir-resources#retrieving_a_fhir_resource_version).
              *
              * Create a request for the method "fhir.vread".
              *
@@ -13313,16 +21385,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Gets the contents of a version (current or historical) of a FHIR resource by version ID.
-               *
                * Implements the FHIR standard vread interaction
-               * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/http.html#vread),
-               * [STU3](http://hl7.org/implement/standards/fhir/STU3/http.html#vread),
-               * [R4](http://hl7.org/implement/standards/fhir/R4/http.html#vread)).
-               *
-               * On success, the response body will contain a JSON-encoded representation of the resource.
-               * Errors generated by the FHIR store will contain a JSON-encoded `OperationOutcome` resource
-               * describing the reason for the error. If the request cannot be mapped to a valid API method on a
-               * FHIR store, a generic GCP error might be returned instead.
+               * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/http.html#vread),
+               * [STU3](https://hl7.org/implement/standards/fhir/STU3/http.html#vread),
+               * [R4](https://hl7.org/implement/standards/fhir/R4/http.html#vread)). On success, the response
+               * body contains a JSON-encoded representation of the resource. Errors generated by the FHIR store
+               * contain a JSON-encoded `OperationOutcome` resource describing the reason for the error. If the
+               * request cannot be mapped to a valid API method on a FHIR store, a generic GCP error might be
+               * returned instead. For samples that show how to call `vread`, see [Retrieving a FHIR resource
+               * version](/healthcare/docs/how-tos/fhir-resources#retrieving_a_fhir_resource_version).
                *
                * Create a request for the method "fhir.vread".
                *
@@ -13614,7 +21685,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Deletes the specified HL7v2 store and removes all messages that are contained within it.
+           * Deletes the specified HL7v2 store and removes all messages that it contains.
            *
            * Create a request for the method "hl7V2Stores.delete".
            *
@@ -13638,7 +21709,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
 
             /**
-             * Deletes the specified HL7v2 store and removes all messages that are contained within it.
+             * Deletes the specified HL7v2 store and removes all messages that it contains.
              *
              * Create a request for the method "hl7V2Stores.delete".
              *
@@ -13740,6 +21811,158 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Exports the messages to a destination. To filter messages to be exported, define a filter using
+           * the start and end time, relative to the message generation time (MSH.7). This API returns an
+           * Operation that can be used to track the status of the job by calling GetOperation. Immediate
+           * fatal errors appear in the error field. Otherwise, when the operation finishes, a detailed
+           * response of type ExportMessagesResponse is returned in the response field. The metadata field
+           * type for this operation is OperationMetadata.
+           *
+           * Create a request for the method "hl7V2Stores.export".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param name The name of the source HL7v2 store, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
+           *        ore_id}`
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportMessagesRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExportMessagesRequest content) throws java.io.IOException {
+            Export result = new Export(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:export";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+
+            /**
+             * Exports the messages to a destination. To filter messages to be exported, define a filter using
+             * the start and end time, relative to the message generation time (MSH.7). This API returns an
+             * Operation that can be used to track the status of the job by calling GetOperation. Immediate
+             * fatal errors appear in the error field. Otherwise, when the operation finishes, a detailed
+             * response of type ExportMessagesResponse is returned in the response field. The metadata field
+             * type for this operation is OperationMetadata.
+             *
+             * Create a request for the method "hl7V2Stores.export".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The name of the source HL7v2 store, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
+           *        ore_id}`
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExportMessagesRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExportMessagesRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the source HL7v2 store, in the format `projects/{project_id}/locations/{l
+             * ocation_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the source HL7v2 store, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The name of the source HL7v2 store, in the format `projects/{project_id}/locations/{l
+             * ocation_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             */
+            public Export setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
             }
           }
           /**
@@ -13889,8 +22112,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -13919,8 +22141,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -14028,36 +22249,33 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -14067,6 +22285,184 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public GetIamPolicy set(String parameterName, Object value) {
               return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Import messages to the HL7v2 store by loading data from the specified sources. This method is
+           * optimized to load large quantities of data using import semantics that ignore some HL7v2 store
+           * configuration options and are not suitable for all use cases. It is primarily intended to load
+           * data into an empty HL7v2 store that is not being used by other clients. An existing message will
+           * be overwritten if a duplicate message is imported. A duplicate message is a message with the same
+           * raw bytes as a message that already exists in this HL7v2 store. When a message is overwritten,
+           * its labels will also be overwritten. The import operation is idempotent unless the input data
+           * contains multiple valid messages with the same raw bytes but different labels. In that case,
+           * after the import completes, the store contains exactly one message with those raw bytes but there
+           * is no ordering guarantee on which version of the labels it has. The operation result counters do
+           * not count duplicated raw bytes as an error and count one success for each message in the input,
+           * which might result in a success count larger than the number of messages in the HL7v2 store. If
+           * some messages fail to import, for example due to parsing errors, successfully imported messages
+           * are not rolled back. This method returns an Operation that can be used to track the status of the
+           * import by calling GetOperation. Immediate fatal errors appear in the error field, errors are also
+           * logged to Cloud Logging (see [Viewing logs](/healthcare/docs/how-tos/logging)). Otherwise, when
+           * the operation finishes, a response of type ImportMessagesResponse is returned in the response
+           * field. The metadata field type for this operation is OperationMetadata.
+           *
+           * Create a request for the method "hl7V2Stores.import".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name The name of the target HL7v2 store, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
+           *        ore_id}`
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportMessagesRequest}
+           * @return the request
+           */
+          public CloudHealthcareImport healthcareImport(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ImportMessagesRequest content) throws java.io.IOException {
+            CloudHealthcareImport result = new CloudHealthcareImport(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CloudHealthcareImport extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:import";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+
+            /**
+             * Import messages to the HL7v2 store by loading data from the specified sources. This method is
+             * optimized to load large quantities of data using import semantics that ignore some HL7v2 store
+             * configuration options and are not suitable for all use cases. It is primarily intended to load
+             * data into an empty HL7v2 store that is not being used by other clients. An existing message
+             * will be overwritten if a duplicate message is imported. A duplicate message is a message with
+             * the same raw bytes as a message that already exists in this HL7v2 store. When a message is
+             * overwritten, its labels will also be overwritten. The import operation is idempotent unless the
+             * input data contains multiple valid messages with the same raw bytes but different labels. In
+             * that case, after the import completes, the store contains exactly one message with those raw
+             * bytes but there is no ordering guarantee on which version of the labels it has. The operation
+             * result counters do not count duplicated raw bytes as an error and count one success for each
+             * message in the input, which might result in a success count larger than the number of messages
+             * in the HL7v2 store. If some messages fail to import, for example due to parsing errors,
+             * successfully imported messages are not rolled back. This method returns an Operation that can
+             * be used to track the status of the import by calling GetOperation. Immediate fatal errors
+             * appear in the error field, errors are also logged to Cloud Logging (see [Viewing
+             * logs](/healthcare/docs/how-tos/logging)). Otherwise, when the operation finishes, a response of
+             * type ImportMessagesResponse is returned in the response field. The metadata field type for this
+             * operation is OperationMetadata.
+             *
+             * Create a request for the method "hl7V2Stores.import".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link CloudHealthcareImport#execute()} method to invoke the
+             * remote operation. <p> {@link CloudHealthcareImport#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name The name of the target HL7v2 store, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_st
+           *        ore_id}`
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ImportMessagesRequest}
+             * @since 1.13
+             */
+            protected CloudHealthcareImport(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ImportMessagesRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+              }
+            }
+
+            @Override
+            public CloudHealthcareImport set$Xgafv(java.lang.String $Xgafv) {
+              return (CloudHealthcareImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CloudHealthcareImport setAccessToken(java.lang.String accessToken) {
+              return (CloudHealthcareImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CloudHealthcareImport setAlt(java.lang.String alt) {
+              return (CloudHealthcareImport) super.setAlt(alt);
+            }
+
+            @Override
+            public CloudHealthcareImport setCallback(java.lang.String callback) {
+              return (CloudHealthcareImport) super.setCallback(callback);
+            }
+
+            @Override
+            public CloudHealthcareImport setFields(java.lang.String fields) {
+              return (CloudHealthcareImport) super.setFields(fields);
+            }
+
+            @Override
+            public CloudHealthcareImport setKey(java.lang.String key) {
+              return (CloudHealthcareImport) super.setKey(key);
+            }
+
+            @Override
+            public CloudHealthcareImport setOauthToken(java.lang.String oauthToken) {
+              return (CloudHealthcareImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CloudHealthcareImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CloudHealthcareImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CloudHealthcareImport setQuotaUser(java.lang.String quotaUser) {
+              return (CloudHealthcareImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CloudHealthcareImport setUploadType(java.lang.String uploadType) {
+              return (CloudHealthcareImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CloudHealthcareImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CloudHealthcareImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The name of the target HL7v2 store, in the format `projects/{project_id}/locations/{l
+             * ocation_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The name of the target HL7v2 store, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The name of the target HL7v2 store, in the format `projects/{project_id}/locations/{l
+             * ocation_id}/datasets/{dataset_id}/hl7v2Stores/{hl7v2_store_id}`
+             */
+            public CloudHealthcareImport setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public CloudHealthcareImport set(String parameterName, Object value) {
+              return (CloudHealthcareImport) super.set(parameterName, value);
             }
           }
           /**
@@ -14280,7 +22676,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Resource name of the HL7v2 store, of the form
+           * @param name Resource name of the HL7v2 store, of the form
            *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Hl7V2Store}
            * @return the request
@@ -14309,7 +22705,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Resource name of the HL7v2 store, of the form
+             * @param name Resource name of the HL7v2 store, of the form
            *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Hl7V2Store}
              * @since 1.13
@@ -14380,13 +22776,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Resource name of the HL7v2 store, of the form
+             * Resource name of the HL7v2 store, of the form
              * `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Resource name of the HL7v2 store, of the form
+            /** Resource name of the HL7v2 store, of the form
            `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             public java.lang.String getName() {
@@ -14394,7 +22790,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Output only. Resource name of the HL7v2 store, of the form
+             * Resource name of the HL7v2 store, of the form
              * `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7v2_store_id}`.
              */
             public Patch setName(java.lang.String name) {
@@ -14438,17 +22834,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "hl7V2Stores.setIamPolicy".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
            * @return the request
@@ -14467,9 +22861,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "hl7V2Stores.setIamPolicy".
              *
@@ -14479,8 +22872,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -14585,18 +22977,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "hl7V2Stores.testIamPermissions".
            *
            * This request holds the parameters needed by the healthcare server.  After setting any optional
            * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
            * @return the request
@@ -14616,10 +23006,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "hl7V2Stores.testIamPermissions".
              *
@@ -14629,8 +23018,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -14755,10 +23143,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           public class Messages {
 
             /**
-             * Creates a message and sends a notification to the Cloud Pub/Sub topic. If configured, the MLLP
-             * adapter listens to messages created by this method and sends those back to the hospital. A
-             * successful response indicates the message has been persisted to storage and a Cloud Pub/Sub
-             * notification has been sent. Sending to the hospital by the MLLP adapter happens asynchronously.
+             * Parses and stores an HL7v2 message. This method triggers an asynchronous notification to any
+             * Cloud Pub/Sub topic configured in
+             * projects.locations.datasets.hl7V2Stores.Hl7V2NotificationConfig, if the filtering matches the
+             * message. If an MLLP adapter is configured to listen to a Cloud Pub/Sub topic, the adapter
+             * transmits the message when a notification is received.
              *
              * Create a request for the method "messages.create".
              *
@@ -14783,10 +23172,11 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
 
               /**
-               * Creates a message and sends a notification to the Cloud Pub/Sub topic. If configured, the MLLP
-               * adapter listens to messages created by this method and sends those back to the hospital. A
-               * successful response indicates the message has been persisted to storage and a Cloud Pub/Sub
-               * notification has been sent. Sending to the hospital by the MLLP adapter happens asynchronously.
+               * Parses and stores an HL7v2 message. This method triggers an asynchronous notification to any
+               * Cloud Pub/Sub topic configured in
+               * projects.locations.datasets.hl7V2Stores.Hl7V2NotificationConfig, if the filtering matches the
+               * message. If an MLLP adapter is configured to listen to a Cloud Pub/Sub topic, the adapter
+               * transmits the message when a notification is received.
                *
                * Create a request for the method "messages.create".
                *
@@ -15182,9 +23572,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Ingests a new HL7v2 message from the hospital and sends a notification to the Cloud Pub/Sub
-             * topic. Return is an HL7v2 ACK message if the message was successfully stored. Otherwise an error
-             * is returned.
+             * Parses and stores an HL7v2 message. This method triggers an asynchronous notification to any
+             * Cloud Pub/Sub topic configured in
+             * projects.locations.datasets.hl7V2Stores.Hl7V2NotificationConfig, if the filtering matches the
+             * message. If an MLLP adapter is configured to listen to a Cloud Pub/Sub topic, the adapter
+             * transmits the message when a notification is received. This method also generates a response
+             * containing an HL7v2 acknowledgement (`ACK`) message when successful or a negative acknowledgement
+             * (`NACK`) message in case of error, suitable for replying to HL7v2 interface systems that expect
+             * these acknowledgements.
              *
              * Create a request for the method "messages.ingest".
              *
@@ -15209,9 +23604,14 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
 
               /**
-               * Ingests a new HL7v2 message from the hospital and sends a notification to the Cloud Pub/Sub
-               * topic. Return is an HL7v2 ACK message if the message was successfully stored. Otherwise an
-               * error is returned.
+               * Parses and stores an HL7v2 message. This method triggers an asynchronous notification to any
+               * Cloud Pub/Sub topic configured in
+               * projects.locations.datasets.hl7V2Stores.Hl7V2NotificationConfig, if the filtering matches the
+               * message. If an MLLP adapter is configured to listen to a Cloud Pub/Sub topic, the adapter
+               * transmits the message when a notification is received. This method also generates a response
+               * containing an HL7v2 acknowledgement (`ACK`) message when successful or a negative
+               * acknowledgement (`NACK`) message in case of error, suitable for replying to HL7v2 interface
+               * systems that expect these acknowledgements.
                *
                * Create a request for the method "messages.ingest".
                *
@@ -15317,10 +23717,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Lists all the messages in the given HL7v2 store with support for filtering.
-             *
-             * Note: HL7v2 messages are indexed asynchronously, so there might be a slight delay between the
-             * time a message is created and when it can be found through a filter.
+             * Lists all the messages in the given HL7v2 store with support for filtering. Note: HL7v2 messages
+             * are indexed asynchronously, so there might be a slight delay between the time a message is
+             * created and when it can be found through a filter.
              *
              * Create a request for the method "messages.list".
              *
@@ -15344,10 +23743,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+$");
 
               /**
-               * Lists all the messages in the given HL7v2 store with support for filtering.
-               *
-               * Note: HL7v2 messages are indexed asynchronously, so there might be a slight delay between the
-               * time a message is created and when it can be found through a filter.
+               * Lists all the messages in the given HL7v2 store with support for filtering. Note: HL7v2
+               * messages are indexed asynchronously, so there might be a slight delay between the time a
+               * message is created and when it can be found through a filter.
                *
                * Create a request for the method "messages.list".
                *
@@ -15457,43 +23855,37 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Restricts messages returned to those matching a filter. Syntax:
-               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
-               *
-               * Fields/functions available for filtering are:
-               *
-               * *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`.
-               * *  `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
-               * dataset's time_zone, from the MSH-7 segment. For example, `send_date <
-               * "2017-01-02"`. *  `send_time`, the timestamp when the message was sent, using the
-               * RFC3339 time format for comparisons, from the MSH-7 segment. For example,
-               * `send_time < "2017-01-02T00:00:00-05:00"`. *  `send_facility`, the care center that
-               * the message came from, from the MSH-4 segment. For example, `send_facility =
-               * "ABC"`. *  `PatientId(value, type)`, which matches if the message lists a patient
-               * having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments.
-               * For example, `PatientId("123456", "MRN")`. *  `labels.x`, a string value of the
-               * label with key `x` as set using the Message.labels map. For example,
-               * `labels."priority"="high"`. The operator `:*` can be used to assert the existence
-               * of a label. For example, `labels."priority":*`.
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
+               * following fields and functions are available for filtering: * `message_type`, from
+               * the MSH-9.1 field. For example, `NOT message_type = "ADT"`. * `send_date` or
+               * `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone,
+               * from the MSH-7 segment. For example, `send_date < "2017-01-02"`. * `send_time`, the
+               * timestamp when the message was sent, using the RFC3339 time format for comparisons,
+               * from the MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. *
+               * `send_facility`, the care center that the message came from, from the MSH-4
+               * segment. For example, `send_facility = "ABC"`. * `PatientId(value, type)`, which
+               * matches if the message lists a patient having an ID of the given value and type in
+               * the PID-2, PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. *
+               * `labels.x`, a string value of the label with key `x` as set using the
+               * Message.labels map. For example, `labels."priority"="high"`. The operator `:*` can
+               * be used to assert the existence of a label. For example, `labels."priority":*`.
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** Restricts messages returned to those matching a filter. Syntax:
-             https://cloud.google.com/appengine/docs/standard/python/search/query_strings
-
-             Fields/functions available for filtering are:
-
-             *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`. *  `send_date`
-             or `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone, from the MSH-7
-             segment. For example, `send_date < "2017-01-02"`. *  `send_time`, the timestamp when the message
-             was sent, using the RFC3339 time format for comparisons, from the MSH-7 segment. For example,
-             `send_time < "2017-01-02T00:00:00-05:00"`. *  `send_facility`, the care center that the message
-             came from, from the MSH-4 segment. For example, `send_facility = "ABC"`. *  `PatientId(value,
-             type)`, which matches if the message lists a patient having an ID of the given value and type in
-             the PID-2, PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. *  `labels.x`, a
-             string value of the label with key `x` as set using the Message.labels map. For example,
-             `labels."priority"="high"`. The operator `:*` can be used to assert the existence of a label. For
-             example, `labels."priority":*`.
+             https://cloud.google.com/appengine/docs/standard/python/search/query_strings The following fields
+             and functions are available for filtering: * `message_type`, from the MSH-9.1 field. For example,
+             `NOT message_type = "ADT"`. * `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent
+             in the dataset's time_zone, from the MSH-7 segment. For example, `send_date < "2017-01-02"`. *
+             `send_time`, the timestamp when the message was sent, using the RFC3339 time format for
+             comparisons, from the MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. *
+             `send_facility`, the care center that the message came from, from the MSH-4 segment. For example,
+             `send_facility = "ABC"`. * `PatientId(value, type)`, which matches if the message lists a patient
+             having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example,
+             `PatientId("123456", "MRN")`. * `labels.x`, a string value of the label with key `x` as set using
+             the Message.labels map. For example, `labels."priority"="high"`. The operator `:*` can be used to
+             assert the existence of a label. For example, `labels."priority":*`.
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -15501,23 +23893,20 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Restricts messages returned to those matching a filter. Syntax:
-               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
-               *
-               * Fields/functions available for filtering are:
-               *
-               * *  `message_type`, from the MSH-9.1 field. For example, `NOT message_type = "ADT"`.
-               * *  `send_date` or `sendDate`, the YYYY-MM-DD date the message was sent in the
-               * dataset's time_zone, from the MSH-7 segment. For example, `send_date <
-               * "2017-01-02"`. *  `send_time`, the timestamp when the message was sent, using the
-               * RFC3339 time format for comparisons, from the MSH-7 segment. For example,
-               * `send_time < "2017-01-02T00:00:00-05:00"`. *  `send_facility`, the care center that
-               * the message came from, from the MSH-4 segment. For example, `send_facility =
-               * "ABC"`. *  `PatientId(value, type)`, which matches if the message lists a patient
-               * having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments.
-               * For example, `PatientId("123456", "MRN")`. *  `labels.x`, a string value of the
-               * label with key `x` as set using the Message.labels map. For example,
-               * `labels."priority"="high"`. The operator `:*` can be used to assert the existence
-               * of a label. For example, `labels."priority":*`.
+               * https://cloud.google.com/appengine/docs/standard/python/search/query_strings The
+               * following fields and functions are available for filtering: * `message_type`, from
+               * the MSH-9.1 field. For example, `NOT message_type = "ADT"`. * `send_date` or
+               * `sendDate`, the YYYY-MM-DD date the message was sent in the dataset's time_zone,
+               * from the MSH-7 segment. For example, `send_date < "2017-01-02"`. * `send_time`, the
+               * timestamp when the message was sent, using the RFC3339 time format for comparisons,
+               * from the MSH-7 segment. For example, `send_time < "2017-01-02T00:00:00-05:00"`. *
+               * `send_facility`, the care center that the message came from, from the MSH-4
+               * segment. For example, `send_facility = "ABC"`. * `PatientId(value, type)`, which
+               * matches if the message lists a patient having an ID of the given value and type in
+               * the PID-2, PID-3, or PID-4 segments. For example, `PatientId("123456", "MRN")`. *
+               * `labels.x`, a string value of the label with key `x` as set using the
+               * Message.labels map. For example, `labels."priority"="high"`. The operator `:*` can
+               * be used to assert the existence of a label. For example, `labels."priority":*`.
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -15526,21 +23915,15 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Orders messages returned by the specified order_by clause. Syntax:
-               * https://cloud.google.com/apis/design/design_patterns#sorting_order
-               *
-               * Fields available for ordering are:
-               *
-               * *  `send_time`
+               * https://cloud.google.com/apis/design/design_patterns#sorting_order Fields available
+               * for ordering are: * `send_time`
                */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
               /** Orders messages returned by the specified order_by clause. Syntax:
-             https://cloud.google.com/apis/design/design_patterns#sorting_order
-
-             Fields available for ordering are:
-
-             *  `send_time`
+             https://cloud.google.com/apis/design/design_patterns#sorting_order Fields available for ordering
+             are: * `send_time`
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
@@ -15548,11 +23931,8 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Orders messages returned by the specified order_by clause. Syntax:
-               * https://cloud.google.com/apis/design/design_patterns#sorting_order
-               *
-               * Fields available for ordering are:
-               *
-               * *  `send_time`
+               * https://cloud.google.com/apis/design/design_patterns#sorting_order Fields available
+               * for ordering are: * `send_time`
                */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
@@ -15600,13 +23980,16 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Specifies the parts of the Message to return in the response. When unspecified,
-               * equivalent to BASIC.
+               * equivalent to BASIC. Setting this to anything other than BASIC with a `page_size`
+               * larger than the default can generate a large response, which impacts the
+               * performance of this method.
                */
               @com.google.api.client.util.Key
               private java.lang.String view;
 
               /** Specifies the parts of the Message to return in the response. When unspecified, equivalent to
-             BASIC.
+             BASIC. Setting this to anything other than BASIC with a `page_size` larger than the default can
+             generate a large response, which impacts the performance of this method.
                */
               public java.lang.String getView() {
                 return view;
@@ -15614,7 +23997,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
               /**
                * Specifies the parts of the Message to return in the response. When unspecified,
-               * equivalent to BASIC.
+               * equivalent to BASIC. Setting this to anything other than BASIC with a `page_size`
+               * larger than the default can generate a large response, which impacts the
+               * performance of this method.
                */
               public List setView(java.lang.String view) {
                 this.view = view;
@@ -15627,12 +24012,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
               }
             }
             /**
-             * Update the message.
-             *
-             * The contents of the message in Message.data and data extracted from the contents such as
-             * Message.create_time cannot be altered. Only the Message.labels field is allowed to be updated.
-             * The labels in the request are merged with the existing set of labels. Existing labels with the
-             * same keys are updated.
+             * Update the message. The contents of the message in Message.data and data extracted from the
+             * contents such as Message.create_time can't be altered. Only the Message.labels field is allowed
+             * to be updated. The labels in the request are merged with the existing set of labels. Existing
+             * labels with the same keys are updated.
              *
              * Create a request for the method "messages.patch".
              *
@@ -15641,8 +24024,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
              *
              * @param name Resource name of the Message, of the form
              *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{messa
-             *        ge_id}`.
-            Assigned by the server.
+             *        ge_id}`. Assigned by the server.
              * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Message}
              * @return the request
              */
@@ -15660,12 +24042,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/hl7V2Stores/[^/]+/messages/[^/]+$");
 
               /**
-               * Update the message.
-               *
-               * The contents of the message in Message.data and data extracted from the contents such as
-               * Message.create_time cannot be altered. Only the Message.labels field is allowed to be updated.
-               * The labels in the request are merged with the existing set of labels. Existing labels with the
-               * same keys are updated.
+               * Update the message. The contents of the message in Message.data and data extracted from the
+               * contents such as Message.create_time can't be altered. Only the Message.labels field is allowed
+               * to be updated. The labels in the request are merged with the existing set of labels. Existing
+               * labels with the same keys are updated.
                *
                * Create a request for the method "messages.patch".
                *
@@ -15677,8 +24057,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                *
                * @param name Resource name of the Message, of the form
              *        `projects/{project_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{messa
-             *        ge_id}`.
-            Assigned by the server.
+             *        ge_id}`. Assigned by the server.
                * @param content the {@link com.google.api.services.healthcare.v1beta1.model.Message}
                * @since 1.13
                */
@@ -15830,9 +24209,9 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         public class Operations {
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-           * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-           * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
            * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -15861,13 +24240,13 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/operations/[^/]+$");
 
             /**
-             * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-             * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-             * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-             * other methods to check whether the cancellation succeeded or whether the operation completed
-             * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-             * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-             * corresponding to `Code.CANCELLED`.
+             * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+             * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+             * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+             * methods to check whether the cancellation succeeded or whether the operation completed despite
+             * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+             * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+             * `Code.CANCELLED`.
              *
              * Create a request for the method "operations.cancel".
              *
@@ -15973,7 +24352,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -15998,7 +24377,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/operations/[^/]+$");
 
             /**
-             * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+             * Gets the latest state of a long-running operation. Clients can use this method to poll the
              * operation result at intervals as recommended by the API service.
              *
              * Create a request for the method "operations.get".
@@ -16114,13 +24493,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
           }
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * NOTE: the `name` binding allows API services to override the binding to use different resource
-           * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-           * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-           * compatibility, the default name includes the operations collection id, however overriding users
-           * must ensure the name binding is the parent resource, without the operations collection id.
+           * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+           * the binding to use different resource name schemes, such as `users/operations`. To override the
+           * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+           * configuration. For backwards compatibility, the default name includes the operations collection
+           * id, however overriding users must ensure the name binding is the parent resource, without the
+           * operations collection id.
            *
            * Create a request for the method "operations.list".
            *
@@ -16145,13 +24523,12 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
 
             /**
              * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`.
-             *
-             * NOTE: the `name` binding allows API services to override the binding to use different resource
-             * name schemes, such as `users/operations`. To override the binding, API services can add a
-             * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-             * compatibility, the default name includes the operations collection id, however overriding users
-             * must ensure the name binding is the parent resource, without the operations collection id.
+             * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+             * override the binding to use different resource name schemes, such as `users/operations`. To
+             * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+             * their service configuration. For backwards compatibility, the default name includes the
+             * operations collection id, however overriding users must ensure the name binding is the parent
+             * resource, without the operations collection id.
              *
              * Create a request for the method "operations.list".
              *
@@ -16310,6 +24687,192 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the Services collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+       *   {@code CloudHealthcare.Services.List request = healthcare.services().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Services services() {
+        return new Services();
+      }
+
+      /**
+       * The "services" collection of methods.
+       */
+      public class Services {
+
+        /**
+         * An accessor for creating requests from the Nlp collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+         *   {@code CloudHealthcare.Nlp.List request = healthcare.nlp().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Nlp nlp() {
+          return new Nlp();
+        }
+
+        /**
+         * The "nlp" collection of methods.
+         */
+        public class Nlp {
+
+          /**
+           * Analyze heathcare entity in a document. Its response includes the recognized entity mentions and
+           * the relationships between them. AnalyzeEntities uses context aware models to detect entities.
+           *
+           * Create a request for the method "nlp.analyzeEntities".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link AnalyzeEntities#execute()} method to invoke the remote operation.
+           *
+           * @param nlpService The resource name of the service of the form:
+           *        "projects/{project_id}/locations/{location_id}/services/nlp".
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnalyzeEntitiesRequest}
+           * @return the request
+           */
+          public AnalyzeEntities analyzeEntities(java.lang.String nlpService, com.google.api.services.healthcare.v1beta1.model.AnalyzeEntitiesRequest content) throws java.io.IOException {
+            AnalyzeEntities result = new AnalyzeEntities(nlpService, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AnalyzeEntities extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.AnalyzeEntitiesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+nlpService}:analyzeEntities";
+
+            private final java.util.regex.Pattern NLP_SERVICE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/nlp$");
+
+            /**
+             * Analyze heathcare entity in a document. Its response includes the recognized entity mentions
+             * and the relationships between them. AnalyzeEntities uses context aware models to detect
+             * entities.
+             *
+             * Create a request for the method "nlp.analyzeEntities".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link AnalyzeEntities#execute()} method to invoke the remote
+             * operation. <p> {@link AnalyzeEntities#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param nlpService The resource name of the service of the form:
+           *        "projects/{project_id}/locations/{location_id}/services/nlp".
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.AnalyzeEntitiesRequest}
+             * @since 1.13
+             */
+            protected AnalyzeEntities(java.lang.String nlpService, com.google.api.services.healthcare.v1beta1.model.AnalyzeEntitiesRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.AnalyzeEntitiesResponse.class);
+              this.nlpService = com.google.api.client.util.Preconditions.checkNotNull(nlpService, "Required parameter nlpService must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NLP_SERVICE_PATTERN.matcher(nlpService).matches(),
+                    "Parameter nlpService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/nlp$");
+              }
+            }
+
+            @Override
+            public AnalyzeEntities set$Xgafv(java.lang.String $Xgafv) {
+              return (AnalyzeEntities) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AnalyzeEntities setAccessToken(java.lang.String accessToken) {
+              return (AnalyzeEntities) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AnalyzeEntities setAlt(java.lang.String alt) {
+              return (AnalyzeEntities) super.setAlt(alt);
+            }
+
+            @Override
+            public AnalyzeEntities setCallback(java.lang.String callback) {
+              return (AnalyzeEntities) super.setCallback(callback);
+            }
+
+            @Override
+            public AnalyzeEntities setFields(java.lang.String fields) {
+              return (AnalyzeEntities) super.setFields(fields);
+            }
+
+            @Override
+            public AnalyzeEntities setKey(java.lang.String key) {
+              return (AnalyzeEntities) super.setKey(key);
+            }
+
+            @Override
+            public AnalyzeEntities setOauthToken(java.lang.String oauthToken) {
+              return (AnalyzeEntities) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AnalyzeEntities setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AnalyzeEntities) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AnalyzeEntities setQuotaUser(java.lang.String quotaUser) {
+              return (AnalyzeEntities) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AnalyzeEntities setUploadType(java.lang.String uploadType) {
+              return (AnalyzeEntities) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AnalyzeEntities setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AnalyzeEntities) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The resource name of the service of the form:
+             * "projects/{project_id}/locations/{location_id}/services/nlp".
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String nlpService;
+
+            /** The resource name of the service of the form:
+           "projects/{project_id}/locations/{location_id}/services/nlp".
+             */
+            public java.lang.String getNlpService() {
+              return nlpService;
+            }
+
+            /**
+             * The resource name of the service of the form:
+             * "projects/{project_id}/locations/{location_id}/services/nlp".
+             */
+            public AnalyzeEntities setNlpService(java.lang.String nlpService) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NLP_SERVICE_PATTERN.matcher(nlpService).matches(),
+                    "Parameter nlpService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/nlp$");
+              }
+              this.nlpService = nlpService;
+              return this;
+            }
+
+            @Override
+            public AnalyzeEntities set(String parameterName, Object value) {
+              return (AnalyzeEntities) super.set(parameterName, value);
             }
           }
 

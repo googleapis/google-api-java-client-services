@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Creative Asset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -58,7 +58,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
 
   /**
    * Possible alignments for an asset. This is a read-only field. Applicable to the following
-   * creative types: RICH_MEDIA_DISPLAY_MULTI_FLOATING_INTERSTITIAL.
+   * creative types: RICH_MEDIA_DISPLAY_MULTI_FLOATING_INTERSTITIAL .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -527,7 +527,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
 
   /**
    * Possible alignments for an asset. This is a read-only field. Applicable to the following
-   * creative types: RICH_MEDIA_DISPLAY_MULTI_FLOATING_INTERSTITIAL.
+   * creative types: RICH_MEDIA_DISPLAY_MULTI_FLOATING_INTERSTITIAL .
    * @return value or {@code null} for none
    */
   public java.lang.String getAlignment() {
@@ -536,7 +536,7 @@ public final class CreativeAsset extends com.google.api.client.json.GenericJson 
 
   /**
    * Possible alignments for an asset. This is a read-only field. Applicable to the following
-   * creative types: RICH_MEDIA_DISPLAY_MULTI_FLOATING_INTERSTITIAL.
+   * creative types: RICH_MEDIA_DISPLAY_MULTI_FLOATING_INTERSTITIAL .
    * @param alignment alignment or {@code null} for none
    */
   public CreativeAsset setAlignment(java.lang.String alignment) {

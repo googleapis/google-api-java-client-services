@@ -46,7 +46,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Service Usage API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Service Usage API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,7 +143,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
   public class Operations {
 
     /**
-     * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.
      *
      * Create a request for the method "operations.get".
@@ -168,7 +168,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^operations/[^/]+$");
 
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -284,13 +284,12 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
     }
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`.
-     *
-     * NOTE: the `name` binding allows API services to override the binding to use different resource
-     * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-     * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-     * compatibility, the default name includes the operations collection id, however overriding users
-     * must ensure the name binding is the parent resource, without the operations collection id.
+     * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+     * the binding to use different resource name schemes, such as `users/operations`. To override the
+     * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+     * configuration. For backwards compatibility, the default name includes the operations collection
+     * id, however overriding users must ensure the name binding is the parent resource, without the
+     * operations collection id.
      *
      * Create a request for the method "operations.list".
      *
@@ -311,13 +310,12 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * NOTE: the `name` binding allows API services to override the binding to use different resource
-       * name schemes, such as `users/operations`. To override the binding, API services can add a
-       * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-       * compatibility, the default name includes the operations collection id, however overriding users
-       * must ensure the name binding is the parent resource, without the operations collection id.
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+       * override the binding to use different resource name schemes, such as `users/operations`. To
+       * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+       * their service configuration. For backwards compatibility, the default name includes the
+       * operations collection id, however overriding users must ensure the name binding is the parent
+       * resource, without the operations collection id.
        *
        * Create a request for the method "operations.list".
        *
@@ -491,21 +489,15 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
     /**
      * Enable multiple services on a project. The operation is atomic: if enabling any service fails,
-     * then the entire batch fails, and no state changes occur.
-     *
-     * Operation
+     * then the entire batch fails, and no state changes occur. Operation
      *
      * Create a request for the method "services.batchEnable".
      *
      * This request holds the parameters needed by the serviceusage server.  After setting any optional
      * parameters, call the {@link BatchEnable#execute()} method to invoke the remote operation.
      *
-     * @param parent Parent to enable services on.
-    An example name would be:
-    `projects/123`
-    where `123` is the project
-     *        number (not project ID).
-    The `BatchEnableServices` method currently only supports
+     * @param parent Parent to enable services on. An example name would be: `projects/123` where `123` is the project
+     *        number (not project ID). The `BatchEnableServices` method currently only supports
      *        projects.
      * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.BatchEnableServicesRequest}
      * @return the request
@@ -525,9 +517,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
       /**
        * Enable multiple services on a project. The operation is atomic: if enabling any service fails,
-       * then the entire batch fails, and no state changes occur.
-       *
-       * Operation
+       * then the entire batch fails, and no state changes occur. Operation
        *
        * Create a request for the method "services.batchEnable".
        *
@@ -537,12 +527,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * BatchEnable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Parent to enable services on.
-    An example name would be:
-    `projects/123`
-    where `123` is the project
-     *        number (not project ID).
-    The `BatchEnableServices` method currently only supports
+       * @param parent Parent to enable services on. An example name would be: `projects/123` where `123` is the project
+     *        number (not project ID). The `BatchEnableServices` method currently only supports
      *        projects.
        * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.BatchEnableServicesRequest}
        * @since 1.13
@@ -613,33 +599,24 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Parent to enable services on.
-       *
-       * An example name would be: `projects/123` where `123` is the project number (not project
-       * ID).
-       *
-       * The `BatchEnableServices` method currently only supports projects.
+       * Parent to enable services on. An example name would be: `projects/123` where `123` is the
+       * project number (not project ID). The `BatchEnableServices` method currently only supports
+       * projects.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Parent to enable services on.
-
-     An example name would be: `projects/123` where `123` is the project number (not project ID).
-
-     The `BatchEnableServices` method currently only supports projects.
+      /** Parent to enable services on. An example name would be: `projects/123` where `123` is the project
+     number (not project ID). The `BatchEnableServices` method currently only supports projects.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Parent to enable services on.
-       *
-       * An example name would be: `projects/123` where `123` is the project number (not project
-       * ID).
-       *
-       * The `BatchEnableServices` method currently only supports projects.
+       * Parent to enable services on. An example name would be: `projects/123` where `123` is the
+       * project number (not project ID). The `BatchEnableServices` method currently only supports
+       * projects.
        */
       public BatchEnable setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -658,24 +635,18 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
     }
     /**
      * Disable a service so that it can no longer be used with a project. This prevents unintended usage
-     * that may cause unexpected billing charges or security leaks.
-     *
-     * It is not valid to call the disable method on a service that is not currently enabled. Callers
-     * will receive a `FAILED_PRECONDITION` status if the target service is not currently enabled.
-     *
-     * Operation
+     * that may cause unexpected billing charges or security leaks. It is not valid to call the disable
+     * method on a service that is not currently enabled. Callers will receive a `FAILED_PRECONDITION`
+     * status if the target service is not currently enabled. Operation
      *
      * Create a request for the method "services.disable".
      *
      * This request holds the parameters needed by the serviceusage server.  After setting any optional
      * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
      *
-     * @param name Name of the consumer and service to disable the service on.
-    The enable and disable methods currently
-     *        only support projects.
-    An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
+     * @param name Name of the consumer and service to disable the service on. The enable and disable methods currently
+     *        only support projects. An example name would be:
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not
      *        project ID).
      * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.DisableServiceRequest}
      * @return the request
@@ -695,12 +666,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
       /**
        * Disable a service so that it can no longer be used with a project. This prevents unintended
-       * usage that may cause unexpected billing charges or security leaks.
-       *
-       * It is not valid to call the disable method on a service that is not currently enabled. Callers
-       * will receive a `FAILED_PRECONDITION` status if the target service is not currently enabled.
-       *
-       * Operation
+       * usage that may cause unexpected billing charges or security leaks. It is not valid to call the
+       * disable method on a service that is not currently enabled. Callers will receive a
+       * `FAILED_PRECONDITION` status if the target service is not currently enabled. Operation
        *
        * Create a request for the method "services.disable".
        *
@@ -710,12 +678,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Name of the consumer and service to disable the service on.
-    The enable and disable methods currently
-     *        only support projects.
-    An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
+       * @param name Name of the consumer and service to disable the service on. The enable and disable methods currently
+     *        only support projects. An example name would be:
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not
      *        project ID).
        * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.DisableServiceRequest}
        * @since 1.13
@@ -786,34 +751,28 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Name of the consumer and service to disable the service on.
-       *
-       * The enable and disable methods currently only support projects.
-       *
-       * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * Name of the consumer and service to disable the service on. The enable and disable methods
+       * currently only support projects. An example name would be:
+       * `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not
+       * project ID).
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Name of the consumer and service to disable the service on.
-
-     The enable and disable methods currently only support projects.
-
-     An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the
-     project number (not project ID).
+      /** Name of the consumer and service to disable the service on. The enable and disable methods
+     currently only support projects. An example name would be:
+     `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not project
+     ID).
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Name of the consumer and service to disable the service on.
-       *
-       * The enable and disable methods currently only support projects.
-       *
-       * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * Name of the consumer and service to disable the service on. The enable and disable methods
+       * currently only support projects. An example name would be:
+       * `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not
+       * project ID).
        */
       public Disable setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -831,25 +790,17 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Enable a service so that it can be used with a project.
-     *
-     * Operation
+     * Enable a service so that it can be used with a project. Operation
      *
      * Create a request for the method "services.enable".
      *
      * This request holds the parameters needed by the serviceusage server.  After setting any optional
      * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
      *
-     * @param name Name of the consumer and service to enable the service on.
-    The `EnableService` and `DisableService`
-     *        methods currently only support
-    projects.
-    Enabling a service requires that the service is
-     *        public or is shared with
-    the user enabling the service.
-    An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
+     * @param name Name of the consumer and service to enable the service on. The `EnableService` and `DisableService`
+     *        methods currently only support projects. Enabling a service requires that the service is
+     *        public or is shared with the user enabling the service. An example name would be:
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not
      *        project ID).
      * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.EnableServiceRequest}
      * @return the request
@@ -868,9 +819,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
 
       /**
-       * Enable a service so that it can be used with a project.
-       *
-       * Operation
+       * Enable a service so that it can be used with a project. Operation
        *
        * Create a request for the method "services.enable".
        *
@@ -880,16 +829,10 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Name of the consumer and service to enable the service on.
-    The `EnableService` and `DisableService`
-     *        methods currently only support
-    projects.
-    Enabling a service requires that the service is
-     *        public or is shared with
-    the user enabling the service.
-    An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
+       * @param name Name of the consumer and service to enable the service on. The `EnableService` and `DisableService`
+     *        methods currently only support projects. Enabling a service requires that the service is
+     *        public or is shared with the user enabling the service. An example name would be:
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not
      *        project ID).
        * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.EnableServiceRequest}
        * @since 1.13
@@ -960,43 +903,31 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Name of the consumer and service to enable the service on.
-       *
-       * The `EnableService` and `DisableService` methods currently only support projects.
-       *
-       * Enabling a service requires that the service is public or is shared with the user enabling
-       * the service.
-       *
-       * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * Name of the consumer and service to enable the service on. The `EnableService` and
+       * `DisableService` methods currently only support projects. Enabling a service requires that
+       * the service is public or is shared with the user enabling the service. An example name
+       * would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the project
+       * number (not project ID).
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Name of the consumer and service to enable the service on.
-
-     The `EnableService` and `DisableService` methods currently only support projects.
-
-     Enabling a service requires that the service is public or is shared with the user enabling the
-     service.
-
-     An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the
-     project number (not project ID).
+      /** Name of the consumer and service to enable the service on. The `EnableService` and `DisableService`
+     methods currently only support projects. Enabling a service requires that the service is public or
+     is shared with the user enabling the service. An example name would be:
+     `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not project
+     ID).
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Name of the consumer and service to enable the service on.
-       *
-       * The `EnableService` and `DisableService` methods currently only support projects.
-       *
-       * Enabling a service requires that the service is public or is shared with the user enabling
-       * the service.
-       *
-       * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * Name of the consumer and service to enable the service on. The `EnableService` and
+       * `DisableService` methods currently only support projects. Enabling a service requires that
+       * the service is public or is shared with the user enabling the service. An example name
+       * would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the project
+       * number (not project ID).
        */
       public Enable setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1014,6 +945,150 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
     }
     /**
+     * Generate service identity for service.
+     *
+     * Create a request for the method "services.generateServiceIdentity".
+     *
+     * This request holds the parameters needed by the serviceusage server.  After setting any optional
+     * parameters, call the {@link GenerateServiceIdentity#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param parent Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity` methods
+     *        currently only support projects. An example name would be:
+     *        `projects/123/services/example.googleapis.com` where `123` is the project number.
+     * @return the request
+     */
+    public GenerateServiceIdentity generateServiceIdentity(java.lang.String parent) throws java.io.IOException {
+      GenerateServiceIdentity result = new GenerateServiceIdentity(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateServiceIdentity extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+      private static final String REST_PATH = "v1beta1/{+parent}:generateServiceIdentity";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+      /**
+       * Generate service identity for service.
+       *
+       * Create a request for the method "services.generateServiceIdentity".
+       *
+       * This request holds the parameters needed by the the serviceusage server.  After setting any
+       * optional parameters, call the {@link GenerateServiceIdentity#execute()} method to invoke the
+       * remote operation. <p> {@link GenerateServiceIdentity#initialize(com.google.api.client.googleapi
+       * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param parent Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity` methods
+     *        currently only support projects. An example name would be:
+     *        `projects/123/services/example.googleapis.com` where `123` is the project number.
+       * @since 1.13
+       */
+      protected GenerateServiceIdentity(java.lang.String parent) {
+        super(ServiceUsage.this, "POST", REST_PATH, null, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+/services/[^/]+$");
+        }
+      }
+
+      @Override
+      public GenerateServiceIdentity set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateServiceIdentity) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateServiceIdentity setAccessToken(java.lang.String accessToken) {
+        return (GenerateServiceIdentity) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateServiceIdentity setAlt(java.lang.String alt) {
+        return (GenerateServiceIdentity) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateServiceIdentity setCallback(java.lang.String callback) {
+        return (GenerateServiceIdentity) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateServiceIdentity setFields(java.lang.String fields) {
+        return (GenerateServiceIdentity) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateServiceIdentity setKey(java.lang.String key) {
+        return (GenerateServiceIdentity) super.setKey(key);
+      }
+
+      @Override
+      public GenerateServiceIdentity setOauthToken(java.lang.String oauthToken) {
+        return (GenerateServiceIdentity) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateServiceIdentity setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateServiceIdentity) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateServiceIdentity setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateServiceIdentity) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateServiceIdentity setUploadType(java.lang.String uploadType) {
+        return (GenerateServiceIdentity) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateServiceIdentity setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateServiceIdentity) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity`
+       * methods currently only support projects. An example name would be:
+       * `projects/123/services/example.googleapis.com` where `123` is the project number.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity` methods
+     currently only support projects. An example name would be:
+     `projects/123/services/example.googleapis.com` where `123` is the project number.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Name of the consumer and service to generate an identity for. The `GenerateServiceIdentity`
+       * methods currently only support projects. An example name would be:
+       * `projects/123/services/example.googleapis.com` where `123` is the project number.
+       */
+      public GenerateServiceIdentity setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^[^/]+/[^/]+/services/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public GenerateServiceIdentity set(String parameterName, Object value) {
+        return (GenerateServiceIdentity) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns the service configuration and enabled state for a given service.
      *
      * Create a request for the method "services.get".
@@ -1021,10 +1096,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the serviceusage server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Name of the consumer and service to get the `ConsumerState` for.
-    An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
+     * @param name Name of the consumer and service to get the `ConsumerState` for. An example name would be:
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not
      *        project ID).
      * @return the request
      */
@@ -1051,10 +1124,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Name of the consumer and service to get the `ConsumerState` for.
-    An example name would be:
-     *        `projects/123/services/serviceusage.googleapis.com`
-    where `123` is the project number (not
+       * @param name Name of the consumer and service to get the `ConsumerState` for. An example name would be:
+     *        `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not
      *        project ID).
        * @since 1.13
        */
@@ -1134,28 +1205,25 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Name of the consumer and service to get the `ConsumerState` for.
-       *
-       * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * Name of the consumer and service to get the `ConsumerState` for. An example name would be:
+       * `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not
+       * project ID).
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Name of the consumer and service to get the `ConsumerState` for.
-
-     An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123` is the
-     project number (not project ID).
+      /** Name of the consumer and service to get the `ConsumerState` for. An example name would be:
+     `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not project
+     ID).
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Name of the consumer and service to get the `ConsumerState` for.
-       *
-       * An example name would be: `projects/123/services/serviceusage.googleapis.com` where `123`
-       * is the project number (not project ID).
+       * Name of the consumer and service to get the `ConsumerState` for. An example name would be:
+       * `projects/123/services/serviceusage.googleapis.com` where `123` is the project number (not
+       * project ID).
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1184,10 +1252,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the serviceusage server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param parent Parent to search for services on.
-    An example name would be:
-    `projects/123`
-    where `123` is the
+     * @param parent Parent to search for services on. An example name would be: `projects/123` where `123` is the
      *        project number (not project ID).
      * @return the request
      */
@@ -1218,10 +1283,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param parent Parent to search for services on.
-    An example name would be:
-    `projects/123`
-    where `123` is the
+       * @param parent Parent to search for services on. An example name would be: `projects/123` where `123` is the
      *        project number (not project ID).
        * @since 1.13
        */
@@ -1301,27 +1363,22 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Parent to search for services on.
-       *
-       * An example name would be: `projects/123` where `123` is the project number (not project
-       * ID).
+       * Parent to search for services on. An example name would be: `projects/123` where `123` is
+       * the project number (not project ID).
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Parent to search for services on.
-
-     An example name would be: `projects/123` where `123` is the project number (not project ID).
+      /** Parent to search for services on. An example name would be: `projects/123` where `123` is the
+     project number (not project ID).
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Parent to search for services on.
-       *
-       * An example name would be: `projects/123` where `123` is the project number (not project
-       * ID).
+       * Parent to search for services on. An example name would be: `projects/123` where `123` is
+       * the project number (not project ID).
        */
       public List setParent(java.lang.String parent) {
         if (!getSuppressPatternChecks()) {
@@ -1433,9 +1490,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the serviceusage server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the quota limit.
-      An example name would be:
-      projects/123/services/serviceusage.g
+       * @param name The resource name of the quota limit. An example name would be: projects/123/services/serviceusage.g
        *        oogleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
        * @return the request
        */
@@ -1462,9 +1517,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the quota limit.
-      An example name would be:
-      projects/123/services/serviceusage.g
+         * @param name The resource name of the quota limit. An example name would be: projects/123/services/serviceusage.g
        *        oogleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
          * @since 1.13
          */
@@ -1544,28 +1597,22 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The resource name of the quota limit.
-         *
-         * An example name would be: projects/123/services/serviceusage.googleapis.com/quotas/metric
-         * s/serviceusage.googleapis.com%2Fmutate_requests
+         * The resource name of the quota limit. An example name would be: projects/123/services/ser
+         * viceusage.googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the quota limit.
-
-       An example name would be: projects/123/services/serviceusage.googleapis.com/quotas/metrics/serviceu
-       sage.googleapis.com%2Fmutate_requests
+        /** The resource name of the quota limit. An example name would be: projects/123/services/serviceusage.
+       googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the quota limit.
-         *
-         * An example name would be: projects/123/services/serviceusage.googleapis.com/quotas/metric
-         * s/serviceusage.googleapis.com%2Fmutate_requests
+         * The resource name of the quota limit. An example name would be: projects/123/services/ser
+         * viceusage.googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1599,6 +1646,292 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         }
       }
       /**
+       * Create or update multiple admin overrides atomically, all on the same consumer, but on many
+       * different metrics or limits. The name field in the quota override message should not be set.
+       *
+       * Create a request for the method "consumerQuotaMetrics.importAdminOverrides".
+       *
+       * This request holds the parameters needed by the serviceusage server.  After setting any optional
+       * parameters, call the {@link ImportAdminOverrides#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent The resource name of the consumer. An example name would be:
+       *        `projects/123/services/compute.googleapis.com`
+       * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.ImportAdminOverridesRequest}
+       * @return the request
+       */
+      public ImportAdminOverrides importAdminOverrides(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.ImportAdminOverridesRequest content) throws java.io.IOException {
+        ImportAdminOverrides result = new ImportAdminOverrides(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ImportAdminOverrides extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/consumerQuotaMetrics:importAdminOverrides";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+        /**
+         * Create or update multiple admin overrides atomically, all on the same consumer, but on many
+         * different metrics or limits. The name field in the quota override message should not be set.
+         *
+         * Create a request for the method "consumerQuotaMetrics.importAdminOverrides".
+         *
+         * This request holds the parameters needed by the the serviceusage server.  After setting any
+         * optional parameters, call the {@link ImportAdminOverrides#execute()} method to invoke the
+         * remote operation. <p> {@link ImportAdminOverrides#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent The resource name of the consumer. An example name would be:
+       *        `projects/123/services/compute.googleapis.com`
+         * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.ImportAdminOverridesRequest}
+         * @since 1.13
+         */
+        protected ImportAdminOverrides(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.ImportAdminOverridesRequest content) {
+          super(ServiceUsage.this, "POST", REST_PATH, content, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public ImportAdminOverrides set$Xgafv(java.lang.String $Xgafv) {
+          return (ImportAdminOverrides) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ImportAdminOverrides setAccessToken(java.lang.String accessToken) {
+          return (ImportAdminOverrides) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ImportAdminOverrides setAlt(java.lang.String alt) {
+          return (ImportAdminOverrides) super.setAlt(alt);
+        }
+
+        @Override
+        public ImportAdminOverrides setCallback(java.lang.String callback) {
+          return (ImportAdminOverrides) super.setCallback(callback);
+        }
+
+        @Override
+        public ImportAdminOverrides setFields(java.lang.String fields) {
+          return (ImportAdminOverrides) super.setFields(fields);
+        }
+
+        @Override
+        public ImportAdminOverrides setKey(java.lang.String key) {
+          return (ImportAdminOverrides) super.setKey(key);
+        }
+
+        @Override
+        public ImportAdminOverrides setOauthToken(java.lang.String oauthToken) {
+          return (ImportAdminOverrides) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ImportAdminOverrides setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ImportAdminOverrides) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ImportAdminOverrides setQuotaUser(java.lang.String quotaUser) {
+          return (ImportAdminOverrides) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ImportAdminOverrides setUploadType(java.lang.String uploadType) {
+          return (ImportAdminOverrides) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ImportAdminOverrides setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ImportAdminOverrides) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the consumer. An example name would be:
+         * `projects/123/services/compute.googleapis.com`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The resource name of the consumer. An example name would be:
+       `projects/123/services/compute.googleapis.com`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The resource name of the consumer. An example name would be:
+         * `projects/123/services/compute.googleapis.com`
+         */
+        public ImportAdminOverrides setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public ImportAdminOverrides set(String parameterName, Object value) {
+          return (ImportAdminOverrides) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Create or update multiple consumer overrides atomically, all on the same consumer, but on many
+       * different metrics or limits. The name field in the quota override message should not be set.
+       *
+       * Create a request for the method "consumerQuotaMetrics.importConsumerOverrides".
+       *
+       * This request holds the parameters needed by the serviceusage server.  After setting any optional
+       * parameters, call the {@link ImportConsumerOverrides#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent The resource name of the consumer. An example name would be:
+       *        `projects/123/services/compute.googleapis.com`
+       * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.ImportConsumerOverridesRequest}
+       * @return the request
+       */
+      public ImportConsumerOverrides importConsumerOverrides(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.ImportConsumerOverridesRequest content) throws java.io.IOException {
+        ImportConsumerOverrides result = new ImportConsumerOverrides(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ImportConsumerOverrides extends ServiceUsageRequest<com.google.api.services.serviceusage.v1beta1.model.Operation> {
+
+        private static final String REST_PATH = "v1beta1/{+parent}/consumerQuotaMetrics:importConsumerOverrides";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+/[^/]+/services/[^/]+$");
+
+        /**
+         * Create or update multiple consumer overrides atomically, all on the same consumer, but on many
+         * different metrics or limits. The name field in the quota override message should not be set.
+         *
+         * Create a request for the method "consumerQuotaMetrics.importConsumerOverrides".
+         *
+         * This request holds the parameters needed by the the serviceusage server.  After setting any
+         * optional parameters, call the {@link ImportConsumerOverrides#execute()} method to invoke the
+         * remote operation. <p> {@link ImportConsumerOverrides#initialize(com.google.api.client.googleapi
+         * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param parent The resource name of the consumer. An example name would be:
+       *        `projects/123/services/compute.googleapis.com`
+         * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.ImportConsumerOverridesRequest}
+         * @since 1.13
+         */
+        protected ImportConsumerOverrides(java.lang.String parent, com.google.api.services.serviceusage.v1beta1.model.ImportConsumerOverridesRequest content) {
+          super(ServiceUsage.this, "POST", REST_PATH, content, com.google.api.services.serviceusage.v1beta1.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public ImportConsumerOverrides set$Xgafv(java.lang.String $Xgafv) {
+          return (ImportConsumerOverrides) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ImportConsumerOverrides setAccessToken(java.lang.String accessToken) {
+          return (ImportConsumerOverrides) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ImportConsumerOverrides setAlt(java.lang.String alt) {
+          return (ImportConsumerOverrides) super.setAlt(alt);
+        }
+
+        @Override
+        public ImportConsumerOverrides setCallback(java.lang.String callback) {
+          return (ImportConsumerOverrides) super.setCallback(callback);
+        }
+
+        @Override
+        public ImportConsumerOverrides setFields(java.lang.String fields) {
+          return (ImportConsumerOverrides) super.setFields(fields);
+        }
+
+        @Override
+        public ImportConsumerOverrides setKey(java.lang.String key) {
+          return (ImportConsumerOverrides) super.setKey(key);
+        }
+
+        @Override
+        public ImportConsumerOverrides setOauthToken(java.lang.String oauthToken) {
+          return (ImportConsumerOverrides) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ImportConsumerOverrides setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ImportConsumerOverrides) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ImportConsumerOverrides setQuotaUser(java.lang.String quotaUser) {
+          return (ImportConsumerOverrides) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ImportConsumerOverrides setUploadType(java.lang.String uploadType) {
+          return (ImportConsumerOverrides) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ImportConsumerOverrides setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ImportConsumerOverrides) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The resource name of the consumer. An example name would be:
+         * `projects/123/services/compute.googleapis.com`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The resource name of the consumer. An example name would be:
+       `projects/123/services/compute.googleapis.com`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The resource name of the consumer. An example name would be:
+         * `projects/123/services/compute.googleapis.com`
+         */
+        public ImportConsumerOverrides setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^[^/]+/[^/]+/services/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public ImportConsumerOverrides set(String parameterName, Object value) {
+          return (ImportConsumerOverrides) super.set(parameterName, value);
+        }
+      }
+      /**
        * Retrieves a summary of all quota information visible to the service consumer, organized by
        * service metric. Each metric includes information about all of its defined limits. Each limit
        * includes the limit configuration (quota unit, preciseness, default value), the current effective
@@ -1609,8 +1942,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the serviceusage server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Parent of the quotas resource.
-      Some example names would be:
+       * @param parent Parent of the quotas resource. Some example names would be:
        *        projects/123/services/serviceconsumermanagement.googleapis.com
        *        folders/345/services/serviceconsumermanagement.googleapis.com
        *        organizations/456/services/serviceconsumermanagement.googleapis.com
@@ -1642,8 +1974,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Parent of the quotas resource.
-      Some example names would be:
+         * @param parent Parent of the quotas resource. Some example names would be:
        *        projects/123/services/serviceconsumermanagement.googleapis.com
        *        folders/345/services/serviceconsumermanagement.googleapis.com
        *        organizations/456/services/serviceconsumermanagement.googleapis.com
@@ -1725,9 +2056,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Parent of the quotas resource.
-         *
-         * Some example names would be:
+         * Parent of the quotas resource. Some example names would be:
          * projects/123/services/serviceconsumermanagement.googleapis.com
          * folders/345/services/serviceconsumermanagement.googleapis.com
          * organizations/456/services/serviceconsumermanagement.googleapis.com
@@ -1735,9 +2064,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Parent of the quotas resource.
-
-       Some example names would be: projects/123/services/serviceconsumermanagement.googleapis.com
+        /** Parent of the quotas resource. Some example names would be:
+       projects/123/services/serviceconsumermanagement.googleapis.com
        folders/345/services/serviceconsumermanagement.googleapis.com
        organizations/456/services/serviceconsumermanagement.googleapis.com
          */
@@ -1746,9 +2074,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Parent of the quotas resource.
-         *
-         * Some example names would be:
+         * Parent of the quotas resource. Some example names would be:
          * projects/123/services/serviceconsumermanagement.googleapis.com
          * folders/345/services/serviceconsumermanagement.googleapis.com
          * organizations/456/services/serviceconsumermanagement.googleapis.com
@@ -1779,9 +2105,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /**
-         * Token identifying which result to start with; returned by a previous list call.
-         */
+        /** Token identifying which result to start with; returned by a previous list call. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
@@ -1791,9 +2115,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
           return pageToken;
         }
 
-        /**
-         * Token identifying which result to start with; returned by a previous list call.
-         */
+        /** Token identifying which result to start with; returned by a previous list call. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -1849,8 +2171,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the serviceusage server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the quota limit.
-        Use the quota limit resource name returned by previous
+         * @param name The resource name of the quota limit. Use the quota limit resource name returned by previous
          *        ListConsumerQuotaMetrics and GetConsumerQuotaMetric API calls.
          * @return the request
          */
@@ -1877,8 +2198,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the quota limit.
-        Use the quota limit resource name returned by previous
+           * @param name The resource name of the quota limit. Use the quota limit resource name returned by previous
          *        ListConsumerQuotaMetrics and GetConsumerQuotaMetric API calls.
            * @since 1.13
            */
@@ -1958,28 +2278,22 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * The resource name of the quota limit.
-           *
-           * Use the quota limit resource name returned by previous ListConsumerQuotaMetrics and
-           * GetConsumerQuotaMetric API calls.
+           * The resource name of the quota limit. Use the quota limit resource name returned by
+           * previous ListConsumerQuotaMetrics and GetConsumerQuotaMetric API calls.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the quota limit.
-
-         Use the quota limit resource name returned by previous ListConsumerQuotaMetrics and
-         GetConsumerQuotaMetric API calls.
+          /** The resource name of the quota limit. Use the quota limit resource name returned by previous
+         ListConsumerQuotaMetrics and GetConsumerQuotaMetric API calls.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The resource name of the quota limit.
-           *
-           * Use the quota limit resource name returned by previous ListConsumerQuotaMetrics and
-           * GetConsumerQuotaMetric API calls.
+           * The resource name of the quota limit. Use the quota limit resource name returned by
+           * previous ListConsumerQuotaMetrics and GetConsumerQuotaMetric API calls.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2044,11 +2358,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the serviceusage server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `projects/123/services/compute.goog
+           * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.goog
            *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
            * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
            * @return the request
@@ -2080,11 +2391,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `projects/123/services/compute.goog
+             * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.goog
            *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
              * @since 1.13
@@ -2156,19 +2464,16 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/comp
+             * ute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
-           GetConsumerQuotaMetric call.
-
-           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.googleapis.co
+           m/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              */
             public java.lang.String getParent() {
               return parent;
@@ -2176,10 +2481,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/comp
+             * ute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2233,9 +2537,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the serviceusage server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the override to delete.
-          An example name would be:
-          `projects/123/services/comput
+           * @param name The resource name of the override to delete. An example name would be: `projects/123/services/comput
            *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/adminOverrides/4a3f2c1d`
            * @return the request
@@ -2264,9 +2566,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the override to delete.
-          An example name would be:
-          `projects/123/services/comput
+             * @param name The resource name of the override to delete. An example name would be: `projects/123/services/comput
            *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/adminOverrides/4a3f2c1d`
              * @since 1.13
@@ -2337,30 +2637,25 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * The resource name of the override to delete.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2
-             * c1d`
+             * The resource name of the override to delete. An example name would be: `projects/123/
+             * services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/adminOverrides/4a3f2c1d`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the override to delete.
-
-           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2c1d`
+            /** The resource name of the override to delete. An example name would be: `projects/123/services/compu
+           te.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adm
+           inOverrides/4a3f2c1d`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The resource name of the override to delete.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2
-             * c1d`
+             * The resource name of the override to delete. An example name would be: `projects/123/
+             * services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/adminOverrides/4a3f2c1d`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2414,11 +2709,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the serviceusage server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `projects/123/services/compute.goog
+           * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.goog
            *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
            * @return the request
            */
@@ -2445,11 +2737,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `projects/123/services/compute.goog
+             * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.goog
            *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              * @since 1.13
              */
@@ -2530,19 +2819,16 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/comp
+             * ute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
-           GetConsumerQuotaMetric call.
-
-           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.googleapis.co
+           m/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              */
             public java.lang.String getParent() {
               return parent;
@@ -2550,10 +2836,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/comp
+             * ute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2581,9 +2866,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
               return this;
             }
 
-            /**
-             * Token identifying which result to start with; returned by a previous list call.
-             */
+            /** Token identifying which result to start with; returned by a previous list call. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
@@ -2593,9 +2876,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
               return pageToken;
             }
 
-            /**
-             * Token identifying which result to start with; returned by a previous list call.
-             */
+            /** Token identifying which result to start with; returned by a previous list call. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -2614,9 +2895,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the serviceusage server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the override to update.
-          An example name would be:
-          `projects/123/services/comput
+           * @param name The resource name of the override to update. An example name would be: `projects/123/services/comput
            *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/adminOverrides/4a3f2c1d`
            * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
@@ -2646,9 +2925,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the override to update.
-          An example name would be:
-          `projects/123/services/comput
+             * @param name The resource name of the override to update. An example name would be: `projects/123/services/comput
            *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/adminOverrides/4a3f2c1d`
              * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
@@ -2720,30 +2997,25 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * The resource name of the override to update.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2
-             * c1d`
+             * The resource name of the override to update. An example name would be: `projects/123/
+             * services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/adminOverrides/4a3f2c1d`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the override to update.
-
-           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2c1d`
+            /** The resource name of the override to update. An example name would be: `projects/123/services/compu
+           te.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adm
+           inOverrides/4a3f2c1d`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The resource name of the override to update.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/adminOverrides/4a3f2
-             * c1d`
+             * The resource name of the override to update. An example name would be: `projects/123/
+             * services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/adminOverrides/4a3f2c1d`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2843,11 +3115,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the serviceusage server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `projects/123/services/compute.goog
+           * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.goog
            *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
            * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
            * @return the request
@@ -2879,11 +3148,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `projects/123/services/compute.goog
+             * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.goog
            *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
              * @since 1.13
@@ -2955,19 +3221,16 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/comp
+             * ute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
-           GetConsumerQuotaMetric call.
-
-           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.googleapis.co
+           m/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              */
             public java.lang.String getParent() {
               return parent;
@@ -2975,10 +3238,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/comp
+             * ute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3032,9 +3294,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the serviceusage server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the override to delete.
-          An example name would be:
-          `projects/123/services/comput
+           * @param name The resource name of the override to delete. An example name would be: `projects/123/services/comput
            *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/consumerOverrides/4a3f2c1d`
            * @return the request
@@ -3063,9 +3323,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the override to delete.
-          An example name would be:
-          `projects/123/services/comput
+             * @param name The resource name of the override to delete. An example name would be: `projects/123/services/comput
            *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/consumerOverrides/4a3f2c1d`
              * @since 1.13
@@ -3136,30 +3394,25 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * The resource name of the override to delete.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a
-             * 3f2c1d`
+             * The resource name of the override to delete. An example name would be: `projects/123/
+             * services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the override to delete.
-
-           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
+            /** The resource name of the override to delete. An example name would be: `projects/123/services/compu
+           te.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/con
+           sumerOverrides/4a3f2c1d`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The resource name of the override to delete.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a
-             * 3f2c1d`
+             * The resource name of the override to delete. An example name would be: `projects/123/
+             * services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3213,11 +3466,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the serviceusage server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `projects/123/services/compute.goog
+           * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.goog
            *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
            * @return the request
            */
@@ -3244,11 +3494,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent The resource name of the parent quota limit, returned by a
-          ListConsumerQuotaMetrics or
-           *        GetConsumerQuotaMetric call.
-          An example name would be:
-          `projects/123/services/compute.goog
+             * @param parent The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
+           *        GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.goog
            *        leapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              * @since 1.13
              */
@@ -3329,19 +3576,16 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/comp
+             * ute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or
-           GetConsumerQuotaMetric call.
-
-           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+           GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.googleapis.co
+           m/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
              */
             public java.lang.String getParent() {
               return parent;
@@ -3349,10 +3593,9 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
 
             /**
              * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics
-             * or GetConsumerQuotaMetric call.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+             * or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/comp
+             * ute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproje
+             * ct%2Fregion`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3380,9 +3623,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
               return this;
             }
 
-            /**
-             * Token identifying which result to start with; returned by a previous list call.
-             */
+            /** Token identifying which result to start with; returned by a previous list call. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
@@ -3392,9 +3633,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
               return pageToken;
             }
 
-            /**
-             * Token identifying which result to start with; returned by a previous list call.
-             */
+            /** Token identifying which result to start with; returned by a previous list call. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -3413,9 +3652,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
            * This request holds the parameters needed by the serviceusage server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The resource name of the override to update.
-          An example name would be:
-          `projects/123/services/comput
+           * @param name The resource name of the override to update. An example name would be: `projects/123/services/comput
            *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/consumerOverrides/4a3f2c1d`
            * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
@@ -3445,9 +3682,7 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The resource name of the override to update.
-          An example name would be:
-          `projects/123/services/comput
+             * @param name The resource name of the override to update. An example name would be: `projects/123/services/comput
            *        e.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fre
            *        gion/consumerOverrides/4a3f2c1d`
              * @param content the {@link com.google.api.services.serviceusage.v1beta1.model.QuotaOverride}
@@ -3519,30 +3754,25 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * The resource name of the override to update.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a
-             * 3f2c1d`
+             * The resource name of the override to update. An example name would be: `projects/123/
+             * services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The resource name of the override to update.
-
-           An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/comput
-           e.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
+            /** The resource name of the override to update. An example name would be: `projects/123/services/compu
+           te.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/con
+           sumerOverrides/4a3f2c1d`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * The resource name of the override to update.
-             *
-             * An example name would be: `projects/123/services/compute.googleapis.com/consumerQuota
-             * Metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion/consumerOverrides/4a
-             * 3f2c1d`
+             * The resource name of the override to update. An example name would be: `projects/123/
+             * services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/li
+             * mits/%2Fproject%2Fregion/consumerOverrides/4a3f2c1d`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

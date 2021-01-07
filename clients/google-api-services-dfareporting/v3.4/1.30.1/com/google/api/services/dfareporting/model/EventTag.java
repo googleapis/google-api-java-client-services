@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Contains properties of an event tag.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -113,7 +113,7 @@ public final class EventTag extends com.google.api.client.json.GenericJson {
 
   /**
    * Filter list of site IDs associated with this event tag. The siteFilterType determines whether
-   * this is a whitelist or blacklist filter.
+   * this is a allowlist or blocklist filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -363,7 +363,7 @@ public final class EventTag extends com.google.api.client.json.GenericJson {
 
   /**
    * Filter list of site IDs associated with this event tag. The siteFilterType determines whether
-   * this is a whitelist or blacklist filter.
+   * this is a allowlist or blocklist filter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getSiteIds() {
@@ -372,7 +372,7 @@ public final class EventTag extends com.google.api.client.json.GenericJson {
 
   /**
    * Filter list of site IDs associated with this event tag. The siteFilterType determines whether
-   * this is a whitelist or blacklist filter.
+   * this is a allowlist or blocklist filter.
    * @param siteIds siteIds or {@code null} for none
    */
   public EventTag setSiteIds(java.util.List<java.lang.Long> siteIds) {

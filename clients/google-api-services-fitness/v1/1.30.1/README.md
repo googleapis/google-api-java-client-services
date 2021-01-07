@@ -1,14 +1,14 @@
-# Fitness Client Library for Java
+# Fitness API Client Library for Java
 
-Stores and accesses user data in the fitness store from apps on any platform.
+The Fitness API for managing users' fitness tracking data.
 
-This page contains information about getting started with the Fitness
+This page contains information about getting started with the Fitness API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Fitness][javadoc]
+* Browse the [Javadoc reference for the Fitness API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Fitness][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the Fitness API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-fitness</artifactId>
-      <version>v1-rev20200220-1.30.9</version>
+      <version>v1-rev20201012-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-fitness:v1-rev20200220-1.30.9'
+  compile 'com.google.apis:google-api-services-fitness:v1-rev20201012-1.30.10'
 }
 ```
 

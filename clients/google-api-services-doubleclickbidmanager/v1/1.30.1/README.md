@@ -1,6 +1,6 @@
 # DoubleClick Bid Manager API Client Library for Java
 
-API for viewing and managing your reports in DoubleClick Bid Manager.
+DoubleClick Bid Manager API allows users to manage and create campaigns and reports.
 
 This page contains information about getting started with the DoubleClick Bid Manager API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-doubleclickbidmanager</artifactId>
-      <version>v1-rev20200220-1.30.9</version>
+      <version>v1-rev20201016-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-doubleclickbidmanager:v1-rev20200220-1.30.9'
+  compile 'com.google.apis:google-api-services-doubleclickbidmanager:v1-rev20201016-1.30.10'
 }
 ```
 

@@ -34,7 +34,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
    * Like the "Customer email" in the reseller tools, this email is the secondary contact used if
    * something happens to the customer's service such as service outage or a security issue. This
    * property is required when creating a new customer and should not use the same domain as
-   * customerDomain.
+   * customerDomain .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
    * Like the "Customer email" in the reseller tools, this email is the secondary contact used if
    * something happens to the customer's service such as service outage or a security issue. This
    * property is required when creating a new customer and should not use the same domain as
-   * customerDomain.
+   * customerDomain .
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateEmail() {
@@ -111,7 +111,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
    * Like the "Customer email" in the reseller tools, this email is the secondary contact used if
    * something happens to the customer's service such as service outage or a security issue. This
    * property is required when creating a new customer and should not use the same domain as
-   * customerDomain.
+   * customerDomain .
    * @param alternateEmail alternateEmail or {@code null} for none
    */
   public Customer setAlternateEmail(java.lang.String alternateEmail) {

@@ -17,10 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a Cloud Armor Security Policy resource.
+ * Represents a Google Cloud Armor security policy resource.
  *
- * Only external backend services that use load balancers can reference a Security Policy. For more
- * information, read  Cloud Armor Security Policy Concepts. (== resource_for
+ * Only external backend services that use load balancers can reference a security policy. For more
+ * information, see  Google Cloud Armor security policy overview. (== resource_for
  * {$api_version}.securityPolicies ==)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,6 +32,12 @@ package com.google.api.services.compute.model;
  */
 @SuppressWarnings("javadoc")
 public final class SecurityPolicy extends com.google.api.client.json.GenericJson {
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecurityPolicyAdaptiveProtectionConfig adaptiveProtectionConfig;
 
   /**
    * A list of associations that belong to this policy.
@@ -113,8 +119,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String labelFingerprint;
 
   /**
-   * Labels to apply to this security policy resource. These can be later modified by the setLabels
-   * method. Each label key/value must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,6 +182,21 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public SecurityPolicyAdaptiveProtectionConfig getAdaptiveProtectionConfig() {
+    return adaptiveProtectionConfig;
+  }
+
+  /**
+   * @param adaptiveProtectionConfig adaptiveProtectionConfig or {@code null} for none
+   */
+  public SecurityPolicy setAdaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfig adaptiveProtectionConfig) {
+    this.adaptiveProtectionConfig = adaptiveProtectionConfig;
+    return this;
+  }
 
   /**
    * A list of associations that belong to this policy.
@@ -441,8 +462,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Labels to apply to this security policy resource. These can be later modified by the setLabels
-   * method. Each label key/value must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -450,8 +471,8 @@ public final class SecurityPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Labels to apply to this security policy resource. These can be later modified by the setLabels
-   * method. Each label key/value must comply with RFC1035. Label values may be empty.
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
    * @param labels labels or {@code null} for none
    */
   public SecurityPolicy setLabels(java.util.Map<String, java.lang.String> labels) {

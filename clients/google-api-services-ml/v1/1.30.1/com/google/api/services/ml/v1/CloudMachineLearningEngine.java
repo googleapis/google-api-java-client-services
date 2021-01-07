@@ -46,7 +46,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the AI Platform Training & Prediction API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the AI Platform Training & Prediction API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,16 +143,15 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
   public class Projects {
 
     /**
-     * Performs explanation on the data in the request. AI Platform implements a custom `explain` verb
-     * on top of an HTTP POST method.
+     * Performs explanation on the data in the request. {% dynamic include "/ai-platform/includes
+     * /___explain-request" %}
      *
      * Create a request for the method "projects.explain".
      *
      * This request holds the parameters needed by the ml server.  After setting any optional
      * parameters, call the {@link Explain#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of a model or a version.
-    Authorization: requires the `predict`
+     * @param name Required. The resource name of a model or a version. Authorization: requires the `predict`
      *        permission on the specified resource.
      * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1ExplainRequest}
      * @return the request
@@ -171,8 +170,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           java.util.regex.Pattern.compile("^projects/.*$");
 
       /**
-       * Performs explanation on the data in the request. AI Platform implements a custom `explain` verb
-       * on top of an HTTP POST method.
+       * Performs explanation on the data in the request. {% dynamic include "/ai-platform/includes
+       * /___explain-request" %}
        *
        * Create a request for the method "projects.explain".
        *
@@ -182,8 +181,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
        * Explain#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of a model or a version.
-    Authorization: requires the `predict`
+       * @param name Required. The resource name of a model or a version. Authorization: requires the `predict`
      *        permission on the specified resource.
        * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1ExplainRequest}
        * @since 1.13
@@ -254,25 +252,22 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       }
 
       /**
-       * Required. The resource name of a model or a version.
-       *
-       * Authorization: requires the `predict` permission on the specified resource.
+       * Required. The resource name of a model or a version. Authorization: requires the `predict`
+       * permission on the specified resource.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of a model or a version.
-
-     Authorization: requires the `predict` permission on the specified resource.
+      /** Required. The resource name of a model or a version. Authorization: requires the `predict`
+     permission on the specified resource.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The resource name of a model or a version.
-       *
-       * Authorization: requires the `predict` permission on the specified resource.
+       * Required. The resource name of a model or a version. Authorization: requires the `predict`
+       * permission on the specified resource.
        */
       public Explain setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -433,17 +428,15 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       }
     }
     /**
-     * Performs online prediction on the data in the request.
-     *
-     * {% dynamic include "/ai-platform/includes/___predict-request" %}
+     * Performs online prediction on the data in the request. {% dynamic include "/ai-platform/includes
+     * /___predict-request" %}
      *
      * Create a request for the method "projects.predict".
      *
      * This request holds the parameters needed by the ml server.  After setting any optional
      * parameters, call the {@link Predict#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of a model or a version.
-    Authorization: requires the `predict`
+     * @param name Required. The resource name of a model or a version. Authorization: requires the `predict`
      *        permission on the specified resource.
      * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1PredictRequest}
      * @return the request
@@ -462,9 +455,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           java.util.regex.Pattern.compile("^projects/.*$");
 
       /**
-       * Performs online prediction on the data in the request.
-       *
-       * {% dynamic include "/ai-platform/includes/___predict-request" %}
+       * Performs online prediction on the data in the request. {% dynamic include "/ai-
+       * platform/includes/___predict-request" %}
        *
        * Create a request for the method "projects.predict".
        *
@@ -474,8 +466,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
        * Predict#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of a model or a version.
-    Authorization: requires the `predict`
+       * @param name Required. The resource name of a model or a version. Authorization: requires the `predict`
      *        permission on the specified resource.
        * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1PredictRequest}
        * @since 1.13
@@ -546,25 +537,22 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       }
 
       /**
-       * Required. The resource name of a model or a version.
-       *
-       * Authorization: requires the `predict` permission on the specified resource.
+       * Required. The resource name of a model or a version. Authorization: requires the `predict`
+       * permission on the specified resource.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of a model or a version.
-
-     Authorization: requires the `predict` permission on the specified resource.
+      /** Required. The resource name of a model or a version. Authorization: requires the `predict`
+     permission on the specified resource.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. The resource name of a model or a version.
-       *
-       * Authorization: requires the `predict` permission on the specified resource.
+       * Required. The resource name of a model or a version. Authorization: requires the `predict`
+       * permission on the specified resource.
        */
       public Predict setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1009,8 +997,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
        * This request holds the parameters needed by the ml server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @return the request
        */
@@ -1039,8 +1026,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @since 1.13
          */
@@ -1148,34 +1134,33 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned.
-
-       Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-       Requests for policies with any conditional bindings must specify version 3. Policies without any
-       conditional bindings may specify any valid value or leave the field unset.
+        /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+       must specify version 3. Policies without any conditional bindings may specify any valid value or
+       leave the field unset. To learn which resources support conditions in their IAM policies, see the
+       [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
           this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1188,10 +1173,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
       }
       /**
-       * Lists the jobs in the project.
-       *
-       * If there are no jobs that match the request parameters, the list request returns an empty
-       * response body: {}.
+       * Lists the jobs in the project. If there are no jobs that match the request parameters, the list
+       * request returns an empty response body: {}.
        *
        * Create a request for the method "jobs.list".
        *
@@ -1215,10 +1198,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists the jobs in the project.
-         *
-         * If there are no jobs that match the request parameters, the list request returns an empty
-         * response body: {}.
+         * Lists the jobs in the project. If there are no jobs that match the request parameters, the list
+         * request returns an empty response body: {}.
          *
          * Create a request for the method "jobs.list".
          *
@@ -1363,16 +1344,13 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Optional. The number of jobs to retrieve per "page" of results. If there are more
          * remaining results than this number, the response message will contain a valid value in
-         * the `next_page_token` field.
-         *
-         * The default value is 20, and the maximum page size is 100.
+         * the `next_page_token` field. The default value is 20, and the maximum page size is 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The number of jobs to retrieve per "page" of results. If there are more remaining results
        than this number, the response message will contain a valid value in the `next_page_token` field.
-
        The default value is 20, and the maximum page size is 100.
          */
         public java.lang.Integer getPageSize() {
@@ -1382,9 +1360,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Optional. The number of jobs to retrieve per "page" of results. If there are more
          * remaining results than this number, the response message will contain a valid value in
-         * the `next_page_token` field.
-         *
-         * The default value is 20, and the maximum page size is 100.
+         * the `next_page_token` field. The default value is 20, and the maximum page size is 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -1392,27 +1368,22 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
 
         /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
+         * Optional. A page token to request the next page of results. You get the token from the
+         * `next_page_token` field of the response from the previous call.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. A page token to request the next page of results.
-
-       You get the token from the `next_page_token` field of the response from the previous call.
+        /** Optional. A page token to request the next page of results. You get the token from the
+       `next_page_token` field of the response from the previous call.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
+         * Optional. A page token to request the next page of results. You get the token from the
+         * `next_page_token` field of the response from the previous call.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -1425,9 +1396,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
       }
       /**
-       * Updates a specific job resource.
-       *
-       * Currently the only supported fields to update are `labels`.
+       * Updates a specific job resource. Currently the only supported fields to update are `labels`.
        *
        * Create a request for the method "jobs.patch".
        *
@@ -1452,9 +1421,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^projects/[^/]+/jobs/[^/]+$");
 
         /**
-         * Updates a specific job resource.
-         *
-         * Currently the only supported fields to update are `labels`.
+         * Updates a specific job resource. Currently the only supported fields to update are `labels`.
          *
          * Create a request for the method "jobs.patch".
          *
@@ -1556,30 +1523,23 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Required. Specifies the path, relative to `Job`, of the field to update. To adopt etag
          * mechanism, include `etag` field in the mask, and include the `etag` value in your job
-         * resource.
-         *
-         * For example, to change the labels of a job, the `update_mask` parameter would be
-         * specified as `labels`, `etag`, and the `PATCH` request body would specify the new value,
-         * as follows: { "labels": { "owner": "Google", "color": "Blue" } "etag":
+         * resource. For example, to change the labels of a job, the `update_mask` parameter would
+         * be specified as `labels`, `etag`, and the `PATCH` request body would specify the new
+         * value, as follows: { "labels": { "owner": "Google", "color": "Blue" } "etag":
          * "33a64df551425fcc55e4d42a148795d9f25f89d4" } If `etag` matches the one on the server, the
          * labels of the job will be replaced with the given ones, and the server end `etag` will be
-         * recalculated.
-         *
-         * Currently the only supported update masks are `labels` and `etag`.
+         * recalculated. Currently the only supported update masks are `labels` and `etag`.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Required. Specifies the path, relative to `Job`, of the field to update. To adopt etag mechanism,
-       include `etag` field in the mask, and include the `etag` value in your job resource.
-
-       For example, to change the labels of a job, the `update_mask` parameter would be specified as
-       `labels`, `etag`, and the `PATCH` request body would specify the new value, as follows: { "labels":
-       { "owner": "Google", "color": "Blue" } "etag": "33a64df551425fcc55e4d42a148795d9f25f89d4" } If
-       `etag` matches the one on the server, the labels of the job will be replaced with the given ones,
-       and the server end `etag` will be recalculated.
-
-       Currently the only supported update masks are `labels` and `etag`.
+       include `etag` field in the mask, and include the `etag` value in your job resource. For example,
+       to change the labels of a job, the `update_mask` parameter would be specified as `labels`, `etag`,
+       and the `PATCH` request body would specify the new value, as follows: { "labels": { "owner":
+       "Google", "color": "Blue" } "etag": "33a64df551425fcc55e4d42a148795d9f25f89d4" } If `etag` matches
+       the one on the server, the labels of the job will be replaced with the given ones, and the server
+       end `etag` will be recalculated. Currently the only supported update masks are `labels` and `etag`.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -1588,16 +1548,12 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Required. Specifies the path, relative to `Job`, of the field to update. To adopt etag
          * mechanism, include `etag` field in the mask, and include the `etag` value in your job
-         * resource.
-         *
-         * For example, to change the labels of a job, the `update_mask` parameter would be
-         * specified as `labels`, `etag`, and the `PATCH` request body would specify the new value,
-         * as follows: { "labels": { "owner": "Google", "color": "Blue" } "etag":
+         * resource. For example, to change the labels of a job, the `update_mask` parameter would
+         * be specified as `labels`, `etag`, and the `PATCH` request body would specify the new
+         * value, as follows: { "labels": { "owner": "Google", "color": "Blue" } "etag":
          * "33a64df551425fcc55e4d42a148795d9f25f89d4" } If `etag` matches the one on the server, the
          * labels of the job will be replaced with the given ones, and the server end `etag` will be
-         * recalculated.
-         *
-         * Currently the only supported update masks are `labels` and `etag`.
+         * recalculated. Currently the only supported update masks are `labels` and `etag`.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -1610,17 +1566,15 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
       }
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
-       *
-       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "jobs.setIamPolicy".
        *
        * This request holds the parameters needed by the ml server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.ml.v1.model.GoogleIamV1SetIamPolicyRequest}
        * @return the request
@@ -1639,9 +1593,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^projects/[^/]+/jobs/[^/]+$");
 
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "jobs.setIamPolicy".
          *
@@ -1651,8 +1604,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.ml.v1.model.GoogleIamV1SetIamPolicyRequest}
          * @since 1.13
@@ -1757,18 +1709,16 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       }
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-       * this will return an empty set of permissions, not a NOT_FOUND error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+       * designed to be used for building permission-aware UIs and command-line tools, not for
+       * authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "jobs.testIamPermissions".
        *
        * This request holds the parameters needed by the ml server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.ml.v1.model.GoogleIamV1TestIamPermissionsRequest}
        * @return the request
@@ -1788,10 +1738,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
-         * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+         * operation is designed to be used for building permission-aware UIs and command-line tools, not
+         * for authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "jobs.testIamPermissions".
          *
@@ -1801,8 +1750,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.ml.v1.model.GoogleIamV1TestIamPermissionsRequest}
          * @since 1.13
@@ -2075,8 +2023,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
        * This request holds the parameters needed by the ml server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the project for which available locations are to be
-      listed (since some
+       * @param parent Required. The name of the project for which available locations are to be listed (since some
        *        locations might be whitelisted for specific projects).
        * @return the request
        */
@@ -2103,8 +2050,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the project for which available locations are to be
-      listed (since some
+         * @param parent Required. The name of the project for which available locations are to be listed (since some
        *        locations might be whitelisted for specific projects).
          * @since 1.13
          */
@@ -2214,18 +2160,14 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Optional. The number of locations to retrieve per "page" of results. If there are more
          * remaining results than this number, the response message will contain a valid value in
-         * the `next_page_token` field.
-         *
-         * The default value is 20, and the maximum page size is 100.
+         * the `next_page_token` field. The default value is 20, and the maximum page size is 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The number of locations to retrieve per "page" of results. If there are more remaining
        results than this number, the response message will contain a valid value in the `next_page_token`
-       field.
-
-       The default value is 20, and the maximum page size is 100.
+       field. The default value is 20, and the maximum page size is 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -2234,9 +2176,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Optional. The number of locations to retrieve per "page" of results. If there are more
          * remaining results than this number, the response message will contain a valid value in
-         * the `next_page_token` field.
-         *
-         * The default value is 20, and the maximum page size is 100.
+         * the `next_page_token` field. The default value is 20, and the maximum page size is 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -2244,27 +2184,22 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
 
         /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
+         * Optional. A page token to request the next page of results. You get the token from the
+         * `next_page_token` field of the response from the previous call.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. A page token to request the next page of results.
-
-       You get the token from the `next_page_token` field of the response from the previous call.
+        /** Optional. A page token to request the next page of results. You get the token from the
+       `next_page_token` field of the response from the previous call.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
+         * Optional. A page token to request the next page of results. You get the token from the
+         * `next_page_token` field of the response from the previous call.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -2298,9 +2233,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-         * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
          * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -2328,13 +2263,13 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-           * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-           * other methods to check whether the cancellation succeeded or whether the operation completed
-           * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-           * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-           * corresponding to `Code.CANCELLED`.
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
            *
@@ -2438,7 +2373,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           }
         }
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -2463,7 +2398,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -2607,8 +2542,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * This request holds the parameters needed by the ml server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project and location that the study belongs to.
-        Format:
+         * @param parent Required. The project and location that the study belongs to. Format:
          *        projects/{project}/locations/{location}
          * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1Study}
          * @return the request
@@ -2636,8 +2570,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project and location that the study belongs to.
-        Format:
+           * @param parent Required. The project and location that the study belongs to. Format:
          *        projects/{project}/locations/{location}
            * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1Study}
            * @since 1.13
@@ -3037,8 +2970,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * This request holds the parameters needed by the ml server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project and location that the study belongs to.
-        Format:
+         * @param parent Required. The project and location that the study belongs to. Format:
          *        projects/{project}/locations/{location}
          * @return the request
          */
@@ -3065,8 +2997,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project and location that the study belongs to.
-        Format:
+           * @param parent Required. The project and location that the study belongs to. Format:
          *        projects/{project}/locations/{location}
            * @since 1.13
            */
@@ -3200,8 +3131,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         public class Trials {
 
           /**
-           * Adds a measurement of the objective metrics to a Trial. This measurement is assumed to have been
-           * taken before the Trial is complete.
+           * Adds a measurement of the objective metrics to a trial. This measurement is assumed to have been
+           * taken before the trial is complete.
            *
            * Create a request for the method "trials.addMeasurement".
            *
@@ -3226,8 +3157,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
 
             /**
-             * Adds a measurement of the objective metrics to a Trial. This measurement is assumed to have
-             * been taken before the Trial is complete.
+             * Adds a measurement of the objective metrics to a trial. This measurement is assumed to have
+             * been taken before the trial is complete.
              *
              * Create a request for the method "trials.addMeasurement".
              *
@@ -3333,7 +3264,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Checks whether a trial should stop or not.
+           * Checks whether a trial should stop or not. Returns a long-running operation. When the operation
+           * is successful, it will contain a CheckTrialEarlyStoppingStateResponse.
            *
            * Create a request for the method "trials.checkEarlyStoppingState".
            *
@@ -3359,7 +3291,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
 
             /**
-             * Checks whether a trial should stop or not.
+             * Checks whether a trial should stop or not. Returns a long-running operation. When the operation
+             * is successful, it will contain a CheckTrialEarlyStoppingStateResponse.
              *
              * Create a request for the method "trials.checkEarlyStoppingState".
              *
@@ -3465,14 +3398,14 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Marks a Trial as complete.
+           * Marks a trial as complete.
            *
            * Create a request for the method "trials.complete".
            *
            * This request holds the parameters needed by the ml server.  After setting any optional
            * parameters, call the {@link Complete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The trial name.
+           * @param name Required. The trial name.metat
            * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1CompleteTrialRequest}
            * @return the request
            */
@@ -3490,7 +3423,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
 
             /**
-             * Marks a Trial as complete.
+             * Marks a trial as complete.
              *
              * Create a request for the method "trials.complete".
              *
@@ -3500,7 +3433,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
              * Complete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The trial name.
+             * @param name Required. The trial name.metat
              * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1CompleteTrialRequest}
              * @since 1.13
              */
@@ -3569,17 +3502,17 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
               return (Complete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The trial name. */
+            /** Required. The trial name.metat */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The trial name.
+            /** Required. The trial name.metat
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The trial name. */
+            /** Required. The trial name.metat */
             public Complete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3596,7 +3529,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Adds a user provided trial to a Study.
+           * Adds a user provided trial to a study.
            *
            * Create a request for the method "trials.create".
            *
@@ -3621,7 +3554,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
 
             /**
-             * Adds a user provided trial to a Study.
+             * Adds a user provided trial to a study.
              *
              * Create a request for the method "trials.create".
              *
@@ -3726,7 +3659,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Deletes a Trial.
+           * Deletes a trial.
            *
            * Create a request for the method "trials.delete".
            *
@@ -3750,7 +3683,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
 
             /**
-             * Deletes a Trial.
+             * Deletes a trial.
              *
              * Create a request for the method "trials.delete".
              *
@@ -3854,7 +3787,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Gets a Trial.
+           * Gets a trial.
            *
            * Create a request for the method "trials.get".
            *
@@ -3878,7 +3811,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+/trials/[^/]+$");
 
             /**
-             * Gets a Trial.
+             * Gets a trial.
              *
              * Create a request for the method "trials.get".
              *
@@ -3992,7 +3925,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Lists the trials associated with a Study.
+           * Lists the trials associated with a study.
            *
            * Create a request for the method "trials.list".
            *
@@ -4016,7 +3949,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
 
             /**
-             * Lists the trials associated with a Study.
+             * Lists the trials associated with a study.
              *
              * Create a request for the method "trials.list".
              *
@@ -4127,6 +4060,141 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the pareto-optimal trials for multi-objective study or the optimal trials for single-
+           * objective study. The definition of pareto-optimal can be checked in wiki page.
+           * https://en.wikipedia.org/wiki/Pareto_efficiency
+           *
+           * Create a request for the method "trials.listOptimalTrials".
+           *
+           * This request holds the parameters needed by the ml server.  After setting any optional
+           * parameters, call the {@link ListOptimalTrials#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the study that the pareto-optimal trial belongs to.
+           * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsRequest}
+           * @return the request
+           */
+          public ListOptimalTrials listOptimalTrials(java.lang.String parent, com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsRequest content) throws java.io.IOException {
+            ListOptimalTrials result = new ListOptimalTrials(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ListOptimalTrials extends CloudMachineLearningEngineRequest<com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/trials:listOptimalTrials";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+
+            /**
+             * Lists the pareto-optimal trials for multi-objective study or the optimal trials for single-
+             * objective study. The definition of pareto-optimal can be checked in wiki page.
+             * https://en.wikipedia.org/wiki/Pareto_efficiency
+             *
+             * Create a request for the method "trials.listOptimalTrials".
+             *
+             * This request holds the parameters needed by the the ml server.  After setting any optional
+             * parameters, call the {@link ListOptimalTrials#execute()} method to invoke the remote operation.
+             * <p> {@link ListOptimalTrials#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+             * eClientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param parent Required. The name of the study that the pareto-optimal trial belongs to.
+             * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsRequest}
+             * @since 1.13
+             */
+            protected ListOptimalTrials(java.lang.String parent, com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsRequest content) {
+              super(CloudMachineLearningEngine.this, "POST", REST_PATH, content, com.google.api.services.ml.v1.model.GoogleCloudMlV1ListOptimalTrialsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+              }
+            }
+
+            @Override
+            public ListOptimalTrials set$Xgafv(java.lang.String $Xgafv) {
+              return (ListOptimalTrials) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ListOptimalTrials setAccessToken(java.lang.String accessToken) {
+              return (ListOptimalTrials) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ListOptimalTrials setAlt(java.lang.String alt) {
+              return (ListOptimalTrials) super.setAlt(alt);
+            }
+
+            @Override
+            public ListOptimalTrials setCallback(java.lang.String callback) {
+              return (ListOptimalTrials) super.setCallback(callback);
+            }
+
+            @Override
+            public ListOptimalTrials setFields(java.lang.String fields) {
+              return (ListOptimalTrials) super.setFields(fields);
+            }
+
+            @Override
+            public ListOptimalTrials setKey(java.lang.String key) {
+              return (ListOptimalTrials) super.setKey(key);
+            }
+
+            @Override
+            public ListOptimalTrials setOauthToken(java.lang.String oauthToken) {
+              return (ListOptimalTrials) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ListOptimalTrials setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ListOptimalTrials) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ListOptimalTrials setQuotaUser(java.lang.String quotaUser) {
+              return (ListOptimalTrials) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ListOptimalTrials setUploadType(java.lang.String uploadType) {
+              return (ListOptimalTrials) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ListOptimalTrials setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ListOptimalTrials) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the study that the pareto-optimal trial belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the study that the pareto-optimal trial belongs to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The name of the study that the pareto-optimal trial belongs to. */
+            public ListOptimalTrials setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public ListOptimalTrials set(String parameterName, Object value) {
+              return (ListOptimalTrials) super.set(parameterName, value);
             }
           }
           /**
@@ -4260,7 +4328,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             }
           }
           /**
-           * Returns a long-running operation associated with the generation of trial suggestions.
+           * Adds one or more trials to a study, with parameter values suggested by AI Platform Vizier.
+           * Returns a long-running operation associated with the generation of trial suggestions. When this
+           * long-running operation succeeds, it will contain a SuggestTrialsResponse.
            *
            * Create a request for the method "trials.suggest".
            *
@@ -4285,7 +4355,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/studies/[^/]+$");
 
             /**
-             * Returns a long-running operation associated with the generation of trial suggestions.
+             * Adds one or more trials to a study, with parameter values suggested by AI Platform Vizier.
+             * Returns a long-running operation associated with the generation of trial suggestions. When this
+             * long-running operation succeeds, it will contain a SuggestTrialsResponse.
              *
              * Create a request for the method "trials.suggest".
              *
@@ -4415,10 +4487,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
     public class Models {
 
       /**
-       * Creates a model which will later contain one or more versions.
-       *
-       * You must add at least one version before you can request predictions from the model. Add versions
-       * by calling projects.models.versions.create.
+       * Creates a model which will later contain one or more versions. You must add at least one version
+       * before you can request predictions from the model. Add versions by calling
+       * projects.models.versions.create.
        *
        * Create a request for the method "models.create".
        *
@@ -4443,10 +4514,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a model which will later contain one or more versions.
-         *
-         * You must add at least one version before you can request predictions from the model. Add
-         * versions by calling projects.models.versions.create.
+         * Creates a model which will later contain one or more versions. You must add at least one
+         * version before you can request predictions from the model. Add versions by calling
+         * projects.models.versions.create.
          *
          * Create a request for the method "models.create".
          *
@@ -4551,10 +4621,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
       }
       /**
-       * Deletes a model.
-       *
-       * You can only delete a model if there are no versions in it. You can delete versions by calling
-       * projects.models.versions.delete.
+       * Deletes a model. You can only delete a model if there are no versions in it. You can delete
+       * versions by calling projects.models.versions.delete.
        *
        * Create a request for the method "models.delete".
        *
@@ -4578,10 +4646,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^projects/[^/]+/models/[^/]+$");
 
         /**
-         * Deletes a model.
-         *
-         * You can only delete a model if there are no versions in it. You can delete versions by calling
-         * projects.models.versions.delete.
+         * Deletes a model. You can only delete a model if there are no versions in it. You can delete
+         * versions by calling projects.models.versions.delete.
          *
          * Create a request for the method "models.delete".
          *
@@ -4833,8 +4899,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
        * This request holds the parameters needed by the ml server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @return the request
        */
@@ -4863,8 +4928,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @since 1.13
          */
@@ -4972,34 +5036,33 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned.
-
-       Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-       Requests for policies with any conditional bindings must specify version 3. Policies without any
-       conditional bindings may specify any valid value or leave the field unset.
+        /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+       must specify version 3. Policies without any conditional bindings may specify any valid value or
+       leave the field unset. To learn which resources support conditions in their IAM policies, see the
+       [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
           this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -5012,12 +5075,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
       }
       /**
-       * Lists the models in a project.
-       *
-       * Each project can contain multiple models, and each model can have multiple versions.
-       *
-       * If there are no models that match the request parameters, the list request returns an empty
-       * response body: {}.
+       * Lists the models in a project. Each project can contain multiple models, and each model can have
+       * multiple versions. If there are no models that match the request parameters, the list request
+       * returns an empty response body: {}.
        *
        * Create a request for the method "models.list".
        *
@@ -5041,12 +5101,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists the models in a project.
-         *
-         * Each project can contain multiple models, and each model can have multiple versions.
-         *
-         * If there are no models that match the request parameters, the list request returns an empty
-         * response body: {}.
+         * Lists the models in a project. Each project can contain multiple models, and each model can
+         * have multiple versions. If there are no models that match the request parameters, the list
+         * request returns an empty response body: {}.
          *
          * Create a request for the method "models.list".
          *
@@ -5173,18 +5230,14 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Optional. The number of models to retrieve per "page" of results. If there are more
          * remaining results than this number, the response message will contain a valid value in
-         * the `next_page_token` field.
-         *
-         * The default value is 20, and the maximum page size is 100.
+         * the `next_page_token` field. The default value is 20, and the maximum page size is 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The number of models to retrieve per "page" of results. If there are more remaining
        results than this number, the response message will contain a valid value in the `next_page_token`
-       field.
-
-       The default value is 20, and the maximum page size is 100.
+       field. The default value is 20, and the maximum page size is 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -5193,9 +5246,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         /**
          * Optional. The number of models to retrieve per "page" of results. If there are more
          * remaining results than this number, the response message will contain a valid value in
-         * the `next_page_token` field.
-         *
-         * The default value is 20, and the maximum page size is 100.
+         * the `next_page_token` field. The default value is 20, and the maximum page size is 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -5203,27 +5254,22 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
 
         /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
+         * Optional. A page token to request the next page of results. You get the token from the
+         * `next_page_token` field of the response from the previous call.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Optional. A page token to request the next page of results.
-
-       You get the token from the `next_page_token` field of the response from the previous call.
+        /** Optional. A page token to request the next page of results. You get the token from the
+       `next_page_token` field of the response from the previous call.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Optional. A page token to request the next page of results.
-         *
-         * You get the token from the `next_page_token` field of the response from the previous
-         * call.
+         * Optional. A page token to request the next page of results. You get the token from the
+         * `next_page_token` field of the response from the previous call.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
@@ -5236,9 +5282,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
       }
       /**
-       * Updates a specific model resource.
-       *
-       * Currently the only supported fields to update are `description` and `default_version.name`.
+       * Updates a specific model resource. Currently the only supported fields to update are
+       * `description` and `default_version.name`.
        *
        * Create a request for the method "models.patch".
        *
@@ -5263,9 +5308,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^projects/[^/]+/models/[^/]+$");
 
         /**
-         * Updates a specific model resource.
-         *
-         * Currently the only supported fields to update are `description` and `default_version.name`.
+         * Updates a specific model resource. Currently the only supported fields to update are
+         * `description` and `default_version.name`.
          *
          * Create a request for the method "models.patch".
          *
@@ -5365,40 +5409,34 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
 
         /**
-         * Required. Specifies the path, relative to `Model`, of the field to update.
-         *
-         * For example, to change the description of a model to "foo" and set its default version to
-         * "version_1", the `update_mask` parameter would be specified as `description`,
-         * `default_version.name`, and the `PATCH` request body would specify the new value, as
-         * follows: { "description": "foo", "defaultVersion": { "name":"version_1" } }
-         *
-         * Currently the supported update masks are `description` and `default_version.name`.
+         * Required. Specifies the path, relative to `Model`, of the field to update. For example,
+         * to change the description of a model to "foo" and set its default version to "version_1",
+         * the `update_mask` parameter would be specified as `description`, `default_version.name`,
+         * and the `PATCH` request body would specify the new value, as follows: { "description":
+         * "foo", "defaultVersion": { "name":"version_1" } } Currently the supported update masks
+         * are `description` and `default_version.name`.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. Specifies the path, relative to `Model`, of the field to update.
-
-       For example, to change the description of a model to "foo" and set its default version to
-       "version_1", the `update_mask` parameter would be specified as `description`,
-       `default_version.name`, and the `PATCH` request body would specify the new value, as follows: {
-       "description": "foo", "defaultVersion": { "name":"version_1" } }
-
-       Currently the supported update masks are `description` and `default_version.name`.
+        /** Required. Specifies the path, relative to `Model`, of the field to update. For example, to change
+       the description of a model to "foo" and set its default version to "version_1", the `update_mask`
+       parameter would be specified as `description`, `default_version.name`, and the `PATCH` request body
+       would specify the new value, as follows: { "description": "foo", "defaultVersion": {
+       "name":"version_1" } } Currently the supported update masks are `description` and
+       `default_version.name`.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Required. Specifies the path, relative to `Model`, of the field to update.
-         *
-         * For example, to change the description of a model to "foo" and set its default version to
-         * "version_1", the `update_mask` parameter would be specified as `description`,
-         * `default_version.name`, and the `PATCH` request body would specify the new value, as
-         * follows: { "description": "foo", "defaultVersion": { "name":"version_1" } }
-         *
-         * Currently the supported update masks are `description` and `default_version.name`.
+         * Required. Specifies the path, relative to `Model`, of the field to update. For example,
+         * to change the description of a model to "foo" and set its default version to "version_1",
+         * the `update_mask` parameter would be specified as `description`, `default_version.name`,
+         * and the `PATCH` request body would specify the new value, as follows: { "description":
+         * "foo", "defaultVersion": { "name":"version_1" } } Currently the supported update masks
+         * are `description` and `default_version.name`.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -5411,17 +5449,15 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
       }
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
-       *
-       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "models.setIamPolicy".
        *
        * This request holds the parameters needed by the ml server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.ml.v1.model.GoogleIamV1SetIamPolicyRequest}
        * @return the request
@@ -5440,9 +5476,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^projects/[^/]+/models/[^/]+$");
 
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "models.setIamPolicy".
          *
@@ -5452,8 +5487,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.ml.v1.model.GoogleIamV1SetIamPolicyRequest}
          * @since 1.13
@@ -5558,18 +5592,16 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       }
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-       * this will return an empty set of permissions, not a NOT_FOUND error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+       * designed to be used for building permission-aware UIs and command-line tools, not for
+       * authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "models.testIamPermissions".
        *
        * This request holds the parameters needed by the ml server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.ml.v1.model.GoogleIamV1TestIamPermissionsRequest}
        * @return the request
@@ -5589,10 +5621,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
-         * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+         * operation is designed to be used for building permission-aware UIs and command-line tools, not
+         * for authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "models.testIamPermissions".
          *
@@ -5602,8 +5633,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.ml.v1.model.GoogleIamV1TestIamPermissionsRequest}
          * @since 1.13
@@ -5728,12 +5758,11 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       public class Versions {
 
         /**
-         * Creates a new version of a model from a trained TensorFlow model.
-         *
-         * If the version created in the cloud by this call is the first deployed version of the specified
-         * model, it will be made the default version of the model. When you add a version to a model that
-         * already has one or more versions, the default version does not automatically change. If you want
-         * a new version to be the default, you must call projects.models.versions.setDefault.
+         * Creates a new version of a model from a trained TensorFlow model. If the version created in the
+         * cloud by this call is the first deployed version of the specified model, it will be made the
+         * default version of the model. When you add a version to a model that already has one or more
+         * versions, the default version does not automatically change. If you want a new version to be the
+         * default, you must call projects.models.versions.setDefault.
          *
          * Create a request for the method "versions.create".
          *
@@ -5758,12 +5787,11 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
               java.util.regex.Pattern.compile("^projects/[^/]+/models/[^/]+$");
 
           /**
-           * Creates a new version of a model from a trained TensorFlow model.
-           *
-           * If the version created in the cloud by this call is the first deployed version of the specified
-           * model, it will be made the default version of the model. When you add a version to a model that
-           * already has one or more versions, the default version does not automatically change. If you
-           * want a new version to be the default, you must call projects.models.versions.setDefault.
+           * Creates a new version of a model from a trained TensorFlow model. If the version created in the
+           * cloud by this call is the first deployed version of the specified model, it will be made the
+           * default version of the model. When you add a version to a model that already has one or more
+           * versions, the default version does not automatically change. If you want a new version to be
+           * the default, you must call projects.models.versions.setDefault.
            *
            * Create a request for the method "versions.create".
            *
@@ -5868,21 +5896,16 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           }
         }
         /**
-         * Deletes a model version.
-         *
-         * Each model can have multiple versions deployed and in use at any given time. Use this method to
-         * remove a single version.
-         *
-         * Note: You cannot delete the version that is set as the default version of the model unless it is
-         * the only remaining version.
+         * Deletes a model version. Each model can have multiple versions deployed and in use at any given
+         * time. Use this method to remove a single version. Note: You cannot delete the version that is set
+         * as the default version of the model unless it is the only remaining version.
          *
          * Create a request for the method "versions.delete".
          *
          * This request holds the parameters needed by the ml server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the version. You can get the names of all the
-        versions of a model by calling
+         * @param name Required. The name of the version. You can get the names of all the versions of a model by calling
          *        projects.models.versions.list.
          * @return the request
          */
@@ -5900,13 +5923,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
               java.util.regex.Pattern.compile("^projects/[^/]+/models/[^/]+/versions/[^/]+$");
 
           /**
-           * Deletes a model version.
-           *
-           * Each model can have multiple versions deployed and in use at any given time. Use this method to
-           * remove a single version.
-           *
-           * Note: You cannot delete the version that is set as the default version of the model unless it
-           * is the only remaining version.
+           * Deletes a model version. Each model can have multiple versions deployed and in use at any given
+           * time. Use this method to remove a single version. Note: You cannot delete the version that is
+           * set as the default version of the model unless it is the only remaining version.
            *
            * Create a request for the method "versions.delete".
            *
@@ -5915,8 +5934,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the version. You can get the names of all the
-        versions of a model by calling
+           * @param name Required. The name of the version. You can get the names of all the versions of a model by calling
          *        projects.models.versions.list.
            * @since 1.13
            */
@@ -6019,10 +6037,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           }
         }
         /**
-         * Gets information about a model version.
-         *
-         * Models can have multiple versions. You can call projects.models.versions.list to get the same
-         * information that this method returns for all of the versions of a model.
+         * Gets information about a model version. Models can have multiple versions. You can call
+         * projects.models.versions.list to get the same information that this method returns for all of the
+         * versions of a model.
          *
          * Create a request for the method "versions.get".
          *
@@ -6046,10 +6063,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
               java.util.regex.Pattern.compile("^projects/[^/]+/models/[^/]+/versions/[^/]+$");
 
           /**
-           * Gets information about a model version.
-           *
-           * Models can have multiple versions. You can call projects.models.versions.list to get the same
-           * information that this method returns for all of the versions of a model.
+           * Gets information about a model version. Models can have multiple versions. You can call
+           * projects.models.versions.list to get the same information that this method returns for all of
+           * the versions of a model.
            *
            * Create a request for the method "versions.get".
            *
@@ -6163,13 +6179,10 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           }
         }
         /**
-         * Gets basic information about all the versions of a model.
-         *
-         * If you expect that a model has many versions, or if you need to handle only a limited number of
-         * results at a time, you can request that the list be retrieved in batches (called pages).
-         *
-         * If there are no versions that match the request parameters, the list request returns an empty
-         * response body: {}.
+         * Gets basic information about all the versions of a model. If you expect that a model has many
+         * versions, or if you need to handle only a limited number of results at a time, you can request
+         * that the list be retrieved in batches (called pages). If there are no versions that match the
+         * request parameters, the list request returns an empty response body: {}.
          *
          * Create a request for the method "versions.list".
          *
@@ -6193,13 +6206,10 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
               java.util.regex.Pattern.compile("^projects/[^/]+/models/[^/]+$");
 
           /**
-           * Gets basic information about all the versions of a model.
-           *
-           * If you expect that a model has many versions, or if you need to handle only a limited number of
-           * results at a time, you can request that the list be retrieved in batches (called pages).
-           *
-           * If there are no versions that match the request parameters, the list request returns an empty
-           * response body: {}.
+           * Gets basic information about all the versions of a model. If you expect that a model has many
+           * versions, or if you need to handle only a limited number of results at a time, you can request
+           * that the list be retrieved in batches (called pages). If there are no versions that match the
+           * request parameters, the list request returns an empty response body: {}.
            *
            * Create a request for the method "versions.list".
            *
@@ -6326,18 +6336,14 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           /**
            * Optional. The number of versions to retrieve per "page" of results. If there are more
            * remaining results than this number, the response message will contain a valid value in
-           * the `next_page_token` field.
-           *
-           * The default value is 20, and the maximum page size is 100.
+           * the `next_page_token` field. The default value is 20, and the maximum page size is 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. The number of versions to retrieve per "page" of results. If there are more remaining
          results than this number, the response message will contain a valid value in the `next_page_token`
-         field.
-
-         The default value is 20, and the maximum page size is 100.
+         field. The default value is 20, and the maximum page size is 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -6346,9 +6352,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           /**
            * Optional. The number of versions to retrieve per "page" of results. If there are more
            * remaining results than this number, the response message will contain a valid value in
-           * the `next_page_token` field.
-           *
-           * The default value is 20, and the maximum page size is 100.
+           * the `next_page_token` field. The default value is 20, and the maximum page size is 100.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -6356,27 +6360,22 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           }
 
           /**
-           * Optional. A page token to request the next page of results.
-           *
-           * You get the token from the `next_page_token` field of the response from the previous
-           * call.
+           * Optional. A page token to request the next page of results. You get the token from the
+           * `next_page_token` field of the response from the previous call.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. A page token to request the next page of results.
-
-         You get the token from the `next_page_token` field of the response from the previous call.
+          /** Optional. A page token to request the next page of results. You get the token from the
+         `next_page_token` field of the response from the previous call.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional. A page token to request the next page of results.
-           *
-           * You get the token from the `next_page_token` field of the response from the previous
-           * call.
+           * Optional. A page token to request the next page of results. You get the token from the
+           * `next_page_token` field of the response from the previous call.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -6389,10 +6388,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           }
         }
         /**
-         * Updates the specified Version resource.
-         *
-         * Currently the only update-able fields are `description`, `requestLoggingConfig`,
-         * `autoScaling.minNodes`, and `manualScaling.nodes`.
+         * Updates the specified Version resource. Currently the only update-able fields are `description`,
+         * `requestLoggingConfig`, `autoScaling.minNodes`, and `manualScaling.nodes`.
          *
          * Create a request for the method "versions.patch".
          *
@@ -6417,10 +6414,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
               java.util.regex.Pattern.compile("^projects/[^/]+/models/[^/]+/versions/[^/]+$");
 
           /**
-           * Updates the specified Version resource.
-           *
-           * Currently the only update-able fields are `description`, `requestLoggingConfig`,
-           * `autoScaling.minNodes`, and `manualScaling.nodes`.
+           * Updates the specified Version resource. Currently the only update-able fields are
+           * `description`, `requestLoggingConfig`, `autoScaling.minNodes`, and `manualScaling.nodes`.
            *
            * Create a request for the method "versions.patch".
            *
@@ -6521,14 +6516,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
           /**
            * Required. Specifies the path, relative to `Version`, of the field to update. Must be
-           * present and non-empty.
-           *
-           * For example, to change the description of a version to "foo", the `update_mask`
-           * parameter would be specified as `description`, and the `PATCH` request body would
-           * specify the new value, as follows:
-           *
-           * ``` { "description": "foo" } ```
-           *
+           * present and non-empty. For example, to change the description of a version to "foo",
+           * the `update_mask` parameter would be specified as `description`, and the `PATCH`
+           * request body would specify the new value, as follows: ``` { "description": "foo" } ```
            * Currently the only supported update mask fields are `description`,
            * `requestLoggingConfig`, `autoScaling.minNodes`, and `manualScaling.nodes`. However, you
            * can only update `manualScaling.nodes` if the version uses a [Compute Engine (N1)
@@ -6538,17 +6528,12 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           private String updateMask;
 
           /** Required. Specifies the path, relative to `Version`, of the field to update. Must be present and
-         non-empty.
-
-         For example, to change the description of a version to "foo", the `update_mask` parameter would be
-         specified as `description`, and the `PATCH` request body would specify the new value, as follows:
-
-         ``` { "description": "foo" } ```
-
-         Currently the only supported update mask fields are `description`, `requestLoggingConfig`,
-         `autoScaling.minNodes`, and `manualScaling.nodes`. However, you can only update
-         `manualScaling.nodes` if the version uses a [Compute Engine (N1) machine type](/ml-engine/docs
-         /machine-types-online-prediction).
+         non-empty. For example, to change the description of a version to "foo", the `update_mask`
+         parameter would be specified as `description`, and the `PATCH` request body would specify the new
+         value, as follows: ``` { "description": "foo" } ``` Currently the only supported update mask fields
+         are `description`, `requestLoggingConfig`, `autoScaling.minNodes`, and `manualScaling.nodes`.
+         However, you can only update `manualScaling.nodes` if the version uses a [Compute Engine (N1)
+         machine type](/ml-engine/docs/machine-types-online-prediction).
            */
           public String getUpdateMask() {
             return updateMask;
@@ -6556,14 +6541,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
           /**
            * Required. Specifies the path, relative to `Version`, of the field to update. Must be
-           * present and non-empty.
-           *
-           * For example, to change the description of a version to "foo", the `update_mask`
-           * parameter would be specified as `description`, and the `PATCH` request body would
-           * specify the new value, as follows:
-           *
-           * ``` { "description": "foo" } ```
-           *
+           * present and non-empty. For example, to change the description of a version to "foo",
+           * the `update_mask` parameter would be specified as `description`, and the `PATCH`
+           * request body would specify the new value, as follows: ``` { "description": "foo" } ```
            * Currently the only supported update mask fields are `description`,
            * `requestLoggingConfig`, `autoScaling.minNodes`, and `manualScaling.nodes`. However, you
            * can only update `manualScaling.nodes` if the version uses a [Compute Engine (N1)
@@ -6580,23 +6560,18 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
           }
         }
         /**
-         * Designates a version to be the default for the model.
-         *
-         * The default version is used for prediction requests made against the model that don't specify a
-         * version.
-         *
-         * The first version to be created for a model is automatically set as the default. You must make
-         * any subsequent changes to the default version setting manually using this method.
+         * Designates a version to be the default for the model. The default version is used for prediction
+         * requests made against the model that don't specify a version. The first version to be created for
+         * a model is automatically set as the default. You must make any subsequent changes to the default
+         * version setting manually using this method.
          *
          * Create a request for the method "versions.setDefault".
          *
          * This request holds the parameters needed by the ml server.  After setting any optional
          * parameters, call the {@link SetDefault#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the version to make the default for the model. You
-        can get the names of all
-         *        the versions of a model by calling
-        projects.models.versions.list.
+         * @param name Required. The name of the version to make the default for the model. You can get the names of all
+         *        the versions of a model by calling projects.models.versions.list.
          * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1SetDefaultVersionRequest}
          * @return the request
          */
@@ -6614,13 +6589,10 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
               java.util.regex.Pattern.compile("^projects/[^/]+/models/[^/]+/versions/[^/]+$");
 
           /**
-           * Designates a version to be the default for the model.
-           *
-           * The default version is used for prediction requests made against the model that don't specify a
-           * version.
-           *
-           * The first version to be created for a model is automatically set as the default. You must make
-           * any subsequent changes to the default version setting manually using this method.
+           * Designates a version to be the default for the model. The default version is used for
+           * prediction requests made against the model that don't specify a version. The first version to
+           * be created for a model is automatically set as the default. You must make any subsequent
+           * changes to the default version setting manually using this method.
            *
            * Create a request for the method "versions.setDefault".
            *
@@ -6630,10 +6602,8 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
            * SetDefault#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the version to make the default for the model. You
-        can get the names of all
-         *        the versions of a model by calling
-        projects.models.versions.list.
+           * @param name Required. The name of the version to make the default for the model. You can get the names of all
+         *        the versions of a model by calling projects.models.versions.list.
            * @param content the {@link com.google.api.services.ml.v1.model.GoogleCloudMlV1SetDefaultVersionRequest}
            * @since 1.13
            */
@@ -6759,9 +6729,9 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
     public class Operations {
 
       /**
-       * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort to
-       * cancel the operation, but success is not guaranteed.  If the server doesn't support this method,
-       * it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or other
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
        * methods to check whether the cancellation succeeded or whether the operation completed despite
        * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
        * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
@@ -6789,13 +6759,13 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Starts asynchronous cancellation on a long-running operation.  The server makes a best effort
-         * to cancel the operation, but success is not guaranteed.  If the server doesn't support this
-         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.  Clients can use Operations.GetOperation or
-         * other methods to check whether the cancellation succeeded or whether the operation completed
-         * despite cancellation. On successful cancellation, the operation is not deleted; instead, it
-         * becomes an operation with an Operation.error value with a google.rpc.Status.code of 1,
-         * corresponding to `Code.CANCELLED`.
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
          *
@@ -6899,7 +6869,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
         }
       }
       /**
-       * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
        * operation result at intervals as recommended by the API service.
        *
        * Create a request for the method "operations.get".
@@ -6924,7 +6894,7 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -7040,13 +7010,12 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
       }
       /**
        * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * NOTE: the `name` binding allows API services to override the binding to use different resource
-       * name schemes, such as `users/operations`. To override the binding, API services can add a binding
-       * such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-       * compatibility, the default name includes the operations collection id, however overriding users
-       * must ensure the name binding is the parent resource, without the operations collection id.
+       * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override
+       * the binding to use different resource name schemes, such as `users/operations`. To override the
+       * binding, API services can add a binding such as `"/v1/{name=users}/operations"` to their service
+       * configuration. For backwards compatibility, the default name includes the operations collection
+       * id, however overriding users must ensure the name binding is the parent resource, without the
+       * operations collection id.
        *
        * Create a request for the method "operations.list".
        *
@@ -7071,13 +7040,12 @@ public class CloudMachineLearningEngine extends com.google.api.client.googleapis
 
         /**
          * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * NOTE: the `name` binding allows API services to override the binding to use different resource
-         * name schemes, such as `users/operations`. To override the binding, API services can add a
-         * binding such as `"/v1/{name=users}/operations"` to their service configuration. For backwards
-         * compatibility, the default name includes the operations collection id, however overriding users
-         * must ensure the name binding is the parent resource, without the operations collection id.
+         * this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to
+         * override the binding to use different resource name schemes, such as `users/operations`. To
+         * override the binding, API services can add a binding such as `"/v1/{name=users}/operations"` to
+         * their service configuration. For backwards compatibility, the default name includes the
+         * operations collection id, however overriding users must ensure the name binding is the parent
+         * resource, without the operations collection id.
          *
          * Create a request for the method "operations.list".
          *

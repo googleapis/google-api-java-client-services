@@ -20,7 +20,7 @@ package com.google.api.services.dns.model;
  * A unit of data that will be returned by the DNS servers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,6 @@ package com.google.api.services.dns.model;
 public final class ResourceRecordSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#resourceRecordSet".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,6 +41,15 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Configures dynamic query responses based on geo location of querying user or a weighted round
+   * robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or
+   * routing_policy(dynamic). An error is returned otherwise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RRSetRoutingPolicy routingPolicy;
 
   /**
    * As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1) -- see examples.
@@ -72,7 +80,6 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   private java.lang.String type;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#resourceRecordSet".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -80,7 +87,6 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "dns#resourceRecordSet".
    * @param kind kind or {@code null} for none
    */
   public ResourceRecordSet setKind(java.lang.String kind) {
@@ -102,6 +108,27 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
    */
   public ResourceRecordSet setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Configures dynamic query responses based on geo location of querying user or a weighted round
+   * robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or
+   * routing_policy(dynamic). An error is returned otherwise.
+   * @return value or {@code null} for none
+   */
+  public RRSetRoutingPolicy getRoutingPolicy() {
+    return routingPolicy;
+  }
+
+  /**
+   * Configures dynamic query responses based on geo location of querying user or a weighted round
+   * robin based routing policy. A ResourceRecordSet should only have either rrdata (static) or
+   * routing_policy(dynamic). An error is returned otherwise.
+   * @param routingPolicy routingPolicy or {@code null} for none
+   */
+  public ResourceRecordSet setRoutingPolicy(RRSetRoutingPolicy routingPolicy) {
+    this.routingPolicy = routingPolicy;
     return this;
   }
 

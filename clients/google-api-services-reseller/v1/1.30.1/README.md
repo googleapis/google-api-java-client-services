@@ -1,6 +1,6 @@
 # Enterprise Apps Reseller API Client Library for Java
 
-Creates and manages your customers and their subscriptions.
+Perform common functions that are available on the Google Apps Reseller Console at scale like placing orders and viewing customer information
 
 This page contains information about getting started with the Enterprise Apps Reseller API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-reseller</artifactId>
-      <version>v1-rev20191008-1.30.9</version>
+      <version>v1-rev20200911-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-reseller:v1-rev20191008-1.30.9'
+  compile 'com.google.apis:google-api-services-reseller:v1-rev20200911-1.30.10'
 }
 ```
 

@@ -17,7 +17,7 @@
 package com.google.api.services.remotebuildexecution.v1alpha.model;
 
 /**
- * Defines the configuration to be used for a creating workers in the worker pool.
+ * Defines the configuration to be used for creating workers in the worker pool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Remote Build Execution API. For a detailed
@@ -89,11 +89,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   private java.lang.String minCpuPlatform;
 
   /**
-   * Determines the type of network access granted to workers. Possible values:
-   *
-   * - "public": Workers can connect to the public internet. - "private": Workers can only connect
-   * to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs
-   * that are   reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+   * Determines the type of network access granted to workers. Possible values: - "public": Workers
+   * can connect to the public internet. - "private": Workers can only connect to Google APIs and
+   * services. - "restricted-private": Workers can only connect to Google APIs that are reachable
+   * through `restricted.googleapis.com` (`199.36.153.4/30`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,6 +106,20 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reserved;
+
+  /**
+   * Sole-tenant node information for pools hosted on STNs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsRemotebuildexecutionAdminV1alphaSoleTenancyConfig soleTenancy;
+
+  /**
+   * The name of the image used by each VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vmImage;
 
   /**
    * The accelerator card attached to each VM.
@@ -246,11 +259,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Determines the type of network access granted to workers. Possible values:
-   *
-   * - "public": Workers can connect to the public internet. - "private": Workers can only connect
-   * to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs
-   * that are   reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+   * Determines the type of network access granted to workers. Possible values: - "public": Workers
+   * can connect to the public internet. - "private": Workers can only connect to Google APIs and
+   * services. - "restricted-private": Workers can only connect to Google APIs that are reachable
+   * through `restricted.googleapis.com` (`199.36.153.4/30`).
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkAccess() {
@@ -258,11 +270,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
   }
 
   /**
-   * Determines the type of network access granted to workers. Possible values:
-   *
-   * - "public": Workers can connect to the public internet. - "private": Workers can only connect
-   * to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs
-   * that are   reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
+   * Determines the type of network access granted to workers. Possible values: - "public": Workers
+   * can connect to the public internet. - "private": Workers can only connect to Google APIs and
+   * services. - "restricted-private": Workers can only connect to Google APIs that are reachable
+   * through `restricted.googleapis.com` (`199.36.153.4/30`).
    * @param networkAccess networkAccess or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setNetworkAccess(java.lang.String networkAccess) {
@@ -288,6 +299,40 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig ex
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setReserved(java.lang.Boolean reserved) {
     this.reserved = reserved;
+    return this;
+  }
+
+  /**
+   * Sole-tenant node information for pools hosted on STNs.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaSoleTenancyConfig getSoleTenancy() {
+    return soleTenancy;
+  }
+
+  /**
+   * Sole-tenant node information for pools hosted on STNs.
+   * @param soleTenancy soleTenancy or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setSoleTenancy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaSoleTenancyConfig soleTenancy) {
+    this.soleTenancy = soleTenancy;
+    return this;
+  }
+
+  /**
+   * The name of the image used by each VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVmImage() {
+    return vmImage;
+  }
+
+  /**
+   * The name of the image used by each VM.
+   * @param vmImage vmImage or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig setVmImage(java.lang.String vmImage) {
+    this.vmImage = vmImage;
     return this;
   }
 

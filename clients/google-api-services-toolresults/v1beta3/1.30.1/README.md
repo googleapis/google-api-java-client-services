@@ -1,6 +1,6 @@
 # Cloud Tool Results API Client Library for Java
 
-Reads and publishes results from Firebase Test Lab.
+API to publish and access results from developer tools.
 
 This page contains information about getting started with the Cloud Tool Results API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-toolresults</artifactId>
-      <version>v1beta3-rev20200317-1.30.9</version>
+      <version>v1beta3-rev20201029-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-toolresults:v1beta3-rev20200317-1.30.9'
+  compile 'com.google.apis:google-api-services-toolresults:v1beta3-rev20201029-1.30.10'
 }
 ```
 

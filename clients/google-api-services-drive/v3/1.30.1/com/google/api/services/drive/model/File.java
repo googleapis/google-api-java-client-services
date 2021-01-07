@@ -54,6 +54,20 @@ public final class File extends com.google.api.client.json.GenericJson {
   private ContentHints contentHints;
 
   /**
+   * Restrictions for accessing the content of the file. Only populated if such a restriction
+   * exists.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContentRestriction> contentRestrictions;
+
+  static {
+    // hack to force ProGuard to consider ContentRestriction used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContentRestriction.class);
+  }
+
+  /**
    * Whether the options to copy, print, or download this file, should be disabled for readers and
    * commenters.
    * The value may be {@code null}.
@@ -91,7 +105,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean explicitlyTrashed;
 
   /**
-   * Links for exporting Google Docs to specific formats.
+   * Links for exporting Docs Editors files to specific formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -334,8 +348,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   private ShortcutDetails shortcutDetails;
 
   /**
-   * The size of the file's content in bytes. This is only applicable to files with binary content
-   * in Google Drive.
+   * The size of the file's content in bytes. This is applicable to binary files in Google Drive and
+   * Google Docs files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -365,7 +379,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * A short-lived link to the file's thumbnail, if available. Typically lasts on the order of
-   * hours. Only populated when the requesting app can access the file's content.
+   * hours. Only populated when the requesting app can access the file's content. If the file isn't
+   * shared publicly, the URL returned in Files.thumbnailLink must be fetched using a credentialed
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -380,7 +396,10 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the
-   * owner may trash a file, and other users cannot see files in the owner's trash.
+   * owner may trash a file. The trashed item is excluded from all files.list responses returned for
+   * any user who does not own the file. However, all users with access to the file can see the
+   * trashed item metadata in an API response. All users with access can copy, download, export, and
+   * share the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -519,6 +538,25 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Restrictions for accessing the content of the file. Only populated if such a restriction
+   * exists.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContentRestriction> getContentRestrictions() {
+    return contentRestrictions;
+  }
+
+  /**
+   * Restrictions for accessing the content of the file. Only populated if such a restriction
+   * exists.
+   * @param contentRestrictions contentRestrictions or {@code null} for none
+   */
+  public File setContentRestrictions(java.util.List<ContentRestriction> contentRestrictions) {
+    this.contentRestrictions = contentRestrictions;
+    return this;
+  }
+
+  /**
    * Whether the options to copy, print, or download this file, should be disabled for readers and
    * commenters.
    * @return value or {@code null} for none
@@ -608,7 +646,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Links for exporting Google Docs to specific formats.
+   * Links for exporting Docs Editors files to specific formats.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getExportLinks() {
@@ -616,7 +654,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Links for exporting Google Docs to specific formats.
+   * Links for exporting Docs Editors files to specific formats.
    * @param exportLinks exportLinks or {@code null} for none
    */
   public File setExportLinks(java.util.Map<String, java.lang.String> exportLinks) {
@@ -1187,8 +1225,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the file's content in bytes. This is only applicable to files with binary content
-   * in Google Drive.
+   * The size of the file's content in bytes. This is applicable to binary files in Google Drive and
+   * Google Docs files.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSize() {
@@ -1196,8 +1234,8 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the file's content in bytes. This is only applicable to files with binary content
-   * in Google Drive.
+   * The size of the file's content in bytes. This is applicable to binary files in Google Drive and
+   * Google Docs files.
    * @param size size or {@code null} for none
    */
   public File setSize(java.lang.Long size) {
@@ -1260,7 +1298,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * A short-lived link to the file's thumbnail, if available. Typically lasts on the order of
-   * hours. Only populated when the requesting app can access the file's content.
+   * hours. Only populated when the requesting app can access the file's content. If the file isn't
+   * shared publicly, the URL returned in Files.thumbnailLink must be fetched using a credentialed
+   * request.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnailLink() {
@@ -1269,7 +1309,9 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * A short-lived link to the file's thumbnail, if available. Typically lasts on the order of
-   * hours. Only populated when the requesting app can access the file's content.
+   * hours. Only populated when the requesting app can access the file's content. If the file isn't
+   * shared publicly, the URL returned in Files.thumbnailLink must be fetched using a credentialed
+   * request.
    * @param thumbnailLink thumbnailLink or {@code null} for none
    */
   public File setThumbnailLink(java.lang.String thumbnailLink) {
@@ -1296,7 +1338,10 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the
-   * owner may trash a file, and other users cannot see files in the owner's trash.
+   * owner may trash a file. The trashed item is excluded from all files.list responses returned for
+   * any user who does not own the file. However, all users with access to the file can see the
+   * trashed item metadata in an API response. All users with access can copy, download, export, and
+   * share the file.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTrashed() {
@@ -1305,7 +1350,10 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the
-   * owner may trash a file, and other users cannot see files in the owner's trash.
+   * owner may trash a file. The trashed item is excluded from all files.list responses returned for
+   * any user who does not own the file. However, all users with access to the file can see the
+   * trashed item metadata in an API response. All users with access can copy, download, export, and
+   * share the file.
    * @param trashed trashed or {@code null} for none
    */
   public File setTrashed(java.lang.Boolean trashed) {
@@ -1518,6 +1566,15 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canAddChildren;
 
     /**
+     * Whether the current user can add a folder from another drive (different shared drive or My
+     * Drive) to this folder. This is false when the item is not a folder. Only populated for items in
+     * shared drives.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canAddFolderFromAnotherDrive;
+
+    /**
      * Whether the current user can add a parent for the item without removing an existing parent in
      * the same request. Not populated for shared drive files.
      * The value may be {@code null}.
@@ -1600,6 +1657,13 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canModifyContent;
 
     /**
+     * Whether the current user can modify restrictions on content of this file.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canModifyContentRestriction;
+
+    /**
      * Whether the current user can move children of this folder outside of the shared drive. This is
      * false when the item is not a folder. Only populated for items in shared drives.
      * The value may be {@code null}.
@@ -1615,8 +1679,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canMoveChildrenOutOfTeamDrive;
 
     /**
-     * Whether the current user can move children of this folder within the shared drive. This is
-     * false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can move children of this folder within this drive. This is false when
+     * the item is not a folder. Note that a request to move the child may still fail depending on the
+     * current user's access to the child and to the destination folder.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1653,9 +1718,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canMoveItemOutOfTeamDrive;
 
     /**
-     * Whether the current user can move this item within this shared drive. Note that a request to
-     * change the parent of the item may still fail depending on the new parent that is being added.
-     * Only populated for items in shared drives.
+     * Whether the current user can move this item within this drive. Note that a request to change
+     * the parent of the item may still fail depending on the new parent that is being added and the
+     * parent that is being removed.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1768,6 +1833,27 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanAddChildren(java.lang.Boolean canAddChildren) {
       this.canAddChildren = canAddChildren;
+      return this;
+    }
+
+    /**
+     * Whether the current user can add a folder from another drive (different shared drive or My
+     * Drive) to this folder. This is false when the item is not a folder. Only populated for items in
+     * shared drives.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanAddFolderFromAnotherDrive() {
+      return canAddFolderFromAnotherDrive;
+    }
+
+    /**
+     * Whether the current user can add a folder from another drive (different shared drive or My
+     * Drive) to this folder. This is false when the item is not a folder. Only populated for items in
+     * shared drives.
+     * @param canAddFolderFromAnotherDrive canAddFolderFromAnotherDrive or {@code null} for none
+     */
+    public Capabilities setCanAddFolderFromAnotherDrive(java.lang.Boolean canAddFolderFromAnotherDrive) {
+      this.canAddFolderFromAnotherDrive = canAddFolderFromAnotherDrive;
       return this;
     }
 
@@ -1969,6 +2055,23 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
+     * Whether the current user can modify restrictions on content of this file.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanModifyContentRestriction() {
+      return canModifyContentRestriction;
+    }
+
+    /**
+     * Whether the current user can modify restrictions on content of this file.
+     * @param canModifyContentRestriction canModifyContentRestriction or {@code null} for none
+     */
+    public Capabilities setCanModifyContentRestriction(java.lang.Boolean canModifyContentRestriction) {
+      this.canModifyContentRestriction = canModifyContentRestriction;
+      return this;
+    }
+
+    /**
      * Whether the current user can move children of this folder outside of the shared drive. This is
      * false when the item is not a folder. Only populated for items in shared drives.
      * @return value or {@code null} for none
@@ -2005,8 +2108,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move children of this folder within the shared drive. This is
-     * false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can move children of this folder within this drive. This is false when
+     * the item is not a folder. Note that a request to move the child may still fail depending on the
+     * current user's access to the child and to the destination folder.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveChildrenWithinDrive() {
@@ -2014,8 +2118,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move children of this folder within the shared drive. This is
-     * false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can move children of this folder within this drive. This is false when
+     * the item is not a folder. Note that a request to move the child may still fail depending on the
+     * current user's access to the child and to the destination folder.
      * @param canMoveChildrenWithinDrive canMoveChildrenWithinDrive or {@code null} for none
      */
     public Capabilities setCanMoveChildrenWithinDrive(java.lang.Boolean canMoveChildrenWithinDrive) {
@@ -2096,9 +2201,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move this item within this shared drive. Note that a request to
-     * change the parent of the item may still fail depending on the new parent that is being added.
-     * Only populated for items in shared drives.
+     * Whether the current user can move this item within this drive. Note that a request to change
+     * the parent of the item may still fail depending on the new parent that is being added and the
+     * parent that is being removed.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanMoveItemWithinDrive() {
@@ -2106,9 +2211,9 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can move this item within this shared drive. Note that a request to
-     * change the parent of the item may still fail depending on the new parent that is being added.
-     * Only populated for items in shared drives.
+     * Whether the current user can move this item within this drive. Note that a request to change
+     * the parent of the item may still fail depending on the new parent that is being added and the
+     * parent that is being removed.
      * @param canMoveItemWithinDrive canMoveItemWithinDrive or {@code null} for none
      */
     public Capabilities setCanMoveItemWithinDrive(java.lang.Boolean canMoveItemWithinDrive) {
@@ -2622,7 +2727,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.String meteringMode;
 
     /**
-     * The rotation in clockwise degrees from the image's original orientation.
+     * The number of clockwise 90 degree rotations applied from the image's original orientation.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2919,7 +3024,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The rotation in clockwise degrees from the image's original orientation.
+     * The number of clockwise 90 degree rotations applied from the image's original orientation.
      * @return value or {@code null} for none
      */
     public java.lang.Integer getRotation() {
@@ -2927,7 +3032,7 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The rotation in clockwise degrees from the image's original orientation.
+     * The number of clockwise 90 degree rotations applied from the image's original orientation.
      * @param rotation rotation or {@code null} for none
      */
     public ImageMediaMetadata setRotation(java.lang.Integer rotation) {

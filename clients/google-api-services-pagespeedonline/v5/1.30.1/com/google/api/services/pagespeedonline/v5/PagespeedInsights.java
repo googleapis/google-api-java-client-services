@@ -20,8 +20,7 @@ package com.google.api.services.pagespeedonline.v5;
  * Service definition for PagespeedInsights (v5).
  *
  * <p>
- * The PageSpeed Insights API lets you analyze the performance of your website with a simple API.  It offers tailored suggestions for how you can optimize your site, and lets you easily integrate PageSpeed Insights analysis into your development tools and workflow.
-
+ * The PageSpeed Insights API lets you analyze the performance of your website with a simple API. It offers tailored suggestions for how you can optimize your site, and lets you easily integrate PageSpeed Insights analysis into your development tools and workflow. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the PageSpeed Insights API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the PageSpeed Insights API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -264,9 +263,7 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * A Lighthouse category to run; if none are given, only Performance category will be run
-       */
+      /** A Lighthouse category to run; if none are given, only Performance category will be run */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> category;
 
@@ -276,9 +273,7 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
         return category;
       }
 
-      /**
-       * A Lighthouse category to run; if none are given, only Performance category will be run
-       */
+      /** A Lighthouse category to run; if none are given, only Performance category will be run */
       public Runpagespeed setCategory(java.util.List<java.lang.String> category) {
         this.category = category;
         return this;
@@ -300,9 +295,7 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
         return this;
       }
 
-      /**
-       * The analysis strategy (desktop or mobile) to use, and desktop is the default
-       */
+      /** The analysis strategy (desktop or mobile) to use, and desktop is the default */
       @com.google.api.client.util.Key
       private java.lang.String strategy;
 
@@ -312,25 +305,23 @@ public class PagespeedInsights extends com.google.api.client.googleapis.services
         return strategy;
       }
 
-      /**
-       * The analysis strategy (desktop or mobile) to use, and desktop is the default
-       */
+      /** The analysis strategy (desktop or mobile) to use, and desktop is the default */
       public Runpagespeed setStrategy(java.lang.String strategy) {
         this.strategy = strategy;
         return this;
       }
 
-      /** The URL to fetch and analyze */
+      /** Required. The URL to fetch and analyze */
       @com.google.api.client.util.Key
       private java.lang.String url;
 
-      /** The URL to fetch and analyze
+      /** Required. The URL to fetch and analyze
        */
       public java.lang.String getUrl() {
         return url;
       }
 
-      /** The URL to fetch and analyze */
+      /** Required. The URL to fetch and analyze */
       public Runpagespeed setUrl(java.lang.String url) {
         this.url = url;
         return this;

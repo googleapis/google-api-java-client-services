@@ -20,8 +20,7 @@ package com.google.api.services.clouddebugger.v2;
  * Service definition for CloudDebugger (v2).
  *
  * <p>
- * Examines the call stack and variables of a running application without stopping or slowing it down.
-
+ * Examines the call stack and variables of a running application without stopping or slowing it down. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Debugger API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Debugger API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -164,15 +163,12 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
     public class Debuggees {
 
       /**
-       * Registers the debuggee with the controller service.
-       *
-       * All agents attached to the same application must call this method with exactly the same request
-       * content to get back the same stable `debuggee_id`. Agents should call this method again whenever
-       * `google.rpc.Code.NOT_FOUND` is returned from any controller method.
-       *
-       * This protocol allows the controller service to disable debuggees, recover from data loss, or
-       * change the `debuggee_id` format. Agents must handle `debuggee_id` value changing upon re-
-       * registration.
+       * Registers the debuggee with the controller service. All agents attached to the same application
+       * must call this method with exactly the same request content to get back the same stable
+       * `debuggee_id`. Agents should call this method again whenever `google.rpc.Code.NOT_FOUND` is
+       * returned from any controller method. This protocol allows the controller service to disable
+       * debuggees, recover from data loss, or change the `debuggee_id` format. Agents must handle
+       * `debuggee_id` value changing upon re-registration.
        *
        * Create a request for the method "debuggees.register".
        *
@@ -193,15 +189,12 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
         private static final String REST_PATH = "v2/controller/debuggees/register";
 
         /**
-         * Registers the debuggee with the controller service.
-         *
-         * All agents attached to the same application must call this method with exactly the same request
-         * content to get back the same stable `debuggee_id`. Agents should call this method again
-         * whenever `google.rpc.Code.NOT_FOUND` is returned from any controller method.
-         *
-         * This protocol allows the controller service to disable debuggees, recover from data loss, or
-         * change the `debuggee_id` format. Agents must handle `debuggee_id` value changing upon re-
-         * registration.
+         * Registers the debuggee with the controller service. All agents attached to the same application
+         * must call this method with exactly the same request content to get back the same stable
+         * `debuggee_id`. Agents should call this method again whenever `google.rpc.Code.NOT_FOUND` is
+         * returned from any controller method. This protocol allows the controller service to disable
+         * debuggees, recover from data loss, or change the `debuggee_id` format. Agents must handle
+         * `debuggee_id` value changing upon re-registration.
          *
          * Create a request for the method "debuggees.register".
          *
@@ -300,16 +293,13 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
       public class Breakpoints {
 
         /**
-         * Returns the list of all active breakpoints for the debuggee.
-         *
-         * The breakpoint specification (`location`, `condition`, and `expressions` fields) is semantically
-         * immutable, although the field values may change. For example, an agent may update the location
-         * line number to reflect the actual line where the breakpoint was set, but this doesn't change the
-         * breakpoint semantics.
-         *
-         * This means that an agent does not need to check if a breakpoint has changed when it encounters
-         * the same breakpoint on a successive call. Moreover, an agent should remember the breakpoints that
-         * are completed until the controller removes them from the active list to avoid setting those
+         * Returns the list of all active breakpoints for the debuggee. The breakpoint specification
+         * (`location`, `condition`, and `expressions` fields) is semantically immutable, although the field
+         * values may change. For example, an agent may update the location line number to reflect the
+         * actual line where the breakpoint was set, but this doesn't change the breakpoint semantics. This
+         * means that an agent does not need to check if a breakpoint has changed when it encounters the
+         * same breakpoint on a successive call. Moreover, an agent should remember the breakpoints that are
+         * completed until the controller removes them from the active list to avoid setting those
          * breakpoints again.
          *
          * Create a request for the method "breakpoints.list".
@@ -331,13 +321,10 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
           private static final String REST_PATH = "v2/controller/debuggees/{debuggeeId}/breakpoints";
 
           /**
-           * Returns the list of all active breakpoints for the debuggee.
-           *
-           * The breakpoint specification (`location`, `condition`, and `expressions` fields) is
-           * semantically immutable, although the field values may change. For example, an agent may update
-           * the location line number to reflect the actual line where the breakpoint was set, but this
-           * doesn't change the breakpoint semantics.
-           *
+           * Returns the list of all active breakpoints for the debuggee. The breakpoint specification
+           * (`location`, `condition`, and `expressions` fields) is semantically immutable, although the
+           * field values may change. For example, an agent may update the location line number to reflect
+           * the actual line where the breakpoint was set, but this doesn't change the breakpoint semantics.
            * This means that an agent does not need to check if a breakpoint has changed when it encounters
            * the same breakpoint on a successive call. Moreover, an agent should remember the breakpoints
            * that are completed until the controller removes them from the active list to avoid setting
@@ -439,10 +426,25 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
             return this;
           }
 
+          /** Identifies the agent. This is the ID returned in the RegisterDebuggee response. */
+          @com.google.api.client.util.Key
+          private java.lang.String agentId;
+
+          /** Identifies the agent. This is the ID returned in the RegisterDebuggee response.
+           */
+          public java.lang.String getAgentId() {
+            return agentId;
+          }
+
+          /** Identifies the agent. This is the ID returned in the RegisterDebuggee response. */
+          public List setAgentId(java.lang.String agentId) {
+            this.agentId = agentId;
+            return this;
+          }
+
           /**
            * If set to `true` (recommended), returns `google.rpc.Code.OK` status and sets the
            * `wait_expired` response field to `true` when the server-selected timeout has expired.
-           *
            * If set to `false` (deprecated), returns `google.rpc.Code.ABORTED` status when the
            * server-selected timeout has expired.
            */
@@ -450,10 +452,9 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
           private java.lang.Boolean successOnTimeout;
 
           /** If set to `true` (recommended), returns `google.rpc.Code.OK` status and sets the `wait_expired`
-         response field to `true` when the server-selected timeout has expired.
-
-         If set to `false` (deprecated), returns `google.rpc.Code.ABORTED` status when the server-selected
-         timeout has expired.
+         response field to `true` when the server-selected timeout has expired. If set to `false`
+         (deprecated), returns `google.rpc.Code.ABORTED` status when the server-selected timeout has
+         expired.
            */
           public java.lang.Boolean getSuccessOnTimeout() {
             return successOnTimeout;
@@ -462,7 +463,6 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
           /**
            * If set to `true` (recommended), returns `google.rpc.Code.OK` status and sets the
            * `wait_expired` response field to `true` when the server-selected timeout has expired.
-           *
            * If set to `false` (deprecated), returns `google.rpc.Code.ABORTED` status when the
            * server-selected timeout has expired.
            */
@@ -506,12 +506,10 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
         }
         /**
          * Updates the breakpoint state or mutable fields. The entire Breakpoint message must be sent back
-         * to the controller service.
-         *
-         * Updates to active breakpoint fields are only allowed if the new value does not change the
-         * breakpoint specification. Updates to the `location`, `condition` and `expressions` fields should
-         * not alter the breakpoint semantics. These may only make changes such as canonicalizing a value or
-         * snapping the location to the correct line of code.
+         * to the controller service. Updates to active breakpoint fields are only allowed if the new value
+         * does not change the breakpoint specification. Updates to the `location`, `condition` and
+         * `expressions` fields should not alter the breakpoint semantics. These may only make changes such
+         * as canonicalizing a value or snapping the location to the correct line of code.
          *
          * Create a request for the method "breakpoints.update".
          *
@@ -535,12 +533,10 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
 
           /**
            * Updates the breakpoint state or mutable fields. The entire Breakpoint message must be sent back
-           * to the controller service.
-           *
-           * Updates to active breakpoint fields are only allowed if the new value does not change the
-           * breakpoint specification. Updates to the `location`, `condition` and `expressions` fields
-           * should not alter the breakpoint semantics. These may only make changes such as canonicalizing a
-           * value or snapping the location to the correct line of code.
+           * to the controller service. Updates to active breakpoint fields are only allowed if the new
+           * value does not change the breakpoint specification. Updates to the `location`, `condition` and
+           * `expressions` fields should not alter the breakpoint semantics. These may only make changes
+           * such as canonicalizing a value or snapping the location to the correct line of code.
            *
            * Create a request for the method "breakpoints.update".
            *
@@ -1442,7 +1438,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
 
           /**
            * A wait token that, if specified, blocks the call until the breakpoints list has
-           * changed, or a server selected timeout has expired.  The value should be set from the
+           * changed, or a server selected timeout has expired. The value should be set from the
            * last response. The error code `google.rpc.Code.ABORTED` (RPC) is returned on wait
            * timeout, which should be called again with the same `wait_token`.
            */
@@ -1450,9 +1446,9 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
           private java.lang.String waitToken;
 
           /** A wait token that, if specified, blocks the call until the breakpoints list has changed, or a
-         server selected timeout has expired.  The value should be set from the last response. The error
-         code `google.rpc.Code.ABORTED` (RPC) is returned on wait timeout, which should be called again with
-         the same `wait_token`.
+         server selected timeout has expired. The value should be set from the last response. The error code
+         `google.rpc.Code.ABORTED` (RPC) is returned on wait timeout, which should be called again with the
+         same `wait_token`.
            */
           public java.lang.String getWaitToken() {
             return waitToken;
@@ -1460,7 +1456,7 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
 
           /**
            * A wait token that, if specified, blocks the call until the breakpoints list has
-           * changed, or a server selected timeout has expired.  The value should be set from the
+           * changed, or a server selected timeout has expired. The value should be set from the
            * last response. The error code `google.rpc.Code.ABORTED` (RPC) is returned on wait
            * timeout, which should be called again with the same `wait_token`.
            */
@@ -1583,6 +1579,22 @@ public class CloudDebugger extends com.google.api.client.googleapis.services.jso
           /** Required. ID of the debuggee where the breakpoint is to be set. */
           public Set setDebuggeeId(java.lang.String debuggeeId) {
             this.debuggeeId = debuggeeId;
+            return this;
+          }
+
+          /** The canary option set by the user upon setting breakpoint. */
+          @com.google.api.client.util.Key
+          private java.lang.String canaryOption;
+
+          /** The canary option set by the user upon setting breakpoint.
+           */
+          public java.lang.String getCanaryOption() {
+            return canaryOption;
+          }
+
+          /** The canary option set by the user upon setting breakpoint. */
+          public Set setCanaryOption(java.lang.String canaryOption) {
+            this.canaryOption = canaryOption;
             return this;
           }
 

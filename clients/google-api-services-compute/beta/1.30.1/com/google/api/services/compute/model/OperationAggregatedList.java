@@ -44,8 +44,8 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
   private java.util.Map<String, OperationsScopedList> items;
 
   /**
-   * [Output Only] Type of resource. Always compute#operationAggregatedList for aggregated lists of
-   * operations.
+   * [Output Only] Type of resource. Always `compute#operationAggregatedList` for aggregated lists
+   * of operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,9 +53,9 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
 
   /**
    * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * number of results is larger than `maxResults`, use the `nextPageToken` as a value for the query
+   * parameter `pageToken` in the next list request. Subsequent list requests will have their own
+   * `nextPageToken` to continue paging through the results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,6 +67,13 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * [Output Only] Unreachable resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachables;
 
   /**
    * [Output Only] Informational warning message.
@@ -110,8 +117,8 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#operationAggregatedList for aggregated lists of
-   * operations.
+   * [Output Only] Type of resource. Always `compute#operationAggregatedList` for aggregated lists
+   * of operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -119,8 +126,8 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#operationAggregatedList for aggregated lists of
-   * operations.
+   * [Output Only] Type of resource. Always `compute#operationAggregatedList` for aggregated lists
+   * of operations.
    * @param kind kind or {@code null} for none
    */
   public OperationAggregatedList setKind(java.lang.String kind) {
@@ -130,9 +137,9 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
 
   /**
    * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * number of results is larger than `maxResults`, use the `nextPageToken` as a value for the query
+   * parameter `pageToken` in the next list request. Subsequent list requests will have their own
+   * `nextPageToken` to continue paging through the results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -141,9 +148,9 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
 
   /**
    * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger than maxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * number of results is larger than `maxResults`, use the `nextPageToken` as a value for the query
+   * parameter `pageToken` in the next list request. Subsequent list requests will have their own
+   * `nextPageToken` to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public OperationAggregatedList setNextPageToken(java.lang.String nextPageToken) {
@@ -165,6 +172,23 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
    */
   public OperationAggregatedList setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Output Only] Unreachable resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachables() {
+    return unreachables;
+  }
+
+  /**
+   * [Output Only] Unreachable resources.
+   * @param unreachables unreachables or {@code null} for none
+   */
+  public OperationAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {
+    this.unreachables = unreachables;
     return this;
   }
 

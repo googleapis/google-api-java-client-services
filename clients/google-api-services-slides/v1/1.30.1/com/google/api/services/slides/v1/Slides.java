@@ -46,7 +46,7 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Google Slides API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Google Slides API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,23 +143,17 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
   public class Presentations {
 
     /**
-     * Applies one or more updates to the presentation.
-     *
-     * Each request is validated before being applied. If any request is not valid, then the entire
-     * request will fail and nothing will be applied.
-     *
-     * Some requests have replies to give you some information about how they are applied. Other
-     * requests do not need to return information; these each return an empty reply. The order of
-     * replies matches that of the requests.
-     *
-     * For example, suppose you call batchUpdate with four updates, and only the third one returns
-     * information. The response would have two empty replies: the reply to the third request, and
-     * another empty reply, in that order.
-     *
-     * Because other users may be editing the presentation, the presentation might not exactly reflect
-     * your changes: your changes may be altered with respect to collaborator changes. If there are no
-     * collaborators, the presentation should reflect your changes. In any case, the updates in your
-     * request are guaranteed to be applied together atomically.
+     * Applies one or more updates to the presentation. Each request is validated before being applied.
+     * If any request is not valid, then the entire request will fail and nothing will be applied. Some
+     * requests have replies to give you some information about how they are applied. Other requests do
+     * not need to return information; these each return an empty reply. The order of replies matches
+     * that of the requests. For example, suppose you call batchUpdate with four updates, and only the
+     * third one returns information. The response would have two empty replies: the reply to the third
+     * request, and another empty reply, in that order. Because other users may be editing the
+     * presentation, the presentation might not exactly reflect your changes: your changes may be
+     * altered with respect to collaborator changes. If there are no collaborators, the presentation
+     * should reflect your changes. In any case, the updates in your request are guaranteed to be
+     * applied together atomically.
      *
      * Create a request for the method "presentations.batchUpdate".
      *
@@ -181,23 +175,17 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v1/presentations/{presentationId}:batchUpdate";
 
       /**
-       * Applies one or more updates to the presentation.
-       *
-       * Each request is validated before being applied. If any request is not valid, then the entire
-       * request will fail and nothing will be applied.
-       *
-       * Some requests have replies to give you some information about how they are applied. Other
-       * requests do not need to return information; these each return an empty reply. The order of
-       * replies matches that of the requests.
-       *
-       * For example, suppose you call batchUpdate with four updates, and only the third one returns
-       * information. The response would have two empty replies: the reply to the third request, and
-       * another empty reply, in that order.
-       *
-       * Because other users may be editing the presentation, the presentation might not exactly reflect
-       * your changes: your changes may be altered with respect to collaborator changes. If there are no
-       * collaborators, the presentation should reflect your changes. In any case, the updates in your
-       * request are guaranteed to be applied together atomically.
+       * Applies one or more updates to the presentation. Each request is validated before being
+       * applied. If any request is not valid, then the entire request will fail and nothing will be
+       * applied. Some requests have replies to give you some information about how they are applied.
+       * Other requests do not need to return information; these each return an empty reply. The order
+       * of replies matches that of the requests. For example, suppose you call batchUpdate with four
+       * updates, and only the third one returns information. The response would have two empty replies:
+       * the reply to the third request, and another empty reply, in that order. Because other users may
+       * be editing the presentation, the presentation might not exactly reflect your changes: your
+       * changes may be altered with respect to collaborator changes. If there are no collaborators, the
+       * presentation should reflect your changes. In any case, the updates in your request are
+       * guaranteed to be applied together atomically.
        *
        * Create a request for the method "presentations.batchUpdate".
        *
@@ -701,9 +689,8 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
       }
       /**
        * Generates a thumbnail of the latest version of the specified page in the presentation and returns
-       * a URL to the thumbnail image.
-       *
-       * This request counts as an [expensive read request](/slides/limits) for quota purposes.
+       * a URL to the thumbnail image. This request counts as an [expensive read request](/slides/limits)
+       * for quota purposes.
        *
        * Create a request for the method "pages.getThumbnail".
        *
@@ -726,9 +713,8 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Generates a thumbnail of the latest version of the specified page in the presentation and
-         * returns a URL to the thumbnail image.
-         *
-         * This request counts as an [expensive read request](/slides/limits) for quota purposes.
+         * returns a URL to the thumbnail image. This request counts as an [expensive read
+         * request](/slides/limits) for quota purposes.
          *
          * Create a request for the method "pages.getThumbnail".
          *
@@ -846,25 +832,22 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The optional mime type of the thumbnail image.
-         *
-         * If you don't specify the mime type, the default mime type will be PNG.
+         * The optional mime type of the thumbnail image. If you don't specify the mime type, the
+         * mime type defaults to PNG.
          */
         @com.google.api.client.util.Key("thumbnailProperties.mimeType")
         private java.lang.String thumbnailPropertiesMimeType;
 
-        /** The optional mime type of the thumbnail image.
-
-       If you don't specify the mime type, the default mime type will be PNG.
+        /** The optional mime type of the thumbnail image. If you don't specify the mime type, the mime type
+       defaults to PNG.
          */
         public java.lang.String getThumbnailPropertiesMimeType() {
           return thumbnailPropertiesMimeType;
         }
 
         /**
-         * The optional mime type of the thumbnail image.
-         *
-         * If you don't specify the mime type, the default mime type will be PNG.
+         * The optional mime type of the thumbnail image. If you don't specify the mime type, the
+         * mime type defaults to PNG.
          */
         public GetThumbnail setThumbnailPropertiesMimeType(java.lang.String thumbnailPropertiesMimeType) {
           this.thumbnailPropertiesMimeType = thumbnailPropertiesMimeType;
@@ -872,25 +855,22 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The optional thumbnail image size.
-         *
-         * If you don't specify the size, the server chooses a default size of the image.
+         * The optional thumbnail image size. If you don't specify the size, the server chooses a
+         * default size of the image.
          */
         @com.google.api.client.util.Key("thumbnailProperties.thumbnailSize")
         private java.lang.String thumbnailPropertiesThumbnailSize;
 
-        /** The optional thumbnail image size.
-
-       If you don't specify the size, the server chooses a default size of the image.
+        /** The optional thumbnail image size. If you don't specify the size, the server chooses a default size
+       of the image.
          */
         public java.lang.String getThumbnailPropertiesThumbnailSize() {
           return thumbnailPropertiesThumbnailSize;
         }
 
         /**
-         * The optional thumbnail image size.
-         *
-         * If you don't specify the size, the server chooses a default size of the image.
+         * The optional thumbnail image size. If you don't specify the size, the server chooses a
+         * default size of the image.
          */
         public GetThumbnail setThumbnailPropertiesThumbnailSize(java.lang.String thumbnailPropertiesThumbnailSize) {
           this.thumbnailPropertiesThumbnailSize = thumbnailPropertiesThumbnailSize;

@@ -20,7 +20,7 @@ package com.google.api.services.dns.model;
  * Model definition for ManagedZonePeeringConfigTargetNetwork.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -40,8 +40,6 @@ public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.
   private java.lang.String deactivateTime;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePeeringConfigTargetNetwork".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +77,6 @@ public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePeeringConfigTargetNetwork".
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -88,8 +84,6 @@ public final class ManagedZonePeeringConfigTargetNetwork extends com.google.api.
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "dns#managedZonePeeringConfigTargetNetwork".
    * @param kind kind or {@code null} for none
    */
   public ManagedZonePeeringConfigTargetNetwork setKind(java.lang.String kind) {

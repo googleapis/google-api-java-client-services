@@ -31,126 +31,126 @@ package com.google.api.services.appengine.v1.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
-   * App Engine release this instance is running on.@OutputOnly
+   * Output only. App Engine release this instance is running on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appEngineRelease;
 
   /**
-   * Availability of the instance.@OutputOnly
+   * Output only. Availability of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String availability;
 
   /**
-   * Average latency (ms) over the last minute.@OutputOnly
+   * Output only. Average latency (ms) over the last minute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer averageLatency;
 
   /**
-   * Number of errors since this instance was started.@OutputOnly
+   * Output only. Number of errors since this instance was started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer errors;
 
   /**
-   * Relative name of the instance within the version. Example: instance-1.@OutputOnly
+   * Output only. Relative name of the instance within the version. Example: instance-1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Total memory in use (bytes).@OutputOnly
+   * Output only. Total memory in use (bytes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long memoryUsage;
 
   /**
-   * Full path to the Instance resource in the API. Example:
-   * apps/myapp/services/default/versions/v1/instances/instance-1.@OutputOnly
+   * Output only. Full path to the Instance resource in the API. Example:
+   * apps/myapp/services/default/versions/v1/instances/instance-1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Average queries per second (QPS) over the last minute.@OutputOnly
+   * Output only. Average queries per second (QPS) over the last minute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float qps;
 
   /**
-   * Number of requests since this instance was started.@OutputOnly
+   * Output only. Number of requests since this instance was started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer requests;
 
   /**
-   * Time that this instance was started.@OutputOnly
+   * Output only. Time that this instance was started.@OutputOnly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Whether this instance is in debug mode. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. Whether this instance is in debug mode. Only applicable for instances in App
+   * Engine flexible environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean vmDebugEnabled;
 
   /**
-   * Virtual machine ID of this instance. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. Virtual machine ID of this instance. Only applicable for instances in App Engine
+   * flexible environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vmId;
 
   /**
-   * The IP address of this instance. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. The IP address of this instance. Only applicable for instances in App Engine
+   * flexible environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vmIp;
 
   /**
-   * Name of the virtual machine where this instance lives. Only applicable for instances in App
-   * Engine flexible environment.@OutputOnly
+   * Output only. Name of the virtual machine where this instance lives. Only applicable for
+   * instances in App Engine flexible environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vmName;
 
   /**
-   * Status of the virtual machine where this instance lives. Only applicable for instances in App
-   * Engine flexible environment.@OutputOnly
+   * Output only. Status of the virtual machine where this instance lives. Only applicable for
+   * instances in App Engine flexible environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vmStatus;
 
   /**
-   * Zone where the virtual machine is located. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. Zone where the virtual machine is located. Only applicable for instances in App
+   * Engine flexible environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vmZoneName;
 
   /**
-   * App Engine release this instance is running on.@OutputOnly
+   * Output only. App Engine release this instance is running on.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppEngineRelease() {
@@ -158,7 +158,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * App Engine release this instance is running on.@OutputOnly
+   * Output only. App Engine release this instance is running on.
    * @param appEngineRelease appEngineRelease or {@code null} for none
    */
   public Instance setAppEngineRelease(java.lang.String appEngineRelease) {
@@ -167,7 +167,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Availability of the instance.@OutputOnly
+   * Output only. Availability of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -175,7 +175,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Availability of the instance.@OutputOnly
+   * Output only. Availability of the instance.
    * @param availability availability or {@code null} for none
    */
   public Instance setAvailability(java.lang.String availability) {
@@ -184,7 +184,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Average latency (ms) over the last minute.@OutputOnly
+   * Output only. Average latency (ms) over the last minute.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAverageLatency() {
@@ -192,7 +192,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Average latency (ms) over the last minute.@OutputOnly
+   * Output only. Average latency (ms) over the last minute.
    * @param averageLatency averageLatency or {@code null} for none
    */
   public Instance setAverageLatency(java.lang.Integer averageLatency) {
@@ -201,7 +201,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of errors since this instance was started.@OutputOnly
+   * Output only. Number of errors since this instance was started.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getErrors() {
@@ -209,7 +209,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of errors since this instance was started.@OutputOnly
+   * Output only. Number of errors since this instance was started.
    * @param errors errors or {@code null} for none
    */
   public Instance setErrors(java.lang.Integer errors) {
@@ -218,7 +218,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Relative name of the instance within the version. Example: instance-1.@OutputOnly
+   * Output only. Relative name of the instance within the version. Example: instance-1.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -226,7 +226,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Relative name of the instance within the version. Example: instance-1.@OutputOnly
+   * Output only. Relative name of the instance within the version. Example: instance-1.
    * @param id id or {@code null} for none
    */
   public Instance setId(java.lang.String id) {
@@ -235,7 +235,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total memory in use (bytes).@OutputOnly
+   * Output only. Total memory in use (bytes).
    * @return value or {@code null} for none
    */
   public java.lang.Long getMemoryUsage() {
@@ -243,7 +243,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Total memory in use (bytes).@OutputOnly
+   * Output only. Total memory in use (bytes).
    * @param memoryUsage memoryUsage or {@code null} for none
    */
   public Instance setMemoryUsage(java.lang.Long memoryUsage) {
@@ -252,8 +252,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full path to the Instance resource in the API. Example:
-   * apps/myapp/services/default/versions/v1/instances/instance-1.@OutputOnly
+   * Output only. Full path to the Instance resource in the API. Example:
+   * apps/myapp/services/default/versions/v1/instances/instance-1.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -261,8 +261,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full path to the Instance resource in the API. Example:
-   * apps/myapp/services/default/versions/v1/instances/instance-1.@OutputOnly
+   * Output only. Full path to the Instance resource in the API. Example:
+   * apps/myapp/services/default/versions/v1/instances/instance-1.
    * @param name name or {@code null} for none
    */
   public Instance setName(java.lang.String name) {
@@ -271,7 +271,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Average queries per second (QPS) over the last minute.@OutputOnly
+   * Output only. Average queries per second (QPS) over the last minute.
    * @return value or {@code null} for none
    */
   public java.lang.Float getQps() {
@@ -279,7 +279,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Average queries per second (QPS) over the last minute.@OutputOnly
+   * Output only. Average queries per second (QPS) over the last minute.
    * @param qps qps or {@code null} for none
    */
   public Instance setQps(java.lang.Float qps) {
@@ -288,7 +288,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of requests since this instance was started.@OutputOnly
+   * Output only. Number of requests since this instance was started.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRequests() {
@@ -296,7 +296,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of requests since this instance was started.@OutputOnly
+   * Output only. Number of requests since this instance was started.
    * @param requests requests or {@code null} for none
    */
   public Instance setRequests(java.lang.Integer requests) {
@@ -305,7 +305,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time that this instance was started.@OutputOnly
+   * Output only. Time that this instance was started.@OutputOnly
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -313,7 +313,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time that this instance was started.@OutputOnly
+   * Output only. Time that this instance was started.@OutputOnly
    * @param startTime startTime or {@code null} for none
    */
   public Instance setStartTime(String startTime) {
@@ -322,8 +322,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this instance is in debug mode. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. Whether this instance is in debug mode. Only applicable for instances in App
+   * Engine flexible environment.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVmDebugEnabled() {
@@ -331,8 +331,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this instance is in debug mode. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. Whether this instance is in debug mode. Only applicable for instances in App
+   * Engine flexible environment.
    * @param vmDebugEnabled vmDebugEnabled or {@code null} for none
    */
   public Instance setVmDebugEnabled(java.lang.Boolean vmDebugEnabled) {
@@ -341,8 +341,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Virtual machine ID of this instance. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. Virtual machine ID of this instance. Only applicable for instances in App Engine
+   * flexible environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmId() {
@@ -350,8 +350,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Virtual machine ID of this instance. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. Virtual machine ID of this instance. Only applicable for instances in App Engine
+   * flexible environment.
    * @param vmId vmId or {@code null} for none
    */
   public Instance setVmId(java.lang.String vmId) {
@@ -360,8 +360,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP address of this instance. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. The IP address of this instance. Only applicable for instances in App Engine
+   * flexible environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmIp() {
@@ -369,8 +369,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IP address of this instance. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. The IP address of this instance. Only applicable for instances in App Engine
+   * flexible environment.
    * @param vmIp vmIp or {@code null} for none
    */
   public Instance setVmIp(java.lang.String vmIp) {
@@ -379,8 +379,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the virtual machine where this instance lives. Only applicable for instances in App
-   * Engine flexible environment.@OutputOnly
+   * Output only. Name of the virtual machine where this instance lives. Only applicable for
+   * instances in App Engine flexible environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmName() {
@@ -388,8 +388,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the virtual machine where this instance lives. Only applicable for instances in App
-   * Engine flexible environment.@OutputOnly
+   * Output only. Name of the virtual machine where this instance lives. Only applicable for
+   * instances in App Engine flexible environment.
    * @param vmName vmName or {@code null} for none
    */
   public Instance setVmName(java.lang.String vmName) {
@@ -398,8 +398,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the virtual machine where this instance lives. Only applicable for instances in App
-   * Engine flexible environment.@OutputOnly
+   * Output only. Status of the virtual machine where this instance lives. Only applicable for
+   * instances in App Engine flexible environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmStatus() {
@@ -407,8 +407,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Status of the virtual machine where this instance lives. Only applicable for instances in App
-   * Engine flexible environment.@OutputOnly
+   * Output only. Status of the virtual machine where this instance lives. Only applicable for
+   * instances in App Engine flexible environment.
    * @param vmStatus vmStatus or {@code null} for none
    */
   public Instance setVmStatus(java.lang.String vmStatus) {
@@ -417,8 +417,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Zone where the virtual machine is located. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. Zone where the virtual machine is located. Only applicable for instances in App
+   * Engine flexible environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmZoneName() {
@@ -426,8 +426,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Zone where the virtual machine is located. Only applicable for instances in App Engine flexible
-   * environment.@OutputOnly
+   * Output only. Zone where the virtual machine is located. Only applicable for instances in App
+   * Engine flexible environment.
    * @param vmZoneName vmZoneName or {@code null} for none
    */
   public Instance setVmZoneName(java.lang.String vmZoneName) {

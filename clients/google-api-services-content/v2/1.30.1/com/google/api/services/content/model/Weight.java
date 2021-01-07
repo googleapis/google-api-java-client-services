@@ -31,9 +31,7 @@ package com.google.api.services.content.model;
 public final class Weight extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The weight unit.
-   *
-   * Acceptable values are:   - "kg"  - "lb"
+   * Required. The weight unit. Acceptable values are: - "`kg`" - "`lb`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +45,7 @@ public final class Weight extends com.google.api.client.json.GenericJson {
   private java.lang.String value;
 
   /**
-   * Required. The weight unit.
-   *
-   * Acceptable values are:   - "kg"  - "lb"
+   * Required. The weight unit. Acceptable values are: - "`kg`" - "`lb`"
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -57,9 +53,7 @@ public final class Weight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The weight unit.
-   *
-   * Acceptable values are:   - "kg"  - "lb"
+   * Required. The weight unit. Acceptable values are: - "`kg`" - "`lb`"
    * @param unit unit or {@code null} for none
    */
   public Weight setUnit(java.lang.String unit) {

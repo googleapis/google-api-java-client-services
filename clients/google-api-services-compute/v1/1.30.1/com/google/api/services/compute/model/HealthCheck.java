@@ -24,12 +24,20 @@ package com.google.api.services.compute.model;
  * * [Global](/compute/docs/reference/rest/{$api_version}/healthChecks) *
  * [Regional](/compute/docs/reference/rest/{$api_version}/regionHealthChecks)
  *
- * Internal HTTP(S) load balancers use regional health checks. All other types of GCP load balancers
- * and managed instance group auto-healing use global health checks. For more information, read
- * Health Check Concepts.
+ * Internal HTTP(S) load balancers must use regional health checks
+ * (`compute.v1.regionHealthChecks`).
  *
- * To perform health checks on network load balancers, you must use either httpHealthChecks or
- * httpsHealthChecks.
+ * Traffic Director must use global health checks (`compute.v1.HealthChecks`).
+ *
+ * Internal TCP/UDP load balancers can use either regional or global health checks
+ * (`compute.v1.regionHealthChecks` or `compute.v1.HealthChecks`).
+ *
+ * External HTTP(S), TCP proxy, and SSL proxy load balancers as well as managed instance group auto-
+ * healing must use global health checks (`compute.v1.HealthChecks`).
+ *
+ * Network load balancers must use legacy HTTP health checks (httpHealthChecks).
+ *
+ * For more information, see Health checks overview.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -61,6 +69,12 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GRPCHealthCheck grpcHealthCheck;
 
   /**
    * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The
@@ -101,6 +115,13 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Configure logging on this health check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HealthCheckLogConfig logConfig;
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
@@ -216,6 +237,21 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public GRPCHealthCheck getGrpcHealthCheck() {
+    return grpcHealthCheck;
+  }
+
+  /**
+   * @param grpcHealthCheck grpcHealthCheck or {@code null} for none
+   */
+  public HealthCheck setGrpcHealthCheck(GRPCHealthCheck grpcHealthCheck) {
+    this.grpcHealthCheck = grpcHealthCheck;
+    return this;
+  }
+
+  /**
    * A so-far unhealthy instance will be marked healthy after this many consecutive successes. The
    * default value is 2.
    * @return value or {@code null} for none
@@ -310,6 +346,23 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
    */
   public HealthCheck setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Configure logging on this health check.
+   * @return value or {@code null} for none
+   */
+  public HealthCheckLogConfig getLogConfig() {
+    return logConfig;
+  }
+
+  /**
+   * Configure logging on this health check.
+   * @param logConfig logConfig or {@code null} for none
+   */
+  public HealthCheck setLogConfig(HealthCheckLogConfig logConfig) {
+    this.logConfig = logConfig;
     return this;
   }
 

@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudbuild</artifactId>
-      <version>v1-rev20200317-1.30.9</version>
+      <version>v1-rev20201015-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudbuild:v1-rev20200317-1.30.9'
+  compile 'com.google.apis:google-api-services-cloudbuild:v1-rev20201015-1.30.10'
 }
 ```
 

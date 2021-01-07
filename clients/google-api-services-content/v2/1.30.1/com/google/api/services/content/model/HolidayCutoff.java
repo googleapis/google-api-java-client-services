@@ -48,7 +48,7 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   private java.lang.Long deadlineHour;
 
   /**
-   * Timezone identifier for the deadline hour. A list of identifiers can be found in  the AdWords
+   * Timezone identifier for the deadline hour. A list of identifiers can be found in the AdWords
    * API documentation. E.g. "Europe/Zurich". Required.
    * The value may be {@code null}.
    */
@@ -111,7 +111,7 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Timezone identifier for the deadline hour. A list of identifiers can be found in  the AdWords
+   * Timezone identifier for the deadline hour. A list of identifiers can be found in the AdWords
    * API documentation. E.g. "Europe/Zurich". Required.
    * @return value or {@code null} for none
    */
@@ -120,7 +120,7 @@ public final class HolidayCutoff extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Timezone identifier for the deadline hour. A list of identifiers can be found in  the AdWords
+   * Timezone identifier for the deadline hour. A list of identifiers can be found in the AdWords
    * API documentation. E.g. "Europe/Zurich". Required.
    * @param deadlineTimezone deadlineTimezone or {@code null} for none
    */

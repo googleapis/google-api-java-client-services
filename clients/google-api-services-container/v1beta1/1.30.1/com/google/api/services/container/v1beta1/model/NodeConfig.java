@@ -57,22 +57,27 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
-   * 10GB.
-   *
-   * If unspecified, the default disk size is 100GB.
+   * 10GB. If unspecified, the default disk size is 100GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer diskSizeGb;
 
   /**
-   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd')
-   *
-   * If unspecified, the default disk type is 'pd-standard'
+   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd') If unspecified, the
+   * default disk type is 'pd-standard'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String diskType;
+
+  /**
+   * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by
+   * the boot disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EphemeralStorageConfig ephemeralStorageConfig;
 
   /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
@@ -81,6 +86,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String imageType;
+
+  /**
+   * Node kubelet configs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeKubeletConfig kubeletConfig;
 
   /**
    * The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in
@@ -95,40 +107,42 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The number of local SSD disks to be attached to the node.
-   *
-   * The limit for this value is dependent upon the maximum number of disks available on a machine
-   * per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.
+   * Parameters that can be configured on Linux nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LinuxNodeConfig linuxNodeConfig;
+
+  /**
+   * The number of local SSD disks to be attached to the node. The limit for this value is dependent
+   * upon the maximum number of disks available on a machine per zone. See:
+   * https://cloud.google.com/compute/docs/disks/local-ssd for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer localSsdCount;
 
   /**
-   * The name of a Google Compute Engine [machine type](/compute/docs/machine-types) (e.g.
-   * `n1-standard-1`).
-   *
-   * If unspecified, the default machine type is `n1-standard-1`.
+   * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
+   * /machine-types). If unspecified, the default machine type is `e2-medium`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
 
   /**
-   * The metadata key/value pairs assigned to instances in the cluster.
-   *
-   * Keys must conform to the regexp [a-zA-Z0-9-_]+ and be less than 128 bytes in length. These are
-   * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
-   * not conflict with any other metadata keys for the project or be one of the reserved keys:
-   * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
-   * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-metrics-enabled"  "gci-update-strategy"
-   * "instance-template"  "kube-env"  "startup-script"  "user-data"  "disable-address-manager"
-   * "windows-startup-script-ps1"  "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-
-   * profile-psm1"  "serial-port-logging-enable" Values are free-form strings, and only have meaning
-   * as interpreted by the image running in the instance. The only restriction placed on them is
-   * that each value's size must be less than or equal to 32 KB.
-   *
-   * The total size of all keys and values must be less than 512 KB.
+   * The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the
+   * regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a
+   * URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any
+   * other metadata keys for the project or be one of the reserved keys: - "cluster-location" -
+   * "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin"
+   * - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template"
+   * - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-
+   * script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1"
+   * The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are
+   * free-form strings, and only have meaning as interpreted by the image running in the instance.
+   * The only restriction placed on them is that each value's size must be less than or equal to 32
+   * KB. The total size of all keys and values must be less than 512 KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +151,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Minimum CPU platform to be used by this instance. The instance may be scheduled on the
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
-   * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
+   * such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more
    * information, read [how to specify min CPU
    * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
    * The value may be {@code null}.
@@ -146,17 +160,22 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String minCpuPlatform;
 
   /**
+   * Setting this field will assign instances of this pool to run on the specified node group. This
+   * is useful for running workloads on [sole tenant
+   * nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nodeGroup;
+
+  /**
    * The set of Google API scopes to be made available on all of the node VMs under the "default"
-   * service account.
-   *
-   * The following scopes are recommended, but not required, and by default are not included:
-   *
-   * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
-   * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
-   * with **gcr.io** (the [Google Container Registry](/container-registry/)).
-   *
-   * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
-   * which case their required scopes will be added.
+   * service account. The following scopes are recommended, but not required, and by default are not
+   * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
+   * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
+   * communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com
+   * /container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud
+   * Monitoring are enabled, in which case their required scopes will be added.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +192,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
-   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this
+   * node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,10 +232,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
-   * List of kubernetes taints to be applied to each node.
-   *
-   * For more information, including usage and the valid values, see:
-   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * List of kubernetes taints to be applied to each node. For more information, including usage and
+   * the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,9 +292,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
-   * 10GB.
-   *
-   * If unspecified, the default disk size is 100GB.
+   * 10GB. If unspecified, the default disk size is 100GB.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiskSizeGb() {
@@ -285,9 +301,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
-   * 10GB.
-   *
-   * If unspecified, the default disk size is 100GB.
+   * 10GB. If unspecified, the default disk size is 100GB.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public NodeConfig setDiskSizeGb(java.lang.Integer diskSizeGb) {
@@ -296,9 +310,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd')
-   *
-   * If unspecified, the default disk type is 'pd-standard'
+   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd') If unspecified, the
+   * default disk type is 'pd-standard'
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -306,13 +319,31 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd')
-   *
-   * If unspecified, the default disk type is 'pd-standard'
+   * Type of the disk attached to each node (e.g. 'pd-standard' or 'pd-ssd') If unspecified, the
+   * default disk type is 'pd-standard'
    * @param diskType diskType or {@code null} for none
    */
   public NodeConfig setDiskType(java.lang.String diskType) {
     this.diskType = diskType;
+    return this;
+  }
+
+  /**
+   * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by
+   * the boot disk.
+   * @return value or {@code null} for none
+   */
+  public EphemeralStorageConfig getEphemeralStorageConfig() {
+    return ephemeralStorageConfig;
+  }
+
+  /**
+   * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by
+   * the boot disk.
+   * @param ephemeralStorageConfig ephemeralStorageConfig or {@code null} for none
+   */
+  public NodeConfig setEphemeralStorageConfig(EphemeralStorageConfig ephemeralStorageConfig) {
+    this.ephemeralStorageConfig = ephemeralStorageConfig;
     return this;
   }
 
@@ -332,6 +363,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setImageType(java.lang.String imageType) {
     this.imageType = imageType;
+    return this;
+  }
+
+  /**
+   * Node kubelet configs.
+   * @return value or {@code null} for none
+   */
+  public NodeKubeletConfig getKubeletConfig() {
+    return kubeletConfig;
+  }
+
+  /**
+   * Node kubelet configs.
+   * @param kubeletConfig kubeletConfig or {@code null} for none
+   */
+  public NodeConfig setKubeletConfig(NodeKubeletConfig kubeletConfig) {
+    this.kubeletConfig = kubeletConfig;
     return this;
   }
 
@@ -363,10 +411,26 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of local SSD disks to be attached to the node.
-   *
-   * The limit for this value is dependent upon the maximum number of disks available on a machine
-   * per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.
+   * Parameters that can be configured on Linux nodes.
+   * @return value or {@code null} for none
+   */
+  public LinuxNodeConfig getLinuxNodeConfig() {
+    return linuxNodeConfig;
+  }
+
+  /**
+   * Parameters that can be configured on Linux nodes.
+   * @param linuxNodeConfig linuxNodeConfig or {@code null} for none
+   */
+  public NodeConfig setLinuxNodeConfig(LinuxNodeConfig linuxNodeConfig) {
+    this.linuxNodeConfig = linuxNodeConfig;
+    return this;
+  }
+
+  /**
+   * The number of local SSD disks to be attached to the node. The limit for this value is dependent
+   * upon the maximum number of disks available on a machine per zone. See:
+   * https://cloud.google.com/compute/docs/disks/local-ssd for more information.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLocalSsdCount() {
@@ -374,10 +438,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of local SSD disks to be attached to the node.
-   *
-   * The limit for this value is dependent upon the maximum number of disks available on a machine
-   * per zone. See: https://cloud.google.com/compute/docs/disks/local-ssd for more information.
+   * The number of local SSD disks to be attached to the node. The limit for this value is dependent
+   * upon the maximum number of disks available on a machine per zone. See:
+   * https://cloud.google.com/compute/docs/disks/local-ssd for more information.
    * @param localSsdCount localSsdCount or {@code null} for none
    */
   public NodeConfig setLocalSsdCount(java.lang.Integer localSsdCount) {
@@ -386,10 +449,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a Google Compute Engine [machine type](/compute/docs/machine-types) (e.g.
-   * `n1-standard-1`).
-   *
-   * If unspecified, the default machine type is `n1-standard-1`.
+   * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
+   * /machine-types). If unspecified, the default machine type is `e2-medium`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -397,10 +458,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of a Google Compute Engine [machine type](/compute/docs/machine-types) (e.g.
-   * `n1-standard-1`).
-   *
-   * If unspecified, the default machine type is `n1-standard-1`.
+   * The name of a Google Compute Engine [machine type](https://cloud.google.com/compute/docs
+   * /machine-types). If unspecified, the default machine type is `e2-medium`.
    * @param machineType machineType or {@code null} for none
    */
   public NodeConfig setMachineType(java.lang.String machineType) {
@@ -409,20 +468,18 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The metadata key/value pairs assigned to instances in the cluster.
-   *
-   * Keys must conform to the regexp [a-zA-Z0-9-_]+ and be less than 128 bytes in length. These are
-   * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
-   * not conflict with any other metadata keys for the project or be one of the reserved keys:
-   * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
-   * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-metrics-enabled"  "gci-update-strategy"
-   * "instance-template"  "kube-env"  "startup-script"  "user-data"  "disable-address-manager"
-   * "windows-startup-script-ps1"  "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-
-   * profile-psm1"  "serial-port-logging-enable" Values are free-form strings, and only have meaning
-   * as interpreted by the image running in the instance. The only restriction placed on them is
-   * that each value's size must be less than or equal to 32 KB.
-   *
-   * The total size of all keys and values must be less than 512 KB.
+   * The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the
+   * regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a
+   * URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any
+   * other metadata keys for the project or be one of the reserved keys: - "cluster-location" -
+   * "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin"
+   * - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template"
+   * - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-
+   * script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1"
+   * The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are
+   * free-form strings, and only have meaning as interpreted by the image running in the instance.
+   * The only restriction placed on them is that each value's size must be less than or equal to 32
+   * KB. The total size of all keys and values must be less than 512 KB.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -430,20 +487,18 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The metadata key/value pairs assigned to instances in the cluster.
-   *
-   * Keys must conform to the regexp [a-zA-Z0-9-_]+ and be less than 128 bytes in length. These are
-   * reflected as part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must
-   * not conflict with any other metadata keys for the project or be one of the reserved keys:
-   * "cluster-location"  "cluster-name"  "cluster-uid"  "configure-sh"  "containerd-configure-sh"
-   * "enable-oslogin"  "gci-ensure-gke-docker"  "gci-metrics-enabled"  "gci-update-strategy"
-   * "instance-template"  "kube-env"  "startup-script"  "user-data"  "disable-address-manager"
-   * "windows-startup-script-ps1"  "common-psm1"  "k8s-node-setup-psm1"  "install-ssh-psm1"  "user-
-   * profile-psm1"  "serial-port-logging-enable" Values are free-form strings, and only have meaning
-   * as interpreted by the image running in the instance. The only restriction placed on them is
-   * that each value's size must be less than or equal to 32 KB.
-   *
-   * The total size of all keys and values must be less than 512 KB.
+   * The metadata key/value pairs assigned to instances in the cluster. Keys must conform to the
+   * regexp `[a-zA-Z0-9-_]+` and be less than 128 bytes in length. These are reflected as part of a
+   * URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any
+   * other metadata keys for the project or be one of the reserved keys: - "cluster-location" -
+   * "cluster-name" - "cluster-uid" - "configure-sh" - "containerd-configure-sh" - "enable-oslogin"
+   * - "gci-ensure-gke-docker" - "gci-metrics-enabled" - "gci-update-strategy" - "instance-template"
+   * - "kube-env" - "startup-script" - "user-data" - "disable-address-manager" - "windows-startup-
+   * script-ps1" - "common-psm1" - "k8s-node-setup-psm1" - "install-ssh-psm1" - "user-profile-psm1"
+   * The following keys are reserved for Windows nodes: - "serial-port-logging-enable" Values are
+   * free-form strings, and only have meaning as interpreted by the image running in the instance.
+   * The only restriction placed on them is that each value's size must be less than or equal to 32
+   * KB. The total size of all keys and values must be less than 512 KB.
    * @param metadata metadata or {@code null} for none
    */
   public NodeConfig setMetadata(java.util.Map<String, java.lang.String> metadata) {
@@ -454,7 +509,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Minimum CPU platform to be used by this instance. The instance may be scheduled on the
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
-   * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
+   * such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more
    * information, read [how to specify min CPU
    * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
    * @return value or {@code null} for none
@@ -466,7 +521,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Minimum CPU platform to be used by this instance. The instance may be scheduled on the
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
-   * such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For more
+   * such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more
    * information, read [how to specify min CPU
    * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
@@ -477,17 +532,34 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Setting this field will assign instances of this pool to run on the specified node group. This
+   * is useful for running workloads on [sole tenant
+   * nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNodeGroup() {
+    return nodeGroup;
+  }
+
+  /**
+   * Setting this field will assign instances of this pool to run on the specified node group. This
+   * is useful for running workloads on [sole tenant
+   * nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+   * @param nodeGroup nodeGroup or {@code null} for none
+   */
+  public NodeConfig setNodeGroup(java.lang.String nodeGroup) {
+    this.nodeGroup = nodeGroup;
+    return this;
+  }
+
+  /**
    * The set of Google API scopes to be made available on all of the node VMs under the "default"
-   * service account.
-   *
-   * The following scopes are recommended, but not required, and by default are not included:
-   *
-   * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
-   * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
-   * with **gcr.io** (the [Google Container Registry](/container-registry/)).
-   *
-   * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
-   * which case their required scopes will be added.
+   * service account. The following scopes are recommended, but not required, and by default are not
+   * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
+   * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
+   * communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com
+   * /container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud
+   * Monitoring are enabled, in which case their required scopes will be added.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOauthScopes() {
@@ -496,16 +568,12 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The set of Google API scopes to be made available on all of the node VMs under the "default"
-   * service account.
-   *
-   * The following scopes are recommended, but not required, and by default are not included:
-   *
-   * * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your
-   * nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating
-   * with **gcr.io** (the [Google Container Registry](/container-registry/)).
-   *
-   * If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
-   * which case their required scopes will be added.
+   * service account. The following scopes are recommended, but not required, and by default are not
+   * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
+   * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
+   * communicating with **gcr.io** (the [Google Container Registry](https://cloud.google.com
+   * /container-registry/)). If unspecified, no scopes are added, unless Cloud Logging or Cloud
+   * Monitoring are enabled, in which case their required scopes will be added.
    * @param oauthScopes oauthScopes or {@code null} for none
    */
   public NodeConfig setOauthScopes(java.util.List<java.lang.String> oauthScopes) {
@@ -536,7 +604,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
-   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this
+   * node pool.
    * @return value or {@code null} for none
    */
   public ReservationAffinity getReservationAffinity() {
@@ -545,7 +614,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
-   * Reservation](/compute/docs/instances/reserving-zonal-resources) to this node pool.
+   * Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this
+   * node pool.
    * @param reservationAffinity reservationAffinity or {@code null} for none
    */
   public NodeConfig setReservationAffinity(ReservationAffinity reservationAffinity) {
@@ -630,10 +700,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of kubernetes taints to be applied to each node.
-   *
-   * For more information, including usage and the valid values, see:
-   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * List of kubernetes taints to be applied to each node. For more information, including usage and
+   * the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
    * @return value or {@code null} for none
    */
   public java.util.List<NodeTaint> getTaints() {
@@ -641,10 +709,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of kubernetes taints to be applied to each node.
-   *
-   * For more information, including usage and the valid values, see:
-   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * List of kubernetes taints to be applied to each node. For more information, including usage and
+   * the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
    * @param taints taints or {@code null} for none
    */
   public NodeConfig setTaints(java.util.List<NodeTaint> taints) {

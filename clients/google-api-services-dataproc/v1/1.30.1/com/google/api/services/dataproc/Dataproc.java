@@ -46,7 +46,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Dataproc API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Dataproc API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -191,13 +191,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The "resource name" of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.create, the resource name  of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.autoscalingPolicies.create, the resource name  of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.create, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.autoscalingPolicies.create, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
          * @param content the {@link com.google.api.services.dataproc.model.AutoscalingPolicy}
          * @return the request
          */
@@ -226,13 +224,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The "resource name" of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.create, the resource name  of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.autoscalingPolicies.create, the resource name  of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.create, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.autoscalingPolicies.create, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
            * @param content the {@link com.google.api.services.dataproc.model.AutoscalingPolicy}
            * @since 1.13
            */
@@ -304,19 +300,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.create, the resource name  of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.autoscalingPolicies.create, the resource name  of the location has
-           * the following format:  projects/{project_id}/locations/{location}
+           * projects.regions.autoscalingPolicies.create, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.autoscalingPolicies.create, the resource name of the location has
+           * the following format: projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The "resource name" of the region or location, as described in
          https://cloud.google.com/apis/design/resource_names. For
-         projects.regions.autoscalingPolicies.create, the resource name  of the region has the following
-         format:  projects/{project_id}/regions/{region} For projects.locations.autoscalingPolicies.create,
-         the resource name  of the location has the following format:
+         projects.regions.autoscalingPolicies.create, the resource name of the region has the following
+         format: projects/{project_id}/regions/{region} For projects.locations.autoscalingPolicies.create,
+         the resource name of the location has the following format:
          projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
@@ -326,10 +322,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.create, the resource name  of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.autoscalingPolicies.create, the resource name  of the location has
-           * the following format:  projects/{project_id}/locations/{location}
+           * projects.regions.autoscalingPolicies.create, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.autoscalingPolicies.create, the resource name of the location has
+           * the following format: projects/{project_id}/locations/{location}
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -356,12 +352,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.delete, the resource name  of the policy has the
-         *        following format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-         *        For projects.locations.autoscalingPolicies.delete, the resource name  of the policy has
-         *        the following format:
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.delete, the resource name of the policy has the
+         *        following format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
+         *        For projects.locations.autoscalingPolicies.delete, the resource name of the policy has the
+         *        following format:
          *        projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
          * @return the request
          */
@@ -391,12 +386,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.delete, the resource name  of the policy has the
-         *        following format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-         *        For projects.locations.autoscalingPolicies.delete, the resource name  of the policy has
-         *        the following format:
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.delete, the resource name of the policy has the
+         *        following format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
+         *        For projects.locations.autoscalingPolicies.delete, the resource name of the policy has the
+         *        following format:
          *        projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            * @since 1.13
            */
@@ -468,10 +462,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.delete, the resource name  of the policy has the
+           * projects.regions.autoscalingPolicies.delete, the resource name of the policy has the
            * following format:
            * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies.delete, the resource name  of the policy has the
+           * projects.locations.autoscalingPolicies.delete, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -480,10 +474,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The "resource name" of the autoscaling policy, as described in
          https://cloud.google.com/apis/design/resource_names. For
-         projects.regions.autoscalingPolicies.delete, the resource name  of the policy has the following
-         format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-         projects.locations.autoscalingPolicies.delete, the resource name  of the policy has the following
-         format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
+         projects.regions.autoscalingPolicies.delete, the resource name of the policy has the following
+         format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+         projects.locations.autoscalingPolicies.delete, the resource name of the policy has the following
+         format: projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
           public java.lang.String getName() {
             return name;
@@ -492,10 +486,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.delete, the resource name  of the policy has the
+           * projects.regions.autoscalingPolicies.delete, the resource name of the policy has the
            * following format:
            * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies.delete, the resource name  of the policy has the
+           * projects.locations.autoscalingPolicies.delete, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -523,11 +517,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.get, the resource name  of the policy has the
-         *        following format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-         *        For projects.locations.autoscalingPolicies.get, the resource name  of the policy has the
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.get, the resource name of the policy has the
+         *        following format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
+         *        For projects.locations.autoscalingPolicies.get, the resource name of the policy has the
          *        following format:
          *        projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
          * @return the request
@@ -556,11 +549,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.get, the resource name  of the policy has the
-         *        following format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-         *        For projects.locations.autoscalingPolicies.get, the resource name  of the policy has the
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.get, the resource name of the policy has the
+         *        following format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
+         *        For projects.locations.autoscalingPolicies.get, the resource name of the policy has the
          *        following format:
          *        projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            * @since 1.13
@@ -643,10 +635,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.get, the resource name  of the policy has the
+           * projects.regions.autoscalingPolicies.get, the resource name of the policy has the
            * following format:
            * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies.get, the resource name  of the policy has the
+           * projects.locations.autoscalingPolicies.get, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -655,10 +647,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The "resource name" of the autoscaling policy, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies.get,
-         the resource name  of the policy has the following format:
+         the resource name of the policy has the following format:
          projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-         projects.locations.autoscalingPolicies.get, the resource name  of the policy has the following
-         format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
+         projects.locations.autoscalingPolicies.get, the resource name of the policy has the following
+         format: projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
           public java.lang.String getName() {
             return name;
@@ -667,10 +659,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.get, the resource name  of the policy has the
+           * projects.regions.autoscalingPolicies.get, the resource name of the policy has the
            * following format:
            * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies.get, the resource name  of the policy has the
+           * projects.locations.autoscalingPolicies.get, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -840,13 +832,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The "resource name" of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.list, the resource name  of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.autoscalingPolicies.list, the resource name  of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.list, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.autoscalingPolicies.list, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -873,13 +863,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The "resource name" of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.list, the resource name  of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.autoscalingPolicies.list, the resource name  of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.list, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.autoscalingPolicies.list, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -960,19 +948,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.list, the resource name  of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.autoscalingPolicies.list, the resource name  of the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.autoscalingPolicies.list, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.autoscalingPolicies.list, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The "resource name" of the region or location, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies.list,
-         the resource name  of the region has the following format:  projects/{project_id}/regions/{region}
-         For projects.locations.autoscalingPolicies.list, the resource name  of the location has the
-         following format:  projects/{project_id}/locations/{location}
+         the resource name of the region has the following format: projects/{project_id}/regions/{region}
+         For projects.locations.autoscalingPolicies.list, the resource name of the location has the
+         following format: projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
@@ -981,10 +969,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.list, the resource name  of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.autoscalingPolicies.list, the resource name  of the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.autoscalingPolicies.list, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.autoscalingPolicies.list, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1048,7 +1036,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "autoscalingPolicies.setIamPolicy".
          *
@@ -1075,7 +1063,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "autoscalingPolicies.setIamPolicy".
            *
@@ -1344,13 +1332,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
          * @param name Output only. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies, the resource name of the  policy has the following
-         *        format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-        For
-         *        projects.locations.autoscalingPolicies, the resource name of the  policy has the following
-         *        format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies, the resource name of the policy has the following
+         *        format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+         *        projects.locations.autoscalingPolicies, the resource name of the policy has the following
+         *        format: projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
          * @param content the {@link com.google.api.services.dataproc.model.AutoscalingPolicy}
          * @return the request
          */
@@ -1380,13 +1366,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies, the resource name of the  policy has the following
-         *        format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-        For
-         *        projects.locations.autoscalingPolicies, the resource name of the  policy has the following
-         *        format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies, the resource name of the policy has the following
+         *        format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+         *        projects.locations.autoscalingPolicies, the resource name of the policy has the following
+         *        format: projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            * @param content the {@link com.google.api.services.dataproc.model.AutoscalingPolicy}
            * @since 1.13
            */
@@ -1458,10 +1442,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Output only. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies, the resource name of the  policy has the
-           * following format:
-           * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies, the resource name of the  policy has the
+           * projects.regions.autoscalingPolicies, the resource name of the policy has the following
+           * format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+           * projects.locations.autoscalingPolicies, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -1470,9 +1453,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Output only. The "resource name" of the autoscaling policy, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies, the
-         resource name of the  policy has the following format:
+         resource name of the policy has the following format:
          projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-         projects.locations.autoscalingPolicies, the resource name of the  policy has the following format:
+         projects.locations.autoscalingPolicies, the resource name of the policy has the following format:
          projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
           public java.lang.String getName() {
@@ -1482,10 +1465,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Output only. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies, the resource name of the  policy has the
-           * following format:
-           * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies, the resource name of the  policy has the
+           * projects.regions.autoscalingPolicies, the resource name of the policy has the following
+           * format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+           * projects.locations.autoscalingPolicies, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -1535,13 +1517,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,create, the resource name of the  region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.create, the resource name of  the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,create, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.create, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -1570,13 +1550,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,create, the resource name of the  region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.create, the resource name of  the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,create, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.create, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -1648,19 +1626,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,create, the resource name of the  region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.create, the resource name of  the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,create, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.create, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the region or location, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,create,
-         the resource name of the  region has the following format:  projects/{project_id}/regions/{region}
-         For projects.locations.workflowTemplates.create, the resource name of  the location has the
-         following format:  projects/{project_id}/locations/{location}
+         the resource name of the region has the following format: projects/{project_id}/regions/{region}
+         For projects.locations.workflowTemplates.create, the resource name of the location has the
+         following format: projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
@@ -1669,10 +1647,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,create, the resource name of the  region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.create, the resource name of  the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,create, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.create, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1698,11 +1676,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
+         *        https://cloud.google.com/apis/design/resource_names. For
          *        projects.regions.workflowTemplates.delete, the resource name of the template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name of the template
          *        has the following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @return the request
@@ -1732,11 +1709,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
+         *        https://cloud.google.com/apis/design/resource_names. For
          *        projects.regions.workflowTemplates.delete, the resource name of the template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name of the template
          *        has the following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @since 1.13
@@ -1812,8 +1788,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * projects.regions.workflowTemplates.delete, the resource name of the template has the
            * following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
-           * has the following format:
+           * projects.locations.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
@@ -1823,8 +1799,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.delete,
          the resource name of the template has the following format:
          projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-         projects.locations.workflowTemplates.instantiate, the resource name  of the template has the
-         following format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+         projects.locations.workflowTemplates.instantiate, the resource name of the template has the
+         following format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
@@ -1836,8 +1812,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * projects.regions.workflowTemplates.delete, the resource name of the template has the
            * following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
-           * has the following format:
+           * projects.locations.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Delete setName(java.lang.String name) {
@@ -1888,11 +1864,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates.get, the resource name of the  template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.get, the resource name of the  template has the
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates.get, the resource name of the template has the
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.get, the resource name of the template has the
          *        following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @return the request
@@ -1922,11 +1897,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates.get, the resource name of the  template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.get, the resource name of the  template has the
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates.get, the resource name of the template has the
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.get, the resource name of the template has the
          *        following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @since 1.13
@@ -2009,10 +1983,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the workflow template, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates.get, the resource name of the  template has the
+           * projects.regions.workflowTemplates.get, the resource name of the template has the
            * following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.get, the resource name of the  template has the
+           * projects.locations.workflowTemplates.get, the resource name of the template has the
            * following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
@@ -2021,10 +1995,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The resource name of the workflow template, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.get,
-         the resource name of the  template has the following format:
+         the resource name of the template has the following format:
          projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-         projects.locations.workflowTemplates.get, the resource name of the  template has the following
-         format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+         projects.locations.workflowTemplates.get, the resource name of the template has the following
+         format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
@@ -2033,10 +2007,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the workflow template, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates.get, the resource name of the  template has the
+           * projects.regions.workflowTemplates.get, the resource name of the template has the
            * following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.get, the resource name of the  template has the
+           * projects.locations.workflowTemplates.get, the resource name of the template has the
            * following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
@@ -2237,11 +2211,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Instantiate#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
+         *        https://cloud.google.com/apis/design/resource_names. For
          *        projects.regions.workflowTemplates.instantiate, the resource name of the template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name of the template
          *        has the following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @param content the {@link com.google.api.services.dataproc.model.InstantiateWorkflowTemplateRequest}
@@ -2279,11 +2252,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
+         *        https://cloud.google.com/apis/design/resource_names. For
          *        projects.regions.workflowTemplates.instantiate, the resource name of the template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name of the template
          *        has the following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @param content the {@link com.google.api.services.dataproc.model.InstantiateWorkflowTemplateRequest}
@@ -2360,8 +2332,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * projects.regions.workflowTemplates.instantiate, the resource name of the template has
            * the following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
-           * has the following format:
+           * projects.locations.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
@@ -2370,9 +2342,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Required. The resource name of the workflow template, as described in
          https://cloud.google.com/apis/design/resource_names. For
          projects.regions.workflowTemplates.instantiate, the resource name of the template has the following
-         format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-         projects.locations.workflowTemplates.instantiate, the resource name  of the template has the
-         following format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+         format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         projects.locations.workflowTemplates.instantiate, the resource name of the template has the
+         following format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
@@ -2384,8 +2356,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * projects.regions.workflowTemplates.instantiate, the resource name of the template has
            * the following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
-           * has the following format:
+           * projects.locations.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Instantiate setName(java.lang.String name) {
@@ -2421,13 +2393,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link InstantiateInline#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has
-         *        the following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.instantiateinline, the  resource name of the location
-         *        has the following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,instantiateinline, the resource name of the region has
+         *        the following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.instantiateinline, the resource name of the location
+         *        has the following format: projects/{project_id}/locations/{location}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -2465,13 +2435,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has
-         *        the following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.instantiateinline, the  resource name of the location
-         *        has the following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,instantiateinline, the resource name of the region has
+         *        the following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.instantiateinline, the resource name of the location
+         *        has the following format: projects/{project_id}/locations/{location}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -2543,20 +2511,20 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,instantiateinline, the resource  name of the region
-           * has the following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.instantiateinline, the  resource name of the
-           * location has the following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,instantiateinline, the resource name of the region
+           * has the following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.instantiateinline, the resource name of the
+           * location has the following format: projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the region or location, as described in
          https://cloud.google.com/apis/design/resource_names. For
-         projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has the
-         following format:  projects/{project_id}/regions/{region} For
-         projects.locations.workflowTemplates.instantiateinline, the  resource name of the location has the
-         following format:  projects/{project_id}/locations/{location}
+         projects.regions.workflowTemplates,instantiateinline, the resource name of the region has the
+         following format: projects/{project_id}/regions/{region} For
+         projects.locations.workflowTemplates.instantiateinline, the resource name of the location has the
+         following format: projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
@@ -2565,10 +2533,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,instantiateinline, the resource  name of the region
-           * has the following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.instantiateinline, the  resource name of the
-           * location has the following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,instantiateinline, the resource name of the region
+           * has the following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.instantiateinline, the resource name of the
+           * location has the following format: projects/{project_id}/locations/{location}
            */
           public InstantiateInline setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2628,13 +2596,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,list, the resource  name of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.list, the  resource name of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,list, the resource name of the region has the following
+         *        format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.list, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2661,13 +2627,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,list, the resource  name of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.list, the  resource name of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,list, the resource name of the region has the following
+         *        format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.list, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2748,19 +2712,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,list, the resource  name of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.list, the  resource name of the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,list, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.list, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the region or location, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,list,
-         the resource  name of the region has the following format:  projects/{project_id}/regions/{region}
-         For projects.locations.workflowTemplates.list, the  resource name of the location has the following
-         format:  projects/{project_id}/locations/{location}
+         the resource name of the region has the following format: projects/{project_id}/regions/{region}
+         For projects.locations.workflowTemplates.list, the resource name of the location has the following
+         format: projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
@@ -2769,10 +2733,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,list, the resource  name of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.list, the  resource name of the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,list, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.list, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2829,7 +2793,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "workflowTemplates.setIamPolicy".
          *
@@ -2856,7 +2820,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "workflowTemplates.setIamPolicy".
            *
@@ -3125,13 +3089,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
          * @param name Output only. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates, the resource name of the  template has the following
-         *        format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-        For
-         *        projects.locations.workflowTemplates, the resource name of the  template has the following
-         *        format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates, the resource name of the template has the following
+         *        format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         *        projects.locations.workflowTemplates, the resource name of the template has the following
+         *        format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -3161,13 +3123,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates, the resource name of the  template has the following
-         *        format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-        For
-         *        projects.locations.workflowTemplates, the resource name of the  template has the following
-         *        format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates, the resource name of the template has the following
+         *        format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         *        projects.locations.workflowTemplates, the resource name of the template has the following
+         *        format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -3239,10 +3199,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Output only. The resource name of the workflow template, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates, the resource name of the  template has the
-           * following format:
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates, the resource name of the  template has the
+           * projects.regions.workflowTemplates, the resource name of the template has the following
+           * format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates, the resource name of the template has the
            * following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
@@ -3251,9 +3210,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Output only. The resource name of the workflow template, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates, the
-         resource name of the  template has the following format:
+         resource name of the template has the following format:
          projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-         projects.locations.workflowTemplates, the resource name of the  template has the following format:
+         projects.locations.workflowTemplates, the resource name of the template has the following format:
          projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
@@ -3263,10 +3222,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Output only. The resource name of the workflow template, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates, the resource name of the  template has the
-           * following format:
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates, the resource name of the  template has the
+           * projects.regions.workflowTemplates, the resource name of the template has the following
+           * format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates, the resource name of the template has the
            * following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
@@ -3337,13 +3295,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The "resource name" of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.create, the resource name  of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.autoscalingPolicies.create, the resource name  of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.create, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.autoscalingPolicies.create, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
          * @param content the {@link com.google.api.services.dataproc.model.AutoscalingPolicy}
          * @return the request
          */
@@ -3372,13 +3328,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The "resource name" of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.create, the resource name  of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.autoscalingPolicies.create, the resource name  of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.create, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.autoscalingPolicies.create, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
            * @param content the {@link com.google.api.services.dataproc.model.AutoscalingPolicy}
            * @since 1.13
            */
@@ -3450,19 +3404,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.create, the resource name  of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.autoscalingPolicies.create, the resource name  of the location has
-           * the following format:  projects/{project_id}/locations/{location}
+           * projects.regions.autoscalingPolicies.create, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.autoscalingPolicies.create, the resource name of the location has
+           * the following format: projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The "resource name" of the region or location, as described in
          https://cloud.google.com/apis/design/resource_names. For
-         projects.regions.autoscalingPolicies.create, the resource name  of the region has the following
-         format:  projects/{project_id}/regions/{region} For projects.locations.autoscalingPolicies.create,
-         the resource name  of the location has the following format:
+         projects.regions.autoscalingPolicies.create, the resource name of the region has the following
+         format: projects/{project_id}/regions/{region} For projects.locations.autoscalingPolicies.create,
+         the resource name of the location has the following format:
          projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
@@ -3472,10 +3426,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.create, the resource name  of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.autoscalingPolicies.create, the resource name  of the location has
-           * the following format:  projects/{project_id}/locations/{location}
+           * projects.regions.autoscalingPolicies.create, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.autoscalingPolicies.create, the resource name of the location has
+           * the following format: projects/{project_id}/locations/{location}
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3502,12 +3456,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.delete, the resource name  of the policy has the
-         *        following format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-         *        For projects.locations.autoscalingPolicies.delete, the resource name  of the policy has
-         *        the following format:
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.delete, the resource name of the policy has the
+         *        following format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
+         *        For projects.locations.autoscalingPolicies.delete, the resource name of the policy has the
+         *        following format:
          *        projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
          * @return the request
          */
@@ -3537,12 +3490,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.delete, the resource name  of the policy has the
-         *        following format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-         *        For projects.locations.autoscalingPolicies.delete, the resource name  of the policy has
-         *        the following format:
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.delete, the resource name of the policy has the
+         *        following format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
+         *        For projects.locations.autoscalingPolicies.delete, the resource name of the policy has the
+         *        following format:
          *        projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            * @since 1.13
            */
@@ -3614,10 +3566,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.delete, the resource name  of the policy has the
+           * projects.regions.autoscalingPolicies.delete, the resource name of the policy has the
            * following format:
            * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies.delete, the resource name  of the policy has the
+           * projects.locations.autoscalingPolicies.delete, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -3626,10 +3578,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The "resource name" of the autoscaling policy, as described in
          https://cloud.google.com/apis/design/resource_names. For
-         projects.regions.autoscalingPolicies.delete, the resource name  of the policy has the following
-         format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-         projects.locations.autoscalingPolicies.delete, the resource name  of the policy has the following
-         format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
+         projects.regions.autoscalingPolicies.delete, the resource name of the policy has the following
+         format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+         projects.locations.autoscalingPolicies.delete, the resource name of the policy has the following
+         format: projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
           public java.lang.String getName() {
             return name;
@@ -3638,10 +3590,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.delete, the resource name  of the policy has the
+           * projects.regions.autoscalingPolicies.delete, the resource name of the policy has the
            * following format:
            * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies.delete, the resource name  of the policy has the
+           * projects.locations.autoscalingPolicies.delete, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -3669,11 +3621,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.get, the resource name  of the policy has the
-         *        following format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-         *        For projects.locations.autoscalingPolicies.get, the resource name  of the policy has the
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.get, the resource name of the policy has the
+         *        following format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
+         *        For projects.locations.autoscalingPolicies.get, the resource name of the policy has the
          *        following format:
          *        projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
          * @return the request
@@ -3702,11 +3653,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.get, the resource name  of the policy has the
-         *        following format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-         *        For projects.locations.autoscalingPolicies.get, the resource name  of the policy has the
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.get, the resource name of the policy has the
+         *        following format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
+         *        For projects.locations.autoscalingPolicies.get, the resource name of the policy has the
          *        following format:
          *        projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            * @since 1.13
@@ -3789,10 +3739,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.get, the resource name  of the policy has the
+           * projects.regions.autoscalingPolicies.get, the resource name of the policy has the
            * following format:
            * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies.get, the resource name  of the policy has the
+           * projects.locations.autoscalingPolicies.get, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -3801,10 +3751,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The "resource name" of the autoscaling policy, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies.get,
-         the resource name  of the policy has the following format:
+         the resource name of the policy has the following format:
          projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-         projects.locations.autoscalingPolicies.get, the resource name  of the policy has the following
-         format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
+         projects.locations.autoscalingPolicies.get, the resource name of the policy has the following
+         format: projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
           public java.lang.String getName() {
             return name;
@@ -3813,10 +3763,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.get, the resource name  of the policy has the
+           * projects.regions.autoscalingPolicies.get, the resource name of the policy has the
            * following format:
            * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies.get, the resource name  of the policy has the
+           * projects.locations.autoscalingPolicies.get, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -3986,13 +3936,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The "resource name" of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.list, the resource name  of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.autoscalingPolicies.list, the resource name  of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.list, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.autoscalingPolicies.list, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4019,13 +3967,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The "resource name" of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies.list, the resource name  of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.autoscalingPolicies.list, the resource name  of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies.list, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.autoscalingPolicies.list, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4106,19 +4052,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.list, the resource name  of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.autoscalingPolicies.list, the resource name  of the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.autoscalingPolicies.list, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.autoscalingPolicies.list, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The "resource name" of the region or location, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies.list,
-         the resource name  of the region has the following format:  projects/{project_id}/regions/{region}
-         For projects.locations.autoscalingPolicies.list, the resource name  of the location has the
-         following format:  projects/{project_id}/locations/{location}
+         the resource name of the region has the following format: projects/{project_id}/regions/{region}
+         For projects.locations.autoscalingPolicies.list, the resource name of the location has the
+         following format: projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
@@ -4127,10 +4073,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The "resource name" of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies.list, the resource name  of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.autoscalingPolicies.list, the resource name  of the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.autoscalingPolicies.list, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.autoscalingPolicies.list, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4194,7 +4140,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "autoscalingPolicies.setIamPolicy".
          *
@@ -4221,7 +4167,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "autoscalingPolicies.setIamPolicy".
            *
@@ -4490,13 +4436,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
          * @param name Output only. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies, the resource name of the  policy has the following
-         *        format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-        For
-         *        projects.locations.autoscalingPolicies, the resource name of the  policy has the following
-         *        format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies, the resource name of the policy has the following
+         *        format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+         *        projects.locations.autoscalingPolicies, the resource name of the policy has the following
+         *        format: projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
          * @param content the {@link com.google.api.services.dataproc.model.AutoscalingPolicy}
          * @return the request
          */
@@ -4526,13 +4470,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. The "resource name" of the autoscaling policy, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.autoscalingPolicies, the resource name of the  policy has the following
-         *        format:  projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id}
-        For
-         *        projects.locations.autoscalingPolicies, the resource name of the  policy has the following
-         *        format:  projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.autoscalingPolicies, the resource name of the policy has the following
+         *        format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+         *        projects.locations.autoscalingPolicies, the resource name of the policy has the following
+         *        format: projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            * @param content the {@link com.google.api.services.dataproc.model.AutoscalingPolicy}
            * @since 1.13
            */
@@ -4604,10 +4546,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Output only. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies, the resource name of the  policy has the
-           * following format:
-           * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies, the resource name of the  policy has the
+           * projects.regions.autoscalingPolicies, the resource name of the policy has the following
+           * format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+           * projects.locations.autoscalingPolicies, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -4616,9 +4557,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Output only. The "resource name" of the autoscaling policy, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies, the
-         resource name of the  policy has the following format:
+         resource name of the policy has the following format:
          projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-         projects.locations.autoscalingPolicies, the resource name of the  policy has the following format:
+         projects.locations.autoscalingPolicies, the resource name of the policy has the following format:
          projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
           public java.lang.String getName() {
@@ -4628,10 +4569,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Output only. The "resource name" of the autoscaling policy, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.autoscalingPolicies, the resource name of the  policy has the
-           * following format:
-           * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
-           * projects.locations.autoscalingPolicies, the resource name of the  policy has the
+           * projects.regions.autoscalingPolicies, the resource name of the policy has the following
+           * format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+           * projects.locations.autoscalingPolicies, the resource name of the policy has the
            * following format:
            * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
            */
@@ -5996,11 +5936,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * } Similarly, to change the number of preemptible workers in a cluster to 5, the
            * update_mask parameter would be config.secondary_worker_config.num_instances, and the
            * PATCH request body would be set as follows: { "config":{ "secondaryWorkerConfig":{
-           * "numInstances":"5" } } } Note: Currently, only the following fields can be updated:
-           * Mask  Purpose      labels  Update labels      config.worker_config.num_instances
-           * Resize primary worker group      config.secondary_worker_config.num_instances  Resize
-           * secondary worker group      config.autoscaling_config.policy_uriUse, stop using, or
-           * change autoscaling policies
+           * "numInstances":"5" } } } *Note:* Currently, only the following fields can be updated:
+           * *Mask* *Purpose* *labels* Update labels *config.worker_config.num_instances* Resize
+           * primary worker group *config.secondary_worker_config.num_instances* Resize secondary
+           * worker group config.autoscaling_config.policy_uri Use, stop using, or change
+           * autoscaling policies
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -6011,11 +5951,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          follows: { "config":{ "workerConfig":{ "numInstances":"5" } } } Similarly, to change the number of
          preemptible workers in a cluster to 5, the update_mask parameter would be
          config.secondary_worker_config.num_instances, and the PATCH request body would be set as follows: {
-         "config":{ "secondaryWorkerConfig":{ "numInstances":"5" } } } Note: Currently, only the following
-         fields can be updated:      Mask  Purpose      labels  Update labels
-         config.worker_config.num_instances  Resize primary worker group
-         config.secondary_worker_config.num_instances  Resize secondary worker group
-         config.autoscaling_config.policy_uriUse, stop using, or  change autoscaling policies
+         "config":{ "secondaryWorkerConfig":{ "numInstances":"5" } } } *Note:* Currently, only the following
+         fields can be updated: *Mask* *Purpose* *labels* Update labels *config.worker_config.num_instances*
+         Resize primary worker group *config.secondary_worker_config.num_instances* Resize secondary worker
+         group config.autoscaling_config.policy_uri Use, stop using, or change autoscaling policies
            */
           public String getUpdateMask() {
             return updateMask;
@@ -6029,11 +5968,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * } Similarly, to change the number of preemptible workers in a cluster to 5, the
            * update_mask parameter would be config.secondary_worker_config.num_instances, and the
            * PATCH request body would be set as follows: { "config":{ "secondaryWorkerConfig":{
-           * "numInstances":"5" } } } Note: Currently, only the following fields can be updated:
-           * Mask  Purpose      labels  Update labels      config.worker_config.num_instances
-           * Resize primary worker group      config.secondary_worker_config.num_instances  Resize
-           * secondary worker group      config.autoscaling_config.policy_uriUse, stop using, or
-           * change autoscaling policies
+           * "numInstances":"5" } } } *Note:* Currently, only the following fields can be updated:
+           * *Mask* *Purpose* *labels* Update labels *config.worker_config.num_instances* Resize
+           * primary worker group *config.secondary_worker_config.num_instances* Resize secondary
+           * worker group config.autoscaling_config.policy_uri Use, stop using, or change
+           * autoscaling policies
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -6047,7 +5986,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "clusters.setIamPolicy".
          *
@@ -6074,7 +6013,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "clusters.setIamPolicy".
            *
@@ -7396,15 +7335,15 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. Specifies the path, relative to Job, of the field to update. For example, to
            * update the labels of a Job the update_mask parameter would be specified as labels, and
-           * the PATCH request body would specify the new value. Note: Currently, labels is the only
-           * field that can be updated.
+           * the PATCH request body would specify the new value. *Note:* Currently, labels is the
+           * only field that can be updated.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Required. Specifies the path, relative to Job, of the field to update. For example, to update the
          labels of a Job the update_mask parameter would be specified as labels, and the PATCH request body
-         would specify the new value. Note: Currently, labels is the only field that can be updated.
+         would specify the new value. *Note:* Currently, labels is the only field that can be updated.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -7413,8 +7352,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. Specifies the path, relative to Job, of the field to update. For example, to
            * update the labels of a Job the update_mask parameter would be specified as labels, and
-           * the PATCH request body would specify the new value. Note: Currently, labels is the only
-           * field that can be updated.
+           * the PATCH request body would specify the new value. *Note:* Currently, labels is the
+           * only field that can be updated.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -7428,7 +7367,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "jobs.setIamPolicy".
          *
@@ -7455,7 +7394,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "jobs.setIamPolicy".
            *
@@ -8766,7 +8705,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "operations.setIamPolicy".
          *
@@ -8793,7 +8732,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "operations.setIamPolicy".
            *
@@ -9083,13 +9022,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,create, the resource name of the  region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.create, the resource name of  the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,create, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.create, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -9118,13 +9055,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,create, the resource name of the  region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.create, the resource name of  the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,create, the resource name of the region has the
+         *        following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.create, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -9196,19 +9131,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,create, the resource name of the  region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.create, the resource name of  the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,create, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.create, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the region or location, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,create,
-         the resource name of the  region has the following format:  projects/{project_id}/regions/{region}
-         For projects.locations.workflowTemplates.create, the resource name of  the location has the
-         following format:  projects/{project_id}/locations/{location}
+         the resource name of the region has the following format: projects/{project_id}/regions/{region}
+         For projects.locations.workflowTemplates.create, the resource name of the location has the
+         following format: projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
@@ -9217,10 +9152,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,create, the resource name of the  region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.create, the resource name of  the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,create, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.create, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -9246,11 +9181,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
+         *        https://cloud.google.com/apis/design/resource_names. For
          *        projects.regions.workflowTemplates.delete, the resource name of the template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name of the template
          *        has the following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @return the request
@@ -9280,11 +9214,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
+         *        https://cloud.google.com/apis/design/resource_names. For
          *        projects.regions.workflowTemplates.delete, the resource name of the template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name of the template
          *        has the following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @since 1.13
@@ -9360,8 +9293,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * projects.regions.workflowTemplates.delete, the resource name of the template has the
            * following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
-           * has the following format:
+           * projects.locations.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
@@ -9371,8 +9304,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.delete,
          the resource name of the template has the following format:
          projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-         projects.locations.workflowTemplates.instantiate, the resource name  of the template has the
-         following format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+         projects.locations.workflowTemplates.instantiate, the resource name of the template has the
+         following format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
@@ -9384,8 +9317,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * projects.regions.workflowTemplates.delete, the resource name of the template has the
            * following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
-           * has the following format:
+           * projects.locations.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Delete setName(java.lang.String name) {
@@ -9436,11 +9369,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates.get, the resource name of the  template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.get, the resource name of the  template has the
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates.get, the resource name of the template has the
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.get, the resource name of the template has the
          *        following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @return the request
@@ -9470,11 +9402,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates.get, the resource name of the  template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.get, the resource name of the  template has the
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates.get, the resource name of the template has the
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.get, the resource name of the template has the
          *        following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @since 1.13
@@ -9557,10 +9488,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the workflow template, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates.get, the resource name of the  template has the
+           * projects.regions.workflowTemplates.get, the resource name of the template has the
            * following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.get, the resource name of the  template has the
+           * projects.locations.workflowTemplates.get, the resource name of the template has the
            * following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
@@ -9569,10 +9500,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Required. The resource name of the workflow template, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates.get,
-         the resource name of the  template has the following format:
+         the resource name of the template has the following format:
          projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-         projects.locations.workflowTemplates.get, the resource name of the  template has the following
-         format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+         projects.locations.workflowTemplates.get, the resource name of the template has the following
+         format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
@@ -9581,10 +9512,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the workflow template, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates.get, the resource name of the  template has the
+           * projects.regions.workflowTemplates.get, the resource name of the template has the
            * following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.get, the resource name of the  template has the
+           * projects.locations.workflowTemplates.get, the resource name of the template has the
            * following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
@@ -9785,11 +9716,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Instantiate#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
+         *        https://cloud.google.com/apis/design/resource_names. For
          *        projects.regions.workflowTemplates.instantiate, the resource name of the template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name of the template
          *        has the following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @param content the {@link com.google.api.services.dataproc.model.InstantiateWorkflowTemplateRequest}
@@ -9827,11 +9757,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
+         *        https://cloud.google.com/apis/design/resource_names. For
          *        projects.regions.workflowTemplates.instantiate, the resource name of the template has the
-         *        following format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-         *        For projects.locations.workflowTemplates.instantiate, the resource name  of the template
+         *        following format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
+         *        For projects.locations.workflowTemplates.instantiate, the resource name of the template
          *        has the following format:
          *        projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @param content the {@link com.google.api.services.dataproc.model.InstantiateWorkflowTemplateRequest}
@@ -9908,8 +9837,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * projects.regions.workflowTemplates.instantiate, the resource name of the template has
            * the following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
-           * has the following format:
+           * projects.locations.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           @com.google.api.client.util.Key
@@ -9918,9 +9847,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /** Required. The resource name of the workflow template, as described in
          https://cloud.google.com/apis/design/resource_names. For
          projects.regions.workflowTemplates.instantiate, the resource name of the template has the following
-         format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-         projects.locations.workflowTemplates.instantiate, the resource name  of the template has the
-         following format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+         format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         projects.locations.workflowTemplates.instantiate, the resource name of the template has the
+         following format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
             return name;
@@ -9932,8 +9861,8 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * projects.regions.workflowTemplates.instantiate, the resource name of the template has
            * the following format:
            * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates.instantiate, the resource name  of the template
-           * has the following format:
+           * projects.locations.workflowTemplates.instantiate, the resource name of the template has
+           * the following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public Instantiate setName(java.lang.String name) {
@@ -9969,13 +9898,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link InstantiateInline#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has
-         *        the following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.instantiateinline, the  resource name of the location
-         *        has the following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,instantiateinline, the resource name of the region has
+         *        the following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.instantiateinline, the resource name of the location
+         *        has the following format: projects/{project_id}/locations/{location}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -10013,13 +9940,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has
-         *        the following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.instantiateinline, the  resource name of the location
-         *        has the following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,instantiateinline, the resource name of the region has
+         *        the following format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.instantiateinline, the resource name of the location
+         *        has the following format: projects/{project_id}/locations/{location}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -10091,20 +10016,20 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,instantiateinline, the resource  name of the region
-           * has the following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.instantiateinline, the  resource name of the
-           * location has the following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,instantiateinline, the resource name of the region
+           * has the following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.instantiateinline, the resource name of the
+           * location has the following format: projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the region or location, as described in
          https://cloud.google.com/apis/design/resource_names. For
-         projects.regions.workflowTemplates,instantiateinline, the resource  name of the region has the
-         following format:  projects/{project_id}/regions/{region} For
-         projects.locations.workflowTemplates.instantiateinline, the  resource name of the location has the
-         following format:  projects/{project_id}/locations/{location}
+         projects.regions.workflowTemplates,instantiateinline, the resource name of the region has the
+         following format: projects/{project_id}/regions/{region} For
+         projects.locations.workflowTemplates.instantiateinline, the resource name of the location has the
+         following format: projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
@@ -10113,10 +10038,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,instantiateinline, the resource  name of the region
-           * has the following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.instantiateinline, the  resource name of the
-           * location has the following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,instantiateinline, the resource name of the region
+           * has the following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.instantiateinline, the resource name of the
+           * location has the following format: projects/{project_id}/locations/{location}
            */
           public InstantiateInline setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -10176,13 +10101,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,list, the resource  name of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.list, the  resource name of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,list, the resource name of the region has the following
+         *        format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.list, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -10209,13 +10132,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the region or location, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates,list, the resource  name of the region has the
-         *        following format:  projects/{project_id}/regions/{region}
-        For
-         *        projects.locations.workflowTemplates.list, the  resource name of the location has the
-         *        following format:  projects/{project_id}/locations/{location}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates,list, the resource name of the region has the following
+         *        format: projects/{project_id}/regions/{region} For
+         *        projects.locations.workflowTemplates.list, the resource name of the location has the
+         *        following format: projects/{project_id}/locations/{location}
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -10296,19 +10217,19 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,list, the resource  name of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.list, the  resource name of the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,list, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.list, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the region or location, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,list,
-         the resource  name of the region has the following format:  projects/{project_id}/regions/{region}
-         For projects.locations.workflowTemplates.list, the  resource name of the location has the following
-         format:  projects/{project_id}/locations/{location}
+         the resource name of the region has the following format: projects/{project_id}/regions/{region}
+         For projects.locations.workflowTemplates.list, the resource name of the location has the following
+         format: projects/{project_id}/locations/{location}
            */
           public java.lang.String getParent() {
             return parent;
@@ -10317,10 +10238,10 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The resource name of the region or location, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates,list, the resource  name of the region has the
-           * following format:  projects/{project_id}/regions/{region} For
-           * projects.locations.workflowTemplates.list, the  resource name of the location has the
-           * following format:  projects/{project_id}/locations/{location}
+           * projects.regions.workflowTemplates,list, the resource name of the region has the
+           * following format: projects/{project_id}/regions/{region} For
+           * projects.locations.workflowTemplates.list, the resource name of the location has the
+           * following format: projects/{project_id}/locations/{location}
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -10377,7 +10298,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
-         * Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
          *
          * Create a request for the method "workflowTemplates.setIamPolicy".
          *
@@ -10404,7 +10325,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Sets the access control policy on the specified resource. Replaces any existing policy.Can
-           * return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
            *
            * Create a request for the method "workflowTemplates.setIamPolicy".
            *
@@ -10673,13 +10594,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
          * @param name Output only. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates, the resource name of the  template has the following
-         *        format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-        For
-         *        projects.locations.workflowTemplates, the resource name of the  template has the following
-         *        format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates, the resource name of the template has the following
+         *        format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         *        projects.locations.workflowTemplates, the resource name of the template has the following
+         *        format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
          * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
          * @return the request
          */
@@ -10709,13 +10628,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. The resource name of the workflow template, as described in
-         *        https://cloud.google.com/apis/design/resource_names.
-        For
-         *        projects.regions.workflowTemplates, the resource name of the  template has the following
-         *        format:  projects/{project_id}/regions/{region}/workflowTemplates/{template_id}
-        For
-         *        projects.locations.workflowTemplates, the resource name of the  template has the following
-         *        format:  projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+         *        https://cloud.google.com/apis/design/resource_names. For
+         *        projects.regions.workflowTemplates, the resource name of the template has the following
+         *        format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+         *        projects.locations.workflowTemplates, the resource name of the template has the following
+         *        format: projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            * @param content the {@link com.google.api.services.dataproc.model.WorkflowTemplate}
            * @since 1.13
            */
@@ -10787,10 +10704,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Output only. The resource name of the workflow template, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates, the resource name of the  template has the
-           * following format:
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates, the resource name of the  template has the
+           * projects.regions.workflowTemplates, the resource name of the template has the following
+           * format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates, the resource name of the template has the
            * following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
@@ -10799,9 +10715,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /** Output only. The resource name of the workflow template, as described in
          https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates, the
-         resource name of the  template has the following format:
+         resource name of the template has the following format:
          projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-         projects.locations.workflowTemplates, the resource name of the  template has the following format:
+         projects.locations.workflowTemplates, the resource name of the template has the following format:
          projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */
           public java.lang.String getName() {
@@ -10811,10 +10727,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Output only. The resource name of the workflow template, as described in
            * https://cloud.google.com/apis/design/resource_names. For
-           * projects.regions.workflowTemplates, the resource name of the  template has the
-           * following format:
-           * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
-           * projects.locations.workflowTemplates, the resource name of the  template has the
+           * projects.regions.workflowTemplates, the resource name of the template has the following
+           * format: projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+           * projects.locations.workflowTemplates, the resource name of the template has the
            * following format:
            * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
            */

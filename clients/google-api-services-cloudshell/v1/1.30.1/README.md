@@ -1,7 +1,6 @@
 # Cloud Shell API Client Library for Java
 
-Allows users to start, configure, and connect to interactive shell sessions running in the cloud.
-
+Allows users to start, configure, and connect to interactive shell sessions running in the cloud. 
 
 This page contains information about getting started with the Cloud Shell API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudshell</artifactId>
-      <version>v1-rev20200224-1.30.9</version>
+      <version>v1-rev20201003-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-cloudshell:v1-rev20200224-1.30.9'
+  compile 'com.google.apis:google-api-services-cloudshell:v1-rev20201003-1.30.10'
 }
 ```
 

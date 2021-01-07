@@ -17,12 +17,10 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * Security Command Center finding.
- *
- * A finding is a record of assessment data like security, risk, health, or privacy, that is
- * ingested into Security Command Center for presentation, notification, analysis, policy testing,
- * and enforcement. For example, a cross-site scripting (XSS) vulnerability in an App Engine
- * application is a finding.
+ * Security Command Center finding. A finding is a record of assessment data like security, risk,
+ * health, or privacy, that is ingested into Security Command Center for presentation, notification,
+ * analysis, policy testing, and enforcement. For example, a cross-site scripting (XSS)
+ * vulnerability in an App Engine application is a finding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -51,9 +49,10 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The time at which the event took place. For example, if the finding represents an open firewall
-   * it would capture the time the detector believes the firewall became open. The accuracy is
-   * determined by the detector.
+   * The time at which the event took place, or when an update to the finding occurred. For example,
+   * if the finding represents an open firewall it would capture the time the detector believes the
+   * firewall became open. The accuracy is determined by the detector. If the finding were to be
+   * resolved afterward, this time would reflect when the finding was resolved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,9 +158,10 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the event took place. For example, if the finding represents an open firewall
-   * it would capture the time the detector believes the firewall became open. The accuracy is
-   * determined by the detector.
+   * The time at which the event took place, or when an update to the finding occurred. For example,
+   * if the finding represents an open firewall it would capture the time the detector believes the
+   * firewall became open. The accuracy is determined by the detector. If the finding were to be
+   * resolved afterward, this time would reflect when the finding was resolved.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -169,9 +169,10 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the event took place. For example, if the finding represents an open firewall
-   * it would capture the time the detector believes the firewall became open. The accuracy is
-   * determined by the detector.
+   * The time at which the event took place, or when an update to the finding occurred. For example,
+   * if the finding represents an open firewall it would capture the time the detector believes the
+   * firewall became open. The accuracy is determined by the detector. If the finding were to be
+   * resolved afterward, this time would reflect when the finding was resolved.
    * @param eventTime eventTime or {@code null} for none
    */
   public Finding setEventTime(String eventTime) {

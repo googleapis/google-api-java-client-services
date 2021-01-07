@@ -1,7 +1,6 @@
 # Accelerated Mobile Pages (AMP) URL API Client Library for Java
 
-Retrieves the list of AMP URLs (and equivalent AMP Cache URLs) for a given list of public URL(s).
-
+Retrieves the list of AMP URLs (and equivalent AMP Cache URLs) for a given list of public URL(s). 
 
 This page contains information about getting started with the Accelerated Mobile Pages (AMP) URL API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -23,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-acceleratedmobilepageurl</artifactId>
-      <version>v1-rev20200215-1.30.9</version>
+      <version>v1-rev20200916-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -36,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-acceleratedmobilepageurl:v1-rev20200215-1.30.9'
+  compile 'com.google.apis:google-api-services-acceleratedmobilepageurl:v1-rev20200916-1.30.10'
 }
 ```
 

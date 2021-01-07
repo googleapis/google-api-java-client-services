@@ -20,8 +20,7 @@ package com.google.api.services.tagmanager;
  * Service definition for TagManager (v1).
  *
  * <p>
- * This API allows clients to access and modify container and tag
-     configuration.
+ * This API allows clients to access and modify container and tag configuration.
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Tag Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Tag Manager API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -56,7 +55,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
    *
    * @since 1.7
    */
-  public static final String DEFAULT_ROOT_URL = "https://www.googleapis.com/";
+  public static final String DEFAULT_ROOT_URL = "https://tagmanager.googleapis.com/";
 
   /**
    * The default encoded service path of the service. This is determined when the library is
@@ -487,9 +486,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return this;
       }
 
-      /**
-       * When provided, this fingerprint must match the fingerprint of the account in storage.
-       */
+      /** When provided, this fingerprint must match the fingerprint of the account in storage. */
       @com.google.api.client.util.Key
       private java.lang.String fingerprint;
 
@@ -499,9 +496,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return fingerprint;
       }
 
-      /**
-       * When provided, this fingerprint must match the fingerprint of the account in storage.
-       */
+      /** When provided, this fingerprint must match the fingerprint of the account in storage. */
       public Update setFingerprint(java.lang.String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -4185,9 +4180,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /**
-           * When provided, this fingerprint must match the fingerprint of the tag in storage.
-           */
+          /** When provided, this fingerprint must match the fingerprint of the tag in storage. */
           @com.google.api.client.util.Key
           private java.lang.String fingerprint;
 
@@ -4197,9 +4190,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return fingerprint;
           }
 
-          /**
-           * When provided, this fingerprint must match the fingerprint of the tag in storage.
-           */
+          /** When provided, this fingerprint must match the fingerprint of the tag in storage. */
           public Update setFingerprint(java.lang.String fingerprint) {
             this.fingerprint = fingerprint;
             return this;
@@ -6139,8 +6130,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          *
          * @param accountId The GTM Account ID.
          * @param containerId The GTM Container ID.
-         * @param containerVersionId The GTM Container Version ID. Specify published to retrieve
-        the currently published version.
+         * @param containerVersionId The GTM Container Version ID. Specify published to retrieve the currently published version.
          * @return the request
          */
         public Get get(java.lang.String accountId, java.lang.String containerId, java.lang.String containerVersionId) throws java.io.IOException {
@@ -6165,8 +6155,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            *
            * @param accountId The GTM Account ID.
            * @param containerId The GTM Container ID.
-           * @param containerVersionId The GTM Container Version ID. Specify published to retrieve
-        the currently published version.
+           * @param containerVersionId The GTM Container Version ID. Specify published to retrieve the currently published version.
            * @since 1.13
            */
           protected Get(java.lang.String accountId, java.lang.String containerId, java.lang.String containerVersionId) {

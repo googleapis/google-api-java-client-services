@@ -46,7 +46,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Runtime Configuration API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Runtime Configuration API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -170,9 +170,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent The [project
-      ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848)
-      for this
+       * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for this
        *        request, in the format `projects/[PROJECT_ID]`.
        * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.RuntimeConfig}
        * @return the request
@@ -201,9 +199,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The [project
-      ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848)
-      for this
+         * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for this
        *        request, in the format `projects/[PROJECT_ID]`.
          * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.RuntimeConfig}
          * @since 1.13
@@ -303,24 +299,19 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
         /**
          * An optional but recommended unique `request_id`. If the server receives two `create()`
-         * requests  with the same `request_id`, then the second request will be ignored and the
+         * requests with the same `request_id`, then the second request will be ignored and the
          * first resource created and stored in the backend is returned. Empty `request_id` fields
-         * are ignored.
-         *
-         * It is responsibility of the client to ensure uniqueness of the `request_id` strings.
-         *
-         * `request_id` strings are limited to 64 characters.
+         * are ignored. It is responsibility of the client to ensure uniqueness of the `request_id`
+         * strings. `request_id` strings are limited to 64 characters.
          */
         @com.google.api.client.util.Key
         private java.lang.String requestId;
 
         /** An optional but recommended unique `request_id`. If the server receives two `create()` requests
        with the same `request_id`, then the second request will be ignored and the first resource created
-       and stored in the backend is returned. Empty `request_id` fields are ignored.
-
-       It is responsibility of the client to ensure uniqueness of the `request_id` strings.
-
-       `request_id` strings are limited to 64 characters.
+       and stored in the backend is returned. Empty `request_id` fields are ignored. It is responsibility
+       of the client to ensure uniqueness of the `request_id` strings. `request_id` strings are limited to
+       64 characters.
          */
         public java.lang.String getRequestId() {
           return requestId;
@@ -328,13 +319,10 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
         /**
          * An optional but recommended unique `request_id`. If the server receives two `create()`
-         * requests  with the same `request_id`, then the second request will be ignored and the
+         * requests with the same `request_id`, then the second request will be ignored and the
          * first resource created and stored in the backend is returned. Empty `request_id` fields
-         * are ignored.
-         *
-         * It is responsibility of the client to ensure uniqueness of the `request_id` strings.
-         *
-         * `request_id` strings are limited to 64 characters.
+         * are ignored. It is responsibility of the client to ensure uniqueness of the `request_id`
+         * strings. `request_id` strings are limited to 64 characters.
          */
         public Create setRequestId(java.lang.String requestId) {
           this.requestId = requestId;
@@ -354,8 +342,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name The RuntimeConfig resource to delete, in the format:
-      `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
+       * @param name The RuntimeConfig resource to delete, in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -382,8 +369,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The RuntimeConfig resource to delete, in the format:
-      `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
+         * @param name The RuntimeConfig resource to delete, in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -453,15 +439,12 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
         /**
          * The RuntimeConfig resource to delete, in the format:
-         *
          * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The RuntimeConfig resource to delete, in the format:
-
-       `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
+        /** The RuntimeConfig resource to delete, in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          */
         public java.lang.String getName() {
           return name;
@@ -469,7 +452,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
         /**
          * The RuntimeConfig resource to delete, in the format:
-         *
          * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          */
         public Delete setName(java.lang.String name) {
@@ -603,14 +585,12 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
         /**
          * The name of the RuntimeConfig resource to retrieve, in the format:
-         *
          * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The name of the RuntimeConfig resource to retrieve, in the format:
-
        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          */
         public java.lang.String getName() {
@@ -619,7 +599,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
         /**
          * The name of the RuntimeConfig resource to retrieve, in the format:
-         *
          * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          */
         public Get setName(java.lang.String name) {
@@ -646,8 +625,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
        * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
        * @return the request
        */
@@ -676,8 +654,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
        *        the appropriate value for this field.
          * @since 1.13
          */
@@ -785,34 +762,33 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         @com.google.api.client.util.Key("options.requestedPolicyVersion")
         private java.lang.Integer optionsRequestedPolicyVersion;
 
-        /** Optional. The policy format version to be returned.
-
-       Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-       Requests for policies with any conditional bindings must specify version 3. Policies without any
-       conditional bindings may specify any valid value or leave the field unset.
+        /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+       specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+       must specify version 3. Policies without any conditional bindings may specify any valid value or
+       leave the field unset. To learn which resources support conditions in their IAM policies, see the
+       [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public java.lang.Integer getOptionsRequestedPolicyVersion() {
           return optionsRequestedPolicyVersion;
         }
 
         /**
-         * Optional. The policy format version to be returned.
-         *
-         * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-         *
-         * Requests for policies with any conditional bindings must specify version 3. Policies
-         * without any conditional bindings may specify any valid value or leave the field unset.
+         * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+         * Requests specifying an invalid value will be rejected. Requests for policies with any
+         * conditional bindings must specify version 3. Policies without any conditional bindings
+         * may specify any valid value or leave the field unset. To learn which resources support
+         * conditions in their IAM policies, see the [IAM
+         * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
          */
         public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
           this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -832,9 +808,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
        * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The [project
-      ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848)
-      for this
+       * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for this
        *        request, in the format `projects/[PROJECT_ID]`.
        * @return the request
        */
@@ -861,9 +835,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The [project
-      ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848)
-      for this
+         * @param parent The [project ID](https://support.google.com/cloud/answer/6158840?hl=en_topic=6158848) for this
        *        request, in the format `projects/[PROJECT_ID]`.
          * @since 1.13
          */
@@ -1022,17 +994,15 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Sets the access control policy on the specified resource. Replaces any existing policy.
-       *
-       * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
        *
        * Create a request for the method "configs.setIamPolicy".
        *
        * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
        * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
        * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.SetIamPolicyRequest}
        * @return the request
@@ -1051,9 +1021,8 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+$");
 
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "configs.setIamPolicy".
          *
@@ -1063,8 +1032,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-      See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
        *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.SetIamPolicyRequest}
          * @since 1.13
@@ -1169,18 +1137,16 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
       }
       /**
        * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-       * this will return an empty set of permissions, not a NOT_FOUND error.
-       *
-       * Note: This operation is designed to be used for building permission-aware UIs and command-line
-       * tools, not for authorization checking. This operation may "fail open" without warning.
+       * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+       * designed to be used for building permission-aware UIs and command-line tools, not for
+       * authorization checking. This operation may "fail open" without warning.
        *
        * Create a request for the method "configs.testIamPermissions".
        *
        * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
        * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
        *
-       * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
        * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.TestIamPermissionsRequest}
        * @return the request
@@ -1200,10 +1166,9 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not
-         * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+         * operation is designed to be used for building permission-aware UIs and command-line tools, not
+         * for authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "configs.testIamPermissions".
          *
@@ -1213,8 +1178,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-      See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
        *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.TestIamPermissionsRequest}
          * @since 1.13
@@ -1426,14 +1390,12 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
         /**
          * The name of the RuntimeConfig resource to update, in the format:
-         *
          * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The name of the RuntimeConfig resource to update, in the format:
-
        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          */
         public java.lang.String getName() {
@@ -1442,7 +1404,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
         /**
          * The name of the RuntimeConfig resource to update, in the format:
-         *
          * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          */
         public Update setName(java.lang.String name) {
@@ -1482,7 +1443,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
       public class Operations {
 
         /**
-         * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+         * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.
          *
          * Create a request for the method "operations.get".
@@ -1507,7 +1468,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
               java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/operations/.*$");
 
           /**
-           * Gets the latest state of a long-running operation.  Clients can use this method to poll the
+           * Gets the latest state of a long-running operation. Clients can use this method to poll the
            * operation result at intervals as recommended by the API service.
            *
            * Create a request for the method "operations.get".
@@ -1623,18 +1584,16 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "operations.testIamPermissions".
          *
          * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.TestIamPermissionsRequest}
          * @return the request
@@ -1654,10 +1613,9 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "operations.testIamPermissions".
            *
@@ -1667,8 +1625,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -1796,18 +1753,15 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         /**
          * Creates a variable within the given configuration. You cannot create a variable with a name that
          * is a prefix of an existing variable name, or a name that has an existing variable name as a
-         * prefix.
-         *
-         * To learn more about creating a variable, read the [Setting and Getting Data](/deployment-manager
-         * /runtime-configurator/set-and-get-variables) documentation.
+         * prefix. To learn more about creating a variable, read the [Setting and Getting Data](/deployment-
+         * manager/runtime-configurator/set-and-get-variables) documentation.
          *
          * Create a request for the method "variables.create".
          *
          * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The path to the RutimeConfig resource that this variable should belong to.
-        The configuration must
+         * @param parent The path to the RutimeConfig resource that this variable should belong to. The configuration must
          *        exist beforehand; the path must be in the format:
          *        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.Variable}
@@ -1829,10 +1783,8 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           /**
            * Creates a variable within the given configuration. You cannot create a variable with a name
            * that is a prefix of an existing variable name, or a name that has an existing variable name as
-           * a prefix.
-           *
-           * To learn more about creating a variable, read the [Setting and Getting Data](/deployment-
-           * manager/runtime-configurator/set-and-get-variables) documentation.
+           * a prefix. To learn more about creating a variable, read the [Setting and Getting Data
+           * ](/deployment-manager/runtime-configurator/set-and-get-variables) documentation.
            *
            * Create a request for the method "variables.create".
            *
@@ -1842,8 +1794,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The path to the RutimeConfig resource that this variable should belong to.
-        The configuration must
+           * @param parent The path to the RutimeConfig resource that this variable should belong to. The configuration must
          *        exist beforehand; the path must be in the format:
          *        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.Variable}
@@ -1917,16 +1868,13 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           /**
            * The path to the RutimeConfig resource that this variable should belong to. The
            * configuration must exist beforehand; the path must be in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The path to the RutimeConfig resource that this variable should belong to. The configuration must
-         exist beforehand; the path must be in the format:
-
-         `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
+         exist beforehand; the path must be in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           public java.lang.String getParent() {
             return parent;
@@ -1935,7 +1883,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           /**
            * The path to the RutimeConfig resource that this variable should belong to. The
            * configuration must exist beforehand; the path must be in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           public Create setParent(java.lang.String parent) {
@@ -1950,24 +1897,19 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * An optional but recommended unique `request_id`. If the server receives two `create()`
-           * requests  with the same `request_id`, then the second request will be ignored and the
+           * requests with the same `request_id`, then the second request will be ignored and the
            * first resource created and stored in the backend is returned. Empty `request_id` fields
-           * are ignored.
-           *
-           * It is responsibility of the client to ensure uniqueness of the `request_id` strings.
-           *
-           * `request_id` strings are limited to 64 characters.
+           * are ignored. It is responsibility of the client to ensure uniqueness of the
+           * `request_id` strings. `request_id` strings are limited to 64 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** An optional but recommended unique `request_id`. If the server receives two `create()` requests
          with the same `request_id`, then the second request will be ignored and the first resource created
-         and stored in the backend is returned. Empty `request_id` fields are ignored.
-
-         It is responsibility of the client to ensure uniqueness of the `request_id` strings.
-
-         `request_id` strings are limited to 64 characters.
+         and stored in the backend is returned. Empty `request_id` fields are ignored. It is responsibility
+         of the client to ensure uniqueness of the `request_id` strings. `request_id` strings are limited to
+         64 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -1975,13 +1917,10 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * An optional but recommended unique `request_id`. If the server receives two `create()`
-           * requests  with the same `request_id`, then the second request will be ignored and the
+           * requests with the same `request_id`, then the second request will be ignored and the
            * first resource created and stored in the backend is returned. Empty `request_id` fields
-           * are ignored.
-           *
-           * It is responsibility of the client to ensure uniqueness of the `request_id` strings.
-           *
-           * `request_id` strings are limited to 64 characters.
+           * are ignored. It is responsibility of the client to ensure uniqueness of the
+           * `request_id` strings. `request_id` strings are limited to 64 characters.
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -1994,11 +1933,9 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           }
         }
         /**
-         * Deletes a variable or multiple variables.
-         *
-         * If you specify a variable name, then that variable is deleted. If you specify a prefix and
-         * `recursive` is true, then all variables with that prefix are deleted. You must set a `recursive`
-         * to true if you delete variables by prefix.
+         * Deletes a variable or multiple variables. If you specify a variable name, then that variable is
+         * deleted. If you specify a prefix and `recursive` is true, then all variables with that prefix are
+         * deleted. You must set a `recursive` to true if you delete variables by prefix.
          *
          * Create a request for the method "variables.delete".
          *
@@ -2023,11 +1960,9 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
               java.util.regex.Pattern.compile("^projects/[^/]+/configs/[^/]+/variables/.*$");
 
           /**
-           * Deletes a variable or multiple variables.
-           *
-           * If you specify a variable name, then that variable is deleted. If you specify a prefix and
-           * `recursive` is true, then all variables with that prefix are deleted. You must set a
-           * `recursive` to true if you delete variables by prefix.
+           * Deletes a variable or multiple variables. If you specify a variable name, then that variable is
+           * deleted. If you specify a prefix and `recursive` is true, then all variables with that prefix
+           * are deleted. You must set a `recursive` to true if you delete variables by prefix.
            *
            * Create a request for the method "variables.delete".
            *
@@ -2108,14 +2043,12 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The name of the variable to delete, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name of the variable to delete, in the format:
-
          `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]`
            */
           public java.lang.String getName() {
@@ -2124,7 +2057,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The name of the variable to delete, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]`
            */
           public Delete setName(java.lang.String name) {
@@ -2137,9 +2069,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             return this;
           }
 
-          /**
-           * Set to `true` to recursively delete multiple variables with the same prefix.
-           */
+          /** Set to `true` to recursively delete multiple variables with the same prefix. */
           @com.google.api.client.util.Key
           private java.lang.Boolean recursive;
 
@@ -2149,9 +2079,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
             return recursive;
           }
 
-          /**
-           * Set to `true` to recursively delete multiple variables with the same prefix.
-           */
+          /** Set to `true` to recursively delete multiple variables with the same prefix. */
           public Delete setRecursive(java.lang.Boolean recursive) {
             this.recursive = recursive;
             return this;
@@ -2278,14 +2206,12 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The name of the variable to return, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIBLE_NAME]`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name of the variable to return, in the format:
-
          `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIBLE_NAME]`
            */
           public java.lang.String getName() {
@@ -2294,7 +2220,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The name of the variable to return, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIBLE_NAME]`
            */
           public Get setName(java.lang.String name) {
@@ -2322,10 +2247,8 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The path to the RuntimeConfig resource for which you want to list
-        variables. The configuration must
-         *        exist beforehand; the path must be in the
-        format:
+         * @param parent The path to the RuntimeConfig resource for which you want to list variables. The configuration must
+         *        exist beforehand; the path must be in the format:
          *        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          * @return the request
          */
@@ -2354,10 +2277,8 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The path to the RuntimeConfig resource for which you want to list
-        variables. The configuration must
-         *        exist beforehand; the path must be in the
-        format:
+           * @param parent The path to the RuntimeConfig resource for which you want to list variables. The configuration must
+         *        exist beforehand; the path must be in the format:
          *        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            * @since 1.13
            */
@@ -2439,16 +2360,13 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           /**
            * The path to the RuntimeConfig resource for which you want to list variables. The
            * configuration must exist beforehand; the path must be in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The path to the RuntimeConfig resource for which you want to list variables. The configuration must
-         exist beforehand; the path must be in the format:
-
-         `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
+         exist beforehand; the path must be in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           public java.lang.String getParent() {
             return parent;
@@ -2457,7 +2375,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           /**
            * The path to the RuntimeConfig resource for which you want to list variables. The
            * configuration must exist beforehand; the path must be in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           public List setParent(java.lang.String parent) {
@@ -2471,25 +2388,22 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           }
 
           /**
-           * Filters variables by matching the specified filter. For example:
-           *
-           * `projects/example-project/config/[CONFIG_NAME]/variables/example-variable`.
+           * Filters variables by matching the specified filter. For example: `projects/example-
+           * project/config/[CONFIG_NAME]/variables/example-variable`.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filters variables by matching the specified filter. For example:
-
-         `projects/example-project/config/[CONFIG_NAME]/variables/example-variable`.
+          /** Filters variables by matching the specified filter. For example: `projects/example-
+         project/config/[CONFIG_NAME]/variables/example-variable`.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Filters variables by matching the specified filter. For example:
-           *
-           * `projects/example-project/config/[CONFIG_NAME]/variables/example-variable`.
+           * Filters variables by matching the specified filter. For example: `projects/example-
+           * project/config/[CONFIG_NAME]/variables/example-variable`.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -2574,18 +2488,16 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "variables.testIamPermissions".
          *
          * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.TestIamPermissionsRequest}
          * @return the request
@@ -2605,10 +2517,9 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "variables.testIamPermissions".
            *
@@ -2618,8 +2529,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -2831,14 +2741,12 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The name of the variable to update, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The name of the variable to update, in the format:
-
          `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]`
            */
           public java.lang.String getName() {
@@ -2847,7 +2755,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The name of the variable to update, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/variables/[VARIABLE_NAME]`
            */
           public Update setName(java.lang.String name) {
@@ -2867,24 +2774,20 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
         /**
          * Watches a specific variable and waits for a change in the variable's value. When there is a
-         * change, this method returns the new value or times out.
-         *
-         * If a variable is deleted while being watched, the `variableState` state is set to `DELETED` and
-         * the method returns the last known variable `value`.
-         *
-         * If you set the deadline for watching to a larger value than internal timeout (60 seconds), the
-         * current variable value is returned and the `variableState` will be `VARIABLE_STATE_UNSPECIFIED`.
-         *
-         * To learn more about creating a watcher, read the [Watching a Variable for Changes](/deployment-
-         * manager/runtime-configurator/watching-a-variable) documentation.
+         * change, this method returns the new value or times out. If a variable is deleted while being
+         * watched, the `variableState` state is set to `DELETED` and the method returns the last known
+         * variable `value`. If you set the deadline for watching to a larger value than internal timeout
+         * (60 seconds), the current variable value is returned and the `variableState` will be
+         * `VARIABLE_STATE_UNSPECIFIED`. To learn more about creating a watcher, read the [Watching a
+         * Variable for Changes](/deployment-manager/runtime-configurator/watching-a-variable)
+         * documentation.
          *
          * Create a request for the method "variables.watch".
          *
          * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
          * parameters, call the {@link Watch#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the variable to watch, in the format:
-        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
+         * @param name The name of the variable to watch, in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.WatchVariableRequest}
          * @return the request
          */
@@ -2903,17 +2806,13 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * Watches a specific variable and waits for a change in the variable's value. When there is a
-           * change, this method returns the new value or times out.
-           *
-           * If a variable is deleted while being watched, the `variableState` state is set to `DELETED` and
-           * the method returns the last known variable `value`.
-           *
-           * If you set the deadline for watching to a larger value than internal timeout (60 seconds), the
-           * current variable value is returned and the `variableState` will be
-           * `VARIABLE_STATE_UNSPECIFIED`.
-           *
-           * To learn more about creating a watcher, read the [Watching a Variable for Changes](/deployment-
-           * manager/runtime-configurator/watching-a-variable) documentation.
+           * change, this method returns the new value or times out. If a variable is deleted while being
+           * watched, the `variableState` state is set to `DELETED` and the method returns the last known
+           * variable `value`. If you set the deadline for watching to a larger value than internal timeout
+           * (60 seconds), the current variable value is returned and the `variableState` will be
+           * `VARIABLE_STATE_UNSPECIFIED`. To learn more about creating a watcher, read the [Watching a
+           * Variable for Changes](/deployment-manager/runtime-configurator/watching-a-variable)
+           * documentation.
            *
            * Create a request for the method "variables.watch".
            *
@@ -2923,8 +2822,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
            * Watch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the variable to watch, in the format:
-        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
+           * @param name The name of the variable to watch, in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.WatchVariableRequest}
            * @since 1.13
            */
@@ -2995,15 +2893,12 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The name of the variable to watch, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the variable to watch, in the format:
-
-         `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
+          /** The name of the variable to watch, in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           public java.lang.String getName() {
             return name;
@@ -3011,7 +2906,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The name of the variable to watch, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           public Watch setName(java.lang.String name) {
@@ -3062,10 +2956,8 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent The path to the configuration that will own the waiter.
-        The configuration must exist beforehand; the
-         *        path must be in the format:
-        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`.
+         * @param parent The path to the configuration that will own the waiter. The configuration must exist beforehand; the
+         *        path must be in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`.
          * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.Waiter}
          * @return the request
          */
@@ -3096,10 +2988,8 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The path to the configuration that will own the waiter.
-        The configuration must exist beforehand; the
-         *        path must be in the format:
-        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`.
+           * @param parent The path to the configuration that will own the waiter. The configuration must exist beforehand; the
+         *        path must be in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`.
            * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.Waiter}
            * @since 1.13
            */
@@ -3171,16 +3061,13 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           /**
            * The path to the configuration that will own the waiter. The configuration must exist
            * beforehand; the path must be in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The path to the configuration that will own the waiter. The configuration must exist beforehand;
-         the path must be in the format:
-
-         `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`.
+         the path must be in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -3189,7 +3076,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           /**
            * The path to the configuration that will own the waiter. The configuration must exist
            * beforehand; the path must be in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`.
            */
           public Create setParent(java.lang.String parent) {
@@ -3204,24 +3090,19 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * An optional but recommended unique `request_id`. If the server receives two `create()`
-           * requests  with the same `request_id`, then the second request will be ignored and the
+           * requests with the same `request_id`, then the second request will be ignored and the
            * first resource created and stored in the backend is returned. Empty `request_id` fields
-           * are ignored.
-           *
-           * It is responsibility of the client to ensure uniqueness of the `request_id` strings.
-           *
-           * `request_id` strings are limited to 64 characters.
+           * are ignored. It is responsibility of the client to ensure uniqueness of the
+           * `request_id` strings. `request_id` strings are limited to 64 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** An optional but recommended unique `request_id`. If the server receives two `create()` requests
          with the same `request_id`, then the second request will be ignored and the first resource created
-         and stored in the backend is returned. Empty `request_id` fields are ignored.
-
-         It is responsibility of the client to ensure uniqueness of the `request_id` strings.
-
-         `request_id` strings are limited to 64 characters.
+         and stored in the backend is returned. Empty `request_id` fields are ignored. It is responsibility
+         of the client to ensure uniqueness of the `request_id` strings. `request_id` strings are limited to
+         64 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -3229,13 +3110,10 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * An optional but recommended unique `request_id`. If the server receives two `create()`
-           * requests  with the same `request_id`, then the second request will be ignored and the
+           * requests with the same `request_id`, then the second request will be ignored and the
            * first resource created and stored in the backend is returned. Empty `request_id` fields
-           * are ignored.
-           *
-           * It is responsibility of the client to ensure uniqueness of the `request_id` strings.
-           *
-           * `request_id` strings are limited to 64 characters.
+           * are ignored. It is responsibility of the client to ensure uniqueness of the
+           * `request_id` strings. `request_id` strings are limited to 64 characters.
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -3354,14 +3232,12 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The Waiter resource to delete, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The Waiter resource to delete, in the format:
-
          `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]`
            */
           public java.lang.String getName() {
@@ -3370,7 +3246,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The Waiter resource to delete, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]`
            */
           public Delete setName(java.lang.String name) {
@@ -3396,8 +3271,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The fully-qualified name of the Waiter resource object to retrieve, in the
-        format:
+         * @param name The fully-qualified name of the Waiter resource object to retrieve, in the format:
          *        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]`
          * @return the request
          */
@@ -3424,8 +3298,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The fully-qualified name of the Waiter resource object to retrieve, in the
-        format:
+           * @param name The fully-qualified name of the Waiter resource object to retrieve, in the format:
          *        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]`
            * @since 1.13
            */
@@ -3506,14 +3379,12 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The fully-qualified name of the Waiter resource object to retrieve, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The fully-qualified name of the Waiter resource object to retrieve, in the format:
-
          `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]`
            */
           public java.lang.String getName() {
@@ -3522,7 +3393,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * The fully-qualified name of the Waiter resource object to retrieve, in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]/waiters/[WAITER_NAME]`
            */
           public Get setName(java.lang.String name) {
@@ -3548,8 +3418,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent The path to the configuration for which you want to get a list of waiters.
-        The configuration must
+         * @param parent The path to the configuration for which you want to get a list of waiters. The configuration must
          *        exist beforehand; the path must be in the format:
          *        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
          * @return the request
@@ -3577,8 +3446,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent The path to the configuration for which you want to get a list of waiters.
-        The configuration must
+           * @param parent The path to the configuration for which you want to get a list of waiters. The configuration must
          *        exist beforehand; the path must be in the format:
          *        `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            * @since 1.13
@@ -3661,16 +3529,13 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           /**
            * The path to the configuration for which you want to get a list of waiters. The
            * configuration must exist beforehand; the path must be in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** The path to the configuration for which you want to get a list of waiters. The configuration must
-         exist beforehand; the path must be in the format:
-
-         `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
+         exist beforehand; the path must be in the format: `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           public java.lang.String getParent() {
             return parent;
@@ -3679,7 +3544,6 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
           /**
            * The path to the configuration for which you want to get a list of waiters. The
            * configuration must exist beforehand; the path must be in the format:
-           *
            * `projects/[PROJECT_ID]/configs/[CONFIG_NAME]`
            */
           public List setParent(java.lang.String parent) {
@@ -3745,18 +3609,16 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "waiters.testIamPermissions".
          *
          * This request holds the parameters needed by the runtimeconfig server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.TestIamPermissionsRequest}
          * @return the request
@@ -3776,10 +3638,9 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "waiters.testIamPermissions".
            *
@@ -3789,8 +3650,7 @@ public class CloudRuntimeConfig extends com.google.api.client.googleapis.service
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.runtimeconfig.v1beta1.model.TestIamPermissionsRequest}
            * @since 1.13

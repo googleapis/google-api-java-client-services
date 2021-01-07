@@ -52,16 +52,14 @@ public final class ShippingsettingsCustomBatchRequestEntry extends com.google.ap
   private java.math.BigInteger merchantId;
 
   /**
-   * The method of the batch entry.
-   *
-   * Acceptable values are:   - "get"  - "update"
+   * The method of the batch entry. Acceptable values are: - "`get`" - "`update`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String method;
 
   /**
-   * The account shipping settings to update. Only defined if the method is update.
+   * The account shipping settings to update. Only defined if the method is `update`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,9 +117,7 @@ public final class ShippingsettingsCustomBatchRequestEntry extends com.google.ap
   }
 
   /**
-   * The method of the batch entry.
-   *
-   * Acceptable values are:   - "get"  - "update"
+   * The method of the batch entry. Acceptable values are: - "`get`" - "`update`"
    * @return value or {@code null} for none
    */
   public java.lang.String getMethod() {
@@ -129,9 +125,7 @@ public final class ShippingsettingsCustomBatchRequestEntry extends com.google.ap
   }
 
   /**
-   * The method of the batch entry.
-   *
-   * Acceptable values are:   - "get"  - "update"
+   * The method of the batch entry. Acceptable values are: - "`get`" - "`update`"
    * @param method method or {@code null} for none
    */
   public ShippingsettingsCustomBatchRequestEntry setMethod(java.lang.String method) {
@@ -140,7 +134,7 @@ public final class ShippingsettingsCustomBatchRequestEntry extends com.google.ap
   }
 
   /**
-   * The account shipping settings to update. Only defined if the method is update.
+   * The account shipping settings to update. Only defined if the method is `update`.
    * @return value or {@code null} for none
    */
   public ShippingSettings getShippingSettings() {
@@ -148,7 +142,7 @@ public final class ShippingsettingsCustomBatchRequestEntry extends com.google.ap
   }
 
   /**
-   * The account shipping settings to update. Only defined if the method is update.
+   * The account shipping settings to update. Only defined if the method is `update`.
    * @param shippingSettings shippingSettings or {@code null} for none
    */
   public ShippingsettingsCustomBatchRequestEntry setShippingSettings(ShippingSettings shippingSettings) {

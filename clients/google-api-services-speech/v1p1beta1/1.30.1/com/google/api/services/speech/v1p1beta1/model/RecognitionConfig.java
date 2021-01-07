@@ -31,6 +31,16 @@ package com.google.api.services.speech.v1p1beta1.model;
 public final class RecognitionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Speech adaptation configuration improves the accuracy of speech recognition. When speech
+   * adaptation is set it supersedes the `speech_contexts` field. For more information, see the
+   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-strength)
+   * documentation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpeechAdaptation adaptation;
+
+  /**
    * A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language
    * tags, listing possible alternative languages of the supplied audio. See [Language
    * Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently
@@ -79,9 +89,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * If 'true', adds punctuation to recognition result hypotheses. This feature is only available in
    * select languages. Setting this for requests in other languages has no effect at all. The
-   * default 'false' value does not add punctuation to result hypotheses. Note: This is currently
-   * offered as an experimental service, complimentary to all users. In the future this may be
-   * exclusively available as a premium feature.
+   * default 'false' value does not add punctuation to result hypotheses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,6 +114,27 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableSpeakerDiarization;
+
+  /**
+   * The spoken emoji behavior for the call If not set, uses default behavior based on model of
+   * choice If 'true', adds spoken emoji formatting for the request. This will replace spoken emojis
+   * with the corresponding Unicode symbols in the final transcript. If 'false', spoken emojis are
+   * not replaced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSpokenEmojis;
+
+  /**
+   * The spoken punctuation behavior for the call If not set, uses default behavior based on model
+   * of choice e.g. command_and_search will enable spoken punctuation by default If 'true', replaces
+   * spoken punctuation with the corresponding symbols in the request. For example, "how are you
+   * question mark" becomes "how are you?". See https://cloud.google.com/speech-to-text/docs/spoken-
+   * punctuation for support. If 'false', spoken punctuation is not replaced.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSpokenPunctuation;
 
   /**
    * If `true`, the top result includes a list of words and the confidence for those words. If
@@ -163,16 +192,13 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Which model to select for the given request. Select the model best suited to your domain to get
    * best results. If a model is not explicitly specified, then we auto-select a model based on the
-   * parameters in the RecognitionConfig.
-   *
-   *        Model     Description           command_and_search     Best for short queries such as
-   * voice commands or voice search.           phone_call     Best for audio that originated from a
-   * phone call (typically     recorded at an 8khz sampling rate).           video     Best for
-   * audio that originated from from video or includes multiple         speakers. Ideally the audio
-   * is recorded at a 16khz or greater         sampling rate. This is a premium model that costs
-   * more than the         standard rate.           default     Best for audio that is not one of
-   * the specific audio models.         For example, long-form audio. Ideally the audio is high-
-   * fidelity,         recorded at a 16khz or greater sampling rate.
+   * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
+   * queries such as voice commands or voice search. phone_call Best for audio that originated from
+   * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
+   * originated from from video or includes multiple speakers. Ideally the audio is recorded at a
+   * 16khz or greater sampling rate. This is a premium model that costs more than the standard rate.
+   * default Best for audio that is not one of the specific audio models. For example, long-form
+   * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -210,14 +236,36 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Set to true to use an enhanced model for speech recognition. If `use_enhanced` is set to true
    * and the `model` field is not set, then an appropriate enhanced model is chosen if an enhanced
-   * model exists for the audio.
-   *
-   * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
-   * the speech is recognized using the standard version of the specified model.
+   * model exists for the audio. If `use_enhanced` is true and an enhanced version of the specified
+   * model does not exist, then the speech is recognized using the standard version of the specified
+   * model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useEnhanced;
+
+  /**
+   * Speech adaptation configuration improves the accuracy of speech recognition. When speech
+   * adaptation is set it supersedes the `speech_contexts` field. For more information, see the
+   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-strength)
+   * documentation.
+   * @return value or {@code null} for none
+   */
+  public SpeechAdaptation getAdaptation() {
+    return adaptation;
+  }
+
+  /**
+   * Speech adaptation configuration improves the accuracy of speech recognition. When speech
+   * adaptation is set it supersedes the `speech_contexts` field. For more information, see the
+   * [speech adaptation](https://cloud.google.com/speech-to-text/docs/context-strength)
+   * documentation.
+   * @param adaptation adaptation or {@code null} for none
+   */
+  public RecognitionConfig setAdaptation(SpeechAdaptation adaptation) {
+    this.adaptation = adaptation;
+    return this;
+  }
 
   /**
    * A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language
@@ -326,9 +374,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * If 'true', adds punctuation to recognition result hypotheses. This feature is only available in
    * select languages. Setting this for requests in other languages has no effect at all. The
-   * default 'false' value does not add punctuation to result hypotheses. Note: This is currently
-   * offered as an experimental service, complimentary to all users. In the future this may be
-   * exclusively available as a premium feature.
+   * default 'false' value does not add punctuation to result hypotheses.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAutomaticPunctuation() {
@@ -338,9 +384,7 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * If 'true', adds punctuation to recognition result hypotheses. This feature is only available in
    * select languages. Setting this for requests in other languages has no effect at all. The
-   * default 'false' value does not add punctuation to result hypotheses. Note: This is currently
-   * offered as an experimental service, complimentary to all users. In the future this may be
-   * exclusively available as a premium feature.
+   * default 'false' value does not add punctuation to result hypotheses.
    * @param enableAutomaticPunctuation enableAutomaticPunctuation or {@code null} for none
    */
   public RecognitionConfig setEnableAutomaticPunctuation(java.lang.Boolean enableAutomaticPunctuation) {
@@ -391,6 +435,54 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
    */
   public RecognitionConfig setEnableSpeakerDiarization(java.lang.Boolean enableSpeakerDiarization) {
     this.enableSpeakerDiarization = enableSpeakerDiarization;
+    return this;
+  }
+
+  /**
+   * The spoken emoji behavior for the call If not set, uses default behavior based on model of
+   * choice If 'true', adds spoken emoji formatting for the request. This will replace spoken emojis
+   * with the corresponding Unicode symbols in the final transcript. If 'false', spoken emojis are
+   * not replaced.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSpokenEmojis() {
+    return enableSpokenEmojis;
+  }
+
+  /**
+   * The spoken emoji behavior for the call If not set, uses default behavior based on model of
+   * choice If 'true', adds spoken emoji formatting for the request. This will replace spoken emojis
+   * with the corresponding Unicode symbols in the final transcript. If 'false', spoken emojis are
+   * not replaced.
+   * @param enableSpokenEmojis enableSpokenEmojis or {@code null} for none
+   */
+  public RecognitionConfig setEnableSpokenEmojis(java.lang.Boolean enableSpokenEmojis) {
+    this.enableSpokenEmojis = enableSpokenEmojis;
+    return this;
+  }
+
+  /**
+   * The spoken punctuation behavior for the call If not set, uses default behavior based on model
+   * of choice e.g. command_and_search will enable spoken punctuation by default If 'true', replaces
+   * spoken punctuation with the corresponding symbols in the request. For example, "how are you
+   * question mark" becomes "how are you?". See https://cloud.google.com/speech-to-text/docs/spoken-
+   * punctuation for support. If 'false', spoken punctuation is not replaced.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSpokenPunctuation() {
+    return enableSpokenPunctuation;
+  }
+
+  /**
+   * The spoken punctuation behavior for the call If not set, uses default behavior based on model
+   * of choice e.g. command_and_search will enable spoken punctuation by default If 'true', replaces
+   * spoken punctuation with the corresponding symbols in the request. For example, "how are you
+   * question mark" becomes "how are you?". See https://cloud.google.com/speech-to-text/docs/spoken-
+   * punctuation for support. If 'false', spoken punctuation is not replaced.
+   * @param enableSpokenPunctuation enableSpokenPunctuation or {@code null} for none
+   */
+  public RecognitionConfig setEnableSpokenPunctuation(java.lang.Boolean enableSpokenPunctuation) {
+    this.enableSpokenPunctuation = enableSpokenPunctuation;
     return this;
   }
 
@@ -521,16 +613,13 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Which model to select for the given request. Select the model best suited to your domain to get
    * best results. If a model is not explicitly specified, then we auto-select a model based on the
-   * parameters in the RecognitionConfig.
-   *
-   *        Model     Description           command_and_search     Best for short queries such as
-   * voice commands or voice search.           phone_call     Best for audio that originated from a
-   * phone call (typically     recorded at an 8khz sampling rate).           video     Best for
-   * audio that originated from from video or includes multiple         speakers. Ideally the audio
-   * is recorded at a 16khz or greater         sampling rate. This is a premium model that costs
-   * more than the         standard rate.           default     Best for audio that is not one of
-   * the specific audio models.         For example, long-form audio. Ideally the audio is high-
-   * fidelity,         recorded at a 16khz or greater sampling rate.
+   * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
+   * queries such as voice commands or voice search. phone_call Best for audio that originated from
+   * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
+   * originated from from video or includes multiple speakers. Ideally the audio is recorded at a
+   * 16khz or greater sampling rate. This is a premium model that costs more than the standard rate.
+   * default Best for audio that is not one of the specific audio models. For example, long-form
+   * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -540,16 +629,13 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Which model to select for the given request. Select the model best suited to your domain to get
    * best results. If a model is not explicitly specified, then we auto-select a model based on the
-   * parameters in the RecognitionConfig.
-   *
-   *        Model     Description           command_and_search     Best for short queries such as
-   * voice commands or voice search.           phone_call     Best for audio that originated from a
-   * phone call (typically     recorded at an 8khz sampling rate).           video     Best for
-   * audio that originated from from video or includes multiple         speakers. Ideally the audio
-   * is recorded at a 16khz or greater         sampling rate. This is a premium model that costs
-   * more than the         standard rate.           default     Best for audio that is not one of
-   * the specific audio models.         For example, long-form audio. Ideally the audio is high-
-   * fidelity,         recorded at a 16khz or greater sampling rate.
+   * parameters in the RecognitionConfig. *Model* *Description* command_and_search Best for short
+   * queries such as voice commands or voice search. phone_call Best for audio that originated from
+   * a phone call (typically recorded at an 8khz sampling rate). video Best for audio that
+   * originated from from video or includes multiple speakers. Ideally the audio is recorded at a
+   * 16khz or greater sampling rate. This is a premium model that costs more than the standard rate.
+   * default Best for audio that is not one of the specific audio models. For example, long-form
+   * audio. Ideally the audio is high-fidelity, recorded at a 16khz or greater sampling rate.
    * @param model model or {@code null} for none
    */
   public RecognitionConfig setModel(java.lang.String model) {
@@ -627,10 +713,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Set to true to use an enhanced model for speech recognition. If `use_enhanced` is set to true
    * and the `model` field is not set, then an appropriate enhanced model is chosen if an enhanced
-   * model exists for the audio.
-   *
-   * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
-   * the speech is recognized using the standard version of the specified model.
+   * model exists for the audio. If `use_enhanced` is true and an enhanced version of the specified
+   * model does not exist, then the speech is recognized using the standard version of the specified
+   * model.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseEnhanced() {
@@ -640,10 +725,9 @@ public final class RecognitionConfig extends com.google.api.client.json.GenericJ
   /**
    * Set to true to use an enhanced model for speech recognition. If `use_enhanced` is set to true
    * and the `model` field is not set, then an appropriate enhanced model is chosen if an enhanced
-   * model exists for the audio.
-   *
-   * If `use_enhanced` is true and an enhanced version of the specified model does not exist, then
-   * the speech is recognized using the standard version of the specified model.
+   * model exists for the audio. If `use_enhanced` is true and an enhanced version of the specified
+   * model does not exist, then the speech is recognized using the standard version of the specified
+   * model.
    * @param useEnhanced useEnhanced or {@code null} for none
    */
   public RecognitionConfig setUseEnhanced(java.lang.Boolean useEnhanced) {

@@ -20,8 +20,8 @@ package com.google.api.services.dfareporting.model;
  * Creative Assignment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -90,8 +90,6 @@ public final class CreativeAssignment extends com.google.api.client.json.Generic
   private DimensionValue creativeIdDimensionValue;
 
   /**
-   * Date and time that the assigned creative should stop serving. Must be later than the start
-   * time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +97,7 @@ public final class CreativeAssignment extends com.google.api.client.json.Generic
 
   /**
    * Rich media exit overrides for this creative assignment. Applicable when the creative type is
-   * any of the following:  - DISPLAY - RICH_MEDIA_INPAGE - RICH_MEDIA_INPAGE_FLOATING -
+   * any of the following: - DISPLAY - RICH_MEDIA_INPAGE - RICH_MEDIA_INPAGE_FLOATING -
    * RICH_MEDIA_IM_EXPAND - RICH_MEDIA_EXPANDING - RICH_MEDIA_INTERSTITIAL_FLOAT -
    * RICH_MEDIA_MOBILE_IN_APP - RICH_MEDIA_MULTI_FLOATING - RICH_MEDIA_PEEL_DOWN - VPAID_LINEAR -
    * VPAID_NON_LINEAR
@@ -125,7 +123,6 @@ public final class CreativeAssignment extends com.google.api.client.json.Generic
   private java.lang.Boolean sslCompliant;
 
   /**
-   * Date and time that the assigned creative should start serving.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,8 +264,6 @@ public final class CreativeAssignment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Date and time that the assigned creative should stop serving. Must be later than the start
-   * time.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getEndTime() {
@@ -276,8 +271,6 @@ public final class CreativeAssignment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Date and time that the assigned creative should stop serving. Must be later than the start
-   * time.
    * @param endTime endTime or {@code null} for none
    */
   public CreativeAssignment setEndTime(com.google.api.client.util.DateTime endTime) {
@@ -287,7 +280,7 @@ public final class CreativeAssignment extends com.google.api.client.json.Generic
 
   /**
    * Rich media exit overrides for this creative assignment. Applicable when the creative type is
-   * any of the following:  - DISPLAY - RICH_MEDIA_INPAGE - RICH_MEDIA_INPAGE_FLOATING -
+   * any of the following: - DISPLAY - RICH_MEDIA_INPAGE - RICH_MEDIA_INPAGE_FLOATING -
    * RICH_MEDIA_IM_EXPAND - RICH_MEDIA_EXPANDING - RICH_MEDIA_INTERSTITIAL_FLOAT -
    * RICH_MEDIA_MOBILE_IN_APP - RICH_MEDIA_MULTI_FLOATING - RICH_MEDIA_PEEL_DOWN - VPAID_LINEAR -
    * VPAID_NON_LINEAR
@@ -299,7 +292,7 @@ public final class CreativeAssignment extends com.google.api.client.json.Generic
 
   /**
    * Rich media exit overrides for this creative assignment. Applicable when the creative type is
-   * any of the following:  - DISPLAY - RICH_MEDIA_INPAGE - RICH_MEDIA_INPAGE_FLOATING -
+   * any of the following: - DISPLAY - RICH_MEDIA_INPAGE - RICH_MEDIA_INPAGE_FLOATING -
    * RICH_MEDIA_IM_EXPAND - RICH_MEDIA_EXPANDING - RICH_MEDIA_INTERSTITIAL_FLOAT -
    * RICH_MEDIA_MOBILE_IN_APP - RICH_MEDIA_MULTI_FLOATING - RICH_MEDIA_PEEL_DOWN - VPAID_LINEAR -
    * VPAID_NON_LINEAR
@@ -349,7 +342,6 @@ public final class CreativeAssignment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Date and time that the assigned creative should start serving.
    * @return value or {@code null} for none
    */
   public com.google.api.client.util.DateTime getStartTime() {
@@ -357,7 +349,6 @@ public final class CreativeAssignment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Date and time that the assigned creative should start serving.
    * @param startTime startTime or {@code null} for none
    */
   public CreativeAssignment setStartTime(com.google.api.client.util.DateTime startTime) {

@@ -20,8 +20,7 @@ package com.google.api.services.firebaserules.v1;
  * Service definition for FirebaseRules (v1).
  *
  * <p>
- * Creates and manages rules that determine when a Firebase Rules-enabled service should permit a request.
-
+ * Creates and manages rules that determine when a Firebase Rules-enabled service should permit a request. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Firebase Rules API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Firebase Rules API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -145,34 +144,23 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
 
     /**
      * Test `Source` for syntactic and semantic correctness. Issues present, if any, will be returned to
-     * the caller with a description, severity, and source location.
-     *
-     * The test method may be executed with `Source` or a `Ruleset` name. Passing `Source` is useful for
-     * unit testing new rules. Passing a `Ruleset` name is useful for regression testing an existing
-     * rule.
-     *
-     * The following is an example of `Source` that permits users to upload images to a bucket bearing
-     * their user id and matching the correct metadata:
-     *
-     * _*Example*_
-     *
-     *     // Users are allowed to subscribe and unsubscribe to the blog.     service firebase.storage {
-     * match /users/{userId}/images/{imageName} {           allow write: if userId == request.auth.uid
-     * && (imageName.matches('*.png$')               || imageName.matches('*.jpg$'))               &&
-     * resource.mimeType.matches('^image/')       }     }
+     * the caller with a description, severity, and source location. The test method may be executed
+     * with `Source` or a `Ruleset` name. Passing `Source` is useful for unit testing new rules. Passing
+     * a `Ruleset` name is useful for regression testing an existing rule. The following is an example
+     * of `Source` that permits users to upload images to a bucket bearing their user id and matching
+     * the correct metadata: _*Example*_ // Users are allowed to subscribe and unsubscribe to the blog.
+     * service firebase.storage { match /users/{userId}/images/{imageName} { allow write: if userId ==
+     * request.auth.uid && (imageName.matches('*.png$') || imageName.matches('*.jpg$')) &&
+     * resource.mimeType.matches('^image/') } }
      *
      * Create a request for the method "projects.test".
      *
      * This request holds the parameters needed by the firebaserules server.  After setting any optional
      * parameters, call the {@link Test#execute()} method to invoke the remote operation.
      *
-     * @param name Tests may either provide `source` or a `Ruleset` resource name.
-    For tests against `source`, the
-     *        resource name must refer to the project:
-    Format: `projects/{project_id}`
-    For tests against
-     *        a `Ruleset`, this must be the `Ruleset` resource name:
-    Format:
+     * @param name Tests may either provide `source` or a `Ruleset` resource name. For tests against `source`, the
+     *        resource name must refer to the project: Format: `projects/{project_id}` For tests against
+     *        a `Ruleset`, this must be the `Ruleset` resource name: Format:
      *        `projects/{project_id}/rulesets/{ruleset_id}`
      * @param content the {@link com.google.api.services.firebaserules.v1.model.TestRulesetRequest}
      * @return the request
@@ -192,22 +180,15 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
 
       /**
        * Test `Source` for syntactic and semantic correctness. Issues present, if any, will be returned
-       * to the caller with a description, severity, and source location.
-       *
-       * The test method may be executed with `Source` or a `Ruleset` name. Passing `Source` is useful
-       * for unit testing new rules. Passing a `Ruleset` name is useful for regression testing an
-       * existing rule.
-       *
-       * The following is an example of `Source` that permits users to upload images to a bucket bearing
-       * their user id and matching the correct metadata:
-       *
-       * _*Example*_
-       *
-       *     // Users are allowed to subscribe and unsubscribe to the blog.     service firebase.storage
-       * {       match /users/{userId}/images/{imageName} {           allow write: if userId ==
-       * request.auth.uid               && (imageName.matches('*.png$')               ||
-       * imageName.matches('*.jpg$'))               && resource.mimeType.matches('^image/')       }
-       * }
+       * to the caller with a description, severity, and source location. The test method may be
+       * executed with `Source` or a `Ruleset` name. Passing `Source` is useful for unit testing new
+       * rules. Passing a `Ruleset` name is useful for regression testing an existing rule. The
+       * following is an example of `Source` that permits users to upload images to a bucket bearing
+       * their user id and matching the correct metadata: _*Example*_ // Users are allowed to subscribe
+       * and unsubscribe to the blog. service firebase.storage { match
+       * /users/{userId}/images/{imageName} { allow write: if userId == request.auth.uid &&
+       * (imageName.matches('*.png$') || imageName.matches('*.jpg$')) &&
+       * resource.mimeType.matches('^image/') } }
        *
        * Create a request for the method "projects.test".
        *
@@ -216,13 +197,9 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
        * {@link Test#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Tests may either provide `source` or a `Ruleset` resource name.
-    For tests against `source`, the
-     *        resource name must refer to the project:
-    Format: `projects/{project_id}`
-    For tests against
-     *        a `Ruleset`, this must be the `Ruleset` resource name:
-    Format:
+       * @param name Tests may either provide `source` or a `Ruleset` resource name. For tests against `source`, the
+     *        resource name must refer to the project: Format: `projects/{project_id}` For tests against
+     *        a `Ruleset`, this must be the `Ruleset` resource name: Format:
      *        `projects/{project_id}/rulesets/{ruleset_id}`
        * @param content the {@link com.google.api.services.firebaserules.v1.model.TestRulesetRequest}
        * @since 1.13
@@ -293,23 +270,17 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Tests may either provide `source` or a `Ruleset` resource name.
-       *
-       * For tests against `source`, the resource name must refer to the project: Format:
-       * `projects/{project_id}`
-       *
-       * For tests against a `Ruleset`, this must be the `Ruleset` resource name: Format:
+       * Tests may either provide `source` or a `Ruleset` resource name. For tests against `source`,
+       * the resource name must refer to the project: Format: `projects/{project_id}` For tests
+       * against a `Ruleset`, this must be the `Ruleset` resource name: Format:
        * `projects/{project_id}/rulesets/{ruleset_id}`
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Tests may either provide `source` or a `Ruleset` resource name.
-
-     For tests against `source`, the resource name must refer to the project: Format:
-     `projects/{project_id}`
-
-     For tests against a `Ruleset`, this must be the `Ruleset` resource name: Format:
+      /** Tests may either provide `source` or a `Ruleset` resource name. For tests against `source`, the
+     resource name must refer to the project: Format: `projects/{project_id}` For tests against a
+     `Ruleset`, this must be the `Ruleset` resource name: Format:
      `projects/{project_id}/rulesets/{ruleset_id}`
        */
       public java.lang.String getName() {
@@ -317,12 +288,9 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
       }
 
       /**
-       * Tests may either provide `source` or a `Ruleset` resource name.
-       *
-       * For tests against `source`, the resource name must refer to the project: Format:
-       * `projects/{project_id}`
-       *
-       * For tests against a `Ruleset`, this must be the `Ruleset` resource name: Format:
+       * Tests may either provide `source` or a `Ruleset` resource name. For tests against `source`,
+       * the resource name must refer to the project: Format: `projects/{project_id}` For tests
+       * against a `Ruleset`, this must be the `Ruleset` resource name: Format:
        * `projects/{project_id}/rulesets/{ruleset_id}`
        */
       public Test setName(java.lang.String name) {
@@ -362,31 +330,25 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
     public class Releases {
 
       /**
-       * Create a `Release`.
-       *
-       * Release names should reflect the developer's deployment practices. For example, the release name
-       * may include the environment name, application name, application version, or any other name
-       * meaningful to the developer. Once a `Release` refers to a `Ruleset`, the rules can be enforced by
-       * Firebase Rules-enabled services.
-       *
-       * More than one `Release` may be 'live' concurrently. Consider the following three `Release` names
-       * for `projects/foo` and the `Ruleset` to which they refer.
-       *
-       * Release Name                    | Ruleset Name --------------------------------|-------------
-       * projects/foo/releases/prod      | projects/foo/rulesets/uuid123 projects/foo/releases/prod/beta |
-       * projects/foo/rulesets/uuid123 projects/foo/releases/prod/v23  | projects/foo/rulesets/uuid456
-       *
-       * The table reflects the `Ruleset` rollout in progress. The `prod` and `prod/beta` releases refer
-       * to the same `Ruleset`. However, `prod/v23` refers to a new `Ruleset`. The `Ruleset` reference for
-       * a `Release` may be updated using the UpdateRelease method.
+       * Create a `Release`. Release names should reflect the developer's deployment practices. For
+       * example, the release name may include the environment name, application name, application
+       * version, or any other name meaningful to the developer. Once a `Release` refers to a `Ruleset`,
+       * the rules can be enforced by Firebase Rules-enabled services. More than one `Release` may be
+       * 'live' concurrently. Consider the following three `Release` names for `projects/foo` and the
+       * `Ruleset` to which they refer. Release Name | Ruleset Name
+       * --------------------------------|------------- projects/foo/releases/prod |
+       * projects/foo/rulesets/uuid123 projects/foo/releases/prod/beta | projects/foo/rulesets/uuid123
+       * projects/foo/releases/prod/v23 | projects/foo/rulesets/uuid456 The table reflects the `Ruleset`
+       * rollout in progress. The `prod` and `prod/beta` releases refer to the same `Ruleset`. However,
+       * `prod/v23` refers to a new `Ruleset`. The `Ruleset` reference for a `Release` may be updated
+       * using the UpdateRelease method.
        *
        * Create a request for the method "releases.create".
        *
        * This request holds the parameters needed by the firebaserules server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the project which owns this `Release`.
-      Format: `projects/{project_id}`
+       * @param name Resource name for the project which owns this `Release`. Format: `projects/{project_id}`
        * @param content the {@link com.google.api.services.firebaserules.v1.model.Release}
        * @return the request
        */
@@ -404,23 +366,18 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Create a `Release`.
-         *
-         * Release names should reflect the developer's deployment practices. For example, the release
-         * name may include the environment name, application name, application version, or any other name
-         * meaningful to the developer. Once a `Release` refers to a `Ruleset`, the rules can be enforced
-         * by Firebase Rules-enabled services.
-         *
-         * More than one `Release` may be 'live' concurrently. Consider the following three `Release`
-         * names for `projects/foo` and the `Ruleset` to which they refer.
-         *
-         * Release Name                    | Ruleset Name --------------------------------|-------------
-         * projects/foo/releases/prod      | projects/foo/rulesets/uuid123 projects/foo/releases/prod/beta
-         * | projects/foo/rulesets/uuid123 projects/foo/releases/prod/v23  | projects/foo/rulesets/uuid456
-         *
-         * The table reflects the `Ruleset` rollout in progress. The `prod` and `prod/beta` releases refer
-         * to the same `Ruleset`. However, `prod/v23` refers to a new `Ruleset`. The `Ruleset` reference
-         * for a `Release` may be updated using the UpdateRelease method.
+         * Create a `Release`. Release names should reflect the developer's deployment practices. For
+         * example, the release name may include the environment name, application name, application
+         * version, or any other name meaningful to the developer. Once a `Release` refers to a `Ruleset`,
+         * the rules can be enforced by Firebase Rules-enabled services. More than one `Release` may be
+         * 'live' concurrently. Consider the following three `Release` names for `projects/foo` and the
+         * `Ruleset` to which they refer. Release Name | Ruleset Name
+         * --------------------------------|------------- projects/foo/releases/prod |
+         * projects/foo/rulesets/uuid123 projects/foo/releases/prod/beta | projects/foo/rulesets/uuid123
+         * projects/foo/releases/prod/v23 | projects/foo/rulesets/uuid456 The table reflects the `Ruleset`
+         * rollout in progress. The `prod` and `prod/beta` releases refer to the same `Ruleset`. However,
+         * `prod/v23` refers to a new `Ruleset`. The `Ruleset` reference for a `Release` may be updated
+         * using the UpdateRelease method.
          *
          * Create a request for the method "releases.create".
          *
@@ -430,8 +387,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the project which owns this `Release`.
-      Format: `projects/{project_id}`
+         * @param name Resource name for the project which owns this `Release`. Format: `projects/{project_id}`
          * @param content the {@link com.google.api.services.firebaserules.v1.model.Release}
          * @since 1.13
          */
@@ -501,25 +457,19 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Resource name for the project which owns this `Release`.
-         *
-         * Format: `projects/{project_id}`
+         * Resource name for the project which owns this `Release`. Format: `projects/{project_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the project which owns this `Release`.
-
-       Format: `projects/{project_id}`
+        /** Resource name for the project which owns this `Release`. Format: `projects/{project_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Resource name for the project which owns this `Release`.
-         *
-         * Format: `projects/{project_id}`
+         * Resource name for the project which owns this `Release`. Format: `projects/{project_id}`
          */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -544,8 +494,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the firebaserules server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the `Release` to delete.
-      Format: `projects/{project_id}/releases/{release_id}`
+       * @param name Resource name for the `Release` to delete. Format: `projects/{project_id}/releases/{release_id}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -572,8 +521,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the `Release` to delete.
-      Format: `projects/{project_id}/releases/{release_id}`
+         * @param name Resource name for the `Release` to delete. Format: `projects/{project_id}/releases/{release_id}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -642,25 +590,21 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Resource name for the `Release` to delete.
-         *
-         * Format: `projects/{project_id}/releases/{release_id}`
+         * Resource name for the `Release` to delete. Format:
+         * `projects/{project_id}/releases/{release_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the `Release` to delete.
-
-       Format: `projects/{project_id}/releases/{release_id}`
+        /** Resource name for the `Release` to delete. Format: `projects/{project_id}/releases/{release_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Resource name for the `Release` to delete.
-         *
-         * Format: `projects/{project_id}/releases/{release_id}`
+         * Resource name for the `Release` to delete. Format:
+         * `projects/{project_id}/releases/{release_id}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -685,8 +629,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the firebaserules server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name of the `Release`.
-      Format: `projects/{project_id}/releases/{release_id}`
+       * @param name Resource name of the `Release`. Format: `projects/{project_id}/releases/{release_id}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -712,8 +655,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name of the `Release`.
-      Format: `projects/{project_id}/releases/{release_id}`
+         * @param name Resource name of the `Release`. Format: `projects/{project_id}/releases/{release_id}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -792,25 +734,19 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Resource name of the `Release`.
-         *
-         * Format: `projects/{project_id}/releases/{release_id}`
+         * Resource name of the `Release`. Format: `projects/{project_id}/releases/{release_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name of the `Release`.
-
-       Format: `projects/{project_id}/releases/{release_id}`
+        /** Resource name of the `Release`. Format: `projects/{project_id}/releases/{release_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Resource name of the `Release`.
-         *
-         * Format: `projects/{project_id}/releases/{release_id}`
+         * Resource name of the `Release`. Format: `projects/{project_id}/releases/{release_id}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -835,8 +771,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the firebaserules server.  After setting any optional
        * parameters, call the {@link GetExecutable#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name of the `Release`.
-      Format: `projects/{project_id}/releases/{release_id}`
+       * @param name Resource name of the `Release`. Format: `projects/{project_id}/releases/{release_id}`
        * @return the request
        */
       public GetExecutable getExecutable(java.lang.String name) throws java.io.IOException {
@@ -863,8 +798,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name Resource name of the `Release`.
-      Format: `projects/{project_id}/releases/{release_id}`
+         * @param name Resource name of the `Release`. Format: `projects/{project_id}/releases/{release_id}`
          * @since 1.13
          */
         protected GetExecutable(java.lang.String name) {
@@ -943,25 +877,19 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Resource name of the `Release`.
-         *
-         * Format: `projects/{project_id}/releases/{release_id}`
+         * Resource name of the `Release`. Format: `projects/{project_id}/releases/{release_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name of the `Release`.
-
-       Format: `projects/{project_id}/releases/{release_id}`
+        /** Resource name of the `Release`. Format: `projects/{project_id}/releases/{release_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Resource name of the `Release`.
-         *
-         * Format: `projects/{project_id}/releases/{release_id}`
+         * Resource name of the `Release`. Format: `projects/{project_id}/releases/{release_id}`
          */
         public GetExecutable setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -973,9 +901,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /**
-         * The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1.
-         */
+        /** The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1. */
         @com.google.api.client.util.Key
         private java.lang.String executableVersion;
 
@@ -985,9 +911,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           return executableVersion;
         }
 
-        /**
-         * The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1.
-         */
+        /** The requested runtime executable version. Defaults to FIREBASE_RULES_EXECUTABLE_V1. */
         public GetExecutable setExecutableVersion(java.lang.String executableVersion) {
           this.executableVersion = executableVersion;
           return this;
@@ -1007,8 +931,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the firebaserules server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the project.
-      Format: `projects/{project_id}`
+       * @param name Resource name for the project. Format: `projects/{project_id}`
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -1035,8 +958,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the project.
-      Format: `projects/{project_id}`
+         * @param name Resource name for the project. Format: `projects/{project_id}`
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -1114,27 +1036,17 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Resource name for the project.
-         *
-         * Format: `projects/{project_id}`
-         */
+        /** Resource name for the project. Format: `projects/{project_id}` */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the project.
-
-       Format: `projects/{project_id}`
+        /** Resource name for the project. Format: `projects/{project_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Resource name for the project.
-         *
-         * Format: `projects/{project_id}`
-         */
+        /** Resource name for the project. Format: `projects/{project_id}` */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1147,50 +1059,35 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
 
         /**
          * `Release` filter. The list method supports filters with restrictions on the
-         * `Release.name`, `Release.ruleset_name`, and `Release.test_suite_name`.
-         *
-         * Example 1: A filter of 'name=prod*' might return `Release`s with names within
-         * 'projects/foo' prefixed with 'prod':
-         *
-         * Name                          | Ruleset Name ------------------------------|-------------
-         * projects/foo/releases/prod    | projects/foo/rulesets/uuid1234
-         * projects/foo/releases/prod/v1 | projects/foo/rulesets/uuid1234
-         * projects/foo/releases/prod/v2 | projects/foo/rulesets/uuid8888
-         *
-         * Example 2: A filter of `name=prod* ruleset_name=uuid1234` would return only `Release`
-         * instances for 'projects/foo' with names prefixed with 'prod' referring to the same
-         * `Ruleset` name of 'uuid1234':
-         *
-         * Name                          | Ruleset Name ------------------------------|-------------
-         * projects/foo/releases/prod    | projects/foo/rulesets/1234 projects/foo/releases/prod/v1
-         * | projects/foo/rulesets/1234
-         *
-         * In the examples, the filter parameters refer to the search filters are relative to the
+         * `Release.name`, `Release.ruleset_name`, and `Release.test_suite_name`. Example 1: A
+         * filter of 'name=prod*' might return `Release`s with names within 'projects/foo' prefixed
+         * with 'prod': Name | Ruleset Name ------------------------------|-------------
+         * projects/foo/releases/prod | projects/foo/rulesets/uuid1234 projects/foo/releases/prod/v1
+         * | projects/foo/rulesets/uuid1234 projects/foo/releases/prod/v2 |
+         * projects/foo/rulesets/uuid8888 Example 2: A filter of `name=prod* ruleset_name=uuid1234`
+         * would return only `Release` instances for 'projects/foo' with names prefixed with 'prod'
+         * referring to the same `Ruleset` name of 'uuid1234': Name | Ruleset Name
+         * ------------------------------|------------- projects/foo/releases/prod |
+         * projects/foo/rulesets/1234 projects/foo/releases/prod/v1 | projects/foo/rulesets/1234 In
+         * the examples, the filter parameters refer to the search filters are relative to the
          * project. Fully qualified prefixed may also be used. e.g.
          * `test_suite_name=projects/foo/testsuites/uuid1`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /**` Release` filter. The list method supports filters with restrictions on the Release.name`,
-      ` `Release.ruleset_name`, and `Release.test_suite_name`.
-      `
-      ` Example 1: A filter of 'name=prod*' might return `Release`s with names within 'projects/foo'
-      ` prefixed with 'prod':
-      `
-      ` Name                          | Ruleset Name ------------------------------|-------------
-      ` projects/foo/releases/prod    | projects/foo/rulesets/uuid1234 projects/foo/releases/prod/v1 |
-      ` projects/foo/rulesets/uuid1234 projects/foo/releases/prod/v2 | projects/foo/rulesets/uuid8888
-      `
-      ` Example 2: A filter of `name=prod* ruleset_name=uuid1234` would return only Release` instances for
-      ` 'projects/foo' with names prefixed with 'prod' referring to the same `Ruleset` name of 'uuid1234':
-      `
-      ` Name                          | Ruleset Name ------------------------------|-------------
-      ` projects/foo/releases/prod    | projects/foo/rulesets/1234 projects/foo/releases/prod/v1 |
-      ` projects/foo/rulesets/1234
-      `
-      ` In the examples, the filter parameters refer to the search filters are relative to the project.
-      ` Fully qualified prefixed may also be used. e.g. test_suite_name=projects/foo/testsuites/uuid1`
+        /**` Release` filter. The list method supports filters with restrictions on the `Release.name`,
+      ` `Release.ruleset_name`, and `Release.test_suite_name`. Example 1: A filter of 'name=prod*' might
+      ` return `Release`s with names within 'projects/foo' prefixed with 'prod': Name | Ruleset Name
+      ` ------------------------------|------------- projects/foo/releases/prod |
+      ` projects/foo/rulesets/uuid1234 projects/foo/releases/prod/v1 | projects/foo/rulesets/uuid1234
+      ` projects/foo/releases/prod/v2 | projects/foo/rulesets/uuid8888 Example 2: A filter of `name=prod*
+      ` ruleset_name=uuid1234` would return only `Release` instances for 'projects/foo' with names
+      ` prefixed with 'prod' referring to the same `Ruleset` name of 'uuid1234': Name | Ruleset Name
+      ` ------------------------------|------------- projects/foo/releases/prod |
+      ` projects/foo/rulesets/1234 projects/foo/releases/prod/v1 | projects/foo/rulesets/1234 In the
+      ` examples, the filter parameters refer to the search filters are relative to the project. Fully
+      ` qualified prefixed may also be used. e.g. `test_suite_name=projects/foo/testsuites/uuid1`
       `
 
          */
@@ -1200,25 +1097,17 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
 
         /**
          * `Release` filter. The list method supports filters with restrictions on the
-         * `Release.name`, `Release.ruleset_name`, and `Release.test_suite_name`.
-         *
-         * Example 1: A filter of 'name=prod*' might return `Release`s with names within
-         * 'projects/foo' prefixed with 'prod':
-         *
-         * Name                          | Ruleset Name ------------------------------|-------------
-         * projects/foo/releases/prod    | projects/foo/rulesets/uuid1234
-         * projects/foo/releases/prod/v1 | projects/foo/rulesets/uuid1234
-         * projects/foo/releases/prod/v2 | projects/foo/rulesets/uuid8888
-         *
-         * Example 2: A filter of `name=prod* ruleset_name=uuid1234` would return only `Release`
-         * instances for 'projects/foo' with names prefixed with 'prod' referring to the same
-         * `Ruleset` name of 'uuid1234':
-         *
-         * Name                          | Ruleset Name ------------------------------|-------------
-         * projects/foo/releases/prod    | projects/foo/rulesets/1234 projects/foo/releases/prod/v1
-         * | projects/foo/rulesets/1234
-         *
-         * In the examples, the filter parameters refer to the search filters are relative to the
+         * `Release.name`, `Release.ruleset_name`, and `Release.test_suite_name`. Example 1: A
+         * filter of 'name=prod*' might return `Release`s with names within 'projects/foo' prefixed
+         * with 'prod': Name | Ruleset Name ------------------------------|-------------
+         * projects/foo/releases/prod | projects/foo/rulesets/uuid1234 projects/foo/releases/prod/v1
+         * | projects/foo/rulesets/uuid1234 projects/foo/releases/prod/v2 |
+         * projects/foo/rulesets/uuid8888 Example 2: A filter of `name=prod* ruleset_name=uuid1234`
+         * would return only `Release` instances for 'projects/foo' with names prefixed with 'prod'
+         * referring to the same `Ruleset` name of 'uuid1234': Name | Ruleset Name
+         * ------------------------------|------------- projects/foo/releases/prod |
+         * projects/foo/rulesets/1234 projects/foo/releases/prod/v1 | projects/foo/rulesets/1234 In
+         * the examples, the filter parameters refer to the search filters are relative to the
          * project. Fully qualified prefixed may also be used. e.g.
          * `test_suite_name=projects/foo/testsuites/uuid1`
          */
@@ -1277,18 +1166,16 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Update a `Release` via PATCH.
-       *
-       * Only updates to the `ruleset_name` and `test_suite_name` fields will be honored. `Release` rename
-       * is not supported. To create a `Release` use the CreateRelease method.
+       * Update a `Release` via PATCH. Only updates to the `ruleset_name` and `test_suite_name` fields
+       * will be honored. `Release` rename is not supported. To create a `Release` use the CreateRelease
+       * method.
        *
        * Create a request for the method "releases.patch".
        *
        * This request holds the parameters needed by the firebaserules server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the project which owns this `Release`.
-      Format: `projects/{project_id}`
+       * @param name Resource name for the project which owns this `Release`. Format: `projects/{project_id}`
        * @param content the {@link com.google.api.services.firebaserules.v1.model.UpdateReleaseRequest}
        * @return the request
        */
@@ -1306,10 +1193,9 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+/releases/.*$");
 
         /**
-         * Update a `Release` via PATCH.
-         *
-         * Only updates to the `ruleset_name` and `test_suite_name` fields will be honored. `Release`
-         * rename is not supported. To create a `Release` use the CreateRelease method.
+         * Update a `Release` via PATCH. Only updates to the `ruleset_name` and `test_suite_name` fields
+         * will be honored. `Release` rename is not supported. To create a `Release` use the CreateRelease
+         * method.
          *
          * Create a request for the method "releases.patch".
          *
@@ -1319,8 +1205,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the project which owns this `Release`.
-      Format: `projects/{project_id}`
+         * @param name Resource name for the project which owns this `Release`. Format: `projects/{project_id}`
          * @param content the {@link com.google.api.services.firebaserules.v1.model.UpdateReleaseRequest}
          * @since 1.13
          */
@@ -1390,25 +1275,19 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Resource name for the project which owns this `Release`.
-         *
-         * Format: `projects/{project_id}`
+         * Resource name for the project which owns this `Release`. Format: `projects/{project_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the project which owns this `Release`.
-
-       Format: `projects/{project_id}`
+        /** Resource name for the project which owns this `Release`. Format: `projects/{project_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Resource name for the project which owns this `Release`.
-         *
-         * Format: `projects/{project_id}`
+         * Resource name for the project which owns this `Release`. Format: `projects/{project_id}`
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1448,19 +1327,17 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
     public class Rulesets {
 
       /**
-       * Create a `Ruleset` from `Source`.
-       *
-       * The `Ruleset` is given a unique generated name which is returned to the caller. `Source`
-       * containing syntactic or semantics errors will result in an error response indicating the first
-       * error encountered. For a detailed view of `Source` issues, use TestRuleset.
+       * Create a `Ruleset` from `Source`. The `Ruleset` is given a unique generated name which is
+       * returned to the caller. `Source` containing syntactic or semantics errors will result in an error
+       * response indicating the first error encountered. For a detailed view of `Source` issues, use
+       * TestRuleset.
        *
        * Create a request for the method "rulesets.create".
        *
        * This request holds the parameters needed by the firebaserules server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for Project which owns this `Ruleset`.
-      Format: `projects/{project_id}`
+       * @param name Resource name for Project which owns this `Ruleset`. Format: `projects/{project_id}`
        * @param content the {@link com.google.api.services.firebaserules.v1.model.Ruleset}
        * @return the request
        */
@@ -1478,11 +1355,10 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Create a `Ruleset` from `Source`.
-         *
-         * The `Ruleset` is given a unique generated name which is returned to the caller. `Source`
-         * containing syntactic or semantics errors will result in an error response indicating the first
-         * error encountered. For a detailed view of `Source` issues, use TestRuleset.
+         * Create a `Ruleset` from `Source`. The `Ruleset` is given a unique generated name which is
+         * returned to the caller. `Source` containing syntactic or semantics errors will result in an
+         * error response indicating the first error encountered. For a detailed view of `Source` issues,
+         * use TestRuleset.
          *
          * Create a request for the method "rulesets.create".
          *
@@ -1492,8 +1368,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for Project which owns this `Ruleset`.
-      Format: `projects/{project_id}`
+         * @param name Resource name for Project which owns this `Ruleset`. Format: `projects/{project_id}`
          * @param content the {@link com.google.api.services.firebaserules.v1.model.Ruleset}
          * @since 1.13
          */
@@ -1562,27 +1437,17 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Resource name for Project which owns this `Ruleset`.
-         *
-         * Format: `projects/{project_id}`
-         */
+        /** Resource name for Project which owns this `Ruleset`. Format: `projects/{project_id}` */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for Project which owns this `Ruleset`.
-
-       Format: `projects/{project_id}`
+        /** Resource name for Project which owns this `Ruleset`. Format: `projects/{project_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Resource name for Project which owns this `Ruleset`.
-         *
-         * Format: `projects/{project_id}`
-         */
+        /** Resource name for Project which owns this `Ruleset`. Format: `projects/{project_id}` */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1599,17 +1464,15 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Delete a `Ruleset` by resource name.
-       *
-       * If the `Ruleset` is referenced by a `Release` the operation will fail.
+       * Delete a `Ruleset` by resource name. If the `Ruleset` is referenced by a `Release` the operation
+       * will fail.
        *
        * Create a request for the method "rulesets.delete".
        *
        * This request holds the parameters needed by the firebaserules server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the ruleset to delete.
-      Format: `projects/{project_id}/rulesets/{ruleset_id}`
+       * @param name Resource name for the ruleset to delete. Format: `projects/{project_id}/rulesets/{ruleset_id}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1626,9 +1489,8 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+/rulesets/[^/]+$");
 
         /**
-         * Delete a `Ruleset` by resource name.
-         *
-         * If the `Ruleset` is referenced by a `Release` the operation will fail.
+         * Delete a `Ruleset` by resource name. If the `Ruleset` is referenced by a `Release` the
+         * operation will fail.
          *
          * Create a request for the method "rulesets.delete".
          *
@@ -1638,8 +1500,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the ruleset to delete.
-      Format: `projects/{project_id}/rulesets/{ruleset_id}`
+         * @param name Resource name for the ruleset to delete. Format: `projects/{project_id}/rulesets/{ruleset_id}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1708,25 +1569,21 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Resource name for the ruleset to delete.
-         *
-         * Format: `projects/{project_id}/rulesets/{ruleset_id}`
+         * Resource name for the ruleset to delete. Format:
+         * `projects/{project_id}/rulesets/{ruleset_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the ruleset to delete.
-
-       Format: `projects/{project_id}/rulesets/{ruleset_id}`
+        /** Resource name for the ruleset to delete. Format: `projects/{project_id}/rulesets/{ruleset_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Resource name for the ruleset to delete.
-         *
-         * Format: `projects/{project_id}/rulesets/{ruleset_id}`
+         * Resource name for the ruleset to delete. Format:
+         * `projects/{project_id}/rulesets/{ruleset_id}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1751,8 +1608,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
        * This request holds the parameters needed by the firebaserules server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the ruleset to get.
-      Format: `projects/{project_id}/rulesets/{ruleset_id}`
+       * @param name Resource name for the ruleset to get. Format: `projects/{project_id}/rulesets/{ruleset_id}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1778,8 +1634,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the ruleset to get.
-      Format: `projects/{project_id}/rulesets/{ruleset_id}`
+         * @param name Resource name for the ruleset to get. Format: `projects/{project_id}/rulesets/{ruleset_id}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1858,25 +1713,21 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
 
         /**
-         * Resource name for the ruleset to get.
-         *
-         * Format: `projects/{project_id}/rulesets/{ruleset_id}`
+         * Resource name for the ruleset to get. Format:
+         * `projects/{project_id}/rulesets/{ruleset_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the ruleset to get.
-
-       Format: `projects/{project_id}/rulesets/{ruleset_id}`
+        /** Resource name for the ruleset to get. Format: `projects/{project_id}/rulesets/{ruleset_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Resource name for the ruleset to get.
-         *
-         * Format: `projects/{project_id}/rulesets/{ruleset_id}`
+         * Resource name for the ruleset to get. Format:
+         * `projects/{project_id}/rulesets/{ruleset_id}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1894,17 +1745,15 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * List `Ruleset` metadata only and optionally filter the results by `Ruleset` name.
-       *
-       * The full `Source` contents of a `Ruleset` may be retrieved with GetRuleset.
+       * List `Ruleset` metadata only and optionally filter the results by `Ruleset` name. The full
+       * `Source` contents of a `Ruleset` may be retrieved with GetRuleset.
        *
        * Create a request for the method "rulesets.list".
        *
        * This request holds the parameters needed by the firebaserules server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the project.
-      Format: `projects/{project_id}`
+       * @param name Resource name for the project. Format: `projects/{project_id}`
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -1921,9 +1770,8 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * List `Ruleset` metadata only and optionally filter the results by `Ruleset` name.
-         *
-         * The full `Source` contents of a `Ruleset` may be retrieved with GetRuleset.
+         * List `Ruleset` metadata only and optionally filter the results by `Ruleset` name. The full
+         * `Source` contents of a `Ruleset` may be retrieved with GetRuleset.
          *
          * Create a request for the method "rulesets.list".
          *
@@ -1932,8 +1780,7 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the project.
-      Format: `projects/{project_id}`
+         * @param name Resource name for the project. Format: `projects/{project_id}`
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -2011,27 +1858,17 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Resource name for the project.
-         *
-         * Format: `projects/{project_id}`
-         */
+        /** Resource name for the project. Format: `projects/{project_id}` */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the project.
-
-       Format: `projects/{project_id}`
+        /** Resource name for the project. Format: `projects/{project_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Resource name for the project.
-         *
-         * Format: `projects/{project_id}`
-         */
+        /** Resource name for the project. Format: `projects/{project_id}` */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2044,21 +1881,17 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
 
         /**
          * `Ruleset` filter. The list method supports filters with restrictions on `Ruleset.name`.
-         *
          * Filters on `Ruleset.create_time` should use the `date` function which parses strings that
-         * conform to the RFC 3339 date/time specifications.
-         *
-         * Example: `create_time > date("2017-01-01T00:00:00Z") AND name=UUID-*`
+         * conform to the RFC 3339 date/time specifications. Example: `create_time >
+         * date("2017-01-01T00:00:00Z") AND name=UUID-*`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /**` Ruleset` filter. The list method supports filters with restrictions on Ruleset.name`.
-      `
-      ` Filters on `Ruleset.create_time` should use the `date` function which parses strings that conform
-      ` to the RFC 3339 date/time specifications.
-      `
-      ` Example: `create_time > date("2017-01-01T00:00:00Z") AND name=UUID-*`
+        /**` Ruleset` filter. The list method supports filters with restrictions on `Ruleset.name`. Filters on
+      ` `Ruleset.create_time` should use the `date` function which parses strings that conform to the RFC
+      ` 3339 date/time specifications. Example: `create_time > date("2017-01-01T00:00:00Z") AND
+      ` name=UUID-*`
       `
 
          */
@@ -2068,11 +1901,9 @@ public class FirebaseRules extends com.google.api.client.googleapis.services.jso
 
         /**
          * `Ruleset` filter. The list method supports filters with restrictions on `Ruleset.name`.
-         *
          * Filters on `Ruleset.create_time` should use the `date` function which parses strings that
-         * conform to the RFC 3339 date/time specifications.
-         *
-         * Example: `create_time > date("2017-01-01T00:00:00Z") AND name=UUID-*`
+         * conform to the RFC 3339 date/time specifications. Example: `create_time >
+         * date("2017-01-01T00:00:00Z") AND name=UUID-*`
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

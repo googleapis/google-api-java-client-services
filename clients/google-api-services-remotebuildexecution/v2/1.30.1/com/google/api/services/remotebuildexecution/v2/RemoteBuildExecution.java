@@ -46,7 +46,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Remote Build Execution API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Remote Build Execution API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -143,31 +143,22 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
   public class ActionResults {
 
     /**
-     * Retrieve a cached execution result.
-     *
-     * Implementations SHOULD ensure that any blobs referenced from the ContentAddressableStorage are
-     * available at the time of returning the ActionResult and will be for some period of time
-     * afterwards. The TTLs of the referenced blobs SHOULD be increased if necessary and applicable.
-     *
-     * Errors:
-     *
-     * * `NOT_FOUND`: The requested `ActionResult` is not in the cache.
+     * Retrieve a cached execution result. Implementations SHOULD ensure that any blobs referenced from
+     * the ContentAddressableStorage are available at the time of returning the ActionResult and will be
+     * for some period of time afterwards. The TTLs of the referenced blobs SHOULD be increased if
+     * necessary and applicable. Errors: * `NOT_FOUND`: The requested `ActionResult` is not in the
+     * cache.
      *
      * Create a request for the method "actionResults.get".
      *
      * This request holds the parameters needed by the remotebuildexecution server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
-     * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string
-    exactly 64 characters
+     * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
+     * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string exactly 64 characters
      *        long.
      * @param sizeBytes The size of the blob, in bytes.
      * @return the request
@@ -186,15 +177,11 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^.*$");
 
       /**
-       * Retrieve a cached execution result.
-       *
-       * Implementations SHOULD ensure that any blobs referenced from the ContentAddressableStorage are
-       * available at the time of returning the ActionResult and will be for some period of time
-       * afterwards. The TTLs of the referenced blobs SHOULD be increased if necessary and applicable.
-       *
-       * Errors:
-       *
-       * * `NOT_FOUND`: The requested `ActionResult` is not in the cache.
+       * Retrieve a cached execution result. Implementations SHOULD ensure that any blobs referenced
+       * from the ContentAddressableStorage are available at the time of returning the ActionResult and
+       * will be for some period of time afterwards. The TTLs of the referenced blobs SHOULD be
+       * increased if necessary and applicable. Errors: * `NOT_FOUND`: The requested `ActionResult` is
+       * not in the cache.
        *
        * Create a request for the method "actionResults.get".
        *
@@ -204,16 +191,11 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
-       * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string
-    exactly 64 characters
+       * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
+       * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string exactly 64 characters
      *        long.
        * @param sizeBytes The size of the blob, in bytes.
        * @since 1.13
@@ -391,9 +373,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         return this;
       }
 
-      /**
-       * A hint to the server to request inlining stderr in the ActionResult message.
-       */
+      /** A hint to the server to request inlining stderr in the ActionResult message. */
       @com.google.api.client.util.Key
       private java.lang.Boolean inlineStderr;
 
@@ -403,17 +383,13 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         return inlineStderr;
       }
 
-      /**
-       * A hint to the server to request inlining stderr in the ActionResult message.
-       */
+      /** A hint to the server to request inlining stderr in the ActionResult message. */
       public Get setInlineStderr(java.lang.Boolean inlineStderr) {
         this.inlineStderr = inlineStderr;
         return this;
       }
 
-      /**
-       * A hint to the server to request inlining stdout in the ActionResult message.
-       */
+      /** A hint to the server to request inlining stdout in the ActionResult message. */
       @com.google.api.client.util.Key
       private java.lang.Boolean inlineStdout;
 
@@ -423,9 +399,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         return inlineStdout;
       }
 
-      /**
-       * A hint to the server to request inlining stdout in the ActionResult message.
-       */
+      /** A hint to the server to request inlining stdout in the ActionResult message. */
       public Get setInlineStdout(java.lang.Boolean inlineStdout) {
         this.inlineStdout = inlineStdout;
         return this;
@@ -437,33 +411,23 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Upload a new execution result.
-     *
-     * In order to allow the server to perform access control based on the type of action, and to assist
-     * with client debugging, the client MUST first upload the Action that produced the result, along
-     * with its Command, into the `ContentAddressableStorage`.
-     *
-     * Errors:
-     *
-     * * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One or more
-     * errors occurred in updating the   action result, such as a missing command or action. *
-     * `RESOURCE_EXHAUSTED`: There is insufficient storage space to add the   entry to the cache.
+     * Upload a new execution result. In order to allow the server to perform access control based on
+     * the type of action, and to assist with client debugging, the client MUST first upload the Action
+     * that produced the result, along with its Command, into the `ContentAddressableStorage`. Errors: *
+     * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One or more
+     * errors occurred in updating the action result, such as a missing command or action. *
+     * `RESOURCE_EXHAUSTED`: There is insufficient storage space to add the entry to the cache.
      *
      * Create a request for the method "actionResults.update".
      *
      * This request holds the parameters needed by the remotebuildexecution server.  After setting any
      * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
-     * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string
-    exactly 64 characters
+     * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
+     * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string exactly 64 characters
      *        long.
      * @param sizeBytes The size of the blob, in bytes.
      * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2ActionResult}
@@ -483,17 +447,12 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^.*$");
 
       /**
-       * Upload a new execution result.
-       *
-       * In order to allow the server to perform access control based on the type of action, and to
-       * assist with client debugging, the client MUST first upload the Action that produced the result,
-       * along with its Command, into the `ContentAddressableStorage`.
-       *
-       * Errors:
-       *
-       * * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One or more
-       * errors occurred in updating the   action result, such as a missing command or action. *
-       * `RESOURCE_EXHAUSTED`: There is insufficient storage space to add the   entry to the cache.
+       * Upload a new execution result. In order to allow the server to perform access control based on
+       * the type of action, and to assist with client debugging, the client MUST first upload the
+       * Action that produced the result, along with its Command, into the `ContentAddressableStorage`.
+       * Errors: * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One
+       * or more errors occurred in updating the action result, such as a missing command or action. *
+       * `RESOURCE_EXHAUSTED`: There is insufficient storage space to add the entry to the cache.
        *
        * Create a request for the method "actionResults.update".
        *
@@ -503,16 +462,11 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
-       * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string
-    exactly 64 characters
+       * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
+       * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string exactly 64 characters
      *        long.
        * @param sizeBytes The size of the blob, in bytes.
        * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2ActionResult}
@@ -662,7 +616,6 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * The priority (relative importance) of this content in the overall cache. Generally, a lower
        * value means a longer retention time or other advantage, but the interpretation of a given
        * value is server-dependent. A priority of 0 means a *default* value, decided by the server.
-       *
        * The particular semantics of this field is up to the server. In particular, every server
        * will have their own supported range of priorities, and will decide how these map into
        * retention/eviction policy.
@@ -672,11 +625,9 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
 
       /** The priority (relative importance) of this content in the overall cache. Generally, a lower value
      means a longer retention time or other advantage, but the interpretation of a given value is
-     server-dependent. A priority of 0 means a *default* value, decided by the server.
-
-     The particular semantics of this field is up to the server. In particular, every server will have
-     their own supported range of priorities, and will decide how these map into retention/eviction
-     policy.
+     server-dependent. A priority of 0 means a *default* value, decided by the server. The particular
+     semantics of this field is up to the server. In particular, every server will have their own
+     supported range of priorities, and will decide how these map into retention/eviction policy.
        */
       public java.lang.Integer getResultsCachePolicyPriority() {
         return resultsCachePolicyPriority;
@@ -686,7 +637,6 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * The priority (relative importance) of this content in the overall cache. Generally, a lower
        * value means a longer retention time or other advantage, but the interpretation of a given
        * value is server-dependent. A priority of 0 means a *default* value, decided by the server.
-       *
        * The particular semantics of this field is up to the server. In particular, every server
        * will have their own supported range of priorities, and will decide how these map into
        * retention/eviction policy.
@@ -725,64 +675,47 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
   public class Actions {
 
     /**
-     * Execute an action remotely.
-     *
-     * In order to execute an action, the client must first upload all of the inputs, the Command to
-     * run, and the Action into the ContentAddressableStorage. It then calls `Execute` with an
-     * `action_digest` referring to them. The server will run the action and eventually return the
-     * result.
-     *
-     * The input `Action`'s fields MUST meet the various canonicalization requirements specified in the
-     * documentation for their types so that it has the same digest as other logically equivalent
-     * `Action`s. The server MAY enforce the requirements and return errors if a non-canonical input is
-     * received. It MAY also proceed without verifying some or all of the requirements, such as for
-     * performance reasons. If the server does not verify the requirement, then it will treat the
-     * `Action` as distinct from another logically equivalent action if they hash differently.
-     *
-     * Returns a stream of google.longrunning.Operation messages describing the resulting execution,
-     * with eventual `response` ExecuteResponse. The `metadata` on the operation is of type
-     * ExecuteOperationMetadata.
-     *
-     * If the client remains connected after the first response is returned after the server, then
-     * updates are streamed as if the client had called WaitExecution until the execution completes or
-     * the request reaches an error. The operation can also be queried using Operations API.
-     *
-     * The server NEED NOT implement other methods or functionality of the Operations API.
-     *
-     * Errors discovered during creation of the `Operation` will be reported as gRPC Status errors,
+     * Execute an action remotely. In order to execute an action, the client must first upload all of
+     * the inputs, the Command to run, and the Action into the ContentAddressableStorage. It then calls
+     * `Execute` with an `action_digest` referring to them. The server will run the action and
+     * eventually return the result. The input `Action`'s fields MUST meet the various canonicalization
+     * requirements specified in the documentation for their types so that it has the same digest as
+     * other logically equivalent `Action`s. The server MAY enforce the requirements and return errors
+     * if a non-canonical input is received. It MAY also proceed without verifying some or all of the
+     * requirements, such as for performance reasons. If the server does not verify the requirement,
+     * then it will treat the `Action` as distinct from another logically equivalent action if they hash
+     * differently. Returns a stream of google.longrunning.Operation messages describing the resulting
+     * execution, with eventual `response` ExecuteResponse. The `metadata` on the operation is of type
+     * ExecuteOperationMetadata. If the client remains connected after the first response is returned
+     * after the server, then updates are streamed as if the client had called WaitExecution until the
+     * execution completes or the request reaches an error. The operation can also be queried using
+     * Operations API. The server NEED NOT implement other methods or functionality of the Operations
+     * API. Errors discovered during creation of the `Operation` will be reported as gRPC Status errors,
      * while errors that occurred while running the action will be reported in the `status` field of the
      * `ExecuteResponse`. The server MUST NOT set the `error` field of the `Operation` proto. The
-     * possible errors include:
-     *
-     * * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One or more
-     * errors occurred in setting up the   action requested, such as a missing input or command or no
-     * worker being   available. The client may be able to fix the errors and retry. *
-     * `RESOURCE_EXHAUSTED`: There is insufficient quota of some resource to run   the action. *
-     * `UNAVAILABLE`: Due to a transient condition, such as all workers being   occupied (and the server
-     * does not support a queue), the action could not   be started. The client should retry. *
-     * `INTERNAL`: An internal error occurred in the execution engine or the   worker. *
+     * possible errors include: * `INVALID_ARGUMENT`: One or more arguments are invalid. *
+     * `FAILED_PRECONDITION`: One or more errors occurred in setting up the action requested, such as a
+     * missing input or command or no worker being available. The client may be able to fix the errors
+     * and retry. * `RESOURCE_EXHAUSTED`: There is insufficient quota of some resource to run the
+     * action. * `UNAVAILABLE`: Due to a transient condition, such as all workers being occupied (and
+     * the server does not support a queue), the action could not be started. The client should retry. *
+     * `INTERNAL`: An internal error occurred in the execution engine or the worker. *
      * `DEADLINE_EXCEEDED`: The execution timed out. * `CANCELLED`: The operation was cancelled by the
-     * client. This status is   only possible if the server implements the Operations API
-     * CancelOperation   method, and it was called for the current execution.
-     *
-     * In the case of a missing input or command, the server SHOULD additionally send a
-     * PreconditionFailure error detail where, for each requested blob not present in the CAS, there is
-     * a `Violation` with a `type` of `MISSING` and a `subject` of `"blobs/{hash}/{size}"` indicating
-     * the digest of the missing blob.
+     * client. This status is only possible if the server implements the Operations API CancelOperation
+     * method, and it was called for the current execution. In the case of a missing input or command,
+     * the server SHOULD additionally send a PreconditionFailure error detail where, for each requested
+     * blob not present in the CAS, there is a `Violation` with a `type` of `MISSING` and a `subject` of
+     * `"blobs/{hash}/{size}"` indicating the digest of the missing blob.
      *
      * Create a request for the method "actions.execute".
      *
      * This request holds the parameters needed by the remotebuildexecution server.  After setting any
      * optional parameters, call the {@link Execute#execute()} method to invoke the remote operation.
      *
-     * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
+     * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
      * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2ExecuteRequest}
      * @return the request
      */
@@ -800,50 +733,38 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^.*$");
 
       /**
-       * Execute an action remotely.
-       *
-       * In order to execute an action, the client must first upload all of the inputs, the Command to
-       * run, and the Action into the ContentAddressableStorage. It then calls `Execute` with an
-       * `action_digest` referring to them. The server will run the action and eventually return the
-       * result.
-       *
-       * The input `Action`'s fields MUST meet the various canonicalization requirements specified in
-       * the documentation for their types so that it has the same digest as other logically equivalent
-       * `Action`s. The server MAY enforce the requirements and return errors if a non-canonical input
-       * is received. It MAY also proceed without verifying some or all of the requirements, such as for
-       * performance reasons. If the server does not verify the requirement, then it will treat the
-       * `Action` as distinct from another logically equivalent action if they hash differently.
-       *
-       * Returns a stream of google.longrunning.Operation messages describing the resulting execution,
-       * with eventual `response` ExecuteResponse. The `metadata` on the operation is of type
-       * ExecuteOperationMetadata.
-       *
-       * If the client remains connected after the first response is returned after the server, then
-       * updates are streamed as if the client had called WaitExecution until the execution completes or
-       * the request reaches an error. The operation can also be queried using Operations API.
-       *
-       * The server NEED NOT implement other methods or functionality of the Operations API.
-       *
-       * Errors discovered during creation of the `Operation` will be reported as gRPC Status errors,
-       * while errors that occurred while running the action will be reported in the `status` field of
-       * the `ExecuteResponse`. The server MUST NOT set the `error` field of the `Operation` proto. The
-       * possible errors include:
-       *
-       * * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One or more
-       * errors occurred in setting up the   action requested, such as a missing input or command or no
-       * worker being   available. The client may be able to fix the errors and retry. *
-       * `RESOURCE_EXHAUSTED`: There is insufficient quota of some resource to run   the action. *
-       * `UNAVAILABLE`: Due to a transient condition, such as all workers being   occupied (and the
-       * server does not support a queue), the action could not   be started. The client should retry. *
-       * `INTERNAL`: An internal error occurred in the execution engine or the   worker. *
-       * `DEADLINE_EXCEEDED`: The execution timed out. * `CANCELLED`: The operation was cancelled by the
-       * client. This status is   only possible if the server implements the Operations API
-       * CancelOperation   method, and it was called for the current execution.
-       *
-       * In the case of a missing input or command, the server SHOULD additionally send a
-       * PreconditionFailure error detail where, for each requested blob not present in the CAS, there
-       * is a `Violation` with a `type` of `MISSING` and a `subject` of `"blobs/{hash}/{size}"`
-       * indicating the digest of the missing blob.
+       * Execute an action remotely. In order to execute an action, the client must first upload all of
+       * the inputs, the Command to run, and the Action into the ContentAddressableStorage. It then
+       * calls `Execute` with an `action_digest` referring to them. The server will run the action and
+       * eventually return the result. The input `Action`'s fields MUST meet the various
+       * canonicalization requirements specified in the documentation for their types so that it has the
+       * same digest as other logically equivalent `Action`s. The server MAY enforce the requirements
+       * and return errors if a non-canonical input is received. It MAY also proceed without verifying
+       * some or all of the requirements, such as for performance reasons. If the server does not verify
+       * the requirement, then it will treat the `Action` as distinct from another logically equivalent
+       * action if they hash differently. Returns a stream of google.longrunning.Operation messages
+       * describing the resulting execution, with eventual `response` ExecuteResponse. The `metadata` on
+       * the operation is of type ExecuteOperationMetadata. If the client remains connected after the
+       * first response is returned after the server, then updates are streamed as if the client had
+       * called WaitExecution until the execution completes or the request reaches an error. The
+       * operation can also be queried using Operations API. The server NEED NOT implement other methods
+       * or functionality of the Operations API. Errors discovered during creation of the `Operation`
+       * will be reported as gRPC Status errors, while errors that occurred while running the action
+       * will be reported in the `status` field of the `ExecuteResponse`. The server MUST NOT set the
+       * `error` field of the `Operation` proto. The possible errors include: * `INVALID_ARGUMENT`: One
+       * or more arguments are invalid. * `FAILED_PRECONDITION`: One or more errors occurred in setting
+       * up the action requested, such as a missing input or command or no worker being available. The
+       * client may be able to fix the errors and retry. * `RESOURCE_EXHAUSTED`: There is insufficient
+       * quota of some resource to run the action. * `UNAVAILABLE`: Due to a transient condition, such
+       * as all workers being occupied (and the server does not support a queue), the action could not
+       * be started. The client should retry. * `INTERNAL`: An internal error occurred in the execution
+       * engine or the worker. * `DEADLINE_EXCEEDED`: The execution timed out. * `CANCELLED`: The
+       * operation was cancelled by the client. This status is only possible if the server implements
+       * the Operations API CancelOperation method, and it was called for the current execution. In the
+       * case of a missing input or command, the server SHOULD additionally send a PreconditionFailure
+       * error detail where, for each requested blob not present in the CAS, there is a `Violation` with
+       * a `type` of `MISSING` and a `subject` of `"blobs/{hash}/{size}"` indicating the digest of the
+       * missing blob.
        *
        * Create a request for the method "actions.execute".
        *
@@ -853,14 +774,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * Execute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
+       * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
        * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2ExecuteRequest}
        * @since 1.13
        */
@@ -992,34 +909,23 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
   public class Blobs {
 
     /**
-     * Download many blobs at once.
-     *
-     * The server may enforce a limit of the combined total size of blobs to be downloaded using this
-     * API. This limit may be obtained using the Capabilities API. Requests exceeding the limit should
-     * either be split into smaller chunks or downloaded using the ByteStream API, as appropriate.
-     *
-     * This request is equivalent to calling a Bytestream `Read` request on each individual blob, in
-     * parallel. The requests may succeed or fail independently.
-     *
-     * Errors:
-     *
-     * * `INVALID_ARGUMENT`: The client attempted to read more than the   server supported limit.
-     *
-     * Every error on individual read will be returned in the corresponding digest status.
+     * Download many blobs at once. The server may enforce a limit of the combined total size of blobs
+     * to be downloaded using this API. This limit may be obtained using the Capabilities API. Requests
+     * exceeding the limit should either be split into smaller chunks or downloaded using the ByteStream
+     * API, as appropriate. This request is equivalent to calling a Bytestream `Read` request on each
+     * individual blob, in parallel. The requests may succeed or fail independently. Errors: *
+     * `INVALID_ARGUMENT`: The client attempted to read more than the server supported limit. Every
+     * error on individual read will be returned in the corresponding digest status.
      *
      * Create a request for the method "blobs.batchRead".
      *
      * This request holds the parameters needed by the remotebuildexecution server.  After setting any
      * optional parameters, call the {@link BatchRead#execute()} method to invoke the remote operation.
      *
-     * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
+     * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
      * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2BatchReadBlobsRequest}
      * @return the request
      */
@@ -1037,20 +943,13 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^.*$");
 
       /**
-       * Download many blobs at once.
-       *
-       * The server may enforce a limit of the combined total size of blobs to be downloaded using this
-       * API. This limit may be obtained using the Capabilities API. Requests exceeding the limit should
-       * either be split into smaller chunks or downloaded using the ByteStream API, as appropriate.
-       *
-       * This request is equivalent to calling a Bytestream `Read` request on each individual blob, in
-       * parallel. The requests may succeed or fail independently.
-       *
-       * Errors:
-       *
-       * * `INVALID_ARGUMENT`: The client attempted to read more than the   server supported limit.
-       *
-       * Every error on individual read will be returned in the corresponding digest status.
+       * Download many blobs at once. The server may enforce a limit of the combined total size of blobs
+       * to be downloaded using this API. This limit may be obtained using the Capabilities API.
+       * Requests exceeding the limit should either be split into smaller chunks or downloaded using the
+       * ByteStream API, as appropriate. This request is equivalent to calling a Bytestream `Read`
+       * request on each individual blob, in parallel. The requests may succeed or fail independently.
+       * Errors: * `INVALID_ARGUMENT`: The client attempted to read more than the server supported
+       * limit. Every error on individual read will be returned in the corresponding digest status.
        *
        * Create a request for the method "blobs.batchRead".
        *
@@ -1060,14 +959,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * BatchRead#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
+       * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
        * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2BatchReadBlobsRequest}
        * @since 1.13
        */
@@ -1176,23 +1071,15 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Upload many blobs at once.
-     *
-     * The server may enforce a limit of the combined total size of blobs to be uploaded using this API.
-     * This limit may be obtained using the Capabilities API. Requests exceeding the limit should either
-     * be split into smaller chunks or uploaded using the ByteStream API, as appropriate.
-     *
-     * This request is equivalent to calling a Bytestream `Write` request on each individual blob, in
-     * parallel. The requests may succeed or fail independently.
-     *
-     * Errors:
-     *
-     * * `INVALID_ARGUMENT`: The client attempted to upload more than the   server supported limit.
-     *
-     * Individual requests may return the following errors, additionally:
-     *
-     * * `RESOURCE_EXHAUSTED`: There is insufficient disk quota to store the blob. * `INVALID_ARGUMENT`:
-     * The Digest does not match the provided data.
+     * Upload many blobs at once. The server may enforce a limit of the combined total size of blobs to
+     * be uploaded using this API. This limit may be obtained using the Capabilities API. Requests
+     * exceeding the limit should either be split into smaller chunks or uploaded using the ByteStream
+     * API, as appropriate. This request is equivalent to calling a Bytestream `Write` request on each
+     * individual blob, in parallel. The requests may succeed or fail independently. Errors: *
+     * `INVALID_ARGUMENT`: The client attempted to upload more than the server supported limit.
+     * Individual requests may return the following errors, additionally: * `RESOURCE_EXHAUSTED`: There
+     * is insufficient disk quota to store the blob. * `INVALID_ARGUMENT`: The Digest does not match the
+     * provided data.
      *
      * Create a request for the method "blobs.batchUpdate".
      *
@@ -1200,14 +1087,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
      * operation.
      *
-     * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
+     * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
      * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2BatchUpdateBlobsRequest}
      * @return the request
      */
@@ -1225,23 +1108,15 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^.*$");
 
       /**
-       * Upload many blobs at once.
-       *
-       * The server may enforce a limit of the combined total size of blobs to be uploaded using this
-       * API. This limit may be obtained using the Capabilities API. Requests exceeding the limit should
-       * either be split into smaller chunks or uploaded using the ByteStream API, as appropriate.
-       *
-       * This request is equivalent to calling a Bytestream `Write` request on each individual blob, in
-       * parallel. The requests may succeed or fail independently.
-       *
-       * Errors:
-       *
-       * * `INVALID_ARGUMENT`: The client attempted to upload more than the   server supported limit.
-       *
-       * Individual requests may return the following errors, additionally:
-       *
-       * * `RESOURCE_EXHAUSTED`: There is insufficient disk quota to store the blob. *
-       * `INVALID_ARGUMENT`: The Digest does not match the provided data.
+       * Upload many blobs at once. The server may enforce a limit of the combined total size of blobs
+       * to be uploaded using this API. This limit may be obtained using the Capabilities API. Requests
+       * exceeding the limit should either be split into smaller chunks or uploaded using the ByteStream
+       * API, as appropriate. This request is equivalent to calling a Bytestream `Write` request on each
+       * individual blob, in parallel. The requests may succeed or fail independently. Errors: *
+       * `INVALID_ARGUMENT`: The client attempted to upload more than the server supported limit.
+       * Individual requests may return the following errors, additionally: * `RESOURCE_EXHAUSTED`:
+       * There is insufficient disk quota to store the blob. * `INVALID_ARGUMENT`: The Digest does not
+       * match the provided data.
        *
        * Create a request for the method "blobs.batchUpdate".
        *
@@ -1251,14 +1126,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
+       * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
        * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2BatchUpdateBlobsRequest}
        * @since 1.13
        */
@@ -1367,14 +1238,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Determine if blobs are present in the CAS.
-     *
-     * Clients can use this API before uploading blobs to determine which ones are already present in
-     * the CAS and do not need to be uploaded again.
-     *
-     * Servers SHOULD increase the TTLs of the referenced blobs if necessary and applicable.
-     *
-     * There are no method-specific errors.
+     * Determine if blobs are present in the CAS. Clients can use this API before uploading blobs to
+     * determine which ones are already present in the CAS and do not need to be uploaded again. Servers
+     * SHOULD increase the TTLs of the referenced blobs if necessary and applicable. There are no
+     * method-specific errors.
      *
      * Create a request for the method "blobs.findMissing".
      *
@@ -1382,14 +1249,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link FindMissing#execute()} method to invoke the remote
      * operation.
      *
-     * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
+     * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
      * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2FindMissingBlobsRequest}
      * @return the request
      */
@@ -1407,14 +1270,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^.*$");
 
       /**
-       * Determine if blobs are present in the CAS.
-       *
-       * Clients can use this API before uploading blobs to determine which ones are already present in
-       * the CAS and do not need to be uploaded again.
-       *
-       * Servers SHOULD increase the TTLs of the referenced blobs if necessary and applicable.
-       *
-       * There are no method-specific errors.
+       * Determine if blobs are present in the CAS. Clients can use this API before uploading blobs to
+       * determine which ones are already present in the CAS and do not need to be uploaded again.
+       * Servers SHOULD increase the TTLs of the referenced blobs if necessary and applicable. There are
+       * no method-specific errors.
        *
        * Create a request for the method "blobs.findMissing".
        *
@@ -1424,14 +1283,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * FindMissing#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
+       * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
        * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2FindMissingBlobsRequest}
        * @since 1.13
        */
@@ -1540,41 +1395,27 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Fetch the entire directory tree rooted at a node.
-     *
-     * This request must be targeted at a Directory stored in the ContentAddressableStorage (CAS). The
-     * server will enumerate the `Directory` tree recursively and return every node descended from the
-     * root.
-     *
-     * The GetTreeRequest.page_token parameter can be used to skip ahead in the stream (e.g. when
-     * retrying a partially completed and aborted request), by setting it to a value taken from
-     * GetTreeResponse.next_page_token of the last successfully processed GetTreeResponse).
-     *
-     * The exact traversal order is unspecified and, unless retrieving subsequent pages from an earlier
-     * request, is not guaranteed to be stable across multiple invocations of `GetTree`.
-     *
-     * If part of the tree is missing from the CAS, the server will return the portion present and omit
-     * the rest.
-     *
-     * Errors:
-     *
-     * * `NOT_FOUND`: The requested tree root is not present in the CAS.
+     * Fetch the entire directory tree rooted at a node. This request must be targeted at a Directory
+     * stored in the ContentAddressableStorage (CAS). The server will enumerate the `Directory` tree
+     * recursively and return every node descended from the root. The GetTreeRequest.page_token
+     * parameter can be used to skip ahead in the stream (e.g. when retrying a partially completed and
+     * aborted request), by setting it to a value taken from GetTreeResponse.next_page_token of the last
+     * successfully processed GetTreeResponse). The exact traversal order is unspecified and, unless
+     * retrieving subsequent pages from an earlier request, is not guaranteed to be stable across
+     * multiple invocations of `GetTree`. If part of the tree is missing from the CAS, the server will
+     * return the portion present and omit the rest. Errors: * `NOT_FOUND`: The requested tree root is
+     * not present in the CAS.
      *
      * Create a request for the method "blobs.getTree".
      *
      * This request holds the parameters needed by the remotebuildexecution server.  After setting any
      * optional parameters, call the {@link GetTree#execute()} method to invoke the remote operation.
      *
-     * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
-     * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string
-    exactly 64 characters
+     * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
+     * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string exactly 64 characters
      *        long.
      * @param sizeBytes The size of the blob, in bytes.
      * @return the request
@@ -1593,25 +1434,16 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^.*$");
 
       /**
-       * Fetch the entire directory tree rooted at a node.
-       *
-       * This request must be targeted at a Directory stored in the ContentAddressableStorage (CAS). The
-       * server will enumerate the `Directory` tree recursively and return every node descended from the
-       * root.
-       *
-       * The GetTreeRequest.page_token parameter can be used to skip ahead in the stream (e.g. when
-       * retrying a partially completed and aborted request), by setting it to a value taken from
-       * GetTreeResponse.next_page_token of the last successfully processed GetTreeResponse).
-       *
-       * The exact traversal order is unspecified and, unless retrieving subsequent pages from an
-       * earlier request, is not guaranteed to be stable across multiple invocations of `GetTree`.
-       *
-       * If part of the tree is missing from the CAS, the server will return the portion present and
-       * omit the rest.
-       *
-       * Errors:
-       *
-       * * `NOT_FOUND`: The requested tree root is not present in the CAS.
+       * Fetch the entire directory tree rooted at a node. This request must be targeted at a Directory
+       * stored in the ContentAddressableStorage (CAS). The server will enumerate the `Directory` tree
+       * recursively and return every node descended from the root. The GetTreeRequest.page_token
+       * parameter can be used to skip ahead in the stream (e.g. when retrying a partially completed and
+       * aborted request), by setting it to a value taken from GetTreeResponse.next_page_token of the
+       * last successfully processed GetTreeResponse). The exact traversal order is unspecified and,
+       * unless retrieving subsequent pages from an earlier request, is not guaranteed to be stable
+       * across multiple invocations of `GetTree`. If part of the tree is missing from the CAS, the
+       * server will return the portion present and omit the rest. Errors: * `NOT_FOUND`: The requested
+       * tree root is not present in the CAS.
        *
        * Create a request for the method "blobs.getTree".
        *
@@ -1621,16 +1453,11 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * GetTree#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
-       * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string
-    exactly 64 characters
+       * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
+       * @param hash The hash. In the case of SHA-256, it will always be a lowercase hex string exactly 64 characters
      *        long.
        * @param sizeBytes The size of the blob, in bytes.
        * @since 1.13
@@ -1879,8 +1706,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link WaitExecution#execute()} method to invoke the remote
      * operation.
      *
-     * @param name The name of the Operation
-    returned by Execute.
+     * @param name The name of the Operation returned by Execute.
      * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2WaitExecutionRequest}
      * @return the request
      */
@@ -1912,8 +1738,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param name The name of the Operation
-    returned by Execute.
+       * @param name The name of the Operation returned by Execute.
        * @param content the {@link com.google.api.services.remotebuildexecution.v2.model.BuildBazelRemoteExecutionV2WaitExecutionRequest}
        * @since 1.13
        */
@@ -1982,9 +1807,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         return (WaitExecution) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * The name of the Operation returned by Execute.
-       */
+      /** The name of the Operation returned by Execute. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
@@ -1994,9 +1817,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
         return name;
       }
 
-      /**
-       * The name of the Operation returned by Execute.
-       */
+      /** The name of the Operation returned by Execute. */
       public WaitExecution setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2038,7 +1859,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
     /**
      * GetCapabilities returns the server capabilities configuration of the remote endpoint. Only the
      * capabilities of the services supported by the endpoint will be returned: * Execution + CAS +
-     * Action Cache endpoints should return both   CacheCapabilities and ExecutionCapabilities. *
+     * Action Cache endpoints should return both CacheCapabilities and ExecutionCapabilities. *
      * Execution only endpoints should return ExecutionCapabilities. * CAS + Action Cache only endpoints
      * should return CacheCapabilities.
      *
@@ -2048,14 +1869,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link GetCapabilities#execute()} method to invoke the remote
      * operation.
      *
-     * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
+     * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
      * @return the request
      */
     public GetCapabilities getCapabilities(java.lang.String instanceName) throws java.io.IOException {
@@ -2074,7 +1891,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       /**
        * GetCapabilities returns the server capabilities configuration of the remote endpoint. Only the
        * capabilities of the services supported by the endpoint will be returned: * Execution + CAS +
-       * Action Cache endpoints should return both   CacheCapabilities and ExecutionCapabilities. *
+       * Action Cache endpoints should return both CacheCapabilities and ExecutionCapabilities. *
        * Execution only endpoints should return ExecutionCapabilities. * CAS + Action Cache only
        * endpoints should return CacheCapabilities.
        *
@@ -2086,14 +1903,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param instanceName The instance of the execution system to operate against. A server may
-    support multiple instances of
-     *        the execution system (with their own workers,
-    storage, caches, etc.). The server MAY
-     *        require use of this field to select
-    between them in an implementation-defined fashion,
-     *        otherwise it can be
-    omitted.
+       * @param instanceName The instance of the execution system to operate against. A server may support multiple instances of
+     *        the execution system (with their own workers, storage, caches, etc.). The server MAY
+     *        require use of this field to select between them in an implementation-defined fashion,
+     *        otherwise it can be omitted.
        * @since 1.13
        */
       protected GetCapabilities(java.lang.String instanceName) {

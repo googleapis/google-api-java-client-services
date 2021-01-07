@@ -46,7 +46,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the G Suite Alert Center API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the G Suite Alert Center API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -1316,8 +1316,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
        * This request holds the parameters needed by the alertcenter server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param alertId Required. The alert identifier.
-      The "-" wildcard could be used to represent all alerts.
+       * @param alertId Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
        * @return the request
        */
       public List list(java.lang.String alertId) throws java.io.IOException {
@@ -1341,8 +1340,7 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param alertId Required. The alert identifier.
-      The "-" wildcard could be used to represent all alerts.
+         * @param alertId Required. The alert identifier. The "-" wildcard could be used to represent all alerts.
          * @since 1.13
          */
         protected List(java.lang.String alertId) {

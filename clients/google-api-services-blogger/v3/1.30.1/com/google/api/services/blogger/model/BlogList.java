@@ -20,7 +20,7 @@ package com.google.api.services.blogger.model;
  * Model definition for BlogList.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Blogger API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Blogger API v3. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -30,7 +30,7 @@ package com.google.api.services.blogger.model;
 public final class BlogList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Admin level list of blog per-user information
+   * Admin level list of blog per-user information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,14 +50,14 @@ public final class BlogList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#blogList
+   * The kind of this entity. Always blogger#blogList.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Admin level list of blog per-user information
+   * Admin level list of blog per-user information.
    * @return value or {@code null} for none
    */
   public java.util.List<BlogUserInfo> getBlogUserInfos() {
@@ -65,7 +65,7 @@ public final class BlogList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Admin level list of blog per-user information
+   * Admin level list of blog per-user information.
    * @param blogUserInfos blogUserInfos or {@code null} for none
    */
   public BlogList setBlogUserInfos(java.util.List<BlogUserInfo> blogUserInfos) {
@@ -91,7 +91,7 @@ public final class BlogList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#blogList
+   * The kind of this entity. Always blogger#blogList.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -99,7 +99,7 @@ public final class BlogList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this entity. Always blogger#blogList
+   * The kind of this entity. Always blogger#blogList.
    * @param kind kind or {@code null} for none
    */
   public BlogList setKind(java.lang.String kind) {

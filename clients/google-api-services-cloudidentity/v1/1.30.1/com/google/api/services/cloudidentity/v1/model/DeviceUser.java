@@ -17,7 +17,8 @@
 package com.google.api.services.cloudidentity.v1.model;
 
 /**
- * A DeviceUser is a resource representing a user's use of a Device
+ * Represents a user's use of a Device in the Cloud Identity Devices API. A DeviceUser is a resource
+ * representing a user's use of a Device
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -35,6 +36,13 @@ public final class DeviceUser extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String compromisedState;
+
+  /**
+   * When the user first signed in to the device
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
 
   /**
    * Output only. Most recent time when user registered with this service.
@@ -108,6 +116,23 @@ public final class DeviceUser extends com.google.api.client.json.GenericJson {
    */
   public DeviceUser setCompromisedState(java.lang.String compromisedState) {
     this.compromisedState = compromisedState;
+    return this;
+  }
+
+  /**
+   * When the user first signed in to the device
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * When the user first signed in to the device
+   * @param createTime createTime or {@code null} for none
+   */
+  public DeviceUser setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 

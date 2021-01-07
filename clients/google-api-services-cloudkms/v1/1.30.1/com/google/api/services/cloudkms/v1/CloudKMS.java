@@ -20,8 +20,7 @@ package com.google.api.services.cloudkms.v1;
  * Service definition for CloudKMS (v1).
  *
  * <p>
- * Manages keys and performs cryptographic operations in a central cloud service, for direct use by other cloud resources and applications.
-
+ * Manages keys and performs cryptographic operations in a central cloud service, for direct use by other cloud resources and applications. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Key Management Service (KMS) API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Key Management Service (KMS) API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -516,8 +515,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the cloudkms server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name of the location associated with the
-        KeyRings, in the format
+         * @param parent Required. The resource name of the location associated with the KeyRings, in the format
          *        `projects/locations`.
          * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyRing}
          * @return the request
@@ -546,8 +544,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name of the location associated with the
-        KeyRings, in the format
+           * @param parent Required. The resource name of the location associated with the KeyRings, in the format
          *        `projects/locations`.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyRing}
            * @since 1.13
@@ -820,8 +817,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the cloudkms server.  After setting any optional
          * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
          * @return the request
          */
@@ -850,8 +846,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
          *        the appropriate value for this field.
            * @since 1.13
            */
@@ -959,34 +954,33 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           @com.google.api.client.util.Key("options.requestedPolicyVersion")
           private java.lang.Integer optionsRequestedPolicyVersion;
 
-          /** Optional. The policy format version to be returned.
-
-         Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-         Requests for policies with any conditional bindings must specify version 3. Policies without any
-         conditional bindings may specify any valid value or leave the field unset.
+          /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+         specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+         must specify version 3. Policies without any conditional bindings may specify any valid value or
+         leave the field unset. To learn which resources support conditions in their IAM policies, see the
+         [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public java.lang.Integer getOptionsRequestedPolicyVersion() {
             return optionsRequestedPolicyVersion;
           }
 
           /**
-           * Optional. The policy format version to be returned.
-           *
-           * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-           *
-           * Requests for policies with any conditional bindings must specify version 3. Policies
-           * without any conditional bindings may specify any valid value or leave the field unset.
+           * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+           * Requests specifying an invalid value will be rejected. Requests for policies with any
+           * conditional bindings must specify version 3. Policies without any conditional bindings
+           * may specify any valid value or leave the field unset. To learn which resources support
+           * conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
            */
           public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -1006,8 +1000,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the cloudkms server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name of the location associated with the
-        KeyRings, in the format
+         * @param parent Required. The resource name of the location associated with the KeyRings, in the format
          *        `projects/locations`.
          * @return the request
          */
@@ -1034,8 +1027,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name of the location associated with the
-        KeyRings, in the format
+           * @param parent Required. The resource name of the location associated with the KeyRings, in the format
          *        `projects/locations`.
            * @since 1.13
            */
@@ -1169,14 +1161,14 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Specify how the results should be sorted. If not specified, the results will
-           * be sorted in the default order.  For more information, see [Sorting and filtering list
+           * be sorted in the default order. For more information, see [Sorting and filtering list
            * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** Optional. Specify how the results should be sorted. If not specified, the results will be sorted in
-         the default order.  For more information, see [Sorting and filtering list
+         the default order. For more information, see [Sorting and filtering list
          results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           public java.lang.String getOrderBy() {
@@ -1185,7 +1177,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. Specify how the results should be sorted. If not specified, the results will
-           * be sorted in the default order.  For more information, see [Sorting and filtering list
+           * be sorted in the default order. For more information, see [Sorting and filtering list
            * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
            */
           public List setOrderBy(java.lang.String orderBy) {
@@ -1194,26 +1186,26 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. Optional limit on the number of KeyRings to include in the response.  Further
+           * Optional. Optional limit on the number of KeyRings to include in the response. Further
            * KeyRings can subsequently be obtained by including the
-           * ListKeyRingsResponse.next_page_token in a subsequent request.  If unspecified, the
+           * ListKeyRingsResponse.next_page_token in a subsequent request. If unspecified, the
            * server will pick an appropriate default.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Optional limit on the number of KeyRings to include in the response.  Further KeyRings
-         can subsequently be obtained by including the ListKeyRingsResponse.next_page_token in a subsequent
-         request.  If unspecified, the server will pick an appropriate default.
+          /** Optional. Optional limit on the number of KeyRings to include in the response. Further KeyRings can
+         subsequently be obtained by including the ListKeyRingsResponse.next_page_token in a subsequent
+         request. If unspecified, the server will pick an appropriate default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. Optional limit on the number of KeyRings to include in the response.  Further
+           * Optional. Optional limit on the number of KeyRings to include in the response. Further
            * KeyRings can subsequently be obtained by including the
-           * ListKeyRingsResponse.next_page_token in a subsequent request.  If unspecified, the
+           * ListKeyRingsResponse.next_page_token in a subsequent request. If unspecified, the
            * server will pick an appropriate default.
            */
           public List setPageSize(java.lang.Integer pageSize) {
@@ -1249,17 +1241,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Sets the access control policy on the specified resource. Replaces any existing policy.
-         *
-         * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
          * Create a request for the method "keyRings.setIamPolicy".
          *
          * This request holds the parameters needed by the cloudkms server.  After setting any optional
          * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+         * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
          * @param content the {@link com.google.api.services.cloudkms.v1.model.SetIamPolicyRequest}
          * @return the request
@@ -1278,9 +1268,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+$");
 
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "keyRings.setIamPolicy".
            *
@@ -1290,8 +1279,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-        See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
          *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.SetIamPolicyRequest}
            * @since 1.13
@@ -1396,18 +1384,16 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-         * this will return an empty set of permissions, not a NOT_FOUND error.
-         *
-         * Note: This operation is designed to be used for building permission-aware UIs and command-line
-         * tools, not for authorization checking. This operation may "fail open" without warning.
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
          *
          * Create a request for the method "keyRings.testIamPermissions".
          *
          * This request holds the parameters needed by the cloudkms server.  After setting any optional
          * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
          *
-         * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
          * @param content the {@link com.google.api.services.cloudkms.v1.model.TestIamPermissionsRequest}
          * @return the request
@@ -1427,10 +1413,9 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not
-           * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "keyRings.testIamPermissions".
            *
@@ -1440,8 +1425,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-        See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
          *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.TestIamPermissionsRequest}
            * @since 1.13
@@ -1566,17 +1550,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         public class CryptoKeys {
 
           /**
-           * Create a new CryptoKey within a KeyRing.
-           *
-           * CryptoKey.purpose and CryptoKey.version_template.algorithm are required.
+           * Create a new CryptoKey within a KeyRing. CryptoKey.purpose and
+           * CryptoKey.version_template.algorithm are required.
            *
            * Create a request for the method "cryptoKeys.create".
            *
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The name of the KeyRing associated with the
-          CryptoKeys.
+           * @param parent Required. The name of the KeyRing associated with the CryptoKeys.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.CryptoKey}
            * @return the request
            */
@@ -1594,9 +1576,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+$");
 
             /**
-             * Create a new CryptoKey within a KeyRing.
-             *
-             * CryptoKey.purpose and CryptoKey.version_template.algorithm are required.
+             * Create a new CryptoKey within a KeyRing. CryptoKey.purpose and
+             * CryptoKey.version_template.algorithm are required.
              *
              * Create a request for the method "cryptoKeys.create".
              *
@@ -1606,8 +1587,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The name of the KeyRing associated with the
-          CryptoKeys.
+             * @param parent Required. The name of the KeyRing associated with the CryptoKeys.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.CryptoKey}
              * @since 1.13
              */
@@ -1676,9 +1656,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the KeyRing associated with the CryptoKeys.
-             */
+            /** Required. The name of the KeyRing associated with the CryptoKeys. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
@@ -1688,9 +1666,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               return parent;
             }
 
-            /**
-             * Required. The name of the KeyRing associated with the CryptoKeys.
-             */
+            /** Required. The name of the KeyRing associated with the CryptoKeys. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1761,8 +1737,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link Decrypt#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the CryptoKey to use for decryption.
-          The server will choose the
+           * @param name Required. The resource name of the CryptoKey to use for decryption. The server will choose the
            *        appropriate version.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.DecryptRequest}
            * @return the request
@@ -1791,8 +1766,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * Decrypt#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the CryptoKey to use for decryption.
-          The server will choose the
+             * @param name Required. The resource name of the CryptoKey to use for decryption. The server will choose the
            *        appropriate version.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.DecryptRequest}
              * @since 1.13
@@ -1904,11 +1878,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link Encrypt#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the CryptoKey or CryptoKeyVersion
-          to use for encryption.
-          If a
-           *        CryptoKey is specified, the server will use its
-          primary version.
+           * @param name Required. The resource name of the CryptoKey or CryptoKeyVersion to use for encryption. If a
+           *        CryptoKey is specified, the server will use its primary version.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.EncryptRequest}
            * @return the request
            */
@@ -1937,11 +1908,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * Encrypt#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the CryptoKey or CryptoKeyVersion
-          to use for encryption.
-          If a
-           *        CryptoKey is specified, the server will use its
-          primary version.
+             * @param name Required. The resource name of the CryptoKey or CryptoKeyVersion to use for encryption. If a
+           *        CryptoKey is specified, the server will use its primary version.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.EncryptRequest}
              * @since 1.13
              */
@@ -2012,16 +1980,13 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The resource name of the CryptoKey or CryptoKeyVersion to use for
-             * encryption.
-             *
-             * If a CryptoKey is specified, the server will use its primary version.
+             * encryption. If a CryptoKey is specified, the server will use its primary version.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the CryptoKey or CryptoKeyVersion to use for encryption.
-
-           If a CryptoKey is specified, the server will use its primary version.
+            /** Required. The resource name of the CryptoKey or CryptoKeyVersion to use for encryption. If a
+           CryptoKey is specified, the server will use its primary version.
              */
             public java.lang.String getName() {
               return name;
@@ -2029,9 +1994,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The resource name of the CryptoKey or CryptoKeyVersion to use for
-             * encryption.
-             *
-             * If a CryptoKey is specified, the server will use its primary version.
+             * encryption. If a CryptoKey is specified, the server will use its primary version.
              */
             public Encrypt setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2195,8 +2158,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -2225,8 +2187,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -2334,36 +2295,33 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -2383,8 +2341,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource name of the KeyRing to list, in the format
-          `projects/locations/keyRings`.
+           * @param parent Required. The resource name of the KeyRing to list, in the format `projects/locations/keyRings`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2410,8 +2367,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource name of the KeyRing to list, in the format
-          `projects/locations/keyRings`.
+             * @param parent Required. The resource name of the KeyRing to list, in the format `projects/locations/keyRings`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2570,15 +2526,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Optional limit on the number of CryptoKeys to include in the response.
              * Further CryptoKeys can subsequently be obtained by including the
-             * ListCryptoKeysResponse.next_page_token in a subsequent request.  If unspecified, the
+             * ListCryptoKeysResponse.next_page_token in a subsequent request. If unspecified, the
              * server will pick an appropriate default.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. Optional limit on the number of CryptoKeys to include in the response.  Further
-           CryptoKeys can subsequently be obtained by including the ListCryptoKeysResponse.next_page_token in
-           a subsequent request.  If unspecified, the server will pick an appropriate default.
+            /** Optional. Optional limit on the number of CryptoKeys to include in the response. Further CryptoKeys
+           can subsequently be obtained by including the ListCryptoKeysResponse.next_page_token in a
+           subsequent request. If unspecified, the server will pick an appropriate default.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
@@ -2587,7 +2543,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Optional. Optional limit on the number of CryptoKeys to include in the response.
              * Further CryptoKeys can subsequently be obtained by including the
-             * ListCryptoKeysResponse.next_page_token in a subsequent request.  If unspecified, the
+             * ListCryptoKeysResponse.next_page_token in a subsequent request. If unspecified, the
              * server will pick an appropriate default.
              */
             public List setPageSize(java.lang.Integer pageSize) {
@@ -2795,17 +2751,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "cryptoKeys.setIamPolicy".
            *
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.SetIamPolicyRequest}
            * @return the request
@@ -2824,9 +2778,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "cryptoKeys.setIamPolicy".
              *
@@ -2836,8 +2789,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -2942,18 +2894,16 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "cryptoKeys.testIamPermissions".
            *
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.TestIamPermissionsRequest}
            * @return the request
@@ -2973,10 +2923,9 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "cryptoKeys.testIamPermissions".
              *
@@ -2986,8 +2935,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.TestIamPermissionsRequest}
              * @since 1.13
@@ -3091,9 +3039,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * Update the version of a CryptoKey that will be used in Encrypt.
-           *
-           * Returns an error if called on an asymmetric key.
+           * Update the version of a CryptoKey that will be used in Encrypt. Returns an error if called on an
+           * asymmetric key.
            *
            * Create a request for the method "cryptoKeys.updatePrimaryVersion".
            *
@@ -3119,9 +3066,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+$");
 
             /**
-             * Update the version of a CryptoKey that will be used in Encrypt.
-             *
-             * Returns an error if called on an asymmetric key.
+             * Update the version of a CryptoKey that will be used in Encrypt. Returns an error if called on
+             * an asymmetric key.
              *
              * Create a request for the method "cryptoKeys.updatePrimaryVersion".
              *
@@ -3256,8 +3202,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the cloudkms server.  After setting any optional
              * parameters, call the {@link AsymmetricDecrypt#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The resource name of the CryptoKeyVersion to use for
-            decryption.
+             * @param name Required. The resource name of the CryptoKeyVersion to use for decryption.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.AsymmetricDecryptRequest}
              * @return the request
              */
@@ -3286,8 +3231,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                * stractGoogleClientRequest)} must be called to initialize this instance immediately after
                * invoking the constructor. </p>
                *
-               * @param name Required. The resource name of the CryptoKeyVersion to use for
-            decryption.
+               * @param name Required. The resource name of the CryptoKeyVersion to use for decryption.
                * @param content the {@link com.google.api.services.cloudkms.v1.model.AsymmetricDecryptRequest}
                * @since 1.13
                */
@@ -3356,9 +3300,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return (AsymmetricDecrypt) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The resource name of the CryptoKeyVersion to use for decryption.
-               */
+              /** Required. The resource name of the CryptoKeyVersion to use for decryption. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
@@ -3368,9 +3310,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return name;
               }
 
-              /**
-               * Required. The resource name of the CryptoKeyVersion to use for decryption.
-               */
+              /** Required. The resource name of the CryptoKeyVersion to use for decryption. */
               public AsymmetricDecrypt setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3520,17 +3460,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
-             * Create a new CryptoKeyVersion in a CryptoKey.
-             *
-             * The server will assign the next sequential id. If unset, state will be set to ENABLED.
+             * Create a new CryptoKeyVersion in a CryptoKey. The server will assign the next sequential id. If
+             * unset, state will be set to ENABLED.
              *
              * Create a request for the method "cryptoKeyVersions.create".
              *
              * This request holds the parameters needed by the cloudkms server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The name of the CryptoKey associated with
-            the CryptoKeyVersions.
+             * @param parent Required. The name of the CryptoKey associated with the CryptoKeyVersions.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.CryptoKeyVersion}
              * @return the request
              */
@@ -3548,9 +3486,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+$");
 
               /**
-               * Create a new CryptoKeyVersion in a CryptoKey.
-               *
-               * The server will assign the next sequential id. If unset, state will be set to ENABLED.
+               * Create a new CryptoKeyVersion in a CryptoKey. The server will assign the next sequential id. If
+               * unset, state will be set to ENABLED.
                *
                * Create a request for the method "cryptoKeyVersions.create".
                *
@@ -3560,8 +3497,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The name of the CryptoKey associated with
-            the CryptoKeyVersions.
+               * @param parent Required. The name of the CryptoKey associated with the CryptoKeyVersions.
                * @param content the {@link com.google.api.services.cloudkms.v1.model.CryptoKeyVersion}
                * @since 1.13
                */
@@ -3630,9 +3566,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the CryptoKey associated with the CryptoKeyVersions.
-               */
+              /** Required. The name of the CryptoKey associated with the CryptoKeyVersions. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
@@ -3642,9 +3576,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return parent;
               }
 
-              /**
-               * Required. The name of the CryptoKey associated with the CryptoKeyVersions.
-               */
+              /** Required. The name of the CryptoKey associated with the CryptoKeyVersions. */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3661,13 +3593,11 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
-             * Schedule a CryptoKeyVersion for destruction.
-             *
-             * Upon calling this method, CryptoKeyVersion.state will be set to DESTROY_SCHEDULED and
-             * destroy_time will be set to a time 24 hours in the future, at which point the state will be
-             * changed to DESTROYED, and the key material will be irrevocably destroyed.
-             *
-             * Before the destroy_time is reached, RestoreCryptoKeyVersion may be called to reverse the process.
+             * Schedule a CryptoKeyVersion for destruction. Upon calling this method, CryptoKeyVersion.state
+             * will be set to DESTROY_SCHEDULED and destroy_time will be set to a time 24 hours in the future,
+             * at which point the state will be changed to DESTROYED, and the key material will be irrevocably
+             * destroyed. Before the destroy_time is reached, RestoreCryptoKeyVersion may be called to reverse
+             * the process.
              *
              * Create a request for the method "cryptoKeyVersions.destroy".
              *
@@ -3692,14 +3622,11 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
 
               /**
-               * Schedule a CryptoKeyVersion for destruction.
-               *
-               * Upon calling this method, CryptoKeyVersion.state will be set to DESTROY_SCHEDULED and
-               * destroy_time will be set to a time 24 hours in the future, at which point the state will be
-               * changed to DESTROYED, and the key material will be irrevocably destroyed.
-               *
-               * Before the destroy_time is reached, RestoreCryptoKeyVersion may be called to reverse the
-               * process.
+               * Schedule a CryptoKeyVersion for destruction. Upon calling this method, CryptoKeyVersion.state
+               * will be set to DESTROY_SCHEDULED and destroy_time will be set to a time 24 hours in the future,
+               * at which point the state will be changed to DESTROYED, and the key material will be irrevocably
+               * destroyed. Before the destroy_time is reached, RestoreCryptoKeyVersion may be called to reverse
+               * the process.
                *
                * Create a request for the method "cryptoKeyVersions.destroy".
                *
@@ -3951,8 +3878,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * This request holds the parameters needed by the cloudkms server.  After setting any optional
              * parameters, call the {@link GetPublicKey#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the CryptoKeyVersion public key to
-            get.
+             * @param name Required. The name of the CryptoKeyVersion public key to get.
              * @return the request
              */
             public GetPublicKey getPublicKey(java.lang.String name) throws java.io.IOException {
@@ -3980,8 +3906,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                * GetPublicKey#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the CryptoKeyVersion public key to
-            get.
+               * @param name Required. The name of the CryptoKeyVersion public key to get.
                * @since 1.13
                */
               protected GetPublicKey(java.lang.String name) {
@@ -4059,9 +3984,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return (GetPublicKey) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the CryptoKeyVersion public key to get.
-               */
+              /** Required. The name of the CryptoKeyVersion public key to get. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
@@ -4071,9 +3994,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return name;
               }
 
-              /**
-               * Required. The name of the CryptoKeyVersion public key to get.
-               */
+              /** Required. The name of the CryptoKeyVersion public key to get. */
               public GetPublicKey setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4091,17 +4012,14 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
             /**
              * Imports a new CryptoKeyVersion into an existing CryptoKey using the wrapped key material provided
-             * in the request.
-             *
-             * The version ID will be assigned the next sequential id within the CryptoKey.
+             * in the request. The version ID will be assigned the next sequential id within the CryptoKey.
              *
              * Create a request for the method "cryptoKeyVersions.import".
              *
              * This request holds the parameters needed by the cloudkms server.  After setting any optional
              * parameters, call the {@link CloudKMSImport#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The name of the CryptoKey to
-            be imported into.
+             * @param parent Required. The name of the CryptoKey to be imported into.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.ImportCryptoKeyVersionRequest}
              * @return the request
              */
@@ -4120,9 +4038,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
               /**
                * Imports a new CryptoKeyVersion into an existing CryptoKey using the wrapped key material
-               * provided in the request.
-               *
-               * The version ID will be assigned the next sequential id within the CryptoKey.
+               * provided in the request. The version ID will be assigned the next sequential id within the
+               * CryptoKey.
                *
                * Create a request for the method "cryptoKeyVersions.import".
                *
@@ -4132,8 +4049,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param parent Required. The name of the CryptoKey to
-            be imported into.
+               * @param parent Required. The name of the CryptoKey to be imported into.
                * @param content the {@link com.google.api.services.cloudkms.v1.model.ImportCryptoKeyVersionRequest}
                * @since 1.13
                */
@@ -4202,9 +4118,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return (CloudKMSImport) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the CryptoKey to be imported into.
-               */
+              /** Required. The name of the CryptoKey to be imported into. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
@@ -4214,9 +4128,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return parent;
               }
 
-              /**
-               * Required. The name of the CryptoKey to be imported into.
-               */
+              /** Required. The name of the CryptoKey to be imported into. */
               public CloudKMSImport setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4499,10 +4411,9 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
-             * Update a CryptoKeyVersion's metadata.
-             *
-             * state may be changed between ENABLED and DISABLED using this method. See DestroyCryptoKeyVersion
-             * and RestoreCryptoKeyVersion to move between other states.
+             * Update a CryptoKeyVersion's metadata. state may be changed between ENABLED and DISABLED using
+             * this method. See DestroyCryptoKeyVersion and RestoreCryptoKeyVersion to move between other
+             * states.
              *
              * Create a request for the method "cryptoKeyVersions.patch".
              *
@@ -4528,10 +4439,9 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
 
               /**
-               * Update a CryptoKeyVersion's metadata.
-               *
-               * state may be changed between ENABLED and DISABLED using this method. See
-               * DestroyCryptoKeyVersion and RestoreCryptoKeyVersion to move between other states.
+               * Update a CryptoKeyVersion's metadata. state may be changed between ENABLED and DISABLED using
+               * this method. See DestroyCryptoKeyVersion and RestoreCryptoKeyVersion to move between other
+               * states.
                *
                * Create a request for the method "cryptoKeyVersions.patch".
                *
@@ -4661,10 +4571,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               }
             }
             /**
-             * Restore a CryptoKeyVersion in the DESTROY_SCHEDULED state.
-             *
-             * Upon restoration of the CryptoKeyVersion, state will be set to DISABLED, and destroy_time will be
-             * cleared.
+             * Restore a CryptoKeyVersion in the DESTROY_SCHEDULED state. Upon restoration of the
+             * CryptoKeyVersion, state will be set to DISABLED, and destroy_time will be cleared.
              *
              * Create a request for the method "cryptoKeyVersions.restore".
              *
@@ -4689,10 +4597,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
 
               /**
-               * Restore a CryptoKeyVersion in the DESTROY_SCHEDULED state.
-               *
-               * Upon restoration of the CryptoKeyVersion, state will be set to DISABLED, and destroy_time will
-               * be cleared.
+               * Restore a CryptoKeyVersion in the DESTROY_SCHEDULED state. Upon restoration of the
+               * CryptoKeyVersion, state will be set to DISABLED, and destroy_time will be cleared.
                *
                * Create a request for the method "cryptoKeyVersions.restore".
                *
@@ -4821,17 +4727,14 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         public class ImportJobs {
 
           /**
-           * Create a new ImportJob within a KeyRing.
-           *
-           * ImportJob.import_method is required.
+           * Create a new ImportJob within a KeyRing. ImportJob.import_method is required.
            *
            * Create a request for the method "importJobs.create".
            *
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The name of the KeyRing associated with the
-          ImportJobs.
+           * @param parent Required. The name of the KeyRing associated with the ImportJobs.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.ImportJob}
            * @return the request
            */
@@ -4849,9 +4752,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+$");
 
             /**
-             * Create a new ImportJob within a KeyRing.
-             *
-             * ImportJob.import_method is required.
+             * Create a new ImportJob within a KeyRing. ImportJob.import_method is required.
              *
              * Create a request for the method "importJobs.create".
              *
@@ -4861,8 +4762,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The name of the KeyRing associated with the
-          ImportJobs.
+             * @param parent Required. The name of the KeyRing associated with the ImportJobs.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.ImportJob}
              * @since 1.13
              */
@@ -4931,9 +4831,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the KeyRing associated with the ImportJobs.
-             */
+            /** Required. The name of the KeyRing associated with the ImportJobs. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
@@ -4943,9 +4841,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               return parent;
             }
 
-            /**
-             * Required. The name of the KeyRing associated with the ImportJobs.
-             */
+            /** Required. The name of the KeyRing associated with the ImportJobs. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5130,8 +5026,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
            * @return the request
            */
@@ -5160,8 +5055,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being requested.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
            *        the appropriate value for this field.
              * @since 1.13
              */
@@ -5269,36 +5163,33 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             @com.google.api.client.util.Key("options.requestedPolicyVersion")
             private java.lang.Integer optionsRequestedPolicyVersion;
 
-            /** Optional. The policy format version to be returned.
-
-           Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-
-           Requests for policies with any conditional bindings must specify version 3. Policies without any
-           conditional bindings may specify any valid value or leave the field unset.
+            /** Optional. The policy format version to be returned. Valid values are 0, 1, and 3. Requests
+           specifying an invalid value will be rejected. Requests for policies with any conditional bindings
+           must specify version 3. Policies without any conditional bindings may specify any valid value or
+           leave the field unset. To learn which resources support conditions in their IAM policies, see the
+           [IAM documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public java.lang.Integer getOptionsRequestedPolicyVersion() {
               return optionsRequestedPolicyVersion;
             }
 
             /**
-             * Optional. The policy format version to be returned.
-             *
-             * Valid values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
-             *
-             * Requests for policies with any conditional bindings must specify version 3. Policies
-             * without any conditional bindings may specify any valid value or leave the field
-             * unset.
+             * Optional. The policy format version to be returned. Valid values are 0, 1, and 3.
+             * Requests specifying an invalid value will be rejected. Requests for policies with any
+             * conditional bindings must specify version 3. Policies without any conditional
+             * bindings may specify any valid value or leave the field unset. To learn which
+             * resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
              */
             public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
               this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
@@ -5318,8 +5209,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource name of the KeyRing to list, in the format
-          `projects/locations/keyRings`.
+           * @param parent Required. The resource name of the KeyRing to list, in the format `projects/locations/keyRings`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -5345,8 +5235,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource name of the KeyRing to list, in the format
-          `projects/locations/keyRings`.
+             * @param parent Required. The resource name of the KeyRing to list, in the format `projects/locations/keyRings`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -5558,17 +5447,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
-           * Sets the access control policy on the specified resource. Replaces any existing policy.
-           *
-           * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
            *
            * Create a request for the method "importJobs.setIamPolicy".
            *
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+           * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.SetIamPolicyRequest}
            * @return the request
@@ -5587,9 +5474,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/importJobs/[^/]+$");
 
             /**
-             * Sets the access control policy on the specified resource. Replaces any existing policy.
-             *
-             * Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
              *
              * Create a request for the method "importJobs.setIamPolicy".
              *
@@ -5599,8 +5485,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy is being specified.
-          See the operation documentation for
+             * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
            *        the appropriate value for this field.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.SetIamPolicyRequest}
              * @since 1.13
@@ -5705,18 +5590,16 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
           /**
            * Returns permissions that a caller has on the specified resource. If the resource does not exist,
-           * this will return an empty set of permissions, not a NOT_FOUND error.
-           *
-           * Note: This operation is designed to be used for building permission-aware UIs and command-line
-           * tools, not for authorization checking. This operation may "fail open" without warning.
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
            *
            * Create a request for the method "importJobs.testIamPermissions".
            *
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
            *
-           * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
            * @param content the {@link com.google.api.services.cloudkms.v1.model.TestIamPermissionsRequest}
            * @return the request
@@ -5736,10 +5619,9 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Returns permissions that a caller has on the specified resource. If the resource does not
-             * exist, this will return an empty set of permissions, not a NOT_FOUND error.
-             *
-             * Note: This operation is designed to be used for building permission-aware UIs and command-line
-             * tools, not for authorization checking. This operation may "fail open" without warning.
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
              *
              * Create a request for the method "importJobs.testIamPermissions".
              *
@@ -5749,8 +5631,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param resource REQUIRED: The resource for which the policy detail is being requested.
-          See the operation
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
            *        documentation for the appropriate value for this field.
              * @param content the {@link com.google.api.services.cloudkms.v1.model.TestIamPermissionsRequest}
              * @since 1.13

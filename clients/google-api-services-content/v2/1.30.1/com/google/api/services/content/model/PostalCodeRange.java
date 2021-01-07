@@ -31,28 +31,28 @@ package com.google.api.services.content.model;
 public final class PostalCodeRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * A postal code or a pattern of the form prefix* denoting the inclusive lower bound of the range
-   * defining the area. Examples values: "94108", "9410*", "9*". Required.
+   * A postal code or a pattern of the form `prefix*` denoting the inclusive lower bound of the
+   * range defining the area. Examples values: `"94108"`, `"9410*"`, `"9*"`. Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String postalCodeRangeBegin;
 
   /**
-   * A postal code or a pattern of the form prefix* denoting the inclusive upper bound of the range
-   * defining the area. It must have the same length as postalCodeRangeBegin: if
-   * postalCodeRangeBegin is a postal code then postalCodeRangeEnd must be a postal code too; if
-   * postalCodeRangeBegin is a pattern then postalCodeRangeEnd must be a pattern with the same
+   * A postal code or a pattern of the form `prefix*` denoting the inclusive upper bound of the
+   * range defining the area. It must have the same length as `postalCodeRangeBegin`: if
+   * `postalCodeRangeBegin` is a postal code then `postalCodeRangeEnd` must be a postal code too; if
+   * `postalCodeRangeBegin` is a pattern then `postalCodeRangeEnd` must be a pattern with the same
    * prefix length. Optional: if not set, then the area is defined as being all the postal codes
-   * matching postalCodeRangeBegin.
+   * matching `postalCodeRangeBegin`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String postalCodeRangeEnd;
 
   /**
-   * A postal code or a pattern of the form prefix* denoting the inclusive lower bound of the range
-   * defining the area. Examples values: "94108", "9410*", "9*". Required.
+   * A postal code or a pattern of the form `prefix*` denoting the inclusive lower bound of the
+   * range defining the area. Examples values: `"94108"`, `"9410*"`, `"9*"`. Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostalCodeRangeBegin() {
@@ -60,8 +60,8 @@ public final class PostalCodeRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A postal code or a pattern of the form prefix* denoting the inclusive lower bound of the range
-   * defining the area. Examples values: "94108", "9410*", "9*". Required.
+   * A postal code or a pattern of the form `prefix*` denoting the inclusive lower bound of the
+   * range defining the area. Examples values: `"94108"`, `"9410*"`, `"9*"`. Required.
    * @param postalCodeRangeBegin postalCodeRangeBegin or {@code null} for none
    */
   public PostalCodeRange setPostalCodeRangeBegin(java.lang.String postalCodeRangeBegin) {
@@ -70,12 +70,12 @@ public final class PostalCodeRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A postal code or a pattern of the form prefix* denoting the inclusive upper bound of the range
-   * defining the area. It must have the same length as postalCodeRangeBegin: if
-   * postalCodeRangeBegin is a postal code then postalCodeRangeEnd must be a postal code too; if
-   * postalCodeRangeBegin is a pattern then postalCodeRangeEnd must be a pattern with the same
+   * A postal code or a pattern of the form `prefix*` denoting the inclusive upper bound of the
+   * range defining the area. It must have the same length as `postalCodeRangeBegin`: if
+   * `postalCodeRangeBegin` is a postal code then `postalCodeRangeEnd` must be a postal code too; if
+   * `postalCodeRangeBegin` is a pattern then `postalCodeRangeEnd` must be a pattern with the same
    * prefix length. Optional: if not set, then the area is defined as being all the postal codes
-   * matching postalCodeRangeBegin.
+   * matching `postalCodeRangeBegin`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostalCodeRangeEnd() {
@@ -83,12 +83,12 @@ public final class PostalCodeRange extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A postal code or a pattern of the form prefix* denoting the inclusive upper bound of the range
-   * defining the area. It must have the same length as postalCodeRangeBegin: if
-   * postalCodeRangeBegin is a postal code then postalCodeRangeEnd must be a postal code too; if
-   * postalCodeRangeBegin is a pattern then postalCodeRangeEnd must be a pattern with the same
+   * A postal code or a pattern of the form `prefix*` denoting the inclusive upper bound of the
+   * range defining the area. It must have the same length as `postalCodeRangeBegin`: if
+   * `postalCodeRangeBegin` is a postal code then `postalCodeRangeEnd` must be a postal code too; if
+   * `postalCodeRangeBegin` is a pattern then `postalCodeRangeEnd` must be a pattern with the same
    * prefix length. Optional: if not set, then the area is defined as being all the postal codes
-   * matching postalCodeRangeBegin.
+   * matching `postalCodeRangeBegin`.
    * @param postalCodeRangeEnd postalCodeRangeEnd or {@code null} for none
    */
   public PostalCodeRange setPostalCodeRangeEnd(java.lang.String postalCodeRangeEnd) {

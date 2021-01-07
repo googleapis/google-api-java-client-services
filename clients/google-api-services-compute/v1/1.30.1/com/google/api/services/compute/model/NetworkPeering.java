@@ -59,11 +59,30 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.Boolean exportCustomRoutes;
 
   /**
+   * Whether subnet routes with public IP range are exported. The default value is true, all subnet
+   * routes are exported. The IPv4 special-use ranges
+   * (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not
+   * controlled by this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exportSubnetRoutesWithPublicIp;
+
+  /**
    * Whether to import the custom routes from peer network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean importCustomRoutes;
+
+  /**
+   * Whether subnet routes with public IP range are imported. The default value is false. The IPv4
+   * special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported
+   * from peers and are not controlled by this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean importSubnetRoutesWithPublicIp;
 
   /**
    * Name of this peering. Provided by the client when the peering is created. The name must comply
@@ -84,6 +103,13 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
+
+  /**
+   * Maximum Transmission Unit in bytes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer peerMtu;
 
   /**
    * [Output Only] State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE`
@@ -164,6 +190,29 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Whether subnet routes with public IP range are exported. The default value is true, all subnet
+   * routes are exported. The IPv4 special-use ranges
+   * (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not
+   * controlled by this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExportSubnetRoutesWithPublicIp() {
+    return exportSubnetRoutesWithPublicIp;
+  }
+
+  /**
+   * Whether subnet routes with public IP range are exported. The default value is true, all subnet
+   * routes are exported. The IPv4 special-use ranges
+   * (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not
+   * controlled by this field.
+   * @param exportSubnetRoutesWithPublicIp exportSubnetRoutesWithPublicIp or {@code null} for none
+   */
+  public NetworkPeering setExportSubnetRoutesWithPublicIp(java.lang.Boolean exportSubnetRoutesWithPublicIp) {
+    this.exportSubnetRoutesWithPublicIp = exportSubnetRoutesWithPublicIp;
+    return this;
+  }
+
+  /**
    * Whether to import the custom routes from peer network.
    * @return value or {@code null} for none
    */
@@ -177,6 +226,27 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
    */
   public NetworkPeering setImportCustomRoutes(java.lang.Boolean importCustomRoutes) {
     this.importCustomRoutes = importCustomRoutes;
+    return this;
+  }
+
+  /**
+   * Whether subnet routes with public IP range are imported. The default value is false. The IPv4
+   * special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported
+   * from peers and are not controlled by this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getImportSubnetRoutesWithPublicIp() {
+    return importSubnetRoutesWithPublicIp;
+  }
+
+  /**
+   * Whether subnet routes with public IP range are imported. The default value is false. The IPv4
+   * special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported
+   * from peers and are not controlled by this field.
+   * @param importSubnetRoutesWithPublicIp importSubnetRoutesWithPublicIp or {@code null} for none
+   */
+  public NetworkPeering setImportSubnetRoutesWithPublicIp(java.lang.Boolean importSubnetRoutesWithPublicIp) {
+    this.importSubnetRoutesWithPublicIp = importSubnetRoutesWithPublicIp;
     return this;
   }
 
@@ -223,6 +293,23 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
    */
   public NetworkPeering setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Maximum Transmission Unit in bytes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPeerMtu() {
+    return peerMtu;
+  }
+
+  /**
+   * Maximum Transmission Unit in bytes.
+   * @param peerMtu peerMtu or {@code null} for none
+   */
+  public NetworkPeering setPeerMtu(java.lang.Integer peerMtu) {
+    this.peerMtu = peerMtu;
     return this;
   }
 

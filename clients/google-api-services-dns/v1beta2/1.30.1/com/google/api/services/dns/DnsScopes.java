@@ -17,7 +17,7 @@
 package com.google.api.services.dns;
 
 /**
- * Available OAuth 2.0 scopes for use with the Google Cloud DNS API.
+ * Available OAuth 2.0 scopes for use with the Cloud DNS API.
  *
  * @since 1.4
  */

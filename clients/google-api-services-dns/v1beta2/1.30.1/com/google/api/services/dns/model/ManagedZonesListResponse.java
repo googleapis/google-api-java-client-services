@@ -20,7 +20,7 @@ package com.google.api.services.dns.model;
  * Model definition for ManagedZonesListResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Google Cloud DNS API. For a detailed explanation see:
+ * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -58,13 +58,11 @@ public final class ManagedZonesListResponse extends com.google.api.client.json.G
   /**
    * The presence of this field indicates that there exist more results following your last page of
    * results in pagination order. To fetch them, make another list request using this value as your
-   * page token.
-   *
-   * In this way you can retrieve the complete contents of even very large collections one page at a
-   * time. However, if the contents of the collection change between the first and last paginated
-   * list request, the set of all elements returned will be an inconsistent view of the collection.
-   * There is no way to retrieve a consistent snapshot of a collection larger than the maximum page
-   * size.
+   * page token. In this way you can retrieve the complete contents of even very large collections
+   * one page at a time. However, if the contents of the collection change between the first and
+   * last paginated list request, the set of all elements returned will be an inconsistent view of
+   * the collection. There is no way to retrieve a consistent snapshot of a collection larger than
+   * the maximum page size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,13 +120,11 @@ public final class ManagedZonesListResponse extends com.google.api.client.json.G
   /**
    * The presence of this field indicates that there exist more results following your last page of
    * results in pagination order. To fetch them, make another list request using this value as your
-   * page token.
-   *
-   * In this way you can retrieve the complete contents of even very large collections one page at a
-   * time. However, if the contents of the collection change between the first and last paginated
-   * list request, the set of all elements returned will be an inconsistent view of the collection.
-   * There is no way to retrieve a consistent snapshot of a collection larger than the maximum page
-   * size.
+   * page token. In this way you can retrieve the complete contents of even very large collections
+   * one page at a time. However, if the contents of the collection change between the first and
+   * last paginated list request, the set of all elements returned will be an inconsistent view of
+   * the collection. There is no way to retrieve a consistent snapshot of a collection larger than
+   * the maximum page size.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -138,13 +134,11 @@ public final class ManagedZonesListResponse extends com.google.api.client.json.G
   /**
    * The presence of this field indicates that there exist more results following your last page of
    * results in pagination order. To fetch them, make another list request using this value as your
-   * page token.
-   *
-   * In this way you can retrieve the complete contents of even very large collections one page at a
-   * time. However, if the contents of the collection change between the first and last paginated
-   * list request, the set of all elements returned will be an inconsistent view of the collection.
-   * There is no way to retrieve a consistent snapshot of a collection larger than the maximum page
-   * size.
+   * page token. In this way you can retrieve the complete contents of even very large collections
+   * one page at a time. However, if the contents of the collection change between the first and
+   * last paginated list request, the set of all elements returned will be an inconsistent view of
+   * the collection. There is no way to retrieve a consistent snapshot of a collection larger than
+   * the maximum page size.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ManagedZonesListResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -20,8 +20,7 @@ package com.google.api.services.cloudshell.v1alpha1;
  * Service definition for CloudShell (v1alpha1).
  *
  * <p>
- * Allows users to start, configure, and connect to interactive shell sessions running in the cloud.
-
+ * Allows users to start, configure, and connect to interactive shell sessions running in the cloud. 
  * </p>
  *
  * <p>
@@ -47,7 +46,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
         com.google.api.client.googleapis.GoogleUtils.MINOR_VERSION >= 15,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.15 of google-api-client to run version " +
-        "1.30.9 of the Cloud Shell API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.30.10 of the Cloud Shell API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -174,8 +173,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link Authorize#execute()} method to invoke the remote operation.
        *
        * @param name Name of the resource that should receive the credentials, for example
-       *        `users/me/environments/default` or
-      `users/someone@example.com/environments/default`.
+       *        `users/me/environments/default` or `users/someone@example.com/environments/default`.
        * @param content the {@link com.google.api.services.cloudshell.v1alpha1.model.AuthorizeEnvironmentRequest}
        * @return the request
        */
@@ -206,8 +204,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Name of the resource that should receive the credentials, for example
-       *        `users/me/environments/default` or
-      `users/someone@example.com/environments/default`.
+       *        `users/me/environments/default` or `users/someone@example.com/environments/default`.
          * @param content the {@link com.google.api.services.cloudshell.v1alpha1.model.AuthorizeEnvironmentRequest}
          * @since 1.13
          */
@@ -317,8 +314,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudshell server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the requested resource, for example `users/me/environments/default`
-      or
+       * @param name Name of the requested resource, for example `users/me/environments/default` or
        *        `users/someone@example.com/environments/default`.
        * @return the request
        */
@@ -345,8 +341,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the requested resource, for example `users/me/environments/default`
-      or
+         * @param name Name of the requested resource, for example `users/me/environments/default` or
        *        `users/someone@example.com/environments/default`.
          * @since 1.13
          */
@@ -466,8 +461,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudshell server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the resource to be updated, for example
-      `users/me/environments/default` or
+       * @param name Name of the resource to be updated, for example `users/me/environments/default` or
        *        `users/someone@example.com/environments/default`.
        * @param content the {@link com.google.api.services.cloudshell.v1alpha1.model.Environment}
        * @return the request
@@ -496,8 +490,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the resource to be updated, for example
-      `users/me/environments/default` or
+         * @param name Name of the resource to be updated, for example `users/me/environments/default` or
        *        `users/someone@example.com/environments/default`.
          * @param content the {@link com.google.api.services.cloudshell.v1alpha1.model.Environment}
          * @since 1.13
@@ -628,8 +621,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the cloudshell server.  After setting any optional
        * parameters, call the {@link Start#execute()} method to invoke the remote operation.
        *
-       * @param name Name of the resource that should be started, for example
-      `users/me/environments/default` or
+       * @param name Name of the resource that should be started, for example `users/me/environments/default` or
        *        `users/someone@example.com/environments/default`.
        * @param content the {@link com.google.api.services.cloudshell.v1alpha1.model.StartEnvironmentRequest}
        * @return the request
@@ -662,8 +654,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
          * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Name of the resource that should be started, for example
-      `users/me/environments/default` or
+         * @param name Name of the resource that should be started, for example `users/me/environments/default` or
        *        `users/someone@example.com/environments/default`.
          * @param content the {@link com.google.api.services.cloudshell.v1alpha1.model.StartEnvironmentRequest}
          * @since 1.13
@@ -931,8 +922,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the cloudshell server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the resource to be deleted, e.g.
-        `users/me/environments/default/publicKeys/my-key`.
+         * @param name Name of the resource to be deleted, e.g. `users/me/environments/default/publicKeys/my-key`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -960,8 +950,7 @@ public class CloudShell extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Name of the resource to be deleted, e.g.
-        `users/me/environments/default/publicKeys/my-key`.
+           * @param name Name of the resource to be deleted, e.g. `users/me/environments/default/publicKeys/my-key`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {

@@ -53,7 +53,7 @@ public final class LiaSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#liaSettings".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#liaSettings`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class LiaSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#liaSettings".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#liaSettings`"
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -104,7 +104,7 @@ public final class LiaSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string "content#liaSettings".
+   * Identifies what kind of resource this is. Value: the fixed string "`content#liaSettings`"
    * @param kind kind or {@code null} for none
    */
   public LiaSettings setKind(java.lang.String kind) {

@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-libraryagent</artifactId>
-      <version>v1-rev20200215-1.30.9</version>
+      <version>v1-rev20200801-1.30.10</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-libraryagent:v1-rev20200215-1.30.9'
+  compile 'com.google.apis:google-api-services-libraryagent:v1-rev20200801-1.30.10'
 }
 ```
 

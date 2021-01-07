@@ -17,11 +17,11 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Model definition for FileList.
+ * List of files for a report.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the DCM/DFA Reporting And Trafficking API. For a detailed
- * explanation see:
+ * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
+ * see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -38,6 +38,7 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * The files returned in this response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,6 +84,7 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The files returned in this response.
    * @return value or {@code null} for none
    */
   public java.util.List<File> getItems() {
@@ -90,6 +92,7 @@ public final class FileList extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The files returned in this response.
    * @param items items or {@code null} for none
    */
   public FileList setItems(java.util.List<File> items) {

@@ -37,14 +37,14 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   private java.lang.String caCertificate;
 
   /**
-   * PEM representation of the slave's x509 certificate.
+   * PEM representation of the replica's x509 certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientCertificate;
 
   /**
-   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
+   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
    * client's certificate.
    * The value may be {@code null}.
    */
@@ -59,17 +59,17 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   private java.lang.Integer connectRetryInterval;
 
   /**
-   * Path to a SQL dump file in Google Cloud Storage from which the slave instance is to be created.
-   * The URI is in the form gs: //bucketName/fileName. Compressed gzip files (.gz) are also
-   * supported. // Dumps should have the binlog co-ordinates from which replication should // begin.
-   * This can be accomplished by setting --master-data to 1 when using // mysqldump.
+   * Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be
+   * created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also
+   * supported. Dumps have the binlog co-ordinates from which replication begins. This can be
+   * accomplished by setting --master-data to 1 when using mysqldump.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dumpFilePath;
 
   /**
-   * This is always sql#mysqlReplicaConfiguration.
+   * This is always *sql#mysqlReplicaConfiguration*.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +129,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * PEM representation of the slave's x509 certificate.
+   * PEM representation of the replica's x509 certificate.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientCertificate() {
@@ -137,7 +137,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * PEM representation of the slave's x509 certificate.
+   * PEM representation of the replica's x509 certificate.
    * @param clientCertificate clientCertificate or {@code null} for none
    */
   public MySqlReplicaConfiguration setClientCertificate(java.lang.String clientCertificate) {
@@ -146,7 +146,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
+   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
    * client's certificate.
    * @return value or {@code null} for none
    */
@@ -155,7 +155,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * PEM representation of the slave's private key. The corresponsing public key is encoded in the
+   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
    * client's certificate.
    * @param clientKey clientKey or {@code null} for none
    */
@@ -182,10 +182,10 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * Path to a SQL dump file in Google Cloud Storage from which the slave instance is to be created.
-   * The URI is in the form gs: //bucketName/fileName. Compressed gzip files (.gz) are also
-   * supported. // Dumps should have the binlog co-ordinates from which replication should // begin.
-   * This can be accomplished by setting --master-data to 1 when using // mysqldump.
+   * Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be
+   * created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also
+   * supported. Dumps have the binlog co-ordinates from which replication begins. This can be
+   * accomplished by setting --master-data to 1 when using mysqldump.
    * @return value or {@code null} for none
    */
   public java.lang.String getDumpFilePath() {
@@ -193,10 +193,10 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * Path to a SQL dump file in Google Cloud Storage from which the slave instance is to be created.
-   * The URI is in the form gs: //bucketName/fileName. Compressed gzip files (.gz) are also
-   * supported. // Dumps should have the binlog co-ordinates from which replication should // begin.
-   * This can be accomplished by setting --master-data to 1 when using // mysqldump.
+   * Path to a SQL dump file in Google Cloud Storage from which the replica instance is to be
+   * created. The URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also
+   * supported. Dumps have the binlog co-ordinates from which replication begins. This can be
+   * accomplished by setting --master-data to 1 when using mysqldump.
    * @param dumpFilePath dumpFilePath or {@code null} for none
    */
   public MySqlReplicaConfiguration setDumpFilePath(java.lang.String dumpFilePath) {
@@ -205,7 +205,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * This is always sql#mysqlReplicaConfiguration.
+   * This is always *sql#mysqlReplicaConfiguration*.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -213,7 +213,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * This is always sql#mysqlReplicaConfiguration.
+   * This is always *sql#mysqlReplicaConfiguration*.
    * @param kind kind or {@code null} for none
    */
   public MySqlReplicaConfiguration setKind(java.lang.String kind) {

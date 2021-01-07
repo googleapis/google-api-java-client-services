@@ -378,17 +378,17 @@ public class DataTransfer extends com.google.api.client.googleapis.services.json
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Apps account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the Google Apps account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the Google Apps account. */
+      /** Immutable ID of the Google Workspace account. */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -786,17 +786,17 @@ public class DataTransfer extends com.google.api.client.googleapis.services.json
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the Google Apps account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the Google Apps account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the Google Apps account. */
+      /** Immutable ID of the Google Workspace account. */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;

@@ -60,7 +60,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The unique ID for the customer's G Suite account. (Readonly)
+   * The unique ID for the customer's Google Workspace account. (Readonly)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +170,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID for the customer's G Suite account. (Readonly)
+   * The unique ID for the customer's Google Workspace account. (Readonly)
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -178,7 +178,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID for the customer's G Suite account. (Readonly)
+   * The unique ID for the customer's Google Workspace account. (Readonly)
    * @param id id or {@code null} for none
    */
   public Customer setId(java.lang.String id) {

@@ -17,7 +17,7 @@
 package com.google.api.services.directory.model;
 
 /**
- * G Suite Mobile Management includes Android, [Google
+ * Google Workspace Mobile Management includes Android, [Google
  * Sync](http://support.google.com/a/bin/answer.py?answer=135937), and iOS devices. For more
  * information about common group mobile device API tasks, see the [Developer's Guide](/admin-
  * sdk/directory/v1/guides/manage-mobile-devices.html).
@@ -41,10 +41,10 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of applications installed on an Android mobile device. It is not applicable to Google
-   * Sync and iOS devices. The list includes any Android applications that access G Suite data. When
-   * updating an applications list, it is important to note that updates replace the existing list.
-   * If the Android device has two existing applications and the API updates the list with five
-   * applications, the is now the updated list of five applications.
+   * Sync and iOS devices. The list includes any Android applications that access Google Workspace
+   * data. When updating an applications list, it is important to note that updates replace the
+   * existing list. If the Android device has two existing applications and the API updates the list
+   * with five applications, the is now the updated list of five applications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -360,10 +360,10 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of applications installed on an Android mobile device. It is not applicable to Google
-   * Sync and iOS devices. The list includes any Android applications that access G Suite data. When
-   * updating an applications list, it is important to note that updates replace the existing list.
-   * If the Android device has two existing applications and the API updates the list with five
-   * applications, the is now the updated list of five applications.
+   * Sync and iOS devices. The list includes any Android applications that access Google Workspace
+   * data. When updating an applications list, it is important to note that updates replace the
+   * existing list. If the Android device has two existing applications and the API updates the list
+   * with five applications, the is now the updated list of five applications.
    * @return value or {@code null} for none
    */
   public java.util.List<Applications> getApplications() {
@@ -372,10 +372,10 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of applications installed on an Android mobile device. It is not applicable to Google
-   * Sync and iOS devices. The list includes any Android applications that access G Suite data. When
-   * updating an applications list, it is important to note that updates replace the existing list.
-   * If the Android device has two existing applications and the API updates the list with five
-   * applications, the is now the updated list of five applications.
+   * Sync and iOS devices. The list includes any Android applications that access Google Workspace
+   * data. When updating an applications list, it is important to note that updates replace the
+   * existing list. If the Android device has two existing applications and the API updates the list
+   * with five applications, the is now the updated list of five applications.
    * @param applications applications or {@code null} for none
    */
   public MobileDevice setApplications(java.util.List<Applications> applications) {

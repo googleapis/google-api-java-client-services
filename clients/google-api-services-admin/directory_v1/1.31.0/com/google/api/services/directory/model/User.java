@@ -157,9 +157,10 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Object ims;
 
   /**
-   * Indicates if the user's profile is visible in the G Suite global address list when the contact
-   * sharing feature is enabled for the domain. For more information about excluding user profiles,
-   * see the [administration help center](http://support.google.com/a/bin/answer.py?answer=1285988).
+   * Indicates if the user's profile is visible in the Google Workspace global address list when the
+   * contact sharing feature is enabled for the domain. For more information about excluding user
+   * profiles, see the [administration help
+   * center](http://support.google.com/a/bin/answer.py?answer=1285988).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -691,9 +692,10 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates if the user's profile is visible in the G Suite global address list when the contact
-   * sharing feature is enabled for the domain. For more information about excluding user profiles,
-   * see the [administration help center](http://support.google.com/a/bin/answer.py?answer=1285988).
+   * Indicates if the user's profile is visible in the Google Workspace global address list when the
+   * contact sharing feature is enabled for the domain. For more information about excluding user
+   * profiles, see the [administration help
+   * center](http://support.google.com/a/bin/answer.py?answer=1285988).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeInGlobalAddressList() {
@@ -701,9 +703,10 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates if the user's profile is visible in the G Suite global address list when the contact
-   * sharing feature is enabled for the domain. For more information about excluding user profiles,
-   * see the [administration help center](http://support.google.com/a/bin/answer.py?answer=1285988).
+   * Indicates if the user's profile is visible in the Google Workspace global address list when the
+   * contact sharing feature is enabled for the domain. For more information about excluding user
+   * profiles, see the [administration help
+   * center](http://support.google.com/a/bin/answer.py?answer=1285988).
    * @param includeInGlobalAddressList includeInGlobalAddressList or {@code null} for none
    */
   public User setIncludeInGlobalAddressList(java.lang.Boolean includeInGlobalAddressList) {

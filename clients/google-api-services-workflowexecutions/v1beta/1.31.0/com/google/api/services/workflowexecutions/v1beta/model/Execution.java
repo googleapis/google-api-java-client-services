@@ -32,7 +32,10 @@ package com.google.api.services.workflowexecutions.v1beta.model;
 public final class Execution extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input parameters of the execution represented as a JSON string. The size limit is 32KB.
+   * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*:
+   * If you are using the REST API directly to run your workflow, you must escape any JSON string
+   * value of `argument`. Example:
+   * `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +94,10 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private java.lang.String workflowRevisionId;
 
   /**
-   * Input parameters of the execution represented as a JSON string. The size limit is 32KB.
+   * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*:
+   * If you are using the REST API directly to run your workflow, you must escape any JSON string
+   * value of `argument`. Example:
+   * `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
    * @return value or {@code null} for none
    */
   public java.lang.String getArgument() {
@@ -99,7 +105,10 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input parameters of the execution represented as a JSON string. The size limit is 32KB.
+   * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*:
+   * If you are using the REST API directly to run your workflow, you must escape any JSON string
+   * value of `argument`. Example:
+   * `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
    * @param argument argument or {@code null} for none
    */
   public Execution setArgument(java.lang.String argument) {

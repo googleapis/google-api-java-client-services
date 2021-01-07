@@ -20,8 +20,8 @@ package com.google.api.services.alertcenter.v1beta1.model;
  * An alert affecting a customer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -121,7 +121,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of the alert. This is output only after alert is created. For a list of
-   * available alert types see [G Suite Alert types](/admin-sdk/alertcenter/reference/alert-types).
+   * available alert types see [Google Workspace Alert types](/admin-sdk/alertcenter/reference
+   * /alert-types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -347,7 +348,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of the alert. This is output only after alert is created. For a list of
-   * available alert types see [G Suite Alert types](/admin-sdk/alertcenter/reference/alert-types).
+   * available alert types see [Google Workspace Alert types](/admin-sdk/alertcenter/reference
+   * /alert-types).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -356,7 +358,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of the alert. This is output only after alert is created. For a list of
-   * available alert types see [G Suite Alert types](/admin-sdk/alertcenter/reference/alert-types).
+   * available alert types see [Google Workspace Alert types](/admin-sdk/alertcenter/reference
+   * /alert-types).
    * @param type type or {@code null} for none
    */
   public Alert setType(java.lang.String type) {

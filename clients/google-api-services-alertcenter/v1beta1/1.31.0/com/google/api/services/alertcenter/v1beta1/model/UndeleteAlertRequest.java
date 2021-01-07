@@ -20,8 +20,8 @@ package com.google.api.services.alertcenter.v1beta1.model;
  * A request to undelete a specific alert that was marked for deletion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the G Suite Alert Center API. For a detailed explanation
- * see:
+ * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed
+ * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
  *
@@ -31,16 +31,16 @@ package com.google.api.services.alertcenter.v1beta1.model;
 public final class UndeleteAlertRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The unique identifier of the G Suite organization account of the customer the alert
-   * is associated with. Inferred from the caller identity if not provided.
+   * Optional. The unique identifier of the Google Workspace organization account of the customer
+   * the alert is associated with. Inferred from the caller identity if not provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerId;
 
   /**
-   * Optional. The unique identifier of the G Suite organization account of the customer the alert
-   * is associated with. Inferred from the caller identity if not provided.
+   * Optional. The unique identifier of the Google Workspace organization account of the customer
+   * the alert is associated with. Inferred from the caller identity if not provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerId() {
@@ -48,8 +48,8 @@ public final class UndeleteAlertRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The unique identifier of the G Suite organization account of the customer the alert
-   * is associated with. Inferred from the caller identity if not provided.
+   * Optional. The unique identifier of the Google Workspace organization account of the customer
+   * the alert is associated with. Inferred from the caller identity if not provided.
    * @param customerId customerId or {@code null} for none
    */
   public UndeleteAlertRequest setCustomerId(java.lang.String customerId) {

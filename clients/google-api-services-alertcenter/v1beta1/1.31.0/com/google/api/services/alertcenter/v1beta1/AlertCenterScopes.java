@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1;
 
 /**
- * Available OAuth 2.0 scopes for use with the G Suite Alert Center API.
+ * Available OAuth 2.0 scopes for use with the Google Workspace Alert Center API.
  *
  * @since 1.4
  */

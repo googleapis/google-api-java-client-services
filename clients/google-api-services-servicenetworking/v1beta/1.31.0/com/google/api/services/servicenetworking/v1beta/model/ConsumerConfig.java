@@ -103,6 +103,14 @@ public final class ConsumerConfig extends com.google.api.client.json.GenericJson
   private java.util.List<GoogleCloudServicenetworkingV1ConsumerConfigReservedRange> reservedRanges;
 
   /**
+   * Output only. Indicates whether the VPC Service Controls reference architecture is configured
+   * for the producer VPC host network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean vpcScReferenceArchitectureEnabled;
+
+  /**
    * Export custom routes flag value for peering from consumer to producer.
    * @return value or {@code null} for none
    */
@@ -273,6 +281,25 @@ public final class ConsumerConfig extends com.google.api.client.json.GenericJson
    */
   public ConsumerConfig setReservedRanges(java.util.List<GoogleCloudServicenetworkingV1ConsumerConfigReservedRange> reservedRanges) {
     this.reservedRanges = reservedRanges;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether the VPC Service Controls reference architecture is configured
+   * for the producer VPC host network.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVpcScReferenceArchitectureEnabled() {
+    return vpcScReferenceArchitectureEnabled;
+  }
+
+  /**
+   * Output only. Indicates whether the VPC Service Controls reference architecture is configured
+   * for the producer VPC host network.
+   * @param vpcScReferenceArchitectureEnabled vpcScReferenceArchitectureEnabled or {@code null} for none
+   */
+  public ConsumerConfig setVpcScReferenceArchitectureEnabled(java.lang.Boolean vpcScReferenceArchitectureEnabled) {
+    this.vpcScReferenceArchitectureEnabled = vpcScReferenceArchitectureEnabled;
     return this;
   }
 

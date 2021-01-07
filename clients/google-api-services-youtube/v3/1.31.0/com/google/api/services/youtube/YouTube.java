@@ -8842,8 +8842,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param part The *part* parameter serves two purposes in this operation. It identifies the properties that the
      *        write operation will set as well as the properties that the API response will include. The
-     *        part properties that you can include in the parameter value are id, snippet, cdn, and
-     *        status.
+     *        part properties that you can include in the parameter value are id, snippet, cdn,
+     *        content_details, and status.
      * @param content the {@link com.google.api.services.youtube.model.LiveStream}
      * @return the request
      */
@@ -8869,8 +8869,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param part The *part* parameter serves two purposes in this operation. It identifies the properties that the
      *        write operation will set as well as the properties that the API response will include. The
-     *        part properties that you can include in the parameter value are id, snippet, cdn, and
-     *        status.
+     *        part properties that you can include in the parameter value are id, snippet, cdn,
+     *        content_details, and status.
        * @param content the {@link com.google.api.services.youtube.model.LiveStream}
        * @since 1.13
        */
@@ -8938,14 +8938,15 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * The *part* parameter serves two purposes in this operation. It identifies the properties
        * that the write operation will set as well as the properties that the API response will
        * include. The part properties that you can include in the parameter value are id, snippet,
-       * cdn, and status.
+       * cdn, content_details, and status.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> part;
 
       /** The *part* parameter serves two purposes in this operation. It identifies the properties that the
      write operation will set as well as the properties that the API response will include. The part
-     properties that you can include in the parameter value are id, snippet, cdn, and status.
+     properties that you can include in the parameter value are id, snippet, cdn, content_details, and
+     status.
        */
       public java.util.List<java.lang.String> getPart() {
         return part;
@@ -8955,7 +8956,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * The *part* parameter serves two purposes in this operation. It identifies the properties
        * that the write operation will set as well as the properties that the API response will
        * include. The part properties that you can include in the parameter value are id, snippet,
-       * cdn, and status.
+       * cdn, content_details, and status.
        */
       public Insert setPart(java.util.List<java.lang.String> part) {
         this.part = part;

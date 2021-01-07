@@ -3509,8 +3509,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       /**
        * Provides a list of the authenticated user's contacts. The request returns a 400 error if
        * `personFields` is not specified. The request returns a 410 error if `sync_token` is specified and
-       * is expired. Sync tokens expire after 7 days. A request without `sync_token` should be made and
-       * all contacts should be synced.
+       * is expired. Sync tokens expire after 7 days to prevent data drift between clients and the server.
+       * To handle a sync token expired error, a request should be sent without `sync_token` to get all
+       * contacts.
        *
        * Create a request for the method "connections.list".
        *
@@ -3536,8 +3537,9 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         /**
          * Provides a list of the authenticated user's contacts. The request returns a 400 error if
          * `personFields` is not specified. The request returns a 410 error if `sync_token` is specified
-         * and is expired. Sync tokens expire after 7 days. A request without `sync_token` should be made
-         * and all contacts should be synced.
+         * and is expired. Sync tokens expire after 7 days to prevent data drift between clients and the
+         * server. To handle a sync token expired error, a request should be sent without `sync_token` to
+         * get all contacts.
          *
          * Create a request for the method "connections.list".
          *
@@ -3757,15 +3759,19 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         /**
          * Optional. Whether the response should include `next_sync_token` on the last page, which
          * can be used to get all changes since the last request. For subsequent sync requests use
-         * the `sync_token` param instead. Initial sync requests that specify `request_sync_token`
-         * have an additional rate limit.
+         * the `sync_token` param instead. Initial full sync requests that specify
+         * `request_sync_token` and do not specify `sync_token` have an additional rate limit per
+         * user. Each client should generally only be doing a full sync once every few days per user
+         * and so should not hit this limit.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean requestSyncToken;
 
         /** Optional. Whether the response should include `next_sync_token` on the last page, which can be used
        to get all changes since the last request. For subsequent sync requests use the `sync_token` param
-       instead. Initial sync requests that specify `request_sync_token` have an additional rate limit.
+       instead. Initial full sync requests that specify `request_sync_token` and do not specify
+       `sync_token` have an additional rate limit per user. Each client should generally only be doing a
+       full sync once every few days per user and so should not hit this limit.
          */
         public java.lang.Boolean getRequestSyncToken() {
           return requestSyncToken;
@@ -3774,8 +3780,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         /**
          * Optional. Whether the response should include `next_sync_token` on the last page, which
          * can be used to get all changes since the last request. For subsequent sync requests use
-         * the `sync_token` param instead. Initial sync requests that specify `request_sync_token`
-         * have an additional rate limit.
+         * the `sync_token` param instead. Initial full sync requests that specify
+         * `request_sync_token` and do not specify `sync_token` have an additional rate limit per
+         * user. Each client should generally only be doing a full sync once every few days per user
+         * and so should not hit this limit.
          */
         public List setRequestSyncToken(java.lang.Boolean requestSyncToken) {
           this.requestSyncToken = requestSyncToken;
@@ -3830,17 +3838,19 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. A sync token, received from a previous `ListConnections` call. Provide this to
-         * retrieve only the resources changed since the last request. Sync requests that specify
-         * `sync_token` have an additional rate limit. When syncing, all other parameters provided
-         * to `ListConnections` must match the call that provided the sync token.
+         * retrieve only the resources changed since the last request. When syncing, all other
+         * parameters provided to `ListConnections` except `page_size` and `page_token` must match
+         * the initial call that provided the sync token. Sync tokens expire after seven days, after
+         * which a full sync request without a `sync_token` should be made.
          */
         @com.google.api.client.util.Key
         private java.lang.String syncToken;
 
         /** Optional. A sync token, received from a previous `ListConnections` call. Provide this to retrieve
-       only the resources changed since the last request. Sync requests that specify `sync_token` have an
-       additional rate limit. When syncing, all other parameters provided to `ListConnections` must match
-       the call that provided the sync token.
+       only the resources changed since the last request. When syncing, all other parameters provided to
+       `ListConnections` except `page_size` and `page_token` must match the initial call that provided the
+       sync token. Sync tokens expire after seven days, after which a full sync request without a
+       `sync_token` should be made.
          */
         public java.lang.String getSyncToken() {
           return syncToken;
@@ -3848,9 +3858,10 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
 
         /**
          * Optional. A sync token, received from a previous `ListConnections` call. Provide this to
-         * retrieve only the resources changed since the last request. Sync requests that specify
-         * `sync_token` have an additional rate limit. When syncing, all other parameters provided
-         * to `ListConnections` must match the call that provided the sync token.
+         * retrieve only the resources changed since the last request. When syncing, all other
+         * parameters provided to `ListConnections` except `page_size` and `page_token` must match
+         * the initial call that provided the sync token. Sync tokens expire after seven days, after
+         * which a full sync request without a `sync_token` should be made.
          */
         public List setSyncToken(java.lang.String syncToken) {
           this.syncToken = syncToken;

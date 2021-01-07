@@ -740,9 +740,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Action#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param resourceId The unique ID of the device. The `resourceId`s are returned in the response from the
      *        [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
      * @param content the {@link com.google.api.services.directory.model.ChromeOsDeviceAction}
@@ -775,9 +775,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Action#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param resourceId The unique ID of the device. The `resourceId`s are returned in the response from the
      *        [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
        * @param content the {@link com.google.api.services.directory.model.ChromeOsDeviceAction}
@@ -845,25 +845,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Action setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -906,9 +908,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
      *        [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
      * @return the request
@@ -933,9 +935,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
      *        [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
        * @since 1.13
@@ -1012,25 +1014,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1089,9 +1093,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @return the request
      */
     public List list(java.lang.String customerId) throws java.io.IOException {
@@ -1114,9 +1118,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @since 1.13
        */
       protected List(java.lang.String customerId) {
@@ -1190,25 +1194,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1364,7 +1370,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link MoveDevicesToOu#execute()} method to invoke the remote operation.
      *
-     * @param customerId Immutable ID of the G Suite account
+     * @param customerId Immutable ID of the Google Workspace account
      * @param orgUnitPath Full path of the target organizational unit or its ID
      * @param content the {@link com.google.api.services.directory.model.ChromeOsMoveDevicesToOu}
      * @return the request
@@ -1391,7 +1397,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * lientRequest)} must be called to initialize this instance immediately after invoking the
        * constructor. </p>
        *
-       * @param customerId Immutable ID of the G Suite account
+       * @param customerId Immutable ID of the Google Workspace account
        * @param orgUnitPath Full path of the target organizational unit or its ID
        * @param content the {@link com.google.api.services.directory.model.ChromeOsMoveDevicesToOu}
        * @since 1.13
@@ -1457,17 +1463,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (MoveDevicesToOu) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account */
+      /** Immutable ID of the Google Workspace account */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the G Suite account
+      /** Immutable ID of the Google Workspace account
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the G Suite account */
+      /** Immutable ID of the Google Workspace account */
       public MoveDevicesToOu setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -1504,9 +1510,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
      *        [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
      * @param content the {@link com.google.api.services.directory.model.ChromeOsDevice}
@@ -1534,9 +1540,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
      *        [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
        * @param content the {@link com.google.api.services.directory.model.ChromeOsDevice}
@@ -1604,25 +1610,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Patch setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1682,9 +1690,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
      *        [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
      * @param content the {@link com.google.api.services.directory.model.ChromeOsDevice}
@@ -1711,9 +1719,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
      *        [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
        * @param content the {@link com.google.api.services.directory.model.ChromeOsDevice}
@@ -1781,25 +1789,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Update setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1921,7 +1931,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the admin server.  After setting any optional
          * parameters, call the {@link IssueCommand#execute()} method to invoke the remote operation.
          *
-         * @param customerId Immutable. Immutable ID of the G Suite account.
+         * @param customerId Immutable. Immutable ID of the Google Workspace account.
          * @param deviceId Immutable. Immutable ID of Chrome OS Device.
          * @param content the {@link com.google.api.services.directory.model.DirectoryChromeosdevicesIssueCommandRequest}
          * @return the request
@@ -1947,7 +1957,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * IssueCommand#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param customerId Immutable. Immutable ID of the G Suite account.
+           * @param customerId Immutable. Immutable ID of the Google Workspace account.
            * @param deviceId Immutable. Immutable ID of Chrome OS Device.
            * @param content the {@link com.google.api.services.directory.model.DirectoryChromeosdevicesIssueCommandRequest}
            * @since 1.13
@@ -2013,17 +2023,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
             return (IssueCommand) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Immutable ID of the G Suite account. */
+          /** Immutable. Immutable ID of the Google Workspace account. */
           @com.google.api.client.util.Key
           private java.lang.String customerId;
 
-          /** Immutable. Immutable ID of the G Suite account.
+          /** Immutable. Immutable ID of the Google Workspace account.
            */
           public java.lang.String getCustomerId() {
             return customerId;
           }
 
-          /** Immutable. Immutable ID of the G Suite account. */
+          /** Immutable. Immutable ID of the Google Workspace account. */
           public IssueCommand setCustomerId(java.lang.String customerId) {
             this.customerId = customerId;
             return this;
@@ -2079,7 +2089,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the admin server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param customerId Immutable. Immutable ID of the G Suite account.
+           * @param customerId Immutable. Immutable ID of the Google Workspace account.
            * @param deviceId Immutable. Immutable ID of Chrome OS Device.
            * @param commandId Immutable. Immutable ID of Chrome OS Device Command.
            * @return the request
@@ -2104,7 +2114,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
              * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
              * called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param customerId Immutable. Immutable ID of the G Suite account.
+             * @param customerId Immutable. Immutable ID of the Google Workspace account.
              * @param deviceId Immutable. Immutable ID of Chrome OS Device.
              * @param commandId Immutable. Immutable ID of Chrome OS Device Command.
              * @since 1.13
@@ -2181,17 +2191,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Immutable. Immutable ID of the G Suite account. */
+            /** Immutable. Immutable ID of the Google Workspace account. */
             @com.google.api.client.util.Key
             private java.lang.String customerId;
 
-            /** Immutable. Immutable ID of the G Suite account.
+            /** Immutable. Immutable ID of the Google Workspace account.
              */
             public java.lang.String getCustomerId() {
               return customerId;
             }
 
-            /** Immutable. Immutable ID of the G Suite account. */
+            /** Immutable. Immutable ID of the Google Workspace account. */
             public Get setCustomerId(java.lang.String customerId) {
               this.customerId = customerId;
               return this;
@@ -2650,7 +2660,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param domainAliasName Name of domain alias to be retrieved.
      * @return the request
      */
@@ -2674,7 +2684,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param domainAliasName Name of domain alias to be retrieved.
        * @since 1.13
        */
@@ -2739,17 +2749,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Delete setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -2784,7 +2794,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param domainAliasName Name of domain alias to be retrieved.
      * @return the request
      */
@@ -2808,7 +2818,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param domainAliasName Name of domain alias to be retrieved.
        * @since 1.13
        */
@@ -2883,17 +2893,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -2928,7 +2938,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param content the {@link com.google.api.services.directory.model.DomainAlias}
      * @return the request
      */
@@ -2952,7 +2962,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param content the {@link com.google.api.services.directory.model.DomainAlias}
        * @since 1.13
        */
@@ -3016,17 +3026,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Insert setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -3045,7 +3055,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -3068,7 +3078,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -3141,17 +3151,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -3209,7 +3219,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param domainName Name of domain to be deleted
      * @return the request
      */
@@ -3233,7 +3243,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param domainName Name of domain to be deleted
        * @since 1.13
        */
@@ -3298,17 +3308,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Delete setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -3343,7 +3353,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param domainName Name of domain to be retrieved
      * @return the request
      */
@@ -3367,7 +3377,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param domainName Name of domain to be retrieved
        * @since 1.13
        */
@@ -3442,17 +3452,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -3487,7 +3497,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param content the {@link com.google.api.services.directory.model.Domains}
      * @return the request
      */
@@ -3511,7 +3521,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param content the {@link com.google.api.services.directory.model.Domains}
        * @since 1.13
        */
@@ -3577,17 +3587,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Insert setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -3606,7 +3616,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -3629,7 +3639,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -3702,17 +3712,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -4206,28 +4216,28 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. In case of a multi-domain account, to
-       * fetch all groups for a customer, fill this field instead of domain. As an account
-       * administrator, you can also use the `my_customer` alias to represent your account's
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, fill this field instead of domain. As an
+       * account administrator, you can also use the `my_customer` alias to represent your account's
        * `customerId`. The `customerId` is also returned as part of the [Users](/admin-
        * sdk/directory/v1/reference/users)
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** The unique ID for the customer's G Suite account. In case of a multi-domain account, to fetch all
-     groups for a customer, fill this field instead of domain. As an account administrator, you can also
-     use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users](/admin-sdk/directory/v1/reference/users)
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, fill this field instead of domain. As an account administrator,
+     you can also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+     is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users)
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. In case of a multi-domain account, to
-       * fetch all groups for a customer, fill this field instead of domain. As an account
-       * administrator, you can also use the `my_customer` alias to represent your account's
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, fill this field instead of domain. As an
+       * account administrator, you can also use the `my_customer` alias to represent your account's
        * `customerId`. The `customerId` is also returned as part of the [Users](/admin-
        * sdk/directory/v1/reference/users)
        */
@@ -6239,9 +6249,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Action#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param resourceId The unique ID the API service uses to identify the mobile device.
      * @param content the {@link com.google.api.services.directory.model.MobileDeviceAction}
      * @return the request
@@ -6266,9 +6276,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Action#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param resourceId The unique ID the API service uses to identify the mobile device.
        * @param content the {@link com.google.api.services.directory.model.MobileDeviceAction}
        * @since 1.13
@@ -6335,25 +6345,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Action setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -6389,9 +6401,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param resourceId The unique ID the API service uses to identify the mobile device.
      * @return the request
      */
@@ -6415,9 +6427,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param resourceId The unique ID the API service uses to identify the mobile device.
        * @since 1.13
        */
@@ -6483,25 +6495,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Delete setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -6537,9 +6551,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param resourceId The unique ID the API service uses to identify the mobile device.
      * @return the request
      */
@@ -6563,9 +6577,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param resourceId The unique ID the API service uses to identify the mobile device.
        * @since 1.13
        */
@@ -6641,25 +6655,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -6711,9 +6727,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @return the request
      */
     public List list(java.lang.String customerId) throws java.io.IOException {
@@ -6736,9 +6752,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @since 1.13
        */
       protected List(java.lang.String customerId) {
@@ -6812,25 +6828,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -6984,9 +7002,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param orgUnitPath The full path of the organizational unit or its unique ID.
      * @return the request
      */
@@ -7013,9 +7031,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param orgUnitPath The full path of the organizational unit or its unique ID.
        * @since 1.13
        */
@@ -7086,25 +7104,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Delete setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -7145,9 +7165,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param orgUnitPath The full path of the organizational unit or its unique ID.
      * @return the request
      */
@@ -7174,9 +7194,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param orgUnitPath The full path of the organizational unit or its unique ID.
        * @since 1.13
        */
@@ -7257,25 +7277,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -7316,9 +7338,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param content the {@link com.google.api.services.directory.model.OrgUnit}
      * @return the request
      */
@@ -7342,9 +7364,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param content the {@link com.google.api.services.directory.model.OrgUnit}
        * @since 1.13
        */
@@ -7411,25 +7433,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Insert setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -7449,9 +7473,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @return the request
      */
     public List list(java.lang.String customerId) throws java.io.IOException {
@@ -7474,9 +7498,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @since 1.13
        */
       protected List(java.lang.String customerId) {
@@ -7550,25 +7574,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -7628,9 +7654,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param orgUnitPath The full path of the organizational unit or its unique ID.
      * @param content the {@link com.google.api.services.directory.model.OrgUnit}
      * @return the request
@@ -7659,9 +7685,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param orgUnitPath The full path of the organizational unit or its unique ID.
        * @param content the {@link com.google.api.services.directory.model.OrgUnit}
        * @since 1.13
@@ -7733,25 +7759,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Patch setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -7792,9 +7820,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
      * @param orgUnitPath The full path of the organizational unit or its unique ID.
      * @param content the {@link com.google.api.services.directory.model.OrgUnit}
      * @return the request
@@ -7822,9 +7850,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+     *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
+     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        * @param orgUnitPath The full path of the organizational unit or its unique ID.
        * @param content the {@link com.google.api.services.directory.model.OrgUnit}
        * @since 1.13
@@ -7896,25 +7924,27 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+      /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+     also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
+     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. As an account administrator, you can also
-       * use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-       * also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * The unique ID for the customer's Google Workspace account. As an account administrator, you
+       * can also use the `my_customer` alias to represent your account's `customerId`. The
+       * `customerId` is also returned as part of the [Users resource](/admin-
+       * sdk/directory/v1/reference/users).
        */
       public Update setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -7978,7 +8008,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -8001,7 +8031,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -8074,17 +8104,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -8146,8 +8176,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param buildingId The id of the building to delete.
        * @return the request
        */
@@ -8171,8 +8201,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param buildingId The id of the building to delete.
          * @since 1.13
          */
@@ -8238,22 +8268,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Delete setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -8289,8 +8319,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param buildingId The unique ID of the building to retrieve.
        * @return the request
        */
@@ -8314,8 +8344,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param buildingId The unique ID of the building to retrieve.
          * @since 1.13
          */
@@ -8391,22 +8421,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Get setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -8442,8 +8472,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param content the {@link com.google.api.services.directory.model.Building}
        * @return the request
        */
@@ -8467,8 +8497,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param content the {@link com.google.api.services.directory.model.Building}
          * @since 1.13
          */
@@ -8533,22 +8563,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Insert setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -8584,8 +8614,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @return the request
        */
       public List list(java.lang.String customer) throws java.io.IOException {
@@ -8608,8 +8638,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @since 1.13
          */
         protected List(java.lang.String customer) {
@@ -8683,22 +8713,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public List setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -8752,8 +8782,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param buildingId The id of the building to update.
        * @param content the {@link com.google.api.services.directory.model.Building}
        * @return the request
@@ -8778,8 +8808,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param buildingId The id of the building to update.
          * @param content the {@link com.google.api.services.directory.model.Building}
          * @since 1.13
@@ -8846,22 +8876,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Patch setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -8913,8 +8943,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param buildingId The id of the building to update.
        * @param content the {@link com.google.api.services.directory.model.Building}
        * @return the request
@@ -8939,8 +8969,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param buildingId The id of the building to update.
          * @param content the {@link com.google.api.services.directory.model.Building}
          * @since 1.13
@@ -9007,22 +9037,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Update setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -9096,8 +9126,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param calendarResourceId The unique ID of the calendar resource to delete.
        * @return the request
        */
@@ -9121,8 +9151,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param calendarResourceId The unique ID of the calendar resource to delete.
          * @since 1.13
          */
@@ -9188,22 +9218,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Delete setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -9239,8 +9269,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param calendarResourceId The unique ID of the calendar resource to retrieve.
        * @return the request
        */
@@ -9264,8 +9294,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param calendarResourceId The unique ID of the calendar resource to retrieve.
          * @since 1.13
          */
@@ -9341,22 +9371,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Get setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -9392,8 +9422,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param content the {@link com.google.api.services.directory.model.CalendarResource}
        * @return the request
        */
@@ -9417,8 +9447,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param content the {@link com.google.api.services.directory.model.CalendarResource}
          * @since 1.13
          */
@@ -9487,22 +9517,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Insert setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -9522,8 +9552,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @return the request
        */
       public List list(java.lang.String customer) throws java.io.IOException {
@@ -9546,8 +9576,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @since 1.13
          */
         protected List(java.lang.String customer) {
@@ -9621,22 +9651,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public List setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -9762,8 +9792,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param calendarResourceId The unique ID of the calendar resource to update.
        * @param content the {@link com.google.api.services.directory.model.CalendarResource}
        * @return the request
@@ -9788,8 +9818,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param calendarResourceId The unique ID of the calendar resource to update.
          * @param content the {@link com.google.api.services.directory.model.CalendarResource}
          * @since 1.13
@@ -9856,22 +9886,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Patch setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -9909,8 +9939,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param calendarResourceId The unique ID of the calendar resource to update.
        * @param content the {@link com.google.api.services.directory.model.CalendarResource}
        * @return the request
@@ -9937,8 +9967,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param calendarResourceId The unique ID of the calendar resource to update.
          * @param content the {@link com.google.api.services.directory.model.CalendarResource}
          * @since 1.13
@@ -10005,22 +10035,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Update setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -10078,8 +10108,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param featureKey The unique ID of the feature to delete.
        * @return the request
        */
@@ -10103,8 +10133,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param featureKey The unique ID of the feature to delete.
          * @since 1.13
          */
@@ -10170,22 +10200,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Delete setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -10221,8 +10251,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param featureKey The unique ID of the feature to retrieve.
        * @return the request
        */
@@ -10246,8 +10276,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param featureKey The unique ID of the feature to retrieve.
          * @since 1.13
          */
@@ -10323,22 +10353,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Get setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -10374,8 +10404,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param content the {@link com.google.api.services.directory.model.Feature}
        * @return the request
        */
@@ -10399,8 +10429,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param content the {@link com.google.api.services.directory.model.Feature}
          * @since 1.13
          */
@@ -10467,22 +10497,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Insert setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -10502,8 +10532,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @return the request
        */
       public List list(java.lang.String customer) throws java.io.IOException {
@@ -10526,8 +10556,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @since 1.13
          */
         protected List(java.lang.String customer) {
@@ -10601,22 +10631,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public List setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -10670,8 +10700,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param featureKey The unique ID of the feature to update.
        * @param content the {@link com.google.api.services.directory.model.Feature}
        * @return the request
@@ -10696,8 +10726,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param featureKey The unique ID of the feature to update.
          * @param content the {@link com.google.api.services.directory.model.Feature}
          * @since 1.13
@@ -10764,22 +10794,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Patch setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -10815,8 +10845,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Rename#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param oldName The unique ID of the feature to rename.
        * @param content the {@link com.google.api.services.directory.model.FeatureRename}
        * @return the request
@@ -10841,8 +10871,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Rename#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param oldName The unique ID of the feature to rename.
          * @param content the {@link com.google.api.services.directory.model.FeatureRename}
          * @since 1.13
@@ -10909,22 +10939,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Rename setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -10960,8 +10990,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * This request holds the parameters needed by the admin server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+       * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
        * @param featureKey The unique ID of the feature to update.
        * @param content the {@link com.google.api.services.directory.model.Feature}
        * @return the request
@@ -10986,8 +11016,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param customer The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       *        `my_customer` alias to represent your account's customer ID.
+         * @param customer The unique ID for the customer's Google Workspace account. As an account administrator, you can also
+       *        use the `my_customer` alias to represent your account's customer ID.
          * @param featureKey The unique ID of the feature to update.
          * @param content the {@link com.google.api.services.directory.model.Feature}
          * @since 1.13
@@ -11054,22 +11084,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String customer;
 
-        /** The unique ID for the customer's G Suite account. As an account administrator, you can also use the
-       `my_customer` alias to represent your account's customer ID.
+        /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
+       also use the `my_customer` alias to represent your account's customer ID.
          */
         public java.lang.String getCustomer() {
           return customer;
         }
 
         /**
-         * The unique ID for the customer's G Suite account. As an account administrator, you can
-         * also use the `my_customer` alias to represent your account's customer ID.
+         * The unique ID for the customer's Google Workspace account. As an account administrator,
+         * you can also use the `my_customer` alias to represent your account's customer ID.
          */
         public Update setCustomer(java.lang.String customer) {
           this.customer = customer;
@@ -11129,7 +11159,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param roleAssignmentId Immutable ID of the role assignment.
      * @return the request
      */
@@ -11153,7 +11183,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param roleAssignmentId Immutable ID of the role assignment.
        * @since 1.13
        */
@@ -11218,17 +11248,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Delete setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -11263,7 +11293,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param roleAssignmentId Immutable ID of the role assignment.
      * @return the request
      */
@@ -11287,7 +11317,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param roleAssignmentId Immutable ID of the role assignment.
        * @since 1.13
        */
@@ -11362,17 +11392,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -11407,7 +11437,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param content the {@link com.google.api.services.directory.model.RoleAssignment}
      * @return the request
      */
@@ -11431,7 +11461,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param content the {@link com.google.api.services.directory.model.RoleAssignment}
        * @since 1.13
        */
@@ -11495,17 +11525,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Insert setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -11524,7 +11554,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -11547,7 +11577,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -11620,17 +11650,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -11752,7 +11782,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param roleId Immutable ID of the role.
      * @return the request
      */
@@ -11776,7 +11806,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param roleId Immutable ID of the role.
        * @since 1.13
        */
@@ -11841,17 +11871,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Delete setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -11886,7 +11916,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param roleId Immutable ID of the role.
      * @return the request
      */
@@ -11910,7 +11940,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param roleId Immutable ID of the role.
        * @since 1.13
        */
@@ -11985,17 +12015,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -12030,7 +12060,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param content the {@link com.google.api.services.directory.model.Role}
      * @return the request
      */
@@ -12054,7 +12084,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param content the {@link com.google.api.services.directory.model.Role}
        * @since 1.13
        */
@@ -12120,17 +12150,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Insert setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -12149,7 +12179,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -12172,7 +12202,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -12245,17 +12275,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -12308,7 +12338,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param roleId Immutable ID of the role.
      * @param content the {@link com.google.api.services.directory.model.Role}
      * @return the request
@@ -12333,7 +12363,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param roleId Immutable ID of the role.
        * @param content the {@link com.google.api.services.directory.model.Role}
        * @since 1.13
@@ -12399,17 +12429,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Patch setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -12444,7 +12474,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param customer Immutable ID of the G Suite account.
+     * @param customer Immutable ID of the Google Workspace account.
      * @param roleId Immutable ID of the role.
      * @param content the {@link com.google.api.services.directory.model.Role}
      * @return the request
@@ -12469,7 +12499,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customer Immutable ID of the G Suite account.
+       * @param customer Immutable ID of the Google Workspace account.
        * @param roleId Immutable ID of the role.
        * @param content the {@link com.google.api.services.directory.model.Role}
        * @since 1.13
@@ -12535,17 +12565,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Update setCustomer(java.lang.String customer) {
         this.customer = customer;
         return this;
@@ -12603,7 +12633,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param customerId Immutable ID of the G Suite account.
+     * @param customerId Immutable ID of the Google Workspace account.
      * @param schemaKey Name or immutable ID of the schema.
      * @return the request
      */
@@ -12627,7 +12657,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Immutable ID of the G Suite account.
+       * @param customerId Immutable ID of the Google Workspace account.
        * @param schemaKey Name or immutable ID of the schema.
        * @since 1.13
        */
@@ -12692,17 +12722,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Delete setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -12737,7 +12767,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param customerId Immutable ID of the G Suite account.
+     * @param customerId Immutable ID of the Google Workspace account.
      * @param schemaKey Name or immutable ID of the schema.
      * @return the request
      */
@@ -12761,7 +12791,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Immutable ID of the G Suite account.
+       * @param customerId Immutable ID of the Google Workspace account.
        * @param schemaKey Name or immutable ID of the schema.
        * @since 1.13
        */
@@ -12836,17 +12866,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -12881,7 +12911,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param customerId Immutable ID of the G Suite account.
+     * @param customerId Immutable ID of the Google Workspace account.
      * @param content the {@link com.google.api.services.directory.model.Schema}
      * @return the request
      */
@@ -12905,7 +12935,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Immutable ID of the G Suite account.
+       * @param customerId Immutable ID of the Google Workspace account.
        * @param content the {@link com.google.api.services.directory.model.Schema}
        * @since 1.13
        */
@@ -12973,17 +13003,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Insert) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Insert setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -13002,7 +13032,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param customerId Immutable ID of the G Suite account.
+     * @param customerId Immutable ID of the Google Workspace account.
      * @return the request
      */
     public List list(java.lang.String customerId) throws java.io.IOException {
@@ -13025,7 +13055,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Immutable ID of the G Suite account.
+       * @param customerId Immutable ID of the Google Workspace account.
        * @since 1.13
        */
       protected List(java.lang.String customerId) {
@@ -13098,17 +13128,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -13127,7 +13157,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param customerId Immutable ID of the G Suite account.
+     * @param customerId Immutable ID of the Google Workspace account.
      * @param schemaKey Name or immutable ID of the schema.
      * @param content the {@link com.google.api.services.directory.model.Schema}
      * @return the request
@@ -13152,7 +13182,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Immutable ID of the G Suite account.
+       * @param customerId Immutable ID of the Google Workspace account.
        * @param schemaKey Name or immutable ID of the schema.
        * @param content the {@link com.google.api.services.directory.model.Schema}
        * @since 1.13
@@ -13218,17 +13248,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Patch setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -13263,7 +13293,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * This request holds the parameters needed by the admin server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param customerId Immutable ID of the G Suite account.
+     * @param customerId Immutable ID of the Google Workspace account.
      * @param schemaKey Name or immutable ID of the schema.
      * @param content the {@link com.google.api.services.directory.model.Schema}
      * @return the request
@@ -13288,7 +13318,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param customerId Immutable ID of the G Suite account.
+       * @param customerId Immutable ID of the Google Workspace account.
        * @param schemaKey Name or immutable ID of the schema.
        * @param content the {@link com.google.api.services.directory.model.Schema}
        * @since 1.13
@@ -13354,17 +13384,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Immutable ID of the G Suite account.
+      /** Immutable ID of the Google Workspace account.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Immutable ID of the G Suite account. */
+      /** Immutable ID of the Google Workspace account. */
       public Update setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -14565,31 +14595,31 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID for the customer's G Suite account. In case of a multi-domain account, to
-       * fetch all groups for a customer, fill this field instead of domain. You can also use the
-       * `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-       * returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users). Either
-       * the `customer` or the `domain` parameter must be provided.
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, fill this field instead of domain. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * Either the `customer` or the `domain` parameter must be provided.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** The unique ID for the customer's G Suite account. In case of a multi-domain account, to fetch all
-     groups for a customer, fill this field instead of domain. You can also use the `my_customer` alias
-     to represent your account's `customerId`. The `customerId` is also returned as part of the [Users
-     resource](/admin-sdk/directory/v1/reference/users). Either the `customer` or the `domain` parameter
-     must be provided.
+      /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
+     fetch all groups for a customer, fill this field instead of domain. You can also use the
+     `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
+     part of the [Users resource](/admin-sdk/directory/v1/reference/users). Either the `customer` or the
+     `domain` parameter must be provided.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
       /**
-       * The unique ID for the customer's G Suite account. In case of a multi-domain account, to
-       * fetch all groups for a customer, fill this field instead of domain. You can also use the
-       * `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-       * returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users). Either
-       * the `customer` or the `domain` parameter must be provided.
+       * The unique ID for the customer's Google Workspace account. In case of a multi-domain
+       * account, to fetch all groups for a customer, fill this field instead of domain. You can
+       * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
+       * is also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+       * Either the `customer` or the `domain` parameter must be provided.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -15521,22 +15551,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Immutable ID of the G Suite account. In case of multi-domain, to fetch all users for a
-       * customer, fill this field instead of domain.
+       * Immutable ID of the Google Workspace account. In case of multi-domain, to fetch all users
+       * for a customer, fill this field instead of domain.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
 
-      /** Immutable ID of the G Suite account. In case of multi-domain, to fetch all users for a customer,
-     fill this field instead of domain.
+      /** Immutable ID of the Google Workspace account. In case of multi-domain, to fetch all users for a
+     customer, fill this field instead of domain.
        */
       public java.lang.String getCustomer() {
         return customer;
       }
 
       /**
-       * Immutable ID of the G Suite account. In case of multi-domain, to fetch all users for a
-       * customer, fill this field instead of domain.
+       * Immutable ID of the Google Workspace account. In case of multi-domain, to fetch all users
+       * for a customer, fill this field instead of domain.
        */
       public Watch setCustomer(java.lang.String customer) {
         this.customer = customer;

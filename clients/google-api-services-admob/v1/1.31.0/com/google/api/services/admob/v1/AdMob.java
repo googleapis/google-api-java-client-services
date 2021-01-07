@@ -295,7 +295,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists the AdMob publisher account accessible with the client credential. Currently, all
+     * List the AdMob publisher account accessible with the client credential. Currently, all
      * credentials have access to at most one AdMob account.
      *
      * Create a request for the method "accounts.list".
@@ -316,7 +316,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v1/accounts";
 
       /**
-       * Lists the AdMob publisher account accessible with the client credential. Currently, all
+       * List the AdMob publisher account accessible with the client credential. Currently, all
        * credentials have access to at most one AdMob account.
        *
        * Create a request for the method "accounts.list".

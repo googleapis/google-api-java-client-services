@@ -295,7 +295,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists the AdMob publisher account accessible with the client credential. Currently, all
+     * List the AdMob publisher account accessible with the client credential. Currently, all
      * credentials have access to at most one AdMob account.
      *
      * Create a request for the method "accounts.list".
@@ -316,7 +316,7 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v1beta/accounts";
 
       /**
-       * Lists the AdMob publisher account accessible with the client credential. Currently, all
+       * List the AdMob publisher account accessible with the client credential. Currently, all
        * credentials have access to at most one AdMob account.
        *
        * Create a request for the method "accounts.list".
@@ -604,17 +604,24 @@ public class AdMob extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** The maximum number of ad units to return. */
+        /**
+         * The maximum number of ad units to return. If unspecified or 0, at most 1000 ad units will
+         * be returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of ad units to return.
+        /** The maximum number of ad units to return. If unspecified or 0, at most 1000 ad units will be
+       returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The maximum number of ad units to return. */
+        /**
+         * The maximum number of ad units to return. If unspecified or 0, at most 1000 ad units will
+         * be returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;

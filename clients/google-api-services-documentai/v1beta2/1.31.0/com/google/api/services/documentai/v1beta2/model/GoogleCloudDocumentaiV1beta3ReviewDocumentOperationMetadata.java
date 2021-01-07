@@ -31,6 +31,13 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * The basic metadata of the long running operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3CommonOperationMetadata commonMetadata;
+
+  /**
    * The creation time of the operation.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * The basic metadata of the long running operation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3CommonOperationMetadata getCommonMetadata() {
+    return commonMetadata;
+  }
+
+  /**
+   * The basic metadata of the long running operation.
+   * @param commonMetadata commonMetadata or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setCommonMetadata(GoogleCloudDocumentaiV1beta3CommonOperationMetadata commonMetadata) {
+    this.commonMetadata = commonMetadata;
+    return this;
+  }
 
   /**
    * The creation time of the operation.

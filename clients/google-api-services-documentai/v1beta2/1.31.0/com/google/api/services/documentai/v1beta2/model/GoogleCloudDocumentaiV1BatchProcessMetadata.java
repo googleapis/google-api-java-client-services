@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.documentai.v1beta3.model;
+package com.google.api.services.documentai.v1beta2.model;
 
 /**
- * The long running operation metadata for review document method.
+ * The long running operation metadata for batch process method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -28,14 +28,7 @@ package com.google.api.services.documentai.v1beta3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The basic metadata of the long running operation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1beta3CommonOperationMetadata commonMetadata;
+public final class GoogleCloudDocumentaiV1BatchProcessMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * The creation time of the operation.
@@ -45,7 +38,14 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
   private String createTime;
 
   /**
-   * Used only when Operation.done is false.
+   * The list of response details of each document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessStatus> individualProcessStatuses;
+
+  /**
+   * The state of the current batch processing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,23 +67,6 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
   private String updateTime;
 
   /**
-   * The basic metadata of the long running operation.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3CommonOperationMetadata getCommonMetadata() {
-    return commonMetadata;
-  }
-
-  /**
-   * The basic metadata of the long running operation.
-   * @param commonMetadata commonMetadata or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setCommonMetadata(GoogleCloudDocumentaiV1beta3CommonOperationMetadata commonMetadata) {
-    this.commonMetadata = commonMetadata;
-    return this;
-  }
-
-  /**
    * The creation time of the operation.
    * @return value or {@code null} for none
    */
@@ -95,13 +78,30 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
    * The creation time of the operation.
    * @param createTime createTime or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setCreateTime(String createTime) {
+  public GoogleCloudDocumentaiV1BatchProcessMetadata setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
 
   /**
-   * Used only when Operation.done is false.
+   * The list of response details of each document.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessStatus> getIndividualProcessStatuses() {
+    return individualProcessStatuses;
+  }
+
+  /**
+   * The list of response details of each document.
+   * @param individualProcessStatuses individualProcessStatuses or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1BatchProcessMetadata setIndividualProcessStatuses(java.util.List<GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessStatus> individualProcessStatuses) {
+    this.individualProcessStatuses = individualProcessStatuses;
+    return this;
+  }
+
+  /**
+   * The state of the current batch processing.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -109,10 +109,10 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
   }
 
   /**
-   * Used only when Operation.done is false.
+   * The state of the current batch processing.
    * @param state state or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setState(java.lang.String state) {
+  public GoogleCloudDocumentaiV1BatchProcessMetadata setState(java.lang.String state) {
     this.state = state;
     return this;
   }
@@ -131,7 +131,7 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
    * message if the operation is failed.
    * @param stateMessage stateMessage or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setStateMessage(java.lang.String stateMessage) {
+  public GoogleCloudDocumentaiV1BatchProcessMetadata setStateMessage(java.lang.String stateMessage) {
     this.stateMessage = stateMessage;
     return this;
   }
@@ -148,19 +148,19 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata e
    * The last update time of the operation.
    * @param updateTime updateTime or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata setUpdateTime(String updateTime) {
+  public GoogleCloudDocumentaiV1BatchProcessMetadata setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata) super.set(fieldName, value);
+  public GoogleCloudDocumentaiV1BatchProcessMetadata set(String fieldName, Object value) {
+    return (GoogleCloudDocumentaiV1BatchProcessMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata clone() {
-    return (GoogleCloudDocumentaiV1beta3ReviewDocumentOperationMetadata) super.clone();
+  public GoogleCloudDocumentaiV1BatchProcessMetadata clone() {
+    return (GoogleCloudDocumentaiV1BatchProcessMetadata) super.clone();
   }
 
 }

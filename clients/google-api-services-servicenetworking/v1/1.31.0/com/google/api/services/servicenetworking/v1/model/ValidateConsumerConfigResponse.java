@@ -31,18 +31,54 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class ValidateConsumerConfigResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * List of subnetwork candidates from the request which exist with the `ip_cidr_range`,
+   * `secondary_ip_cider_ranges`, and `outside_allocation` fields set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Subnetwork> existingSubnetworkCandidates;
+
+  static {
+    // hack to force ProGuard to consider Subnetwork used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Subnetwork.class);
+  }
+
+  /**
+   * Indicates whether all the requested validations passed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isValid;
 
   /**
+   * The first validation which failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String validationError;
 
   /**
+   * List of subnetwork candidates from the request which exist with the `ip_cidr_range`,
+   * `secondary_ip_cider_ranges`, and `outside_allocation` fields set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Subnetwork> getExistingSubnetworkCandidates() {
+    return existingSubnetworkCandidates;
+  }
+
+  /**
+   * List of subnetwork candidates from the request which exist with the `ip_cidr_range`,
+   * `secondary_ip_cider_ranges`, and `outside_allocation` fields set.
+   * @param existingSubnetworkCandidates existingSubnetworkCandidates or {@code null} for none
+   */
+  public ValidateConsumerConfigResponse setExistingSubnetworkCandidates(java.util.List<Subnetwork> existingSubnetworkCandidates) {
+    this.existingSubnetworkCandidates = existingSubnetworkCandidates;
+    return this;
+  }
+
+  /**
+   * Indicates whether all the requested validations passed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsValid() {
@@ -50,6 +86,7 @@ public final class ValidateConsumerConfigResponse extends com.google.api.client.
   }
 
   /**
+   * Indicates whether all the requested validations passed.
    * @param isValid isValid or {@code null} for none
    */
   public ValidateConsumerConfigResponse setIsValid(java.lang.Boolean isValid) {
@@ -58,6 +95,7 @@ public final class ValidateConsumerConfigResponse extends com.google.api.client.
   }
 
   /**
+   * The first validation which failed.
    * @return value or {@code null} for none
    */
   public java.lang.String getValidationError() {
@@ -65,6 +103,7 @@ public final class ValidateConsumerConfigResponse extends com.google.api.client.
   }
 
   /**
+   * The first validation which failed.
    * @param validationError validationError or {@code null} for none
    */
   public ValidateConsumerConfigResponse setValidationError(java.lang.String validationError) {

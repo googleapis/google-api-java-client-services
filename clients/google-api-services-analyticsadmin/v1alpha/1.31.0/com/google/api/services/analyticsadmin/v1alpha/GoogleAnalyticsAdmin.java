@@ -3261,21 +3261,21 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * Required. An expression for filtering the results of the request. Fields eligible for
        * filtering are: `parent:`(The resource name of the parent account) or
        * `firebase_project:`(The id or number of the linked firebase project). Some examples of
-       * filters: | Filter | Description |
+       * filters: ``` | Filter | Description |
        * |-----------------------------|-------------------------------------------| |
        * parent:accounts/123 | The account with account id: 123. | | firebase_project:project-id |
        * The firebase project with id: project-id. | | firebase_project:123 | The firebase project
-       * with number: 123. |
+       * with number: 123. | ```
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Required. An expression for filtering the results of the request. Fields eligible for filtering
      are: `parent:`(The resource name of the parent account) or `firebase_project:`(The id or number of
-     the linked firebase project). Some examples of filters: | Filter | Description |
+     the linked firebase project). Some examples of filters: ``` | Filter | Description |
      |-----------------------------|-------------------------------------------| | parent:accounts/123 |
      The account with account id: 123. | | firebase_project:project-id | The firebase project with id:
-     project-id. | | firebase_project:123 | The firebase project with number: 123. |
+     project-id. | | firebase_project:123 | The firebase project with number: 123. | ```
        */
       public java.lang.String getFilter() {
         return filter;
@@ -3285,11 +3285,11 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * Required. An expression for filtering the results of the request. Fields eligible for
        * filtering are: `parent:`(The resource name of the parent account) or
        * `firebase_project:`(The id or number of the linked firebase project). Some examples of
-       * filters: | Filter | Description |
+       * filters: ``` | Filter | Description |
        * |-----------------------------|-------------------------------------------| |
        * parent:accounts/123 | The account with account id: 123. | | firebase_project:project-id |
        * The firebase project with id: project-id. | | firebase_project:123 | The firebase project
-       * with number: 123. |
+       * with number: 123. | ```
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

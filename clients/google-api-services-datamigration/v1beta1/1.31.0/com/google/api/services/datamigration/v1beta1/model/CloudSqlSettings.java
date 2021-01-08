@@ -73,7 +73,7 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> databaseFlags;
 
   /**
-   * The database engine type and version (such as `MYSQL_5_7` / `POSTGRES_9_6`).
+   * The database engine type and version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,8 +118,8 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private java.lang.Long storageAutoResizeLimit;
 
   /**
-   * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances)
-   * or `db-custom-1-3840` (PostgreSQL instances). For more information, see [Cloud SQL Instance
+   * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL
+   * instances). For more information, see [Cloud SQL Instance
    * Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
    * The value may be {@code null}.
    */
@@ -242,7 +242,7 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database engine type and version (such as `MYSQL_5_7` / `POSTGRES_9_6`).
+   * The database engine type and version.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseVersion() {
@@ -250,7 +250,7 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The database engine type and version (such as `MYSQL_5_7` / `POSTGRES_9_6`).
+   * The database engine type and version.
    * @param databaseVersion databaseVersion or {@code null} for none
    */
   public CloudSqlSettings setDatabaseVersion(java.lang.String databaseVersion) {
@@ -350,8 +350,8 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances)
-   * or `db-custom-1-3840` (PostgreSQL instances). For more information, see [Cloud SQL Instance
+   * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL
+   * instances). For more information, see [Cloud SQL Instance
    * Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
    * @return value or {@code null} for none
    */
@@ -360,8 +360,8 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances)
-   * or `db-custom-1-3840` (PostgreSQL instances). For more information, see [Cloud SQL Instance
+   * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL
+   * instances). For more information, see [Cloud SQL Instance
    * Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
    * @param tier tier or {@code null} for none
    */

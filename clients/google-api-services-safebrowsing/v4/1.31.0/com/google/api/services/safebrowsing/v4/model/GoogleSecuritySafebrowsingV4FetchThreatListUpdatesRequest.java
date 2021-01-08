@@ -18,7 +18,8 @@ package com.google.api.services.safebrowsing.v4.model;
 
 /**
  * Describes a Safe Browsing API update request. Clients can request updates for multiple lists in a
- * single request. NOTE: Field index 2 is unused. NEXT: 5
+ * single request. The server may not respond to all requests, if the server has no updates for that
+ * list. NOTE: Field index 2 is unused. NEXT: 5
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Safe Browsing API. For a detailed explanation see:

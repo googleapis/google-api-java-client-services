@@ -50,14 +50,23 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> requestedRanges;
 
   /**
-   * Optional. DO NOT USE - Under development. The size of the desired secondary ranges for the
-   * subnet. Use usual CIDR range notation. For example, '30' to find unused x.x.x.x/30 CIDR range.
-   * The goal is to determine that the allocated ranges have enough free space for all the requested
-   * secondary ranges.
+   * Optional. The size of the desired secondary ranges for the subnet. Use usual CIDR range
+   * notation. For example, '30' to find unused x.x.x.x/30 CIDR range. The goal is to determine that
+   * the allocated ranges have enough free space for all the requested secondary ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Integer> secondaryRangeIpPrefixLengths;
+
+  /**
+   * Optional. List of subnetwork candidates to validate. The required input fields are `name`,
+   * `network`, and `region`. Subnetworks from this list which exist will be returned in the
+   * response with the `ip_cidr_range`, `secondary_ip_cider_ranges`, and `outside_allocation` fields
+   * set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Subnetwork> subnetworkCandidates;
 
   /**
    * Required. The size of the desired subnet. Use usual CIDR range notation. For example, '30' to
@@ -104,10 +113,9 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. DO NOT USE - Under development. The size of the desired secondary ranges for the
-   * subnet. Use usual CIDR range notation. For example, '30' to find unused x.x.x.x/30 CIDR range.
-   * The goal is to determine that the allocated ranges have enough free space for all the requested
-   * secondary ranges.
+   * Optional. The size of the desired secondary ranges for the subnet. Use usual CIDR range
+   * notation. For example, '30' to find unused x.x.x.x/30 CIDR range. The goal is to determine that
+   * the allocated ranges have enough free space for all the requested secondary ranges.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getSecondaryRangeIpPrefixLengths() {
@@ -115,14 +123,36 @@ public final class RangeReservation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. DO NOT USE - Under development. The size of the desired secondary ranges for the
-   * subnet. Use usual CIDR range notation. For example, '30' to find unused x.x.x.x/30 CIDR range.
-   * The goal is to determine that the allocated ranges have enough free space for all the requested
-   * secondary ranges.
+   * Optional. The size of the desired secondary ranges for the subnet. Use usual CIDR range
+   * notation. For example, '30' to find unused x.x.x.x/30 CIDR range. The goal is to determine that
+   * the allocated ranges have enough free space for all the requested secondary ranges.
    * @param secondaryRangeIpPrefixLengths secondaryRangeIpPrefixLengths or {@code null} for none
    */
   public RangeReservation setSecondaryRangeIpPrefixLengths(java.util.List<java.lang.Integer> secondaryRangeIpPrefixLengths) {
     this.secondaryRangeIpPrefixLengths = secondaryRangeIpPrefixLengths;
+    return this;
+  }
+
+  /**
+   * Optional. List of subnetwork candidates to validate. The required input fields are `name`,
+   * `network`, and `region`. Subnetworks from this list which exist will be returned in the
+   * response with the `ip_cidr_range`, `secondary_ip_cider_ranges`, and `outside_allocation` fields
+   * set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Subnetwork> getSubnetworkCandidates() {
+    return subnetworkCandidates;
+  }
+
+  /**
+   * Optional. List of subnetwork candidates to validate. The required input fields are `name`,
+   * `network`, and `region`. Subnetworks from this list which exist will be returned in the
+   * response with the `ip_cidr_range`, `secondary_ip_cider_ranges`, and `outside_allocation` fields
+   * set.
+   * @param subnetworkCandidates subnetworkCandidates or {@code null} for none
+   */
+  public RangeReservation setSubnetworkCandidates(java.util.List<Subnetwork> subnetworkCandidates) {
+    this.subnetworkCandidates = subnetworkCandidates;
     return this;
   }
 

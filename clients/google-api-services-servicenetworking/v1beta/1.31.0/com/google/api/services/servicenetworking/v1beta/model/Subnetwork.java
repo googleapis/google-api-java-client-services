@@ -60,6 +60,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean outsideAllocation;
 
   /**
+   * GCP region where the subnetwork is located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * List of secondary IP ranges in this subnetwork.
    * The value may be {@code null}.
    */
@@ -139,6 +146,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setOutsideAllocation(java.lang.Boolean outsideAllocation) {
     this.outsideAllocation = outsideAllocation;
+    return this;
+  }
+
+  /**
+   * GCP region where the subnetwork is located.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * GCP region where the subnetwork is located.
+   * @param region region or {@code null} for none
+   */
+  public Subnetwork setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

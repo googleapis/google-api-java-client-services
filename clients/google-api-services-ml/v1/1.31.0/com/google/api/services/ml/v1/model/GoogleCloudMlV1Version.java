@@ -45,9 +45,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Automatically scale the number of nodes used to serve the model in response to increases and
    * decreases in traffic. Care should be taken to ramp up traffic according to the model's ability
-   * to scale or you will start seeing increases in latency and 429 response codes. Note that you
-   * cannot use AutoScaling if your version uses [GPUs](#Version.FIELDS.accelerator_config).
-   * Instead, you must use specify `manual_scaling`.
+   * to scale or you will start seeing increases in latency and 429 response codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,6 +147,20 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Output only. The uCAIP model id for the last model migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lastMigrationModelId;
+
+  /**
+   * Output only. The last time this version was successfully migrated to uCAIP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastMigrationTime;
 
   /**
    * Output only. The time the version was last used for prediction.
@@ -314,9 +326,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Automatically scale the number of nodes used to serve the model in response to increases and
    * decreases in traffic. Care should be taken to ramp up traffic according to the model's ability
-   * to scale or you will start seeing increases in latency and 429 response codes. Note that you
-   * cannot use AutoScaling if your version uses [GPUs](#Version.FIELDS.accelerator_config).
-   * Instead, you must use specify `manual_scaling`.
+   * to scale or you will start seeing increases in latency and 429 response codes.
    * @return value or {@code null} for none
    */
   public GoogleCloudMlV1AutoScaling getAutoScaling() {
@@ -326,9 +336,7 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
   /**
    * Automatically scale the number of nodes used to serve the model in response to increases and
    * decreases in traffic. Care should be taken to ramp up traffic according to the model's ability
-   * to scale or you will start seeing increases in latency and 429 response codes. Note that you
-   * cannot use AutoScaling if your version uses [GPUs](#Version.FIELDS.accelerator_config).
-   * Instead, you must use specify `manual_scaling`.
+   * to scale or you will start seeing increases in latency and 429 response codes.
    * @param autoScaling autoScaling or {@code null} for none
    */
   public GoogleCloudMlV1Version setAutoScaling(GoogleCloudMlV1AutoScaling autoScaling) {
@@ -595,6 +603,40 @@ public final class GoogleCloudMlV1Version extends com.google.api.client.json.Gen
    */
   public GoogleCloudMlV1Version setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The uCAIP model id for the last model migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLastMigrationModelId() {
+    return lastMigrationModelId;
+  }
+
+  /**
+   * Output only. The uCAIP model id for the last model migration.
+   * @param lastMigrationModelId lastMigrationModelId or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setLastMigrationModelId(java.lang.String lastMigrationModelId) {
+    this.lastMigrationModelId = lastMigrationModelId;
+    return this;
+  }
+
+  /**
+   * Output only. The last time this version was successfully migrated to uCAIP.
+   * @return value or {@code null} for none
+   */
+  public String getLastMigrationTime() {
+    return lastMigrationTime;
+  }
+
+  /**
+   * Output only. The last time this version was successfully migrated to uCAIP.
+   * @param lastMigrationTime lastMigrationTime or {@code null} for none
+   */
+  public GoogleCloudMlV1Version setLastMigrationTime(String lastMigrationTime) {
+    this.lastMigrationTime = lastMigrationTime;
     return this;
   }
 

@@ -45,7 +45,7 @@ packages on [Maven Central][maven-search].
 | BigQuery API | [v2](clients/google-api-services-bigquery/v2) |
 | BigQuery Connection API | [v1beta1](clients/google-api-services-bigqueryconnection/v1beta1) |
 | BigQuery Data Transfer API | [v1](clients/google-api-services-bigquerydatatransfer/v1) |
-| BigQuery Reservation API | [v1](clients/google-api-services-bigqueryreservation/v1), [v1alpha2](clients/google-api-services-bigqueryreservation/v1alpha2), [v1beta1](clients/google-api-services-bigqueryreservation/v1beta1) |
+| BigQuery Reservation API | [v1](clients/google-api-services-bigqueryreservation/v1), [v1beta1](clients/google-api-services-bigqueryreservation/v1beta1) |
 | Binary Authorization API | [v1](clients/google-api-services-binaryauthorization/v1), [v1beta1](clients/google-api-services-binaryauthorization/v1beta1) |
 | Blogger API v3 | [v2](clients/google-api-services-blogger/v2), [v3](clients/google-api-services-blogger/v3) |
 | Books API | [v1](clients/google-api-services-books/v1) |
@@ -213,7 +213,7 @@ packages on [Maven Central][maven-search].
 | Web Security Scanner API | [v1](clients/google-api-services-websecurityscanner/v1), [v1alpha](clients/google-api-services-websecurityscanner/v1alpha), [v1beta](clients/google-api-services-websecurityscanner/v1beta) |
 | Workflow Executions API | [v1beta](clients/google-api-services-workflowexecutions/v1beta) |
 | Workflows API | [v1beta](clients/google-api-services-workflows/v1beta) |
-| YouTube Analytics API | [v1](clients/google-api-services-youtubeAnalytics/v1), [v2](clients/google-api-services-youtubeAnalytics/v2) |
+| YouTube Analytics API | [v2](clients/google-api-services-youtubeAnalytics/v2) |
 | YouTube Data API v3 | [v3](clients/google-api-services-youtube/v3) |
 | YouTube Reporting API | [v1](clients/google-api-services-youtubereporting/v1) |
 

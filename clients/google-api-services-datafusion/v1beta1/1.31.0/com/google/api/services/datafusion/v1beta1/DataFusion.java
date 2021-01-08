@@ -153,6 +153,138 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
   public class Projects {
 
     /**
+     * Remove IAM policy that is currently set on the given resource.
+     *
+     * Create a request for the method "projects.removeIamPolicy".
+     *
+     * This request holds the parameters needed by the datafusion server.  After setting any optional
+     * parameters, call the {@link RemoveIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param resource The resource on which IAM policy to be removed is attached to.
+     * @param content the {@link com.google.api.services.datafusion.v1beta1.model.RemoveIamPolicyRequest}
+     * @return the request
+     */
+    public RemoveIamPolicy removeIamPolicy(java.lang.String resource, com.google.api.services.datafusion.v1beta1.model.RemoveIamPolicyRequest content) throws java.io.IOException {
+      RemoveIamPolicy result = new RemoveIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RemoveIamPolicy extends DataFusionRequest<com.google.api.services.datafusion.v1beta1.model.RemoveIamPolicyResponse> {
+
+      private static final String REST_PATH = "v1beta1/{+resource}:removeIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/.*$");
+
+      /**
+       * Remove IAM policy that is currently set on the given resource.
+       *
+       * Create a request for the method "projects.removeIamPolicy".
+       *
+       * This request holds the parameters needed by the the datafusion server.  After setting any
+       * optional parameters, call the {@link RemoveIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link RemoveIamPolicy#initialize(com.google.api.client.googleapis.services.Abst
+       * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+       * the constructor. </p>
+       *
+       * @param resource The resource on which IAM policy to be removed is attached to.
+       * @param content the {@link com.google.api.services.datafusion.v1beta1.model.RemoveIamPolicyRequest}
+       * @since 1.13
+       */
+      protected RemoveIamPolicy(java.lang.String resource, com.google.api.services.datafusion.v1beta1.model.RemoveIamPolicyRequest content) {
+        super(DataFusion.this, "POST", REST_PATH, content, com.google.api.services.datafusion.v1beta1.model.RemoveIamPolicyResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/.*$");
+        }
+      }
+
+      @Override
+      public RemoveIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (RemoveIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RemoveIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (RemoveIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RemoveIamPolicy setAlt(java.lang.String alt) {
+        return (RemoveIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public RemoveIamPolicy setCallback(java.lang.String callback) {
+        return (RemoveIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public RemoveIamPolicy setFields(java.lang.String fields) {
+        return (RemoveIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public RemoveIamPolicy setKey(java.lang.String key) {
+        return (RemoveIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public RemoveIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (RemoveIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RemoveIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RemoveIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RemoveIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (RemoveIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RemoveIamPolicy setUploadType(java.lang.String uploadType) {
+        return (RemoveIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RemoveIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RemoveIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The resource on which IAM policy to be removed is attached to. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** The resource on which IAM policy to be removed is attached to.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** The resource on which IAM policy to be removed is attached to. */
+      public RemoveIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/.*$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public RemoveIamPolicy set(String parameterName, Object value) {
+        return (RemoveIamPolicy) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Locations collection.
      *
      * <p>The typical use is:</p>
@@ -687,7 +819,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Deletes a single Date Fusion instance.
+         * Deletes a single Data Fusion instance.
          *
          * Create a request for the method "instances.delete".
          *
@@ -712,7 +844,7 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Deletes a single Date Fusion instance.
+           * Deletes a single Data Fusion instance.
            *
            * Create a request for the method "instances.delete".
            *

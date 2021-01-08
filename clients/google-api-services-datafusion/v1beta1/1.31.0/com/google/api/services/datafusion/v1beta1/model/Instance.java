@@ -212,7 +212,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String version;
 
   /**
-   * Name of the zone in which the Data Fusion instance will be created.
+   * Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances
+   * use this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -641,7 +642,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the zone in which the Data Fusion instance will be created.
+   * Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances
+   * use this field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -649,7 +651,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the zone in which the Data Fusion instance will be created.
+   * Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances
+   * use this field.
    * @param zone zone or {@code null} for none
    */
   public Instance setZone(java.lang.String zone) {

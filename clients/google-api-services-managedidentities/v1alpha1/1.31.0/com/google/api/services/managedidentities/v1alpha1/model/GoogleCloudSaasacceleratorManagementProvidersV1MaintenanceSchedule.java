@@ -55,6 +55,16 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSch
   private java.lang.String rolloutManagementPolicy;
 
   /**
+   * schedule_deadline_time is the time deadline any schedule start time cannot go beyond, including
+   * reschedule. It's normally the initial schedule start time plus a week. If the reschedule type
+   * is next window, simply take this value as start time. If reschedule type is IMMEDIATELY or
+   * BY_TIME, current or selected time cannot go beyond this deadline.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String scheduleDeadlineTime;
+
+  /**
    * The scheduled start time for the maintenance.
    * The value may be {@code null}.
    */
@@ -113,6 +123,29 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSch
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule setRolloutManagementPolicy(java.lang.String rolloutManagementPolicy) {
     this.rolloutManagementPolicy = rolloutManagementPolicy;
+    return this;
+  }
+
+  /**
+   * schedule_deadline_time is the time deadline any schedule start time cannot go beyond, including
+   * reschedule. It's normally the initial schedule start time plus a week. If the reschedule type
+   * is next window, simply take this value as start time. If reschedule type is IMMEDIATELY or
+   * BY_TIME, current or selected time cannot go beyond this deadline.
+   * @return value or {@code null} for none
+   */
+  public String getScheduleDeadlineTime() {
+    return scheduleDeadlineTime;
+  }
+
+  /**
+   * schedule_deadline_time is the time deadline any schedule start time cannot go beyond, including
+   * reschedule. It's normally the initial schedule start time plus a week. If the reschedule type
+   * is next window, simply take this value as start time. If reschedule type is IMMEDIATELY or
+   * BY_TIME, current or selected time cannot go beyond this deadline.
+   * @param scheduleDeadlineTime scheduleDeadlineTime or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule setScheduleDeadlineTime(String scheduleDeadlineTime) {
+    this.scheduleDeadlineTime = scheduleDeadlineTime;
     return this;
   }
 

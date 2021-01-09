@@ -30,7 +30,7 @@ package com.google.api.services.bigquery.model;
 public final class ClusteringMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Beta] Information for all clusters.
+   * Information for all clusters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class ClusteringMetrics extends com.google.api.client.json.GenericJ
   private java.lang.Double meanSquaredDistance;
 
   /**
-   * [Beta] Information for all clusters.
+   * Information for all clusters.
    * @return value or {@code null} for none
    */
   public java.util.List<Cluster> getClusters() {
@@ -65,7 +65,7 @@ public final class ClusteringMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [Beta] Information for all clusters.
+   * Information for all clusters.
    * @param clusters clusters or {@code null} for none
    */
   public ClusteringMetrics setClusters(java.util.List<Cluster> clusters) {

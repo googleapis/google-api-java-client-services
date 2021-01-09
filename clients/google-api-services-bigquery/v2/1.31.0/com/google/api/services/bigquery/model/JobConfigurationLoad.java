@@ -75,20 +75,21 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String createDisposition;
 
   /**
-   * [Trusted Tester] Defines the list of possible SQL data types to which the source decimal values
-   * are converted. This list and the precision and the scale parameters of the decimal field
-   * determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if
-   * it is in the specified list and if it supports the precision and the scale. STRING supports all
-   * precision and scale values. If none of the listed types supports the precision and the scale,
-   * the type supporting the widest range in the specified list is picked, and if a value exceeds
-   * the supported range when reading the data, an error will be thrown. For example: suppose
-   * decimal_target_type = ["NUMERIC", "BIGNUMERIC"]. Then if (precision,scale) is: * (38,9) ->
-   * NUMERIC; * (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) ->
-   * BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) ->
-   * BIGNUMERIC (error if value exeeds supported range). For duplicated types in this field, only
-   * one will be considered and the rest will be ignored. The order of the types in this field is
-   * ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and
-   * NUMERIC always takes precedence over BIGNUMERIC.
+   * Defines the list of possible SQL data types to which the source decimal values are converted.
+   * This list and the precision and the scale parameters of the decimal field determine the target
+   * type. In the order of NUMERIC, BIGNUMERIC ([Preview](/products/#product-launch-stages)), and
+   * STRING, a type is picked if it is in the specified list and if it supports the precision and
+   * the scale. STRING supports all precision and scale values. If none of the listed types supports
+   * the precision and the scale, the type supporting the widest range in the specified list is
+   * picked, and if a value exceeds the supported range when reading the data, an error will be
+   * thrown. Example: Suppose the value of this field is ["NUMERIC", "BIGNUMERIC"]. If
+   * (precision,scale) is: * (38,9) -> NUMERIC; * (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30
+   * integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); * (76,38)
+   * -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value exeeds supported range). This field
+   * cannot contain duplicate types. The order of the types in this field is ignored. For example,
+   * ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and NUMERIC always takes
+   * precedence over BIGNUMERIC. Defaults to ["NUMERIC", "STRING"] for ORC and ["NUMERIC"] for the
+   * other file formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +137,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String fieldDelimiter;
 
   /**
-   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * [Optional] Options to configure hive partitioning support.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,6 +154,16 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ignoreUnknownValues;
+
+  /**
+   * [Optional] If sourceFormat is set to newline-delimited JSON, indicates whether it should be
+   * processed as a JSON variant such as GeoJSON. For a sourceFormat other than JSON, omit this
+   * field. If the sourceFormat is newline-delimited JSON: - for newline-delimited GeoJSON: set to
+   * GEOJSON.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jsonExtension;
 
   /**
    * [Optional] The maximum number of bad records that BigQuery can ignore when running the job. If
@@ -409,20 +420,21 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Trusted Tester] Defines the list of possible SQL data types to which the source decimal values
-   * are converted. This list and the precision and the scale parameters of the decimal field
-   * determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if
-   * it is in the specified list and if it supports the precision and the scale. STRING supports all
-   * precision and scale values. If none of the listed types supports the precision and the scale,
-   * the type supporting the widest range in the specified list is picked, and if a value exceeds
-   * the supported range when reading the data, an error will be thrown. For example: suppose
-   * decimal_target_type = ["NUMERIC", "BIGNUMERIC"]. Then if (precision,scale) is: * (38,9) ->
-   * NUMERIC; * (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) ->
-   * BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) ->
-   * BIGNUMERIC (error if value exeeds supported range). For duplicated types in this field, only
-   * one will be considered and the rest will be ignored. The order of the types in this field is
-   * ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and
-   * NUMERIC always takes precedence over BIGNUMERIC.
+   * Defines the list of possible SQL data types to which the source decimal values are converted.
+   * This list and the precision and the scale parameters of the decimal field determine the target
+   * type. In the order of NUMERIC, BIGNUMERIC ([Preview](/products/#product-launch-stages)), and
+   * STRING, a type is picked if it is in the specified list and if it supports the precision and
+   * the scale. STRING supports all precision and scale values. If none of the listed types supports
+   * the precision and the scale, the type supporting the widest range in the specified list is
+   * picked, and if a value exceeds the supported range when reading the data, an error will be
+   * thrown. Example: Suppose the value of this field is ["NUMERIC", "BIGNUMERIC"]. If
+   * (precision,scale) is: * (38,9) -> NUMERIC; * (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30
+   * integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); * (76,38)
+   * -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value exeeds supported range). This field
+   * cannot contain duplicate types. The order of the types in this field is ignored. For example,
+   * ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and NUMERIC always takes
+   * precedence over BIGNUMERIC. Defaults to ["NUMERIC", "STRING"] for ORC and ["NUMERIC"] for the
+   * other file formats.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDecimalTargetTypes() {
@@ -430,20 +442,21 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Trusted Tester] Defines the list of possible SQL data types to which the source decimal values
-   * are converted. This list and the precision and the scale parameters of the decimal field
-   * determine the target type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if
-   * it is in the specified list and if it supports the precision and the scale. STRING supports all
-   * precision and scale values. If none of the listed types supports the precision and the scale,
-   * the type supporting the widest range in the specified list is picked, and if a value exceeds
-   * the supported range when reading the data, an error will be thrown. For example: suppose
-   * decimal_target_type = ["NUMERIC", "BIGNUMERIC"]. Then if (precision,scale) is: * (38,9) ->
-   * NUMERIC; * (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) ->
-   * BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) ->
-   * BIGNUMERIC (error if value exeeds supported range). For duplicated types in this field, only
-   * one will be considered and the rest will be ignored. The order of the types in this field is
-   * ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and
-   * NUMERIC always takes precedence over BIGNUMERIC.
+   * Defines the list of possible SQL data types to which the source decimal values are converted.
+   * This list and the precision and the scale parameters of the decimal field determine the target
+   * type. In the order of NUMERIC, BIGNUMERIC ([Preview](/products/#product-launch-stages)), and
+   * STRING, a type is picked if it is in the specified list and if it supports the precision and
+   * the scale. STRING supports all precision and scale values. If none of the listed types supports
+   * the precision and the scale, the type supporting the widest range in the specified list is
+   * picked, and if a value exceeds the supported range when reading the data, an error will be
+   * thrown. Example: Suppose the value of this field is ["NUMERIC", "BIGNUMERIC"]. If
+   * (precision,scale) is: * (38,9) -> NUMERIC; * (39,9) -> BIGNUMERIC (NUMERIC cannot hold 30
+   * integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot hold 10 fractional digits); * (76,38)
+   * -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value exeeds supported range). This field
+   * cannot contain duplicate types. The order of the types in this field is ignored. For example,
+   * ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC", "BIGNUMERIC"] and NUMERIC always takes
+   * precedence over BIGNUMERIC. Defaults to ["NUMERIC", "STRING"] for ORC and ["NUMERIC"] for the
+   * other file formats.
    * @param decimalTargetTypes decimalTargetTypes or {@code null} for none
    */
   public JobConfigurationLoad setDecimalTargetTypes(java.util.List<java.lang.String> decimalTargetTypes) {
@@ -549,7 +562,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * [Optional] Options to configure hive partitioning support.
    * @return value or {@code null} for none
    */
   public HivePartitioningOptions getHivePartitioningOptions() {
@@ -557,7 +570,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * [Optional] Options to configure hive partitioning support.
    * @param hivePartitioningOptions hivePartitioningOptions or {@code null} for none
    */
   public JobConfigurationLoad setHivePartitioningOptions(HivePartitioningOptions hivePartitioningOptions) {
@@ -589,6 +602,29 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setIgnoreUnknownValues(java.lang.Boolean ignoreUnknownValues) {
     this.ignoreUnknownValues = ignoreUnknownValues;
+    return this;
+  }
+
+  /**
+   * [Optional] If sourceFormat is set to newline-delimited JSON, indicates whether it should be
+   * processed as a JSON variant such as GeoJSON. For a sourceFormat other than JSON, omit this
+   * field. If the sourceFormat is newline-delimited JSON: - for newline-delimited GeoJSON: set to
+   * GEOJSON.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJsonExtension() {
+    return jsonExtension;
+  }
+
+  /**
+   * [Optional] If sourceFormat is set to newline-delimited JSON, indicates whether it should be
+   * processed as a JSON variant such as GeoJSON. For a sourceFormat other than JSON, omit this
+   * field. If the sourceFormat is newline-delimited JSON: - for newline-delimited GeoJSON: set to
+   * GEOJSON.
+   * @param jsonExtension jsonExtension or {@code null} for none
+   */
+  public JobConfigurationLoad setJsonExtension(java.lang.String jsonExtension) {
+    this.jsonExtension = jsonExtension;
     return this;
   }
 

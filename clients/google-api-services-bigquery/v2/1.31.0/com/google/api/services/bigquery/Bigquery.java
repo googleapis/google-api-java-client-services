@@ -3979,6 +3979,128 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
   public class RowAccessPolicies {
 
     /**
+     * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+     * does not have a policy set.
+     *
+     * Create a request for the method "rowAccessPolicies.getIamPolicy".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     *        the appropriate value for this field.
+     * @param content the {@link com.google.api.services.bigquery.model.GetIamPolicyRequest}
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.bigquery.model.GetIamPolicyRequest content) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends BigqueryRequest<com.google.api.services.bigquery.model.Policy> {
+
+      private static final String REST_PATH = "{+resource}:getIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/datasets/[^/]+/tables/[^/]+/rowAccessPolicies/[^/]+$");
+
+      /**
+       * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+       * and does not have a policy set.
+       *
+       * Create a request for the method "rowAccessPolicies.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     *        the appropriate value for this field.
+       * @param content the {@link com.google.api.services.bigquery.model.GetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String resource, com.google.api.services.bigquery.model.GetIamPolicyRequest content) {
+        super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/tables/[^/]+/rowAccessPolicies/[^/]+$");
+        }
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUserIp(java.lang.String userIp) {
+        return (GetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being requested. See the operation documentation for
+     the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public GetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/tables/[^/]+/rowAccessPolicies/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
      * Lists all row access policies on the specified table.
      *
      * Create a request for the method "rowAccessPolicies.list".
@@ -4197,6 +4319,254 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+     * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+     *
+     * Create a request for the method "rowAccessPolicies.setIamPolicy".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     *        the appropriate value for this field.
+     * @param content the {@link com.google.api.services.bigquery.model.SetIamPolicyRequest}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.bigquery.model.SetIamPolicyRequest content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends BigqueryRequest<com.google.api.services.bigquery.model.Policy> {
+
+      private static final String REST_PATH = "{+resource}:setIamPolicy";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/datasets/[^/]+/tables/[^/]+/rowAccessPolicies/[^/]+$");
+
+      /**
+       * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+       * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+       *
+       * Create a request for the method "rowAccessPolicies.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     *        the appropriate value for this field.
+       * @param content the {@link com.google.api.services.bigquery.model.SetIamPolicyRequest}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String resource, com.google.api.services.bigquery.model.SetIamPolicyRequest content) {
+        super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.Policy.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/tables/[^/]+/rowAccessPolicies/[^/]+$");
+        }
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUserIp(java.lang.String userIp) {
+        return (SetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy is being specified. See the operation documentation for
+     the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy is being specified. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public SetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/tables/[^/]+/rowAccessPolicies/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+     * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+     * designed to be used for building permission-aware UIs and command-line tools, not for
+     * authorization checking. This operation may "fail open" without warning.
+     *
+     * Create a request for the method "rowAccessPolicies.testIamPermissions".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+     *
+     * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+     * @param content the {@link com.google.api.services.bigquery.model.TestIamPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.bigquery.model.TestIamPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends BigqueryRequest<com.google.api.services.bigquery.model.TestIamPermissionsResponse> {
+
+      private static final String REST_PATH = "{+resource}:testIamPermissions";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/datasets/[^/]+/tables/[^/]+/rowAccessPolicies/[^/]+$");
+
+      /**
+       * Returns permissions that a caller has on the specified resource. If the resource does not
+       * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+       * operation is designed to be used for building permission-aware UIs and command-line tools, not
+       * for authorization checking. This operation may "fail open" without warning.
+       *
+       * Create a request for the method "rowAccessPolicies.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+       * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param resource REQUIRED: The resource for which the policy detail is being requested. See the operation
+     *        documentation for the appropriate value for this field.
+       * @param content the {@link com.google.api.services.bigquery.model.TestIamPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String resource, com.google.api.services.bigquery.model.TestIamPermissionsRequest content) {
+        super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.TestIamPermissionsResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/tables/[^/]+/rowAccessPolicies/[^/]+$");
+        }
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUserIp(java.lang.String userIp) {
+        return (TestIamPermissions) super.setUserIp(userIp);
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** REQUIRED: The resource for which the policy detail is being requested. See the operation
+     documentation for the appropriate value for this field.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /**
+       * REQUIRED: The resource for which the policy detail is being requested. See the operation
+       * documentation for the appropriate value for this field.
+       */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+/datasets/[^/]+/tables/[^/]+/rowAccessPolicies/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
       }
     }
 

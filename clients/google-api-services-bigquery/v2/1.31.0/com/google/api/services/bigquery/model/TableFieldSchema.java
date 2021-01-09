@@ -75,9 +75,9 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
 
   /**
    * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
-   * INTEGER), FLOAT, FLOAT64 (same as FLOAT), BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE,
-   * TIME, DATETIME, RECORD (where RECORD indicates that the field contains a nested schema) or
-   * STRUCT (same as RECORD).
+   * INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN),
+   * TIMESTAMP, DATE, TIME, DATETIME, RECORD (where RECORD indicates that the field contains a
+   * nested schema) or STRUCT (same as RECORD).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,9 +191,9 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
 
   /**
    * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
-   * INTEGER), FLOAT, FLOAT64 (same as FLOAT), BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE,
-   * TIME, DATETIME, RECORD (where RECORD indicates that the field contains a nested schema) or
-   * STRUCT (same as RECORD).
+   * INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN),
+   * TIMESTAMP, DATE, TIME, DATETIME, RECORD (where RECORD indicates that the field contains a
+   * nested schema) or STRUCT (same as RECORD).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -202,9 +202,9 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
 
   /**
    * [Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
-   * INTEGER), FLOAT, FLOAT64 (same as FLOAT), BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE,
-   * TIME, DATETIME, RECORD (where RECORD indicates that the field contains a nested schema) or
-   * STRUCT (same as RECORD).
+   * INTEGER), FLOAT, FLOAT64 (same as FLOAT), NUMERIC, BIGNUMERIC, BOOLEAN, BOOL (same as BOOLEAN),
+   * TIMESTAMP, DATE, TIME, DATETIME, RECORD (where RECORD indicates that the field contains a
+   * nested schema) or STRUCT (same as RECORD).
    * @param type type or {@code null} for none
    */
   public TableFieldSchema setType(java.lang.String type) {

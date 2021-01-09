@@ -75,7 +75,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private GoogleSheetsOptions googleSheetsOptions;
 
   /**
-   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * [Optional] Options to configure hive partitioning support.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,7 +244,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * [Optional] Options to configure hive partitioning support.
    * @return value or {@code null} for none
    */
   public HivePartitioningOptions getHivePartitioningOptions() {
@@ -252,7 +252,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * [Optional, Trusted Tester] Options to configure hive partitioning support.
+   * [Optional] Options to configure hive partitioning support.
    * @param hivePartitioningOptions hivePartitioningOptions or {@code null} for none
    */
   public ExternalDataConfiguration setHivePartitioningOptions(HivePartitioningOptions hivePartitioningOptions) {

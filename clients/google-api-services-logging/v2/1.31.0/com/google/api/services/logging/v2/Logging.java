@@ -3425,9 +3425,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Logs {
 
       /**
-       * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-       * written shortly before the delete operation might not be deleted. Entries received after the
-       * delete operation with a timestamp before the operation will be deleted.
+       * Deletes all the log entries in a log for the _Default Log Bucket. The log reappears if it
+       * receives new entries. Log entries written shortly before the delete operation might not be
+       * deleted. Entries received after the delete operation with a timestamp before the operation will
+       * be deleted.
        *
        * Create a request for the method "logs.delete".
        *
@@ -3456,9 +3457,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+/logs/[^/]+$");
 
         /**
-         * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-         * written shortly before the delete operation might not be deleted. Entries received after the
-         * delete operation with a timestamp before the operation will be deleted.
+         * Deletes all the log entries in a log for the _Default Log Bucket. The log reappears if it
+         * receives new entries. Log entries written shortly before the delete operation might not be
+         * deleted. Entries received after the delete operation with a timestamp before the operation will
+         * be deleted.
          *
          * Create a request for the method "logs.delete".
          *
@@ -9490,9 +9492,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Logs {
 
       /**
-       * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-       * written shortly before the delete operation might not be deleted. Entries received after the
-       * delete operation with a timestamp before the operation will be deleted.
+       * Deletes all the log entries in a log for the _Default Log Bucket. The log reappears if it
+       * receives new entries. Log entries written shortly before the delete operation might not be
+       * deleted. Entries received after the delete operation with a timestamp before the operation will
+       * be deleted.
        *
        * Create a request for the method "logs.delete".
        *
@@ -9521,9 +9524,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^folders/[^/]+/logs/[^/]+$");
 
         /**
-         * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-         * written shortly before the delete operation might not be deleted. Entries received after the
-         * delete operation with a timestamp before the operation will be deleted.
+         * Deletes all the log entries in a log for the _Default Log Bucket. The log reappears if it
+         * receives new entries. Log entries written shortly before the delete operation might not be
+         * deleted. Entries received after the delete operation with a timestamp before the operation will
+         * be deleted.
          *
          * Create a request for the method "logs.delete".
          *
@@ -13434,9 +13438,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
   public class Logs {
 
     /**
-     * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-     * written shortly before the delete operation might not be deleted. Entries received after the
-     * delete operation with a timestamp before the operation will be deleted.
+     * Deletes all the log entries in a log for the _Default Log Bucket. The log reappears if it
+     * receives new entries. Log entries written shortly before the delete operation might not be
+     * deleted. Entries received after the delete operation with a timestamp before the operation will
+     * be deleted.
      *
      * Create a request for the method "logs.delete".
      *
@@ -13465,9 +13470,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/logs/[^/]+$");
 
       /**
-       * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-       * written shortly before the delete operation might not be deleted. Entries received after the
-       * delete operation with a timestamp before the operation will be deleted.
+       * Deletes all the log entries in a log for the _Default Log Bucket. The log reappears if it
+       * receives new entries. Log entries written shortly before the delete operation might not be
+       * deleted. Entries received after the delete operation with a timestamp before the operation will
+       * be deleted.
        *
        * Create a request for the method "logs.delete".
        *
@@ -17641,9 +17647,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Logs {
 
       /**
-       * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-       * written shortly before the delete operation might not be deleted. Entries received after the
-       * delete operation with a timestamp before the operation will be deleted.
+       * Deletes all the log entries in a log for the _Default Log Bucket. The log reappears if it
+       * receives new entries. Log entries written shortly before the delete operation might not be
+       * deleted. Entries received after the delete operation with a timestamp before the operation will
+       * be deleted.
        *
        * Create a request for the method "logs.delete".
        *
@@ -17672,9 +17679,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^organizations/[^/]+/logs/[^/]+$");
 
         /**
-         * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-         * written shortly before the delete operation might not be deleted. Entries received after the
-         * delete operation with a timestamp before the operation will be deleted.
+         * Deletes all the log entries in a log for the _Default Log Bucket. The log reappears if it
+         * receives new entries. Log entries written shortly before the delete operation might not be
+         * deleted. Entries received after the delete operation with a timestamp before the operation will
+         * be deleted.
          *
          * Create a request for the method "logs.delete".
          *
@@ -22491,9 +22499,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     public class Logs {
 
       /**
-       * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-       * written shortly before the delete operation might not be deleted. Entries received after the
-       * delete operation with a timestamp before the operation will be deleted.
+       * Deletes all the log entries in a log for the _Default Log Bucket. The log reappears if it
+       * receives new entries. Log entries written shortly before the delete operation might not be
+       * deleted. Entries received after the delete operation with a timestamp before the operation will
+       * be deleted.
        *
        * Create a request for the method "logs.delete".
        *
@@ -22522,9 +22531,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+/logs/[^/]+$");
 
         /**
-         * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries
-         * written shortly before the delete operation might not be deleted. Entries received after the
-         * delete operation with a timestamp before the operation will be deleted.
+         * Deletes all the log entries in a log for the _Default Log Bucket. The log reappears if it
+         * receives new entries. Log entries written shortly before the delete operation might not be
+         * deleted. Entries received after the delete operation with a timestamp before the operation will
+         * be deleted.
          *
          * Create a request for the method "logs.delete".
          *

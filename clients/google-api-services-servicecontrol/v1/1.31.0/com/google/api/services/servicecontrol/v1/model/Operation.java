@@ -158,8 +158,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.util.List<TraceSpan> traceSpans;
 
   /**
-   * User defined labels for the resource that this operation is associated with. Only a combination
-   * of 1000 user labels per consumer project are allowed.
+   * Private Preview. This feature is only available for approved services. User defined labels for
+   * the resource that this operation is associated with. Only a combination of 1000 user labels per
+   * consumer project are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -437,8 +438,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User defined labels for the resource that this operation is associated with. Only a combination
-   * of 1000 user labels per consumer project are allowed.
+   * Private Preview. This feature is only available for approved services. User defined labels for
+   * the resource that this operation is associated with. Only a combination of 1000 user labels per
+   * consumer project are allowed.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getUserLabels() {
@@ -446,8 +448,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User defined labels for the resource that this operation is associated with. Only a combination
-   * of 1000 user labels per consumer project are allowed.
+   * Private Preview. This feature is only available for approved services. User defined labels for
+   * the resource that this operation is associated with. Only a combination of 1000 user labels per
+   * consumer project are allowed.
    * @param userLabels userLabels or {@code null} for none
    */
   public Operation setUserLabels(java.util.Map<String, java.lang.String> userLabels) {

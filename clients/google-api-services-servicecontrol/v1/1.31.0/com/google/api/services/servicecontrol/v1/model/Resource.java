@@ -33,7 +33,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * Annotations is an unstructured key-value map stored with a resource that may be set by external
    * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
-   * when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+   * when modifying objects. More info: https://kubernetes.io/docs/user-guide/annotations
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,6 +77,17 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Immutable. The location of the resource. The location encoding is specific to the service
+   * provider, and new encoding may be introduced as the service evolves. For Google Cloud products,
+   * the encoding is what is used by Google Cloud APIs, such as `us-east1`, `aws-us-east-1`, and
+   * `azure-eastus2`. The semantics of `location` is identical to the
+   * `cloud.googleapis.com/location` label used by some Google Cloud APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
 
   /**
    * The stable identifier (name) of a resource on the `service`. A resource can be logically
@@ -129,7 +140,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * Annotations is an unstructured key-value map stored with a resource that may be set by external
    * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
-   * when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+   * when modifying objects. More info: https://kubernetes.io/docs/user-guide/annotations
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -139,7 +150,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   /**
    * Annotations is an unstructured key-value map stored with a resource that may be set by external
    * tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved
-   * when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations
+   * when modifying objects. More info: https://kubernetes.io/docs/user-guide/annotations
    * @param annotations annotations or {@code null} for none
    */
   public Resource setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -237,6 +248,31 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   public Resource setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Immutable. The location of the resource. The location encoding is specific to the service
+   * provider, and new encoding may be introduced as the service evolves. For Google Cloud products,
+   * the encoding is what is used by Google Cloud APIs, such as `us-east1`, `aws-us-east-1`, and
+   * `azure-eastus2`. The semantics of `location` is identical to the
+   * `cloud.googleapis.com/location` label used by some Google Cloud APIs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Immutable. The location of the resource. The location encoding is specific to the service
+   * provider, and new encoding may be introduced as the service evolves. For Google Cloud products,
+   * the encoding is what is used by Google Cloud APIs, such as `us-east1`, `aws-us-east-1`, and
+   * `azure-eastus2`. The semantics of `location` is identical to the
+   * `cloud.googleapis.com/location` label used by some Google Cloud APIs.
+   * @param location location or {@code null} for none
+   */
+  public Resource setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

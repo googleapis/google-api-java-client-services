@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-retail",
+    "version": "v2beta-rev20210105-1.31.0"
+  }
+}

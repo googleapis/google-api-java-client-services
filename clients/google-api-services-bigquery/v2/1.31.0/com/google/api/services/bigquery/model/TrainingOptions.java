@@ -17,7 +17,7 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Model definition for TrainingOptions.
+ * Options used in model training.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:
@@ -253,7 +253,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Double minSplitLoss;
 
   /**
-   * [Beta] Google Cloud Storage URI from which the model was imported. Only applicable for imported
+   * Google Cloud Storage URI from which the model was imported. Only applicable for imported
    * models.
    * The value may be {@code null}.
    */
@@ -885,7 +885,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Beta] Google Cloud Storage URI from which the model was imported. Only applicable for imported
+   * Google Cloud Storage URI from which the model was imported. Only applicable for imported
    * models.
    * @return value or {@code null} for none
    */
@@ -894,7 +894,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Beta] Google Cloud Storage URI from which the model was imported. Only applicable for imported
+   * Google Cloud Storage URI from which the model was imported. Only applicable for imported
    * models.
    * @param modelUri modelUri or {@code null} for none
    */

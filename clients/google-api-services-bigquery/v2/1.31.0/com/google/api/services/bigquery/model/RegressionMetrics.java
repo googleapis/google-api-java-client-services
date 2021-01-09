@@ -58,7 +58,7 @@ public final class RegressionMetrics extends com.google.api.client.json.GenericJ
   private java.lang.Double medianAbsoluteError;
 
   /**
-   * R^2 score.
+   * R^2 score. This corresponds to r2_score in ML.EVALUATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +133,7 @@ public final class RegressionMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * R^2 score.
+   * R^2 score. This corresponds to r2_score in ML.EVALUATE.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRSquared() {
@@ -141,7 +141,7 @@ public final class RegressionMetrics extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * R^2 score.
+   * R^2 score. This corresponds to r2_score in ML.EVALUATE.
    * @param rSquared rSquared or {@code null} for none
    */
   public RegressionMetrics setRSquared(java.lang.Double rSquared) {

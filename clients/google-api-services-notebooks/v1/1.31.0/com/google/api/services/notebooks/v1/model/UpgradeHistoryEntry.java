@@ -17,7 +17,7 @@
 package com.google.api.services.notebooks.v1.model;
 
 /**
- * Model definition for UpgradeHistoryEntry.
+ * The entry of VM image upgrade history.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Notebooks API. For a detailed explanation see:
@@ -28,6 +28,13 @@ package com.google.api.services.notebooks.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class UpgradeHistoryEntry extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Action. Rolloback or Upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String action;
 
   /**
    * The container image before this instance upgrade.
@@ -65,6 +72,13 @@ public final class UpgradeHistoryEntry extends com.google.api.client.json.Generi
   private java.lang.String state;
 
   /**
+   * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetImage;
+
+  /**
    * The version of the notebook instance before this upgrade.
    * The value may be {@code null}.
    */
@@ -77,6 +91,23 @@ public final class UpgradeHistoryEntry extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String vmImage;
+
+  /**
+   * Action. Rolloback or Upgrade.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAction() {
+    return action;
+  }
+
+  /**
+   * Action. Rolloback or Upgrade.
+   * @param action action or {@code null} for none
+   */
+  public UpgradeHistoryEntry setAction(java.lang.String action) {
+    this.action = action;
+    return this;
+  }
 
   /**
    * The container image before this instance upgrade.
@@ -160,6 +191,23 @@ public final class UpgradeHistoryEntry extends com.google.api.client.json.Generi
    */
   public UpgradeHistoryEntry setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetImage() {
+    return targetImage;
+  }
+
+  /**
+   * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
+   * @param targetImage targetImage or {@code null} for none
+   */
+  public UpgradeHistoryEntry setTargetImage(java.lang.String targetImage) {
+    this.targetImage = targetImage;
     return this;
   }
 

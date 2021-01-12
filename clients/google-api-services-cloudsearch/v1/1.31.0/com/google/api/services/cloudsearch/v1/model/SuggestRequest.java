@@ -31,8 +31,8 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
 
   /**
    * The sources to use for suggestions. If not specified, the data sources are taken from the
-   * current search application. NOTE: Suggestions are supported only for third party data sources
-   * and people (i.e. PredefinedSource.PERSON).
+   * current search application. NOTE: Suggestions are only supported for the following sources: *
+   * Third-party data sources * PredefinedSource.PERSON * PredefinedSource.GOOGLE_DRIVE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +61,8 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
 
   /**
    * The sources to use for suggestions. If not specified, the data sources are taken from the
-   * current search application. NOTE: Suggestions are supported only for third party data sources
-   * and people (i.e. PredefinedSource.PERSON).
+   * current search application. NOTE: Suggestions are only supported for the following sources: *
+   * Third-party data sources * PredefinedSource.PERSON * PredefinedSource.GOOGLE_DRIVE
    * @return value or {@code null} for none
    */
   public java.util.List<DataSourceRestriction> getDataSourceRestrictions() {
@@ -71,8 +71,8 @@ public final class SuggestRequest extends com.google.api.client.json.GenericJson
 
   /**
    * The sources to use for suggestions. If not specified, the data sources are taken from the
-   * current search application. NOTE: Suggestions are supported only for third party data sources
-   * and people (i.e. PredefinedSource.PERSON).
+   * current search application. NOTE: Suggestions are only supported for the following sources: *
+   * Third-party data sources * PredefinedSource.PERSON * PredefinedSource.GOOGLE_DRIVE
    * @param dataSourceRestrictions dataSourceRestrictions or {@code null} for none
    */
   public SuggestRequest setDataSourceRestrictions(java.util.List<DataSourceRestriction> dataSourceRestrictions) {

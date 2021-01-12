@@ -17,7 +17,7 @@
 package com.google.api.services.tasks.model;
 
 /**
- * LINT.IfChange
+ * Model definition for Task.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Tasks API. For a detailed explanation see:

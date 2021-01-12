@@ -225,6 +225,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccount;
 
   /**
+   * Optional. The URIs of service account scopes to be included in Compute Engine instances. If not
+   * specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-
+   * accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform -
+   * https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least:
+   * https://www.googleapis.com/auth/compute
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> serviceAccountScopes;
+
+  /**
+   * Optional. Shielded VM configuration. [Images using supported Shielded VM features]
+   * (https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ShieldedInstanceConfig shieldedInstanceConfig;
+
+  /**
    * Output only. The state of this instance.
    * The value may be {@code null}.
    */
@@ -238,6 +257,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String subnet;
+
+  /**
+   * Optional. The Compute Engine tags to add to runtime (see [Tagging
+   * instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tags;
 
   /**
    * Output only. Instance update time.
@@ -711,6 +738,50 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The URIs of service account scopes to be included in Compute Engine instances. If not
+   * specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-
+   * accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform -
+   * https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least:
+   * https://www.googleapis.com/auth/compute
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getServiceAccountScopes() {
+    return serviceAccountScopes;
+  }
+
+  /**
+   * Optional. The URIs of service account scopes to be included in Compute Engine instances. If not
+   * specified, the following [scopes](https://cloud.google.com/compute/docs/access/service-
+   * accounts#accesscopesiam) are defined: - https://www.googleapis.com/auth/cloud-platform -
+   * https://www.googleapis.com/auth/userinfo.email If not using default scopes, you need at least:
+   * https://www.googleapis.com/auth/compute
+   * @param serviceAccountScopes serviceAccountScopes or {@code null} for none
+   */
+  public Instance setServiceAccountScopes(java.util.List<java.lang.String> serviceAccountScopes) {
+    this.serviceAccountScopes = serviceAccountScopes;
+    return this;
+  }
+
+  /**
+   * Optional. Shielded VM configuration. [Images using supported Shielded VM features]
+   * (https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+   * @return value or {@code null} for none
+   */
+  public ShieldedInstanceConfig getShieldedInstanceConfig() {
+    return shieldedInstanceConfig;
+  }
+
+  /**
+   * Optional. Shielded VM configuration. [Images using supported Shielded VM features]
+   * (https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
+   * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
+   */
+  public Instance setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
+    this.shieldedInstanceConfig = shieldedInstanceConfig;
+    return this;
+  }
+
+  /**
    * Output only. The state of this instance.
    * @return value or {@code null} for none
    */
@@ -743,6 +814,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setSubnet(java.lang.String subnet) {
     this.subnet = subnet;
+    return this;
+  }
+
+  /**
+   * Optional. The Compute Engine tags to add to runtime (see [Tagging
+   * instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. The Compute Engine tags to add to runtime (see [Tagging
+   * instances](https://cloud.google.com/compute/docs/label-or-tag-resources#tags)).
+   * @param tags tags or {@code null} for none
+   */
+  public Instance setTags(java.util.List<java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

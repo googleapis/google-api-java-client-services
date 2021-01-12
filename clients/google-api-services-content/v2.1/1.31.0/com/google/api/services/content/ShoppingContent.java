@@ -2428,6 +2428,556 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
 
     }
+    /**
+     * An accessor for creating requests from the Returncarrier collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ShoppingContent content = new ShoppingContent(...);}
+     *   {@code ShoppingContent.Returncarrier.List request = content.returncarrier().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Returncarrier returncarrier() {
+      return new Returncarrier();
+    }
+
+    /**
+     * The "returncarrier" collection of methods.
+     */
+    public class Returncarrier {
+
+      /**
+       * Links return carrier to a merchant account.
+       *
+       * Create a request for the method "returncarrier.create".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+       * @param content the {@link com.google.api.services.content.model.AccountReturnCarrier}
+       * @return the request
+       */
+      public Create create(java.lang.Long accountId, com.google.api.services.content.model.AccountReturnCarrier content) throws java.io.IOException {
+        Create result = new Create(accountId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ShoppingContentRequest<com.google.api.services.content.model.AccountReturnCarrier> {
+
+        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/returncarrier";
+
+        /**
+         * Links return carrier to a merchant account.
+         *
+         * Create a request for the method "returncarrier.create".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         * @param content the {@link com.google.api.services.content.model.AccountReturnCarrier}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long accountId, com.google.api.services.content.model.AccountReturnCarrier content) {
+          super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.AccountReturnCarrier.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long accountId;
+
+        /** Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        public java.lang.Long getAccountId() {
+          return accountId;
+        }
+
+        /**
+         * Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        public Create setAccountId(java.lang.Long accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Delete a return carrier in the merchant account.
+       *
+       * Create a request for the method "returncarrier.delete".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+       * @param carrierAccountId Required. The Google-provided unique carrier ID, used to update the resource.
+       * @return the request
+       */
+      public Delete delete(java.lang.Long accountId, java.lang.Long carrierAccountId) throws java.io.IOException {
+        Delete result = new Delete(accountId, carrierAccountId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ShoppingContentRequest<Void> {
+
+        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/returncarrier/{carrierAccountId}";
+
+        /**
+         * Delete a return carrier in the merchant account.
+         *
+         * Create a request for the method "returncarrier.delete".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         * @param carrierAccountId Required. The Google-provided unique carrier ID, used to update the resource.
+         * @since 1.13
+         */
+        protected Delete(java.lang.Long accountId, java.lang.Long carrierAccountId) {
+          super(ShoppingContent.this, "DELETE", REST_PATH, null, Void.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.carrierAccountId = com.google.api.client.util.Preconditions.checkNotNull(carrierAccountId, "Required parameter carrierAccountId must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long accountId;
+
+        /** Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        public java.lang.Long getAccountId() {
+          return accountId;
+        }
+
+        /**
+         * Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        public Delete setAccountId(java.lang.Long accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** Required. The Google-provided unique carrier ID, used to update the resource. */
+        @com.google.api.client.util.Key
+        private java.lang.Long carrierAccountId;
+
+        /** Required. The Google-provided unique carrier ID, used to update the resource.
+         */
+        public java.lang.Long getCarrierAccountId() {
+          return carrierAccountId;
+        }
+
+        /** Required. The Google-provided unique carrier ID, used to update the resource. */
+        public Delete setCarrierAccountId(java.lang.Long carrierAccountId) {
+          this.carrierAccountId = carrierAccountId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists available return carriers in the merchant account.
+       *
+       * Create a request for the method "returncarrier.list".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+       * @return the request
+       */
+      public List list(java.lang.Long accountId) throws java.io.IOException {
+        List result = new List(accountId);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListAccountReturnCarrierResponse> {
+
+        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/returncarrier";
+
+        /**
+         * Lists available return carriers in the merchant account.
+         *
+         * Create a request for the method "returncarrier.list".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         * @since 1.13
+         */
+        protected List(java.lang.Long accountId) {
+          super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListAccountReturnCarrierResponse.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long accountId;
+
+        /** Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        public java.lang.Long getAccountId() {
+          return accountId;
+        }
+
+        /**
+         * Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        public List setAccountId(java.lang.Long accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a return carrier in the merchant account.
+       *
+       * Create a request for the method "returncarrier.patch".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+       * @param carrierAccountId Required. The Google-provided unique carrier ID, used to update the resource.
+       * @param content the {@link com.google.api.services.content.model.AccountReturnCarrier}
+       * @return the request
+       */
+      public Patch patch(java.lang.Long accountId, java.lang.Long carrierAccountId, com.google.api.services.content.model.AccountReturnCarrier content) throws java.io.IOException {
+        Patch result = new Patch(accountId, carrierAccountId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends ShoppingContentRequest<com.google.api.services.content.model.AccountReturnCarrier> {
+
+        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/returncarrier/{carrierAccountId}";
+
+        /**
+         * Updates a return carrier in the merchant account.
+         *
+         * Create a request for the method "returncarrier.patch".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         * @param carrierAccountId Required. The Google-provided unique carrier ID, used to update the resource.
+         * @param content the {@link com.google.api.services.content.model.AccountReturnCarrier}
+         * @since 1.13
+         */
+        protected Patch(java.lang.Long accountId, java.lang.Long carrierAccountId, com.google.api.services.content.model.AccountReturnCarrier content) {
+          super(ShoppingContent.this, "PATCH", REST_PATH, content, com.google.api.services.content.model.AccountReturnCarrier.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+          this.carrierAccountId = com.google.api.client.util.Preconditions.checkNotNull(carrierAccountId, "Required parameter carrierAccountId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Long accountId;
+
+        /** Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        public java.lang.Long getAccountId() {
+          return accountId;
+        }
+
+        /**
+         * Required. The Merchant Center Account Id under which the Return Carrier is to be linked.
+         */
+        public Patch setAccountId(java.lang.Long accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        /** Required. The Google-provided unique carrier ID, used to update the resource. */
+        @com.google.api.client.util.Key
+        private java.lang.Long carrierAccountId;
+
+        /** Required. The Google-provided unique carrier ID, used to update the resource.
+         */
+        public java.lang.Long getCarrierAccountId() {
+          return carrierAccountId;
+        }
+
+        /** Required. The Google-provided unique carrier ID, used to update the resource. */
+        public Patch setCarrierAccountId(java.lang.Long carrierAccountId) {
+          this.carrierAccountId = carrierAccountId;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**
@@ -3496,6 +4046,1013 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       @Override
       public Update set(String parameterName, Object value) {
         return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Collections collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Collections.List request = content.collections().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Collections collections() {
+    return new Collections();
+  }
+
+  /**
+   * The "collections" collection of methods.
+   */
+  public class Collections {
+
+    /**
+     * Uploads a collection to your Merchant Center account. If a collection with the same collectionId
+     * already exists, this method updates that entry. In each update, the collection is completely
+     * replaced by the fields in the body of the update request.
+     *
+     * Create a request for the method "collections.create".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+     * @param content the {@link com.google.api.services.content.model.Collection}
+     * @return the request
+     */
+    public Create create(java.lang.Long merchantId, com.google.api.services.content.model.Collection content) throws java.io.IOException {
+      Create result = new Create(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends ShoppingContentRequest<com.google.api.services.content.model.Collection> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/collections";
+
+      /**
+       * Uploads a collection to your Merchant Center account. If a collection with the same
+       * collectionId already exists, this method updates that entry. In each update, the collection is
+       * completely replaced by the fields in the body of the update request.
+       *
+       * Create a request for the method "collections.create".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+       * @param content the {@link com.google.api.services.content.model.Collection}
+       * @since 1.13
+       */
+      protected Create(java.lang.Long merchantId, com.google.api.services.content.model.Collection content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.Collection.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      public Create setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a collection from your Merchant Center account.
+     *
+     * Create a request for the method "collections.delete".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+     * @param collectionId Required. The collectionId of the collection. CollectionId is the same as the REST ID of the
+     *        collection.
+     * @return the request
+     */
+    public Delete delete(java.lang.Long merchantId, java.lang.String collectionId) throws java.io.IOException {
+      Delete result = new Delete(merchantId, collectionId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/collections/{collectionId}";
+
+      /**
+       * Deletes a collection from your Merchant Center account.
+       *
+       * Create a request for the method "collections.delete".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+       * @param collectionId Required. The collectionId of the collection. CollectionId is the same as the REST ID of the
+     *        collection.
+       * @since 1.13
+       */
+      protected Delete(java.lang.Long merchantId, java.lang.String collectionId) {
+        super(ShoppingContent.this, "DELETE", REST_PATH, null, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.collectionId = com.google.api.client.util.Preconditions.checkNotNull(collectionId, "Required parameter collectionId must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      public Delete setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * Required. The collectionId of the collection. CollectionId is the same as the REST ID of
+       * the collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String collectionId;
+
+      /** Required. The collectionId of the collection. CollectionId is the same as the REST ID of the
+     collection.
+       */
+      public java.lang.String getCollectionId() {
+        return collectionId;
+      }
+
+      /**
+       * Required. The collectionId of the collection. CollectionId is the same as the REST ID of
+       * the collection.
+       */
+      public Delete setCollectionId(java.lang.String collectionId) {
+        this.collectionId = collectionId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a collection from your Merchant Center account.
+     *
+     * Create a request for the method "collections.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+     * @param collectionId Required. The REST ID of the collection.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId, java.lang.String collectionId) throws java.io.IOException {
+      Get result = new Get(merchantId, collectionId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.Collection> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/collections/{collectionId}";
+
+      /**
+       * Retrieves a collection from your Merchant Center account.
+       *
+       * Create a request for the method "collections.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+       * @param collectionId Required. The REST ID of the collection.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId, java.lang.String collectionId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.Collection.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.collectionId = com.google.api.client.util.Preconditions.checkNotNull(collectionId, "Required parameter collectionId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /** Required. The REST ID of the collection. */
+      @com.google.api.client.util.Key
+      private java.lang.String collectionId;
+
+      /** Required. The REST ID of the collection.
+       */
+      public java.lang.String getCollectionId() {
+        return collectionId;
+      }
+
+      /** Required. The REST ID of the collection. */
+      public Get setCollectionId(java.lang.String collectionId) {
+        this.collectionId = collectionId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the collections in your Merchant Center account. The response might contain fewer items
+     * than specified by page_size. Rely on next_page_token to determine if there are more items to be
+     * requested.
+     *
+     * Create a request for the method "collections.list".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+     * @return the request
+     */
+    public List list(java.lang.Long merchantId) throws java.io.IOException {
+      List result = new List(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListCollectionsResponse> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/collections";
+
+      /**
+       * Lists the collections in your Merchant Center account. The response might contain fewer items
+       * than specified by page_size. Rely on next_page_token to determine if there are more items to be
+       * requested.
+       *
+       * Create a request for the method "collections.list".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+       * @since 1.13
+       */
+      protected List(java.lang.Long merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListCollectionsResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      public List setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * The maximum number of collections to return in the response, used for paging. Defaults to
+       * 50; values above 1000 will be coerced to 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of collections to return in the response, used for paging. Defaults to 50;
+     values above 1000 will be coerced to 1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of collections to return in the response, used for paging. Defaults to
+       * 50; values above 1000 will be coerced to 1000.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Token (if provided) to retrieve the subsequent page. All other parameters must match the
+       * original call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Token (if provided) to retrieve the subsequent page. All other parameters must match the original
+     call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Token (if provided) to retrieve the subsequent page. All other parameters must match the
+       * original call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Collectionstatuses collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Collectionstatuses.List request = content.collectionstatuses().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Collectionstatuses collectionstatuses() {
+    return new Collectionstatuses();
+  }
+
+  /**
+   * The "collectionstatuses" collection of methods.
+   */
+  public class Collectionstatuses {
+
+    /**
+     * Gets the status of a collection from your Merchant Center account.
+     *
+     * Create a request for the method "collectionstatuses.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+     * @param collectionId Required. The collectionId of the collection. CollectionId is the same as the REST ID of the
+     *        collection.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId, java.lang.String collectionId) throws java.io.IOException {
+      Get result = new Get(merchantId, collectionId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.CollectionStatus> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/collectionstatuses/{collectionId}";
+
+      /**
+       * Gets the status of a collection from your Merchant Center account.
+       *
+       * Create a request for the method "collectionstatuses.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+       * @param collectionId Required. The collectionId of the collection. CollectionId is the same as the REST ID of the
+     *        collection.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId, java.lang.String collectionId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.CollectionStatus.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.collectionId = com.google.api.client.util.Preconditions.checkNotNull(collectionId, "Required parameter collectionId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * Required. The collectionId of the collection. CollectionId is the same as the REST ID of
+       * the collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String collectionId;
+
+      /** Required. The collectionId of the collection. CollectionId is the same as the REST ID of the
+     collection.
+       */
+      public java.lang.String getCollectionId() {
+        return collectionId;
+      }
+
+      /**
+       * Required. The collectionId of the collection. CollectionId is the same as the REST ID of
+       * the collection.
+       */
+      public Get setCollectionId(java.lang.String collectionId) {
+        this.collectionId = collectionId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the statuses of the collections in your Merchant Center account.
+     *
+     * Create a request for the method "collectionstatuses.list".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+     * @return the request
+     */
+    public List list(java.lang.Long merchantId) throws java.io.IOException {
+      List result = new List(merchantId);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ShoppingContentRequest<com.google.api.services.content.model.ListCollectionStatusesResponse> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/collectionstatuses";
+
+      /**
+       * Lists the statuses of the collections in your Merchant Center account.
+       *
+       * Create a request for the method "collectionstatuses.list".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     *        account.
+       * @since 1.13
+       */
+      protected List(java.lang.Long merchantId) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.ListCollectionStatusesResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account that contains the collection. This account cannot be a multi-client
+     account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. The ID of the account that contains the collection. This account cannot be a
+       * multi-client account.
+       */
+      public List setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * The maximum number of collection statuses to return in the response, used for paging.
+       * Defaults to 50; values above 1000 will be coerced to 1000.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of collection statuses to return in the response, used for paging. Defaults to
+     50; values above 1000 will be coerced to 1000.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of collection statuses to return in the response, used for paging.
+       * Defaults to 50; values above 1000 will be coerced to 1000.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Token (if provided) to retrieve the subsequent page. All other parameters must match the
+       * original call that provided the page token.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Token (if provided) to retrieve the subsequent page. All other parameters must match the original
+     call that provided the page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Token (if provided) to retrieve the subsequent page. All other parameters must match the
+       * original call that provided the page token.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
       }
     }
 

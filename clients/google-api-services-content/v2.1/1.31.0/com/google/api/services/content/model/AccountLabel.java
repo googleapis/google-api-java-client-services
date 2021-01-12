@@ -52,6 +52,13 @@ public final class AccountLabel extends com.google.api.client.json.GenericJson {
   private java.lang.Long labelId;
 
   /**
+   * Output only. The type of this label.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String labelType;
+
+  /**
    * The display name of this label.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class AccountLabel extends com.google.api.client.json.GenericJson {
    */
   public AccountLabel setLabelId(java.lang.Long labelId) {
     this.labelId = labelId;
+    return this;
+  }
+
+  /**
+   * Output only. The type of this label.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLabelType() {
+    return labelType;
+  }
+
+  /**
+   * Output only. The type of this label.
+   * @param labelType labelType or {@code null} for none
+   */
+  public AccountLabel setLabelType(java.lang.String labelType) {
+    this.labelType = labelType;
     return this;
   }
 

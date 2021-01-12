@@ -294,7 +294,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String gender;
 
   /**
-   * Google's category of the item (see Google product taxonomy).
+   * Google's category of the item (see [Google product
+   * taxonomy](https://support.google.com/merchants/answer/1705911)). When querying products, this
+   * field will contain the user provided value. There is currently no way to get back the auto
+   * assigned google product categories through the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1227,7 +1230,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google's category of the item (see Google product taxonomy).
+   * Google's category of the item (see [Google product
+   * taxonomy](https://support.google.com/merchants/answer/1705911)). When querying products, this
+   * field will contain the user provided value. There is currently no way to get back the auto
+   * assigned google product categories through the API.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleProductCategory() {
@@ -1235,7 +1241,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google's category of the item (see Google product taxonomy).
+   * Google's category of the item (see [Google product
+   * taxonomy](https://support.google.com/merchants/answer/1705911)). When querying products, this
+   * field will contain the user provided value. There is currently no way to get back the auto
+   * assigned google product categories through the API.
    * @param googleProductCategory googleProductCategory or {@code null} for none
    */
   public Product setGoogleProductCategory(java.lang.String googleProductCategory) {

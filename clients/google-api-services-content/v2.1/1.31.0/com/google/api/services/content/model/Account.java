@@ -49,6 +49,13 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adultContent;
 
   /**
+   * List of automatically created label IDs that are assigned to the account by CSS Center.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.math.BigInteger> automaticLabelIds;
+
+  /**
    * The business information of the account.
    * The value may be {@code null}.
    */
@@ -85,7 +92,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * List of label IDs that are assigned to the account by CSS.
+   * List of manually created label IDs that are assigned to the account by CSS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -167,6 +174,23 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   public Account setAdultContent(java.lang.Boolean adultContent) {
     this.adultContent = adultContent;
+    return this;
+  }
+
+  /**
+   * List of automatically created label IDs that are assigned to the account by CSS Center.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.math.BigInteger> getAutomaticLabelIds() {
+    return automaticLabelIds;
+  }
+
+  /**
+   * List of automatically created label IDs that are assigned to the account by CSS Center.
+   * @param automaticLabelIds automaticLabelIds or {@code null} for none
+   */
+  public Account setAutomaticLabelIds(java.util.List<java.math.BigInteger> automaticLabelIds) {
+    this.automaticLabelIds = automaticLabelIds;
     return this;
   }
 
@@ -258,7 +282,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of label IDs that are assigned to the account by CSS.
+   * List of manually created label IDs that are assigned to the account by CSS.
    * @return value or {@code null} for none
    */
   public java.util.List<java.math.BigInteger> getLabelIds() {
@@ -266,7 +290,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of label IDs that are assigned to the account by CSS.
+   * List of manually created label IDs that are assigned to the account by CSS.
    * @param labelIds labelIds or {@code null} for none
    */
   public Account setLabelIds(java.util.List<java.math.BigInteger> labelIds) {

@@ -2699,18 +2699,18 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
      * method requires authorization with an OAuth 2.0 token that includes at least one of the scopes
      * listed in the [Authorization](#authorization-scopes) section; script projects that do not require
      * authorization cannot be executed through this API. To find the correct scopes to include in the
-     * authentication token, open the project in the script editor, then select **File > Project
-     * properties** and click the **Scopes** tab. The error `403, PERMISSION_DENIED: The caller does not
-     * have permission` indicates that the Cloud Platform project used to authorize the request is not
-     * the same as the one used by the script.
+     * authentication token, open the script project **Overview** page and scroll down to "Project OAuth
+     * Scopes." The error `403, PERMISSION_DENIED: The caller does not have permission` indicates that
+     * the Cloud Platform project used to authorize the request is not the same as the one used by the
+     * script.
      *
      * Create a request for the method "scripts.run".
      *
      * This request holds the parameters needed by the script server.  After setting any optional
      * parameters, call the {@link Run#execute()} method to invoke the remote operation.
      *
-     * @param scriptId The script ID of the script to be executed. To find the script ID, open the project in the script
-     *        editor and select **File > Project properties**.
+     * @param scriptId The script ID of the script to be executed. Find the script ID on the **Project settings** page
+     *        under "IDs."
      * @param content the {@link com.google.api.services.script.model.ExecutionRequest}
      * @return the request
      */
@@ -2730,10 +2730,10 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
        * method requires authorization with an OAuth 2.0 token that includes at least one of the scopes
        * listed in the [Authorization](#authorization-scopes) section; script projects that do not
        * require authorization cannot be executed through this API. To find the correct scopes to
-       * include in the authentication token, open the project in the script editor, then select **File
-       * > Project properties** and click the **Scopes** tab. The error `403, PERMISSION_DENIED: The
-       * caller does not have permission` indicates that the Cloud Platform project used to authorize
-       * the request is not the same as the one used by the script.
+       * include in the authentication token, open the script project **Overview** page and scroll down
+       * to "Project OAuth Scopes." The error `403, PERMISSION_DENIED: The caller does not have
+       * permission` indicates that the Cloud Platform project used to authorize the request is not the
+       * same as the one used by the script.
        *
        * Create a request for the method "scripts.run".
        *
@@ -2742,8 +2742,8 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
        * Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param scriptId The script ID of the script to be executed. To find the script ID, open the project in the script
-     *        editor and select **File > Project properties**.
+       * @param scriptId The script ID of the script to be executed. Find the script ID on the **Project settings** page
+     *        under "IDs."
        * @param content the {@link com.google.api.services.script.model.ExecutionRequest}
        * @since 1.13
        */
@@ -2808,22 +2808,22 @@ public class Script extends com.google.api.client.googleapis.services.json.Abstr
       }
 
       /**
-       * The script ID of the script to be executed. To find the script ID, open the project in the
-       * script editor and select **File > Project properties**.
+       * The script ID of the script to be executed. Find the script ID on the **Project settings**
+       * page under "IDs."
        */
       @com.google.api.client.util.Key
       private java.lang.String scriptId;
 
-      /** The script ID of the script to be executed. To find the script ID, open the project in the script
-     editor and select **File > Project properties**.
+      /** The script ID of the script to be executed. Find the script ID on the **Project settings** page
+     under "IDs."
        */
       public java.lang.String getScriptId() {
         return scriptId;
       }
 
       /**
-       * The script ID of the script to be executed. To find the script ID, open the project in the
-       * script editor and select **File > Project properties**.
+       * The script ID of the script to be executed. Find the script ID on the **Project settings**
+       * page under "IDs."
        */
       public Run setScriptId(java.lang.String scriptId) {
         this.scriptId = scriptId;

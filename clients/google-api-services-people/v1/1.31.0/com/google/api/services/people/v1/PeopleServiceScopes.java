@@ -38,7 +38,7 @@ public class PeopleServiceScopes {
   /** View your street addresses. */
   public static final String USER_ADDRESSES_READ = "https://www.googleapis.com/auth/user.addresses.read";
 
-  /** View your complete date of birth. */
+  /** See and download your exact date of birth. */
   public static final String USER_BIRTHDAY_READ = "https://www.googleapis.com/auth/user.birthday.read";
 
   /** View your email addresses. */
@@ -50,7 +50,7 @@ public class PeopleServiceScopes {
   /** See your education, work history and org info. */
   public static final String USER_ORGANIZATION_READ = "https://www.googleapis.com/auth/user.organization.read";
 
-  /** View your phone numbers. */
+  /** See and download your personal phone numbers. */
   public static final String USER_PHONENUMBERS_READ = "https://www.googleapis.com/auth/user.phonenumbers.read";
 
   /** View your email address. */

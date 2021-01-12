@@ -121,6 +121,29 @@ public final class Queue extends com.google.api.client.json.GenericJson {
   private QueueStats stats;
 
   /**
+   * The maximum amount of time that a task will be retained in this queue. Queues created by Cloud
+   * Tasks have a default `task_ttl` of 31 days. After a task has lived for `task_ttl`, the task
+   * will be deleted regardless of whether it was dispatched or not. The `task_ttl` for queues
+   * created via queue.yaml/xml is equal to the maximum duration because there is a [storage
+   * quota](https://cloud.google.com/appengine/quotas#Task_Queue) for these queues. To view the
+   * maximum valid duration, see the documentation for Duration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String taskTtl;
+
+  /**
+   * The task tombstone time to live (TTL). After a task is deleted or executed, the task's
+   * tombstone is retained for the length of time specified by `tombstone_ttl`. The tombstone is
+   * used by task de-duplication; another task with the same name can't be created until the
+   * tombstone has expired. For more information about task de-duplication, see the documentation
+   * for CreateTaskRequest. Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String tombstoneTtl;
+
+  /**
    * Immutable. The type of a queue (push or pull). `Queue.type` is an immutable property of the
    * queue that is set at the queue creation time. When left unspecified, the default value of
    * `PUSH` is selected.
@@ -330,6 +353,58 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    */
   public Queue setStats(QueueStats stats) {
     this.stats = stats;
+    return this;
+  }
+
+  /**
+   * The maximum amount of time that a task will be retained in this queue. Queues created by Cloud
+   * Tasks have a default `task_ttl` of 31 days. After a task has lived for `task_ttl`, the task
+   * will be deleted regardless of whether it was dispatched or not. The `task_ttl` for queues
+   * created via queue.yaml/xml is equal to the maximum duration because there is a [storage
+   * quota](https://cloud.google.com/appengine/quotas#Task_Queue) for these queues. To view the
+   * maximum valid duration, see the documentation for Duration.
+   * @return value or {@code null} for none
+   */
+  public String getTaskTtl() {
+    return taskTtl;
+  }
+
+  /**
+   * The maximum amount of time that a task will be retained in this queue. Queues created by Cloud
+   * Tasks have a default `task_ttl` of 31 days. After a task has lived for `task_ttl`, the task
+   * will be deleted regardless of whether it was dispatched or not. The `task_ttl` for queues
+   * created via queue.yaml/xml is equal to the maximum duration because there is a [storage
+   * quota](https://cloud.google.com/appengine/quotas#Task_Queue) for these queues. To view the
+   * maximum valid duration, see the documentation for Duration.
+   * @param taskTtl taskTtl or {@code null} for none
+   */
+  public Queue setTaskTtl(String taskTtl) {
+    this.taskTtl = taskTtl;
+    return this;
+  }
+
+  /**
+   * The task tombstone time to live (TTL). After a task is deleted or executed, the task's
+   * tombstone is retained for the length of time specified by `tombstone_ttl`. The tombstone is
+   * used by task de-duplication; another task with the same name can't be created until the
+   * tombstone has expired. For more information about task de-duplication, see the documentation
+   * for CreateTaskRequest. Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.
+   * @return value or {@code null} for none
+   */
+  public String getTombstoneTtl() {
+    return tombstoneTtl;
+  }
+
+  /**
+   * The task tombstone time to live (TTL). After a task is deleted or executed, the task's
+   * tombstone is retained for the length of time specified by `tombstone_ttl`. The tombstone is
+   * used by task de-duplication; another task with the same name can't be created until the
+   * tombstone has expired. For more information about task de-duplication, see the documentation
+   * for CreateTaskRequest. Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.
+   * @param tombstoneTtl tombstoneTtl or {@code null} for none
+   */
+  public Queue setTombstoneTtl(String tombstoneTtl) {
+    this.tombstoneTtl = tombstoneTtl;
     return this;
   }
 

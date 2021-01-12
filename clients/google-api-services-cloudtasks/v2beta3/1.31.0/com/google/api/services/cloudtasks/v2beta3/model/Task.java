@@ -122,7 +122,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * set through Cloud Tasks API. Its purpose, currently is to provide backward compatibility with
    * App Engine Task Queue
    * [pull](https://cloud.google.com/appengine/docs/standard/java/taskqueue/pull/) queues to provide
-   * a way to inspect contents of pull tasks through the CloudTasks.
+   * a way to inspect contents of pull tasks through the CloudTasks.GetTask.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -356,7 +356,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * set through Cloud Tasks API. Its purpose, currently is to provide backward compatibility with
    * App Engine Task Queue
    * [pull](https://cloud.google.com/appengine/docs/standard/java/taskqueue/pull/) queues to provide
-   * a way to inspect contents of pull tasks through the CloudTasks.
+   * a way to inspect contents of pull tasks through the CloudTasks.GetTask.
    * @return value or {@code null} for none
    */
   public PullMessage getPullMessage() {
@@ -368,7 +368,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
    * set through Cloud Tasks API. Its purpose, currently is to provide backward compatibility with
    * App Engine Task Queue
    * [pull](https://cloud.google.com/appengine/docs/standard/java/taskqueue/pull/) queues to provide
-   * a way to inspect contents of pull tasks through the CloudTasks.
+   * a way to inspect contents of pull tasks through the CloudTasks.GetTask.
    * @param pullMessage pullMessage or {@code null} for none
    */
   public Task setPullMessage(PullMessage pullMessage) {

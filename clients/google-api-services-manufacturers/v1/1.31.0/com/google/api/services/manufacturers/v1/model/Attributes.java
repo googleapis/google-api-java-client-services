@@ -18,7 +18,7 @@ package com.google.api.services.manufacturers.v1.model;
 
 /**
  * Attributes of the product. For more information, see
- * https://support.google.com/manufacturers/answer/6124116. Next tag: 47
+ * https://support.google.com/manufacturers/answer/6124116. Next tag: 48
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Manufacturer Center API. For a detailed explanation
@@ -196,6 +196,14 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<ProductDetail> productDetail;
+
+  /**
+   * The product highlights. For more information, see
+   * https://support.google.com/manufacturers/answer/10066942
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> productHighlight;
 
   /**
    * The name of the group of products related to the product. For more information, see
@@ -708,6 +716,25 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setProductDetail(java.util.List<ProductDetail> productDetail) {
     this.productDetail = productDetail;
+    return this;
+  }
+
+  /**
+   * The product highlights. For more information, see
+   * https://support.google.com/manufacturers/answer/10066942
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProductHighlight() {
+    return productHighlight;
+  }
+
+  /**
+   * The product highlights. For more information, see
+   * https://support.google.com/manufacturers/answer/10066942
+   * @param productHighlight productHighlight or {@code null} for none
+   */
+  public Attributes setProductHighlight(java.util.List<java.lang.String> productHighlight) {
+    this.productHighlight = productHighlight;
     return this;
   }
 

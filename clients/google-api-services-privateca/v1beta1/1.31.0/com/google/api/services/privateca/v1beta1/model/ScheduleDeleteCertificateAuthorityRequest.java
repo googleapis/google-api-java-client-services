@@ -31,6 +31,14 @@ package com.google.api.services.privateca.v1beta1.model;
 public final class ScheduleDeleteCertificateAuthorityRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. This field allows the CA to be scheduled for deletion even if the CA has active
+   * certs. Active certs include both unrevoked and unexpired certs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreActiveCertificates;
+
+  /**
    * Optional. An ID to identify requests. Specify a unique request ID so that if you must retry
    * your request, the server will know to ignore the request if it has already been completed. The
    * server will guarantee that for at least 60 minutes since the first request. For example,
@@ -43,6 +51,25 @@ public final class ScheduleDeleteCertificateAuthorityRequest extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * Optional. This field allows the CA to be scheduled for deletion even if the CA has active
+   * certs. Active certs include both unrevoked and unexpired certs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreActiveCertificates() {
+    return ignoreActiveCertificates;
+  }
+
+  /**
+   * Optional. This field allows the CA to be scheduled for deletion even if the CA has active
+   * certs. Active certs include both unrevoked and unexpired certs.
+   * @param ignoreActiveCertificates ignoreActiveCertificates or {@code null} for none
+   */
+  public ScheduleDeleteCertificateAuthorityRequest setIgnoreActiveCertificates(java.lang.Boolean ignoreActiveCertificates) {
+    this.ignoreActiveCertificates = ignoreActiveCertificates;
+    return this;
+  }
 
   /**
    * Optional. An ID to identify requests. Specify a unique request ID so that if you must retry

@@ -77,13 +77,6 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
   private java.lang.String name;
 
   /**
-   * Immutable. Format: properties/{propertyId}
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String parent;
-
-  /**
    * Output only. Time when this link was last updated.
    * The value may be {@code null}.
    */
@@ -197,23 +190,6 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
    */
   public GoogleAnalyticsAdminV1alphaGoogleAdsLink setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Immutable. Format: properties/{propertyId}
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getParent() {
-    return parent;
-  }
-
-  /**
-   * Immutable. Format: properties/{propertyId}
-   * @param parent parent or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaGoogleAdsLink setParent(java.lang.String parent) {
-    this.parent = parent;
     return this;
   }
 

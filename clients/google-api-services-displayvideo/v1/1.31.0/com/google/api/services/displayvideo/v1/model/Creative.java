@@ -333,7 +333,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: * `CREATIVE_TYPE_STANDARD`
    * * `CREATIVE_TYPE_EXPANDABLE` Third-party VAST tag creatives are creatives with following
    * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
-   * `CREATIVE_TYPE_VIDEO`
+   * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -438,7 +438,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * Optional. The URL of the VAST tag for a third-party VAST tag creative. Required and only valid
    * for third-party VAST tag creatives. Third-party VAST tag creatives are creatives with following
    * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
-   * `CREATIVE_TYPE_VIDEO`
+   * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1124,7 +1124,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: * `CREATIVE_TYPE_STANDARD`
    * * `CREATIVE_TYPE_EXPANDABLE` Third-party VAST tag creatives are creatives with following
    * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
-   * `CREATIVE_TYPE_VIDEO`
+   * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequirePingForAttribution() {
@@ -1139,7 +1139,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: * `CREATIVE_TYPE_STANDARD`
    * * `CREATIVE_TYPE_EXPANDABLE` Third-party VAST tag creatives are creatives with following
    * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
-   * `CREATIVE_TYPE_VIDEO`
+   * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
    * @param requirePingForAttribution requirePingForAttribution or {@code null} for none
    */
   public Creative setRequirePingForAttribution(java.lang.Boolean requirePingForAttribution) {
@@ -1371,7 +1371,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * Optional. The URL of the VAST tag for a third-party VAST tag creative. Required and only valid
    * for third-party VAST tag creatives. Third-party VAST tag creatives are creatives with following
    * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
-   * `CREATIVE_TYPE_VIDEO`
+   * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
    * @return value or {@code null} for none
    */
   public java.lang.String getVastTagUrl() {
@@ -1382,7 +1382,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * Optional. The URL of the VAST tag for a third-party VAST tag creative. Required and only valid
    * for third-party VAST tag creatives. Third-party VAST tag creatives are creatives with following
    * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
-   * `CREATIVE_TYPE_VIDEO`
+   * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
    * @param vastTagUrl vastTagUrl or {@code null} for none
    */
   public Creative setVastTagUrl(java.lang.String vastTagUrl) {

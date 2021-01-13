@@ -66,9 +66,10 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRule extends com.goog
   private java.lang.String pubsubTopic;
 
   /**
-   * Optional. The schema version of the notification sent to `pubsub_topic`. Only "1.0" is
-   * accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs
-   * /how-to/budgets-programmatic-notifications#notification_format
+   * Optional. Required when NotificationsRule.pubsub_topic is set. The schema version of the
+   * notification sent to NotificationsRule.pubsub_topic. Only "1.0" is accepted. It represents the
+   * JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-
+   * notifications#notification_format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,9 +155,10 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRule extends com.goog
   }
 
   /**
-   * Optional. The schema version of the notification sent to `pubsub_topic`. Only "1.0" is
-   * accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs
-   * /how-to/budgets-programmatic-notifications#notification_format
+   * Optional. Required when NotificationsRule.pubsub_topic is set. The schema version of the
+   * notification sent to NotificationsRule.pubsub_topic. Only "1.0" is accepted. It represents the
+   * JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-
+   * notifications#notification_format.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchemaVersion() {
@@ -164,9 +166,10 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRule extends com.goog
   }
 
   /**
-   * Optional. The schema version of the notification sent to `pubsub_topic`. Only "1.0" is
-   * accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs
-   * /how-to/budgets-programmatic-notifications#notification_format
+   * Optional. Required when NotificationsRule.pubsub_topic is set. The schema version of the
+   * notification sent to NotificationsRule.pubsub_topic. Only "1.0" is accepted. It represents the
+   * JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-
+   * notifications#notification_format.
    * @param schemaVersion schemaVersion or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1NotificationsRule setSchemaVersion(java.lang.String schemaVersion) {

@@ -63,8 +63,8 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The list of contact person resource names that are members of the contact group.
-   * The field is not populated for LIST requests and can only be updated through the
-   * [ModifyContactGroupMembers](/people/api/rest/v1/contactgroups/members/modify).
+   * The field is only populated for GET requests and will only return as many members as
+   * `maxMembers` in the get request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,8 +170,8 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The list of contact person resource names that are members of the contact group.
-   * The field is not populated for LIST requests and can only be updated through the
-   * [ModifyContactGroupMembers](/people/api/rest/v1/contactgroups/members/modify).
+   * The field is only populated for GET requests and will only return as many members as
+   * `maxMembers` in the get request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMemberResourceNames() {
@@ -180,8 +180,8 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The list of contact person resource names that are members of the contact group.
-   * The field is not populated for LIST requests and can only be updated through the
-   * [ModifyContactGroupMembers](/people/api/rest/v1/contactgroups/members/modify).
+   * The field is only populated for GET requests and will only return as many members as
+   * `maxMembers` in the get request.
    * @param memberResourceNames memberResourceNames or {@code null} for none
    */
   public ContactGroup setMemberResourceNames(java.util.List<java.lang.String> memberResourceNames) {

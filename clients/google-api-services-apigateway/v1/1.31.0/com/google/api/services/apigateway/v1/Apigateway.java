@@ -25,7 +25,7 @@ package com.google.api.services.apigateway.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href=" https://cloud.google.com/api-gateway/docs" target="_blank">API Documentation</a>
+ * <a href="https://cloud.google.com/api-gateway/docs" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

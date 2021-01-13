@@ -3237,7 +3237,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        *
        * @param userId The user's email address. The special value `me` can be used to indicate the authenticated user.
        *        [default: me]
-       * @param id The ID of the message to retrieve.
+       * @param id The ID of the message to retrieve. This ID is usually retrieved using `messages.list`. The ID is
+       *        also contained in the result when a message is inserted (`messages.insert`) or imported
+       *        (`messages.import`).
        * @return the request
        */
       public Get get(java.lang.String userId, java.lang.String id) throws java.io.IOException {
@@ -3262,7 +3264,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          *
          * @param userId The user's email address. The special value `me` can be used to indicate the authenticated user.
        *        [default: me]
-         * @param id The ID of the message to retrieve.
+         * @param id The ID of the message to retrieve. This ID is usually retrieved using `messages.list`. The ID is
+       *        also contained in the result when a message is inserted (`messages.insert`) or imported
+       *        (`messages.import`).
          * @since 1.13
          */
         protected Get(java.lang.String userId, java.lang.String id) {
@@ -3359,17 +3363,27 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           return this;
         }
 
-        /** The ID of the message to retrieve. */
+        /**
+         * The ID of the message to retrieve. This ID is usually retrieved using `messages.list`.
+         * The ID is also contained in the result when a message is inserted (`messages.insert`) or
+         * imported (`messages.import`).
+         */
         @com.google.api.client.util.Key
         private java.lang.String id;
 
-        /** The ID of the message to retrieve.
+        /** The ID of the message to retrieve. This ID is usually retrieved using `messages.list`. The ID is
+       also contained in the result when a message is inserted (`messages.insert`) or imported
+       (`messages.import`).
          */
         public java.lang.String getId() {
           return id;
         }
 
-        /** The ID of the message to retrieve. */
+        /**
+         * The ID of the message to retrieve. This ID is usually retrieved using `messages.list`.
+         * The ID is also contained in the result when a message is inserted (`messages.insert`) or
+         * imported (`messages.import`).
+         */
         public Get setId(java.lang.String id) {
           this.id = id;
           return this;

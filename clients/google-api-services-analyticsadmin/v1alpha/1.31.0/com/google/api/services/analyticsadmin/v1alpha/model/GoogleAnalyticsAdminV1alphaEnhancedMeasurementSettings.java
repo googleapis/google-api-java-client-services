@@ -32,50 +32,12 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Capture events when your visitors view content on your site that has articles or blog posts.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean articlesAndBlogsEnabled;
-
-  /**
-   * Capture events when your visitors view content on your site that has structured data (eg,
-   * articles, blog posts, product details screens, etc.).
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean contentViewsEnabled;
-
-  /**
-   * If enabled, capture a click event each time a visitor clicks a link or element that has data
-   * attributes beginning with "data-ga".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean dataTaggedElementClicksEnabled;
-
-  /**
-   * Domains to exclude from measurement. Max length is 1024 characters.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String excludedDomains;
-
-  /**
    * If enabled, capture a file download event each time a link is clicked with a common document,
    * compressed file, application, video, or audio extension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean fileDownloadsEnabled;
-
-  /**
-   * If enabled, capture a view search results event each time a visitor interacts with a form on
-   * your site.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean formInteractionsEnabled;
 
   /**
    * Output only. Resource name of this Data Stream. Format:
@@ -102,7 +64,7 @@ public final class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings extend
   private java.lang.Boolean pageChangesEnabled;
 
   /**
-   * If enabled, capture a page view event each time a page loads.
+   * Output only. If enabled, capture a page view event each time a page loads.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,14 +77,6 @@ public final class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings extend
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean pageViewsEnabled;
-
-  /**
-   * Capture events when your visitors view content on your site that has product details screens,
-   * etc.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean productsAndEcommerceEnabled;
 
   /**
    * If enabled, capture scroll events each time a visitor gets to the bottom of a page.
@@ -161,7 +115,7 @@ public final class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings extend
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String urlQueryParameter;
+  private java.lang.String uriQueryParameter;
 
   /**
    * If enabled, capture video play, progress, and complete events as visitors view embedded videos
@@ -170,78 +124,6 @@ public final class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings extend
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean videoEngagementEnabled;
-
-  /**
-   * Capture events when your visitors view content on your site that has articles or blog posts.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getArticlesAndBlogsEnabled() {
-    return articlesAndBlogsEnabled;
-  }
-
-  /**
-   * Capture events when your visitors view content on your site that has articles or blog posts.
-   * @param articlesAndBlogsEnabled articlesAndBlogsEnabled or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setArticlesAndBlogsEnabled(java.lang.Boolean articlesAndBlogsEnabled) {
-    this.articlesAndBlogsEnabled = articlesAndBlogsEnabled;
-    return this;
-  }
-
-  /**
-   * Capture events when your visitors view content on your site that has structured data (eg,
-   * articles, blog posts, product details screens, etc.).
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getContentViewsEnabled() {
-    return contentViewsEnabled;
-  }
-
-  /**
-   * Capture events when your visitors view content on your site that has structured data (eg,
-   * articles, blog posts, product details screens, etc.).
-   * @param contentViewsEnabled contentViewsEnabled or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setContentViewsEnabled(java.lang.Boolean contentViewsEnabled) {
-    this.contentViewsEnabled = contentViewsEnabled;
-    return this;
-  }
-
-  /**
-   * If enabled, capture a click event each time a visitor clicks a link or element that has data
-   * attributes beginning with "data-ga".
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getDataTaggedElementClicksEnabled() {
-    return dataTaggedElementClicksEnabled;
-  }
-
-  /**
-   * If enabled, capture a click event each time a visitor clicks a link or element that has data
-   * attributes beginning with "data-ga".
-   * @param dataTaggedElementClicksEnabled dataTaggedElementClicksEnabled or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setDataTaggedElementClicksEnabled(java.lang.Boolean dataTaggedElementClicksEnabled) {
-    this.dataTaggedElementClicksEnabled = dataTaggedElementClicksEnabled;
-    return this;
-  }
-
-  /**
-   * Domains to exclude from measurement. Max length is 1024 characters.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getExcludedDomains() {
-    return excludedDomains;
-  }
-
-  /**
-   * Domains to exclude from measurement. Max length is 1024 characters.
-   * @param excludedDomains excludedDomains or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setExcludedDomains(java.lang.String excludedDomains) {
-    this.excludedDomains = excludedDomains;
-    return this;
-  }
 
   /**
    * If enabled, capture a file download event each time a link is clicked with a common document,
@@ -259,25 +141,6 @@ public final class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings extend
    */
   public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setFileDownloadsEnabled(java.lang.Boolean fileDownloadsEnabled) {
     this.fileDownloadsEnabled = fileDownloadsEnabled;
-    return this;
-  }
-
-  /**
-   * If enabled, capture a view search results event each time a visitor interacts with a form on
-   * your site.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getFormInteractionsEnabled() {
-    return formInteractionsEnabled;
-  }
-
-  /**
-   * If enabled, capture a view search results event each time a visitor interacts with a form on
-   * your site.
-   * @param formInteractionsEnabled formInteractionsEnabled or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setFormInteractionsEnabled(java.lang.Boolean formInteractionsEnabled) {
-    this.formInteractionsEnabled = formInteractionsEnabled;
     return this;
   }
 
@@ -339,7 +202,7 @@ public final class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings extend
   }
 
   /**
-   * If enabled, capture a page view event each time a page loads.
+   * Output only. If enabled, capture a page view event each time a page loads.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPageLoadsEnabled() {
@@ -347,7 +210,7 @@ public final class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings extend
   }
 
   /**
-   * If enabled, capture a page view event each time a page loads.
+   * Output only. If enabled, capture a page view event each time a page loads.
    * @param pageLoadsEnabled pageLoadsEnabled or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setPageLoadsEnabled(java.lang.Boolean pageLoadsEnabled) {
@@ -371,25 +234,6 @@ public final class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings extend
    */
   public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setPageViewsEnabled(java.lang.Boolean pageViewsEnabled) {
     this.pageViewsEnabled = pageViewsEnabled;
-    return this;
-  }
-
-  /**
-   * Capture events when your visitors view content on your site that has product details screens,
-   * etc.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getProductsAndEcommerceEnabled() {
-    return productsAndEcommerceEnabled;
-  }
-
-  /**
-   * Capture events when your visitors view content on your site that has product details screens,
-   * etc.
-   * @param productsAndEcommerceEnabled productsAndEcommerceEnabled or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setProductsAndEcommerceEnabled(java.lang.Boolean productsAndEcommerceEnabled) {
-    this.productsAndEcommerceEnabled = productsAndEcommerceEnabled;
     return this;
   }
 
@@ -473,16 +317,16 @@ public final class GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings extend
    * Additional URL query parameters. Max length is 1024 characters.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUrlQueryParameter() {
-    return urlQueryParameter;
+  public java.lang.String getUriQueryParameter() {
+    return uriQueryParameter;
   }
 
   /**
    * Additional URL query parameters. Max length is 1024 characters.
-   * @param urlQueryParameter urlQueryParameter or {@code null} for none
+   * @param uriQueryParameter uriQueryParameter or {@code null} for none
    */
-  public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setUrlQueryParameter(java.lang.String urlQueryParameter) {
-    this.urlQueryParameter = urlQueryParameter;
+  public GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings setUriQueryParameter(java.lang.String uriQueryParameter) {
+    this.uriQueryParameter = uriQueryParameter;
     return this;
   }
 

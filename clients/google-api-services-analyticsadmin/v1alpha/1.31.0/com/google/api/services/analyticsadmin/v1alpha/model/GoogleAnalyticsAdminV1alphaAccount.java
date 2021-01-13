@@ -31,14 +31,6 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Country of business. Must be a non-deprecated code for a UN M.49 region.
-   * https://unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String countryCode;
-
-  /**
    * Output only. Time when this account was originally created.
    * The value may be {@code null}.
    */
@@ -68,30 +60,18 @@ public final class GoogleAnalyticsAdminV1alphaAccount extends com.google.api.cli
   private java.lang.String name;
 
   /**
+   * Country of business. Must be a Unicode CLDR region code.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regionCode;
+
+  /**
    * Output only. Time when account payload fields were last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
-
-  /**
-   * Country of business. Must be a non-deprecated code for a UN M.49 region.
-   * https://unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCountryCode() {
-    return countryCode;
-  }
-
-  /**
-   * Country of business. Must be a non-deprecated code for a UN M.49 region.
-   * https://unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html
-   * @param countryCode countryCode or {@code null} for none
-   */
-  public GoogleAnalyticsAdminV1alphaAccount setCountryCode(java.lang.String countryCode) {
-    this.countryCode = countryCode;
-    return this;
-  }
 
   /**
    * Output only. Time when this account was originally created.
@@ -160,6 +140,23 @@ public final class GoogleAnalyticsAdminV1alphaAccount extends com.google.api.cli
    */
   public GoogleAnalyticsAdminV1alphaAccount setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Country of business. Must be a Unicode CLDR region code.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegionCode() {
+    return regionCode;
+  }
+
+  /**
+   * Country of business. Must be a Unicode CLDR region code.
+   * @param regionCode regionCode or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaAccount setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
     return this;
   }
 

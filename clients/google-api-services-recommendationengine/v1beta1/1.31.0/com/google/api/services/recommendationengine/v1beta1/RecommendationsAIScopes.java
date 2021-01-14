@@ -17,7 +17,7 @@
 package com.google.api.services.recommendationengine.v1beta1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Recommendations AI.
+ * Available OAuth 2.0 scopes for use with the Recommendations AI (Beta).
  *
  * @since 1.4
  */

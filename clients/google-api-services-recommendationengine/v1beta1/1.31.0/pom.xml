@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-recommendationengine</artifactId>
-  <version>v1beta1-rev20201212-1.31.0</version>
-  <name>Recommendations AI v1beta1-rev20201212-1.31.0</name>
+  <version>v1beta1-rev20210108-1.31.0</version>
+  <name>Recommendations AI (Beta) v1beta1-rev20210108-1.31.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Recommendations AI ${project.version}</doctitle>
-          <windowtitle>Recommendations AI ${project.version}</windowtitle>
+          <doctitle>Recommendations AI (Beta) ${project.version}</doctitle>
+          <windowtitle>Recommendations AI (Beta) ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.38.0/</link>

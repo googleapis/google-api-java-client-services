@@ -20,7 +20,7 @@ package com.google.api.services.recommendationengine.v1beta1;
  * Service definition for RecommendationsAI (v1beta1).
  *
  * <p>
- * Recommendations AI service enables customers to build end-to-end personalized recommendation systems without requiring a high level of expertise in machine learning, recommendation system, or Google Cloud.
+ * Note that we now highly recommend new customers to use Retail API that incorporates the GA version of the Recommendations AI funtionalities. To enable Retail API, please visit https://console.cloud.google.com/apis/library/retail.googleapis.com. This is Recommendations AI service enables customers to build end-to-end personalized recommendation systems without requiring a high level of expertise in machine learning, recommendation system, or Google Cloud.
  * </p>
  *
  * <p>
@@ -48,7 +48,7 @@ public class RecommendationsAI extends com.google.api.client.googleapis.services
         com.google.api.client.googleapis.GoogleUtils.BUGFIX_VERSION >= 1)),
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "1.31.0 of the Recommendations AI library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "1.31.0 of the Recommendations AI (Beta) library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**

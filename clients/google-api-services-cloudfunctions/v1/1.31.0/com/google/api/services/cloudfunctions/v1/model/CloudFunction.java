@@ -52,6 +52,19 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String buildId;
 
   /**
+   * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The
+   * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * {project} and {region} are the project id and region respectively where the worker pool is
+   * defined and {workerPool} is the short name of the worker pool. If the project id is not the
+   * same as the function, then the Cloud Functions Service Agent (service-@gcf-admin-
+   * robot.iam.gserviceaccount.com) must be granted the role Cloud Build Custom Workers Builder
+   * (roles/cloudbuild.customworkers.builder) in the project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buildWorkerPool;
+
+  /**
    * User-provided description of a function.
    * The value may be {@code null}.
    */
@@ -273,6 +286,35 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
    */
   public CloudFunction setBuildId(java.lang.String buildId) {
     this.buildId = buildId;
+    return this;
+  }
+
+  /**
+   * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The
+   * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * {project} and {region} are the project id and region respectively where the worker pool is
+   * defined and {workerPool} is the short name of the worker pool. If the project id is not the
+   * same as the function, then the Cloud Functions Service Agent (service-@gcf-admin-
+   * robot.iam.gserviceaccount.com) must be granted the role Cloud Build Custom Workers Builder
+   * (roles/cloudbuild.customworkers.builder) in the project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuildWorkerPool() {
+    return buildWorkerPool;
+  }
+
+  /**
+   * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The
+   * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * {project} and {region} are the project id and region respectively where the worker pool is
+   * defined and {workerPool} is the short name of the worker pool. If the project id is not the
+   * same as the function, then the Cloud Functions Service Agent (service-@gcf-admin-
+   * robot.iam.gserviceaccount.com) must be granted the role Cloud Build Custom Workers Builder
+   * (roles/cloudbuild.customworkers.builder) in the project.
+   * @param buildWorkerPool buildWorkerPool or {@code null} for none
+   */
+  public CloudFunction setBuildWorkerPool(java.lang.String buildWorkerPool) {
+    this.buildWorkerPool = buildWorkerPool;
     return this;
   }
 

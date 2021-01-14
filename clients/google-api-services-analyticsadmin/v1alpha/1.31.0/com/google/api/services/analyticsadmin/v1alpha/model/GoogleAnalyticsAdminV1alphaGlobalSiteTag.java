@@ -31,12 +31,39 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaGlobalSiteTag extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Resource name for this GlobalSiteTag resource. Format:
+   * properties/{propertyId}/globalSiteTag
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Immutable. JavaScript code snippet to be pasted as the first item into the head tag of every
    * webpage to measure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String snippet;
+
+  /**
+   * Output only. Resource name for this GlobalSiteTag resource. Format:
+   * properties/{propertyId}/globalSiteTag
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Output only. Resource name for this GlobalSiteTag resource. Format:
+   * properties/{propertyId}/globalSiteTag
+   * @param name name or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaGlobalSiteTag setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
 
   /**
    * Immutable. JavaScript code snippet to be pasted as the first item into the head tag of every

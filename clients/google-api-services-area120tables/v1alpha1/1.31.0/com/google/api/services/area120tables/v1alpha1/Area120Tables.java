@@ -601,6 +601,137 @@ public class Area120Tables extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
+       * Deletes multiple rows.
+       *
+       * Create a request for the method "rows.batchDelete".
+       *
+       * This request holds the parameters needed by the area120tables server.  After setting any optional
+       * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent table shared by all rows being deleted. Format: tables/{table}
+       * @param content the {@link com.google.api.services.area120tables.v1alpha1.model.BatchDeleteRowsRequest}
+       * @return the request
+       */
+      public BatchDelete batchDelete(java.lang.String parent, com.google.api.services.area120tables.v1alpha1.model.BatchDeleteRowsRequest content) throws java.io.IOException {
+        BatchDelete result = new BatchDelete(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BatchDelete extends Area120TablesRequest<com.google.api.services.area120tables.v1alpha1.model.Empty> {
+
+        private static final String REST_PATH = "v1alpha1/{+parent}/rows:batchDelete";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^tables/[^/]+$");
+
+        /**
+         * Deletes multiple rows.
+         *
+         * Create a request for the method "rows.batchDelete".
+         *
+         * This request holds the parameters needed by the the area120tables server.  After setting any
+         * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent table shared by all rows being deleted. Format: tables/{table}
+         * @param content the {@link com.google.api.services.area120tables.v1alpha1.model.BatchDeleteRowsRequest}
+         * @since 1.13
+         */
+        protected BatchDelete(java.lang.String parent, com.google.api.services.area120tables.v1alpha1.model.BatchDeleteRowsRequest content) {
+          super(Area120Tables.this, "POST", REST_PATH, content, com.google.api.services.area120tables.v1alpha1.model.Empty.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^tables/[^/]+$");
+          }
+        }
+
+        @Override
+        public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+          return (BatchDelete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BatchDelete setAccessToken(java.lang.String accessToken) {
+          return (BatchDelete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BatchDelete setAlt(java.lang.String alt) {
+          return (BatchDelete) super.setAlt(alt);
+        }
+
+        @Override
+        public BatchDelete setCallback(java.lang.String callback) {
+          return (BatchDelete) super.setCallback(callback);
+        }
+
+        @Override
+        public BatchDelete setFields(java.lang.String fields) {
+          return (BatchDelete) super.setFields(fields);
+        }
+
+        @Override
+        public BatchDelete setKey(java.lang.String key) {
+          return (BatchDelete) super.setKey(key);
+        }
+
+        @Override
+        public BatchDelete setOauthToken(java.lang.String oauthToken) {
+          return (BatchDelete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BatchDelete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+          return (BatchDelete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BatchDelete setUploadType(java.lang.String uploadType) {
+          return (BatchDelete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent table shared by all rows being deleted. Format: tables/{table} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent table shared by all rows being deleted. Format: tables/{table}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent table shared by all rows being deleted. Format: tables/{table} */
+        public BatchDelete setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^tables/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public BatchDelete set(String parameterName, Object value) {
+          return (BatchDelete) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates multiple rows.
        *
        * Create a request for the method "rows.batchUpdate".

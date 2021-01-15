@@ -48,6 +48,14 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private java.lang.String dagGcsPrefix;
 
   /**
+   * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow
+   * software.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseConfig databaseConfig;
+
+  /**
    * Output only. The Kubernetes Engine cluster used to run this environment.
    * The value may be {@code null}.
    */
@@ -81,6 +89,13 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private SoftwareConfig softwareConfig;
+
+  /**
+   * Optional. The configuration settings for the Airflow web server App Engine instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WebServerConfig webServerConfig;
 
   /**
    * Optional. The network-level access control policy for the Airflow web server. If unspecified,
@@ -129,6 +144,25 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setDagGcsPrefix(java.lang.String dagGcsPrefix) {
     this.dagGcsPrefix = dagGcsPrefix;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow
+   * software.
+   * @return value or {@code null} for none
+   */
+  public DatabaseConfig getDatabaseConfig() {
+    return databaseConfig;
+  }
+
+  /**
+   * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow
+   * software.
+   * @param databaseConfig databaseConfig or {@code null} for none
+   */
+  public EnvironmentConfig setDatabaseConfig(DatabaseConfig databaseConfig) {
+    this.databaseConfig = databaseConfig;
     return this;
   }
 
@@ -214,6 +248,23 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setSoftwareConfig(SoftwareConfig softwareConfig) {
     this.softwareConfig = softwareConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration settings for the Airflow web server App Engine instance.
+   * @return value or {@code null} for none
+   */
+  public WebServerConfig getWebServerConfig() {
+    return webServerConfig;
+  }
+
+  /**
+   * Optional. The configuration settings for the Airflow web server App Engine instance.
+   * @param webServerConfig webServerConfig or {@code null} for none
+   */
+  public EnvironmentConfig setWebServerConfig(WebServerConfig webServerConfig) {
+    this.webServerConfig = webServerConfig;
     return this;
   }
 

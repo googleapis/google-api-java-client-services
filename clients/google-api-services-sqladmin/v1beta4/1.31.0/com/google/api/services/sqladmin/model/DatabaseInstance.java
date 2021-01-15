@@ -259,11 +259,11 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The current serving state of the Cloud SQL instance. This can be one of the following.
    * *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The
-   * instance has been stopped by owner. It is not currently running, but it's ready to be
-   * restarted. *SUSPENDED*: The instance is not available, for example due to problems with
-   * billing. for example due to problems with billing. *PENDING_DELETE*: The instance is being
-   * deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down
-   * for maintenance. *FAILED*: The instance creation failed.
+   * instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available,
+   * for example due to problems with billing. for example due to problems with billing.
+   * *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being
+   * created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation
+   * failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -820,11 +820,11 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The current serving state of the Cloud SQL instance. This can be one of the following.
    * *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The
-   * instance has been stopped by owner. It is not currently running, but it's ready to be
-   * restarted. *SUSPENDED*: The instance is not available, for example due to problems with
-   * billing. for example due to problems with billing. *PENDING_DELETE*: The instance is being
-   * deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down
-   * for maintenance. *FAILED*: The instance creation failed.
+   * instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available,
+   * for example due to problems with billing. for example due to problems with billing.
+   * *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being
+   * created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation
+   * failed.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -834,11 +834,11 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   /**
    * The current serving state of the Cloud SQL instance. This can be one of the following.
    * *SQL_INSTANCE_STATE_UNSPECIFIED*: The state of the instance is unknown. *RUNNABLE*: The
-   * instance has been stopped by owner. It is not currently running, but it's ready to be
-   * restarted. *SUSPENDED*: The instance is not available, for example due to problems with
-   * billing. for example due to problems with billing. *PENDING_DELETE*: The instance is being
-   * deleted. *PENDING_CREATE*: The instance is being created. *MAINTENANCE*: The instance is down
-   * for maintenance. *FAILED*: The instance creation failed.
+   * instance is running, or has been stopped by owner. *SUSPENDED*: The instance is not available,
+   * for example due to problems with billing. for example due to problems with billing.
+   * *PENDING_DELETE*: The instance is being deleted. *PENDING_CREATE*: The instance is being
+   * created. *MAINTENANCE*: The instance is down for maintenance. *FAILED*: The instance creation
+   * failed.
    * @param state state or {@code null} for none
    */
   public DatabaseInstance setState(java.lang.String state) {

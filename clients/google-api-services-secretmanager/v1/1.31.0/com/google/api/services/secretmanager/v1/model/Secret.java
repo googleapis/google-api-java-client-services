@@ -38,6 +38,14 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on
+   * output, regardless of what was sent on input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
+
+  /**
    * The labels assigned to this Secret. Label keys must be between 1 and 63 characters long, have a
    * UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression:
    * `\p{Ll}\p{Lo}{0,62}` Label values must be between 0 and 63 characters long, have a UTF-8
@@ -64,6 +72,13 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private Replication replication;
 
   /**
+   * Input only. The TTL for the Secret.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String ttl;
+
+  /**
    * Output only. The time at which the Secret was created.
    * @return value or {@code null} for none
    */
@@ -77,6 +92,25 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    */
   public Secret setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on
+   * output, regardless of what was sent on input.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Optional. Timestamp in UTC when the Secret is scheduled to expire. This is always provided on
+   * output, regardless of what was sent on input.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public Secret setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
     return this;
   }
 
@@ -138,6 +172,23 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    */
   public Secret setReplication(Replication replication) {
     this.replication = replication;
+    return this;
+  }
+
+  /**
+   * Input only. The TTL for the Secret.
+   * @return value or {@code null} for none
+   */
+  public String getTtl() {
+    return ttl;
+  }
+
+  /**
+   * Input only. The TTL for the Secret.
+   * @param ttl ttl or {@code null} for none
+   */
+  public Secret setTtl(String ttl) {
+    this.ttl = ttl;
     return this;
   }
 

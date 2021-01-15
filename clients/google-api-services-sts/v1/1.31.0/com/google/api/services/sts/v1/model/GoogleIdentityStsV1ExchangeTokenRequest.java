@@ -31,6 +31,15 @@ package com.google.api.services.sts.v1.model;
 public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The full resource name of the identity provider; for example:
+   * `//iam.googleapis.com/projects//workloadIdentityPools//providers/`. Required when exchanging an
+   * external credential for a Google access token.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String audience;
+
+  /**
    * Required. The grant type. Must be `urn:ietf:params:oauth:grant-type:token-exchange`, which
    * indicates a token exchange.
    * The value may be {@code null}.
@@ -55,6 +64,15 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
   private java.lang.String requestedTokenType;
 
   /**
+   * The OAuth 2.0 scopes to include on the resulting access token, formatted as a list of space-
+   * delimited, case-sensitive strings. Required when exchanging an external credential for a Google
+   * access token.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scope;
+
+  /**
    * Required. The input token. You can use a Google-issued OAuth 2.0 access token with this field
    * to obtain an access token with new security attributes applied, such as a Credential Access
    * Boundary. If an access token already contains security attributes, you cannot apply additional
@@ -71,6 +89,27 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String subjectTokenType;
+
+  /**
+   * The full resource name of the identity provider; for example:
+   * `//iam.googleapis.com/projects//workloadIdentityPools//providers/`. Required when exchanging an
+   * external credential for a Google access token.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAudience() {
+    return audience;
+  }
+
+  /**
+   * The full resource name of the identity provider; for example:
+   * `//iam.googleapis.com/projects//workloadIdentityPools//providers/`. Required when exchanging an
+   * external credential for a Google access token.
+   * @param audience audience or {@code null} for none
+   */
+  public GoogleIdentityStsV1ExchangeTokenRequest setAudience(java.lang.String audience) {
+    this.audience = audience;
+    return this;
+  }
 
   /**
    * Required. The grant type. Must be `urn:ietf:params:oauth:grant-type:token-exchange`, which
@@ -126,6 +165,27 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setRequestedTokenType(java.lang.String requestedTokenType) {
     this.requestedTokenType = requestedTokenType;
+    return this;
+  }
+
+  /**
+   * The OAuth 2.0 scopes to include on the resulting access token, formatted as a list of space-
+   * delimited, case-sensitive strings. Required when exchanging an external credential for a Google
+   * access token.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScope() {
+    return scope;
+  }
+
+  /**
+   * The OAuth 2.0 scopes to include on the resulting access token, formatted as a list of space-
+   * delimited, case-sensitive strings. Required when exchanging an external credential for a Google
+   * access token.
+   * @param scope scope or {@code null} for none
+   */
+  public GoogleIdentityStsV1ExchangeTokenRequest setScope(java.lang.String scope) {
+    this.scope = scope;
     return this;
   }
 

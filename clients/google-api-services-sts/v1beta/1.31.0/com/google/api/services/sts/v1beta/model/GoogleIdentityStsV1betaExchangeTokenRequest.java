@@ -128,7 +128,9 @@ public final class GoogleIdentityStsV1betaExchangeTokenRequest extends com.googl
   private java.lang.String subjectToken;
 
   /**
-   * Required. `urn:ietf:params:oauth:token-type:access_token`.
+   * Required. An identifier that indicates the type of the security token in the `subject_token`
+   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:aws
+   * :token-type:aws4_request`, and `urn:ietf:params:oauth:token-type:access_token`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -347,7 +349,9 @@ public final class GoogleIdentityStsV1betaExchangeTokenRequest extends com.googl
   }
 
   /**
-   * Required. `urn:ietf:params:oauth:token-type:access_token`.
+   * Required. An identifier that indicates the type of the security token in the `subject_token`
+   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:aws
+   * :token-type:aws4_request`, and `urn:ietf:params:oauth:token-type:access_token`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubjectTokenType() {
@@ -355,7 +359,9 @@ public final class GoogleIdentityStsV1betaExchangeTokenRequest extends com.googl
   }
 
   /**
-   * Required. `urn:ietf:params:oauth:token-type:access_token`.
+   * Required. An identifier that indicates the type of the security token in the `subject_token`
+   * parameter. Supported values are `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:aws
+   * :token-type:aws4_request`, and `urn:ietf:params:oauth:token-type:access_token`.
    * @param subjectTokenType subjectTokenType or {@code null} for none
    */
   public GoogleIdentityStsV1betaExchangeTokenRequest setSubjectTokenType(java.lang.String subjectTokenType) {

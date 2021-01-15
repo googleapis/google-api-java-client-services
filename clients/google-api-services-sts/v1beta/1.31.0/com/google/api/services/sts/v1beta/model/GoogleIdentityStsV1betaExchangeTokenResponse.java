@@ -41,10 +41,10 @@ public final class GoogleIdentityStsV1betaExchangeTokenResponse extends com.goog
   private java.lang.String accessToken;
 
   /**
-   * The amount of time, in seconds, between the time when the `access_token` was issued and the
-   * time when the `access_token` will expire. This field is absent when the `subject_token` in the
-   * request is a Google-issued, short-lived access token. In this case, the `access_token` has the
-   * same expiration time as the `subject_token`.
+   * The amount of time, in seconds, between the time when the access token was issued and the time
+   * when the access token will expire. This field is absent when the `subject_token` in the request
+   * is a Google-issued, short-lived access token. In this case, the access token has the same
+   * expiration time as the `subject_token`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("expires_in")
@@ -58,7 +58,7 @@ public final class GoogleIdentityStsV1betaExchangeTokenResponse extends com.goog
   private java.lang.String issuedTokenType;
 
   /**
-   * The type of `access_token`. Always has the value `Bearer`.
+   * The type of access token. Always has the value `Bearer`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("token_type")
@@ -88,10 +88,10 @@ public final class GoogleIdentityStsV1betaExchangeTokenResponse extends com.goog
   }
 
   /**
-   * The amount of time, in seconds, between the time when the `access_token` was issued and the
-   * time when the `access_token` will expire. This field is absent when the `subject_token` in the
-   * request is a Google-issued, short-lived access token. In this case, the `access_token` has the
-   * same expiration time as the `subject_token`.
+   * The amount of time, in seconds, between the time when the access token was issued and the time
+   * when the access token will expire. This field is absent when the `subject_token` in the request
+   * is a Google-issued, short-lived access token. In this case, the access token has the same
+   * expiration time as the `subject_token`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExpiresIn() {
@@ -99,10 +99,10 @@ public final class GoogleIdentityStsV1betaExchangeTokenResponse extends com.goog
   }
 
   /**
-   * The amount of time, in seconds, between the time when the `access_token` was issued and the
-   * time when the `access_token` will expire. This field is absent when the `subject_token` in the
-   * request is a Google-issued, short-lived access token. In this case, the `access_token` has the
-   * same expiration time as the `subject_token`.
+   * The amount of time, in seconds, between the time when the access token was issued and the time
+   * when the access token will expire. This field is absent when the `subject_token` in the request
+   * is a Google-issued, short-lived access token. In this case, the access token has the same
+   * expiration time as the `subject_token`.
    * @param expiresIn expiresIn or {@code null} for none
    */
   public GoogleIdentityStsV1betaExchangeTokenResponse setExpiresIn(java.lang.Integer expiresIn) {
@@ -128,7 +128,7 @@ public final class GoogleIdentityStsV1betaExchangeTokenResponse extends com.goog
   }
 
   /**
-   * The type of `access_token`. Always has the value `Bearer`.
+   * The type of access token. Always has the value `Bearer`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTokenType() {
@@ -136,7 +136,7 @@ public final class GoogleIdentityStsV1betaExchangeTokenResponse extends com.goog
   }
 
   /**
-   * The type of `access_token`. Always has the value `Bearer`.
+   * The type of access token. Always has the value `Bearer`.
    * @param tokenType tokenType or {@code null} for none
    */
   public GoogleIdentityStsV1betaExchangeTokenResponse setTokenType(java.lang.String tokenType) {

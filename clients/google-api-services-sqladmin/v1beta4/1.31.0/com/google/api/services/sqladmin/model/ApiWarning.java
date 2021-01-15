@@ -44,6 +44,13 @@ public final class ApiWarning extends com.google.api.client.json.GenericJson {
   private java.lang.String message;
 
   /**
+   * The region name for REGION_UNREACHABLE warning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * Code to uniquely identify the warning type.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class ApiWarning extends com.google.api.client.json.GenericJson {
    */
   public ApiWarning setMessage(java.lang.String message) {
     this.message = message;
+    return this;
+  }
+
+  /**
+   * The region name for REGION_UNREACHABLE warning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * The region name for REGION_UNREACHABLE warning.
+   * @param region region or {@code null} for none
+   */
+  public ApiWarning setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

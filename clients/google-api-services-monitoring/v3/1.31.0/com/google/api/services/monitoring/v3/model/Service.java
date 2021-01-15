@@ -67,6 +67,14 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here
+   * (https://istio.io/latest/docs/reference/config/metrics/)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IstioCanonicalService istioCanonicalService;
+
+  /**
    * Type used for Istio services scoped to an Istio mesh.
    * The value may be {@code null}.
    */
@@ -170,6 +178,25 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here
+   * (https://istio.io/latest/docs/reference/config/metrics/)
+   * @return value or {@code null} for none
+   */
+  public IstioCanonicalService getIstioCanonicalService() {
+    return istioCanonicalService;
+  }
+
+  /**
+   * Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here
+   * (https://istio.io/latest/docs/reference/config/metrics/)
+   * @param istioCanonicalService istioCanonicalService or {@code null} for none
+   */
+  public Service setIstioCanonicalService(IstioCanonicalService istioCanonicalService) {
+    this.istioCanonicalService = istioCanonicalService;
     return this;
   }
 

@@ -122,7 +122,7 @@ packages on [Maven Central][maven-search].
 | Drive Activity API | [v2](clients/google-api-services-driveactivity/v2) |
 | Enterprise License Manager API | [v1](clients/google-api-services-licensing/v1) |
 | Error Reporting API | [v1beta1](clients/google-api-services-clouderrorreporting/v1beta1) |
-| Eventarc API | [v1beta1](clients/google-api-services-eventarc/v1beta1) |
+| Eventarc API | [v1](clients/google-api-services-eventarc/v1), [v1beta1](clients/google-api-services-eventarc/v1beta1) |
 | Fact Check Tools API | [v1alpha1](clients/google-api-services-factchecktools/v1alpha1) |
 | Firebase Cloud Messaging API | [v1](clients/google-api-services-fcm/v1) |
 | Firebase Dynamic Links API | [v1](clients/google-api-services-firebasedynamiclinks/v1) |
@@ -136,7 +136,7 @@ packages on [Maven Central][maven-search].
 | Game Services API | [v1](clients/google-api-services-gameservices/v1), [v1beta](clients/google-api-services-gameservices/v1beta) |
 | Genomics API | [v1](clients/google-api-services-genomics/v1), [v1alpha2](clients/google-api-services-genomics/v1alpha2), [v2alpha1](clients/google-api-services-genomics/v2alpha1) |
 | Gmail API | [v1](clients/google-api-services-gmail/v1) |
-| Gmail Postmaster Tools API | [v1beta1](clients/google-api-services-gmailpostmastertools/v1beta1) |
+| Gmail Postmaster Tools API | [v1](clients/google-api-services-gmailpostmastertools/v1), [v1beta1](clients/google-api-services-gmailpostmastertools/v1beta1) |
 | Google Analytics API | [v3](clients/google-api-services-analytics/v3) |
 | Google Analytics Admin API | [v1alpha](clients/google-api-services-analyticsadmin/v1alpha) |
 | Google Analytics Data API | [v1alpha](clients/google-api-services-analyticsdata/v1alpha) |

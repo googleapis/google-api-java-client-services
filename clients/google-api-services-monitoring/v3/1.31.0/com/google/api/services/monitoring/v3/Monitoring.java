@@ -133,6 +133,1422 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the Folders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Monitoring monitoring = new Monitoring(...);}
+   *   {@code Monitoring.Folders.List request = monitoring.folders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Folders folders() {
+    return new Folders();
+  }
+
+  /**
+   * The "folders" collection of methods.
+   */
+  public class Folders {
+
+    /**
+     * An accessor for creating requests from the TimeSeries collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Monitoring monitoring = new Monitoring(...);}
+     *   {@code Monitoring.TimeSeries.List request = monitoring.timeSeries().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public TimeSeries timeSeries() {
+      return new TimeSeries();
+    }
+
+    /**
+     * The "timeSeries" collection of methods.
+     */
+    public class TimeSeries {
+
+      /**
+       * Lists time series that match a filter. This method does not require a Workspace.
+       *
+       * Create a request for the method "timeSeries.list".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The project, organization or folder on which to execute the request. The format is:
+       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ListTimeSeriesResponse> {
+
+        private static final String REST_PATH = "v3/{+name}/timeSeries";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+        /**
+         * Lists time series that match a filter. This method does not require a Workspace.
+         *
+         * Create a request for the method "timeSeries.list".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The project, organization or folder on which to execute the request. The format is:
+       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v3.model.ListTimeSeriesResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project, organization or folder on which to execute the request. The format
+         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The project, organization or folder on which to execute the request. The format is:
+       projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The project, organization or folder on which to execute the request. The format
+         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        @com.google.api.client.util.Key("aggregation.alignmentPeriod")
+        private String aggregationAlignmentPeriod;
+
+        /** The alignment_period specifies a time interval, in seconds, that is used to divide the data in all
+       the time series into consistent blocks of time. This will be done before the per-series aligner can
+       be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than
+       ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner
+       is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value
+       of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for
+       alerting policies.
+         */
+        public String getAggregationAlignmentPeriod() {
+          return aggregationAlignmentPeriod;
+        }
+
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        public List setAggregationAlignmentPeriod(String aggregationAlignmentPeriod) {
+          this.aggregationAlignmentPeriod = aggregationAlignmentPeriod;
+          return this;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        @com.google.api.client.util.Key("aggregation.crossSeriesReducer")
+        private java.lang.String aggregationCrossSeriesReducer;
+
+        /** The reduction operation to be used to combine time series into a single time series, where the
+       value of each data point in the resulting series is a function of all the already aligned values in
+       the input time series.Not all reducer operations can be applied to all time series. The valid
+       choices depend on the metric_kind and the value_type of the original time series. Reduction can
+       yield a time series with a different metric_kind or value_type than the input time series.Time
+       series data must first be aligned (see per_series_aligner) in order to perform cross-time series
+       reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and
+       must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+       returned.
+         */
+        public java.lang.String getAggregationCrossSeriesReducer() {
+          return aggregationCrossSeriesReducer;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        public List setAggregationCrossSeriesReducer(java.lang.String aggregationCrossSeriesReducer) {
+          this.aggregationCrossSeriesReducer = aggregationCrossSeriesReducer;
+          return this;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        @com.google.api.client.util.Key("aggregation.groupByFields")
+        private java.util.List<java.lang.String> aggregationGroupByFields;
+
+        /** The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine
+       how the time series are partitioned into subsets prior to applying the aggregation operation. Each
+       subset contains time series that have the same value for each of the grouping fields. Each
+       individual time series is a member of exactly one subset. The cross_series_reducer is applied to
+       each subset of time series. It is not possible to reduce across different resource types, so this
+       field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated
+       away. If group_by_fields is not specified and all the time series have the same resource type, then
+       the time series are aggregated into a single output time series. If cross_series_reducer is not
+       defined, this field is ignored.
+         */
+        public java.util.List<java.lang.String> getAggregationGroupByFields() {
+          return aggregationGroupByFields;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        public List setAggregationGroupByFields(java.util.List<java.lang.String> aggregationGroupByFields) {
+          this.aggregationGroupByFields = aggregationGroupByFields;
+          return this;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        @com.google.api.client.util.Key("aggregation.perSeriesAligner")
+        private java.lang.String aggregationPerSeriesAligner;
+
+        /** An Aligner describes how to bring the data points in a single time series into temporal alignment.
+       Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be
+       mathematically grouped together, resulting in a single data point for each alignment_period with
+       end timestamp at the end of the period.Not all alignment operations may be applied to all time
+       series. The valid choices depend on the metric_kind and value_type of the original time series.
+       Alignment can change the metric_kind or the value_type of the time series.Time series data must be
+       aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then
+       per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be
+       specified; otherwise, an error is returned.
+         */
+        public java.lang.String getAggregationPerSeriesAligner() {
+          return aggregationPerSeriesAligner;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        public List setAggregationPerSeriesAligner(java.lang.String aggregationPerSeriesAligner) {
+          this.aggregationPerSeriesAligner = aggregationPerSeriesAligner;
+          return this;
+        }
+
+        /**
+         * Required. A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+         * specifies which time series should be returned. The filter must specify a single metric
+         * type, and can additionally specify metric labels and other information. For example:
+         * metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+         * metric.labels.instance_name = "my-instance-name"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Required. A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that specifies
+       which time series should be returned. The filter must specify a single metric type, and can
+       additionally specify metric labels and other information. For example: metric.type =
+       "compute.googleapis.com/instance/cpu/usage_time" AND metric.labels.instance_name = "my-instance-
+       name"
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Required. A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+         * specifies which time series should be returned. The filter must specify a single metric
+         * type, and can additionally specify metric labels and other information. For example:
+         * metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+         * metric.labels.instance_name = "my-instance-name"
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** Required. The end of the time interval. */
+        @com.google.api.client.util.Key("interval.endTime")
+        private String intervalEndTime;
+
+        /** Required. The end of the time interval.
+         */
+        public String getIntervalEndTime() {
+          return intervalEndTime;
+        }
+
+        /** Required. The end of the time interval. */
+        public List setIntervalEndTime(String intervalEndTime) {
+          this.intervalEndTime = intervalEndTime;
+          return this;
+        }
+
+        /**
+         * Optional. The beginning of the time interval. The default value for the start time is the
+         * end time. The start time must not be later than the end time.
+         */
+        @com.google.api.client.util.Key("interval.startTime")
+        private String intervalStartTime;
+
+        /** Optional. The beginning of the time interval. The default value for the start time is the end time.
+       The start time must not be later than the end time.
+         */
+        public String getIntervalStartTime() {
+          return intervalStartTime;
+        }
+
+        /**
+         * Optional. The beginning of the time interval. The default value for the start time is the
+         * end time. The start time must not be later than the end time.
+         */
+        public List setIntervalStartTime(String intervalStartTime) {
+          this.intervalStartTime = intervalStartTime;
+          return this;
+        }
+
+        /**
+         * Unsupported: must be left blank. The points in each time series are currently returned in
+         * reverse time order (most recent to oldest).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Unsupported: must be left blank. The points in each time series are currently returned in reverse
+       time order (most recent to oldest).
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Unsupported: must be left blank. The points in each time series are currently returned in
+         * reverse time order (most recent to oldest).
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * A positive number that is the maximum number of results to return. If page_size is empty
+         * or more than 100,000 results, the effective page_size is 100,000 results. If view is set
+         * to FULL, this is the maximum number of Points returned. If view is set to HEADERS, this
+         * is the maximum number of TimeSeries returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** A positive number that is the maximum number of results to return. If page_size is empty or more
+       than 100,000 results, the effective page_size is 100,000 results. If view is set to FULL, this is
+       the maximum number of Points returned. If view is set to HEADERS, this is the maximum number of
+       TimeSeries returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * A positive number that is the maximum number of results to return. If page_size is empty
+         * or more than 100,000 results, the effective page_size is 100,000 results. If view is set
+         * to FULL, this is the maximum number of Points returned. If view is set to HEADERS, this
+         * is the maximum number of TimeSeries returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
+       to this method. Using this field causes the method to return additional results from the previous
+       method call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.alignmentPeriod")
+        private String secondaryAggregationAlignmentPeriod;
+
+        /** The alignment_period specifies a time interval, in seconds, that is used to divide the data in all
+       the time series into consistent blocks of time. This will be done before the per-series aligner can
+       be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than
+       ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner
+       is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value
+       of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for
+       alerting policies.
+         */
+        public String getSecondaryAggregationAlignmentPeriod() {
+          return secondaryAggregationAlignmentPeriod;
+        }
+
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        public List setSecondaryAggregationAlignmentPeriod(String secondaryAggregationAlignmentPeriod) {
+          this.secondaryAggregationAlignmentPeriod = secondaryAggregationAlignmentPeriod;
+          return this;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.crossSeriesReducer")
+        private java.lang.String secondaryAggregationCrossSeriesReducer;
+
+        /** The reduction operation to be used to combine time series into a single time series, where the
+       value of each data point in the resulting series is a function of all the already aligned values in
+       the input time series.Not all reducer operations can be applied to all time series. The valid
+       choices depend on the metric_kind and the value_type of the original time series. Reduction can
+       yield a time series with a different metric_kind or value_type than the input time series.Time
+       series data must first be aligned (see per_series_aligner) in order to perform cross-time series
+       reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and
+       must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+       returned.
+         */
+        public java.lang.String getSecondaryAggregationCrossSeriesReducer() {
+          return secondaryAggregationCrossSeriesReducer;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        public List setSecondaryAggregationCrossSeriesReducer(java.lang.String secondaryAggregationCrossSeriesReducer) {
+          this.secondaryAggregationCrossSeriesReducer = secondaryAggregationCrossSeriesReducer;
+          return this;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.groupByFields")
+        private java.util.List<java.lang.String> secondaryAggregationGroupByFields;
+
+        /** The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine
+       how the time series are partitioned into subsets prior to applying the aggregation operation. Each
+       subset contains time series that have the same value for each of the grouping fields. Each
+       individual time series is a member of exactly one subset. The cross_series_reducer is applied to
+       each subset of time series. It is not possible to reduce across different resource types, so this
+       field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated
+       away. If group_by_fields is not specified and all the time series have the same resource type, then
+       the time series are aggregated into a single output time series. If cross_series_reducer is not
+       defined, this field is ignored.
+         */
+        public java.util.List<java.lang.String> getSecondaryAggregationGroupByFields() {
+          return secondaryAggregationGroupByFields;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        public List setSecondaryAggregationGroupByFields(java.util.List<java.lang.String> secondaryAggregationGroupByFields) {
+          this.secondaryAggregationGroupByFields = secondaryAggregationGroupByFields;
+          return this;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.perSeriesAligner")
+        private java.lang.String secondaryAggregationPerSeriesAligner;
+
+        /** An Aligner describes how to bring the data points in a single time series into temporal alignment.
+       Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be
+       mathematically grouped together, resulting in a single data point for each alignment_period with
+       end timestamp at the end of the period.Not all alignment operations may be applied to all time
+       series. The valid choices depend on the metric_kind and value_type of the original time series.
+       Alignment can change the metric_kind or the value_type of the time series.Time series data must be
+       aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then
+       per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be
+       specified; otherwise, an error is returned.
+         */
+        public java.lang.String getSecondaryAggregationPerSeriesAligner() {
+          return secondaryAggregationPerSeriesAligner;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        public List setSecondaryAggregationPerSeriesAligner(java.lang.String secondaryAggregationPerSeriesAligner) {
+          this.secondaryAggregationPerSeriesAligner = secondaryAggregationPerSeriesAligner;
+          return this;
+        }
+
+        /** Required. Specifies which information is returned about the time series. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Required. Specifies which information is returned about the time series.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Required. Specifies which information is returned about the time series. */
+        public List setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Monitoring monitoring = new Monitoring(...);}
+   *   {@code Monitoring.Organizations.List request = monitoring.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the TimeSeries collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Monitoring monitoring = new Monitoring(...);}
+     *   {@code Monitoring.TimeSeries.List request = monitoring.timeSeries().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public TimeSeries timeSeries() {
+      return new TimeSeries();
+    }
+
+    /**
+     * The "timeSeries" collection of methods.
+     */
+    public class TimeSeries {
+
+      /**
+       * Lists time series that match a filter. This method does not require a Workspace.
+       *
+       * Create a request for the method "timeSeries.list".
+       *
+       * This request holds the parameters needed by the monitoring server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The project, organization or folder on which to execute the request. The format is:
+       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+       * @return the request
+       */
+      public List list(java.lang.String name) throws java.io.IOException {
+        List result = new List(name);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends MonitoringRequest<com.google.api.services.monitoring.v3.model.ListTimeSeriesResponse> {
+
+        private static final String REST_PATH = "v3/{+name}/timeSeries";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists time series that match a filter. This method does not require a Workspace.
+         *
+         * Create a request for the method "timeSeries.list".
+         *
+         * This request holds the parameters needed by the the monitoring server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The project, organization or folder on which to execute the request. The format is:
+       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         * @since 1.13
+         */
+        protected List(java.lang.String name) {
+          super(Monitoring.this, "GET", REST_PATH, null, com.google.api.services.monitoring.v3.model.ListTimeSeriesResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project, organization or folder on which to execute the request. The format
+         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The project, organization or folder on which to execute the request. The format is:
+       projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The project, organization or folder on which to execute the request. The format
+         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
+         */
+        public List setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        @com.google.api.client.util.Key("aggregation.alignmentPeriod")
+        private String aggregationAlignmentPeriod;
+
+        /** The alignment_period specifies a time interval, in seconds, that is used to divide the data in all
+       the time series into consistent blocks of time. This will be done before the per-series aligner can
+       be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than
+       ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner
+       is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value
+       of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for
+       alerting policies.
+         */
+        public String getAggregationAlignmentPeriod() {
+          return aggregationAlignmentPeriod;
+        }
+
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        public List setAggregationAlignmentPeriod(String aggregationAlignmentPeriod) {
+          this.aggregationAlignmentPeriod = aggregationAlignmentPeriod;
+          return this;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        @com.google.api.client.util.Key("aggregation.crossSeriesReducer")
+        private java.lang.String aggregationCrossSeriesReducer;
+
+        /** The reduction operation to be used to combine time series into a single time series, where the
+       value of each data point in the resulting series is a function of all the already aligned values in
+       the input time series.Not all reducer operations can be applied to all time series. The valid
+       choices depend on the metric_kind and the value_type of the original time series. Reduction can
+       yield a time series with a different metric_kind or value_type than the input time series.Time
+       series data must first be aligned (see per_series_aligner) in order to perform cross-time series
+       reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and
+       must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+       returned.
+         */
+        public java.lang.String getAggregationCrossSeriesReducer() {
+          return aggregationCrossSeriesReducer;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        public List setAggregationCrossSeriesReducer(java.lang.String aggregationCrossSeriesReducer) {
+          this.aggregationCrossSeriesReducer = aggregationCrossSeriesReducer;
+          return this;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        @com.google.api.client.util.Key("aggregation.groupByFields")
+        private java.util.List<java.lang.String> aggregationGroupByFields;
+
+        /** The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine
+       how the time series are partitioned into subsets prior to applying the aggregation operation. Each
+       subset contains time series that have the same value for each of the grouping fields. Each
+       individual time series is a member of exactly one subset. The cross_series_reducer is applied to
+       each subset of time series. It is not possible to reduce across different resource types, so this
+       field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated
+       away. If group_by_fields is not specified and all the time series have the same resource type, then
+       the time series are aggregated into a single output time series. If cross_series_reducer is not
+       defined, this field is ignored.
+         */
+        public java.util.List<java.lang.String> getAggregationGroupByFields() {
+          return aggregationGroupByFields;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        public List setAggregationGroupByFields(java.util.List<java.lang.String> aggregationGroupByFields) {
+          this.aggregationGroupByFields = aggregationGroupByFields;
+          return this;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        @com.google.api.client.util.Key("aggregation.perSeriesAligner")
+        private java.lang.String aggregationPerSeriesAligner;
+
+        /** An Aligner describes how to bring the data points in a single time series into temporal alignment.
+       Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be
+       mathematically grouped together, resulting in a single data point for each alignment_period with
+       end timestamp at the end of the period.Not all alignment operations may be applied to all time
+       series. The valid choices depend on the metric_kind and value_type of the original time series.
+       Alignment can change the metric_kind or the value_type of the time series.Time series data must be
+       aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then
+       per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be
+       specified; otherwise, an error is returned.
+         */
+        public java.lang.String getAggregationPerSeriesAligner() {
+          return aggregationPerSeriesAligner;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        public List setAggregationPerSeriesAligner(java.lang.String aggregationPerSeriesAligner) {
+          this.aggregationPerSeriesAligner = aggregationPerSeriesAligner;
+          return this;
+        }
+
+        /**
+         * Required. A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+         * specifies which time series should be returned. The filter must specify a single metric
+         * type, and can additionally specify metric labels and other information. For example:
+         * metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+         * metric.labels.instance_name = "my-instance-name"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Required. A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that specifies
+       which time series should be returned. The filter must specify a single metric type, and can
+       additionally specify metric labels and other information. For example: metric.type =
+       "compute.googleapis.com/instance/cpu/usage_time" AND metric.labels.instance_name = "my-instance-
+       name"
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Required. A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that
+         * specifies which time series should be returned. The filter must specify a single metric
+         * type, and can additionally specify metric labels and other information. For example:
+         * metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+         * metric.labels.instance_name = "my-instance-name"
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** Required. The end of the time interval. */
+        @com.google.api.client.util.Key("interval.endTime")
+        private String intervalEndTime;
+
+        /** Required. The end of the time interval.
+         */
+        public String getIntervalEndTime() {
+          return intervalEndTime;
+        }
+
+        /** Required. The end of the time interval. */
+        public List setIntervalEndTime(String intervalEndTime) {
+          this.intervalEndTime = intervalEndTime;
+          return this;
+        }
+
+        /**
+         * Optional. The beginning of the time interval. The default value for the start time is the
+         * end time. The start time must not be later than the end time.
+         */
+        @com.google.api.client.util.Key("interval.startTime")
+        private String intervalStartTime;
+
+        /** Optional. The beginning of the time interval. The default value for the start time is the end time.
+       The start time must not be later than the end time.
+         */
+        public String getIntervalStartTime() {
+          return intervalStartTime;
+        }
+
+        /**
+         * Optional. The beginning of the time interval. The default value for the start time is the
+         * end time. The start time must not be later than the end time.
+         */
+        public List setIntervalStartTime(String intervalStartTime) {
+          this.intervalStartTime = intervalStartTime;
+          return this;
+        }
+
+        /**
+         * Unsupported: must be left blank. The points in each time series are currently returned in
+         * reverse time order (most recent to oldest).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Unsupported: must be left blank. The points in each time series are currently returned in reverse
+       time order (most recent to oldest).
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Unsupported: must be left blank. The points in each time series are currently returned in
+         * reverse time order (most recent to oldest).
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * A positive number that is the maximum number of results to return. If page_size is empty
+         * or more than 100,000 results, the effective page_size is 100,000 results. If view is set
+         * to FULL, this is the maximum number of Points returned. If view is set to HEADERS, this
+         * is the maximum number of TimeSeries returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** A positive number that is the maximum number of results to return. If page_size is empty or more
+       than 100,000 results, the effective page_size is 100,000 results. If view is set to FULL, this is
+       the maximum number of Points returned. If view is set to HEADERS, this is the maximum number of
+       TimeSeries returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * A positive number that is the maximum number of results to return. If page_size is empty
+         * or more than 100,000 results, the effective page_size is 100,000 results. If view is set
+         * to FULL, this is the maximum number of Points returned. If view is set to HEADERS, this
+         * is the maximum number of TimeSeries returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** If this field is not empty then it must contain the nextPageToken value returned by a previous call
+       to this method. Using this field causes the method to return additional results from the previous
+       method call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * If this field is not empty then it must contain the nextPageToken value returned by a
+         * previous call to this method. Using this field causes the method to return additional
+         * results from the previous method call.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.alignmentPeriod")
+        private String secondaryAggregationAlignmentPeriod;
+
+        /** The alignment_period specifies a time interval, in seconds, that is used to divide the data in all
+       the time series into consistent blocks of time. This will be done before the per-series aligner can
+       be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than
+       ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner
+       is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value
+       of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for
+       alerting policies.
+         */
+        public String getSecondaryAggregationAlignmentPeriod() {
+          return secondaryAggregationAlignmentPeriod;
+        }
+
+        /**
+         * The alignment_period specifies a time interval, in seconds, that is used to divide the
+         * data in all the time series into consistent blocks of time. This will be done before the
+         * per-series aligner can be applied to the data.The value must be at least 60 seconds. If a
+         * per-series aligner other than ALIGN_NONE is specified, this field is required or an error
+         * is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is
+         * specified, then this field is ignored.The maximum value of the alignment_period is 104
+         * weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+         */
+        public List setSecondaryAggregationAlignmentPeriod(String secondaryAggregationAlignmentPeriod) {
+          this.secondaryAggregationAlignmentPeriod = secondaryAggregationAlignmentPeriod;
+          return this;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.crossSeriesReducer")
+        private java.lang.String secondaryAggregationCrossSeriesReducer;
+
+        /** The reduction operation to be used to combine time series into a single time series, where the
+       value of each data point in the resulting series is a function of all the already aligned values in
+       the input time series.Not all reducer operations can be applied to all time series. The valid
+       choices depend on the metric_kind and the value_type of the original time series. Reduction can
+       yield a time series with a different metric_kind or value_type than the input time series.Time
+       series data must first be aligned (see per_series_aligner) in order to perform cross-time series
+       reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and
+       must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+       returned.
+         */
+        public java.lang.String getSecondaryAggregationCrossSeriesReducer() {
+          return secondaryAggregationCrossSeriesReducer;
+        }
+
+        /**
+         * The reduction operation to be used to combine time series into a single time series,
+         * where the value of each data point in the resulting series is a function of all the
+         * already aligned values in the input time series.Not all reducer operations can be applied
+         * to all time series. The valid choices depend on the metric_kind and the value_type of the
+         * original time series. Reduction can yield a time series with a different metric_kind or
+         * value_type than the input time series.Time series data must first be aligned (see
+         * per_series_aligner) in order to perform cross-time series reduction. If
+         * cross_series_reducer is specified, then per_series_aligner must be specified, and must
+         * not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is
+         * returned.
+         */
+        public List setSecondaryAggregationCrossSeriesReducer(java.lang.String secondaryAggregationCrossSeriesReducer) {
+          this.secondaryAggregationCrossSeriesReducer = secondaryAggregationCrossSeriesReducer;
+          return this;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.groupByFields")
+        private java.util.List<java.lang.String> secondaryAggregationGroupByFields;
+
+        /** The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine
+       how the time series are partitioned into subsets prior to applying the aggregation operation. Each
+       subset contains time series that have the same value for each of the grouping fields. Each
+       individual time series is a member of exactly one subset. The cross_series_reducer is applied to
+       each subset of time series. It is not possible to reduce across different resource types, so this
+       field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated
+       away. If group_by_fields is not specified and all the time series have the same resource type, then
+       the time series are aggregated into a single output time series. If cross_series_reducer is not
+       defined, this field is ignored.
+         */
+        public java.util.List<java.lang.String> getSecondaryAggregationGroupByFields() {
+          return secondaryAggregationGroupByFields;
+        }
+
+        /**
+         * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields
+         * determine how the time series are partitioned into subsets prior to applying the
+         * aggregation operation. Each subset contains time series that have the same value for each
+         * of the grouping fields. Each individual time series is a member of exactly one subset.
+         * The cross_series_reducer is applied to each subset of time series. It is not possible to
+         * reduce across different resource types, so this field implicitly contains resource.type.
+         * Fields not specified in group_by_fields are aggregated away. If group_by_fields is not
+         * specified and all the time series have the same resource type, then the time series are
+         * aggregated into a single output time series. If cross_series_reducer is not defined, this
+         * field is ignored.
+         */
+        public List setSecondaryAggregationGroupByFields(java.util.List<java.lang.String> secondaryAggregationGroupByFields) {
+          this.secondaryAggregationGroupByFields = secondaryAggregationGroupByFields;
+          return this;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        @com.google.api.client.util.Key("secondaryAggregation.perSeriesAligner")
+        private java.lang.String secondaryAggregationPerSeriesAligner;
+
+        /** An Aligner describes how to bring the data points in a single time series into temporal alignment.
+       Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be
+       mathematically grouped together, resulting in a single data point for each alignment_period with
+       end timestamp at the end of the period.Not all alignment operations may be applied to all time
+       series. The valid choices depend on the metric_kind and value_type of the original time series.
+       Alignment can change the metric_kind or the value_type of the time series.Time series data must be
+       aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then
+       per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be
+       specified; otherwise, an error is returned.
+         */
+        public java.lang.String getSecondaryAggregationPerSeriesAligner() {
+          return secondaryAggregationPerSeriesAligner;
+        }
+
+        /**
+         * An Aligner describes how to bring the data points in a single time series into temporal
+         * alignment. Except for ALIGN_NONE, all alignments cause all the data points in an
+         * alignment_period to be mathematically grouped together, resulting in a single data point
+         * for each alignment_period with end timestamp at the end of the period.Not all alignment
+         * operations may be applied to all time series. The valid choices depend on the metric_kind
+         * and value_type of the original time series. Alignment can change the metric_kind or the
+         * value_type of the time series.Time series data must be aligned in order to perform cross-
+         * time series reduction. If cross_series_reducer is specified, then per_series_aligner must
+         * be specified and not equal to ALIGN_NONE and alignment_period must be specified;
+         * otherwise, an error is returned.
+         */
+        public List setSecondaryAggregationPerSeriesAligner(java.lang.String secondaryAggregationPerSeriesAligner) {
+          this.secondaryAggregationPerSeriesAligner = secondaryAggregationPerSeriesAligner;
+          return this;
+        }
+
+        /** Required. Specifies which information is returned about the time series. */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** Required. Specifies which information is returned about the time series.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /** Required. Specifies which information is returned about the time series. */
+        public List setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -5427,8 +6843,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the monitoring server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+       * @param name Required. The project, organization or folder on which to execute the request. The format is:
+       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -5454,8 +6870,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The project on which to execute the request. The format is:
-       *        projects/[PROJECT_ID_OR_NUMBER]
+         * @param name Required. The project, organization or folder on which to execute the request. The format is:
+       *        projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -5534,22 +6950,22 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project, organization or folder on which to execute the request. The format
+         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The project on which to execute the request. The format is:
-       projects/[PROJECT_ID_OR_NUMBER]
+        /** Required. The project, organization or folder on which to execute the request. The format is:
+       projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The project on which to execute the request. The format is:
-         * projects/[PROJECT_ID_OR_NUMBER]
+         * Required. The project, organization or folder on which to execute the request. The format
+         * is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID]
          */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

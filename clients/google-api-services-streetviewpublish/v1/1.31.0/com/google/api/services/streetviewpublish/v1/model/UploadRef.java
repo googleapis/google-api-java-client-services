@@ -31,7 +31,7 @@ package com.google.api.services.streetviewpublish.v1.model;
 public final class UploadRef extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. An upload reference should be unique for each user. It follows the form:
+   * An upload reference should be unique for each user. It follows the form:
    * "https://streetviewpublish.googleapis.com/media/user/{account_id}/photo/{upload_reference}"
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class UploadRef extends com.google.api.client.json.GenericJson {
   private java.lang.String uploadUrl;
 
   /**
-   * Required. An upload reference should be unique for each user. It follows the form:
+   * An upload reference should be unique for each user. It follows the form:
    * "https://streetviewpublish.googleapis.com/media/user/{account_id}/photo/{upload_reference}"
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class UploadRef extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. An upload reference should be unique for each user. It follows the form:
+   * An upload reference should be unique for each user. It follows the form:
    * "https://streetviewpublish.googleapis.com/media/user/{account_id}/photo/{upload_reference}"
    * @param uploadUrl uploadUrl or {@code null} for none
    */

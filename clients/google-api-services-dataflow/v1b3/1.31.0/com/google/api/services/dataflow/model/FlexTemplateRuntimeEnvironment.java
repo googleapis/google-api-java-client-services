@@ -54,6 +54,13 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
   private java.lang.Boolean enableStreamingEngine;
 
   /**
+   * Set FlexRS goal for the job. https://cloud.google.com/dataflow/docs/guides/flexrs
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String flexrsGoal;
+
+  /**
    * Configuration for VM IPs.
    * The value may be {@code null}.
    */
@@ -207,6 +214,23 @@ public final class FlexTemplateRuntimeEnvironment extends com.google.api.client.
    */
   public FlexTemplateRuntimeEnvironment setEnableStreamingEngine(java.lang.Boolean enableStreamingEngine) {
     this.enableStreamingEngine = enableStreamingEngine;
+    return this;
+  }
+
+  /**
+   * Set FlexRS goal for the job. https://cloud.google.com/dataflow/docs/guides/flexrs
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFlexrsGoal() {
+    return flexrsGoal;
+  }
+
+  /**
+   * Set FlexRS goal for the job. https://cloud.google.com/dataflow/docs/guides/flexrs
+   * @param flexrsGoal flexrsGoal or {@code null} for none
+   */
+  public FlexTemplateRuntimeEnvironment setFlexrsGoal(java.lang.String flexrsGoal) {
+    this.flexrsGoal = flexrsGoal;
     return this;
   }
 

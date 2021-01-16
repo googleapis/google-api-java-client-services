@@ -74,7 +74,8 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   private java.util.Map<String, java.lang.String> parameters;
 
   /**
-   * Users need to set transform_name_mappings Ex:{"oldTransformName":"newTransformName",...}'
+   * Use this to pass transform_name_mappings for streaming update jobs.
+   * Ex:{"oldTransformName":"newTransformName",...}'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +196,8 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   }
 
   /**
-   * Users need to set transform_name_mappings Ex:{"oldTransformName":"newTransformName",...}'
+   * Use this to pass transform_name_mappings for streaming update jobs.
+   * Ex:{"oldTransformName":"newTransformName",...}'
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTransformNameMappings() {
@@ -203,7 +205,8 @@ public final class LaunchFlexTemplateParameter extends com.google.api.client.jso
   }
 
   /**
-   * Users need to set transform_name_mappings Ex:{"oldTransformName":"newTransformName",...}'
+   * Use this to pass transform_name_mappings for streaming update jobs.
+   * Ex:{"oldTransformName":"newTransformName",...}'
    * @param transformNameMappings transformNameMappings or {@code null} for none
    */
   public LaunchFlexTemplateParameter setTransformNameMappings(java.util.Map<String, java.lang.String> transformNameMappings) {

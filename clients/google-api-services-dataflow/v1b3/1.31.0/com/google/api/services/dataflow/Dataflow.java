@@ -1571,17 +1571,17 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
+        /** Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews. */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
-        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`.
+        /** Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews.
          */
         public java.lang.String getView() {
           return view;
         }
 
-        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
+        /** Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews. */
         public Aggregated setView(java.lang.String view) {
           this.view = view;
           return this;
@@ -2372,17 +2372,17 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
+        /** Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews. */
         @com.google.api.client.util.Key
         private java.lang.String view;
 
-        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`.
+        /** Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews.
          */
         public java.lang.String getView() {
           return view;
         }
 
-        /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
+        /** Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews. */
         public List setView(java.lang.String view) {
           this.view = view;
           return this;
@@ -4977,17 +4977,17 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
+          /** Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews. */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`.
+          /** Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews.
            */
           public java.lang.String getView() {
             return view;
           }
 
-          /** Level of information requested in response. Default is `JOB_VIEW_SUMMARY`. */
+          /** Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews. */
           public List setView(java.lang.String view) {
             this.view = view;
             return this;

@@ -17,7 +17,7 @@
 package com.google.api.services.dataflow.model;
 
 /**
- * Defines a job to be run by the Cloud Dataflow service.
+ * Defines a job to be run by the Cloud Dataflow service. nextID: 26
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataflow API. For a detailed explanation see:
@@ -173,6 +173,14 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String requestedState;
+
+  /**
+   * Reserved for future use. This field is set only in responses from the server; it is ignored if
+   * it is set in any requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
 
   /**
    * This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
@@ -575,6 +583,25 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setRequestedState(java.lang.String requestedState) {
     this.requestedState = requestedState;
+    return this;
+  }
+
+  /**
+   * Reserved for future use. This field is set only in responses from the server; it is ignored if
+   * it is set in any requests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Reserved for future use. This field is set only in responses from the server; it is ignored if
+   * it is set in any requests.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Job setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

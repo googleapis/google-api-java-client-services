@@ -41,6 +41,14 @@ public final class Domain extends com.google.api.client.json.GenericJson {
   private java.lang.String admin;
 
   /**
+   * Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is
+   * audit logs disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean auditLogsEnabled;
+
+  /**
    * Optional. The full names of the Google Compute Engine [networks](/compute/docs/networks-and-
    * firewalls#networks) the domain instance is connected to. Networks can be added using
    * UpdateDomain. The domain is only available on networks listed in `authorized_networks`. If CIDR
@@ -142,6 +150,25 @@ public final class Domain extends com.google.api.client.json.GenericJson {
    */
   public Domain setAdmin(java.lang.String admin) {
     this.admin = admin;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is
+   * audit logs disabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAuditLogsEnabled() {
+    return auditLogsEnabled;
+  }
+
+  /**
+   * Optional. Configuration for audit logs. True if audit logs are enabled, else false. Default is
+   * audit logs disabled.
+   * @param auditLogsEnabled auditLogsEnabled or {@code null} for none
+   */
+  public Domain setAuditLogsEnabled(java.lang.Boolean auditLogsEnabled) {
+    this.auditLogsEnabled = auditLogsEnabled;
     return this;
   }
 

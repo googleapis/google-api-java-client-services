@@ -1662,7 +1662,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
         /**
          * Adds data points to a dataset. The dataset need not be previously created. All points within the
          * given dataset will be returned with subsquent calls to retrieve this dataset. Data points can
-         * belong to more than one dataset. This method does not use patch semantics.
+         * belong to more than one dataset. This method does not use patch semantics: the data points
+         * provided are merely inserted, with no existing data replaced.
          *
          * Create a request for the method "datasets.patch".
          *
@@ -1672,9 +1673,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
          * @param userId Patch a dataset for the person identified. Use me to indicate the authenticated user. Only me is
          *        supported at this time.
          * @param dataSourceId The data stream ID of the data source that created the dataset.
-         * @param datasetId Dataset identifier that is a composite of the minimum data point start time and maximum data point
-         *        end time represented as nanoseconds from the epoch. The ID is formatted like: "startTime-
-         *        endTime" where startTime and endTime are 64 bit integers.
+         * @param datasetId This field is not used, and can be safely omitted.
          * @param content the {@link com.google.api.services.fitness.model.Dataset}
          * @return the request
          */
@@ -1691,7 +1690,8 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Adds data points to a dataset. The dataset need not be previously created. All points within
            * the given dataset will be returned with subsquent calls to retrieve this dataset. Data points
-           * can belong to more than one dataset. This method does not use patch semantics.
+           * can belong to more than one dataset. This method does not use patch semantics: the data points
+           * provided are merely inserted, with no existing data replaced.
            *
            * Create a request for the method "datasets.patch".
            *
@@ -1703,9 +1703,7 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
            * @param userId Patch a dataset for the person identified. Use me to indicate the authenticated user. Only me is
          *        supported at this time.
            * @param dataSourceId The data stream ID of the data source that created the dataset.
-           * @param datasetId Dataset identifier that is a composite of the minimum data point start time and maximum data point
-         *        end time represented as nanoseconds from the epoch. The ID is formatted like: "startTime-
-         *        endTime" where startTime and endTime are 64 bit integers.
+           * @param datasetId This field is not used, and can be safely omitted.
            * @param content the {@link com.google.api.services.fitness.model.Dataset}
            * @since 1.13
            */
@@ -1816,27 +1814,17 @@ public class Fitness extends com.google.api.client.googleapis.services.json.Abst
             return this;
           }
 
-          /**
-           * Dataset identifier that is a composite of the minimum data point start time and maximum
-           * data point end time represented as nanoseconds from the epoch. The ID is formatted
-           * like: "startTime-endTime" where startTime and endTime are 64 bit integers.
-           */
+          /** This field is not used, and can be safely omitted. */
           @com.google.api.client.util.Key
           private java.lang.String datasetId;
 
-          /** Dataset identifier that is a composite of the minimum data point start time and maximum data point
-         end time represented as nanoseconds from the epoch. The ID is formatted like: "startTime-endTime"
-         where startTime and endTime are 64 bit integers.
+          /** This field is not used, and can be safely omitted.
            */
           public java.lang.String getDatasetId() {
             return datasetId;
           }
 
-          /**
-           * Dataset identifier that is a composite of the minimum data point start time and maximum
-           * data point end time represented as nanoseconds from the epoch. The ID is formatted
-           * like: "startTime-endTime" where startTime and endTime are 64 bit integers.
-           */
+          /** This field is not used, and can be safely omitted. */
           public Patch setDatasetId(java.lang.String datasetId) {
             this.datasetId = datasetId;
             return this;

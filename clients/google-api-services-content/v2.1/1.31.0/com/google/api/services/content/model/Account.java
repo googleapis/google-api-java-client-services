@@ -32,10 +32,10 @@ package com.google.api.services.content.model;
 public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of linked Ads accounts that are active or pending approval. To create a new link request,
-   * add a new link with status `active` to the list. It will remain in a `pending` state until
-   * approved or rejected either in the Ads interface or through the AdWords API. To delete an
-   * active link, or to cancel a link request, remove it from the list.
+   * Linked Ads accounts that are active or pending approval. To create a new link request, add a
+   * new link with status `active` to the list. It will remain in a `pending` state until approved
+   * or rejected either in the Ads interface or through the AdWords API. To delete an active link,
+   * or to cancel a link request, remove it from the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adultContent;
 
   /**
-   * List of automatically created label IDs that are assigned to the account by CSS Center.
+   * Automatically created label IDs that are assigned to the account by CSS Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -92,7 +92,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * List of manually created label IDs that are assigned to the account by CSS.
+   * Manually created label IDs that are assigned to the account by CSS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -128,20 +128,20 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String websiteUrl;
 
   /**
-   * List of linked YouTube channels that are active or pending approval. To create a new link
-   * request, add a new link with status `active` to the list. It will remain in a `pending` state
-   * until approved or rejected in the YT Creator Studio interface. To delete an active link, or to
-   * cancel a link request, remove it from the list.
+   * Linked YouTube channels that are active or pending approval. To create a new link request, add
+   * a new link with status `active` to the list. It will remain in a `pending` state until approved
+   * or rejected in the YT Creator Studio interface. To delete an active link, or to cancel a link
+   * request, remove it from the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AccountYouTubeChannelLink> youtubeChannelLinks;
 
   /**
-   * List of linked Ads accounts that are active or pending approval. To create a new link request,
-   * add a new link with status `active` to the list. It will remain in a `pending` state until
-   * approved or rejected either in the Ads interface or through the AdWords API. To delete an
-   * active link, or to cancel a link request, remove it from the list.
+   * Linked Ads accounts that are active or pending approval. To create a new link request, add a
+   * new link with status `active` to the list. It will remain in a `pending` state until approved
+   * or rejected either in the Ads interface or through the AdWords API. To delete an active link,
+   * or to cancel a link request, remove it from the list.
    * @return value or {@code null} for none
    */
   public java.util.List<AccountAdsLink> getAdsLinks() {
@@ -149,10 +149,10 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of linked Ads accounts that are active or pending approval. To create a new link request,
-   * add a new link with status `active` to the list. It will remain in a `pending` state until
-   * approved or rejected either in the Ads interface or through the AdWords API. To delete an
-   * active link, or to cancel a link request, remove it from the list.
+   * Linked Ads accounts that are active or pending approval. To create a new link request, add a
+   * new link with status `active` to the list. It will remain in a `pending` state until approved
+   * or rejected either in the Ads interface or through the AdWords API. To delete an active link,
+   * or to cancel a link request, remove it from the list.
    * @param adsLinks adsLinks or {@code null} for none
    */
   public Account setAdsLinks(java.util.List<AccountAdsLink> adsLinks) {
@@ -178,7 +178,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of automatically created label IDs that are assigned to the account by CSS Center.
+   * Automatically created label IDs that are assigned to the account by CSS Center.
    * @return value or {@code null} for none
    */
   public java.util.List<java.math.BigInteger> getAutomaticLabelIds() {
@@ -186,7 +186,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of automatically created label IDs that are assigned to the account by CSS Center.
+   * Automatically created label IDs that are assigned to the account by CSS Center.
    * @param automaticLabelIds automaticLabelIds or {@code null} for none
    */
   public Account setAutomaticLabelIds(java.util.List<java.math.BigInteger> automaticLabelIds) {
@@ -282,7 +282,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of manually created label IDs that are assigned to the account by CSS.
+   * Manually created label IDs that are assigned to the account by CSS.
    * @return value or {@code null} for none
    */
   public java.util.List<java.math.BigInteger> getLabelIds() {
@@ -290,7 +290,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of manually created label IDs that are assigned to the account by CSS.
+   * Manually created label IDs that are assigned to the account by CSS.
    * @param labelIds labelIds or {@code null} for none
    */
   public Account setLabelIds(java.util.List<java.math.BigInteger> labelIds) {
@@ -369,10 +369,10 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of linked YouTube channels that are active or pending approval. To create a new link
-   * request, add a new link with status `active` to the list. It will remain in a `pending` state
-   * until approved or rejected in the YT Creator Studio interface. To delete an active link, or to
-   * cancel a link request, remove it from the list.
+   * Linked YouTube channels that are active or pending approval. To create a new link request, add
+   * a new link with status `active` to the list. It will remain in a `pending` state until approved
+   * or rejected in the YT Creator Studio interface. To delete an active link, or to cancel a link
+   * request, remove it from the list.
    * @return value or {@code null} for none
    */
   public java.util.List<AccountYouTubeChannelLink> getYoutubeChannelLinks() {
@@ -380,10 +380,10 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of linked YouTube channels that are active or pending approval. To create a new link
-   * request, add a new link with status `active` to the list. It will remain in a `pending` state
-   * until approved or rejected in the YT Creator Studio interface. To delete an active link, or to
-   * cancel a link request, remove it from the list.
+   * Linked YouTube channels that are active or pending approval. To create a new link request, add
+   * a new link with status `active` to the list. It will remain in a `pending` state until approved
+   * or rejected in the YT Creator Studio interface. To delete an active link, or to cancel a link
+   * request, remove it from the list.
    * @param youtubeChannelLinks youtubeChannelLinks or {@code null} for none
    */
   public Account setYoutubeChannelLinks(java.util.List<AccountYouTubeChannelLink> youtubeChannelLinks) {

@@ -48,7 +48,10 @@ public final class Geometry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The extruded areas present in this geometry.
+   * The extruded areas present in this geometry. Not populated if modeled_volumes are included in
+   * this geometry unless always_include_building_footprints is set in GetFeatureTileRequest, in
+   * which case the client should decide which (extruded areas or modeled volumes) should be used
+   * (they should not be rendered together).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +71,8 @@ public final class Geometry extends com.google.api.client.json.GenericJson {
   private java.util.List<Line> lines;
 
   /**
-   * The modeled volumes present in this geometry.
+   * The modeled volumes present in this geometry. Not populated unless enable_modeled_volumes has
+   * been set in GetFeatureTileRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +96,10 @@ public final class Geometry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The extruded areas present in this geometry.
+   * The extruded areas present in this geometry. Not populated if modeled_volumes are included in
+   * this geometry unless always_include_building_footprints is set in GetFeatureTileRequest, in
+   * which case the client should decide which (extruded areas or modeled volumes) should be used
+   * (they should not be rendered together).
    * @return value or {@code null} for none
    */
   public java.util.List<ExtrudedArea> getExtrudedAreas() {
@@ -100,7 +107,10 @@ public final class Geometry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The extruded areas present in this geometry.
+   * The extruded areas present in this geometry. Not populated if modeled_volumes are included in
+   * this geometry unless always_include_building_footprints is set in GetFeatureTileRequest, in
+   * which case the client should decide which (extruded areas or modeled volumes) should be used
+   * (they should not be rendered together).
    * @param extrudedAreas extrudedAreas or {@code null} for none
    */
   public Geometry setExtrudedAreas(java.util.List<ExtrudedArea> extrudedAreas) {
@@ -126,7 +136,8 @@ public final class Geometry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The modeled volumes present in this geometry.
+   * The modeled volumes present in this geometry. Not populated unless enable_modeled_volumes has
+   * been set in GetFeatureTileRequest.
    * @return value or {@code null} for none
    */
   public java.util.List<ModeledVolume> getModeledVolumes() {
@@ -134,7 +145,8 @@ public final class Geometry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The modeled volumes present in this geometry.
+   * The modeled volumes present in this geometry. Not populated unless enable_modeled_volumes has
+   * been set in GetFeatureTileRequest.
    * @param modeledVolumes modeledVolumes or {@code null} for none
    */
   public Geometry setModeledVolumes(java.util.List<ModeledVolume> modeledVolumes) {

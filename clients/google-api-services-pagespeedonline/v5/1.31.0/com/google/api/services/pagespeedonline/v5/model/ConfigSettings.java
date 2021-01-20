@@ -38,11 +38,20 @@ public final class ConfigSettings extends com.google.api.client.json.GenericJson
   private java.lang.String channel;
 
   /**
-   * The form factor the emulation should use.
+   * The form factor the emulation should use. This field is deprecated, form_factor should be used
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String emulatedFormFactor;
+
+  /**
+   * How Lighthouse should interpret this run in regards to scoring performance metrics and skipping
+   * mobile-only tests in desktop.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String formFactor;
 
   /**
    * The locale setting.
@@ -76,7 +85,8 @@ public final class ConfigSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The form factor the emulation should use.
+   * The form factor the emulation should use. This field is deprecated, form_factor should be used
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmulatedFormFactor() {
@@ -84,11 +94,31 @@ public final class ConfigSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The form factor the emulation should use.
+   * The form factor the emulation should use. This field is deprecated, form_factor should be used
+   * instead.
    * @param emulatedFormFactor emulatedFormFactor or {@code null} for none
    */
   public ConfigSettings setEmulatedFormFactor(java.lang.String emulatedFormFactor) {
     this.emulatedFormFactor = emulatedFormFactor;
+    return this;
+  }
+
+  /**
+   * How Lighthouse should interpret this run in regards to scoring performance metrics and skipping
+   * mobile-only tests in desktop.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFormFactor() {
+    return formFactor;
+  }
+
+  /**
+   * How Lighthouse should interpret this run in regards to scoring performance metrics and skipping
+   * mobile-only tests in desktop.
+   * @param formFactor formFactor or {@code null} for none
+   */
+  public ConfigSettings setFormFactor(java.lang.String formFactor) {
+    this.formFactor = formFactor;
     return this;
   }
 

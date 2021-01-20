@@ -300,6 +300,32 @@ public class SemanticTile extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * Flag indicating whether the returned tile will always contain 2.5D footprints for
+       * structures. If enabled_modeled_volumes is set, this will mean that structures will have
+       * both their 3D models and 2.5D footprints returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean alwaysIncludeBuildingFootprints;
+
+      /** Flag indicating whether the returned tile will always contain 2.5D footprints for structures. If
+     enabled_modeled_volumes is set, this will mean that structures will have both their 3D models and
+     2.5D footprints returned.
+       */
+      public java.lang.Boolean getAlwaysIncludeBuildingFootprints() {
+        return alwaysIncludeBuildingFootprints;
+      }
+
+      /**
+       * Flag indicating whether the returned tile will always contain 2.5D footprints for
+       * structures. If enabled_modeled_volumes is set, this will mean that structures will have
+       * both their 3D models and 2.5D footprints returned.
+       */
+      public Get setAlwaysIncludeBuildingFootprints(java.lang.Boolean alwaysIncludeBuildingFootprints) {
+        this.alwaysIncludeBuildingFootprints = alwaysIncludeBuildingFootprints;
+        return this;
+      }
+
+      /**
        * API client name and version. For example, the SDK calling the API. The exact format is up
        * to the client.
        */

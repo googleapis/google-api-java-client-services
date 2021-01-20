@@ -159,8 +159,9 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
 
   /**
    * The user's search query. The value must be a UTF-8 encoded string with a length limit of 5,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Required for `search` events.
-   * Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or
+   * filter is required for `search` events. Other event types should not set this field. Otherwise,
+   * an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -458,8 +459,9 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
 
   /**
    * The user's search query. The value must be a UTF-8 encoded string with a length limit of 5,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Required for `search` events.
-   * Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or
+   * filter is required for `search` events. Other event types should not set this field. Otherwise,
+   * an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchQuery() {
@@ -468,8 +470,9 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
 
   /**
    * The user's search query. The value must be a UTF-8 encoded string with a length limit of 5,000
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned. Required for `search` events.
-   * Other event types should not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or
+   * filter is required for `search` events. Other event types should not set this field. Otherwise,
+   * an INVALID_ARGUMENT error is returned.
    * @param searchQuery searchQuery or {@code null} for none
    */
   public GoogleCloudRetailV2UserEvent setSearchQuery(java.lang.String searchQuery) {

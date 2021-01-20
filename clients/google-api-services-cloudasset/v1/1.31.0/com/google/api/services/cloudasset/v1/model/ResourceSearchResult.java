@@ -57,8 +57,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * Optional. One or more paragraphs of text description of this resource. Maximum length could be
    * up to 1M bytes. This field is available only when the resource's proto contains it. To search
-   * against the `description`: * use a field query. Example: `description:"*important instance*"` *
-   * use a free text query. Example: `"*important instance*"`
+   * against the `description`: * use a field query. Example: `description:"important instance"` *
+   * use a free text query. Example: `"important instance"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,6 +72,16 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Optional. The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}.
+   * This field is available when the resource belongs to one or more folders. To search against
+   * `folders`: * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as
+   * this folder in your search request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> folders;
 
   /**
    * Optional. Labels associated with this resource. See [Labelling and grouping GCP
@@ -120,9 +130,20 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> networkTags;
 
   /**
+   * Optional. The organization that this resource belongs to, in the form of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to a
+   * organization. To search against `organization`: * use a field query. Example:
+   * `organization:123` * specify the `scope` field as this organization in your search request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String organization;
+
+  /**
    * Optional. The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}.
-   * This field is available when the resource belongs to a project. To search against the
-   * `project`: * specify the `scope` field as this project in your search request.
+   * This field is available when the resource belongs to a project. To search against `project`: *
+   * use a field query. Example: `project:12345` * specify the `scope` field as this project in your
+   * search request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,8 +208,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * Optional. One or more paragraphs of text description of this resource. Maximum length could be
    * up to 1M bytes. This field is available only when the resource's proto contains it. To search
-   * against the `description`: * use a field query. Example: `description:"*important instance*"` *
-   * use a free text query. Example: `"*important instance*"`
+   * against the `description`: * use a field query. Example: `description:"important instance"` *
+   * use a free text query. Example: `"important instance"`
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -198,8 +219,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * Optional. One or more paragraphs of text description of this resource. Maximum length could be
    * up to 1M bytes. This field is available only when the resource's proto contains it. To search
-   * against the `description`: * use a field query. Example: `description:"*important instance*"` *
-   * use a free text query. Example: `"*important instance*"`
+   * against the `description`: * use a field query. Example: `description:"important instance"` *
+   * use a free text query. Example: `"important instance"`
    * @param description description or {@code null} for none
    */
   public ResourceSearchResult setDescription(java.lang.String description) {
@@ -225,6 +246,29 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}.
+   * This field is available when the resource belongs to one or more folders. To search against
+   * `folders`: * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as
+   * this folder in your search request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFolders() {
+    return folders;
+  }
+
+  /**
+   * Optional. The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}.
+   * This field is available when the resource belongs to one or more folders. To search against
+   * `folders`: * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as
+   * this folder in your search request.
+   * @param folders folders or {@code null} for none
+   */
+  public ResourceSearchResult setFolders(java.util.List<java.lang.String> folders) {
+    this.folders = folders;
     return this;
   }
 
@@ -333,9 +377,33 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
+   * Optional. The organization that this resource belongs to, in the form of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to a
+   * organization. To search against `organization`: * use a field query. Example:
+   * `organization:123` * specify the `scope` field as this organization in your search request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrganization() {
+    return organization;
+  }
+
+  /**
+   * Optional. The organization that this resource belongs to, in the form of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to a
+   * organization. To search against `organization`: * use a field query. Example:
+   * `organization:123` * specify the `scope` field as this organization in your search request.
+   * @param organization organization or {@code null} for none
+   */
+  public ResourceSearchResult setOrganization(java.lang.String organization) {
+    this.organization = organization;
+    return this;
+  }
+
+  /**
    * Optional. The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}.
-   * This field is available when the resource belongs to a project. To search against the
-   * `project`: * specify the `scope` field as this project in your search request.
+   * This field is available when the resource belongs to a project. To search against `project`: *
+   * use a field query. Example: `project:12345` * specify the `scope` field as this project in your
+   * search request.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -344,8 +412,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
 
   /**
    * Optional. The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}.
-   * This field is available when the resource belongs to a project. To search against the
-   * `project`: * specify the `scope` field as this project in your search request.
+   * This field is available when the resource belongs to a project. To search against `project`: *
+   * use a field query. Example: `project:12345` * specify the `scope` field as this project in your
+   * search request.
    * @param project project or {@code null} for none
    */
   public ResourceSearchResult setProject(java.lang.String project) {

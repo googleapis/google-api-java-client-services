@@ -2365,6 +2365,50 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
+       * Optional. A list of asset types that this request searches for. If empty, it will search
+       * all the [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-
+       * asset-types#searchable_asset_types). Regular expressions are also supported. For example: *
+       * "compute.googleapis.com.*" snapshots resources whose asset type starts with
+       * "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with
+       * "Instance". * ".*Instance.*" snapshots resources whose asset type contains "Instance". See
+       * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
+       * syntax. If the regular expression does not match any supported asset type, an
+       * INVALID_ARGUMENT error will be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> assetTypes;
+
+      /** Optional. A list of asset types that this request searches for. If empty, it will search all the
+     [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-
+     types#searchable_asset_types). Regular expressions are also supported. For example: *
+     "compute.googleapis.com.*" snapshots resources whose asset type starts with
+     "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with "Instance".
+     * ".*Instance.*" snapshots resources whose asset type contains "Instance". See
+     [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression syntax. If
+     the regular expression does not match any supported asset type, an INVALID_ARGUMENT error will be
+     returned.
+       */
+      public java.util.List<java.lang.String> getAssetTypes() {
+        return assetTypes;
+      }
+
+      /**
+       * Optional. A list of asset types that this request searches for. If empty, it will search
+       * all the [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-
+       * asset-types#searchable_asset_types). Regular expressions are also supported. For example: *
+       * "compute.googleapis.com.*" snapshots resources whose asset type starts with
+       * "compute.googleapis.com". * ".*Instance" snapshots resources whose asset type ends with
+       * "Instance". * ".*Instance.*" snapshots resources whose asset type contains "Instance". See
+       * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
+       * syntax. If the regular expression does not match any supported asset type, an
+       * INVALID_ARGUMENT error will be returned.
+       */
+      public SearchAllIamPolicies setAssetTypes(java.util.List<java.lang.String> assetTypes) {
+        this.assetTypes = assetTypes;
+        return this;
+      }
+
+      /**
        * Optional. The page size for search result pagination. Page size is capped at 500 even if a
        * larger value is given. If set to zero, server will pick an appropriate default. Returned
        * results may be fewer than requested. When this happens, there could be more results as long
@@ -2430,18 +2474,21 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * doc](https://cloud.google.com/iam/docs/policies#structure). Examples: *
        * `policy:amy@gmail.com` to find IAM policy bindings that specify user "amy@gmail.com". *
        * `policy:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin
-       * role. * `policy.role.permissions:storage.buckets.update` to find IAM policy bindings that
-       * specify a role containing "storage.buckets.update" permission. Note that if callers don't
-       * have `iam.roles.get` access to a role's included permissions, policy bindings that specify
-       * this role will be dropped from the search results. * `resource:organizations/123456` to
-       * find IAM policy bindings that are set on "organizations/123456". *
+       * role. * `policy:comp*` to find IAM policy bindings that contain "comp" as a prefix of any
+       * word in the binding. * `policy.role.permissions:storage.buckets.update` to find IAM policy
+       * bindings that specify a role containing "storage.buckets.update" permission. Note that if
+       * callers don't have `iam.roles.get` access to a role's included permissions, policy bindings
+       * that specify this role will be dropped from the search results. *
+       * `policy.role.permissions:upd*` to find IAM policy bindings that specify a role containing
+       * "upd" as a prefix of any word in the role permission. Note that if callers don't have
+       * `iam.roles.get` access to a role's included permissions, policy bindings that specify this
+       * role will be dropped from the search results. * `resource:organizations/123456` to find IAM
+       * policy bindings that are set on "organizations/123456". *
        * `resource=//cloudresourcemanager.googleapis.com/projects/myproject` to find IAM policy
        * bindings that are set on the project named "myproject". * `Important` to find IAM policy
        * bindings that contain "Important" as a word in any of the searchable fields (except for the
-       * included permissions). * `*por*` to find IAM policy bindings that contain "por" as a
-       * substring in any of the searchable fields (except for the included permissions). *
-       * `resource:(instance1 OR instance2) policy:amy` to find IAM policy bindings that are set on
-       * resources "instance1" or "instance2" and also specify user "amy".
+       * included permissions). * `resource:(instance1 OR instance2) policy:amy` to find IAM policy
+       * bindings that are set on resources "instance1" or "instance2" and also specify user "amy".
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -2454,18 +2501,21 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      your query. To learn more about the IAM policy structure, see [IAM policy
      doc](https://cloud.google.com/iam/docs/policies#structure). Examples: * `policy:amy@gmail.com` to
      find IAM policy bindings that specify user "amy@gmail.com". * `policy:roles/compute.admin` to find
-     IAM policy bindings that specify the Compute Admin role. *
+     IAM policy bindings that specify the Compute Admin role. * `policy:comp*` to find IAM policy
+     bindings that contain "comp" as a prefix of any word in the binding. *
      `policy.role.permissions:storage.buckets.update` to find IAM policy bindings that specify a role
      containing "storage.buckets.update" permission. Note that if callers don't have `iam.roles.get`
      access to a role's included permissions, policy bindings that specify this role will be dropped
-     from the search results. * `resource:organizations/123456` to find IAM policy bindings that are set
-     on "organizations/123456". * `resource=//cloudresourcemanager.googleapis.com/projects/myproject` to
-     find IAM policy bindings that are set on the project named "myproject". * `Important` to find IAM
-     policy bindings that contain "Important" as a word in any of the searchable fields (except for the
-     included permissions). * `*por*` to find IAM policy bindings that contain "por" as a substring in
-     any of the searchable fields (except for the included permissions). * `resource:(instance1 OR
-     instance2) policy:amy` to find IAM policy bindings that are set on resources "instance1" or
-     "instance2" and also specify user "amy".
+     from the search results. * `policy.role.permissions:upd*` to find IAM policy bindings that specify
+     a role containing "upd" as a prefix of any word in the role permission. Note that if callers don't
+     have `iam.roles.get` access to a role's included permissions, policy bindings that specify this
+     role will be dropped from the search results. * `resource:organizations/123456` to find IAM policy
+     bindings that are set on "organizations/123456". *
+     `resource=//cloudresourcemanager.googleapis.com/projects/myproject` to find IAM policy bindings
+     that are set on the project named "myproject". * `Important` to find IAM policy bindings that
+     contain "Important" as a word in any of the searchable fields (except for the included
+     permissions). * `resource:(instance1 OR instance2) policy:amy` to find IAM policy bindings that are
+     set on resources "instance1" or "instance2" and also specify user "amy".
        */
       public java.lang.String getQuery() {
         return query;
@@ -2482,18 +2532,21 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * doc](https://cloud.google.com/iam/docs/policies#structure). Examples: *
        * `policy:amy@gmail.com` to find IAM policy bindings that specify user "amy@gmail.com". *
        * `policy:roles/compute.admin` to find IAM policy bindings that specify the Compute Admin
-       * role. * `policy.role.permissions:storage.buckets.update` to find IAM policy bindings that
-       * specify a role containing "storage.buckets.update" permission. Note that if callers don't
-       * have `iam.roles.get` access to a role's included permissions, policy bindings that specify
-       * this role will be dropped from the search results. * `resource:organizations/123456` to
-       * find IAM policy bindings that are set on "organizations/123456". *
+       * role. * `policy:comp*` to find IAM policy bindings that contain "comp" as a prefix of any
+       * word in the binding. * `policy.role.permissions:storage.buckets.update` to find IAM policy
+       * bindings that specify a role containing "storage.buckets.update" permission. Note that if
+       * callers don't have `iam.roles.get` access to a role's included permissions, policy bindings
+       * that specify this role will be dropped from the search results. *
+       * `policy.role.permissions:upd*` to find IAM policy bindings that specify a role containing
+       * "upd" as a prefix of any word in the role permission. Note that if callers don't have
+       * `iam.roles.get` access to a role's included permissions, policy bindings that specify this
+       * role will be dropped from the search results. * `resource:organizations/123456` to find IAM
+       * policy bindings that are set on "organizations/123456". *
        * `resource=//cloudresourcemanager.googleapis.com/projects/myproject` to find IAM policy
        * bindings that are set on the project named "myproject". * `Important` to find IAM policy
        * bindings that contain "Important" as a word in any of the searchable fields (except for the
-       * included permissions). * `*por*` to find IAM policy bindings that contain "por" as a
-       * substring in any of the searchable fields (except for the included permissions). *
-       * `resource:(instance1 OR instance2) policy:amy` to find IAM policy bindings that are set on
-       * resources "instance1" or "instance2" and also specify user "amy".
+       * included permissions). * `resource:(instance1 OR instance2) policy:amy` to find IAM policy
+       * bindings that are set on resources "instance1" or "instance2" and also specify user "amy".
        */
       public SearchAllIamPolicies setQuery(java.lang.String query) {
         this.query = query;
@@ -2820,17 +2873,15 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Examples: * `name:Important` to find Cloud resources whose name contains "Important" as a
        * word. * `name=Important` to find the Cloud resource whose name is exactly "Important". *
        * `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a
-       * prefix. * `description:*por*` to find Cloud resources whose description contains "por" as a
-       * substring. * `location:us-west*` to find Cloud resources whose location is prefixed with
-       * "us-west". * `labels:prod` to find Cloud resources whose labels contain "prod" as a key or
-       * value. * `labels.env:prod` to find Cloud resources that have a label "env" and its value is
-       * "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `Important` to
-       * find Cloud resources that contain "Important" as a word in any of the searchable fields. *
-       * `Impor*` to find Cloud resources that contain "Impor" as a prefix in any of the searchable
-       * fields. * `*por*` to find Cloud resources that contain "por" as a substring in any of the
-       * searchable fields. * `Important location:(us-west1 OR global)` to find Cloud resources that
-       * contain "Important" as a word in any of the searchable fields and are also located in the
-       * "us-west1" region or the "global" location.
+       * prefix of any word in the field. * `location:us-west*` to find Cloud resources whose
+       * location contains both "us" and "west" as prefixes. * `labels:prod` to find Cloud resources
+       * whose labels contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources
+       * that have a label "env" and its value is "prod". * `labels.env:*` to find Cloud resources
+       * that have a label "env". * `Important` to find Cloud resources that contain "Important" as
+       * a word in any of the searchable fields. * `Impor*` to find Cloud resources that contain
+       * "Impor" as a prefix of any word in any of the searchable fields. * `Important location:(us-
+       * west1 OR global)` to find Cloud resources that contain "Important" as a word in any of the
+       * searchable fields and are also located in the "us-west1" region or the "global" location.
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -2840,17 +2891,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      or empty, it will search all the resources within the specified `scope`. Examples: *
      `name:Important` to find Cloud resources whose name contains "Important" as a word. *
      `name=Important` to find the Cloud resource whose name is exactly "Important". *
-     `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a prefix. *
-     `description:*por*` to find Cloud resources whose description contains "por" as a substring. *
-     `location:us-west*` to find Cloud resources whose location is prefixed with "us-west". *
-     `labels:prod` to find Cloud resources whose labels contain "prod" as a key or value. *
-     `labels.env:prod` to find Cloud resources that have a label "env" and its value is "prod". *
-     `labels.env:*` to find Cloud resources that have a label "env". * `Important` to find Cloud
-     resources that contain "Important" as a word in any of the searchable fields. * `Impor*` to find
-     Cloud resources that contain "Impor" as a prefix in any of the searchable fields. * `*por*` to find
-     Cloud resources that contain "por" as a substring in any of the searchable fields. * `Important
-     location:(us-west1 OR global)` to find Cloud resources that contain "Important" as a word in any of
-     the searchable fields and are also located in the "us-west1" region or the "global" location.
+     `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a prefix of any
+     word in the field. * `location:us-west*` to find Cloud resources whose location contains both "us"
+     and "west" as prefixes. * `labels:prod` to find Cloud resources whose labels contain "prod" as a
+     key or value. * `labels.env:prod` to find Cloud resources that have a label "env" and its value is
+     "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `Important` to find
+     Cloud resources that contain "Important" as a word in any of the searchable fields. * `Impor*` to
+     find Cloud resources that contain "Impor" as a prefix of any word in any of the searchable fields.
+     * `Important location:(us-west1 OR global)` to find Cloud resources that contain "Important" as a
+     word in any of the searchable fields and are also located in the "us-west1" region or the "global"
+     location.
        */
       public java.lang.String getQuery() {
         return query;
@@ -2863,17 +2913,15 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * Examples: * `name:Important` to find Cloud resources whose name contains "Important" as a
        * word. * `name=Important` to find the Cloud resource whose name is exactly "Important". *
        * `displayName:Impor*` to find Cloud resources whose display name contains "Impor" as a
-       * prefix. * `description:*por*` to find Cloud resources whose description contains "por" as a
-       * substring. * `location:us-west*` to find Cloud resources whose location is prefixed with
-       * "us-west". * `labels:prod` to find Cloud resources whose labels contain "prod" as a key or
-       * value. * `labels.env:prod` to find Cloud resources that have a label "env" and its value is
-       * "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `Important` to
-       * find Cloud resources that contain "Important" as a word in any of the searchable fields. *
-       * `Impor*` to find Cloud resources that contain "Impor" as a prefix in any of the searchable
-       * fields. * `*por*` to find Cloud resources that contain "por" as a substring in any of the
-       * searchable fields. * `Important location:(us-west1 OR global)` to find Cloud resources that
-       * contain "Important" as a word in any of the searchable fields and are also located in the
-       * "us-west1" region or the "global" location.
+       * prefix of any word in the field. * `location:us-west*` to find Cloud resources whose
+       * location contains both "us" and "west" as prefixes. * `labels:prod` to find Cloud resources
+       * whose labels contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources
+       * that have a label "env" and its value is "prod". * `labels.env:*` to find Cloud resources
+       * that have a label "env". * `Important` to find Cloud resources that contain "Important" as
+       * a word in any of the searchable fields. * `Impor*` to find Cloud resources that contain
+       * "Impor" as a prefix of any word in any of the searchable fields. * `Important location:(us-
+       * west1 OR global)` to find Cloud resources that contain "Important" as a word in any of the
+       * searchable fields and are also located in the "us-west1" region or the "global" location.
        */
       public SearchAllResources setQuery(java.lang.String query) {
         this.query = query;

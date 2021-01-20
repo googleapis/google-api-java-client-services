@@ -43,7 +43,8 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Token to retrieve the next page of results. Set to empty if there are no remaining results.
+   * Token to retrieve the next page of results. It expires 72 hours after the page token for the
+   * first page is generated. Set to empty if there are no remaining results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +75,8 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Token to retrieve the next page of results. Set to empty if there are no remaining results.
+   * Token to retrieve the next page of results. It expires 72 hours after the page token for the
+   * first page is generated. Set to empty if there are no remaining results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -82,7 +84,8 @@ public final class ListAssetsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Token to retrieve the next page of results. Set to empty if there are no remaining results.
+   * Token to retrieve the next page of results. It expires 72 hours after the page token for the
+   * first page is generated. Set to empty if there are no remaining results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListAssetsResponse setNextPageToken(java.lang.String nextPageToken) {

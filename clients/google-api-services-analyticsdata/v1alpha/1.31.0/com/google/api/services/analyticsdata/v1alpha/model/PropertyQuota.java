@@ -56,8 +56,8 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   private QuotaStatus tokensPerDay;
 
   /**
-   * Standard Analytics Properties can use up to 5,000 tokens per day; Analytics 360 Properties can
-   * use 50,000 tokens per day. An API request consumes a single number of tokens, and that number
+   * Standard Analytics Properties can use up to 5,000 tokens per hour; Analytics 360 Properties can
+   * use 50,000 tokens per hour. An API request consumes a single number of tokens, and that number
    * is deducted from both the hourly and daily quotas.
    * The value may be {@code null}.
    */
@@ -122,8 +122,8 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Standard Analytics Properties can use up to 5,000 tokens per day; Analytics 360 Properties can
-   * use 50,000 tokens per day. An API request consumes a single number of tokens, and that number
+   * Standard Analytics Properties can use up to 5,000 tokens per hour; Analytics 360 Properties can
+   * use 50,000 tokens per hour. An API request consumes a single number of tokens, and that number
    * is deducted from both the hourly and daily quotas.
    * @return value or {@code null} for none
    */
@@ -132,8 +132,8 @@ public final class PropertyQuota extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Standard Analytics Properties can use up to 5,000 tokens per day; Analytics 360 Properties can
-   * use 50,000 tokens per day. An API request consumes a single number of tokens, and that number
+   * Standard Analytics Properties can use up to 5,000 tokens per hour; Analytics 360 Properties can
+   * use 50,000 tokens per hour. An API request consumes a single number of tokens, and that number
    * is deducted from both the hourly and daily quotas.
    * @param tokensPerHour tokensPerHour or {@code null} for none
    */

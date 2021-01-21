@@ -107,10 +107,9 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
   /**
    * For satisfying the matchRule condition, the path of the request must satisfy the regular
    * expression specified in regexMatch after removing any query parameters and anchor supplied with
-   * the original URL. For regular expression grammar please see
-   * en.cppreference.com/w/cpp/regex/ecmascript Only one of prefixMatch, fullPathMatch or regexMatch
-   * must be specified. Note that regexMatch only applies to Loadbalancers that have their
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * the original URL. For regular expression grammar please see github.com/google/re2/wiki/Syntax
+   * Only one of prefixMatch, fullPathMatch or regexMatch must be specified. Note that regexMatch
+   * only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,10 +260,9 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
   /**
    * For satisfying the matchRule condition, the path of the request must satisfy the regular
    * expression specified in regexMatch after removing any query parameters and anchor supplied with
-   * the original URL. For regular expression grammar please see
-   * en.cppreference.com/w/cpp/regex/ecmascript Only one of prefixMatch, fullPathMatch or regexMatch
-   * must be specified. Note that regexMatch only applies to Loadbalancers that have their
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * the original URL. For regular expression grammar please see github.com/google/re2/wiki/Syntax
+   * Only one of prefixMatch, fullPathMatch or regexMatch must be specified. Note that regexMatch
+   * only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexMatch() {
@@ -274,10 +272,9 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
   /**
    * For satisfying the matchRule condition, the path of the request must satisfy the regular
    * expression specified in regexMatch after removing any query parameters and anchor supplied with
-   * the original URL. For regular expression grammar please see
-   * en.cppreference.com/w/cpp/regex/ecmascript Only one of prefixMatch, fullPathMatch or regexMatch
-   * must be specified. Note that regexMatch only applies to Loadbalancers that have their
-   * loadBalancingScheme set to INTERNAL_SELF_MANAGED.
+   * the original URL. For regular expression grammar please see github.com/google/re2/wiki/Syntax
+   * Only one of prefixMatch, fullPathMatch or regexMatch must be specified. Note that regexMatch
+   * only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */
   public HttpRouteRuleMatch setRegexMatch(java.lang.String regexMatch) {

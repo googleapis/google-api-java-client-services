@@ -163,6 +163,14 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> licenses;
 
   /**
+   * An opaque location hint used to place the disk close to other resources. This field is for use
+   * by internal tools that use the public API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationHint;
+
+  /**
    * Indicates whether or not the disk can be read/write attached to more than one instance.
    * The value may be {@code null}.
    */
@@ -396,7 +404,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
    * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
-   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized
+   * for creating multiple disks from a source storage object. To create many disks from a source
+   * storage object, use gcloud compute images import instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -766,6 +776,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setLicenses(java.util.List<java.lang.String> licenses) {
     this.licenses = licenses;
+    return this;
+  }
+
+  /**
+   * An opaque location hint used to place the disk close to other resources. This field is for use
+   * by internal tools that use the public API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationHint() {
+    return locationHint;
+  }
+
+  /**
+   * An opaque location hint used to place the disk close to other resources. This field is for use
+   * by internal tools that use the public API.
+   * @param locationHint locationHint or {@code null} for none
+   */
+  public Disk setLocationHint(java.lang.String locationHint) {
+    this.locationHint = locationHint;
     return this;
   }
 
@@ -1306,7 +1335,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
    * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
-   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized
+   * for creating multiple disks from a source storage object. To create many disks from a source
+   * storage object, use gcloud compute images import instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceStorageObject() {
@@ -1316,7 +1347,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
    * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
-   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized
+   * for creating multiple disks from a source storage object. To create many disks from a source
+   * storage object, use gcloud compute images import instead.
    * @param sourceStorageObject sourceStorageObject or {@code null} for none
    */
   public Disk setSourceStorageObject(java.lang.String sourceStorageObject) {

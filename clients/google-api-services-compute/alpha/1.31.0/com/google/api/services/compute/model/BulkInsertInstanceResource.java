@@ -81,6 +81,14 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.lang.String namePattern;
 
   /**
+   * Per-instance properties to be set on individual instances. Keys of this map specify requested
+   * instance names. Can be empty if name_pattern is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, BulkInsertInstanceResourcePerInstanceProperties> perInstanceProperties;
+
+  /**
    * List of predefined names. The number of names provided must be equal to count.
    * The value may be {@code null}.
    */
@@ -220,6 +228,25 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
    */
   public BulkInsertInstanceResource setNamePattern(java.lang.String namePattern) {
     this.namePattern = namePattern;
+    return this;
+  }
+
+  /**
+   * Per-instance properties to be set on individual instances. Keys of this map specify requested
+   * instance names. Can be empty if name_pattern is used.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, BulkInsertInstanceResourcePerInstanceProperties> getPerInstanceProperties() {
+    return perInstanceProperties;
+  }
+
+  /**
+   * Per-instance properties to be set on individual instances. Keys of this map specify requested
+   * instance names. Can be empty if name_pattern is used.
+   * @param perInstanceProperties perInstanceProperties or {@code null} for none
+   */
+  public BulkInsertInstanceResource setPerInstanceProperties(java.util.Map<String, BulkInsertInstanceResourcePerInstanceProperties> perInstanceProperties) {
+    this.perInstanceProperties = perInstanceProperties;
     return this;
   }
 

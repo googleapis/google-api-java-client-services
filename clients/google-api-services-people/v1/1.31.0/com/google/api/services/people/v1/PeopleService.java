@@ -257,6 +257,32 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
+       * Optional. A field mask to restrict which fields on the group are returned. Defaults to
+       * `metadata`, `groupType`, `memberCount`, and `name` if not set or set to empty. Valid fields
+       * are: * clientData * groupType * memberCount * metadata * name
+       */
+      @com.google.api.client.util.Key
+      private String groupFields;
+
+      /** Optional. A field mask to restrict which fields on the group are returned. Defaults to `metadata`,
+     `groupType`, `memberCount`, and `name` if not set or set to empty. Valid fields are: * clientData *
+     groupType * memberCount * metadata * name
+       */
+      public String getGroupFields() {
+        return groupFields;
+      }
+
+      /**
+       * Optional. A field mask to restrict which fields on the group are returned. Defaults to
+       * `metadata`, `groupType`, `memberCount`, and `name` if not set or set to empty. Valid fields
+       * are: * clientData * groupType * memberCount * metadata * name
+       */
+      public BatchGet setGroupFields(String groupFields) {
+        this.groupFields = groupFields;
+        return this;
+      }
+
+      /**
        * Optional. Specifies the maximum number of members to return for each group. Defaults to 0
        * if not set, which will return zero members.
        */
@@ -680,6 +706,32 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       }
 
       /**
+       * Optional. A field mask to restrict which fields on the group are returned. Defaults to
+       * `metadata`, `groupType`, `memberCount`, and `name` if not set or set to empty. Valid fields
+       * are: * clientData * groupType * memberCount * metadata * name
+       */
+      @com.google.api.client.util.Key
+      private String groupFields;
+
+      /** Optional. A field mask to restrict which fields on the group are returned. Defaults to `metadata`,
+     `groupType`, `memberCount`, and `name` if not set or set to empty. Valid fields are: * clientData *
+     groupType * memberCount * metadata * name
+       */
+      public String getGroupFields() {
+        return groupFields;
+      }
+
+      /**
+       * Optional. A field mask to restrict which fields on the group are returned. Defaults to
+       * `metadata`, `groupType`, `memberCount`, and `name` if not set or set to empty. Valid fields
+       * are: * clientData * groupType * memberCount * metadata * name
+       */
+      public Get setGroupFields(String groupFields) {
+        this.groupFields = groupFields;
+        return this;
+      }
+
+      /**
        * Optional. Specifies the maximum number of members to return. Defaults to 0 if not set,
        * which will return zero members.
        */
@@ -808,6 +860,32 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       @Override
       public List setUploadProtocol(java.lang.String uploadProtocol) {
         return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. A field mask to restrict which fields on the group are returned. Defaults to
+       * `metadata`, `groupType`, `memberCount`, and `name` if not set or set to empty. Valid fields
+       * are: * clientData * groupType * memberCount * metadata * name
+       */
+      @com.google.api.client.util.Key
+      private String groupFields;
+
+      /** Optional. A field mask to restrict which fields on the group are returned. Defaults to `metadata`,
+     `groupType`, `memberCount`, and `name` if not set or set to empty. Valid fields are: * clientData *
+     groupType * memberCount * metadata * name
+       */
+      public String getGroupFields() {
+        return groupFields;
+      }
+
+      /**
+       * Optional. A field mask to restrict which fields on the group are returned. Defaults to
+       * `metadata`, `groupType`, `memberCount`, and `name` if not set or set to empty. Valid fields
+       * are: * clientData * groupType * memberCount * metadata * name
+       */
+      public List setGroupFields(String groupFields) {
+        this.groupFields = groupFields;
+        return this;
       }
 
       /**

@@ -39,6 +39,13 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * The ProtectionLevel of the CryptoKeyVersion used for signing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protectionLevel;
+
+  /**
    * The created signature.
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class AsymmetricSignResponse extends com.google.api.client.json.Gen
    */
   public AsymmetricSignResponse setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The ProtectionLevel of the CryptoKeyVersion used for signing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtectionLevel() {
+    return protectionLevel;
+  }
+
+  /**
+   * The ProtectionLevel of the CryptoKeyVersion used for signing.
+   * @param protectionLevel protectionLevel or {@code null} for none
+   */
+  public AsymmetricSignResponse setProtectionLevel(java.lang.String protectionLevel) {
+    this.protectionLevel = protectionLevel;
     return this;
   }
 

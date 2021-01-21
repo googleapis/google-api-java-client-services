@@ -60,6 +60,13 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * The ProtectionLevel of the CryptoKeyVersion used in encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protectionLevel;
+
+  /**
    * Integrity verification field. A flag indicating whether
    * EncryptRequest.additional_authenticated_data_crc32c was received by KeyManagementService and
    * used for the integrity verification of the AAD. A false value of this field indicates either
@@ -176,6 +183,23 @@ public final class EncryptResponse extends com.google.api.client.json.GenericJso
    */
   public EncryptResponse setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The ProtectionLevel of the CryptoKeyVersion used in encryption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtectionLevel() {
+    return protectionLevel;
+  }
+
+  /**
+   * The ProtectionLevel of the CryptoKeyVersion used in encryption.
+   * @param protectionLevel protectionLevel or {@code null} for none
+   */
+  public EncryptResponse setProtectionLevel(java.lang.String protectionLevel) {
+    this.protectionLevel = protectionLevel;
     return this;
   }
 

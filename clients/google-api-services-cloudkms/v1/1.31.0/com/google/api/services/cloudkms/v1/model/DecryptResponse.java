@@ -54,6 +54,20 @@ public final class DecryptResponse extends com.google.api.client.json.GenericJso
   private java.lang.Long plaintextCrc32c;
 
   /**
+   * The ProtectionLevel of the CryptoKeyVersion used in decryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protectionLevel;
+
+  /**
+   * Whether the Decryption was performed using the primary key version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean usedPrimary;
+
+  /**
    * The decrypted data originally supplied in EncryptRequest.plaintext.
    * @see #decodePlaintext()
    * @return value or {@code null} for none
@@ -130,6 +144,40 @@ public final class DecryptResponse extends com.google.api.client.json.GenericJso
    */
   public DecryptResponse setPlaintextCrc32c(java.lang.Long plaintextCrc32c) {
     this.plaintextCrc32c = plaintextCrc32c;
+    return this;
+  }
+
+  /**
+   * The ProtectionLevel of the CryptoKeyVersion used in decryption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtectionLevel() {
+    return protectionLevel;
+  }
+
+  /**
+   * The ProtectionLevel of the CryptoKeyVersion used in decryption.
+   * @param protectionLevel protectionLevel or {@code null} for none
+   */
+  public DecryptResponse setProtectionLevel(java.lang.String protectionLevel) {
+    this.protectionLevel = protectionLevel;
+    return this;
+  }
+
+  /**
+   * Whether the Decryption was performed using the primary key version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUsedPrimary() {
+    return usedPrimary;
+  }
+
+  /**
+   * Whether the Decryption was performed using the primary key version.
+   * @param usedPrimary usedPrimary or {@code null} for none
+   */
+  public DecryptResponse setUsedPrimary(java.lang.Boolean usedPrimary) {
+    this.usedPrimary = usedPrimary;
     return this;
   }
 

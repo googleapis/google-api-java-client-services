@@ -32,7 +32,7 @@ public final class AddPublicKeyRequest extends com.google.api.client.json.Generi
   /**
    * Key that should be added to the environment. Supported formats are `ssh-dss` (see RFC4253),
    * `ssh-rsa` (see RFC4253), `ecdsa-sha2-nistp256` (see RFC5656), `ecdsa-sha2-nistp384` (see
-   * RFC5656) and `ecdsa-sha2-nistp521` (see RFC5656). It should be structured as , where part is
+   * RFC5656) and `ecdsa-sha2-nistp521` (see RFC5656). It should be structured as  , where  part is
    * encoded with Base64.
    * The value may be {@code null}.
    */
@@ -42,7 +42,7 @@ public final class AddPublicKeyRequest extends com.google.api.client.json.Generi
   /**
    * Key that should be added to the environment. Supported formats are `ssh-dss` (see RFC4253),
    * `ssh-rsa` (see RFC4253), `ecdsa-sha2-nistp256` (see RFC5656), `ecdsa-sha2-nistp384` (see
-   * RFC5656) and `ecdsa-sha2-nistp521` (see RFC5656). It should be structured as , where part is
+   * RFC5656) and `ecdsa-sha2-nistp521` (see RFC5656). It should be structured as  , where  part is
    * encoded with Base64.
    * @return value or {@code null} for none
    */
@@ -53,7 +53,7 @@ public final class AddPublicKeyRequest extends com.google.api.client.json.Generi
   /**
    * Key that should be added to the environment. Supported formats are `ssh-dss` (see RFC4253),
    * `ssh-rsa` (see RFC4253), `ecdsa-sha2-nistp256` (see RFC5656), `ecdsa-sha2-nistp384` (see
-   * RFC5656) and `ecdsa-sha2-nistp521` (see RFC5656). It should be structured as , where part is
+   * RFC5656) and `ecdsa-sha2-nistp521` (see RFC5656). It should be structured as  , where  part is
    * encoded with Base64.
    * @param key key or {@code null} for none
    */

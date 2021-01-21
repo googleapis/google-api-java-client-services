@@ -1340,6 +1340,29 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
+         * Deadline used while retrieving metadata for instances. Instances whose metadata cannot be
+         * retrieved within this deadline will be added to unreachable in ListInstancesResponse.
+         */
+        @com.google.api.client.util.Key
+        private String instanceDeadline;
+
+        /** Deadline used while retrieving metadata for instances. Instances whose metadata cannot be retrieved
+       within this deadline will be added to unreachable in ListInstancesResponse.
+         */
+        public String getInstanceDeadline() {
+          return instanceDeadline;
+        }
+
+        /**
+         * Deadline used while retrieving metadata for instances. Instances whose metadata cannot be
+         * retrieved within this deadline will be added to unreachable in ListInstancesResponse.
+         */
+        public List setInstanceDeadline(String instanceDeadline) {
+          this.instanceDeadline = instanceDeadline;
+          return this;
+        }
+
+        /**
          * Number of instances to be returned in the response. If 0 or less, defaults to the
          * server's maximum allowed page size.
          */

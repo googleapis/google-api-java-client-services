@@ -51,6 +51,14 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   private java.lang.String nextPageToken;
 
   /**
+   * The list of unreachable instances. It includes the names of instances whose metadata could not
+   * be retrieved within instance_deadline.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The list of requested instances.
    * @return value or {@code null} for none
    */
@@ -83,6 +91,25 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
    */
   public ListInstancesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * The list of unreachable instances. It includes the names of instances whose metadata could not
+   * be retrieved within instance_deadline.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * The list of unreachable instances. It includes the names of instances whose metadata could not
+   * be retrieved within instance_deadline.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListInstancesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

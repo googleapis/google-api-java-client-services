@@ -78,6 +78,20 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
   private java.lang.String layout;
 
   /**
+   * Output only. The computed size of the fully expanded manifest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long manifestSizeBytes;
+
+  /**
+   * Output only. The size limit for expanded manifests in the project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long manifestSizeLimitBytes;
+
+  /**
    * Output only. The name of the manifest.
    * The value may be {@code null}.
    */
@@ -188,6 +202,40 @@ public final class Manifest extends com.google.api.client.json.GenericJson {
    */
   public Manifest setLayout(java.lang.String layout) {
     this.layout = layout;
+    return this;
+  }
+
+  /**
+   * Output only. The computed size of the fully expanded manifest.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getManifestSizeBytes() {
+    return manifestSizeBytes;
+  }
+
+  /**
+   * Output only. The computed size of the fully expanded manifest.
+   * @param manifestSizeBytes manifestSizeBytes or {@code null} for none
+   */
+  public Manifest setManifestSizeBytes(java.lang.Long manifestSizeBytes) {
+    this.manifestSizeBytes = manifestSizeBytes;
+    return this;
+  }
+
+  /**
+   * Output only. The size limit for expanded manifests in the project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getManifestSizeLimitBytes() {
+    return manifestSizeLimitBytes;
+  }
+
+  /**
+   * Output only. The size limit for expanded manifests in the project.
+   * @param manifestSizeLimitBytes manifestSizeLimitBytes or {@code null} for none
+   */
+  public Manifest setManifestSizeLimitBytes(java.lang.Long manifestSizeLimitBytes) {
+    this.manifestSizeLimitBytes = manifestSizeLimitBytes;
     return this;
   }
 

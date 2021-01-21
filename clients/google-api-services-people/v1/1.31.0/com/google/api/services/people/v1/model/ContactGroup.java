@@ -30,6 +30,13 @@ package com.google.api.services.people.v1.model;
 public final class ContactGroup extends com.google.api.client.json.GenericJson {
 
   /**
+   * The group's client data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GroupClientData> clientData;
+
+  /**
    * The [HTTP entity tag](https://en.wikipedia.org/wiki/HTTP_ETag) of the resource. Used for web
    * cache validation.
    * The value may be {@code null}.
@@ -91,6 +98,23 @@ public final class ContactGroup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceName;
+
+  /**
+   * The group's client data.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GroupClientData> getClientData() {
+    return clientData;
+  }
+
+  /**
+   * The group's client data.
+   * @param clientData clientData or {@code null} for none
+   */
+  public ContactGroup setClientData(java.util.List<GroupClientData> clientData) {
+    this.clientData = clientData;
+    return this;
+  }
 
   /**
    * The [HTTP entity tag](https://en.wikipedia.org/wiki/HTTP_ETag) of the resource. Used for web

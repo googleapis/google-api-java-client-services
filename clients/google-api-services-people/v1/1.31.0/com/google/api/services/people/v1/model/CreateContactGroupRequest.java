@@ -37,6 +37,15 @@ public final class CreateContactGroupRequest extends com.google.api.client.json.
   private ContactGroup contactGroup;
 
   /**
+   * Optional. A field mask to restrict which fields on the group are returned. Defaults to
+   * `metadata`, `groupType`, and `name` if not set or set to empty. Valid fields are: * clientData
+   * * groupType * metadata * name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String readGroupFields;
+
+  /**
    * Required. The contact group to create.
    * @return value or {@code null} for none
    */
@@ -50,6 +59,27 @@ public final class CreateContactGroupRequest extends com.google.api.client.json.
    */
   public CreateContactGroupRequest setContactGroup(ContactGroup contactGroup) {
     this.contactGroup = contactGroup;
+    return this;
+  }
+
+  /**
+   * Optional. A field mask to restrict which fields on the group are returned. Defaults to
+   * `metadata`, `groupType`, and `name` if not set or set to empty. Valid fields are: * clientData
+   * * groupType * metadata * name
+   * @return value or {@code null} for none
+   */
+  public String getReadGroupFields() {
+    return readGroupFields;
+  }
+
+  /**
+   * Optional. A field mask to restrict which fields on the group are returned. Defaults to
+   * `metadata`, `groupType`, and `name` if not set or set to empty. Valid fields are: * clientData
+   * * groupType * metadata * name
+   * @param readGroupFields readGroupFields or {@code null} for none
+   */
+  public CreateContactGroupRequest setReadGroupFields(String readGroupFields) {
+    this.readGroupFields = readGroupFields;
     return this;
   }
 

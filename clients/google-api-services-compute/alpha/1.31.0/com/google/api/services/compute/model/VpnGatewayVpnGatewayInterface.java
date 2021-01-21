@@ -38,8 +38,8 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
 
   /**
    * URL of the interconnect attachment resource. When the value of this field is present, the VPN
-   * Gateway will be used for IPsec over Interconnect; all Egress or Ingress traffic for this VPN
-   * Gateway interface will go through the specified interconnect attachment resource.
+   * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
+   * this VPN Gateway interface will go through the specified interconnect attachment resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
 
   /**
    * URL of the interconnect attachment resource. When the value of this field is present, the VPN
-   * Gateway will be used for IPsec over Interconnect; all Egress or Ingress traffic for this VPN
-   * Gateway interface will go through the specified interconnect attachment resource.
+   * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
+   * this VPN Gateway interface will go through the specified interconnect attachment resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterconnectAttachment() {
@@ -81,8 +81,8 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
 
   /**
    * URL of the interconnect attachment resource. When the value of this field is present, the VPN
-   * Gateway will be used for IPsec over Interconnect; all Egress or Ingress traffic for this VPN
-   * Gateway interface will go through the specified interconnect attachment resource.
+   * Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for
+   * this VPN Gateway interface will go through the specified interconnect attachment resource.
    * @param interconnectAttachment interconnectAttachment or {@code null} for none
    */
   public VpnGatewayVpnGatewayInterface setInterconnectAttachment(java.lang.String interconnectAttachment) {

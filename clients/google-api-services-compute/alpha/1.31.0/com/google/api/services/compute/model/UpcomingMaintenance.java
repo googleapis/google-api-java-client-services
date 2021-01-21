@@ -38,6 +38,13 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   private java.lang.String date;
 
   /**
+   * [Output Only] The start time window of the maintenance disruption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpcomingMaintenanceTimeWindow startTimeWindow;
+
+  /**
    * [Output Only] The time when the maintenance will take place. This value is in RFC3339 text
    * format. DEPRECATED: Use start_time_window instead.
    * The value may be {@code null}.
@@ -68,6 +75,23 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
    */
   public UpcomingMaintenance setDate(java.lang.String date) {
     this.date = date;
+    return this;
+  }
+
+  /**
+   * [Output Only] The start time window of the maintenance disruption.
+   * @return value or {@code null} for none
+   */
+  public UpcomingMaintenanceTimeWindow getStartTimeWindow() {
+    return startTimeWindow;
+  }
+
+  /**
+   * [Output Only] The start time window of the maintenance disruption.
+   * @param startTimeWindow startTimeWindow or {@code null} for none
+   */
+  public UpcomingMaintenance setStartTimeWindow(UpcomingMaintenanceTimeWindow startTimeWindow) {
+    this.startTimeWindow = startTimeWindow;
     return this;
   }
 

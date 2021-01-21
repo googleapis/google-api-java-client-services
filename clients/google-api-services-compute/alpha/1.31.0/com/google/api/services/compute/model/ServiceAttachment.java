@@ -65,6 +65,14 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String description;
 
   /**
+   * If true, enable the proxy protocol which is for supplying client TCP/IP address data in TCP
+   * connections that traverse proxies on their way to destination servers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableProxyProtocol;
+
+  /**
    * [Output Only] The unique identifier for the resource type. The server generates this
    * identifier.
    * The value may be {@code null}.
@@ -193,6 +201,25 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * If true, enable the proxy protocol which is for supplying client TCP/IP address data in TCP
+   * connections that traverse proxies on their way to destination servers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableProxyProtocol() {
+    return enableProxyProtocol;
+  }
+
+  /**
+   * If true, enable the proxy protocol which is for supplying client TCP/IP address data in TCP
+   * connections that traverse proxies on their way to destination servers.
+   * @param enableProxyProtocol enableProxyProtocol or {@code null} for none
+   */
+  public ServiceAttachment setEnableProxyProtocol(java.lang.Boolean enableProxyProtocol) {
+    this.enableProxyProtocol = enableProxyProtocol;
     return this;
   }
 

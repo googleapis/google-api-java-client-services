@@ -66,8 +66,7 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   private java.lang.String ipAddress;
 
   /**
-   * Optional port number of network endpoint. If not specified and the
-   * NetworkEndpointGroup.network_endpoint_type is GCE_IP_PORT, the defaultPort for the network
+   * Optional port number of network endpoint. If not specified, the defaultPort for the network
    * endpoint group will be used.
    * The value may be {@code null}.
    */
@@ -159,8 +158,7 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional port number of network endpoint. If not specified and the
-   * NetworkEndpointGroup.network_endpoint_type is GCE_IP_PORT, the defaultPort for the network
+   * Optional port number of network endpoint. If not specified, the defaultPort for the network
    * endpoint group will be used.
    * @return value or {@code null} for none
    */
@@ -169,8 +167,7 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional port number of network endpoint. If not specified and the
-   * NetworkEndpointGroup.network_endpoint_type is GCE_IP_PORT, the defaultPort for the network
+   * Optional port number of network endpoint. If not specified, the defaultPort for the network
    * endpoint group will be used.
    * @param port port or {@code null} for none
    */

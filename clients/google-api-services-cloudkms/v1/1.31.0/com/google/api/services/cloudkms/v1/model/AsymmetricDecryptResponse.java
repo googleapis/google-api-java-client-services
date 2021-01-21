@@ -53,6 +53,13 @@ public final class AsymmetricDecryptResponse extends com.google.api.client.json.
   private java.lang.Long plaintextCrc32c;
 
   /**
+   * The ProtectionLevel of the CryptoKeyVersion used in decryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protectionLevel;
+
+  /**
    * Integrity verification field. A flag indicating whether
    * AsymmetricDecryptRequest.ciphertext_crc32c was received by KeyManagementService and used for
    * the integrity verification of the ciphertext. A false value of this field indicates either that
@@ -140,6 +147,23 @@ public final class AsymmetricDecryptResponse extends com.google.api.client.json.
    */
   public AsymmetricDecryptResponse setPlaintextCrc32c(java.lang.Long plaintextCrc32c) {
     this.plaintextCrc32c = plaintextCrc32c;
+    return this;
+  }
+
+  /**
+   * The ProtectionLevel of the CryptoKeyVersion used in decryption.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtectionLevel() {
+    return protectionLevel;
+  }
+
+  /**
+   * The ProtectionLevel of the CryptoKeyVersion used in decryption.
+   * @param protectionLevel protectionLevel or {@code null} for none
+   */
+  public AsymmetricDecryptResponse setProtectionLevel(java.lang.String protectionLevel) {
+    this.protectionLevel = protectionLevel;
     return this;
   }
 

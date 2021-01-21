@@ -70,6 +70,13 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
   private java.lang.Long pemCrc32c;
 
   /**
+   * The ProtectionLevel of the CryptoKeyVersion public key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protectionLevel;
+
+  /**
    * The Algorithm associated with this key.
    * @return value or {@code null} for none
    */
@@ -156,6 +163,23 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
    */
   public PublicKey setPemCrc32c(java.lang.Long pemCrc32c) {
     this.pemCrc32c = pemCrc32c;
+    return this;
+  }
+
+  /**
+   * The ProtectionLevel of the CryptoKeyVersion public key.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtectionLevel() {
+    return protectionLevel;
+  }
+
+  /**
+   * The ProtectionLevel of the CryptoKeyVersion public key.
+   * @param protectionLevel protectionLevel or {@code null} for none
+   */
+  public PublicKey setProtectionLevel(java.lang.String protectionLevel) {
+    this.protectionLevel = protectionLevel;
     return this;
   }
 

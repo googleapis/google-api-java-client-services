@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class InstanceProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Controls for advanced machine-related behavior features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvancedMachineFeatures advancedMachineFeatures;
+
+  /**
    * Enables instances created based on these properties to send packets with source IP addresses
    * other than their own and receive packets with destination IP addresses other than their own. If
    * these instances will be used as an IP gateway or it will be set as the next-hop in a Route
@@ -174,6 +181,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private Tags tags;
+
+  /**
+   * Controls for advanced machine-related behavior features.
+   * @return value or {@code null} for none
+   */
+  public AdvancedMachineFeatures getAdvancedMachineFeatures() {
+    return advancedMachineFeatures;
+  }
+
+  /**
+   * Controls for advanced machine-related behavior features.
+   * @param advancedMachineFeatures advancedMachineFeatures or {@code null} for none
+   */
+  public InstanceProperties setAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {
+    this.advancedMachineFeatures = advancedMachineFeatures;
+    return this;
+  }
 
   /**
    * Enables instances created based on these properties to send packets with source IP addresses

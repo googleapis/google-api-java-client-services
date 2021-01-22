@@ -33,6 +33,13 @@ package com.google.api.services.compute.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Controls for advanced machine-related behavior features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdvancedMachineFeatures advancedMachineFeatures;
+
+  /**
    * Allows this instance to send and receive packets with non-matching destination or source IPs.
    * This is required if you plan to use this instance to forward routes. For more information, see
    * Enabling IP Forwarding.
@@ -263,6 +270,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
+   * [Output Only] Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Sets the scheduling options for this instance.
    * The value may be {@code null}.
    */
@@ -340,6 +354,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Controls for advanced machine-related behavior features.
+   * @return value or {@code null} for none
+   */
+  public AdvancedMachineFeatures getAdvancedMachineFeatures() {
+    return advancedMachineFeatures;
+  }
+
+  /**
+   * Controls for advanced machine-related behavior features.
+   * @param advancedMachineFeatures advancedMachineFeatures or {@code null} for none
+   */
+  public Instance setAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {
+    this.advancedMachineFeatures = advancedMachineFeatures;
+    return this;
+  }
 
   /**
    * Allows this instance to send and receive packets with non-matching destination or source IPs.
@@ -928,6 +959,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
     this.resourcePolicies = resourcePolicies;
+    return this;
+  }
+
+  /**
+   * [Output Only] Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * [Output Only] Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Instance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

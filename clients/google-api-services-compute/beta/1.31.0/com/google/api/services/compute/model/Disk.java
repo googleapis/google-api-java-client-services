@@ -222,6 +222,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
+   * [Output Only] Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
@@ -331,7 +338,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
    * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
-   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized
+   * for creating multiple disks from a source storage object. To create many disks from a source
+   * storage object, use gcloud compute images import instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -834,6 +843,23 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * [Output Only] Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Disk setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
@@ -1080,7 +1106,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
    * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
-   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized
+   * for creating multiple disks from a source storage object. To create many disks from a source
+   * storage object, use gcloud compute images import instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceStorageObject() {
@@ -1090,7 +1118,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
    * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
-   * Valid URIs may start with gs:// or https://storage.googleapis.com/.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized
+   * for creating multiple disks from a source storage object. To create many disks from a source
+   * storage object, use gcloud compute images import instead.
    * @param sourceStorageObject sourceStorageObject or {@code null} for none
    */
   public Disk setSourceStorageObject(java.lang.String sourceStorageObject) {

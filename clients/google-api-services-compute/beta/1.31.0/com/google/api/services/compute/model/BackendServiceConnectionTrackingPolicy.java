@@ -51,6 +51,33 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
   private java.lang.String connectionPersistenceOnUnhealthyBackends;
 
   /**
+   * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
+   * seconds).
+   *
+   * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
+   *
+   * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
+   *
+   * This field will be supported only if the Connection Tracking key is less than 5-tuple.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer idleTimeoutSec;
+
+  /**
+   * Specifies the key used for connection tracking. There are two options:
+   *
+   * PER_CONNECTION: This is the default mode. The Connection Tracking is performed as per the
+   * Connection Key (default Hash Method) for the specific protocol.
+   *
+   * PER_SESSION: The Connection Tracking is performed as per the configured Session Affinity. It
+   * matches the configured Session Affinity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trackingMode;
+
+  /**
    * Specifies connection persistence when backends are unhealthy. The default value is
    * DEFAULT_FOR_PROTOCOL.
    *
@@ -92,6 +119,66 @@ public final class BackendServiceConnectionTrackingPolicy extends com.google.api
    */
   public BackendServiceConnectionTrackingPolicy setConnectionPersistenceOnUnhealthyBackends(java.lang.String connectionPersistenceOnUnhealthyBackends) {
     this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
+    return this;
+  }
+
+  /**
+   * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
+   * seconds).
+   *
+   * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
+   *
+   * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
+   *
+   * This field will be supported only if the Connection Tracking key is less than 5-tuple.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getIdleTimeoutSec() {
+    return idleTimeoutSec;
+  }
+
+  /**
+   * Specifies how long to keep a Connection Tracking entry while there is no matching traffic (in
+   * seconds).
+   *
+   * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
+   *
+   * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
+   *
+   * This field will be supported only if the Connection Tracking key is less than 5-tuple.
+   * @param idleTimeoutSec idleTimeoutSec or {@code null} for none
+   */
+  public BackendServiceConnectionTrackingPolicy setIdleTimeoutSec(java.lang.Integer idleTimeoutSec) {
+    this.idleTimeoutSec = idleTimeoutSec;
+    return this;
+  }
+
+  /**
+   * Specifies the key used for connection tracking. There are two options:
+   *
+   * PER_CONNECTION: This is the default mode. The Connection Tracking is performed as per the
+   * Connection Key (default Hash Method) for the specific protocol.
+   *
+   * PER_SESSION: The Connection Tracking is performed as per the configured Session Affinity. It
+   * matches the configured Session Affinity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrackingMode() {
+    return trackingMode;
+  }
+
+  /**
+   * Specifies the key used for connection tracking. There are two options:
+   *
+   * PER_CONNECTION: This is the default mode. The Connection Tracking is performed as per the
+   * Connection Key (default Hash Method) for the specific protocol.
+   *
+   * PER_SESSION: The Connection Tracking is performed as per the configured Session Affinity. It
+   * matches the configured Session Affinity.
+   * @param trackingMode trackingMode or {@code null} for none
+   */
+  public BackendServiceConnectionTrackingPolicy setTrackingMode(java.lang.String trackingMode) {
+    this.trackingMode = trackingMode;
     return this;
   }
 

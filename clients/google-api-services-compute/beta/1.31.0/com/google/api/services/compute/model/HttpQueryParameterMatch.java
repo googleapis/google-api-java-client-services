@@ -57,8 +57,8 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
   /**
    * The queryParameterMatch matches if the value of the parameter matches the regular expression
    * specified by regexMatch. For the regular expression grammar, please see
-   * en.cppreference.com/w/cpp/regex/ecmascript Only one of presentMatch, exactMatch or regexMatch
-   * must be set. Note that regexMatch only applies when the loadBalancingScheme is set to
+   * github.com/google/re2/wiki/Syntax Only one of presentMatch, exactMatch or regexMatch must be
+   * set. Note that regexMatch only applies when the loadBalancingScheme is set to
    * INTERNAL_SELF_MANAGED.
    * The value may be {@code null}.
    */
@@ -127,8 +127,8 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
   /**
    * The queryParameterMatch matches if the value of the parameter matches the regular expression
    * specified by regexMatch. For the regular expression grammar, please see
-   * en.cppreference.com/w/cpp/regex/ecmascript Only one of presentMatch, exactMatch or regexMatch
-   * must be set. Note that regexMatch only applies when the loadBalancingScheme is set to
+   * github.com/google/re2/wiki/Syntax Only one of presentMatch, exactMatch or regexMatch must be
+   * set. Note that regexMatch only applies when the loadBalancingScheme is set to
    * INTERNAL_SELF_MANAGED.
    * @return value or {@code null} for none
    */
@@ -139,8 +139,8 @@ public final class HttpQueryParameterMatch extends com.google.api.client.json.Ge
   /**
    * The queryParameterMatch matches if the value of the parameter matches the regular expression
    * specified by regexMatch. For the regular expression grammar, please see
-   * en.cppreference.com/w/cpp/regex/ecmascript Only one of presentMatch, exactMatch or regexMatch
-   * must be set. Note that regexMatch only applies when the loadBalancingScheme is set to
+   * github.com/google/re2/wiki/Syntax Only one of presentMatch, exactMatch or regexMatch must be
+   * set. Note that regexMatch only applies when the loadBalancingScheme is set to
    * INTERNAL_SELF_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */

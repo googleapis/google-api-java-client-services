@@ -30,6 +30,21 @@ package com.google.api.services.compute.model;
 public final class TestFailure extends com.google.api.client.json.GenericJson {
 
   /**
+   * The actual output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String actualOutputUrl;
+
+  /**
+   * Actual HTTP status code for rule with `urlRedirect` calculated by load balancer
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer actualRedirectResponseCode;
+
+  /**
    * BackendService or BackendBucket returned by load balancer.
    * The value may be {@code null}.
    */
@@ -37,11 +52,33 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   private java.lang.String actualService;
 
   /**
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String expectedOutputUrl;
+
+  /**
+   * Expected HTTP status code for rule with `urlRedirect` calculated by load balancer
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer expectedRedirectResponseCode;
+
+  /**
    * Expected BackendService or BackendBucket resource the given URL should be mapped to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String expectedService;
+
+  /**
+   * HTTP headers of the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UrlMapTestHeader> headers;
 
   /**
    * Host portion of the URL.
@@ -56,6 +93,42 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
+
+  /**
+   * The actual output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActualOutputUrl() {
+    return actualOutputUrl;
+  }
+
+  /**
+   * The actual output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters.
+   * @param actualOutputUrl actualOutputUrl or {@code null} for none
+   */
+  public TestFailure setActualOutputUrl(java.lang.String actualOutputUrl) {
+    this.actualOutputUrl = actualOutputUrl;
+    return this;
+  }
+
+  /**
+   * Actual HTTP status code for rule with `urlRedirect` calculated by load balancer
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getActualRedirectResponseCode() {
+    return actualRedirectResponseCode;
+  }
+
+  /**
+   * Actual HTTP status code for rule with `urlRedirect` calculated by load balancer
+   * @param actualRedirectResponseCode actualRedirectResponseCode or {@code null} for none
+   */
+  public TestFailure setActualRedirectResponseCode(java.lang.Integer actualRedirectResponseCode) {
+    this.actualRedirectResponseCode = actualRedirectResponseCode;
+    return this;
+  }
 
   /**
    * BackendService or BackendBucket returned by load balancer.
@@ -75,6 +148,42 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExpectedOutputUrl() {
+    return expectedOutputUrl;
+  }
+
+  /**
+   * The expected output URL evaluated by load balancer containing the scheme, host, path and query
+   * parameters.
+   * @param expectedOutputUrl expectedOutputUrl or {@code null} for none
+   */
+  public TestFailure setExpectedOutputUrl(java.lang.String expectedOutputUrl) {
+    this.expectedOutputUrl = expectedOutputUrl;
+    return this;
+  }
+
+  /**
+   * Expected HTTP status code for rule with `urlRedirect` calculated by load balancer
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getExpectedRedirectResponseCode() {
+    return expectedRedirectResponseCode;
+  }
+
+  /**
+   * Expected HTTP status code for rule with `urlRedirect` calculated by load balancer
+   * @param expectedRedirectResponseCode expectedRedirectResponseCode or {@code null} for none
+   */
+  public TestFailure setExpectedRedirectResponseCode(java.lang.Integer expectedRedirectResponseCode) {
+    this.expectedRedirectResponseCode = expectedRedirectResponseCode;
+    return this;
+  }
+
+  /**
    * Expected BackendService or BackendBucket resource the given URL should be mapped to.
    * @return value or {@code null} for none
    */
@@ -88,6 +197,23 @@ public final class TestFailure extends com.google.api.client.json.GenericJson {
    */
   public TestFailure setExpectedService(java.lang.String expectedService) {
     this.expectedService = expectedService;
+    return this;
+  }
+
+  /**
+   * HTTP headers of the request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UrlMapTestHeader> getHeaders() {
+    return headers;
+  }
+
+  /**
+   * HTTP headers of the request.
+   * @param headers headers or {@code null} for none
+   */
+  public TestFailure setHeaders(java.util.List<UrlMapTestHeader> headers) {
+    this.headers = headers;
     return this;
   }
 

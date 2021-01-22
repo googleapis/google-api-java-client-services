@@ -55,8 +55,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the regualar expression patterns that match allowed origins. For regular expression
-   * grammar please see en.cppreference.com/w/cpp/regex/ecmascript An origin is allowed if it
-   * matches either an item in allowOrigins or an item in allowOriginRegexes.
+   * grammar please see github.com/google/re2/wiki/Syntax An origin is allowed if it matches either
+   * an item in allowOrigins or an item in allowOriginRegexes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,8 +150,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the regualar expression patterns that match allowed origins. For regular expression
-   * grammar please see en.cppreference.com/w/cpp/regex/ecmascript An origin is allowed if it
-   * matches either an item in allowOrigins or an item in allowOriginRegexes.
+   * grammar please see github.com/google/re2/wiki/Syntax An origin is allowed if it matches either
+   * an item in allowOrigins or an item in allowOriginRegexes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowOriginRegexes() {
@@ -160,8 +160,8 @@ public final class CorsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the regualar expression patterns that match allowed origins. For regular expression
-   * grammar please see en.cppreference.com/w/cpp/regex/ecmascript An origin is allowed if it
-   * matches either an item in allowOrigins or an item in allowOriginRegexes.
+   * grammar please see github.com/google/re2/wiki/Syntax An origin is allowed if it matches either
+   * an item in allowOrigins or an item in allowOriginRegexes.
    * @param allowOriginRegexes allowOriginRegexes or {@code null} for none
    */
   public CorsPolicy setAllowOriginRegexes(java.util.List<java.lang.String> allowOriginRegexes) {

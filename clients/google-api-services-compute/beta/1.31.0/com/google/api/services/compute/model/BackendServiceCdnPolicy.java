@@ -128,6 +128,14 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
   private java.util.List<BackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicy;
 
   /**
+   * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number
+   * of requests to the origin.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requestCoalescing;
+
+  /**
    * Serve existing content from the cache (if available) when revalidating content with the origin,
    * or when an error is encountered when refreshing the cache. This setting defines the default
    * "max-stale" duration for any cached responses that do not specify a max-stale directive. Stale
@@ -376,6 +384,25 @@ public final class BackendServiceCdnPolicy extends com.google.api.client.json.Ge
    */
   public BackendServiceCdnPolicy setNegativeCachingPolicy(java.util.List<BackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicy) {
     this.negativeCachingPolicy = negativeCachingPolicy;
+    return this;
+  }
+
+  /**
+   * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number
+   * of requests to the origin.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequestCoalescing() {
+    return requestCoalescing;
+  }
+
+  /**
+   * If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number
+   * of requests to the origin.
+   * @param requestCoalescing requestCoalescing or {@code null} for none
+   */
+  public BackendServiceCdnPolicy setRequestCoalescing(java.lang.Boolean requestCoalescing) {
+    this.requestCoalescing = requestCoalescing;
     return this;
   }
 

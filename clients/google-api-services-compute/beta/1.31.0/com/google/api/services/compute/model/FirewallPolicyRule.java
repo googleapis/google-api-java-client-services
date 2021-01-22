@@ -79,7 +79,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming traffic is evaluated against. If it evaluates to true, the
-   * corresponding ?action? is enforced.
+   * corresponding 'action' is enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network?s VMs get this rule. If this field is left blank, all VMs within the organization
+   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
    * The value may be {@code null}.
    */
@@ -243,7 +243,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming traffic is evaluated against. If it evaluates to true, the
-   * corresponding ?action? is enforced.
+   * corresponding 'action' is enforced.
    * @return value or {@code null} for none
    */
   public FirewallPolicyRuleMatcher getMatch() {
@@ -252,7 +252,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A match condition that incoming traffic is evaluated against. If it evaluates to true, the
-   * corresponding ?action? is enforced.
+   * corresponding 'action' is enforced.
    * @param match match or {@code null} for none
    */
   public FirewallPolicyRule setMatch(FirewallPolicyRuleMatcher match) {
@@ -300,7 +300,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network?s VMs get this rule. If this field is left blank, all VMs within the organization
+   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
    * @return value or {@code null} for none
    */
@@ -310,7 +310,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
 
   /**
    * A list of network resource URLs to which this rule applies. This field allows you to control
-   * which network?s VMs get this rule. If this field is left blank, all VMs within the organization
+   * which network's VMs get this rule. If this field is left blank, all VMs within the organization
    * will receive the rule.
    * @param targetResources targetResources or {@code null} for none
    */

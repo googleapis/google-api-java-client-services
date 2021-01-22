@@ -62,9 +62,6 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    *
    * Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field
    * set to true.
-   *
-   * For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address
-   * must be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("IPAddress")
@@ -179,6 +176,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String kind;
 
   /**
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Specifies the forwarding rule type.
    *
    *   - EXTERNAL is used for:   - Classic Cloud VPN gateways  - Protocol forwarding to VMs from an
@@ -228,9 +233,6 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced
    * IP should belong to for this Forwarding Rule. If this field is not specified, the default
    * network will be used.
-   *
-   * For Private Service Connect forwarding rules that forward traffic to Google APIs, a network
-   * must be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -346,14 +348,6 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
    * appropriate to the target object. For more information, see the "Target" column in [Port
    * specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
-   *
-   * For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the
-   * name of a supported Google API bundle. Currently, the supported Google API bundles include:
-   *
-   *   - vpc-sc - GCP APIs that support VPC Service Controls. For more information about which APIs
-   * support VPC Service Controls, refer to VPC-SC supported products and limitations.   - all-apis
-   * - All GCP APIs. For more information about which APIs are supported with this bundle, refer to
-   * Private Google Access-specific domains and VIPs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -377,9 +371,6 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    *
    * Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field
    * set to true.
-   *
-   * For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address
-   * must be provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getIPAddress() {
@@ -404,9 +395,6 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    *
    * Must be set to `0.0.0.0` when the target is targetGrpcProxy that has validateForProxyless field
    * set to true.
-   *
-   * For Private Service Connect forwarding rules that forward traffic to Google APIs, IP address
-   * must be provided.
    * @param iPAddress iPAddress or {@code null} for none
    */
   public ForwardingRule setIPAddress(java.lang.String iPAddress) {
@@ -702,6 +690,25 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Labels for this resource. These can only be added or modified by the setLabels method. Each
+   * label key/value pair must comply with RFC1035. Label values may be empty.
+   * @param labels labels or {@code null} for none
+   */
+  public ForwardingRule setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
+    return this;
+  }
+
+  /**
    * Specifies the forwarding rule type.
    *
    *   - EXTERNAL is used for:   - Classic Cloud VPN gateways  - Protocol forwarding to VMs from an
@@ -804,9 +811,6 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced
    * IP should belong to for this Forwarding Rule. If this field is not specified, the default
    * network will be used.
-   *
-   * For Private Service Connect forwarding rules that forward traffic to Google APIs, a network
-   * must be provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -819,9 +823,6 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced
    * IP should belong to for this Forwarding Rule. If this field is not specified, the default
    * network will be used.
-   *
-   * For Private Service Connect forwarding rules that forward traffic to Google APIs, a network
-   * must be provided.
    * @param network network or {@code null} for none
    */
   public ForwardingRule setNetwork(java.lang.String network) {
@@ -1067,14 +1068,6 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
    * appropriate to the target object. For more information, see the "Target" column in [Port
    * specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
-   *
-   * For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the
-   * name of a supported Google API bundle. Currently, the supported Google API bundles include:
-   *
-   *   - vpc-sc - GCP APIs that support VPC Service Controls. For more information about which APIs
-   * support VPC Service Controls, refer to VPC-SC supported products and limitations.   - all-apis
-   * - All GCP APIs. For more information about which APIs are supported with this bundle, refer to
-   * Private Google Access-specific domains and VIPs.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -1087,14 +1080,6 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    * this target must be a global load balancing resource. The forwarded traffic must be of a type
    * appropriate to the target object. For more information, see the "Target" column in [Port
    * specifications](/load-balancing/docs/forwarding-rule-concepts#ip_address_specifications).
-   *
-   * For Private Service Connect forwarding rules that forward traffic to Google APIs, provide the
-   * name of a supported Google API bundle. Currently, the supported Google API bundles include:
-   *
-   *   - vpc-sc - GCP APIs that support VPC Service Controls. For more information about which APIs
-   * support VPC Service Controls, refer to VPC-SC supported products and limitations.   - all-apis
-   * - All GCP APIs. For more information about which APIs are supported with this bundle, refer to
-   * Private Google Access-specific domains and VIPs.
    * @param target target or {@code null} for none
    */
   public ForwardingRule setTarget(java.lang.String target) {

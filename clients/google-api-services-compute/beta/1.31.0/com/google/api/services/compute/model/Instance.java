@@ -278,6 +278,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
+   * [Output Only] Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Sets the scheduling options for this instance.
    * The value may be {@code null}.
    */
@@ -1007,6 +1014,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setResourcePolicies(java.util.List<java.lang.String> resourcePolicies) {
     this.resourcePolicies = resourcePolicies;
+    return this;
+  }
+
+  /**
+   * [Output Only] Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * [Output Only] Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Instance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

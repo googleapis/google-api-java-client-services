@@ -104,6 +104,13 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
+   * [Output Only] Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsPzs;
+
+  /**
    * [Output Only] Available cpu/platform selections for the zone.
    * @return value or {@code null} for none
    */
@@ -270,6 +277,23 @@ public final class Zone extends com.google.api.client.json.GenericJson {
    */
   public Zone setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * [Output Only] Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsPzs() {
+    return supportsPzs;
+  }
+
+  /**
+   * [Output Only] Reserved for future use.
+   * @param supportsPzs supportsPzs or {@code null} for none
+   */
+  public Zone setSupportsPzs(java.lang.Boolean supportsPzs) {
+    this.supportsPzs = supportsPzs;
     return this;
   }
 

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.memcache.v1beta2;
+package com.google.api.services.memcache.v1;
 
 /**
- * Service definition for CloudMemorystoreforMemcached (v1beta2).
+ * Service definition for CloudMemorystoreforMemcached (v1).
  *
  * <p>
  * Google Cloud Memorystore for Memcached API is used for creating and managing Memcached instances in GCP.
@@ -189,9 +189,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
         return result;
       }
 
-      public class Get extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Location> {
+      public class Get extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Location> {
 
-        private static final String REST_PATH = "v1beta2/{+name}";
+        private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
@@ -210,7 +210,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * @since 1.13
          */
         protected Get(java.lang.String name) {
-          super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1beta2.model.Location.class);
+          super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1.model.Location.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -327,9 +327,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
         return result;
       }
 
-      public class List extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.ListLocationsResponse> {
+      public class List extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.ListLocationsResponse> {
 
-        private static final String REST_PATH = "v1beta2/{+name}/locations";
+        private static final String REST_PATH = "v1/{+name}/locations";
 
         private final java.util.regex.Pattern NAME_PATTERN =
             java.util.regex.Pattern.compile("^projects/[^/]+$");
@@ -348,7 +348,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * @since 1.13
          */
         protected List(java.lang.String name) {
-          super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1beta2.model.ListLocationsResponse.class);
+          super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1.model.ListLocationsResponse.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -528,18 +528,18 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          *
          * @param name Required. Resource name of the Memcached instance for which parameter group updates should be
          *        applied.
-         * @param content the {@link com.google.api.services.memcache.v1beta2.model.ApplyParametersRequest}
+         * @param content the {@link com.google.api.services.memcache.v1.model.ApplyParametersRequest}
          * @return the request
          */
-        public ApplyParameters applyParameters(java.lang.String name, com.google.api.services.memcache.v1beta2.model.ApplyParametersRequest content) throws java.io.IOException {
+        public ApplyParameters applyParameters(java.lang.String name, com.google.api.services.memcache.v1.model.ApplyParametersRequest content) throws java.io.IOException {
           ApplyParameters result = new ApplyParameters(name, content);
           initialize(result);
           return result;
         }
 
-        public class ApplyParameters extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Operation> {
+        public class ApplyParameters extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1beta2/{+name}:applyParameters";
+          private static final String REST_PATH = "v1/{+name}:applyParameters";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
@@ -558,11 +558,11 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            *
            * @param name Required. Resource name of the Memcached instance for which parameter group updates should be
          *        applied.
-           * @param content the {@link com.google.api.services.memcache.v1beta2.model.ApplyParametersRequest}
+           * @param content the {@link com.google.api.services.memcache.v1.model.ApplyParametersRequest}
            * @since 1.13
            */
-          protected ApplyParameters(java.lang.String name, com.google.api.services.memcache.v1beta2.model.ApplyParametersRequest content) {
-            super(CloudMemorystoreforMemcached.this, "POST", REST_PATH, content, com.google.api.services.memcache.v1beta2.model.Operation.class);
+          protected ApplyParameters(java.lang.String name, com.google.api.services.memcache.v1.model.ApplyParametersRequest content) {
+            super(CloudMemorystoreforMemcached.this, "POST", REST_PATH, content, com.google.api.services.memcache.v1.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -660,143 +660,6 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           }
         }
         /**
-         * Updates software on the selected nodes of the Instance.
-         *
-         * Create a request for the method "instances.applySoftwareUpdate".
-         *
-         * This request holds the parameters needed by the memcache server.  After setting any optional
-         * parameters, call the {@link ApplySoftwareUpdate#execute()} method to invoke the remote operation.
-         *
-         * @param instance Required. Resource name of the Memcached instance for which software update should be applied.
-         * @param content the {@link com.google.api.services.memcache.v1beta2.model.ApplySoftwareUpdateRequest}
-         * @return the request
-         */
-        public ApplySoftwareUpdate applySoftwareUpdate(java.lang.String instance, com.google.api.services.memcache.v1beta2.model.ApplySoftwareUpdateRequest content) throws java.io.IOException {
-          ApplySoftwareUpdate result = new ApplySoftwareUpdate(instance, content);
-          initialize(result);
-          return result;
-        }
-
-        public class ApplySoftwareUpdate extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Operation> {
-
-          private static final String REST_PATH = "v1beta2/{+instance}:applySoftwareUpdate";
-
-          private final java.util.regex.Pattern INSTANCE_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-
-          /**
-           * Updates software on the selected nodes of the Instance.
-           *
-           * Create a request for the method "instances.applySoftwareUpdate".
-           *
-           * This request holds the parameters needed by the the memcache server.  After setting any
-           * optional parameters, call the {@link ApplySoftwareUpdate#execute()} method to invoke the remote
-           * operation. <p> {@link ApplySoftwareUpdate#initialize(com.google.api.client.googleapis.services.
-           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
-           * invoking the constructor. </p>
-           *
-           * @param instance Required. Resource name of the Memcached instance for which software update should be applied.
-           * @param content the {@link com.google.api.services.memcache.v1beta2.model.ApplySoftwareUpdateRequest}
-           * @since 1.13
-           */
-          protected ApplySoftwareUpdate(java.lang.String instance, com.google.api.services.memcache.v1beta2.model.ApplySoftwareUpdateRequest content) {
-            super(CloudMemorystoreforMemcached.this, "POST", REST_PATH, content, com.google.api.services.memcache.v1beta2.model.Operation.class);
-            this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
-                  "Parameter instance must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-          }
-
-          @Override
-          public ApplySoftwareUpdate set$Xgafv(java.lang.String $Xgafv) {
-            return (ApplySoftwareUpdate) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public ApplySoftwareUpdate setAccessToken(java.lang.String accessToken) {
-            return (ApplySoftwareUpdate) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public ApplySoftwareUpdate setAlt(java.lang.String alt) {
-            return (ApplySoftwareUpdate) super.setAlt(alt);
-          }
-
-          @Override
-          public ApplySoftwareUpdate setCallback(java.lang.String callback) {
-            return (ApplySoftwareUpdate) super.setCallback(callback);
-          }
-
-          @Override
-          public ApplySoftwareUpdate setFields(java.lang.String fields) {
-            return (ApplySoftwareUpdate) super.setFields(fields);
-          }
-
-          @Override
-          public ApplySoftwareUpdate setKey(java.lang.String key) {
-            return (ApplySoftwareUpdate) super.setKey(key);
-          }
-
-          @Override
-          public ApplySoftwareUpdate setOauthToken(java.lang.String oauthToken) {
-            return (ApplySoftwareUpdate) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public ApplySoftwareUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ApplySoftwareUpdate) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public ApplySoftwareUpdate setQuotaUser(java.lang.String quotaUser) {
-            return (ApplySoftwareUpdate) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public ApplySoftwareUpdate setUploadType(java.lang.String uploadType) {
-            return (ApplySoftwareUpdate) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public ApplySoftwareUpdate setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ApplySoftwareUpdate) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. Resource name of the Memcached instance for which software update should be
-           * applied.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String instance;
-
-          /** Required. Resource name of the Memcached instance for which software update should be applied.
-           */
-          public java.lang.String getInstance() {
-            return instance;
-          }
-
-          /**
-           * Required. Resource name of the Memcached instance for which software update should be
-           * applied.
-           */
-          public ApplySoftwareUpdate setInstance(java.lang.String instance) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
-                  "Parameter instance must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
-            }
-            this.instance = instance;
-            return this;
-          }
-
-          @Override
-          public ApplySoftwareUpdate set(String parameterName, Object value) {
-            return (ApplySoftwareUpdate) super.set(parameterName, value);
-          }
-        }
-        /**
          * Creates a new Instance in a given location.
          *
          * Create a request for the method "instances.create".
@@ -806,18 +669,18 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          *
          * @param parent Required. The resource name of the instance location using the form:
          *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region
-         * @param content the {@link com.google.api.services.memcache.v1beta2.model.Instance}
+         * @param content the {@link com.google.api.services.memcache.v1.model.Instance}
          * @return the request
          */
-        public Create create(java.lang.String parent, com.google.api.services.memcache.v1beta2.model.Instance content) throws java.io.IOException {
+        public Create create(java.lang.String parent, com.google.api.services.memcache.v1.model.Instance content) throws java.io.IOException {
           Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
-        public class Create extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Operation> {
+        public class Create extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1beta2/{+parent}/instances";
+          private static final String REST_PATH = "v1/{+parent}/instances";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
@@ -835,11 +698,11 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            *
            * @param parent Required. The resource name of the instance location using the form:
          *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region
-           * @param content the {@link com.google.api.services.memcache.v1beta2.model.Instance}
+           * @param content the {@link com.google.api.services.memcache.v1.model.Instance}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, com.google.api.services.memcache.v1beta2.model.Instance content) {
-            super(CloudMemorystoreforMemcached.this, "POST", REST_PATH, content, com.google.api.services.memcache.v1beta2.model.Operation.class);
+          protected Create(java.lang.String parent, com.google.api.services.memcache.v1.model.Instance content) {
+            super(CloudMemorystoreforMemcached.this, "POST", REST_PATH, content, com.google.api.services.memcache.v1.model.Operation.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -989,9 +852,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           return result;
         }
 
-        public class Delete extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Operation> {
+        public class Delete extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1beta2/{+name}";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
@@ -1013,7 +876,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudMemorystoreforMemcached.this, "DELETE", REST_PATH, null, com.google.api.services.memcache.v1beta2.model.Operation.class);
+            super(CloudMemorystoreforMemcached.this, "DELETE", REST_PATH, null, com.google.api.services.memcache.v1.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1132,9 +995,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           return result;
         }
 
-        public class Get extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Instance> {
+        public class Get extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Instance> {
 
-          private static final String REST_PATH = "v1beta2/{+name}";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
@@ -1155,7 +1018,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * @since 1.13
            */
           protected Get(java.lang.String name) {
-            super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1beta2.model.Instance.class);
+            super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1.model.Instance.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1283,9 +1146,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           return result;
         }
 
-        public class List extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.ListInstancesResponse> {
+        public class List extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.ListInstancesResponse> {
 
-          private static final String REST_PATH = "v1beta2/{+parent}/instances";
+          private static final String REST_PATH = "v1/{+parent}/instances";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
@@ -1305,7 +1168,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * @since 1.13
            */
           protected List(java.lang.String parent) {
-            super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1beta2.model.ListInstancesResponse.class);
+            super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1.model.ListInstancesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1511,18 +1374,18 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          *        instances are managed and addressed at regional level so location_id here refers to a GCP
          *        region; however, users may choose which zones Memcached nodes within an instances should
          *        be provisioned in. Refer to [zones] field for more details.
-         * @param content the {@link com.google.api.services.memcache.v1beta2.model.Instance}
+         * @param content the {@link com.google.api.services.memcache.v1.model.Instance}
          * @return the request
          */
-        public Patch patch(java.lang.String name, com.google.api.services.memcache.v1beta2.model.Instance content) throws java.io.IOException {
+        public Patch patch(java.lang.String name, com.google.api.services.memcache.v1.model.Instance content) throws java.io.IOException {
           Patch result = new Patch(name, content);
           initialize(result);
           return result;
         }
 
-        public class Patch extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Operation> {
+        public class Patch extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1beta2/{+name}";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
@@ -1543,11 +1406,11 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          *        instances are managed and addressed at regional level so location_id here refers to a GCP
          *        region; however, users may choose which zones Memcached nodes within an instances should
          *        be provisioned in. Refer to [zones] field for more details.
-           * @param content the {@link com.google.api.services.memcache.v1beta2.model.Instance}
+           * @param content the {@link com.google.api.services.memcache.v1.model.Instance}
            * @since 1.13
            */
-          protected Patch(java.lang.String name, com.google.api.services.memcache.v1beta2.model.Instance content) {
-            super(CloudMemorystoreforMemcached.this, "PATCH", REST_PATH, content, com.google.api.services.memcache.v1beta2.model.Operation.class);
+          protected Patch(java.lang.String name, com.google.api.services.memcache.v1.model.Instance content) {
+            super(CloudMemorystoreforMemcached.this, "PATCH", REST_PATH, content, com.google.api.services.memcache.v1.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1680,18 +1543,18 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * parameters, call the {@link UpdateParameters#execute()} method to invoke the remote operation.
          *
          * @param name Required. Resource name of the Memcached instance for which the parameters should be updated.
-         * @param content the {@link com.google.api.services.memcache.v1beta2.model.UpdateParametersRequest}
+         * @param content the {@link com.google.api.services.memcache.v1.model.UpdateParametersRequest}
          * @return the request
          */
-        public UpdateParameters updateParameters(java.lang.String name, com.google.api.services.memcache.v1beta2.model.UpdateParametersRequest content) throws java.io.IOException {
+        public UpdateParameters updateParameters(java.lang.String name, com.google.api.services.memcache.v1.model.UpdateParametersRequest content) throws java.io.IOException {
           UpdateParameters result = new UpdateParameters(name, content);
           initialize(result);
           return result;
         }
 
-        public class UpdateParameters extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Operation> {
+        public class UpdateParameters extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1beta2/{+name}:updateParameters";
+          private static final String REST_PATH = "v1/{+name}:updateParameters";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
@@ -1710,11 +1573,11 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * invoking the constructor. </p>
            *
            * @param name Required. Resource name of the Memcached instance for which the parameters should be updated.
-           * @param content the {@link com.google.api.services.memcache.v1beta2.model.UpdateParametersRequest}
+           * @param content the {@link com.google.api.services.memcache.v1.model.UpdateParametersRequest}
            * @since 1.13
            */
-          protected UpdateParameters(java.lang.String name, com.google.api.services.memcache.v1beta2.model.UpdateParametersRequest content) {
-            super(CloudMemorystoreforMemcached.this, "PATCH", REST_PATH, content, com.google.api.services.memcache.v1beta2.model.Operation.class);
+          protected UpdateParameters(java.lang.String name, com.google.api.services.memcache.v1.model.UpdateParametersRequest content) {
+            super(CloudMemorystoreforMemcached.this, "PATCH", REST_PATH, content, com.google.api.services.memcache.v1.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1847,18 +1710,18 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
          * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
          *
          * @param name The name of the operation resource to be cancelled.
-         * @param content the {@link com.google.api.services.memcache.v1beta2.model.CancelOperationRequest}
+         * @param content the {@link com.google.api.services.memcache.v1.model.CancelOperationRequest}
          * @return the request
          */
-        public Cancel cancel(java.lang.String name, com.google.api.services.memcache.v1beta2.model.CancelOperationRequest content) throws java.io.IOException {
+        public Cancel cancel(java.lang.String name, com.google.api.services.memcache.v1.model.CancelOperationRequest content) throws java.io.IOException {
           Cancel result = new Cancel(name, content);
           initialize(result);
           return result;
         }
 
-        public class Cancel extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Empty> {
+        public class Cancel extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Empty> {
 
-          private static final String REST_PATH = "v1beta2/{+name}:cancel";
+          private static final String REST_PATH = "v1/{+name}:cancel";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
@@ -1881,11 +1744,11 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The name of the operation resource to be cancelled.
-           * @param content the {@link com.google.api.services.memcache.v1beta2.model.CancelOperationRequest}
+           * @param content the {@link com.google.api.services.memcache.v1.model.CancelOperationRequest}
            * @since 1.13
            */
-          protected Cancel(java.lang.String name, com.google.api.services.memcache.v1beta2.model.CancelOperationRequest content) {
-            super(CloudMemorystoreforMemcached.this, "POST", REST_PATH, content, com.google.api.services.memcache.v1beta2.model.Empty.class);
+          protected Cancel(java.lang.String name, com.google.api.services.memcache.v1.model.CancelOperationRequest content) {
+            super(CloudMemorystoreforMemcached.this, "POST", REST_PATH, content, com.google.api.services.memcache.v1.model.Empty.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1994,9 +1857,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           return result;
         }
 
-        public class Delete extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Empty> {
+        public class Delete extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Empty> {
 
-          private static final String REST_PATH = "v1beta2/{+name}";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
@@ -2018,7 +1881,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(CloudMemorystoreforMemcached.this, "DELETE", REST_PATH, null, com.google.api.services.memcache.v1beta2.model.Empty.class);
+            super(CloudMemorystoreforMemcached.this, "DELETE", REST_PATH, null, com.google.api.services.memcache.v1.model.Empty.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2126,9 +1989,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           return result;
         }
 
-        public class Get extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.Operation> {
+        public class Get extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1beta2/{+name}";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
@@ -2148,7 +2011,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * @since 1.13
            */
           protected Get(java.lang.String name) {
-            super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1beta2.model.Operation.class);
+            super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2271,9 +2134,9 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
           return result;
         }
 
-        public class List extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1beta2.model.ListOperationsResponse> {
+        public class List extends CloudMemorystoreforMemcachedRequest<com.google.api.services.memcache.v1.model.ListOperationsResponse> {
 
-          private static final String REST_PATH = "v1beta2/{+name}/operations";
+          private static final String REST_PATH = "v1/{+name}/operations";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
@@ -2298,7 +2161,7 @@ public class CloudMemorystoreforMemcached extends com.google.api.client.googleap
            * @since 1.13
            */
           protected List(java.lang.String name) {
-            super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1beta2.model.ListOperationsResponse.class);
+            super(CloudMemorystoreforMemcached.this, "GET", REST_PATH, null, com.google.api.services.memcache.v1.model.ListOperationsResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

@@ -113,7 +113,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> serviceAccountScopes;
 
   /**
-   * Optional. Shielded Instance Config for clusters using shielded VMs.
+   * Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs
+   * (https://cloud.google.com/security/shielded-cloud/shielded-vm).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -338,7 +339,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Shielded Instance Config for clusters using shielded VMs.
+   * Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs
+   * (https://cloud.google.com/security/shielded-cloud/shielded-vm).
    * @return value or {@code null} for none
    */
   public ShieldedInstanceConfig getShieldedInstanceConfig() {
@@ -346,7 +348,8 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Shielded Instance Config for clusters using shielded VMs.
+   * Optional. Shielded Instance Config for clusters using Compute Engine Shielded VMs
+   * (https://cloud.google.com/security/shielded-cloud/shielded-vm).
    * @param shieldedInstanceConfig shieldedInstanceConfig or {@code null} for none
    */
   public GceClusterConfig setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {

@@ -17,7 +17,8 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Shielded Instance Config for clusters using shielded VMs.
+ * Shielded Instance Config for clusters using Compute Engine Shielded VMs
+ * (https://cloud.google.com/security/shielded-cloud/shielded-vm).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

@@ -79,7 +79,7 @@ packages on [Maven Central][maven-search].
 | Cloud Key Management Service (KMS) API | [v1](clients/google-api-services-cloudkms/v1) |
 | Cloud Life Sciences API | [v2beta](clients/google-api-services-lifesciences/v2beta) |
 | Cloud Logging API | [v2](clients/google-api-services-logging/v2) |
-| Cloud Memorystore for Memcached API | [v1beta2](clients/google-api-services-memcache/v1beta2) |
+| Cloud Memorystore for Memcached API | [v1](clients/google-api-services-memcache/v1), [v1beta2](clients/google-api-services-memcache/v1beta2) |
 | Cloud Monitoring API | [v1](clients/google-api-services-monitoring/v1), [v3](clients/google-api-services-monitoring/v3) |
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
 | Cloud OS Login API | [v1](clients/google-api-services-oslogin/v1), [v1alpha](clients/google-api-services-oslogin/v1alpha), [v1beta](clients/google-api-services-oslogin/v1beta) |
@@ -182,7 +182,7 @@ packages on [Maven Central][maven-search].
 | Policy Troubleshooter API | [v1](clients/google-api-services-policytroubleshooter/v1), [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
 | Poly API | [v1](clients/google-api-services-poly/v1) |
 | Pub/Sub Lite API | [v1](clients/google-api-services-pubsublite/v1) |
-| Real-time Bidding API | [v1](clients/google-api-services-realtimebidding/v1) |
+| Real-time Bidding API | [v1](clients/google-api-services-realtimebidding/v1), [v1alpha](clients/google-api-services-realtimebidding/v1alpha) |
 | Recommendations AI (Beta) | [v1beta1](clients/google-api-services-recommendationengine/v1beta1) |
 | Recommender API | [v1](clients/google-api-services-recommender/v1), [v1beta1](clients/google-api-services-recommender/v1beta1) |
 | Remote Build Execution API | [v1](clients/google-api-services-remotebuildexecution/v1), [v1alpha](clients/google-api-services-remotebuildexecution/v1alpha), [v2](clients/google-api-services-remotebuildexecution/v2) |

@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.memcache.v1beta2.model;
+package com.google.api.services.memcache.v1.model;
 
 /**
  * Model definition for Instance.
@@ -31,8 +31,9 @@ package com.google.api.services.memcache.v1beta2.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
-   * The full name of the Google Compute Engine [network](https://cloud.google.com/vpc/docs/vpc) to
-   * which the instance is connected. If left unspecified, the `default` network will be used.
+   * The full name of the Google Compute Engine [network](/compute/docs/networks-and-
+   * firewalls#networks) to which the instance is connected. If left unspecified, the `default`
+   * network will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,13 +141,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Output only. Returns true if there is an update waiting to be applied
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean updateAvailable;
-
-  /**
    * Output only. The time the instance was updated.
    * The value may be {@code null}.
    */
@@ -163,8 +157,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> zones;
 
   /**
-   * The full name of the Google Compute Engine [network](https://cloud.google.com/vpc/docs/vpc) to
-   * which the instance is connected. If left unspecified, the `default` network will be used.
+   * The full name of the Google Compute Engine [network](/compute/docs/networks-and-
+   * firewalls#networks) to which the instance is connected. If left unspecified, the `default`
+   * network will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorizedNetwork() {
@@ -172,8 +167,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The full name of the Google Compute Engine [network](https://cloud.google.com/vpc/docs/vpc) to
-   * which the instance is connected. If left unspecified, the `default` network will be used.
+   * The full name of the Google Compute Engine [network](/compute/docs/networks-and-
+   * firewalls#networks) to which the instance is connected. If left unspecified, the `default`
+   * network will be used.
    * @param authorizedNetwork authorizedNetwork or {@code null} for none
    */
   public Instance setAuthorizedNetwork(java.lang.String authorizedNetwork) {
@@ -419,23 +415,6 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setState(java.lang.String state) {
     this.state = state;
-    return this;
-  }
-
-  /**
-   * Output only. Returns true if there is an update waiting to be applied
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getUpdateAvailable() {
-    return updateAvailable;
-  }
-
-  /**
-   * Output only. Returns true if there is an update waiting to be applied
-   * @param updateAvailable updateAvailable or {@code null} for none
-   */
-  public Instance setUpdateAvailable(java.lang.Boolean updateAvailable) {
-    this.updateAvailable = updateAvailable;
     return this;
   }
 

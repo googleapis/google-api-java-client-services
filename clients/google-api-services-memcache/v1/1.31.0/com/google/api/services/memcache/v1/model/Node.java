@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.memcache.v1beta2.model;
+package com.google.api.services.memcache.v1.model;
 
 /**
  * Model definition for Node.
@@ -66,13 +66,6 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
-
-  /**
-   * Output only. Returns true if there is an update waiting to be applied
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean updateAvailable;
 
   /**
    * Output only. Location (GCP Zone) for the Memcached node.
@@ -167,23 +160,6 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setState(java.lang.String state) {
     this.state = state;
-    return this;
-  }
-
-  /**
-   * Output only. Returns true if there is an update waiting to be applied
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getUpdateAvailable() {
-    return updateAvailable;
-  }
-
-  /**
-   * Output only. Returns true if there is an update waiting to be applied
-   * @param updateAvailable updateAvailable or {@code null} for none
-   */
-  public Node setUpdateAvailable(java.lang.Boolean updateAvailable) {
-    this.updateAvailable = updateAvailable;
     return this;
   }
 

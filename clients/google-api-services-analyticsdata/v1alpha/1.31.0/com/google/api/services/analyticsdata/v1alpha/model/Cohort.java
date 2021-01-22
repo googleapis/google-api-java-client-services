@@ -18,7 +18,7 @@ package com.google.api.services.analyticsdata.v1alpha.model;
 
 /**
  * Defines a cohort selection criteria. A cohort is a group of users who share a common
- * characteristic. For example, users with the same `firstTouchDate` belong to the same cohort.
+ * characteristic. For example, users with the same `firstSessionDate` belong to the same cohort.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation
@@ -49,7 +49,7 @@ public final class Cohort extends com.google.api.client.json.GenericJson {
   private DateRange dateRange;
 
   /**
-   * Dimension used by the cohort. Required and only supports `firstTouchDate`.
+   * Dimension used by the cohort. Required and only supports `firstSessionDate`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class Cohort extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Dimension used by the cohort. Required and only supports `firstTouchDate`.
+   * Dimension used by the cohort. Required and only supports `firstSessionDate`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDimension() {
@@ -110,7 +110,7 @@ public final class Cohort extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Dimension used by the cohort. Required and only supports `firstTouchDate`.
+   * Dimension used by the cohort. Required and only supports `firstSessionDate`.
    * @param dimension dimension or {@code null} for none
    */
   public Cohort setDimension(java.lang.String dimension) {

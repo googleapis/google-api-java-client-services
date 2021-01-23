@@ -93,6 +93,14 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private java.lang.Long insertionOrderId;
 
   /**
+   * The type of insertion order. If this field is unspecified in creation, the value defaults to
+   * `RTB`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String insertionOrderType;
+
+  /**
    * Additional integration details of the insertion order.
    * The value may be {@code null}.
    */
@@ -281,6 +289,25 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
    */
   public InsertionOrder setInsertionOrderId(java.lang.Long insertionOrderId) {
     this.insertionOrderId = insertionOrderId;
+    return this;
+  }
+
+  /**
+   * The type of insertion order. If this field is unspecified in creation, the value defaults to
+   * `RTB`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInsertionOrderType() {
+    return insertionOrderType;
+  }
+
+  /**
+   * The type of insertion order. If this field is unspecified in creation, the value defaults to
+   * `RTB`.
+   * @param insertionOrderType insertionOrderType or {@code null} for none
+   */
+  public InsertionOrder setInsertionOrderType(java.lang.String insertionOrderType) {
+    this.insertionOrderType = insertionOrderType;
     return this;
   }
 

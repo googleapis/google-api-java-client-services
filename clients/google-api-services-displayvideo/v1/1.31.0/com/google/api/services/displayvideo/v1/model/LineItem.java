@@ -142,6 +142,14 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private java.lang.String lineItemType;
 
   /**
+   * The mobile app promoted by the line item. This is applicable only when line_item_type is either
+   * `LINE_ITEM_TYPE_DISPLAY_MOBILE_APP_INSTALL` or `LINE_ITEM_TYPE_VIDEO_MOBILE_APP_INSTALL`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MobileApp mobileApp;
+
+  /**
    * Output only. The resource name of the line item.
    * The value may be {@code null}.
    */
@@ -458,6 +466,25 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    */
   public LineItem setLineItemType(java.lang.String lineItemType) {
     this.lineItemType = lineItemType;
+    return this;
+  }
+
+  /**
+   * The mobile app promoted by the line item. This is applicable only when line_item_type is either
+   * `LINE_ITEM_TYPE_DISPLAY_MOBILE_APP_INSTALL` or `LINE_ITEM_TYPE_VIDEO_MOBILE_APP_INSTALL`.
+   * @return value or {@code null} for none
+   */
+  public MobileApp getMobileApp() {
+    return mobileApp;
+  }
+
+  /**
+   * The mobile app promoted by the line item. This is applicable only when line_item_type is either
+   * `LINE_ITEM_TYPE_DISPLAY_MOBILE_APP_INSTALL` or `LINE_ITEM_TYPE_VIDEO_MOBILE_APP_INSTALL`.
+   * @param mobileApp mobileApp or {@code null} for none
+   */
+  public LineItem setMobileApp(MobileApp mobileApp) {
+    this.mobileApp = mobileApp;
     return this;
   }
 

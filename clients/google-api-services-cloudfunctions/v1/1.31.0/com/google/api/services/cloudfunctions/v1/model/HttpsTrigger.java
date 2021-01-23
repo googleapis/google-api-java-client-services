@@ -30,11 +30,35 @@ package com.google.api.services.cloudfunctions.v1.model;
 public final class HttpsTrigger extends com.google.api.client.json.GenericJson {
 
   /**
+   * The security level for the function.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securityLevel;
+
+  /**
    * Output only. The deployed url for the function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
+
+  /**
+   * The security level for the function.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecurityLevel() {
+    return securityLevel;
+  }
+
+  /**
+   * The security level for the function.
+   * @param securityLevel securityLevel or {@code null} for none
+   */
+  public HttpsTrigger setSecurityLevel(java.lang.String securityLevel) {
+    this.securityLevel = securityLevel;
+    return this;
+  }
 
   /**
    * Output only. The deployed url for the function.

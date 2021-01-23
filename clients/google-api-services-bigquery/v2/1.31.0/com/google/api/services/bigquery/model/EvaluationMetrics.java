@@ -53,6 +53,14 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
   private ClusteringMetrics clusteringMetrics;
 
   /**
+   * Evaluation metrics when the model is a dimensionality reduction model, which currently includes
+   * PCA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DimensionalityReductionMetrics dimensionalityReductionMetrics;
+
+  /**
    * Populated for multi-class classification/classifier models.
    * The value may be {@code null}.
    */
@@ -121,6 +129,25 @@ public final class EvaluationMetrics extends com.google.api.client.json.GenericJ
    */
   public EvaluationMetrics setClusteringMetrics(ClusteringMetrics clusteringMetrics) {
     this.clusteringMetrics = clusteringMetrics;
+    return this;
+  }
+
+  /**
+   * Evaluation metrics when the model is a dimensionality reduction model, which currently includes
+   * PCA.
+   * @return value or {@code null} for none
+   */
+  public DimensionalityReductionMetrics getDimensionalityReductionMetrics() {
+    return dimensionalityReductionMetrics;
+  }
+
+  /**
+   * Evaluation metrics when the model is a dimensionality reduction model, which currently includes
+   * PCA.
+   * @param dimensionalityReductionMetrics dimensionalityReductionMetrics or {@code null} for none
+   */
+  public EvaluationMetrics setDimensionalityReductionMetrics(DimensionalityReductionMetrics dimensionalityReductionMetrics) {
+    this.dimensionalityReductionMetrics = dimensionalityReductionMetrics;
     return this;
   }
 

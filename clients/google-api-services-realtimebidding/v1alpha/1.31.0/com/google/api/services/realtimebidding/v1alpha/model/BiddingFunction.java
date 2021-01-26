@@ -35,11 +35,11 @@ public final class BiddingFunction extends com.google.api.client.json.GenericJso
    * object, `inputs`, that contains the following named fields: `openrtbContextualBidRequest` OR
    * `googleContextualBidRequest`, `customContextualSignal`, `interestBasedBidData`,
    * `interestGroupData`, `recentImpressionAges`, and returns the bid price CPM (double). Example:
-   * Returns a bid price CPM (double). * * @param {Object} inputs an object with the * following
-   * named fields: * - openrtbContextualBidRequest * OR googleContextualBidRequest * -
+   * ```  Returns a bid price CPM (double). * * @param {Object} inputs an object with the *
+   * following named fields: * - openrtbContextualBidRequest * OR googleContextualBidRequest * -
    * customContextualSignal * - interestBasedBidData * - interestGroupData * - recentImpressionAges
    * function biddingFunction(inputs) { ... return inputs.interestBasedBidData.cpm *
-   * inputs.customContextualSignals.placementMultiplier; }
+   * inputs.customContextualSignals.placementMultiplier; } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,11 +58,11 @@ public final class BiddingFunction extends com.google.api.client.json.GenericJso
    * object, `inputs`, that contains the following named fields: `openrtbContextualBidRequest` OR
    * `googleContextualBidRequest`, `customContextualSignal`, `interestBasedBidData`,
    * `interestGroupData`, `recentImpressionAges`, and returns the bid price CPM (double). Example:
-   * Returns a bid price CPM (double). * * @param {Object} inputs an object with the * following
-   * named fields: * - openrtbContextualBidRequest * OR googleContextualBidRequest * -
+   * ```  Returns a bid price CPM (double). * * @param {Object} inputs an object with the *
+   * following named fields: * - openrtbContextualBidRequest * OR googleContextualBidRequest * -
    * customContextualSignal * - interestBasedBidData * - interestGroupData * - recentImpressionAges
    * function biddingFunction(inputs) { ... return inputs.interestBasedBidData.cpm *
-   * inputs.customContextualSignals.placementMultiplier; }
+   * inputs.customContextualSignals.placementMultiplier; } ```
    * @return value or {@code null} for none
    */
   public java.lang.String getBiddingFunction() {
@@ -74,11 +74,11 @@ public final class BiddingFunction extends com.google.api.client.json.GenericJso
    * object, `inputs`, that contains the following named fields: `openrtbContextualBidRequest` OR
    * `googleContextualBidRequest`, `customContextualSignal`, `interestBasedBidData`,
    * `interestGroupData`, `recentImpressionAges`, and returns the bid price CPM (double). Example:
-   * Returns a bid price CPM (double). * * @param {Object} inputs an object with the * following
-   * named fields: * - openrtbContextualBidRequest * OR googleContextualBidRequest * -
+   * ```  Returns a bid price CPM (double). * * @param {Object} inputs an object with the *
+   * following named fields: * - openrtbContextualBidRequest * OR googleContextualBidRequest * -
    * customContextualSignal * - interestBasedBidData * - interestGroupData * - recentImpressionAges
    * function biddingFunction(inputs) { ... return inputs.interestBasedBidData.cpm *
-   * inputs.customContextualSignals.placementMultiplier; }
+   * inputs.customContextualSignals.placementMultiplier; } ```
    * @param biddingFunction biddingFunction or {@code null} for none
    */
   public BiddingFunction setBiddingFunction(java.lang.String biddingFunction) {

@@ -17,10 +17,8 @@
 package com.google.api.services.cloudbuild.v1alpha1.model;
 
 /**
- * Pairs a set of secret environment variables containing encrypted values with the Cloud KMS key to
- * use to decrypt the value. Note: Use `kmsKeyName` with `available_secrets` instead of using
- * `kmsKeyName` with `secret`. For instructions see: https://cloud.google.com/cloud-build/docs
- * /securing-builds/use-encrypted-credentials.
+ * Pairs a set of secret environment variables mapped to encrypted values with the Cloud KMS key to
+ * use to decrypt the value.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Build API. For a detailed explanation see:
@@ -30,10 +28,21 @@ package com.google.api.services.cloudbuild.v1alpha1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Secret extends com.google.api.client.json.GenericJson {
+public final class InlineSecret extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud KMS key name to use to decrypt these envs.
+   * Map of environment variable name to its encrypted value. Secret environment variables must be
+   * unique across all of a build's secrets, and must be used by at least one build step. Values can
+   * be at most 64 KB in size. There can be at most 100 secret values across all of a build's
+   * secrets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> envMap;
+
+  /**
+   * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format:
+   * projects/locations/keyRings/cryptoKeys
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,13 +53,27 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    * unique across all of a build's secrets, and must be used by at least one build step. Values can
    * be at most 64 KB in size. There can be at most 100 secret values across all of a build's
    * secrets.
-   * The value may be {@code null}.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> secretEnv;
+  public java.util.Map<String, java.lang.String> getEnvMap() {
+    return envMap;
+  }
 
   /**
-   * Cloud KMS key name to use to decrypt these envs.
+   * Map of environment variable name to its encrypted value. Secret environment variables must be
+   * unique across all of a build's secrets, and must be used by at least one build step. Values can
+   * be at most 64 KB in size. There can be at most 100 secret values across all of a build's
+   * secrets.
+   * @param envMap envMap or {@code null} for none
+   */
+  public InlineSecret setEnvMap(java.util.Map<String, java.lang.String> envMap) {
+    this.envMap = envMap;
+    return this;
+  }
+
+  /**
+   * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format:
+   * projects/locations/keyRings/cryptoKeys
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -58,45 +81,23 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cloud KMS key name to use to decrypt these envs.
+   * Resource name of Cloud KMS crypto key to decrypt the encrypted value. In format:
+   * projects/locations/keyRings/cryptoKeys
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
-  public Secret setKmsKeyName(java.lang.String kmsKeyName) {
+  public InlineSecret setKmsKeyName(java.lang.String kmsKeyName) {
     this.kmsKeyName = kmsKeyName;
     return this;
   }
 
-  /**
-   * Map of environment variable name to its encrypted value. Secret environment variables must be
-   * unique across all of a build's secrets, and must be used by at least one build step. Values can
-   * be at most 64 KB in size. There can be at most 100 secret values across all of a build's
-   * secrets.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getSecretEnv() {
-    return secretEnv;
-  }
-
-  /**
-   * Map of environment variable name to its encrypted value. Secret environment variables must be
-   * unique across all of a build's secrets, and must be used by at least one build step. Values can
-   * be at most 64 KB in size. There can be at most 100 secret values across all of a build's
-   * secrets.
-   * @param secretEnv secretEnv or {@code null} for none
-   */
-  public Secret setSecretEnv(java.util.Map<String, java.lang.String> secretEnv) {
-    this.secretEnv = secretEnv;
-    return this;
+  @Override
+  public InlineSecret set(String fieldName, Object value) {
+    return (InlineSecret) super.set(fieldName, value);
   }
 
   @Override
-  public Secret set(String fieldName, Object value) {
-    return (Secret) super.set(fieldName, value);
-  }
-
-  @Override
-  public Secret clone() {
-    return (Secret) super.clone();
+  public InlineSecret clone() {
+    return (InlineSecret) super.clone();
   }
 
 }

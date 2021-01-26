@@ -3357,6 +3357,161 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           return (Run) super.set(parameterName, value);
         }
       }
+      /**
+       * ReceiveTriggerWebhook [Experimental] is called when the API receives a webhook request targeted
+       * at a specific trigger.
+       *
+       * Create a request for the method "triggers.webhook".
+       *
+       * This request holds the parameters needed by the cloudbuild server.  After setting any optional
+       * parameters, call the {@link Webhook#execute()} method to invoke the remote operation.
+       *
+       * @param projectId Project in which the specified trigger lives
+       * @param trigger Name of the trigger to run the payload against
+       * @param content the {@link com.google.api.services.cloudbuild.v1.model.HttpBody}
+       * @return the request
+       */
+      public Webhook webhook(java.lang.String projectId, java.lang.String trigger, com.google.api.services.cloudbuild.v1.model.HttpBody content) throws java.io.IOException {
+        Webhook result = new Webhook(projectId, trigger, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Webhook extends CloudBuildRequest<com.google.api.services.cloudbuild.v1.model.ReceiveTriggerWebhookResponse> {
+
+        private static final String REST_PATH = "v1/projects/{projectId}/triggers/{trigger}:webhook";
+
+        /**
+         * ReceiveTriggerWebhook [Experimental] is called when the API receives a webhook request targeted
+         * at a specific trigger.
+         *
+         * Create a request for the method "triggers.webhook".
+         *
+         * This request holds the parameters needed by the the cloudbuild server.  After setting any
+         * optional parameters, call the {@link Webhook#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Webhook#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param projectId Project in which the specified trigger lives
+         * @param trigger Name of the trigger to run the payload against
+         * @param content the {@link com.google.api.services.cloudbuild.v1.model.HttpBody}
+         * @since 1.13
+         */
+        protected Webhook(java.lang.String projectId, java.lang.String trigger, com.google.api.services.cloudbuild.v1.model.HttpBody content) {
+          super(CloudBuild.this, "POST", REST_PATH, content, com.google.api.services.cloudbuild.v1.model.ReceiveTriggerWebhookResponse.class);
+          this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+          this.trigger = com.google.api.client.util.Preconditions.checkNotNull(trigger, "Required parameter trigger must be specified.");
+        }
+
+        @Override
+        public Webhook set$Xgafv(java.lang.String $Xgafv) {
+          return (Webhook) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Webhook setAccessToken(java.lang.String accessToken) {
+          return (Webhook) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Webhook setAlt(java.lang.String alt) {
+          return (Webhook) super.setAlt(alt);
+        }
+
+        @Override
+        public Webhook setCallback(java.lang.String callback) {
+          return (Webhook) super.setCallback(callback);
+        }
+
+        @Override
+        public Webhook setFields(java.lang.String fields) {
+          return (Webhook) super.setFields(fields);
+        }
+
+        @Override
+        public Webhook setKey(java.lang.String key) {
+          return (Webhook) super.setKey(key);
+        }
+
+        @Override
+        public Webhook setOauthToken(java.lang.String oauthToken) {
+          return (Webhook) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Webhook setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Webhook) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Webhook setQuotaUser(java.lang.String quotaUser) {
+          return (Webhook) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Webhook setUploadType(java.lang.String uploadType) {
+          return (Webhook) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Webhook setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Webhook) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Project in which the specified trigger lives */
+        @com.google.api.client.util.Key
+        private java.lang.String projectId;
+
+        /** Project in which the specified trigger lives
+         */
+        public java.lang.String getProjectId() {
+          return projectId;
+        }
+
+        /** Project in which the specified trigger lives */
+        public Webhook setProjectId(java.lang.String projectId) {
+          this.projectId = projectId;
+          return this;
+        }
+
+        /** Name of the trigger to run the payload against */
+        @com.google.api.client.util.Key
+        private java.lang.String trigger;
+
+        /** Name of the trigger to run the payload against
+         */
+        public java.lang.String getTrigger() {
+          return trigger;
+        }
+
+        /** Name of the trigger to run the payload against */
+        public Webhook setTrigger(java.lang.String trigger) {
+          this.trigger = trigger;
+          return this;
+        }
+
+        /** Secret token used for authorization if an OAuth token isn't provided. */
+        @com.google.api.client.util.Key
+        private java.lang.String secret;
+
+        /** Secret token used for authorization if an OAuth token isn't provided.
+         */
+        public java.lang.String getSecret() {
+          return secret;
+        }
+
+        /** Secret token used for authorization if an OAuth token isn't provided. */
+        public Webhook setSecret(java.lang.String secret) {
+          this.secret = secret;
+          return this;
+        }
+
+        @Override
+        public Webhook set(String parameterName, Object value) {
+          return (Webhook) super.set(parameterName, value);
+        }
+      }
 
     }
   }

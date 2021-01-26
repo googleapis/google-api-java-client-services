@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
   /**
    * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
    * then the rest of the bytes are omitted. Only one of bytes_limit_per_file and
-   * bytes_limit_per_file_percent can be specified.
+   * bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -43,7 +43,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
    * Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned
    * is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
    * Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be
-   * specified.
+   * specified. Cannot be set if de-identification is requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
   /**
    * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
    * then the rest of the bytes are omitted. Only one of bytes_limit_per_file and
-   * bytes_limit_per_file_percent can be specified.
+   * bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBytesLimitPerFile() {
@@ -95,7 +95,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
   /**
    * Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
    * then the rest of the bytes are omitted. Only one of bytes_limit_per_file and
-   * bytes_limit_per_file_percent can be specified.
+   * bytes_limit_per_file_percent can be specified. Cannot be set if de-identification is requested.
    * @param bytesLimitPerFile bytesLimitPerFile or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudStorageOptions setBytesLimitPerFile(java.lang.Long bytesLimitPerFile) {
@@ -107,7 +107,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
    * Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned
    * is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
    * Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be
-   * specified.
+   * specified. Cannot be set if de-identification is requested.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBytesLimitPerFilePercent() {
@@ -118,7 +118,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptions extends com.google.api.
    * Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned
    * is rounded down. Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
    * Defaults to 0. Only one of bytes_limit_per_file and bytes_limit_per_file_percent can be
-   * specified.
+   * specified. Cannot be set if de-identification is requested.
    * @param bytesLimitPerFilePercent bytesLimitPerFilePercent or {@code null} for none
    */
   public GooglePrivacyDlpV2CloudStorageOptions setBytesLimitPerFilePercent(java.lang.Integer bytesLimitPerFilePercent) {

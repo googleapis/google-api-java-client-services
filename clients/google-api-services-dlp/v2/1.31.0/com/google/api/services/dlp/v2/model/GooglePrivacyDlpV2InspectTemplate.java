@@ -62,8 +62,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
 
   /**
    * Output only. The template name. The template will have one of the following formats:
-   * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR
-   * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
+   * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,8 +145,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
 
   /**
    * Output only. The template name. The template will have one of the following formats:
-   * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR
-   * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
+   * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -156,8 +154,7 @@ public final class GooglePrivacyDlpV2InspectTemplate extends com.google.api.clie
 
   /**
    * Output only. The template name. The template will have one of the following formats:
-   * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR
-   * `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
+   * `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID`
    * @param name name or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectTemplate setName(java.lang.String name) {

@@ -53,6 +53,14 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
+   * A header to display above the incident message. Typcially used to attach a localized notice on
+   * the timeline for followup comms translations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String header;
+
+  /**
    * A one-line incident description.
    * The value may be {@code null}.
    */
@@ -109,6 +117,25 @@ public final class GoogleOperations extends com.google.api.client.json.GenericJs
    */
   public GoogleOperations setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * A header to display above the incident message. Typcially used to attach a localized notice on
+   * the timeline for followup comms translations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHeader() {
+    return header;
+  }
+
+  /**
+   * A header to display above the incident message. Typcially used to attach a localized notice on
+   * the timeline for followup comms translations.
+   * @param header header or {@code null} for none
+   */
+  public GoogleOperations setHeader(java.lang.String header) {
+    this.header = header;
     return this;
   }
 

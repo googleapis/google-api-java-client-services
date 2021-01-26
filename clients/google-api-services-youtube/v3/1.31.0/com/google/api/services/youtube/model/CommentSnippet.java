@@ -94,12 +94,11 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
   private java.lang.String parentId;
 
   /**
-   * The date and time when the comment was orignally published. The value is specified in ISO 8601
-   * format.
+   * The date and time when the comment was originally published.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String publishedAt;
+  private com.google.api.client.util.DateTime publishedAt;
 
   /**
    * The comment's text. The format is either plain text or HTML dependent on what has been
@@ -120,11 +119,11 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
   private java.lang.String textOriginal;
 
   /**
-   * The date and time when was last updated . The value is specified in ISO 8601 format.
+   * The date and time when the comment was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String updatedAt;
+  private com.google.api.client.util.DateTime updatedAt;
 
   /**
    * The ID of the video the comment refers to, if any.
@@ -297,20 +296,18 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The date and time when the comment was orignally published. The value is specified in ISO 8601
-   * format.
+   * The date and time when the comment was originally published.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPublishedAt() {
+  public com.google.api.client.util.DateTime getPublishedAt() {
     return publishedAt;
   }
 
   /**
-   * The date and time when the comment was orignally published. The value is specified in ISO 8601
-   * format.
+   * The date and time when the comment was originally published.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public CommentSnippet setPublishedAt(java.lang.String publishedAt) {
+  public CommentSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }
@@ -358,18 +355,18 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The date and time when was last updated . The value is specified in ISO 8601 format.
+   * The date and time when the comment was last updated.
    * @return value or {@code null} for none
    */
-  public java.lang.String getUpdatedAt() {
+  public com.google.api.client.util.DateTime getUpdatedAt() {
     return updatedAt;
   }
 
   /**
-   * The date and time when was last updated . The value is specified in ISO 8601 format.
+   * The date and time when the comment was last updated.
    * @param updatedAt updatedAt or {@code null} for none
    */
-  public CommentSnippet setUpdatedAt(java.lang.String updatedAt) {
+  public CommentSnippet setUpdatedAt(com.google.api.client.util.DateTime updatedAt) {
     this.updatedAt = updatedAt;
     return this;
   }

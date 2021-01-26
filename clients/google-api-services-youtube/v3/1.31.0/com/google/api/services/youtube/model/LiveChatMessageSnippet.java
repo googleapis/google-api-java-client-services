@@ -82,12 +82,11 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   private LiveChatMessageRetractedDetails messageRetractedDetails;
 
   /**
-   * The date and time when the message was orignally published. The value is specified in ISO 8601
-   * format.
+   * The date and time when the message was orignally published.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String publishedAt;
+  private com.google.api.client.util.DateTime publishedAt;
 
   /**
    * Details about the Super Chat event, this is only set if the type is 'superChatEvent'.
@@ -250,20 +249,18 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * The date and time when the message was orignally published. The value is specified in ISO 8601
-   * format.
+   * The date and time when the message was orignally published.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPublishedAt() {
+  public com.google.api.client.util.DateTime getPublishedAt() {
     return publishedAt;
   }
 
   /**
-   * The date and time when the message was orignally published. The value is specified in ISO 8601
-   * format.
+   * The date and time when the message was orignally published.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public LiveChatMessageSnippet setPublishedAt(java.lang.String publishedAt) {
+  public LiveChatMessageSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }

@@ -61,12 +61,11 @@ public final class SearchResultSnippet extends com.google.api.client.json.Generi
   private java.lang.String liveBroadcastContent;
 
   /**
-   * The creation date and time of the resource that the search result identifies. The value is
-   * specified in ISO 8601 format.
+   * The creation date and time of the resource that the search result identifies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String publishedAt;
+  private com.google.api.client.util.DateTime publishedAt;
 
   /**
    * A map of thumbnail images associated with the search result. For each object in the map, the
@@ -157,20 +156,18 @@ public final class SearchResultSnippet extends com.google.api.client.json.Generi
   }
 
   /**
-   * The creation date and time of the resource that the search result identifies. The value is
-   * specified in ISO 8601 format.
+   * The creation date and time of the resource that the search result identifies.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPublishedAt() {
+  public com.google.api.client.util.DateTime getPublishedAt() {
     return publishedAt;
   }
 
   /**
-   * The creation date and time of the resource that the search result identifies. The value is
-   * specified in ISO 8601 format.
+   * The creation date and time of the resource that the search result identifies.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public SearchResultSnippet setPublishedAt(java.lang.String publishedAt) {
+  public SearchResultSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }

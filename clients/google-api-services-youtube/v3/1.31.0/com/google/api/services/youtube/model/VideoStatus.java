@@ -76,11 +76,11 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The date and time when the video is scheduled to publish. It can be set only if the privacy
-   * status of the video is private. The value is specified in ISO 8601 format.
+   * status of the video is private..
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String publishAt;
+  private com.google.api.client.util.DateTime publishAt;
 
   /**
    * This value explains why YouTube rejected an uploaded video. This property is only present if
@@ -213,19 +213,19 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * The date and time when the video is scheduled to publish. It can be set only if the privacy
-   * status of the video is private. The value is specified in ISO 8601 format.
+   * status of the video is private..
    * @return value or {@code null} for none
    */
-  public java.lang.String getPublishAt() {
+  public com.google.api.client.util.DateTime getPublishAt() {
     return publishAt;
   }
 
   /**
    * The date and time when the video is scheduled to publish. It can be set only if the privacy
-   * status of the video is private. The value is specified in ISO 8601 format.
+   * status of the video is private..
    * @param publishAt publishAt or {@code null} for none
    */
-  public VideoStatus setPublishAt(java.lang.String publishAt) {
+  public VideoStatus setPublishAt(com.google.api.client.util.DateTime publishAt) {
     this.publishAt = publishAt;
     return this;
   }

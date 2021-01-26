@@ -89,11 +89,11 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
   private VideoLocalization localized;
 
   /**
-   * The date and time that the video was uploaded. The value is specified in ISO 8601 format.
+   * The date and time when the video was uploaded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String publishedAt;
+  private com.google.api.client.util.DateTime publishedAt;
 
   /**
    * A list of keyword tags associated with the video. Tags may contain spaces.
@@ -261,18 +261,18 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The date and time that the video was uploaded. The value is specified in ISO 8601 format.
+   * The date and time when the video was uploaded.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPublishedAt() {
+  public com.google.api.client.util.DateTime getPublishedAt() {
     return publishedAt;
   }
 
   /**
-   * The date and time that the video was uploaded. The value is specified in ISO 8601 format.
+   * The date and time when the video was uploaded.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public VideoSnippet setPublishedAt(java.lang.String publishedAt) {
+  public VideoSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }

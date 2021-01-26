@@ -44,12 +44,11 @@ public final class VideoRecordingDetails extends com.google.api.client.json.Gene
   private java.lang.String locationDescription;
 
   /**
-   * The date and time when the video was recorded. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sssZ) format.
+   * The date and time when the video was recorded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String recordingDate;
+  private com.google.api.client.util.DateTime recordingDate;
 
   /**
    * The geolocation information associated with the video.
@@ -86,20 +85,18 @@ public final class VideoRecordingDetails extends com.google.api.client.json.Gene
   }
 
   /**
-   * The date and time when the video was recorded. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sssZ) format.
+   * The date and time when the video was recorded.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRecordingDate() {
+  public com.google.api.client.util.DateTime getRecordingDate() {
     return recordingDate;
   }
 
   /**
-   * The date and time when the video was recorded. The value is specified in ISO 8601 (YYYY-MM-
-   * DDThh:mm:ss.sssZ) format.
+   * The date and time when the video was recorded.
    * @param recordingDate recordingDate or {@code null} for none
    */
-  public VideoRecordingDetails setRecordingDate(java.lang.String recordingDate) {
+  public VideoRecordingDetails setRecordingDate(com.google.api.client.util.DateTime recordingDate) {
     this.recordingDate = recordingDate;
     return this;
   }

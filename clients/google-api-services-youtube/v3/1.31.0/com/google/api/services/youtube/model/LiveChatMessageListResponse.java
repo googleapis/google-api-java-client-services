@@ -70,12 +70,11 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   private java.lang.String nextPageToken;
 
   /**
-   * The date and time when the underlying stream went offline. The value is specified in ISO 8601
-   * format.
+   * The date and time when the underlying stream went offline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String offlineAt;
+  private com.google.api.client.util.DateTime offlineAt;
 
   /**
    * General pagination information.
@@ -188,20 +187,18 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   }
 
   /**
-   * The date and time when the underlying stream went offline. The value is specified in ISO 8601
-   * format.
+   * The date and time when the underlying stream went offline.
    * @return value or {@code null} for none
    */
-  public java.lang.String getOfflineAt() {
+  public com.google.api.client.util.DateTime getOfflineAt() {
     return offlineAt;
   }
 
   /**
-   * The date and time when the underlying stream went offline. The value is specified in ISO 8601
-   * format.
+   * The date and time when the underlying stream went offline.
    * @param offlineAt offlineAt or {@code null} for none
    */
-  public LiveChatMessageListResponse setOfflineAt(java.lang.String offlineAt) {
+  public LiveChatMessageListResponse setOfflineAt(com.google.api.client.util.DateTime offlineAt) {
     this.offlineAt = offlineAt;
     return this;
   }

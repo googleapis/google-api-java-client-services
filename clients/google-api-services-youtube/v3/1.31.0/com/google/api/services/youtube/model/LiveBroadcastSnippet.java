@@ -31,19 +31,19 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
 
   /**
    * The date and time that the broadcast actually ended. This information is only available once
-   * the broadcast's state is complete. The value is specified in ISO 8601 format.
+   * the broadcast's state is complete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String actualEndTime;
+  private com.google.api.client.util.DateTime actualEndTime;
 
   /**
    * The date and time that the broadcast actually started. This information is only available once
-   * the broadcast's state is live. The value is specified in ISO 8601 format.
+   * the broadcast's state is live.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String actualStartTime;
+  private com.google.api.client.util.DateTime actualStartTime;
 
   /**
    * The ID that YouTube uses to uniquely identify the channel that is publishing the broadcast.
@@ -75,28 +75,25 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   private java.lang.String liveChatId;
 
   /**
-   * The date and time that the broadcast was added to YouTube's live broadcast schedule. The value
-   * is specified in ISO 8601 format.
+   * The date and time that the broadcast was added to YouTube's live broadcast schedule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String publishedAt;
+  private com.google.api.client.util.DateTime publishedAt;
 
   /**
-   * The date and time that the broadcast is scheduled to end. The value is specified in ISO 8601
-   * format.
+   * The date and time that the broadcast is scheduled to start.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String scheduledEndTime;
+  private com.google.api.client.util.DateTime scheduledEndTime;
 
   /**
-   * The date and time that the broadcast is scheduled to start. The value is specified in ISO 8601
-   * format.
+   * The date and time that the broadcast is scheduled to end.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String scheduledStartTime;
+  private com.google.api.client.util.DateTime scheduledStartTime;
 
   /**
    * A map of thumbnail images associated with the broadcast. For each nested object in this object,
@@ -118,38 +115,38 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
 
   /**
    * The date and time that the broadcast actually ended. This information is only available once
-   * the broadcast's state is complete. The value is specified in ISO 8601 format.
+   * the broadcast's state is complete.
    * @return value or {@code null} for none
    */
-  public java.lang.String getActualEndTime() {
+  public com.google.api.client.util.DateTime getActualEndTime() {
     return actualEndTime;
   }
 
   /**
    * The date and time that the broadcast actually ended. This information is only available once
-   * the broadcast's state is complete. The value is specified in ISO 8601 format.
+   * the broadcast's state is complete.
    * @param actualEndTime actualEndTime or {@code null} for none
    */
-  public LiveBroadcastSnippet setActualEndTime(java.lang.String actualEndTime) {
+  public LiveBroadcastSnippet setActualEndTime(com.google.api.client.util.DateTime actualEndTime) {
     this.actualEndTime = actualEndTime;
     return this;
   }
 
   /**
    * The date and time that the broadcast actually started. This information is only available once
-   * the broadcast's state is live. The value is specified in ISO 8601 format.
+   * the broadcast's state is live.
    * @return value or {@code null} for none
    */
-  public java.lang.String getActualStartTime() {
+  public com.google.api.client.util.DateTime getActualStartTime() {
     return actualStartTime;
   }
 
   /**
    * The date and time that the broadcast actually started. This information is only available once
-   * the broadcast's state is live. The value is specified in ISO 8601 format.
+   * the broadcast's state is live.
    * @param actualStartTime actualStartTime or {@code null} for none
    */
-  public LiveBroadcastSnippet setActualStartTime(java.lang.String actualStartTime) {
+  public LiveBroadcastSnippet setActualStartTime(com.google.api.client.util.DateTime actualStartTime) {
     this.actualStartTime = actualStartTime;
     return this;
   }
@@ -225,58 +222,52 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   }
 
   /**
-   * The date and time that the broadcast was added to YouTube's live broadcast schedule. The value
-   * is specified in ISO 8601 format.
+   * The date and time that the broadcast was added to YouTube's live broadcast schedule.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPublishedAt() {
+  public com.google.api.client.util.DateTime getPublishedAt() {
     return publishedAt;
   }
 
   /**
-   * The date and time that the broadcast was added to YouTube's live broadcast schedule. The value
-   * is specified in ISO 8601 format.
+   * The date and time that the broadcast was added to YouTube's live broadcast schedule.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public LiveBroadcastSnippet setPublishedAt(java.lang.String publishedAt) {
+  public LiveBroadcastSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }
 
   /**
-   * The date and time that the broadcast is scheduled to end. The value is specified in ISO 8601
-   * format.
+   * The date and time that the broadcast is scheduled to start.
    * @return value or {@code null} for none
    */
-  public java.lang.String getScheduledEndTime() {
+  public com.google.api.client.util.DateTime getScheduledEndTime() {
     return scheduledEndTime;
   }
 
   /**
-   * The date and time that the broadcast is scheduled to end. The value is specified in ISO 8601
-   * format.
+   * The date and time that the broadcast is scheduled to start.
    * @param scheduledEndTime scheduledEndTime or {@code null} for none
    */
-  public LiveBroadcastSnippet setScheduledEndTime(java.lang.String scheduledEndTime) {
+  public LiveBroadcastSnippet setScheduledEndTime(com.google.api.client.util.DateTime scheduledEndTime) {
     this.scheduledEndTime = scheduledEndTime;
     return this;
   }
 
   /**
-   * The date and time that the broadcast is scheduled to start. The value is specified in ISO 8601
-   * format.
+   * The date and time that the broadcast is scheduled to end.
    * @return value or {@code null} for none
    */
-  public java.lang.String getScheduledStartTime() {
+  public com.google.api.client.util.DateTime getScheduledStartTime() {
     return scheduledStartTime;
   }
 
   /**
-   * The date and time that the broadcast is scheduled to start. The value is specified in ISO 8601
-   * format.
+   * The date and time that the broadcast is scheduled to end.
    * @param scheduledStartTime scheduledStartTime or {@code null} for none
    */
-  public LiveBroadcastSnippet setScheduledStartTime(java.lang.String scheduledStartTime) {
+  public LiveBroadcastSnippet setScheduledStartTime(com.google.api.client.util.DateTime scheduledStartTime) {
     this.scheduledStartTime = scheduledStartTime;
     return this;
   }

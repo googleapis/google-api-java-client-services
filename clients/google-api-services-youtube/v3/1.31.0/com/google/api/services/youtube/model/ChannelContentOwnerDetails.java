@@ -38,12 +38,11 @@ public final class ChannelContentOwnerDetails extends com.google.api.client.json
   private java.lang.String contentOwner;
 
   /**
-   * The date and time of when the channel was linked to the content owner. The value is specified
-   * in ISO 8601 format.
+   * The date and time when the channel was linked to the content owner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String timeLinked;
+  private com.google.api.client.util.DateTime timeLinked;
 
   /**
    * The ID of the content owner linked to the channel.
@@ -63,20 +62,18 @@ public final class ChannelContentOwnerDetails extends com.google.api.client.json
   }
 
   /**
-   * The date and time of when the channel was linked to the content owner. The value is specified
-   * in ISO 8601 format.
+   * The date and time when the channel was linked to the content owner.
    * @return value or {@code null} for none
    */
-  public java.lang.String getTimeLinked() {
+  public com.google.api.client.util.DateTime getTimeLinked() {
     return timeLinked;
   }
 
   /**
-   * The date and time of when the channel was linked to the content owner. The value is specified
-   * in ISO 8601 format.
+   * The date and time when the channel was linked to the content owner.
    * @param timeLinked timeLinked or {@code null} for none
    */
-  public ChannelContentOwnerDetails setTimeLinked(java.lang.String timeLinked) {
+  public ChannelContentOwnerDetails setTimeLinked(com.google.api.client.util.DateTime timeLinked) {
     this.timeLinked = timeLinked;
     return this;
   }

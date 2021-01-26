@@ -41,7 +41,7 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String boundStreamLastUpdateTimeMs;
+  private com.google.api.client.util.DateTime boundStreamLastUpdateTimeMs;
 
   /**
    * The value may be {@code null}.
@@ -185,7 +185,7 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
    * The date and time that the live stream referenced by boundStreamId was last updated.
    * @return value or {@code null} for none
    */
-  public java.lang.String getBoundStreamLastUpdateTimeMs() {
+  public com.google.api.client.util.DateTime getBoundStreamLastUpdateTimeMs() {
     return boundStreamLastUpdateTimeMs;
   }
 
@@ -193,7 +193,7 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
    * The date and time that the live stream referenced by boundStreamId was last updated.
    * @param boundStreamLastUpdateTimeMs boundStreamLastUpdateTimeMs or {@code null} for none
    */
-  public LiveBroadcastContentDetails setBoundStreamLastUpdateTimeMs(java.lang.String boundStreamLastUpdateTimeMs) {
+  public LiveBroadcastContentDetails setBoundStreamLastUpdateTimeMs(com.google.api.client.util.DateTime boundStreamLastUpdateTimeMs) {
     this.boundStreamLastUpdateTimeMs = boundStreamLastUpdateTimeMs;
     return this;
   }

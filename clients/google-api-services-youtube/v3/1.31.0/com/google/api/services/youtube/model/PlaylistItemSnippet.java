@@ -67,12 +67,11 @@ public final class PlaylistItemSnippet extends com.google.api.client.json.Generi
   private java.lang.Long position;
 
   /**
-   * The date and time that the item was added to the playlist. The value is specified in ISO 8601
-   * format.
+   * The date and time that the item was added to the playlist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String publishedAt;
+  private com.google.api.client.util.DateTime publishedAt;
 
   /**
    * The id object contains information that can be used to uniquely identify the resource that is
@@ -186,20 +185,18 @@ public final class PlaylistItemSnippet extends com.google.api.client.json.Generi
   }
 
   /**
-   * The date and time that the item was added to the playlist. The value is specified in ISO 8601
-   * format.
+   * The date and time that the item was added to the playlist.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPublishedAt() {
+  public com.google.api.client.util.DateTime getPublishedAt() {
     return publishedAt;
   }
 
   /**
-   * The date and time that the item was added to the playlist. The value is specified in ISO 8601
-   * format.
+   * The date and time that the item was added to the playlist.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public PlaylistItemSnippet setPublishedAt(java.lang.String publishedAt) {
+  public PlaylistItemSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }

@@ -97,12 +97,11 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
   private java.lang.String language;
 
   /**
-   * The date and time when the caption track was last updated. The value is specified in ISO 8601
-   * format.
+   * The date and time when the caption track was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String lastUpdated;
+  private com.google.api.client.util.DateTime lastUpdated;
 
   /**
    * The name of the caption track. The name is intended to be visible to the user as an option
@@ -293,20 +292,18 @@ public final class CaptionSnippet extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The date and time when the caption track was last updated. The value is specified in ISO 8601
-   * format.
+   * The date and time when the caption track was last updated.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLastUpdated() {
+  public com.google.api.client.util.DateTime getLastUpdated() {
     return lastUpdated;
   }
 
   /**
-   * The date and time when the caption track was last updated. The value is specified in ISO 8601
-   * format.
+   * The date and time when the caption track was last updated.
    * @param lastUpdated lastUpdated or {@code null} for none
    */
-  public CaptionSnippet setLastUpdated(java.lang.String lastUpdated) {
+  public CaptionSnippet setLastUpdated(com.google.api.client.util.DateTime lastUpdated) {
     this.lastUpdated = lastUpdated;
     return this;
   }

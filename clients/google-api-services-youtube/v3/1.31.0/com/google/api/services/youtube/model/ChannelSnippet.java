@@ -65,12 +65,11 @@ public final class ChannelSnippet extends com.google.api.client.json.GenericJson
   private ChannelLocalization localized;
 
   /**
-   * The date and time that the channel was created. The value is specified in < a
-   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 format.
+   * The date and time that the channel was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String publishedAt;
+  private com.google.api.client.util.DateTime publishedAt;
 
   /**
    * A map of thumbnail images associated with the channel. For each object in the map, the key is
@@ -181,20 +180,18 @@ public final class ChannelSnippet extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The date and time that the channel was created. The value is specified in < a
-   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 format.
+   * The date and time that the channel was created.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPublishedAt() {
+  public com.google.api.client.util.DateTime getPublishedAt() {
     return publishedAt;
   }
 
   /**
-   * The date and time that the channel was created. The value is specified in < a
-   * href="//www.w3.org/TR/NOTE-datetime">ISO 8601 format.
+   * The date and time that the channel was created.
    * @param publishedAt publishedAt or {@code null} for none
    */
-  public ChannelSnippet setPublishedAt(java.lang.String publishedAt) {
+  public ChannelSnippet setPublishedAt(com.google.api.client.util.DateTime publishedAt) {
     this.publishedAt = publishedAt;
     return this;
   }

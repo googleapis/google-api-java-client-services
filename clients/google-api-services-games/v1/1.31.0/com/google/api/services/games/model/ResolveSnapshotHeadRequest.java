@@ -31,6 +31,16 @@ package com.google.api.services.games.model;
 public final class ResolveSnapshotHeadRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The maximum number of SnapshotRevision resources for `conflictingRevisions` to return per
+   * SnapshotExtended resource in the response. For any response, the actual number of resources
+   * returned may be less than specified by `maxConflictsPerSnapshot`. The value provided should be
+   * greater or equal to 0. If no value is provided, the server will use a sensible default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxConflictsPerSnapshot;
+
+  /**
    * Required. The automatic resolution policy. All conflicts are resolved in chronological order,
    * starting from the/ least recent. If the comparison metric is equal for the tentative head and
    * the conflict, the head wins.
@@ -38,6 +48,29 @@ public final class ResolveSnapshotHeadRequest extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String resolutionPolicy;
+
+  /**
+   * The maximum number of SnapshotRevision resources for `conflictingRevisions` to return per
+   * SnapshotExtended resource in the response. For any response, the actual number of resources
+   * returned may be less than specified by `maxConflictsPerSnapshot`. The value provided should be
+   * greater or equal to 0. If no value is provided, the server will use a sensible default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxConflictsPerSnapshot() {
+    return maxConflictsPerSnapshot;
+  }
+
+  /**
+   * The maximum number of SnapshotRevision resources for `conflictingRevisions` to return per
+   * SnapshotExtended resource in the response. For any response, the actual number of resources
+   * returned may be less than specified by `maxConflictsPerSnapshot`. The value provided should be
+   * greater or equal to 0. If no value is provided, the server will use a sensible default.
+   * @param maxConflictsPerSnapshot maxConflictsPerSnapshot or {@code null} for none
+   */
+  public ResolveSnapshotHeadRequest setMaxConflictsPerSnapshot(java.lang.Integer maxConflictsPerSnapshot) {
+    this.maxConflictsPerSnapshot = maxConflictsPerSnapshot;
+    return this;
+  }
 
   /**
    * Required. The automatic resolution policy. All conflicts are resolved in chronological order,

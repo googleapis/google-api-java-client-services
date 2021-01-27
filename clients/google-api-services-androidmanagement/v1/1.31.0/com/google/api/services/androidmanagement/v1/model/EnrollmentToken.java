@@ -53,7 +53,7 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   private java.lang.String allowPersonalUsage;
 
   /**
-   * The length of time the enrollment token is valid, ranging from 1 minute to 30 days. If not
+   * The length of time the enrollment token is valid, ranging from 1 minute to 90 days. If not
    * specified, the default duration is 1 hour.
    * The value may be {@code null}.
    */
@@ -172,7 +172,7 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The length of time the enrollment token is valid, ranging from 1 minute to 30 days. If not
+   * The length of time the enrollment token is valid, ranging from 1 minute to 90 days. If not
    * specified, the default duration is 1 hour.
    * @return value or {@code null} for none
    */
@@ -181,7 +181,7 @@ public final class EnrollmentToken extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The length of time the enrollment token is valid, ranging from 1 minute to 30 days. If not
+   * The length of time the enrollment token is valid, ranging from 1 minute to 90 days. If not
    * specified, the default duration is 1 hour.
    * @param duration duration or {@code null} for none
    */

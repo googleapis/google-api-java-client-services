@@ -32,10 +32,10 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
   /**
    * The schema to use when parsing the data from the source. Supported values for product imports:
    * * `product` (default): One JSON Product per line. Each product must have a valid Product.id. *
-   * `product_merchant_center`: See [Importing catalog data from Merchant Center](/retail
-   * /recommendations-ai/docs/upload-catalog#mc). Supported values for user events imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `user_event_ga360`: Using
-   * https://support.google.com/analytics/answer/3437719?hl=en.
+   * `product_merchant_center`: See [Importing catalog data from Merchant
+   * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
+   * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
+   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719?hl=en.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,10 +75,10 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
   /**
    * The schema to use when parsing the data from the source. Supported values for product imports:
    * * `product` (default): One JSON Product per line. Each product must have a valid Product.id. *
-   * `product_merchant_center`: See [Importing catalog data from Merchant Center](/retail
-   * /recommendations-ai/docs/upload-catalog#mc). Supported values for user events imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `user_event_ga360`: Using
-   * https://support.google.com/analytics/answer/3437719?hl=en.
+   * `product_merchant_center`: See [Importing catalog data from Merchant
+   * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
+   * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
+   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719?hl=en.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -88,10 +88,10 @@ public final class GoogleCloudRetailV2betaBigQuerySource extends com.google.api.
   /**
    * The schema to use when parsing the data from the source. Supported values for product imports:
    * * `product` (default): One JSON Product per line. Each product must have a valid Product.id. *
-   * `product_merchant_center`: See [Importing catalog data from Merchant Center](/retail
-   * /recommendations-ai/docs/upload-catalog#mc). Supported values for user events imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `user_event_ga360`: Using
-   * https://support.google.com/analytics/answer/3437719?hl=en.
+   * `product_merchant_center`: See [Importing catalog data from Merchant
+   * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mc). Supported
+   * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
+   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719?hl=en.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudRetailV2betaBigQuerySource setDataSchema(java.lang.String dataSchema) {

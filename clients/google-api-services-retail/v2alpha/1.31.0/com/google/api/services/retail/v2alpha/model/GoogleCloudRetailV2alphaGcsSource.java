@@ -32,10 +32,10 @@ public final class GoogleCloudRetailV2alphaGcsSource extends com.google.api.clie
   /**
    * The schema to use when parsing the data from the source. Supported values for product imports:
    * * `product` (default): One JSON Product per line. Each product must have a valid Product.id. *
-   * `product_merchant_center`: See [Importing catalog data from Merchant Center](/retail
-   * /recommendations-ai/docs/upload-catalog#mc). Supported values for user events imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `user_event_ga360`: Using
-   * https://support.google.com/analytics/answer/3437719?hl=en.
+   * `product_merchant_center`: See [Importing catalog data from Merchant
+   * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mcc). Supported
+   * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
+   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719?hl=en.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,9 @@ public final class GoogleCloudRetailV2alphaGcsSource extends com.google.api.clie
    * Required. Google Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs
    * can match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
-   * 100 files, and each file can be up to 2 GB. See [Importing product information
-   * ](/recommendations-ai/docs/upload-catalog) for the expected file format and setup instructions.
+   * 100 files, and each file can be up to 2 GB. See [Importing product
+   * information](https://cloud.google.com/recommendations-ai/docs/upload-catalog) for the expected
+   * file format and setup instructions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,10 +56,10 @@ public final class GoogleCloudRetailV2alphaGcsSource extends com.google.api.clie
   /**
    * The schema to use when parsing the data from the source. Supported values for product imports:
    * * `product` (default): One JSON Product per line. Each product must have a valid Product.id. *
-   * `product_merchant_center`: See [Importing catalog data from Merchant Center](/retail
-   * /recommendations-ai/docs/upload-catalog#mc). Supported values for user events imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `user_event_ga360`: Using
-   * https://support.google.com/analytics/answer/3437719?hl=en.
+   * `product_merchant_center`: See [Importing catalog data from Merchant
+   * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mcc). Supported
+   * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
+   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719?hl=en.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSchema() {
@@ -68,10 +69,10 @@ public final class GoogleCloudRetailV2alphaGcsSource extends com.google.api.clie
   /**
    * The schema to use when parsing the data from the source. Supported values for product imports:
    * * `product` (default): One JSON Product per line. Each product must have a valid Product.id. *
-   * `product_merchant_center`: See [Importing catalog data from Merchant Center](/retail
-   * /recommendations-ai/docs/upload-catalog#mc). Supported values for user events imports: *
-   * `user_event` (default): One JSON UserEvent per line. * `user_event_ga360`: Using
-   * https://support.google.com/analytics/answer/3437719?hl=en.
+   * `product_merchant_center`: See [Importing catalog data from Merchant
+   * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-catalog#mcc). Supported
+   * values for user events imports: * `user_event` (default): One JSON UserEvent per line. *
+   * `user_event_ga360`: Using https://support.google.com/analytics/answer/3437719?hl=en.
    * @param dataSchema dataSchema or {@code null} for none
    */
   public GoogleCloudRetailV2alphaGcsSource setDataSchema(java.lang.String dataSchema) {
@@ -83,8 +84,9 @@ public final class GoogleCloudRetailV2alphaGcsSource extends com.google.api.clie
    * Required. Google Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs
    * can match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
-   * 100 files, and each file can be up to 2 GB. See [Importing product information
-   * ](/recommendations-ai/docs/upload-catalog) for the expected file format and setup instructions.
+   * 100 files, and each file can be up to 2 GB. See [Importing product
+   * information](https://cloud.google.com/recommendations-ai/docs/upload-catalog) for the expected
+   * file format and setup instructions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInputUris() {
@@ -95,8 +97,9 @@ public final class GoogleCloudRetailV2alphaGcsSource extends com.google.api.clie
    * Required. Google Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs
    * can match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern
    * matching one or more files, such as `gs://bucket/directory.json`. A request can contain at most
-   * 100 files, and each file can be up to 2 GB. See [Importing product information
-   * ](/recommendations-ai/docs/upload-catalog) for the expected file format and setup instructions.
+   * 100 files, and each file can be up to 2 GB. See [Importing product
+   * information](https://cloud.google.com/recommendations-ai/docs/upload-catalog) for the expected
+   * file format and setup instructions.
    * @param inputUris inputUris or {@code null} for none
    */
   public GoogleCloudRetailV2alphaGcsSource setInputUris(java.util.List<java.lang.String> inputUris) {

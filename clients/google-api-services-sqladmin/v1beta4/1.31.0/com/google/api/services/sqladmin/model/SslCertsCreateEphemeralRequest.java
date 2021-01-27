@@ -30,11 +30,35 @@ package com.google.api.services.sqladmin.model;
 public final class SslCertsCreateEphemeralRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Access token to include in the signed certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("access_token")
+  private java.lang.String accessToken;
+
+  /**
    * PEM encoded public key to include in the signed certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("public_key")
   private java.lang.String publicKey;
+
+  /**
+   * Access token to include in the signed certificate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccessToken() {
+    return accessToken;
+  }
+
+  /**
+   * Access token to include in the signed certificate.
+   * @param accessToken accessToken or {@code null} for none
+   */
+  public SslCertsCreateEphemeralRequest setAccessToken(java.lang.String accessToken) {
+    this.accessToken = accessToken;
+    return this;
+  }
 
   /**
    * PEM encoded public key to include in the signed certificate.

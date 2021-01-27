@@ -132,7 +132,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * The type of this run; can be either "AUTOMATED" or "ON_DEMAND".
+   * The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to
+   * "ON_DEMAND" and is ignored, when specified for insert requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -393,7 +394,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of this run; can be either "AUTOMATED" or "ON_DEMAND".
+   * The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to
+   * "ON_DEMAND" and is ignored, when specified for insert requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -401,7 +403,8 @@ public final class BackupRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of this run; can be either "AUTOMATED" or "ON_DEMAND".
+   * The type of this run; can be either "AUTOMATED" or "ON_DEMAND". This field defaults to
+   * "ON_DEMAND" and is ignored, when specified for insert requests.
    * @param type type or {@code null} for none
    */
   public BackupRun setType(java.lang.String type) {

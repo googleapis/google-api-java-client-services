@@ -193,9 +193,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.lang.String type;
 
   /**
-   * Canonical URL directly linking to the product detail page. This field must be a UTF-8 encoded
-   * string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. Google Merchant Center property
+   * Canonical URL directly linking to the product detail page. It is strongly recommended to
+   * provide a valid uri for the product, otherwise the service performance could be significantly
+   * degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [link](https://support.google.com/merchants/answer/6324416). Schema.org property
    * [Offer.url](https://schema.org/url).
    * The value may be {@code null}.
@@ -548,9 +549,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Canonical URL directly linking to the product detail page. This field must be a UTF-8 encoded
-   * string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. Google Merchant Center property
+   * Canonical URL directly linking to the product detail page. It is strongly recommended to
+   * provide a valid uri for the product, otherwise the service performance could be significantly
+   * degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [link](https://support.google.com/merchants/answer/6324416). Schema.org property
    * [Offer.url](https://schema.org/url).
    * @return value or {@code null} for none
@@ -560,9 +562,10 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Canonical URL directly linking to the product detail page. This field must be a UTF-8 encoded
-   * string with a length limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is
-   * returned. Google Merchant Center property
+   * Canonical URL directly linking to the product detail page. It is strongly recommended to
+   * provide a valid uri for the product, otherwise the service performance could be significantly
+   * degraded. This field must be a UTF-8 encoded string with a length limit of 5,000 characters.
+   * Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property
    * [link](https://support.google.com/merchants/answer/6324416). Schema.org property
    * [Offer.url](https://schema.org/url).
    * @param uri uri or {@code null} for none

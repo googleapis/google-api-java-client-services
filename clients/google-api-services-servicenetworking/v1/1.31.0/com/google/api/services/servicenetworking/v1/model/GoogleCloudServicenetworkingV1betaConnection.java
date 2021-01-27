@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.servicenetworking.v1beta.model;
+package com.google.api.services.servicenetworking.v1.model;
 
 /**
  * Represents a private connection resource. A private connection is implemented as a VPC Network
@@ -29,7 +29,7 @@ package com.google.api.services.servicenetworking.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Connection extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudServicenetworkingV1betaConnection extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of service consumer's VPC network that's connected with service producer network, in
@@ -51,11 +51,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of one or more allocated IP address ranges for this service producer of type
-   * `PEERING`. Note that invoking CreateConnection method with a different range when connection is
-   * already established will not modify already provisioned service producer subnetworks. If
-   * CreateConnection method is invoked repeatedly to reconnect when peering connection had been
-   * disconnected on the consumer side, leaving this field empty will restore previously allocated
-   * IP ranges.
+   * `PEERING`. Note that invoking this method with a different range when connection is already
+   * established will not modify already provisioned service producer subnetworks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +84,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    * the name of the service consumer's VPC network.
    * @param network network or {@code null} for none
    */
-  public Connection setNetwork(java.lang.String network) {
+  public GoogleCloudServicenetworkingV1betaConnection setNetwork(java.lang.String network) {
     this.network = network;
     return this;
   }
@@ -106,18 +103,15 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    * producer.
    * @param peering peering or {@code null} for none
    */
-  public Connection setPeering(java.lang.String peering) {
+  public GoogleCloudServicenetworkingV1betaConnection setPeering(java.lang.String peering) {
     this.peering = peering;
     return this;
   }
 
   /**
    * The name of one or more allocated IP address ranges for this service producer of type
-   * `PEERING`. Note that invoking CreateConnection method with a different range when connection is
-   * already established will not modify already provisioned service producer subnetworks. If
-   * CreateConnection method is invoked repeatedly to reconnect when peering connection had been
-   * disconnected on the consumer side, leaving this field empty will restore previously allocated
-   * IP ranges.
+   * `PEERING`. Note that invoking this method with a different range when connection is already
+   * established will not modify already provisioned service producer subnetworks.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReservedPeeringRanges() {
@@ -126,14 +120,11 @@ public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of one or more allocated IP address ranges for this service producer of type
-   * `PEERING`. Note that invoking CreateConnection method with a different range when connection is
-   * already established will not modify already provisioned service producer subnetworks. If
-   * CreateConnection method is invoked repeatedly to reconnect when peering connection had been
-   * disconnected on the consumer side, leaving this field empty will restore previously allocated
-   * IP ranges.
+   * `PEERING`. Note that invoking this method with a different range when connection is already
+   * established will not modify already provisioned service producer subnetworks.
    * @param reservedPeeringRanges reservedPeeringRanges or {@code null} for none
    */
-  public Connection setReservedPeeringRanges(java.util.List<java.lang.String> reservedPeeringRanges) {
+  public GoogleCloudServicenetworkingV1betaConnection setReservedPeeringRanges(java.util.List<java.lang.String> reservedPeeringRanges) {
     this.reservedPeeringRanges = reservedPeeringRanges;
     return this;
   }
@@ -152,19 +143,19 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    * following format: `services/{service name}`.
    * @param service service or {@code null} for none
    */
-  public Connection setService(java.lang.String service) {
+  public GoogleCloudServicenetworkingV1betaConnection setService(java.lang.String service) {
     this.service = service;
     return this;
   }
 
   @Override
-  public Connection set(String fieldName, Object value) {
-    return (Connection) super.set(fieldName, value);
+  public GoogleCloudServicenetworkingV1betaConnection set(String fieldName, Object value) {
+    return (GoogleCloudServicenetworkingV1betaConnection) super.set(fieldName, value);
   }
 
   @Override
-  public Connection clone() {
-    return (Connection) super.clone();
+  public GoogleCloudServicenetworkingV1betaConnection clone() {
+    return (GoogleCloudServicenetworkingV1betaConnection) super.clone();
   }
 
 }

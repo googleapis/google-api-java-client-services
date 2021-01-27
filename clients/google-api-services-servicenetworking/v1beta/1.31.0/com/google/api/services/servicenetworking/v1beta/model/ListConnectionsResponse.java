@@ -36,19 +36,19 @@ public final class ListConnectionsResponse extends com.google.api.client.json.Ge
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Connection> connections;
+  private java.util.List<GoogleCloudServicenetworkingV1betaConnection> connections;
 
   static {
-    // hack to force ProGuard to consider Connection used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider GoogleCloudServicenetworkingV1betaConnection used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Connection.class);
+    com.google.api.client.util.Data.nullOf(GoogleCloudServicenetworkingV1betaConnection.class);
   }
 
   /**
    * The list of Connections.
    * @return value or {@code null} for none
    */
-  public java.util.List<Connection> getConnections() {
+  public java.util.List<GoogleCloudServicenetworkingV1betaConnection> getConnections() {
     return connections;
   }
 
@@ -56,7 +56,7 @@ public final class ListConnectionsResponse extends com.google.api.client.json.Ge
    * The list of Connections.
    * @param connections connections or {@code null} for none
    */
-  public ListConnectionsResponse setConnections(java.util.List<Connection> connections) {
+  public ListConnectionsResponse setConnections(java.util.List<GoogleCloudServicenetworkingV1betaConnection> connections) {
     this.connections = connections;
     return this;
   }

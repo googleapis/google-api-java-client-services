@@ -649,10 +649,10 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
      * @param name The service producer peering service that is managing peering connectivity for a service producer
      *        organization. For Google services that support this functionality, this is
      *        `services/servicenetworking.googleapis.com`.
-     * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
+     * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.GoogleCloudServicenetworkingV1betaConnection}
      * @return the request
      */
-    public UpdateConnections updateConnections(java.lang.String name, com.google.api.services.servicenetworking.v1beta.model.Connection content) throws java.io.IOException {
+    public UpdateConnections updateConnections(java.lang.String name, com.google.api.services.servicenetworking.v1beta.model.GoogleCloudServicenetworkingV1betaConnection content) throws java.io.IOException {
       UpdateConnections result = new UpdateConnections(name, content);
       initialize(result);
       return result;
@@ -680,10 +680,10 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * @param name The service producer peering service that is managing peering connectivity for a service producer
      *        organization. For Google services that support this functionality, this is
      *        `services/servicenetworking.googleapis.com`.
-       * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
+       * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.GoogleCloudServicenetworkingV1betaConnection}
        * @since 1.13
        */
-      protected UpdateConnections(java.lang.String name, com.google.api.services.servicenetworking.v1beta.model.Connection content) {
+      protected UpdateConnections(java.lang.String name, com.google.api.services.servicenetworking.v1beta.model.GoogleCloudServicenetworkingV1betaConnection content) {
         super(ServiceNetworking.this, "PATCH", REST_PATH, content, com.google.api.services.servicenetworking.v1beta.model.Operation.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
@@ -861,10 +861,10 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
        *        services that support this functionality, this value is
        *        `services/servicenetworking.googleapis.com`.
-       * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
+       * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.GoogleCloudServicenetworkingV1betaConnection}
        * @return the request
        */
-      public Create create(java.lang.String parent, com.google.api.services.servicenetworking.v1beta.model.Connection content) throws java.io.IOException {
+      public Create create(java.lang.String parent, com.google.api.services.servicenetworking.v1beta.model.GoogleCloudServicenetworkingV1betaConnection content) throws java.io.IOException {
         Create result = new Create(parent, content);
         initialize(result);
         return result;
@@ -897,10 +897,10 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
        *        services that support this functionality, this value is
        *        `services/servicenetworking.googleapis.com`.
-         * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.Connection}
+         * @param content the {@link com.google.api.services.servicenetworking.v1beta.model.GoogleCloudServicenetworkingV1betaConnection}
          * @since 1.13
          */
-        protected Create(java.lang.String parent, com.google.api.services.servicenetworking.v1beta.model.Connection content) {
+        protected Create(java.lang.String parent, com.google.api.services.servicenetworking.v1beta.model.GoogleCloudServicenetworkingV1betaConnection content) {
           super(ServiceNetworking.this, "POST", REST_PATH, content, com.google.api.services.servicenetworking.v1beta.model.Operation.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {

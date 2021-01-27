@@ -39,6 +39,13 @@ public final class CheckInResponse extends com.google.api.client.json.GenericJso
   private String deadline;
 
   /**
+   * Feature configuration for the operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> features;
+
+  /**
    * The metadata that describes the operation assigned to the worker.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class CheckInResponse extends com.google.api.client.json.GenericJso
    */
   public CheckInResponse setDeadline(String deadline) {
     this.deadline = deadline;
+    return this;
+  }
+
+  /**
+   * Feature configuration for the operation.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getFeatures() {
+    return features;
+  }
+
+  /**
+   * Feature configuration for the operation.
+   * @param features features or {@code null} for none
+   */
+  public CheckInResponse setFeatures(java.util.Map<String, java.lang.Object> features) {
+    this.features = features;
     return this;
   }
 

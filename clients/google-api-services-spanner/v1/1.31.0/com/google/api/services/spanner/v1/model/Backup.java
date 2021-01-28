@@ -30,9 +30,8 @@ package com.google.api.services.spanner.v1.model;
 public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The backup will contain an externally consistent copy of the database at the
-   * timestamp specified by `create_time`. `create_time` is approximately the time the CreateBackup
-   * request is received.
+   * Output only. The time the CreateBackup request is received. If the request does not specify
+   * `version_time`, the `version_time` of the backup will be equivalent to the `create_time`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,9 +94,17 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Output only. The backup will contain an externally consistent copy of the database at the
-   * timestamp specified by `create_time`. `create_time` is approximately the time the CreateBackup
-   * request is received.
+   * The backup will contain an externally consistent copy of the database at the timestamp
+   * specified by `version_time`. If `version_time` is not specified, the system will set
+   * `version_time` to the `create_time` of the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String versionTime;
+
+  /**
+   * Output only. The time the CreateBackup request is received. If the request does not specify
+   * `version_time`, the `version_time` of the backup will be equivalent to the `create_time`.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -105,9 +112,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The backup will contain an externally consistent copy of the database at the
-   * timestamp specified by `create_time`. `create_time` is approximately the time the CreateBackup
-   * request is received.
+   * Output only. The time the CreateBackup request is received. If the request does not specify
+   * `version_time`, the `version_time` of the backup will be equivalent to the `create_time`.
    * @param createTime createTime or {@code null} for none
    */
   public Backup setCreateTime(String createTime) {
@@ -242,6 +248,27 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * The backup will contain an externally consistent copy of the database at the timestamp
+   * specified by `version_time`. If `version_time` is not specified, the system will set
+   * `version_time` to the `create_time` of the backup.
+   * @return value or {@code null} for none
+   */
+  public String getVersionTime() {
+    return versionTime;
+  }
+
+  /**
+   * The backup will contain an externally consistent copy of the database at the timestamp
+   * specified by `version_time`. If `version_time` is not specified, the system will set
+   * `version_time` to the `create_time` of the backup.
+   * @param versionTime versionTime or {@code null} for none
+   */
+  public Backup setVersionTime(String versionTime) {
+    this.versionTime = versionTime;
     return this;
   }
 

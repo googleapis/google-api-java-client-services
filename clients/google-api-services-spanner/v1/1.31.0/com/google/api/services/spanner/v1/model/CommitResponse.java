@@ -30,11 +30,38 @@ package com.google.api.services.spanner.v1.model;
 public final class CommitResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The statistics about this Commit. Not returned by default. For more information, see
+   * CommitRequest.return_commit_stats.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CommitStats commitStats;
+
+  /**
    * The Cloud Spanner timestamp at which the transaction committed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String commitTimestamp;
+
+  /**
+   * The statistics about this Commit. Not returned by default. For more information, see
+   * CommitRequest.return_commit_stats.
+   * @return value or {@code null} for none
+   */
+  public CommitStats getCommitStats() {
+    return commitStats;
+  }
+
+  /**
+   * The statistics about this Commit. Not returned by default. For more information, see
+   * CommitRequest.return_commit_stats.
+   * @param commitStats commitStats or {@code null} for none
+   */
+  public CommitResponse setCommitStats(CommitStats commitStats) {
+    this.commitStats = commitStats;
+    return this;
+  }
 
   /**
    * The Cloud Spanner timestamp at which the transaction committed.

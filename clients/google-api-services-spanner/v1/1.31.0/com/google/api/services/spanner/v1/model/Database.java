@@ -37,6 +37,13 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. Earliest timestamp at which older versions of the data can be read.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String earliestVersionTime;
+
+  /**
    * Required. The name of the database. Values are of the form `projects//instances//databases/`,
    * where `` is as specified in the `CREATE DATABASE` statement. This name can be passed to other
    * API methods to identify the database.
@@ -61,6 +68,15 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. The period in which Cloud Spanner retains all versions of data for the database.
+   * This is same as the value of version_retention_period database option set using
+   * UpdateDatabaseDdl. Defaults to 1 hour, if not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String versionRetentionPeriod;
+
+  /**
    * Output only. If exists, the time at which the database creation started.
    * @return value or {@code null} for none
    */
@@ -74,6 +90,23 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Earliest timestamp at which older versions of the data can be read.
+   * @return value or {@code null} for none
+   */
+  public String getEarliestVersionTime() {
+    return earliestVersionTime;
+  }
+
+  /**
+   * Output only. Earliest timestamp at which older versions of the data can be read.
+   * @param earliestVersionTime earliestVersionTime or {@code null} for none
+   */
+  public Database setEarliestVersionTime(String earliestVersionTime) {
+    this.earliestVersionTime = earliestVersionTime;
     return this;
   }
 
@@ -131,6 +164,27 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The period in which Cloud Spanner retains all versions of data for the database.
+   * This is same as the value of version_retention_period database option set using
+   * UpdateDatabaseDdl. Defaults to 1 hour, if not set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersionRetentionPeriod() {
+    return versionRetentionPeriod;
+  }
+
+  /**
+   * Output only. The period in which Cloud Spanner retains all versions of data for the database.
+   * This is same as the value of version_retention_period database option set using
+   * UpdateDatabaseDdl. Defaults to 1 hour, if not set.
+   * @param versionRetentionPeriod versionRetentionPeriod or {@code null} for none
+   */
+  public Database setVersionRetentionPeriod(java.lang.String versionRetentionPeriod) {
+    this.versionRetentionPeriod = versionRetentionPeriod;
     return this;
   }
 

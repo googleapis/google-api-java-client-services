@@ -37,8 +37,7 @@ public final class BackupInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String backup;
 
   /**
-   * The backup contains an externally consistent copy of `source_database` at the timestamp
-   * specified by `create_time`.
+   * The time the CreateBackup request was received.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,6 +49,15 @@ public final class BackupInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceDatabase;
+
+  /**
+   * The backup contains an externally consistent copy of `source_database` at the timestamp
+   * specified by `version_time`. If the CreateBackup request did not specify `version_time`, the
+   * `version_time` of the backup is equivalent to the `create_time`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String versionTime;
 
   /**
    * Name of the backup.
@@ -69,8 +77,7 @@ public final class BackupInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The backup contains an externally consistent copy of `source_database` at the timestamp
-   * specified by `create_time`.
+   * The time the CreateBackup request was received.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -78,8 +85,7 @@ public final class BackupInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The backup contains an externally consistent copy of `source_database` at the timestamp
-   * specified by `create_time`.
+   * The time the CreateBackup request was received.
    * @param createTime createTime or {@code null} for none
    */
   public BackupInfo setCreateTime(String createTime) {
@@ -101,6 +107,27 @@ public final class BackupInfo extends com.google.api.client.json.GenericJson {
    */
   public BackupInfo setSourceDatabase(java.lang.String sourceDatabase) {
     this.sourceDatabase = sourceDatabase;
+    return this;
+  }
+
+  /**
+   * The backup contains an externally consistent copy of `source_database` at the timestamp
+   * specified by `version_time`. If the CreateBackup request did not specify `version_time`, the
+   * `version_time` of the backup is equivalent to the `create_time`.
+   * @return value or {@code null} for none
+   */
+  public String getVersionTime() {
+    return versionTime;
+  }
+
+  /**
+   * The backup contains an externally consistent copy of `source_database` at the timestamp
+   * specified by `version_time`. If the CreateBackup request did not specify `version_time`, the
+   * `version_time` of the backup is equivalent to the `create_time`.
+   * @param versionTime versionTime or {@code null} for none
+   */
+  public BackupInfo setVersionTime(String versionTime) {
+    this.versionTime = versionTime;
     return this;
   }
 

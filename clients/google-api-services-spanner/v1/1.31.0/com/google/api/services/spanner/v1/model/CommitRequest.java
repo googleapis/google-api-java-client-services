@@ -38,6 +38,14 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   private java.util.List<Mutation> mutations;
 
   /**
+   * If `true`, then statistics related to the transaction will be included in the CommitResponse.
+   * Default value is `false`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean returnCommitStats;
+
+  /**
    * Execute mutations in a temporary transaction. Note that unlike commit of a previously-started
    * transaction, commit with a temporary transaction is non-idempotent. That is, if the
    * `CommitRequest` is sent to Cloud Spanner more than once (for instance, due to retries in the
@@ -71,6 +79,25 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
    */
   public CommitRequest setMutations(java.util.List<Mutation> mutations) {
     this.mutations = mutations;
+    return this;
+  }
+
+  /**
+   * If `true`, then statistics related to the transaction will be included in the CommitResponse.
+   * Default value is `false`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReturnCommitStats() {
+    return returnCommitStats;
+  }
+
+  /**
+   * If `true`, then statistics related to the transaction will be included in the CommitResponse.
+   * Default value is `false`.
+   * @param returnCommitStats returnCommitStats or {@code null} for none
+   */
+  public CommitRequest setReturnCommitStats(java.lang.Boolean returnCommitStats) {
+    this.returnCommitStats = returnCommitStats;
     return this;
   }
 

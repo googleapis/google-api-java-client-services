@@ -17,7 +17,7 @@
 package com.google.api.services.homegraph.v1.model;
 
 /**
- * Third-party device definition.
+ * Third-party device definition. Next ID = 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:
@@ -67,6 +67,16 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private DeviceNames name;
+
+  /**
+   * See description for "traits". For Smart Home Entertainment Devices (SHED) devices, some traits
+   * can only be executed on 3P cloud, e.g. "non_local_traits": [ { "trait":
+   * "action.devices.traits.MediaInitiation" }, { "trait": "action.devices.traits.Channel" } ] go
+   * /shed-per-trait-routing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NonLocalTrait> nonLocalTraits;
 
   /**
    * Indicates whether your smart home Action will report notifications to Google for this device
@@ -222,6 +232,29 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setName(DeviceNames name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * See description for "traits". For Smart Home Entertainment Devices (SHED) devices, some traits
+   * can only be executed on 3P cloud, e.g. "non_local_traits": [ { "trait":
+   * "action.devices.traits.MediaInitiation" }, { "trait": "action.devices.traits.Channel" } ] go
+   * /shed-per-trait-routing.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NonLocalTrait> getNonLocalTraits() {
+    return nonLocalTraits;
+  }
+
+  /**
+   * See description for "traits". For Smart Home Entertainment Devices (SHED) devices, some traits
+   * can only be executed on 3P cloud, e.g. "non_local_traits": [ { "trait":
+   * "action.devices.traits.MediaInitiation" }, { "trait": "action.devices.traits.Channel" } ] go
+   * /shed-per-trait-routing.
+   * @param nonLocalTraits nonLocalTraits or {@code null} for none
+   */
+  public Device setNonLocalTraits(java.util.List<NonLocalTrait> nonLocalTraits) {
+    this.nonLocalTraits = nonLocalTraits;
     return this;
   }
 

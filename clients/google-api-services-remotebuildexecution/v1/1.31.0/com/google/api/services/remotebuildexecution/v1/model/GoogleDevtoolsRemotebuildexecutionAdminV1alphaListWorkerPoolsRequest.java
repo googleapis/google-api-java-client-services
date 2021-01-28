@@ -41,8 +41,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPools
    * separate expression using `AND` and `OR` operators, using parentheses to specify precedence. If
    * neither operator is specified, `AND` is assumed. Examples: Include only pools with more than
    * 100 reserved workers: `(worker_count > 100) (worker_config.reserved = true)` Include only pools
-   * with a certain label or machines of the n1-standard family: `worker_config.labels.key1 : * OR
-   * worker_config.machine_type: n1-standard`
+   * with a certain label or machines of the e2-standard family: `worker_config.labels.key1 : * OR
+   * worker_config.machine_type: e2-standard`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPools
    * separate expression using `AND` and `OR` operators, using parentheses to specify precedence. If
    * neither operator is specified, `AND` is assumed. Examples: Include only pools with more than
    * 100 reserved workers: `(worker_count > 100) (worker_config.reserved = true)` Include only pools
-   * with a certain label or machines of the n1-standard family: `worker_config.labels.key1 : * OR
-   * worker_config.machine_type: n1-standard`
+   * with a certain label or machines of the e2-standard family: `worker_config.labels.key1 : * OR
+   * worker_config.machine_type: e2-standard`
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -85,8 +85,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPools
    * separate expression using `AND` and `OR` operators, using parentheses to specify precedence. If
    * neither operator is specified, `AND` is assumed. Examples: Include only pools with more than
    * 100 reserved workers: `(worker_count > 100) (worker_config.reserved = true)` Include only pools
-   * with a certain label or machines of the n1-standard family: `worker_config.labels.key1 : * OR
-   * worker_config.machine_type: n1-standard`
+   * with a certain label or machines of the e2-standard family: `worker_config.labels.key1 : * OR
+   * worker_config.machine_type: e2-standard`
    * @param filter filter or {@code null} for none
    */
   public GoogleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPoolsRequest setFilter(java.lang.String filter) {

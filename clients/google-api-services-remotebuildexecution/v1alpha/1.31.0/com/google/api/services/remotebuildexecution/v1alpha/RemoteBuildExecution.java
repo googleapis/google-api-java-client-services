@@ -1562,8 +1562,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * `AND` and `OR` operators, using parentheses to specify precedence. If neither operator
            * is specified, `AND` is assumed. Examples: Include only pools with more than 100
            * reserved workers: `(worker_count > 100) (worker_config.reserved = true)` Include only
-           * pools with a certain label or machines of the n1-standard family:
-           * `worker_config.labels.key1 : * OR worker_config.machine_type: n1-standard`
+           * pools with a certain label or machines of the e2-standard family:
+           * `worker_config.labels.key1 : * OR worker_config.machine_type: e2-standard`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -1578,7 +1578,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
          and `OR` operators, using parentheses to specify precedence. If neither operator is specified,
          `AND` is assumed. Examples: Include only pools with more than 100 reserved workers: `(worker_count
          > 100) (worker_config.reserved = true)` Include only pools with a certain label or machines of the
-         n1-standard family: `worker_config.labels.key1 : * OR worker_config.machine_type: n1-standard`
+         e2-standard family: `worker_config.labels.key1 : * OR worker_config.machine_type: e2-standard`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -1596,8 +1596,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
            * `AND` and `OR` operators, using parentheses to specify precedence. If neither operator
            * is specified, `AND` is assumed. Examples: Include only pools with more than 100
            * reserved workers: `(worker_count > 100) (worker_config.reserved = true)` Include only
-           * pools with a certain label or machines of the n1-standard family:
-           * `worker_config.labels.key1 : * OR worker_config.machine_type: n1-standard`
+           * pools with a certain label or machines of the e2-standard family:
+           * `worker_config.labels.key1 : * OR worker_config.machine_type: e2-standard`
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

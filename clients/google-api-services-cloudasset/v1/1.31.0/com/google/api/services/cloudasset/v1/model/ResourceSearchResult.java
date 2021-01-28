@@ -55,6 +55,16 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String assetType;
 
   /**
+   * Optional. The create timestamp of this resource, at which the resource was created. The
+   * granularity is in seconds. Timestamp.nanos will always be 0. This field is available only when
+   * the resource's proto contains it. To search against `create_time`: * use a field query (value
+   * in seconds). Example: `createTime >= 1594294238`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Optional. One or more paragraphs of text description of this resource. Maximum length could be
    * up to 1M bytes. This field is available only when the resource's proto contains it. To search
    * against the `description`: * use a field query. Example: `description:"important instance"` *
@@ -82,6 +92,17 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> folders;
+
+  /**
+   * Optional. The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/project
+   * s.locations.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/
+   * docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name.
+   * This field is available only when the resource's proto contains it. To search against the
+   * `kms_key`: * use a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String kmsKey;
 
   /**
    * Optional. Labels associated with this resource. See [Labelling and grouping GCP
@@ -150,6 +171,33 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String project;
 
   /**
+   * Optional. The state of this resource. Different resources types have different state
+   * definitions that are mapped from various fields of different resource types. This field is
+   * available only when the resource's proto contains it. Example: If the resource is an instance
+   * provided by Compute Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING,
+   * SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. See `status` definition in [API
+   * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
+   * is a project provided by Cloud Resource Manager, its state will include
+   * LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See
+   * `lifecycleState` definition in [API Reference](https://cloud.google.com/resource-
+   * manager/reference/rest/v1/projects). To search against the `state`: * use a field query.
+   * Example: `state:RUNNING` * use a free text query. Example: `RUNNING`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * Optional. The last update timestamp of this resource, at which the resource was last modified
+   * or deleted. The granularity is in seconds. Timestamp.nanos will always be 0. This field is
+   * available only when the resource's proto contains it. To search against `update_time`: * use a
+   * field query (value in seconds). Example: `updateTime < 1594294238`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Optional. The additional searchable attributes of this resource. The attributes may vary from
    * one resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
    * This field contains a subset of the resource metadata fields that are returned by the List or
@@ -202,6 +250,29 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setAssetType(java.lang.String assetType) {
     this.assetType = assetType;
+    return this;
+  }
+
+  /**
+   * Optional. The create timestamp of this resource, at which the resource was created. The
+   * granularity is in seconds. Timestamp.nanos will always be 0. This field is available only when
+   * the resource's proto contains it. To search against `create_time`: * use a field query (value
+   * in seconds). Example: `createTime >= 1594294238`
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Optional. The create timestamp of this resource, at which the resource was created. The
+   * granularity is in seconds. Timestamp.nanos will always be 0. This field is available only when
+   * the resource's proto contains it. To search against `create_time`: * use a field query (value
+   * in seconds). Example: `createTime >= 1594294238`
+   * @param createTime createTime or {@code null} for none
+   */
+  public ResourceSearchResult setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
@@ -269,6 +340,31 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setFolders(java.util.List<java.lang.String> folders) {
     this.folders = folders;
+    return this;
+  }
+
+  /**
+   * Optional. The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/project
+   * s.locations.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/
+   * docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name.
+   * This field is available only when the resource's proto contains it. To search against the
+   * `kms_key`: * use a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKmsKey() {
+    return kmsKey;
+  }
+
+  /**
+   * Optional. The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/project
+   * s.locations.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/
+   * docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name.
+   * This field is available only when the resource's proto contains it. To search against the
+   * `kms_key`: * use a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
+   * @param kmsKey kmsKey or {@code null} for none
+   */
+  public ResourceSearchResult setKmsKey(java.lang.String kmsKey) {
+    this.kmsKey = kmsKey;
     return this;
   }
 
@@ -419,6 +515,66 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    */
   public ResourceSearchResult setProject(java.lang.String project) {
     this.project = project;
+    return this;
+  }
+
+  /**
+   * Optional. The state of this resource. Different resources types have different state
+   * definitions that are mapped from various fields of different resource types. This field is
+   * available only when the resource's proto contains it. Example: If the resource is an instance
+   * provided by Compute Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING,
+   * SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. See `status` definition in [API
+   * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
+   * is a project provided by Cloud Resource Manager, its state will include
+   * LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See
+   * `lifecycleState` definition in [API Reference](https://cloud.google.com/resource-
+   * manager/reference/rest/v1/projects). To search against the `state`: * use a field query.
+   * Example: `state:RUNNING` * use a free text query. Example: `RUNNING`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Optional. The state of this resource. Different resources types have different state
+   * definitions that are mapped from various fields of different resource types. This field is
+   * available only when the resource's proto contains it. Example: If the resource is an instance
+   * provided by Compute Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING,
+   * SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. See `status` definition in [API
+   * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
+   * is a project provided by Cloud Resource Manager, its state will include
+   * LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See
+   * `lifecycleState` definition in [API Reference](https://cloud.google.com/resource-
+   * manager/reference/rest/v1/projects). To search against the `state`: * use a field query.
+   * Example: `state:RUNNING` * use a free text query. Example: `RUNNING`
+   * @param state state or {@code null} for none
+   */
+  public ResourceSearchResult setState(java.lang.String state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. The last update timestamp of this resource, at which the resource was last modified
+   * or deleted. The granularity is in seconds. Timestamp.nanos will always be 0. This field is
+   * available only when the resource's proto contains it. To search against `update_time`: * use a
+   * field query (value in seconds). Example: `updateTime < 1594294238`
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Optional. The last update timestamp of this resource, at which the resource was last modified
+   * or deleted. The granularity is in seconds. Timestamp.nanos will always be 0. This field is
+   * available only when the resource's proto contains it. To search against `update_time`: * use a
+   * field query (value in seconds). Example: `updateTime < 1594294238`
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public ResourceSearchResult setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

@@ -90,9 +90,9 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccount;
 
   /**
-   * Output only. In order to deliver messages, Eventarc may configure other GCP products as
-   * transport intermediary. This field returns a reference to that transport intermediary. This
-   * information can be used for debugging purposes.
+   * Output only. In order to deliver messages, Eventarc may use other GCP products as transport
+   * intermediary. This field contains a reference to that transport intermediary. This information
+   * can be used for debugging purposes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,9 +232,9 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. In order to deliver messages, Eventarc may configure other GCP products as
-   * transport intermediary. This field returns a reference to that transport intermediary. This
-   * information can be used for debugging purposes.
+   * Output only. In order to deliver messages, Eventarc may use other GCP products as transport
+   * intermediary. This field contains a reference to that transport intermediary. This information
+   * can be used for debugging purposes.
    * @return value or {@code null} for none
    */
   public Transport getTransport() {
@@ -242,9 +242,9 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. In order to deliver messages, Eventarc may configure other GCP products as
-   * transport intermediary. This field returns a reference to that transport intermediary. This
-   * information can be used for debugging purposes.
+   * Output only. In order to deliver messages, Eventarc may use other GCP products as transport
+   * intermediary. This field contains a reference to that transport intermediary. This information
+   * can be used for debugging purposes.
    * @param transport transport or {@code null} for none
    */
   public Trigger setTransport(Transport transport) {

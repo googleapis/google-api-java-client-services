@@ -30,8 +30,8 @@ package com.google.api.services.eventarc.v1beta1.model;
 public final class Pubsub extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for
-   * the event delivery. The value must be in the form of
+   * Output only. The name of the Pub/Sub subscription created and managed by Eventarc system as a
+   * transport for the event delivery. Format:
    * `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
    * The value may be {@code null}.
    */
@@ -39,16 +39,18 @@ public final class Pubsub extends com.google.api.client.json.GenericJson {
   private java.lang.String subscription;
 
   /**
-   * The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the
-   * event delivery. The value must be in the form of `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`.
+   * Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport
+   * for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an
+   * existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only.
+   * The topic you provide here will not be deleted by Eventarc at trigger deletion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String topic;
 
   /**
-   * The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for
-   * the event delivery. The value must be in the form of
+   * Output only. The name of the Pub/Sub subscription created and managed by Eventarc system as a
+   * transport for the event delivery. Format:
    * `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
    * @return value or {@code null} for none
    */
@@ -57,8 +59,8 @@ public final class Pubsub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the Pub/Sub subscription created and managed by Eventarc system as a transport for
-   * the event delivery. The value must be in the form of
+   * Output only. The name of the Pub/Sub subscription created and managed by Eventarc system as a
+   * transport for the event delivery. Format:
    * `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
    * @param subscription subscription or {@code null} for none
    */
@@ -68,8 +70,10 @@ public final class Pubsub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the
-   * event delivery. The value must be in the form of `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`.
+   * Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport
+   * for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an
+   * existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only.
+   * The topic you provide here will not be deleted by Eventarc at trigger deletion.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopic() {
@@ -77,8 +81,10 @@ public final class Pubsub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the
-   * event delivery. The value must be in the form of `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`.
+   * Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport
+   * for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`. You may set an
+   * existing topic for triggers of the type `google.cloud.pubsub.topic.v1.messagePublished` only.
+   * The topic you provide here will not be deleted by Eventarc at trigger deletion.
    * @param topic topic or {@code null} for none
    */
   public Pubsub setTopic(java.lang.String topic) {

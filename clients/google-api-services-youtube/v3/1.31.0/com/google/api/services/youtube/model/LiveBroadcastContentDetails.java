@@ -165,6 +165,13 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   private java.lang.Boolean startWithSlate;
 
   /**
+   * The 3D stereo layout of this broadcast. This defaults to mono.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stereoLayout;
+
+  /**
    * This value uniquely identifies the live stream bound to the broadcast.
    * @return value or {@code null} for none
    */
@@ -513,6 +520,23 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
    */
   public LiveBroadcastContentDetails setStartWithSlate(java.lang.Boolean startWithSlate) {
     this.startWithSlate = startWithSlate;
+    return this;
+  }
+
+  /**
+   * The 3D stereo layout of this broadcast. This defaults to mono.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStereoLayout() {
+    return stereoLayout;
+  }
+
+  /**
+   * The 3D stereo layout of this broadcast. This defaults to mono.
+   * @param stereoLayout stereoLayout or {@code null} for none
+   */
+  public LiveBroadcastContentDetails setStereoLayout(java.lang.String stereoLayout) {
+    this.stereoLayout = stereoLayout;
     return this;
   }
 

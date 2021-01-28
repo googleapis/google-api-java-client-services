@@ -490,7 +490,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 0] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -3200,7 +3200,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 0] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -3849,7 +3849,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 20]
+     result set. [default: 20] [minimum: 1] [maximum: 100]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -4539,7 +4539,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 20]
+     result set. [default: 20] [minimum: 1] [maximum: 100]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -6665,7 +6665,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 0] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -8066,7 +8066,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 500]
+     result set. [default: 500] [minimum: 200] [maximum: 2000]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -8111,6 +8111,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long profileImageSize;
 
       /** Specifies the size of the profile image that should be returned for each user.
+
+     [minimum: 16] [maximum: 720]
        */
       public java.lang.Long getProfileImageSize() {
         return profileImageSize;
@@ -8551,7 +8553,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 0] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -9224,7 +9226,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 0] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -9830,7 +9832,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 0] [maximum: 1000]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -10572,7 +10574,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 0] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -11513,7 +11515,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 0] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -12161,7 +12163,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 0] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -13039,7 +13041,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 0] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -13422,7 +13424,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Long maxResults;
 
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
-     result set. [default: 5]
+     result set. [default: 5] [minimum: 1] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -15781,7 +15783,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Integer maxHeight;
 
       /**
-
+     [minimum: 72] [maximum: 8192]
        */
       public java.lang.Integer getMaxHeight() {
         return maxHeight;
@@ -15804,6 +15806,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
      result set. *Note:* This parameter is supported for use in conjunction with the myRating and chart
      parameters, but it is not supported for use in conjunction with the id parameter. [default: 5]
+     [minimum: 1] [maximum: 50]
        */
       public java.lang.Long getMaxResults() {
         return maxResults;
@@ -15825,6 +15828,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private java.lang.Integer maxWidth;
 
       /** Return the player with maximum height specified in
+
+     [minimum: 72] [maximum: 8192]
        */
       public java.lang.Integer getMaxWidth() {
         return maxWidth;

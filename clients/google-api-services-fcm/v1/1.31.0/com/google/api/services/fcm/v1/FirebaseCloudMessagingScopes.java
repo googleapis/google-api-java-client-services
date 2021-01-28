@@ -23,7 +23,7 @@ package com.google.api.services.fcm.v1;
  */
 public class FirebaseCloudMessagingScopes {
 
-  /** See, edit, configure, and delete your Google Cloud Platform data. */
+  /** View and manage your data across Google Cloud Platform services. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
   /**

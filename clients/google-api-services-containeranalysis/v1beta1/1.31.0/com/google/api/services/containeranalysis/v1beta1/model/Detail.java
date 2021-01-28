@@ -96,6 +96,13 @@ public final class Detail extends com.google.api.client.json.GenericJson {
   private java.lang.String severityName;
 
   /**
+   * The source from which the information in this Detail was obtained.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String source;
+
+  /**
    * The time this information was last changed at the source. This is an upstream timestamp from
    * the underlying information source - e.g. Ubuntu security tracker.
    * The value may be {@code null}.
@@ -255,6 +262,23 @@ public final class Detail extends com.google.api.client.json.GenericJson {
    */
   public Detail setSeverityName(java.lang.String severityName) {
     this.severityName = severityName;
+    return this;
+  }
+
+  /**
+   * The source from which the information in this Detail was obtained.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSource() {
+    return source;
+  }
+
+  /**
+   * The source from which the information in this Detail was obtained.
+   * @param source source or {@code null} for none
+   */
+  public Detail setSource(java.lang.String source) {
+    this.source = source;
     return this;
   }
 

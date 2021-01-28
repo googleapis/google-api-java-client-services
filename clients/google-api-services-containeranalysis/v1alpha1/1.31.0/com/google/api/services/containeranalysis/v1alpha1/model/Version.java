@@ -41,6 +41,15 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.Integer epoch;
 
   /**
+   * Whether this version is vulnerable, when defining the version bounds. For example, if the
+   * minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would
+   * say it's not
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean inclusive;
+
+  /**
    * Distinguish between sentinel MIN/MAX versions and normal versions. If kind is not NORMAL, then
    * the other fields are ignored.
    * The value may be {@code null}.
@@ -76,6 +85,27 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setEpoch(java.lang.Integer epoch) {
     this.epoch = epoch;
+    return this;
+  }
+
+  /**
+   * Whether this version is vulnerable, when defining the version bounds. For example, if the
+   * minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would
+   * say it's not
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInclusive() {
+    return inclusive;
+  }
+
+  /**
+   * Whether this version is vulnerable, when defining the version bounds. For example, if the
+   * minimum version is 2.0, inclusive=true would say 2.0 is vulnerable, while inclusive=false would
+   * say it's not
+   * @param inclusive inclusive or {@code null} for none
+   */
+  public Version setInclusive(java.lang.Boolean inclusive) {
+    this.inclusive = inclusive;
     return this;
   }
 

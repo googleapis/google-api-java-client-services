@@ -30,14 +30,23 @@ package com.google.api.services.serviceusage.v1beta1.model;
 public final class ImportAdminOverridesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to force the creation of the quota overrides. If creating an override would cause the
-   * effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as
-   * a safety measure to avoid accidentally decreasing quota too quickly. Setting the force
-   * parameter to true ignores this restriction.
+   * Whether to force the creation of the quota overrides. Setting the force parameter to 'true'
+   * ignores all quota safety checks that would fail the request. QuotaSafetyCheck lists all such
+   * validations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean force;
+
+  /**
+   * The list of quota safety checks to ignore before the override mutation. Unlike 'force' field
+   * that ignores all the quota safety checks, the 'force_only' field ignores only the specified
+   * checks; other checks are still enforced. The 'force' and 'force_only' fields cannot both be
+   * set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> forceOnly;
 
   /**
    * The import data is specified in the request message itself
@@ -47,10 +56,9 @@ public final class ImportAdminOverridesRequest extends com.google.api.client.jso
   private OverrideInlineSource inlineSource;
 
   /**
-   * Whether to force the creation of the quota overrides. If creating an override would cause the
-   * effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as
-   * a safety measure to avoid accidentally decreasing quota too quickly. Setting the force
-   * parameter to true ignores this restriction.
+   * Whether to force the creation of the quota overrides. Setting the force parameter to 'true'
+   * ignores all quota safety checks that would fail the request. QuotaSafetyCheck lists all such
+   * validations.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getForce() {
@@ -58,14 +66,36 @@ public final class ImportAdminOverridesRequest extends com.google.api.client.jso
   }
 
   /**
-   * Whether to force the creation of the quota overrides. If creating an override would cause the
-   * effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as
-   * a safety measure to avoid accidentally decreasing quota too quickly. Setting the force
-   * parameter to true ignores this restriction.
+   * Whether to force the creation of the quota overrides. Setting the force parameter to 'true'
+   * ignores all quota safety checks that would fail the request. QuotaSafetyCheck lists all such
+   * validations.
    * @param force force or {@code null} for none
    */
   public ImportAdminOverridesRequest setForce(java.lang.Boolean force) {
     this.force = force;
+    return this;
+  }
+
+  /**
+   * The list of quota safety checks to ignore before the override mutation. Unlike 'force' field
+   * that ignores all the quota safety checks, the 'force_only' field ignores only the specified
+   * checks; other checks are still enforced. The 'force' and 'force_only' fields cannot both be
+   * set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getForceOnly() {
+    return forceOnly;
+  }
+
+  /**
+   * The list of quota safety checks to ignore before the override mutation. Unlike 'force' field
+   * that ignores all the quota safety checks, the 'force_only' field ignores only the specified
+   * checks; other checks are still enforced. The 'force' and 'force_only' fields cannot both be
+   * set.
+   * @param forceOnly forceOnly or {@code null} for none
+   */
+  public ImportAdminOverridesRequest setForceOnly(java.util.List<java.lang.String> forceOnly) {
+    this.forceOnly = forceOnly;
     return this;
   }
 

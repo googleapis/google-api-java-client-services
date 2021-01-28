@@ -2506,31 +2506,55 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Whether to force the creation of the quota override. If creating an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the creation of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** Whether to force the creation of the quota override. If creating an override would cause the
-           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
-           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
-           true ignores this restriction.
+            /** Whether to force the creation of the quota override. Setting the force parameter to 'true' ignores
+           all quota safety checks that would fail the request. QuotaSafetyCheck lists all such validations.
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
             /**
-             * Whether to force the creation of the quota override. If creating an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the creation of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             public Create setForce(java.lang.Boolean force) {
               this.force = force;
+              return this;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> forceOnly;
+
+            /** The list of quota safety checks to ignore before the override mutation. Unlike 'force' field that
+           ignores all the quota safety checks, the 'force_only' field ignores only the specified checks;
+           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set.
+             */
+            public java.util.List<java.lang.String> getForceOnly() {
+              return forceOnly;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            public Create setForceOnly(java.util.List<java.lang.String> forceOnly) {
+              this.forceOnly = forceOnly;
               return this;
             }
 
@@ -2678,31 +2702,55 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Whether to force the deletion of the quota override. If deleting an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the deletion of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** Whether to force the deletion of the quota override. If deleting an override would cause the
-           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
-           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
-           true ignores this restriction.
+            /** Whether to force the deletion of the quota override. Setting the force parameter to 'true' ignores
+           all quota safety checks that would fail the request. QuotaSafetyCheck lists all such validations.
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
             /**
-             * Whether to force the deletion of the quota override. If deleting an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the deletion of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
+              return this;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> forceOnly;
+
+            /** The list of quota safety checks to ignore before the override mutation. Unlike 'force' field that
+           ignores all the quota safety checks, the 'force_only' field ignores only the specified checks;
+           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set.
+             */
+            public java.util.List<java.lang.String> getForceOnly() {
+              return forceOnly;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            public Delete setForceOnly(java.util.List<java.lang.String> forceOnly) {
+              this.forceOnly = forceOnly;
               return this;
             }
 
@@ -3038,31 +3086,55 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Whether to force the update of the quota override. If updating an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the update of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** Whether to force the update of the quota override. If updating an override would cause the
-           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
-           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
-           true ignores this restriction.
+            /** Whether to force the update of the quota override. Setting the force parameter to 'true' ignores
+           all quota safety checks that would fail the request. QuotaSafetyCheck lists all such validations.
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
             /**
-             * Whether to force the update of the quota override. If updating an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the update of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             public Patch setForce(java.lang.Boolean force) {
               this.force = force;
+              return this;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> forceOnly;
+
+            /** The list of quota safety checks to ignore before the override mutation. Unlike 'force' field that
+           ignores all the quota safety checks, the 'force_only' field ignores only the specified checks;
+           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set.
+             */
+            public java.util.List<java.lang.String> getForceOnly() {
+              return forceOnly;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            public Patch setForceOnly(java.util.List<java.lang.String> forceOnly) {
+              this.forceOnly = forceOnly;
               return this;
             }
 
@@ -3263,31 +3335,55 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Whether to force the creation of the quota override. If creating an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the creation of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** Whether to force the creation of the quota override. If creating an override would cause the
-           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
-           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
-           true ignores this restriction.
+            /** Whether to force the creation of the quota override. Setting the force parameter to 'true' ignores
+           all quota safety checks that would fail the request. QuotaSafetyCheck lists all such validations.
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
             /**
-             * Whether to force the creation of the quota override. If creating an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the creation of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             public Create setForce(java.lang.Boolean force) {
               this.force = force;
+              return this;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> forceOnly;
+
+            /** The list of quota safety checks to ignore before the override mutation. Unlike 'force' field that
+           ignores all the quota safety checks, the 'force_only' field ignores only the specified checks;
+           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set.
+             */
+            public java.util.List<java.lang.String> getForceOnly() {
+              return forceOnly;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            public Create setForceOnly(java.util.List<java.lang.String> forceOnly) {
+              this.forceOnly = forceOnly;
               return this;
             }
 
@@ -3435,31 +3531,55 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Whether to force the deletion of the quota override. If deleting an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the deletion of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** Whether to force the deletion of the quota override. If deleting an override would cause the
-           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
-           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
-           true ignores this restriction.
+            /** Whether to force the deletion of the quota override. Setting the force parameter to 'true' ignores
+           all quota safety checks that would fail the request. QuotaSafetyCheck lists all such validations.
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
             /**
-             * Whether to force the deletion of the quota override. If deleting an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the deletion of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
+              return this;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> forceOnly;
+
+            /** The list of quota safety checks to ignore before the override mutation. Unlike 'force' field that
+           ignores all the quota safety checks, the 'force_only' field ignores only the specified checks;
+           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set.
+             */
+            public java.util.List<java.lang.String> getForceOnly() {
+              return forceOnly;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            public Delete setForceOnly(java.util.List<java.lang.String> forceOnly) {
+              this.forceOnly = forceOnly;
               return this;
             }
 
@@ -3795,31 +3915,55 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Whether to force the update of the quota override. If updating an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the update of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** Whether to force the update of the quota override. If updating an override would cause the
-           effective quota for the consumer to decrease by more than 10 percent, the call is rejected, as a
-           safety measure to avoid accidentally decreasing quota too quickly. Setting the force parameter to
-           true ignores this restriction.
+            /** Whether to force the update of the quota override. Setting the force parameter to 'true' ignores
+           all quota safety checks that would fail the request. QuotaSafetyCheck lists all such validations.
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
             /**
-             * Whether to force the update of the quota override. If updating an override would
-             * cause the effective quota for the consumer to decrease by more than 10 percent, the
-             * call is rejected, as a safety measure to avoid accidentally decreasing quota too
-             * quickly. Setting the force parameter to true ignores this restriction.
+             * Whether to force the update of the quota override. Setting the force parameter to
+             * 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck
+             * lists all such validations.
              */
             public Patch setForce(java.lang.Boolean force) {
               this.force = force;
+              return this;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> forceOnly;
+
+            /** The list of quota safety checks to ignore before the override mutation. Unlike 'force' field that
+           ignores all the quota safety checks, the 'force_only' field ignores only the specified checks;
+           other checks are still enforced. The 'force' and 'force_only' fields cannot both be set.
+             */
+            public java.util.List<java.lang.String> getForceOnly() {
+              return forceOnly;
+            }
+
+            /**
+             * The list of quota safety checks to ignore before the override mutation. Unlike
+             * 'force' field that ignores all the quota safety checks, the 'force_only' field
+             * ignores only the specified checks; other checks are still enforced. The 'force' and
+             * 'force_only' fields cannot both be set.
+             */
+            public Patch setForceOnly(java.util.List<java.lang.String> forceOnly) {
+              this.forceOnly = forceOnly;
               return this;
             }
 

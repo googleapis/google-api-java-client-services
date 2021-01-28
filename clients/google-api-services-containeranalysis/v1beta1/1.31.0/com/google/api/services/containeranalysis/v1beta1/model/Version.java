@@ -38,6 +38,17 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.Integer epoch;
 
   /**
+   * Whether this version is specifying part of an inclusive range. Grafeas does not have the
+   * capability to specify version ranges; instead we have fields that specify start version and end
+   * versions. At times this is insufficient - we also need to specify whether the version is
+   * included in the range or is excluded from the range. This boolean is expected to be set to true
+   * when the version is included in a range.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean inclusive;
+
+  /**
    * Required. Distinguishes between sentinel MIN/MAX versions and normal versions.
    * The value may be {@code null}.
    */
@@ -72,6 +83,31 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setEpoch(java.lang.Integer epoch) {
     this.epoch = epoch;
+    return this;
+  }
+
+  /**
+   * Whether this version is specifying part of an inclusive range. Grafeas does not have the
+   * capability to specify version ranges; instead we have fields that specify start version and end
+   * versions. At times this is insufficient - we also need to specify whether the version is
+   * included in the range or is excluded from the range. This boolean is expected to be set to true
+   * when the version is included in a range.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInclusive() {
+    return inclusive;
+  }
+
+  /**
+   * Whether this version is specifying part of an inclusive range. Grafeas does not have the
+   * capability to specify version ranges; instead we have fields that specify start version and end
+   * versions. At times this is insufficient - we also need to specify whether the version is
+   * included in the range or is excluded from the range. This boolean is expected to be set to true
+   * when the version is included in a range.
+   * @param inclusive inclusive or {@code null} for none
+   */
+  public Version setInclusive(java.lang.Boolean inclusive) {
+    this.inclusive = inclusive;
     return this;
   }
 

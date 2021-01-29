@@ -50,23 +50,6 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Quota usage for each quota release `Operation` request. Fully or partially failed quota release
-   * request may or may not be present in `report_quota_info`. For example, a failed quota release
-   * request will have the current quota usage info when precise quota library returns the info. A
-   * deadline exceeded quota request will not have quota usage info. If there is no quota release
-   * request, report_quota_info will be empty.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<ReportInfo> reportInfos;
-
-  static {
-    // hack to force ProGuard to consider ReportInfo used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ReportInfo.class);
-  }
-
-  /**
    * The actual config id used to process the request.
    * The value may be {@code null}.
    */
@@ -108,31 +91,6 @@ public final class ReportResponse extends com.google.api.client.json.GenericJson
    */
   public ReportResponse setReportErrors(java.util.List<ReportError> reportErrors) {
     this.reportErrors = reportErrors;
-    return this;
-  }
-
-  /**
-   * Quota usage for each quota release `Operation` request. Fully or partially failed quota release
-   * request may or may not be present in `report_quota_info`. For example, a failed quota release
-   * request will have the current quota usage info when precise quota library returns the info. A
-   * deadline exceeded quota request will not have quota usage info. If there is no quota release
-   * request, report_quota_info will be empty.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<ReportInfo> getReportInfos() {
-    return reportInfos;
-  }
-
-  /**
-   * Quota usage for each quota release `Operation` request. Fully or partially failed quota release
-   * request may or may not be present in `report_quota_info`. For example, a failed quota release
-   * request will have the current quota usage info when precise quota library returns the info. A
-   * deadline exceeded quota request will not have quota usage info. If there is no quota release
-   * request, report_quota_info will be empty.
-   * @param reportInfos reportInfos or {@code null} for none
-   */
-  public ReportResponse setReportInfos(java.util.List<ReportInfo> reportInfos) {
-    this.reportInfos = reportInfos;
     return this;
   }
 

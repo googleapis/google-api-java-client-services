@@ -53,6 +53,13 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Optional. Dynamic group metadata like queries and status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DynamicGroupMetadata dynamicGroupMetadata;
+
+  /**
    * Required. Immutable. The `EntityKey` of the `Group`.
    * The value may be {@code null}.
    */
@@ -148,6 +155,23 @@ public final class Group extends com.google.api.client.json.GenericJson {
    */
   public Group setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Dynamic group metadata like queries and status.
+   * @return value or {@code null} for none
+   */
+  public DynamicGroupMetadata getDynamicGroupMetadata() {
+    return dynamicGroupMetadata;
+  }
+
+  /**
+   * Optional. Dynamic group metadata like queries and status.
+   * @param dynamicGroupMetadata dynamicGroupMetadata or {@code null} for none
+   */
+  public Group setDynamicGroupMetadata(DynamicGroupMetadata dynamicGroupMetadata) {
+    this.dynamicGroupMetadata = dynamicGroupMetadata;
     return this;
   }
 

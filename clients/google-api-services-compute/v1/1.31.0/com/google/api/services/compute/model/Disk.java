@@ -147,6 +147,14 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> licenses;
 
   /**
+   * An opaque location hint used to place the disk close to other resources. This field is for use
+   * by internal tools that use the public API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationHint;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -313,9 +321,20 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceSnapshotId;
 
   /**
-   * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
-   * data is being copied into the disk. FAILED: Disk creation failed. READY: Disk is ready for use.
-   * DELETING: Disk is deleting.
+   * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
+   * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized
+   * for creating multiple disks from a source storage object. To create many disks from a source
+   * storage object, use gcloud compute images import instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceStorageObject;
+
+  /**
+   * [Output Only] The status of disk creation. - CREATING: Disk is provisioning.  - RESTORING:
+   * Source data is being copied into the disk.  - FAILED: Disk creation failed.  - READY: Disk is
+   * ready for use.  - DELETING: Disk is deleting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -621,6 +640,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setLicenses(java.util.List<java.lang.String> licenses) {
     this.licenses = licenses;
+    return this;
+  }
+
+  /**
+   * An opaque location hint used to place the disk close to other resources. This field is for use
+   * by internal tools that use the public API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationHint() {
+    return locationHint;
+  }
+
+  /**
+   * An opaque location hint used to place the disk close to other resources. This field is for use
+   * by internal tools that use the public API.
+   * @param locationHint locationHint or {@code null} for none
+   */
+  public Disk setLocationHint(java.lang.String locationHint) {
+    this.locationHint = locationHint;
     return this;
   }
 
@@ -1008,9 +1046,34 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
-   * data is being copied into the disk. FAILED: Disk creation failed. READY: Disk is ready for use.
-   * DELETING: Disk is deleting.
+   * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
+   * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized
+   * for creating multiple disks from a source storage object. To create many disks from a source
+   * storage object, use gcloud compute images import instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceStorageObject() {
+    return sourceStorageObject;
+  }
+
+  /**
+   * The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-
+   * compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk.
+   * Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized
+   * for creating multiple disks from a source storage object. To create many disks from a source
+   * storage object, use gcloud compute images import instead.
+   * @param sourceStorageObject sourceStorageObject or {@code null} for none
+   */
+  public Disk setSourceStorageObject(java.lang.String sourceStorageObject) {
+    this.sourceStorageObject = sourceStorageObject;
+    return this;
+  }
+
+  /**
+   * [Output Only] The status of disk creation. - CREATING: Disk is provisioning.  - RESTORING:
+   * Source data is being copied into the disk.  - FAILED: Disk creation failed.  - READY: Disk is
+   * ready for use.  - DELETING: Disk is deleting.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1018,9 +1081,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
-   * data is being copied into the disk. FAILED: Disk creation failed. READY: Disk is ready for use.
-   * DELETING: Disk is deleting.
+   * [Output Only] The status of disk creation. - CREATING: Disk is provisioning.  - RESTORING:
+   * Source data is being copied into the disk.  - FAILED: Disk creation failed.  - READY: Disk is
+   * ready for use.  - DELETING: Disk is deleting.
    * @param status status or {@code null} for none
    */
   public Disk setStatus(java.lang.String status) {

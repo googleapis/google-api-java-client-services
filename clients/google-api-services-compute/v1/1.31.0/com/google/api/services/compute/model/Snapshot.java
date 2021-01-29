@@ -130,6 +130,14 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> licenses;
 
   /**
+   * An opaque location hint used to place the snapshot close to other resources. This field is for
+   * use by internal tools that use the public API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationHint;
+
+  /**
    * Name of the resource; provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -495,6 +503,25 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setLicenses(java.util.List<java.lang.String> licenses) {
     this.licenses = licenses;
+    return this;
+  }
+
+  /**
+   * An opaque location hint used to place the snapshot close to other resources. This field is for
+   * use by internal tools that use the public API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationHint() {
+    return locationHint;
+  }
+
+  /**
+   * An opaque location hint used to place the snapshot close to other resources. This field is for
+   * use by internal tools that use the public API.
+   * @param locationHint locationHint or {@code null} for none
+   */
+  public Snapshot setLocationHint(java.lang.String locationHint) {
+    this.locationHint = locationHint;
     return this;
   }
 

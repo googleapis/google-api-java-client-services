@@ -117,7 +117,7 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used.
    * - When quic-override is set to ENABLE, the load balancer uses QUIC when possible.  - When quic-
    * override is set to DISABLE, the load balancer doesn't use QUIC.  - If the quic-override flag is
-   * not specified, NONE is implied. -
+   * not specified, NONE is implied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -337,7 +337,7 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used.
    * - When quic-override is set to ENABLE, the load balancer uses QUIC when possible.  - When quic-
    * override is set to DISABLE, the load balancer doesn't use QUIC.  - If the quic-override flag is
-   * not specified, NONE is implied. -
+   * not specified, NONE is implied.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuicOverride() {
@@ -350,7 +350,7 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used.
    * - When quic-override is set to ENABLE, the load balancer uses QUIC when possible.  - When quic-
    * override is set to DISABLE, the load balancer doesn't use QUIC.  - If the quic-override flag is
-   * not specified, NONE is implied. -
+   * not specified, NONE is implied.
    * @param quicOverride quicOverride or {@code null} for none
    */
   public TargetHttpsProxy setQuicOverride(java.lang.String quicOverride) {

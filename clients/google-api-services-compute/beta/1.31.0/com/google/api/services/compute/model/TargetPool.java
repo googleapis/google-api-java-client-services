@@ -85,9 +85,8 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the HttpHealthCheck resource. A member instance in this pool is considered healthy
-   * if and only if the health checks pass. An empty list means all member instances will be
-   * considered healthy at all times. Only legacy HttpHealthChecks are supported. Only one health
-   * check may be specified.
+   * if and only if the health checks pass. Only legacy HttpHealthChecks are supported. Only one
+   * health check may be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,9 +264,8 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the HttpHealthCheck resource. A member instance in this pool is considered healthy
-   * if and only if the health checks pass. An empty list means all member instances will be
-   * considered healthy at all times. Only legacy HttpHealthChecks are supported. Only one health
-   * check may be specified.
+   * if and only if the health checks pass. Only legacy HttpHealthChecks are supported. Only one
+   * health check may be specified.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHealthChecks() {
@@ -276,9 +274,8 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL of the HttpHealthCheck resource. A member instance in this pool is considered healthy
-   * if and only if the health checks pass. An empty list means all member instances will be
-   * considered healthy at all times. Only legacy HttpHealthChecks are supported. Only one health
-   * check may be specified.
+   * if and only if the health checks pass. Only legacy HttpHealthChecks are supported. Only one
+   * health check may be specified.
    * @param healthChecks healthChecks or {@code null} for none
    */
   public TargetPool setHealthChecks(java.util.List<java.lang.String> healthChecks) {

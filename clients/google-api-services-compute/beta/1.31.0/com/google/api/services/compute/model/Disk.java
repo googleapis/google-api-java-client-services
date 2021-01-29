@@ -163,6 +163,14 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> licenses;
 
   /**
+   * An opaque location hint used to place the disk close to other resources. This field is for use
+   * by internal tools that use the public API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationHint;
+
+  /**
    * Indicates whether or not the disk can be read/write attached to more than one instance.
    * The value may be {@code null}.
    */
@@ -196,6 +204,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long physicalBlockSizeBytes;
+
+  /**
+   * Indicates how many IOPS must be provisioned for the disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedIops;
 
   /**
    * [Output Only] URL of the region where the disk resides. Only applicable for regional resources.
@@ -347,9 +362,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceStorageObject;
 
   /**
-   * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
-   * data is being copied into the disk. FAILED: Disk creation failed. READY: Disk is ready for use.
-   * DELETING: Disk is deleting.
+   * [Output Only] The status of disk creation. - CREATING: Disk is provisioning.  - RESTORING:
+   * Source data is being copied into the disk.  - FAILED: Disk creation failed.  - READY: Disk is
+   * ready for use.  - DELETING: Disk is deleting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -704,6 +719,25 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * An opaque location hint used to place the disk close to other resources. This field is for use
+   * by internal tools that use the public API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationHint() {
+    return locationHint;
+  }
+
+  /**
+   * An opaque location hint used to place the disk close to other resources. This field is for use
+   * by internal tools that use the public API.
+   * @param locationHint locationHint or {@code null} for none
+   */
+  public Disk setLocationHint(java.lang.String locationHint) {
+    this.locationHint = locationHint;
+    return this;
+  }
+
+  /**
    * Indicates whether or not the disk can be read/write attached to more than one instance.
    * @return value or {@code null} for none
    */
@@ -782,6 +816,23 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setPhysicalBlockSizeBytes(java.lang.Long physicalBlockSizeBytes) {
     this.physicalBlockSizeBytes = physicalBlockSizeBytes;
+    return this;
+  }
+
+  /**
+   * Indicates how many IOPS must be provisioned for the disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedIops() {
+    return provisionedIops;
+  }
+
+  /**
+   * Indicates how many IOPS must be provisioned for the disk.
+   * @param provisionedIops provisionedIops or {@code null} for none
+   */
+  public Disk setProvisionedIops(java.lang.Long provisionedIops) {
+    this.provisionedIops = provisionedIops;
     return this;
   }
 
@@ -1129,9 +1180,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
-   * data is being copied into the disk. FAILED: Disk creation failed. READY: Disk is ready for use.
-   * DELETING: Disk is deleting.
+   * [Output Only] The status of disk creation. - CREATING: Disk is provisioning.  - RESTORING:
+   * Source data is being copied into the disk.  - FAILED: Disk creation failed.  - READY: Disk is
+   * ready for use.  - DELETING: Disk is deleting.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1139,9 +1190,9 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The status of disk creation. CREATING: Disk is provisioning. RESTORING: Source
-   * data is being copied into the disk. FAILED: Disk creation failed. READY: Disk is ready for use.
-   * DELETING: Disk is deleting.
+   * [Output Only] The status of disk creation. - CREATING: Disk is provisioning.  - RESTORING:
+   * Source data is being copied into the disk.  - FAILED: Disk creation failed.  - READY: Disk is
+   * ready for use.  - DELETING: Disk is deleting.
    * @param status status or {@code null} for none
    */
   public Disk setStatus(java.lang.String status) {

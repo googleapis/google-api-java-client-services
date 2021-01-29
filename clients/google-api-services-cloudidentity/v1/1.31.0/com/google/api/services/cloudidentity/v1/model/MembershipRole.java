@@ -31,11 +31,41 @@ package com.google.api.services.cloudidentity.v1.model;
 public final class MembershipRole extends com.google.api.client.json.GenericJson {
 
   /**
+   * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER`
+   * `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other
+   * value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExpiryDetail expiryDetail;
+
+  /**
    * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER`
+   * `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other
+   * value.
+   * @return value or {@code null} for none
+   */
+  public ExpiryDetail getExpiryDetail() {
+    return expiryDetail;
+  }
+
+  /**
+   * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER`
+   * `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other
+   * value.
+   * @param expiryDetail expiryDetail or {@code null} for none
+   */
+  public MembershipRole setExpiryDetail(ExpiryDetail expiryDetail) {
+    this.expiryDetail = expiryDetail;
+    return this;
+  }
 
   /**
    * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.

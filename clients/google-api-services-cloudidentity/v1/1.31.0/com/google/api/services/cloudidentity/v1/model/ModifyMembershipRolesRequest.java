@@ -55,6 +55,14 @@ public final class ModifyMembershipRolesRequest extends com.google.api.client.js
   private java.util.List<java.lang.String> removeRoles;
 
   /**
+   * The `MembershipRole`s to be updated. Updating roles in the same request as adding or removing
+   * roles is not supported. Must not be set if either `add_roles` or `remove_roles` is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UpdateMembershipRolesParams> updateRolesParams;
+
+  /**
    * The `MembershipRole`s to be added. Adding or removing roles in the same request as updating
    * roles is not supported. Must not be set if `update_roles_params` is set.
    * @return value or {@code null} for none
@@ -95,6 +103,25 @@ public final class ModifyMembershipRolesRequest extends com.google.api.client.js
    */
   public ModifyMembershipRolesRequest setRemoveRoles(java.util.List<java.lang.String> removeRoles) {
     this.removeRoles = removeRoles;
+    return this;
+  }
+
+  /**
+   * The `MembershipRole`s to be updated. Updating roles in the same request as adding or removing
+   * roles is not supported. Must not be set if either `add_roles` or `remove_roles` is set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UpdateMembershipRolesParams> getUpdateRolesParams() {
+    return updateRolesParams;
+  }
+
+  /**
+   * The `MembershipRole`s to be updated. Updating roles in the same request as adding or removing
+   * roles is not supported. Must not be set if either `add_roles` or `remove_roles` is set.
+   * @param updateRolesParams updateRolesParams or {@code null} for none
+   */
+  public ModifyMembershipRolesRequest setUpdateRolesParams(java.util.List<UpdateMembershipRolesParams> updateRolesParams) {
+    this.updateRolesParams = updateRolesParams;
     return this;
   }
 

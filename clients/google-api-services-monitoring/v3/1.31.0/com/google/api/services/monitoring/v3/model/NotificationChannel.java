@@ -33,6 +33,13 @@ package com.google.api.services.monitoring.v3.model;
 public final class NotificationChannel extends com.google.api.client.json.GenericJson {
 
   /**
+   * Record of the creation of this channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MutationRecord creationRecord;
+
+  /**
    * An optional human-readable description of this notification channel. This description may
    * provide additional details, beyond the display name, for the channel. This may not exceed 1024
    * Unicode characters.
@@ -69,6 +76,19 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Records of the modification of this channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MutationRecord> mutationRecords;
+
+  static {
+    // hack to force ProGuard to consider MutationRecord used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MutationRecord.class);
+  }
 
   /**
    * The full REST resource name for this channel. The format is:
@@ -113,6 +133,23 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String verificationStatus;
+
+  /**
+   * Record of the creation of this channel.
+   * @return value or {@code null} for none
+   */
+  public MutationRecord getCreationRecord() {
+    return creationRecord;
+  }
+
+  /**
+   * Record of the creation of this channel.
+   * @param creationRecord creationRecord or {@code null} for none
+   */
+  public NotificationChannel setCreationRecord(MutationRecord creationRecord) {
+    this.creationRecord = creationRecord;
+    return this;
+  }
 
   /**
    * An optional human-readable description of this notification channel. This description may
@@ -199,6 +236,23 @@ public final class NotificationChannel extends com.google.api.client.json.Generi
    */
   public NotificationChannel setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Records of the modification of this channel.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MutationRecord> getMutationRecords() {
+    return mutationRecords;
+  }
+
+  /**
+   * Records of the modification of this channel.
+   * @param mutationRecords mutationRecords or {@code null} for none
+   */
+  public NotificationChannel setMutationRecords(java.util.List<MutationRecord> mutationRecords) {
+    this.mutationRecords = mutationRecords;
     return this;
   }
 

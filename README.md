@@ -173,6 +173,7 @@ packages on [Maven Central][maven-search].
 | Local Services API | [v1](clients/google-api-services-localservices/v1) |
 | Managed Service for Microsoft Active Directory API | [v1](clients/google-api-services-managedidentities/v1), [v1alpha1](clients/google-api-services-managedidentities/v1alpha1), [v1beta1](clients/google-api-services-managedidentities/v1beta1) |
 | Manufacturer Center API | [v1](clients/google-api-services-manufacturers/v1) |
+| Network Connectivity API | [v1alpha1](clients/google-api-services-networkconnectivity/v1alpha1) |
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
 | Notebooks API | [v1](clients/google-api-services-notebooks/v1) |
 | OS Config API | [v1](clients/google-api-services-osconfig/v1), [v1beta](clients/google-api-services-osconfig/v1beta) |

@@ -86,6 +86,48 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String globalPolicyEvaluationMode;
 
   /**
+   * Optional. Per-istio-service-identity admission rules. Istio service identity spec format:
+   * spiffe:ns//sa/ or /ns//sa/ e.g. spiffe://example.com/ns/test-ns/sa/default
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, AdmissionRule> istioServiceIdentityAdmissionRules;
+
+  static {
+    // hack to force ProGuard to consider AdmissionRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdmissionRule.class);
+  }
+
+  /**
+   * Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format: [a-z.-]+, e.g.
+   * 'some-namespace'
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, AdmissionRule> kubernetesNamespaceAdmissionRules;
+
+  static {
+    // hack to force ProGuard to consider AdmissionRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdmissionRule.class);
+  }
+
+  /**
+   * Optional. Per-kubernetes-service-account admission rules. Service account spec format:
+   * `namespace:serviceaccount`. e.g. 'test-ns:default'
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, AdmissionRule> kubernetesServiceAccountAdmissionRules;
+
+  static {
+    // hack to force ProGuard to consider AdmissionRule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdmissionRule.class);
+  }
+
+  /**
    * Output only. The resource name, in the format `projects/policy`. There is at most one policy
    * per project.
    * The value may be {@code null}.
@@ -198,6 +240,63 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setGlobalPolicyEvaluationMode(java.lang.String globalPolicyEvaluationMode) {
     this.globalPolicyEvaluationMode = globalPolicyEvaluationMode;
+    return this;
+  }
+
+  /**
+   * Optional. Per-istio-service-identity admission rules. Istio service identity spec format:
+   * spiffe:ns//sa/ or /ns//sa/ e.g. spiffe://example.com/ns/test-ns/sa/default
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, AdmissionRule> getIstioServiceIdentityAdmissionRules() {
+    return istioServiceIdentityAdmissionRules;
+  }
+
+  /**
+   * Optional. Per-istio-service-identity admission rules. Istio service identity spec format:
+   * spiffe:ns//sa/ or /ns//sa/ e.g. spiffe://example.com/ns/test-ns/sa/default
+   * @param istioServiceIdentityAdmissionRules istioServiceIdentityAdmissionRules or {@code null} for none
+   */
+  public Policy setIstioServiceIdentityAdmissionRules(java.util.Map<String, AdmissionRule> istioServiceIdentityAdmissionRules) {
+    this.istioServiceIdentityAdmissionRules = istioServiceIdentityAdmissionRules;
+    return this;
+  }
+
+  /**
+   * Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format: [a-z.-]+, e.g.
+   * 'some-namespace'
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, AdmissionRule> getKubernetesNamespaceAdmissionRules() {
+    return kubernetesNamespaceAdmissionRules;
+  }
+
+  /**
+   * Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format: [a-z.-]+, e.g.
+   * 'some-namespace'
+   * @param kubernetesNamespaceAdmissionRules kubernetesNamespaceAdmissionRules or {@code null} for none
+   */
+  public Policy setKubernetesNamespaceAdmissionRules(java.util.Map<String, AdmissionRule> kubernetesNamespaceAdmissionRules) {
+    this.kubernetesNamespaceAdmissionRules = kubernetesNamespaceAdmissionRules;
+    return this;
+  }
+
+  /**
+   * Optional. Per-kubernetes-service-account admission rules. Service account spec format:
+   * `namespace:serviceaccount`. e.g. 'test-ns:default'
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, AdmissionRule> getKubernetesServiceAccountAdmissionRules() {
+    return kubernetesServiceAccountAdmissionRules;
+  }
+
+  /**
+   * Optional. Per-kubernetes-service-account admission rules. Service account spec format:
+   * `namespace:serviceaccount`. e.g. 'test-ns:default'
+   * @param kubernetesServiceAccountAdmissionRules kubernetesServiceAccountAdmissionRules or {@code null} for none
+   */
+  public Policy setKubernetesServiceAccountAdmissionRules(java.util.Map<String, AdmissionRule> kubernetesServiceAccountAdmissionRules) {
+    this.kubernetesServiceAccountAdmissionRules = kubernetesServiceAccountAdmissionRules;
     return this;
   }
 

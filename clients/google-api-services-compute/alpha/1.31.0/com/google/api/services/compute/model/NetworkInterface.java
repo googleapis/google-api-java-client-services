@@ -170,6 +170,15 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String stackType;
 
   /**
+   * SubInterfaces help enable L2 communication for the instance over subnetworks that support L2.
+   * Every network interface will get a default untagged (vlan not specified) subinterface. Users
+   * can specify additional tagged subinterfaces which are sub-fields to the Network Interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NetworkInterfaceSubInterface> subinterfaces;
+
+  /**
    * The URL of the Subnetwork resource for this instance. If the network resource is in legacy
    * mode, do not specify this field. If the network is in auto subnet mode, specifying the
    * subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is
@@ -499,6 +508,27 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setStackType(java.lang.String stackType) {
     this.stackType = stackType;
+    return this;
+  }
+
+  /**
+   * SubInterfaces help enable L2 communication for the instance over subnetworks that support L2.
+   * Every network interface will get a default untagged (vlan not specified) subinterface. Users
+   * can specify additional tagged subinterfaces which are sub-fields to the Network Interface.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NetworkInterfaceSubInterface> getSubinterfaces() {
+    return subinterfaces;
+  }
+
+  /**
+   * SubInterfaces help enable L2 communication for the instance over subnetworks that support L2.
+   * Every network interface will get a default untagged (vlan not specified) subinterface. Users
+   * can specify additional tagged subinterfaces which are sub-fields to the Network Interface.
+   * @param subinterfaces subinterfaces or {@code null} for none
+   */
+  public NetworkInterface setSubinterfaces(java.util.List<NetworkInterfaceSubInterface> subinterfaces) {
+    this.subinterfaces = subinterfaces;
     return this;
   }
 

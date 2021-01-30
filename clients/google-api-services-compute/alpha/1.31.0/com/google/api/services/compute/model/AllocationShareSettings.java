@@ -30,11 +30,38 @@ package com.google.api.services.compute.model;
 public final class AllocationShareSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * A List of Project names to specify consumer projects for this shared-reservation. This is only
+   * valid when share_type's value is SPECIFIC_PROJECTS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> projects;
+
+  /**
    * Type of sharing for this shared-reservation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String shareType;
+
+  /**
+   * A List of Project names to specify consumer projects for this shared-reservation. This is only
+   * valid when share_type's value is SPECIFIC_PROJECTS.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProjects() {
+    return projects;
+  }
+
+  /**
+   * A List of Project names to specify consumer projects for this shared-reservation. This is only
+   * valid when share_type's value is SPECIFIC_PROJECTS.
+   * @param projects projects or {@code null} for none
+   */
+  public AllocationShareSettings setProjects(java.util.List<java.lang.String> projects) {
+    this.projects = projects;
+    return this;
+  }
 
   /**
    * Type of sharing for this shared-reservation

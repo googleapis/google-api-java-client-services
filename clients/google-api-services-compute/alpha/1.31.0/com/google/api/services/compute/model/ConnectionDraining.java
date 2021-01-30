@@ -30,16 +30,16 @@ package com.google.api.services.compute.model;
 public final class ConnectionDraining extends com.google.api.client.json.GenericJson {
 
   /**
-   * The amount of time in seconds to allow existing connections to persist while on unhealthy
-   * backend VMs. Only applicable if the protocol is not UDP. The valid range is [0, 3600].
+   * Configures a duration timeout for existing requests on a removed backend instance. For
+   * supported load balancers and protocols, as described in Enabling connection draining.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer drainingTimeoutSec;
 
   /**
-   * The amount of time in seconds to allow existing connections to persist while on unhealthy
-   * backend VMs. Only applicable if the protocol is not UDP. The valid range is [0, 3600].
+   * Configures a duration timeout for existing requests on a removed backend instance. For
+   * supported load balancers and protocols, as described in Enabling connection draining.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDrainingTimeoutSec() {
@@ -47,8 +47,8 @@ public final class ConnectionDraining extends com.google.api.client.json.Generic
   }
 
   /**
-   * The amount of time in seconds to allow existing connections to persist while on unhealthy
-   * backend VMs. Only applicable if the protocol is not UDP. The valid range is [0, 3600].
+   * Configures a duration timeout for existing requests on a removed backend instance. For
+   * supported load balancers and protocols, as described in Enabling connection draining.
    * @param drainingTimeoutSec drainingTimeoutSec or {@code null} for none
    */
   public ConnectionDraining setDrainingTimeoutSec(java.lang.Integer drainingTimeoutSec) {

@@ -96,8 +96,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Integer priority;
 
   /**
-   * Must be specified if the action is "rate_based_blacklist" or "throttle". Cannot be specified
-   * for any other actions.
+   * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any
+   * other actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -298,8 +298,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Must be specified if the action is "rate_based_blacklist" or "throttle". Cannot be specified
-   * for any other actions.
+   * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any
+   * other actions.
    * @return value or {@code null} for none
    */
   public SecurityPolicyRuleRateLimitOptions getRateLimitOptions() {
@@ -307,8 +307,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * Must be specified if the action is "rate_based_blacklist" or "throttle". Cannot be specified
-   * for any other actions.
+   * Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any
+   * other actions.
    * @param rateLimitOptions rateLimitOptions or {@code null} for none
    */
   public SecurityPolicyRule setRateLimitOptions(SecurityPolicyRuleRateLimitOptions rateLimitOptions) {

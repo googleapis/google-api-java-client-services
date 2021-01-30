@@ -42,6 +42,16 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean automaticRestart;
 
   /**
+   * Specifies the availability domain (AD), which this instance should be scheduled on. The AD
+   * belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the
+   * instance. Specify a value between 1-max count of availability domains in your
+   * GroupPlacementPolicy. See go/placement-policy-extension for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer availabilityDomain;
+
+  /**
    * Defines whether the instance is tolerant of higher cpu latency. This can only be set during
    * instance creation, or when the instance is not currently running. It must not be set if the
    * preemptible option is also set.
@@ -134,6 +144,29 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setAutomaticRestart(java.lang.Boolean automaticRestart) {
     this.automaticRestart = automaticRestart;
+    return this;
+  }
+
+  /**
+   * Specifies the availability domain (AD), which this instance should be scheduled on. The AD
+   * belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the
+   * instance. Specify a value between 1-max count of availability domains in your
+   * GroupPlacementPolicy. See go/placement-policy-extension for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAvailabilityDomain() {
+    return availabilityDomain;
+  }
+
+  /**
+   * Specifies the availability domain (AD), which this instance should be scheduled on. The AD
+   * belongs to the spread GroupPlacementPolicy resource policy that has been assigned to the
+   * instance. Specify a value between 1-max count of availability domains in your
+   * GroupPlacementPolicy. See go/placement-policy-extension for more details.
+   * @param availabilityDomain availabilityDomain or {@code null} for none
+   */
+  public Scheduling setAvailabilityDomain(java.lang.Integer availabilityDomain) {
+    this.availabilityDomain = availabilityDomain;
     return this;
   }
 

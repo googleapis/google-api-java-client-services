@@ -129,6 +129,13 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
   }
 
   /**
+   * PostKeyRevocationActionType of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String postKeyRevocationActionType;
+
+  /**
    * Specifies the scheduling options for the instances that are created from this machine image.
    * The value may be {@code null}.
    */
@@ -348,6 +355,23 @@ public final class SourceInstanceProperties extends com.google.api.client.json.G
    */
   public SourceInstanceProperties setNetworkInterfaces(java.util.List<NetworkInterface> networkInterfaces) {
     this.networkInterfaces = networkInterfaces;
+    return this;
+  }
+
+  /**
+   * PostKeyRevocationActionType of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPostKeyRevocationActionType() {
+    return postKeyRevocationActionType;
+  }
+
+  /**
+   * PostKeyRevocationActionType of the instance.
+   * @param postKeyRevocationActionType postKeyRevocationActionType or {@code null} for none
+   */
+  public SourceInstanceProperties setPostKeyRevocationActionType(java.lang.String postKeyRevocationActionType) {
+    this.postKeyRevocationActionType = postKeyRevocationActionType;
     return this;
   }
 

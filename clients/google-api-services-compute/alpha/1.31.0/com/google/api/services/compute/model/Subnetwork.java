@@ -88,6 +88,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableFlowLogs;
 
   /**
+   * Enables Layer2 communication on the subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableL2;
+
+  /**
    * Deprecated in favor of enable in PrivateIpv6GoogleAccess. Whether the VMs in this subnet can
    * directly access Google services via internal IPv6 addresses. This field can be both set at
    * resource creation time and updated using patch.
@@ -319,6 +326,15 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * A repeated field indicating the VLAN IDs supported on this subnetwork. During Subnet creation,
+   * specifying vlan is valid only if enable_l2 is true. During Subnet Update, specifying vlan is
+   * allowed only for l2 enabled subnets. Restricted to only one VLAN.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> vlans;
+
+  /**
    * Can only be specified if VPC flow logging for this subnetwork is enabled. Sets the aggregation
    * interval for collecting flow logs. Increasing the interval time reduces the amount of generated
    * flow logs for long-lasting connections. Default is an interval of 5 seconds per connection.
@@ -438,6 +454,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setEnableFlowLogs(java.lang.Boolean enableFlowLogs) {
     this.enableFlowLogs = enableFlowLogs;
+    return this;
+  }
+
+  /**
+   * Enables Layer2 communication on the subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableL2() {
+    return enableL2;
+  }
+
+  /**
+   * Enables Layer2 communication on the subnetwork.
+   * @param enableL2 enableL2 or {@code null} for none
+   */
+  public Subnetwork setEnableL2(java.lang.Boolean enableL2) {
+    this.enableL2 = enableL2;
     return this;
   }
 
@@ -1013,6 +1046,27 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * A repeated field indicating the VLAN IDs supported on this subnetwork. During Subnet creation,
+   * specifying vlan is valid only if enable_l2 is true. During Subnet Update, specifying vlan is
+   * allowed only for l2 enabled subnets. Restricted to only one VLAN.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getVlans() {
+    return vlans;
+  }
+
+  /**
+   * A repeated field indicating the VLAN IDs supported on this subnetwork. During Subnet creation,
+   * specifying vlan is valid only if enable_l2 is true. During Subnet Update, specifying vlan is
+   * allowed only for l2 enabled subnets. Restricted to only one VLAN.
+   * @param vlans vlans or {@code null} for none
+   */
+  public Subnetwork setVlans(java.util.List<java.lang.Integer> vlans) {
+    this.vlans = vlans;
     return this;
   }
 

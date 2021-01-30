@@ -161,6 +161,14 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String selfLinkWithId;
 
   /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine
+   * cloudFunction or serverlessDeployment may be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkEndpointGroupServerlessDeployment serverlessDeployment;
+
+  /**
    * [Output only] Number of network endpoints in the network endpoint group.
    * The value may be {@code null}.
    */
@@ -479,6 +487,25 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   public NetworkEndpointGroup setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine
+   * cloudFunction or serverlessDeployment may be set.
+   * @return value or {@code null} for none
+   */
+  public NetworkEndpointGroupServerlessDeployment getServerlessDeployment() {
+    return serverlessDeployment;
+  }
+
+  /**
+   * Only valid when networkEndpointType is "SERVERLESS". Only one of cloudRun, appEngine
+   * cloudFunction or serverlessDeployment may be set.
+   * @param serverlessDeployment serverlessDeployment or {@code null} for none
+   */
+  public NetworkEndpointGroup setServerlessDeployment(NetworkEndpointGroupServerlessDeployment serverlessDeployment) {
+    this.serverlessDeployment = serverlessDeployment;
     return this;
   }
 

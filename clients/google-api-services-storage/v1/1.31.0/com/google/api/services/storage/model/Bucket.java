@@ -194,6 +194,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   private RetentionPolicy retentionPolicy;
 
   /**
+   * Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPZS;
+
+  /**
    * The URI of this bucket.
    * The value may be {@code null}.
    */
@@ -621,6 +628,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
    */
   public Bucket setRetentionPolicy(RetentionPolicy retentionPolicy) {
     this.retentionPolicy = retentionPolicy;
+    return this;
+  }
+
+  /**
+   * Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPZS() {
+    return satisfiesPZS;
+  }
+
+  /**
+   * Reserved for future use.
+   * @param satisfiesPZS satisfiesPZS or {@code null} for none
+   */
+  public Bucket setSatisfiesPZS(java.lang.Boolean satisfiesPZS) {
+    this.satisfiesPZS = satisfiesPZS;
     return this;
   }
 

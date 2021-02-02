@@ -38,9 +38,9 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.lang.String message;
 
   /**
-   * Output only. The unique identifier for the release, in the format: sites/ site-
-   * name/releases/releaseID This name is provided in the response body when you call the
-   * [`CreateRelease`](sites.releases/create) endpoint.
+   * Output only. The unique identifier for the release, in the format: sites/
+   * SITE_NAME/releases/RELEASE_ID This name is provided in the response body when you call
+   * [`CreateRelease`](sites.releases/create).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,9 +93,9 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique identifier for the release, in the format: sites/ site-
-   * name/releases/releaseID This name is provided in the response body when you call the
-   * [`CreateRelease`](sites.releases/create) endpoint.
+   * Output only. The unique identifier for the release, in the format: sites/
+   * SITE_NAME/releases/RELEASE_ID This name is provided in the response body when you call
+   * [`CreateRelease`](sites.releases/create).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,9 +103,9 @@ public final class Release extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique identifier for the release, in the format: sites/ site-
-   * name/releases/releaseID This name is provided in the response body when you call the
-   * [`CreateRelease`](sites.releases/create) endpoint.
+   * Output only. The unique identifier for the release, in the format: sites/
+   * SITE_NAME/releases/RELEASE_ID This name is provided in the response body when you call
+   * [`CreateRelease`](sites.releases/create).
    * @param name name or {@code null} for none
    */
   public Release setName(java.lang.String name) {

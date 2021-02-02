@@ -17,9 +17,9 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * A [`rewrite`](/docs/hosting/full-config#rewrites) object specifies a URL pattern that, if matched
- * to the request URL path, triggers Hosting to respond as if the service were given the specified
- * destination URL.
+ * A [`Rewrite`](https://firebase.google.com/docs/hosting/full-config#rewrites) specifies a URL
+ * pattern that, if matched to the request URL path, triggers Hosting to respond as if the service
+ * were given the specified destination URL.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -46,8 +46,8 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   private java.lang.String function;
 
   /**
-   * The user-supplied [glob](/docs/hosting/full-config#glob_pattern_matching) to match against the
-   * request URL path.
+   * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-
+   * config#glob_pattern_matching) to match against the request URL path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +109,8 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-supplied [glob](/docs/hosting/full-config#glob_pattern_matching) to match against the
-   * request URL path.
+   * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-
+   * config#glob_pattern_matching) to match against the request URL path.
    * @return value or {@code null} for none
    */
   public java.lang.String getGlob() {
@@ -118,8 +118,8 @@ public final class Rewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user-supplied [glob](/docs/hosting/full-config#glob_pattern_matching) to match against the
-   * request URL path.
+   * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-
+   * config#glob_pattern_matching) to match against the request URL path.
    * @param glob glob or {@code null} for none
    */
   public Rewrite setGlob(java.lang.String glob) {

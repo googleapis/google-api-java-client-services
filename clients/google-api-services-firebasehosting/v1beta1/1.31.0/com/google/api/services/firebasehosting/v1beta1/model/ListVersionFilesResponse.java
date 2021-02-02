@@ -30,21 +30,23 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class ListVersionFilesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list path/hashes in the specified version.
+   * The list of paths to the hashes of the files in the specified version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<VersionFile> files;
 
   /**
-   * The pagination token, if more results exist.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListVersionFiles`. Page tokens are short-lived and should not be
+   * stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list path/hashes in the specified version.
+   * The list of paths to the hashes of the files in the specified version.
    * @return value or {@code null} for none
    */
   public java.util.List<VersionFile> getFiles() {
@@ -52,7 +54,7 @@ public final class ListVersionFilesResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The list path/hashes in the specified version.
+   * The list of paths to the hashes of the files in the specified version.
    * @param files files or {@code null} for none
    */
   public ListVersionFilesResponse setFiles(java.util.List<VersionFile> files) {
@@ -61,7 +63,9 @@ public final class ListVersionFilesResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The pagination token, if more results exist.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListVersionFiles`. Page tokens are short-lived and should not be
+   * stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -69,7 +73,9 @@ public final class ListVersionFilesResponse extends com.google.api.client.json.G
   }
 
   /**
-   * The pagination token, if more results exist.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListVersionFiles`. Page tokens are short-lived and should not be
+   * stored.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListVersionFilesResponse setNextPageToken(java.lang.String nextPageToken) {

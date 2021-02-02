@@ -30,9 +30,9 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class ListReleasesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * If there are additional releases remaining beyond the ones in this response, then supply this
-   * token in the next [`list`](../sites.versions.files/list) call to continue with the next set of
-   * releases.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListReleases`. Page tokens are short-lived and should not be
+   * stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +46,9 @@ public final class ListReleasesResponse extends com.google.api.client.json.Gener
   private java.util.List<Release> releases;
 
   /**
-   * If there are additional releases remaining beyond the ones in this response, then supply this
-   * token in the next [`list`](../sites.versions.files/list) call to continue with the next set of
-   * releases.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListReleases`. Page tokens are short-lived and should not be
+   * stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -56,9 +56,9 @@ public final class ListReleasesResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * If there are additional releases remaining beyond the ones in this response, then supply this
-   * token in the next [`list`](../sites.versions.files/list) call to continue with the next set of
-   * releases.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListReleases`. Page tokens are short-lived and should not be
+   * stored.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListReleasesResponse setNextPageToken(java.lang.String nextPageToken) {

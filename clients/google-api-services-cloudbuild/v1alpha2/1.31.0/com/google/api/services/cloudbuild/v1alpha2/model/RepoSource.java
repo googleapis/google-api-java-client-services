@@ -69,7 +69,7 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * Required. Name of the Cloud Source Repository.
+   * Name of the Cloud Source Repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +184,7 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the Cloud Source Repository.
+   * Name of the Cloud Source Repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getRepoName() {
@@ -192,7 +192,7 @@ public final class RepoSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Name of the Cloud Source Repository.
+   * Name of the Cloud Source Repository.
    * @param repoName repoName or {@code null} for none
    */
   public RepoSource setRepoName(java.lang.String repoName) {

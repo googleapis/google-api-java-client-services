@@ -18,7 +18,7 @@ package com.google.api.services.manufacturers.v1.model;
 
 /**
  * Attributes of the product. For more information, see
- * https://support.google.com/manufacturers/answer/6124116. Next tag: 48
+ * https://support.google.com/manufacturers/answer/6124116.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Manufacturer Center API. For a detailed explanation

@@ -1431,7 +1431,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         public class Releases {
 
           /**
-           * Creates a new release which makes the content of the specified version actively display on the
+           * Creates a new release, which makes the content of the specified version actively display on the
            * appropriate URL(s).
            *
            * Create a request for the method "releases.create".
@@ -1439,7 +1439,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the firebasehosting server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
+           * @param parent Required. The site to which the release belongs, in the format: sites/ SITE_NAME
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
            * @return the request
            */
@@ -1457,7 +1457,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/channels/[^/]+$");
 
             /**
-             * Creates a new release which makes the content of the specified version actively display on the
+             * Creates a new release, which makes the content of the specified version actively display on the
              * appropriate URL(s).
              *
              * Create a request for the method "releases.create".
@@ -1468,7 +1468,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
+             * @param parent Required. The site to which the release belongs, in the format: sites/ SITE_NAME
              * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
              * @since 1.13
              */
@@ -1537,17 +1537,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The site that the release belongs to, in the format: sites/ site-name */
+            /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The site that the release belongs to, in the format: sites/ site-name
+            /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The site that the release belongs to, in the format: sites/ site-name */
+            /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1559,27 +1559,27 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The unique identifier for a version, in the format: /sites/site-name
-             * /versions/versionID The site-name in this version identifier must match the site-name
-             * in the `parent` parameter. This query parameter must be empty if the `type` field in
-             * the request body is `SITE_DISABLE`.
+             * The unique identifier for a version, in the format: sites/SITE_NAME
+             * /versions/VERSION_ID The SITE_NAME in this version identifier must match the
+             * SITE_NAME in the `parent` parameter. This query parameter must be empty if the `type`
+             * field in the request body is `SITE_DISABLE`.
              */
             @com.google.api.client.util.Key
             private java.lang.String versionName;
 
-            /** The unique identifier for a version, in the format: /sites/site-name /versions/versionID The site-
-           name in this version identifier must match the site-name in the `parent` parameter. This query
-           parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
+            /**  The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID The
+            SITE_NAME in this version identifier must match the SITE_NAME in the `parent` parameter. This
+            query parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
              */
             public java.lang.String getVersionName() {
               return versionName;
             }
 
             /**
-             * The unique identifier for a version, in the format: /sites/site-name
-             * /versions/versionID The site-name in this version identifier must match the site-name
-             * in the `parent` parameter. This query parameter must be empty if the `type` field in
-             * the request body is `SITE_DISABLE`.
+             * The unique identifier for a version, in the format: sites/SITE_NAME
+             * /versions/VERSION_ID The SITE_NAME in this version identifier must match the
+             * SITE_NAME in the `parent` parameter. This query parameter must be empty if the `type`
+             * field in the request body is `SITE_DISABLE`.
              */
             public Create setVersionName(java.lang.String versionName) {
               this.versionName = versionName;
@@ -1599,7 +1599,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the firebasehosting server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent for which to list files, in the format: sites/site-name
+           * @param parent Required. The site for which to list releases, in the format: sites/ SITE_NAME
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1625,7 +1625,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent for which to list files, in the format: sites/site-name
+             * @param parent Required. The site for which to list releases, in the format: sites/ SITE_NAME
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1703,17 +1703,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The parent for which to list files, in the format: sites/site-name */
+            /** Required. The site for which to list releases, in the format: sites/ SITE_NAME */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent for which to list files, in the format: sites/site-name
+            /** Required. The site for which to list releases, in the format: sites/ SITE_NAME
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The parent for which to list files, in the format: sites/site-name */
+            /** Required. The site for which to list releases, in the format: sites/ SITE_NAME */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1724,33 +1724,46 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               return this;
             }
 
-            /** The page size to return. Defaults to 100. */
+            /**
+             * The maximum number of releases to return. The service may return a lower number if
+             * fewer releases exist than this maximum number. If unspecified, defaults to 100.
+             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The page size to return. Defaults to 100.
+            /** The maximum number of releases to return. The service may return a lower number if fewer releases
+           exist than this maximum number. If unspecified, defaults to 100.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The page size to return. Defaults to 100. */
+            /**
+             * The maximum number of releases to return. The service may return a lower number if
+             * fewer releases exist than this maximum number. If unspecified, defaults to 100.
+             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token from a previous request, if provided. */
+            /**
+             * A token from a previous call to `ListReleases` that tells the server where to resume
+             * listing.
+             */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token from a previous request, if provided.
+            /** A token from a previous call to `ListReleases` that tells the server where to resume listing.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token from a previous request, if provided. */
+            /**
+             * A token from a previous call to `ListReleases` that tells the server where to resume
+             * listing.
+             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -2521,7 +2534,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
       public class Releases {
 
         /**
-         * Creates a new release which makes the content of the specified version actively display on the
+         * Creates a new release, which makes the content of the specified version actively display on the
          * appropriate URL(s).
          *
          * Create a request for the method "releases.create".
@@ -2529,7 +2542,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
+         * @param parent Required. The site to which the release belongs, in the format: sites/ SITE_NAME
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
          * @return the request
          */
@@ -2547,7 +2560,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
 
           /**
-           * Creates a new release which makes the content of the specified version actively display on the
+           * Creates a new release, which makes the content of the specified version actively display on the
            * appropriate URL(s).
            *
            * Create a request for the method "releases.create".
@@ -2558,7 +2571,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
+           * @param parent Required. The site to which the release belongs, in the format: sites/ SITE_NAME
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
            * @since 1.13
            */
@@ -2627,17 +2640,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The site that the release belongs to, in the format: sites/ site-name */
+          /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The site that the release belongs to, in the format: sites/ site-name
+          /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The site that the release belongs to, in the format: sites/ site-name */
+          /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2649,25 +2662,25 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The unique identifier for a version, in the format: /sites/site-name
-           * /versions/versionID The site-name in this version identifier must match the site-name
+           * The unique identifier for a version, in the format: sites/SITE_NAME
+           * /versions/VERSION_ID The SITE_NAME in this version identifier must match the SITE_NAME
            * in the `parent` parameter. This query parameter must be empty if the `type` field in
            * the request body is `SITE_DISABLE`.
            */
           @com.google.api.client.util.Key
           private java.lang.String versionName;
 
-          /** The unique identifier for a version, in the format: /sites/site-name /versions/versionID The site-
-         name in this version identifier must match the site-name in the `parent` parameter. This query
-         parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
+          /**  The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID The
+          SITE_NAME in this version identifier must match the SITE_NAME in the `parent` parameter. This
+          query parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
            */
           public java.lang.String getVersionName() {
             return versionName;
           }
 
           /**
-           * The unique identifier for a version, in the format: /sites/site-name
-           * /versions/versionID The site-name in this version identifier must match the site-name
+           * The unique identifier for a version, in the format: sites/SITE_NAME
+           * /versions/VERSION_ID The SITE_NAME in this version identifier must match the SITE_NAME
            * in the `parent` parameter. This query parameter must be empty if the `type` field in
            * the request body is `SITE_DISABLE`.
            */
@@ -2689,7 +2702,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent for which to list files, in the format: sites/site-name
+         * @param parent Required. The site for which to list releases, in the format: sites/ SITE_NAME
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2715,7 +2728,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent for which to list files, in the format: sites/site-name
+           * @param parent Required. The site for which to list releases, in the format: sites/ SITE_NAME
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2793,17 +2806,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent for which to list files, in the format: sites/site-name */
+          /** Required. The site for which to list releases, in the format: sites/ SITE_NAME */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent for which to list files, in the format: sites/site-name
+          /** Required. The site for which to list releases, in the format: sites/ SITE_NAME
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent for which to list files, in the format: sites/site-name */
+          /** Required. The site for which to list releases, in the format: sites/ SITE_NAME */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2814,33 +2827,46 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** The page size to return. Defaults to 100. */
+          /**
+           * The maximum number of releases to return. The service may return a lower number if
+           * fewer releases exist than this maximum number. If unspecified, defaults to 100.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The page size to return. Defaults to 100.
+          /** The maximum number of releases to return. The service may return a lower number if fewer releases
+         exist than this maximum number. If unspecified, defaults to 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The page size to return. Defaults to 100. */
+          /**
+           * The maximum number of releases to return. The service may return a lower number if
+           * fewer releases exist than this maximum number. If unspecified, defaults to 100.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The next_page_token from a previous request, if provided. */
+          /**
+           * A token from a previous call to `ListReleases` that tells the server where to resume
+           * listing.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The next_page_token from a previous request, if provided.
+          /** A token from a previous call to `ListReleases` that tells the server where to resume listing.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The next_page_token from a previous request, if provided. */
+          /**
+           * A token from a previous call to `ListReleases` that tells the server where to resume
+           * listing.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -3011,14 +3037,14 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Creates a new version for a site.
+         * Creates a new version for the specified site.
          *
          * Create a request for the method "versions.create".
          *
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent to create the version for, in the format: sites/ site-name
+         * @param parent Required. The site in which to create the version, in the format: sites/ SITE_NAME
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
          * @return the request
          */
@@ -3036,7 +3062,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+$");
 
           /**
-           * Creates a new version for a site.
+           * Creates a new version for the specified site.
            *
            * Create a request for the method "versions.create".
            *
@@ -3046,7 +3072,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent to create the version for, in the format: sites/ site-name
+           * @param parent Required. The site in which to create the version, in the format: sites/ SITE_NAME
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
            * @since 1.13
            */
@@ -3115,17 +3141,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent to create the version for, in the format: sites/ site-name */
+          /** Required. The site in which to create the version, in the format: sites/ SITE_NAME */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent to create the version for, in the format: sites/ site-name
+          /** Required. The site in which to create the version, in the format: sites/ SITE_NAME
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent to create the version for, in the format: sites/ site-name */
+          /** Required. The site in which to create the version, in the format: sites/ SITE_NAME */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3195,7 +3221,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
+         * @param name Required. The name of the version to be deleted, in the format: sites/ SITE_NAME/versions/VERSION_ID
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3222,7 +3248,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
+           * @param name Required. The name of the version to be deleted, in the format: sites/ SITE_NAME/versions/VERSION_ID
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -3291,21 +3317,22 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The name of the version to be deleted, in the format: sites/ site-
-           * name/versions/versionID
+           * Required. The name of the version to be deleted, in the format: sites/
+           * SITE_NAME/versions/VERSION_ID
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
+          /** Required. The name of the version to be deleted, in the format: sites/
+         SITE_NAME/versions/VERSION_ID
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the version to be deleted, in the format: sites/ site-
-           * name/versions/versionID
+           * Required. The name of the version to be deleted, in the format: sites/
+           * SITE_NAME/versions/VERSION_ID
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3531,19 +3558,18 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates the specified metadata for a version. Note that this method will fail with
+         * Updates the specified metadata for the specified version. This method will fail with
          * `FAILED_PRECONDITION` in the event of an invalid state transition. The only valid transition for
          * a version is currently from a `CREATED` status to a `FINALIZED` status. Use
-         * [`DeleteVersion`](../sites.versions/delete) to set the status of a version to `DELETED`.
+         * [`DeleteVersion`](delete) to set the status of a version to `DELETED`.
          *
          * Create a request for the method "versions.patch".
          *
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The unique identifier for a version, in the format: sites/site-name /versions/versionID This name is
-         *        provided in the response body when you call the
-         *        [`CreateVersion`](../sites.versions/create) endpoint.
+         * @param name The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID This name
+         *        is provided in the response body when you call [`CreateVersion`](sites.versions/create).
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
          * @return the request
          */
@@ -3561,10 +3587,10 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
 
           /**
-           * Updates the specified metadata for a version. Note that this method will fail with
+           * Updates the specified metadata for the specified version. This method will fail with
            * `FAILED_PRECONDITION` in the event of an invalid state transition. The only valid transition
            * for a version is currently from a `CREATED` status to a `FINALIZED` status. Use
-           * [`DeleteVersion`](../sites.versions/delete) to set the status of a version to `DELETED`.
+           * [`DeleteVersion`](delete) to set the status of a version to `DELETED`.
            *
            * Create a request for the method "versions.patch".
            *
@@ -3574,9 +3600,8 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The unique identifier for a version, in the format: sites/site-name /versions/versionID This name is
-         *        provided in the response body when you call the
-         *        [`CreateVersion`](../sites.versions/create) endpoint.
+           * @param name The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID This name
+         *        is provided in the response body when you call [`CreateVersion`](sites.versions/create).
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
            * @since 1.13
            */
@@ -3646,25 +3671,24 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The unique identifier for a version, in the format: sites/site-name /versions/versionID
-           * This name is provided in the response body when you call the
-           * [`CreateVersion`](../sites.versions/create) endpoint.
+           * The unique identifier for a version, in the format: sites/SITE_NAME
+           * /versions/VERSION_ID This name is provided in the response body when you call
+           * [`CreateVersion`](sites.versions/create).
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The unique identifier for a version, in the format: sites/site-name /versions/versionID This name
-         is provided in the response body when you call the [`CreateVersion`](../sites.versions/create)
-         endpoint.
+          /** The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID This name
+         is provided in the response body when you call [`CreateVersion`](sites.versions/create).
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The unique identifier for a version, in the format: sites/site-name /versions/versionID
-           * This name is provided in the response body when you call the
-           * [`CreateVersion`](../sites.versions/create) endpoint.
+           * The unique identifier for a version, in the format: sites/SITE_NAME
+           * /versions/VERSION_ID This name is provided in the response body when you call
+           * [`CreateVersion`](sites.versions/create).
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3710,7 +3734,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Adds content files to a version. Each file must be under 2 GB.
+         * Adds content files to the specified version. Each file must be under 2 GB.
          *
          * Create a request for the method "versions.populateFiles".
          *
@@ -3718,7 +3742,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link PopulateFiles#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. The version to add files to, in the format: sites/site-name /versions/versionID
+         * @param parent Required. The version to which to add files, in the format: sites/SITE_NAME /versions/VERSION_ID
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesRequest}
          * @return the request
          */
@@ -3736,7 +3760,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/sites/[^/]+/versions/[^/]+$");
 
           /**
-           * Adds content files to a version. Each file must be under 2 GB.
+           * Adds content files to the specified version. Each file must be under 2 GB.
            *
            * Create a request for the method "versions.populateFiles".
            *
@@ -3746,7 +3770,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param parent Required. The version to add files to, in the format: sites/site-name /versions/versionID
+           * @param parent Required. The version to which to add files, in the format: sites/SITE_NAME /versions/VERSION_ID
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesRequest}
            * @since 1.13
            */
@@ -3816,21 +3840,21 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The version to add files to, in the format: sites/site-name
-           * /versions/versionID
+           * Required. The version to which to add files, in the format: sites/SITE_NAME
+           * /versions/VERSION_ID
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The version to add files to, in the format: sites/site-name /versions/versionID
+          /** Required. The version to which to add files, in the format: sites/SITE_NAME /versions/VERSION_ID
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The version to add files to, in the format: sites/site-name
-           * /versions/versionID
+           * Required. The version to which to add files, in the format: sites/SITE_NAME
+           * /versions/VERSION_ID
            */
           public PopulateFiles setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3876,7 +3900,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the firebasehosting server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent to list files for, in the format: sites/site-name /versions/versionID
+           * @param parent Required. The version for which to list files, in the format: sites/ SITE_NAME/versions/VERSION_ID
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3902,7 +3926,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent to list files for, in the format: sites/site-name /versions/versionID
+             * @param parent Required. The version for which to list files, in the format: sites/ SITE_NAME/versions/VERSION_ID
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3981,21 +4005,21 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The parent to list files for, in the format: sites/site-name
-             * /versions/versionID
+             * Required. The version for which to list files, in the format: sites/
+             * SITE_NAME/versions/VERSION_ID
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent to list files for, in the format: sites/site-name /versions/versionID
+            /** Required. The version for which to list files, in the format: sites/ SITE_NAME/versions/VERSION_ID
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent to list files for, in the format: sites/site-name
-             * /versions/versionID
+             * Required. The version for which to list files, in the format: sites/
+             * SITE_NAME/versions/VERSION_ID
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -4007,56 +4031,64 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               return this;
             }
 
-            /** The page size to return. Defaults to 1000. */
+            /**
+             * The maximum number of version files to return. The service may return a lower number
+             * if fewer version files exist than this maximum number. If unspecified, defaults to
+             * 1000.
+             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The page size to return. Defaults to 1000.
+            /** The maximum number of version files to return. The service may return a lower number if fewer
+           version files exist than this maximum number. If unspecified, defaults to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The page size to return. Defaults to 1000. */
+            /**
+             * The maximum number of version files to return. The service may return a lower number
+             * if fewer version files exist than this maximum number. If unspecified, defaults to
+             * 1000.
+             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
             /**
-             * The next_page_token from a previous request, if provided. This will be the encoded
-             * version of a firebase.hosting.proto.metadata.ListFilesPageToken.
+             * A token from a previous call to `ListVersionFiles` that tells the server where to
+             * resume listing.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token from a previous request, if provided. This will be the encoded version of a
-           firebase.hosting.proto.metadata.ListFilesPageToken.
+            /** A token from a previous call to `ListVersionFiles` that tells the server where to resume listing.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * The next_page_token from a previous request, if provided. This will be the encoded
-             * version of a firebase.hosting.proto.metadata.ListFilesPageToken.
+             * A token from a previous call to `ListVersionFiles` that tells the server where to
+             * resume listing.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
             }
 
-            /** The type of files in the version that should be listed. */
+            /**  The type of files that should be listed for the specified version. */
             @com.google.api.client.util.Key
             private java.lang.String status;
 
-            /** The type of files in the version that should be listed.
+            /**  The type of files that should be listed for the specified version.
              */
             public java.lang.String getStatus() {
               return status;
             }
 
-            /** The type of files in the version that should be listed. */
+            /**  The type of files that should be listed for the specified version. */
             public List setStatus(java.lang.String status) {
               this.status = status;
               return this;
@@ -5188,7 +5220,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
       public class Releases {
 
         /**
-         * Creates a new release which makes the content of the specified version actively display on the
+         * Creates a new release, which makes the content of the specified version actively display on the
          * appropriate URL(s).
          *
          * Create a request for the method "releases.create".
@@ -5196,7 +5228,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
+         * @param parent Required. The site to which the release belongs, in the format: sites/ SITE_NAME
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
          * @return the request
          */
@@ -5214,7 +5246,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^sites/[^/]+/channels/[^/]+$");
 
           /**
-           * Creates a new release which makes the content of the specified version actively display on the
+           * Creates a new release, which makes the content of the specified version actively display on the
            * appropriate URL(s).
            *
            * Create a request for the method "releases.create".
@@ -5225,7 +5257,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
+           * @param parent Required. The site to which the release belongs, in the format: sites/ SITE_NAME
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
            * @since 1.13
            */
@@ -5294,17 +5326,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The site that the release belongs to, in the format: sites/ site-name */
+          /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The site that the release belongs to, in the format: sites/ site-name
+          /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The site that the release belongs to, in the format: sites/ site-name */
+          /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5316,25 +5348,25 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The unique identifier for a version, in the format: /sites/site-name
-           * /versions/versionID The site-name in this version identifier must match the site-name
+           * The unique identifier for a version, in the format: sites/SITE_NAME
+           * /versions/VERSION_ID The SITE_NAME in this version identifier must match the SITE_NAME
            * in the `parent` parameter. This query parameter must be empty if the `type` field in
            * the request body is `SITE_DISABLE`.
            */
           @com.google.api.client.util.Key
           private java.lang.String versionName;
 
-          /** The unique identifier for a version, in the format: /sites/site-name /versions/versionID The site-
-         name in this version identifier must match the site-name in the `parent` parameter. This query
-         parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
+          /**  The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID The
+          SITE_NAME in this version identifier must match the SITE_NAME in the `parent` parameter. This
+          query parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
            */
           public java.lang.String getVersionName() {
             return versionName;
           }
 
           /**
-           * The unique identifier for a version, in the format: /sites/site-name
-           * /versions/versionID The site-name in this version identifier must match the site-name
+           * The unique identifier for a version, in the format: sites/SITE_NAME
+           * /versions/VERSION_ID The SITE_NAME in this version identifier must match the SITE_NAME
            * in the `parent` parameter. This query parameter must be empty if the `type` field in
            * the request body is `SITE_DISABLE`.
            */
@@ -5356,7 +5388,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent for which to list files, in the format: sites/site-name
+         * @param parent Required. The site for which to list releases, in the format: sites/ SITE_NAME
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5382,7 +5414,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent for which to list files, in the format: sites/site-name
+           * @param parent Required. The site for which to list releases, in the format: sites/ SITE_NAME
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5460,17 +5492,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The parent for which to list files, in the format: sites/site-name */
+          /** Required. The site for which to list releases, in the format: sites/ SITE_NAME */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent for which to list files, in the format: sites/site-name
+          /** Required. The site for which to list releases, in the format: sites/ SITE_NAME
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The parent for which to list files, in the format: sites/site-name */
+          /** Required. The site for which to list releases, in the format: sites/ SITE_NAME */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5481,33 +5513,46 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** The page size to return. Defaults to 100. */
+          /**
+           * The maximum number of releases to return. The service may return a lower number if
+           * fewer releases exist than this maximum number. If unspecified, defaults to 100.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The page size to return. Defaults to 100.
+          /** The maximum number of releases to return. The service may return a lower number if fewer releases
+         exist than this maximum number. If unspecified, defaults to 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The page size to return. Defaults to 100. */
+          /**
+           * The maximum number of releases to return. The service may return a lower number if
+           * fewer releases exist than this maximum number. If unspecified, defaults to 100.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The next_page_token from a previous request, if provided. */
+          /**
+           * A token from a previous call to `ListReleases` that tells the server where to resume
+           * listing.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The next_page_token from a previous request, if provided.
+          /** A token from a previous call to `ListReleases` that tells the server where to resume listing.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The next_page_token from a previous request, if provided. */
+          /**
+           * A token from a previous call to `ListReleases` that tells the server where to resume
+           * listing.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -6276,7 +6321,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
     public class Releases {
 
       /**
-       * Creates a new release which makes the content of the specified version actively display on the
+       * Creates a new release, which makes the content of the specified version actively display on the
        * appropriate URL(s).
        *
        * Create a request for the method "releases.create".
@@ -6284,7 +6329,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
+       * @param parent Required. The site to which the release belongs, in the format: sites/ SITE_NAME
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
        * @return the request
        */
@@ -6302,7 +6347,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^sites/[^/]+$");
 
         /**
-         * Creates a new release which makes the content of the specified version actively display on the
+         * Creates a new release, which makes the content of the specified version actively display on the
          * appropriate URL(s).
          *
          * Create a request for the method "releases.create".
@@ -6313,7 +6358,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The site that the release belongs to, in the format: sites/ site-name
+         * @param parent Required. The site to which the release belongs, in the format: sites/ SITE_NAME
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Release}
          * @since 1.13
          */
@@ -6382,17 +6427,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The site that the release belongs to, in the format: sites/ site-name */
+        /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The site that the release belongs to, in the format: sites/ site-name
+        /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The site that the release belongs to, in the format: sites/ site-name */
+        /** Required. The site to which the release belongs, in the format: sites/ SITE_NAME */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6404,25 +6449,25 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * The unique identifier for a version, in the format: /sites/site-name /versions/versionID
-         * The site-name in this version identifier must match the site-name in the `parent`
+         * The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID
+         * The SITE_NAME in this version identifier must match the SITE_NAME in the `parent`
          * parameter. This query parameter must be empty if the `type` field in the request body is
          * `SITE_DISABLE`.
          */
         @com.google.api.client.util.Key
         private java.lang.String versionName;
 
-        /** The unique identifier for a version, in the format: /sites/site-name /versions/versionID The site-
-       name in this version identifier must match the site-name in the `parent` parameter. This query
-       parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
+        /**  The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID The
+        SITE_NAME in this version identifier must match the SITE_NAME in the `parent` parameter. This
+        query parameter must be empty if the `type` field in the request body is `SITE_DISABLE`.
          */
         public java.lang.String getVersionName() {
           return versionName;
         }
 
         /**
-         * The unique identifier for a version, in the format: /sites/site-name /versions/versionID
-         * The site-name in this version identifier must match the site-name in the `parent`
+         * The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID
+         * The SITE_NAME in this version identifier must match the SITE_NAME in the `parent`
          * parameter. This query parameter must be empty if the `type` field in the request body is
          * `SITE_DISABLE`.
          */
@@ -6444,7 +6489,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent for which to list files, in the format: sites/site-name
+       * @param parent Required. The site for which to list releases, in the format: sites/ SITE_NAME
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -6470,7 +6515,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent for which to list files, in the format: sites/site-name
+         * @param parent Required. The site for which to list releases, in the format: sites/ SITE_NAME
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -6548,17 +6593,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent for which to list files, in the format: sites/site-name */
+        /** Required. The site for which to list releases, in the format: sites/ SITE_NAME */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent for which to list files, in the format: sites/site-name
+        /** Required. The site for which to list releases, in the format: sites/ SITE_NAME
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent for which to list files, in the format: sites/site-name */
+        /** Required. The site for which to list releases, in the format: sites/ SITE_NAME */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6569,33 +6614,46 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return this;
         }
 
-        /** The page size to return. Defaults to 100. */
+        /**
+         * The maximum number of releases to return. The service may return a lower number if fewer
+         * releases exist than this maximum number. If unspecified, defaults to 100.
+         */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The page size to return. Defaults to 100.
+        /** The maximum number of releases to return. The service may return a lower number if fewer releases
+       exist than this maximum number. If unspecified, defaults to 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The page size to return. Defaults to 100. */
+        /**
+         * The maximum number of releases to return. The service may return a lower number if fewer
+         * releases exist than this maximum number. If unspecified, defaults to 100.
+         */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** The next_page_token from a previous request, if provided. */
+        /**
+         * A token from a previous call to `ListReleases` that tells the server where to resume
+         * listing.
+         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The next_page_token from a previous request, if provided.
+        /** A token from a previous call to `ListReleases` that tells the server where to resume listing.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The next_page_token from a previous request, if provided. */
+        /**
+         * A token from a previous call to `ListReleases` that tells the server where to resume
+         * listing.
+         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -6766,14 +6824,14 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Creates a new version for a site.
+       * Creates a new version for the specified site.
        *
        * Create a request for the method "versions.create".
        *
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent to create the version for, in the format: sites/ site-name
+       * @param parent Required. The site in which to create the version, in the format: sites/ SITE_NAME
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
        * @return the request
        */
@@ -6791,7 +6849,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^sites/[^/]+$");
 
         /**
-         * Creates a new version for a site.
+         * Creates a new version for the specified site.
          *
          * Create a request for the method "versions.create".
          *
@@ -6801,7 +6859,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent to create the version for, in the format: sites/ site-name
+         * @param parent Required. The site in which to create the version, in the format: sites/ SITE_NAME
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
          * @since 1.13
          */
@@ -6870,17 +6928,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent to create the version for, in the format: sites/ site-name */
+        /** Required. The site in which to create the version, in the format: sites/ SITE_NAME */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent to create the version for, in the format: sites/ site-name
+        /** Required. The site in which to create the version, in the format: sites/ SITE_NAME
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent to create the version for, in the format: sites/ site-name */
+        /** Required. The site in which to create the version, in the format: sites/ SITE_NAME */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6950,7 +7008,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
+       * @param name Required. The name of the version to be deleted, in the format: sites/ SITE_NAME/versions/VERSION_ID
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6977,7 +7035,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
+         * @param name Required. The name of the version to be deleted, in the format: sites/ SITE_NAME/versions/VERSION_ID
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -7046,21 +7104,22 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. The name of the version to be deleted, in the format: sites/ site-
-         * name/versions/versionID
+         * Required. The name of the version to be deleted, in the format: sites/
+         * SITE_NAME/versions/VERSION_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the version to be deleted, in the format: sites/ site-name/versions/versionID
+        /** Required. The name of the version to be deleted, in the format: sites/
+       SITE_NAME/versions/VERSION_ID
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The name of the version to be deleted, in the format: sites/ site-
-         * name/versions/versionID
+         * Required. The name of the version to be deleted, in the format: sites/
+         * SITE_NAME/versions/VERSION_ID
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -7286,19 +7345,18 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Updates the specified metadata for a version. Note that this method will fail with
+       * Updates the specified metadata for the specified version. This method will fail with
        * `FAILED_PRECONDITION` in the event of an invalid state transition. The only valid transition for
        * a version is currently from a `CREATED` status to a `FINALIZED` status. Use
-       * [`DeleteVersion`](../sites.versions/delete) to set the status of a version to `DELETED`.
+       * [`DeleteVersion`](delete) to set the status of a version to `DELETED`.
        *
        * Create a request for the method "versions.patch".
        *
        * This request holds the parameters needed by the firebasehosting server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The unique identifier for a version, in the format: sites/site-name /versions/versionID This name is
-       *        provided in the response body when you call the
-       *        [`CreateVersion`](../sites.versions/create) endpoint.
+       * @param name The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID This name
+       *        is provided in the response body when you call [`CreateVersion`](sites.versions/create).
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
        * @return the request
        */
@@ -7316,10 +7374,10 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^sites/[^/]+/versions/[^/]+$");
 
         /**
-         * Updates the specified metadata for a version. Note that this method will fail with
+         * Updates the specified metadata for the specified version. This method will fail with
          * `FAILED_PRECONDITION` in the event of an invalid state transition. The only valid transition
          * for a version is currently from a `CREATED` status to a `FINALIZED` status. Use
-         * [`DeleteVersion`](../sites.versions/delete) to set the status of a version to `DELETED`.
+         * [`DeleteVersion`](delete) to set the status of a version to `DELETED`.
          *
          * Create a request for the method "versions.patch".
          *
@@ -7329,9 +7387,8 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The unique identifier for a version, in the format: sites/site-name /versions/versionID This name is
-       *        provided in the response body when you call the
-       *        [`CreateVersion`](../sites.versions/create) endpoint.
+         * @param name The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID This name
+       *        is provided in the response body when you call [`CreateVersion`](sites.versions/create).
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.Version}
          * @since 1.13
          */
@@ -7401,25 +7458,24 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * The unique identifier for a version, in the format: sites/site-name /versions/versionID
-         * This name is provided in the response body when you call the
-         * [`CreateVersion`](../sites.versions/create) endpoint.
+         * The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID
+         * This name is provided in the response body when you call
+         * [`CreateVersion`](sites.versions/create).
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The unique identifier for a version, in the format: sites/site-name /versions/versionID This name
-       is provided in the response body when you call the [`CreateVersion`](../sites.versions/create)
-       endpoint.
+        /** The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID This name
+       is provided in the response body when you call [`CreateVersion`](sites.versions/create).
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The unique identifier for a version, in the format: sites/site-name /versions/versionID
-         * This name is provided in the response body when you call the
-         * [`CreateVersion`](../sites.versions/create) endpoint.
+         * The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID
+         * This name is provided in the response body when you call
+         * [`CreateVersion`](sites.versions/create).
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -7465,7 +7521,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Adds content files to a version. Each file must be under 2 GB.
+       * Adds content files to the specified version. Each file must be under 2 GB.
        *
        * Create a request for the method "versions.populateFiles".
        *
@@ -7473,7 +7529,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link PopulateFiles#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The version to add files to, in the format: sites/site-name /versions/versionID
+       * @param parent Required. The version to which to add files, in the format: sites/SITE_NAME /versions/VERSION_ID
        * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesRequest}
        * @return the request
        */
@@ -7491,7 +7547,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^sites/[^/]+/versions/[^/]+$");
 
         /**
-         * Adds content files to a version. Each file must be under 2 GB.
+         * Adds content files to the specified version. Each file must be under 2 GB.
          *
          * Create a request for the method "versions.populateFiles".
          *
@@ -7501,7 +7557,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param parent Required. The version to add files to, in the format: sites/site-name /versions/versionID
+         * @param parent Required. The version to which to add files, in the format: sites/SITE_NAME /versions/VERSION_ID
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.PopulateVersionFilesRequest}
          * @since 1.13
          */
@@ -7571,19 +7627,21 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. The version to add files to, in the format: sites/site-name /versions/versionID
+         * Required. The version to which to add files, in the format: sites/SITE_NAME
+         * /versions/VERSION_ID
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The version to add files to, in the format: sites/site-name /versions/versionID
+        /** Required. The version to which to add files, in the format: sites/SITE_NAME /versions/VERSION_ID
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The version to add files to, in the format: sites/site-name /versions/versionID
+         * Required. The version to which to add files, in the format: sites/SITE_NAME
+         * /versions/VERSION_ID
          */
         public PopulateFiles setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -7629,7 +7687,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent to list files for, in the format: sites/site-name /versions/versionID
+         * @param parent Required. The version for which to list files, in the format: sites/ SITE_NAME/versions/VERSION_ID
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7655,7 +7713,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent to list files for, in the format: sites/site-name /versions/versionID
+           * @param parent Required. The version for which to list files, in the format: sites/ SITE_NAME/versions/VERSION_ID
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7734,21 +7792,21 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent to list files for, in the format: sites/site-name
-           * /versions/versionID
+           * Required. The version for which to list files, in the format: sites/
+           * SITE_NAME/versions/VERSION_ID
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent to list files for, in the format: sites/site-name /versions/versionID
+          /** Required. The version for which to list files, in the format: sites/ SITE_NAME/versions/VERSION_ID
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent to list files for, in the format: sites/site-name
-           * /versions/versionID
+           * Required. The version for which to list files, in the format: sites/
+           * SITE_NAME/versions/VERSION_ID
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7760,56 +7818,62 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** The page size to return. Defaults to 1000. */
+          /**
+           * The maximum number of version files to return. The service may return a lower number if
+           * fewer version files exist than this maximum number. If unspecified, defaults to 1000.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The page size to return. Defaults to 1000.
+          /** The maximum number of version files to return. The service may return a lower number if fewer
+         version files exist than this maximum number. If unspecified, defaults to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The page size to return. Defaults to 1000. */
+          /**
+           * The maximum number of version files to return. The service may return a lower number if
+           * fewer version files exist than this maximum number. If unspecified, defaults to 1000.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * The next_page_token from a previous request, if provided. This will be the encoded
-           * version of a firebase.hosting.proto.metadata.ListFilesPageToken.
+           * A token from a previous call to `ListVersionFiles` that tells the server where to
+           * resume listing.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The next_page_token from a previous request, if provided. This will be the encoded version of a
-         firebase.hosting.proto.metadata.ListFilesPageToken.
+          /** A token from a previous call to `ListVersionFiles` that tells the server where to resume listing.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The next_page_token from a previous request, if provided. This will be the encoded
-           * version of a firebase.hosting.proto.metadata.ListFilesPageToken.
+           * A token from a previous call to `ListVersionFiles` that tells the server where to
+           * resume listing.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /** The type of files in the version that should be listed. */
+          /**  The type of files that should be listed for the specified version. */
           @com.google.api.client.util.Key
           private java.lang.String status;
 
-          /** The type of files in the version that should be listed.
+          /**  The type of files that should be listed for the specified version.
            */
           public java.lang.String getStatus() {
             return status;
           }
 
-          /** The type of files in the version that should be listed. */
+          /**  The type of files that should be listed for the specified version. */
           public List setStatus(java.lang.String status) {
             this.status = status;
             return this;

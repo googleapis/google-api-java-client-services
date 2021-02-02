@@ -17,7 +17,7 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * The request to populate a Version's Files.
+ * Model definition for PopulateVersionFilesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -31,8 +31,8 @@ public final class PopulateVersionFilesRequest extends com.google.api.client.jso
 
   /**
    * A set of file paths to the hashes corresponding to assets that should be added to the version.
-   * Note that a file path to an empty hash will remove the path from the version. Calculate a hash
-   * by Gzipping the file then taking the SHA256 hash of the newly compressed file.
+   * A file path to an empty hash will remove the path from the version. Calculate a hash by
+   * Gzipping the file then taking the SHA256 hash of the newly compressed file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +40,8 @@ public final class PopulateVersionFilesRequest extends com.google.api.client.jso
 
   /**
    * A set of file paths to the hashes corresponding to assets that should be added to the version.
-   * Note that a file path to an empty hash will remove the path from the version. Calculate a hash
-   * by Gzipping the file then taking the SHA256 hash of the newly compressed file.
+   * A file path to an empty hash will remove the path from the version. Calculate a hash by
+   * Gzipping the file then taking the SHA256 hash of the newly compressed file.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFiles() {
@@ -50,8 +50,8 @@ public final class PopulateVersionFilesRequest extends com.google.api.client.jso
 
   /**
    * A set of file paths to the hashes corresponding to assets that should be added to the version.
-   * Note that a file path to an empty hash will remove the path from the version. Calculate a hash
-   * by Gzipping the file then taking the SHA256 hash of the newly compressed file.
+   * A file path to an empty hash will remove the path from the version. Calculate a hash by
+   * Gzipping the file then taking the SHA256 hash of the newly compressed file.
    * @param files files or {@code null} for none
    */
   public PopulateVersionFilesRequest setFiles(java.util.Map<String, java.lang.String> files) {

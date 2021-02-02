@@ -20,7 +20,7 @@ package com.google.api.services.firebasehosting.v1beta1.model;
  * The configuration for how incoming requests to a site should be routed and processed before
  * serving content. The URL request paths are matched against the specified URL patterns in the
  * configuration, then Hosting applies the applicable configuration according to a specific
- * [priority order](/docs/hosting/full-config#hosting_priority_order).
+ * [priority order](https://firebase.google.com/docs/hosting/full-config#hosting_priority_order).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:

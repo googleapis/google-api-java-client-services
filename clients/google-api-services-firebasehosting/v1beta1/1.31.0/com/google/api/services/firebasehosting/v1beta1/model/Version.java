@@ -17,8 +17,8 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * A `Version` is the collection of configuration and [static files](sites.versions.files) that
- * determine how a site is displayed.
+ * A `Version` is a configuration and a collection of static files which determine how a site is
+ * displayed.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -32,7 +32,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * The configuration for the behavior of the site. This configuration exists in the
-   * [`firebase.json`](/docs/cli/#the_firebasejson_file) file.
+   * [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,9 +96,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The unique identifier for a version, in the format: sites/site-name /versions/versionID This
-   * name is provided in the response body when you call the
-   * [`CreateVersion`](../sites.versions/create) endpoint.
+   * The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID This
+   * name is provided in the response body when you call [`CreateVersion`](sites.versions/create).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,13 +113,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private PreviewConfig preview;
 
   /**
-   * The deploy status of a version. For a successful deploy, call the
-   * [`CreateVersion`](sites.versions/create) endpoint to make a new version (`CREATED` status),
-   * [upload all desired files](sites.versions/populateFiles) to the version, then
+   * The deploy status of a version. For a successful deploy, call
+   * [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all
+   * desired files](sites.versions/populateFiles) to the version, then
    * [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave
    * the version in the `CREATED` state for more than 12 hours, the system will automatically mark
    * the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling
-   * the [`DeleteVersion`](sites.versions/delete) endpoint.
+   * [`DeleteVersion`](sites.versions/delete).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +135,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * The configuration for the behavior of the site. This configuration exists in the
-   * [`firebase.json`](/docs/cli/#the_firebasejson_file) file.
+   * [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.
    * @return value or {@code null} for none
    */
   public ServingConfig getConfig() {
@@ -145,7 +144,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
 
   /**
    * The configuration for the behavior of the site. This configuration exists in the
-   * [`firebase.json`](/docs/cli/#the_firebasejson_file) file.
+   * [`firebase.json`](https://firebase.google.com/docs/cli/#the_firebasejson_file) file.
    * @param config config or {@code null} for none
    */
   public Version setConfig(ServingConfig config) {
@@ -292,9 +291,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier for a version, in the format: sites/site-name /versions/versionID This
-   * name is provided in the response body when you call the
-   * [`CreateVersion`](../sites.versions/create) endpoint.
+   * The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID This
+   * name is provided in the response body when you call [`CreateVersion`](sites.versions/create).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -302,9 +300,8 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier for a version, in the format: sites/site-name /versions/versionID This
-   * name is provided in the response body when you call the
-   * [`CreateVersion`](../sites.versions/create) endpoint.
+   * The unique identifier for a version, in the format: sites/SITE_NAME /versions/VERSION_ID This
+   * name is provided in the response body when you call [`CreateVersion`](sites.versions/create).
    * @param name name or {@code null} for none
    */
   public Version setName(java.lang.String name) {
@@ -334,13 +331,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The deploy status of a version. For a successful deploy, call the
-   * [`CreateVersion`](sites.versions/create) endpoint to make a new version (`CREATED` status),
-   * [upload all desired files](sites.versions/populateFiles) to the version, then
+   * The deploy status of a version. For a successful deploy, call
+   * [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all
+   * desired files](sites.versions/populateFiles) to the version, then
    * [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave
    * the version in the `CREATED` state for more than 12 hours, the system will automatically mark
    * the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling
-   * the [`DeleteVersion`](sites.versions/delete) endpoint.
+   * [`DeleteVersion`](sites.versions/delete).
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -348,13 +345,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The deploy status of a version. For a successful deploy, call the
-   * [`CreateVersion`](sites.versions/create) endpoint to make a new version (`CREATED` status),
-   * [upload all desired files](sites.versions/populateFiles) to the version, then
+   * The deploy status of a version. For a successful deploy, call
+   * [`CreateVersion`](sites.versions/create) to make a new version (`CREATED` status), [upload all
+   * desired files](sites.versions/populateFiles) to the version, then
    * [update](sites.versions/patch) the version to the `FINALIZED` status. Note that if you leave
    * the version in the `CREATED` state for more than 12 hours, the system will automatically mark
    * the version as `ABANDONED`. You can also change the status of a version to `DELETED` by calling
-   * the [`DeleteVersion`](sites.versions/delete) endpoint.
+   * [`DeleteVersion`](sites.versions/delete).
    * @param status status or {@code null} for none
    */
   public Version setStatus(java.lang.String status) {

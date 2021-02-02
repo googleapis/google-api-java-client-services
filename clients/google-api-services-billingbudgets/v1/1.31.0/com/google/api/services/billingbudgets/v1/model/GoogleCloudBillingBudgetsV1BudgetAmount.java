@@ -38,8 +38,10 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
   private GoogleCloudBillingBudgetsV1LastPeriodAmount lastPeriodAmount;
 
   /**
-   * A specified amount to use as the budget. `currency_code` is optional. If specified, it must
-   * match the currency of the billing account. The `currency_code` is provided on output.
+   * A specified amount to use as the budget. `currency_code` is optional. If specified when
+   * creating a budget, it must match the currency of the billing account. If specified when
+   * updating a budget, it must match the currency_code of the existing budget. The `currency_code`
+   * is provided on output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +65,10 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
   }
 
   /**
-   * A specified amount to use as the budget. `currency_code` is optional. If specified, it must
-   * match the currency of the billing account. The `currency_code` is provided on output.
+   * A specified amount to use as the budget. `currency_code` is optional. If specified when
+   * creating a budget, it must match the currency of the billing account. If specified when
+   * updating a budget, it must match the currency_code of the existing budget. The `currency_code`
+   * is provided on output.
    * @return value or {@code null} for none
    */
   public GoogleTypeMoney getSpecifiedAmount() {
@@ -72,8 +76,10 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
   }
 
   /**
-   * A specified amount to use as the budget. `currency_code` is optional. If specified, it must
-   * match the currency of the billing account. The `currency_code` is provided on output.
+   * A specified amount to use as the budget. `currency_code` is optional. If specified when
+   * creating a budget, it must match the currency of the billing account. If specified when
+   * updating a budget, it must match the currency_code of the existing budget. The `currency_code`
+   * is provided on output.
    * @param specifiedAmount specifiedAmount or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1BudgetAmount setSpecifiedAmount(GoogleTypeMoney specifiedAmount) {

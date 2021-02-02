@@ -56,7 +56,7 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   private java.lang.Integer height;
 
   /**
-   * The MIME type of the image.
+   * Output only. The MIME type of the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,7 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   }
 
   /**
-   * The MIME type of the image.
+   * Output only. The MIME type of the image.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -149,7 +149,7 @@ public final class SnapshotCoverImageResource extends com.google.api.client.json
   }
 
   /**
-   * The MIME type of the image.
+   * Output only. The MIME type of the image.
    * @param mimeType mimeType or {@code null} for none
    */
   public SnapshotCoverImageResource setMimeType(java.lang.String mimeType) {

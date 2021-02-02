@@ -246,6 +246,29 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * This feature is not generally available yet. Whether the managed Google Play Agreement is
+       * presented and agreed.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean agreementAccepted;
+
+      /** This feature is not generally available yet. Whether the managed Google Play Agreement is presented
+     and agreed.
+       */
+      public java.lang.Boolean getAgreementAccepted() {
+        return agreementAccepted;
+      }
+
+      /**
+       * This feature is not generally available yet. Whether the managed Google Play Agreement is
+       * presented and agreed.
+       */
+      public Create setAgreementAccepted(java.lang.Boolean agreementAccepted) {
+        this.agreementAccepted = agreementAccepted;
+        return this;
+      }
+
       /** The enterprise token appended to the callback URL. */
       @com.google.api.client.util.Key
       private java.lang.String enterpriseToken;
@@ -297,6 +320,144 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       @Override
       public Create set(String parameterName, Object value) {
         return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * This feature is not generally available yet. Deletes an enterprise.
+     *
+     * Create a request for the method "enterprises.delete".
+     *
+     * This request holds the parameters needed by the androidmanagement server.  After setting any
+     * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name This feature is not generally available yet. The name of the enterprise in the form
+     *        enterprises/{enterpriseId}.
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^enterprises/[^/]+$");
+
+      /**
+       * This feature is not generally available yet. Deletes an enterprise.
+       *
+       * Create a request for the method "enterprises.delete".
+       *
+       * This request holds the parameters needed by the the androidmanagement server.  After setting
+       * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name This feature is not generally available yet. The name of the enterprise in the form
+     *        enterprises/{enterpriseId}.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(AndroidManagement.this, "DELETE", REST_PATH, null, com.google.api.services.androidmanagement.v1.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^enterprises/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * This feature is not generally available yet. The name of the enterprise in the form
+       * enterprises/{enterpriseId}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** This feature is not generally available yet. The name of the enterprise in the form
+     enterprises/{enterpriseId}.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * This feature is not generally available yet. The name of the enterprise in the form
+       * enterprises/{enterpriseId}.
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^enterprises/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
       }
     }
     /**
@@ -436,6 +597,207 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * This feature is not generally available yet. Lists enterprises that are managed by an EMM. Only
+     * partial views are returned.
+     *
+     * Create a request for the method "enterprises.list".
+     *
+     * This request holds the parameters needed by the androidmanagement server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.ListEnterprisesResponse> {
+
+      private static final String REST_PATH = "v1/enterprises";
+
+      /**
+       * This feature is not generally available yet. Lists enterprises that are managed by an EMM. Only
+       * partial views are returned.
+       *
+       * Create a request for the method "enterprises.list".
+       *
+       * This request holds the parameters needed by the the androidmanagement server.  After setting
+       * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(AndroidManagement.this, "GET", REST_PATH, null, com.google.api.services.androidmanagement.v1.model.ListEnterprisesResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * This feature is not generally available yet. The requested page size. The actual page size
+       * may be fixed to a min or max value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** This feature is not generally available yet. The requested page size. The actual page size may be
+     fixed to a min or max value.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * This feature is not generally available yet. The requested page size. The actual page size
+       * may be fixed to a min or max value.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * This feature is not generally available yet. A token identifying a page of results returned
+       * by the server.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** This feature is not generally available yet. A token identifying a page of results returned by the
+     server.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * This feature is not generally available yet. A token identifying a page of results returned
+       * by the server.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Required. This feature is not generally available yet. The ID of the Cloud project of the
+       * EMM the enterprises belongs to.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Required. This feature is not generally available yet. The ID of the Cloud project of the EMM the
+     enterprises belongs to.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /**
+       * Required. This feature is not generally available yet. The ID of the Cloud project of the
+       * EMM the enterprises belongs to.
+       */
+      public List setProjectId(java.lang.String projectId) {
+        this.projectId = projectId;
+        return this;
+      }
+
+      /**
+       * This feature is not generally available yet. View that specify that partial response should
+       * be returned.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** This feature is not generally available yet. View that specify that partial response should be
+     returned.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * This feature is not generally available yet. View that specify that partial response should
+       * be returned.
+       */
+      public List setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
       }
     }
     /**

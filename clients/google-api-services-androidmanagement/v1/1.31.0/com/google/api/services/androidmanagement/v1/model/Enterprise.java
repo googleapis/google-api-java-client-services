@@ -38,6 +38,14 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean appAutoApprovalEnabled;
 
   /**
+   * This feature is not generally available yet. The enterprise contact info of an EMM owned
+   * enterprise
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContactInfo contactInfo;
+
+  /**
    * The types of Google Pub/Sub notifications enabled for the enterprise.
    * The value may be {@code null}.
    */
@@ -115,6 +123,25 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
    */
   public Enterprise setAppAutoApprovalEnabled(java.lang.Boolean appAutoApprovalEnabled) {
     this.appAutoApprovalEnabled = appAutoApprovalEnabled;
+    return this;
+  }
+
+  /**
+   * This feature is not generally available yet. The enterprise contact info of an EMM owned
+   * enterprise
+   * @return value or {@code null} for none
+   */
+  public ContactInfo getContactInfo() {
+    return contactInfo;
+  }
+
+  /**
+   * This feature is not generally available yet. The enterprise contact info of an EMM owned
+   * enterprise
+   * @param contactInfo contactInfo or {@code null} for none
+   */
+  public Enterprise setContactInfo(ContactInfo contactInfo) {
+    this.contactInfo = contactInfo;
     return this;
   }
 

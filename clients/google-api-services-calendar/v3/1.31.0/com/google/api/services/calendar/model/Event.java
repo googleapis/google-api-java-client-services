@@ -127,6 +127,14 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
+   * not further specified.  - "outOfOffice" - An out-of-office event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventType;
+
+  /**
    * Extended properties of the event.
    * The value may be {@code null}.
    */
@@ -678,6 +686,25 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
+   * not further specified.  - "outOfOffice" - An out-of-office event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventType() {
+    return eventType;
+  }
+
+  /**
+   * Specific type of the event. Read-only. Possible values are: - "default" - A regular event or
+   * not further specified.  - "outOfOffice" - An out-of-office event.
+   * @param eventType eventType or {@code null} for none
+   */
+  public Event setEventType(java.lang.String eventType) {
+    this.eventType = eventType;
     return this;
   }
 

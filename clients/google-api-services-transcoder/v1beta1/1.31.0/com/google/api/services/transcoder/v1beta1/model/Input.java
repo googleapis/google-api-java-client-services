@@ -44,8 +44,9 @@ public final class Input extends com.google.api.client.json.GenericJson {
   private PreprocessingConfig preprocessingConfig;
 
   /**
-   * URI of the media. It must be stored in Cloud Storage. Example `gs://bucket/inputs/file.mp4`. If
-   * empty the value will be populated from `Job.input_uri`.
+   * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud
+   * Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated
+   * from `Job.input_uri`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +87,9 @@ public final class Input extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the media. It must be stored in Cloud Storage. Example `gs://bucket/inputs/file.mp4`. If
-   * empty the value will be populated from `Job.input_uri`.
+   * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud
+   * Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated
+   * from `Job.input_uri`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -95,8 +97,9 @@ public final class Input extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * URI of the media. It must be stored in Cloud Storage. Example `gs://bucket/inputs/file.mp4`. If
-   * empty the value will be populated from `Job.input_uri`.
+   * URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud
+   * Storage (for example, `gs://bucket/inputs/file.mp4`). If empty, the value will be populated
+   * from `Job.input_uri`.
    * @param uri uri or {@code null} for none
    */
   public Input setUri(java.lang.String uri) {

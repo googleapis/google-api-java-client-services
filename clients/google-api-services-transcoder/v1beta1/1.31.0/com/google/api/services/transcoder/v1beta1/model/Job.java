@@ -74,8 +74,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Specify the `input_uri` to populate empty `uri` fields in each element of
-   * `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. It
-   * must be stored in Cloud Storage. For example, `gs://bucket/inputs/file.mp4`.
+   * `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input
+   * files must be at least 5 seconds in duration and stored in Cloud Storage (for example,
+   * `gs://bucket/inputs/file.mp4`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -242,8 +243,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Specify the `input_uri` to populate empty `uri` fields in each element of
-   * `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. It
-   * must be stored in Cloud Storage. For example, `gs://bucket/inputs/file.mp4`.
+   * `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input
+   * files must be at least 5 seconds in duration and stored in Cloud Storage (for example,
+   * `gs://bucket/inputs/file.mp4`).
    * @return value or {@code null} for none
    */
   public java.lang.String getInputUri() {
@@ -252,8 +254,9 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Input only. Specify the `input_uri` to populate empty `uri` fields in each element of
-   * `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. It
-   * must be stored in Cloud Storage. For example, `gs://bucket/inputs/file.mp4`.
+   * `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input
+   * files must be at least 5 seconds in duration and stored in Cloud Storage (for example,
+   * `gs://bucket/inputs/file.mp4`).
    * @param inputUri inputUri or {@code null} for none
    */
   public Job setInputUri(java.lang.String inputUri) {

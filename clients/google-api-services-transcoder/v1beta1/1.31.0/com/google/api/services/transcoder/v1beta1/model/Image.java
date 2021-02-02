@@ -30,7 +30,7 @@ package com.google.api.services.transcoder.v1beta1.model;
 public final class Image extends com.google.api.client.json.GenericJson {
 
   /**
-   * Target image opacity. Valid values: `1` (solid, default), `0` (transparent).
+   * Target image opacity. Valid values: `1.0` (solid, default) to `0.0` (transparent).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String uri;
 
   /**
-   * Target image opacity. Valid values: `1` (solid, default), `0` (transparent).
+   * Target image opacity. Valid values: `1.0` (solid, default) to `0.0` (transparent).
    * @return value or {@code null} for none
    */
   public java.lang.Double getAlpha() {
@@ -61,7 +61,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Target image opacity. Valid values: `1` (solid, default), `0` (transparent).
+   * Target image opacity. Valid values: `1.0` (solid, default) to `0.0` (transparent).
    * @param alpha alpha or {@code null} for none
    */
   public Image setAlpha(java.lang.Double alpha) {

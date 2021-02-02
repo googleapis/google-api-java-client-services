@@ -105,19 +105,21 @@ public final class VideoStream extends com.google.api.client.json.GenericJson {
    * 120. Will default to the input frame rate if larger than the input frame rate. The API will
    * generate an output FPS that is divisible by the input FPS, and smaller or equal to the target
    * FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and
-   * input FPS (in the first column): | | (30) | (60) | (25) | (50) |
+   * input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) |
    * |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60
    * | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | |
    * 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 |
    * 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15
-   * | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 |
+   * | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double frameRate;
 
   /**
-   * Select the GOP size based on the specified duration. The default is `"3s"`.
+   * Select the GOP size based on the specified duration. The default is `"3s"`. Note that
+   * `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and
+   * [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -385,12 +387,12 @@ public final class VideoStream extends com.google.api.client.json.GenericJson {
    * 120. Will default to the input frame rate if larger than the input frame rate. The API will
    * generate an output FPS that is divisible by the input FPS, and smaller or equal to the target
    * FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and
-   * input FPS (in the first column): | | (30) | (60) | (25) | (50) |
+   * input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) |
    * |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60
    * | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | |
    * 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 |
    * 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15
-   * | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 |
+   * | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```
    * @return value or {@code null} for none
    */
   public java.lang.Double getFrameRate() {
@@ -402,12 +404,12 @@ public final class VideoStream extends com.google.api.client.json.GenericJson {
    * 120. Will default to the input frame rate if larger than the input frame rate. The API will
    * generate an output FPS that is divisible by the input FPS, and smaller or equal to the target
    * FPS. The following table shows the computed video FPS given the target FPS (in parenthesis) and
-   * input FPS (in the first column): | | (30) | (60) | (25) | (50) |
+   * input FPS (in the first column): ``` | | (30) | (60) | (25) | (50) |
    * |--------|--------|--------|------|------| | 240 | Fail | Fail | Fail | Fail | | 120 | 30 | 60
    * | 20 | 30 | | 100 | 25 | 50 | 20 | 30 | | 50 | 25 | 50 | 20 | 30 | | 60 | 30 | 60 | 20 | 30 | |
    * 59.94 | 29.97 | 59.94 | 20 | 30 | | 48 | 24 | 48 | 20 | 30 | | 30 | 30 | 30 | 20 | 30 | | 25 |
    * 25 | 25 | 20 | 30 | | 24 | 24 | 24 | 20 | 30 | | 23.976 | 23.976 | 23.976 | 20 | 30 | | 15 | 15
-   * | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 |
+   * | 15 | 20 | 30 | | 12 | 12 | 12 | 20 | 30 | | 10 | 10 | 10 | 20 | 30 | ```
    * @param frameRate frameRate or {@code null} for none
    */
   public VideoStream setFrameRate(java.lang.Double frameRate) {
@@ -416,7 +418,9 @@ public final class VideoStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Select the GOP size based on the specified duration. The default is `"3s"`.
+   * Select the GOP size based on the specified duration. The default is `"3s"`. Note that
+   * `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and
+   * [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
    * @return value or {@code null} for none
    */
   public String getGopDuration() {
@@ -424,7 +428,9 @@ public final class VideoStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Select the GOP size based on the specified duration. The default is `"3s"`.
+   * Select the GOP size based on the specified duration. The default is `"3s"`. Note that
+   * `gopDuration` must be less than or equal to [`segmentDuration`](#SegmentSettings), and
+   * [`segmentDuration`](#SegmentSettings) must be divisible by `gopDuration`.
    * @param gopDuration gopDuration or {@code null} for none
    */
   public VideoStream setGopDuration(String gopDuration) {

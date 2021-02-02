@@ -37,7 +37,9 @@ public final class SegmentSettings extends com.google.api.client.json.GenericJso
   private java.lang.Boolean individualSegments;
 
   /**
-   * Duration of the segments in seconds. The default is `"6.0s"`.
+   * Duration of the segments in seconds. The default is `"6.0s"`. Note that `segmentDuration` must
+   * be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be
+   * divisible by [`gopDuration`](#videostream).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +63,9 @@ public final class SegmentSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Duration of the segments in seconds. The default is `"6.0s"`.
+   * Duration of the segments in seconds. The default is `"6.0s"`. Note that `segmentDuration` must
+   * be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be
+   * divisible by [`gopDuration`](#videostream).
    * @return value or {@code null} for none
    */
   public String getSegmentDuration() {
@@ -69,7 +73,9 @@ public final class SegmentSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Duration of the segments in seconds. The default is `"6.0s"`.
+   * Duration of the segments in seconds. The default is `"6.0s"`. Note that `segmentDuration` must
+   * be greater than or equal to [`gopDuration`](#videostream), and `segmentDuration` must be
+   * divisible by [`gopDuration`](#videostream).
    * @param segmentDuration segmentDuration or {@code null} for none
    */
   public SegmentSettings setSegmentDuration(String segmentDuration) {

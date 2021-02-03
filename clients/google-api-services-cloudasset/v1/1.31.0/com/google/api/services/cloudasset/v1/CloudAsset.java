@@ -2204,7 +2204,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *
      * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
      *        policies within the `scope`. The caller must be granted the
-     *        [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
+     *        [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs
      *        /access-control#required_permissions) permission on the desired scope. The allowed values
      *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
      *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
@@ -2239,7 +2239,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        *
        * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
      *        policies within the `scope`. The caller must be granted the
-     *        [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
+     *        [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs
      *        /access-control#required_permissions) permission on the desired scope. The allowed values
      *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
      *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
@@ -2324,7 +2324,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the IAM policies within the `scope`. The caller must be granted the
-       * [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
+       * [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs
        * /access-control#required_permissions) permission on the desired scope. The allowed values
        * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
        * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
@@ -2335,7 +2335,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /** Required. A scope can be a project, a folder, or an organization. The search is limited to the IAM
      policies within the `scope`. The caller must be granted the
-     [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs/access-
+     [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs/access-
      control#required_permissions) permission on the desired scope. The allowed values are: *
      projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
      "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
@@ -2348,7 +2348,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the IAM policies within the `scope`. The caller must be granted the
-       * [`cloudasset.assets.searchAllIamPolicies`](http://cloud.google.com/asset-inventory/docs
+       * [`cloudasset.assets.searchAllIamPolicies`](https://cloud.google.com/asset-inventory/docs
        * /access-control#required_permissions) permission on the desired scope. The allowed values
        * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
        * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
@@ -2526,7 +2526,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      *
      * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the
      *        resources within the `scope`. The caller must be granted the
-     *        [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
+     *        [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs
      *        /access-control#required_permissions) permission on the desired scope. The allowed values
      *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
      *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
@@ -2561,7 +2561,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        *
        * @param scope Required. A scope can be a project, a folder, or an organization. The search is limited to the
      *        resources within the `scope`. The caller must be granted the
-     *        [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
+     *        [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs
      *        /access-control#required_permissions) permission on the desired scope. The allowed values
      *        are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
      *        "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
@@ -2646,7 +2646,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the resources within the `scope`. The caller must be granted the
-       * [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
+       * [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs
        * /access-control#required_permissions) permission on the desired scope. The allowed values
        * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
        * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
@@ -2657,7 +2657,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
 
       /** Required. A scope can be a project, a folder, or an organization. The search is limited to the
      resources within the `scope`. The caller must be granted the
-     [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs/access-
+     [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs/access-
      control#required_permissions) permission on the desired scope. The allowed values are: *
      projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
      "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
@@ -2670,7 +2670,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. A scope can be a project, a folder, or an organization. The search is limited to
        * the resources within the `scope`. The caller must be granted the
-       * [`cloudasset.assets.searchAllResources`](http://cloud.google.com/asset-inventory/docs
+       * [`cloudasset.assets.searchAllResources`](https://cloud.google.com/asset-inventory/docs
        * /access-control#required_permissions) permission on the desired scope. The allowed values
        * are: * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
        * "projects/12345678") * folders/{FOLDER_NUMBER} (e.g., "folders/1234567") *
@@ -2823,7 +2823,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. The query statement. See [how to construct a query](http://cloud.google.com
+       * Optional. The query statement. See [how to construct a query](https://cloud.google.com
        * /asset-inventory/docs/searching-resources#how_to_construct_a_query) for more information.
        * If not specified or empty, it will search all the resources within the specified `scope`.
        * Examples: * `name:Important` to find Cloud resources whose name contains "Important" as a
@@ -2833,16 +2833,23 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * location contains both "us" and "west" as prefixes. * `labels:prod` to find Cloud resources
        * whose labels contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources
        * that have a label "env" and its value is "prod". * `labels.env:*` to find Cloud resources
-       * that have a label "env". * `Important` to find Cloud resources that contain "Important" as
-       * a word in any of the searchable fields. * `Impor*` to find Cloud resources that contain
-       * "Impor" as a prefix of any word in any of the searchable fields. * `Important location:(us-
-       * west1 OR global)` to find Cloud resources that contain "Important" as a word in any of the
-       * searchable fields and are also located in the "us-west1" region or the "global" location.
+       * that have a label "env". * `kmsKey:key` to find Cloud resources encrypted with a customer-
+       * managed encryption key whose name contains the word "key". * `state:ACTIVE` to find Cloud
+       * resources whose state contains "ACTIVE" as a word. * `createTime<1609459200` to find Cloud
+       * resources that were created before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch
+       * timestamp of "2021-01-01 00:00:00 UTC" in seconds. * `updateTime>1609459200` to find Cloud
+       * resources that were updated after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch
+       * timestamp of "2021-01-01 00:00:00 UTC" in seconds. * `Important` to find Cloud resources
+       * that contain "Important" as a word in any of the searchable fields. * `Impor*` to find
+       * Cloud resources that contain "Impor" as a prefix of any word in any of the searchable
+       * fields. * `Important location:(us-west1 OR global)` to find Cloud resources that contain
+       * "Important" as a word in any of the searchable fields and are also located in the "us-
+       * west1" region or the "global" location.
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Optional. The query statement. See [how to construct a query](http://cloud.google.com/asset-
+      /** Optional. The query statement. See [how to construct a query](https://cloud.google.com/asset-
      inventory/docs/searching-resources#how_to_construct_a_query) for more information. If not specified
      or empty, it will search all the resources within the specified `scope`. Examples: *
      `name:Important` to find Cloud resources whose name contains "Important" as a word. *
@@ -2851,7 +2858,13 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      word in the field. * `location:us-west*` to find Cloud resources whose location contains both "us"
      and "west" as prefixes. * `labels:prod` to find Cloud resources whose labels contain "prod" as a
      key or value. * `labels.env:prod` to find Cloud resources that have a label "env" and its value is
-     "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `Important` to find
+     "prod". * `labels.env:*` to find Cloud resources that have a label "env". * `kmsKey:key` to find
+     Cloud resources encrypted with a customer-managed encryption key whose name contains the word
+     "key". * `state:ACTIVE` to find Cloud resources whose state contains "ACTIVE" as a word. *
+     `createTime<1609459200` to find Cloud resources that were created before "2021-01-01 00:00:00 UTC".
+     1609459200 is the epoch timestamp of "2021-01-01 00:00:00 UTC" in seconds. *
+     `updateTime>1609459200` to find Cloud resources that were updated after "2021-01-01 00:00:00 UTC".
+     1609459200 is the epoch timestamp of "2021-01-01 00:00:00 UTC" in seconds. * `Important` to find
      Cloud resources that contain "Important" as a word in any of the searchable fields. * `Impor*` to
      find Cloud resources that contain "Impor" as a prefix of any word in any of the searchable fields.
      * `Important location:(us-west1 OR global)` to find Cloud resources that contain "Important" as a
@@ -2863,7 +2876,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Optional. The query statement. See [how to construct a query](http://cloud.google.com
+       * Optional. The query statement. See [how to construct a query](https://cloud.google.com
        * /asset-inventory/docs/searching-resources#how_to_construct_a_query) for more information.
        * If not specified or empty, it will search all the resources within the specified `scope`.
        * Examples: * `name:Important` to find Cloud resources whose name contains "Important" as a
@@ -2873,11 +2886,18 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * location contains both "us" and "west" as prefixes. * `labels:prod` to find Cloud resources
        * whose labels contain "prod" as a key or value. * `labels.env:prod` to find Cloud resources
        * that have a label "env" and its value is "prod". * `labels.env:*` to find Cloud resources
-       * that have a label "env". * `Important` to find Cloud resources that contain "Important" as
-       * a word in any of the searchable fields. * `Impor*` to find Cloud resources that contain
-       * "Impor" as a prefix of any word in any of the searchable fields. * `Important location:(us-
-       * west1 OR global)` to find Cloud resources that contain "Important" as a word in any of the
-       * searchable fields and are also located in the "us-west1" region or the "global" location.
+       * that have a label "env". * `kmsKey:key` to find Cloud resources encrypted with a customer-
+       * managed encryption key whose name contains the word "key". * `state:ACTIVE` to find Cloud
+       * resources whose state contains "ACTIVE" as a word. * `createTime<1609459200` to find Cloud
+       * resources that were created before "2021-01-01 00:00:00 UTC". 1609459200 is the epoch
+       * timestamp of "2021-01-01 00:00:00 UTC" in seconds. * `updateTime>1609459200` to find Cloud
+       * resources that were updated after "2021-01-01 00:00:00 UTC". 1609459200 is the epoch
+       * timestamp of "2021-01-01 00:00:00 UTC" in seconds. * `Important` to find Cloud resources
+       * that contain "Important" as a word in any of the searchable fields. * `Impor*` to find
+       * Cloud resources that contain "Impor" as a prefix of any word in any of the searchable
+       * fields. * `Important location:(us-west1 OR global)` to find Cloud resources that contain
+       * "Important" as a word in any of the searchable fields and are also located in the "us-
+       * west1" region or the "global" location.
        */
       public SearchAllResources setQuery(java.lang.String query) {
         this.query = query;

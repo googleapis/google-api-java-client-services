@@ -30,53 +30,53 @@ package com.google.api.services.cloudasset.v1.model;
 public final class ResourceSearchResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The additional searchable attributes of this resource. The attributes may vary from
-   * one resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
+   * The additional searchable attributes of this resource. The attributes may vary from one
+   * resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
    * This field contains a subset of the resource metadata fields that are returned by the List or
    * Get APIs provided by the corresponding GCP service (e.g., Compute Engine). see [API references
    * and supported searchable attributes](https://cloud.google.com/asset-inventory/docs/supported-
-   * asset-types#searchable_asset_types) for more information. You can search values of these fields
-   * through free text search. However, you should not consume the field programically as the field
-   * names and values may change as the GCP service updates to a new incompatible API version. To
-   * search against the `additional_attributes`: * use a free text query to match the attributes
-   * values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can issue a
-   * query `foobar`.
+   * asset-types#searchable_asset_types) to see which fields are included. You can search values of
+   * these fields through free text search. However, you should not consume the field programically
+   * as the field names and values may change as the GCP service updates to a new incompatible API
+   * version. To search against the `additional_attributes`: * use a free text query to match the
+   * attributes values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can
+   * issue a query `foobar`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> additionalAttributes;
 
   /**
-   * Required. The type of this resource. Example: `compute.googleapis.com/Disk`. To search against
-   * the `asset_type`: * specify the `asset_type` field in your search request.
+   * The type of this resource. Example: `compute.googleapis.com/Disk`. To search against the
+   * `asset_type`: * specify the `asset_type` field in your search request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String assetType;
 
   /**
-   * Optional. The create timestamp of this resource, at which the resource was created. The
-   * granularity is in seconds. Timestamp.nanos will always be 0. This field is available only when
-   * the resource's proto contains it. To search against `create_time`: * use a field query (value
-   * in seconds). Example: `createTime >= 1594294238`
+   * The create timestamp of this resource, at which the resource was created. The granularity is in
+   * seconds. Timestamp.nanos will always be 0. This field is available only when the resource's
+   * proto contains it. To search against `create_time`: * use a field query (value in seconds).
+   * Example: `createTime >= 1594294238`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. One or more paragraphs of text description of this resource. Maximum length could be
-   * up to 1M bytes. This field is available only when the resource's proto contains it. To search
-   * against the `description`: * use a field query. Example: `description:"important instance"` *
-   * use a free text query. Example: `"important instance"`
+   * One or more paragraphs of text description of this resource. Maximum length could be up to 1M
+   * bytes. This field is available only when the resource's proto contains it. To search against
+   * the `description`: * use a field query. Example: `description:"important instance"` * use a
+   * free text query. Example: `"important instance"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. The display name of this resource. This field is available only when the resource's
-   * proto contains it. To search against the `display_name`: * use a field query. Example:
+   * The display name of this resource. This field is available only when the resource's proto
+   * contains it. To search against the `display_name`: * use a field query. Example:
    * `displayName:"My Instance"` * use a free text query. Example: `"My Instance"`
    * The value may be {@code null}.
    */
@@ -84,28 +84,28 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String displayName;
 
   /**
-   * Optional. The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}.
-   * This field is available when the resource belongs to one or more folders. To search against
-   * `folders`: * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as
-   * this folder in your search request.
+   * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
+   * is available when the resource belongs to one or more folders. To search against `folders`: *
+   * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as this folder
+   * in your search request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> folders;
 
   /**
-   * Optional. The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/project
-   * s.locations.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/
-   * docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name.
-   * This field is available only when the resource's proto contains it. To search against the
-   * `kms_key`: * use a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
+   * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
+   * s.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/refer
+   * ence/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name. This field
+   * is available only when the resource's proto contains it. To search against the `kms_key`: * use
+   * a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKey;
 
   /**
-   * Optional. Labels associated with this resource. See [Labelling and grouping GCP
+   * Labels associated with this resource. See [Labelling and grouping GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * proto contains it. To search against the `labels`: * use a field query: - query on any label's
@@ -118,17 +118,16 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`. This
-   * field is available only when the resource's proto contains it. To search against the
-   * `location`: * use a field query. Example: `location:us-west*` * use a free text query. Example:
-   * `us-west*`
+   * Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`. This field is
+   * available only when the resource's proto contains it. To search against the `location`: * use a
+   * field query. Example: `location:us-west*` * use a free text query. Example: `us-west*`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * Required. The full resource name of this resource. Example:
+   * The full resource name of this resource. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information. To search against the `name`: * use a field query. Example:
@@ -139,8 +138,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * Optional. Network tags associated with this resource. Like labels, network tags are a type of
-   * annotations used to group GCP resources. See [Labelling GCP
+   * Network tags associated with this resource. Like labels, network tags are a type of annotations
+   * used to group GCP resources. See [Labelling GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * proto contains it. To search against the `network_tags`: * use a field query. Example:
@@ -151,8 +150,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> networkTags;
 
   /**
-   * Optional. The organization that this resource belongs to, in the form of
-   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to a
+   * The organization that this resource belongs to, in the form of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to an
    * organization. To search against `organization`: * use a field query. Example:
    * `organization:123` * specify the `scope` field as this organization in your search request.
    * The value may be {@code null}.
@@ -161,21 +160,21 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String organization;
 
   /**
-   * Optional. The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}.
-   * This field is available when the resource belongs to a project. To search against `project`: *
-   * use a field query. Example: `project:12345` * specify the `scope` field as this project in your
-   * search request.
+   * The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}. This field
+   * is available when the resource belongs to a project. To search against `project`: * use a field
+   * query. Example: `project:12345` * specify the `scope` field as this project in your search
+   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
 
   /**
-   * Optional. The state of this resource. Different resources types have different state
-   * definitions that are mapped from various fields of different resource types. This field is
-   * available only when the resource's proto contains it. Example: If the resource is an instance
-   * provided by Compute Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING,
-   * SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. See `status` definition in [API
+   * The state of this resource. Different resources types have different state definitions that are
+   * mapped from various fields of different resource types. This field is available only when the
+   * resource's proto contains it. Example: If the resource is an instance provided by Compute
+   * Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED,
+   * REPAIRING, and TERMINATED. See `status` definition in [API
    * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
    * is a project provided by Cloud Resource Manager, its state will include
    * LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See
@@ -188,27 +187,27 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   private java.lang.String state;
 
   /**
-   * Optional. The last update timestamp of this resource, at which the resource was last modified
-   * or deleted. The granularity is in seconds. Timestamp.nanos will always be 0. This field is
-   * available only when the resource's proto contains it. To search against `update_time`: * use a
-   * field query (value in seconds). Example: `updateTime < 1594294238`
+   * The last update timestamp of this resource, at which the resource was last modified or deleted.
+   * The granularity is in seconds. Timestamp.nanos will always be 0. This field is available only
+   * when the resource's proto contains it. To search against `update_time`: * use a field query
+   * (value in seconds). Example: `updateTime < 1594294238`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. The additional searchable attributes of this resource. The attributes may vary from
-   * one resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
+   * The additional searchable attributes of this resource. The attributes may vary from one
+   * resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
    * This field contains a subset of the resource metadata fields that are returned by the List or
    * Get APIs provided by the corresponding GCP service (e.g., Compute Engine). see [API references
    * and supported searchable attributes](https://cloud.google.com/asset-inventory/docs/supported-
-   * asset-types#searchable_asset_types) for more information. You can search values of these fields
-   * through free text search. However, you should not consume the field programically as the field
-   * names and values may change as the GCP service updates to a new incompatible API version. To
-   * search against the `additional_attributes`: * use a free text query to match the attributes
-   * values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can issue a
-   * query `foobar`.
+   * asset-types#searchable_asset_types) to see which fields are included. You can search values of
+   * these fields through free text search. However, you should not consume the field programically
+   * as the field names and values may change as the GCP service updates to a new incompatible API
+   * version. To search against the `additional_attributes`: * use a free text query to match the
+   * attributes values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can
+   * issue a query `foobar`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getAdditionalAttributes() {
@@ -216,17 +215,17 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The additional searchable attributes of this resource. The attributes may vary from
-   * one resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
+   * The additional searchable attributes of this resource. The attributes may vary from one
+   * resource type to another. Examples: `projectId` for Project, `dnsName` for DNS ManagedZone.
    * This field contains a subset of the resource metadata fields that are returned by the List or
    * Get APIs provided by the corresponding GCP service (e.g., Compute Engine). see [API references
    * and supported searchable attributes](https://cloud.google.com/asset-inventory/docs/supported-
-   * asset-types#searchable_asset_types) for more information. You can search values of these fields
-   * through free text search. However, you should not consume the field programically as the field
-   * names and values may change as the GCP service updates to a new incompatible API version. To
-   * search against the `additional_attributes`: * use a free text query to match the attributes
-   * values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can issue a
-   * query `foobar`.
+   * asset-types#searchable_asset_types) to see which fields are included. You can search values of
+   * these fields through free text search. However, you should not consume the field programically
+   * as the field names and values may change as the GCP service updates to a new incompatible API
+   * version. To search against the `additional_attributes`: * use a free text query to match the
+   * attributes values. Example: to search `additional_attributes = { dnsName: "foobar" }`, you can
+   * issue a query `foobar`.
    * @param additionalAttributes additionalAttributes or {@code null} for none
    */
   public ResourceSearchResult setAdditionalAttributes(java.util.Map<String, java.lang.Object> additionalAttributes) {
@@ -235,8 +234,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The type of this resource. Example: `compute.googleapis.com/Disk`. To search against
-   * the `asset_type`: * specify the `asset_type` field in your search request.
+   * The type of this resource. Example: `compute.googleapis.com/Disk`. To search against the
+   * `asset_type`: * specify the `asset_type` field in your search request.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetType() {
@@ -244,8 +243,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The type of this resource. Example: `compute.googleapis.com/Disk`. To search against
-   * the `asset_type`: * specify the `asset_type` field in your search request.
+   * The type of this resource. Example: `compute.googleapis.com/Disk`. To search against the
+   * `asset_type`: * specify the `asset_type` field in your search request.
    * @param assetType assetType or {@code null} for none
    */
   public ResourceSearchResult setAssetType(java.lang.String assetType) {
@@ -254,10 +253,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The create timestamp of this resource, at which the resource was created. The
-   * granularity is in seconds. Timestamp.nanos will always be 0. This field is available only when
-   * the resource's proto contains it. To search against `create_time`: * use a field query (value
-   * in seconds). Example: `createTime >= 1594294238`
+   * The create timestamp of this resource, at which the resource was created. The granularity is in
+   * seconds. Timestamp.nanos will always be 0. This field is available only when the resource's
+   * proto contains it. To search against `create_time`: * use a field query (value in seconds).
+   * Example: `createTime >= 1594294238`
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -265,10 +264,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The create timestamp of this resource, at which the resource was created. The
-   * granularity is in seconds. Timestamp.nanos will always be 0. This field is available only when
-   * the resource's proto contains it. To search against `create_time`: * use a field query (value
-   * in seconds). Example: `createTime >= 1594294238`
+   * The create timestamp of this resource, at which the resource was created. The granularity is in
+   * seconds. Timestamp.nanos will always be 0. This field is available only when the resource's
+   * proto contains it. To search against `create_time`: * use a field query (value in seconds).
+   * Example: `createTime >= 1594294238`
    * @param createTime createTime or {@code null} for none
    */
   public ResourceSearchResult setCreateTime(String createTime) {
@@ -277,10 +276,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. One or more paragraphs of text description of this resource. Maximum length could be
-   * up to 1M bytes. This field is available only when the resource's proto contains it. To search
-   * against the `description`: * use a field query. Example: `description:"important instance"` *
-   * use a free text query. Example: `"important instance"`
+   * One or more paragraphs of text description of this resource. Maximum length could be up to 1M
+   * bytes. This field is available only when the resource's proto contains it. To search against
+   * the `description`: * use a field query. Example: `description:"important instance"` * use a
+   * free text query. Example: `"important instance"`
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -288,10 +287,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. One or more paragraphs of text description of this resource. Maximum length could be
-   * up to 1M bytes. This field is available only when the resource's proto contains it. To search
-   * against the `description`: * use a field query. Example: `description:"important instance"` *
-   * use a free text query. Example: `"important instance"`
+   * One or more paragraphs of text description of this resource. Maximum length could be up to 1M
+   * bytes. This field is available only when the resource's proto contains it. To search against
+   * the `description`: * use a field query. Example: `description:"important instance"` * use a
+   * free text query. Example: `"important instance"`
    * @param description description or {@code null} for none
    */
   public ResourceSearchResult setDescription(java.lang.String description) {
@@ -300,8 +299,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The display name of this resource. This field is available only when the resource's
-   * proto contains it. To search against the `display_name`: * use a field query. Example:
+   * The display name of this resource. This field is available only when the resource's proto
+   * contains it. To search against the `display_name`: * use a field query. Example:
    * `displayName:"My Instance"` * use a free text query. Example: `"My Instance"`
    * @return value or {@code null} for none
    */
@@ -310,8 +309,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The display name of this resource. This field is available only when the resource's
-   * proto contains it. To search against the `display_name`: * use a field query. Example:
+   * The display name of this resource. This field is available only when the resource's proto
+   * contains it. To search against the `display_name`: * use a field query. Example:
    * `displayName:"My Instance"` * use a free text query. Example: `"My Instance"`
    * @param displayName displayName or {@code null} for none
    */
@@ -321,10 +320,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}.
-   * This field is available when the resource belongs to one or more folders. To search against
-   * `folders`: * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as
-   * this folder in your search request.
+   * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
+   * is available when the resource belongs to one or more folders. To search against `folders`: *
+   * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as this folder
+   * in your search request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFolders() {
@@ -332,10 +331,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}.
-   * This field is available when the resource belongs to one or more folders. To search against
-   * `folders`: * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as
-   * this folder in your search request.
+   * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
+   * is available when the resource belongs to one or more folders. To search against `folders`: *
+   * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as this folder
+   * in your search request.
    * @param folders folders or {@code null} for none
    */
   public ResourceSearchResult setFolders(java.util.List<java.lang.String> folders) {
@@ -344,11 +343,11 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/project
-   * s.locations.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/
-   * docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name.
-   * This field is available only when the resource's proto contains it. To search against the
-   * `kms_key`: * use a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
+   * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
+   * s.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/refer
+   * ence/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name. This field
+   * is available only when the resource's proto contains it. To search against the `kms_key`: * use
+   * a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKey() {
@@ -356,11 +355,11 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/project
-   * s.locations.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/
-   * docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name.
-   * This field is available only when the resource's proto contains it. To search against the
-   * `kms_key`: * use a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
+   * The Cloud KMS [CryptoKey](https://cloud.google.com/kms/docs/reference/rest/v1/projects.location
+   * s.keyRings.cryptoKeys?hl=en) name or [CryptoKeyVersion](https://cloud.google.com/kms/docs/refer
+   * ence/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions?hl=en) name. This field
+   * is available only when the resource's proto contains it. To search against the `kms_key`: * use
+   * a field query. Example: `kmsKey:key` * use a free text query. Example: `key`
    * @param kmsKey kmsKey or {@code null} for none
    */
   public ResourceSearchResult setKmsKey(java.lang.String kmsKey) {
@@ -369,7 +368,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Labels associated with this resource. See [Labelling and grouping GCP
+   * Labels associated with this resource. See [Labelling and grouping GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * proto contains it. To search against the `labels`: * use a field query: - query on any label's
@@ -383,7 +382,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Labels associated with this resource. See [Labelling and grouping GCP
+   * Labels associated with this resource. See [Labelling and grouping GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * proto contains it. To search against the `labels`: * use a field query: - query on any label's
@@ -398,10 +397,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`. This
-   * field is available only when the resource's proto contains it. To search against the
-   * `location`: * use a field query. Example: `location:us-west*` * use a free text query. Example:
-   * `us-west*`
+   * Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`. This field is
+   * available only when the resource's proto contains it. To search against the `location`: * use a
+   * field query. Example: `location:us-west*` * use a free text query. Example: `us-west*`
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -409,10 +407,9 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`. This
-   * field is available only when the resource's proto contains it. To search against the
-   * `location`: * use a field query. Example: `location:us-west*` * use a free text query. Example:
-   * `us-west*`
+   * Location can be `global`, regional like `us-east1`, or zonal like `us-west1-b`. This field is
+   * available only when the resource's proto contains it. To search against the `location`: * use a
+   * field query. Example: `location:us-west*` * use a free text query. Example: `us-west*`
    * @param location location or {@code null} for none
    */
   public ResourceSearchResult setLocation(java.lang.String location) {
@@ -421,7 +418,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The full resource name of this resource. Example:
+   * The full resource name of this resource. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information. To search against the `name`: * use a field query. Example:
@@ -433,7 +430,7 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The full resource name of this resource. Example:
+   * The full resource name of this resource. Example:
    * `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. See [Cloud
    * Asset Inventory Resource Name Format](https://cloud.google.com/asset-inventory/docs/resource-
    * name-format) for more information. To search against the `name`: * use a field query. Example:
@@ -446,8 +443,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Network tags associated with this resource. Like labels, network tags are a type of
-   * annotations used to group GCP resources. See [Labelling GCP
+   * Network tags associated with this resource. Like labels, network tags are a type of annotations
+   * used to group GCP resources. See [Labelling GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * proto contains it. To search against the `network_tags`: * use a field query. Example:
@@ -459,8 +456,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Network tags associated with this resource. Like labels, network tags are a type of
-   * annotations used to group GCP resources. See [Labelling GCP
+   * Network tags associated with this resource. Like labels, network tags are a type of annotations
+   * used to group GCP resources. See [Labelling GCP
    * resources](https://cloud.google.com/blog/products/gcp/labelling-and-grouping-your-google-cloud-
    * platform-resources) for more information. This field is available only when the resource's
    * proto contains it. To search against the `network_tags`: * use a field query. Example:
@@ -473,8 +470,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The organization that this resource belongs to, in the form of
-   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to a
+   * The organization that this resource belongs to, in the form of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to an
    * organization. To search against `organization`: * use a field query. Example:
    * `organization:123` * specify the `scope` field as this organization in your search request.
    * @return value or {@code null} for none
@@ -484,8 +481,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The organization that this resource belongs to, in the form of
-   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to a
+   * The organization that this resource belongs to, in the form of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to an
    * organization. To search against `organization`: * use a field query. Example:
    * `organization:123` * specify the `scope` field as this organization in your search request.
    * @param organization organization or {@code null} for none
@@ -496,10 +493,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}.
-   * This field is available when the resource belongs to a project. To search against `project`: *
-   * use a field query. Example: `project:12345` * specify the `scope` field as this project in your
-   * search request.
+   * The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}. This field
+   * is available when the resource belongs to a project. To search against `project`: * use a field
+   * query. Example: `project:12345` * specify the `scope` field as this project in your search
+   * request.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -507,10 +504,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}.
-   * This field is available when the resource belongs to a project. To search against `project`: *
-   * use a field query. Example: `project:12345` * specify the `scope` field as this project in your
-   * search request.
+   * The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}. This field
+   * is available when the resource belongs to a project. To search against `project`: * use a field
+   * query. Example: `project:12345` * specify the `scope` field as this project in your search
+   * request.
    * @param project project or {@code null} for none
    */
   public ResourceSearchResult setProject(java.lang.String project) {
@@ -519,11 +516,11 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The state of this resource. Different resources types have different state
-   * definitions that are mapped from various fields of different resource types. This field is
-   * available only when the resource's proto contains it. Example: If the resource is an instance
-   * provided by Compute Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING,
-   * SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. See `status` definition in [API
+   * The state of this resource. Different resources types have different state definitions that are
+   * mapped from various fields of different resource types. This field is available only when the
+   * resource's proto contains it. Example: If the resource is an instance provided by Compute
+   * Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED,
+   * REPAIRING, and TERMINATED. See `status` definition in [API
    * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
    * is a project provided by Cloud Resource Manager, its state will include
    * LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See
@@ -537,11 +534,11 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The state of this resource. Different resources types have different state
-   * definitions that are mapped from various fields of different resource types. This field is
-   * available only when the resource's proto contains it. Example: If the resource is an instance
-   * provided by Compute Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING,
-   * SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. See `status` definition in [API
+   * The state of this resource. Different resources types have different state definitions that are
+   * mapped from various fields of different resource types. This field is available only when the
+   * resource's proto contains it. Example: If the resource is an instance provided by Compute
+   * Engine, its state will include PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED,
+   * REPAIRING, and TERMINATED. See `status` definition in [API
    * Reference](https://cloud.google.com/compute/docs/reference/rest/v1/instances). If the resource
    * is a project provided by Cloud Resource Manager, its state will include
    * LIFECYCLE_STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED and DELETE_IN_PROGRESS. See
@@ -556,10 +553,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The last update timestamp of this resource, at which the resource was last modified
-   * or deleted. The granularity is in seconds. Timestamp.nanos will always be 0. This field is
-   * available only when the resource's proto contains it. To search against `update_time`: * use a
-   * field query (value in seconds). Example: `updateTime < 1594294238`
+   * The last update timestamp of this resource, at which the resource was last modified or deleted.
+   * The granularity is in seconds. Timestamp.nanos will always be 0. This field is available only
+   * when the resource's proto contains it. To search against `update_time`: * use a field query
+   * (value in seconds). Example: `updateTime < 1594294238`
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -567,10 +564,10 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The last update timestamp of this resource, at which the resource was last modified
-   * or deleted. The granularity is in seconds. Timestamp.nanos will always be 0. This field is
-   * available only when the resource's proto contains it. To search against `update_time`: * use a
-   * field query (value in seconds). Example: `updateTime < 1594294238`
+   * The last update timestamp of this resource, at which the resource was last modified or deleted.
+   * The granularity is in seconds. Timestamp.nanos will always be 0. This field is available only
+   * when the resource's proto contains it. To search against `update_time`: * use a field query
+   * (value in seconds). Example: `updateTime < 1594294238`
    * @param updateTime updateTime or {@code null} for none
    */
   public ResourceSearchResult setUpdateTime(String updateTime) {

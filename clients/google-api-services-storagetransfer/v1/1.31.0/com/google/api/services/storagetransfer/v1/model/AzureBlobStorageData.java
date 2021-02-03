@@ -36,8 +36,8 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
 
   /**
    * Required. Input only. Credentials used to authenticate API requests to Azure. For information
-   * on our data retention policy for user credentials, see [User credentials](data-retention#user-
-   * credentials).
+   * on our data retention policy for user credentials, see [User credentials](/storage-
+   * transfer/docs/data-retention#user-credentials).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
 
   /**
    * Required. Input only. Credentials used to authenticate API requests to Azure. For information
-   * on our data retention policy for user credentials, see [User credentials](data-retention#user-
-   * credentials).
+   * on our data retention policy for user credentials, see [User credentials](/storage-
+   * transfer/docs/data-retention#user-credentials).
    * @return value or {@code null} for none
    */
   public AzureCredentials getAzureCredentials() {
@@ -77,8 +77,8 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
 
   /**
    * Required. Input only. Credentials used to authenticate API requests to Azure. For information
-   * on our data retention policy for user credentials, see [User credentials](data-retention#user-
-   * credentials).
+   * on our data retention policy for user credentials, see [User credentials](/storage-
+   * transfer/docs/data-retention#user-credentials).
    * @param azureCredentials azureCredentials or {@code null} for none
    */
   public AzureBlobStorageData setAzureCredentials(AzureCredentials azureCredentials) {

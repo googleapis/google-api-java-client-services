@@ -72,6 +72,13 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
   private java.lang.Integer targetSdkVersion;
 
   /**
+   * Permissions declared to be used by the application
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> usesPermission;
+
+  /**
    * User-readable name for the application.
    * @return value or {@code null} for none
    */
@@ -168,6 +175,23 @@ public final class ApkManifest extends com.google.api.client.json.GenericJson {
    */
   public ApkManifest setTargetSdkVersion(java.lang.Integer targetSdkVersion) {
     this.targetSdkVersion = targetSdkVersion;
+    return this;
+  }
+
+  /**
+   * Permissions declared to be used by the application
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUsesPermission() {
+    return usesPermission;
+  }
+
+  /**
+   * Permissions declared to be used by the application
+   * @param usesPermission usesPermission or {@code null} for none
+   */
+  public ApkManifest setUsesPermission(java.util.List<java.lang.String> usesPermission) {
+    this.usesPermission = usesPermission;
     return this;
   }
 

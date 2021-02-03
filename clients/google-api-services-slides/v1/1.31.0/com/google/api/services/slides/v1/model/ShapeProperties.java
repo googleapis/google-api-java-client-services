@@ -34,6 +34,13 @@ package com.google.api.services.slides.v1.model;
 public final class ShapeProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * The autofit properties of the shape. This property is only set for shapes that allow text.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Autofit autofit;
+
+  /**
    * The alignment of the content in the shape. If unspecified, the alignment is inherited from a
    * parent placeholder if it exists. If the shape has no parent, the default alignment matches the
    * alignment for new shapes created in the Slides editor.
@@ -76,6 +83,23 @@ public final class ShapeProperties extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private ShapeBackgroundFill shapeBackgroundFill;
+
+  /**
+   * The autofit properties of the shape. This property is only set for shapes that allow text.
+   * @return value or {@code null} for none
+   */
+  public Autofit getAutofit() {
+    return autofit;
+  }
+
+  /**
+   * The autofit properties of the shape. This property is only set for shapes that allow text.
+   * @param autofit autofit or {@code null} for none
+   */
+  public ShapeProperties setAutofit(Autofit autofit) {
+    this.autofit = autofit;
+    return this;
+  }
 
   /**
    * The alignment of the content in the shape. If unspecified, the alignment is inherited from a

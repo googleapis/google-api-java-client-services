@@ -54,7 +54,7 @@ packages on [Maven Central][maven-search].
 | Certificate Authority API | [v1beta1](clients/google-api-services-privateca/v1beta1) |
 | Chrome UX Report API | [v1](clients/google-api-services-chromeuxreport/v1) |
 | Chrome Verified Access API | [v1](clients/google-api-services-verifiedaccess/v1) |
-| Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1), [v1p1beta1](clients/google-api-services-cloudasset/v1p1beta1), [v1p4beta1](clients/google-api-services-cloudasset/v1p4beta1), [v1p5beta1](clients/google-api-services-cloudasset/v1p5beta1) |
+| Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1), [v1p1beta1](clients/google-api-services-cloudasset/v1p1beta1), [v1p4beta1](clients/google-api-services-cloudasset/v1p4beta1), [v1p5beta1](clients/google-api-services-cloudasset/v1p5beta1), [v1p7beta1](clients/google-api-services-cloudasset/v1p7beta1) |
 | Cloud Bigtable Admin API | [v1](clients/google-api-services-bigtableadmin/v1), [v2](clients/google-api-services-bigtableadmin/v2) |
 | Cloud Billing API | [v1](clients/google-api-services-cloudbilling/v1) |
 | Cloud Billing Budget API | [v1](clients/google-api-services-billingbudgets/v1), [v1beta1](clients/google-api-services-billingbudgets/v1beta1) |
@@ -140,6 +140,7 @@ packages on [Maven Central][maven-search].
 | Google Analytics API | [v3](clients/google-api-services-analytics/v3) |
 | Google Analytics Admin API | [v1alpha](clients/google-api-services-analyticsadmin/v1alpha) |
 | Google Analytics Data API | [v1alpha](clients/google-api-services-analyticsdata/v1alpha) |
+| Google Chat API | [v1](clients/google-api-services-chat/v1) |
 | Google Civic Information API | [v2](clients/google-api-services-civicinfo/v2) |
 | Google Classroom API | [v1](clients/google-api-services-classroom/v1) |
 | Google Cloud Data Catalog API | [v1beta1](clients/google-api-services-datacatalog/v1beta1) |
@@ -162,7 +163,6 @@ packages on [Maven Central][maven-search].
 | Google Workspace Reseller API | [v1](clients/google-api-services-reseller/v1) |
 | Groups Migration API | [v1](clients/google-api-services-groupsmigration/v1) |
 | Groups Settings API | [v1](clients/google-api-services-groupssettings/v1) |
-| Hangouts Chat API | [v1](clients/google-api-services-chat/v1) |
 | HomeGraph API | [v1](clients/google-api-services-homegraph/v1) |
 | IAM Service Account Credentials API | [v1](clients/google-api-services-iamcredentials/v1) |
 | Identity and Access Management (IAM) API | [v1](clients/google-api-services-iam/v1) |

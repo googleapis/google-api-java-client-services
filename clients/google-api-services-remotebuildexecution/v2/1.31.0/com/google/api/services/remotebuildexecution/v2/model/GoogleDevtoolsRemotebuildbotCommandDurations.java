@@ -31,6 +31,13 @@ package com.google.api.services.remotebuildexecution.v2.model;
 public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time spent waiting for Container Manager to assign an asynchronous container for execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String cmWaitForAssignment;
+
+  /**
    * The time spent preparing the command to be run in a Docker container (includes pulling the
    * Docker image, if necessary).
    * The value may be {@code null}.
@@ -107,6 +114,23 @@ public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.goog
    */
   @com.google.api.client.util.Key
   private String uploadStartTime;
+
+  /**
+   * The time spent waiting for Container Manager to assign an asynchronous container for execution.
+   * @return value or {@code null} for none
+   */
+  public String getCmWaitForAssignment() {
+    return cmWaitForAssignment;
+  }
+
+  /**
+   * The time spent waiting for Container Manager to assign an asynchronous container for execution.
+   * @param cmWaitForAssignment cmWaitForAssignment or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandDurations setCmWaitForAssignment(String cmWaitForAssignment) {
+    this.cmWaitForAssignment = cmWaitForAssignment;
+    return this;
+  }
 
   /**
    * The time spent preparing the command to be run in a Docker container (includes pulling the

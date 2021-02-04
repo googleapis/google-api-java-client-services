@@ -68,6 +68,13 @@ public final class GoogleDevtoolsRemotebuildbotCommandEvents extends com.google.
   private java.math.BigInteger numWarnings;
 
   /**
+   * Indicates whether an asynchronous container was used for execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean usedAsyncContainer;
+
+  /**
    * Indicates whether we are using a cached Docker image (true) or had to pull the Docker image
    * (false) for this command.
    * @return value or {@code null} for none
@@ -151,6 +158,23 @@ public final class GoogleDevtoolsRemotebuildbotCommandEvents extends com.google.
    */
   public GoogleDevtoolsRemotebuildbotCommandEvents setNumWarnings(java.math.BigInteger numWarnings) {
     this.numWarnings = numWarnings;
+    return this;
+  }
+
+  /**
+   * Indicates whether an asynchronous container was used for execution.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUsedAsyncContainer() {
+    return usedAsyncContainer;
+  }
+
+  /**
+   * Indicates whether an asynchronous container was used for execution.
+   * @param usedAsyncContainer usedAsyncContainer or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandEvents setUsedAsyncContainer(java.lang.Boolean usedAsyncContainer) {
+    this.usedAsyncContainer = usedAsyncContainer;
     return this;
   }
 

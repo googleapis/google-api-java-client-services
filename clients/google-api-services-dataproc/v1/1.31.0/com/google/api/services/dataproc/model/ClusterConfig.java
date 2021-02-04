@@ -98,6 +98,13 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private InstanceGroupConfig masterConfig;
 
   /**
+   * Optional. Metastore configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MetastoreConfig metastoreConfig;
+
+  /**
    * Optional. The Compute Engine config settings for additional worker instances in a cluster.
    * The value may be {@code null}.
    */
@@ -295,6 +302,23 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setMasterConfig(InstanceGroupConfig masterConfig) {
     this.masterConfig = masterConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Metastore configuration.
+   * @return value or {@code null} for none
+   */
+  public MetastoreConfig getMetastoreConfig() {
+    return metastoreConfig;
+  }
+
+  /**
+   * Optional. Metastore configuration.
+   * @param metastoreConfig metastoreConfig or {@code null} for none
+   */
+  public ClusterConfig setMetastoreConfig(MetastoreConfig metastoreConfig) {
+    this.metastoreConfig = metastoreConfig;
     return this;
   }
 

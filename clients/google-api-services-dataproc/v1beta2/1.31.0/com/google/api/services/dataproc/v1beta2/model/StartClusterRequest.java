@@ -30,8 +30,8 @@ package com.google.api.services.dataproc.v1beta2.model;
 public final class StartClusterRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifying the cluster_uuid means the RPC should fail (with error NOT_FOUND) if
-   * cluster with specified UUID does not exist.
+   * Optional. Specifying the cluster_uuid means the RPC will fail (with error NOT_FOUND) if a
+   * cluster with the specified UUID does not exist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,9 +39,10 @@ public final class StartClusterRequest extends com.google.api.client.json.Generi
 
   /**
    * Optional. A unique id used to identify the request. If the server receives two
-   * StartClusterRequest requests with the same id, then the second request will be ignored and the
-   * first google.longrunning.Operation created and stored in the backend is returned.It is
-   * recommended to always set this value to a UUID
+   * StartClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc
+   * .v1beta2#google.cloud.dataproc.v1beta2.StartClusterRequest)s with the same id, then the second
+   * request will be ignored and the first google.longrunning.Operation created and stored in the
+   * backend is returned.Recommendation: Set this value to a UUID
    * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters
    * (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40
    * characters.
@@ -51,8 +52,8 @@ public final class StartClusterRequest extends com.google.api.client.json.Generi
   private java.lang.String requestId;
 
   /**
-   * Optional. Specifying the cluster_uuid means the RPC should fail (with error NOT_FOUND) if
-   * cluster with specified UUID does not exist.
+   * Optional. Specifying the cluster_uuid means the RPC will fail (with error NOT_FOUND) if a
+   * cluster with the specified UUID does not exist.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterUuid() {
@@ -60,8 +61,8 @@ public final class StartClusterRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Specifying the cluster_uuid means the RPC should fail (with error NOT_FOUND) if
-   * cluster with specified UUID does not exist.
+   * Optional. Specifying the cluster_uuid means the RPC will fail (with error NOT_FOUND) if a
+   * cluster with the specified UUID does not exist.
    * @param clusterUuid clusterUuid or {@code null} for none
    */
   public StartClusterRequest setClusterUuid(java.lang.String clusterUuid) {
@@ -71,9 +72,10 @@ public final class StartClusterRequest extends com.google.api.client.json.Generi
 
   /**
    * Optional. A unique id used to identify the request. If the server receives two
-   * StartClusterRequest requests with the same id, then the second request will be ignored and the
-   * first google.longrunning.Operation created and stored in the backend is returned.It is
-   * recommended to always set this value to a UUID
+   * StartClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc
+   * .v1beta2#google.cloud.dataproc.v1beta2.StartClusterRequest)s with the same id, then the second
+   * request will be ignored and the first google.longrunning.Operation created and stored in the
+   * backend is returned.Recommendation: Set this value to a UUID
    * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters
    * (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40
    * characters.
@@ -85,9 +87,10 @@ public final class StartClusterRequest extends com.google.api.client.json.Generi
 
   /**
    * Optional. A unique id used to identify the request. If the server receives two
-   * StartClusterRequest requests with the same id, then the second request will be ignored and the
-   * first google.longrunning.Operation created and stored in the backend is returned.It is
-   * recommended to always set this value to a UUID
+   * StartClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc
+   * .v1beta2#google.cloud.dataproc.v1beta2.StartClusterRequest)s with the same id, then the second
+   * request will be ignored and the first google.longrunning.Operation created and stored in the
+   * backend is returned.Recommendation: Set this value to a UUID
    * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters
    * (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40
    * characters.

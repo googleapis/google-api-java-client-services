@@ -83,11 +83,11 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Compute Engine network to be used for machine communications, specified as a
    * [relative resource name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/global/networks/{networkId}". [Shared VPC](/vpc/docs/shared-vpc) is not
-   * currently supported. The network must belong to the environment's project. If unspecified, the
-   * "default" network ID in the environment's project is used. If a [Custom Subnet
+   * "projects/{projectId}/global/networks/{networkId}". If unspecified, the "default" network ID in
+   * the environment's project is used. If a [Custom Subnet
    * Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also
-   * be provided.
+   * be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
+   * `nodeConfig.subnetwork`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,11 +245,11 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Compute Engine network to be used for machine communications, specified as a
    * [relative resource name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/global/networks/{networkId}". [Shared VPC](/vpc/docs/shared-vpc) is not
-   * currently supported. The network must belong to the environment's project. If unspecified, the
-   * "default" network ID in the environment's project is used. If a [Custom Subnet
+   * "projects/{projectId}/global/networks/{networkId}". If unspecified, the "default" network ID in
+   * the environment's project is used. If a [Custom Subnet
    * Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also
-   * be provided.
+   * be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
+   * `nodeConfig.subnetwork`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -259,11 +259,11 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Compute Engine network to be used for machine communications, specified as a
    * [relative resource name](/apis/design/resource_names#relative_resource_name). For example:
-   * "projects/{projectId}/global/networks/{networkId}". [Shared VPC](/vpc/docs/shared-vpc) is not
-   * currently supported. The network must belong to the environment's project. If unspecified, the
-   * "default" network ID in the environment's project is used. If a [Custom Subnet
+   * "projects/{projectId}/global/networks/{networkId}". If unspecified, the "default" network ID in
+   * the environment's project is used. If a [Custom Subnet
    * Network](/vpc/docs/vpc#vpc_networks_and_subnets) is provided, `nodeConfig.subnetwork` must also
-   * be provided.
+   * be provided. For [Shared VPC](/vpc/docs/shared-vpc) subnetwork requirements, see
+   * `nodeConfig.subnetwork`.
    * @param network network or {@code null} for none
    */
   public NodeConfig setNetwork(java.lang.String network) {

@@ -4895,22 +4895,24 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. A unique id used to identify the request. If the server receives two
-           * CreateClusterRequest requests with the same id, then the second request will be ignored
-           * and the first google.longrunning.Operation created and stored in the backend is
-           * returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
-           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
-           * is 40 characters.
+           * CreateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
+           * .dataproc.v1beta2#google.cloud.dataproc.v1beta2.CreateClusterRequest)s with the same
+           * id, then the second request will be ignored and the first google.longrunning.Operation
+           * created and stored in the backend is returned.It is recommended to always set this
+           * value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id
+           * must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+           * The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. A unique id used to identify the request. If the server receives two CreateClusterRequest
-         requests with the same id, then the second request will be ignored and the first
-         google.longrunning.Operation created and stored in the backend is returned.It is recommended to
-         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+         (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1beta2#google.cloud.da
+         taproc.v1beta2.CreateClusterRequest)s with the same id, then the second request will be ignored and
+         the first google.longrunning.Operation created and stored in the backend is returned.It is
+         recommended to always set this value to a UUID
+         (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters
+         (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -4918,12 +4920,13 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. A unique id used to identify the request. If the server receives two
-           * CreateClusterRequest requests with the same id, then the second request will be ignored
-           * and the first google.longrunning.Operation created and stored in the backend is
-           * returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
-           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
-           * is 40 characters.
+           * CreateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
+           * .dataproc.v1beta2#google.cloud.dataproc.v1beta2.CreateClusterRequest)s with the same
+           * id, then the second request will be ignored and the first google.longrunning.Operation
+           * created and stored in the backend is returned.It is recommended to always set this
+           * value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id
+           * must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+           * The maximum length is 40 characters.
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -5113,22 +5116,24 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. A unique id used to identify the request. If the server receives two
-           * DeleteClusterRequest requests with the same id, then the second request will be ignored
-           * and the first google.longrunning.Operation created and stored in the backend is
-           * returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
-           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
-           * is 40 characters.
+           * DeleteClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
+           * .dataproc.v1beta2#google.cloud.dataproc.v1beta2.DeleteClusterRequest)s with the same
+           * id, then the second request will be ignored and the first google.longrunning.Operation
+           * created and stored in the backend is returned.It is recommended to always set this
+           * value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id
+           * must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+           * The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. A unique id used to identify the request. If the server receives two DeleteClusterRequest
-         requests with the same id, then the second request will be ignored and the first
-         google.longrunning.Operation created and stored in the backend is returned.It is recommended to
-         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+         (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1beta2#google.cloud.da
+         taproc.v1beta2.DeleteClusterRequest)s with the same id, then the second request will be ignored and
+         the first google.longrunning.Operation created and stored in the backend is returned.It is
+         recommended to always set this value to a UUID
+         (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters
+         (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -5136,12 +5141,13 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. A unique id used to identify the request. If the server receives two
-           * DeleteClusterRequest requests with the same id, then the second request will be ignored
-           * and the first google.longrunning.Operation created and stored in the backend is
-           * returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
-           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
-           * is 40 characters.
+           * DeleteClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
+           * .dataproc.v1beta2#google.cloud.dataproc.v1beta2.DeleteClusterRequest)s with the same
+           * id, then the second request will be ignored and the first google.longrunning.Operation
+           * created and stored in the backend is returned.It is recommended to always set this
+           * value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id
+           * must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+           * The maximum length is 40 characters.
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -6282,22 +6288,24 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. A unique id used to identify the request. If the server receives two
-           * UpdateClusterRequest requests with the same id, then the second request will be ignored
-           * and the first google.longrunning.Operation created and stored in the backend is
-           * returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
-           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
-           * is 40 characters.
+           * UpdateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
+           * .dataproc.v1beta2#google.cloud.dataproc.v1beta2.UpdateClusterRequest)s with the same
+           * id, then the second request will be ignored and the first google.longrunning.Operation
+           * created and stored in the backend is returned.It is recommended to always set this
+           * value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id
+           * must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+           * The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. A unique id used to identify the request. If the server receives two UpdateClusterRequest
-         requests with the same id, then the second request will be ignored and the first
-         google.longrunning.Operation created and stored in the backend is returned.It is recommended to
-         always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The
-         id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
-         maximum length is 40 characters.
+         (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1beta2#google.cloud.da
+         taproc.v1beta2.UpdateClusterRequest)s with the same id, then the second request will be ignored and
+         the first google.longrunning.Operation created and stored in the backend is returned.It is
+         recommended to always set this value to a UUID
+         (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only letters
+         (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -6305,12 +6313,13 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. A unique id used to identify the request. If the server receives two
-           * UpdateClusterRequest requests with the same id, then the second request will be ignored
-           * and the first google.longrunning.Operation created and stored in the backend is
-           * returned.It is recommended to always set this value to a UUID
-           * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must contain only
-           * letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length
-           * is 40 characters.
+           * UpdateClusterRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud
+           * .dataproc.v1beta2#google.cloud.dataproc.v1beta2.UpdateClusterRequest)s with the same
+           * id, then the second request will be ignored and the first google.longrunning.Operation
+           * created and stored in the backend is returned.It is recommended to always set this
+           * value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id
+           * must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+           * The maximum length is 40 characters.
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;

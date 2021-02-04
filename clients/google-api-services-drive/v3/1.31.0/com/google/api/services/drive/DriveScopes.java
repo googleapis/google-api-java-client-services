@@ -26,7 +26,7 @@ public class DriveScopes {
   /** See, edit, create, and delete all of your Google Drive files. */
   public static final String DRIVE = "https://www.googleapis.com/auth/drive";
 
-  /** View and manage its own configuration data in your Google Drive. */
+  /** See, create, and delete its own configuration data in your Google Drive. */
   public static final String DRIVE_APPDATA = "https://www.googleapis.com/auth/drive.appdata";
 
   /** View and manage Google Drive files and folders that you have opened or created with this app. */

@@ -103,8 +103,9 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
    * sign to separate different hierarchies. If '>' is part of the category name, please replace it
    * with other character(s). Category pages include special pages such as sales or promotions. For
    * instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales >
-   * 2017 Black Friday Deals"]. Required for `category-page-view` events. Other event types should
-   * not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * 2017 Black Friday Deals"]. Required for `category-page-view` events. At least one of
+   * search_query or page_categories is required for `search` events. Other event types should not
+   * set this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,8 +161,8 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
   /**
    * The user's search query. The value must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or
-   * filter is required for `search` events. Other event types should not set this field. Otherwise,
-   * an INVALID_ARGUMENT error is returned.
+   * page_categories is required for `search` events. Other event types should not set this field.
+   * Otherwise, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -341,8 +342,9 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
    * sign to separate different hierarchies. If '>' is part of the category name, please replace it
    * with other character(s). Category pages include special pages such as sales or promotions. For
    * instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales >
-   * 2017 Black Friday Deals"]. Required for `category-page-view` events. Other event types should
-   * not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * 2017 Black Friday Deals"]. Required for `category-page-view` events. At least one of
+   * search_query or page_categories is required for `search` events. Other event types should not
+   * set this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPageCategories() {
@@ -354,8 +356,9 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
    * sign to separate different hierarchies. If '>' is part of the category name, please replace it
    * with other character(s). Category pages include special pages such as sales or promotions. For
    * instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales >
-   * 2017 Black Friday Deals"]. Required for `category-page-view` events. Other event types should
-   * not set this field. Otherwise, an INVALID_ARGUMENT error is returned.
+   * 2017 Black Friday Deals"]. Required for `category-page-view` events. At least one of
+   * search_query or page_categories is required for `search` events. Other event types should not
+   * set this field. Otherwise, an INVALID_ARGUMENT error is returned.
    * @param pageCategories pageCategories or {@code null} for none
    */
   public GoogleCloudRetailV2UserEvent setPageCategories(java.util.List<java.lang.String> pageCategories) {
@@ -460,8 +463,8 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
   /**
    * The user's search query. The value must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or
-   * filter is required for `search` events. Other event types should not set this field. Otherwise,
-   * an INVALID_ARGUMENT error is returned.
+   * page_categories is required for `search` events. Other event types should not set this field.
+   * Otherwise, an INVALID_ARGUMENT error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchQuery() {
@@ -471,8 +474,8 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
   /**
    * The user's search query. The value must be a UTF-8 encoded string with a length limit of 5,000
    * characters. Otherwise, an INVALID_ARGUMENT error is returned. At least one of search_query or
-   * filter is required for `search` events. Other event types should not set this field. Otherwise,
-   * an INVALID_ARGUMENT error is returned.
+   * page_categories is required for `search` events. Other event types should not set this field.
+   * Otherwise, an INVALID_ARGUMENT error is returned.
    * @param searchQuery searchQuery or {@code null} for none
    */
   public GoogleCloudRetailV2UserEvent setSearchQuery(java.lang.String searchQuery) {

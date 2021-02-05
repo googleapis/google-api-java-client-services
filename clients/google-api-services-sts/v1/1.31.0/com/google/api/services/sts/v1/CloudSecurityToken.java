@@ -153,7 +153,9 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
   public class V1 {
 
     /**
-     * Exchanges a credential for a Google OAuth 2.0 access token.
+     * Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external
+     * identity within a workload identity pool, or it applies a Credential Access Boundary to a Google
+     * access token.
      *
      * Create a request for the method "v1.token".
      *
@@ -174,7 +176,9 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
       private static final String REST_PATH = "v1/token";
 
       /**
-       * Exchanges a credential for a Google OAuth 2.0 access token.
+       * Exchanges a credential for a Google OAuth 2.0 access token. The token asserts an external
+       * identity within a workload identity pool, or it applies a Credential Access Boundary to a
+       * Google access token.
        *
        * Create a request for the method "v1.token".
        *

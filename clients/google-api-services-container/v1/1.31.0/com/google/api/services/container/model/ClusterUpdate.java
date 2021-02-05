@@ -164,6 +164,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredNodeVersion;
 
   /**
+   * The desired notification configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NotificationConfig desiredNotificationConfig;
+
+  /**
    * The desired private cluster configuration.
    * The value may be {@code null}.
    */
@@ -518,6 +525,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredNodeVersion(java.lang.String desiredNodeVersion) {
     this.desiredNodeVersion = desiredNodeVersion;
+    return this;
+  }
+
+  /**
+   * The desired notification configuration.
+   * @return value or {@code null} for none
+   */
+  public NotificationConfig getDesiredNotificationConfig() {
+    return desiredNotificationConfig;
+  }
+
+  /**
+   * The desired notification configuration.
+   * @param desiredNotificationConfig desiredNotificationConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredNotificationConfig(NotificationConfig desiredNotificationConfig) {
+    this.desiredNotificationConfig = desiredNotificationConfig;
     return this;
   }
 

@@ -355,6 +355,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<NodePool> nodePools;
 
   /**
+   * Notification configuration of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NotificationConfig notificationConfig;
+
+  /**
    * Configuration for private cluster.
    * The value may be {@code null}.
    */
@@ -1219,6 +1226,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setNodePools(java.util.List<NodePool> nodePools) {
     this.nodePools = nodePools;
+    return this;
+  }
+
+  /**
+   * Notification configuration of the cluster.
+   * @return value or {@code null} for none
+   */
+  public NotificationConfig getNotificationConfig() {
+    return notificationConfig;
+  }
+
+  /**
+   * Notification configuration of the cluster.
+   * @param notificationConfig notificationConfig or {@code null} for none
+   */
+  public Cluster setNotificationConfig(NotificationConfig notificationConfig) {
+    this.notificationConfig = notificationConfig;
     return this;
   }
 

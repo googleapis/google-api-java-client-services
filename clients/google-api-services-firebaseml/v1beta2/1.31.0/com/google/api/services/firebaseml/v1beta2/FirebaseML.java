@@ -451,6 +451,156 @@ public class FirebaseML extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * Gets Download information for a model. This is meant for downloading model resources onto
+       * devices. It gives very limited information about the model.
+       *
+       * Create a request for the method "models.download".
+       *
+       * This request holds the parameters needed by the firebaseml server.  After setting any optional
+       * parameters, call the {@link Download#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the model to download. The name must have the form
+       *        `projects/{project}/models/{model}`
+       * @return the request
+       */
+      public Download download(java.lang.String name) throws java.io.IOException {
+        Download result = new Download(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Download extends FirebaseMLRequest<com.google.api.services.firebaseml.v1beta2.model.DownloadModelResponse> {
+
+        private static final String REST_PATH = "v1beta2/{+name}:download";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/models/[^/]+$");
+
+        /**
+         * Gets Download information for a model. This is meant for downloading model resources onto
+         * devices. It gives very limited information about the model.
+         *
+         * Create a request for the method "models.download".
+         *
+         * This request holds the parameters needed by the the firebaseml server.  After setting any
+         * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the model to download. The name must have the form
+       *        `projects/{project}/models/{model}`
+         * @since 1.13
+         */
+        protected Download(java.lang.String name) {
+          super(FirebaseML.this, "GET", REST_PATH, null, com.google.api.services.firebaseml.v1beta2.model.DownloadModelResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/models/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Download set$Xgafv(java.lang.String $Xgafv) {
+          return (Download) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Download setAccessToken(java.lang.String accessToken) {
+          return (Download) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Download setAlt(java.lang.String alt) {
+          return (Download) super.setAlt(alt);
+        }
+
+        @Override
+        public Download setCallback(java.lang.String callback) {
+          return (Download) super.setCallback(callback);
+        }
+
+        @Override
+        public Download setFields(java.lang.String fields) {
+          return (Download) super.setFields(fields);
+        }
+
+        @Override
+        public Download setKey(java.lang.String key) {
+          return (Download) super.setKey(key);
+        }
+
+        @Override
+        public Download setOauthToken(java.lang.String oauthToken) {
+          return (Download) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Download) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Download setQuotaUser(java.lang.String quotaUser) {
+          return (Download) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Download setUploadType(java.lang.String uploadType) {
+          return (Download) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Download setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Download) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the model to download. The name must have the form
+         * `projects/{project}/models/{model}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the model to download. The name must have the form
+       `projects/{project}/models/{model}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the model to download. The name must have the form
+         * `projects/{project}/models/{model}`
+         */
+        public Download setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/models/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Download set(String parameterName, Object value) {
+          return (Download) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets a model resource.
        *
        * Create a request for the method "models.get".

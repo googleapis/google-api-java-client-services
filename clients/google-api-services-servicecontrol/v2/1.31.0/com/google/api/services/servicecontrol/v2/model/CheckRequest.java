@@ -37,6 +37,13 @@ public final class CheckRequest extends com.google.api.client.json.GenericJson {
   private AttributeContext attributes;
 
   /**
+   * Optional. Contains a comma-separated list of flags.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String flags;
+
+  /**
    * Describes the resources and the policies applied to each resource.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class CheckRequest extends com.google.api.client.json.GenericJson {
    */
   public CheckRequest setAttributes(AttributeContext attributes) {
     this.attributes = attributes;
+    return this;
+  }
+
+  /**
+   * Optional. Contains a comma-separated list of flags.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFlags() {
+    return flags;
+  }
+
+  /**
+   * Optional. Contains a comma-separated list of flags.
+   * @param flags flags or {@code null} for none
+   */
+  public CheckRequest setFlags(java.lang.String flags) {
+    this.flags = flags;
     return this;
   }
 

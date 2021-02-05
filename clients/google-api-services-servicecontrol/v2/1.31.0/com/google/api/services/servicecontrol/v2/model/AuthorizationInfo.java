@@ -44,8 +44,9 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
   private java.lang.String permission;
 
   /**
-   * The resource being accessed, as a REST-style string. For example:
-   * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
+   * The resource being accessed, as a REST-style or cloud resource string. For example:
+   * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID or
+   * projects/PROJECTID/datasets/DATASETID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +97,9 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The resource being accessed, as a REST-style string. For example:
-   * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
+   * The resource being accessed, as a REST-style or cloud resource string. For example:
+   * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID or
+   * projects/PROJECTID/datasets/DATASETID
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -105,8 +107,9 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The resource being accessed, as a REST-style string. For example:
-   * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID
+   * The resource being accessed, as a REST-style or cloud resource string. For example:
+   * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID or
+   * projects/PROJECTID/datasets/DATASETID
    * @param resource resource or {@code null} for none
    */
   public AuthorizationInfo setResource(java.lang.String resource) {

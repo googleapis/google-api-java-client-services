@@ -2334,6 +2334,177 @@ public class BinaryAuthorization extends com.google.api.client.googleapis.servic
   }
 
   /**
+   * An accessor for creating requests from the Systempolicy collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code BinaryAuthorization binaryauthorization = new BinaryAuthorization(...);}
+   *   {@code BinaryAuthorization.Systempolicy.List request = binaryauthorization.systempolicy().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Systempolicy systempolicy() {
+    return new Systempolicy();
+  }
+
+  /**
+   * The "systempolicy" collection of methods.
+   */
+  public class Systempolicy {
+
+    /**
+     * Gets the current system policy in the specified location.
+     *
+     * Create a request for the method "systempolicy.getPolicy".
+     *
+     * This request holds the parameters needed by the binaryauthorization server.  After setting any
+     * optional parameters, call the {@link GetPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name, in the format `locations/policy`. Note that the system policy is not
+     *        associated with a project.
+     * @return the request
+     */
+    public GetPolicy getPolicy(java.lang.String name) throws java.io.IOException {
+      GetPolicy result = new GetPolicy(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetPolicy extends BinaryAuthorizationRequest<com.google.api.services.binaryauthorization.v1beta1.model.Policy> {
+
+      private static final String REST_PATH = "v1beta1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^locations/[^/]+/policy$");
+
+      /**
+       * Gets the current system policy in the specified location.
+       *
+       * Create a request for the method "systempolicy.getPolicy".
+       *
+       * This request holds the parameters needed by the the binaryauthorization server.  After setting
+       * any optional parameters, call the {@link GetPolicy#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name, in the format `locations/policy`. Note that the system policy is not
+     *        associated with a project.
+       * @since 1.13
+       */
+      protected GetPolicy(java.lang.String name) {
+        super(BinaryAuthorization.this, "GET", REST_PATH, null, com.google.api.services.binaryauthorization.v1beta1.model.Policy.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^locations/[^/]+/policy$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetPolicy setAlt(java.lang.String alt) {
+        return (GetPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetPolicy setCallback(java.lang.String callback) {
+        return (GetPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetPolicy setFields(java.lang.String fields) {
+        return (GetPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetPolicy setKey(java.lang.String key) {
+        return (GetPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetPolicy setUploadType(java.lang.String uploadType) {
+        return (GetPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name, in the format `locations/policy`. Note that the system policy
+       * is not associated with a project.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name, in the format `locations/policy`. Note that the system policy is not
+     associated with a project.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name, in the format `locations/policy`. Note that the system policy
+       * is not associated with a project.
+       */
+      public GetPolicy setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^locations/[^/]+/policy$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetPolicy set(String parameterName, Object value) {
+        return (GetPolicy) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link BinaryAuthorization}.
    *
    * <p>

@@ -48,9 +48,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
   private java.lang.String listId;
 
   /**
-   * Required for `category-page-view` events. Other event types should not set this field. The
-   * categories associated with a category page. Category pages include special pages such as sales
-   * or promotions. For instance, a special sale page may have the category hierarchy: categories :
+   * Required for `category-page-view` events. At least one of search_query or page_categories is
+   * required for `search` events. Other event types should not set this field. The categories
+   * associated with a category page. Category pages include special pages such as sales or
+   * promotions. For instance, a special sale page may have the category hierarchy: categories :
    * ["Sales", "2017 Black Friday Deals"].
    * The value may be {@code null}.
    */
@@ -96,8 +97,9 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
   private GoogleCloudRecommendationengineV1beta1PurchaseTransaction purchaseTransaction;
 
   /**
-   * Required for `search` events. Other event types should not set this field. The user's search
-   * query as UTF-8 encoded text with a length limit of 5 KiB.
+   * At least one of search_query or page_categories is required for `search` events. Other event
+   * types should not set this field. The user's search query as UTF-8 encoded text with a length
+   * limit of 5 KiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,9 +146,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
   }
 
   /**
-   * Required for `category-page-view` events. Other event types should not set this field. The
-   * categories associated with a category page. Category pages include special pages such as sales
-   * or promotions. For instance, a special sale page may have the category hierarchy: categories :
+   * Required for `category-page-view` events. At least one of search_query or page_categories is
+   * required for `search` events. Other event types should not set this field. The categories
+   * associated with a category page. Category pages include special pages such as sales or
+   * promotions. For instance, a special sale page may have the category hierarchy: categories :
    * ["Sales", "2017 Black Friday Deals"].
    * @return value or {@code null} for none
    */
@@ -155,9 +158,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
   }
 
   /**
-   * Required for `category-page-view` events. Other event types should not set this field. The
-   * categories associated with a category page. Category pages include special pages such as sales
-   * or promotions. For instance, a special sale page may have the category hierarchy: categories :
+   * Required for `category-page-view` events. At least one of search_query or page_categories is
+   * required for `search` events. Other event types should not set this field. The categories
+   * associated with a category page. Category pages include special pages such as sales or
+   * promotions. For instance, a special sale page may have the category hierarchy: categories :
    * ["Sales", "2017 Black Friday Deals"].
    * @param pageCategories pageCategories or {@code null} for none
    */
@@ -225,8 +229,9 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
   }
 
   /**
-   * Required for `search` events. Other event types should not set this field. The user's search
-   * query as UTF-8 encoded text with a length limit of 5 KiB.
+   * At least one of search_query or page_categories is required for `search` events. Other event
+   * types should not set this field. The user's search query as UTF-8 encoded text with a length
+   * limit of 5 KiB.
    * @return value or {@code null} for none
    */
   public java.lang.String getSearchQuery() {
@@ -234,8 +239,9 @@ public final class GoogleCloudRecommendationengineV1beta1ProductEventDetail exte
   }
 
   /**
-   * Required for `search` events. Other event types should not set this field. The user's search
-   * query as UTF-8 encoded text with a length limit of 5 KiB.
+   * At least one of search_query or page_categories is required for `search` events. Other event
+   * types should not set this field. The user's search query as UTF-8 encoded text with a length
+   * limit of 5 KiB.
    * @param searchQuery searchQuery or {@code null} for none
    */
   public GoogleCloudRecommendationengineV1beta1ProductEventDetail setSearchQuery(java.lang.String searchQuery) {

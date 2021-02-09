@@ -18,7 +18,7 @@ package com.google.api.services.youtube.model;
 
 /**
  * Basic details about a playlist, including title, description and thumbnails. Basic details of a
- * YouTube Playlist item provided by the author. Next ID: 13
+ * YouTube Playlist item provided by the author. Next ID: 15
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -96,6 +96,20 @@ public final class PlaylistItemSnippet extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * Channel id for the channel this video belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String videoOwnerChannelId;
+
+  /**
+   * Channel title for the channel this video belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String videoOwnerChannelTitle;
 
   /**
    * The ID that YouTube uses to uniquely identify the user that added the item to the playlist.
@@ -255,6 +269,40 @@ public final class PlaylistItemSnippet extends com.google.api.client.json.Generi
    */
   public PlaylistItemSnippet setTitle(java.lang.String title) {
     this.title = title;
+    return this;
+  }
+
+  /**
+   * Channel id for the channel this video belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVideoOwnerChannelId() {
+    return videoOwnerChannelId;
+  }
+
+  /**
+   * Channel id for the channel this video belongs to.
+   * @param videoOwnerChannelId videoOwnerChannelId or {@code null} for none
+   */
+  public PlaylistItemSnippet setVideoOwnerChannelId(java.lang.String videoOwnerChannelId) {
+    this.videoOwnerChannelId = videoOwnerChannelId;
+    return this;
+  }
+
+  /**
+   * Channel title for the channel this video belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVideoOwnerChannelTitle() {
+    return videoOwnerChannelTitle;
+  }
+
+  /**
+   * Channel title for the channel this video belongs to.
+   * @param videoOwnerChannelTitle videoOwnerChannelTitle or {@code null} for none
+   */
+  public PlaylistItemSnippet setVideoOwnerChannelTitle(java.lang.String videoOwnerChannelTitle) {
+    this.videoOwnerChannelTitle = videoOwnerChannelTitle;
     return this;
   }
 

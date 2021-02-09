@@ -40,8 +40,9 @@ public final class Pivot extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> fieldNames;
 
   /**
-   * The number of rows to return in this pivot. If unspecified, 10 rows are returned. If -1, all
-   * rows are returned.
+   * The number of rows to return in this pivot. If the `limit` parameter is unspecified, up to
+   * 10,000 rows are returned. The API returns a maximum of 100,000 rows per request, no matter how
+   * many you ask for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -99,8 +100,9 @@ public final class Pivot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of rows to return in this pivot. If unspecified, 10 rows are returned. If -1, all
-   * rows are returned.
+   * The number of rows to return in this pivot. If the `limit` parameter is unspecified, up to
+   * 10,000 rows are returned. The API returns a maximum of 100,000 rows per request, no matter how
+   * many you ask for.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLimit() {
@@ -108,8 +110,9 @@ public final class Pivot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of rows to return in this pivot. If unspecified, 10 rows are returned. If -1, all
-   * rows are returned.
+   * The number of rows to return in this pivot. If the `limit` parameter is unspecified, up to
+   * 10,000 rows are returned. The API returns a maximum of 100,000 rows per request, no matter how
+   * many you ask for.
    * @param limit limit or {@code null} for none
    */
   public Pivot setLimit(java.lang.Long limit) {

@@ -52,8 +52,9 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The number of rows to return. If unspecified, 10 rows are returned. If -1, all rows are
-   * returned.
+   * The number of rows to return. If the `limit` parameter is unspecified, 10,000 rows are
+   * returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask
+   * for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -146,8 +147,9 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The number of rows to return. If unspecified, 10 rows are returned. If -1, all rows are
-   * returned.
+   * The number of rows to return. If the `limit` parameter is unspecified, 10,000 rows are
+   * returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask
+   * for.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLimit() {
@@ -155,8 +157,9 @@ public final class RunRealtimeReportRequest extends com.google.api.client.json.G
   }
 
   /**
-   * The number of rows to return. If unspecified, 10 rows are returned. If -1, all rows are
-   * returned.
+   * The number of rows to return. If the `limit` parameter is unspecified, 10,000 rows are
+   * returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask
+   * for.
    * @param limit limit or {@code null} for none
    */
   public RunRealtimeReportRequest setLimit(java.lang.Long limit) {

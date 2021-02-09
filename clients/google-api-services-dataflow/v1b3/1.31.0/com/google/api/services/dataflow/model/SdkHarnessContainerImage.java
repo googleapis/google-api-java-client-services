@@ -37,6 +37,14 @@ public final class SdkHarnessContainerImage extends com.google.api.client.json.G
   private java.lang.String containerImage;
 
   /**
+   * Environment ID for the Beam runner API proto Environment that corresponds to the current SDK
+   * Harness.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String environmentId;
+
+  /**
    * If true, recommends the Dataflow service to use only one core per SDK container instance with
    * this image. If false (or unset) recommends using more than one core per SDK container instance
    * with this image for efficiency. Note that Dataflow service may choose to override this property
@@ -60,6 +68,25 @@ public final class SdkHarnessContainerImage extends com.google.api.client.json.G
    */
   public SdkHarnessContainerImage setContainerImage(java.lang.String containerImage) {
     this.containerImage = containerImage;
+    return this;
+  }
+
+  /**
+   * Environment ID for the Beam runner API proto Environment that corresponds to the current SDK
+   * Harness.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnvironmentId() {
+    return environmentId;
+  }
+
+  /**
+   * Environment ID for the Beam runner API proto Environment that corresponds to the current SDK
+   * Harness.
+   * @param environmentId environmentId or {@code null} for none
+   */
+  public SdkHarnessContainerImage setEnvironmentId(java.lang.String environmentId) {
+    this.environmentId = environmentId;
     return this;
   }
 

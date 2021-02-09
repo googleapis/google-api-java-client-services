@@ -93,6 +93,13 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceKmsKeyName;
 
   /**
+   * Output only. The shuffle mode used for the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String shuffleMode;
+
+  /**
    * The prefix of the resources the system should use for temporary storage. The system will append
    * the suffix "/temp-{JOBNAME} to this resource prefix, where {JOBNAME} is the value of the
    * job_name field. The resulting bucket and object prefix is used as the prefix of the resources
@@ -293,6 +300,23 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setServiceKmsKeyName(java.lang.String serviceKmsKeyName) {
     this.serviceKmsKeyName = serviceKmsKeyName;
+    return this;
+  }
+
+  /**
+   * Output only. The shuffle mode used for the job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getShuffleMode() {
+    return shuffleMode;
+  }
+
+  /**
+   * Output only. The shuffle mode used for the job.
+   * @param shuffleMode shuffleMode or {@code null} for none
+   */
+  public Environment setShuffleMode(java.lang.String shuffleMode) {
+    this.shuffleMode = shuffleMode;
     return this;
   }
 

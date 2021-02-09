@@ -44,8 +44,8 @@ public final class PivotHeader extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The cardinality of the pivot as if offset = 0 and limit = -1. The total number of rows for this
-   * pivot's fields regardless of how the parameters offset and limit are specified in the request.
+   * The cardinality of the pivot. The total number of rows for this pivot's fields regardless of
+   * how the parameters `offset` and `limit` are specified in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class PivotHeader extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The cardinality of the pivot as if offset = 0 and limit = -1. The total number of rows for this
-   * pivot's fields regardless of how the parameters offset and limit are specified in the request.
+   * The cardinality of the pivot. The total number of rows for this pivot's fields regardless of
+   * how the parameters `offset` and `limit` are specified in the request.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRowCount() {
@@ -78,8 +78,8 @@ public final class PivotHeader extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The cardinality of the pivot as if offset = 0 and limit = -1. The total number of rows for this
-   * pivot's fields regardless of how the parameters offset and limit are specified in the request.
+   * The cardinality of the pivot. The total number of rows for this pivot's fields regardless of
+   * how the parameters `offset` and `limit` are specified in the request.
    * @param rowCount rowCount or {@code null} for none
    */
   public PivotHeader setRowCount(java.lang.Integer rowCount) {

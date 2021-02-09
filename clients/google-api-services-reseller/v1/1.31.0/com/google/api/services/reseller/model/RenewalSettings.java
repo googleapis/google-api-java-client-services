@@ -31,7 +31,8 @@ package com.google.api.services.reseller.model;
 public final class RenewalSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies the resource as a subscription renewal setting. Value: subscriptions#renewalSettings
+   * Identifies the resource as a subscription renewal setting. Value:
+   * `subscriptions#renewalSettings`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +40,7 @@ public final class RenewalSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Renewal settings for the annual commitment plan. For more detailed information, see renewal
-   * options in the administrator help center. When renewing a subscription, the renewalType is a
+   * options in the administrator help center. When renewing a subscription, the `renewalType` is a
    * required property.
    * The value may be {@code null}.
    */
@@ -47,7 +48,8 @@ public final class RenewalSettings extends com.google.api.client.json.GenericJso
   private java.lang.String renewalType;
 
   /**
-   * Identifies the resource as a subscription renewal setting. Value: subscriptions#renewalSettings
+   * Identifies the resource as a subscription renewal setting. Value:
+   * `subscriptions#renewalSettings`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -55,7 +57,8 @@ public final class RenewalSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Identifies the resource as a subscription renewal setting. Value: subscriptions#renewalSettings
+   * Identifies the resource as a subscription renewal setting. Value:
+   * `subscriptions#renewalSettings`
    * @param kind kind or {@code null} for none
    */
   public RenewalSettings setKind(java.lang.String kind) {
@@ -65,7 +68,7 @@ public final class RenewalSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Renewal settings for the annual commitment plan. For more detailed information, see renewal
-   * options in the administrator help center. When renewing a subscription, the renewalType is a
+   * options in the administrator help center. When renewing a subscription, the `renewalType` is a
    * required property.
    * @return value or {@code null} for none
    */
@@ -75,7 +78,7 @@ public final class RenewalSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Renewal settings for the annual commitment plan. For more detailed information, see renewal
-   * options in the administrator help center. When renewing a subscription, the renewalType is a
+   * options in the administrator help center. When renewing a subscription, the `renewalType` is a
    * required property.
    * @param renewalType renewalType or {@code null} for none
    */

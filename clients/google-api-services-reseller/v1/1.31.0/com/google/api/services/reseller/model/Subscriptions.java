@@ -17,7 +17,9 @@
 package com.google.api.services.reseller.model;
 
 /**
- * JSON template for a subscription list.
+ * A subscription manages the relationship of a Google customer's payment plan with a product's SKU,
+ * user licenses, 30-day free trial status, and renewal options. A primary role of a reseller is to
+ * manage the Google customer's subscriptions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Reseller API. For a detailed

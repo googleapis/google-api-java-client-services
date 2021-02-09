@@ -17,7 +17,9 @@
 package com.google.api.services.reseller.model;
 
 /**
- * JSON template for a customer.
+ * When a Google customer's account is registered with a reseller, the customer's subscriptions for
+ * Google services are managed by this reseller. A customer is described by a primary domain name
+ * and a physical address.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Reseller API. For a detailed
@@ -34,15 +36,15 @@ public final class Customer extends com.google.api.client.json.GenericJson {
    * Like the "Customer email" in the reseller tools, this email is the secondary contact used if
    * something happens to the customer's service such as service outage or a security issue. This
    * property is required when creating a new customer and should not use the same domain as
-   * customerDomain .
+   * `customerDomain`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String alternateEmail;
 
   /**
-   * The customer's primary domain name string. customerDomain is required when creating a new
-   * customer. Do not include the www prefix in the domain when adding a customer.
+   * The customer's primary domain name string. `customerDomain` is required when creating a new
+   * customer. Do not include the `www` prefix in the domain when adding a customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +67,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   private java.lang.String customerId;
 
   /**
-   * Identifies the resource as a customer. Value: reseller#customer
+   * Identifies the resource as a customer. Value: `reseller#customer`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +102,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
    * Like the "Customer email" in the reseller tools, this email is the secondary contact used if
    * something happens to the customer's service such as service outage or a security issue. This
    * property is required when creating a new customer and should not use the same domain as
-   * customerDomain .
+   * `customerDomain`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlternateEmail() {
@@ -111,7 +113,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
    * Like the "Customer email" in the reseller tools, this email is the secondary contact used if
    * something happens to the customer's service such as service outage or a security issue. This
    * property is required when creating a new customer and should not use the same domain as
-   * customerDomain .
+   * `customerDomain`.
    * @param alternateEmail alternateEmail or {@code null} for none
    */
   public Customer setAlternateEmail(java.lang.String alternateEmail) {
@@ -120,8 +122,8 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer's primary domain name string. customerDomain is required when creating a new
-   * customer. Do not include the www prefix in the domain when adding a customer.
+   * The customer's primary domain name string. `customerDomain` is required when creating a new
+   * customer. Do not include the `www` prefix in the domain when adding a customer.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerDomain() {
@@ -129,8 +131,8 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer's primary domain name string. customerDomain is required when creating a new
-   * customer. Do not include the www prefix in the domain when adding a customer.
+   * The customer's primary domain name string. `customerDomain` is required when creating a new
+   * customer. Do not include the `www` prefix in the domain when adding a customer.
    * @param customerDomain customerDomain or {@code null} for none
    */
   public Customer setCustomerDomain(java.lang.String customerDomain) {
@@ -177,7 +179,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies the resource as a customer. Value: reseller#customer
+   * Identifies the resource as a customer. Value: `reseller#customer`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -185,7 +187,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies the resource as a customer. Value: reseller#customer
+   * Identifies the resource as a customer. Value: `reseller#customer`
    * @param kind kind or {@code null} for none
    */
   public Customer setKind(java.lang.String kind) {

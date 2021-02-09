@@ -30,7 +30,9 @@ package com.google.api.services.safebrowsing.v4.model;
 public final class FetchThreatListUpdatesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list updates requested by the clients.
+   * The list updates requested by the clients. The number of responses here may be less than the
+   * number of requests sent by clients. This is the case, for example, if the server has no updates
+   * for a particular list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +47,9 @@ public final class FetchThreatListUpdatesResponse extends com.google.api.client.
   private String minimumWaitDuration;
 
   /**
-   * The list updates requested by the clients.
+   * The list updates requested by the clients. The number of responses here may be less than the
+   * number of requests sent by clients. This is the case, for example, if the server has no updates
+   * for a particular list.
    * @return value or {@code null} for none
    */
   public java.util.List<ListUpdateResponse> getListUpdateResponses() {
@@ -53,7 +57,9 @@ public final class FetchThreatListUpdatesResponse extends com.google.api.client.
   }
 
   /**
-   * The list updates requested by the clients.
+   * The list updates requested by the clients. The number of responses here may be less than the
+   * number of requests sent by clients. This is the case, for example, if the server has no updates
+   * for a particular list.
    * @param listUpdateResponses listUpdateResponses or {@code null} for none
    */
   public FetchThreatListUpdatesResponse setListUpdateResponses(java.util.List<ListUpdateResponse> listUpdateResponses) {

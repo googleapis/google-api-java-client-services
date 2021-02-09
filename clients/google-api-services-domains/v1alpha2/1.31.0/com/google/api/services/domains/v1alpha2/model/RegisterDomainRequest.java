@@ -30,8 +30,8 @@ package com.google.api.services.domains.v1alpha2.model;
 public final class RegisterDomainRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of contact notices that the caller acknowledges. The notices required here depend on
-   * the values specified in `registration.contact_settings`.
+   * The list of contact notices that the caller acknowledges. The notices needed here depend on the
+   * values specified in `registration.contact_settings`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class RegisterDomainRequest extends com.google.api.client.json.Gene
   private Money yearlyPrice;
 
   /**
-   * The list of contact notices that the caller acknowledges. The notices required here depend on
-   * the values specified in `registration.contact_settings`.
+   * The list of contact notices that the caller acknowledges. The notices needed here depend on the
+   * values specified in `registration.contact_settings`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContactNotices() {
@@ -78,8 +78,8 @@ public final class RegisterDomainRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * The list of contact notices that the caller acknowledges. The notices required here depend on
-   * the values specified in `registration.contact_settings`.
+   * The list of contact notices that the caller acknowledges. The notices needed here depend on the
+   * values specified in `registration.contact_settings`.
    * @param contactNotices contactNotices or {@code null} for none
    */
   public RegisterDomainRequest setContactNotices(java.util.List<java.lang.String> contactNotices) {

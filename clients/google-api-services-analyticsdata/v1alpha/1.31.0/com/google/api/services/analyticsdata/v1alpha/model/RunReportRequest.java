@@ -100,9 +100,9 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   private java.lang.Boolean keepEmptyRows;
 
   /**
-   * The number of rows to return. If unspecified, 10 rows are returned. If -1, all rows are
-   * returned. To learn more about this pagination parameter, see [Pagination](https://developers.go
-   * ogle.com/analytics/devguides/reporting/data/v1/basics#pagination).
+   * The number of rows to return. If the `limit` parameter is unspecified, 10,000 rows are
+   * returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask
+   * for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -138,9 +138,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The row count of the start row. The first row is counted as row 0. To learn more about this
-   * pagination parameter, see [Pagination](https://developers.google.com/analytics/devguides/report
-   * ing/data/v1/basics#pagination).
+   * The row count of the start row. The first row is counted as row 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -303,9 +301,9 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The number of rows to return. If unspecified, 10 rows are returned. If -1, all rows are
-   * returned. To learn more about this pagination parameter, see [Pagination](https://developers.go
-   * ogle.com/analytics/devguides/reporting/data/v1/basics#pagination).
+   * The number of rows to return. If the `limit` parameter is unspecified, 10,000 rows are
+   * returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask
+   * for.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLimit() {
@@ -313,9 +311,9 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The number of rows to return. If unspecified, 10 rows are returned. If -1, all rows are
-   * returned. To learn more about this pagination parameter, see [Pagination](https://developers.go
-   * ogle.com/analytics/devguides/reporting/data/v1/basics#pagination).
+   * The number of rows to return. If the `limit` parameter is unspecified, 10,000 rows are
+   * returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask
+   * for.
    * @param limit limit or {@code null} for none
    */
   public RunReportRequest setLimit(java.lang.Long limit) {
@@ -379,9 +377,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The row count of the start row. The first row is counted as row 0. To learn more about this
-   * pagination parameter, see [Pagination](https://developers.google.com/analytics/devguides/report
-   * ing/data/v1/basics#pagination).
+   * The row count of the start row. The first row is counted as row 0.
    * @return value or {@code null} for none
    */
   public java.lang.Long getOffset() {
@@ -389,9 +385,7 @@ public final class RunReportRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The row count of the start row. The first row is counted as row 0. To learn more about this
-   * pagination parameter, see [Pagination](https://developers.google.com/analytics/devguides/report
-   * ing/data/v1/basics#pagination).
+   * The row count of the start row. The first row is counted as row 0.
    * @param offset offset or {@code null} for none
    */
   public RunReportRequest setOffset(java.lang.Long offset) {

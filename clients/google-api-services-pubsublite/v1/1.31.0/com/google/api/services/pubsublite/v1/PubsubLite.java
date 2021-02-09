@@ -2538,6 +2538,143 @@ public class PubsubLite extends com.google.api.client.googleapis.services.json.A
         public class Topics {
 
           /**
+           * Compute the head cursor for the partition. The head cursor’s offset is guaranteed to be before or
+           * equal to all messages which have not yet been acknowledged to be published, and greater than the
+           * offset of any message whose publish has already been acknowledged. It is 0 if there have never
+           * been messages on the partition.
+           *
+           * Create a request for the method "topics.computeHeadCursor".
+           *
+           * This request holds the parameters needed by the pubsublite server.  After setting any optional
+           * parameters, call the {@link ComputeHeadCursor#execute()} method to invoke the remote operation.
+           *
+           * @param topic Required. The topic for which we should compute the head cursor.
+           * @param content the {@link com.google.api.services.pubsublite.v1.model.ComputeHeadCursorRequest}
+           * @return the request
+           */
+          public ComputeHeadCursor computeHeadCursor(java.lang.String topic, com.google.api.services.pubsublite.v1.model.ComputeHeadCursorRequest content) throws java.io.IOException {
+            ComputeHeadCursor result = new ComputeHeadCursor(topic, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ComputeHeadCursor extends PubsubLiteRequest<com.google.api.services.pubsublite.v1.model.ComputeHeadCursorResponse> {
+
+            private static final String REST_PATH = "v1/topicStats/{+topic}:computeHeadCursor";
+
+            private final java.util.regex.Pattern TOPIC_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/topics/[^/]+$");
+
+            /**
+             * Compute the head cursor for the partition. The head cursor’s offset is guaranteed to be before
+             * or equal to all messages which have not yet been acknowledged to be published, and greater than
+             * the offset of any message whose publish has already been acknowledged. It is 0 if there have
+             * never been messages on the partition.
+             *
+             * Create a request for the method "topics.computeHeadCursor".
+             *
+             * This request holds the parameters needed by the the pubsublite server.  After setting any
+             * optional parameters, call the {@link ComputeHeadCursor#execute()} method to invoke the remote
+             * operation. <p> {@link ComputeHeadCursor#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param topic Required. The topic for which we should compute the head cursor.
+             * @param content the {@link com.google.api.services.pubsublite.v1.model.ComputeHeadCursorRequest}
+             * @since 1.13
+             */
+            protected ComputeHeadCursor(java.lang.String topic, com.google.api.services.pubsublite.v1.model.ComputeHeadCursorRequest content) {
+              super(PubsubLite.this, "POST", REST_PATH, content, com.google.api.services.pubsublite.v1.model.ComputeHeadCursorResponse.class);
+              this.topic = com.google.api.client.util.Preconditions.checkNotNull(topic, "Required parameter topic must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TOPIC_PATTERN.matcher(topic).matches(),
+                    "Parameter topic must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/topics/[^/]+$");
+              }
+            }
+
+            @Override
+            public ComputeHeadCursor set$Xgafv(java.lang.String $Xgafv) {
+              return (ComputeHeadCursor) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ComputeHeadCursor setAccessToken(java.lang.String accessToken) {
+              return (ComputeHeadCursor) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ComputeHeadCursor setAlt(java.lang.String alt) {
+              return (ComputeHeadCursor) super.setAlt(alt);
+            }
+
+            @Override
+            public ComputeHeadCursor setCallback(java.lang.String callback) {
+              return (ComputeHeadCursor) super.setCallback(callback);
+            }
+
+            @Override
+            public ComputeHeadCursor setFields(java.lang.String fields) {
+              return (ComputeHeadCursor) super.setFields(fields);
+            }
+
+            @Override
+            public ComputeHeadCursor setKey(java.lang.String key) {
+              return (ComputeHeadCursor) super.setKey(key);
+            }
+
+            @Override
+            public ComputeHeadCursor setOauthToken(java.lang.String oauthToken) {
+              return (ComputeHeadCursor) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ComputeHeadCursor setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ComputeHeadCursor) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ComputeHeadCursor setQuotaUser(java.lang.String quotaUser) {
+              return (ComputeHeadCursor) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ComputeHeadCursor setUploadType(java.lang.String uploadType) {
+              return (ComputeHeadCursor) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ComputeHeadCursor setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ComputeHeadCursor) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The topic for which we should compute the head cursor. */
+            @com.google.api.client.util.Key
+            private java.lang.String topic;
+
+            /** Required. The topic for which we should compute the head cursor.
+             */
+            public java.lang.String getTopic() {
+              return topic;
+            }
+
+            /** Required. The topic for which we should compute the head cursor. */
+            public ComputeHeadCursor setTopic(java.lang.String topic) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TOPIC_PATTERN.matcher(topic).matches(),
+                    "Parameter topic must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/topics/[^/]+$");
+              }
+              this.topic = topic;
+              return this;
+            }
+
+            @Override
+            public ComputeHeadCursor set(String parameterName, Object value) {
+              return (ComputeHeadCursor) super.set(parameterName, value);
+            }
+          }
+          /**
            * Compute statistics about a range of messages in a given topic and partition.
            *
            * Create a request for the method "topics.computeMessageStats".

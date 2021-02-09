@@ -46,7 +46,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean addUserDisabled;
 
   /**
-   * Whether adjusting the master volume is disabled.
+   * Whether adjusting the master volume is disabled. Also mutes the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -726,7 +726,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether adjusting the master volume is disabled.
+   * Whether adjusting the master volume is disabled. Also mutes the device.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAdjustVolumeDisabled() {
@@ -734,7 +734,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether adjusting the master volume is disabled.
+   * Whether adjusting the master volume is disabled. Also mutes the device.
    * @param adjustVolumeDisabled adjustVolumeDisabled or {@code null} for none
    */
   public Policy setAdjustVolumeDisabled(java.lang.Boolean adjustVolumeDisabled) {

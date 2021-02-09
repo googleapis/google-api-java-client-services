@@ -38,7 +38,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String billingMethod;
 
   /**
-   * The creationTime property is the date when subscription was created. It is in milliseconds
+   * The `creationTime` property is the date when subscription was created. It is in milliseconds
    * using the Epoch format. See an example Epoch converter.
    * The value may be {@code null}.
    */
@@ -63,22 +63,22 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Google-issued code (100 char max) for discounted pricing on subscription plans. Deal code must
-   * be included in insert requests in order to receive discounted rate. This property is optional,
-   * regular pricing applies if left empty.
+   * be included in `insert` requests in order to receive discounted rate. This property is
+   * optional, regular pricing applies if left empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dealCode;
 
   /**
-   * Identifies the resource as a Subscription. Value: reseller#subscription
+   * Identifies the resource as a Subscription. Value: `reseller#subscription`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The plan property is required. In this version of the API, the G Suite plans are the flexible
+   * The `plan` property is required. In this version of the API, the G Suite plans are the flexible
    * plan, annual commitment plan, and the 30-day free trial plan. For more information about the
    * API"s payment plans, see the API concepts.
    * The value may be {@code null}.
@@ -88,7 +88,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * This is an optional property. This purchase order (PO) information is for resellers to use for
-   * their company tracking usage. If a purchaseOrderId value is given it appears in the API
+   * their company tracking usage. If a `purchaseOrderId` value is given it appears in the API
    * responses and shows up in the invoice. The property accepts up to 80 plain text characters.
    * The value may be {@code null}.
    */
@@ -120,8 +120,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private Seats seats;
 
   /**
-   * A required property. The skuId is a unique system identifier for a product's SKU assigned to a
-   * customer in the subscription. For products and SKUs available in this version of the API, see
+   * A required property. The `skuId` is a unique system identifier for a product's SKU assigned to
+   * a customer in the subscription. For products and SKUs available in this version of the API, see
    * Product and SKU IDs.
    * The value may be {@code null}.
    */
@@ -145,10 +145,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * The subscriptionId is the subscription identifier and is unique for each customer. This is a
-   * required property. Since a subscriptionId changes when a subscription is updated, we recommend
-   * not using this ID as a key for persistent data. Use the subscriptionId as described in retrieve
-   * all reseller subscriptions.
+   * The `subscriptionId` is the subscription identifier and is unique for each customer. This is a
+   * required property. Since a `subscriptionId` changes when a subscription is updated, we
+   * recommend not using this ID as a key for persistent data. Use the `subscriptionId` as described
+   * in retrieve all reseller subscriptions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,13 +157,13 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Read-only field containing an enumerable of all the current suspension reasons for a
    * subscription. It is possible for a subscription to have many concurrent, overlapping suspension
-   * reasons. A subscription's STATUS is SUSPENDED until all pending suspensions are removed.
-   * Possible options include: - PENDING_TOS_ACCEPTANCE - The customer has not logged in and
-   * accepted the G Suite Resold Terms of Services. - RENEWAL_WITH_TYPE_CANCEL - The customer's
-   * commitment ended and their service was cancelled at the end of their term. - RESELLER_INITIATED
-   * - A manual suspension invoked by a Reseller. - TRIAL_ENDED - The customer's trial expired
-   * without a plan selected. - OTHER - The customer is suspended for an internal Google reason
-   * (e.g. abuse or otherwise).
+   * reasons. A subscription's `STATUS` is `SUSPENDED` until all pending suspensions are removed.
+   * Possible options include: - `PENDING_TOS_ACCEPTANCE` - The customer has not logged in and
+   * accepted the G Suite Resold Terms of Services. - `RENEWAL_WITH_TYPE_CANCEL` - The customer's
+   * commitment ended and their service was cancelled at the end of their term. -
+   * `RESELLER_INITIATED` - A manual suspension invoked by a Reseller. - `TRIAL_ENDED` - The
+   * customer's trial expired without a plan selected. - `OTHER` - The customer is suspended for an
+   * internal Google reason (e.g. abuse or otherwise).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,7 +203,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The creationTime property is the date when subscription was created. It is in milliseconds
+   * The `creationTime` property is the date when subscription was created. It is in milliseconds
    * using the Epoch format. See an example Epoch converter.
    * @return value or {@code null} for none
    */
@@ -212,7 +212,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The creationTime property is the date when subscription was created. It is in milliseconds
+   * The `creationTime` property is the date when subscription was created. It is in milliseconds
    * using the Epoch format. See an example Epoch converter.
    * @param creationTime creationTime or {@code null} for none
    */
@@ -261,8 +261,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Google-issued code (100 char max) for discounted pricing on subscription plans. Deal code must
-   * be included in insert requests in order to receive discounted rate. This property is optional,
-   * regular pricing applies if left empty.
+   * be included in `insert` requests in order to receive discounted rate. This property is
+   * optional, regular pricing applies if left empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getDealCode() {
@@ -271,8 +271,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Google-issued code (100 char max) for discounted pricing on subscription plans. Deal code must
-   * be included in insert requests in order to receive discounted rate. This property is optional,
-   * regular pricing applies if left empty.
+   * be included in `insert` requests in order to receive discounted rate. This property is
+   * optional, regular pricing applies if left empty.
    * @param dealCode dealCode or {@code null} for none
    */
   public Subscription setDealCode(java.lang.String dealCode) {
@@ -281,7 +281,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies the resource as a Subscription. Value: reseller#subscription
+   * Identifies the resource as a Subscription. Value: `reseller#subscription`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -289,7 +289,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies the resource as a Subscription. Value: reseller#subscription
+   * Identifies the resource as a Subscription. Value: `reseller#subscription`
    * @param kind kind or {@code null} for none
    */
   public Subscription setKind(java.lang.String kind) {
@@ -298,7 +298,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The plan property is required. In this version of the API, the G Suite plans are the flexible
+   * The `plan` property is required. In this version of the API, the G Suite plans are the flexible
    * plan, annual commitment plan, and the 30-day free trial plan. For more information about the
    * API"s payment plans, see the API concepts.
    * @return value or {@code null} for none
@@ -308,7 +308,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The plan property is required. In this version of the API, the G Suite plans are the flexible
+   * The `plan` property is required. In this version of the API, the G Suite plans are the flexible
    * plan, annual commitment plan, and the 30-day free trial plan. For more information about the
    * API"s payment plans, see the API concepts.
    * @param plan plan or {@code null} for none
@@ -320,7 +320,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * This is an optional property. This purchase order (PO) information is for resellers to use for
-   * their company tracking usage. If a purchaseOrderId value is given it appears in the API
+   * their company tracking usage. If a `purchaseOrderId` value is given it appears in the API
    * responses and shows up in the invoice. The property accepts up to 80 plain text characters.
    * @return value or {@code null} for none
    */
@@ -330,7 +330,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * This is an optional property. This purchase order (PO) information is for resellers to use for
-   * their company tracking usage. If a purchaseOrderId value is given it appears in the API
+   * their company tracking usage. If a `purchaseOrderId` value is given it appears in the API
    * responses and shows up in the invoice. The property accepts up to 80 plain text characters.
    * @param purchaseOrderId purchaseOrderId or {@code null} for none
    */
@@ -397,8 +397,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A required property. The skuId is a unique system identifier for a product's SKU assigned to a
-   * customer in the subscription. For products and SKUs available in this version of the API, see
+   * A required property. The `skuId` is a unique system identifier for a product's SKU assigned to
+   * a customer in the subscription. For products and SKUs available in this version of the API, see
    * Product and SKU IDs.
    * @return value or {@code null} for none
    */
@@ -407,8 +407,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A required property. The skuId is a unique system identifier for a product's SKU assigned to a
-   * customer in the subscription. For products and SKUs available in this version of the API, see
+   * A required property. The `skuId` is a unique system identifier for a product's SKU assigned to
+   * a customer in the subscription. For products and SKUs available in this version of the API, see
    * Product and SKU IDs.
    * @param skuId skuId or {@code null} for none
    */
@@ -456,10 +456,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The subscriptionId is the subscription identifier and is unique for each customer. This is a
-   * required property. Since a subscriptionId changes when a subscription is updated, we recommend
-   * not using this ID as a key for persistent data. Use the subscriptionId as described in retrieve
-   * all reseller subscriptions.
+   * The `subscriptionId` is the subscription identifier and is unique for each customer. This is a
+   * required property. Since a `subscriptionId` changes when a subscription is updated, we
+   * recommend not using this ID as a key for persistent data. Use the `subscriptionId` as described
+   * in retrieve all reseller subscriptions.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubscriptionId() {
@@ -467,10 +467,10 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The subscriptionId is the subscription identifier and is unique for each customer. This is a
-   * required property. Since a subscriptionId changes when a subscription is updated, we recommend
-   * not using this ID as a key for persistent data. Use the subscriptionId as described in retrieve
-   * all reseller subscriptions.
+   * The `subscriptionId` is the subscription identifier and is unique for each customer. This is a
+   * required property. Since a `subscriptionId` changes when a subscription is updated, we
+   * recommend not using this ID as a key for persistent data. Use the `subscriptionId` as described
+   * in retrieve all reseller subscriptions.
    * @param subscriptionId subscriptionId or {@code null} for none
    */
   public Subscription setSubscriptionId(java.lang.String subscriptionId) {
@@ -481,13 +481,13 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Read-only field containing an enumerable of all the current suspension reasons for a
    * subscription. It is possible for a subscription to have many concurrent, overlapping suspension
-   * reasons. A subscription's STATUS is SUSPENDED until all pending suspensions are removed.
-   * Possible options include: - PENDING_TOS_ACCEPTANCE - The customer has not logged in and
-   * accepted the G Suite Resold Terms of Services. - RENEWAL_WITH_TYPE_CANCEL - The customer's
-   * commitment ended and their service was cancelled at the end of their term. - RESELLER_INITIATED
-   * - A manual suspension invoked by a Reseller. - TRIAL_ENDED - The customer's trial expired
-   * without a plan selected. - OTHER - The customer is suspended for an internal Google reason
-   * (e.g. abuse or otherwise).
+   * reasons. A subscription's `STATUS` is `SUSPENDED` until all pending suspensions are removed.
+   * Possible options include: - `PENDING_TOS_ACCEPTANCE` - The customer has not logged in and
+   * accepted the G Suite Resold Terms of Services. - `RENEWAL_WITH_TYPE_CANCEL` - The customer's
+   * commitment ended and their service was cancelled at the end of their term. -
+   * `RESELLER_INITIATED` - A manual suspension invoked by a Reseller. - `TRIAL_ENDED` - The
+   * customer's trial expired without a plan selected. - `OTHER` - The customer is suspended for an
+   * internal Google reason (e.g. abuse or otherwise).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSuspensionReasons() {
@@ -497,13 +497,13 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   /**
    * Read-only field containing an enumerable of all the current suspension reasons for a
    * subscription. It is possible for a subscription to have many concurrent, overlapping suspension
-   * reasons. A subscription's STATUS is SUSPENDED until all pending suspensions are removed.
-   * Possible options include: - PENDING_TOS_ACCEPTANCE - The customer has not logged in and
-   * accepted the G Suite Resold Terms of Services. - RENEWAL_WITH_TYPE_CANCEL - The customer's
-   * commitment ended and their service was cancelled at the end of their term. - RESELLER_INITIATED
-   * - A manual suspension invoked by a Reseller. - TRIAL_ENDED - The customer's trial expired
-   * without a plan selected. - OTHER - The customer is suspended for an internal Google reason
-   * (e.g. abuse or otherwise).
+   * reasons. A subscription's `STATUS` is `SUSPENDED` until all pending suspensions are removed.
+   * Possible options include: - `PENDING_TOS_ACCEPTANCE` - The customer has not logged in and
+   * accepted the G Suite Resold Terms of Services. - `RENEWAL_WITH_TYPE_CANCEL` - The customer's
+   * commitment ended and their service was cancelled at the end of their term. -
+   * `RESELLER_INITIATED` - A manual suspension invoked by a Reseller. - `TRIAL_ENDED` - The
+   * customer's trial expired without a plan selected. - `OTHER` - The customer is suspended for an
+   * internal Google reason (e.g. abuse or otherwise).
    * @param suspensionReasons suspensionReasons or {@code null} for none
    */
   public Subscription setSuspensionReasons(java.util.List<java.lang.String> suspensionReasons) {
@@ -560,7 +560,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The plan property is required. In this version of the API, the G Suite plans are the flexible
+   * The `plan` property is required. In this version of the API, the G Suite plans are the flexible
    * plan, annual commitment plan, and the 30-day free trial plan. For more information about the
    * API"s payment plans, see the API concepts.
    */
@@ -568,33 +568,33 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
     /**
      * In this version of the API, annual commitment plan's interval is one year. *Note: *When
-     * billingMethod value is OFFLINE, the subscription property object plan.commitmentInterval is
-     * omitted in all API responses.
+     * `billingMethod` value is `OFFLINE`, the subscription property object `plan.commitmentInterval`
+     * is omitted in all API responses.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private CommitmentInterval commitmentInterval;
 
     /**
-     * The isCommitmentPlan property's boolean value identifies the plan as an annual commitment plan:
-     * - true — The subscription's plan is an annual commitment plan. - false — The plan is not an
-     * annual commitment plan.
+     * The `isCommitmentPlan` property's boolean value identifies the plan as an annual commitment
+     * plan: - `true` — The subscription's plan is an annual commitment plan. - `false` — The plan is
+     * not an annual commitment plan.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean isCommitmentPlan;
 
     /**
-     * The planName property is required. This is the name of the subscription's plan. For more
+     * The `planName` property is required. This is the name of the subscription's plan. For more
      * information about the Google payment plans, see the API concepts. Possible values are: -
-     * ANNUAL_MONTHLY_PAY — The annual commitment plan with monthly payments. *Caution:
-     * *ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses. - ANNUAL_YEARLY_PAY — The
-     * annual commitment plan with yearly payments - FLEXIBLE — The flexible plan - TRIAL — The 30-day
-     * free trial plan. A subscription in trial will be suspended after the 30th free day if no
-     * payment plan is assigned. Calling changePlan will assign a payment plan to a trial but will not
-     * activate the plan. A trial will automatically begin its assigned payment plan after its 30th
-     * free day or immediately after calling startPaidService. - FREE — The free plan is exclusive to
-     * the Cloud Identity SKU and does not incur any billing.
+     * `ANNUAL_MONTHLY_PAY` — The annual commitment plan with monthly payments. *Caution:
+     * *`ANNUAL_MONTHLY_PAY` is returned as `ANNUAL` in all API responses. - `ANNUAL_YEARLY_PAY` — The
+     * annual commitment plan with yearly payments - `FLEXIBLE` — The flexible plan - `TRIAL` — The
+     * 30-day free trial plan. A subscription in trial will be suspended after the 30th free day if no
+     * payment plan is assigned. Calling `changePlan` will assign a payment plan to a trial but will
+     * not activate the plan. A trial will automatically begin its assigned payment plan after its
+     * 30th free day or immediately after calling `startPaidService`. - `FREE` — The free plan is
+     * exclusive to the Cloud Identity SKU and does not incur any billing.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -602,8 +602,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
     /**
      * In this version of the API, annual commitment plan's interval is one year. *Note: *When
-     * billingMethod value is OFFLINE, the subscription property object plan.commitmentInterval is
-     * omitted in all API responses.
+     * `billingMethod` value is `OFFLINE`, the subscription property object `plan.commitmentInterval`
+     * is omitted in all API responses.
      * @return value or {@code null} for none
      */
     public CommitmentInterval getCommitmentInterval() {
@@ -612,8 +612,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
     /**
      * In this version of the API, annual commitment plan's interval is one year. *Note: *When
-     * billingMethod value is OFFLINE, the subscription property object plan.commitmentInterval is
-     * omitted in all API responses.
+     * `billingMethod` value is `OFFLINE`, the subscription property object `plan.commitmentInterval`
+     * is omitted in all API responses.
      * @param commitmentInterval commitmentInterval or {@code null} for none
      */
     public Plan setCommitmentInterval(CommitmentInterval commitmentInterval) {
@@ -622,9 +622,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The isCommitmentPlan property's boolean value identifies the plan as an annual commitment plan:
-     * - true — The subscription's plan is an annual commitment plan. - false — The plan is not an
-     * annual commitment plan.
+     * The `isCommitmentPlan` property's boolean value identifies the plan as an annual commitment
+     * plan: - `true` — The subscription's plan is an annual commitment plan. - `false` — The plan is
+     * not an annual commitment plan.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getIsCommitmentPlan() {
@@ -632,9 +632,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The isCommitmentPlan property's boolean value identifies the plan as an annual commitment plan:
-     * - true — The subscription's plan is an annual commitment plan. - false — The plan is not an
-     * annual commitment plan.
+     * The `isCommitmentPlan` property's boolean value identifies the plan as an annual commitment
+     * plan: - `true` — The subscription's plan is an annual commitment plan. - `false` — The plan is
+     * not an annual commitment plan.
      * @param isCommitmentPlan isCommitmentPlan or {@code null} for none
      */
     public Plan setIsCommitmentPlan(java.lang.Boolean isCommitmentPlan) {
@@ -643,16 +643,16 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The planName property is required. This is the name of the subscription's plan. For more
+     * The `planName` property is required. This is the name of the subscription's plan. For more
      * information about the Google payment plans, see the API concepts. Possible values are: -
-     * ANNUAL_MONTHLY_PAY — The annual commitment plan with monthly payments. *Caution:
-     * *ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses. - ANNUAL_YEARLY_PAY — The
-     * annual commitment plan with yearly payments - FLEXIBLE — The flexible plan - TRIAL — The 30-day
-     * free trial plan. A subscription in trial will be suspended after the 30th free day if no
-     * payment plan is assigned. Calling changePlan will assign a payment plan to a trial but will not
-     * activate the plan. A trial will automatically begin its assigned payment plan after its 30th
-     * free day or immediately after calling startPaidService. - FREE — The free plan is exclusive to
-     * the Cloud Identity SKU and does not incur any billing.
+     * `ANNUAL_MONTHLY_PAY` — The annual commitment plan with monthly payments. *Caution:
+     * *`ANNUAL_MONTHLY_PAY` is returned as `ANNUAL` in all API responses. - `ANNUAL_YEARLY_PAY` — The
+     * annual commitment plan with yearly payments - `FLEXIBLE` — The flexible plan - `TRIAL` — The
+     * 30-day free trial plan. A subscription in trial will be suspended after the 30th free day if no
+     * payment plan is assigned. Calling `changePlan` will assign a payment plan to a trial but will
+     * not activate the plan. A trial will automatically begin its assigned payment plan after its
+     * 30th free day or immediately after calling `startPaidService`. - `FREE` — The free plan is
+     * exclusive to the Cloud Identity SKU and does not incur any billing.
      * @return value or {@code null} for none
      */
     public java.lang.String getPlanName() {
@@ -660,16 +660,16 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The planName property is required. This is the name of the subscription's plan. For more
+     * The `planName` property is required. This is the name of the subscription's plan. For more
      * information about the Google payment plans, see the API concepts. Possible values are: -
-     * ANNUAL_MONTHLY_PAY — The annual commitment plan with monthly payments. *Caution:
-     * *ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses. - ANNUAL_YEARLY_PAY — The
-     * annual commitment plan with yearly payments - FLEXIBLE — The flexible plan - TRIAL — The 30-day
-     * free trial plan. A subscription in trial will be suspended after the 30th free day if no
-     * payment plan is assigned. Calling changePlan will assign a payment plan to a trial but will not
-     * activate the plan. A trial will automatically begin its assigned payment plan after its 30th
-     * free day or immediately after calling startPaidService. - FREE — The free plan is exclusive to
-     * the Cloud Identity SKU and does not incur any billing.
+     * `ANNUAL_MONTHLY_PAY` — The annual commitment plan with monthly payments. *Caution:
+     * *`ANNUAL_MONTHLY_PAY` is returned as `ANNUAL` in all API responses. - `ANNUAL_YEARLY_PAY` — The
+     * annual commitment plan with yearly payments - `FLEXIBLE` — The flexible plan - `TRIAL` — The
+     * 30-day free trial plan. A subscription in trial will be suspended after the 30th free day if no
+     * payment plan is assigned. Calling `changePlan` will assign a payment plan to a trial but will
+     * not activate the plan. A trial will automatically begin its assigned payment plan after its
+     * 30th free day or immediately after calling `startPaidService`. - `FREE` — The free plan is
+     * exclusive to the Cloud Identity SKU and does not incur any billing.
      * @param planName planName or {@code null} for none
      */
     public Plan setPlanName(java.lang.String planName) {
@@ -689,21 +689,21 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
     /**
      * In this version of the API, annual commitment plan's interval is one year. *Note: *When
-     * billingMethod value is OFFLINE, the subscription property object plan.commitmentInterval is
+     * `billingMethod` value is `OFFLINE`, the subscription property object `plan.commitmentInterval` is
      * omitted in all API responses.
      */
     public static final class CommitmentInterval extends com.google.api.client.json.GenericJson {
 
       /**
-       * An annual commitment plan's interval's endTime in milliseconds using the UNIX Epoch format. See
-       * an example Epoch converter.
+       * An annual commitment plan's interval's `endTime` in milliseconds using the UNIX Epoch format.
+       * See an example Epoch converter.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key @com.google.api.client.json.JsonString
       private java.lang.Long endTime;
 
       /**
-       * An annual commitment plan's interval's startTime in milliseconds using UNIX Epoch format. See
+       * An annual commitment plan's interval's `startTime` in milliseconds using UNIX Epoch format. See
        * an example Epoch converter.
        * The value may be {@code null}.
        */
@@ -711,8 +711,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
       private java.lang.Long startTime;
 
       /**
-       * An annual commitment plan's interval's endTime in milliseconds using the UNIX Epoch format. See
-       * an example Epoch converter.
+       * An annual commitment plan's interval's `endTime` in milliseconds using the UNIX Epoch format.
+       * See an example Epoch converter.
        * @return value or {@code null} for none
        */
       public java.lang.Long getEndTime() {
@@ -720,8 +720,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * An annual commitment plan's interval's endTime in milliseconds using the UNIX Epoch format. See
-       * an example Epoch converter.
+       * An annual commitment plan's interval's `endTime` in milliseconds using the UNIX Epoch format.
+       * See an example Epoch converter.
        * @param endTime endTime or {@code null} for none
        */
       public CommitmentInterval setEndTime(java.lang.Long endTime) {
@@ -730,7 +730,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * An annual commitment plan's interval's startTime in milliseconds using UNIX Epoch format. See
+       * An annual commitment plan's interval's `startTime` in milliseconds using UNIX Epoch format. See
        * an example Epoch converter.
        * @return value or {@code null} for none
        */
@@ -739,7 +739,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * An annual commitment plan's interval's startTime in milliseconds using UNIX Epoch format. See
+       * An annual commitment plan's interval's `startTime` in milliseconds using UNIX Epoch format. See
        * an example Epoch converter.
        * @param startTime startTime or {@code null} for none
        */
@@ -843,8 +843,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   public static final class TrialSettings extends com.google.api.client.json.GenericJson {
 
     /**
-     * Determines if a subscription's plan is in a 30-day free trial or not: - true — The plan is in
-     * trial. - false — The plan is not in trial.
+     * Determines if a subscription's plan is in a 30-day free trial or not: - `true` — The plan is in
+     * trial. - `false` — The plan is not in trial.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -859,8 +859,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
     private java.lang.Long trialEndTime;
 
     /**
-     * Determines if a subscription's plan is in a 30-day free trial or not: - true — The plan is in
-     * trial. - false — The plan is not in trial.
+     * Determines if a subscription's plan is in a 30-day free trial or not: - `true` — The plan is in
+     * trial. - `false` — The plan is not in trial.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getIsInTrial() {
@@ -868,8 +868,8 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Determines if a subscription's plan is in a 30-day free trial or not: - true — The plan is in
-     * trial. - false — The plan is not in trial.
+     * Determines if a subscription's plan is in a 30-day free trial or not: - `true` — The plan is in
+     * trial. - `false` — The plan is not in trial.
      * @param isInTrial isInTrial or {@code null} for none
      */
     public TrialSettings setIsInTrial(java.lang.Boolean isInTrial) {

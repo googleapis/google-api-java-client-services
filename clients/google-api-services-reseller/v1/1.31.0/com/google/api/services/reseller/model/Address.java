@@ -32,7 +32,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
 
   /**
    * A customer's physical address. An address can be composed of one to three lines. The
-   * addressline2 and addressLine3 are optional.
+   * `addressline2` and `addressLine3` are optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String contactName;
 
   /**
-   * For countryCode information, see the ISO 3166 country code elements. Verify that country is
+   * For `countryCode` information, see the ISO 3166 country code elements. Verify that country is
    * approved for resale of Google products. This property is required when creating a new customer.
    * The value may be {@code null}.
    */
@@ -68,14 +68,14 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String countryCode;
 
   /**
-   * Identifies the resource as a customer address. Value: customers#address
+   * Identifies the resource as a customer address. Value: `customers#address`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * An example of a locality value is the city of San Francisco.
+   * An example of a `locality` value is the city of `San Francisco`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String organizationName;
 
   /**
-   * A postalCode example is a postal zip code such as 94043. This property is required when
+   * A `postalCode` example is a postal zip code such as `94043`. This property is required when
    * creating a new customer.
    * The value may be {@code null}.
    */
@@ -97,7 +97,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String postalCode;
 
   /**
-   * An example of a region value is CA for the state of California.
+   * An example of a `region` value is `CA` for the state of California.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
 
   /**
    * A customer's physical address. An address can be composed of one to three lines. The
-   * addressline2 and addressLine3 are optional.
+   * `addressline2` and `addressLine3` are optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getAddressLine1() {
@@ -114,7 +114,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
 
   /**
    * A customer's physical address. An address can be composed of one to three lines. The
-   * addressline2 and addressLine3 are optional.
+   * `addressline2` and `addressLine3` are optional.
    * @param addressLine1 addressLine1 or {@code null} for none
    */
   public Address setAddressLine1(java.lang.String addressLine1) {
@@ -174,7 +174,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For countryCode information, see the ISO 3166 country code elements. Verify that country is
+   * For `countryCode` information, see the ISO 3166 country code elements. Verify that country is
    * approved for resale of Google products. This property is required when creating a new customer.
    * @return value or {@code null} for none
    */
@@ -183,7 +183,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * For countryCode information, see the ISO 3166 country code elements. Verify that country is
+   * For `countryCode` information, see the ISO 3166 country code elements. Verify that country is
    * approved for resale of Google products. This property is required when creating a new customer.
    * @param countryCode countryCode or {@code null} for none
    */
@@ -193,7 +193,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies the resource as a customer address. Value: customers#address
+   * Identifies the resource as a customer address. Value: `customers#address`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -201,7 +201,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifies the resource as a customer address. Value: customers#address
+   * Identifies the resource as a customer address. Value: `customers#address`
    * @param kind kind or {@code null} for none
    */
   public Address setKind(java.lang.String kind) {
@@ -210,7 +210,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An example of a locality value is the city of San Francisco.
+   * An example of a `locality` value is the city of `San Francisco`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocality() {
@@ -218,7 +218,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An example of a locality value is the city of San Francisco.
+   * An example of a `locality` value is the city of `San Francisco`.
    * @param locality locality or {@code null} for none
    */
   public Address setLocality(java.lang.String locality) {
@@ -244,7 +244,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A postalCode example is a postal zip code such as 94043. This property is required when
+   * A `postalCode` example is a postal zip code such as `94043`. This property is required when
    * creating a new customer.
    * @return value or {@code null} for none
    */
@@ -253,7 +253,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A postalCode example is a postal zip code such as 94043. This property is required when
+   * A `postalCode` example is a postal zip code such as `94043`. This property is required when
    * creating a new customer.
    * @param postalCode postalCode or {@code null} for none
    */
@@ -263,7 +263,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An example of a region value is CA for the state of California.
+   * An example of a `region` value is `CA` for the state of California.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -271,7 +271,7 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An example of a region value is CA for the state of California.
+   * An example of a `region` value is `CA` for the state of California.
    * @param region region or {@code null} for none
    */
   public Address setRegion(java.lang.String region) {

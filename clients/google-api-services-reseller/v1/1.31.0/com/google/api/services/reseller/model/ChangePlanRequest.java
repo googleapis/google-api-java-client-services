@@ -32,7 +32,7 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
 
   /**
    * Google-issued code (100 char max) for discounted pricing on subscription plans. Deal code must
-   * be included in changePlan request in order to receive discounted rate. This property is
+   * be included in `changePlan` request in order to receive discounted rate. This property is
    * optional. If a deal code has already been added to a subscription, this property may be left
    * empty and the existing discounted rate will still apply (if not empty, only provide the deal
    * code that is already present on the subscription). If a deal code has never been added to a
@@ -44,19 +44,19 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
 
   /**
    * Identifies the resource as a subscription change plan request. Value:
-   * subscriptions#changePlanRequest
+   * `subscriptions#changePlanRequest`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The planName property is required. This is the name of the subscription's payment plan. For
+   * The `planName` property is required. This is the name of the subscription's payment plan. For
    * more information about the Google payment plans, see API concepts. Possible values are: -
-   * ANNUAL_MONTHLY_PAY - The annual commitment plan with monthly payments *Caution:
-   * *ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses. - ANNUAL_YEARLY_PAY - The
-   * annual commitment plan with yearly payments - FLEXIBLE - The flexible plan - TRIAL - The 30-day
-   * free trial plan
+   * `ANNUAL_MONTHLY_PAY` - The annual commitment plan with monthly payments *Caution:
+   * *`ANNUAL_MONTHLY_PAY` is returned as `ANNUAL` in all API responses. - `ANNUAL_YEARLY_PAY` - The
+   * annual commitment plan with yearly payments - `FLEXIBLE` - The flexible plan - `TRIAL` - The
+   * 30-day free trial plan
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
 
   /**
    * This is an optional property. This purchase order (PO) information is for resellers to use for
-   * their company tracking usage. If a purchaseOrderId value is given it appears in the API
+   * their company tracking usage. If a `purchaseOrderId` value is given it appears in the API
    * responses and shows up in the invoice. The property accepts up to 80 plain text characters.
    * The value may be {@code null}.
    */
@@ -80,7 +80,7 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
 
   /**
    * Google-issued code (100 char max) for discounted pricing on subscription plans. Deal code must
-   * be included in changePlan request in order to receive discounted rate. This property is
+   * be included in `changePlan` request in order to receive discounted rate. This property is
    * optional. If a deal code has already been added to a subscription, this property may be left
    * empty and the existing discounted rate will still apply (if not empty, only provide the deal
    * code that is already present on the subscription). If a deal code has never been added to a
@@ -93,7 +93,7 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
 
   /**
    * Google-issued code (100 char max) for discounted pricing on subscription plans. Deal code must
-   * be included in changePlan request in order to receive discounted rate. This property is
+   * be included in `changePlan` request in order to receive discounted rate. This property is
    * optional. If a deal code has already been added to a subscription, this property may be left
    * empty and the existing discounted rate will still apply (if not empty, only provide the deal
    * code that is already present on the subscription). If a deal code has never been added to a
@@ -107,7 +107,7 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
 
   /**
    * Identifies the resource as a subscription change plan request. Value:
-   * subscriptions#changePlanRequest
+   * `subscriptions#changePlanRequest`
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -116,7 +116,7 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
 
   /**
    * Identifies the resource as a subscription change plan request. Value:
-   * subscriptions#changePlanRequest
+   * `subscriptions#changePlanRequest`
    * @param kind kind or {@code null} for none
    */
   public ChangePlanRequest setKind(java.lang.String kind) {
@@ -125,12 +125,12 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The planName property is required. This is the name of the subscription's payment plan. For
+   * The `planName` property is required. This is the name of the subscription's payment plan. For
    * more information about the Google payment plans, see API concepts. Possible values are: -
-   * ANNUAL_MONTHLY_PAY - The annual commitment plan with monthly payments *Caution:
-   * *ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses. - ANNUAL_YEARLY_PAY - The
-   * annual commitment plan with yearly payments - FLEXIBLE - The flexible plan - TRIAL - The 30-day
-   * free trial plan
+   * `ANNUAL_MONTHLY_PAY` - The annual commitment plan with monthly payments *Caution:
+   * *`ANNUAL_MONTHLY_PAY` is returned as `ANNUAL` in all API responses. - `ANNUAL_YEARLY_PAY` - The
+   * annual commitment plan with yearly payments - `FLEXIBLE` - The flexible plan - `TRIAL` - The
+   * 30-day free trial plan
    * @return value or {@code null} for none
    */
   public java.lang.String getPlanName() {
@@ -138,12 +138,12 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The planName property is required. This is the name of the subscription's payment plan. For
+   * The `planName` property is required. This is the name of the subscription's payment plan. For
    * more information about the Google payment plans, see API concepts. Possible values are: -
-   * ANNUAL_MONTHLY_PAY - The annual commitment plan with monthly payments *Caution:
-   * *ANNUAL_MONTHLY_PAY is returned as ANNUAL in all API responses. - ANNUAL_YEARLY_PAY - The
-   * annual commitment plan with yearly payments - FLEXIBLE - The flexible plan - TRIAL - The 30-day
-   * free trial plan
+   * `ANNUAL_MONTHLY_PAY` - The annual commitment plan with monthly payments *Caution:
+   * *`ANNUAL_MONTHLY_PAY` is returned as `ANNUAL` in all API responses. - `ANNUAL_YEARLY_PAY` - The
+   * annual commitment plan with yearly payments - `FLEXIBLE` - The flexible plan - `TRIAL` - The
+   * 30-day free trial plan
    * @param planName planName or {@code null} for none
    */
   public ChangePlanRequest setPlanName(java.lang.String planName) {
@@ -153,7 +153,7 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
 
   /**
    * This is an optional property. This purchase order (PO) information is for resellers to use for
-   * their company tracking usage. If a purchaseOrderId value is given it appears in the API
+   * their company tracking usage. If a `purchaseOrderId` value is given it appears in the API
    * responses and shows up in the invoice. The property accepts up to 80 plain text characters.
    * @return value or {@code null} for none
    */
@@ -163,7 +163,7 @@ public final class ChangePlanRequest extends com.google.api.client.json.GenericJ
 
   /**
    * This is an optional property. This purchase order (PO) information is for resellers to use for
-   * their company tracking usage. If a purchaseOrderId value is given it appears in the API
+   * their company tracking usage. If a `purchaseOrderId` value is given it appears in the API
    * responses and shows up in the invoice. The property accepts up to 80 plain text characters.
    * @param purchaseOrderId purchaseOrderId or {@code null} for none
    */

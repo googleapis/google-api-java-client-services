@@ -52,15 +52,6 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   private InListFilter inListFilter;
 
   /**
-   * A filter for null values. If True, a null dimension value is matched by this filter. Null
-   * filter is commonly used inside a NOT filter expression. For example, a NOT expression of a null
-   * filter removes rows when a dimension is null.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean nullFilter;
-
-  /**
    * A filter for numeric or date values.
    * The value may be {@code null}.
    */
@@ -122,27 +113,6 @@ public final class Filter extends com.google.api.client.json.GenericJson {
    */
   public Filter setInListFilter(InListFilter inListFilter) {
     this.inListFilter = inListFilter;
-    return this;
-  }
-
-  /**
-   * A filter for null values. If True, a null dimension value is matched by this filter. Null
-   * filter is commonly used inside a NOT filter expression. For example, a NOT expression of a null
-   * filter removes rows when a dimension is null.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getNullFilter() {
-    return nullFilter;
-  }
-
-  /**
-   * A filter for null values. If True, a null dimension value is matched by this filter. Null
-   * filter is commonly used inside a NOT filter expression. For example, a NOT expression of a null
-   * filter removes rows when a dimension is null.
-   * @param nullFilter nullFilter or {@code null} for none
-   */
-  public Filter setNullFilter(java.lang.Boolean nullFilter) {
-    this.nullFilter = nullFilter;
     return this;
   }
 

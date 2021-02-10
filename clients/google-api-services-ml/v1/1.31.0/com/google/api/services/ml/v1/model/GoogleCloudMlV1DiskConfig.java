@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1DiskConfig extends com.google.api.client.json.
   private java.lang.Integer bootDiskSizeGb;
 
   /**
-   * Type of the boot disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid
+   * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid
    * State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class GoogleCloudMlV1DiskConfig extends com.google.api.client.json.
   }
 
   /**
-   * Type of the boot disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid
+   * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid
    * State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
    * @return value or {@code null} for none
    */
@@ -72,7 +72,7 @@ public final class GoogleCloudMlV1DiskConfig extends com.google.api.client.json.
   }
 
   /**
-   * Type of the boot disk (default is "pd-standard"). Valid values: "pd-ssd" (Persistent Disk Solid
+   * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid
    * State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
    * @param bootDiskType bootDiskType or {@code null} for none
    */

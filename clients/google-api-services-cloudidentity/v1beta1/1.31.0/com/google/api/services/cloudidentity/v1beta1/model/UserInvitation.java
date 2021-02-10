@@ -17,7 +17,10 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * UserInvitation to join a Google Workspace organization.
+ * The `UserInvitation` resource represents an email sent to an unmanaged user account (an email
+ * address that shares the domain of the Google Workspace customer but is not managed by it yet),
+ * inviting them to join the customer’s domain. If the user accepts the `UserInvitation`, the
+ * account will become a managed account.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -37,7 +40,7 @@ public final class UserInvitation extends com.google.api.client.json.GenericJson
   private java.lang.Long mailsSentCount;
 
   /**
-   * Shall be of the form `customers/{customer}/userinvitations/{user_email_address}`
+   * Shall be of the form `customers/{customer}/userinvitations/{user_email_address}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +78,7 @@ public final class UserInvitation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Shall be of the form `customers/{customer}/userinvitations/{user_email_address}`
+   * Shall be of the form `customers/{customer}/userinvitations/{user_email_address}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -83,7 +86,7 @@ public final class UserInvitation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Shall be of the form `customers/{customer}/userinvitations/{user_email_address}`
+   * Shall be of the form `customers/{customer}/userinvitations/{user_email_address}`.
    * @param name name or {@code null} for none
    */
   public UserInvitation setName(java.lang.String name) {

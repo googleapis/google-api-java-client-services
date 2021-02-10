@@ -30,8 +30,8 @@ package com.google.api.services.domains.v1beta1.model;
 public final class ConfigureContactSettingsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of contact notices that the caller acknowledges. The notices required here depend on
-   * the values specified in `contact_settings`.
+   * The list of contact notices that the caller acknowledges. The notices needed here depend on the
+   * values specified in `contact_settings`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +61,8 @@ public final class ConfigureContactSettingsRequest extends com.google.api.client
   private java.lang.Boolean validateOnly;
 
   /**
-   * The list of contact notices that the caller acknowledges. The notices required here depend on
-   * the values specified in `contact_settings`.
+   * The list of contact notices that the caller acknowledges. The notices needed here depend on the
+   * values specified in `contact_settings`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContactNotices() {
@@ -70,8 +70,8 @@ public final class ConfigureContactSettingsRequest extends com.google.api.client
   }
 
   /**
-   * The list of contact notices that the caller acknowledges. The notices required here depend on
-   * the values specified in `contact_settings`.
+   * The list of contact notices that the caller acknowledges. The notices needed here depend on the
+   * values specified in `contact_settings`.
    * @param contactNotices contactNotices or {@code null} for none
    */
   public ConfigureContactSettingsRequest setContactNotices(java.util.List<java.lang.String> contactNotices) {

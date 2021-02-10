@@ -30,16 +30,48 @@ package com.google.api.services.testing.model;
 public final class ProvidedSoftwareCatalog extends com.google.api.client.json.GenericJson {
 
   /**
-   * A string representing the current version of Android Test Orchestrator that is provided by
-   * TestExecutionService. Example: "1.0.2 beta".
+   * A string representing the current version of AndroidX Test Orchestrator that is used in the
+   * environment. The package is available at
+   * https://maven.google.com/web/index.html#androidx.test:orchestrator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String androidxOrchestratorVersion;
+
+  /**
+   * A string representing the current version of Android Test Orchestrator that is used in the
+   * environment. The package is available at
+   * https://maven.google.com/web/index.html#com.android.support.test:orchestrator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orchestratorVersion;
 
   /**
-   * A string representing the current version of Android Test Orchestrator that is provided by
-   * TestExecutionService. Example: "1.0.2 beta".
+   * A string representing the current version of AndroidX Test Orchestrator that is used in the
+   * environment. The package is available at
+   * https://maven.google.com/web/index.html#androidx.test:orchestrator.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAndroidxOrchestratorVersion() {
+    return androidxOrchestratorVersion;
+  }
+
+  /**
+   * A string representing the current version of AndroidX Test Orchestrator that is used in the
+   * environment. The package is available at
+   * https://maven.google.com/web/index.html#androidx.test:orchestrator.
+   * @param androidxOrchestratorVersion androidxOrchestratorVersion or {@code null} for none
+   */
+  public ProvidedSoftwareCatalog setAndroidxOrchestratorVersion(java.lang.String androidxOrchestratorVersion) {
+    this.androidxOrchestratorVersion = androidxOrchestratorVersion;
+    return this;
+  }
+
+  /**
+   * A string representing the current version of Android Test Orchestrator that is used in the
+   * environment. The package is available at
+   * https://maven.google.com/web/index.html#com.android.support.test:orchestrator.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrchestratorVersion() {
@@ -47,8 +79,9 @@ public final class ProvidedSoftwareCatalog extends com.google.api.client.json.Ge
   }
 
   /**
-   * A string representing the current version of Android Test Orchestrator that is provided by
-   * TestExecutionService. Example: "1.0.2 beta".
+   * A string representing the current version of Android Test Orchestrator that is used in the
+   * environment. The package is available at
+   * https://maven.google.com/web/index.html#com.android.support.test:orchestrator.
    * @param orchestratorVersion orchestratorVersion or {@code null} for none
    */
   public ProvidedSoftwareCatalog setOrchestratorVersion(java.lang.String orchestratorVersion) {

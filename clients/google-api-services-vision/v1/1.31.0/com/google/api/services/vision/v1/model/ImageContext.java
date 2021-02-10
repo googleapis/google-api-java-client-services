@@ -64,6 +64,13 @@ public final class ImageContext extends com.google.api.client.json.GenericJson {
   private ProductSearchParams productSearchParams;
 
   /**
+   * Parameters for text detection and document text detection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TextDetectionParams textDetectionParams;
+
+  /**
    * Parameters for web detection.
    * The value may be {@code null}.
    */
@@ -147,6 +154,23 @@ public final class ImageContext extends com.google.api.client.json.GenericJson {
    */
   public ImageContext setProductSearchParams(ProductSearchParams productSearchParams) {
     this.productSearchParams = productSearchParams;
+    return this;
+  }
+
+  /**
+   * Parameters for text detection and document text detection.
+   * @return value or {@code null} for none
+   */
+  public TextDetectionParams getTextDetectionParams() {
+    return textDetectionParams;
+  }
+
+  /**
+   * Parameters for text detection and document text detection.
+   * @param textDetectionParams textDetectionParams or {@code null} for none
+   */
+  public ImageContext setTextDetectionParams(TextDetectionParams textDetectionParams) {
+    this.textDetectionParams = textDetectionParams;
     return this;
   }
 

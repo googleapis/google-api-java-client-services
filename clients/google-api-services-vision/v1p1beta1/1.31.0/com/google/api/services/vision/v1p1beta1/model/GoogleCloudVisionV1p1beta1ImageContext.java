@@ -64,6 +64,13 @@ public final class GoogleCloudVisionV1p1beta1ImageContext extends com.google.api
   private GoogleCloudVisionV1p1beta1ProductSearchParams productSearchParams;
 
   /**
+   * Parameters for text detection and document text detection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudVisionV1p1beta1TextDetectionParams textDetectionParams;
+
+  /**
    * Parameters for web detection.
    * The value may be {@code null}.
    */
@@ -147,6 +154,23 @@ public final class GoogleCloudVisionV1p1beta1ImageContext extends com.google.api
    */
   public GoogleCloudVisionV1p1beta1ImageContext setProductSearchParams(GoogleCloudVisionV1p1beta1ProductSearchParams productSearchParams) {
     this.productSearchParams = productSearchParams;
+    return this;
+  }
+
+  /**
+   * Parameters for text detection and document text detection.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudVisionV1p1beta1TextDetectionParams getTextDetectionParams() {
+    return textDetectionParams;
+  }
+
+  /**
+   * Parameters for text detection and document text detection.
+   * @param textDetectionParams textDetectionParams or {@code null} for none
+   */
+  public GoogleCloudVisionV1p1beta1ImageContext setTextDetectionParams(GoogleCloudVisionV1p1beta1TextDetectionParams textDetectionParams) {
+    this.textDetectionParams = textDetectionParams;
     return this;
   }
 

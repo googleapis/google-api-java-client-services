@@ -36,6 +36,7 @@ public final class ResourceRecordSetsListResponse extends com.google.api.client.
   private ResponseHeader header;
 
   /**
+   * Type of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,6 +84,7 @@ public final class ResourceRecordSetsListResponse extends com.google.api.client.
   }
 
   /**
+   * Type of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -90,6 +92,7 @@ public final class ResourceRecordSetsListResponse extends com.google.api.client.
   }
 
   /**
+   * Type of resource.
    * @param kind kind or {@code null} for none
    */
   public ResourceRecordSetsListResponse setKind(java.lang.String kind) {

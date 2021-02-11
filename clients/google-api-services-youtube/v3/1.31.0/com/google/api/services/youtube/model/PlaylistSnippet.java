@@ -79,6 +79,18 @@ public final class PlaylistSnippet extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> tags;
 
   /**
+   * Note: if the playlist has a custom thumbnail, this field will not be populated. The video id
+   * selected by the user that will be used as the thumbnail of this playlist. This field defaults
+   * to the first publicly viewable video in the playlist, if: 1. The user has never selected a
+   * video to be the thumbnail of the playlist. 2. The user selects a video to be the thumbnail, and
+   * then removes that video from the playlist. 3. The user selects a non-owned video to be the
+   * thumbnail, but that video becomes private, or gets deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thumbnailVideoId;
+
+  /**
    * A map of thumbnail images associated with the playlist. For each object in the map, the key is
    * the name of the thumbnail image, and the value is an object that contains other information
    * about the thumbnail.
@@ -210,6 +222,33 @@ public final class PlaylistSnippet extends com.google.api.client.json.GenericJso
    */
   public PlaylistSnippet setTags(java.util.List<java.lang.String> tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * Note: if the playlist has a custom thumbnail, this field will not be populated. The video id
+   * selected by the user that will be used as the thumbnail of this playlist. This field defaults
+   * to the first publicly viewable video in the playlist, if: 1. The user has never selected a
+   * video to be the thumbnail of the playlist. 2. The user selects a video to be the thumbnail, and
+   * then removes that video from the playlist. 3. The user selects a non-owned video to be the
+   * thumbnail, but that video becomes private, or gets deleted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThumbnailVideoId() {
+    return thumbnailVideoId;
+  }
+
+  /**
+   * Note: if the playlist has a custom thumbnail, this field will not be populated. The video id
+   * selected by the user that will be used as the thumbnail of this playlist. This field defaults
+   * to the first publicly viewable video in the playlist, if: 1. The user has never selected a
+   * video to be the thumbnail of the playlist. 2. The user selects a video to be the thumbnail, and
+   * then removes that video from the playlist. 3. The user selects a non-owned video to be the
+   * thumbnail, but that video becomes private, or gets deleted.
+   * @param thumbnailVideoId thumbnailVideoId or {@code null} for none
+   */
+  public PlaylistSnippet setThumbnailVideoId(java.lang.String thumbnailVideoId) {
+    this.thumbnailVideoId = thumbnailVideoId;
     return this;
   }
 

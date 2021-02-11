@@ -33,9 +33,6 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
    * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
-   * In the case of scheduled export, a path indiciating when the export happens will be added in
-   * between the bucket_name and object_name. For example: the real destination for an scheduled
-   * snapshot is: gs://bucket_name/{YYYY}/{MM}/{DD}/snapshot/{HHMMSS}/file
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +46,7 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
    * "gs://bucket_name/object_name_prefix/compute.googleapis.com/Disk/0" is the first shard of
    * output objects containing all compute.googleapis.com/Disk assets. An INVALID_ARGUMENT error
    * will be returned if file with the same name "gs://bucket_name/object_name_prefix" already
-   * exists. In the case of scheduled export, a path indiciating when the export happens will be
-   * appended. For example: the real destination for an scheduled snapshot is: gs://bucket_name/obje
-   * ct_name_prefix/{YYYY}/{MM}/{DD}/snapshot/{HHMMSS}/{ASSET_TYPE}/{SHARD_NUMBER}
+   * exists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +56,6 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
    * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
-   * In the case of scheduled export, a path indiciating when the export happens will be added in
-   * between the bucket_name and object_name. For example: the real destination for an scheduled
-   * snapshot is: gs://bucket_name/{YYYY}/{MM}/{DD}/snapshot/{HHMMSS}/file
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -74,9 +66,6 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
    * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
-   * In the case of scheduled export, a path indiciating when the export happens will be added in
-   * between the bucket_name and object_name. For example: the real destination for an scheduled
-   * snapshot is: gs://bucket_name/{YYYY}/{MM}/{DD}/snapshot/{HHMMSS}/file
    * @param uri uri or {@code null} for none
    */
   public GcsDestination setUri(java.lang.String uri) {
@@ -92,9 +81,7 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
    * "gs://bucket_name/object_name_prefix/compute.googleapis.com/Disk/0" is the first shard of
    * output objects containing all compute.googleapis.com/Disk assets. An INVALID_ARGUMENT error
    * will be returned if file with the same name "gs://bucket_name/object_name_prefix" already
-   * exists. In the case of scheduled export, a path indiciating when the export happens will be
-   * appended. For example: the real destination for an scheduled snapshot is: gs://bucket_name/obje
-   * ct_name_prefix/{YYYY}/{MM}/{DD}/snapshot/{HHMMSS}/{ASSET_TYPE}/{SHARD_NUMBER}
+   * exists.
    * @return value or {@code null} for none
    */
   public java.lang.String getUriPrefix() {
@@ -109,9 +96,7 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
    * "gs://bucket_name/object_name_prefix/compute.googleapis.com/Disk/0" is the first shard of
    * output objects containing all compute.googleapis.com/Disk assets. An INVALID_ARGUMENT error
    * will be returned if file with the same name "gs://bucket_name/object_name_prefix" already
-   * exists. In the case of scheduled export, a path indiciating when the export happens will be
-   * appended. For example: the real destination for an scheduled snapshot is: gs://bucket_name/obje
-   * ct_name_prefix/{YYYY}/{MM}/{DD}/snapshot/{HHMMSS}/{ASSET_TYPE}/{SHARD_NUMBER}
+   * exists.
    * @param uriPrefix uriPrefix or {@code null} for none
    */
   public GcsDestination setUriPrefix(java.lang.String uriPrefix) {

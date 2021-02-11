@@ -70,6 +70,19 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
   private String readTime;
 
   /**
+   * A list of relationship types to export, for example: `INSTANCE_TO_INSTANCEGROUP`. This field
+   * should only be specified if content_type=RELATIONSHIP. If specified, it will snapshot
+   * [asset_types]' specified relationships, or give errors if any relationship_types' supported
+   * types are not in [asset_types]. If not specified, it will snapshot all [asset_types]' supported
+   * relationships. An unspecified [asset_types] field means all supported asset_types. See
+   * [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview)
+   * for all supported asset types and relationship types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> relationshipTypes;
+
+  /**
    * A list of asset types to take a snapshot for. For example: "compute.googleapis.com/Disk".
    * Regular expressions are also supported. For example: * "compute.googleapis.com.*" snapshots
    * resources whose asset type starts with "compute.googleapis.com". * ".*Instance" snapshots
@@ -158,6 +171,35 @@ public final class ExportAssetsRequest extends com.google.api.client.json.Generi
    */
   public ExportAssetsRequest setReadTime(String readTime) {
     this.readTime = readTime;
+    return this;
+  }
+
+  /**
+   * A list of relationship types to export, for example: `INSTANCE_TO_INSTANCEGROUP`. This field
+   * should only be specified if content_type=RELATIONSHIP. If specified, it will snapshot
+   * [asset_types]' specified relationships, or give errors if any relationship_types' supported
+   * types are not in [asset_types]. If not specified, it will snapshot all [asset_types]' supported
+   * relationships. An unspecified [asset_types] field means all supported asset_types. See
+   * [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview)
+   * for all supported asset types and relationship types.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRelationshipTypes() {
+    return relationshipTypes;
+  }
+
+  /**
+   * A list of relationship types to export, for example: `INSTANCE_TO_INSTANCEGROUP`. This field
+   * should only be specified if content_type=RELATIONSHIP. If specified, it will snapshot
+   * [asset_types]' specified relationships, or give errors if any relationship_types' supported
+   * types are not in [asset_types]. If not specified, it will snapshot all [asset_types]' supported
+   * relationships. An unspecified [asset_types] field means all supported asset_types. See
+   * [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview)
+   * for all supported asset types and relationship types.
+   * @param relationshipTypes relationshipTypes or {@code null} for none
+   */
+  public ExportAssetsRequest setRelationshipTypes(java.util.List<java.lang.String> relationshipTypes) {
+    this.relationshipTypes = relationshipTypes;
     return this;
   }
 

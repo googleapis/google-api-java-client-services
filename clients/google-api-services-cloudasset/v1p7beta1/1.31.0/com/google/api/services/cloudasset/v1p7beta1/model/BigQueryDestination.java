@@ -89,13 +89,7 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
 
   /**
    * Required. The BigQuery table to which the snapshot result should be written. If this table does
-   * not exist, a new table with the given name will be created. In the case of scheduled export,
-   * the real destination is [table] appended with a suffix indicating the point-in-time of the
-   * snapshot. For example, suppose field [table] is "mytable". When
-   * [separate_tables_per_asset_type] and is `FALSE`, the destination will be
-   * "mytable_snapshot_20201122060000", and when [separate_tables_per_asset_type] and is `TRUE` and
-   * the [asset_types] contains "storage.googleapis.com/Bucket", the destination will be
-   * "mytable_snapshot_20201122060000_storage_googleapis_com_Bucket"
+   * not exist, a new table with the given name will be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -231,13 +225,7 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
 
   /**
    * Required. The BigQuery table to which the snapshot result should be written. If this table does
-   * not exist, a new table with the given name will be created. In the case of scheduled export,
-   * the real destination is [table] appended with a suffix indicating the point-in-time of the
-   * snapshot. For example, suppose field [table] is "mytable". When
-   * [separate_tables_per_asset_type] and is `FALSE`, the destination will be
-   * "mytable_snapshot_20201122060000", and when [separate_tables_per_asset_type] and is `TRUE` and
-   * the [asset_types] contains "storage.googleapis.com/Bucket", the destination will be
-   * "mytable_snapshot_20201122060000_storage_googleapis_com_Bucket"
+   * not exist, a new table with the given name will be created.
    * @return value or {@code null} for none
    */
   public java.lang.String getTable() {
@@ -246,13 +234,7 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
 
   /**
    * Required. The BigQuery table to which the snapshot result should be written. If this table does
-   * not exist, a new table with the given name will be created. In the case of scheduled export,
-   * the real destination is [table] appended with a suffix indicating the point-in-time of the
-   * snapshot. For example, suppose field [table] is "mytable". When
-   * [separate_tables_per_asset_type] and is `FALSE`, the destination will be
-   * "mytable_snapshot_20201122060000", and when [separate_tables_per_asset_type] and is `TRUE` and
-   * the [asset_types] contains "storage.googleapis.com/Bucket", the destination will be
-   * "mytable_snapshot_20201122060000_storage_googleapis_com_Bucket"
+   * not exist, a new table with the given name will be created.
    * @param table table or {@code null} for none
    */
   public BigQueryDestination setTable(java.lang.String table) {

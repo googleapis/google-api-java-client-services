@@ -122,6 +122,14 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output Only] An ID that represents a group of operations, such as when a group of operations
+   * results from a `bulkInsert` API request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String operationGroupId;
+
+  /**
    * [Output Only] The type of operation, such as `insert`, `update`, or `delete`, and so on.
    * The value may be {@code null}.
    */
@@ -417,6 +425,25 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] An ID that represents a group of operations, such as when a group of operations
+   * results from a `bulkInsert` API request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOperationGroupId() {
+    return operationGroupId;
+  }
+
+  /**
+   * [Output Only] An ID that represents a group of operations, such as when a group of operations
+   * results from a `bulkInsert` API request.
+   * @param operationGroupId operationGroupId or {@code null} for none
+   */
+  public Operation setOperationGroupId(java.lang.String operationGroupId) {
+    this.operationGroupId = operationGroupId;
     return this;
   }
 

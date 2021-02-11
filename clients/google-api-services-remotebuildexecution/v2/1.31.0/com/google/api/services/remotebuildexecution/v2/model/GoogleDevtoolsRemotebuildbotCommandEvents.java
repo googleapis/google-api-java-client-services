@@ -32,6 +32,13 @@ package com.google.api.services.remotebuildexecution.v2.model;
 public final class GoogleDevtoolsRemotebuildbotCommandEvents extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates if and how Container Manager is being used for task execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cmUsage;
+
+  /**
    * Indicates whether we are using a cached Docker image (true) or had to pull the Docker image
    * (false) for this command.
    * The value may be {@code null}.
@@ -73,6 +80,23 @@ public final class GoogleDevtoolsRemotebuildbotCommandEvents extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean usedAsyncContainer;
+
+  /**
+   * Indicates if and how Container Manager is being used for task execution.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCmUsage() {
+    return cmUsage;
+  }
+
+  /**
+   * Indicates if and how Container Manager is being used for task execution.
+   * @param cmUsage cmUsage or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandEvents setCmUsage(java.lang.String cmUsage) {
+    this.cmUsage = cmUsage;
+    return this;
+  }
 
   /**
    * Indicates whether we are using a cached Docker image (true) or had to pull the Docker image

@@ -44,6 +44,22 @@ public final class V1Beta1ConsumerQuotaMetric extends com.google.api.client.json
   }
 
   /**
+   * The quota limits targeting the descendant containers of the consumer in request. If the
+   * consumer in request is of type `organizations` or `folders`, the field will list per-project
+   * limits in the metric; if the consumer in request is of type `project`, the field will be empty.
+   * The `quota_buckets` field of each descendant consumer quota limit will not be populated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<V1Beta1ConsumerQuotaLimit> descendantConsumerQuotaLimits;
+
+  static {
+    // hack to force ProGuard to consider V1Beta1ConsumerQuotaLimit used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(V1Beta1ConsumerQuotaLimit.class);
+  }
+
+  /**
    * The display name of the metric. An example name would be: "CPUs"
    * The value may be {@code null}.
    */
@@ -88,6 +104,29 @@ public final class V1Beta1ConsumerQuotaMetric extends com.google.api.client.json
    */
   public V1Beta1ConsumerQuotaMetric setConsumerQuotaLimits(java.util.List<V1Beta1ConsumerQuotaLimit> consumerQuotaLimits) {
     this.consumerQuotaLimits = consumerQuotaLimits;
+    return this;
+  }
+
+  /**
+   * The quota limits targeting the descendant containers of the consumer in request. If the
+   * consumer in request is of type `organizations` or `folders`, the field will list per-project
+   * limits in the metric; if the consumer in request is of type `project`, the field will be empty.
+   * The `quota_buckets` field of each descendant consumer quota limit will not be populated.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<V1Beta1ConsumerQuotaLimit> getDescendantConsumerQuotaLimits() {
+    return descendantConsumerQuotaLimits;
+  }
+
+  /**
+   * The quota limits targeting the descendant containers of the consumer in request. If the
+   * consumer in request is of type `organizations` or `folders`, the field will list per-project
+   * limits in the metric; if the consumer in request is of type `project`, the field will be empty.
+   * The `quota_buckets` field of each descendant consumer quota limit will not be populated.
+   * @param descendantConsumerQuotaLimits descendantConsumerQuotaLimits or {@code null} for none
+   */
+  public V1Beta1ConsumerQuotaMetric setDescendantConsumerQuotaLimits(java.util.List<V1Beta1ConsumerQuotaLimit> descendantConsumerQuotaLimits) {
+    this.descendantConsumerQuotaLimits = descendantConsumerQuotaLimits;
     return this;
   }
 

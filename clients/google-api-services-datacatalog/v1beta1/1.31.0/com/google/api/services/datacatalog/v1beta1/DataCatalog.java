@@ -2710,7 +2710,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
            * This request holds the parameters needed by the datacatalog server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The Data Catalog resource name of the entry in URL format. Example: *
+           * @param name Output only. The Data Catalog resource name of the entry in URL format. Example: *
            *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
            *        Note that this Entry and its child resources may not actually be stored in the location in
            *        this name.
@@ -2743,7 +2743,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The Data Catalog resource name of the entry in URL format. Example: *
+             * @param name Output only. The Data Catalog resource name of the entry in URL format. Example: *
            *        projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id}
            *        Note that this Entry and its child resources may not actually be stored in the location in
            *        this name.
@@ -2816,15 +2816,15 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * The Data Catalog resource name of the entry in URL format. Example: * projects/{proje
-             * ct_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note that
-             * this Entry and its child resources may not actually be stored in the location in this
-             * name.
+             * Output only. The Data Catalog resource name of the entry in URL format. Example: * pr
+             * ojects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_
+             * id} Note that this Entry and its child resources may not actually be stored in the
+             * location in this name.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The Data Catalog resource name of the entry in URL format. Example: *
+            /** Output only. The Data Catalog resource name of the entry in URL format. Example: *
            projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note
            that this Entry and its child resources may not actually be stored in the location in this name.
              */
@@ -2833,10 +2833,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * The Data Catalog resource name of the entry in URL format. Example: * projects/{proje
-             * ct_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_id} Note that
-             * this Entry and its child resources may not actually be stored in the location in this
-             * name.
+             * Output only. The Data Catalog resource name of the entry in URL format. Example: * pr
+             * ojects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entries/{entry_
+             * id} Note that this Entry and its child resources may not actually be stored in the
+             * location in this name.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

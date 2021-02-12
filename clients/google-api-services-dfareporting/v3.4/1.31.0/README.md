@@ -1,6 +1,6 @@
 # Campaign Manager 360 API Client Library for Java
 
-Manage your DoubleClick Campaign Manager ad campaigns and reports.
+Build applications to efficiently manage large or complex trafficking, reporting, and attribution workflows for Campaign Manager 360.
 
 This page contains information about getting started with the Campaign Manager 360 API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-dfareporting</artifactId>
-      <version>v3.4-rev20201102-1.31.0</version>
+      <version>v3.4-rev20210210-1.31.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-dfareporting:v3.4-rev20201102-1.31.0'
+  compile 'com.google.apis:google-api-services-dfareporting:v3.4-rev20210210-1.31.0'
 }
 ```
 

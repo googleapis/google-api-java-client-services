@@ -44,6 +44,13 @@ public final class MetadataManagementActivity extends com.google.api.client.json
   }
 
   /**
+   * Output only. The latest restores of the metastore service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Restore> restores;
+
+  /**
    * Output only. The latest metadata exports of the metastore service.
    * @return value or {@code null} for none
    */
@@ -57,6 +64,23 @@ public final class MetadataManagementActivity extends com.google.api.client.json
    */
   public MetadataManagementActivity setMetadataExports(java.util.List<MetadataExport> metadataExports) {
     this.metadataExports = metadataExports;
+    return this;
+  }
+
+  /**
+   * Output only. The latest restores of the metastore service.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Restore> getRestores() {
+    return restores;
+  }
+
+  /**
+   * Output only. The latest restores of the metastore service.
+   * @param restores restores or {@code null} for none
+   */
+  public MetadataManagementActivity setRestores(java.util.List<Restore> restores) {
+    this.restores = restores;
     return this;
   }
 

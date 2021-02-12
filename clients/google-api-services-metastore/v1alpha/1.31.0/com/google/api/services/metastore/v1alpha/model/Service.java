@@ -99,8 +99,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The relative resource name of the VPC network on which the instance can be accessed.
-   * The network must belong to the same project as the metastore instance. It is specified in the
-   * following form:"projects/{project_number}/global/networks/{network_id}".
+   * It is specified in the following form:"projects/{project_number}/global/networks/{network_id}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -312,8 +311,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The relative resource name of the VPC network on which the instance can be accessed.
-   * The network must belong to the same project as the metastore instance. It is specified in the
-   * following form:"projects/{project_number}/global/networks/{network_id}".
+   * It is specified in the following form:"projects/{project_number}/global/networks/{network_id}".
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -322,8 +320,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The relative resource name of the VPC network on which the instance can be accessed.
-   * The network must belong to the same project as the metastore instance. It is specified in the
-   * following form:"projects/{project_number}/global/networks/{network_id}".
+   * It is specified in the following form:"projects/{project_number}/global/networks/{network_id}".
    * @param network network or {@code null} for none
    */
   public Service setNetwork(java.lang.String network) {

@@ -47,7 +47,7 @@ public final class CustomFloodlightVariable extends com.google.api.client.json.G
   private java.lang.String type;
 
   /**
-   * The value of the custom floodlight variable. The length of string must not exceed 50
+   * The value of the custom floodlight variable. The length of string must not exceed 100
    * characters.
    * The value may be {@code null}.
    */
@@ -93,7 +93,7 @@ public final class CustomFloodlightVariable extends com.google.api.client.json.G
   }
 
   /**
-   * The value of the custom floodlight variable. The length of string must not exceed 50
+   * The value of the custom floodlight variable. The length of string must not exceed 100
    * characters.
    * @return value or {@code null} for none
    */
@@ -102,7 +102,7 @@ public final class CustomFloodlightVariable extends com.google.api.client.json.G
   }
 
   /**
-   * The value of the custom floodlight variable. The length of string must not exceed 50
+   * The value of the custom floodlight variable. The length of string must not exceed 100
    * characters.
    * @param value value or {@code null} for none
    */

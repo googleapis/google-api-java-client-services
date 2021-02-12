@@ -1519,8 +1519,8 @@ public final class Report extends com.google.api.client.json.GenericJson {
     public static final class ReportProperties extends com.google.api.client.json.GenericJson {
 
       /**
-       * DFA checks to see if a click interaction occurred within the specified period of time before a
-       * conversion. By default the value is pulled from Floodlight or you can manually enter a custom
+       * CM360 checks to see if a click interaction occurred within the specified period of time before
+       * a conversion. By default the value is pulled from Floodlight or you can manually enter a custom
        * value. Valid values: 1-90.
        * The value may be {@code null}.
        */
@@ -1528,7 +1528,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
       private java.lang.Integer clicksLookbackWindow;
 
       /**
-       * DFA checks to see if an impression interaction occurred within the specified period of time
+       * CM360 checks to see if an impression interaction occurred within the specified period of time
        * before a conversion. By default the value is pulled from Floodlight or you can manually enter a
        * custom value. Valid values: 1-90.
        * The value may be {@code null}.
@@ -1594,8 +1594,8 @@ public final class Report extends com.google.api.client.json.GenericJson {
       private java.lang.Boolean pivotOnInteractionPath;
 
       /**
-       * DFA checks to see if a click interaction occurred within the specified period of time before a
-       * conversion. By default the value is pulled from Floodlight or you can manually enter a custom
+       * CM360 checks to see if a click interaction occurred within the specified period of time before
+       * a conversion. By default the value is pulled from Floodlight or you can manually enter a custom
        * value. Valid values: 1-90.
        * @return value or {@code null} for none
        */
@@ -1604,8 +1604,8 @@ public final class Report extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * DFA checks to see if a click interaction occurred within the specified period of time before a
-       * conversion. By default the value is pulled from Floodlight or you can manually enter a custom
+       * CM360 checks to see if a click interaction occurred within the specified period of time before
+       * a conversion. By default the value is pulled from Floodlight or you can manually enter a custom
        * value. Valid values: 1-90.
        * @param clicksLookbackWindow clicksLookbackWindow or {@code null} for none
        */
@@ -1615,7 +1615,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * DFA checks to see if an impression interaction occurred within the specified period of time
+       * CM360 checks to see if an impression interaction occurred within the specified period of time
        * before a conversion. By default the value is pulled from Floodlight or you can manually enter a
        * custom value. Valid values: 1-90.
        * @return value or {@code null} for none
@@ -1625,7 +1625,7 @@ public final class Report extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * DFA checks to see if an impression interaction occurred within the specified period of time
+       * CM360 checks to see if an impression interaction occurred within the specified period of time
        * before a conversion. By default the value is pulled from Floodlight or you can manually enter a
        * custom value. Valid values: 1-90.
        * @param impressionsLookbackWindow impressionsLookbackWindow or {@code null} for none

@@ -72,6 +72,14 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private Replication replication;
 
   /**
+   * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane
+   * operations are called on the secret or its versions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Topic> topics;
+
+  /**
    * Input only. The TTL for the Secret.
    * The value may be {@code null}.
    */
@@ -172,6 +180,25 @@ public final class Secret extends com.google.api.client.json.GenericJson {
    */
   public Secret setReplication(Replication replication) {
     this.replication = replication;
+    return this;
+  }
+
+  /**
+   * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane
+   * operations are called on the secret or its versions.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Topic> getTopics() {
+    return topics;
+  }
+
+  /**
+   * Optional. A list of up to 10 Pub/Sub topics to which messages are published when control plane
+   * operations are called on the secret or its versions.
+   * @param topics topics or {@code null} for none
+   */
+  public Secret setTopics(java.util.List<Topic> topics) {
+    this.topics = topics;
     return this;
   }
 

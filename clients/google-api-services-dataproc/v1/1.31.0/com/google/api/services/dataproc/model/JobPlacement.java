@@ -30,6 +30,13 @@ package com.google.api.services.dataproc.model;
 public final class JobPlacement extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Cluster labels to identify a cluster where the job will be submitted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> clusterLabels;
+
+  /**
    * Required. The name of the cluster where the job will be submitted.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class JobPlacement extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterUuid;
+
+  /**
+   * Optional. Cluster labels to identify a cluster where the job will be submitted.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getClusterLabels() {
+    return clusterLabels;
+  }
+
+  /**
+   * Optional. Cluster labels to identify a cluster where the job will be submitted.
+   * @param clusterLabels clusterLabels or {@code null} for none
+   */
+  public JobPlacement setClusterLabels(java.util.Map<String, java.lang.String> clusterLabels) {
+    this.clusterLabels = clusterLabels;
+    return this;
+  }
 
   /**
    * Required. The name of the cluster where the job will be submitted.

@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Security related configuration, including Kerberos.
+ * Security related configuration, including encryption, Kerberos, etc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.dataproc.model;
 public final class SecurityConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Kerberos related configuration.
+   * Optional. Kerberos related configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private KerberosConfig kerberosConfig;
 
   /**
-   * Kerberos related configuration.
+   * Optional. Kerberos related configuration.
    * @return value or {@code null} for none
    */
   public KerberosConfig getKerberosConfig() {
@@ -45,7 +45,7 @@ public final class SecurityConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Kerberos related configuration.
+   * Optional. Kerberos related configuration.
    * @param kerberosConfig kerberosConfig or {@code null} for none
    */
   public SecurityConfig setKerberosConfig(KerberosConfig kerberosConfig) {

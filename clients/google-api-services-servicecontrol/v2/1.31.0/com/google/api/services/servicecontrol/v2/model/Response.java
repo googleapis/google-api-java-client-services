@@ -31,6 +31,15 @@ package com.google.api.services.servicecontrol.v2.model;
 public final class Response extends com.google.api.client.json.GenericJson {
 
   /**
+   * The length of time it takes the backend service to fully respond to a request. Measured from
+   * when the destination service starts to send the request to the backend until when the
+   * destination service receives the complete response from the backend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String backendLatency;
+
+  /**
    * The HTTP response status code, such as `200` and `404`.
    * The value may be {@code null}.
    */
@@ -54,11 +63,32 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private java.lang.Long size;
 
   /**
-   * The timestamp when the `destination` service generates the first byte of the response.
+   * The timestamp when the `destination` service sends the last byte of the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String time;
+
+  /**
+   * The length of time it takes the backend service to fully respond to a request. Measured from
+   * when the destination service starts to send the request to the backend until when the
+   * destination service receives the complete response from the backend.
+   * @return value or {@code null} for none
+   */
+  public String getBackendLatency() {
+    return backendLatency;
+  }
+
+  /**
+   * The length of time it takes the backend service to fully respond to a request. Measured from
+   * when the destination service starts to send the request to the backend until when the
+   * destination service receives the complete response from the backend.
+   * @param backendLatency backendLatency or {@code null} for none
+   */
+  public Response setBackendLatency(String backendLatency) {
+    this.backendLatency = backendLatency;
+    return this;
+  }
 
   /**
    * The HTTP response status code, such as `200` and `404`.
@@ -116,7 +146,7 @@ public final class Response extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The timestamp when the `destination` service generates the first byte of the response.
+   * The timestamp when the `destination` service sends the last byte of the response.
    * @return value or {@code null} for none
    */
   public String getTime() {
@@ -124,7 +154,7 @@ public final class Response extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The timestamp when the `destination` service generates the first byte of the response.
+   * The timestamp when the `destination` service sends the last byte of the response.
    * @param time time or {@code null} for none
    */
   public Response setTime(String time) {

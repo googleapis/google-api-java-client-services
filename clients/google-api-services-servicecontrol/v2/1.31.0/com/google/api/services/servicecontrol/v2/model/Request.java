@@ -116,7 +116,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private java.lang.Long size;
 
   /**
-   * The timestamp when the `destination` service receives the first byte of the request.
+   * The timestamp when the `destination` service receives the last byte of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -326,7 +326,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The timestamp when the `destination` service receives the first byte of the request.
+   * The timestamp when the `destination` service receives the last byte of the request.
    * @return value or {@code null} for none
    */
   public String getTime() {
@@ -334,7 +334,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The timestamp when the `destination` service receives the first byte of the request.
+   * The timestamp when the `destination` service receives the last byte of the request.
    * @param time time or {@code null} for none
    */
   public Request setTime(String time) {

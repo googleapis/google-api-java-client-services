@@ -31,7 +31,8 @@ package com.google.api.services.managedidentities.v1.model;
 public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. User-defined instance eligibility.
+   * Optional. Global per-instance SLI eligibility which applies to all defined SLIs. Exactly one of
+   * 'eligibility' and 'per_sli_eligibility' fields must be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,6 +74,14 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   }
 
   /**
+   * Optional. Multiple per-instance SLI eligibilities which apply for individual SLIs. Exactly one
+   * of 'eligibility' and 'per_sli_eligibility' fields must be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility perSliEligibility;
+
+  /**
    * Name of the SLO tier the Instance belongs to. This name will be expected to match the tiers
    * specified in the service SLO configuration. Field is mandatory and must not be empty.
    * The value may be {@code null}.
@@ -81,7 +90,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   private java.lang.String tier;
 
   /**
-   * Optional. User-defined instance eligibility.
+   * Optional. Global per-instance SLI eligibility which applies to all defined SLIs. Exactly one of
+   * 'eligibility' and 'per_sli_eligibility' fields must be used.
    * @return value or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility getEligibility() {
@@ -89,7 +99,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
   }
 
   /**
-   * Optional. User-defined instance eligibility.
+   * Optional. Global per-instance SLI eligibility which applies to all defined SLIs. Exactly one of
+   * 'eligibility' and 'per_sli_eligibility' fields must be used.
    * @param eligibility eligibility or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata setEligibility(GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility eligibility) {
@@ -146,6 +157,25 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata ex
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata setNodes(java.util.List<GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata> nodes) {
     this.nodes = nodes;
+    return this;
+  }
+
+  /**
+   * Optional. Multiple per-instance SLI eligibilities which apply for individual SLIs. Exactly one
+   * of 'eligibility' and 'per_sli_eligibility' fields must be used.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility getPerSliEligibility() {
+    return perSliEligibility;
+  }
+
+  /**
+   * Optional. Multiple per-instance SLI eligibilities which apply for individual SLIs. Exactly one
+   * of 'eligibility' and 'per_sli_eligibility' fields must be used.
+   * @param perSliEligibility perSliEligibility or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata setPerSliEligibility(GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility perSliEligibility) {
+    this.perSliEligibility = perSliEligibility;
     return this;
   }
 

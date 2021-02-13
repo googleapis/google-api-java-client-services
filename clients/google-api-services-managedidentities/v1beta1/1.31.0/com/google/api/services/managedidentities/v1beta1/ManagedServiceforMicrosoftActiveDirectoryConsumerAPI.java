@@ -2622,7 +2622,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
              * This request holds the parameters needed by the managedidentities server.  After setting any
              * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. SQLIntegration resource name using the form:
+             * @param name Required. SqlIntegration resource name using the form:
              *        `projects/{project_id}/locations/global/domains/sqlIntegrations/{name}`
              * @return the request
              */
@@ -2632,7 +2632,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
               return result;
             }
 
-            public class Get extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.SQLIntegration> {
+            public class Get extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.SqlIntegration> {
 
               private static final String REST_PATH = "v1beta1/{+name}";
 
@@ -2650,12 +2650,12 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
                * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. SQLIntegration resource name using the form:
+               * @param name Required. SqlIntegration resource name using the form:
              *        `projects/{project_id}/locations/global/domains/sqlIntegrations/{name}`
                * @since 1.13
                */
               protected Get(java.lang.String name) {
-                super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1beta1.model.SQLIntegration.class);
+                super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1beta1.model.SqlIntegration.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2730,13 +2730,13 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
               }
 
               /**
-               * Required. SQLIntegration resource name using the form:
+               * Required. SqlIntegration resource name using the form:
                * `projects/{project_id}/locations/global/domains/sqlIntegrations/{name}`
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. SQLIntegration resource name using the form:
+              /** Required. SqlIntegration resource name using the form:
              `projects/{project_id}/locations/global/domains/sqlIntegrations/{name}`
                */
               public java.lang.String getName() {
@@ -2744,7 +2744,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
               }
 
               /**
-               * Required. SQLIntegration resource name using the form:
+               * Required. SqlIntegration resource name using the form:
                * `projects/{project_id}/locations/global/domains/sqlIntegrations/{name}`
                */
               public Get setName(java.lang.String name) {
@@ -2763,14 +2763,14 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
               }
             }
             /**
-             * Lists SQLIntegrations in a given domain.
+             * Lists SqlIntegrations in a given domain.
              *
              * Create a request for the method "sqlIntegrations.list".
              *
              * This request holds the parameters needed by the managedidentities server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the SQLIntegrations using the form:
+             * @param parent Required. The resource name of the SqlIntegrations using the form:
              *        `projects/{project_id}/locations/global/domains`
              * @return the request
              */
@@ -2780,7 +2780,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
               return result;
             }
 
-            public class List extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.ListSQLIntegrationsResponse> {
+            public class List extends ManagedServiceforMicrosoftActiveDirectoryConsumerAPIRequest<com.google.api.services.managedidentities.v1beta1.model.ListSqlIntegrationsResponse> {
 
               private static final String REST_PATH = "v1beta1/{+parent}/sqlIntegrations";
 
@@ -2788,7 +2788,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/domains/[^/]+$");
 
               /**
-               * Lists SQLIntegrations in a given domain.
+               * Lists SqlIntegrations in a given domain.
                *
                * Create a request for the method "sqlIntegrations.list".
                *
@@ -2798,12 +2798,12 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
                * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the SQLIntegrations using the form:
+               * @param parent Required. The resource name of the SqlIntegrations using the form:
              *        `projects/{project_id}/locations/global/domains`
                * @since 1.13
                */
               protected List(java.lang.String parent) {
-                super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1beta1.model.ListSQLIntegrationsResponse.class);
+                super(ManagedServiceforMicrosoftActiveDirectoryConsumerAPI.this, "GET", REST_PATH, null, com.google.api.services.managedidentities.v1beta1.model.ListSqlIntegrationsResponse.class);
                 this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2878,13 +2878,13 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
               }
 
               /**
-               * Required. The resource name of the SQLIntegrations using the form:
+               * Required. The resource name of the SqlIntegrations using the form:
                * `projects/{project_id}/locations/global/domains`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name of the SQLIntegrations using the form:
+              /** Required. The resource name of the SqlIntegrations using the form:
              `projects/{project_id}/locations/global/domains`
                */
               public java.lang.String getParent() {
@@ -2892,7 +2892,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
               }
 
               /**
-               * Required. The resource name of the SQLIntegrations using the form:
+               * Required. The resource name of the SqlIntegrations using the form:
                * `projects/{project_id}/locations/global/domains`
                */
               public List setParent(java.lang.String parent) {
@@ -2907,13 +2907,13 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
 
               /**
                * Optional. Filter specifying constraints of a list operation. For example,
-               * `SQLIntegration.name="sql"`.
+               * `SqlIntegration.name="sql"`.
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** Optional. Filter specifying constraints of a list operation. For example,
-             `SQLIntegration.name="sql"`.
+             `SqlIntegration.name="sql"`.
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -2921,7 +2921,7 @@ public class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends com.go
 
               /**
                * Optional. Filter specifying constraints of a list operation. For example,
-               * `SQLIntegration.name="sql"`.
+               * `SqlIntegration.name="sql"`.
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;

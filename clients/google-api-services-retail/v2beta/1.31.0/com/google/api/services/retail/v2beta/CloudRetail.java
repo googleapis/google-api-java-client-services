@@ -947,7 +947,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              *        is returned. If the Product to delete does not exist, a NOT_FOUND error is returned. The
              *        Product to delete can neither be a Product.Type.COLLECTION Product member nor a
              *        Product.Type.PRIMARY Product with more than one variants. Otherwise, an INVALID_ARGUMENT
-             *        error is returned.
+             *        error is returned. All inventory information for the named Product will be deleted.
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -979,7 +979,7 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              *        is returned. If the Product to delete does not exist, a NOT_FOUND error is returned. The
              *        Product to delete can neither be a Product.Type.COLLECTION Product member nor a
              *        Product.Type.PRIMARY Product with more than one variants. Otherwise, an INVALID_ARGUMENT
-             *        error is returned.
+             *        error is returned. All inventory information for the named Product will be deleted.
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -1054,7 +1054,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * exists, a PERMISSION_DENIED error is returned. If the Product to delete does not
                * exist, a NOT_FOUND error is returned. The Product to delete can neither be a
                * Product.Type.COLLECTION Product member nor a Product.Type.PRIMARY Product with more
-               * than one variants. Otherwise, an INVALID_ARGUMENT error is returned.
+               * than one variants. Otherwise, an INVALID_ARGUMENT error is returned. All inventory
+               * information for the named Product will be deleted.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
@@ -1064,7 +1065,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
              delete the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
              If the Product to delete does not exist, a NOT_FOUND error is returned. The Product to delete can
              neither be a Product.Type.COLLECTION Product member nor a Product.Type.PRIMARY Product with more
-             than one variants. Otherwise, an INVALID_ARGUMENT error is returned.
+             than one variants. Otherwise, an INVALID_ARGUMENT error is returned. All inventory information for
+             the named Product will be deleted.
                */
               public java.lang.String getName() {
                 return name;
@@ -1077,7 +1079,8 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
                * exists, a PERMISSION_DENIED error is returned. If the Product to delete does not
                * exist, a NOT_FOUND error is returned. The Product to delete can neither be a
                * Product.Type.COLLECTION Product member nor a Product.Type.PRIMARY Product with more
-               * than one variants. Otherwise, an INVALID_ARGUMENT error is returned.
+               * than one variants. Otherwise, an INVALID_ARGUMENT error is returned. All inventory
+               * information for the named Product will be deleted.
                */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

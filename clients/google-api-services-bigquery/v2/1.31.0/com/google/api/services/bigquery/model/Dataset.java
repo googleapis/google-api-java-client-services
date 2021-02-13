@@ -516,6 +516,16 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   public static final class Access extends com.google.api.client.json.GenericJson {
 
     /**
+     * [Pick one] A grant authorizing all resources of a particular type in a particular dataset
+     * access to this dataset. Only views are supported for now. The role field is not required when
+     * this field is set. If that dataset is deleted and re-created, its access needs to be granted
+     * again via an update operation.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private DatasetAccessEntry dataset;
+
+    /**
      * [Pick one] A domain to grant access to. Any users signed in with the domain specified will be
      * granted the specified access. Example: "example.com". Maps to IAM policy member
      * "domain:DOMAIN".
@@ -589,6 +599,29 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private TableReference view;
+
+    /**
+     * [Pick one] A grant authorizing all resources of a particular type in a particular dataset
+     * access to this dataset. Only views are supported for now. The role field is not required when
+     * this field is set. If that dataset is deleted and re-created, its access needs to be granted
+     * again via an update operation.
+     * @return value or {@code null} for none
+     */
+    public DatasetAccessEntry getDataset() {
+      return dataset;
+    }
+
+    /**
+     * [Pick one] A grant authorizing all resources of a particular type in a particular dataset
+     * access to this dataset. Only views are supported for now. The role field is not required when
+     * this field is set. If that dataset is deleted and re-created, its access needs to be granted
+     * again via an update operation.
+     * @param dataset dataset or {@code null} for none
+     */
+    public Access setDataset(DatasetAccessEntry dataset) {
+      this.dataset = dataset;
+      return this;
+    }
 
     /**
      * [Pick one] A domain to grant access to. Any users signed in with the domain specified will be

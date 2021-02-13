@@ -37,7 +37,10 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Output only. Earliest timestamp at which older versions of the data can be read.
+   * Output only. Earliest timestamp at which older versions of the data can be read. This value is
+   * continuously updated by Cloud Spanner and becomes stale the moment it is queried. If you are
+   * using this value to recover data, make sure to account for the time from the moment when the
+   * value is queried to the moment when you initiate the recovery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +72,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The period in which Cloud Spanner retains all versions of data for the database.
-   * This is same as the value of version_retention_period database option set using
+   * This is the same as the value of version_retention_period database option set using
    * UpdateDatabaseDdl. Defaults to 1 hour, if not set.
    * The value may be {@code null}.
    */
@@ -94,7 +97,10 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Earliest timestamp at which older versions of the data can be read.
+   * Output only. Earliest timestamp at which older versions of the data can be read. This value is
+   * continuously updated by Cloud Spanner and becomes stale the moment it is queried. If you are
+   * using this value to recover data, make sure to account for the time from the moment when the
+   * value is queried to the moment when you initiate the recovery.
    * @return value or {@code null} for none
    */
   public String getEarliestVersionTime() {
@@ -102,7 +108,10 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Earliest timestamp at which older versions of the data can be read.
+   * Output only. Earliest timestamp at which older versions of the data can be read. This value is
+   * continuously updated by Cloud Spanner and becomes stale the moment it is queried. If you are
+   * using this value to recover data, make sure to account for the time from the moment when the
+   * value is queried to the moment when you initiate the recovery.
    * @param earliestVersionTime earliestVersionTime or {@code null} for none
    */
   public Database setEarliestVersionTime(String earliestVersionTime) {
@@ -169,7 +178,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The period in which Cloud Spanner retains all versions of data for the database.
-   * This is same as the value of version_retention_period database option set using
+   * This is the same as the value of version_retention_period database option set using
    * UpdateDatabaseDdl. Defaults to 1 hour, if not set.
    * @return value or {@code null} for none
    */
@@ -179,7 +188,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The period in which Cloud Spanner retains all versions of data for the database.
-   * This is same as the value of version_retention_period database option set using
+   * This is the same as the value of version_retention_period database option set using
    * UpdateDatabaseDdl. Defaults to 1 hour, if not set.
    * @param versionRetentionPeriod versionRetentionPeriod or {@code null} for none
    */

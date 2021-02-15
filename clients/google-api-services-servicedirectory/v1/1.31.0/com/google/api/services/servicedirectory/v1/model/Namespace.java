@@ -32,7 +32,7 @@ package com.google.api.services.servicedirectory.v1.model;
 public final class Namespace extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Resource labels associated with this Namespace. No more than 64 user labels can be
+   * Optional. Resource labels associated with this namespace. No more than 64 user labels can be
    * associated with a given resource. Label keys and values can be no longer than 63 characters.
    * The value may be {@code null}.
    */
@@ -40,14 +40,14 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. The resource name for the namespace in the format 'projects/locations/namespaces'.
+   * Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. Resource labels associated with this Namespace. No more than 64 user labels can be
+   * Optional. Resource labels associated with this namespace. No more than 64 user labels can be
    * associated with a given resource. Label keys and values can be no longer than 63 characters.
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Resource labels associated with this Namespace. No more than 64 user labels can be
+   * Optional. Resource labels associated with this namespace. No more than 64 user labels can be
    * associated with a given resource. Label keys and values can be no longer than 63 characters.
    * @param labels labels or {@code null} for none
    */
@@ -66,7 +66,7 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name for the namespace in the format 'projects/locations/namespaces'.
+   * Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -74,7 +74,7 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name for the namespace in the format 'projects/locations/namespaces'.
+   * Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
    * @param name name or {@code null} for none
    */
   public Namespace setName(java.lang.String name) {

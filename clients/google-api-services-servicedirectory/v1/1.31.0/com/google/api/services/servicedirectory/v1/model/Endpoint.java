@@ -32,8 +32,8 @@ package com.google.api.services.servicedirectory.v1.model;
 public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like: "8.8.8"
-   * "8.8.8.8:53" "test:bad:address" "[::1]" "[::1]:8080" Limited to 45 characters.
+   * Optional. An IPv4 or IPv6 address. Service Directory rejects bad addresses like: * `8.8.8` *
+   * `8.8.8.8:53` * `test:bad:address` * `[::1]` * `[::1]:8080` Limited to 45 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,19 +41,19 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Annotations for the endpoint. This data can be consumed by service clients.
-   * Restrictions: - The entire annotations dictionary may contain up to 512 characters, spread
-   * accoss all key-value pairs. Annotations that goes beyond any these limits will be rejected. -
-   * Valid annotation keys have two segments: an optional prefix and name, separated by a slash (/).
-   * The name segment is required and must be 63 characters or less, beginning and ending with an
+   * Restrictions: * The entire annotations dictionary may contain up to 512 characters, spread
+   * accoss all key-value pairs. Annotations that go beyond this limit are rejected * Valid
+   * annotation keys have two segments: an optional prefix and name, separated by a slash (/). The
+   * name segment is required and must be 63 characters or less, beginning and ending with an
    * alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and
    * alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS
    * subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in
-   * total, followed by a slash (/). Annotations that fails to meet these requirements will be
-   * rejected. - The '(*.)google.com/' and '(*.)googleapis.com/' prefixes are reserved for system
-   * annotations managed by Service Directory. If the user tries to write to these keyspaces, those
-   * entries will be silently ignored by the system. Note: This field is equivalent to the
-   * 'metadata' field in the v1beta1 API. They have the same syntax and read/write to the same
-   * location in Service Directory.
+   * total, followed by a slash (/) Annotations that fails to meet these requirements are rejected.
+   * * The `(*.)google.com/` and `(*.)googleapis.com/` prefixes are reserved for system annotations
+   * managed by Service Directory. If the user tries to write to these keyspaces, those entries are
+   * silently ignored by the system Note: This field is equivalent to the `metadata` field in the
+   * v1beta1 API. They have the same syntax and read/write to the same location in Service
+   * Directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,22 +61,22 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The resource name for the endpoint in the format
-   * 'projects/locations/namespaces/services/endpoints'.
+   * `projects/locations/namespaces/services/endpoints`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. Service Directory will reject values outside of [0, 65535].
+   * Optional. Service Directory rejects values outside of `[0, 65535]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
 
   /**
-   * Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like: "8.8.8"
-   * "8.8.8.8:53" "test:bad:address" "[::1]" "[::1]:8080" Limited to 45 characters.
+   * Optional. An IPv4 or IPv6 address. Service Directory rejects bad addresses like: * `8.8.8` *
+   * `8.8.8.8:53` * `test:bad:address` * `[::1]` * `[::1]:8080` Limited to 45 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getAddress() {
@@ -84,8 +84,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. An IPv4 or IPv6 address. Service Directory will reject bad addresses like: "8.8.8"
-   * "8.8.8.8:53" "test:bad:address" "[::1]" "[::1]:8080" Limited to 45 characters.
+   * Optional. An IPv4 or IPv6 address. Service Directory rejects bad addresses like: * `8.8.8` *
+   * `8.8.8.8:53` * `test:bad:address` * `[::1]` * `[::1]:8080` Limited to 45 characters.
    * @param address address or {@code null} for none
    */
   public Endpoint setAddress(java.lang.String address) {
@@ -95,19 +95,19 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Annotations for the endpoint. This data can be consumed by service clients.
-   * Restrictions: - The entire annotations dictionary may contain up to 512 characters, spread
-   * accoss all key-value pairs. Annotations that goes beyond any these limits will be rejected. -
-   * Valid annotation keys have two segments: an optional prefix and name, separated by a slash (/).
-   * The name segment is required and must be 63 characters or less, beginning and ending with an
+   * Restrictions: * The entire annotations dictionary may contain up to 512 characters, spread
+   * accoss all key-value pairs. Annotations that go beyond this limit are rejected * Valid
+   * annotation keys have two segments: an optional prefix and name, separated by a slash (/). The
+   * name segment is required and must be 63 characters or less, beginning and ending with an
    * alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and
    * alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS
    * subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in
-   * total, followed by a slash (/). Annotations that fails to meet these requirements will be
-   * rejected. - The '(*.)google.com/' and '(*.)googleapis.com/' prefixes are reserved for system
-   * annotations managed by Service Directory. If the user tries to write to these keyspaces, those
-   * entries will be silently ignored by the system. Note: This field is equivalent to the
-   * 'metadata' field in the v1beta1 API. They have the same syntax and read/write to the same
-   * location in Service Directory.
+   * total, followed by a slash (/) Annotations that fails to meet these requirements are rejected.
+   * * The `(*.)google.com/` and `(*.)googleapis.com/` prefixes are reserved for system annotations
+   * managed by Service Directory. If the user tries to write to these keyspaces, those entries are
+   * silently ignored by the system Note: This field is equivalent to the `metadata` field in the
+   * v1beta1 API. They have the same syntax and read/write to the same location in Service
+   * Directory.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -116,19 +116,19 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Annotations for the endpoint. This data can be consumed by service clients.
-   * Restrictions: - The entire annotations dictionary may contain up to 512 characters, spread
-   * accoss all key-value pairs. Annotations that goes beyond any these limits will be rejected. -
-   * Valid annotation keys have two segments: an optional prefix and name, separated by a slash (/).
-   * The name segment is required and must be 63 characters or less, beginning and ending with an
+   * Restrictions: * The entire annotations dictionary may contain up to 512 characters, spread
+   * accoss all key-value pairs. Annotations that go beyond this limit are rejected * Valid
+   * annotation keys have two segments: an optional prefix and name, separated by a slash (/). The
+   * name segment is required and must be 63 characters or less, beginning and ending with an
    * alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and
    * alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS
    * subdomain: a series of DNS labels separated by dots (.), not longer than 253 characters in
-   * total, followed by a slash (/). Annotations that fails to meet these requirements will be
-   * rejected. - The '(*.)google.com/' and '(*.)googleapis.com/' prefixes are reserved for system
-   * annotations managed by Service Directory. If the user tries to write to these keyspaces, those
-   * entries will be silently ignored by the system. Note: This field is equivalent to the
-   * 'metadata' field in the v1beta1 API. They have the same syntax and read/write to the same
-   * location in Service Directory.
+   * total, followed by a slash (/) Annotations that fails to meet these requirements are rejected.
+   * * The `(*.)google.com/` and `(*.)googleapis.com/` prefixes are reserved for system annotations
+   * managed by Service Directory. If the user tries to write to these keyspaces, those entries are
+   * silently ignored by the system Note: This field is equivalent to the `metadata` field in the
+   * v1beta1 API. They have the same syntax and read/write to the same location in Service
+   * Directory.
    * @param annotations annotations or {@code null} for none
    */
   public Endpoint setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -138,7 +138,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The resource name for the endpoint in the format
-   * 'projects/locations/namespaces/services/endpoints'.
+   * `projects/locations/namespaces/services/endpoints`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -147,7 +147,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The resource name for the endpoint in the format
-   * 'projects/locations/namespaces/services/endpoints'.
+   * `projects/locations/namespaces/services/endpoints`.
    * @param name name or {@code null} for none
    */
   public Endpoint setName(java.lang.String name) {
@@ -156,7 +156,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Service Directory will reject values outside of [0, 65535].
+   * Optional. Service Directory rejects values outside of `[0, 65535]`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -164,7 +164,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Service Directory will reject values outside of [0, 65535].
+   * Optional. Service Directory rejects values outside of `[0, 65535]`.
    * @param port port or {@code null} for none
    */
   public Endpoint setPort(java.lang.Integer port) {

@@ -518,7 +518,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
       public class Namespaces {
 
         /**
-         * Creates a namespace, and returns the new Namespace.
+         * Creates a namespace, and returns the new namespace.
          *
          * Create a request for the method "namespaces.create".
          *
@@ -543,7 +543,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a namespace, and returns the new Namespace.
+           * Creates a namespace, and returns the new namespace.
            *
            * Create a request for the method "namespaces.create".
            *
@@ -1102,7 +1102,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the servicedirectory server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name of the project and location whose namespaces we'd like to list.
+         * @param parent Required. The resource name of the project and location whose namespaces you'd like to list.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1128,7 +1128,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name of the project and location whose namespaces we'd like to list.
+           * @param parent Required. The resource name of the project and location whose namespaces you'd like to list.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1207,20 +1207,20 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The resource name of the project and location whose namespaces we'd like to
+           * Required. The resource name of the project and location whose namespaces you'd like to
            * list.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The resource name of the project and location whose namespaces we'd like to list.
+          /** Required. The resource name of the project and location whose namespaces you'd like to list.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The resource name of the project and location whose namespaces we'd like to
+           * Required. The resource name of the project and location whose namespaces you'd like to
            * list.
            */
           public List setParent(java.lang.String parent) {
@@ -1234,53 +1234,56 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Optional. The filter to list result by. General filter string syntax: () can be "name",
-           * or "labels." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS,
-           * and is roughly the same as "=". must be the same data type as field. can be "AND, OR,
-           * NOT". Examples of valid filters: * "labels.owner" returns Namespaces that have a label
-           * with the key "owner" this is the same as "labels:owner". * "labels.protocol=gRPC"
-           * returns Namespaces that have key/value "protocol=gRPC". * "name>projects/my-
-           * project/locations/us-east/namespaces/namespace-c" returns Namespaces that have name
-           * that is alphabetically later than the string, so "namespace-e" will be returned but
-           * "namespace-a" will not be. * "labels.owner!=sd AND labels.foo=bar" returns Namespaces
-           * that have "owner" in label key but value is not "sd" AND have key/value foo=bar. *
-           * "doesnotexist.foo=bar" returns an empty list. Note that Namespace doesn't have a field
-           * called "doesnotexist". Since the filter does not match any Namespaces, it returns no
-           * results.
+           * Optional. The filter to list results by. General `filter` string syntax: ` ()` * `` can
+           * be `name` or `labels.` for map field * `` can be `<`, `>`, `<=`, `>=`, `!=`, `=`, `:`.
+           * Of which `:` means `HAS`, and is roughly the same as `=` * `` must be the same data
+           * type as field * `` can be `AND`, `OR`, `NOT` Examples of valid filters: *
+           * `labels.owner` returns namespaces that have a label with the key `owner`, this is the
+           * same as `labels:owner` * `labels.owner=sd` returns namespaces that have key/value
+           * `owner=sd` * `name>projects/my-project/locations/us-east1/namespaces/namespace-c`
+           * returns namespaces that have name that is alphabetically later than the string, so
+           * "namespace-e" is returned but "namespace-a" is not * `labels.owner!=sd AND
+           * labels.foo=bar` returns namespaces that have `owner` in label key but value is not `sd`
+           * AND have key/value `foo=bar` * `doesnotexist.foo=bar` returns an empty list. Note that
+           * namespace doesn't have a field called "doesnotexist". Since the filter does not match
+           * any namespaces, it returns no results For more information about filtering, see [API
+           * Filtering](https://aip.dev/160).
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filter to list result by. General filter string syntax: () can be "name", or
-         "labels." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and is roughly
-         the same as "=". must be the same data type as field. can be "AND, OR, NOT". Examples of valid
-         filters: * "labels.owner" returns Namespaces that have a label with the key "owner" this is the
-         same as "labels:owner". * "labels.protocol=gRPC" returns Namespaces that have key/value
-         "protocol=gRPC". * "name>projects/my-project/locations/us-east/namespaces/namespace-c" returns
-         Namespaces that have name that is alphabetically later than the string, so "namespace-e" will be
-         returned but "namespace-a" will not be. * "labels.owner!=sd AND labels.foo=bar" returns Namespaces
-         that have "owner" in label key but value is not "sd" AND have key/value foo=bar. *
-         "doesnotexist.foo=bar" returns an empty list. Note that Namespace doesn't have a field called
-         "doesnotexist". Since the filter does not match any Namespaces, it returns no results.
+          /** Optional. The filter to list results by. General `filter` string syntax: ` ()` * `` can be `name`
+         or `labels.` for map field * `` can be `<`, `>`, `<=`, `>=`, `!=`, `=`, `:`. Of which `:` means
+         `HAS`, and is roughly the same as `=` * `` must be the same data type as field * `` can be `AND`,
+         `OR`, `NOT` Examples of valid filters: * `labels.owner` returns namespaces that have a label with
+         the key `owner`, this is the same as `labels:owner` * `labels.owner=sd` returns namespaces that
+         have key/value `owner=sd` * `name>projects/my-project/locations/us-east1/namespaces/namespace-c`
+         returns namespaces that have name that is alphabetically later than the string, so "namespace-e" is
+         returned but "namespace-a" is not * `labels.owner!=sd AND labels.foo=bar` returns namespaces that
+         have `owner` in label key but value is not `sd` AND have key/value `foo=bar` *
+         `doesnotexist.foo=bar` returns an empty list. Note that namespace doesn't have a field called
+         "doesnotexist". Since the filter does not match any namespaces, it returns no results For more
+         information about filtering, see [API Filtering](https://aip.dev/160).
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. The filter to list result by. General filter string syntax: () can be "name",
-           * or "labels." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS,
-           * and is roughly the same as "=". must be the same data type as field. can be "AND, OR,
-           * NOT". Examples of valid filters: * "labels.owner" returns Namespaces that have a label
-           * with the key "owner" this is the same as "labels:owner". * "labels.protocol=gRPC"
-           * returns Namespaces that have key/value "protocol=gRPC". * "name>projects/my-
-           * project/locations/us-east/namespaces/namespace-c" returns Namespaces that have name
-           * that is alphabetically later than the string, so "namespace-e" will be returned but
-           * "namespace-a" will not be. * "labels.owner!=sd AND labels.foo=bar" returns Namespaces
-           * that have "owner" in label key but value is not "sd" AND have key/value foo=bar. *
-           * "doesnotexist.foo=bar" returns an empty list. Note that Namespace doesn't have a field
-           * called "doesnotexist". Since the filter does not match any Namespaces, it returns no
-           * results.
+           * Optional. The filter to list results by. General `filter` string syntax: ` ()` * `` can
+           * be `name` or `labels.` for map field * `` can be `<`, `>`, `<=`, `>=`, `!=`, `=`, `:`.
+           * Of which `:` means `HAS`, and is roughly the same as `=` * `` must be the same data
+           * type as field * `` can be `AND`, `OR`, `NOT` Examples of valid filters: *
+           * `labels.owner` returns namespaces that have a label with the key `owner`, this is the
+           * same as `labels:owner` * `labels.owner=sd` returns namespaces that have key/value
+           * `owner=sd` * `name>projects/my-project/locations/us-east1/namespaces/namespace-c`
+           * returns namespaces that have name that is alphabetically later than the string, so
+           * "namespace-e" is returned but "namespace-a" is not * `labels.owner!=sd AND
+           * labels.foo=bar` returns namespaces that have `owner` in label key but value is not `sd`
+           * AND have key/value `foo=bar` * `doesnotexist.foo=bar` returns an empty list. Note that
+           * namespace doesn't have a field called "doesnotexist". Since the filter does not match
+           * any namespaces, it returns no results For more information about filtering, see [API
+           * Filtering](https://aip.dev/160).
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -1288,27 +1291,28 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Optional. The order to list result by. General order by string syntax: () (,) allows
-           * values {"name"} ascending or descending order by . If this is left blank, "asc" is
-           * used. Note that an empty order_by string result in default order, which is order by
-           * name in ascending order.
+           * Optional. The order to list results by. General `order_by` string syntax: ` () (,)` *
+           * `` allows value: `name` * `` ascending or descending order by ``. If this is left
+           * blank, `asc` is used Note that an empty `order_by` string results in default order,
+           * which is order by `name` in ascending order.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. The order to list result by. General order by string syntax: () (,) allows values
-         {"name"} ascending or descending order by . If this is left blank, "asc" is used. Note that an
-         empty order_by string result in default order, which is order by name in ascending order.
+          /** Optional. The order to list results by. General `order_by` string syntax: ` () (,)` * `` allows
+         value: `name` * `` ascending or descending order by ``. If this is left blank, `asc` is used Note
+         that an empty `order_by` string results in default order, which is order by `name` in ascending
+         order.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * Optional. The order to list result by. General order by string syntax: () (,) allows
-           * values {"name"} ascending or descending order by . If this is left blank, "asc" is
-           * used. Note that an empty order_by string result in default order, which is order by
-           * name in ascending order.
+           * Optional. The order to list results by. General `order_by` string syntax: ` () (,)` *
+           * `` allows value: `name` * `` ascending or descending order by ``. If this is left
+           * blank, `asc` is used Note that an empty `order_by` string results in default order,
+           * which is order by `name` in ascending order.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -1360,7 +1364,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the servicedirectory server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name for the namespace in the format 'projects/locations/namespaces'.
+         * @param name Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
          * @param content the {@link com.google.api.services.servicedirectory.v1.model.Namespace}
          * @return the request
          */
@@ -1388,7 +1392,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name for the namespace in the format 'projects/locations/namespaces'.
+           * @param name Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
            * @param content the {@link com.google.api.services.servicedirectory.v1.model.Namespace}
            * @since 1.13
            */
@@ -1459,12 +1463,12 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
 
           /**
            * Immutable. The resource name for the namespace in the format
-           * 'projects/locations/namespaces'.
+           * `projects/locations/namespaces`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name for the namespace in the format 'projects/locations/namespaces'.
+          /** Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
            */
           public java.lang.String getName() {
             return name;
@@ -1472,7 +1476,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
 
           /**
            * Immutable. The resource name for the namespace in the format
-           * 'projects/locations/namespaces'.
+           * `projects/locations/namespaces`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1809,7 +1813,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
         public class Services {
 
           /**
-           * Creates a service, and returns the new Service.
+           * Creates a service, and returns the new service.
            *
            * Create a request for the method "services.create".
            *
@@ -1834,7 +1838,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/namespaces/[^/]+$");
 
             /**
-             * Creates a service, and returns the new Service.
+             * Creates a service, and returns the new service.
              *
              * Create a request for the method "services.create".
              *
@@ -2387,7 +2391,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the servicedirectory server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource name of the namespace whose services we'd like to list.
+           * @param parent Required. The resource name of the namespace whose services you'd like to list.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2413,7 +2417,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource name of the namespace whose services we'd like to list.
+             * @param parent Required. The resource name of the namespace whose services you'd like to list.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2491,17 +2495,17 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The resource name of the namespace whose services we'd like to list. */
+            /** Required. The resource name of the namespace whose services you'd like to list. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The resource name of the namespace whose services we'd like to list.
+            /** Required. The resource name of the namespace whose services you'd like to list.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The resource name of the namespace whose services we'd like to list. */
+            /** Required. The resource name of the namespace whose services you'd like to list. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2513,70 +2517,89 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Optional. The filter to list result by. General filter string syntax: () can be
-             * "name", or "metadata." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":"
-             * means HAS, and is roughly the same as "=". must be the same data type as field. can
-             * be "AND, OR, NOT". Examples of valid filters: * "metadata.owner" returns Services
-             * that have a label with the key "owner" this is the same as "metadata:owner". *
-             * "metadata.protocol=gRPC" returns Services that have key/value "protocol=gRPC". *
-             * "name>projects/my-project/locations/us-east/namespaces/my-
-             * namespace/services/service-c" returns Services that have name that is alphabetically
-             * later than the string, so "service-e" will be returned but "service-a" will not be. *
-             * "metadata.owner!=sd AND metadata.foo=bar" returns Services that have "owner" in label
-             * key but value is not "sd" AND have key/value foo=bar. * "doesnotexist.foo=bar"
-             * returns an empty list. Note that Service doesn't have a field called "doesnotexist".
-             * Since the filter does not match any Services, it returns no results.
+             * Optional. The filter to list results by. General `filter` string syntax: ` ()` * ``
+             * can be `name` or `annotations.` for map field * `` can be `<`, `>`, `<=`, `>=`, `!=`,
+             * `=`, `:`. Of which `:` means `HAS`, and is roughly the same as `=` * `` must be the
+             * same data type as field * `` can be `AND`, `OR`, `NOT` Examples of valid filters: *
+             * `annotations.owner` returns services that have a annotation with the key `owner`,
+             * this is the same as `annotations:owner` * `annotations.protocol=gRPC` returns
+             * services that have key/value `protocol=gRPC` * `name>projects/my-project/locations
+             * /us-east1/namespaces/my-namespace/services/service-c` returns services that have name
+             * that is alphabetically later than the string, so "service-e" is returned but
+             * "service-a" is not * `annotations.owner!=sd AND annotations.foo=bar` returns services
+             * that have `owner` in annotation key but value is not `sd` AND have key/value
+             * `foo=bar` * `doesnotexist.foo=bar` returns an empty list. Note that service doesn't
+             * have a field called "doesnotexist". Since the filter does not match any services, it
+             * returns no results For more information about filtering, see [API
+             * Filtering](https://aip.dev/160).
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. The filter to list result by. General filter string syntax: () can be "name", or
-           "metadata." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and is roughly
-           the same as "=". must be the same data type as field. can be "AND, OR, NOT". Examples of valid
-           filters: * "metadata.owner" returns Services that have a label with the key "owner" this is the
-           same as "metadata:owner". * "metadata.protocol=gRPC" returns Services that have key/value
-           "protocol=gRPC". * "name>projects/my-project/locations/us-east/namespaces/my-
-           namespace/services/service-c" returns Services that have name that is alphabetically later than the
-           string, so "service-e" will be returned but "service-a" will not be. * "metadata.owner!=sd AND
-           metadata.foo=bar" returns Services that have "owner" in label key but value is not "sd" AND have
-           key/value foo=bar. * "doesnotexist.foo=bar" returns an empty list. Note that Service doesn't have a
-           field called "doesnotexist". Since the filter does not match any Services, it returns no results.
+            /** Optional. The filter to list results by. General `filter` string syntax: ` ()` * `` can be `name`
+           or `annotations.` for map field * `` can be `<`, `>`, `<=`, `>=`, `!=`, `=`, `:`. Of which `:`
+           means `HAS`, and is roughly the same as `=` * `` must be the same data type as field * `` can be
+           `AND`, `OR`, `NOT` Examples of valid filters: * `annotations.owner` returns services that have a
+           annotation with the key `owner`, this is the same as `annotations:owner` *
+           `annotations.protocol=gRPC` returns services that have key/value `protocol=gRPC` * `name>projects
+           /my-project/locations/us-east1/namespaces/my-namespace/services/service-c` returns services that
+           have name that is alphabetically later than the string, so "service-e" is returned but "service-a"
+           is not * `annotations.owner!=sd AND annotations.foo=bar` returns services that have `owner` in
+           annotation key but value is not `sd` AND have key/value `foo=bar` * `doesnotexist.foo=bar` returns
+           an empty list. Note that service doesn't have a field called "doesnotexist". Since the filter does
+           not match any services, it returns no results For more information about filtering, see [API
+           Filtering](https://aip.dev/160).
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. The filter to list result by. General filter string syntax: () can be
-             * "name", or "metadata." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":"
-             * means HAS, and is roughly the same as "=". must be the same data type as field. can
-             * be "AND, OR, NOT". Examples of valid filters: * "metadata.owner" returns Services
-             * that have a label with the key "owner" this is the same as "metadata:owner". *
-             * "metadata.protocol=gRPC" returns Services that have key/value "protocol=gRPC". *
-             * "name>projects/my-project/locations/us-east/namespaces/my-
-             * namespace/services/service-c" returns Services that have name that is alphabetically
-             * later than the string, so "service-e" will be returned but "service-a" will not be. *
-             * "metadata.owner!=sd AND metadata.foo=bar" returns Services that have "owner" in label
-             * key but value is not "sd" AND have key/value foo=bar. * "doesnotexist.foo=bar"
-             * returns an empty list. Note that Service doesn't have a field called "doesnotexist".
-             * Since the filter does not match any Services, it returns no results.
+             * Optional. The filter to list results by. General `filter` string syntax: ` ()` * ``
+             * can be `name` or `annotations.` for map field * `` can be `<`, `>`, `<=`, `>=`, `!=`,
+             * `=`, `:`. Of which `:` means `HAS`, and is roughly the same as `=` * `` must be the
+             * same data type as field * `` can be `AND`, `OR`, `NOT` Examples of valid filters: *
+             * `annotations.owner` returns services that have a annotation with the key `owner`,
+             * this is the same as `annotations:owner` * `annotations.protocol=gRPC` returns
+             * services that have key/value `protocol=gRPC` * `name>projects/my-project/locations
+             * /us-east1/namespaces/my-namespace/services/service-c` returns services that have name
+             * that is alphabetically later than the string, so "service-e" is returned but
+             * "service-a" is not * `annotations.owner!=sd AND annotations.foo=bar` returns services
+             * that have `owner` in annotation key but value is not `sd` AND have key/value
+             * `foo=bar` * `doesnotexist.foo=bar` returns an empty list. Note that service doesn't
+             * have a field called "doesnotexist". Since the filter does not match any services, it
+             * returns no results For more information about filtering, see [API
+             * Filtering](https://aip.dev/160).
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /** Optional. The order to list result by. */
+            /**
+             * Optional. The order to list results by. General `order_by` string syntax: ` () (,)` *
+             * `` allows value: `name` * `` ascending or descending order by ``. If this is left
+             * blank, `asc` is used Note that an empty `order_by` string results in default order,
+             * which is order by `name` in ascending order.
+             */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. The order to list result by.
+            /** Optional. The order to list results by. General `order_by` string syntax: ` () (,)` * `` allows
+           value: `name` * `` ascending or descending order by ``. If this is left blank, `asc` is used Note
+           that an empty `order_by` string results in default order, which is order by `name` in ascending
+           order.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /** Optional. The order to list result by. */
+            /**
+             * Optional. The order to list results by. General `order_by` string syntax: ` () (,)` *
+             * `` allows value: `name` * `` ascending or descending order by ``. If this is left
+             * blank, `asc` is used Note that an empty `order_by` string results in default order,
+             * which is order by `name` in ascending order.
+             */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;
@@ -2631,7 +2654,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the servicedirectory server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The resource name for the service in the format 'projects/locations/namespaces/services'.
+           * @param name Immutable. The resource name for the service in the format `projects/locations/namespaces/services`.
            * @param content the {@link com.google.api.services.servicedirectory.v1.model.Service}
            * @return the request
            */
@@ -2659,7 +2682,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The resource name for the service in the format 'projects/locations/namespaces/services'.
+             * @param name Immutable. The resource name for the service in the format `projects/locations/namespaces/services`.
              * @param content the {@link com.google.api.services.servicedirectory.v1.model.Service}
              * @since 1.13
              */
@@ -2730,13 +2753,13 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
 
             /**
              * Immutable. The resource name for the service in the format
-             * 'projects/locations/namespaces/services'.
+             * `projects/locations/namespaces/services`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Immutable. The resource name for the service in the format
-           'projects/locations/namespaces/services'.
+           `projects/locations/namespaces/services`.
              */
             public java.lang.String getName() {
               return name;
@@ -2744,7 +2767,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
 
             /**
              * Immutable. The resource name for the service in the format
-             * 'projects/locations/namespaces/services'.
+             * `projects/locations/namespaces/services`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3214,7 +3237,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
           public class Endpoints {
 
             /**
-             * Creates a endpoint, and returns the new Endpoint.
+             * Creates an endpoint, and returns the new endpoint.
              *
              * Create a request for the method "endpoints.create".
              *
@@ -3239,7 +3262,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+$");
 
               /**
-               * Creates a endpoint, and returns the new Endpoint.
+               * Creates an endpoint, and returns the new endpoint.
                *
                * Create a request for the method "endpoints.create".
                *
@@ -3377,7 +3400,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               }
             }
             /**
-             * Deletes a endpoint.
+             * Deletes an endpoint.
              *
              * Create a request for the method "endpoints.delete".
              *
@@ -3401,7 +3424,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+/endpoints/[^/]+$");
 
               /**
-               * Deletes a endpoint.
+               * Deletes an endpoint.
                *
                * Create a request for the method "endpoints.delete".
                *
@@ -3506,7 +3529,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               }
             }
             /**
-             * Gets a endpoint.
+             * Gets an endpoint.
              *
              * Create a request for the method "endpoints.get".
              *
@@ -3530,7 +3553,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+/endpoints/[^/]+$");
 
               /**
-               * Gets a endpoint.
+               * Gets an endpoint.
                *
                * Create a request for the method "endpoints.get".
                *
@@ -3651,7 +3674,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * This request holds the parameters needed by the servicedirectory server.  After setting any
              * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the service whose endpoints we'd like to list.
+             * @param parent Required. The resource name of the service whose endpoints you'd like to list.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -3677,7 +3700,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the service whose endpoints we'd like to list.
+               * @param parent Required. The resource name of the service whose endpoints you'd like to list.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -3755,17 +3778,17 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Required. The resource name of the service whose endpoints we'd like to list. */
+              /** Required. The resource name of the service whose endpoints you'd like to list. */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name of the service whose endpoints we'd like to list.
+              /** Required. The resource name of the service whose endpoints you'd like to list.
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /** Required. The resource name of the service whose endpoints we'd like to list. */
+              /** Required. The resource name of the service whose endpoints you'd like to list. */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3777,78 +3800,97 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               }
 
               /**
-               * Optional. The filter to list result by. General filter string syntax: () can be
-               * "name", "address", "port" or "metadata." for map field. can be "<, >, <=, >=, !=,
-               * =, :". Of which ":" means HAS, and is roughly the same as "=". must be the same
-               * data type as field. can be "AND, OR, NOT". Examples of valid filters: *
-               * "metadata.owner" returns Endpoints that have a label with the key "owner" this is
-               * the same as "metadata:owner". * "metadata.protocol=gRPC" returns Endpoints that
-               * have key/value "protocol=gRPC". * "address=192.108.1.105" returns Endpoints that
-               * have this address. * "port>8080" returns Endpoints that have port number larger
-               * than 8080. * "name>projects/my-project/locations/us-east/namespaces/my-
-               * namespace/services/my-service/endpoints/endpoint-c" returns Endpoints that have
-               * name that is alphabetically later than the string, so "endpoint-e" will be returned
-               * but "endpoint-a" will not be. * "metadata.owner!=sd AND metadata.foo=bar" returns
-               * Endpoints that have "owner" in label key but value is not "sd" AND have key/value
-               * foo=bar. * "doesnotexist.foo=bar" returns an empty list. Note that Endpoint doesn't
-               * have a field called "doesnotexist". Since the filter does not match any Endpoints,
-               * it returns no results.
+               * Optional. The filter to list results by. General `filter` string syntax: ` ()` * ``
+               * can be `name`, `address`, `port`, or `annotations.` for map field * `` can be `<`,
+               * `>`, `<=`, `>=`, `!=`, `=`, `:`. Of which `:` means `HAS`, and is roughly the same
+               * as `=` * `` must be the same data type as field * `` can be `AND`, `OR`, `NOT`
+               * Examples of valid filters: * `annotations.owner` returns endpoints that have a
+               * annotation with the key `owner`, this is the same as `annotations:owner` *
+               * `annotations.protocol=gRPC` returns endpoints that have key/value `protocol=gRPC` *
+               * `address=192.108.1.105` returns endpoints that have this address * `port>8080`
+               * returns endpoints that have port number larger than 8080 * `name>projects/my-
+               * project/locations/us-east1/namespaces/my-namespace/services/my-
+               * service/endpoints/endpoint-c` returns endpoints that have name that is
+               * alphabetically later than the string, so "endpoint-e" is returned but "endpoint-a"
+               * is not * `annotations.owner!=sd AND annotations.foo=bar` returns endpoints that
+               * have `owner` in annotation key but value is not `sd` AND have key/value `foo=bar` *
+               * `doesnotexist.foo=bar` returns an empty list. Note that endpoint doesn't have a
+               * field called "doesnotexist". Since the filter does not match any endpoints, it
+               * returns no results For more information about filtering, see [API
+               * Filtering](https://aip.dev/160).
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Optional. The filter to list result by. General filter string syntax: () can be "name", "address",
-             "port" or "metadata." for map field. can be "<, >, <=, >=, !=, =, :". Of which ":" means HAS, and
-             is roughly the same as "=". must be the same data type as field. can be "AND, OR, NOT". Examples of
-             valid filters: * "metadata.owner" returns Endpoints that have a label with the key "owner" this is
-             the same as "metadata:owner". * "metadata.protocol=gRPC" returns Endpoints that have key/value
-             "protocol=gRPC". * "address=192.108.1.105" returns Endpoints that have this address. * "port>8080"
-             returns Endpoints that have port number larger than 8080. * "name>projects/my-project/locations/us-
-             east/namespaces/my-namespace/services/my-service/endpoints/endpoint-c" returns Endpoints that have
-             name that is alphabetically later than the string, so "endpoint-e" will be returned but
-             "endpoint-a" will not be. * "metadata.owner!=sd AND metadata.foo=bar" returns Endpoints that have
-             "owner" in label key but value is not "sd" AND have key/value foo=bar. * "doesnotexist.foo=bar"
-             returns an empty list. Note that Endpoint doesn't have a field called "doesnotexist". Since the
-             filter does not match any Endpoints, it returns no results.
+              /** Optional. The filter to list results by. General `filter` string syntax: ` ()` * `` can be `name`,
+             `address`, `port`, or `annotations.` for map field * `` can be `<`, `>`, `<=`, `>=`, `!=`, `=`,
+             `:`. Of which `:` means `HAS`, and is roughly the same as `=` * `` must be the same data type as
+             field * `` can be `AND`, `OR`, `NOT` Examples of valid filters: * `annotations.owner` returns
+             endpoints that have a annotation with the key `owner`, this is the same as `annotations:owner` *
+             `annotations.protocol=gRPC` returns endpoints that have key/value `protocol=gRPC` *
+             `address=192.108.1.105` returns endpoints that have this address * `port>8080` returns endpoints
+             that have port number larger than 8080 * `name>projects/my-project/locations/us-east1/namespaces
+             /my-namespace/services/my-service/endpoints/endpoint-c` returns endpoints that have name that is
+             alphabetically later than the string, so "endpoint-e" is returned but "endpoint-a" is not *
+             `annotations.owner!=sd AND annotations.foo=bar` returns endpoints that have `owner` in annotation
+             key but value is not `sd` AND have key/value `foo=bar` * `doesnotexist.foo=bar` returns an empty
+             list. Note that endpoint doesn't have a field called "doesnotexist". Since the filter does not
+             match any endpoints, it returns no results For more information about filtering, see [API
+             Filtering](https://aip.dev/160).
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * Optional. The filter to list result by. General filter string syntax: () can be
-               * "name", "address", "port" or "metadata." for map field. can be "<, >, <=, >=, !=,
-               * =, :". Of which ":" means HAS, and is roughly the same as "=". must be the same
-               * data type as field. can be "AND, OR, NOT". Examples of valid filters: *
-               * "metadata.owner" returns Endpoints that have a label with the key "owner" this is
-               * the same as "metadata:owner". * "metadata.protocol=gRPC" returns Endpoints that
-               * have key/value "protocol=gRPC". * "address=192.108.1.105" returns Endpoints that
-               * have this address. * "port>8080" returns Endpoints that have port number larger
-               * than 8080. * "name>projects/my-project/locations/us-east/namespaces/my-
-               * namespace/services/my-service/endpoints/endpoint-c" returns Endpoints that have
-               * name that is alphabetically later than the string, so "endpoint-e" will be returned
-               * but "endpoint-a" will not be. * "metadata.owner!=sd AND metadata.foo=bar" returns
-               * Endpoints that have "owner" in label key but value is not "sd" AND have key/value
-               * foo=bar. * "doesnotexist.foo=bar" returns an empty list. Note that Endpoint doesn't
-               * have a field called "doesnotexist". Since the filter does not match any Endpoints,
-               * it returns no results.
+               * Optional. The filter to list results by. General `filter` string syntax: ` ()` * ``
+               * can be `name`, `address`, `port`, or `annotations.` for map field * `` can be `<`,
+               * `>`, `<=`, `>=`, `!=`, `=`, `:`. Of which `:` means `HAS`, and is roughly the same
+               * as `=` * `` must be the same data type as field * `` can be `AND`, `OR`, `NOT`
+               * Examples of valid filters: * `annotations.owner` returns endpoints that have a
+               * annotation with the key `owner`, this is the same as `annotations:owner` *
+               * `annotations.protocol=gRPC` returns endpoints that have key/value `protocol=gRPC` *
+               * `address=192.108.1.105` returns endpoints that have this address * `port>8080`
+               * returns endpoints that have port number larger than 8080 * `name>projects/my-
+               * project/locations/us-east1/namespaces/my-namespace/services/my-
+               * service/endpoints/endpoint-c` returns endpoints that have name that is
+               * alphabetically later than the string, so "endpoint-e" is returned but "endpoint-a"
+               * is not * `annotations.owner!=sd AND annotations.foo=bar` returns endpoints that
+               * have `owner` in annotation key but value is not `sd` AND have key/value `foo=bar` *
+               * `doesnotexist.foo=bar` returns an empty list. Note that endpoint doesn't have a
+               * field called "doesnotexist". Since the filter does not match any endpoints, it
+               * returns no results For more information about filtering, see [API
+               * Filtering](https://aip.dev/160).
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
                 return this;
               }
 
-              /** Optional. The order to list result by. */
+              /**
+               * Optional. The order to list results by. General `order_by` string syntax: ` () (,)`
+               * * `` allows values: `name`, `address`, `port` * `` ascending or descending order by
+               * ``. If this is left blank, `asc` is used Note that an empty `order_by` string
+               * results in default order, which is order by `name` in ascending order.
+               */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
-              /** Optional. The order to list result by.
+              /** Optional. The order to list results by. General `order_by` string syntax: ` () (,)` * `` allows
+             values: `name`, `address`, `port` * `` ascending or descending order by ``. If this is left blank,
+             `asc` is used Note that an empty `order_by` string results in default order, which is order by
+             `name` in ascending order.
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
               }
 
-              /** Optional. The order to list result by. */
+              /**
+               * Optional. The order to list results by. General `order_by` string syntax: ` () (,)`
+               * * `` allows values: `name`, `address`, `port` * `` ascending or descending order by
+               * ``. If this is left blank, `asc` is used Note that an empty `order_by` string
+               * results in default order, which is order by `name` in ascending order.
+               */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
                 return this;
@@ -3896,7 +3938,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               }
             }
             /**
-             * Updates a endpoint.
+             * Updates an endpoint.
              *
              * Create a request for the method "endpoints.patch".
              *
@@ -3904,7 +3946,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
              * @param name Immutable. The resource name for the endpoint in the format
-             *        'projects/locations/namespaces/services/endpoints'.
+             *        `projects/locations/namespaces/services/endpoints`.
              * @param content the {@link com.google.api.services.servicedirectory.v1.model.Endpoint}
              * @return the request
              */
@@ -3922,7 +3964,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/namespaces/[^/]+/services/[^/]+/endpoints/[^/]+$");
 
               /**
-               * Updates a endpoint.
+               * Updates an endpoint.
                *
                * Create a request for the method "endpoints.patch".
                *
@@ -3933,7 +3975,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Immutable. The resource name for the endpoint in the format
-             *        'projects/locations/namespaces/services/endpoints'.
+             *        `projects/locations/namespaces/services/endpoints`.
                * @param content the {@link com.google.api.services.servicedirectory.v1.model.Endpoint}
                * @since 1.13
                */
@@ -4004,13 +4046,13 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
 
               /**
                * Immutable. The resource name for the endpoint in the format
-               * 'projects/locations/namespaces/services/endpoints'.
+               * `projects/locations/namespaces/services/endpoints`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Immutable. The resource name for the endpoint in the format
-             'projects/locations/namespaces/services/endpoints'.
+             `projects/locations/namespaces/services/endpoints`.
                */
               public java.lang.String getName() {
                 return name;
@@ -4018,7 +4060,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
 
               /**
                * Immutable. The resource name for the endpoint in the format
-               * 'projects/locations/namespaces/services/endpoints'.
+               * `projects/locations/namespaces/services/endpoints`.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {

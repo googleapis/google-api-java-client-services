@@ -32,8 +32,8 @@ package com.google.api.services.servicedirectory.v1beta1.model;
 public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Endpoints associated with this service. Returned on LookupService.Resolve. Control
-   * plane clients should use RegistrationService.ListEndpoints.
+   * Output only. Endpoints associated with this service. Returned on LookupService.ResolveService.
+   * Control plane clients should use RegistrationService.ListEndpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,17 +47,18 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Metadata for the service. This data can be consumed by service clients. Restrictions:
-   * - The entire metadata dictionary may contain up to 2000 characters, spread accoss all key-value
-   * pairs. Metadata that goes beyond any these limits will be rejected. - Valid metadata keys have
-   * two segments: an optional prefix and name, separated by a slash (/). The name segment is
-   * required and must be 63 characters or less, beginning and ending with an alphanumeric character
+   * * The entire metadata dictionary may contain up to 512 characters, spread accoss all key-value
+   * pairs. Metadata that goes beyond this limit are rejected * Valid metadata keys have two
+   * segments: an optional prefix and name, separated by a slash (/). The name segment is required
+   * and must be 63 characters or less, beginning and ending with an alphanumeric character
    * ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. The prefix
    * is optional. If specified, the prefix must be a DNS subdomain: a series of DNS labels separated
    * by dots (.), not longer than 253 characters in total, followed by a slash (/). Metadata that
-   * fails to meet these requirements will be rejected. - The '(*.)google.com/' and
-   * '(*.)googleapis.com/' prefixes are reserved for system metadata managed by Service Directory.
-   * If the user tries to write to these keyspaces, those entries will be silently ignored by the
-   * system.
+   * fails to meet these requirements are rejected * The `(*.)google.com/` and `(*.)googleapis.com/`
+   * prefixes are reserved for system metadata managed by Service Directory. If the user tries to
+   * write to these keyspaces, those entries are silently ignored by the system Note: This field is
+   * equivalent to the `annotations` field in the v1 API. They have the same syntax and read/write
+   * to the same location in Service Directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,15 +66,15 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The resource name for the service in the format
-   * 'projects/locations/namespaces/services'.
+   * `projects/locations/namespaces/services`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Endpoints associated with this service. Returned on LookupService.Resolve. Control
-   * plane clients should use RegistrationService.ListEndpoints.
+   * Output only. Endpoints associated with this service. Returned on LookupService.ResolveService.
+   * Control plane clients should use RegistrationService.ListEndpoints.
    * @return value or {@code null} for none
    */
   public java.util.List<Endpoint> getEndpoints() {
@@ -81,8 +82,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Endpoints associated with this service. Returned on LookupService.Resolve. Control
-   * plane clients should use RegistrationService.ListEndpoints.
+   * Output only. Endpoints associated with this service. Returned on LookupService.ResolveService.
+   * Control plane clients should use RegistrationService.ListEndpoints.
    * @param endpoints endpoints or {@code null} for none
    */
   public Service setEndpoints(java.util.List<Endpoint> endpoints) {
@@ -92,17 +93,18 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Metadata for the service. This data can be consumed by service clients. Restrictions:
-   * - The entire metadata dictionary may contain up to 2000 characters, spread accoss all key-value
-   * pairs. Metadata that goes beyond any these limits will be rejected. - Valid metadata keys have
-   * two segments: an optional prefix and name, separated by a slash (/). The name segment is
-   * required and must be 63 characters or less, beginning and ending with an alphanumeric character
+   * * The entire metadata dictionary may contain up to 512 characters, spread accoss all key-value
+   * pairs. Metadata that goes beyond this limit are rejected * Valid metadata keys have two
+   * segments: an optional prefix and name, separated by a slash (/). The name segment is required
+   * and must be 63 characters or less, beginning and ending with an alphanumeric character
    * ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. The prefix
    * is optional. If specified, the prefix must be a DNS subdomain: a series of DNS labels separated
    * by dots (.), not longer than 253 characters in total, followed by a slash (/). Metadata that
-   * fails to meet these requirements will be rejected. - The '(*.)google.com/' and
-   * '(*.)googleapis.com/' prefixes are reserved for system metadata managed by Service Directory.
-   * If the user tries to write to these keyspaces, those entries will be silently ignored by the
-   * system.
+   * fails to meet these requirements are rejected * The `(*.)google.com/` and `(*.)googleapis.com/`
+   * prefixes are reserved for system metadata managed by Service Directory. If the user tries to
+   * write to these keyspaces, those entries are silently ignored by the system Note: This field is
+   * equivalent to the `annotations` field in the v1 API. They have the same syntax and read/write
+   * to the same location in Service Directory.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -111,17 +113,18 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Metadata for the service. This data can be consumed by service clients. Restrictions:
-   * - The entire metadata dictionary may contain up to 2000 characters, spread accoss all key-value
-   * pairs. Metadata that goes beyond any these limits will be rejected. - Valid metadata keys have
-   * two segments: an optional prefix and name, separated by a slash (/). The name segment is
-   * required and must be 63 characters or less, beginning and ending with an alphanumeric character
+   * * The entire metadata dictionary may contain up to 512 characters, spread accoss all key-value
+   * pairs. Metadata that goes beyond this limit are rejected * Valid metadata keys have two
+   * segments: an optional prefix and name, separated by a slash (/). The name segment is required
+   * and must be 63 characters or less, beginning and ending with an alphanumeric character
    * ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. The prefix
    * is optional. If specified, the prefix must be a DNS subdomain: a series of DNS labels separated
    * by dots (.), not longer than 253 characters in total, followed by a slash (/). Metadata that
-   * fails to meet these requirements will be rejected. - The '(*.)google.com/' and
-   * '(*.)googleapis.com/' prefixes are reserved for system metadata managed by Service Directory.
-   * If the user tries to write to these keyspaces, those entries will be silently ignored by the
-   * system.
+   * fails to meet these requirements are rejected * The `(*.)google.com/` and `(*.)googleapis.com/`
+   * prefixes are reserved for system metadata managed by Service Directory. If the user tries to
+   * write to these keyspaces, those entries are silently ignored by the system Note: This field is
+   * equivalent to the `annotations` field in the v1 API. They have the same syntax and read/write
+   * to the same location in Service Directory.
    * @param metadata metadata or {@code null} for none
    */
   public Service setMetadata(java.util.Map<String, java.lang.String> metadata) {
@@ -131,7 +134,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The resource name for the service in the format
-   * 'projects/locations/namespaces/services'.
+   * `projects/locations/namespaces/services`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -140,7 +143,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. The resource name for the service in the format
-   * 'projects/locations/namespaces/services'.
+   * `projects/locations/namespaces/services`.
    * @param name name or {@code null} for none
    */
   public Service setName(java.lang.String name) {

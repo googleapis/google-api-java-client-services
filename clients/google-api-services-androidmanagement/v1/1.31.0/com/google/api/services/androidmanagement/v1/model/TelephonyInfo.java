@@ -18,7 +18,7 @@ package com.google.api.services.androidmanagement.v1.model;
 
 /**
  * Telephony information associated with a given SIM card on the device. Only supported on fully
- * managed devices starting from Android API level 23 and above.
+ * managed devices starting from Android API level 23.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

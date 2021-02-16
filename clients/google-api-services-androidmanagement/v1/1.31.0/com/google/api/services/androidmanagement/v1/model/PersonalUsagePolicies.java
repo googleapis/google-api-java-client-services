@@ -45,7 +45,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   private java.lang.Boolean cameraDisabled;
 
   /**
-   * Controls how long the work profile can stay off.
+   * Controls how long the work profile can stay off. The duration must be at least 3 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Controls how long the work profile can stay off.
+   * Controls how long the work profile can stay off. The duration must be at least 3 days.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxDaysWithWorkOff() {
@@ -122,7 +122,7 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * Controls how long the work profile can stay off.
+   * Controls how long the work profile can stay off. The duration must be at least 3 days.
    * @param maxDaysWithWorkOff maxDaysWithWorkOff or {@code null} for none
    */
   public PersonalUsagePolicies setMaxDaysWithWorkOff(java.lang.Integer maxDaysWithWorkOff) {

@@ -604,10 +604,15 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Report an individual error event. This endpoint accepts **either** an OAuth token, **or** an [API
-       * key](https://support.google.com/cloud/answer/6158862) for authentication. To use an API key,
-       * append it to the URL as the value of a `key` parameter. For example: `POST
+       * Report an individual error event and record the event to a log. This endpoint accepts **either**
+       * an OAuth token, **or** an [API key](https://support.google.com/cloud/answer/6158862) for
+       * authentication. To use an API key, append it to the URL as the value of a `key` parameter. For
+       * example: `POST
        * https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+       * **Note:** [Error Reporting](/error-reporting) is a global service built on Cloud Logging and
+       * doesn't analyze logs stored in regional log buckets or logs routed to other Google Cloud
+       * projects. For more information, see [Using Error Reporting with regionalized logs](/error-
+       * reporting/docs/regionalization).
        *
        * Create a request for the method "events.report".
        *
@@ -635,10 +640,15 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Report an individual error event. This endpoint accepts **either** an OAuth token, **or** an
-         * [API key](https://support.google.com/cloud/answer/6158862) for authentication. To use an API
-         * key, append it to the URL as the value of a `key` parameter. For example: `POST
+         * Report an individual error event and record the event to a log. This endpoint accepts
+         * **either** an OAuth token, **or** an [API key](https://support.google.com/cloud/answer/6158862)
+         * for authentication. To use an API key, append it to the URL as the value of a `key` parameter.
+         * For example: `POST
          * https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+         * **Note:** [Error Reporting](/error-reporting) is a global service built on Cloud Logging and
+         * doesn't analyze logs stored in regional log buckets or logs routed to other Google Cloud
+         * projects. For more information, see [Using Error Reporting with regionalized logs](/error-
+         * reporting/docs/regionalization).
          *
          * Create a request for the method "events.report".
          *
@@ -788,9 +798,10 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the clouderrorreporting server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`,
-       *        where `{projectID}` is the [Google Cloud Platform project
-       *        ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+       * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+       *        or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in
+       *        the [Google Cloud Console](https://support.google.com/cloud/answer/6158840). Examples:
+       *        `projects/my-project-123`, `projects/5551234`.
        * @return the request
        */
       public List list(java.lang.String projectName) throws java.io.IOException {
@@ -817,9 +828,10 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`,
-       *        where `{projectID}` is the [Google Cloud Platform project
-       *        ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+         * @param projectName Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+       *        or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in
+       *        the [Google Cloud Console](https://support.google.com/cloud/answer/6158840). Examples:
+       *        `projects/my-project-123`, `projects/5551234`.
          * @since 1.13
          */
         protected List(java.lang.String projectName) {
@@ -899,15 +911,18 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
 
         /**
          * Required. The resource name of the Google Cloud Platform project. Written as
-         * `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
-         * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+         * `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and
+         * `{projectNumber}` can be found in the [Google Cloud
+         * Console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
+         * project-123`, `projects/5551234`.
          */
         @com.google.api.client.util.Key
         private java.lang.String projectName;
 
-        /** Required. The resource name of the Google Cloud Platform project. Written as
-       `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
-       ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+        /** Required. The resource name of the Google Cloud Platform project. Written as `projects/{projectID}`
+       or `projects/{projectNumber}`, where `{projectID}` and `{projectNumber}` can be found in the
+       [Google Cloud Console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
+       project-123`, `projects/5551234`.
          */
         public java.lang.String getProjectName() {
           return projectName;
@@ -915,8 +930,10 @@ public class Clouderrorreporting extends com.google.api.client.googleapis.servic
 
         /**
          * Required. The resource name of the Google Cloud Platform project. Written as
-         * `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
-         * ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+         * `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and
+         * `{projectNumber}` can be found in the [Google Cloud
+         * Console](https://support.google.com/cloud/answer/6158840). Examples: `projects/my-
+         * project-123`, `projects/5551234`.
          */
         public List setProjectName(java.lang.String projectName) {
           if (!getSuppressPatternChecks()) {

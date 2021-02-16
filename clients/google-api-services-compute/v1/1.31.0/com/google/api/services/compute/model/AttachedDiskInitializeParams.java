@@ -91,6 +91,13 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
   private java.lang.String onUpdateAction;
 
   /**
+   * Indicates how many IOPS must be provisioned for the disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedIops;
+
+  /**
    * Resource policies applied to this disk for automatic snapshot creations. Specified using the
    * full or partial URL. For instance template, specify only the resource policy name.
    * The value may be {@code null}.
@@ -283,6 +290,23 @@ public final class AttachedDiskInitializeParams extends com.google.api.client.js
    */
   public AttachedDiskInitializeParams setOnUpdateAction(java.lang.String onUpdateAction) {
     this.onUpdateAction = onUpdateAction;
+    return this;
+  }
+
+  /**
+   * Indicates how many IOPS must be provisioned for the disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedIops() {
+    return provisionedIops;
+  }
+
+  /**
+   * Indicates how many IOPS must be provisioned for the disk.
+   * @param provisionedIops provisionedIops or {@code null} for none
+   */
+  public AttachedDiskInitializeParams setProvisionedIops(java.lang.Long provisionedIops) {
+    this.provisionedIops = provisionedIops;
     return this;
   }
 

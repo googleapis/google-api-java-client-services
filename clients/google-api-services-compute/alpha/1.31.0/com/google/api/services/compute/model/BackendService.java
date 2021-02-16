@@ -73,8 +73,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Cloud CDN configuration for this BackendService. Not available for Internal TCP/UDP Load
-   * Balancing and Network Load Balancing.
+   * Cloud CDN configuration for this BackendService. Only available for  external HTTP(S) Load
+   * Balancing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,7 +321,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
    * 80.
    *
-   * This cannot be used if the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
+   * Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing require you
+   * omit port.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -482,8 +483,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Cloud CDN configuration for this BackendService. Not available for Internal TCP/UDP Load
-   * Balancing and Network Load Balancing.
+   * Cloud CDN configuration for this BackendService. Only available for  external HTTP(S) Load
+   * Balancing.
    * @return value or {@code null} for none
    */
   public BackendServiceCdnPolicy getCdnPolicy() {
@@ -491,8 +492,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Cloud CDN configuration for this BackendService. Not available for Internal TCP/UDP Load
-   * Balancing and Network Load Balancing.
+   * Cloud CDN configuration for this BackendService. Only available for  external HTTP(S) Load
+   * Balancing.
    * @param cdnPolicy cdnPolicy or {@code null} for none
    */
   public BackendService setCdnPolicy(BackendServiceCdnPolicy cdnPolicy) {
@@ -1085,7 +1086,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
    * 80.
    *
-   * This cannot be used if the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
+   * Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing require you
+   * omit port.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -1096,7 +1098,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * Deprecated in favor of portName. The TCP port to connect on the backend. The default value is
    * 80.
    *
-   * This cannot be used if the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
+   * Backend services for Internal TCP/UDP Load Balancing and Network Load Balancing require you
+   * omit port.
    * @param port port or {@code null} for none
    */
   public BackendService setPort(java.lang.Integer port) {

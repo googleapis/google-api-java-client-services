@@ -76,6 +76,15 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * An opaque location hint used to place the Node close to other resources. This field is for use
+   * by internal tools that use the public API. The location hint here on the NodeGroup overrides
+   * any location_hint present in the NodeTemplate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationHint;
+
+  /**
    * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one
    * of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For
    * more information, see  Maintenance policies.
@@ -260,6 +269,27 @@ public final class NodeGroup extends com.google.api.client.json.GenericJson {
    */
   public NodeGroup setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * An opaque location hint used to place the Node close to other resources. This field is for use
+   * by internal tools that use the public API. The location hint here on the NodeGroup overrides
+   * any location_hint present in the NodeTemplate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationHint() {
+    return locationHint;
+  }
+
+  /**
+   * An opaque location hint used to place the Node close to other resources. This field is for use
+   * by internal tools that use the public API. The location hint here on the NodeGroup overrides
+   * any location_hint present in the NodeTemplate.
+   * @param locationHint locationHint or {@code null} for none
+   */
+  public NodeGroup setLocationHint(java.lang.String locationHint) {
+    this.locationHint = locationHint;
     return this;
   }
 

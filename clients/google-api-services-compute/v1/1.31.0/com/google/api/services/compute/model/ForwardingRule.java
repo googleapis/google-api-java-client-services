@@ -303,6 +303,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> ports;
 
   /**
+   * [Output Only] The PSC connection id of the PSC Forwarding Rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger pscConnectionId;
+
+  /**
    * [Output Only] URL of the region where the regional forwarding rule resides. This field is not
    * applicable to global forwarding rules. You must specify this field as part of the HTTP request
    * URL. It is not settable as a field in the request body.
@@ -317,6 +324,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * Service Directory resources to register this forwarding rule with. Currently, only supports a
+   * single Service Directory resource.
+   *
+   * It is only supported for Internal TCP/UDP Load Balancing and Internal HTTP(S) Load Balancing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ForwardingRuleServiceDirectoryRegistration> serviceDirectoryRegistrations;
 
   /**
    * An optional prefix to the service name for this Forwarding Rule. If specified, the prefix is
@@ -1024,6 +1041,23 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * [Output Only] The PSC connection id of the PSC Forwarding Rule.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getPscConnectionId() {
+    return pscConnectionId;
+  }
+
+  /**
+   * [Output Only] The PSC connection id of the PSC Forwarding Rule.
+   * @param pscConnectionId pscConnectionId or {@code null} for none
+   */
+  public ForwardingRule setPscConnectionId(java.math.BigInteger pscConnectionId) {
+    this.pscConnectionId = pscConnectionId;
+    return this;
+  }
+
+  /**
    * [Output Only] URL of the region where the regional forwarding rule resides. This field is not
    * applicable to global forwarding rules. You must specify this field as part of the HTTP request
    * URL. It is not settable as a field in the request body.
@@ -1058,6 +1092,29 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Service Directory resources to register this forwarding rule with. Currently, only supports a
+   * single Service Directory resource.
+   *
+   * It is only supported for Internal TCP/UDP Load Balancing and Internal HTTP(S) Load Balancing.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ForwardingRuleServiceDirectoryRegistration> getServiceDirectoryRegistrations() {
+    return serviceDirectoryRegistrations;
+  }
+
+  /**
+   * Service Directory resources to register this forwarding rule with. Currently, only supports a
+   * single Service Directory resource.
+   *
+   * It is only supported for Internal TCP/UDP Load Balancing and Internal HTTP(S) Load Balancing.
+   * @param serviceDirectoryRegistrations serviceDirectoryRegistrations or {@code null} for none
+   */
+  public ForwardingRule setServiceDirectoryRegistrations(java.util.List<ForwardingRuleServiceDirectoryRegistration> serviceDirectoryRegistrations) {
+    this.serviceDirectoryRegistrations = serviceDirectoryRegistrations;
     return this;
   }
 

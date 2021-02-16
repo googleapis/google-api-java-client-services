@@ -51,7 +51,9 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String instance;
 
   /**
-   * A forwarding rule IP address assigned to this instance.
+   * For target pool based Network Load Balancing, it indicates the forwarding rule's IP address
+   * assigned to this instance. For other types of load balancing, the field indicates VM internal
+   * ip.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +130,9 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A forwarding rule IP address assigned to this instance.
+   * For target pool based Network Load Balancing, it indicates the forwarding rule's IP address
+   * assigned to this instance. For other types of load balancing, the field indicates VM internal
+   * ip.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -136,7 +140,9 @@ public final class HealthStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A forwarding rule IP address assigned to this instance.
+   * For target pool based Network Load Balancing, it indicates the forwarding rule's IP address
+   * assigned to this instance. For other types of load balancing, the field indicates VM internal
+   * ip.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public HealthStatus setIpAddress(java.lang.String ipAddress) {

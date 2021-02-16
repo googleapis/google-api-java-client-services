@@ -173,6 +173,17 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private RawDisk rawDisk;
 
   /**
+   * A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone
+   * references to the image via the associated image family. The rollout policy restricts the zones
+   * where this image is accessible when using a zonal image family reference. When the rollout
+   * policy does not include the user specified zone, or if the zone is rolled out, this image is
+   * accessible.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RolloutPolicy rolloutOverride;
+
+  /**
    * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
@@ -659,6 +670,31 @@ public final class Image extends com.google.api.client.json.GenericJson {
    */
   public Image setRawDisk(RawDisk rawDisk) {
     this.rawDisk = rawDisk;
+    return this;
+  }
+
+  /**
+   * A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone
+   * references to the image via the associated image family. The rollout policy restricts the zones
+   * where this image is accessible when using a zonal image family reference. When the rollout
+   * policy does not include the user specified zone, or if the zone is rolled out, this image is
+   * accessible.
+   * @return value or {@code null} for none
+   */
+  public RolloutPolicy getRolloutOverride() {
+    return rolloutOverride;
+  }
+
+  /**
+   * A rollout policy to apply to this image. When specified, the rollout policy overrides per-zone
+   * references to the image via the associated image family. The rollout policy restricts the zones
+   * where this image is accessible when using a zonal image family reference. When the rollout
+   * policy does not include the user specified zone, or if the zone is rolled out, this image is
+   * accessible.
+   * @param rolloutOverride rolloutOverride or {@code null} for none
+   */
+  public Image setRolloutOverride(RolloutPolicy rolloutOverride) {
+    this.rolloutOverride = rolloutOverride;
     return this;
   }
 

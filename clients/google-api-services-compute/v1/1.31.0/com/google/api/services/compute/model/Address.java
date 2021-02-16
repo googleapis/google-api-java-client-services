@@ -151,8 +151,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String purpose;
 
   /**
-   * [Output Only] The URL of the region where the regional address resides. This field is not
-   * applicable to global addresses. You must specify this field as part of the HTTP request URL.
+   * [Output Only] The URL of the region where a regional address resides. For regional addresses,
+   * you must specify the region as a path parameter in the HTTP request URL. This field is not
+   * applicable to global addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -434,8 +435,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The URL of the region where the regional address resides. This field is not
-   * applicable to global addresses. You must specify this field as part of the HTTP request URL.
+   * [Output Only] The URL of the region where a regional address resides. For regional addresses,
+   * you must specify the region as a path parameter in the HTTP request URL. This field is not
+   * applicable to global addresses.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -443,8 +445,9 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The URL of the region where the regional address resides. This field is not
-   * applicable to global addresses. You must specify this field as part of the HTTP request URL.
+   * [Output Only] The URL of the region where a regional address resides. For regional addresses,
+   * you must specify the region as a path parameter in the HTTP request URL. This field is not
+   * applicable to global addresses.
    * @param region region or {@code null} for none
    */
   public Address setRegion(java.lang.String region) {

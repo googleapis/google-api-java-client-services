@@ -183,6 +183,13 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.Long physicalBlockSizeBytes;
 
   /**
+   * Indicates how many IOPS must be provisioned for the disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedIops;
+
+  /**
    * [Output Only] URL of the region where the disk resides. Only applicable for regional resources.
    * You must specify this field as part of the HTTP request URL. It is not settable as a field in
    * the request body.
@@ -724,6 +731,23 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setPhysicalBlockSizeBytes(java.lang.Long physicalBlockSizeBytes) {
     this.physicalBlockSizeBytes = physicalBlockSizeBytes;
+    return this;
+  }
+
+  /**
+   * Indicates how many IOPS must be provisioned for the disk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedIops() {
+    return provisionedIops;
+  }
+
+  /**
+   * Indicates how many IOPS must be provisioned for the disk.
+   * @param provisionedIops provisionedIops or {@code null} for none
+   */
+  public Disk setProvisionedIops(java.lang.Long provisionedIops) {
+    this.provisionedIops = provisionedIops;
     return this;
   }
 

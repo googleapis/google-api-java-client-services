@@ -76,6 +76,16 @@ public final class DeprecationStatus extends com.google.api.client.json.GenericJ
   private java.lang.String state;
 
   /**
+   * The rollout policy of this deprecation. This policy is only enforced by image family views. The
+   * rollout policy restricts the zones where the associated resource is considered in a deprecated
+   * state. When the rollout policy does not include the user specified zone, or if the zone is
+   * rolled out, the associated resource is considered in a deprecated state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RolloutPolicy stateOverride;
+
+  /**
    * An optional RFC3339 timestamp on or after which the state of this resource is intended to
    * change to DELETED. This is only informational and the status will not change unless the client
    * explicitly changes it.
@@ -179,6 +189,29 @@ public final class DeprecationStatus extends com.google.api.client.json.GenericJ
    */
   public DeprecationStatus setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * The rollout policy of this deprecation. This policy is only enforced by image family views. The
+   * rollout policy restricts the zones where the associated resource is considered in a deprecated
+   * state. When the rollout policy does not include the user specified zone, or if the zone is
+   * rolled out, the associated resource is considered in a deprecated state.
+   * @return value or {@code null} for none
+   */
+  public RolloutPolicy getStateOverride() {
+    return stateOverride;
+  }
+
+  /**
+   * The rollout policy of this deprecation. This policy is only enforced by image family views. The
+   * rollout policy restricts the zones where the associated resource is considered in a deprecated
+   * state. When the rollout policy does not include the user specified zone, or if the zone is
+   * rolled out, the associated resource is considered in a deprecated state.
+   * @param stateOverride stateOverride or {@code null} for none
+   */
+  public DeprecationStatus setStateOverride(RolloutPolicy stateOverride) {
+    this.stateOverride = stateOverride;
     return this;
   }
 

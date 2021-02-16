@@ -39,7 +39,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.String action;
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +149,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -157,7 +157,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description for this resource.
    * @param description description or {@code null} for none
    */
   public FirewallPolicyRule setDescription(java.lang.String description) {

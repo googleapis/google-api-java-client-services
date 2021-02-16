@@ -38,7 +38,7 @@ public class ScriptScopes {
   /** View and manage the provisioning of users on your domain. */
   public static final String ADMIN_DIRECTORY_USER = "https://www.googleapis.com/auth/admin.directory.user";
 
-  /** View and manage your Google Docs documents. */
+  /** See, create, and edit all Google Docs documents you have access to. */
   public static final String DOCUMENTS = "https://www.googleapis.com/auth/documents";
 
   /** See, edit, create, and delete all of your Google Drive files. */

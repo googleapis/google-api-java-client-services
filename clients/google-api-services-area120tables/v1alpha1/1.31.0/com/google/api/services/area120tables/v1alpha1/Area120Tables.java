@@ -1426,6 +1426,29 @@ public class Area120Tables extends com.google.api.client.googleapis.services.jso
         }
 
         /**
+         * Optional. Raw text query to search for in rows of the table. Special characters must be
+         * escaped. Logical operators and field specific filtering not supported.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Raw text query to search for in rows of the table. Special characters must be escaped.
+       Logical operators and field specific filtering not supported.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Raw text query to search for in rows of the table. Special characters must be
+         * escaped. Logical operators and field specific filtering not supported.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * The maximum number of rows to return. The service may return fewer than this value. If
          * unspecified, at most 50 rows are returned. The maximum value is 1,000; values above 1,000
          * are coerced to 1,000.

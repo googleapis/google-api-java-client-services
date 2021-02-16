@@ -303,6 +303,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> ports;
 
   /**
+   * [Output Only] The PSC connection id of the PSC Forwarding Rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.math.BigInteger pscConnectionId;
+
+  /**
    * [Output Only] URL of the region where the regional forwarding rule resides. This field is not
    * applicable to global forwarding rules. You must specify this field as part of the HTTP request
    * URL. It is not settable as a field in the request body.
@@ -1030,6 +1037,23 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setPorts(java.util.List<java.lang.String> ports) {
     this.ports = ports;
+    return this;
+  }
+
+  /**
+   * [Output Only] The PSC connection id of the PSC Forwarding Rule.
+   * @return value or {@code null} for none
+   */
+  public java.math.BigInteger getPscConnectionId() {
+    return pscConnectionId;
+  }
+
+  /**
+   * [Output Only] The PSC connection id of the PSC Forwarding Rule.
+   * @param pscConnectionId pscConnectionId or {@code null} for none
+   */
+  public ForwardingRule setPscConnectionId(java.math.BigInteger pscConnectionId) {
+    this.pscConnectionId = pscConnectionId;
     return this;
   }
 

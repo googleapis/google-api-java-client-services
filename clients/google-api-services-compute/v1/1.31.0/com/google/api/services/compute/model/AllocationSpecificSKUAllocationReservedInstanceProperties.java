@@ -56,6 +56,14 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
   }
 
   /**
+   * An opaque location hint used to place the allocation close to other resources. This field is
+   * for use by internal tools that use the public API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationHint;
+
+  /**
    * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of
    * memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-
    * AMOUNT_OF_MEMORY pattern.
@@ -102,6 +110,25 @@ public final class AllocationSpecificSKUAllocationReservedInstanceProperties ext
    */
   public AllocationSpecificSKUAllocationReservedInstanceProperties setLocalSsds(java.util.List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk> localSsds) {
     this.localSsds = localSsds;
+    return this;
+  }
+
+  /**
+   * An opaque location hint used to place the allocation close to other resources. This field is
+   * for use by internal tools that use the public API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationHint() {
+    return locationHint;
+  }
+
+  /**
+   * An opaque location hint used to place the allocation close to other resources. This field is
+   * for use by internal tools that use the public API.
+   * @param locationHint locationHint or {@code null} for none
+   */
+  public AllocationSpecificSKUAllocationReservedInstanceProperties setLocationHint(java.lang.String locationHint) {
+    this.locationHint = locationHint;
     return this;
   }
 

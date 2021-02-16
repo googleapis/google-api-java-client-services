@@ -138,6 +138,12 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkPerformanceConfig networkPerformanceConfig;
+
+  /**
    * PostKeyRevocationActionType of the instance.
    * The value may be {@code null}.
    */
@@ -429,6 +435,21 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setNetworkInterfaces(java.util.List<NetworkInterface> networkInterfaces) {
     this.networkInterfaces = networkInterfaces;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public NetworkPerformanceConfig getNetworkPerformanceConfig() {
+    return networkPerformanceConfig;
+  }
+
+  /**
+   * @param networkPerformanceConfig networkPerformanceConfig or {@code null} for none
+   */
+  public InstanceProperties setNetworkPerformanceConfig(NetworkPerformanceConfig networkPerformanceConfig) {
+    this.networkPerformanceConfig = networkPerformanceConfig;
     return this;
   }
 

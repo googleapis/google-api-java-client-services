@@ -46,6 +46,15 @@ public final class ForwardingRuleServiceDirectoryRegistration extends com.google
   private java.lang.String service;
 
   /**
+   * [Optional] Service Directory region to register this global forwarding rule under. Default to
+   * "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on
+   * the same network should use the same Service Directory region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceDirectoryRegion;
+
+  /**
    * Service Directory namespace to register the forwarding rule under.
    * @return value or {@code null} for none
    */
@@ -76,6 +85,27 @@ public final class ForwardingRuleServiceDirectoryRegistration extends com.google
    */
   public ForwardingRuleServiceDirectoryRegistration setService(java.lang.String service) {
     this.service = service;
+    return this;
+  }
+
+  /**
+   * [Optional] Service Directory region to register this global forwarding rule under. Default to
+   * "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on
+   * the same network should use the same Service Directory region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceDirectoryRegion() {
+    return serviceDirectoryRegion;
+  }
+
+  /**
+   * [Optional] Service Directory region to register this global forwarding rule under. Default to
+   * "us-central1". Only used for PSC for Google APIs. All PSC for Google APIs Forwarding Rules on
+   * the same network should use the same Service Directory region.
+   * @param serviceDirectoryRegion serviceDirectoryRegion or {@code null} for none
+   */
+  public ForwardingRuleServiceDirectoryRegistration setServiceDirectoryRegion(java.lang.String serviceDirectoryRegion) {
+    this.serviceDirectoryRegion = serviceDirectoryRegion;
     return this;
   }
 

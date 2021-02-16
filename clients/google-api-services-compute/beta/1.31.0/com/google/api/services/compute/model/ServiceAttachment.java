@@ -21,7 +21,7 @@ package com.google.api.services.compute.model;
  *
  * A service attachment represents a service that a producer has exposed. It encapsulates the load
  * balancer which fronts the service runs and a list of NAT IP ranges that the producers uses to
- * represent the consumers connecting to the service.
+ * represent the consumers connecting to the service. next tag = 16
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:

@@ -60,6 +60,13 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
+   * Resource policy for scheduling instance operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourcePolicyInstanceSchedulePolicy instanceSchedulePolicy;
+
+  /**
    * [Output Only] Type of the resource. Always compute#resource_policies for resource policies.
    * The value may be {@code null}.
    */
@@ -82,6 +89,13 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
+
+  /**
+   * [Output Only] The system status of the resource policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourcePolicyResourceStatus resourceStatus;
 
   /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
@@ -171,6 +185,23 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Resource policy for scheduling instance operations.
+   * @return value or {@code null} for none
+   */
+  public ResourcePolicyInstanceSchedulePolicy getInstanceSchedulePolicy() {
+    return instanceSchedulePolicy;
+  }
+
+  /**
+   * Resource policy for scheduling instance operations.
+   * @param instanceSchedulePolicy instanceSchedulePolicy or {@code null} for none
+   */
+  public ResourcePolicy setInstanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicy instanceSchedulePolicy) {
+    this.instanceSchedulePolicy = instanceSchedulePolicy;
+    return this;
+  }
+
+  /**
    * [Output Only] Type of the resource. Always compute#resource_policies for resource policies.
    * @return value or {@code null} for none
    */
@@ -224,6 +255,23 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
    */
   public ResourcePolicy setRegion(java.lang.String region) {
     this.region = region;
+    return this;
+  }
+
+  /**
+   * [Output Only] The system status of the resource policy.
+   * @return value or {@code null} for none
+   */
+  public ResourcePolicyResourceStatus getResourceStatus() {
+    return resourceStatus;
+  }
+
+  /**
+   * [Output Only] The system status of the resource policy.
+   * @param resourceStatus resourceStatus or {@code null} for none
+   */
+  public ResourcePolicy setResourceStatus(ResourcePolicyResourceStatus resourceStatus) {
+    this.resourceStatus = resourceStatus;
     return this;
   }
 

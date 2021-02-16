@@ -39,7 +39,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.lang.String action;
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,6 +123,19 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> targetSecureLabels;
 
   /**
+   * A list of secure tags that controls which instances the firewall rule applies to. If
+   * targetSecureTag are specified, then the firewall rule applies only to instances in the VPC
+   * network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in
+   * INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same
+   * time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are
+   * specified, the firewall rule applies to all instances on the specified network. Maximum number
+   * of target label tags allowed is 256.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FirewallPolicyRuleSecureTag> targetSecureTags;
+
+  /**
    * A list of service accounts indicating the sets of instances that are applied with this rule.
    * The value may be {@code null}.
    */
@@ -149,7 +162,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -157,7 +170,7 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description for this resource.
    * @param description description or {@code null} for none
    */
   public FirewallPolicyRule setDescription(java.lang.String description) {
@@ -343,6 +356,35 @@ public final class FirewallPolicyRule extends com.google.api.client.json.Generic
    */
   public FirewallPolicyRule setTargetSecureLabels(java.util.List<java.lang.String> targetSecureLabels) {
     this.targetSecureLabels = targetSecureLabels;
+    return this;
+  }
+
+  /**
+   * A list of secure tags that controls which instances the firewall rule applies to. If
+   * targetSecureTag are specified, then the firewall rule applies only to instances in the VPC
+   * network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in
+   * INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same
+   * time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are
+   * specified, the firewall rule applies to all instances on the specified network. Maximum number
+   * of target label tags allowed is 256.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FirewallPolicyRuleSecureTag> getTargetSecureTags() {
+    return targetSecureTags;
+  }
+
+  /**
+   * A list of secure tags that controls which instances the firewall rule applies to. If
+   * targetSecureTag are specified, then the firewall rule applies only to instances in the VPC
+   * network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in
+   * INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same
+   * time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are
+   * specified, the firewall rule applies to all instances on the specified network. Maximum number
+   * of target label tags allowed is 256.
+   * @param targetSecureTags targetSecureTags or {@code null} for none
+   */
+  public FirewallPolicyRule setTargetSecureTags(java.util.List<FirewallPolicyRuleSecureTag> targetSecureTags) {
+    this.targetSecureTags = targetSecureTags;
     return this;
   }
 

@@ -96,7 +96,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    * digests of the cached images must match those of the tags used or the latest version will still
    * be pulled. The root directory of the ext4 image must contain `image` and `overlay2` directories
    * copied from the Docker directory of a VM where the desired Docker images have already been
-   * pulled. Only a single image is supported.
+   * pulled. Any images pulled that are not cached will be stored on the first cache disk instead of
+   * the boot disk. Only a single image is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -289,7 +290,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    * digests of the cached images must match those of the tags used or the latest version will still
    * be pulled. The root directory of the ext4 image must contain `image` and `overlay2` directories
    * copied from the Docker directory of a VM where the desired Docker images have already been
-   * pulled. Only a single image is supported.
+   * pulled. Any images pulled that are not cached will be stored on the first cache disk instead of
+   * the boot disk. Only a single image is supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDockerCacheImages() {
@@ -302,7 +304,8 @@ public final class VirtualMachine extends com.google.api.client.json.GenericJson
    * digests of the cached images must match those of the tags used or the latest version will still
    * be pulled. The root directory of the ext4 image must contain `image` and `overlay2` directories
    * copied from the Docker directory of a VM where the desired Docker images have already been
-   * pulled. Only a single image is supported.
+   * pulled. Any images pulled that are not cached will be stored on the first cache disk instead of
+   * the boot disk. Only a single image is supported.
    * @param dockerCacheImages dockerCacheImages or {@code null} for none
    */
   public VirtualMachine setDockerCacheImages(java.util.List<java.lang.String> dockerCacheImages) {

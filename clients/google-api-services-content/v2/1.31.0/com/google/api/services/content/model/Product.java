@@ -136,7 +136,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String color;
 
   /**
-   * Condition or state of the item. Acceptable values are: - "`local`" - "`online`"
+   * Condition or state of the item. Acceptable values are: - "`new`" - "`refurbished`" - "`used`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -878,7 +878,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Condition or state of the item. Acceptable values are: - "`local`" - "`online`"
+   * Condition or state of the item. Acceptable values are: - "`new`" - "`refurbished`" - "`used`"
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -886,7 +886,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Condition or state of the item. Acceptable values are: - "`local`" - "`online`"
+   * Condition or state of the item. Acceptable values are: - "`new`" - "`refurbished`" - "`used`"
    * @param condition condition or {@code null} for none
    */
   public Product setCondition(java.lang.String condition) {

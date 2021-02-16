@@ -45,6 +45,13 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
   private GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig outputConfig;
 
   /**
+   * Whether Human Review feature should be skipped for this request. Default to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipHumanReview;
+
+  /**
    * The input config for each single document in the batch process.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
    */
   public GoogleCloudDocumentaiV1beta3BatchProcessRequest setOutputConfig(GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig outputConfig) {
     this.outputConfig = outputConfig;
+    return this;
+  }
+
+  /**
+   * Whether Human Review feature should be skipped for this request. Default to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipHumanReview() {
+    return skipHumanReview;
+  }
+
+  /**
+   * Whether Human Review feature should be skipped for this request. Default to false.
+   * @param skipHumanReview skipHumanReview or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3BatchProcessRequest setSkipHumanReview(java.lang.Boolean skipHumanReview) {
+    this.skipHumanReview = skipHumanReview;
     return this;
   }
 

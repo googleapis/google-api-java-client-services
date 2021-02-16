@@ -33,11 +33,18 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   /**
    * The name of the operation triggered by the processed document. If the human review process is
    * not triggered, this field will be empty. It has the same response type and metadata as the long
-   * running operation returned by ReviewDocument method.
+   * running operation returned by ReviewDocument method. .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String humanReviewOperation;
+
+  /**
+   * The status of human review on the processed document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3HumanReviewStatus humanReviewStatus;
 
   /**
    * The source of the document, same as the [input_gcs_source] field in the request when the batch
@@ -66,7 +73,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   /**
    * The name of the operation triggered by the processed document. If the human review process is
    * not triggered, this field will be empty. It has the same response type and metadata as the long
-   * running operation returned by ReviewDocument method.
+   * running operation returned by ReviewDocument method. .
    * @return value or {@code null} for none
    */
   public java.lang.String getHumanReviewOperation() {
@@ -76,11 +83,28 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualPro
   /**
    * The name of the operation triggered by the processed document. If the human review process is
    * not triggered, this field will be empty. It has the same response type and metadata as the long
-   * running operation returned by ReviewDocument method.
+   * running operation returned by ReviewDocument method. .
    * @param humanReviewOperation humanReviewOperation or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualProcessStatus setHumanReviewOperation(java.lang.String humanReviewOperation) {
     this.humanReviewOperation = humanReviewOperation;
+    return this;
+  }
+
+  /**
+   * The status of human review on the processed document.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3HumanReviewStatus getHumanReviewStatus() {
+    return humanReviewStatus;
+  }
+
+  /**
+   * The status of human review on the processed document.
+   * @param humanReviewStatus humanReviewStatus or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3BatchProcessMetadataIndividualProcessStatus setHumanReviewStatus(GoogleCloudDocumentaiV1beta3HumanReviewStatus humanReviewStatus) {
+    this.humanReviewStatus = humanReviewStatus;
     return this;
   }
 

@@ -55,11 +55,12 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
    * Optional. The name of the Pub/Sub topic where budget related messages will be published, in the
    * form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the
    * topic. The topic needs to be created before the budget is created; see
-   * https://cloud.google.com/billing/docs/how-to/budgets#manage-notifications for more details.
-   * Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set
-   * for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See
    * https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more
-   * details on Pub/Sub roles and permissions.
+   * details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when
+   * it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See
+   * https://cloud.google.com/billing/docs/how-to/budgets-programmatic-
+   * notifications#permissions_required_for_this_task for more details on Pub/Sub roles and
+   * permissions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,11 +128,12 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
    * Optional. The name of the Pub/Sub topic where budget related messages will be published, in the
    * form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the
    * topic. The topic needs to be created before the budget is created; see
-   * https://cloud.google.com/billing/docs/how-to/budgets#manage-notifications for more details.
-   * Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set
-   * for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See
    * https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more
-   * details on Pub/Sub roles and permissions.
+   * details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when
+   * it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See
+   * https://cloud.google.com/billing/docs/how-to/budgets-programmatic-
+   * notifications#permissions_required_for_this_task for more details on Pub/Sub roles and
+   * permissions.
    * @return value or {@code null} for none
    */
   public java.lang.String getPubsubTopic() {
@@ -142,11 +144,12 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRule extends com.go
    * Optional. The name of the Pub/Sub topic where budget related messages will be published, in the
    * form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the
    * topic. The topic needs to be created before the budget is created; see
-   * https://cloud.google.com/billing/docs/how-to/budgets#manage-notifications for more details.
-   * Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set
-   * for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See
    * https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more
-   * details on Pub/Sub roles and permissions.
+   * details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when
+   * it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See
+   * https://cloud.google.com/billing/docs/how-to/budgets-programmatic-
+   * notifications#permissions_required_for_this_task for more details on Pub/Sub roles and
+   * permissions.
    * @param pubsubTopic pubsubTopic or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1beta1AllUpdatesRule setPubsubTopic(java.lang.String pubsubTopic) {

@@ -46,6 +46,15 @@ public final class V1beta1DefaultIdentity extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
+   * The Default Identity tag. If specified when creating the account, the tag must be present in
+   * activation_grants. If not specified when creating the account, the tag is set to the tag
+   * specified in activation_grants.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tag;
+
+  /**
    * The unique and stable id of the default identity.
    * The value may be {@code null}.
    */
@@ -85,6 +94,27 @@ public final class V1beta1DefaultIdentity extends com.google.api.client.json.Gen
    */
   public V1beta1DefaultIdentity setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The Default Identity tag. If specified when creating the account, the tag must be present in
+   * activation_grants. If not specified when creating the account, the tag is set to the tag
+   * specified in activation_grants.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTag() {
+    return tag;
+  }
+
+  /**
+   * The Default Identity tag. If specified when creating the account, the tag must be present in
+   * activation_grants. If not specified when creating the account, the tag is set to the tag
+   * specified in activation_grants.
+   * @param tag tag or {@code null} for none
+   */
+  public V1beta1DefaultIdentity setTag(java.lang.String tag) {
+    this.tag = tag;
     return this;
   }
 

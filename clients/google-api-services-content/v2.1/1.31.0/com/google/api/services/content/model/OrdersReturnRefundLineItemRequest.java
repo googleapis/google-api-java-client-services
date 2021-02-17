@@ -61,7 +61,7 @@ public final class OrdersReturnRefundLineItemRequest extends com.google.api.clie
   private java.lang.String productId;
 
   /**
-   * The quantity to return and refund.
+   * The quantity to return and refund. Quantity is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +166,7 @@ public final class OrdersReturnRefundLineItemRequest extends com.google.api.clie
   }
 
   /**
-   * The quantity to return and refund.
+   * The quantity to return and refund. Quantity is required.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuantity() {
@@ -174,7 +174,7 @@ public final class OrdersReturnRefundLineItemRequest extends com.google.api.clie
   }
 
   /**
-   * The quantity to return and refund.
+   * The quantity to return and refund. Quantity is required.
    * @param quantity quantity or {@code null} for none
    */
   public OrdersReturnRefundLineItemRequest setQuantity(java.lang.Long quantity) {

@@ -83,7 +83,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private SecurityMarks securityMarks;
 
   /**
-   * The time at which the asset was last updated, added, or deleted in Security Command Center.
+   * The time at which the asset was last updated or added in Cloud SCC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,7 +206,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the asset was last updated, added, or deleted in Security Command Center.
+   * The time at which the asset was last updated or added in Cloud SCC.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -214,7 +214,7 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The time at which the asset was last updated, added, or deleted in Security Command Center.
+   * The time at which the asset was last updated or added in Cloud SCC.
    * @param updateTime updateTime or {@code null} for none
    */
   public Asset setUpdateTime(String updateTime) {

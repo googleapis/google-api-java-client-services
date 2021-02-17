@@ -21,7 +21,7 @@ package com.google.api.services.directory.model;
  * verification code when logging into the application on certain devices. The ASP access code is
  * used instead of the login and password you commonly use when accessing an application through a
  * browser. For more information about ASPs and how to create one, see the [help
- * center](//http://support.google.com/a/bin/answer.py?amp;answer=1032419).
+ * center](https://support.google.com/a/answer/2537800#asp).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:
@@ -42,7 +42,7 @@ public final class Asp extends com.google.api.client.json.GenericJson {
 
   /**
    * The time when the ASP was created. Expressed in [Unix
-   * time](http://en.wikipedia.org/wiki/Epoch_time) format.
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -64,7 +64,7 @@ public final class Asp extends com.google.api.client.json.GenericJson {
 
   /**
    * The time when the ASP was last used. Expressed in [Unix
-   * time](http://en.wikipedia.org/wiki/Epoch_time) format.
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -104,7 +104,7 @@ public final class Asp extends com.google.api.client.json.GenericJson {
 
   /**
    * The time when the ASP was created. Expressed in [Unix
-   * time](http://en.wikipedia.org/wiki/Epoch_time) format.
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCreationTime() {
@@ -113,7 +113,7 @@ public final class Asp extends com.google.api.client.json.GenericJson {
 
   /**
    * The time when the ASP was created. Expressed in [Unix
-   * time](http://en.wikipedia.org/wiki/Epoch_time) format.
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format.
    * @param creationTime creationTime or {@code null} for none
    */
   public Asp setCreationTime(java.lang.Long creationTime) {
@@ -157,7 +157,7 @@ public final class Asp extends com.google.api.client.json.GenericJson {
 
   /**
    * The time when the ASP was last used. Expressed in [Unix
-   * time](http://en.wikipedia.org/wiki/Epoch_time) format.
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLastTimeUsed() {
@@ -166,7 +166,7 @@ public final class Asp extends com.google.api.client.json.GenericJson {
 
   /**
    * The time when the ASP was last used. Expressed in [Unix
-   * time](http://en.wikipedia.org/wiki/Epoch_time) format.
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format.
    * @param lastTimeUsed lastTimeUsed or {@code null} for none
    */
   public Asp setLastTimeUsed(java.lang.Long lastTimeUsed) {

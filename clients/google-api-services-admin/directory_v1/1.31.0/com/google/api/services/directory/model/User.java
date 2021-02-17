@@ -133,8 +133,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   /**
    * Stores the hash format of the password property. We recommend sending the `password` property
    * value as a base 16 bit hexadecimal-encoded hash value. Set the `hashFunction` values as either
-   * the [SHA-1](http://wikipedia.org/wiki/SHA-1), [MD5](http://wikipedia.org/wiki/MD5), or
-   * [crypt](https://en.wikipedia.org/wiki/Crypt_(C)) hash format.
+   * the [SHA-1](https://wikipedia.org/wiki/SHA-1), [MD5](https://wikipedia.org/wiki/MD5), or
+   * [crypt](https://en.wikipedia.org/wiki/Crypt_\(C\)) hash format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,16 +159,14 @@ public final class User extends com.google.api.client.json.GenericJson {
   /**
    * Indicates if the user's profile is visible in the Google Workspace global address list when the
    * contact sharing feature is enabled for the domain. For more information about excluding user
-   * profiles, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=1285988).
+   * profiles, see the [administration help center](https://support.google.com/a/answer/1285988).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeInGlobalAddressList;
 
   /**
-   * If `true`, the user's IP address is [white
-   * listed](http://support.google.com/a/bin/answer.py?answer=60752).
+   * If `true`, the user's IP address is [whitelisted](https://support.google.com/a/answer/60752).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,7 +188,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * Output only. Indicates if the user is a delegated administrator. Delegated administrators are
    * supported by the API but cannot create or undelete users, or make users administrators. These
    * requests are ignored by the API service. Roles and privileges for administrators are assigned
-   * using the [Admin console](http://support.google.com/a/bin/answer.py?answer=33325).
+   * using the [Admin console](https://support.google.com/a/answer/33325).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -259,9 +257,8 @@ public final class User extends com.google.api.client.json.GenericJson {
    * number of characters in the `givenName` and in the `familyName` values is 60. In addition, name
    * values support unicode/UTF-8 characters, and can contain spaces, letters (a-z), numbers (0-9),
    * dashes (-), forward slashes (/), and periods (.). For more information about character usage
-   * rules, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=33386). Maximum allowed data size for
-   * this field is 1Kb.
+   * rules, see the [administration help center](https://support.google.com/a/answer/9193374).
+   * Maximum allowed data size for this field is 1Kb.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -313,7 +310,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Object phones;
 
   /**
-   * A list of [POSIX](http://www.opengroup.org/austin/papers/posix_faq.html) account information
+   * A list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html) account information
    * for the user.
    * The value may be {@code null}.
    */
@@ -633,8 +630,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   /**
    * Stores the hash format of the password property. We recommend sending the `password` property
    * value as a base 16 bit hexadecimal-encoded hash value. Set the `hashFunction` values as either
-   * the [SHA-1](http://wikipedia.org/wiki/SHA-1), [MD5](http://wikipedia.org/wiki/MD5), or
-   * [crypt](https://en.wikipedia.org/wiki/Crypt_(C)) hash format.
+   * the [SHA-1](https://wikipedia.org/wiki/SHA-1), [MD5](https://wikipedia.org/wiki/MD5), or
+   * [crypt](https://en.wikipedia.org/wiki/Crypt_\(C\)) hash format.
    * @return value or {@code null} for none
    */
   public java.lang.String getHashFunction() {
@@ -644,8 +641,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   /**
    * Stores the hash format of the password property. We recommend sending the `password` property
    * value as a base 16 bit hexadecimal-encoded hash value. Set the `hashFunction` values as either
-   * the [SHA-1](http://wikipedia.org/wiki/SHA-1), [MD5](http://wikipedia.org/wiki/MD5), or
-   * [crypt](https://en.wikipedia.org/wiki/Crypt_(C)) hash format.
+   * the [SHA-1](https://wikipedia.org/wiki/SHA-1), [MD5](https://wikipedia.org/wiki/MD5), or
+   * [crypt](https://en.wikipedia.org/wiki/Crypt_\(C\)) hash format.
    * @param hashFunction hashFunction or {@code null} for none
    */
   public User setHashFunction(java.lang.String hashFunction) {
@@ -694,8 +691,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   /**
    * Indicates if the user's profile is visible in the Google Workspace global address list when the
    * contact sharing feature is enabled for the domain. For more information about excluding user
-   * profiles, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=1285988).
+   * profiles, see the [administration help center](https://support.google.com/a/answer/1285988).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeInGlobalAddressList() {
@@ -705,8 +701,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   /**
    * Indicates if the user's profile is visible in the Google Workspace global address list when the
    * contact sharing feature is enabled for the domain. For more information about excluding user
-   * profiles, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=1285988).
+   * profiles, see the [administration help center](https://support.google.com/a/answer/1285988).
    * @param includeInGlobalAddressList includeInGlobalAddressList or {@code null} for none
    */
   public User setIncludeInGlobalAddressList(java.lang.Boolean includeInGlobalAddressList) {
@@ -715,8 +710,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If `true`, the user's IP address is [white
-   * listed](http://support.google.com/a/bin/answer.py?answer=60752).
+   * If `true`, the user's IP address is [whitelisted](https://support.google.com/a/answer/60752).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIpWhitelisted() {
@@ -724,8 +718,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If `true`, the user's IP address is [white
-   * listed](http://support.google.com/a/bin/answer.py?answer=60752).
+   * If `true`, the user's IP address is [whitelisted](https://support.google.com/a/answer/60752).
    * @param ipWhitelisted ipWhitelisted or {@code null} for none
    */
   public User setIpWhitelisted(java.lang.Boolean ipWhitelisted) {
@@ -764,7 +757,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * Output only. Indicates if the user is a delegated administrator. Delegated administrators are
    * supported by the API but cannot create or undelete users, or make users administrators. These
    * requests are ignored by the API service. Roles and privileges for administrators are assigned
-   * using the [Admin console](http://support.google.com/a/bin/answer.py?answer=33325).
+   * using the [Admin console](https://support.google.com/a/answer/33325).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsDelegatedAdmin() {
@@ -775,7 +768,7 @@ public final class User extends com.google.api.client.json.GenericJson {
    * Output only. Indicates if the user is a delegated administrator. Delegated administrators are
    * supported by the API but cannot create or undelete users, or make users administrators. These
    * requests are ignored by the API service. Roles and privileges for administrators are assigned
-   * using the [Admin console](http://support.google.com/a/bin/answer.py?answer=33325).
+   * using the [Admin console](https://support.google.com/a/answer/33325).
    * @param isDelegatedAdmin isDelegatedAdmin or {@code null} for none
    */
   public User setIsDelegatedAdmin(java.lang.Boolean isDelegatedAdmin) {
@@ -928,9 +921,8 @@ public final class User extends com.google.api.client.json.GenericJson {
    * number of characters in the `givenName` and in the `familyName` values is 60. In addition, name
    * values support unicode/UTF-8 characters, and can contain spaces, letters (a-z), numbers (0-9),
    * dashes (-), forward slashes (/), and periods (.). For more information about character usage
-   * rules, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=33386). Maximum allowed data size for
-   * this field is 1Kb.
+   * rules, see the [administration help center](https://support.google.com/a/answer/9193374).
+   * Maximum allowed data size for this field is 1Kb.
    * @return value or {@code null} for none
    */
   public UserName getName() {
@@ -942,9 +934,8 @@ public final class User extends com.google.api.client.json.GenericJson {
    * number of characters in the `givenName` and in the `familyName` values is 60. In addition, name
    * values support unicode/UTF-8 characters, and can contain spaces, letters (a-z), numbers (0-9),
    * dashes (-), forward slashes (/), and periods (.). For more information about character usage
-   * rules, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=33386). Maximum allowed data size for
-   * this field is 1Kb.
+   * rules, see the [administration help center](https://support.google.com/a/answer/9193374).
+   * Maximum allowed data size for this field is 1Kb.
    * @param name name or {@code null} for none
    */
   public User setName(UserName name) {
@@ -1061,7 +1052,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of [POSIX](http://www.opengroup.org/austin/papers/posix_faq.html) account information
+   * A list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html) account information
    * for the user.
    * @return value or {@code null} for none
    */
@@ -1070,7 +1061,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of [POSIX](http://www.opengroup.org/austin/papers/posix_faq.html) account information
+   * A list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html) account information
    * for the user.
    * @param posixAccounts posixAccounts or {@code null} for none
    */

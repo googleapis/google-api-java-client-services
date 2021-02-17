@@ -59,7 +59,7 @@ public final class CustomerPostalAddress extends com.google.api.client.json.Gene
 
   /**
    * This is a required property. For `countryCode` information see the [ISO 3166 country code
-   * elements](http://www.iso.org/iso/country_codes.htm).
+   * elements](https://www.iso.org/iso/country_codes.htm).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +164,7 @@ public final class CustomerPostalAddress extends com.google.api.client.json.Gene
 
   /**
    * This is a required property. For `countryCode` information see the [ISO 3166 country code
-   * elements](http://www.iso.org/iso/country_codes.htm).
+   * elements](https://www.iso.org/iso/country_codes.htm).
    * @return value or {@code null} for none
    */
   public java.lang.String getCountryCode() {
@@ -173,7 +173,7 @@ public final class CustomerPostalAddress extends com.google.api.client.json.Gene
 
   /**
    * This is a required property. For `countryCode` information see the [ISO 3166 country code
-   * elements](http://www.iso.org/iso/country_codes.htm).
+   * elements](https://www.iso.org/iso/country_codes.htm).
    * @param countryCode countryCode or {@code null} for none
    */
   public CustomerPostalAddress setCountryCode(java.lang.String countryCode) {

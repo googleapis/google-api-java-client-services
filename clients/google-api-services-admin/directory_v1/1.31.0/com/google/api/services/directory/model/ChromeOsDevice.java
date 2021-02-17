@@ -17,7 +17,7 @@
 package com.google.api.services.directory.model;
 
 /**
- * Google Chrome devices run on the [Chrome OS](http://support.google.com/chromeos). For more
+ * Google Chrome devices run on the [Chrome OS](https://support.google.com/chromeos). For more
  * information about common API tasks, see the [Developer's Guide](/admin-sdk/directory/v1/guides
  * /manage-chrome-devices).
  *
@@ -78,7 +78,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * The boot mode for the device. The possible values are: * `Verified`: The device is running a
    * valid version of the Chrome OS. * `Dev`: The devices's developer hardware switch is enabled.
    * When booted, the device has a command line shell. For an example of a developer switch, see the
-   * [Chromebook developer information](http://www.chromium.org/chromium-os/developer-information-
+   * [Chromebook developer information](https://www.chromium.org/chromium-os/developer-information-
    * for-chrome-os-devices/samsung-series-5-chromebook#TOC-Developer-switch).
    * The value may be {@code null}.
    */
@@ -244,9 +244,9 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
 
   /**
    * Notes about this device added by the administrator. This property can be
-   * [searched](http://support.google.com/chromeos/a/bin/answer.py?answer=1698333) with the [list
-   * ](/admin-sdk/directory/v1/reference/chromeosdevices/list) method's `query` parameter. Maximum
-   * length is 500 characters. Empty values are allowed.
+   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [list](/admin-
+   * sdk/directory/v1/reference/chromeosdevices/list) method's `query` parameter. Maximum length is
+   * 500 characters. Empty values are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,7 +265,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * represented as a forward slash, `/`. This property can be [updated](/admin-
    * sdk/directory/v1/guides/manage-chrome-devices#update_chrome_device) using the API. For more
    * information about how to create an organizational structure for your device, see the
-   * [administration help center](http://support.google.com/a/bin/answer.py?answer=182433).
+   * [administration help center](https://support.google.com/a/answer/182433).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -442,7 +442,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * The boot mode for the device. The possible values are: * `Verified`: The device is running a
    * valid version of the Chrome OS. * `Dev`: The devices's developer hardware switch is enabled.
    * When booted, the device has a command line shell. For an example of a developer switch, see the
-   * [Chromebook developer information](http://www.chromium.org/chromium-os/developer-information-
+   * [Chromebook developer information](https://www.chromium.org/chromium-os/developer-information-
    * for-chrome-os-devices/samsung-series-5-chromebook#TOC-Developer-switch).
    * @return value or {@code null} for none
    */
@@ -454,7 +454,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * The boot mode for the device. The possible values are: * `Verified`: The device is running a
    * valid version of the Chrome OS. * `Dev`: The devices's developer hardware switch is enabled.
    * When booted, the device has a command line shell. For an example of a developer switch, see the
-   * [Chromebook developer information](http://www.chromium.org/chromium-os/developer-information-
+   * [Chromebook developer information](https://www.chromium.org/chromium-os/developer-information-
    * for-chrome-os-devices/samsung-series-5-chromebook#TOC-Developer-switch).
    * @param bootMode bootMode or {@code null} for none
    */
@@ -782,9 +782,9 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
 
   /**
    * Notes about this device added by the administrator. This property can be
-   * [searched](http://support.google.com/chromeos/a/bin/answer.py?answer=1698333) with the [list
-   * ](/admin-sdk/directory/v1/reference/chromeosdevices/list) method's `query` parameter. Maximum
-   * length is 500 characters. Empty values are allowed.
+   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [list](/admin-
+   * sdk/directory/v1/reference/chromeosdevices/list) method's `query` parameter. Maximum length is
+   * 500 characters. Empty values are allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -793,9 +793,9 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
 
   /**
    * Notes about this device added by the administrator. This property can be
-   * [searched](http://support.google.com/chromeos/a/bin/answer.py?answer=1698333) with the [list
-   * ](/admin-sdk/directory/v1/reference/chromeosdevices/list) method's `query` parameter. Maximum
-   * length is 500 characters. Empty values are allowed.
+   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [list](/admin-
+   * sdk/directory/v1/reference/chromeosdevices/list) method's `query` parameter. Maximum length is
+   * 500 characters. Empty values are allowed.
    * @param notes notes or {@code null} for none
    */
   public ChromeOsDevice setNotes(java.lang.String notes) {
@@ -826,7 +826,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * represented as a forward slash, `/`. This property can be [updated](/admin-
    * sdk/directory/v1/guides/manage-chrome-devices#update_chrome_device) using the API. For more
    * information about how to create an organizational structure for your device, see the
-   * [administration help center](http://support.google.com/a/bin/answer.py?answer=182433).
+   * [administration help center](https://support.google.com/a/answer/182433).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgUnitPath() {
@@ -839,7 +839,7 @@ public final class ChromeOsDevice extends com.google.api.client.json.GenericJson
    * represented as a forward slash, `/`. This property can be [updated](/admin-
    * sdk/directory/v1/guides/manage-chrome-devices#update_chrome_device) using the API. For more
    * information about how to create an organizational structure for your device, see the
-   * [administration help center](http://support.google.com/a/bin/answer.py?answer=182433).
+   * [administration help center](https://support.google.com/a/answer/182433).
    * @param orgUnitPath orgUnitPath or {@code null} for none
    */
   public ChromeOsDevice setOrgUnitPath(java.lang.String orgUnitPath) {

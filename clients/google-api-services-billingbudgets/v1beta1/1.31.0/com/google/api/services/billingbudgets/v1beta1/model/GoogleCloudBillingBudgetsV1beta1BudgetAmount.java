@@ -31,7 +31,8 @@ package com.google.api.services.billingbudgets.v1beta1.model;
 public final class GoogleCloudBillingBudgetsV1beta1BudgetAmount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Use the last period's actual spend as the budget for the present period.
+   * Use the last period's actual spend as the budget for the present period. Cannot be set in
+   * combination with Filter.custom_period.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,15 +41,16 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmount extends com.goog
   /**
    * A specified amount to use as the budget. `currency_code` is optional. If specified when
    * creating a budget, it must match the currency of the billing account. If specified when
-   * updating a budget, it must match the existing budget currency_code. The `currency_code` is
-   * provided on output.
+   * updating a budget, it must match the currency_code of the existing budget. The `currency_code`
+   * is provided on output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeMoney specifiedAmount;
 
   /**
-   * Use the last period's actual spend as the budget for the present period.
+   * Use the last period's actual spend as the budget for the present period. Cannot be set in
+   * combination with Filter.custom_period.
    * @return value or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1beta1LastPeriodAmount getLastPeriodAmount() {
@@ -56,7 +58,8 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmount extends com.goog
   }
 
   /**
-   * Use the last period's actual spend as the budget for the present period.
+   * Use the last period's actual spend as the budget for the present period. Cannot be set in
+   * combination with Filter.custom_period.
    * @param lastPeriodAmount lastPeriodAmount or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1beta1BudgetAmount setLastPeriodAmount(GoogleCloudBillingBudgetsV1beta1LastPeriodAmount lastPeriodAmount) {
@@ -67,8 +70,8 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmount extends com.goog
   /**
    * A specified amount to use as the budget. `currency_code` is optional. If specified when
    * creating a budget, it must match the currency of the billing account. If specified when
-   * updating a budget, it must match the existing budget currency_code. The `currency_code` is
-   * provided on output.
+   * updating a budget, it must match the currency_code of the existing budget. The `currency_code`
+   * is provided on output.
    * @return value or {@code null} for none
    */
   public GoogleTypeMoney getSpecifiedAmount() {
@@ -78,8 +81,8 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmount extends com.goog
   /**
    * A specified amount to use as the budget. `currency_code` is optional. If specified when
    * creating a budget, it must match the currency of the billing account. If specified when
-   * updating a budget, it must match the existing budget currency_code. The `currency_code` is
-   * provided on output.
+   * updating a budget, it must match the currency_code of the existing budget. The `currency_code`
+   * is provided on output.
    * @param specifiedAmount specifiedAmount or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1beta1BudgetAmount setSpecifiedAmount(GoogleTypeMoney specifiedAmount) {

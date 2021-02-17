@@ -31,7 +31,8 @@ package com.google.api.services.billingbudgets.v1.model;
 public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Use the last period's actual spend as the budget for the present period.
+   * Use the last period's actual spend as the budget for the present period. Cannot be set in
+   * combination with Filter.custom_period.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,8 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
   private GoogleTypeMoney specifiedAmount;
 
   /**
-   * Use the last period's actual spend as the budget for the present period.
+   * Use the last period's actual spend as the budget for the present period. Cannot be set in
+   * combination with Filter.custom_period.
    * @return value or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1LastPeriodAmount getLastPeriodAmount() {
@@ -56,7 +58,8 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
   }
 
   /**
-   * Use the last period's actual spend as the budget for the present period.
+   * Use the last period's actual spend as the budget for the present period. Cannot be set in
+   * combination with Filter.custom_period.
    * @param lastPeriodAmount lastPeriodAmount or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1BudgetAmount setLastPeriodAmount(GoogleCloudBillingBudgetsV1LastPeriodAmount lastPeriodAmount) {

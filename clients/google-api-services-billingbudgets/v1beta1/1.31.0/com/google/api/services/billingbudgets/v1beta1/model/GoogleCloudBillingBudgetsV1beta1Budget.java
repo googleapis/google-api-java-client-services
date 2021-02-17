@@ -19,8 +19,8 @@ package com.google.api.services.billingbudgets.v1beta1.model;
 /**
  * A budget is a plan that describes what you expect to spend on Cloud projects, plus the rules to
  * execute as spend is tracked against that plan, (for example, send an alert when 90% of the target
- * spend is met). Currently all plans are monthly budgets so the usage period(s) tracked are implied
- * (calendar months of usage back-to-back).
+ * spend is met). The budget time period is configurable, with options such as month (default),
+ * quarter, year, or custom time period.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing Budget API. For a detailed explanation

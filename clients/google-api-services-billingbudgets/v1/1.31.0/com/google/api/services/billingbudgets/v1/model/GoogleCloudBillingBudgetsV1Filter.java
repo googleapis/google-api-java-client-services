@@ -31,6 +31,16 @@ package com.google.api.services.billingbudgets.v1.model;
 public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies to track usage for recurring calendar period. E.g. Assume that
+   * CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when
+   * current calendar month is April, May, June. After that, it will track usage from July 1 to
+   * September 30 when current calendar month is July, August, September, and so on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String calendarPeriod;
+
+  /**
    * Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of
    * credit types to be subtracted from gross cost to determine the spend for threshold
    * calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field
@@ -47,6 +57,13 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String creditTypesTreatment;
+
+  /**
+   * Optional. Specifies to track usage from any start date (required) to any end date (optional).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBillingBudgetsV1CustomPeriod customPeriod;
 
   /**
    * Optional. A single label and value pair specifying that usage from only this set of labeled
@@ -89,6 +106,29 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   private java.util.List<java.lang.String> subaccounts;
 
   /**
+   * Optional. Specifies to track usage for recurring calendar period. E.g. Assume that
+   * CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when
+   * current calendar month is April, May, June. After that, it will track usage from July 1 to
+   * September 30 when current calendar month is July, August, September, and so on.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCalendarPeriod() {
+    return calendarPeriod;
+  }
+
+  /**
+   * Optional. Specifies to track usage for recurring calendar period. E.g. Assume that
+   * CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when
+   * current calendar month is April, May, June. After that, it will track usage from July 1 to
+   * September 30 when current calendar month is July, August, September, and so on.
+   * @param calendarPeriod calendarPeriod or {@code null} for none
+   */
+  public GoogleCloudBillingBudgetsV1Filter setCalendarPeriod(java.lang.String calendarPeriod) {
+    this.calendarPeriod = calendarPeriod;
+    return this;
+  }
+
+  /**
    * Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of
    * credit types to be subtracted from gross cost to determine the spend for threshold
    * calculations. If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field
@@ -127,6 +167,23 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    */
   public GoogleCloudBillingBudgetsV1Filter setCreditTypesTreatment(java.lang.String creditTypesTreatment) {
     this.creditTypesTreatment = creditTypesTreatment;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies to track usage from any start date (required) to any end date (optional).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBillingBudgetsV1CustomPeriod getCustomPeriod() {
+    return customPeriod;
+  }
+
+  /**
+   * Optional. Specifies to track usage from any start date (required) to any end date (optional).
+   * @param customPeriod customPeriod or {@code null} for none
+   */
+  public GoogleCloudBillingBudgetsV1Filter setCustomPeriod(GoogleCloudBillingBudgetsV1CustomPeriod customPeriod) {
+    this.customPeriod = customPeriod;
     return this;
   }
 

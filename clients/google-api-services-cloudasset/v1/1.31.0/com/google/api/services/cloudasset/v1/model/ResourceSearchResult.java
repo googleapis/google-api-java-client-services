@@ -86,8 +86,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
    * is available when the resource belongs to one or more folders. To search against `folders`: *
-   * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as this folder
-   * in your search request.
+   * use a field query. Example: `folders:(123 OR 456)` * use a free text query. Example: `123` *
+   * specify the `scope` field as this folder in your search request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,17 +153,35 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The organization that this resource belongs to, in the form of
    * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to an
    * organization. To search against `organization`: * use a field query. Example:
-   * `organization:123` * specify the `scope` field as this organization in your search request.
+   * `organization:123` * use a free text query. Example: `123` * specify the `scope` field as this
+   * organization in your search request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String organization;
 
   /**
+   * The type of this resource's immediate parent, if there is one. To search against the
+   * `parent_asset_type`: * use a field query. Example:
+   * `parentAssetType:"cloudresourcemanager.googleapis.com/Project"` * use a free text query.
+   * Example: `cloudresourcemanager.googleapis.com/Project`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentAssetType;
+
+  /**
+   * The full resource name of this resource's parent, if it has one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentFullResourceName;
+
+  /**
    * The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}. This field
    * is available when the resource belongs to a project. To search against `project`: * use a field
-   * query. Example: `project:12345` * specify the `scope` field as this project in your search
-   * request.
+   * query. Example: `project:12345` * use a free text query. Example: `12345` * specify the `scope`
+   * field as this project in your search request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -322,8 +340,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
    * is available when the resource belongs to one or more folders. To search against `folders`: *
-   * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as this folder
-   * in your search request.
+   * use a field query. Example: `folders:(123 OR 456)` * use a free text query. Example: `123` *
+   * specify the `scope` field as this folder in your search request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFolders() {
@@ -333,8 +351,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The folder(s) that this resource belongs to, in the form of folders/{FOLDER_NUMBER}. This field
    * is available when the resource belongs to one or more folders. To search against `folders`: *
-   * use a field query. Example: `folders:(123 OR 456)` * specify the `scope` field as this folder
-   * in your search request.
+   * use a field query. Example: `folders:(123 OR 456)` * use a free text query. Example: `123` *
+   * specify the `scope` field as this folder in your search request.
    * @param folders folders or {@code null} for none
    */
   public ResourceSearchResult setFolders(java.util.List<java.lang.String> folders) {
@@ -473,7 +491,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The organization that this resource belongs to, in the form of
    * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to an
    * organization. To search against `organization`: * use a field query. Example:
-   * `organization:123` * specify the `scope` field as this organization in your search request.
+   * `organization:123` * use a free text query. Example: `123` * specify the `scope` field as this
+   * organization in your search request.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrganization() {
@@ -484,7 +503,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
    * The organization that this resource belongs to, in the form of
    * organizations/{ORGANIZATION_NUMBER}. This field is available when the resource belongs to an
    * organization. To search against `organization`: * use a field query. Example:
-   * `organization:123` * specify the `scope` field as this organization in your search request.
+   * `organization:123` * use a free text query. Example: `123` * specify the `scope` field as this
+   * organization in your search request.
    * @param organization organization or {@code null} for none
    */
   public ResourceSearchResult setOrganization(java.lang.String organization) {
@@ -493,10 +513,50 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   }
 
   /**
+   * The type of this resource's immediate parent, if there is one. To search against the
+   * `parent_asset_type`: * use a field query. Example:
+   * `parentAssetType:"cloudresourcemanager.googleapis.com/Project"` * use a free text query.
+   * Example: `cloudresourcemanager.googleapis.com/Project`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentAssetType() {
+    return parentAssetType;
+  }
+
+  /**
+   * The type of this resource's immediate parent, if there is one. To search against the
+   * `parent_asset_type`: * use a field query. Example:
+   * `parentAssetType:"cloudresourcemanager.googleapis.com/Project"` * use a free text query.
+   * Example: `cloudresourcemanager.googleapis.com/Project`
+   * @param parentAssetType parentAssetType or {@code null} for none
+   */
+  public ResourceSearchResult setParentAssetType(java.lang.String parentAssetType) {
+    this.parentAssetType = parentAssetType;
+    return this;
+  }
+
+  /**
+   * The full resource name of this resource's parent, if it has one.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentFullResourceName() {
+    return parentFullResourceName;
+  }
+
+  /**
+   * The full resource name of this resource's parent, if it has one.
+   * @param parentFullResourceName parentFullResourceName or {@code null} for none
+   */
+  public ResourceSearchResult setParentFullResourceName(java.lang.String parentFullResourceName) {
+    this.parentFullResourceName = parentFullResourceName;
+    return this;
+  }
+
+  /**
    * The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}. This field
    * is available when the resource belongs to a project. To search against `project`: * use a field
-   * query. Example: `project:12345` * specify the `scope` field as this project in your search
-   * request.
+   * query. Example: `project:12345` * use a free text query. Example: `12345` * specify the `scope`
+   * field as this project in your search request.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -506,8 +566,8 @@ public final class ResourceSearchResult extends com.google.api.client.json.Gener
   /**
    * The project that this resource belongs to, in the form of projects/{PROJECT_NUMBER}. This field
    * is available when the resource belongs to a project. To search against `project`: * use a field
-   * query. Example: `project:12345` * specify the `scope` field as this project in your search
-   * request.
+   * query. Example: `project:12345` * use a free text query. Example: `12345` * specify the `scope`
+   * field as this project in your search request.
    * @param project project or {@code null} for none
    */
   public ResourceSearchResult setProject(java.lang.String project) {

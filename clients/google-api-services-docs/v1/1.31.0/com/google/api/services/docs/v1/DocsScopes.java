@@ -23,7 +23,7 @@ package com.google.api.services.docs.v1;
  */
 public class DocsScopes {
 
-  /** View and manage your Google Docs documents. */
+  /** See, create, and edit all Google Docs documents you have access to. */
   public static final String DOCUMENTS = "https://www.googleapis.com/auth/documents";
 
   /** View your Google Docs documents. */

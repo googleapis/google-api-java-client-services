@@ -31,11 +31,25 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The overall output config for batch process.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentOutputConfig documentOutputConfig;
+
+  /**
    * The input config for each single document in the batch process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig> inputConfigs;
+
+  /**
+   * The input documents for batch process.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig inputDocuments;
 
   /**
    * The overall output config for batch process.
@@ -52,6 +66,23 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
   private java.lang.Boolean skipHumanReview;
 
   /**
+   * The overall output config for batch process.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentOutputConfig getDocumentOutputConfig() {
+    return documentOutputConfig;
+  }
+
+  /**
+   * The overall output config for batch process.
+   * @param documentOutputConfig documentOutputConfig or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3BatchProcessRequest setDocumentOutputConfig(GoogleCloudDocumentaiV1beta3DocumentOutputConfig documentOutputConfig) {
+    this.documentOutputConfig = documentOutputConfig;
+    return this;
+  }
+
+  /**
    * The input config for each single document in the batch process.
    * @return value or {@code null} for none
    */
@@ -65,6 +96,23 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
    */
   public GoogleCloudDocumentaiV1beta3BatchProcessRequest setInputConfigs(java.util.List<GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig> inputConfigs) {
     this.inputConfigs = inputConfigs;
+    return this;
+  }
+
+  /**
+   * The input documents for batch process.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig getInputDocuments() {
+    return inputDocuments;
+  }
+
+  /**
+   * The input documents for batch process.
+   * @param inputDocuments inputDocuments or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3BatchProcessRequest setInputDocuments(GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig inputDocuments) {
+    this.inputDocuments = inputDocuments;
     return this;
   }
 

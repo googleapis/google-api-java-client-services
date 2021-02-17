@@ -38,6 +38,20 @@ public final class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadata e
   private GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata;
 
   /**
+   * The test dataset validation information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation testDatasetValidation;
+
+  /**
+   * The training dataset validation information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation trainingDatasetValidation;
+
+  /**
    * The basic metadata of the long running operation.
    * @return value or {@code null} for none
    */
@@ -51,6 +65,40 @@ public final class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadata e
    */
   public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadata setCommonMetadata(GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata commonMetadata) {
     this.commonMetadata = commonMetadata;
+    return this;
+  }
+
+  /**
+   * The test dataset validation information.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation getTestDatasetValidation() {
+    return testDatasetValidation;
+  }
+
+  /**
+   * The test dataset validation information.
+   * @param testDatasetValidation testDatasetValidation or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadata setTestDatasetValidation(GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation testDatasetValidation) {
+    this.testDatasetValidation = testDatasetValidation;
+    return this;
+  }
+
+  /**
+   * The training dataset validation information.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation getTrainingDatasetValidation() {
+    return trainingDatasetValidation;
+  }
+
+  /**
+   * The training dataset validation information.
+   * @param trainingDatasetValidation trainingDatasetValidation or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadata setTrainingDatasetValidation(GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation trainingDatasetValidation) {
+    this.trainingDatasetValidation = trainingDatasetValidation;
     return this;
   }
 

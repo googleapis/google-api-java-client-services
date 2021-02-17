@@ -38,6 +38,20 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
   private GoogleCloudDocumentaiV1beta3Document document;
 
   /**
+   * An inline document proto.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3Document inlineDocument;
+
+  /**
+   * A raw document content (bytes).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3RawDocument rawDocument;
+
+  /**
    * Whether Human Review feature should be skipped for this request. Default to false.
    * The value may be {@code null}.
    */
@@ -58,6 +72,40 @@ public final class GoogleCloudDocumentaiV1beta3ProcessRequest extends com.google
    */
   public GoogleCloudDocumentaiV1beta3ProcessRequest setDocument(GoogleCloudDocumentaiV1beta3Document document) {
     this.document = document;
+    return this;
+  }
+
+  /**
+   * An inline document proto.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3Document getInlineDocument() {
+    return inlineDocument;
+  }
+
+  /**
+   * An inline document proto.
+   * @param inlineDocument inlineDocument or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessRequest setInlineDocument(GoogleCloudDocumentaiV1beta3Document inlineDocument) {
+    this.inlineDocument = inlineDocument;
+    return this;
+  }
+
+  /**
+   * A raw document content (bytes).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3RawDocument getRawDocument() {
+    return rawDocument;
+  }
+
+  /**
+   * A raw document content (bytes).
+   * @param rawDocument rawDocument or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessRequest setRawDocument(GoogleCloudDocumentaiV1beta3RawDocument rawDocument) {
+    this.rawDocument = rawDocument;
     return this;
   }
 

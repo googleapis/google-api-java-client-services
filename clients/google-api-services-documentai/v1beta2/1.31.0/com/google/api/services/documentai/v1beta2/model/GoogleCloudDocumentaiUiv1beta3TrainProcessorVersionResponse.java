@@ -31,25 +31,25 @@ package com.google.api.services.documentai.v1beta2.model;
 public final class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The processor version produced by training.
+   * The resource name of the processor version produced by training.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiUiv1beta3ProcessorVersion processorVersion;
+  private java.lang.String processorVersion;
 
   /**
-   * The processor version produced by training.
+   * The resource name of the processor version produced by training.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3ProcessorVersion getProcessorVersion() {
+  public java.lang.String getProcessorVersion() {
     return processorVersion;
   }
 
   /**
-   * The processor version produced by training.
+   * The resource name of the processor version produced by training.
    * @param processorVersion processorVersion or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse setProcessorVersion(GoogleCloudDocumentaiUiv1beta3ProcessorVersion processorVersion) {
+  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse setProcessorVersion(java.lang.String processorVersion) {
     this.processorVersion = processorVersion;
     return this;
   }

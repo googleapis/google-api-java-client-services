@@ -23,7 +23,7 @@ package com.google.api.services.games;
  */
 public class GamesScopes {
 
-  /** View and manage its own configuration data in your Google Drive. */
+  /** See, create, and delete its own configuration data in your Google Drive. */
   public static final String DRIVE_APPDATA = "https://www.googleapis.com/auth/drive.appdata";
 
   /** Create, edit, and delete your Google Play Games activity. */

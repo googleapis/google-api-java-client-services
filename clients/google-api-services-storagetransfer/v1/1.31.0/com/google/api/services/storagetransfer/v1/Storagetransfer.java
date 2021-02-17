@@ -896,6 +896,140 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return (Patch) super.set(parameterName, value);
       }
     }
+    /**
+     * Attempts to start a new TransferOperation for the current TransferJob. A TransferJob has a
+     * maximum of one active TransferOperation. If this method is called while a TransferOperation is
+     * active, an error wil be returned.
+     *
+     * Create a request for the method "transferJobs.run".
+     *
+     * This request holds the parameters needed by the storagetransfer server.  After setting any
+     * optional parameters, call the {@link Run#execute()} method to invoke the remote operation.
+     *
+     * @param jobName Required. The name of the transfer job.
+     * @param content the {@link com.google.api.services.storagetransfer.v1.model.RunTransferJobRequest}
+     * @return the request
+     */
+    public Run run(java.lang.String jobName, com.google.api.services.storagetransfer.v1.model.RunTransferJobRequest content) throws java.io.IOException {
+      Run result = new Run(jobName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Run extends StoragetransferRequest<com.google.api.services.storagetransfer.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+jobName}:run";
+
+      private final java.util.regex.Pattern JOB_NAME_PATTERN =
+          java.util.regex.Pattern.compile("^transferJobs/.*$");
+
+      /**
+       * Attempts to start a new TransferOperation for the current TransferJob. A TransferJob has a
+       * maximum of one active TransferOperation. If this method is called while a TransferOperation is
+       * active, an error wil be returned.
+       *
+       * Create a request for the method "transferJobs.run".
+       *
+       * This request holds the parameters needed by the the storagetransfer server.  After setting any
+       * optional parameters, call the {@link Run#execute()} method to invoke the remote operation. <p>
+       * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param jobName Required. The name of the transfer job.
+       * @param content the {@link com.google.api.services.storagetransfer.v1.model.RunTransferJobRequest}
+       * @since 1.13
+       */
+      protected Run(java.lang.String jobName, com.google.api.services.storagetransfer.v1.model.RunTransferJobRequest content) {
+        super(Storagetransfer.this, "POST", REST_PATH, content, com.google.api.services.storagetransfer.v1.model.Operation.class);
+        this.jobName = com.google.api.client.util.Preconditions.checkNotNull(jobName, "Required parameter jobName must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(JOB_NAME_PATTERN.matcher(jobName).matches(),
+              "Parameter jobName must conform to the pattern " +
+              "^transferJobs/.*$");
+        }
+      }
+
+      @Override
+      public Run set$Xgafv(java.lang.String $Xgafv) {
+        return (Run) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Run setAccessToken(java.lang.String accessToken) {
+        return (Run) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Run setAlt(java.lang.String alt) {
+        return (Run) super.setAlt(alt);
+      }
+
+      @Override
+      public Run setCallback(java.lang.String callback) {
+        return (Run) super.setCallback(callback);
+      }
+
+      @Override
+      public Run setFields(java.lang.String fields) {
+        return (Run) super.setFields(fields);
+      }
+
+      @Override
+      public Run setKey(java.lang.String key) {
+        return (Run) super.setKey(key);
+      }
+
+      @Override
+      public Run setOauthToken(java.lang.String oauthToken) {
+        return (Run) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Run setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Run) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Run setQuotaUser(java.lang.String quotaUser) {
+        return (Run) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Run setUploadType(java.lang.String uploadType) {
+        return (Run) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Run setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Run) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the transfer job. */
+      @com.google.api.client.util.Key
+      private java.lang.String jobName;
+
+      /** Required. The name of the transfer job.
+       */
+      public java.lang.String getJobName() {
+        return jobName;
+      }
+
+      /** Required. The name of the transfer job. */
+      public Run setJobName(java.lang.String jobName) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(JOB_NAME_PATTERN.matcher(jobName).matches(),
+              "Parameter jobName must conform to the pattern " +
+              "^transferJobs/.*$");
+        }
+        this.jobName = jobName;
+        return this;
+      }
+
+      @Override
+      public Run set(String parameterName, Object value) {
+        return (Run) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -1217,14 +1351,15 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Lists transfer operations.
+     * Lists transfer operations. Operations are ordered by their creation time in reverse chronological
+     * order.
      *
      * Create a request for the method "transferOperations.list".
      *
      * This request holds the parameters needed by the storagetransfer server.  After setting any
      * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The value `transferOperations`.
+     * @param name Not used.
      * @param filter Required. A list of query parameters specified as JSON text in the form of:
      *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
      *        "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
@@ -1249,7 +1384,8 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
           java.util.regex.Pattern.compile("^transferOperations$");
 
       /**
-       * Lists transfer operations.
+       * Lists transfer operations. Operations are ordered by their creation time in reverse
+       * chronological order.
        *
        * Create a request for the method "transferOperations.list".
        *
@@ -1258,7 +1394,7 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
        * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The value `transferOperations`.
+       * @param name Not used.
        * @param filter Required. A list of query parameters specified as JSON text in the form of:
      *        `{"projectId":"my_project_id", "jobNames":["jobid1","jobid2",...],
      *        "operationNames":["opid1","opid2",...], "transferStatuses":["status1","status2",...]}`
@@ -1345,17 +1481,17 @@ public class Storagetransfer extends com.google.api.client.googleapis.services.j
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The value `transferOperations`. */
+      /** Not used. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The value `transferOperations`.
+      /** Not used.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The value `transferOperations`. */
+      /** Not used. */
       public List setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

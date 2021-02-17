@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * The response for the TrainProcessorVersion method.
+ * Metadata of the EvaluateProcessorVersion method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.documentai.v1beta3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDocumentaiUiv1beta3EvaluateProcessorVersionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the processor version produced by training.
+   * The resource name of the created evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String processorVersion;
+  private java.lang.String evaluation;
 
   /**
-   * The resource name of the processor version produced by training.
+   * The resource name of the created evaluation.
    * @return value or {@code null} for none
    */
-  public java.lang.String getProcessorVersion() {
-    return processorVersion;
+  public java.lang.String getEvaluation() {
+    return evaluation;
   }
 
   /**
-   * The resource name of the processor version produced by training.
-   * @param processorVersion processorVersion or {@code null} for none
+   * The resource name of the created evaluation.
+   * @param evaluation evaluation or {@code null} for none
    */
-  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse setProcessorVersion(java.lang.String processorVersion) {
-    this.processorVersion = processorVersion;
+  public GoogleCloudDocumentaiUiv1beta3EvaluateProcessorVersionResponse setEvaluation(java.lang.String evaluation) {
+    this.evaluation = evaluation;
     return this;
   }
 
   @Override
-  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse set(String fieldName, Object value) {
-    return (GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse) super.set(fieldName, value);
+  public GoogleCloudDocumentaiUiv1beta3EvaluateProcessorVersionResponse set(String fieldName, Object value) {
+    return (GoogleCloudDocumentaiUiv1beta3EvaluateProcessorVersionResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse clone() {
-    return (GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionResponse) super.clone();
+  public GoogleCloudDocumentaiUiv1beta3EvaluateProcessorVersionResponse clone() {
+    return (GoogleCloudDocumentaiUiv1beta3EvaluateProcessorVersionResponse) super.clone();
   }
 
 }

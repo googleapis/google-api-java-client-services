@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentRequest extends com
   private GoogleCloudDocumentaiV1beta3Document document;
 
   /**
+   * An inline document proto.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3Document inlineDocument;
+
+  /**
    * The document that needs human review.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class GoogleCloudDocumentaiV1beta3ReviewDocumentRequest extends com
    */
   public GoogleCloudDocumentaiV1beta3ReviewDocumentRequest setDocument(GoogleCloudDocumentaiV1beta3Document document) {
     this.document = document;
+    return this;
+  }
+
+  /**
+   * An inline document proto.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3Document getInlineDocument() {
+    return inlineDocument;
+  }
+
+  /**
+   * An inline document proto.
+   * @param inlineDocument inlineDocument or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ReviewDocumentRequest setInlineDocument(GoogleCloudDocumentaiV1beta3Document inlineDocument) {
+    this.inlineDocument = inlineDocument;
     return this;
   }
 

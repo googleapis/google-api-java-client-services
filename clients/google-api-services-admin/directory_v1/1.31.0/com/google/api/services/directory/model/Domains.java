@@ -30,7 +30,7 @@ package com.google.api.services.directory.model;
 public final class Domains extends com.google.api.client.json.GenericJson {
 
   /**
-   * Creation time of the domain. Expressed in [Unix time](http://en.wikipedia.org/wiki/Epoch_time)
+   * Creation time of the domain. Expressed in [Unix time](https://en.wikipedia.org/wiki/Epoch_time)
    * format. (Read-only).
    * The value may be {@code null}.
    */
@@ -86,7 +86,7 @@ public final class Domains extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean verified;
 
   /**
-   * Creation time of the domain. Expressed in [Unix time](http://en.wikipedia.org/wiki/Epoch_time)
+   * Creation time of the domain. Expressed in [Unix time](https://en.wikipedia.org/wiki/Epoch_time)
    * format. (Read-only).
    * @return value or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class Domains extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Creation time of the domain. Expressed in [Unix time](http://en.wikipedia.org/wiki/Epoch_time)
+   * Creation time of the domain. Expressed in [Unix time](https://en.wikipedia.org/wiki/Epoch_time)
    * format. (Read-only).
    * @param creationTime creationTime or {@code null} for none
    */

@@ -74,7 +74,7 @@ public final class Member extends com.google.api.client.json.GenericJson {
    * The member's role in a group. The API returns an error for cycles in group memberships. For
    * example, if `group1` is a member of `group2`, `group2` cannot be a member of `group1`. For more
    * information about a member's role, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=167094).
+   * center](https://support.google.com/a/answer/167094).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +191,7 @@ public final class Member extends com.google.api.client.json.GenericJson {
    * The member's role in a group. The API returns an error for cycles in group memberships. For
    * example, if `group1` is a member of `group2`, `group2` cannot be a member of `group1`. For more
    * information about a member's role, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=167094).
+   * center](https://support.google.com/a/answer/167094).
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -202,7 +202,7 @@ public final class Member extends com.google.api.client.json.GenericJson {
    * The member's role in a group. The API returns an error for cycles in group memberships. For
    * example, if `group1` is a member of `group2`, `group2` cannot be a member of `group1`. For more
    * information about a member's role, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=167094).
+   * center](https://support.google.com/a/answer/167094).
    * @param role role or {@code null} for none
    */
   public Member setRole(java.lang.String role) {

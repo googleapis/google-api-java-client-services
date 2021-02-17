@@ -67,9 +67,9 @@ public final class UserPhoto extends com.google.api.client.json.GenericJson {
 
   /**
    * The user photo's upload data in [web-safe
-   * Base64](https://code.google.com/p/stringencoders/wiki/WebSafeBase64) format in bytes. This
-   * means: * The slash (/) character is replaced with the underscore (_) character. * The plus sign
-   * (+) character is replaced with the hyphen (-) character. * The equals sign (=) character is
+   * Base64](https://en.wikipedia.org/wiki/Base64#URL_applications) format in bytes. This means: *
+   * The slash (/) character is replaced with the underscore (_) character. * The plus sign (+)
+   * character is replaced with the hyphen (-) character. * The equals sign (=) character is
    * replaced with the asterisk (*). * For padding, the period (.) character is used instead of the
    * RFC-4648 baseURL definition which uses the equals sign (=) for padding. This is done to
    * simplify URL-parsing. * Whatever the size of the photo being uploaded, the API downsizes it to
@@ -182,9 +182,9 @@ public final class UserPhoto extends com.google.api.client.json.GenericJson {
 
   /**
    * The user photo's upload data in [web-safe
-   * Base64](https://code.google.com/p/stringencoders/wiki/WebSafeBase64) format in bytes. This
-   * means: * The slash (/) character is replaced with the underscore (_) character. * The plus sign
-   * (+) character is replaced with the hyphen (-) character. * The equals sign (=) character is
+   * Base64](https://en.wikipedia.org/wiki/Base64#URL_applications) format in bytes. This means: *
+   * The slash (/) character is replaced with the underscore (_) character. * The plus sign (+)
+   * character is replaced with the hyphen (-) character. * The equals sign (=) character is
    * replaced with the asterisk (*). * For padding, the period (.) character is used instead of the
    * RFC-4648 baseURL definition which uses the equals sign (=) for padding. This is done to
    * simplify URL-parsing. * Whatever the size of the photo being uploaded, the API downsizes it to
@@ -198,9 +198,9 @@ public final class UserPhoto extends com.google.api.client.json.GenericJson {
 
   /**
    * The user photo's upload data in [web-safe
-   * Base64](https://code.google.com/p/stringencoders/wiki/WebSafeBase64) format in bytes. This
-   * means: * The slash (/) character is replaced with the underscore (_) character. * The plus sign
-   * (+) character is replaced with the hyphen (-) character. * The equals sign (=) character is
+   * Base64](https://en.wikipedia.org/wiki/Base64#URL_applications) format in bytes. This means: *
+   * The slash (/) character is replaced with the underscore (_) character. * The plus sign (+)
+   * character is replaced with the hyphen (-) character. * The equals sign (=) character is
    * replaced with the asterisk (*). * For padding, the period (.) character is used instead of the
    * RFC-4648 baseURL definition which uses the equals sign (=) for padding. This is done to
    * simplify URL-parsing. * Whatever the size of the photo being uploaded, the API downsizes it to
@@ -216,9 +216,9 @@ public final class UserPhoto extends com.google.api.client.json.GenericJson {
 
   /**
    * The user photo's upload data in [web-safe
-   * Base64](https://code.google.com/p/stringencoders/wiki/WebSafeBase64) format in bytes. This
-   * means: * The slash (/) character is replaced with the underscore (_) character. * The plus sign
-   * (+) character is replaced with the hyphen (-) character. * The equals sign (=) character is
+   * Base64](https://en.wikipedia.org/wiki/Base64#URL_applications) format in bytes. This means: *
+   * The slash (/) character is replaced with the underscore (_) character. * The plus sign (+)
+   * character is replaced with the hyphen (-) character. * The equals sign (=) character is
    * replaced with the asterisk (*). * For padding, the period (.) character is used instead of the
    * RFC-4648 baseURL definition which uses the equals sign (=) for padding. This is done to
    * simplify URL-parsing. * Whatever the size of the photo being uploaded, the API downsizes it to
@@ -233,9 +233,9 @@ public final class UserPhoto extends com.google.api.client.json.GenericJson {
 
   /**
    * The user photo's upload data in [web-safe
-   * Base64](https://code.google.com/p/stringencoders/wiki/WebSafeBase64) format in bytes. This
-   * means: * The slash (/) character is replaced with the underscore (_) character. * The plus sign
-   * (+) character is replaced with the hyphen (-) character. * The equals sign (=) character is
+   * Base64](https://en.wikipedia.org/wiki/Base64#URL_applications) format in bytes. This means: *
+   * The slash (/) character is replaced with the underscore (_) character. * The plus sign (+)
+   * character is replaced with the hyphen (-) character. * The equals sign (=) character is
    * replaced with the asterisk (*). * For padding, the period (.) character is used instead of the
    * RFC-4648 baseURL definition which uses the equals sign (=) for padding. This is done to
    * simplify URL-parsing. * Whatever the size of the photo being uploaded, the API downsizes it to

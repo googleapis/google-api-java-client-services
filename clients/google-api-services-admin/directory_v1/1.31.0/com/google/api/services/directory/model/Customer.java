@@ -84,7 +84,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   private java.lang.String language;
 
   /**
-   * The customer's contact phone number in [E.164](http://en.wikipedia.org/wiki/E.164) format.
+   * The customer's contact phone number in [E.164](https://en.wikipedia.org/wiki/E.164) format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,7 +227,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer's contact phone number in [E.164](http://en.wikipedia.org/wiki/E.164) format.
+   * The customer's contact phone number in [E.164](https://en.wikipedia.org/wiki/E.164) format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -235,7 +235,7 @@ public final class Customer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The customer's contact phone number in [E.164](http://en.wikipedia.org/wiki/E.164) format.
+   * The customer's contact phone number in [E.164](https://en.wikipedia.org/wiki/E.164) format.
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public Customer setPhoneNumber(java.lang.String phoneNumber) {

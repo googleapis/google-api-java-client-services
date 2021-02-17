@@ -18,9 +18,9 @@ package com.google.api.services.directory.model;
 
 /**
  * Google Workspace Mobile Management includes Android, [Google
- * Sync](http://support.google.com/a/bin/answer.py?answer=135937), and iOS devices. For more
- * information about common group mobile device API tasks, see the [Developer's Guide](/admin-
- * sdk/directory/v1/guides/manage-mobile-devices.html).
+ * Sync](https://support.google.com/a/answer/135937), and iOS devices. For more information about
+ * common group mobile device API tasks, see the [Developer's Guide](/admin-sdk/directory/v1/guides
+ * /manage-mobile-devices.html).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:
@@ -1099,7 +1099,7 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
     /**
      * The list of permissions of this application. These can be either a standard Android permission
      * or one defined by the application, and are found in an application's [Android
-     * manifest](http://developer.android.com/guide/topics/manifest/uses-permission-element.html).
+     * manifest](https://developer.android.com/guide/topics/manifest/uses-permission-element.html).
      * Examples of a Calendar application's permissions are `READ_CALENDAR`, or `MANAGE_ACCOUNTS`.
      * The value may be {@code null}.
      */
@@ -1157,7 +1157,7 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
     /**
      * The list of permissions of this application. These can be either a standard Android permission
      * or one defined by the application, and are found in an application's [Android
-     * manifest](http://developer.android.com/guide/topics/manifest/uses-permission-element.html).
+     * manifest](https://developer.android.com/guide/topics/manifest/uses-permission-element.html).
      * Examples of a Calendar application's permissions are `READ_CALENDAR`, or `MANAGE_ACCOUNTS`.
      * @return value or {@code null} for none
      */
@@ -1168,7 +1168,7 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
     /**
      * The list of permissions of this application. These can be either a standard Android permission
      * or one defined by the application, and are found in an application's [Android
-     * manifest](http://developer.android.com/guide/topics/manifest/uses-permission-element.html).
+     * manifest](https://developer.android.com/guide/topics/manifest/uses-permission-element.html).
      * Examples of a Calendar application's permissions are `READ_CALENDAR`, or `MANAGE_ACCOUNTS`.
      * @param permission permission or {@code null} for none
      */

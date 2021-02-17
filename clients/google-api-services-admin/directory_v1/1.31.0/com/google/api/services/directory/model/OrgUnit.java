@@ -36,7 +36,7 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
    * The default value is `false`, meaning a sub-organizational unit inherits the settings of the
    * nearest parent organizational unit. For more information on inheritance and users in an
    * organization structure, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=182442=1227584=topic).
+   * center](https://support.google.com/a/answer/4352075).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,9 +86,8 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
    * organization or the `parentOrgunitPath`. A user's organizational unit determines which Google
    * Workspace services the user has access to. If the user is moved to a new organization, the
    * user's access changes. For more information about organization structures, see the
-   * [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=182433=1227584=topic). For more
-   * information about moving a user to a different organization, see [Update a user](/admin-
+   * [administration help center](https://support.google.com/a/answer/4352075). For more information
+   * about moving a user to a different organization, see [Update a user](/admin-
    * sdk/directory/v1/guides/manage-users.html#update_user).
    * The value may be {@code null}.
    */
@@ -115,7 +114,7 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
    * The default value is `false`, meaning a sub-organizational unit inherits the settings of the
    * nearest parent organizational unit. For more information on inheritance and users in an
    * organization structure, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=182442=1227584=topic).
+   * center](https://support.google.com/a/answer/4352075).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBlockInheritance() {
@@ -127,7 +126,7 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
    * The default value is `false`, meaning a sub-organizational unit inherits the settings of the
    * nearest parent organizational unit. For more information on inheritance and users in an
    * organization structure, see the [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=182442=1227584=topic).
+   * center](https://support.google.com/a/answer/4352075).
    * @param blockInheritance blockInheritance or {@code null} for none
    */
   public OrgUnit setBlockInheritance(java.lang.Boolean blockInheritance) {
@@ -230,9 +229,8 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
    * organization or the `parentOrgunitPath`. A user's organizational unit determines which Google
    * Workspace services the user has access to. If the user is moved to a new organization, the
    * user's access changes. For more information about organization structures, see the
-   * [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=182433=1227584=topic). For more
-   * information about moving a user to a different organization, see [Update a user](/admin-
+   * [administration help center](https://support.google.com/a/answer/4352075). For more information
+   * about moving a user to a different organization, see [Update a user](/admin-
    * sdk/directory/v1/guides/manage-users.html#update_user).
    * @return value or {@code null} for none
    */
@@ -248,9 +246,8 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
    * organization or the `parentOrgunitPath`. A user's organizational unit determines which Google
    * Workspace services the user has access to. If the user is moved to a new organization, the
    * user's access changes. For more information about organization structures, see the
-   * [administration help
-   * center](http://support.google.com/a/bin/answer.py?answer=182433=1227584=topic). For more
-   * information about moving a user to a different organization, see [Update a user](/admin-
+   * [administration help center](https://support.google.com/a/answer/4352075). For more information
+   * about moving a user to a different organization, see [Update a user](/admin-
    * sdk/directory/v1/guides/manage-users.html#update_user).
    * @param orgUnitPath orgUnitPath or {@code null} for none
    */

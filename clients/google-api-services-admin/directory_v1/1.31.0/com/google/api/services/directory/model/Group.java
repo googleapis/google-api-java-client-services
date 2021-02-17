@@ -67,8 +67,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
    * The group's email address. If your account has multiple domains, select the appropriate domain
    * for the email address. The `email` must be unique. This property is required when creating a
    * group. Group email addresses are subject to the same character usage rules as usernames, see
-   * the [administration help center](http://support.google.com/a/bin/answer.py?answer=33386) for
-   * the details.
+   * the [help center](https://support.google.com/a/answer/9193374) for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,8 +191,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
    * The group's email address. If your account has multiple domains, select the appropriate domain
    * for the email address. The `email` must be unique. This property is required when creating a
    * group. Group email addresses are subject to the same character usage rules as usernames, see
-   * the [administration help center](http://support.google.com/a/bin/answer.py?answer=33386) for
-   * the details.
+   * the [help center](https://support.google.com/a/answer/9193374) for details.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -204,8 +202,7 @@ public final class Group extends com.google.api.client.json.GenericJson {
    * The group's email address. If your account has multiple domains, select the appropriate domain
    * for the email address. The `email` must be unique. This property is required when creating a
    * group. Group email addresses are subject to the same character usage rules as usernames, see
-   * the [administration help center](http://support.google.com/a/bin/answer.py?answer=33386) for
-   * the details.
+   * the [help center](https://support.google.com/a/answer/9193374) for details.
    * @param email email or {@code null} for none
    */
   public Group setEmail(java.lang.String email) {

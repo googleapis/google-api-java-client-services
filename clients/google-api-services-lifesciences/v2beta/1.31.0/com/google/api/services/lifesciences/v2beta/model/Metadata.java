@@ -73,6 +73,13 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private Pipeline pipeline;
 
   /**
+   * The name of the Cloud Pub/Sub topic where notifications of operation status changes are sent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pubSubTopic;
+
+  /**
    * The first time at which resources were allocated to execute the pipeline.
    * The value may be {@code null}.
    */
@@ -161,6 +168,23 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
    */
   public Metadata setPipeline(Pipeline pipeline) {
     this.pipeline = pipeline;
+    return this;
+  }
+
+  /**
+   * The name of the Cloud Pub/Sub topic where notifications of operation status changes are sent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPubSubTopic() {
+    return pubSubTopic;
+  }
+
+  /**
+   * The name of the Cloud Pub/Sub topic where notifications of operation status changes are sent.
+   * @param pubSubTopic pubSubTopic or {@code null} for none
+   */
+  public Metadata setPubSubTopic(java.lang.String pubSubTopic) {
+    this.pubSubTopic = pubSubTopic;
     return this;
   }
 

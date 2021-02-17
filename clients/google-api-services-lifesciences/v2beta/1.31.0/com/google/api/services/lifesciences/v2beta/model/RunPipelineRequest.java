@@ -50,6 +50,15 @@ public final class RunPipelineRequest extends com.google.api.client.json.Generic
   private Pipeline pipeline;
 
   /**
+   * The name of an existing Pub/Sub topic. The server will publish messages to this topic whenever
+   * the status of the operation changes. The Life Sciences Service Agent account must have
+   * publisher permissions to the specified topic or notifications will not be sent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pubSubTopic;
+
+  /**
    * User-defined labels to associate with the returned operation. These labels are not propagated
    * to any Google Cloud Platform resources used by the operation, and can be modified at any time.
    * To associate labels with resources created while executing the operation, see the appropriate
@@ -86,6 +95,27 @@ public final class RunPipelineRequest extends com.google.api.client.json.Generic
    */
   public RunPipelineRequest setPipeline(Pipeline pipeline) {
     this.pipeline = pipeline;
+    return this;
+  }
+
+  /**
+   * The name of an existing Pub/Sub topic. The server will publish messages to this topic whenever
+   * the status of the operation changes. The Life Sciences Service Agent account must have
+   * publisher permissions to the specified topic or notifications will not be sent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPubSubTopic() {
+    return pubSubTopic;
+  }
+
+  /**
+   * The name of an existing Pub/Sub topic. The server will publish messages to this topic whenever
+   * the status of the operation changes. The Life Sciences Service Agent account must have
+   * publisher permissions to the specified topic or notifications will not be sent.
+   * @param pubSubTopic pubSubTopic or {@code null} for none
+   */
+  public RunPipelineRequest setPubSubTopic(java.lang.String pubSubTopic) {
+    this.pubSubTopic = pubSubTopic;
     return this;
   }
 

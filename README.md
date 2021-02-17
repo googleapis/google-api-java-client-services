@@ -52,6 +52,7 @@ packages on [Maven Central][maven-search].
 | Calendar API | [v3](clients/google-api-services-calendar/v3) |
 | Campaign Manager 360 API | [v3.3](clients/google-api-services-dfareporting/v3.3), [v3.4](clients/google-api-services-dfareporting/v3.4) |
 | Certificate Authority API | [v1beta1](clients/google-api-services-privateca/v1beta1) |
+| Chrome Management API | [v1](clients/google-api-services-chromemanagement/v1) |
 | Chrome UX Report API | [v1](clients/google-api-services-chromeuxreport/v1) |
 | Chrome Verified Access API | [v1](clients/google-api-services-verifiedaccess/v1) |
 | Cloud Asset API | [v1](clients/google-api-services-cloudasset/v1), [v1beta1](clients/google-api-services-cloudasset/v1beta1), [v1p1beta1](clients/google-api-services-cloudasset/v1p1beta1), [v1p4beta1](clients/google-api-services-cloudasset/v1p4beta1), [v1p5beta1](clients/google-api-services-cloudasset/v1p5beta1), [v1p7beta1](clients/google-api-services-cloudasset/v1p7beta1) |
@@ -59,6 +60,7 @@ packages on [Maven Central][maven-search].
 | Cloud Billing API | [v1](clients/google-api-services-cloudbilling/v1) |
 | Cloud Billing Budget API | [v1](clients/google-api-services-billingbudgets/v1), [v1beta1](clients/google-api-services-billingbudgets/v1beta1) |
 | Cloud Build API | [v1](clients/google-api-services-cloudbuild/v1), [v1alpha1](clients/google-api-services-cloudbuild/v1alpha1), [v1alpha2](clients/google-api-services-cloudbuild/v1alpha2) |
+| Cloud Channel API | [v1](clients/google-api-services-cloudchannel/v1) |
 | Cloud Composer API | [v1](clients/google-api-services-composer/v1), [v1beta1](clients/google-api-services-composer/v1beta1) |
 | Cloud DNS API | [v1](clients/google-api-services-dns/v1), [v1beta2](clients/google-api-services-dns/v1beta2) |
 | Cloud Data Fusion API | [v1](clients/google-api-services-datafusion/v1), [v1beta1](clients/google-api-services-datafusion/v1beta1) |
@@ -213,7 +215,7 @@ packages on [Maven Central][maven-search].
 | Transcoder API | [v1beta1](clients/google-api-services-transcoder/v1beta1) |
 | Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Web Security Scanner API | [v1](clients/google-api-services-websecurityscanner/v1), [v1alpha](clients/google-api-services-websecurityscanner/v1alpha), [v1beta](clients/google-api-services-websecurityscanner/v1beta) |
-| Workflow Executions API | [v1beta](clients/google-api-services-workflowexecutions/v1beta) |
+| Workflow Executions API | [v1](clients/google-api-services-workflowexecutions/v1), [v1beta](clients/google-api-services-workflowexecutions/v1beta) |
 | Workflows API | [v1beta](clients/google-api-services-workflows/v1beta) |
 | YouTube Analytics API | [v2](clients/google-api-services-youtubeAnalytics/v2) |
 | YouTube Data API v3 | [v3](clients/google-api-services-youtube/v3) |

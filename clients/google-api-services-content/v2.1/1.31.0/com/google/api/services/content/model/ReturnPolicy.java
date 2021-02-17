@@ -81,6 +81,13 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String returnPolicyId;
 
   /**
+   * The return shipping fee that will apply to non free return reasons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price returnShippingFee;
+
+  /**
    * An optional list of seasonal overrides.
    * The value may be {@code null}.
    */
@@ -205,6 +212,23 @@ public final class ReturnPolicy extends com.google.api.client.json.GenericJson {
    */
   public ReturnPolicy setReturnPolicyId(java.lang.String returnPolicyId) {
     this.returnPolicyId = returnPolicyId;
+    return this;
+  }
+
+  /**
+   * The return shipping fee that will apply to non free return reasons.
+   * @return value or {@code null} for none
+   */
+  public Price getReturnShippingFee() {
+    return returnShippingFee;
+  }
+
+  /**
+   * The return shipping fee that will apply to non free return reasons.
+   * @param returnShippingFee returnShippingFee or {@code null} for none
+   */
+  public ReturnPolicy setReturnShippingFee(Price returnShippingFee) {
+    this.returnShippingFee = returnShippingFee;
     return this;
   }
 

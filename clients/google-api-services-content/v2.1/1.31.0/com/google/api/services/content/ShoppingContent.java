@@ -16041,8 +16041,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     public class Repricingreports {
 
       /**
-       * Lists the metrics report for a given Repricing product. Reports of the last 3 days may not be
-       * complete.
+       * Lists the metrics report for a given Repricing product.
        *
        * Create a request for the method "repricingreports.list".
        *
@@ -16065,8 +16064,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         private static final String REST_PATH = "content/v2.1/{merchantId}/productstatuses/{productId}/repricingreports";
 
         /**
-         * Lists the metrics report for a given Repricing product. Reports of the last 3 days may not be
-         * complete.
+         * Lists the metrics report for a given Repricing product.
          *
          * Create a request for the method "repricingreports.list".
          *
@@ -16194,13 +16192,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
         /**
          * Gets Repricing reports on and before this date in the merchant's timezone. You can only
-         * retrieve data up to 3 days ago (default) or earlier. Format is YYYY-MM-DD.
+         * retrieve data up to 7 days ago (default) or earlier. Format is YYYY-MM-DD.
          */
         @com.google.api.client.util.Key
         private java.lang.String endDate;
 
         /** Gets Repricing reports on and before this date in the merchant's timezone. You can only retrieve
-       data up to 3 days ago (default) or earlier. Format is YYYY-MM-DD.
+       data up to 7 days ago (default) or earlier. Format is YYYY-MM-DD.
          */
         public java.lang.String getEndDate() {
           return endDate;
@@ -16208,7 +16206,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
         /**
          * Gets Repricing reports on and before this date in the merchant's timezone. You can only
-         * retrieve data up to 3 days ago (default) or earlier. Format is YYYY-MM-DD.
+         * retrieve data up to 7 days ago (default) or earlier. Format is YYYY-MM-DD.
          */
         public List setEndDate(java.lang.String endDate) {
           this.endDate = endDate;
@@ -16290,13 +16288,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
         /**
          * Gets Repricing reports on and after this date in the merchant's timezone, up to one year
-         * ago. Do not use a start date later than 3 days ago (default). Format is YYYY-MM-DD.
+         * ago. Do not use a start date later than 7 days ago (default). Format is YYYY-MM-DD.
          */
         @com.google.api.client.util.Key
         private java.lang.String startDate;
 
         /** Gets Repricing reports on and after this date in the merchant's timezone, up to one year ago. Do
-       not use a start date later than 3 days ago (default). Format is YYYY-MM-DD.
+       not use a start date later than 7 days ago (default). Format is YYYY-MM-DD.
          */
         public java.lang.String getStartDate() {
           return startDate;
@@ -16304,7 +16302,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
         /**
          * Gets Repricing reports on and after this date in the merchant's timezone, up to one year
-         * ago. Do not use a start date later than 3 days ago (default). Format is YYYY-MM-DD.
+         * ago. Do not use a start date later than 7 days ago (default). Format is YYYY-MM-DD.
          */
         public List setStartDate(java.lang.String startDate) {
           this.startDate = startDate;
@@ -17617,6 +17615,154 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Reports collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Reports.List request = content.reports().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Reports reports() {
+    return new Reports();
+  }
+
+  /**
+   * The "reports" collection of methods.
+   */
+  public class Reports {
+
+    /**
+     * Retrieves merchant performance mertrics matching the search query and optionally segmented by
+     * selected dimensions.
+     *
+     * Create a request for the method "reports.search".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. Id of the merchant making the call. Must be a standalone account or an MCA subaccount.
+     * @param content the {@link com.google.api.services.content.model.SearchRequest}
+     * @return the request
+     */
+    public Search search(java.lang.Long merchantId, com.google.api.services.content.model.SearchRequest content) throws java.io.IOException {
+      Search result = new Search(merchantId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Search extends ShoppingContentRequest<com.google.api.services.content.model.SearchResponse> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/reports/search";
+
+      /**
+       * Retrieves merchant performance mertrics matching the search query and optionally segmented by
+       * selected dimensions.
+       *
+       * Create a request for the method "reports.search".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Search#execute()} method to invoke the remote operation. <p> {@link
+       * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. Id of the merchant making the call. Must be a standalone account or an MCA subaccount.
+       * @param content the {@link com.google.api.services.content.model.SearchRequest}
+       * @since 1.13
+       */
+      protected Search(java.lang.Long merchantId, com.google.api.services.content.model.SearchRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.SearchResponse.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+      }
+
+      @Override
+      public Search set$Xgafv(java.lang.String $Xgafv) {
+        return (Search) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Search setAlt(java.lang.String alt) {
+        return (Search) super.setAlt(alt);
+      }
+
+      @Override
+      public Search setCallback(java.lang.String callback) {
+        return (Search) super.setCallback(callback);
+      }
+
+      @Override
+      public Search setFields(java.lang.String fields) {
+        return (Search) super.setFields(fields);
+      }
+
+      @Override
+      public Search setKey(java.lang.String key) {
+        return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Search) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Search setQuotaUser(java.lang.String quotaUser) {
+        return (Search) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Search setUploadType(java.lang.String uploadType) {
+        return (Search) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Search setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Search) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Id of the merchant making the call. Must be a standalone account or an MCA
+       * subaccount.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. Id of the merchant making the call. Must be a standalone account or an MCA subaccount.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /**
+       * Required. Id of the merchant making the call. Must be a standalone account or an MCA
+       * subaccount.
+       */
+      public Search setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      @Override
+      public Search set(String parameterName, Object value) {
+        return (Search) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Repricingrules collection.
    *
    * <p>The typical use is:</p>
@@ -18426,8 +18572,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     public class Repricingreports {
 
       /**
-       * Lists the metrics report for a given Repricing rule. Reports of the last 3 days may not be
-       * complete.
+       * Lists the metrics report for a given Repricing rule.
        *
        * Create a request for the method "repricingreports.list".
        *
@@ -18449,8 +18594,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         private static final String REST_PATH = "content/v2.1/{merchantId}/repricingrules/{ruleId}/repricingreports";
 
         /**
-         * Lists the metrics report for a given Repricing rule. Reports of the last 3 days may not be
-         * complete.
+         * Lists the metrics report for a given Repricing rule.
          *
          * Create a request for the method "repricingreports.list".
          *
@@ -18568,13 +18712,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
         /**
          * Gets Repricing reports on and before this date in the merchant's timezone. You can only
-         * retrieve data up to 3 days ago (default) or earlier. Format: YYYY-MM-DD.
+         * retrieve data up to 7 days ago (default) or earlier. Format: YYYY-MM-DD.
          */
         @com.google.api.client.util.Key
         private java.lang.String endDate;
 
         /** Gets Repricing reports on and before this date in the merchant's timezone. You can only retrieve
-       data up to 3 days ago (default) or earlier. Format: YYYY-MM-DD.
+       data up to 7 days ago (default) or earlier. Format: YYYY-MM-DD.
          */
         public java.lang.String getEndDate() {
           return endDate;
@@ -18582,7 +18726,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
         /**
          * Gets Repricing reports on and before this date in the merchant's timezone. You can only
-         * retrieve data up to 3 days ago (default) or earlier. Format: YYYY-MM-DD.
+         * retrieve data up to 7 days ago (default) or earlier. Format: YYYY-MM-DD.
          */
         public List setEndDate(java.lang.String endDate) {
           this.endDate = endDate;
@@ -18643,13 +18787,13 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
         /**
          * Gets Repricing reports on and after this date in the merchant's timezone, up to one year
-         * ago. Do not use a start date later than 3 days ago (default). Format: YYYY-MM-DD.
+         * ago. Do not use a start date later than 7 days ago (default). Format: YYYY-MM-DD.
          */
         @com.google.api.client.util.Key
         private java.lang.String startDate;
 
         /** Gets Repricing reports on and after this date in the merchant's timezone, up to one year ago. Do
-       not use a start date later than 3 days ago (default). Format: YYYY-MM-DD.
+       not use a start date later than 7 days ago (default). Format: YYYY-MM-DD.
          */
         public java.lang.String getStartDate() {
           return startDate;
@@ -18657,7 +18801,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
 
         /**
          * Gets Repricing reports on and after this date in the merchant's timezone, up to one year
-         * ago. Do not use a start date later than 3 days ago (default). Format: YYYY-MM-DD.
+         * ago. Do not use a start date later than 7 days ago (default). Format: YYYY-MM-DD.
          */
         public List setStartDate(java.lang.String startDate) {
           this.startDate = startDate;

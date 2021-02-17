@@ -32,7 +32,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * Label that you assign to a collection to help organize bidding and reporting in Shopping
-   * campaigns. Custom label
+   * campaigns. [Custom label](https://support.google.com/merchants/answer/9674217)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,14 +74,15 @@ public final class Collection extends com.google.api.client.json.GenericJson {
    * This identifies one or more products associated with the collection. Used as a lookup to the
    * corresponding product ID in your product feeds. Provide a maximum of 100 featuredProduct (for
    * collections). Provide up to 10 featuredProduct (for Shoppable Images only) with ID and X and Y
-   * coordinates. featured_product attribute
+   * coordinates. [featured_product attribute](https://support.google.com/merchants/answer/9703736)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<CollectionFeaturedProduct> featuredProduct;
 
   /**
-   * Your collection's name. headline attribute
+   * Your collection's name. [headline
+   * attribute](https://support.google.com/merchants/answer/9673580)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,14 +91,15 @@ public final class Collection extends com.google.api.client.json.GenericJson {
   /**
    * Required. The REST ID of the collection. Content API methods that operate on collections take
    * this as their collectionId parameter. The REST ID for a collection is of the form collectionId.
-   * id attribute
+   * [id attribute](https://support.google.com/merchants/answer/9649290)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The URL of a collection’s image. image_link attribute
+   * The URL of a collection’s image. [image_link
+   * attribute](https://support.google.com/merchants/answer/9703236)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +107,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * The language of a collection and the language of any featured products linked to the
-   * collection. language attribute
+   * collection. [language attribute](https://support.google.com/merchants/answer/9673781)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +115,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * A collection’s landing page. URL directly linking to your collection's page on your website.
-   * link attribute
+   * [link attribute](https://support.google.com/merchants/answer/9673983)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,14 +123,14 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * A collection’s mobile-optimized landing page when you have a different URL for mobile and
-   * desktop traffic. mobile_link attribute
+   * desktop traffic. [mobile_link attribute](https://support.google.com/merchants/answer/9646123)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mobileLink;
 
   /**
-   * product_country attribute
+   * [product_country attribute](https://support.google.com/merchants/answer/9674155)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +138,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * Label that you assign to a collection to help organize bidding and reporting in Shopping
-   * campaigns. Custom label
+   * campaigns. [Custom label](https://support.google.com/merchants/answer/9674217)
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomLabel0() {
@@ -145,7 +147,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * Label that you assign to a collection to help organize bidding and reporting in Shopping
-   * campaigns. Custom label
+   * campaigns. [Custom label](https://support.google.com/merchants/answer/9674217)
    * @param customLabel0 customLabel0 or {@code null} for none
    */
   public Collection setCustomLabel0(java.lang.String customLabel0) {
@@ -233,7 +235,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
    * This identifies one or more products associated with the collection. Used as a lookup to the
    * corresponding product ID in your product feeds. Provide a maximum of 100 featuredProduct (for
    * collections). Provide up to 10 featuredProduct (for Shoppable Images only) with ID and X and Y
-   * coordinates. featured_product attribute
+   * coordinates. [featured_product attribute](https://support.google.com/merchants/answer/9703736)
    * @return value or {@code null} for none
    */
   public java.util.List<CollectionFeaturedProduct> getFeaturedProduct() {
@@ -244,7 +246,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
    * This identifies one or more products associated with the collection. Used as a lookup to the
    * corresponding product ID in your product feeds. Provide a maximum of 100 featuredProduct (for
    * collections). Provide up to 10 featuredProduct (for Shoppable Images only) with ID and X and Y
-   * coordinates. featured_product attribute
+   * coordinates. [featured_product attribute](https://support.google.com/merchants/answer/9703736)
    * @param featuredProduct featuredProduct or {@code null} for none
    */
   public Collection setFeaturedProduct(java.util.List<CollectionFeaturedProduct> featuredProduct) {
@@ -253,7 +255,8 @@ public final class Collection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Your collection's name. headline attribute
+   * Your collection's name. [headline
+   * attribute](https://support.google.com/merchants/answer/9673580)
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHeadline() {
@@ -261,7 +264,8 @@ public final class Collection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Your collection's name. headline attribute
+   * Your collection's name. [headline
+   * attribute](https://support.google.com/merchants/answer/9673580)
    * @param headline headline or {@code null} for none
    */
   public Collection setHeadline(java.util.List<java.lang.String> headline) {
@@ -272,7 +276,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
   /**
    * Required. The REST ID of the collection. Content API methods that operate on collections take
    * this as their collectionId parameter. The REST ID for a collection is of the form collectionId.
-   * id attribute
+   * [id attribute](https://support.google.com/merchants/answer/9649290)
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -282,7 +286,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
   /**
    * Required. The REST ID of the collection. Content API methods that operate on collections take
    * this as their collectionId parameter. The REST ID for a collection is of the form collectionId.
-   * id attribute
+   * [id attribute](https://support.google.com/merchants/answer/9649290)
    * @param id id or {@code null} for none
    */
   public Collection setId(java.lang.String id) {
@@ -291,7 +295,8 @@ public final class Collection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of a collection’s image. image_link attribute
+   * The URL of a collection’s image. [image_link
+   * attribute](https://support.google.com/merchants/answer/9703236)
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getImageLink() {
@@ -299,7 +304,8 @@ public final class Collection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of a collection’s image. image_link attribute
+   * The URL of a collection’s image. [image_link
+   * attribute](https://support.google.com/merchants/answer/9703236)
    * @param imageLink imageLink or {@code null} for none
    */
   public Collection setImageLink(java.util.List<java.lang.String> imageLink) {
@@ -309,7 +315,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * The language of a collection and the language of any featured products linked to the
-   * collection. language attribute
+   * collection. [language attribute](https://support.google.com/merchants/answer/9673781)
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguage() {
@@ -318,7 +324,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * The language of a collection and the language of any featured products linked to the
-   * collection. language attribute
+   * collection. [language attribute](https://support.google.com/merchants/answer/9673781)
    * @param language language or {@code null} for none
    */
   public Collection setLanguage(java.lang.String language) {
@@ -328,7 +334,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * A collection’s landing page. URL directly linking to your collection's page on your website.
-   * link attribute
+   * [link attribute](https://support.google.com/merchants/answer/9673983)
    * @return value or {@code null} for none
    */
   public java.lang.String getLink() {
@@ -337,7 +343,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * A collection’s landing page. URL directly linking to your collection's page on your website.
-   * link attribute
+   * [link attribute](https://support.google.com/merchants/answer/9673983)
    * @param link link or {@code null} for none
    */
   public Collection setLink(java.lang.String link) {
@@ -347,7 +353,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * A collection’s mobile-optimized landing page when you have a different URL for mobile and
-   * desktop traffic. mobile_link attribute
+   * desktop traffic. [mobile_link attribute](https://support.google.com/merchants/answer/9646123)
    * @return value or {@code null} for none
    */
   public java.lang.String getMobileLink() {
@@ -356,7 +362,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
 
   /**
    * A collection’s mobile-optimized landing page when you have a different URL for mobile and
-   * desktop traffic. mobile_link attribute
+   * desktop traffic. [mobile_link attribute](https://support.google.com/merchants/answer/9646123)
    * @param mobileLink mobileLink or {@code null} for none
    */
   public Collection setMobileLink(java.lang.String mobileLink) {
@@ -365,7 +371,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * product_country attribute
+   * [product_country attribute](https://support.google.com/merchants/answer/9674155)
    * @return value or {@code null} for none
    */
   public java.lang.String getProductCountry() {
@@ -373,7 +379,7 @@ public final class Collection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * product_country attribute
+   * [product_country attribute](https://support.google.com/merchants/answer/9674155)
    * @param productCountry productCountry or {@code null} for none
    */
   public Collection setProductCountry(java.lang.String productCountry) {

@@ -55,9 +55,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSch
 
   /**
    * schedule_deadline_time is the time deadline any schedule start time cannot go beyond, including
-   * reschedule. It's normally the initial schedule start time plus a week. If the reschedule type
-   * is next window, simply take this value as start time. If reschedule type is IMMEDIATELY or
-   * BY_TIME, current or selected time cannot go beyond this deadline.
+   * reschedule. It's normally the initial schedule start time plus maintenance window length (1 day
+   * or 1 week). Maintenance cannot be scheduled to start beyond this deadline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,9 +126,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSch
 
   /**
    * schedule_deadline_time is the time deadline any schedule start time cannot go beyond, including
-   * reschedule. It's normally the initial schedule start time plus a week. If the reschedule type
-   * is next window, simply take this value as start time. If reschedule type is IMMEDIATELY or
-   * BY_TIME, current or selected time cannot go beyond this deadline.
+   * reschedule. It's normally the initial schedule start time plus maintenance window length (1 day
+   * or 1 week). Maintenance cannot be scheduled to start beyond this deadline.
    * @return value or {@code null} for none
    */
   public String getScheduleDeadlineTime() {
@@ -138,9 +136,8 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSch
 
   /**
    * schedule_deadline_time is the time deadline any schedule start time cannot go beyond, including
-   * reschedule. It's normally the initial schedule start time plus a week. If the reschedule type
-   * is next window, simply take this value as start time. If reschedule type is IMMEDIATELY or
-   * BY_TIME, current or selected time cannot go beyond this deadline.
+   * reschedule. It's normally the initial schedule start time plus maintenance window length (1 day
+   * or 1 week). Maintenance cannot be scheduled to start beyond this deadline.
    * @param scheduleDeadlineTime scheduleDeadlineTime or {@code null} for none
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule setScheduleDeadlineTime(String scheduleDeadlineTime) {

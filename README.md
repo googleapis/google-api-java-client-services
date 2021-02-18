@@ -86,7 +86,7 @@ packages on [Maven Central][maven-search].
 | Cloud Natural Language API | [v1](clients/google-api-services-language/v1), [v1beta1](clients/google-api-services-language/v1beta1), [v1beta2](clients/google-api-services-language/v1beta2) |
 | Cloud OS Login API | [v1](clients/google-api-services-oslogin/v1), [v1alpha](clients/google-api-services-oslogin/v1alpha), [v1beta](clients/google-api-services-oslogin/v1beta) |
 | Cloud Pub/Sub API | [v1](clients/google-api-services-pubsub/v1), [v1beta1a](clients/google-api-services-pubsub/v1beta1a), [v1beta2](clients/google-api-services-pubsub/v1beta2) |
-| Cloud Resource Manager API | [v1](clients/google-api-services-cloudresourcemanager/v1), [v1beta1](clients/google-api-services-cloudresourcemanager/v1beta1), [v2](clients/google-api-services-cloudresourcemanager/v2), [v2beta1](clients/google-api-services-cloudresourcemanager/v2beta1) |
+| Cloud Resource Manager API | [v1](clients/google-api-services-cloudresourcemanager/v1), [v1beta1](clients/google-api-services-cloudresourcemanager/v1beta1), [v2](clients/google-api-services-cloudresourcemanager/v2), [v2beta1](clients/google-api-services-cloudresourcemanager/v2beta1), [v3](clients/google-api-services-cloudresourcemanager/v3) |
 | Cloud Run Admin API | [v1](clients/google-api-services-run/v1), [v1alpha1](clients/google-api-services-run/v1alpha1), [v1beta1](clients/google-api-services-run/v1beta1) |
 | Cloud Runtime Configuration API | [v1](clients/google-api-services-runtimeconfig/v1), [v1beta1](clients/google-api-services-runtimeconfig/v1beta1) |
 | Cloud SQL Admin API | [v1beta4](clients/google-api-services-sqladmin/v1beta4) |
@@ -175,6 +175,7 @@ packages on [Maven Central][maven-search].
 | Local Services API | [v1](clients/google-api-services-localservices/v1) |
 | Managed Service for Microsoft Active Directory API | [v1](clients/google-api-services-managedidentities/v1), [v1alpha1](clients/google-api-services-managedidentities/v1alpha1), [v1beta1](clients/google-api-services-managedidentities/v1beta1) |
 | Manufacturer Center API | [v1](clients/google-api-services-manufacturers/v1) |
+| My Business Account Management API | [v1](clients/google-api-services-mybusinessaccountmanagement/v1) |
 | Network Connectivity API | [v1alpha1](clients/google-api-services-networkconnectivity/v1alpha1) |
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
 | Notebooks API | [v1](clients/google-api-services-notebooks/v1) |
@@ -216,7 +217,7 @@ packages on [Maven Central][maven-search].
 | Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Web Security Scanner API | [v1](clients/google-api-services-websecurityscanner/v1), [v1alpha](clients/google-api-services-websecurityscanner/v1alpha), [v1beta](clients/google-api-services-websecurityscanner/v1beta) |
 | Workflow Executions API | [v1](clients/google-api-services-workflowexecutions/v1), [v1beta](clients/google-api-services-workflowexecutions/v1beta) |
-| Workflows API | [v1beta](clients/google-api-services-workflows/v1beta) |
+| Workflows API | [v1](clients/google-api-services-workflows/v1), [v1beta](clients/google-api-services-workflows/v1beta) |
 | YouTube Analytics API | [v2](clients/google-api-services-youtubeAnalytics/v2) |
 | YouTube Data API v3 | [v3](clients/google-api-services-youtube/v3) |
 | YouTube Reporting API | [v1](clients/google-api-services-youtubereporting/v1) |

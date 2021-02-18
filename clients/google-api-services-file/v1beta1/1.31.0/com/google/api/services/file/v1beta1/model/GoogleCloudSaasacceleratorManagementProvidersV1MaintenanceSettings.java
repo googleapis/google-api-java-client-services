@@ -40,6 +40,13 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSet
   private java.lang.Boolean exclude;
 
   /**
+   * Optional. If the update call is triggered from rollback, set the value as true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isRollback;
+
+  /**
    * Optional. The MaintenancePolicies that have been attached to the instance. The key must be of
    * the type name of the oneof policy name defined in MaintenancePolicy, and the embedded policy
    * must define the same policy type. For complete details of MaintenancePolicy, please refer to go
@@ -68,6 +75,23 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSet
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings setExclude(java.lang.Boolean exclude) {
     this.exclude = exclude;
+    return this;
+  }
+
+  /**
+   * Optional. If the update call is triggered from rollback, set the value as true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsRollback() {
+    return isRollback;
+  }
+
+  /**
+   * Optional. If the update call is triggered from rollback, set the value as true.
+   * @param isRollback isRollback or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings setIsRollback(java.lang.Boolean isRollback) {
+    this.isRollback = isRollback;
     return this;
   }
 

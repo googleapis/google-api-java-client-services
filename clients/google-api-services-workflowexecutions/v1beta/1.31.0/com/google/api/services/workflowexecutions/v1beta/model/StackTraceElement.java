@@ -17,7 +17,9 @@
 package com.google.api.services.workflowexecutions.v1beta.model;
 
 /**
- * A single stack element (frame) where an error occurred.
+ * A single stack element (frame) where an error occurred. This field currently only exists in
+ * v1Beta. We will need to roll this change out to V1 after the feature is thoroughly tested.
+ * TODO(b/178540475)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workflow Executions API. For a detailed explanation
@@ -31,18 +33,11 @@ package com.google.api.services.workflowexecutions.v1beta.model;
 public final class StackTraceElement extends com.google.api.client.json.GenericJson {
 
   /**
-   * The source code column position (of the line) the current instruction was generated from.
+   * The source position information of the stacktrace element.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long column;
-
-  /**
-   * The source code line number the current instruction was generated from.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long line;
+  @com.google.api.client.util.Key
+  private Position position;
 
   /**
    * The routine where the error occurred.
@@ -59,36 +54,19 @@ public final class StackTraceElement extends com.google.api.client.json.GenericJ
   private java.lang.String step;
 
   /**
-   * The source code column position (of the line) the current instruction was generated from.
+   * The source position information of the stacktrace element.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getColumn() {
-    return column;
+  public Position getPosition() {
+    return position;
   }
 
   /**
-   * The source code column position (of the line) the current instruction was generated from.
-   * @param column column or {@code null} for none
+   * The source position information of the stacktrace element.
+   * @param position position or {@code null} for none
    */
-  public StackTraceElement setColumn(java.lang.Long column) {
-    this.column = column;
-    return this;
-  }
-
-  /**
-   * The source code line number the current instruction was generated from.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getLine() {
-    return line;
-  }
-
-  /**
-   * The source code line number the current instruction was generated from.
-   * @param line line or {@code null} for none
-   */
-  public StackTraceElement setLine(java.lang.Long line) {
-    this.line = line;
+  public StackTraceElement setPosition(Position position) {
+    this.position = position;
     return this;
   }
 

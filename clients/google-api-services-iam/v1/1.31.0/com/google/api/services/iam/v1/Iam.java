@@ -1993,6 +1993,926 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
       public class WorkloadIdentityPools {
 
         /**
+         * Creates a new WorkloadIdentityPool. You cannot reuse the name of a deleted pool until 30 days
+         * after deletion.
+         *
+         * Create a request for the method "workloadIdentityPools.create".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource to create the pool in. The only supported location is `global`.
+         * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPool}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkloadIdentityPool content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/workloadIdentityPools";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new WorkloadIdentityPool. You cannot reuse the name of a deleted pool until 30 days
+           * after deletion.
+           *
+           * Create a request for the method "workloadIdentityPools.create".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource to create the pool in. The only supported location is `global`.
+           * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPool}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkloadIdentityPool content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource to create the pool in. The only supported location is
+           * `global`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource to create the pool in. The only supported location is `global`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource to create the pool in. The only supported location is
+           * `global`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the pool, which becomes the final component of the resource
+           * name. This value should be 4-32 characters, and may contain the characters [a-z0-9-].
+           * The prefix `gcp-` is reserved for use by Google, and may not be specified.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String workloadIdentityPoolId;
+
+          /** Required. The ID to use for the pool, which becomes the final component of the resource name. This
+         value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix `gcp-` is
+         reserved for use by Google, and may not be specified.
+           */
+          public java.lang.String getWorkloadIdentityPoolId() {
+            return workloadIdentityPoolId;
+          }
+
+          /**
+           * Required. The ID to use for the pool, which becomes the final component of the resource
+           * name. This value should be 4-32 characters, and may contain the characters [a-z0-9-].
+           * The prefix `gcp-` is reserved for use by Google, and may not be specified.
+           */
+          public Create setWorkloadIdentityPoolId(java.lang.String workloadIdentityPoolId) {
+            this.workloadIdentityPoolId = workloadIdentityPoolId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a WorkloadIdentityPool. You cannot use a deleted pool to exchange external credentials
+         * for Google Cloud credentials. However, deletion does not revoke credentials that have already
+         * been issued. Credentials issued for a deleted pool do not grant access to resources. If the pool
+         * is undeleted, and the credentials are not expired, they grant access again. You can undelete a
+         * pool for 30 days. After 30 days, deletion is permanent. You cannot update deleted pools. However,
+         * you can view and list them.
+         *
+         * Create a request for the method "workloadIdentityPools.delete".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the pool to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+          /**
+           * Deletes a WorkloadIdentityPool. You cannot use a deleted pool to exchange external credentials
+           * for Google Cloud credentials. However, deletion does not revoke credentials that have already
+           * been issued. Credentials issued for a deleted pool do not grant access to resources. If the
+           * pool is undeleted, and the credentials are not expired, they grant access again. You can
+           * undelete a pool for 30 days. After 30 days, deletion is permanent. You cannot update deleted
+           * pools. However, you can view and list them.
+           *
+           * Create a request for the method "workloadIdentityPools.delete".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the pool to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Iam.this, "DELETE", REST_PATH, null, com.google.api.services.iam.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the pool to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the pool to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the pool to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets an individual WorkloadIdentityPool.
+         *
+         * Create a request for the method "workloadIdentityPools.get".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the pool to retrieve.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends IamRequest<com.google.api.services.iam.v1.model.WorkloadIdentityPool> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+          /**
+           * Gets an individual WorkloadIdentityPool.
+           *
+           * Create a request for the method "workloadIdentityPools.get".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the pool to retrieve.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.WorkloadIdentityPool.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the pool to retrieve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the pool to retrieve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the pool to retrieve. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all non-deleted WorkloadIdentityPools in a project. If `show_deleted` is set to `true`,
+         * then deleted pools are also listed.
+         *
+         * Create a request for the method "workloadIdentityPools.list".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource to list pools for.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends IamRequest<com.google.api.services.iam.v1.model.ListWorkloadIdentityPoolsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/workloadIdentityPools";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all non-deleted WorkloadIdentityPools in a project. If `show_deleted` is set to `true`,
+           * then deleted pools are also listed.
+           *
+           * Create a request for the method "workloadIdentityPools.list".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource to list pools for.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListWorkloadIdentityPoolsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource to list pools for. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource to list pools for.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource to list pools for. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of pools to return. If unspecified, at most 50 pools are returned.
+           * The maximum value is 1000; values above are 1000 truncated to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of pools to return. If unspecified, at most 50 pools are returned. The maximum
+         value is 1000; values above are 1000 truncated to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of pools to return. If unspecified, at most 50 pools are returned.
+           * The maximum value is 1000; values above are 1000 truncated to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListWorkloadIdentityPools` call. Provide this
+           * to retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListWorkloadIdentityPools` call. Provide this to retrieve
+         the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListWorkloadIdentityPools` call. Provide this
+           * to retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Whether to return soft-deleted pools. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showDeleted;
+
+          /** Whether to return soft-deleted pools.
+           */
+          public java.lang.Boolean getShowDeleted() {
+            return showDeleted;
+          }
+
+          /** Whether to return soft-deleted pools. */
+          public List setShowDeleted(java.lang.Boolean showDeleted) {
+            this.showDeleted = showDeleted;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing WorkloadIdentityPool.
+         *
+         * Create a request for the method "workloadIdentityPools.patch".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. The resource name of the pool.
+         * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPool}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkloadIdentityPool content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+          /**
+           * Updates an existing WorkloadIdentityPool.
+           *
+           * Create a request for the method "workloadIdentityPools.patch".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. The resource name of the pool.
+           * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPool}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkloadIdentityPool content) {
+            super(Iam.this, "PATCH", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Output only. The resource name of the pool. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. The resource name of the pool.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Output only. The resource name of the pool. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. The list of fields update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. The list of fields update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. The list of fields update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Undeletes a WorkloadIdentityPool, as long as it was deleted fewer than 30 days ago.
+         *
+         * Create a request for the method "workloadIdentityPools.undelete".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the pool to undelete.
+         * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolRequest}
+         * @return the request
+         */
+        public Undelete undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolRequest content) throws java.io.IOException {
+          Undelete result = new Undelete(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Undelete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:undelete";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+          /**
+           * Undeletes a WorkloadIdentityPool, as long as it was deleted fewer than 30 days ago.
+           *
+           * Create a request for the method "workloadIdentityPools.undelete".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the pool to undelete.
+           * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolRequest}
+           * @since 1.13
+           */
+          protected Undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolRequest content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public Undelete set$Xgafv(java.lang.String $Xgafv) {
+            return (Undelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Undelete setAccessToken(java.lang.String accessToken) {
+            return (Undelete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Undelete setAlt(java.lang.String alt) {
+            return (Undelete) super.setAlt(alt);
+          }
+
+          @Override
+          public Undelete setCallback(java.lang.String callback) {
+            return (Undelete) super.setCallback(callback);
+          }
+
+          @Override
+          public Undelete setFields(java.lang.String fields) {
+            return (Undelete) super.setFields(fields);
+          }
+
+          @Override
+          public Undelete setKey(java.lang.String key) {
+            return (Undelete) super.setKey(key);
+          }
+
+          @Override
+          public Undelete setOauthToken(java.lang.String oauthToken) {
+            return (Undelete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Undelete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Undelete setQuotaUser(java.lang.String quotaUser) {
+            return (Undelete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Undelete setUploadType(java.lang.String uploadType) {
+            return (Undelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Undelete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the pool to undelete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the pool to undelete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the pool to undelete. */
+          public Undelete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Undelete set(String parameterName, Object value) {
+            return (Undelete) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Operations collection.
          *
          * <p>The typical use is:</p>
@@ -2173,6 +3093,916 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * The "providers" collection of methods.
          */
         public class Providers {
+
+          /**
+           * Creates a new WorkloadIdentityPoolProvider in a WorkloadIdentityPool. You cannot reuse the name
+           * of a deleted provider until 30 days after deletion.
+           *
+           * Create a request for the method "providers.create".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The pool to create this provider in.
+           * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/providers";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+            /**
+             * Creates a new WorkloadIdentityPoolProvider in a WorkloadIdentityPool. You cannot reuse the name
+             * of a deleted provider until 30 days after deletion.
+             *
+             * Create a request for the method "providers.create".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The pool to create this provider in.
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider content) {
+              super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The pool to create this provider in. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The pool to create this provider in.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The pool to create this provider in. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID for the provider, which becomes the final component of the resource
+             * name. This value must be 4-32 characters, and may contain the characters [a-z0-9-].
+             * The prefix `gcp-` is reserved for use by Google, and may not be specified.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String workloadIdentityPoolProviderId;
+
+            /** Required. The ID for the provider, which becomes the final component of the resource name. This
+           value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix `gcp-` is
+           reserved for use by Google, and may not be specified.
+             */
+            public java.lang.String getWorkloadIdentityPoolProviderId() {
+              return workloadIdentityPoolProviderId;
+            }
+
+            /**
+             * Required. The ID for the provider, which becomes the final component of the resource
+             * name. This value must be 4-32 characters, and may contain the characters [a-z0-9-].
+             * The prefix `gcp-` is reserved for use by Google, and may not be specified.
+             */
+            public Create setWorkloadIdentityPoolProviderId(java.lang.String workloadIdentityPoolProviderId) {
+              this.workloadIdentityPoolProviderId = workloadIdentityPoolProviderId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a WorkloadIdentityPoolProvider. Deleting a provider does not revoke credentials that have
+           * already been issued; they continue to grant access. You can undelete a provider for 30 days.
+           * After 30 days, deletion is permanent. You cannot update deleted providers. However, you can view
+           * and list them.
+           *
+           * Create a request for the method "providers.delete".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the provider to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+
+            /**
+             * Deletes a WorkloadIdentityPoolProvider. Deleting a provider does not revoke credentials that
+             * have already been issued; they continue to grant access. You can undelete a provider for 30
+             * days. After 30 days, deletion is permanent. You cannot update deleted providers. However, you
+             * can view and list them.
+             *
+             * Create a request for the method "providers.delete".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the provider to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Iam.this, "DELETE", REST_PATH, null, com.google.api.services.iam.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the provider to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the provider to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the provider to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets an individual WorkloadIdentityPoolProvider.
+           *
+           * Create a request for the method "providers.get".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the provider to retrieve.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends IamRequest<com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+
+            /**
+             * Gets an individual WorkloadIdentityPoolProvider.
+             *
+             * Create a request for the method "providers.get".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the provider to retrieve.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the provider to retrieve. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the provider to retrieve.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the provider to retrieve. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all non-deleted WorkloadIdentityPoolProviders in a WorkloadIdentityPool. If `show_deleted`
+           * is set to `true`, then deleted providers are also listed.
+           *
+           * Create a request for the method "providers.list".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The pool to list providers for.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends IamRequest<com.google.api.services.iam.v1.model.ListWorkloadIdentityPoolProvidersResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/providers";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+            /**
+             * Lists all non-deleted WorkloadIdentityPoolProviders in a WorkloadIdentityPool. If
+             * `show_deleted` is set to `true`, then deleted providers are also listed.
+             *
+             * Create a request for the method "providers.list".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The pool to list providers for.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListWorkloadIdentityPoolProvidersResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The pool to list providers for. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The pool to list providers for.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The pool to list providers for. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of providers to return. If unspecified, at most 50 providers are
+             * returned. The maximum value is 100; values above 100 are truncated to 100.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of providers to return. If unspecified, at most 50 providers are returned. The
+           maximum value is 100; values above 100 are truncated to 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of providers to return. If unspecified, at most 50 providers are
+             * returned. The maximum value is 100; values above 100 are truncated to 100.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous `ListWorkloadIdentityPoolProviders` call.
+             * Provide this to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous `ListWorkloadIdentityPoolProviders` call. Provide this to
+           retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous `ListWorkloadIdentityPoolProviders` call.
+             * Provide this to retrieve the subsequent page.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Whether to return soft-deleted providers. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean showDeleted;
+
+            /** Whether to return soft-deleted providers.
+             */
+            public java.lang.Boolean getShowDeleted() {
+              return showDeleted;
+            }
+
+            /** Whether to return soft-deleted providers. */
+            public List setShowDeleted(java.lang.Boolean showDeleted) {
+              this.showDeleted = showDeleted;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing WorkloadIdentityPoolProvider.
+           *
+           * Create a request for the method "providers.patch".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. The resource name of the provider.
+           * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+
+            /**
+             * Updates an existing WorkloadIdentityPoolProvider.
+             *
+             * Create a request for the method "providers.patch".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. The resource name of the provider.
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider content) {
+              super(Iam.this, "PATCH", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Output only. The resource name of the provider. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. The resource name of the provider.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Output only. The resource name of the provider. */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. The list of fields to update. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. The list of fields to update.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. The list of fields to update. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Undeletes a WorkloadIdentityPoolProvider, as long as it was deleted fewer than 30 days ago.
+           *
+           * Create a request for the method "providers.undelete".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the provider to undelete.
+           * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolProviderRequest}
+           * @return the request
+           */
+          public Undelete undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolProviderRequest content) throws java.io.IOException {
+            Undelete result = new Undelete(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Undelete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:undelete";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+
+            /**
+             * Undeletes a WorkloadIdentityPoolProvider, as long as it was deleted fewer than 30 days ago.
+             *
+             * Create a request for the method "providers.undelete".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the provider to undelete.
+             * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolProviderRequest}
+             * @since 1.13
+             */
+            protected Undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolProviderRequest content) {
+              super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+              }
+            }
+
+            @Override
+            public Undelete set$Xgafv(java.lang.String $Xgafv) {
+              return (Undelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Undelete setAccessToken(java.lang.String accessToken) {
+              return (Undelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Undelete setAlt(java.lang.String alt) {
+              return (Undelete) super.setAlt(alt);
+            }
+
+            @Override
+            public Undelete setCallback(java.lang.String callback) {
+              return (Undelete) super.setCallback(callback);
+            }
+
+            @Override
+            public Undelete setFields(java.lang.String fields) {
+              return (Undelete) super.setFields(fields);
+            }
+
+            @Override
+            public Undelete setKey(java.lang.String key) {
+              return (Undelete) super.setKey(key);
+            }
+
+            @Override
+            public Undelete setOauthToken(java.lang.String oauthToken) {
+              return (Undelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Undelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Undelete setQuotaUser(java.lang.String quotaUser) {
+              return (Undelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Undelete setUploadType(java.lang.String uploadType) {
+              return (Undelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Undelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the provider to undelete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the provider to undelete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the provider to undelete. */
+            public Undelete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/providers/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Undelete set(String parameterName, Object value) {
+              return (Undelete) super.set(parameterName, value);
+            }
+          }
 
           /**
            * An accessor for creating requests from the Operations collection.

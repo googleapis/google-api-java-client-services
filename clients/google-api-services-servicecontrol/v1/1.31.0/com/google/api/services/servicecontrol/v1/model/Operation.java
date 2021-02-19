@@ -159,8 +159,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * Private Preview. This feature is only available for approved services. User defined labels for
-   * the resource that this operation is associated with. Only a combination of 1000 user labels per
-   * consumer project are allowed.
+   * the resource that this operation is associated with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -439,8 +438,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * Private Preview. This feature is only available for approved services. User defined labels for
-   * the resource that this operation is associated with. Only a combination of 1000 user labels per
-   * consumer project are allowed.
+   * the resource that this operation is associated with.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getUserLabels() {
@@ -449,8 +447,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
   /**
    * Private Preview. This feature is only available for approved services. User defined labels for
-   * the resource that this operation is associated with. Only a combination of 1000 user labels per
-   * consumer project are allowed.
+   * the resource that this operation is associated with.
    * @param userLabels userLabels or {@code null} for none
    */
   public Operation setUserLabels(java.util.Map<String, java.lang.String> userLabels) {

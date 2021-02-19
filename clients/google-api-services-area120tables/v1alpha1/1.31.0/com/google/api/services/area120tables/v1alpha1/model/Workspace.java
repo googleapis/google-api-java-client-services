@@ -30,6 +30,13 @@ package com.google.api.services.area120tables.v1alpha1.model;
 public final class Workspace extends com.google.api.client.json.GenericJson {
 
   /**
+   * Time when the workspace was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * The human readable title of the workspace.
    * The value may be {@code null}.
    */
@@ -54,6 +61,30 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider Table used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(Table.class);
+  }
+
+  /**
+   * Time when the workspace was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Time when the workspace was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Time when the workspace was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Workspace setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
   }
 
   /**
@@ -104,6 +135,23 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
    */
   public Workspace setTables(java.util.List<Table> tables) {
     this.tables = tables;
+    return this;
+  }
+
+  /**
+   * Time when the workspace was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Time when the workspace was last updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Workspace setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

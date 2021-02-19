@@ -43,6 +43,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Time when the table was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * The human readable title of the table.
    * The value may be {@code null}.
    */
@@ -55,6 +62,13 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Time when the table was last updated excluding updates to individual rows
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
 
   /**
    * List of columns in this table. Order of columns matches the display order.
@@ -70,6 +84,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setColumns(java.util.List<ColumnDescription> columns) {
     this.columns = columns;
+    return this;
+  }
+
+  /**
+   * Time when the table was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Time when the table was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Table setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
@@ -104,6 +135,23 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Time when the table was last updated excluding updates to individual rows
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Time when the table was last updated excluding updates to individual rows
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Table setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

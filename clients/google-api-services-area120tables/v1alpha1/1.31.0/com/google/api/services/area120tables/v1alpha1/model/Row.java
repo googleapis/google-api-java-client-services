@@ -30,6 +30,13 @@ package com.google.api.services.area120tables.v1alpha1.model;
 public final class Row extends com.google.api.client.json.GenericJson {
 
   /**
+   * Time when the row was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * The resource name of the row. Row names have the form `tables/{table}/rows/{row}`. The name is
    * ignored when creating a row.
    * The value may be {@code null}.
@@ -38,12 +45,36 @@ public final class Row extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Time when the row was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * The values of the row. This is a map of column key to value. Key is user entered name(default)
    * or the internal column id based on the view in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> values;
+
+  /**
+   * Time when the row was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Time when the row was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Row setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * The resource name of the row. Row names have the form `tables/{table}/rows/{row}`. The name is
@@ -61,6 +92,23 @@ public final class Row extends com.google.api.client.json.GenericJson {
    */
   public Row setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Time when the row was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Time when the row was last updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public Row setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

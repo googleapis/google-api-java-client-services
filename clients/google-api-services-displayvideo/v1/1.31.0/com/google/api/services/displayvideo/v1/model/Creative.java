@@ -274,6 +274,16 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private String mediaDuration;
 
   /**
+   * Output only. Indicates the third-party audio creative supports MP3. Output only and only valid
+   * for third-party audio creatives. Third-party audio creatives are creatives with following
+   * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
+   * `CREATIVE_TYPE_AUDIO`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean mp3Audio;
+
+  /**
    * Output only. The resource name of the creative.
    * The value may be {@code null}.
    */
@@ -295,6 +305,16 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ObaIcon obaIcon;
+
+  /**
+   * Output only. Indicates the third-party audio creative supports OGG. Output only and only valid
+   * for third-party audio creatives. Third-party audio creatives are creatives with following
+   * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
+   * `CREATIVE_TYPE_AUDIO`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean oggAudio;
 
   /**
    * Amount of time to play the video before counting a view. This field is required when skippable
@@ -995,6 +1015,29 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Indicates the third-party audio creative supports MP3. Output only and only valid
+   * for third-party audio creatives. Third-party audio creatives are creatives with following
+   * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
+   * `CREATIVE_TYPE_AUDIO`
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMp3Audio() {
+    return mp3Audio;
+  }
+
+  /**
+   * Output only. Indicates the third-party audio creative supports MP3. Output only and only valid
+   * for third-party audio creatives. Third-party audio creatives are creatives with following
+   * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
+   * `CREATIVE_TYPE_AUDIO`
+   * @param mp3Audio mp3Audio or {@code null} for none
+   */
+  public Creative setMp3Audio(java.lang.Boolean mp3Audio) {
+    this.mp3Audio = mp3Audio;
+    return this;
+  }
+
+  /**
    * Output only. The resource name of the creative.
    * @return value or {@code null} for none
    */
@@ -1046,6 +1089,29 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setObaIcon(ObaIcon obaIcon) {
     this.obaIcon = obaIcon;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates the third-party audio creative supports OGG. Output only and only valid
+   * for third-party audio creatives. Third-party audio creatives are creatives with following
+   * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
+   * `CREATIVE_TYPE_AUDIO`
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOggAudio() {
+    return oggAudio;
+  }
+
+  /**
+   * Output only. Indicates the third-party audio creative supports OGG. Output only and only valid
+   * for third-party audio creatives. Third-party audio creatives are creatives with following
+   * hosting_source: * `HOSTING_SOURCE_THIRD_PARTY` combined with following creative_type: *
+   * `CREATIVE_TYPE_AUDIO`
+   * @param oggAudio oggAudio or {@code null} for none
+   */
+  public Creative setOggAudio(java.lang.Boolean oggAudio) {
+    this.oggAudio = oggAudio;
     return this;
   }
 

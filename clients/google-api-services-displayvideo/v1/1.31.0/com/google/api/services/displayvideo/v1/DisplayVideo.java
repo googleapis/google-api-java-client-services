@@ -4934,6 +4934,287 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class InsertionOrders {
 
       /**
+       * Lists assigned targeting options of an insertion order across targeting types.
+       *
+       * Create a request for the method "insertionOrders.bulkListInsertionOrderAssignedTargetingOptions".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link BulkListInsertionOrderAssignedTargetingOptions#execute()} method to
+       * invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser the insertion order belongs to.
+       * @param insertionOrderId Required. The ID of the insertion order to list assigned targeting options for.
+       * @return the request
+       */
+      public BulkListInsertionOrderAssignedTargetingOptions bulkListInsertionOrderAssignedTargetingOptions(java.lang.Long advertiserId, java.lang.Long insertionOrderId) throws java.io.IOException {
+        BulkListInsertionOrderAssignedTargetingOptions result = new BulkListInsertionOrderAssignedTargetingOptions(advertiserId, insertionOrderId);
+        initialize(result);
+        return result;
+      }
+
+      public class BulkListInsertionOrderAssignedTargetingOptions extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.BulkListInsertionOrderAssignedTargetingOptionsResponse> {
+
+        private static final String REST_PATH = "v1/advertisers/{+advertiserId}/insertionOrders/{+insertionOrderId}:bulkListInsertionOrderAssignedTargetingOptions";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern INSERTION_ORDER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Lists assigned targeting options of an insertion order across targeting types.
+         *
+         * Create a request for the method
+         * "insertionOrders.bulkListInsertionOrderAssignedTargetingOptions".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link BulkListInsertionOrderAssignedTargetingOptions#execute()}
+         * method to invoke the remote operation. <p> {@link BulkListInsertionOrderAssignedTargetingOption
+         * s#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser the insertion order belongs to.
+         * @param insertionOrderId Required. The ID of the insertion order to list assigned targeting options for.
+         * @since 1.13
+         */
+        protected BulkListInsertionOrderAssignedTargetingOptions(java.lang.Long advertiserId, java.lang.Long insertionOrderId) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.BulkListInsertionOrderAssignedTargetingOptionsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.insertionOrderId = com.google.api.client.util.Preconditions.checkNotNull(insertionOrderId, "Required parameter insertionOrderId must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions set$Xgafv(java.lang.String $Xgafv) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions setAccessToken(java.lang.String accessToken) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions setAlt(java.lang.String alt) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.setAlt(alt);
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions setCallback(java.lang.String callback) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.setCallback(callback);
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions setFields(java.lang.String fields) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.setFields(fields);
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions setKey(java.lang.String key) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.setKey(key);
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions setOauthToken(java.lang.String oauthToken) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions setQuotaUser(java.lang.String quotaUser) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions setUploadType(java.lang.String uploadType) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser the insertion order belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser the insertion order belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser the insertion order belongs to. */
+        public BulkListInsertionOrderAssignedTargetingOptions setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the insertion order to list assigned targeting options for. */
+        @com.google.api.client.util.Key
+        private java.lang.Long insertionOrderId;
+
+        /** Required. The ID of the insertion order to list assigned targeting options for.
+         */
+        public java.lang.Long getInsertionOrderId() {
+          return insertionOrderId;
+        }
+
+        /** Required. The ID of the insertion order to list assigned targeting options for. */
+        public BulkListInsertionOrderAssignedTargetingOptions setInsertionOrderId(java.lang.Long insertionOrderId) {
+          this.insertionOrderId = insertionOrderId;
+          return this;
+        }
+
+        /**
+         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
+         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
+         * TARGETING_TYPE_PROXIMITY_LOCATION_LIST or TARGETING_TYPE_CHANNEL
+         * `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
+         * targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance
+         * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+         * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+         * characters.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+       are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+       `OR` on the same field. * A restriction has the form of `{field} {operator} {value}`. * The
+       operator must be `EQUALS (=)`. * Supported fields: - `targetingType` - `inheritance` Examples: *
+       AssignedTargetingOptions of targeting type TARGETING_TYPE_PROXIMITY_LOCATION_LIST or
+       TARGETING_TYPE_CHANNEL `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
+       targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance status of
+       NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+       inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+       characters.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+         * expressions are made up of one or more restrictions. * Restrictions can be combined by
+         * the logical operator `OR` on the same field. * A restriction has the form of `{field}
+         * {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+         * `targetingType` - `inheritance` Examples: * AssignedTargetingOptions of targeting type
+         * TARGETING_TYPE_PROXIMITY_LOCATION_LIST or TARGETING_TYPE_CHANNEL
+         * `targetingType="TARGETING_TYPE_PROXIMITY_LOCATION_LIST" OR
+         * targetingType="TARGETING_TYPE_CHANNEL"` * AssignedTargetingOptions with inheritance
+         * status of NOT_INHERITED or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+         * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than 500
+         * characters.
+         */
+        public BulkListInsertionOrderAssignedTargetingOptions setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `targetingType` (default) The
+         * default sorting order is ascending. To specify descending order for a field, a suffix
+         * "desc" should be added to the field name. Example: `targetingType desc`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Field by which to sort the list. Acceptable values are: * `targetingType` (default) The default
+       sorting order is ascending. To specify descending order for a field, a suffix "desc" should be
+       added to the field name. Example: `targetingType desc`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Field by which to sort the list. Acceptable values are: * `targetingType` (default) The
+         * default sorting order is ascending. To specify descending order for a field, a suffix
+         * "desc" should be added to the field name. Example: `targetingType desc`.
+         */
+        public BulkListInsertionOrderAssignedTargetingOptions setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Requested page size. The size must be an integer between `1` and `5000`. If unspecified,
+         * the default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is
+         * specified.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Requested page size. The size must be an integer between `1` and `5000`. If unspecified, the
+       default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Requested page size. The size must be an integer between `1` and `5000`. If unspecified,
+         * the default is `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is
+         * specified.
+         */
+        public BulkListInsertionOrderAssignedTargetingOptions setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A token that lets the client fetch the next page of results. Typically, this is the value
+         * of next_page_token returned from the previous call to
+         * `BulkListInsertionOrderAssignedTargetingOptions` method. If not specified, the first page
+         * of results will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A token that lets the client fetch the next page of results. Typically, this is the value of
+       next_page_token returned from the previous call to `BulkListInsertionOrderAssignedTargetingOptions`
+       method. If not specified, the first page of results will be returned.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A token that lets the client fetch the next page of results. Typically, this is the value
+         * of next_page_token returned from the previous call to
+         * `BulkListInsertionOrderAssignedTargetingOptions` method. If not specified, the first page
+         * of results will be returned.
+         */
+        public BulkListInsertionOrderAssignedTargetingOptions setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public BulkListInsertionOrderAssignedTargetingOptions set(String parameterName, Object value) {
+          return (BulkListInsertionOrderAssignedTargetingOptions) super.set(parameterName, value);
+        }
+      }
+      /**
        * Creates a new insertion order. Returns the newly created insertion order if successful.
        *
        * Create a request for the method "insertionOrders.create".
@@ -5789,6 +6070,582 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
 
+      /**
+       * An accessor for creating requests from the TargetingTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+       *   {@code DisplayVideo.TargetingTypes.List request = displayvideo.targetingTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TargetingTypes targetingTypes() {
+        return new TargetingTypes();
+      }
+
+      /**
+       * The "targetingTypes" collection of methods.
+       */
+      public class TargetingTypes {
+
+        /**
+         * An accessor for creating requests from the AssignedTargetingOptions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+         *   {@code DisplayVideo.AssignedTargetingOptions.List request = displayvideo.assignedTargetingOptions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AssignedTargetingOptions assignedTargetingOptions() {
+          return new AssignedTargetingOptions();
+        }
+
+        /**
+         * The "assignedTargetingOptions" collection of methods.
+         */
+        public class AssignedTargetingOptions {
+
+          /**
+           * Gets a single targeting option assigned to an insertion order.
+           *
+           * Create a request for the method "assignedTargetingOptions.get".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser the insertion order belongs to.
+           * @param insertionOrderId Required. The ID of the insertion order the assigned targeting option belongs to.
+           * @param targetingType Required. Identifies the type of this assigned targeting option.
+           * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this insertion order that identifies the
+           *        assigned targeting option being requested.
+           * @return the request
+           */
+          public Get get(java.lang.Long advertiserId, java.lang.Long insertionOrderId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) throws java.io.IOException {
+            Get result = new Get(advertiserId, insertionOrderId, targetingType, assignedTargetingOptionId);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.AssignedTargetingOption> {
+
+            private static final String REST_PATH = "v1/advertisers/{+advertiserId}/insertionOrders/{+insertionOrderId}/targetingTypes/{+targetingType}/assignedTargetingOptions/{+assignedTargetingOptionId}";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern INSERTION_ORDER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern ASSIGNED_TARGETING_OPTION_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Gets a single targeting option assigned to an insertion order.
+             *
+             * Create a request for the method "assignedTargetingOptions.get".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser the insertion order belongs to.
+             * @param insertionOrderId Required. The ID of the insertion order the assigned targeting option belongs to.
+             * @param targetingType Required. Identifies the type of this assigned targeting option.
+             * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this insertion order that identifies the
+           *        assigned targeting option being requested.
+             * @since 1.13
+             */
+            protected Get(java.lang.Long advertiserId, java.lang.Long insertionOrderId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) {
+              super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.AssignedTargetingOption.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.insertionOrderId = com.google.api.client.util.Preconditions.checkNotNull(insertionOrderId, "Required parameter insertionOrderId must be specified.");
+              this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.assignedTargetingOptionId = com.google.api.client.util.Preconditions.checkNotNull(assignedTargetingOptionId, "Required parameter assignedTargetingOptionId must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                    "Parameter assignedTargetingOptionId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser the insertion order belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser the insertion order belongs to.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser the insertion order belongs to. */
+            public Get setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /**
+             * Required. The ID of the insertion order the assigned targeting option belongs to.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Long insertionOrderId;
+
+            /** Required. The ID of the insertion order the assigned targeting option belongs to.
+             */
+            public java.lang.Long getInsertionOrderId() {
+              return insertionOrderId;
+            }
+
+            /**
+             * Required. The ID of the insertion order the assigned targeting option belongs to.
+             */
+            public Get setInsertionOrderId(java.lang.Long insertionOrderId) {
+              this.insertionOrderId = insertionOrderId;
+              return this;
+            }
+
+            /** Required. Identifies the type of this assigned targeting option. */
+            @com.google.api.client.util.Key
+            private java.lang.String targetingType;
+
+            /** Required. Identifies the type of this assigned targeting option.
+             */
+            public java.lang.String getTargetingType() {
+              return targetingType;
+            }
+
+            /** Required. Identifies the type of this assigned targeting option. */
+            public Get setTargetingType(java.lang.String targetingType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.targetingType = targetingType;
+              return this;
+            }
+
+            /**
+             * Required. An identifier unique to the targeting type in this insertion order that
+             * identifies the assigned targeting option being requested.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String assignedTargetingOptionId;
+
+            /** Required. An identifier unique to the targeting type in this insertion order that identifies the
+           assigned targeting option being requested.
+             */
+            public java.lang.String getAssignedTargetingOptionId() {
+              return assignedTargetingOptionId;
+            }
+
+            /**
+             * Required. An identifier unique to the targeting type in this insertion order that
+             * identifies the assigned targeting option being requested.
+             */
+            public Get setAssignedTargetingOptionId(java.lang.String assignedTargetingOptionId) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                    "Parameter assignedTargetingOptionId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.assignedTargetingOptionId = assignedTargetingOptionId;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the targeting options assigned to an insertion order.
+           *
+           * Create a request for the method "assignedTargetingOptions.list".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser the insertion order belongs to.
+           * @param insertionOrderId Required. The ID of the insertion order to list assigned targeting options for.
+           * @param targetingType Required. Identifies the type of assigned targeting options to list.
+           * @return the request
+           */
+          public List list(java.lang.Long advertiserId, java.lang.Long insertionOrderId, java.lang.String targetingType) throws java.io.IOException {
+            List result = new List(advertiserId, insertionOrderId, targetingType);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DisplayVideoRequest<com.google.api.services.displayvideo.v1.model.ListInsertionOrderAssignedTargetingOptionsResponse> {
+
+            private static final String REST_PATH = "v1/advertisers/{+advertiserId}/insertionOrders/{+insertionOrderId}/targetingTypes/{+targetingType}/assignedTargetingOptions";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern INSERTION_ORDER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Lists the targeting options assigned to an insertion order.
+             *
+             * Create a request for the method "assignedTargetingOptions.list".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser the insertion order belongs to.
+             * @param insertionOrderId Required. The ID of the insertion order to list assigned targeting options for.
+             * @param targetingType Required. Identifies the type of assigned targeting options to list.
+             * @since 1.13
+             */
+            protected List(java.lang.Long advertiserId, java.lang.Long insertionOrderId, java.lang.String targetingType) {
+              super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v1.model.ListInsertionOrderAssignedTargetingOptionsResponse.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.insertionOrderId = com.google.api.client.util.Preconditions.checkNotNull(insertionOrderId, "Required parameter insertionOrderId must be specified.");
+              this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser the insertion order belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser the insertion order belongs to.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser the insertion order belongs to. */
+            public List setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** Required. The ID of the insertion order to list assigned targeting options for. */
+            @com.google.api.client.util.Key
+            private java.lang.Long insertionOrderId;
+
+            /** Required. The ID of the insertion order to list assigned targeting options for.
+             */
+            public java.lang.Long getInsertionOrderId() {
+              return insertionOrderId;
+            }
+
+            /** Required. The ID of the insertion order to list assigned targeting options for. */
+            public List setInsertionOrderId(java.lang.Long insertionOrderId) {
+              this.insertionOrderId = insertionOrderId;
+              return this;
+            }
+
+            /** Required. Identifies the type of assigned targeting options to list. */
+            @com.google.api.client.util.Key
+            private java.lang.String targetingType;
+
+            /** Required. Identifies the type of assigned targeting options to list.
+             */
+            public java.lang.String getTargetingType() {
+              return targetingType;
+            }
+
+            /** Required. Identifies the type of assigned targeting options to list. */
+            public List setTargetingType(java.lang.String targetingType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.targetingType = targetingType;
+              return this;
+            }
+
+            /**
+             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * expressions are made up of one or more restrictions. * Restrictions can be combined
+             * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
+             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
+             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
+             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
+             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+             * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
+             * 500 characters.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions
+           are made up of one or more restrictions. * Restrictions can be combined by the logical operator
+           `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS
+           (=)`. * Supported fields: - `assignedTargetingOptionId` - `inheritance` Examples: *
+           AssignedTargetingOptions with ID 1 or 2 `assignedTargetingOptionId="1" OR
+           assignedTargetingOptionId="2"` * AssignedTargetingOptions with inheritance status of NOT_INHERITED
+           or INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR inheritance="INHERITED_FROM_PARTNER"` The
+           length of this field should be no more than 500 characters.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Allows filtering by assigned targeting option properties. Supported syntax: * Filter
+             * expressions are made up of one or more restrictions. * Restrictions can be combined
+             * by the logical operator `OR`. * A restriction has the form of `{field} {operator}
+             * {value}`. * The operator must be `EQUALS (=)`. * Supported fields: -
+             * `assignedTargetingOptionId` - `inheritance` Examples: * AssignedTargetingOptions with
+             * ID 1 or 2 `assignedTargetingOptionId="1" OR assignedTargetingOptionId="2"` *
+             * AssignedTargetingOptions with inheritance status of NOT_INHERITED or
+             * INHERITED_FROM_PARTNER `inheritance="NOT_INHERITED" OR
+             * inheritance="INHERITED_FROM_PARTNER"` The length of this field should be no more than
+             * 500 characters.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+             * (default) The default sorting order is ascending. To specify descending order for a
+             * field, a suffix "desc" should be added to the field name. Example:
+             * `assignedTargetingOptionId desc`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId` (default) The
+           default sorting order is ascending. To specify descending order for a field, a suffix "desc" should
+           be added to the field name. Example: `assignedTargetingOptionId desc`.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Field by which to sort the list. Acceptable values are: * `assignedTargetingOptionId`
+             * (default) The default sorting order is ascending. To specify descending order for a
+             * field, a suffix "desc" should be added to the field name. Example:
+             * `assignedTargetingOptionId desc`.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Requested page size. Must be between `1` and `100`. If unspecified will default to
+             * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Requested page size. Must be between `1` and `100`. If unspecified will default to `100`. Returns
+           error code `INVALID_ARGUMENT` if an invalid value is specified.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Requested page size. Must be between `1` and `100`. If unspecified will default to
+             * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of next_page_token returned from the previous call to
+             * `ListInsertionOrderAssignedTargetingOptions` method. If not specified, the first page
+             * of results will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A token identifying a page of results the server should return. Typically, this is the value of
+           next_page_token returned from the previous call to `ListInsertionOrderAssignedTargetingOptions`
+           method. If not specified, the first page of results will be returned.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A token identifying a page of results the server should return. Typically, this is
+             * the value of next_page_token returned from the previous call to
+             * `ListInsertionOrderAssignedTargetingOptions` method. If not specified, the first page
+             * of results will be returned.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
     /**
      * An accessor for creating requests from the LineItems collection.

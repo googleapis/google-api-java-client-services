@@ -33,8 +33,8 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
   /**
    * The goal amount, in micros of the advertiser's currency. Applicable when performance_goal_type
    * is one of: * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` *
-   * `PERFORMANCE_GOAL_TYPE_CPA` * `PERFORMANCE_GOAL_TYPE_CPIAVC` For example 1500000 represents 1.5
-   * standard units of the currency.
+   * `PERFORMANCE_GOAL_TYPE_CPA` * `PERFORMANCE_GOAL_TYPE_CPIAVC` * `PERFORMANCE_GOAL_TYPE_VCPM` For
+   * example 1500000 represents 1.5 standard units of the currency.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -43,7 +43,10 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
   /**
    * The decimal representation of the goal percentage in micros. Applicable when
    * performance_goal_type is one of: * `PERFORMANCE_GOAL_TYPE_CTR` *
-   * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` For example, 70000 represents 7% (decimal 0.07).
+   * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` * `PERFORMANCE_GOAL_TYPE_CLICK_CVR` *
+   * `PERFORMANCE_GOAL_TYPE_IMPRESSION_CVR` * `PERFORMANCE_GOAL_TYPE_VTR` *
+   * `PERFORMANCE_GOAL_TYPE_AUDIO_COMPLETION_RATE` * `PERFORMANCE_GOAL_TYPE_VIDEO_COMPLETION_RATE`
+   * For example, 70000 represents 7% (decimal 0.07).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -68,8 +71,8 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
   /**
    * The goal amount, in micros of the advertiser's currency. Applicable when performance_goal_type
    * is one of: * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` *
-   * `PERFORMANCE_GOAL_TYPE_CPA` * `PERFORMANCE_GOAL_TYPE_CPIAVC` For example 1500000 represents 1.5
-   * standard units of the currency.
+   * `PERFORMANCE_GOAL_TYPE_CPA` * `PERFORMANCE_GOAL_TYPE_CPIAVC` * `PERFORMANCE_GOAL_TYPE_VCPM` For
+   * example 1500000 represents 1.5 standard units of the currency.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPerformanceGoalAmountMicros() {
@@ -79,8 +82,8 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
   /**
    * The goal amount, in micros of the advertiser's currency. Applicable when performance_goal_type
    * is one of: * `PERFORMANCE_GOAL_TYPE_CPM` * `PERFORMANCE_GOAL_TYPE_CPC` *
-   * `PERFORMANCE_GOAL_TYPE_CPA` * `PERFORMANCE_GOAL_TYPE_CPIAVC` For example 1500000 represents 1.5
-   * standard units of the currency.
+   * `PERFORMANCE_GOAL_TYPE_CPA` * `PERFORMANCE_GOAL_TYPE_CPIAVC` * `PERFORMANCE_GOAL_TYPE_VCPM` For
+   * example 1500000 represents 1.5 standard units of the currency.
    * @param performanceGoalAmountMicros performanceGoalAmountMicros or {@code null} for none
    */
   public PerformanceGoal setPerformanceGoalAmountMicros(java.lang.Long performanceGoalAmountMicros) {
@@ -91,7 +94,10 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
   /**
    * The decimal representation of the goal percentage in micros. Applicable when
    * performance_goal_type is one of: * `PERFORMANCE_GOAL_TYPE_CTR` *
-   * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` For example, 70000 represents 7% (decimal 0.07).
+   * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` * `PERFORMANCE_GOAL_TYPE_CLICK_CVR` *
+   * `PERFORMANCE_GOAL_TYPE_IMPRESSION_CVR` * `PERFORMANCE_GOAL_TYPE_VTR` *
+   * `PERFORMANCE_GOAL_TYPE_AUDIO_COMPLETION_RATE` * `PERFORMANCE_GOAL_TYPE_VIDEO_COMPLETION_RATE`
+   * For example, 70000 represents 7% (decimal 0.07).
    * @return value or {@code null} for none
    */
   public java.lang.Long getPerformanceGoalPercentageMicros() {
@@ -101,7 +107,10 @@ public final class PerformanceGoal extends com.google.api.client.json.GenericJso
   /**
    * The decimal representation of the goal percentage in micros. Applicable when
    * performance_goal_type is one of: * `PERFORMANCE_GOAL_TYPE_CTR` *
-   * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` For example, 70000 represents 7% (decimal 0.07).
+   * `PERFORMANCE_GOAL_TYPE_VIEWABILITY` * `PERFORMANCE_GOAL_TYPE_CLICK_CVR` *
+   * `PERFORMANCE_GOAL_TYPE_IMPRESSION_CVR` * `PERFORMANCE_GOAL_TYPE_VTR` *
+   * `PERFORMANCE_GOAL_TYPE_AUDIO_COMPLETION_RATE` * `PERFORMANCE_GOAL_TYPE_VIDEO_COMPLETION_RATE`
+   * For example, 70000 represents 7% (decimal 0.07).
    * @param performanceGoalPercentageMicros performanceGoalPercentageMicros or {@code null} for none
    */
   public PerformanceGoal setPerformanceGoalPercentageMicros(java.lang.Long performanceGoalPercentageMicros) {

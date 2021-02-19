@@ -21,10 +21,10 @@ package com.google.api.services.servicenetworking.v1.model;
  * information about a service, such as the name and the title, and delegates other aspects to sub-
  * sections. Each sub-section is either a proto message or a repeated proto message that configures
  * a specific aspect, such as auth. See each proto message definition for details. Example: type:
- * google.api.Service config_version: 3 name: calendar.googleapis.com title: Google Calendar API
- * apis: - name: google.calendar.v3.Calendar authentication: providers: - id: google_calendar_auth
- * jwks_uri: https://www.googleapis.com/oauth2/v1/certs issuer: https://securetoken.google.com
- * rules: - selector: "*" requirements: provider_id: google_calendar_auth
+ * google.api.Service name: calendar.googleapis.com title: Google Calendar API apis: - name:
+ * google.calendar.v3.Calendar authentication: providers: - id: google_calendar_auth jwks_uri:
+ * https://www.googleapis.com/oauth2/v1/certs issuer: https://securetoken.google.com rules: -
+ * selector: "*" requirements: provider_id: google_calendar_auth
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation

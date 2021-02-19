@@ -153,6 +153,968 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
   public class Projects {
 
     /**
+     * An accessor for creating requests from the Schemas collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Pubsub pubsub = new Pubsub(...);}
+     *   {@code Pubsub.Schemas.List request = pubsub.schemas().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Schemas schemas() {
+      return new Schemas();
+    }
+
+    /**
+     * The "schemas" collection of methods.
+     */
+    public class Schemas {
+
+      /**
+       * Creates a schema.
+       *
+       * Create a request for the method "schemas.create".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the project in which to create the schema. Format is `projects/{project-id}`.
+       * @param content the {@link com.google.api.services.pubsub.model.Schema}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.pubsub.model.Schema content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends PubsubRequest<com.google.api.services.pubsub.model.Schema> {
+
+        private static final String REST_PATH = "v1/{+parent}/schemas";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a schema.
+         *
+         * Create a request for the method "schemas.create".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the project in which to create the schema. Format is `projects/{project-id}`.
+         * @param content the {@link com.google.api.services.pubsub.model.Schema}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.pubsub.model.Schema content) {
+          super(Pubsub.this, "POST", REST_PATH, content, com.google.api.services.pubsub.model.Schema.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project in which to create the schema. Format is `projects
+         * /{project-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project in which to create the schema. Format is `projects/{project-id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the project in which to create the schema. Format is `projects
+         * /{project-id}`.
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * The ID to use for the schema, which will become the final component of the schema's
+         * resource name. See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
+         * name constraints.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String schemaId;
+
+        /** The ID to use for the schema, which will become the final component of the schema's resource name.
+       See https://cloud.google.com/pubsub/docs/admin#resource_names for resource name constraints.
+         */
+        public java.lang.String getSchemaId() {
+          return schemaId;
+        }
+
+        /**
+         * The ID to use for the schema, which will become the final component of the schema's
+         * resource name. See https://cloud.google.com/pubsub/docs/admin#resource_names for resource
+         * name constraints.
+         */
+        public Create setSchemaId(java.lang.String schemaId) {
+          this.schemaId = schemaId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a schema.
+       *
+       * Create a request for the method "schemas.delete".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the schema to delete. Format is `projects/{project}/schemas/{schema}`.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends PubsubRequest<com.google.api.services.pubsub.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/schemas/[^/]+$");
+
+        /**
+         * Deletes a schema.
+         *
+         * Create a request for the method "schemas.delete".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the schema to delete. Format is `projects/{project}/schemas/{schema}`.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Pubsub.this, "DELETE", REST_PATH, null, com.google.api.services.pubsub.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the schema to delete. Format is `projects/{project}/schemas/{schema}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the schema to delete. Format is `projects/{project}/schemas/{schema}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the schema to delete. Format is `projects/{project}/schemas/{schema}`.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a schema.
+       *
+       * Create a request for the method "schemas.get".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the schema to get. Format is `projects/{project}/schemas/{schema}`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends PubsubRequest<com.google.api.services.pubsub.model.Schema> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/schemas/[^/]+$");
+
+        /**
+         * Gets a schema.
+         *
+         * Create a request for the method "schemas.get".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the schema to get. Format is `projects/{project}/schemas/{schema}`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Pubsub.this, "GET", REST_PATH, null, com.google.api.services.pubsub.model.Schema.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the schema to get. Format is `projects/{project}/schemas/{schema}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the schema to get. Format is `projects/{project}/schemas/{schema}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the schema to get. Format is `projects/{project}/schemas/{schema}`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/schemas/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * The set of fields to return in the response. If not set, returns a Schema with `name` and
+         * `type`, but not `definition`. Set to `FULL` to retrieve all fields.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** The set of fields to return in the response. If not set, returns a Schema with `name` and `type`,
+       but not `definition`. Set to `FULL` to retrieve all fields.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /**
+         * The set of fields to return in the response. If not set, returns a Schema with `name` and
+         * `type`, but not `definition`. Set to `FULL` to retrieve all fields.
+         */
+        public Get setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists schemas in a project.
+       *
+       * Create a request for the method "schemas.list".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the project in which to list schemas. Format is `projects/{project-id}`.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends PubsubRequest<com.google.api.services.pubsub.model.ListSchemasResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/schemas";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Lists schemas in a project.
+         *
+         * Create a request for the method "schemas.list".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the project in which to list schemas. Format is `projects/{project-id}`.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Pubsub.this, "GET", REST_PATH, null, com.google.api.services.pubsub.model.ListSchemasResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project in which to list schemas. Format is `projects/{project-
+         * id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project in which to list schemas. Format is `projects/{project-id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the project in which to list schemas. Format is `projects/{project-
+         * id}`.
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Maximum number of schemas to return. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of schemas to return.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Maximum number of schemas to return. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * The value returned by the last `ListSchemasResponse`; indicates that this is a
+         * continuation of a prior `ListSchemas` call, and that the system should return the next
+         * page of data.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** The value returned by the last `ListSchemasResponse`; indicates that this is a continuation of a
+       prior `ListSchemas` call, and that the system should return the next page of data.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * The value returned by the last `ListSchemasResponse`; indicates that this is a
+         * continuation of a prior `ListSchemas` call, and that the system should return the next
+         * page of data.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * The set of Schema fields to return in the response. If not set, returns Schemas with
+         * `name` and `type`, but not `definition`. Set to `FULL` to retrieve all fields.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String view;
+
+        /** The set of Schema fields to return in the response. If not set, returns Schemas with `name` and
+       `type`, but not `definition`. Set to `FULL` to retrieve all fields.
+         */
+        public java.lang.String getView() {
+          return view;
+        }
+
+        /**
+         * The set of Schema fields to return in the response. If not set, returns Schemas with
+         * `name` and `type`, but not `definition`. Set to `FULL` to retrieve all fields.
+         */
+        public List setView(java.lang.String view) {
+          this.view = view;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Validates a schema.
+       *
+       * Create a request for the method "schemas.validate".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link Validate#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the project in which to validate schemas. Format is `projects/{project-id}`.
+       * @param content the {@link com.google.api.services.pubsub.model.ValidateSchemaRequest}
+       * @return the request
+       */
+      public Validate validate(java.lang.String parent, com.google.api.services.pubsub.model.ValidateSchemaRequest content) throws java.io.IOException {
+        Validate result = new Validate(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Validate extends PubsubRequest<com.google.api.services.pubsub.model.ValidateSchemaResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/schemas:validate";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Validates a schema.
+         *
+         * Create a request for the method "schemas.validate".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link Validate#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * Validate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the project in which to validate schemas. Format is `projects/{project-id}`.
+         * @param content the {@link com.google.api.services.pubsub.model.ValidateSchemaRequest}
+         * @since 1.13
+         */
+        protected Validate(java.lang.String parent, com.google.api.services.pubsub.model.ValidateSchemaRequest content) {
+          super(Pubsub.this, "POST", REST_PATH, content, com.google.api.services.pubsub.model.ValidateSchemaResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Validate set$Xgafv(java.lang.String $Xgafv) {
+          return (Validate) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Validate setAccessToken(java.lang.String accessToken) {
+          return (Validate) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Validate setAlt(java.lang.String alt) {
+          return (Validate) super.setAlt(alt);
+        }
+
+        @Override
+        public Validate setCallback(java.lang.String callback) {
+          return (Validate) super.setCallback(callback);
+        }
+
+        @Override
+        public Validate setFields(java.lang.String fields) {
+          return (Validate) super.setFields(fields);
+        }
+
+        @Override
+        public Validate setKey(java.lang.String key) {
+          return (Validate) super.setKey(key);
+        }
+
+        @Override
+        public Validate setOauthToken(java.lang.String oauthToken) {
+          return (Validate) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Validate setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Validate) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Validate setQuotaUser(java.lang.String quotaUser) {
+          return (Validate) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Validate setUploadType(java.lang.String uploadType) {
+          return (Validate) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Validate setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Validate) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project in which to validate schemas. Format is `projects
+         * /{project-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project in which to validate schemas. Format is `projects/{project-id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the project in which to validate schemas. Format is `projects
+         * /{project-id}`.
+         */
+        public Validate setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Validate set(String parameterName, Object value) {
+          return (Validate) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Validates a message against a schema.
+       *
+       * Create a request for the method "schemas.validateMessage".
+       *
+       * This request holds the parameters needed by the pubsub server.  After setting any optional
+       * parameters, call the {@link ValidateMessage#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the project in which to validate schemas. Format is `projects/{project-id}`.
+       * @param content the {@link com.google.api.services.pubsub.model.ValidateMessageRequest}
+       * @return the request
+       */
+      public ValidateMessage validateMessage(java.lang.String parent, com.google.api.services.pubsub.model.ValidateMessageRequest content) throws java.io.IOException {
+        ValidateMessage result = new ValidateMessage(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ValidateMessage extends PubsubRequest<com.google.api.services.pubsub.model.ValidateMessageResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/schemas:validateMessage";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Validates a message against a schema.
+         *
+         * Create a request for the method "schemas.validateMessage".
+         *
+         * This request holds the parameters needed by the the pubsub server.  After setting any optional
+         * parameters, call the {@link ValidateMessage#execute()} method to invoke the remote operation.
+         * <p> {@link ValidateMessage#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+         * lientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param parent Required. The name of the project in which to validate schemas. Format is `projects/{project-id}`.
+         * @param content the {@link com.google.api.services.pubsub.model.ValidateMessageRequest}
+         * @since 1.13
+         */
+        protected ValidateMessage(java.lang.String parent, com.google.api.services.pubsub.model.ValidateMessageRequest content) {
+          super(Pubsub.this, "POST", REST_PATH, content, com.google.api.services.pubsub.model.ValidateMessageResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public ValidateMessage set$Xgafv(java.lang.String $Xgafv) {
+          return (ValidateMessage) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ValidateMessage setAccessToken(java.lang.String accessToken) {
+          return (ValidateMessage) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ValidateMessage setAlt(java.lang.String alt) {
+          return (ValidateMessage) super.setAlt(alt);
+        }
+
+        @Override
+        public ValidateMessage setCallback(java.lang.String callback) {
+          return (ValidateMessage) super.setCallback(callback);
+        }
+
+        @Override
+        public ValidateMessage setFields(java.lang.String fields) {
+          return (ValidateMessage) super.setFields(fields);
+        }
+
+        @Override
+        public ValidateMessage setKey(java.lang.String key) {
+          return (ValidateMessage) super.setKey(key);
+        }
+
+        @Override
+        public ValidateMessage setOauthToken(java.lang.String oauthToken) {
+          return (ValidateMessage) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ValidateMessage setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ValidateMessage) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ValidateMessage setQuotaUser(java.lang.String quotaUser) {
+          return (ValidateMessage) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ValidateMessage setUploadType(java.lang.String uploadType) {
+          return (ValidateMessage) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ValidateMessage setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ValidateMessage) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project in which to validate schemas. Format is `projects
+         * /{project-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the project in which to validate schemas. Format is `projects/{project-id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the project in which to validate schemas. Format is `projects
+         * /{project-id}`.
+         */
+        public ValidateMessage setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public ValidateMessage set(String parameterName, Object value) {
+          return (ValidateMessage) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Snapshots collection.
      *
      * <p>The typical use is:</p>

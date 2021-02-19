@@ -67,6 +67,15 @@ public final class Client extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * User notes on how to apply this tag in the container. @mutable
+   * tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * tagmanager.accounts.containers.workspaces.tags.update
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notes;
+
+  /**
    * The client's parameters. @mutable tagmanager.accounts.containers.workspaces.clients.create
    * @mutable tagmanager.accounts.containers.workspaces.clients.update
    * The value may be {@code null}.
@@ -205,6 +214,27 @@ public final class Client extends com.google.api.client.json.GenericJson {
    */
   public Client setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * User notes on how to apply this tag in the container. @mutable
+   * tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * tagmanager.accounts.containers.workspaces.tags.update
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotes() {
+    return notes;
+  }
+
+  /**
+   * User notes on how to apply this tag in the container. @mutable
+   * tagmanager.accounts.containers.workspaces.tags.create @mutable
+   * tagmanager.accounts.containers.workspaces.tags.update
+   * @param notes notes or {@code null} for none
+   */
+  public Client setNotes(java.lang.String notes) {
+    this.notes = notes;
     return this;
   }
 

@@ -71,6 +71,13 @@ public final class Topic extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * Settings for validating messages published against a schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchemaSettings schemaSettings;
+
+  /**
    * The resource name of the Cloud KMS CryptoKey to be used to protect access to messages published
    * on this topic. The expected format is `projects/locations/keyRings/cryptoKeys`.
    * @return value or {@code null} for none
@@ -164,6 +171,23 @@ public final class Topic extends com.google.api.client.json.GenericJson {
    */
   public Topic setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * Settings for validating messages published against a schema.
+   * @return value or {@code null} for none
+   */
+  public SchemaSettings getSchemaSettings() {
+    return schemaSettings;
+  }
+
+  /**
+   * Settings for validating messages published against a schema.
+   * @param schemaSettings schemaSettings or {@code null} for none
+   */
+  public Topic setSchemaSettings(SchemaSettings schemaSettings) {
+    this.schemaSettings = schemaSettings;
     return this;
   }
 

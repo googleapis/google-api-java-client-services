@@ -41,7 +41,7 @@ public class PeopleServiceScopes {
   /** See and download your exact date of birth. */
   public static final String USER_BIRTHDAY_READ = "https://www.googleapis.com/auth/user.birthday.read";
 
-  /** View your email addresses. */
+  /** See and download all of your Google Account email addresses. */
   public static final String USER_EMAILS_READ = "https://www.googleapis.com/auth/user.emails.read";
 
   /** See your gender. */

@@ -54,12 +54,16 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   private LatLng latLng;
 
   /**
-   * CLDR region code of the country/region of the address. This is used to address ambiguity of the
-   * user-input location, for example, "Liverpool" against "Liverpool, NY, US" or "Liverpool, UK".
-   * Set this field to bias location resolution toward a specific country or territory. If this
-   * field is not set, application behavior is biased toward the United States by default. See
-   * https://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
-   * Example: "CH" for Switzerland.
+   * CLDR region code of the country/region. This field may be used in two ways: 1) If telecommute
+   * preference is not set, this field is used address ambiguity of the user-input address. For
+   * example, "Liverpool" may refer to "Liverpool, NY, US" or "Liverpool, UK". This region code
+   * biases the address resolution toward a specific country or territory. If this field is not set,
+   * address resolution is biased toward the United States by default. 2) If telecommute preference
+   * is set to TELECOMMUTE_ALLOWED, the telecommute location filter will be limited to the region
+   * specified in this field. If this field is not set, the telecommute job locations will not be
+   * See https://unicode-org.github.io/cldr-
+   * staging/charts/latest/supplemental/territory_information.html for details. Example: "CH" for
+   * Switzerland.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,12 +142,16 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * CLDR region code of the country/region of the address. This is used to address ambiguity of the
-   * user-input location, for example, "Liverpool" against "Liverpool, NY, US" or "Liverpool, UK".
-   * Set this field to bias location resolution toward a specific country or territory. If this
-   * field is not set, application behavior is biased toward the United States by default. See
-   * https://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
-   * Example: "CH" for Switzerland.
+   * CLDR region code of the country/region. This field may be used in two ways: 1) If telecommute
+   * preference is not set, this field is used address ambiguity of the user-input address. For
+   * example, "Liverpool" may refer to "Liverpool, NY, US" or "Liverpool, UK". This region code
+   * biases the address resolution toward a specific country or territory. If this field is not set,
+   * address resolution is biased toward the United States by default. 2) If telecommute preference
+   * is set to TELECOMMUTE_ALLOWED, the telecommute location filter will be limited to the region
+   * specified in this field. If this field is not set, the telecommute job locations will not be
+   * See https://unicode-org.github.io/cldr-
+   * staging/charts/latest/supplemental/territory_information.html for details. Example: "CH" for
+   * Switzerland.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -151,12 +159,16 @@ public final class LocationFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * CLDR region code of the country/region of the address. This is used to address ambiguity of the
-   * user-input location, for example, "Liverpool" against "Liverpool, NY, US" or "Liverpool, UK".
-   * Set this field to bias location resolution toward a specific country or territory. If this
-   * field is not set, application behavior is biased toward the United States by default. See
-   * https://www.unicode.org/cldr/charts/30/supplemental/territory_information.html for details.
-   * Example: "CH" for Switzerland.
+   * CLDR region code of the country/region. This field may be used in two ways: 1) If telecommute
+   * preference is not set, this field is used address ambiguity of the user-input address. For
+   * example, "Liverpool" may refer to "Liverpool, NY, US" or "Liverpool, UK". This region code
+   * biases the address resolution toward a specific country or territory. If this field is not set,
+   * address resolution is biased toward the United States by default. 2) If telecommute preference
+   * is set to TELECOMMUTE_ALLOWED, the telecommute location filter will be limited to the region
+   * specified in this field. If this field is not set, the telecommute job locations will not be
+   * See https://unicode-org.github.io/cldr-
+   * staging/charts/latest/supplemental/territory_information.html for details. Example: "CH" for
+   * Switzerland.
    * @param regionCode regionCode or {@code null} for none
    */
   public LocationFilter setRegionCode(java.lang.String regionCode) {

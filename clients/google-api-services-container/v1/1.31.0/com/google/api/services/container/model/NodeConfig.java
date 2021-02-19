@@ -80,6 +80,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String imageType;
 
   /**
+   * Node kubelet configs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeKubeletConfig kubeletConfig;
+
+  /**
    * The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in
    * addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in
    * label keys, the applied set may differ depending on the Kubernetes version -- it's best to
@@ -90,6 +97,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Parameters that can be configured on Linux nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LinuxNodeConfig linuxNodeConfig;
 
   /**
    * The number of local SSD disks to be attached to the node. The limit for this value is dependent
@@ -326,6 +340,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Node kubelet configs.
+   * @return value or {@code null} for none
+   */
+  public NodeKubeletConfig getKubeletConfig() {
+    return kubeletConfig;
+  }
+
+  /**
+   * Node kubelet configs.
+   * @param kubeletConfig kubeletConfig or {@code null} for none
+   */
+  public NodeConfig setKubeletConfig(NodeKubeletConfig kubeletConfig) {
+    this.kubeletConfig = kubeletConfig;
+    return this;
+  }
+
+  /**
    * The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in
    * addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in
    * label keys, the applied set may differ depending on the Kubernetes version -- it's best to
@@ -349,6 +380,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Parameters that can be configured on Linux nodes.
+   * @return value or {@code null} for none
+   */
+  public LinuxNodeConfig getLinuxNodeConfig() {
+    return linuxNodeConfig;
+  }
+
+  /**
+   * Parameters that can be configured on Linux nodes.
+   * @param linuxNodeConfig linuxNodeConfig or {@code null} for none
+   */
+  public NodeConfig setLinuxNodeConfig(LinuxNodeConfig linuxNodeConfig) {
+    this.linuxNodeConfig = linuxNodeConfig;
     return this;
   }
 

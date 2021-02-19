@@ -45,6 +45,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private AuthenticatorGroupsConfig authenticatorGroupsConfig;
 
   /**
+   * Autopilot configuration for the cluster. It has the same semantics as AutoGKE and overrides the
+   * setting in autogke.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Autopilot autopilot;
+
+  /**
    * Cluster-level autoscaling configuration.
    * The value may be {@code null}.
    */
@@ -555,6 +563,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setAuthenticatorGroupsConfig(AuthenticatorGroupsConfig authenticatorGroupsConfig) {
     this.authenticatorGroupsConfig = authenticatorGroupsConfig;
+    return this;
+  }
+
+  /**
+   * Autopilot configuration for the cluster. It has the same semantics as AutoGKE and overrides the
+   * setting in autogke.
+   * @return value or {@code null} for none
+   */
+  public Autopilot getAutopilot() {
+    return autopilot;
+  }
+
+  /**
+   * Autopilot configuration for the cluster. It has the same semantics as AutoGKE and overrides the
+   * setting in autogke.
+   * @param autopilot autopilot or {@code null} for none
+   */
+  public Cluster setAutopilot(Autopilot autopilot) {
+    this.autopilot = autopilot;
     return this;
   }
 

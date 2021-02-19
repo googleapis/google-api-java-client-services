@@ -46,6 +46,20 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String imageType;
 
   /**
+   * Node kubelet configs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeKubeletConfig kubeletConfig;
+
+  /**
+   * Parameters that can be configured on Linux nodes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LinuxNodeConfig linuxNodeConfig;
+
+  /**
    * The desired list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the node pool's nodes
    * should be located. Changing the locations for a node pool will result in nodes being either
@@ -149,6 +163,40 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setImageType(java.lang.String imageType) {
     this.imageType = imageType;
+    return this;
+  }
+
+  /**
+   * Node kubelet configs.
+   * @return value or {@code null} for none
+   */
+  public NodeKubeletConfig getKubeletConfig() {
+    return kubeletConfig;
+  }
+
+  /**
+   * Node kubelet configs.
+   * @param kubeletConfig kubeletConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setKubeletConfig(NodeKubeletConfig kubeletConfig) {
+    this.kubeletConfig = kubeletConfig;
+    return this;
+  }
+
+  /**
+   * Parameters that can be configured on Linux nodes.
+   * @return value or {@code null} for none
+   */
+  public LinuxNodeConfig getLinuxNodeConfig() {
+    return linuxNodeConfig;
+  }
+
+  /**
+   * Parameters that can be configured on Linux nodes.
+   * @param linuxNodeConfig linuxNodeConfig or {@code null} for none
+   */
+  public UpdateNodePoolRequest setLinuxNodeConfig(LinuxNodeConfig linuxNodeConfig) {
+    this.linuxNodeConfig = linuxNodeConfig;
     return this;
   }
 

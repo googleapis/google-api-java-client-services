@@ -17,7 +17,7 @@
 package com.google.api.services.binaryauthorization.v1.model;
 
 /**
- * An admission whitelist pattern exempts images from checks by admission rules.
+ * An admission allowlist pattern exempts images from checks by admission rules.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Binary Authorization API. For a detailed explanation

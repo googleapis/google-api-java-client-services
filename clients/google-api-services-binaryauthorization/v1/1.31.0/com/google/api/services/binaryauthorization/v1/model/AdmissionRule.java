@@ -19,7 +19,7 @@ package com.google.api.services.binaryauthorization.v1.model;
 /**
  * An admission rule specifies either that all container images used in a pod creation request must
  * be attested to by one or more attestors, that all pod creations will be allowed, or that all pod
- * creations will be denied. Images matching an admission whitelist pattern are exempted from
+ * creations will be denied. Images matching an admission allowlist pattern are exempted from
  * admission rules and will never block a pod creation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

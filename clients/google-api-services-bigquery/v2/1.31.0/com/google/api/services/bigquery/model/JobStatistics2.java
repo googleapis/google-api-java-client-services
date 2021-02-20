@@ -64,6 +64,13 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.String ddlOperationPerformed;
 
   /**
+   * [Output-only] The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatasetReference ddlTargetDataset;
+
+  /**
    * The DDL target routine. Present only for CREATE/DROP FUNCTION/PROCEDURE queries.
    * The value may be {@code null}.
    */
@@ -322,6 +329,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setDdlOperationPerformed(java.lang.String ddlOperationPerformed) {
     this.ddlOperationPerformed = ddlOperationPerformed;
+    return this;
+  }
+
+  /**
+   * [Output-only] The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
+   * @return value or {@code null} for none
+   */
+  public DatasetReference getDdlTargetDataset() {
+    return ddlTargetDataset;
+  }
+
+  /**
+   * [Output-only] The DDL target dataset. Present only for CREATE/ALTER/DROP SCHEMA queries.
+   * @param ddlTargetDataset ddlTargetDataset or {@code null} for none
+   */
+  public JobStatistics2 setDdlTargetDataset(DatasetReference ddlTargetDataset) {
+    this.ddlTargetDataset = ddlTargetDataset;
     return this;
   }
 

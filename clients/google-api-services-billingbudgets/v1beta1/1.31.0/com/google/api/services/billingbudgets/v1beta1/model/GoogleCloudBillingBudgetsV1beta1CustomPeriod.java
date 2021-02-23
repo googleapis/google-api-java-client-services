@@ -31,8 +31,8 @@ package com.google.api.services.billingbudgets.v1beta1.model;
 public final class GoogleCloudBillingBudgetsV1beta1CustomPeriod extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The end date of the time period. If unset, specifies to track all usage incurred
-   * since the start_date.
+   * Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If
+   * unset, specifies to track all usage incurred since the start_date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriod extends com.goog
   private GoogleTypeDate startDate;
 
   /**
-   * Optional. The end date of the time period. If unset, specifies to track all usage incurred
-   * since the start_date.
+   * Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If
+   * unset, specifies to track all usage incurred since the start_date.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getEndDate() {
@@ -55,8 +55,8 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriod extends com.goog
   }
 
   /**
-   * Optional. The end date of the time period. If unset, specifies to track all usage incurred
-   * since the start_date.
+   * Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If
+   * unset, specifies to track all usage incurred since the start_date.
    * @param endDate endDate or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1beta1CustomPeriod setEndDate(GoogleTypeDate endDate) {

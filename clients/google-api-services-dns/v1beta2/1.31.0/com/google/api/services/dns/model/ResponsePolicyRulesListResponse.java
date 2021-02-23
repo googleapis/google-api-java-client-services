@@ -40,9 +40,9 @@ public final class ResponsePolicyRulesListResponse extends com.google.api.client
    * results in pagination order. To fetch them, make another list request using this value as your
    * page token. In this way you can retrieve the complete contents of even very large collections
    * one page at a time. However, if the contents of the collection change between the first and
-   * last paginated list request, the set of all elements returned will be an inconsistent view of
-   * the collection. There is no way to retrieve a consistent snapshot of a collection larger than
-   * the maximum page size.
+   * last paginated list request, the set of all elements returned are an inconsistent view of the
+   * collection. There is no way to retrieve a consistent snapshot of a collection larger than the
+   * maximum page size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,9 +81,9 @@ public final class ResponsePolicyRulesListResponse extends com.google.api.client
    * results in pagination order. To fetch them, make another list request using this value as your
    * page token. In this way you can retrieve the complete contents of even very large collections
    * one page at a time. However, if the contents of the collection change between the first and
-   * last paginated list request, the set of all elements returned will be an inconsistent view of
-   * the collection. There is no way to retrieve a consistent snapshot of a collection larger than
-   * the maximum page size.
+   * last paginated list request, the set of all elements returned are an inconsistent view of the
+   * collection. There is no way to retrieve a consistent snapshot of a collection larger than the
+   * maximum page size.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -95,9 +95,9 @@ public final class ResponsePolicyRulesListResponse extends com.google.api.client
    * results in pagination order. To fetch them, make another list request using this value as your
    * page token. In this way you can retrieve the complete contents of even very large collections
    * one page at a time. However, if the contents of the collection change between the first and
-   * last paginated list request, the set of all elements returned will be an inconsistent view of
-   * the collection. There is no way to retrieve a consistent snapshot of a collection larger than
-   * the maximum page size.
+   * last paginated list request, the set of all elements returned are an inconsistent view of the
+   * collection. There is no way to retrieve a consistent snapshot of a collection larger than the
+   * maximum page size.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ResponsePolicyRulesListResponse setNextPageToken(java.lang.String nextPageToken) {

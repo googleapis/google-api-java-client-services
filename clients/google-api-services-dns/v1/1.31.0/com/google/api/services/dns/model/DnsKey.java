@@ -68,16 +68,15 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will
-   * still be present as DNSKEY Resource Records for the use of resolvers validating existing
-   * signatures.
+   * Active keys are used to sign subsequent changes to the ManagedZone. Inactive keys will still be
+   * present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isActive;
 
   /**
-   * Length of the key in bits. Specified at creation time then immutable.
+   * Length of the key in bits. Specified at creation time, then immutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,9 +108,9 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
 
   /**
    * One of "KEY_SIGNING" or "ZONE_SIGNING". Keys of type KEY_SIGNING have the Secure Entry Point
-   * flag set and, when active, will be used to sign only resource record sets of type DNSKEY.
-   * Otherwise, the Secure Entry Point flag will be cleared and this key will be used to sign only
-   * resource record sets of other types. Immutable after creation time.
+   * flag set and, when active, are used to sign only resource record sets of type DNSKEY.
+   * Otherwise, the Secure Entry Point flag is cleared and this key is used to sign only resource
+   * record sets of other types. Immutable after creation time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,9 +208,8 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will
-   * still be present as DNSKEY Resource Records for the use of resolvers validating existing
-   * signatures.
+   * Active keys are used to sign subsequent changes to the ManagedZone. Inactive keys will still be
+   * present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsActive() {
@@ -219,9 +217,8 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will
-   * still be present as DNSKEY Resource Records for the use of resolvers validating existing
-   * signatures.
+   * Active keys are used to sign subsequent changes to the ManagedZone. Inactive keys will still be
+   * present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
    * @param isActive isActive or {@code null} for none
    */
   public DnsKey setIsActive(java.lang.Boolean isActive) {
@@ -230,7 +227,7 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Length of the key in bits. Specified at creation time then immutable.
+   * Length of the key in bits. Specified at creation time, then immutable.
    * @return value or {@code null} for none
    */
   public java.lang.Long getKeyLength() {
@@ -238,7 +235,7 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Length of the key in bits. Specified at creation time then immutable.
+   * Length of the key in bits. Specified at creation time, then immutable.
    * @param keyLength keyLength or {@code null} for none
    */
   public DnsKey setKeyLength(java.lang.Long keyLength) {
@@ -305,9 +302,9 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
 
   /**
    * One of "KEY_SIGNING" or "ZONE_SIGNING". Keys of type KEY_SIGNING have the Secure Entry Point
-   * flag set and, when active, will be used to sign only resource record sets of type DNSKEY.
-   * Otherwise, the Secure Entry Point flag will be cleared and this key will be used to sign only
-   * resource record sets of other types. Immutable after creation time.
+   * flag set and, when active, are used to sign only resource record sets of type DNSKEY.
+   * Otherwise, the Secure Entry Point flag is cleared and this key is used to sign only resource
+   * record sets of other types. Immutable after creation time.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -316,9 +313,9 @@ public final class DnsKey extends com.google.api.client.json.GenericJson {
 
   /**
    * One of "KEY_SIGNING" or "ZONE_SIGNING". Keys of type KEY_SIGNING have the Secure Entry Point
-   * flag set and, when active, will be used to sign only resource record sets of type DNSKEY.
-   * Otherwise, the Secure Entry Point flag will be cleared and this key will be used to sign only
-   * resource record sets of other types. Immutable after creation time.
+   * flag set and, when active, are used to sign only resource record sets of type DNSKEY.
+   * Otherwise, the Secure Entry Point flag is cleared and this key is used to sign only resource
+   * record sets of other types. Immutable after creation time.
    * @param type type or {@code null} for none
    */
   public DnsKey setType(java.lang.String type) {

@@ -180,9 +180,11 @@ packages on [Maven Central][maven-search].
 | Network Management API | [v1](clients/google-api-services-networkmanagement/v1), [v1beta1](clients/google-api-services-networkmanagement/v1beta1) |
 | Notebooks API | [v1](clients/google-api-services-notebooks/v1) |
 | OS Config API | [v1](clients/google-api-services-osconfig/v1), [v1beta](clients/google-api-services-osconfig/v1beta) |
+| On-Demand Scanning API | [v1beta1](clients/google-api-services-ondemandscanning/v1beta1) |
 | PageSpeed Insights API | [v5](clients/google-api-services-pagespeedonline/v5) |
 | People API | [v1](clients/google-api-services-people/v1) |
 | Playable Locations API | [v3](clients/google-api-services-playablelocations/v3) |
+| Policy Simulator API | [v1beta1](clients/google-api-services-policysimulator/v1beta1) |
 | Policy Troubleshooter API | [v1](clients/google-api-services-policytroubleshooter/v1), [v1beta](clients/google-api-services-policytroubleshooter/v1beta) |
 | Poly API | [v1](clients/google-api-services-poly/v1) |
 | Pub/Sub Lite API | [v1](clients/google-api-services-pubsublite/v1) |

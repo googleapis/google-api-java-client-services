@@ -39,7 +39,8 @@ public final class RepricingRule extends com.google.api.client.json.GenericJson 
   private RepricingRuleCostOfGoodsSaleRule cogsBasedRule;
 
   /**
-   * Required. Immutable. CLDR country code (e.g. "US").
+   * Required. Immutable. [CLDR country
+   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (e.g. "US").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +136,8 @@ public final class RepricingRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Immutable. CLDR country code (e.g. "US").
+   * Required. Immutable. [CLDR country
+   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (e.g. "US").
    * @return value or {@code null} for none
    */
   public java.lang.String getCountryCode() {
@@ -143,7 +145,8 @@ public final class RepricingRule extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Immutable. CLDR country code (e.g. "US").
+   * Required. Immutable. [CLDR country
+   * code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) (e.g. "US").
    * @param countryCode countryCode or {@code null} for none
    */
   public RepricingRule setCountryCode(java.lang.String countryCode) {

@@ -48,8 +48,8 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
   private java.lang.String pageToken;
 
   /**
-   * Required. Search query that defines performance metrics to retrieve and dimensions according to
-   * which the metrics are to be segmented.
+   * Required. Query that defines performance metrics to retrieve and dimensions according to which
+   * the metrics are to be segmented.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +96,8 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Search query that defines performance metrics to retrieve and dimensions according to
-   * which the metrics are to be segmented.
+   * Required. Query that defines performance metrics to retrieve and dimensions according to which
+   * the metrics are to be segmented.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -105,8 +105,8 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Search query that defines performance metrics to retrieve and dimensions according to
-   * which the metrics are to be segmented.
+   * Required. Query that defines performance metrics to retrieve and dimensions according to which
+   * the metrics are to be segmented.
    * @param query query or {@code null} for none
    */
   public SearchRequest setQuery(java.lang.String query) {

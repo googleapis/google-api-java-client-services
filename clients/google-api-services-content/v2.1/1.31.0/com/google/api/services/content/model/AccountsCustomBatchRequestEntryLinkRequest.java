@@ -55,8 +55,7 @@ public final class AccountsCustomBatchRequestEntryLinkRequest extends com.google
 
   /**
    * Provided services. Acceptable values are: - "`shoppingAdsProductManagement`" -
-   * "`shoppingAdsOther`" - "`shoppingActionsProductManagement`" -
-   * "`shoppingActionsOrderManagement`" - "`shoppingActionsOther`"
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +118,7 @@ public final class AccountsCustomBatchRequestEntryLinkRequest extends com.google
 
   /**
    * Provided services. Acceptable values are: - "`shoppingAdsProductManagement`" -
-   * "`shoppingAdsOther`" - "`shoppingActionsProductManagement`" -
-   * "`shoppingActionsOrderManagement`" - "`shoppingActionsOther`"
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServices() {
@@ -129,8 +127,7 @@ public final class AccountsCustomBatchRequestEntryLinkRequest extends com.google
 
   /**
    * Provided services. Acceptable values are: - "`shoppingAdsProductManagement`" -
-   * "`shoppingAdsOther`" - "`shoppingActionsProductManagement`" -
-   * "`shoppingActionsOrderManagement`" - "`shoppingActionsOther`"
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`"
    * @param services services or {@code null} for none
    */
   public AccountsCustomBatchRequestEntryLinkRequest setServices(java.util.List<java.lang.String> services) {

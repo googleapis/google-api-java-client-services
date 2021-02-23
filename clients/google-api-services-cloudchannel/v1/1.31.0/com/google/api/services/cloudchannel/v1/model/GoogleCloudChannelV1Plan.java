@@ -30,6 +30,14 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1Plan extends com.google.api.client.json.GenericJson {
 
   /**
+   * Reseller Billing account that will be charged when this offer is transacted. Only present for
+   * GCP offers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingAccount;
+
+  /**
    * Describes how frequently the reseller will be billed, such as once per month.
    * The value may be {@code null}.
    */
@@ -59,6 +67,25 @@ public final class GoogleCloudChannelV1Plan extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private GoogleCloudChannelV1Period trialPeriod;
+
+  /**
+   * Reseller Billing account that will be charged when this offer is transacted. Only present for
+   * GCP offers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingAccount() {
+    return billingAccount;
+  }
+
+  /**
+   * Reseller Billing account that will be charged when this offer is transacted. Only present for
+   * GCP offers.
+   * @param billingAccount billingAccount or {@code null} for none
+   */
+  public GoogleCloudChannelV1Plan setBillingAccount(java.lang.String billingAccount) {
+    this.billingAccount = billingAccount;
+    return this;
+  }
 
   /**
    * Describes how frequently the reseller will be billed, such as once per month.

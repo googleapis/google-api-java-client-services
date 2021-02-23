@@ -45,11 +45,11 @@ public final class Audio extends com.google.api.client.json.GenericJson {
 
   /**
    * Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a
-   * value between -24 and 0, where -24 is the Advanced Television Systems Committee (ATSC A/85),
-   * -23 is the EU R128 broadcast standard, -19 is the prior standard for online mono audio, -18 is
-   * the ReplayGain standard, -16 is the prior standard for stereo audio, -14 is the new online
-   * audio standard recommended by Spotify, as well as Amazon Echo, and 0 disables normalization.
-   * The default is 0.
+   * value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems
+   * Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior
+   * standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for
+   * stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon
+   * Echo * 0 disables normalization
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,11 +91,11 @@ public final class Audio extends com.google.api.client.json.GenericJson {
 
   /**
    * Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a
-   * value between -24 and 0, where -24 is the Advanced Television Systems Committee (ATSC A/85),
-   * -23 is the EU R128 broadcast standard, -19 is the prior standard for online mono audio, -18 is
-   * the ReplayGain standard, -16 is the prior standard for stereo audio, -14 is the new online
-   * audio standard recommended by Spotify, as well as Amazon Echo, and 0 disables normalization.
-   * The default is 0.
+   * value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems
+   * Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior
+   * standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for
+   * stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon
+   * Echo * 0 disables normalization
    * @return value or {@code null} for none
    */
   public java.lang.Double getLufs() {
@@ -104,11 +104,11 @@ public final class Audio extends com.google.api.client.json.GenericJson {
 
   /**
    * Specify audio loudness normalization in loudness units relative to full scale (LUFS). Enter a
-   * value between -24 and 0, where -24 is the Advanced Television Systems Committee (ATSC A/85),
-   * -23 is the EU R128 broadcast standard, -19 is the prior standard for online mono audio, -18 is
-   * the ReplayGain standard, -16 is the prior standard for stereo audio, -14 is the new online
-   * audio standard recommended by Spotify, as well as Amazon Echo, and 0 disables normalization.
-   * The default is 0.
+   * value between -24 and 0 (the default), where: * -24 is the Advanced Television Systems
+   * Committee (ATSC A/85) standard * -23 is the EU R128 broadcast standard * -19 is the prior
+   * standard for online mono audio * -18 is the ReplayGain standard * -16 is the prior standard for
+   * stereo audio * -14 is the new online audio standard recommended by Spotify, as well as Amazon
+   * Echo * 0 disables normalization
    * @param lufs lufs or {@code null} for none
    */
   public Audio setLufs(java.lang.Double lufs) {

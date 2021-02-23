@@ -69,6 +69,15 @@ public final class SpriteSheet extends com.google.api.client.json.GenericJson {
   private String interval;
 
   /**
+   * The quality of the generated sprite sheet. Enter a value between 1 and 100, where 1 is the
+   * lowest quality and 100 is the highest quality. The default is 100. A high quality value
+   * corresponds to a low image data compression ratio.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer quality;
+
+  /**
    * The maximum number of rows per sprite sheet. When the sprite sheet is full, a new sprite sheet
    * is created. The default is 0, which indicates no maximum limit.
    * The value may be {@code null}.
@@ -196,6 +205,27 @@ public final class SpriteSheet extends com.google.api.client.json.GenericJson {
    */
   public SpriteSheet setInterval(String interval) {
     this.interval = interval;
+    return this;
+  }
+
+  /**
+   * The quality of the generated sprite sheet. Enter a value between 1 and 100, where 1 is the
+   * lowest quality and 100 is the highest quality. The default is 100. A high quality value
+   * corresponds to a low image data compression ratio.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getQuality() {
+    return quality;
+  }
+
+  /**
+   * The quality of the generated sprite sheet. Enter a value between 1 and 100, where 1 is the
+   * lowest quality and 100 is the highest quality. The default is 100. A high quality value
+   * corresponds to a low image data compression ratio.
+   * @param quality quality or {@code null} for none
+   */
+  public SpriteSheet setQuality(java.lang.Integer quality) {
+    this.quality = quality;
     return this;
   }
 

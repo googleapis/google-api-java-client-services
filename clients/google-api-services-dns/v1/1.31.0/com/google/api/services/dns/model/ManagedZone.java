@@ -99,7 +99,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS
-   * name servers that all host the same ManagedZones. Most users will leave this field unset.
+   * name servers that all host the same ManagedZones. Most users will leave this field unset. If
+   * you need to use this field, please reach out to your account team.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,8 +131,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS
-   * will resolve reverse lookup queries using automatically configured records for VPC resources.
-   * This only applies to networks listed under private_visibility_config.
+   * resolves reverse lookup queries using automatically configured records for VPC resources. This
+   * only applies to networks listed under private_visibility_config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -316,7 +317,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS
-   * name servers that all host the same ManagedZones. Most users will leave this field unset.
+   * name servers that all host the same ManagedZones. Most users will leave this field unset. If
+   * you need to use this field, please reach out to your account team.
    * @return value or {@code null} for none
    */
   public java.lang.String getNameServerSet() {
@@ -325,7 +327,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS
-   * name servers that all host the same ManagedZones. Most users will leave this field unset.
+   * name servers that all host the same ManagedZones. Most users will leave this field unset. If
+   * you need to use this field, please reach out to your account team.
    * @param nameServerSet nameServerSet or {@code null} for none
    */
   public ManagedZone setNameServerSet(java.lang.String nameServerSet) {
@@ -390,8 +393,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS
-   * will resolve reverse lookup queries using automatically configured records for VPC resources.
-   * This only applies to networks listed under private_visibility_config.
+   * resolves reverse lookup queries using automatically configured records for VPC resources. This
+   * only applies to networks listed under private_visibility_config.
    * @return value or {@code null} for none
    */
   public ManagedZoneReverseLookupConfig getReverseLookupConfig() {
@@ -400,8 +403,8 @@ public final class ManagedZone extends com.google.api.client.json.GenericJson {
 
   /**
    * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS
-   * will resolve reverse lookup queries using automatically configured records for VPC resources.
-   * This only applies to networks listed under private_visibility_config.
+   * resolves reverse lookup queries using automatically configured records for VPC resources. This
+   * only applies to networks listed under private_visibility_config.
    * @param reverseLookupConfig reverseLookupConfig or {@code null} for none
    */
   public ManagedZone setReverseLookupConfig(ManagedZoneReverseLookupConfig reverseLookupConfig) {

@@ -30,10 +30,10 @@ package com.google.api.services.dns.model;
 public final class ManagedZoneForwardingConfigNameServerTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS will make
-   * forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, non-RFC1918
-   * addresses go to the Internet. When set to PRIVATE, Cloud DNS will always send queries through
-   * VPC for this target.
+   * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes
+   * forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC, non-
+   * RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries
+   * through VPC for this target.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class ManagedZoneForwardingConfigNameServerTarget extends com.googl
   private java.lang.String ipv4Address;
 
   /**
-   * IPv6 address of a target name server. Will not accept both fields (ipv4 & ipv6) being
+   * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being
    * populated.
    * The value may be {@code null}.
    */
@@ -61,10 +61,10 @@ public final class ManagedZoneForwardingConfigNameServerTarget extends com.googl
   private java.lang.String kind;
 
   /**
-   * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS will make
-   * forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, non-RFC1918
-   * addresses go to the Internet. When set to PRIVATE, Cloud DNS will always send queries through
-   * VPC for this target.
+   * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes
+   * forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC, non-
+   * RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries
+   * through VPC for this target.
    * @return value or {@code null} for none
    */
   public java.lang.String getForwardingPath() {
@@ -72,10 +72,10 @@ public final class ManagedZoneForwardingConfigNameServerTarget extends com.googl
   }
 
   /**
-   * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS will make
-   * forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, non-RFC1918
-   * addresses go to the Internet. When set to PRIVATE, Cloud DNS will always send queries through
-   * VPC for this target.
+   * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes
+   * forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC, non-
+   * RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries
+   * through VPC for this target.
    * @param forwardingPath forwardingPath or {@code null} for none
    */
   public ManagedZoneForwardingConfigNameServerTarget setForwardingPath(java.lang.String forwardingPath) {
@@ -101,7 +101,7 @@ public final class ManagedZoneForwardingConfigNameServerTarget extends com.googl
   }
 
   /**
-   * IPv6 address of a target name server. Will not accept both fields (ipv4 & ipv6) being
+   * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being
    * populated.
    * @return value or {@code null} for none
    */
@@ -110,7 +110,7 @@ public final class ManagedZoneForwardingConfigNameServerTarget extends com.googl
   }
 
   /**
-   * IPv6 address of a target name server. Will not accept both fields (ipv4 & ipv6) being
+   * IPv6 address of a target name server. Does not accept both fields (ipv4 & ipv6) being
    * populated.
    * @param ipv6Address ipv6Address or {@code null} for none
    */

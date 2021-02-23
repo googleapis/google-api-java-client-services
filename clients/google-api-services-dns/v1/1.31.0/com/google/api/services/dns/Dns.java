@@ -153,7 +153,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class Changes {
 
     /**
-     * Atomically update the ResourceRecordSet collection.
+     * Atomically updates the ResourceRecordSet collection.
      *
      * Create a request for the method "changes.create".
      *
@@ -176,7 +176,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/changes";
 
       /**
-       * Atomically update the ResourceRecordSet collection.
+       * Atomically updates the ResourceRecordSet collection.
        *
        * Create a request for the method "changes.create".
        *
@@ -316,7 +316,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Fetch the representation of an existing Change.
+     * Fetches the representation of an existing Change.
      *
      * Create a request for the method "changes.get".
      *
@@ -339,7 +339,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/changes/{changeId}";
 
       /**
-       * Fetch the representation of an existing Change.
+       * Fetches the representation of an existing Change.
        *
        * Create a request for the method "changes.get".
        *
@@ -510,7 +510,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Enumerate Changes to a ResourceRecordSet collection.
+     * Enumerates Changes to a ResourceRecordSet collection.
      *
      * Create a request for the method "changes.list".
      *
@@ -532,7 +532,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/changes";
 
       /**
-       * Enumerate Changes to a ResourceRecordSet collection.
+       * Enumerates Changes to a ResourceRecordSet collection.
        *
        * Create a request for the method "changes.list".
        *
@@ -653,13 +653,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+      /** Optional. Maximum number of results to be returned. If unspecified, the server decides how many
      results to return.
        */
       public java.lang.Integer getMaxResults() {
@@ -667,8 +667,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -945,13 +945,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * An optional comma-separated list of digest types to compute and display for key signing
-       * keys. If omitted, the recommended digest type will be computed and displayed.
+       * keys. If omitted, the recommended digest type is computed and displayed.
        */
       @com.google.api.client.util.Key
       private java.lang.String digestType;
 
       /** An optional comma-separated list of digest types to compute and display for key signing keys. If
-     omitted, the recommended digest type will be computed and displayed.
+     omitted, the recommended digest type is computed and displayed.
        */
       public java.lang.String getDigestType() {
         return digestType;
@@ -959,7 +959,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * An optional comma-separated list of digest types to compute and display for key signing
-       * keys. If omitted, the recommended digest type will be computed and displayed.
+       * keys. If omitted, the recommended digest type is computed and displayed.
        */
       public Get setDigestType(java.lang.String digestType) {
         this.digestType = digestType;
@@ -1116,13 +1116,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * An optional comma-separated list of digest types to compute and display for key signing
-       * keys. If omitted, the recommended digest type will be computed and displayed.
+       * keys. If omitted, the recommended digest type is computed and displayed.
        */
       @com.google.api.client.util.Key
       private java.lang.String digestType;
 
       /** An optional comma-separated list of digest types to compute and display for key signing keys. If
-     omitted, the recommended digest type will be computed and displayed.
+     omitted, the recommended digest type is computed and displayed.
        */
       public java.lang.String getDigestType() {
         return digestType;
@@ -1130,7 +1130,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * An optional comma-separated list of digest types to compute and display for key signing
-       * keys. If omitted, the recommended digest type will be computed and displayed.
+       * keys. If omitted, the recommended digest type is computed and displayed.
        */
       public List setDigestType(java.lang.String digestType) {
         this.digestType = digestType;
@@ -1138,13 +1138,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+      /** Optional. Maximum number of results to be returned. If unspecified, the server decides how many
      results to return.
        */
       public java.lang.Integer getMaxResults() {
@@ -1152,8 +1152,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -1212,7 +1212,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class ManagedZoneOperations {
 
     /**
-     * Fetch the representation of an existing Operation.
+     * Fetches the representation of an existing Operation.
      *
      * Create a request for the method "managedZoneOperations.get".
      *
@@ -1221,7 +1221,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
      *
      * @param project Identifies the project addressed by this request.
      * @param managedZone Identifies the managed zone addressed by this request.
-     * @param operation Identifies the operation addressed by this request.
+     * @param operation Identifies the operation addressed by this request (ID of the operation).
      * @return the request
      */
     public Get get(java.lang.String project, java.lang.String managedZone, java.lang.String operation) throws java.io.IOException {
@@ -1235,7 +1235,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/operations/{operation}";
 
       /**
-       * Fetch the representation of an existing Operation.
+       * Fetches the representation of an existing Operation.
        *
        * Create a request for the method "managedZoneOperations.get".
        *
@@ -1246,7 +1246,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
        *
        * @param project Identifies the project addressed by this request.
        * @param managedZone Identifies the managed zone addressed by this request.
-       * @param operation Identifies the operation addressed by this request.
+       * @param operation Identifies the operation addressed by this request (ID of the operation).
        * @since 1.13
        */
       protected Get(java.lang.String project, java.lang.String managedZone, java.lang.String operation) {
@@ -1353,17 +1353,17 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return this;
       }
 
-      /** Identifies the operation addressed by this request. */
+      /** Identifies the operation addressed by this request (ID of the operation). */
       @com.google.api.client.util.Key
       private java.lang.String operation;
 
-      /** Identifies the operation addressed by this request.
+      /** Identifies the operation addressed by this request (ID of the operation).
        */
       public java.lang.String getOperation() {
         return operation;
       }
 
-      /** Identifies the operation addressed by this request. */
+      /** Identifies the operation addressed by this request (ID of the operation). */
       public Get setOperation(java.lang.String operation) {
         this.operation = operation;
         return this;
@@ -1398,7 +1398,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Enumerate Operations for the given ManagedZone.
+     * Enumerates Operations for the given ManagedZone.
      *
      * Create a request for the method "managedZoneOperations.list".
      *
@@ -1420,7 +1420,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/operations";
 
       /**
-       * Enumerate Operations for the given ManagedZone.
+       * Enumerates Operations for the given ManagedZone.
        *
        * Create a request for the method "managedZoneOperations.list".
        *
@@ -1537,13 +1537,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+      /** Optional. Maximum number of results to be returned. If unspecified, the server decides how many
      results to return.
        */
       public java.lang.Integer getMaxResults() {
@@ -1551,8 +1551,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -2235,13 +2235,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+      /** Optional. Maximum number of results to be returned. If unspecified, the server decides how many
      results to return.
        */
       public java.lang.Integer getMaxResults() {
@@ -2249,8 +2249,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -2635,7 +2635,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class Policies {
 
     /**
-     * Create a new Policy
+     * Creates a new Policy
      *
      * Create a request for the method "policies.create".
      *
@@ -2657,7 +2657,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies";
 
       /**
-       * Create a new Policy
+       * Creates a new Policy
        *
        * Create a request for the method "policies.create".
        *
@@ -2775,8 +2775,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Delete a previously created Policy. Will fail if the policy is still being referenced by a
-     * network.
+     * Delete a previously created Policy. Fails if the policy is still being referenced by a network.
      *
      * Create a request for the method "policies.delete".
      *
@@ -2798,8 +2797,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies/{policy}";
 
       /**
-       * Delete a previously created Policy. Will fail if the policy is still being referenced by a
-       * network.
+       * Delete a previously created Policy. Fails if the policy is still being referenced by a network.
        *
        * Create a request for the method "policies.delete".
        *
@@ -2934,7 +2932,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Fetch the representation of an existing Policy.
+     * Fetches the representation of an existing Policy.
      *
      * Create a request for the method "policies.get".
      *
@@ -2956,7 +2954,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies/{policy}";
 
       /**
-       * Fetch the representation of an existing Policy.
+       * Fetches the representation of an existing Policy.
        *
        * Create a request for the method "policies.get".
        *
@@ -3101,7 +3099,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
     }
     /**
-     * Enumerate all Policies associated with a project.
+     * Enumerates all Policies associated with a project.
      *
      * Create a request for the method "policies.list".
      *
@@ -3122,7 +3120,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/policies";
 
       /**
-       * Enumerate all Policies associated with a project.
+       * Enumerates all Policies associated with a project.
        *
        * Create a request for the method "policies.list".
        *
@@ -3221,13 +3219,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+      /** Optional. Maximum number of results to be returned. If unspecified, the server decides how many
      results to return.
        */
       public java.lang.Integer getMaxResults() {
@@ -3235,8 +3233,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -3784,7 +3782,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   public class ResourceRecordSets {
 
     /**
-     * Enumerate ResourceRecordSets that have been created but not yet deleted.
+     * Enumerate ResourceRecordSets that you have created but not yet deleted.
      *
      * Create a request for the method "resourceRecordSets.list".
      *
@@ -3806,7 +3804,7 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       private static final String REST_PATH = "dns/v1/projects/{project}/managedZones/{managedZone}/rrsets";
 
       /**
-       * Enumerate ResourceRecordSets that have been created but not yet deleted.
+       * Enumerate ResourceRecordSets that you have created but not yet deleted.
        *
        * Create a request for the method "resourceRecordSets.list".
        *
@@ -3927,13 +3925,13 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Optional. Maximum number of results to be returned. If unspecified, the server will decide how many
+      /** Optional. Maximum number of results to be returned. If unspecified, the server decides how many
      results to return.
        */
       public java.lang.Integer getMaxResults() {
@@ -3941,8 +3939,8 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Optional. Maximum number of results to be returned. If unspecified, the server will decide
-       * how many results to return.
+       * Optional. Maximum number of results to be returned. If unspecified, the server decides how
+       * many results to return.
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;

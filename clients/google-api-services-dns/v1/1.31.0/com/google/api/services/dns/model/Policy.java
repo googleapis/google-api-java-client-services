@@ -48,8 +48,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over
-   * VPN connections. When enabled, a virtual IP address will be allocated from each of the sub-
-   * networks that are bound to this policy.
+   * VPN connections. When enabled, a virtual IP address is allocated from each of the sub-networks
+   * that are bound to this policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * User assigned name for this policy.
+   * User-assigned name for this policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,8 +132,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over
-   * VPN connections. When enabled, a virtual IP address will be allocated from each of the sub-
-   * networks that are bound to this policy.
+   * VPN connections. When enabled, a virtual IP address is allocated from each of the sub-networks
+   * that are bound to this policy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableInboundForwarding() {
@@ -142,8 +142,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over
-   * VPN connections. When enabled, a virtual IP address will be allocated from each of the sub-
-   * networks that are bound to this policy.
+   * VPN connections. When enabled, a virtual IP address is allocated from each of the sub-networks
+   * that are bound to this policy.
    * @param enableInboundForwarding enableInboundForwarding or {@code null} for none
    */
   public Policy setEnableInboundForwarding(java.lang.Boolean enableInboundForwarding) {
@@ -203,7 +203,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User assigned name for this policy.
+   * User-assigned name for this policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -211,7 +211,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User assigned name for this policy.
+   * User-assigned name for this policy.
    * @param name name or {@code null} for none
    */
   public Policy setName(java.lang.String name) {

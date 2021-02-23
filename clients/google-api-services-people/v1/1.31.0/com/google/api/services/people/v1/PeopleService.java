@@ -1653,6 +1653,185 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
         return (List) super.set(parameterName, value);
       }
     }
+    /**
+     * Provides a list of contacts in the authenticated user's other contacts that matches the search
+     * query.
+     *
+     * Create a request for the method "otherContacts.search".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public Search search() throws java.io.IOException {
+      Search result = new Search();
+      initialize(result);
+      return result;
+    }
+
+    public class Search extends PeopleServiceRequest<com.google.api.services.people.v1.model.SearchResponse> {
+
+      private static final String REST_PATH = "v1/otherContacts:search";
+
+      /**
+       * Provides a list of contacts in the authenticated user's other contacts that matches the search
+       * query.
+       *
+       * Create a request for the method "otherContacts.search".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link Search#execute()} method to invoke the remote operation. <p> {@link
+       * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected Search() {
+        super(PeopleService.this, "GET", REST_PATH, null, com.google.api.services.people.v1.model.SearchResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Search set$Xgafv(java.lang.String $Xgafv) {
+        return (Search) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Search setAlt(java.lang.String alt) {
+        return (Search) super.setAlt(alt);
+      }
+
+      @Override
+      public Search setCallback(java.lang.String callback) {
+        return (Search) super.setCallback(callback);
+      }
+
+      @Override
+      public Search setFields(java.lang.String fields) {
+        return (Search) super.setFields(fields);
+      }
+
+      @Override
+      public Search setKey(java.lang.String key) {
+        return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Search) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Search setQuotaUser(java.lang.String quotaUser) {
+        return (Search) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Search setUploadType(java.lang.String uploadType) {
+        return (Search) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Search setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Search) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The number of results to return. Defaults to 10 if field is not set, or set to 0.
+       */
+      public Search setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Required. The plain-text query for the request. The query is used to match prefix phrases
+       * of the fields on a person. For example, a person with name "foo name" matches queries such
+       * as "f", "fo", "foo", "foo n", "nam", etc., but not "oo n".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Required. The plain-text query for the request. The query is used to match prefix phrases of the
+     fields on a person. For example, a person with name "foo name" matches queries such as "f", "fo",
+     "foo", "foo n", "nam", etc., but not "oo n".
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Required. The plain-text query for the request. The query is used to match prefix phrases
+       * of the fields on a person. For example, a person with name "foo name" matches queries such
+       * as "f", "fo", "foo", "foo n", "nam", etc., but not "oo n".
+       */
+      public Search setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are: * emailAddresses
+       * * names * phoneNumbers
+       */
+      @com.google.api.client.util.Key
+      private String readMask;
+
+      /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
+     specified by separating them with commas. Valid values are: * emailAddresses * names * phoneNumbers
+       */
+      public String getReadMask() {
+        return readMask;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are: * emailAddresses
+       * * names * phoneNumbers
+       */
+      public Search setReadMask(String readMask) {
+        this.readMask = readMask;
+        return this;
+      }
+
+      @Override
+      public Search set(String parameterName, Object value) {
+        return (Search) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -2918,6 +3097,194 @@ public class PeopleService extends com.google.api.client.googleapis.services.jso
       @Override
       public ListDirectoryPeople set(String parameterName, Object value) {
         return (ListDirectoryPeople) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Provides a list of contacts in the authenticated user's grouped contacts that matches the search
+     * query.
+     *
+     * Create a request for the method "people.searchContacts".
+     *
+     * This request holds the parameters needed by the people server.  After setting any optional
+     * parameters, call the {@link SearchContacts#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public SearchContacts searchContacts() throws java.io.IOException {
+      SearchContacts result = new SearchContacts();
+      initialize(result);
+      return result;
+    }
+
+    public class SearchContacts extends PeopleServiceRequest<com.google.api.services.people.v1.model.SearchResponse> {
+
+      private static final String REST_PATH = "v1/people:searchContacts";
+
+      /**
+       * Provides a list of contacts in the authenticated user's grouped contacts that matches the
+       * search query.
+       *
+       * Create a request for the method "people.searchContacts".
+       *
+       * This request holds the parameters needed by the the people server.  After setting any optional
+       * parameters, call the {@link SearchContacts#execute()} method to invoke the remote operation.
+       * <p> {@link SearchContacts#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected SearchContacts() {
+        super(PeopleService.this, "GET", REST_PATH, null, com.google.api.services.people.v1.model.SearchResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public SearchContacts set$Xgafv(java.lang.String $Xgafv) {
+        return (SearchContacts) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SearchContacts setAccessToken(java.lang.String accessToken) {
+        return (SearchContacts) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SearchContacts setAlt(java.lang.String alt) {
+        return (SearchContacts) super.setAlt(alt);
+      }
+
+      @Override
+      public SearchContacts setCallback(java.lang.String callback) {
+        return (SearchContacts) super.setCallback(callback);
+      }
+
+      @Override
+      public SearchContacts setFields(java.lang.String fields) {
+        return (SearchContacts) super.setFields(fields);
+      }
+
+      @Override
+      public SearchContacts setKey(java.lang.String key) {
+        return (SearchContacts) super.setKey(key);
+      }
+
+      @Override
+      public SearchContacts setOauthToken(java.lang.String oauthToken) {
+        return (SearchContacts) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SearchContacts setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SearchContacts) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SearchContacts setQuotaUser(java.lang.String quotaUser) {
+        return (SearchContacts) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SearchContacts setUploadType(java.lang.String uploadType) {
+        return (SearchContacts) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SearchContacts setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SearchContacts) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Optional. The number of results to return. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The number of results to return.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Optional. The number of results to return. */
+      public SearchContacts setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Required. The plain-text query for the request. The query is used to match prefix phrases
+       * of the fields on a person. For example, a person with name "foo name" matches queries such
+       * as "f", "fo", "foo", "foo n", "nam", etc., but not "oo n".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String query;
+
+      /** Required. The plain-text query for the request. The query is used to match prefix phrases of the
+     fields on a person. For example, a person with name "foo name" matches queries such as "f", "fo",
+     "foo", "foo n", "nam", etc., but not "oo n".
+       */
+      public java.lang.String getQuery() {
+        return query;
+      }
+
+      /**
+       * Required. The plain-text query for the request. The query is used to match prefix phrases
+       * of the fields on a person. For example, a person with name "foo name" matches queries such
+       * as "f", "fo", "foo", "foo n", "nam", etc., but not "oo n".
+       */
+      public SearchContacts setQuery(java.lang.String query) {
+        this.query = query;
+        return this;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are: * addresses *
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+       * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+       * userDefined
+       */
+      @com.google.api.client.util.Key
+      private String readMask;
+
+      /** Required. A field mask to restrict which fields on each person are returned. Multiple fields can be
+     specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies *
+     birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds *
+     genders * imClients * interests * locales * locations * memberships * metadata * miscKeywords *
+     names * nicknames * occupations * organizations * phoneNumbers * photos * relations * sipAddresses
+     * skills * urls * userDefined
+       */
+      public String getReadMask() {
+        return readMask;
+      }
+
+      /**
+       * Required. A field mask to restrict which fields on each person are returned. Multiple
+       * fields can be specified by separating them with commas. Valid values are: * addresses *
+       * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos *
+       * emailAddresses * events * externalIds * genders * imClients * interests * locales *
+       * locations * memberships * metadata * miscKeywords * names * nicknames * occupations *
+       * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+       * userDefined
+       */
+      public SearchContacts setReadMask(String readMask) {
+        this.readMask = readMask;
+        return this;
+      }
+
+      @Override
+      public SearchContacts set(String parameterName, Object value) {
+        return (SearchContacts) super.set(parameterName, value);
       }
     }
     /**

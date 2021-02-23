@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   private String createTime;
 
   /**
-   * / // The core content of the template //
+   * The core content of the template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * / // The core content of the template //
+   * The core content of the template.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyConfig getDeidentifyConfig() {
@@ -101,7 +101,7 @@ public final class GooglePrivacyDlpV2DeidentifyTemplate extends com.google.api.c
   }
 
   /**
-   * / // The core content of the template //
+   * The core content of the template.
    * @param deidentifyConfig deidentifyConfig or {@code null} for none
    */
   public GooglePrivacyDlpV2DeidentifyTemplate setDeidentifyConfig(GooglePrivacyDlpV2DeidentifyConfig deidentifyConfig) {

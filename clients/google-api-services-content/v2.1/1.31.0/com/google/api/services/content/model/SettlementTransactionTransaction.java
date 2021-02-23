@@ -41,7 +41,7 @@ public final class SettlementTransactionTransaction extends com.google.api.clien
    * The type of the transaction that occurred. Acceptable values are: - "`order`" - "`reversal`" -
    * "`orderRefund`" - "`reversalRefund`" - "`issueRelatedRefundAndReplacement`" -
    * "`returnLabelShippingFeeTransaction`" - "`reversalIssueRelatedRefundAndReplacement`" -
-   * "`reversalReturnLabelShippingFeeTransaction`"
+   * "`reversalReturnLabelShippingFeeTransaction`" - "`lumpSumCorrectionTransaction`"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class SettlementTransactionTransaction extends com.google.api.clien
    * The type of the transaction that occurred. Acceptable values are: - "`order`" - "`reversal`" -
    * "`orderRefund`" - "`reversalRefund`" - "`issueRelatedRefundAndReplacement`" -
    * "`returnLabelShippingFeeTransaction`" - "`reversalIssueRelatedRefundAndReplacement`" -
-   * "`reversalReturnLabelShippingFeeTransaction`"
+   * "`reversalReturnLabelShippingFeeTransaction`" - "`lumpSumCorrectionTransaction`"
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -79,7 +79,7 @@ public final class SettlementTransactionTransaction extends com.google.api.clien
    * The type of the transaction that occurred. Acceptable values are: - "`order`" - "`reversal`" -
    * "`orderRefund`" - "`reversalRefund`" - "`issueRelatedRefundAndReplacement`" -
    * "`returnLabelShippingFeeTransaction`" - "`reversalIssueRelatedRefundAndReplacement`" -
-   * "`reversalReturnLabelShippingFeeTransaction`"
+   * "`reversalReturnLabelShippingFeeTransaction`" - "`lumpSumCorrectionTransaction`"
    * @param type type or {@code null} for none
    */
   public SettlementTransactionTransaction setType(java.lang.String type) {

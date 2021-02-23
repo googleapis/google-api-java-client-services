@@ -65,6 +65,13 @@ public final class PreprocessingConfig extends com.google.api.client.json.Generi
   private Denoise denoise;
 
   /**
+   * Specify the video pad filter configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Pad pad;
+
+  /**
    * Audio preprocessing configuration.
    * @return value or {@code null} for none
    */
@@ -146,6 +153,23 @@ public final class PreprocessingConfig extends com.google.api.client.json.Generi
    */
   public PreprocessingConfig setDenoise(Denoise denoise) {
     this.denoise = denoise;
+    return this;
+  }
+
+  /**
+   * Specify the video pad filter configuration.
+   * @return value or {@code null} for none
+   */
+  public Pad getPad() {
+    return pad;
+  }
+
+  /**
+   * Specify the video pad filter configuration.
+   * @param pad pad or {@code null} for none
+   */
+  public PreprocessingConfig setPad(Pad pad) {
+    this.pad = pad;
     return this;
   }
 

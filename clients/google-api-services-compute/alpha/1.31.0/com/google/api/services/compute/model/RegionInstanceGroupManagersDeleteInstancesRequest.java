@@ -38,9 +38,8 @@ public final class RegionInstanceGroupManagersDeleteInstancesRequest extends com
   private java.util.List<java.lang.String> instances;
 
   /**
-   * If false and the request contains references to instances that cannot be deleted (that is,
-   * instances that are not in the group or are already deleted), the request fails. Otherwise, such
-   * instances are ignored.
+   * Skip instances which cannot be deleted (instances not belonging to this managed group, already
+   * being deleted or being abandoned). If `false`, fail whole flow, if such instance is passed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +65,8 @@ public final class RegionInstanceGroupManagersDeleteInstancesRequest extends com
   }
 
   /**
-   * If false and the request contains references to instances that cannot be deleted (that is,
-   * instances that are not in the group or are already deleted), the request fails. Otherwise, such
-   * instances are ignored.
+   * Skip instances which cannot be deleted (instances not belonging to this managed group, already
+   * being deleted or being abandoned). If `false`, fail whole flow, if such instance is passed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkipInapplicableInstances() {
@@ -76,9 +74,8 @@ public final class RegionInstanceGroupManagersDeleteInstancesRequest extends com
   }
 
   /**
-   * If false and the request contains references to instances that cannot be deleted (that is,
-   * instances that are not in the group or are already deleted), the request fails. Otherwise, such
-   * instances are ignored.
+   * Skip instances which cannot be deleted (instances not belonging to this managed group, already
+   * being deleted or being abandoned). If `false`, fail whole flow, if such instance is passed.
    * @param skipInapplicableInstances skipInapplicableInstances or {@code null} for none
    */
   public RegionInstanceGroupManagersDeleteInstancesRequest setSkipInapplicableInstances(java.lang.Boolean skipInapplicableInstances) {

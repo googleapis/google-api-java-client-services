@@ -32,8 +32,8 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   /**
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
-   * secondary IP ranges within a network. Only IPv4 is supported. This may be a RFC 1918 IP range,
-   * or a privately, non-RFC 1918 IP range, not belonging to Google.
+   * secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed
+   * in the Valid ranges list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +51,8 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   /**
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
-   * secondary IP ranges within a network. Only IPv4 is supported. This may be a RFC 1918 IP range,
-   * or a privately, non-RFC 1918 IP range, not belonging to Google.
+   * secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed
+   * in the Valid ranges list.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -62,8 +62,8 @@ public final class SubnetworkSecondaryRange extends com.google.api.client.json.G
   /**
    * The range of IP addresses belonging to this subnetwork secondary range. Provide this property
    * when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and
-   * secondary IP ranges within a network. Only IPv4 is supported. This may be a RFC 1918 IP range,
-   * or a privately, non-RFC 1918 IP range, not belonging to Google.
+   * secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed
+   * in the Valid ranges list.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public SubnetworkSecondaryRange setIpCidrRange(java.lang.String ipCidrRange) {

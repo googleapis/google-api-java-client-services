@@ -94,7 +94,9 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private java.lang.String projectId;
 
   /**
-   * Schedule specification.
+   * Specifies schedule for the transfer job. This is an optional field. When the field is not set,
+   * the job will never execute a transfer, unless you invoke RunTransferJob or update the job to
+   * have a non-empty schedule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -270,7 +272,9 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Schedule specification.
+   * Specifies schedule for the transfer job. This is an optional field. When the field is not set,
+   * the job will never execute a transfer, unless you invoke RunTransferJob or update the job to
+   * have a non-empty schedule.
    * @return value or {@code null} for none
    */
   public Schedule getSchedule() {
@@ -278,7 +282,9 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Schedule specification.
+   * Specifies schedule for the transfer job. This is an optional field. When the field is not set,
+   * the job will never execute a transfer, unless you invoke RunTransferJob or update the job to
+   * have a non-empty schedule.
    * @param schedule schedule or {@code null} for none
    */
   public TransferJob setSchedule(Schedule schedule) {

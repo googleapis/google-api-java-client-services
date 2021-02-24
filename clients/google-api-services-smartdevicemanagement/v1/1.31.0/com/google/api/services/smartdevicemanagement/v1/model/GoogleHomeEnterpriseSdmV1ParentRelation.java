@@ -18,7 +18,6 @@ package com.google.api.services.smartdevicemanagement.v1.model;
 
 /**
  * Represents device relationships, for instance, structure/room to which the device is assigned to.
- * For now this is only filled in the enterprise flow.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Smart Device Management API. For a detailed

@@ -537,7 +537,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
        * operation.
        *
        * @param name Required. Name of the requested reservation, for example:
-       *        `projects/{project_id}/locations/{location_id}/bireservation`
+       *        `projects/{project_id}/locations/{location_id}/biReservation`
        * @return the request
        */
       public GetBiReservation getBiReservation(java.lang.String name) throws java.io.IOException {
@@ -565,7 +565,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * invoking the constructor. </p>
          *
          * @param name Required. Name of the requested reservation, for example:
-       *        `projects/{project_id}/locations/{location_id}/bireservation`
+       *        `projects/{project_id}/locations/{location_id}/biReservation`
          * @since 1.13
          */
         protected GetBiReservation(java.lang.String name) {
@@ -645,13 +645,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
         /**
          * Required. Name of the requested reservation, for example:
-         * `projects/{project_id}/locations/{location_id}/bireservation`
+         * `projects/{project_id}/locations/{location_id}/biReservation`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the requested reservation, for example:
-       `projects/{project_id}/locations/{location_id}/bireservation`
+       `projects/{project_id}/locations/{location_id}/biReservation`
          */
         public java.lang.String getName() {
           return name;
@@ -659,7 +659,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
         /**
          * Required. Name of the requested reservation, for example:
-         * `projects/{project_id}/locations/{location_id}/bireservation`
+         * `projects/{project_id}/locations/{location_id}/biReservation`
          */
         public GetBiReservation setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1131,7 +1131,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
        * operation.
        *
        * @param name The resource name of the singleton BI reservation. Reservation names have the form
-       *        `projects/{project_id}/locations/{location_id}/bireservation`.
+       *        `projects/{project_id}/locations/{location_id}/biReservation`.
        * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.BiReservation}
        * @return the request
        */
@@ -1163,7 +1163,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * after invoking the constructor. </p>
          *
          * @param name The resource name of the singleton BI reservation. Reservation names have the form
-       *        `projects/{project_id}/locations/{location_id}/bireservation`.
+       *        `projects/{project_id}/locations/{location_id}/biReservation`.
          * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.BiReservation}
          * @since 1.13
          */
@@ -1234,13 +1234,13 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
         /**
          * The resource name of the singleton BI reservation. Reservation names have the form
-         * `projects/{project_id}/locations/{location_id}/bireservation`.
+         * `projects/{project_id}/locations/{location_id}/biReservation`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The resource name of the singleton BI reservation. Reservation names have the form
-       `projects/{project_id}/locations/{location_id}/bireservation`.
+       `projects/{project_id}/locations/{location_id}/biReservation`.
          */
         public java.lang.String getName() {
           return name;
@@ -1248,7 +1248,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
         /**
          * The resource name of the singleton BI reservation. Reservation names have the form
-         * `projects/{project_id}/locations/{location_id}/bireservation`.
+         * `projects/{project_id}/locations/{location_id}/biReservation`.
          */
         public UpdateBiReservation setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3202,7 +3202,10 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * found is applied to the query. When creating assignments, it does not matter if other assignments
            * exist at higher levels. Example: * The organization `organizationA` contains two projects,
            * `project1` and `project2`. * Assignments for all three entities (`organizationA`, `project1`, and
-           * `project2`) could all be created and mapped to the same or different reservations. Returns
+           * `project2`) could all be created and mapped to the same or different reservations. "None"
+           * assignments represent an absence of the assignment. Projects assigned to None use on-demand
+           * pricing. To create a "None" assignment, use "none" as a reservation_id in the parent. Example
+           * parent: `projects/myproject/locations/US/reservations/none`. Returns
            * `google.rpc.Code.PERMISSION_DENIED` if user does not have 'bigquery.admin' permissions on the
            * project using the reservation and the project that owns this reservation. Returns
            * `google.rpc.Code.INVALID_ARGUMENT` when location of the assignment does not match location of the
@@ -3242,10 +3245,14 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
              * not matter if other assignments exist at higher levels. Example: * The organization
              * `organizationA` contains two projects, `project1` and `project2`. * Assignments for all three
              * entities (`organizationA`, `project1`, and `project2`) could all be created and mapped to the
-             * same or different reservations. Returns `google.rpc.Code.PERMISSION_DENIED` if user does not
-             * have 'bigquery.admin' permissions on the project using the reservation and the project that
-             * owns this reservation. Returns `google.rpc.Code.INVALID_ARGUMENT` when location of the
-             * assignment does not match location of the reservation.
+             * same or different reservations. "None" assignments represent an absence of the assignment.
+             * Projects assigned to None use on-demand pricing. To create a "None" assignment, use "none" as a
+             * reservation_id in the parent. Example parent:
+             * `projects/myproject/locations/US/reservations/none`. Returns
+             * `google.rpc.Code.PERMISSION_DENIED` if user does not have 'bigquery.admin' permissions on the
+             * project using the reservation and the project that owns this reservation. Returns
+             * `google.rpc.Code.INVALID_ARGUMENT` when location of the assignment does not match location of
+             * the reservation.
              *
              * Create a request for the method "assignments.create".
              *

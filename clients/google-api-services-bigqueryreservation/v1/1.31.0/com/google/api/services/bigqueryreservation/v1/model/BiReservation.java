@@ -32,7 +32,7 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
 
   /**
    * The resource name of the singleton BI reservation. Reservation names have the form
-   * `projects/{project_id}/locations/{location_id}/bireservation`.
+   * `projects/{project_id}/locations/{location_id}/biReservation`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
 
   /**
    * The resource name of the singleton BI reservation. Reservation names have the form
-   * `projects/{project_id}/locations/{location_id}/bireservation`.
+   * `projects/{project_id}/locations/{location_id}/biReservation`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -63,7 +63,7 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
 
   /**
    * The resource name of the singleton BI reservation. Reservation names have the form
-   * `projects/{project_id}/locations/{location_id}/bireservation`.
+   * `projects/{project_id}/locations/{location_id}/biReservation`.
    * @param name name or {@code null} for none
    */
   public BiReservation setName(java.lang.String name) {

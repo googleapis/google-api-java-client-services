@@ -47,6 +47,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String database;
 
   /**
+   * Output only. The encryption information for the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionInfo encryptionInfo;
+
+  /**
    * Required for the CreateBackup operation. The expiration time of the backup, with microseconds
    * granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup
    * request is processed. Once the `expire_time` has passed, the backup is eligible to be
@@ -139,6 +146,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setDatabase(java.lang.String database) {
     this.database = database;
+    return this;
+  }
+
+  /**
+   * Output only. The encryption information for the backup.
+   * @return value or {@code null} for none
+   */
+  public EncryptionInfo getEncryptionInfo() {
+    return encryptionInfo;
+  }
+
+  /**
+   * Output only. The encryption information for the backup.
+   * @param encryptionInfo encryptionInfo or {@code null} for none
+   */
+  public Backup setEncryptionInfo(EncryptionInfo encryptionInfo) {
+    this.encryptionInfo = encryptionInfo;
     return this;
   }
 

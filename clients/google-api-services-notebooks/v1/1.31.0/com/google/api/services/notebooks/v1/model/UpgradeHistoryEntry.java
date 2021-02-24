@@ -79,6 +79,13 @@ public final class UpgradeHistoryEntry extends com.google.api.client.json.Generi
   private java.lang.String targetImage;
 
   /**
+   * Target VM Version, like m63.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetVersion;
+
+  /**
    * The version of the notebook instance before this upgrade.
    * The value may be {@code null}.
    */
@@ -208,6 +215,23 @@ public final class UpgradeHistoryEntry extends com.google.api.client.json.Generi
    */
   public UpgradeHistoryEntry setTargetImage(java.lang.String targetImage) {
     this.targetImage = targetImage;
+    return this;
+  }
+
+  /**
+   * Target VM Version, like m63.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetVersion() {
+    return targetVersion;
+  }
+
+  /**
+   * Target VM Version, like m63.
+   * @param targetVersion targetVersion or {@code null} for none
+   */
+  public UpgradeHistoryEntry setTargetVersion(java.lang.String targetVersion) {
+    this.targetVersion = targetVersion;
     return this;
   }
 

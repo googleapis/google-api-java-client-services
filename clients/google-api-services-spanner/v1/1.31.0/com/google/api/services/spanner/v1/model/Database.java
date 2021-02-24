@@ -47,6 +47,26 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private String earliestVersionTime;
 
   /**
+   * Output only. For databases that are using customer managed encryption, this field contains the
+   * encryption configuration for the database. For databases that are using Google default or other
+   * types of encryption, this field is empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfig encryptionConfig;
+
+  /**
+   * Output only. For databases that are using customer managed encryption, this field contains the
+   * encryption information for the database, such as encryption state and the Cloud KMS key
+   * versions that are in use. For databases that are using Google default or other types of
+   * encryption, this field is empty. This field is propagated lazily from the backend. There might
+   * be a delay from when a key version is being used and when it appears in this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EncryptionInfo> encryptionInfo;
+
+  /**
    * Required. The name of the database. Values are of the form `projects//instances//databases/`,
    * where `` is as specified in the `CREATE DATABASE` statement. This name can be passed to other
    * API methods to identify the database.
@@ -116,6 +136,52 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setEarliestVersionTime(String earliestVersionTime) {
     this.earliestVersionTime = earliestVersionTime;
+    return this;
+  }
+
+  /**
+   * Output only. For databases that are using customer managed encryption, this field contains the
+   * encryption configuration for the database. For databases that are using Google default or other
+   * types of encryption, this field is empty.
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
+  }
+
+  /**
+   * Output only. For databases that are using customer managed encryption, this field contains the
+   * encryption configuration for the database. For databases that are using Google default or other
+   * types of encryption, this field is empty.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
+   */
+  public Database setEncryptionConfig(EncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
+    return this;
+  }
+
+  /**
+   * Output only. For databases that are using customer managed encryption, this field contains the
+   * encryption information for the database, such as encryption state and the Cloud KMS key
+   * versions that are in use. For databases that are using Google default or other types of
+   * encryption, this field is empty. This field is propagated lazily from the backend. There might
+   * be a delay from when a key version is being used and when it appears in this field.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EncryptionInfo> getEncryptionInfo() {
+    return encryptionInfo;
+  }
+
+  /**
+   * Output only. For databases that are using customer managed encryption, this field contains the
+   * encryption information for the database, such as encryption state and the Cloud KMS key
+   * versions that are in use. For databases that are using Google default or other types of
+   * encryption, this field is empty. This field is propagated lazily from the backend. There might
+   * be a delay from when a key version is being used and when it appears in this field.
+   * @param encryptionInfo encryptionInfo or {@code null} for none
+   */
+  public Database setEncryptionInfo(java.util.List<EncryptionInfo> encryptionInfo) {
+    this.encryptionInfo = encryptionInfo;
     return this;
   }
 

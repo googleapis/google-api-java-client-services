@@ -40,6 +40,14 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
   private java.lang.String createStatement;
 
   /**
+   * Optional. The encryption configuration for the database. If this field is not specified, Cloud
+   * Spanner will encrypt/decrypt all data at rest using Google default encryption.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfig encryptionConfig;
+
+  /**
    * Optional. A list of DDL statements to run inside the newly created database. Statements can
    * create tables, indexes, etc. These statements execute atomically with the creation of the
    * database: if there is an error in any statement, the database is not created.
@@ -68,6 +76,25 @@ public final class CreateDatabaseRequest extends com.google.api.client.json.Gene
    */
   public CreateDatabaseRequest setCreateStatement(java.lang.String createStatement) {
     this.createStatement = createStatement;
+    return this;
+  }
+
+  /**
+   * Optional. The encryption configuration for the database. If this field is not specified, Cloud
+   * Spanner will encrypt/decrypt all data at rest using Google default encryption.
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
+  }
+
+  /**
+   * Optional. The encryption configuration for the database. If this field is not specified, Cloud
+   * Spanner will encrypt/decrypt all data at rest using Google default encryption.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
+   */
+  public CreateDatabaseRequest setEncryptionConfig(EncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
     return this;
   }
 

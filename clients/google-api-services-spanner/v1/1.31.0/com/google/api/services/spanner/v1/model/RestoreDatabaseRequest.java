@@ -47,6 +47,16 @@ public final class RestoreDatabaseRequest extends com.google.api.client.json.Gen
   private java.lang.String databaseId;
 
   /**
+   * Optional. An encryption configuration describing the encryption type and key resources in Cloud
+   * KMS used to encrypt/decrypt the database to restore to. If this field is not specified, the
+   * restored database will use the same encryption configuration as the backup by default, namely
+   * encryption_type = `USE_CONFIG_DEFAULT_OR_DATABASE_ENCRYPTION`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestoreDatabaseEncryptionConfig encryptionConfig;
+
+  /**
    * Name of the backup from which to restore. Values are of the form
    * `projects//instances//backups/`.
    * @return value or {@code null} for none
@@ -83,6 +93,29 @@ public final class RestoreDatabaseRequest extends com.google.api.client.json.Gen
    */
   public RestoreDatabaseRequest setDatabaseId(java.lang.String databaseId) {
     this.databaseId = databaseId;
+    return this;
+  }
+
+  /**
+   * Optional. An encryption configuration describing the encryption type and key resources in Cloud
+   * KMS used to encrypt/decrypt the database to restore to. If this field is not specified, the
+   * restored database will use the same encryption configuration as the backup by default, namely
+   * encryption_type = `USE_CONFIG_DEFAULT_OR_DATABASE_ENCRYPTION`.
+   * @return value or {@code null} for none
+   */
+  public RestoreDatabaseEncryptionConfig getEncryptionConfig() {
+    return encryptionConfig;
+  }
+
+  /**
+   * Optional. An encryption configuration describing the encryption type and key resources in Cloud
+   * KMS used to encrypt/decrypt the database to restore to. If this field is not specified, the
+   * restored database will use the same encryption configuration as the backup by default, namely
+   * encryption_type = `USE_CONFIG_DEFAULT_OR_DATABASE_ENCRYPTION`.
+   * @param encryptionConfig encryptionConfig or {@code null} for none
+   */
+  public RestoreDatabaseRequest setEncryptionConfig(RestoreDatabaseEncryptionConfig encryptionConfig) {
+    this.encryptionConfig = encryptionConfig;
     return this;
   }
 

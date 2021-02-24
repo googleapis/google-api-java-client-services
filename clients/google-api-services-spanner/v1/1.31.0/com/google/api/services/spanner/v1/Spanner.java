@@ -2382,6 +2382,48 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
             return this;
           }
 
+          /** Required. The encryption type of the backup. */
+          @com.google.api.client.util.Key("encryptionConfig.encryptionType")
+          private java.lang.String encryptionConfigEncryptionType;
+
+          /** Required. The encryption type of the backup.
+           */
+          public java.lang.String getEncryptionConfigEncryptionType() {
+            return encryptionConfigEncryptionType;
+          }
+
+          /** Required. The encryption type of the backup. */
+          public Create setEncryptionConfigEncryptionType(java.lang.String encryptionConfigEncryptionType) {
+            this.encryptionConfigEncryptionType = encryptionConfigEncryptionType;
+            return this;
+          }
+
+          /**
+           * Optional. The Cloud KMS key that will be used to protect the backup. This field should
+           * be set only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the
+           * form `projects//locations//keyRings//cryptoKeys/`.
+           */
+          @com.google.api.client.util.Key("encryptionConfig.kmsKeyName")
+          private java.lang.String encryptionConfigKmsKeyName;
+
+          /** Optional. The Cloud KMS key that will be used to protect the backup. This field should be set only
+         when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
+         `projects//locations//keyRings//cryptoKeys/`.
+           */
+          public java.lang.String getEncryptionConfigKmsKeyName() {
+            return encryptionConfigKmsKeyName;
+          }
+
+          /**
+           * Optional. The Cloud KMS key that will be used to protect the backup. This field should
+           * be set only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the
+           * form `projects//locations//keyRings//cryptoKeys/`.
+           */
+          public Create setEncryptionConfigKmsKeyName(java.lang.String encryptionConfigKmsKeyName) {
+            this.encryptionConfigKmsKeyName = encryptionConfigKmsKeyName;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);

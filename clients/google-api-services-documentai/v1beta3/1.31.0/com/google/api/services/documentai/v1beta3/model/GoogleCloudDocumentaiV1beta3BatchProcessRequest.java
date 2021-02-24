@@ -49,7 +49,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig inputDocuments;
+  private GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig inputDocuments;
 
   /**
    * The overall output config for batch process.
@@ -103,7 +103,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
    * The input documents for batch process.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig getInputDocuments() {
+  public GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig getInputDocuments() {
     return inputDocuments;
   }
 
@@ -111,7 +111,7 @@ public final class GoogleCloudDocumentaiV1beta3BatchProcessRequest extends com.g
    * The input documents for batch process.
    * @param inputDocuments inputDocuments or {@code null} for none
    */
-  public GoogleCloudDocumentaiV1beta3BatchProcessRequest setInputDocuments(GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig inputDocuments) {
+  public GoogleCloudDocumentaiV1beta3BatchProcessRequest setInputDocuments(GoogleCloudDocumentaiV1beta3BatchDocumentsInputConfig inputDocuments) {
     this.inputDocuments = inputDocuments;
     return this;
   }

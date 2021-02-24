@@ -39,6 +39,13 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue ext
   private GoogleTypePostalAddress addressValue;
 
   /**
+   * Boolean value. Can be used for entities with binary values, or for checkboxes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean booleanValue;
+
+  /**
    * Date value. Includes year, month, day. See also:
    * https://github.com/googleapis/googleapis/blob/master/google/type/date.proto
    * The value may be {@code null}.
@@ -89,6 +96,23 @@ public final class GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue ext
    */
   public GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue setAddressValue(GoogleTypePostalAddress addressValue) {
     this.addressValue = addressValue;
+    return this;
+  }
+
+  /**
+   * Boolean value. Can be used for entities with binary values, or for checkboxes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBooleanValue() {
+    return booleanValue;
+  }
+
+  /**
+   * Boolean value. Can be used for entities with binary values, or for checkboxes.
+   * @param booleanValue booleanValue or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta1DocumentEntityNormalizedValue setBooleanValue(java.lang.Boolean booleanValue) {
+    this.booleanValue = booleanValue;
     return this;
   }
 

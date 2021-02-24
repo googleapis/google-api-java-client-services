@@ -265,8 +265,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * The source disk used to create this disk. You can provide this as a partial or full URL to the
    * resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
-   * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk   -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/disks/disk   -
+   * projects/project/zones/zone/disks/disk   - projects/project/regions/region/disks/disk   -
+   * zones/zone/disks/disk   - regions/region/disks/disk
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -957,8 +959,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * The source disk used to create this disk. You can provide this as a partial or full URL to the
    * resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
-   * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk   -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/disks/disk   -
+   * projects/project/zones/zone/disks/disk   - projects/project/regions/region/disks/disk   -
+   * zones/zone/disks/disk   - regions/region/disks/disk
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDisk() {
@@ -968,8 +972,10 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   /**
    * The source disk used to create this disk. You can provide this as a partial or full URL to the
    * resource. For example, the following are valid values: -
-   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk  -
-   * projects/project/zones/zone/disks/disk  - zones/zone/disks/disk
+   * https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk   -
+   * https://www.googleapis.com/compute/v1/projects/project/regions/region/disks/disk   -
+   * projects/project/zones/zone/disks/disk   - projects/project/regions/region/disks/disk   -
+   * zones/zone/disks/disk   - regions/region/disks/disk
    * @param sourceDisk sourceDisk or {@code null} for none
    */
   public Disk setSourceDisk(java.lang.String sourceDisk) {

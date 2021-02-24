@@ -76,6 +76,20 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The most recent execution names triggered from this schedule and their
+   * corresponding states.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Execution> recentExecutions;
+
+  static {
+    // hack to force ProGuard to consider Execution used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Execution.class);
+  }
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +107,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   private java.lang.String timeZone;
 
   /**
-   * Output only. TIme the schedule was last updated.
+   * Output only. Time the schedule was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -210,6 +224,25 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The most recent execution names triggered from this schedule and their
+   * corresponding states.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Execution> getRecentExecutions() {
+    return recentExecutions;
+  }
+
+  /**
+   * Output only. The most recent execution names triggered from this schedule and their
+   * corresponding states.
+   * @param recentExecutions recentExecutions or {@code null} for none
+   */
+  public Schedule setRecentExecutions(java.util.List<Execution> recentExecutions) {
+    this.recentExecutions = recentExecutions;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -250,7 +283,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. TIme the schedule was last updated.
+   * Output only. Time the schedule was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -258,7 +291,7 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. TIme the schedule was last updated.
+   * Output only. Time the schedule was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public Schedule setUpdateTime(String updateTime) {

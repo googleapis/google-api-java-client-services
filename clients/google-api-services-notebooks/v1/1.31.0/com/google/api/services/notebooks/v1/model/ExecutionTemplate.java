@@ -90,6 +90,13 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
   private java.lang.String outputNotebookFolder;
 
   /**
+   * Parameters used within the 'input_notebook_file' notebook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parameters;
+
+  /**
    * Parameters to be overridden in the notebook during execution. Ref
    * https://papermill.readthedocs.io/en/latest/usage-parameterize.html on how to specifying
    * parameters in the input notebook and pass them here in an YAML file. Ex:
@@ -241,6 +248,23 @@ public final class ExecutionTemplate extends com.google.api.client.json.GenericJ
    */
   public ExecutionTemplate setOutputNotebookFolder(java.lang.String outputNotebookFolder) {
     this.outputNotebookFolder = outputNotebookFolder;
+    return this;
+  }
+
+  /**
+   * Parameters used within the 'input_notebook_file' notebook.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParameters() {
+    return parameters;
+  }
+
+  /**
+   * Parameters used within the 'input_notebook_file' notebook.
+   * @param parameters parameters or {@code null} for none
+   */
+  public ExecutionTemplate setParameters(java.lang.String parameters) {
+    this.parameters = parameters;
     return this;
   }
 

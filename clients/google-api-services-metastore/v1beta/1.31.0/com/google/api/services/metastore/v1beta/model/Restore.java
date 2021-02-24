@@ -40,6 +40,14 @@ public final class Restore extends com.google.api.client.json.GenericJson {
   private java.lang.String backup;
 
   /**
+   * Output only. The restore details containing the revision of the service to be restored to, in
+   * format of JSON.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String details;
+
+  /**
    * Output only. The time when the restore ended.
    * The value may be {@code null}.
    */
@@ -85,6 +93,25 @@ public final class Restore extends com.google.api.client.json.GenericJson {
    */
   public Restore setBackup(java.lang.String backup) {
     this.backup = backup;
+    return this;
+  }
+
+  /**
+   * Output only. The restore details containing the revision of the service to be restored to, in
+   * format of JSON.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDetails() {
+    return details;
+  }
+
+  /**
+   * Output only. The restore details containing the revision of the service to be restored to, in
+   * format of JSON.
+   * @param details details or {@code null} for none
+   */
+  public Restore setDetails(java.lang.String details) {
+    this.details = details;
     return this;
   }
 

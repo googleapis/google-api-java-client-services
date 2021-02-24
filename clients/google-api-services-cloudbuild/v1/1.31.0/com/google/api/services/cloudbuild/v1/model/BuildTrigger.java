@@ -58,7 +58,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disabled;
 
   /**
-   * Path, from the source root, to a file whose contents is used for the template.
+   * Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,7 +204,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Path, from the source root, to a file whose contents is used for the template.
+   * Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
    * @return value or {@code null} for none
    */
   public java.lang.String getFilename() {
@@ -212,7 +212,7 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Path, from the source root, to a file whose contents is used for the template.
+   * Path, from the source root, to the build configuration file (i.e. cloudbuild.yaml).
    * @param filename filename or {@code null} for none
    */
   public BuildTrigger setFilename(java.lang.String filename) {

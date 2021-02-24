@@ -217,6 +217,7 @@ packages on [Maven Central][maven-search].
 | Traffic Director API | [v2](clients/google-api-services-trafficdirector/v2) |
 | Transcoder API | [v1beta1](clients/google-api-services-transcoder/v1beta1) |
 | Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
+| Web Risk API | [v1](clients/google-api-services-webrisk/v1) |
 | Web Security Scanner API | [v1](clients/google-api-services-websecurityscanner/v1), [v1alpha](clients/google-api-services-websecurityscanner/v1alpha), [v1beta](clients/google-api-services-websecurityscanner/v1beta) |
 | Workflow Executions API | [v1](clients/google-api-services-workflowexecutions/v1), [v1beta](clients/google-api-services-workflowexecutions/v1beta) |
 | Workflows API | [v1](clients/google-api-services-workflows/v1), [v1beta](clients/google-api-services-workflows/v1beta) |

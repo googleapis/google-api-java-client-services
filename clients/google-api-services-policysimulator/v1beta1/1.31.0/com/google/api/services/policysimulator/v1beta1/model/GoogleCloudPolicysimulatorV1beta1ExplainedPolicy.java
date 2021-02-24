@@ -42,8 +42,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
 
   /**
    * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource. If the Simulator user does not have access to the policy, this
-   * field is omitted.
+   * the permission for the resource. If the user who created the Replay does not have access to the
+   * policy, this field is omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +58,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
   /**
    * The full resource name that identifies the resource. For example,
    * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`. If
-   * the Simulator user does not have access to the policy, this field is omitted. For examples of
-   * full resource names for Google Cloud services, see
+   * the user who created the Replay does not have access to the policy, this field is omitted. For
+   * examples of full resource names for Google Cloud services, see
    * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * The value may be {@code null}.
    */
@@ -67,8 +67,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
   private java.lang.String fullResourceName;
 
   /**
-   * The IAM policy attached to the resource. If the Simulator user does not have access to the
-   * policy, this field is empty.
+   * The IAM policy attached to the resource. If the user who created the Replay does not have
+   * access to the policy, this field is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
 
   /**
    * The relevance of this policy to the overall determination in the TroubleshootIamPolicyResponse.
-   * If the Simulator user does not have access to the policy, this field is omitted.
+   * If the user who created the Replay does not have access to the policy, this field is omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +109,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
 
   /**
    * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource. If the Simulator user does not have access to the policy, this
-   * field is omitted.
+   * the permission for the resource. If the user who created the Replay does not have access to the
+   * policy, this field is omitted.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudPolicysimulatorV1beta1BindingExplanation> getBindingExplanations() {
@@ -119,8 +119,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
 
   /**
    * Details about how each binding in the policy affects the member's ability, or inability, to use
-   * the permission for the resource. If the Simulator user does not have access to the policy, this
-   * field is omitted.
+   * the permission for the resource. If the user who created the Replay does not have access to the
+   * policy, this field is omitted.
    * @param bindingExplanations bindingExplanations or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ExplainedPolicy setBindingExplanations(java.util.List<GoogleCloudPolicysimulatorV1beta1BindingExplanation> bindingExplanations) {
@@ -131,8 +131,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
   /**
    * The full resource name that identifies the resource. For example,
    * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`. If
-   * the Simulator user does not have access to the policy, this field is omitted. For examples of
-   * full resource names for Google Cloud services, see
+   * the user who created the Replay does not have access to the policy, this field is omitted. For
+   * examples of full resource names for Google Cloud services, see
    * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * @return value or {@code null} for none
    */
@@ -143,8 +143,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
   /**
    * The full resource name that identifies the resource. For example,
    * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`. If
-   * the Simulator user does not have access to the policy, this field is omitted. For examples of
-   * full resource names for Google Cloud services, see
+   * the user who created the Replay does not have access to the policy, this field is omitted. For
+   * examples of full resource names for Google Cloud services, see
    * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
    * @param fullResourceName fullResourceName or {@code null} for none
    */
@@ -154,8 +154,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
   }
 
   /**
-   * The IAM policy attached to the resource. If the Simulator user does not have access to the
-   * policy, this field is empty.
+   * The IAM policy attached to the resource. If the user who created the Replay does not have
+   * access to the policy, this field is empty.
    * @return value or {@code null} for none
    */
   public GoogleIamV1Policy getPolicy() {
@@ -163,8 +163,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
   }
 
   /**
-   * The IAM policy attached to the resource. If the Simulator user does not have access to the
-   * policy, this field is empty.
+   * The IAM policy attached to the resource. If the user who created the Replay does not have
+   * access to the policy, this field is empty.
    * @param policy policy or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ExplainedPolicy setPolicy(GoogleIamV1Policy policy) {
@@ -174,7 +174,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
 
   /**
    * The relevance of this policy to the overall determination in the TroubleshootIamPolicyResponse.
-   * If the Simulator user does not have access to the policy, this field is omitted.
+   * If the user who created the Replay does not have access to the policy, this field is omitted.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelevance() {
@@ -183,7 +183,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedPolicy extends com.
 
   /**
    * The relevance of this policy to the overall determination in the TroubleshootIamPolicyResponse.
-   * If the Simulator user does not have access to the policy, this field is omitted.
+   * If the user who created the Replay does not have access to the policy, this field is omitted.
    * @param relevance relevance or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ExplainedPolicy setRelevance(java.lang.String relevance) {

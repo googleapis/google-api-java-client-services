@@ -17,8 +17,9 @@
 package com.google.api.services.policysimulator.v1beta1.model;
 
 /**
- * A successful replay of an AccessTuple that resulted in a difference between baseline and
- * simulated.
+ * The difference between the results of evaluating an access tuple under the current (baseline)
+ * policies and under the proposed (simulated) policies. This difference explains how a member's
+ * access could change if the proposed policies were applied.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Simulator API. For a detailed explanation see:
@@ -31,14 +32,18 @@ package com.google.api.services.policysimulator.v1beta1.model;
 public final class GoogleCloudPolicysimulatorV1beta1ReplayDiff extends com.google.api.client.json.GenericJson {
 
   /**
-   * The difference in AccessState between replays.
+   * A summary and comparison of the member's access under the current (baseline) policies and the
+   * proposed (simulated) policies for a single access tuple. The evaluation of the member's access
+   * is reported in the AccessState field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPolicysimulatorV1beta1AccessStateDiff accessDiff;
 
   /**
-   * The difference in AccessState between replays.
+   * A summary and comparison of the member's access under the current (baseline) policies and the
+   * proposed (simulated) policies for a single access tuple. The evaluation of the member's access
+   * is reported in the AccessState field.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1AccessStateDiff getAccessDiff() {
@@ -46,7 +51,9 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayDiff extends com.googl
   }
 
   /**
-   * The difference in AccessState between replays.
+   * A summary and comparison of the member's access under the current (baseline) policies and the
+   * proposed (simulated) policies for a single access tuple. The evaluation of the member's access
+   * is reported in the AccessState field.
    * @param accessDiff accessDiff or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayDiff setAccessDiff(GoogleCloudPolicysimulatorV1beta1AccessStateDiff accessDiff) {

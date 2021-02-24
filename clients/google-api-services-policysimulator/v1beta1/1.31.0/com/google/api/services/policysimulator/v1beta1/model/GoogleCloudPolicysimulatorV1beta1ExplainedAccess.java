@@ -17,7 +17,8 @@
 package com.google.api.services.policysimulator.v1beta1.model;
 
 /**
- * Details about how the set of Explained Policies resulted in the Access State.
+ * Details about how a set of policies, listed in ExplainedPolicy, resulted in a certain AccessState
+ * when replaying an access tuple.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Simulator API. For a detailed explanation see:
@@ -30,30 +31,32 @@ package com.google.api.services.policysimulator.v1beta1.model;
 public final class GoogleCloudPolicysimulatorV1beta1ExplainedAccess extends com.google.api.client.json.GenericJson {
 
   /**
-   * The overall access state for the included set of policies.
+   * Whether the member in the access tuple has permission to access the resource in the access
+   * tuple under the given policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accessState;
 
   /**
-   * The list of problems encountered when explaining this access. This list provides the reason why
-   * UNKNOWN information in `policies` was unknown.
+   * If the AccessState is `UNKNOWN`, this field contains a list of errors explaining why the result
+   * is `UNKNOWN`. If the `AccessState` is `GRANTED` or `NOT_GRANTED`, this field is omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleRpcStatus> errors;
 
   /**
-   * The set of policies causing an UNKNOWN AccessState, if any. If the Access is GRANTED or
-   * NOT_GRANTED, this list will be empty.
+   * If the AccessState is `UNKNOWN`, this field contains the policies that led to that result. If
+   * the `AccessState` is `GRANTED` or `NOT_GRANTED`, this field is omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudPolicysimulatorV1beta1ExplainedPolicy> policies;
 
   /**
-   * The overall access state for the included set of policies.
+   * Whether the member in the access tuple has permission to access the resource in the access
+   * tuple under the given policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessState() {
@@ -61,7 +64,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedAccess extends com.
   }
 
   /**
-   * The overall access state for the included set of policies.
+   * Whether the member in the access tuple has permission to access the resource in the access
+   * tuple under the given policies.
    * @param accessState accessState or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ExplainedAccess setAccessState(java.lang.String accessState) {
@@ -70,8 +74,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedAccess extends com.
   }
 
   /**
-   * The list of problems encountered when explaining this access. This list provides the reason why
-   * UNKNOWN information in `policies` was unknown.
+   * If the AccessState is `UNKNOWN`, this field contains a list of errors explaining why the result
+   * is `UNKNOWN`. If the `AccessState` is `GRANTED` or `NOT_GRANTED`, this field is omitted.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleRpcStatus> getErrors() {
@@ -79,8 +83,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedAccess extends com.
   }
 
   /**
-   * The list of problems encountered when explaining this access. This list provides the reason why
-   * UNKNOWN information in `policies` was unknown.
+   * If the AccessState is `UNKNOWN`, this field contains a list of errors explaining why the result
+   * is `UNKNOWN`. If the `AccessState` is `GRANTED` or `NOT_GRANTED`, this field is omitted.
    * @param errors errors or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ExplainedAccess setErrors(java.util.List<GoogleRpcStatus> errors) {
@@ -89,8 +93,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedAccess extends com.
   }
 
   /**
-   * The set of policies causing an UNKNOWN AccessState, if any. If the Access is GRANTED or
-   * NOT_GRANTED, this list will be empty.
+   * If the AccessState is `UNKNOWN`, this field contains the policies that led to that result. If
+   * the `AccessState` is `GRANTED` or `NOT_GRANTED`, this field is omitted.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudPolicysimulatorV1beta1ExplainedPolicy> getPolicies() {
@@ -98,8 +102,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ExplainedAccess extends com.
   }
 
   /**
-   * The set of policies causing an UNKNOWN AccessState, if any. If the Access is GRANTED or
-   * NOT_GRANTED, this list will be empty.
+   * If the AccessState is `UNKNOWN`, this field contains the policies that led to that result. If
+   * the `AccessState` is `GRANTED` or `NOT_GRANTED`, this field is omitted.
    * @param policies policies or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ExplainedAccess setPolicies(java.util.List<GoogleCloudPolicysimulatorV1beta1ExplainedPolicy> policies) {

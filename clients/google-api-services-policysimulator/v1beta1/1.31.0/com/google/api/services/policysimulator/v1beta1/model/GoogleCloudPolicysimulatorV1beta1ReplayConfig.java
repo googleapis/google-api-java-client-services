@@ -17,7 +17,7 @@
 package com.google.api.services.policysimulator.v1beta1.model;
 
 /**
- * The configuration used for the replay.
+ * The configuration used for a Replay.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Simulator API. For a detailed explanation see:
@@ -30,22 +30,28 @@ package com.google.api.services.policysimulator.v1beta1.model;
 public final class GoogleCloudPolicysimulatorV1beta1ReplayConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The logs to use as input for the replay.
+   * The logs to use as input for the Replay.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logSource;
 
   /**
-   * The policy overlay used during the replay. Keys are full resource names and the values are the
-   * policies to apply on these resources in the simulated state.
+   * A mapping of the resources that you want to simulate policies for and the policies that you
+   * want to simulate. Keys are the full resource names for the resources. For example,
+   * `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource
+   * names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-
+   * resource-names. Values are Policy objects representing the policies that you want to simulate.
+   * Replays automatically take into account any IAM policies inherited through the resource
+   * hierarchy, and any policies set on descendant resources. You do not need to include these
+   * policies in the policy overlay.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleIamV1Policy> policyOverlay;
 
   /**
-   * The logs to use as input for the replay.
+   * The logs to use as input for the Replay.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogSource() {
@@ -53,7 +59,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfig extends com.goo
   }
 
   /**
-   * The logs to use as input for the replay.
+   * The logs to use as input for the Replay.
    * @param logSource logSource or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayConfig setLogSource(java.lang.String logSource) {
@@ -62,8 +68,14 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfig extends com.goo
   }
 
   /**
-   * The policy overlay used during the replay. Keys are full resource names and the values are the
-   * policies to apply on these resources in the simulated state.
+   * A mapping of the resources that you want to simulate policies for and the policies that you
+   * want to simulate. Keys are the full resource names for the resources. For example,
+   * `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource
+   * names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-
+   * resource-names. Values are Policy objects representing the policies that you want to simulate.
+   * Replays automatically take into account any IAM policies inherited through the resource
+   * hierarchy, and any policies set on descendant resources. You do not need to include these
+   * policies in the policy overlay.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleIamV1Policy> getPolicyOverlay() {
@@ -71,8 +83,14 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfig extends com.goo
   }
 
   /**
-   * The policy overlay used during the replay. Keys are full resource names and the values are the
-   * policies to apply on these resources in the simulated state.
+   * A mapping of the resources that you want to simulate policies for and the policies that you
+   * want to simulate. Keys are the full resource names for the resources. For example,
+   * `//cloudresourcemanager.googleapis.com/projects/my-project`. For examples of full resource
+   * names for Google Cloud services, see https://cloud.google.com/iam/help/troubleshooter/full-
+   * resource-names. Values are Policy objects representing the policies that you want to simulate.
+   * Replays automatically take into account any IAM policies inherited through the resource
+   * hierarchy, and any policies set on descendant resources. You do not need to include these
+   * policies in the policy overlay.
    * @param policyOverlay policyOverlay or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayConfig setPolicyOverlay(java.util.Map<String, GoogleIamV1Policy> policyOverlay) {

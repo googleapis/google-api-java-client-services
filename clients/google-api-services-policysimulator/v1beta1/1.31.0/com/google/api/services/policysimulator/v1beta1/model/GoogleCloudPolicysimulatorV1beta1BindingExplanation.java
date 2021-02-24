@@ -42,8 +42,8 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
 
   /**
    * A condition expression that prevents this binding from granting access unless the expression
-   * evaluates to `true`. To learn about IAM Conditions, see
-   * http://cloud.google.com/iam/help/conditions/overview.
+   * evaluates to `true`. To learn about IAM Conditions, see https://cloud.google.com/iam/docs
+   * /conditions-overview.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,9 +54,9 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
    * either directly or indirectly. Each key identifies a member in the binding, and each value
    * indicates whether the member in the binding includes the member in the request. For example,
    * suppose that a binding includes the following members: * `user:alice@example.com` * `group
-   * :product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`. This user
-   * is a member of the group `group:product-eng@example.com`. For the first member in the binding,
-   * the key is `user:alice@example.com`, and the `membership` field in the value is set to
+   * :product-eng@example.com` The member in the replayed access tuple is `user:bob@example.com`.
+   * This user is a member of the group `group:product-eng@example.com`. For the first member in the
+   * binding, the key is `user:alice@example.com`, and the `membership` field in the value is set to
    * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
    * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * The value may be {@code null}.
@@ -122,8 +122,8 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
 
   /**
    * A condition expression that prevents this binding from granting access unless the expression
-   * evaluates to `true`. To learn about IAM Conditions, see
-   * http://cloud.google.com/iam/help/conditions/overview.
+   * evaluates to `true`. To learn about IAM Conditions, see https://cloud.google.com/iam/docs
+   * /conditions-overview.
    * @return value or {@code null} for none
    */
   public GoogleTypeExpr getCondition() {
@@ -132,8 +132,8 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
 
   /**
    * A condition expression that prevents this binding from granting access unless the expression
-   * evaluates to `true`. To learn about IAM Conditions, see
-   * http://cloud.google.com/iam/help/conditions/overview.
+   * evaluates to `true`. To learn about IAM Conditions, see https://cloud.google.com/iam/docs
+   * /conditions-overview.
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1BindingExplanation setCondition(GoogleTypeExpr condition) {
@@ -146,9 +146,9 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
    * either directly or indirectly. Each key identifies a member in the binding, and each value
    * indicates whether the member in the binding includes the member in the request. For example,
    * suppose that a binding includes the following members: * `user:alice@example.com` * `group
-   * :product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`. This user
-   * is a member of the group `group:product-eng@example.com`. For the first member in the binding,
-   * the key is `user:alice@example.com`, and the `membership` field in the value is set to
+   * :product-eng@example.com` The member in the replayed access tuple is `user:bob@example.com`.
+   * This user is a member of the group `group:product-eng@example.com`. For the first member in the
+   * binding, the key is `user:alice@example.com`, and the `membership` field in the value is set to
    * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
    * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * @return value or {@code null} for none
@@ -162,9 +162,9 @@ public final class GoogleCloudPolicysimulatorV1beta1BindingExplanation extends c
    * either directly or indirectly. Each key identifies a member in the binding, and each value
    * indicates whether the member in the binding includes the member in the request. For example,
    * suppose that a binding includes the following members: * `user:alice@example.com` * `group
-   * :product-eng@example.com` You want to troubleshoot access for `user:bob@example.com`. This user
-   * is a member of the group `group:product-eng@example.com`. For the first member in the binding,
-   * the key is `user:alice@example.com`, and the `membership` field in the value is set to
+   * :product-eng@example.com` The member in the replayed access tuple is `user:bob@example.com`.
+   * This user is a member of the group `group:product-eng@example.com`. For the first member in the
+   * binding, the key is `user:alice@example.com`, and the `membership` field in the value is set to
    * `MEMBERSHIP_NOT_INCLUDED`. For the second member in the binding, the key is `group:product-
    * eng@example.com`, and the `membership` field in the value is set to `MEMBERSHIP_INCLUDED`.
    * @param memberships memberships or {@code null} for none

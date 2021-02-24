@@ -17,7 +17,7 @@
 package com.google.api.services.policysimulator.v1beta1.model;
 
 /**
- * A Replay of Accesses against a simulated state.
+ * A resource describing a `Replay`, or simulation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Simulator API. For a detailed explanation see:
@@ -30,17 +30,18 @@ package com.google.api.services.policysimulator.v1beta1.model;
 public final class GoogleCloudPolicysimulatorV1beta1Replay extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The configuration used for the replay.
+   * Required. The configuration used for the `Replay`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPolicysimulatorV1beta1ReplayConfig config;
 
   /**
-   * The resource name of the replay. The replay id is randomly generated on creation. Format is
-   * `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-   * organization. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-   * 4d7d-8e03-479ce1833c36`
+   * Output only. The resource name of the `Replay`, which has the following format:
+   * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where
+   * `{resource-id}` is the ID of the project, folder, or organization that owns the Replay.
+   * Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-
+   * 8e03-479ce1833c36`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,14 +55,14 @@ public final class GoogleCloudPolicysimulatorV1beta1Replay extends com.google.ap
   private GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary resultsSummary;
 
   /**
-   * Output only. The current state of the replay. https://aip.dev/216
+   * Output only. The current state of the `Replay`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Required. The configuration used for the replay.
+   * Required. The configuration used for the `Replay`.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayConfig getConfig() {
@@ -69,7 +70,7 @@ public final class GoogleCloudPolicysimulatorV1beta1Replay extends com.google.ap
   }
 
   /**
-   * Required. The configuration used for the replay.
+   * Required. The configuration used for the `Replay`.
    * @param config config or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1Replay setConfig(GoogleCloudPolicysimulatorV1beta1ReplayConfig config) {
@@ -78,10 +79,11 @@ public final class GoogleCloudPolicysimulatorV1beta1Replay extends com.google.ap
   }
 
   /**
-   * The resource name of the replay. The replay id is randomly generated on creation. Format is
-   * `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-   * organization. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-   * 4d7d-8e03-479ce1833c36`
+   * Output only. The resource name of the `Replay`, which has the following format:
+   * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where
+   * `{resource-id}` is the ID of the project, folder, or organization that owns the Replay.
+   * Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-
+   * 8e03-479ce1833c36`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -89,10 +91,11 @@ public final class GoogleCloudPolicysimulatorV1beta1Replay extends com.google.ap
   }
 
   /**
-   * The resource name of the replay. The replay id is randomly generated on creation. Format is
-   * `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-   * organization. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
-   * 4d7d-8e03-479ce1833c36`
+   * Output only. The resource name of the `Replay`, which has the following format:
+   * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where
+   * `{resource-id}` is the ID of the project, folder, or organization that owns the Replay.
+   * Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-
+   * 8e03-479ce1833c36`
    * @param name name or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1Replay setName(java.lang.String name) {
@@ -118,7 +121,7 @@ public final class GoogleCloudPolicysimulatorV1beta1Replay extends com.google.ap
   }
 
   /**
-   * Output only. The current state of the replay. https://aip.dev/216
+   * Output only. The current state of the `Replay`.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -126,7 +129,7 @@ public final class GoogleCloudPolicysimulatorV1beta1Replay extends com.google.ap
   }
 
   /**
-   * Output only. The current state of the replay. https://aip.dev/216
+   * Output only. The current state of the `Replay`.
    * @param state state or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1Replay setState(java.lang.String state) {

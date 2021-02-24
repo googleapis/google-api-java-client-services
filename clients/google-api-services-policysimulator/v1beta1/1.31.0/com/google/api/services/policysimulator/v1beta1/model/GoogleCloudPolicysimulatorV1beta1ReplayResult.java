@@ -30,52 +30,59 @@ package com.google.api.services.policysimulator.v1beta1.model;
 public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The access replayed.
+   * The access tuple that was replayed. This field includes information about the member, resource,
+   * and permission that were involved in the access attempt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPolicysimulatorV1beta1AccessTuple accessTuple;
 
   /**
-   * The tuple was successfully replayed and had a difference.
+   * The difference between the member's access under the current (baseline) policies and the
+   * member's access under the proposed (simulated) policies. This field is only included for access
+   * tuples that were successfully replayed and had different results under the current policies and
+   * the proposed policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPolicysimulatorV1beta1ReplayDiff diff;
 
   /**
-   * The tuple was not successfully replayed.
+   * The error that caused the access tuple replay to fail. This field is only included for access
+   * tuples that were not replayed successfully.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus error;
 
   /**
-   * The late date this access was seen in the logs.
+   * The latest date this access tuple was seen in the logs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate lastSeenDate;
 
   /**
-   * The resource name of the replay result. Format is
-   * `PARENT/locations/{location}/replays/{replay}/results/{replay_result}` where PARENT is a
-   * project, folder, or organization. Example: `projects/my-example-
-   * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36/results/1234`
+   * The resource name of the `ReplayResult`, in the following format:
+   * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}/results
+   * /{replay-result-id}`, where `{resource-id}` is the ID of the project, folder, or organization
+   * that owns the Replay. Example: `projects/my-example-project/locations/global/replays/506a5f7f-
+   * 38ce-4d7d-8e03-479ce1833c36/results/1234`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The replay the access tuple was included in.
+   * The Replay that the access tuple was included in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * The access replayed.
+   * The access tuple that was replayed. This field includes information about the member, resource,
+   * and permission that were involved in the access attempt.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1AccessTuple getAccessTuple() {
@@ -83,7 +90,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The access replayed.
+   * The access tuple that was replayed. This field includes information about the member, resource,
+   * and permission that were involved in the access attempt.
    * @param accessTuple accessTuple or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResult setAccessTuple(GoogleCloudPolicysimulatorV1beta1AccessTuple accessTuple) {
@@ -92,7 +100,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The tuple was successfully replayed and had a difference.
+   * The difference between the member's access under the current (baseline) policies and the
+   * member's access under the proposed (simulated) policies. This field is only included for access
+   * tuples that were successfully replayed and had different results under the current policies and
+   * the proposed policies.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayDiff getDiff() {
@@ -100,7 +111,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The tuple was successfully replayed and had a difference.
+   * The difference between the member's access under the current (baseline) policies and the
+   * member's access under the proposed (simulated) policies. This field is only included for access
+   * tuples that were successfully replayed and had different results under the current policies and
+   * the proposed policies.
    * @param diff diff or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResult setDiff(GoogleCloudPolicysimulatorV1beta1ReplayDiff diff) {
@@ -109,7 +123,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The tuple was not successfully replayed.
+   * The error that caused the access tuple replay to fail. This field is only included for access
+   * tuples that were not replayed successfully.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getError() {
@@ -117,7 +132,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The tuple was not successfully replayed.
+   * The error that caused the access tuple replay to fail. This field is only included for access
+   * tuples that were not replayed successfully.
    * @param error error or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResult setError(GoogleRpcStatus error) {
@@ -126,7 +142,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The late date this access was seen in the logs.
+   * The latest date this access tuple was seen in the logs.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getLastSeenDate() {
@@ -134,7 +150,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The late date this access was seen in the logs.
+   * The latest date this access tuple was seen in the logs.
    * @param lastSeenDate lastSeenDate or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResult setLastSeenDate(GoogleTypeDate lastSeenDate) {
@@ -143,10 +159,11 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The resource name of the replay result. Format is
-   * `PARENT/locations/{location}/replays/{replay}/results/{replay_result}` where PARENT is a
-   * project, folder, or organization. Example: `projects/my-example-
-   * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36/results/1234`
+   * The resource name of the `ReplayResult`, in the following format:
+   * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}/results
+   * /{replay-result-id}`, where `{resource-id}` is the ID of the project, folder, or organization
+   * that owns the Replay. Example: `projects/my-example-project/locations/global/replays/506a5f7f-
+   * 38ce-4d7d-8e03-479ce1833c36/results/1234`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -154,10 +171,11 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The resource name of the replay result. Format is
-   * `PARENT/locations/{location}/replays/{replay}/results/{replay_result}` where PARENT is a
-   * project, folder, or organization. Example: `projects/my-example-
-   * project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36/results/1234`
+   * The resource name of the `ReplayResult`, in the following format:
+   * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}/results
+   * /{replay-result-id}`, where `{resource-id}` is the ID of the project, folder, or organization
+   * that owns the Replay. Example: `projects/my-example-project/locations/global/replays/506a5f7f-
+   * 38ce-4d7d-8e03-479ce1833c36/results/1234`
    * @param name name or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResult setName(java.lang.String name) {
@@ -166,7 +184,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The replay the access tuple was included in.
+   * The Replay that the access tuple was included in.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -174,7 +192,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResult extends com.goo
   }
 
   /**
-   * The replay the access tuple was included in.
+   * The Replay that the access tuple was included in.
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResult setParent(java.lang.String parent) {

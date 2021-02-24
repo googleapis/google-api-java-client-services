@@ -1,6 +1,6 @@
 # Policy Simulator API Client Library for Java
 
-
+ Policy Simulator is a collection of endpoints for creating, running, and viewing a Replay. A `Replay` is a type of simulation that lets you see how your members' access to resources might change if you changed your IAM policy. During a `Replay`, Policy Simulator re-evaluates, or replays, past access attempts under both the current policy and your proposed policy, and compares those results to determine how your members' access might change under the proposed policy.
 
 This page contains information about getting started with the Policy Simulator API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-policysimulator</artifactId>
-      <version>v1beta1-rev20210213-1.31.0</version>
+      <version>v1beta1-rev20210220-1.31.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'com.google.apis:google-api-services-policysimulator:v1beta1-rev20210213-1.31.0'
+  compile 'com.google.apis:google-api-services-policysimulator:v1beta1-rev20210220-1.31.0'
 }
 ```
 

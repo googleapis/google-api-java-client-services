@@ -20,7 +20,7 @@ package com.google.api.services.policysimulator.v1beta1;
  * Service definition for PolicySimulator (v1beta1).
  *
  * <p>
- * 
+ *  Policy Simulator is a collection of endpoints for creating, running, and viewing a Replay. A `Replay` is a type of simulation that lets you see how your members' access to resources might change if you changed your IAM policy. During a `Replay`, Policy Simulator re-evaluates, or replays, past access attempts under both the current policy and your proposed policy, and compares those results to determine how your members' access might change under the proposed policy.
  * </p>
  *
  * <p>
@@ -193,19 +193,15 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
       public class Replays {
 
         /**
-         * Create a replay using the given ReplayConfig. The parent of the replay must contain all resources
-         * in the overlay. For example, if the overlay contains: ``` ReplayConfig { policy_overlay = map = {
-         * "//cloudresourcemanager.googleapis.com/projects/project-1": ...,
-         * "//cloudresourcemanager.googleapis.com/projects/project-2": ..., } ``` Then, the parent used for
-         * CreateReplay must be the organization or a folder that contains both projects as children.
+         * Creates and starts a Replay using the given ReplayConfig.
          *
          * Create a request for the method "replays.create".
          *
          * This request holds the parameters needed by the policysimulator server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource where this Replay will be created. This must be a project, folder, or
-         *        organization with included location. Example: `projects/my-example-
+         * @param parent Required. The parent resource where this Replay will be created. This resource must be a project,
+         *        folder, or organization with a location. Example: `projects/my-example-
          *        project/locations/global`
          * @param content the {@link com.google.api.services.policysimulator.v1beta1.model.GoogleCloudPolicysimulatorV1beta1Replay}
          * @return the request
@@ -224,11 +220,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
 
           /**
-           * Create a replay using the given ReplayConfig. The parent of the replay must contain all
-           * resources in the overlay. For example, if the overlay contains: ``` ReplayConfig {
-           * policy_overlay = map = { "//cloudresourcemanager.googleapis.com/projects/project-1": ...,
-           * "//cloudresourcemanager.googleapis.com/projects/project-2": ..., } ``` Then, the parent used
-           * for CreateReplay must be the organization or a folder that contains both projects as children.
+           * Creates and starts a Replay using the given ReplayConfig.
            *
            * Create a request for the method "replays.create".
            *
@@ -238,8 +230,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource where this Replay will be created. This must be a project, folder, or
-         *        organization with included location. Example: `projects/my-example-
+           * @param parent Required. The parent resource where this Replay will be created. This resource must be a project,
+         *        folder, or organization with a location. Example: `projects/my-example-
          *        project/locations/global`
            * @param content the {@link com.google.api.services.policysimulator.v1beta1.model.GoogleCloudPolicysimulatorV1beta1Replay}
            * @since 1.13
@@ -310,23 +302,23 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent resource where this Replay will be created. This must be a
-           * project, folder, or organization with included location. Example: `projects/my-example-
+           * Required. The parent resource where this Replay will be created. This resource must be
+           * a project, folder, or organization with a location. Example: `projects/my-example-
            * project/locations/global`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource where this Replay will be created. This must be a project, folder, or
-         organization with included location. Example: `projects/my-example-project/locations/global`
+          /** Required. The parent resource where this Replay will be created. This resource must be a project,
+         folder, or organization with a location. Example: `projects/my-example-project/locations/global`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource where this Replay will be created. This must be a
-           * project, folder, or organization with included location. Example: `projects/my-example-
+           * Required. The parent resource where this Replay will be created. This resource must be
+           * a project, folder, or organization with a location. Example: `projects/my-example-
            * project/locations/global`
            */
           public Create setParent(java.lang.String parent) {
@@ -345,17 +337,18 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Get the specified Replay.
+         * Gets the specified Replay. Each `Replay` is available for at least 7 days.
          *
          * Create a request for the method "replays.get".
          *
          * This request holds the parameters needed by the policysimulator server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the replay to retrieve. Format is
-         *        `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-         *        organization. Example: `projects/my-example-project/locations/{location}/replays/506a5f7f-
-         *        38ce-4d7d-8e03-479ce1833c36`
+         * @param name Required. The name of the Replay to retrieve, in the following format:
+         *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+         *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
+         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+         *        4d7d-8e03-479ce1833c36`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -372,7 +365,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/replays/[^/]+$");
 
           /**
-           * Get the specified Replay.
+           * Gets the specified Replay. Each `Replay` is available for at least 7 days.
            *
            * Create a request for the method "replays.get".
            *
@@ -381,10 +374,11 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the replay to retrieve. Format is
-         *        `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-         *        organization. Example: `projects/my-example-project/locations/{location}/replays/506a5f7f-
-         *        38ce-4d7d-8e03-479ce1833c36`
+           * @param name Required. The name of the Replay to retrieve, in the following format:
+         *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+         *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
+         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+         *        4d7d-8e03-479ce1833c36`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -463,28 +457,30 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The name of the replay to retrieve. Format is
-           * `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-           * organization. Example: `projects/my-example-project/locations/{location}/replays
-           * /506a5f7f-38ce-4d7d-8e03-479ce1833c36`
+           * Required. The name of the Replay to retrieve, in the following format:
+           * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+           * where `{resource-id}` is the ID of the project, folder, or organization that owns the
+           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+           * 4d7d-8e03-479ce1833c36`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the replay to retrieve. Format is
-         `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or organization.
-         Example: `projects/my-example-project/locations/{location}/replays/506a5f7f-38ce-4d7d-
-         8e03-479ce1833c36`
+          /** Required. The name of the Replay to retrieve, in the following format:
+         `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where
+         `{resource-id}` is the ID of the project, folder, or organization that owns the `Replay`. Example:
+         `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the replay to retrieve. Format is
-           * `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-           * organization. Example: `projects/my-example-project/locations/{location}/replays
-           * /506a5f7f-38ce-4d7d-8e03-479ce1833c36`
+           * Required. The name of the Replay to retrieve, in the following format:
+           * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+           * where `{resource-id}` is the ID of the project, folder, or organization that owns the
+           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+           * 4d7d-8e03-479ce1833c36`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -523,14 +519,17 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
         public class Results {
 
           /**
-           * List the results of running a replay
+           * Lists the results of running a Replay.
            *
            * Create a request for the method "results.list".
            *
            * This request holds the parameters needed by the policysimulator server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The replay we are listing results for.
+           * @param parent Required. The Replay whose results are listed, in the following format:
+           *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+           *        8e03-479ce1833c36`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -547,7 +546,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/replays/[^/]+$");
 
             /**
-             * List the results of running a replay
+             * Lists the results of running a Replay.
              *
              * Create a request for the method "results.list".
              *
@@ -556,7 +555,10 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The replay we are listing results for.
+             * @param parent Required. The Replay whose results are listed, in the following format:
+           *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+           *        8e03-479ce1833c36`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -634,17 +636,29 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The replay we are listing results for. */
+            /**
+             * Required. The Replay whose results are listed, in the following format:
+             * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+             * 8e03-479ce1833c36`
+             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The replay we are listing results for.
+            /** Required. The Replay whose results are listed, in the following format:
+           `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}` Example:
+           `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The replay we are listing results for. */
+            /**
+             * Required. The Replay whose results are listed, in the following format:
+             * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+             * 8e03-479ce1833c36`
+             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -656,24 +670,22 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The maximum number of `ReplayResults` to return. If unspecified, at most 5000
-             * `Replays` will be returned. The maximum value is 5000; values above 5000 will be
-             * coerced to 5000.
+             * The maximum number of ReplayResult objects to return. Defaults to 5000. The maximum
+             * value is 5000; values above 5000 are rounded down to 5000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of `ReplayResults` to return. If unspecified, at most 5000 `Replays` will be
-           returned. The maximum value is 5000; values above 5000 will be coerced to 5000.
+            /** The maximum number of ReplayResult objects to return. Defaults to 5000. The maximum value is 5000;
+           values above 5000 are rounded down to 5000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of `ReplayResults` to return. If unspecified, at most 5000
-             * `Replays` will be returned. The maximum value is 5000; values above 5000 will be
-             * coerced to 5000.
+             * The maximum number of ReplayResult objects to return. Defaults to 5000. The maximum
+             * value is 5000; values above 5000 are rounded down to 5000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -681,25 +693,27 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * A page token, received from a previous `ListReplayResults` call. Provide this to
-             * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListReplayResults` must match the call that provided the page token.
+             * A page token, received from a previous Simulator.ListReplayResults call. Provide this
+             * token to retrieve the next page of results. When paginating, all other parameters
+             * provided to [Simulator.ListReplayResults[] must match the call that provided the page
+             * token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** A page token, received from a previous `ListReplayResults` call. Provide this to retrieve the
-           subsequent page. When paginating, all other parameters provided to `ListReplayResults` must match
-           the call that provided the page token.
+            /** A page token, received from a previous Simulator.ListReplayResults call. Provide this token to
+           retrieve the next page of results. When paginating, all other parameters provided to
+           [Simulator.ListReplayResults[] must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * A page token, received from a previous `ListReplayResults` call. Provide this to
-             * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListReplayResults` must match the call that provided the page token.
+             * A page token, received from a previous Simulator.ListReplayResults call. Provide this
+             * token to retrieve the next page of results. When paginating, all other parameters
+             * provided to [Simulator.ListReplayResults[] must match the call that provided the page
+             * token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -1123,19 +1137,15 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
       public class Replays {
 
         /**
-         * Create a replay using the given ReplayConfig. The parent of the replay must contain all resources
-         * in the overlay. For example, if the overlay contains: ``` ReplayConfig { policy_overlay = map = {
-         * "//cloudresourcemanager.googleapis.com/projects/project-1": ...,
-         * "//cloudresourcemanager.googleapis.com/projects/project-2": ..., } ``` Then, the parent used for
-         * CreateReplay must be the organization or a folder that contains both projects as children.
+         * Creates and starts a Replay using the given ReplayConfig.
          *
          * Create a request for the method "replays.create".
          *
          * This request holds the parameters needed by the policysimulator server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource where this Replay will be created. This must be a project, folder, or
-         *        organization with included location. Example: `projects/my-example-
+         * @param parent Required. The parent resource where this Replay will be created. This resource must be a project,
+         *        folder, or organization with a location. Example: `projects/my-example-
          *        project/locations/global`
          * @param content the {@link com.google.api.services.policysimulator.v1beta1.model.GoogleCloudPolicysimulatorV1beta1Replay}
          * @return the request
@@ -1154,11 +1164,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Create a replay using the given ReplayConfig. The parent of the replay must contain all
-           * resources in the overlay. For example, if the overlay contains: ``` ReplayConfig {
-           * policy_overlay = map = { "//cloudresourcemanager.googleapis.com/projects/project-1": ...,
-           * "//cloudresourcemanager.googleapis.com/projects/project-2": ..., } ``` Then, the parent used
-           * for CreateReplay must be the organization or a folder that contains both projects as children.
+           * Creates and starts a Replay using the given ReplayConfig.
            *
            * Create a request for the method "replays.create".
            *
@@ -1168,8 +1174,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource where this Replay will be created. This must be a project, folder, or
-         *        organization with included location. Example: `projects/my-example-
+           * @param parent Required. The parent resource where this Replay will be created. This resource must be a project,
+         *        folder, or organization with a location. Example: `projects/my-example-
          *        project/locations/global`
            * @param content the {@link com.google.api.services.policysimulator.v1beta1.model.GoogleCloudPolicysimulatorV1beta1Replay}
            * @since 1.13
@@ -1240,23 +1246,23 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent resource where this Replay will be created. This must be a
-           * project, folder, or organization with included location. Example: `projects/my-example-
+           * Required. The parent resource where this Replay will be created. This resource must be
+           * a project, folder, or organization with a location. Example: `projects/my-example-
            * project/locations/global`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource where this Replay will be created. This must be a project, folder, or
-         organization with included location. Example: `projects/my-example-project/locations/global`
+          /** Required. The parent resource where this Replay will be created. This resource must be a project,
+         folder, or organization with a location. Example: `projects/my-example-project/locations/global`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource where this Replay will be created. This must be a
-           * project, folder, or organization with included location. Example: `projects/my-example-
+           * Required. The parent resource where this Replay will be created. This resource must be
+           * a project, folder, or organization with a location. Example: `projects/my-example-
            * project/locations/global`
            */
           public Create setParent(java.lang.String parent) {
@@ -1275,17 +1281,18 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Get the specified Replay.
+         * Gets the specified Replay. Each `Replay` is available for at least 7 days.
          *
          * Create a request for the method "replays.get".
          *
          * This request holds the parameters needed by the policysimulator server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the replay to retrieve. Format is
-         *        `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-         *        organization. Example: `projects/my-example-project/locations/{location}/replays/506a5f7f-
-         *        38ce-4d7d-8e03-479ce1833c36`
+         * @param name Required. The name of the Replay to retrieve, in the following format:
+         *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+         *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
+         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+         *        4d7d-8e03-479ce1833c36`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1302,7 +1309,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/replays/[^/]+$");
 
           /**
-           * Get the specified Replay.
+           * Gets the specified Replay. Each `Replay` is available for at least 7 days.
            *
            * Create a request for the method "replays.get".
            *
@@ -1311,10 +1318,11 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the replay to retrieve. Format is
-         *        `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-         *        organization. Example: `projects/my-example-project/locations/{location}/replays/506a5f7f-
-         *        38ce-4d7d-8e03-479ce1833c36`
+           * @param name Required. The name of the Replay to retrieve, in the following format:
+         *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+         *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
+         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+         *        4d7d-8e03-479ce1833c36`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1393,28 +1401,30 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The name of the replay to retrieve. Format is
-           * `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-           * organization. Example: `projects/my-example-project/locations/{location}/replays
-           * /506a5f7f-38ce-4d7d-8e03-479ce1833c36`
+           * Required. The name of the Replay to retrieve, in the following format:
+           * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+           * where `{resource-id}` is the ID of the project, folder, or organization that owns the
+           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+           * 4d7d-8e03-479ce1833c36`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the replay to retrieve. Format is
-         `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or organization.
-         Example: `projects/my-example-project/locations/{location}/replays/506a5f7f-38ce-4d7d-
-         8e03-479ce1833c36`
+          /** Required. The name of the Replay to retrieve, in the following format:
+         `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where
+         `{resource-id}` is the ID of the project, folder, or organization that owns the `Replay`. Example:
+         `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the replay to retrieve. Format is
-           * `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-           * organization. Example: `projects/my-example-project/locations/{location}/replays
-           * /506a5f7f-38ce-4d7d-8e03-479ce1833c36`
+           * Required. The name of the Replay to retrieve, in the following format:
+           * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+           * where `{resource-id}` is the ID of the project, folder, or organization that owns the
+           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+           * 4d7d-8e03-479ce1833c36`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1453,14 +1463,17 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
         public class Results {
 
           /**
-           * List the results of running a replay
+           * Lists the results of running a Replay.
            *
            * Create a request for the method "results.list".
            *
            * This request holds the parameters needed by the policysimulator server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The replay we are listing results for.
+           * @param parent Required. The Replay whose results are listed, in the following format:
+           *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+           *        8e03-479ce1833c36`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -1477,7 +1490,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/replays/[^/]+$");
 
             /**
-             * List the results of running a replay
+             * Lists the results of running a Replay.
              *
              * Create a request for the method "results.list".
              *
@@ -1486,7 +1499,10 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The replay we are listing results for.
+             * @param parent Required. The Replay whose results are listed, in the following format:
+           *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+           *        8e03-479ce1833c36`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -1564,17 +1580,29 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The replay we are listing results for. */
+            /**
+             * Required. The Replay whose results are listed, in the following format:
+             * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+             * 8e03-479ce1833c36`
+             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The replay we are listing results for.
+            /** Required. The Replay whose results are listed, in the following format:
+           `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}` Example:
+           `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The replay we are listing results for. */
+            /**
+             * Required. The Replay whose results are listed, in the following format:
+             * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+             * 8e03-479ce1833c36`
+             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1586,24 +1614,22 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The maximum number of `ReplayResults` to return. If unspecified, at most 5000
-             * `Replays` will be returned. The maximum value is 5000; values above 5000 will be
-             * coerced to 5000.
+             * The maximum number of ReplayResult objects to return. Defaults to 5000. The maximum
+             * value is 5000; values above 5000 are rounded down to 5000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of `ReplayResults` to return. If unspecified, at most 5000 `Replays` will be
-           returned. The maximum value is 5000; values above 5000 will be coerced to 5000.
+            /** The maximum number of ReplayResult objects to return. Defaults to 5000. The maximum value is 5000;
+           values above 5000 are rounded down to 5000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of `ReplayResults` to return. If unspecified, at most 5000
-             * `Replays` will be returned. The maximum value is 5000; values above 5000 will be
-             * coerced to 5000.
+             * The maximum number of ReplayResult objects to return. Defaults to 5000. The maximum
+             * value is 5000; values above 5000 are rounded down to 5000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -1611,25 +1637,27 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * A page token, received from a previous `ListReplayResults` call. Provide this to
-             * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListReplayResults` must match the call that provided the page token.
+             * A page token, received from a previous Simulator.ListReplayResults call. Provide this
+             * token to retrieve the next page of results. When paginating, all other parameters
+             * provided to [Simulator.ListReplayResults[] must match the call that provided the page
+             * token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** A page token, received from a previous `ListReplayResults` call. Provide this to retrieve the
-           subsequent page. When paginating, all other parameters provided to `ListReplayResults` must match
-           the call that provided the page token.
+            /** A page token, received from a previous Simulator.ListReplayResults call. Provide this token to
+           retrieve the next page of results. When paginating, all other parameters provided to
+           [Simulator.ListReplayResults[] must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * A page token, received from a previous `ListReplayResults` call. Provide this to
-             * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListReplayResults` must match the call that provided the page token.
+             * A page token, received from a previous Simulator.ListReplayResults call. Provide this
+             * token to retrieve the next page of results. When paginating, all other parameters
+             * provided to [Simulator.ListReplayResults[] must match the call that provided the page
+             * token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -1708,19 +1736,15 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
       public class Replays {
 
         /**
-         * Create a replay using the given ReplayConfig. The parent of the replay must contain all resources
-         * in the overlay. For example, if the overlay contains: ``` ReplayConfig { policy_overlay = map = {
-         * "//cloudresourcemanager.googleapis.com/projects/project-1": ...,
-         * "//cloudresourcemanager.googleapis.com/projects/project-2": ..., } ``` Then, the parent used for
-         * CreateReplay must be the organization or a folder that contains both projects as children.
+         * Creates and starts a Replay using the given ReplayConfig.
          *
          * Create a request for the method "replays.create".
          *
          * This request holds the parameters needed by the policysimulator server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource where this Replay will be created. This must be a project, folder, or
-         *        organization with included location. Example: `projects/my-example-
+         * @param parent Required. The parent resource where this Replay will be created. This resource must be a project,
+         *        folder, or organization with a location. Example: `projects/my-example-
          *        project/locations/global`
          * @param content the {@link com.google.api.services.policysimulator.v1beta1.model.GoogleCloudPolicysimulatorV1beta1Replay}
          * @return the request
@@ -1739,11 +1763,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Create a replay using the given ReplayConfig. The parent of the replay must contain all
-           * resources in the overlay. For example, if the overlay contains: ``` ReplayConfig {
-           * policy_overlay = map = { "//cloudresourcemanager.googleapis.com/projects/project-1": ...,
-           * "//cloudresourcemanager.googleapis.com/projects/project-2": ..., } ``` Then, the parent used
-           * for CreateReplay must be the organization or a folder that contains both projects as children.
+           * Creates and starts a Replay using the given ReplayConfig.
            *
            * Create a request for the method "replays.create".
            *
@@ -1753,8 +1773,8 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource where this Replay will be created. This must be a project, folder, or
-         *        organization with included location. Example: `projects/my-example-
+           * @param parent Required. The parent resource where this Replay will be created. This resource must be a project,
+         *        folder, or organization with a location. Example: `projects/my-example-
          *        project/locations/global`
            * @param content the {@link com.google.api.services.policysimulator.v1beta1.model.GoogleCloudPolicysimulatorV1beta1Replay}
            * @since 1.13
@@ -1825,23 +1845,23 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent resource where this Replay will be created. This must be a
-           * project, folder, or organization with included location. Example: `projects/my-example-
+           * Required. The parent resource where this Replay will be created. This resource must be
+           * a project, folder, or organization with a location. Example: `projects/my-example-
            * project/locations/global`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource where this Replay will be created. This must be a project, folder, or
-         organization with included location. Example: `projects/my-example-project/locations/global`
+          /** Required. The parent resource where this Replay will be created. This resource must be a project,
+         folder, or organization with a location. Example: `projects/my-example-project/locations/global`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource where this Replay will be created. This must be a
-           * project, folder, or organization with included location. Example: `projects/my-example-
+           * Required. The parent resource where this Replay will be created. This resource must be
+           * a project, folder, or organization with a location. Example: `projects/my-example-
            * project/locations/global`
            */
           public Create setParent(java.lang.String parent) {
@@ -1860,17 +1880,18 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Get the specified Replay.
+         * Gets the specified Replay. Each `Replay` is available for at least 7 days.
          *
          * Create a request for the method "replays.get".
          *
          * This request holds the parameters needed by the policysimulator server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the replay to retrieve. Format is
-         *        `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-         *        organization. Example: `projects/my-example-project/locations/{location}/replays/506a5f7f-
-         *        38ce-4d7d-8e03-479ce1833c36`
+         * @param name Required. The name of the Replay to retrieve, in the following format:
+         *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+         *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
+         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+         *        4d7d-8e03-479ce1833c36`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1887,7 +1908,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/replays/[^/]+$");
 
           /**
-           * Get the specified Replay.
+           * Gets the specified Replay. Each `Replay` is available for at least 7 days.
            *
            * Create a request for the method "replays.get".
            *
@@ -1896,10 +1917,11 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the replay to retrieve. Format is
-         *        `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-         *        organization. Example: `projects/my-example-project/locations/{location}/replays/506a5f7f-
-         *        38ce-4d7d-8e03-479ce1833c36`
+           * @param name Required. The name of the Replay to retrieve, in the following format:
+         *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+         *        where `{resource-id}` is the ID of the project, folder, or organization that owns the
+         *        `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+         *        4d7d-8e03-479ce1833c36`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1978,28 +2000,30 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The name of the replay to retrieve. Format is
-           * `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-           * organization. Example: `projects/my-example-project/locations/{location}/replays
-           * /506a5f7f-38ce-4d7d-8e03-479ce1833c36`
+           * Required. The name of the Replay to retrieve, in the following format:
+           * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+           * where `{resource-id}` is the ID of the project, folder, or organization that owns the
+           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+           * 4d7d-8e03-479ce1833c36`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the replay to retrieve. Format is
-         `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or organization.
-         Example: `projects/my-example-project/locations/{location}/replays/506a5f7f-38ce-4d7d-
-         8e03-479ce1833c36`
+          /** Required. The name of the Replay to retrieve, in the following format:
+         `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`, where
+         `{resource-id}` is the ID of the project, folder, or organization that owns the `Replay`. Example:
+         `projects/my-example-project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the replay to retrieve. Format is
-           * `PARENT/locations/{location}/replays/{replay}` where PARENT is a project, folder, or
-           * organization. Example: `projects/my-example-project/locations/{location}/replays
-           * /506a5f7f-38ce-4d7d-8e03-479ce1833c36`
+           * Required. The name of the Replay to retrieve, in the following format:
+           * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`,
+           * where `{resource-id}` is the ID of the project, folder, or organization that owns the
+           * `Replay`. Example: `projects/my-example-project/locations/global/replays/506a5f7f-38ce-
+           * 4d7d-8e03-479ce1833c36`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2038,14 +2062,17 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
         public class Results {
 
           /**
-           * List the results of running a replay
+           * Lists the results of running a Replay.
            *
            * Create a request for the method "results.list".
            *
            * This request holds the parameters needed by the policysimulator server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The replay we are listing results for.
+           * @param parent Required. The Replay whose results are listed, in the following format:
+           *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+           *        8e03-479ce1833c36`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2062,7 +2089,7 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/replays/[^/]+$");
 
             /**
-             * List the results of running a replay
+             * Lists the results of running a Replay.
              *
              * Create a request for the method "results.list".
              *
@@ -2071,7 +2098,10 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The replay we are listing results for.
+             * @param parent Required. The Replay whose results are listed, in the following format:
+           *        `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+           *        Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+           *        8e03-479ce1833c36`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2149,17 +2179,29 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The replay we are listing results for. */
+            /**
+             * Required. The Replay whose results are listed, in the following format:
+             * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+             * 8e03-479ce1833c36`
+             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The replay we are listing results for.
+            /** Required. The Replay whose results are listed, in the following format:
+           `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}` Example:
+           `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-8e03-479ce1833c36`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. The replay we are listing results for. */
+            /**
+             * Required. The Replay whose results are listed, in the following format:
+             * `{projects|folders|organizations}/{resource-id}/locations/global/replays/{replay-id}`
+             * Example: `projects/my-project/locations/global/replays/506a5f7f-38ce-4d7d-
+             * 8e03-479ce1833c36`
+             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2171,24 +2213,22 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The maximum number of `ReplayResults` to return. If unspecified, at most 5000
-             * `Replays` will be returned. The maximum value is 5000; values above 5000 will be
-             * coerced to 5000.
+             * The maximum number of ReplayResult objects to return. Defaults to 5000. The maximum
+             * value is 5000; values above 5000 are rounded down to 5000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of `ReplayResults` to return. If unspecified, at most 5000 `Replays` will be
-           returned. The maximum value is 5000; values above 5000 will be coerced to 5000.
+            /** The maximum number of ReplayResult objects to return. Defaults to 5000. The maximum value is 5000;
+           values above 5000 are rounded down to 5000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of `ReplayResults` to return. If unspecified, at most 5000
-             * `Replays` will be returned. The maximum value is 5000; values above 5000 will be
-             * coerced to 5000.
+             * The maximum number of ReplayResult objects to return. Defaults to 5000. The maximum
+             * value is 5000; values above 5000 are rounded down to 5000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -2196,25 +2236,27 @@ public class PolicySimulator extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * A page token, received from a previous `ListReplayResults` call. Provide this to
-             * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListReplayResults` must match the call that provided the page token.
+             * A page token, received from a previous Simulator.ListReplayResults call. Provide this
+             * token to retrieve the next page of results. When paginating, all other parameters
+             * provided to [Simulator.ListReplayResults[] must match the call that provided the page
+             * token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** A page token, received from a previous `ListReplayResults` call. Provide this to retrieve the
-           subsequent page. When paginating, all other parameters provided to `ListReplayResults` must match
-           the call that provided the page token.
+            /** A page token, received from a previous Simulator.ListReplayResults call. Provide this token to
+           retrieve the next page of results. When paginating, all other parameters provided to
+           [Simulator.ListReplayResults[] must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * A page token, received from a previous `ListReplayResults` call. Provide this to
-             * retrieve the subsequent page. When paginating, all other parameters provided to
-             * `ListReplayResults` must match the call that provided the page token.
+             * A page token, received from a previous Simulator.ListReplayResults call. Provide this
+             * token to retrieve the next page of results. When paginating, all other parameters
+             * provided to [Simulator.ListReplayResults[] must match the call that provided the page
+             * token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;

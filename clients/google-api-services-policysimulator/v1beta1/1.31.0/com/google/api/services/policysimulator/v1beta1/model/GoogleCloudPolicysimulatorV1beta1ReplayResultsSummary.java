@@ -30,49 +30,49 @@ package com.google.api.services.policysimulator.v1beta1.model;
 public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of replayed log entries with a difference between baseline and simulated policies.
+   * The number of replayed log entries with a difference between baseline and simulated policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer differenceCount;
 
   /**
-   * Number of log entries with an error during replay.
+   * The number of log entries that could not be replayed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer errorCount;
 
   /**
-   * Number of log entries replayed. log_count == unchanged_count + difference_count + error_count
+   * The total number of log entries replayed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer logCount;
 
   /**
-   * Date of newest log entry replayed.
+   * The date of the newest log entry replayed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate newestDate;
 
   /**
-   * Date of oldest log entry replayed.
+   * The date of the oldest log entry replayed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDate oldestDate;
 
   /**
-   * Number of replayed log entries with no difference between baseline and simulated
+   * The number of replayed log entries with no difference between baseline and simulated policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer unchangedCount;
 
   /**
-   * Number of replayed log entries with a difference between baseline and simulated policies.
+   * The number of replayed log entries with a difference between baseline and simulated policies.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDifferenceCount() {
@@ -80,7 +80,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Number of replayed log entries with a difference between baseline and simulated policies.
+   * The number of replayed log entries with a difference between baseline and simulated policies.
    * @param differenceCount differenceCount or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary setDifferenceCount(java.lang.Integer differenceCount) {
@@ -89,7 +89,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Number of log entries with an error during replay.
+   * The number of log entries that could not be replayed.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getErrorCount() {
@@ -97,7 +97,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Number of log entries with an error during replay.
+   * The number of log entries that could not be replayed.
    * @param errorCount errorCount or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary setErrorCount(java.lang.Integer errorCount) {
@@ -106,7 +106,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Number of log entries replayed. log_count == unchanged_count + difference_count + error_count
+   * The total number of log entries replayed.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLogCount() {
@@ -114,7 +114,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Number of log entries replayed. log_count == unchanged_count + difference_count + error_count
+   * The total number of log entries replayed.
    * @param logCount logCount or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary setLogCount(java.lang.Integer logCount) {
@@ -123,7 +123,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Date of newest log entry replayed.
+   * The date of the newest log entry replayed.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getNewestDate() {
@@ -131,7 +131,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Date of newest log entry replayed.
+   * The date of the newest log entry replayed.
    * @param newestDate newestDate or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary setNewestDate(GoogleTypeDate newestDate) {
@@ -140,7 +140,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Date of oldest log entry replayed.
+   * The date of the oldest log entry replayed.
    * @return value or {@code null} for none
    */
   public GoogleTypeDate getOldestDate() {
@@ -148,7 +148,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Date of oldest log entry replayed.
+   * The date of the oldest log entry replayed.
    * @param oldestDate oldestDate or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary setOldestDate(GoogleTypeDate oldestDate) {
@@ -157,7 +157,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Number of replayed log entries with no difference between baseline and simulated
+   * The number of replayed log entries with no difference between baseline and simulated policies.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUnchangedCount() {
@@ -165,7 +165,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary extends
   }
 
   /**
-   * Number of replayed log entries with no difference between baseline and simulated
+   * The number of replayed log entries with no difference between baseline and simulated policies.
    * @param unchangedCount unchangedCount or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummary setUnchangedCount(java.lang.Integer unchangedCount) {

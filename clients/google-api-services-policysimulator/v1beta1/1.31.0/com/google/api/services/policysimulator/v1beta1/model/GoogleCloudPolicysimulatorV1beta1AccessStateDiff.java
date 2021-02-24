@@ -17,9 +17,8 @@
 package com.google.api.services.policysimulator.v1beta1.model;
 
 /**
- * The difference in AccessState between baseline and simulated policies. If either AccessState
- * cannot be fully evaluated, i.e. the AccessState is one of the UNKNOWN_* values, the explanation
- * why full evaluation was not possible is in the ExplainedAccess message.
+ * A summary and comparison of the member's access under the current (baseline) policies and the
+ * proposed (simulated) policies for a single access tuple.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Simulator API. For a detailed explanation see:
@@ -32,28 +31,32 @@ package com.google.api.services.policysimulator.v1beta1.model;
 public final class GoogleCloudPolicysimulatorV1beta1AccessStateDiff extends com.google.api.client.json.GenericJson {
 
   /**
-   * A single value interpretation of the difference between baseline and simulated.
+   * How the member's access, specified in the AccessState field, changed between the current
+   * (baseline) policies and proposed (simulated) policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accessChange;
 
   /**
-   * The explained access when replayed against the baseline policies.
+   * The results of evaluating the access tuple under the current (baseline) policies. If the
+   * AccessState couldn't be fully evaluated, this field explains why.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPolicysimulatorV1beta1ExplainedAccess baseline;
 
   /**
-   * The explained access when replayed against the simulated policies.
+   * The results of evaluating the access tuple under the proposed (simulated) policies. If the
+   * AccessState couldn't be fully evaluated, this field explains why.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudPolicysimulatorV1beta1ExplainedAccess simulated;
 
   /**
-   * A single value interpretation of the difference between baseline and simulated.
+   * How the member's access, specified in the AccessState field, changed between the current
+   * (baseline) policies and proposed (simulated) policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessChange() {
@@ -61,7 +64,8 @@ public final class GoogleCloudPolicysimulatorV1beta1AccessStateDiff extends com.
   }
 
   /**
-   * A single value interpretation of the difference between baseline and simulated.
+   * How the member's access, specified in the AccessState field, changed between the current
+   * (baseline) policies and proposed (simulated) policies.
    * @param accessChange accessChange or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1AccessStateDiff setAccessChange(java.lang.String accessChange) {
@@ -70,7 +74,8 @@ public final class GoogleCloudPolicysimulatorV1beta1AccessStateDiff extends com.
   }
 
   /**
-   * The explained access when replayed against the baseline policies.
+   * The results of evaluating the access tuple under the current (baseline) policies. If the
+   * AccessState couldn't be fully evaluated, this field explains why.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ExplainedAccess getBaseline() {
@@ -78,7 +83,8 @@ public final class GoogleCloudPolicysimulatorV1beta1AccessStateDiff extends com.
   }
 
   /**
-   * The explained access when replayed against the baseline policies.
+   * The results of evaluating the access tuple under the current (baseline) policies. If the
+   * AccessState couldn't be fully evaluated, this field explains why.
    * @param baseline baseline or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1AccessStateDiff setBaseline(GoogleCloudPolicysimulatorV1beta1ExplainedAccess baseline) {
@@ -87,7 +93,8 @@ public final class GoogleCloudPolicysimulatorV1beta1AccessStateDiff extends com.
   }
 
   /**
-   * The explained access when replayed against the simulated policies.
+   * The results of evaluating the access tuple under the proposed (simulated) policies. If the
+   * AccessState couldn't be fully evaluated, this field explains why.
    * @return value or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ExplainedAccess getSimulated() {
@@ -95,7 +102,8 @@ public final class GoogleCloudPolicysimulatorV1beta1AccessStateDiff extends com.
   }
 
   /**
-   * The explained access when replayed against the simulated policies.
+   * The results of evaluating the access tuple under the proposed (simulated) policies. If the
+   * AccessState couldn't be fully evaluated, this field explains why.
    * @param simulated simulated or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1AccessStateDiff setSimulated(GoogleCloudPolicysimulatorV1beta1ExplainedAccess simulated) {

@@ -17,7 +17,7 @@
 package com.google.api.services.policysimulator.v1beta1.model;
 
 /**
- * The results of a replay.
+ * Response message for Simulator.ListReplayResults.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Simulator API. For a detailed explanation see:
@@ -30,23 +30,23 @@ package com.google.api.services.policysimulator.v1beta1.model;
 public final class GoogleCloudPolicysimulatorV1beta1ListReplayResultsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token that you can use to retrieve the next page of ReplayResult objects. If this field is
+   * omitted, there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The results of running a replay.
+   * The results of running a Replay.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudPolicysimulatorV1beta1ReplayResult> replayResults;
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token that you can use to retrieve the next page of ReplayResult objects. If this field is
+   * omitted, there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +54,8 @@ public final class GoogleCloudPolicysimulatorV1beta1ListReplayResultsResponse ex
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token that you can use to retrieve the next page of ReplayResult objects. If this field is
+   * omitted, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ListReplayResultsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -64,7 +64,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ListReplayResultsResponse ex
   }
 
   /**
-   * The results of running a replay.
+   * The results of running a Replay.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudPolicysimulatorV1beta1ReplayResult> getReplayResults() {
@@ -72,7 +72,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ListReplayResultsResponse ex
   }
 
   /**
-   * The results of running a replay.
+   * The results of running a Replay.
    * @param replayResults replayResults or {@code null} for none
    */
   public GoogleCloudPolicysimulatorV1beta1ListReplayResultsResponse setReplayResults(java.util.List<GoogleCloudPolicysimulatorV1beta1ReplayResult> replayResults) {

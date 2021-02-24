@@ -88,8 +88,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * The range of internal addresses that are owned by this subnetwork. Provide this property when
    * you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and
    * non-overlapping within a network. Only IPv4 is supported. This field is set at resource
-   * creation time. This may be a RFC 1918 IP range, or a privately routed, non-RFC 1918 IP range,
-   * not belonging to Google. The range can be expanded after creation using expandIpCidrRange.
+   * creation time. The range can be any range listed in the Valid ranges list. The range can be
+   * expanded after creation using expandIpCidrRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -377,8 +377,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * The range of internal addresses that are owned by this subnetwork. Provide this property when
    * you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and
    * non-overlapping within a network. Only IPv4 is supported. This field is set at resource
-   * creation time. This may be a RFC 1918 IP range, or a privately routed, non-RFC 1918 IP range,
-   * not belonging to Google. The range can be expanded after creation using expandIpCidrRange.
+   * creation time. The range can be any range listed in the Valid ranges list. The range can be
+   * expanded after creation using expandIpCidrRange.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -389,8 +389,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * The range of internal addresses that are owned by this subnetwork. Provide this property when
    * you create the subnetwork. For example, 10.0.0.0/8 or 100.64.0.0/10. Ranges must be unique and
    * non-overlapping within a network. Only IPv4 is supported. This field is set at resource
-   * creation time. This may be a RFC 1918 IP range, or a privately routed, non-RFC 1918 IP range,
-   * not belonging to Google. The range can be expanded after creation using expandIpCidrRange.
+   * creation time. The range can be any range listed in the Valid ranges list. The range can be
+   * expanded after creation using expandIpCidrRange.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public Subnetwork setIpCidrRange(java.lang.String ipCidrRange) {

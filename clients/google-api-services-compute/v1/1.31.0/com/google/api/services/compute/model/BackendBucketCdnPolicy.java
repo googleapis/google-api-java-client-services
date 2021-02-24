@@ -50,9 +50,14 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   private java.lang.String cacheMode;
 
   /**
-   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN's
-   * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
-   * facing response. The maximum allowed value is 86400s (1 day).
+   * Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-
+   * age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and
+   * default_ttl is used for the response max-age directive, along with a "public" directive. For
+   * cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if
+   * specified), or else sets the response max-age directive to the lesser of the client_ttl and
+   * default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is
+   * not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1
+   * day).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,9 +150,14 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN's
-   * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
-   * facing response. The maximum allowed value is 86400s (1 day).
+   * Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-
+   * age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and
+   * default_ttl is used for the response max-age directive, along with a "public" directive. For
+   * cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if
+   * specified), or else sets the response max-age directive to the lesser of the client_ttl and
+   * default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is
+   * not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1
+   * day).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getClientTtl() {
@@ -155,9 +165,14 @@ public final class BackendBucketCdnPolicy extends com.google.api.client.json.Gen
   }
 
   /**
-   * Specifies a separate client (e.g. browser client) TTL, separate from the TTL for Cloud CDN's
-   * edge caches. Leaving this empty will use the same cache TTL for both Cloud CDN and the client-
-   * facing response. The maximum allowed value is 86400s (1 day).
+   * Specifies a separate client (e.g. browser client) maximum TTL. This is used to clamp the max-
+   * age (or Expires) value sent to the client. With FORCE_CACHE_ALL, the lesser of client_ttl and
+   * default_ttl is used for the response max-age directive, along with a "public" directive. For
+   * cacheable content in CACHE_ALL_STATIC mode, client_ttl clamps the max-age from the origin (if
+   * specified), or else sets the response max-age directive to the lesser of the client_ttl and
+   * default_ttl, and also ensures a "public" cache-control directive is present. If a client TTL is
+   * not specified, a default value (1 hour) will be used. The maximum allowed value is 86400s (1
+   * day).
    * @param clientTtl clientTtl or {@code null} for none
    */
   public BackendBucketCdnPolicy setClientTtl(java.lang.Integer clientTtl) {

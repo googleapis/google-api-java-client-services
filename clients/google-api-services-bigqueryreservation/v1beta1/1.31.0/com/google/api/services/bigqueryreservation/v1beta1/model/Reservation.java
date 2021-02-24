@@ -47,6 +47,15 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean ignoreIdleSlots;
 
   /**
+   * Maximum number of queries that are allowed to run concurrently in this reservation. Default
+   * value is 0 which means that maximum concurrency will be automatically set based on the
+   * reservation size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxConcurrency;
+
+  /**
    * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`.
    * The value may be {@code null}.
    */
@@ -107,6 +116,27 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setIgnoreIdleSlots(java.lang.Boolean ignoreIdleSlots) {
     this.ignoreIdleSlots = ignoreIdleSlots;
+    return this;
+  }
+
+  /**
+   * Maximum number of queries that are allowed to run concurrently in this reservation. Default
+   * value is 0 which means that maximum concurrency will be automatically set based on the
+   * reservation size.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxConcurrency() {
+    return maxConcurrency;
+  }
+
+  /**
+   * Maximum number of queries that are allowed to run concurrently in this reservation. Default
+   * value is 0 which means that maximum concurrency will be automatically set based on the
+   * reservation size.
+   * @param maxConcurrency maxConcurrency or {@code null} for none
+   */
+  public Reservation setMaxConcurrency(java.lang.Long maxConcurrency) {
+    this.maxConcurrency = maxConcurrency;
     return this;
   }
 

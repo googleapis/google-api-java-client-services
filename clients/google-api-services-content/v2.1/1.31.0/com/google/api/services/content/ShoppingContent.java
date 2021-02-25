@@ -4052,6 +4052,330 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the Buyongoogleprograms collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code ShoppingContent content = new ShoppingContent(...);}
+   *   {@code ShoppingContent.Buyongoogleprograms.List request = content.buyongoogleprograms().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Buyongoogleprograms buyongoogleprograms() {
+    return new Buyongoogleprograms();
+  }
+
+  /**
+   * The "buyongoogleprograms" collection of methods.
+   */
+  public class Buyongoogleprograms {
+
+    /**
+     * Retrieves a status of BoG program for your Merchant Center account.
+     *
+     * Create a request for the method "buyongoogleprograms.get".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account.
+     * @param regionCode The Program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     *        Currently only US is available.
+     * @return the request
+     */
+    public Get get(java.lang.Long merchantId, java.lang.String regionCode) throws java.io.IOException {
+      Get result = new Get(merchantId, regionCode);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ShoppingContentRequest<com.google.api.services.content.model.BuyOnGoogleProgramStatus> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/buyongoogleprograms/{regionCode}";
+
+      /**
+       * Retrieves a status of BoG program for your Merchant Center account.
+       *
+       * Create a request for the method "buyongoogleprograms.get".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account.
+       * @param regionCode The Program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     *        Currently only US is available.
+       * @since 1.13
+       */
+      protected Get(java.lang.Long merchantId, java.lang.String regionCode) {
+        super(ShoppingContent.this, "GET", REST_PATH, null, com.google.api.services.content.model.BuyOnGoogleProgramStatus.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.regionCode = com.google.api.client.util.Preconditions.checkNotNull(regionCode, "Required parameter regionCode must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account. */
+      public Get setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * The Program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String regionCode;
+
+      /** The Program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     Currently only US is available.
+       */
+      public java.lang.String getRegionCode() {
+        return regionCode;
+      }
+
+      /**
+       * The Program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      public Get setRegionCode(java.lang.String regionCode) {
+        this.regionCode = regionCode;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Onboards BoG in your Merchant Center account. By using this method, you agree to the Terms of
+     * Service.
+     *
+     * Create a request for the method "buyongoogleprograms.onboard".
+     *
+     * This request holds the parameters needed by the content server.  After setting any optional
+     * parameters, call the {@link Onboard#execute()} method to invoke the remote operation.
+     *
+     * @param merchantId Required. The ID of the account.
+     * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     *        Currently only US is available.
+     * @param content the {@link com.google.api.services.content.model.OnboardBuyOnGoogleProgramRequest}
+     * @return the request
+     */
+    public Onboard onboard(java.lang.Long merchantId, java.lang.String regionCode, com.google.api.services.content.model.OnboardBuyOnGoogleProgramRequest content) throws java.io.IOException {
+      Onboard result = new Onboard(merchantId, regionCode, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Onboard extends ShoppingContentRequest<Void> {
+
+      private static final String REST_PATH = "content/v2.1/{merchantId}/buyongoogleprograms/{regionCode}/onboard";
+
+      /**
+       * Onboards BoG in your Merchant Center account. By using this method, you agree to the Terms of
+       * Service.
+       *
+       * Create a request for the method "buyongoogleprograms.onboard".
+       *
+       * This request holds the parameters needed by the the content server.  After setting any optional
+       * parameters, call the {@link Onboard#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Onboard#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param merchantId Required. The ID of the account.
+       * @param regionCode The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     *        Currently only US is available.
+       * @param content the {@link com.google.api.services.content.model.OnboardBuyOnGoogleProgramRequest}
+       * @since 1.13
+       */
+      protected Onboard(java.lang.Long merchantId, java.lang.String regionCode, com.google.api.services.content.model.OnboardBuyOnGoogleProgramRequest content) {
+        super(ShoppingContent.this, "POST", REST_PATH, content, Void.class);
+        this.merchantId = com.google.api.client.util.Preconditions.checkNotNull(merchantId, "Required parameter merchantId must be specified.");
+        this.regionCode = com.google.api.client.util.Preconditions.checkNotNull(regionCode, "Required parameter regionCode must be specified.");
+      }
+
+      @Override
+      public Onboard set$Xgafv(java.lang.String $Xgafv) {
+        return (Onboard) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Onboard setAccessToken(java.lang.String accessToken) {
+        return (Onboard) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Onboard setAlt(java.lang.String alt) {
+        return (Onboard) super.setAlt(alt);
+      }
+
+      @Override
+      public Onboard setCallback(java.lang.String callback) {
+        return (Onboard) super.setCallback(callback);
+      }
+
+      @Override
+      public Onboard setFields(java.lang.String fields) {
+        return (Onboard) super.setFields(fields);
+      }
+
+      @Override
+      public Onboard setKey(java.lang.String key) {
+        return (Onboard) super.setKey(key);
+      }
+
+      @Override
+      public Onboard setOauthToken(java.lang.String oauthToken) {
+        return (Onboard) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Onboard setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Onboard) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Onboard setQuotaUser(java.lang.String quotaUser) {
+        return (Onboard) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Onboard setUploadType(java.lang.String uploadType) {
+        return (Onboard) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Onboard setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Onboard) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the account. */
+      @com.google.api.client.util.Key
+      private java.lang.Long merchantId;
+
+      /** Required. The ID of the account.
+       */
+      public java.lang.Long getMerchantId() {
+        return merchantId;
+      }
+
+      /** Required. The ID of the account. */
+      public Onboard setMerchantId(java.lang.Long merchantId) {
+        this.merchantId = merchantId;
+        return this;
+      }
+
+      /**
+       * The program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String regionCode;
+
+      /** The program region code [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     Currently only US is available.
+       */
+      public java.lang.String getRegionCode() {
+        return regionCode;
+      }
+
+      /**
+       * The program region code [ISO 3166-1
+       * alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Currently only US is available.
+       */
+      public Onboard setRegionCode(java.lang.String regionCode) {
+        this.regionCode = regionCode;
+        return this;
+      }
+
+      @Override
+      public Onboard set(String parameterName, Object value) {
+        return (Onboard) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Collections collection.
    *
    * <p>The typical use is:</p>

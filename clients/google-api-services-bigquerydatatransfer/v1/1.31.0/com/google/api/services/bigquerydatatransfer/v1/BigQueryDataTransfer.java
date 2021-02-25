@@ -2318,11 +2318,10 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the transfer config. Transfer config names have the form of
-         *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
-         *        automatically generated based on the config_id specified in CreateTransferConfigRequest
-         *        along with project_id and region. If config_id is not provided, usually a uuid, even
-         *        though it is not guaranteed or required, will be generated for config_id.
+         * @param name The resource name of the transfer config. Transfer config names have the form
+         *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id`
+         *        is usually a uuid, even though it is not guaranteed or required. The name is ignored when
+         *        creating a transfer config.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
          * @return the request
          */
@@ -2350,11 +2349,10 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the transfer config. Transfer config names have the form of
-         *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
-         *        automatically generated based on the config_id specified in CreateTransferConfigRequest
-         *        along with project_id and region. If config_id is not provided, usually a uuid, even
-         *        though it is not guaranteed or required, will be generated for config_id.
+           * @param name The resource name of the transfer config. Transfer config names have the form
+         *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id`
+         *        is usually a uuid, even though it is not guaranteed or required. The name is ignored when
+         *        creating a transfer config.
            * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
            * @since 1.13
            */
@@ -2424,31 +2422,28 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The resource name of the transfer config. Transfer config names have the form of
-           * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
-           * automatically generated based on the config_id specified in CreateTransferConfigRequest
-           * along with project_id and region. If config_id is not provided, usually a uuid, even
-           * though it is not guaranteed or required, will be generated for config_id.
+           * The resource name of the transfer config. Transfer config names have the form
+           * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where
+           * `config_id` is usually a uuid, even though it is not guaranteed or required. The name
+           * is ignored when creating a transfer config.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the transfer config. Transfer config names have the form of
-         `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is automatically
-         generated based on the config_id specified in CreateTransferConfigRequest along with project_id and
-         region. If config_id is not provided, usually a uuid, even though it is not guaranteed or required,
-         will be generated for config_id.
+          /** The resource name of the transfer config. Transfer config names have the form
+         `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is
+         usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a
+         transfer config.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The resource name of the transfer config. Transfer config names have the form of
-           * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
-           * automatically generated based on the config_id specified in CreateTransferConfigRequest
-           * along with project_id and region. If config_id is not provided, usually a uuid, even
-           * though it is not guaranteed or required, will be generated for config_id.
+           * The resource name of the transfer config. Transfer config names have the form
+           * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where
+           * `config_id` is usually a uuid, even though it is not guaranteed or required. The name
+           * is ignored when creating a transfer config.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4469,11 +4464,10 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the transfer config. Transfer config names have the form of
-       *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
-       *        automatically generated based on the config_id specified in CreateTransferConfigRequest
-       *        along with project_id and region. If config_id is not provided, usually a uuid, even
-       *        though it is not guaranteed or required, will be generated for config_id.
+       * @param name The resource name of the transfer config. Transfer config names have the form
+       *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id`
+       *        is usually a uuid, even though it is not guaranteed or required. The name is ignored when
+       *        creating a transfer config.
        * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
        * @return the request
        */
@@ -4501,11 +4495,10 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the transfer config. Transfer config names have the form of
-       *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
-       *        automatically generated based on the config_id specified in CreateTransferConfigRequest
-       *        along with project_id and region. If config_id is not provided, usually a uuid, even
-       *        though it is not guaranteed or required, will be generated for config_id.
+         * @param name The resource name of the transfer config. Transfer config names have the form
+       *        `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id`
+       *        is usually a uuid, even though it is not guaranteed or required. The name is ignored when
+       *        creating a transfer config.
          * @param content the {@link com.google.api.services.bigquerydatatransfer.v1.model.TransferConfig}
          * @since 1.13
          */
@@ -4575,31 +4568,28 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The resource name of the transfer config. Transfer config names have the form of
-         * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
-         * automatically generated based on the config_id specified in CreateTransferConfigRequest
-         * along with project_id and region. If config_id is not provided, usually a uuid, even
-         * though it is not guaranteed or required, will be generated for config_id.
+         * The resource name of the transfer config. Transfer config names have the form
+         * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id`
+         * is usually a uuid, even though it is not guaranteed or required. The name is ignored when
+         * creating a transfer config.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the transfer config. Transfer config names have the form of
-       `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is automatically
-       generated based on the config_id specified in CreateTransferConfigRequest along with project_id and
-       region. If config_id is not provided, usually a uuid, even though it is not guaranteed or required,
-       will be generated for config_id.
+        /** The resource name of the transfer config. Transfer config names have the form
+       `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is
+       usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a
+       transfer config.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the transfer config. Transfer config names have the form of
-         * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. The name is
-         * automatically generated based on the config_id specified in CreateTransferConfigRequest
-         * along with project_id and region. If config_id is not provided, usually a uuid, even
-         * though it is not guaranteed or required, will be generated for config_id.
+         * The resource name of the transfer config. Transfer config names have the form
+         * `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id`
+         * is usually a uuid, even though it is not guaranteed or required. The name is ignored when
+         * creating a transfer config.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

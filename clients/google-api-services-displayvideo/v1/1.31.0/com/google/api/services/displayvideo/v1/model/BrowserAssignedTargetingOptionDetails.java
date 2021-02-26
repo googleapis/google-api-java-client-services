@@ -40,7 +40,7 @@ public final class BrowserAssignedTargetingOptionDetails extends com.google.api.
 
   /**
    * Indicates if this option is being negatively targeted. All assigned browser targeting options
-   * on the same line item must have the same value for this field.
+   * on the same resource must have the same value for this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class BrowserAssignedTargetingOptionDetails extends com.google.api.
 
   /**
    * Indicates if this option is being negatively targeted. All assigned browser targeting options
-   * on the same line item must have the same value for this field.
+   * on the same resource must have the same value for this field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNegative() {
@@ -81,7 +81,7 @@ public final class BrowserAssignedTargetingOptionDetails extends com.google.api.
 
   /**
    * Indicates if this option is being negatively targeted. All assigned browser targeting options
-   * on the same line item must have the same value for this field.
+   * on the same resource must have the same value for this field.
    * @param negative negative or {@code null} for none
    */
   public BrowserAssignedTargetingOptionDetails setNegative(java.lang.Boolean negative) {

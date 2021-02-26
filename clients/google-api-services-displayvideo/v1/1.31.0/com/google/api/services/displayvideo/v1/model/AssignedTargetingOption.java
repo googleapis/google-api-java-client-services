@@ -32,7 +32,7 @@ package com.google.api.services.displayvideo.v1.model;
 public final class AssignedTargetingOption extends com.google.api.client.json.GenericJson {
 
   /**
-   * Age range details. This field will be populated when the TargetingType is
+   * Age range details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_AGE_RANGE`.
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private AgeRangeAssignedTargetingOptionDetails ageRangeDetails;
 
   /**
-   * App category details. This field will be populated when the TargetingType is
+   * App category details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_APP_CATEGORY`.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private AppCategoryAssignedTargetingOptionDetails appCategoryDetails;
 
   /**
-   * App details. This field will be populated when the TargetingType is `TARGETING_TYPE_APP`.
+   * App details. This field will be populated when the targeting_type is `TARGETING_TYPE_APP`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,24 +56,24 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Output only. The unique ID of the assigned targeting option. The ID is only unique within a
-   * given line item and targeting type. It may be reused in other contexts.
+   * given resource and targeting type. It may be reused in other contexts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String assignedTargetingOptionId;
 
   /**
-   * Audience targeting details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_AUDIENCE_GROUP`. You can only target one audience group option per line item.
+   * Audience targeting details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_AUDIENCE_GROUP`. You can only target one audience group option per resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AudienceGroupAssignedTargetingOptionDetails audienceGroupDetails;
 
   /**
-   * Authorized seller status details. This field will be populated when the TargetingType is
+   * Authorized seller status details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. You can only target one authorized seller status
-   * option per line item. If a line item doesn't have an authorized seller status option, all
+   * option per resource. If a resource doesn't have an authorized seller status option, all
    * authorized sellers indicated as DIRECT or RESELLER in the ads.txt file are targeted by default.
    * The value may be {@code null}.
    */
@@ -81,7 +81,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private AuthorizedSellerStatusAssignedTargetingOptionDetails authorizedSellerStatusDetails;
 
   /**
-   * Browser details. This field will be populated when the TargetingType is
+   * Browser details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_BROWSER`.
    * The value may be {@code null}.
    */
@@ -89,7 +89,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private BrowserAssignedTargetingOptionDetails browserDetails;
 
   /**
-   * Carrier and ISP details. This field will be populated when the TargetingType is
+   * Carrier and ISP details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CARRIER_AND_ISP`.
    * The value may be {@code null}.
    */
@@ -97,7 +97,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private CarrierAndIspAssignedTargetingOptionDetails carrierAndIspDetails;
 
   /**
-   * Category details. This field will be populated when the TargetingType is
+   * Category details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CATEGORY`. Targeting a category will also target its subcategories. If a
    * category is excluded from targeting and a subcategory is included, the exclusion will take
    * precedence.
@@ -107,7 +107,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private CategoryAssignedTargetingOptionDetails categoryDetails;
 
   /**
-   * Channel details. This field will be populated when the TargetingType is
+   * Channel details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CHANNEL`.
    * The value may be {@code null}.
    */
@@ -115,7 +115,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private ChannelAssignedTargetingOptionDetails channelDetails;
 
   /**
-   * Content instream position details. This field will be populated when the TargetingType is
+   * Content instream position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION`.
    * The value may be {@code null}.
    */
@@ -123,7 +123,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private ContentInstreamPositionAssignedTargetingOptionDetails contentInstreamPositionDetails;
 
   /**
-   * Content outstream position details. This field will be populated when the TargetingType is
+   * Content outstream position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION`.
    * The value may be {@code null}.
    */
@@ -131,7 +131,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private ContentOutstreamPositionAssignedTargetingOptionDetails contentOutstreamPositionDetails;
 
   /**
-   * Day and time details. This field will be populated when the TargetingType is
+   * Day and time details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DAY_AND_TIME`.
    * The value may be {@code null}.
    */
@@ -139,7 +139,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private DayAndTimeAssignedTargetingOptionDetails dayAndTimeDetails;
 
   /**
-   * Device make and model details. This field will be populated when the TargetingType is
+   * Device make and model details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DEVICE_MAKE_MODEL`.
    * The value may be {@code null}.
    */
@@ -147,7 +147,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private DeviceMakeModelAssignedTargetingOptionDetails deviceMakeModelDetails;
 
   /**
-   * Device Type details. This field will be populated when the TargetingType is
+   * Device Type details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DEVICE_TYPE`.
    * The value may be {@code null}.
    */
@@ -155,10 +155,10 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private DeviceTypeAssignedTargetingOptionDetails deviceTypeDetails;
 
   /**
-   * Digital content label details. This field will be populated when the TargetingType is
+   * Digital content label details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`. Digital content labels are targeting
    * exclusions. Advertiser level digital content label exclusions, if set, are always applied in
-   * serving (even though they aren't visible in line item settings). Line item settings can exclude
+   * serving (even though they aren't visible in resource settings). Resource settings can exclude
    * content labels in addition to advertiser exclusions, but can't override them. A line item won't
    * serve if all the digital content labels are excluded.
    * The value may be {@code null}.
@@ -167,7 +167,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private DigitalContentLabelAssignedTargetingOptionDetails digitalContentLabelExclusionDetails;
 
   /**
-   * Environment details. This field will be populated when the TargetingType is
+   * Environment details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_ENVIRONMENT`.
    * The value may be {@code null}.
    */
@@ -175,7 +175,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private EnvironmentAssignedTargetingOptionDetails environmentDetails;
 
   /**
-   * Exchange details. This field will be populated when the TargetingType is
+   * Exchange details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_EXCHANGE`.
    * The value may be {@code null}.
    */
@@ -183,14 +183,15 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private ExchangeAssignedTargetingOptionDetails exchangeDetails;
 
   /**
-   * Gender details. This field will be populated when the TargetingType is `TARGETING_TYPE_GENDER`.
+   * Gender details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_GENDER`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GenderAssignedTargetingOptionDetails genderDetails;
 
   /**
-   * Geographic region details. This field will be populated when the TargetingType is
+   * Geographic region details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_GEO_REGION`.
    * The value may be {@code null}.
    */
@@ -198,7 +199,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private GeoRegionAssignedTargetingOptionDetails geoRegionDetails;
 
   /**
-   * Household income details. This field will be populated when the TargetingType is
+   * Household income details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_HOUSEHOLD_INCOME`.
    * The value may be {@code null}.
    */
@@ -213,7 +214,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private java.lang.String inheritance;
 
   /**
-   * Inventory source details. This field will be populated when the TargetingType is
+   * Inventory source details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_INVENTORY_SOURCE`.
    * The value may be {@code null}.
    */
@@ -221,7 +222,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private InventorySourceAssignedTargetingOptionDetails inventorySourceDetails;
 
   /**
-   * Inventory source group details. This field will be populated when the TargetingType is
+   * Inventory source group details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_INVENTORY_SOURCE_GROUP`.
    * The value may be {@code null}.
    */
@@ -229,16 +230,16 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private InventorySourceGroupAssignedTargetingOptionDetails inventorySourceGroupDetails;
 
   /**
-   * Keyword details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_KEYWORD`. A maximum of 5000 direct negative keywords can be assigned to a line
-   * item. No limit on number of positive keywords that can be assigned.
+   * Keyword details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_KEYWORD`. A maximum of 5000 direct negative keywords can be assigned to a
+   * resource. No limit on number of positive keywords that can be assigned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private KeywordAssignedTargetingOptionDetails keywordDetails;
 
   /**
-   * Language details. This field will be populated when the TargetingType is
+   * Language details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_LANGUAGE`.
    * The value may be {@code null}.
    */
@@ -253,16 +254,16 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private java.lang.String name;
 
   /**
-   * Keyword details. This field will be populated when the TargetingType is
+   * Keyword details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST`. A maximum of 4 negative keyword lists can be assigned
-   * to a line item.
+   * to a resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NegativeKeywordListAssignedTargetingOptionDetails negativeKeywordListDetails;
 
   /**
-   * On screen position details. This field will be populated when the TargetingType is
+   * On screen position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_ON_SCREEN_POSITION`.
    * The value may be {@code null}.
    */
@@ -270,7 +271,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private OnScreenPositionAssignedTargetingOptionDetails onScreenPositionDetails;
 
   /**
-   * Operating system details. This field will be populated when the TargetingType is
+   * Operating system details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_OPERATING_SYSTEM`.
    * The value may be {@code null}.
    */
@@ -278,7 +279,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private OperatingSystemAssignedTargetingOptionDetails operatingSystemDetails;
 
   /**
-   * Parental status details. This field will be populated when the TargetingType is
+   * Parental status details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_PARENTAL_STATUS`.
    * The value may be {@code null}.
    */
@@ -286,7 +287,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private ParentalStatusAssignedTargetingOptionDetails parentalStatusDetails;
 
   /**
-   * Proximity location list details. This field will be populated when the TargetingType is
+   * Proximity location list details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_PROXIMITY_LOCATION_LIST`.
    * The value may be {@code null}.
    */
@@ -294,7 +295,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private ProximityLocationListAssignedTargetingOptionDetails proximityLocationListDetails;
 
   /**
-   * Regional location list details. This field will be populated when the TargetingType is
+   * Regional location list details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_REGIONAL_LOCATION_LIST`.
    * The value may be {@code null}.
    */
@@ -302,10 +303,10 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private RegionalLocationListAssignedTargetingOptionDetails regionalLocationListDetails;
 
   /**
-   * Sensitive category details. This field will be populated when the TargetingType is
+   * Sensitive category details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`. Sensitive categories are targeting exclusions.
    * Advertiser level sensitive category exclusions, if set, are always applied in serving (even
-   * though they aren't visible in line item settings). Line item settings can exclude sensitive
+   * though they aren't visible in resource settings). Resource settings can exclude sensitive
    * categories in addition to advertiser exclusions, but can't override them.
    * The value may be {@code null}.
    */
@@ -313,7 +314,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private SensitiveCategoryAssignedTargetingOptionDetails sensitiveCategoryExclusionDetails;
 
   /**
-   * Sub-exchange details. This field will be populated when the TargetingType is
+   * Sub-exchange details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_SUB_EXCHANGE`.
    * The value may be {@code null}.
    */
@@ -328,7 +329,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private java.lang.String targetingType;
 
   /**
-   * Third party verification details. This field will be populated when the TargetingType is
+   * Third party verification details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_THIRD_PARTY_VERIFIER`.
    * The value may be {@code null}.
    */
@@ -336,14 +337,14 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private ThirdPartyVerifierAssignedTargetingOptionDetails thirdPartyVerifierDetails;
 
   /**
-   * URL details. This field will be populated when the TargetingType is `TARGETING_TYPE_URL`.
+   * URL details. This field will be populated when the targeting_type is `TARGETING_TYPE_URL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UrlAssignedTargetingOptionDetails urlDetails;
 
   /**
-   * User rewarded content details. This field will be populated when the TargetingType is
+   * User rewarded content details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_USER_REWARDED_CONTENT`.
    * The value may be {@code null}.
    */
@@ -351,7 +352,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private UserRewardedContentAssignedTargetingOptionDetails userRewardedContentDetails;
 
   /**
-   * Video player size details. This field will be populated when the TargetingType is
+   * Video player size details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_VIDEO_PLAYER_SIZE`.
    * The value may be {@code null}.
    */
@@ -359,15 +360,15 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private VideoPlayerSizeAssignedTargetingOptionDetails videoPlayerSizeDetails;
 
   /**
-   * Viewability details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_VIEWABILITY`. You can only target one viewability option per line item.
+   * Viewability details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_VIEWABILITY`. You can only target one viewability option per resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ViewabilityAssignedTargetingOptionDetails viewabilityDetails;
 
   /**
-   * Age range details. This field will be populated when the TargetingType is
+   * Age range details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_AGE_RANGE`.
    * @return value or {@code null} for none
    */
@@ -376,7 +377,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Age range details. This field will be populated when the TargetingType is
+   * Age range details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_AGE_RANGE`.
    * @param ageRangeDetails ageRangeDetails or {@code null} for none
    */
@@ -386,7 +387,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * App category details. This field will be populated when the TargetingType is
+   * App category details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_APP_CATEGORY`.
    * @return value or {@code null} for none
    */
@@ -395,7 +396,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * App category details. This field will be populated when the TargetingType is
+   * App category details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_APP_CATEGORY`.
    * @param appCategoryDetails appCategoryDetails or {@code null} for none
    */
@@ -405,7 +406,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * App details. This field will be populated when the TargetingType is `TARGETING_TYPE_APP`.
+   * App details. This field will be populated when the targeting_type is `TARGETING_TYPE_APP`.
    * @return value or {@code null} for none
    */
   public AppAssignedTargetingOptionDetails getAppDetails() {
@@ -413,7 +414,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * App details. This field will be populated when the TargetingType is `TARGETING_TYPE_APP`.
+   * App details. This field will be populated when the targeting_type is `TARGETING_TYPE_APP`.
    * @param appDetails appDetails or {@code null} for none
    */
   public AssignedTargetingOption setAppDetails(AppAssignedTargetingOptionDetails appDetails) {
@@ -423,7 +424,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Output only. The unique ID of the assigned targeting option. The ID is only unique within a
-   * given line item and targeting type. It may be reused in other contexts.
+   * given resource and targeting type. It may be reused in other contexts.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssignedTargetingOptionId() {
@@ -432,7 +433,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Output only. The unique ID of the assigned targeting option. The ID is only unique within a
-   * given line item and targeting type. It may be reused in other contexts.
+   * given resource and targeting type. It may be reused in other contexts.
    * @param assignedTargetingOptionId assignedTargetingOptionId or {@code null} for none
    */
   public AssignedTargetingOption setAssignedTargetingOptionId(java.lang.String assignedTargetingOptionId) {
@@ -441,8 +442,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Audience targeting details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_AUDIENCE_GROUP`. You can only target one audience group option per line item.
+   * Audience targeting details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_AUDIENCE_GROUP`. You can only target one audience group option per resource.
    * @return value or {@code null} for none
    */
   public AudienceGroupAssignedTargetingOptionDetails getAudienceGroupDetails() {
@@ -450,8 +451,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Audience targeting details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_AUDIENCE_GROUP`. You can only target one audience group option per line item.
+   * Audience targeting details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_AUDIENCE_GROUP`. You can only target one audience group option per resource.
    * @param audienceGroupDetails audienceGroupDetails or {@code null} for none
    */
   public AssignedTargetingOption setAudienceGroupDetails(AudienceGroupAssignedTargetingOptionDetails audienceGroupDetails) {
@@ -460,9 +461,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Authorized seller status details. This field will be populated when the TargetingType is
+   * Authorized seller status details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. You can only target one authorized seller status
-   * option per line item. If a line item doesn't have an authorized seller status option, all
+   * option per resource. If a resource doesn't have an authorized seller status option, all
    * authorized sellers indicated as DIRECT or RESELLER in the ads.txt file are targeted by default.
    * @return value or {@code null} for none
    */
@@ -471,9 +472,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Authorized seller status details. This field will be populated when the TargetingType is
+   * Authorized seller status details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. You can only target one authorized seller status
-   * option per line item. If a line item doesn't have an authorized seller status option, all
+   * option per resource. If a resource doesn't have an authorized seller status option, all
    * authorized sellers indicated as DIRECT or RESELLER in the ads.txt file are targeted by default.
    * @param authorizedSellerStatusDetails authorizedSellerStatusDetails or {@code null} for none
    */
@@ -483,7 +484,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Browser details. This field will be populated when the TargetingType is
+   * Browser details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_BROWSER`.
    * @return value or {@code null} for none
    */
@@ -492,7 +493,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Browser details. This field will be populated when the TargetingType is
+   * Browser details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_BROWSER`.
    * @param browserDetails browserDetails or {@code null} for none
    */
@@ -502,7 +503,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Carrier and ISP details. This field will be populated when the TargetingType is
+   * Carrier and ISP details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CARRIER_AND_ISP`.
    * @return value or {@code null} for none
    */
@@ -511,7 +512,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Carrier and ISP details. This field will be populated when the TargetingType is
+   * Carrier and ISP details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CARRIER_AND_ISP`.
    * @param carrierAndIspDetails carrierAndIspDetails or {@code null} for none
    */
@@ -521,7 +522,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Category details. This field will be populated when the TargetingType is
+   * Category details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CATEGORY`. Targeting a category will also target its subcategories. If a
    * category is excluded from targeting and a subcategory is included, the exclusion will take
    * precedence.
@@ -532,7 +533,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Category details. This field will be populated when the TargetingType is
+   * Category details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CATEGORY`. Targeting a category will also target its subcategories. If a
    * category is excluded from targeting and a subcategory is included, the exclusion will take
    * precedence.
@@ -544,7 +545,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Channel details. This field will be populated when the TargetingType is
+   * Channel details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CHANNEL`.
    * @return value or {@code null} for none
    */
@@ -553,7 +554,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Channel details. This field will be populated when the TargetingType is
+   * Channel details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CHANNEL`.
    * @param channelDetails channelDetails or {@code null} for none
    */
@@ -563,7 +564,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Content instream position details. This field will be populated when the TargetingType is
+   * Content instream position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION`.
    * @return value or {@code null} for none
    */
@@ -572,7 +573,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Content instream position details. This field will be populated when the TargetingType is
+   * Content instream position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CONTENT_INSTREAM_POSITION`.
    * @param contentInstreamPositionDetails contentInstreamPositionDetails or {@code null} for none
    */
@@ -582,7 +583,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Content outstream position details. This field will be populated when the TargetingType is
+   * Content outstream position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION`.
    * @return value or {@code null} for none
    */
@@ -591,7 +592,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Content outstream position details. This field will be populated when the TargetingType is
+   * Content outstream position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_CONTENT_OUTSTREAM_POSITION`.
    * @param contentOutstreamPositionDetails contentOutstreamPositionDetails or {@code null} for none
    */
@@ -601,7 +602,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Day and time details. This field will be populated when the TargetingType is
+   * Day and time details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DAY_AND_TIME`.
    * @return value or {@code null} for none
    */
@@ -610,7 +611,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Day and time details. This field will be populated when the TargetingType is
+   * Day and time details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DAY_AND_TIME`.
    * @param dayAndTimeDetails dayAndTimeDetails or {@code null} for none
    */
@@ -620,7 +621,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device make and model details. This field will be populated when the TargetingType is
+   * Device make and model details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DEVICE_MAKE_MODEL`.
    * @return value or {@code null} for none
    */
@@ -629,7 +630,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device make and model details. This field will be populated when the TargetingType is
+   * Device make and model details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DEVICE_MAKE_MODEL`.
    * @param deviceMakeModelDetails deviceMakeModelDetails or {@code null} for none
    */
@@ -639,7 +640,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device Type details. This field will be populated when the TargetingType is
+   * Device Type details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DEVICE_TYPE`.
    * @return value or {@code null} for none
    */
@@ -648,7 +649,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Device Type details. This field will be populated when the TargetingType is
+   * Device Type details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DEVICE_TYPE`.
    * @param deviceTypeDetails deviceTypeDetails or {@code null} for none
    */
@@ -658,10 +659,10 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Digital content label details. This field will be populated when the TargetingType is
+   * Digital content label details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`. Digital content labels are targeting
    * exclusions. Advertiser level digital content label exclusions, if set, are always applied in
-   * serving (even though they aren't visible in line item settings). Line item settings can exclude
+   * serving (even though they aren't visible in resource settings). Resource settings can exclude
    * content labels in addition to advertiser exclusions, but can't override them. A line item won't
    * serve if all the digital content labels are excluded.
    * @return value or {@code null} for none
@@ -671,10 +672,10 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Digital content label details. This field will be populated when the TargetingType is
+   * Digital content label details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION`. Digital content labels are targeting
    * exclusions. Advertiser level digital content label exclusions, if set, are always applied in
-   * serving (even though they aren't visible in line item settings). Line item settings can exclude
+   * serving (even though they aren't visible in resource settings). Resource settings can exclude
    * content labels in addition to advertiser exclusions, but can't override them. A line item won't
    * serve if all the digital content labels are excluded.
    * @param digitalContentLabelExclusionDetails digitalContentLabelExclusionDetails or {@code null} for none
@@ -685,7 +686,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Environment details. This field will be populated when the TargetingType is
+   * Environment details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_ENVIRONMENT`.
    * @return value or {@code null} for none
    */
@@ -694,7 +695,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Environment details. This field will be populated when the TargetingType is
+   * Environment details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_ENVIRONMENT`.
    * @param environmentDetails environmentDetails or {@code null} for none
    */
@@ -704,7 +705,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Exchange details. This field will be populated when the TargetingType is
+   * Exchange details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_EXCHANGE`.
    * @return value or {@code null} for none
    */
@@ -713,7 +714,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Exchange details. This field will be populated when the TargetingType is
+   * Exchange details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_EXCHANGE`.
    * @param exchangeDetails exchangeDetails or {@code null} for none
    */
@@ -723,7 +724,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Gender details. This field will be populated when the TargetingType is `TARGETING_TYPE_GENDER`.
+   * Gender details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_GENDER`.
    * @return value or {@code null} for none
    */
   public GenderAssignedTargetingOptionDetails getGenderDetails() {
@@ -731,7 +733,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Gender details. This field will be populated when the TargetingType is `TARGETING_TYPE_GENDER`.
+   * Gender details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_GENDER`.
    * @param genderDetails genderDetails or {@code null} for none
    */
   public AssignedTargetingOption setGenderDetails(GenderAssignedTargetingOptionDetails genderDetails) {
@@ -740,7 +743,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Geographic region details. This field will be populated when the TargetingType is
+   * Geographic region details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_GEO_REGION`.
    * @return value or {@code null} for none
    */
@@ -749,7 +752,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Geographic region details. This field will be populated when the TargetingType is
+   * Geographic region details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_GEO_REGION`.
    * @param geoRegionDetails geoRegionDetails or {@code null} for none
    */
@@ -759,7 +762,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Household income details. This field will be populated when the TargetingType is
+   * Household income details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_HOUSEHOLD_INCOME`.
    * @return value or {@code null} for none
    */
@@ -768,7 +771,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Household income details. This field will be populated when the TargetingType is
+   * Household income details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_HOUSEHOLD_INCOME`.
    * @param householdIncomeDetails householdIncomeDetails or {@code null} for none
    */
@@ -795,7 +798,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Inventory source details. This field will be populated when the TargetingType is
+   * Inventory source details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_INVENTORY_SOURCE`.
    * @return value or {@code null} for none
    */
@@ -804,7 +807,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Inventory source details. This field will be populated when the TargetingType is
+   * Inventory source details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_INVENTORY_SOURCE`.
    * @param inventorySourceDetails inventorySourceDetails or {@code null} for none
    */
@@ -814,7 +817,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Inventory source group details. This field will be populated when the TargetingType is
+   * Inventory source group details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_INVENTORY_SOURCE_GROUP`.
    * @return value or {@code null} for none
    */
@@ -823,7 +826,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Inventory source group details. This field will be populated when the TargetingType is
+   * Inventory source group details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_INVENTORY_SOURCE_GROUP`.
    * @param inventorySourceGroupDetails inventorySourceGroupDetails or {@code null} for none
    */
@@ -833,9 +836,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Keyword details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_KEYWORD`. A maximum of 5000 direct negative keywords can be assigned to a line
-   * item. No limit on number of positive keywords that can be assigned.
+   * Keyword details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_KEYWORD`. A maximum of 5000 direct negative keywords can be assigned to a
+   * resource. No limit on number of positive keywords that can be assigned.
    * @return value or {@code null} for none
    */
   public KeywordAssignedTargetingOptionDetails getKeywordDetails() {
@@ -843,9 +846,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Keyword details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_KEYWORD`. A maximum of 5000 direct negative keywords can be assigned to a line
-   * item. No limit on number of positive keywords that can be assigned.
+   * Keyword details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_KEYWORD`. A maximum of 5000 direct negative keywords can be assigned to a
+   * resource. No limit on number of positive keywords that can be assigned.
    * @param keywordDetails keywordDetails or {@code null} for none
    */
   public AssignedTargetingOption setKeywordDetails(KeywordAssignedTargetingOptionDetails keywordDetails) {
@@ -854,7 +857,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Language details. This field will be populated when the TargetingType is
+   * Language details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_LANGUAGE`.
    * @return value or {@code null} for none
    */
@@ -863,7 +866,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Language details. This field will be populated when the TargetingType is
+   * Language details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_LANGUAGE`.
    * @param languageDetails languageDetails or {@code null} for none
    */
@@ -890,9 +893,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Keyword details. This field will be populated when the TargetingType is
+   * Keyword details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST`. A maximum of 4 negative keyword lists can be assigned
-   * to a line item.
+   * to a resource.
    * @return value or {@code null} for none
    */
   public NegativeKeywordListAssignedTargetingOptionDetails getNegativeKeywordListDetails() {
@@ -900,9 +903,9 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Keyword details. This field will be populated when the TargetingType is
+   * Keyword details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST`. A maximum of 4 negative keyword lists can be assigned
-   * to a line item.
+   * to a resource.
    * @param negativeKeywordListDetails negativeKeywordListDetails or {@code null} for none
    */
   public AssignedTargetingOption setNegativeKeywordListDetails(NegativeKeywordListAssignedTargetingOptionDetails negativeKeywordListDetails) {
@@ -911,7 +914,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * On screen position details. This field will be populated when the TargetingType is
+   * On screen position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_ON_SCREEN_POSITION`.
    * @return value or {@code null} for none
    */
@@ -920,7 +923,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * On screen position details. This field will be populated when the TargetingType is
+   * On screen position details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_ON_SCREEN_POSITION`.
    * @param onScreenPositionDetails onScreenPositionDetails or {@code null} for none
    */
@@ -930,7 +933,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Operating system details. This field will be populated when the TargetingType is
+   * Operating system details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_OPERATING_SYSTEM`.
    * @return value or {@code null} for none
    */
@@ -939,7 +942,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Operating system details. This field will be populated when the TargetingType is
+   * Operating system details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_OPERATING_SYSTEM`.
    * @param operatingSystemDetails operatingSystemDetails or {@code null} for none
    */
@@ -949,7 +952,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Parental status details. This field will be populated when the TargetingType is
+   * Parental status details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_PARENTAL_STATUS`.
    * @return value or {@code null} for none
    */
@@ -958,7 +961,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Parental status details. This field will be populated when the TargetingType is
+   * Parental status details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_PARENTAL_STATUS`.
    * @param parentalStatusDetails parentalStatusDetails or {@code null} for none
    */
@@ -968,7 +971,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Proximity location list details. This field will be populated when the TargetingType is
+   * Proximity location list details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_PROXIMITY_LOCATION_LIST`.
    * @return value or {@code null} for none
    */
@@ -977,7 +980,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Proximity location list details. This field will be populated when the TargetingType is
+   * Proximity location list details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_PROXIMITY_LOCATION_LIST`.
    * @param proximityLocationListDetails proximityLocationListDetails or {@code null} for none
    */
@@ -987,7 +990,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Regional location list details. This field will be populated when the TargetingType is
+   * Regional location list details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_REGIONAL_LOCATION_LIST`.
    * @return value or {@code null} for none
    */
@@ -996,7 +999,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Regional location list details. This field will be populated when the TargetingType is
+   * Regional location list details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_REGIONAL_LOCATION_LIST`.
    * @param regionalLocationListDetails regionalLocationListDetails or {@code null} for none
    */
@@ -1006,10 +1009,10 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Sensitive category details. This field will be populated when the TargetingType is
+   * Sensitive category details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`. Sensitive categories are targeting exclusions.
    * Advertiser level sensitive category exclusions, if set, are always applied in serving (even
-   * though they aren't visible in line item settings). Line item settings can exclude sensitive
+   * though they aren't visible in resource settings). Resource settings can exclude sensitive
    * categories in addition to advertiser exclusions, but can't override them.
    * @return value or {@code null} for none
    */
@@ -1018,10 +1021,10 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Sensitive category details. This field will be populated when the TargetingType is
+   * Sensitive category details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`. Sensitive categories are targeting exclusions.
    * Advertiser level sensitive category exclusions, if set, are always applied in serving (even
-   * though they aren't visible in line item settings). Line item settings can exclude sensitive
+   * though they aren't visible in resource settings). Resource settings can exclude sensitive
    * categories in addition to advertiser exclusions, but can't override them.
    * @param sensitiveCategoryExclusionDetails sensitiveCategoryExclusionDetails or {@code null} for none
    */
@@ -1031,7 +1034,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Sub-exchange details. This field will be populated when the TargetingType is
+   * Sub-exchange details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_SUB_EXCHANGE`.
    * @return value or {@code null} for none
    */
@@ -1040,7 +1043,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Sub-exchange details. This field will be populated when the TargetingType is
+   * Sub-exchange details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_SUB_EXCHANGE`.
    * @param subExchangeDetails subExchangeDetails or {@code null} for none
    */
@@ -1067,7 +1070,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Third party verification details. This field will be populated when the TargetingType is
+   * Third party verification details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_THIRD_PARTY_VERIFIER`.
    * @return value or {@code null} for none
    */
@@ -1076,7 +1079,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Third party verification details. This field will be populated when the TargetingType is
+   * Third party verification details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_THIRD_PARTY_VERIFIER`.
    * @param thirdPartyVerifierDetails thirdPartyVerifierDetails or {@code null} for none
    */
@@ -1086,7 +1089,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * URL details. This field will be populated when the TargetingType is `TARGETING_TYPE_URL`.
+   * URL details. This field will be populated when the targeting_type is `TARGETING_TYPE_URL`.
    * @return value or {@code null} for none
    */
   public UrlAssignedTargetingOptionDetails getUrlDetails() {
@@ -1094,7 +1097,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * URL details. This field will be populated when the TargetingType is `TARGETING_TYPE_URL`.
+   * URL details. This field will be populated when the targeting_type is `TARGETING_TYPE_URL`.
    * @param urlDetails urlDetails or {@code null} for none
    */
   public AssignedTargetingOption setUrlDetails(UrlAssignedTargetingOptionDetails urlDetails) {
@@ -1103,7 +1106,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * User rewarded content details. This field will be populated when the TargetingType is
+   * User rewarded content details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_USER_REWARDED_CONTENT`.
    * @return value or {@code null} for none
    */
@@ -1112,7 +1115,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * User rewarded content details. This field will be populated when the TargetingType is
+   * User rewarded content details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_USER_REWARDED_CONTENT`.
    * @param userRewardedContentDetails userRewardedContentDetails or {@code null} for none
    */
@@ -1122,7 +1125,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Video player size details. This field will be populated when the TargetingType is
+   * Video player size details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_VIDEO_PLAYER_SIZE`.
    * @return value or {@code null} for none
    */
@@ -1131,7 +1134,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Video player size details. This field will be populated when the TargetingType is
+   * Video player size details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_VIDEO_PLAYER_SIZE`.
    * @param videoPlayerSizeDetails videoPlayerSizeDetails or {@code null} for none
    */
@@ -1141,8 +1144,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Viewability details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_VIEWABILITY`. You can only target one viewability option per line item.
+   * Viewability details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_VIEWABILITY`. You can only target one viewability option per resource.
    * @return value or {@code null} for none
    */
   public ViewabilityAssignedTargetingOptionDetails getViewabilityDetails() {
@@ -1150,8 +1153,8 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   }
 
   /**
-   * Viewability details. This field will be populated when the TargetingType is
-   * `TARGETING_TYPE_VIEWABILITY`. You can only target one viewability option per line item.
+   * Viewability details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_VIEWABILITY`. You can only target one viewability option per resource.
    * @param viewabilityDetails viewabilityDetails or {@code null} for none
    */
   public AssignedTargetingOption setViewabilityDetails(ViewabilityAssignedTargetingOptionDetails viewabilityDetails) {

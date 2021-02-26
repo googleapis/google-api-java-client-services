@@ -40,7 +40,7 @@ public final class CarrierAndIspAssignedTargetingOptionDetails extends com.googl
 
   /**
    * Indicates if this option is being negatively targeted. All assigned carrier and ISP targeting
-   * options on the same line item must have the same value for this field.
+   * options on the same resource must have the same value for this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class CarrierAndIspAssignedTargetingOptionDetails extends com.googl
 
   /**
    * Indicates if this option is being negatively targeted. All assigned carrier and ISP targeting
-   * options on the same line item must have the same value for this field.
+   * options on the same resource must have the same value for this field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNegative() {
@@ -82,7 +82,7 @@ public final class CarrierAndIspAssignedTargetingOptionDetails extends com.googl
 
   /**
    * Indicates if this option is being negatively targeted. All assigned carrier and ISP targeting
-   * options on the same line item must have the same value for this field.
+   * options on the same resource must have the same value for this field.
    * @param negative negative or {@code null} for none
    */
   public CarrierAndIspAssignedTargetingOptionDetails setNegative(java.lang.Boolean negative) {

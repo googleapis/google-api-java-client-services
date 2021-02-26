@@ -53,8 +53,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Required. The list of filters that applies to event attributes. Only events that match all the
-   * provided filters will be sent to the destination.
+   * Required. null The list of filters that applies to event attributes. Only events that match all
+   * the provided filters will be sent to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,6 +65,13 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(EventFilter.class);
   }
+
+  /**
+   * Optional. User labels attached to the triggers that can be used to group resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
 
   /**
    * Required. The resource name of the trigger. Must be unique within the location on the project
@@ -83,7 +90,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    * tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push
    * #create-service-account for information on how to invoke authenticated Cloud Run services. In
    * order to create Audit Log triggers, the service account should also have
-   * 'eventarc.events.receiveAuditLogV1Written' permission.
+   * `roles/eventarc.eventReceiver` IAM role.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,8 +176,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of filters that applies to event attributes. Only events that match all the
-   * provided filters will be sent to the destination.
+   * Required. null The list of filters that applies to event attributes. Only events that match all
+   * the provided filters will be sent to the destination.
    * @return value or {@code null} for none
    */
   public java.util.List<EventFilter> getEventFilters() {
@@ -178,12 +185,29 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of filters that applies to event attributes. Only events that match all the
-   * provided filters will be sent to the destination.
+   * Required. null The list of filters that applies to event attributes. Only events that match all
+   * the provided filters will be sent to the destination.
    * @param eventFilters eventFilters or {@code null} for none
    */
   public Trigger setEventFilters(java.util.List<EventFilter> eventFilters) {
     this.eventFilters = eventFilters;
+    return this;
+  }
+
+  /**
+   * Optional. User labels attached to the triggers that can be used to group resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. User labels attached to the triggers that can be used to group resources.
+   * @param labels labels or {@code null} for none
+   */
+  public Trigger setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 
@@ -215,7 +239,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    * tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push
    * #create-service-account for information on how to invoke authenticated Cloud Run services. In
    * order to create Audit Log triggers, the service account should also have
-   * 'eventarc.events.receiveAuditLogV1Written' permission.
+   * `roles/eventarc.eventReceiver` IAM role.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -231,7 +255,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    * tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push
    * #create-service-account for information on how to invoke authenticated Cloud Run services. In
    * order to create Audit Log triggers, the service account should also have
-   * 'eventarc.events.receiveAuditLogV1Written' permission.
+   * `roles/eventarc.eventReceiver` IAM role.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public Trigger setServiceAccount(java.lang.String serviceAccount) {

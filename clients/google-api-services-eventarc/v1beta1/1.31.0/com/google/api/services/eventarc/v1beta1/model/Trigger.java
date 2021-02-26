@@ -53,8 +53,15 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Required. The criteria by which events are filtered. Only events that match with this criteria
-   * will be sent to the destination.
+   * Optional. User labels attached to the triggers that can be used to group resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Required. null The criteria by which events are filtered. Only events that match with this
+   * criteria will be sent to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,8 +168,25 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The criteria by which events are filtered. Only events that match with this criteria
-   * will be sent to the destination.
+   * Optional. User labels attached to the triggers that can be used to group resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. User labels attached to the triggers that can be used to group resources.
+   * @param labels labels or {@code null} for none
+   */
+  public Trigger setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Required. null The criteria by which events are filtered. Only events that match with this
+   * criteria will be sent to the destination.
    * @return value or {@code null} for none
    */
   public java.util.List<MatchingCriteria> getMatchingCriteria() {
@@ -170,8 +194,8 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The criteria by which events are filtered. Only events that match with this criteria
-   * will be sent to the destination.
+   * Required. null The criteria by which events are filtered. Only events that match with this
+   * criteria will be sent to the destination.
    * @param matchingCriteria matchingCriteria or {@code null} for none
    */
   public Trigger setMatchingCriteria(java.util.List<MatchingCriteria> matchingCriteria) {

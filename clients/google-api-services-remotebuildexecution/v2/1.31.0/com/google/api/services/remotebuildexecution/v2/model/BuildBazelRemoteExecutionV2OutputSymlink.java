@@ -32,17 +32,10 @@ package com.google.api.services.remotebuildexecution.v2.model;
 public final class BuildBazelRemoteExecutionV2OutputSymlink extends com.google.api.client.json.GenericJson {
 
   /**
-   * The supported node properties of the OutputSymlink, if requested by the Action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties;
-
-  static {
-    // hack to force ProGuard to consider BuildBazelRemoteExecutionV2NodeProperty used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(BuildBazelRemoteExecutionV2NodeProperty.class);
-  }
+  private BuildBazelRemoteExecutionV2NodeProperties nodeProperties;
 
   /**
    * The full path of the symlink relative to the working directory, including the filename. The
@@ -56,27 +49,24 @@ public final class BuildBazelRemoteExecutionV2OutputSymlink extends com.google.a
   /**
    * The target path of the symlink. The path separator is a forward slash `/`. The target path can
    * be relative to the parent directory of the symlink or it can be an absolute path starting with
-   * `/`. Support for absolute paths can be checked using the Capabilities API. The canonical form
-   * forbids the substrings `/./` and `//` in the target path. `..` components are allowed anywhere
-   * in the target path.
+   * `/`. Support for absolute paths can be checked using the Capabilities API. `..` components are
+   * allowed anywhere in the target path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String target;
 
   /**
-   * The supported node properties of the OutputSymlink, if requested by the Action.
    * @return value or {@code null} for none
    */
-  public java.util.List<BuildBazelRemoteExecutionV2NodeProperty> getNodeProperties() {
+  public BuildBazelRemoteExecutionV2NodeProperties getNodeProperties() {
     return nodeProperties;
   }
 
   /**
-   * The supported node properties of the OutputSymlink, if requested by the Action.
    * @param nodeProperties nodeProperties or {@code null} for none
    */
-  public BuildBazelRemoteExecutionV2OutputSymlink setNodeProperties(java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties) {
+  public BuildBazelRemoteExecutionV2OutputSymlink setNodeProperties(BuildBazelRemoteExecutionV2NodeProperties nodeProperties) {
     this.nodeProperties = nodeProperties;
     return this;
   }
@@ -105,9 +95,8 @@ public final class BuildBazelRemoteExecutionV2OutputSymlink extends com.google.a
   /**
    * The target path of the symlink. The path separator is a forward slash `/`. The target path can
    * be relative to the parent directory of the symlink or it can be an absolute path starting with
-   * `/`. Support for absolute paths can be checked using the Capabilities API. The canonical form
-   * forbids the substrings `/./` and `//` in the target path. `..` components are allowed anywhere
-   * in the target path.
+   * `/`. Support for absolute paths can be checked using the Capabilities API. `..` components are
+   * allowed anywhere in the target path.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -117,9 +106,8 @@ public final class BuildBazelRemoteExecutionV2OutputSymlink extends com.google.a
   /**
    * The target path of the symlink. The path separator is a forward slash `/`. The target path can
    * be relative to the parent directory of the symlink or it can be an absolute path starting with
-   * `/`. Support for absolute paths can be checked using the Capabilities API. The canonical form
-   * forbids the substrings `/./` and `//` in the target path. `..` components are allowed anywhere
-   * in the target path.
+   * `/`. Support for absolute paths can be checked using the Capabilities API. `..` components are
+   * allowed anywhere in the target path.
    * @param target target or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2OutputSymlink setTarget(java.lang.String target) {

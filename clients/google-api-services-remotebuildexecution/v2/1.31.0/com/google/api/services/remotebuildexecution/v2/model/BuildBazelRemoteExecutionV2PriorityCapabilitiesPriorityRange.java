@@ -31,18 +31,24 @@ package com.google.api.services.remotebuildexecution.v2.model;
 public final class BuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange extends com.google.api.client.json.GenericJson {
 
   /**
+   * The maximum numeric value for this priority range, which represents the least urgent task or
+   * shortest retained item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxPriority;
 
   /**
+   * The minimum numeric value for this priority range, which represents the most urgent task or
+   * longest retained item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minPriority;
 
   /**
+   * The maximum numeric value for this priority range, which represents the least urgent task or
+   * shortest retained item.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxPriority() {
@@ -50,6 +56,8 @@ public final class BuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange 
   }
 
   /**
+   * The maximum numeric value for this priority range, which represents the least urgent task or
+   * shortest retained item.
    * @param maxPriority maxPriority or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange setMaxPriority(java.lang.Integer maxPriority) {
@@ -58,6 +66,8 @@ public final class BuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange 
   }
 
   /**
+   * The minimum numeric value for this priority range, which represents the most urgent task or
+   * longest retained item.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinPriority() {
@@ -65,6 +75,8 @@ public final class BuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange 
   }
 
   /**
+   * The minimum numeric value for this priority range, which represents the most urgent task or
+   * longest retained item.
    * @param minPriority minPriority or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2PriorityCapabilitiesPriorityRange setMinPriority(java.lang.Integer minPriority) {

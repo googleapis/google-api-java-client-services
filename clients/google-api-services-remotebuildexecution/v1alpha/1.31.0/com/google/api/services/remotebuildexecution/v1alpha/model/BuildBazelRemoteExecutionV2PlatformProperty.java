@@ -25,7 +25,10 @@ package com.google.api.services.remotebuildexecution.v1alpha.model;
  * as allowing a worker with 16GB to fulfill a request for 8GB, while a property describing the OS
  * environment on which the action must be performed may require an exact match with the worker's
  * OS. The server MAY use the `value` of one or more properties to determine how it sets up the
- * execution environment, such as by making specific system files available to the worker.
+ * execution environment, such as by making specific system files available to the worker. Both
+ * names and values are typically case-sensitive. Note that the platform is implicitly part of the
+ * action digest, so even tiny changes in the names or values (like changing case) may result in
+ * different action cache entries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Remote Build Execution API. For a detailed

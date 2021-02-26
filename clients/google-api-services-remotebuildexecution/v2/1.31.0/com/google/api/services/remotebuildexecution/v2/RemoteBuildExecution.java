@@ -155,7 +155,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
     /**
      * Retrieve a cached execution result. Implementations SHOULD ensure that any blobs referenced from
      * the ContentAddressableStorage are available at the time of returning the ActionResult and will be
-     * for some period of time afterwards. The TTLs of the referenced blobs SHOULD be increased if
+     * for some period of time afterwards. The lifetimes of the referenced blobs SHOULD be increased if
      * necessary and applicable. Errors: * `NOT_FOUND`: The requested `ActionResult` is not in the
      * cache.
      *
@@ -189,7 +189,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       /**
        * Retrieve a cached execution result. Implementations SHOULD ensure that any blobs referenced
        * from the ContentAddressableStorage are available at the time of returning the ActionResult and
-       * will be for some period of time afterwards. The TTLs of the referenced blobs SHOULD be
+       * will be for some period of time afterwards. The lifetimes of the referenced blobs SHOULD be
        * increased if necessary and applicable. Errors: * `NOT_FOUND`: The requested `ActionResult` is
        * not in the cache.
        *
@@ -362,13 +362,15 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
 
       /**
        * A hint to the server to inline the contents of the listed output files. Each path needs to
-       * exactly match one path in `output_files` in the Command message.
+       * exactly match one file path in either `output_paths` or `output_files` (DEPRECATED since
+       * v2.1) in the Command message.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> inlineOutputFiles;
 
       /** A hint to the server to inline the contents of the listed output files. Each path needs to exactly
-     match one path in `output_files` in the Command message.
+     match one file path in either `output_paths` or `output_files` (DEPRECATED since v2.1) in the
+     Command message.
        */
       public java.util.List<java.lang.String> getInlineOutputFiles() {
         return inlineOutputFiles;
@@ -376,7 +378,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
 
       /**
        * A hint to the server to inline the contents of the listed output files. Each path needs to
-       * exactly match one path in `output_files` in the Command message.
+       * exactly match one file path in either `output_paths` or `output_files` (DEPRECATED since
+       * v2.1) in the Command message.
        */
       public Get setInlineOutputFiles(java.util.List<java.lang.String> inlineOutputFiles) {
         this.inlineOutputFiles = inlineOutputFiles;
@@ -423,9 +426,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
     /**
      * Upload a new execution result. In order to allow the server to perform access control based on
      * the type of action, and to assist with client debugging, the client MUST first upload the Action
-     * that produced the result, along with its Command, into the `ContentAddressableStorage`. Errors: *
-     * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One or more
-     * errors occurred in updating the action result, such as a missing command or action. *
+     * that produced the result, along with its Command, into the `ContentAddressableStorage`. Server
+     * implementations MAY modify the `UpdateActionResultRequest.action_result` and return an equivalent
+     * value. Errors: * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`:
+     * One or more errors occurred in updating the action result, such as a missing command or action. *
      * `RESOURCE_EXHAUSTED`: There is insufficient storage space to add the entry to the cache.
      *
      * Create a request for the method "actionResults.update".
@@ -460,9 +464,11 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * Upload a new execution result. In order to allow the server to perform access control based on
        * the type of action, and to assist with client debugging, the client MUST first upload the
        * Action that produced the result, along with its Command, into the `ContentAddressableStorage`.
-       * Errors: * `INVALID_ARGUMENT`: One or more arguments are invalid. * `FAILED_PRECONDITION`: One
-       * or more errors occurred in updating the action result, such as a missing command or action. *
-       * `RESOURCE_EXHAUSTED`: There is insufficient storage space to add the entry to the cache.
+       * Server implementations MAY modify the `UpdateActionResultRequest.action_result` and return an
+       * equivalent value. Errors: * `INVALID_ARGUMENT`: One or more arguments are invalid. *
+       * `FAILED_PRECONDITION`: One or more errors occurred in updating the action result, such as a
+       * missing command or action. * `RESOURCE_EXHAUSTED`: There is insufficient storage space to add
+       * the entry to the cache.
        *
        * Create a request for the method "actionResults.update".
        *
@@ -715,7 +721,10 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
      * method, and it was called for the current execution. In the case of a missing input or command,
      * the server SHOULD additionally send a PreconditionFailure error detail where, for each requested
      * blob not present in the CAS, there is a `Violation` with a `type` of `MISSING` and a `subject` of
-     * `"blobs/{hash}/{size}"` indicating the digest of the missing blob.
+     * `"blobs/{hash}/{size}"` indicating the digest of the missing blob. The server does not need to
+     * guarantee that a call to this method leads to at most one execution of the action. The server MAY
+     * execute the action multiple times, potentially in parallel. These redundant executions MAY
+     * continue to run, even if the operation is completed.
      *
      * Create a request for the method "actions.execute".
      *
@@ -774,7 +783,9 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
        * case of a missing input or command, the server SHOULD additionally send a PreconditionFailure
        * error detail where, for each requested blob not present in the CAS, there is a `Violation` with
        * a `type` of `MISSING` and a `subject` of `"blobs/{hash}/{size}"` indicating the digest of the
-       * missing blob.
+       * missing blob. The server does not need to guarantee that a call to this method leads to at most
+       * one execution of the action. The server MAY execute the action multiple times, potentially in
+       * parallel. These redundant executions MAY continue to run, even if the operation is completed.
        *
        * Create a request for the method "actions.execute".
        *
@@ -1250,7 +1261,7 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
     /**
      * Determine if blobs are present in the CAS. Clients can use this API before uploading blobs to
      * determine which ones are already present in the CAS and do not need to be uploaded again. Servers
-     * SHOULD increase the TTLs of the referenced blobs if necessary and applicable. There are no
+     * SHOULD increase the lifetimes of the referenced blobs if necessary and applicable. There are no
      * method-specific errors.
      *
      * Create a request for the method "blobs.findMissing".
@@ -1282,8 +1293,8 @@ public class RemoteBuildExecution extends com.google.api.client.googleapis.servi
       /**
        * Determine if blobs are present in the CAS. Clients can use this API before uploading blobs to
        * determine which ones are already present in the CAS and do not need to be uploaded again.
-       * Servers SHOULD increase the TTLs of the referenced blobs if necessary and applicable. There are
-       * no method-specific errors.
+       * Servers SHOULD increase the lifetimes of the referenced blobs if necessary and applicable.
+       * There are no method-specific errors.
        *
        * Create a request for the method "blobs.findMissing".
        *

@@ -58,7 +58,9 @@ public final class ArimaSingleModelForecastingMetrics extends com.google.api.cli
   private java.util.List<java.lang.String> seasonalPeriods;
 
   /**
-   * The id to indicate different time series.
+   * The time_series_id value for this time series. It will be one of the unique values from the
+   * time_series_id_column specified during ARIMA model training. Only present when
+   * time_series_id_column training option was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +135,9 @@ public final class ArimaSingleModelForecastingMetrics extends com.google.api.cli
   }
 
   /**
-   * The id to indicate different time series.
+   * The time_series_id value for this time series. It will be one of the unique values from the
+   * time_series_id_column specified during ARIMA model training. Only present when
+   * time_series_id_column training option was used.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeSeriesId() {
@@ -141,7 +145,9 @@ public final class ArimaSingleModelForecastingMetrics extends com.google.api.cli
   }
 
   /**
-   * The id to indicate different time series.
+   * The time_series_id value for this time series. It will be one of the unique values from the
+   * time_series_id_column specified during ARIMA model training. Only present when
+   * time_series_id_column training option was used.
    * @param timeSeriesId timeSeriesId or {@code null} for none
    */
   public ArimaSingleModelForecastingMetrics setTimeSeriesId(java.lang.String timeSeriesId) {

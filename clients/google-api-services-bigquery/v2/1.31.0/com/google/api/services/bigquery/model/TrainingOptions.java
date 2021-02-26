@@ -314,7 +314,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.String timeSeriesDataColumn;
 
   /**
-   * The id column that will be used to indicate different time series to forecast in parallel.
+   * The time series id column that was used during ARIMA model training.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1031,7 +1031,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The id column that will be used to indicate different time series to forecast in parallel.
+   * The time series id column that was used during ARIMA model training.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeSeriesIdColumn() {
@@ -1039,7 +1039,7 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The id column that will be used to indicate different time series to forecast in parallel.
+   * The time series id column that was used during ARIMA model training.
    * @param timeSeriesIdColumn timeSeriesIdColumn or {@code null} for none
    */
   public TrainingOptions setTimeSeriesIdColumn(java.lang.String timeSeriesIdColumn) {

@@ -46,6 +46,13 @@ public final class SpeechAdaptation extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * A collection of phrase set resource names to use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> phraseSetReferences;
+
+  /**
    * A collection of phrase sets. To specify the hints inline, leave the phrase set's `name` blank
    * and fill in the rest of its fields. Any phrase set can use any custom class.
    * The value may be {@code null}.
@@ -77,6 +84,23 @@ public final class SpeechAdaptation extends com.google.api.client.json.GenericJs
    */
   public SpeechAdaptation setCustomClasses(java.util.List<CustomClass> customClasses) {
     this.customClasses = customClasses;
+    return this;
+  }
+
+  /**
+   * A collection of phrase set resource names to use.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPhraseSetReferences() {
+    return phraseSetReferences;
+  }
+
+  /**
+   * A collection of phrase set resource names to use.
+   * @param phraseSetReferences phraseSetReferences or {@code null} for none
+   */
+  public SpeechAdaptation setPhraseSetReferences(java.util.List<java.lang.String> phraseSetReferences) {
+    this.phraseSetReferences = phraseSetReferences;
     return this;
   }
 

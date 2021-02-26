@@ -37,6 +37,14 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
   private java.lang.Boolean flexibleEnvironmentAvailable;
 
   /**
+   * Output only. Search API (https://cloud.google.com/appengine/docs/standard/python/search) is
+   * available in the given location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean searchApiAvailable;
+
+  /**
    * App Engine standard environment is available in the given location.@OutputOnly
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
    */
   public LocationMetadata setFlexibleEnvironmentAvailable(java.lang.Boolean flexibleEnvironmentAvailable) {
     this.flexibleEnvironmentAvailable = flexibleEnvironmentAvailable;
+    return this;
+  }
+
+  /**
+   * Output only. Search API (https://cloud.google.com/appengine/docs/standard/python/search) is
+   * available in the given location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSearchApiAvailable() {
+    return searchApiAvailable;
+  }
+
+  /**
+   * Output only. Search API (https://cloud.google.com/appengine/docs/standard/python/search) is
+   * available in the given location.
+   * @param searchApiAvailable searchApiAvailable or {@code null} for none
+   */
+  public LocationMetadata setSearchApiAvailable(java.lang.Boolean searchApiAvailable) {
+    this.searchApiAvailable = searchApiAvailable;
     return this;
   }
 

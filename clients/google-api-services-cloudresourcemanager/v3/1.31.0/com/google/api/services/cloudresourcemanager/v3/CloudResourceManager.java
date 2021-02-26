@@ -392,8 +392,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
     }
     /**
      * Retrieve a Lien by `name`. Callers of this method will require permission on the `parent`
-     * resource. For example, a Lien with a `parent` of `projects/1234` requires permission requires
-     * permission `resourcemanager.projects.get` or `resourcemanager.projects.updateLiens`.
+     * resource. For example, a Lien with a `parent` of `projects/1234` requires permission
+     * `resourcemanager.projects.get`
      *
      * Create a request for the method "liens.get".
      *
@@ -418,8 +418,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /**
        * Retrieve a Lien by `name`. Callers of this method will require permission on the `parent`
-       * resource. For example, a Lien with a `parent` of `projects/1234` requires permission requires
-       * permission `resourcemanager.projects.get` or `resourcemanager.projects.updateLiens`.
+       * resource. For example, a Lien with a `parent` of `projects/1234` requires permission
+       * `resourcemanager.projects.get`
        *
        * Create a request for the method "liens.get".
        *

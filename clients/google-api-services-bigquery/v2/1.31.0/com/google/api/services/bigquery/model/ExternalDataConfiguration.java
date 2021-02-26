@@ -106,6 +106,13 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.lang.Integer maxBadRecords;
 
   /**
+   * Additional properties to set if sourceFormat is set to Parquet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ParquetOptions parquetOptions;
+
+  /**
    * [Optional] The schema for the data. Schema is required for CSV and JSON formats. Schema is
    * disallowed for Google Cloud Bigtable, Cloud Datastore backups, and Avro formats.
    * The value may be {@code null}.
@@ -311,6 +318,23 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    */
   public ExternalDataConfiguration setMaxBadRecords(java.lang.Integer maxBadRecords) {
     this.maxBadRecords = maxBadRecords;
+    return this;
+  }
+
+  /**
+   * Additional properties to set if sourceFormat is set to Parquet.
+   * @return value or {@code null} for none
+   */
+  public ParquetOptions getParquetOptions() {
+    return parquetOptions;
+  }
+
+  /**
+   * Additional properties to set if sourceFormat is set to Parquet.
+   * @param parquetOptions parquetOptions or {@code null} for none
+   */
+  public ExternalDataConfiguration setParquetOptions(ParquetOptions parquetOptions) {
+    this.parquetOptions = parquetOptions;
     return this;
   }
 

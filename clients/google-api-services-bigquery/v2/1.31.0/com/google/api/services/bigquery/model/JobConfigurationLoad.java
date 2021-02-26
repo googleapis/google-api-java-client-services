@@ -187,6 +187,13 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.String nullMarker;
 
   /**
+   * [Optional] Options to configure parquet support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ParquetOptions parquetOptions;
+
+  /**
    * If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into
    * BigQuery from a Cloud Datastore backup. Property names are case sensitive and must be top-level
    * properties. If no properties are specified, BigQuery loads all properties. If any named
@@ -673,6 +680,23 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setNullMarker(java.lang.String nullMarker) {
     this.nullMarker = nullMarker;
+    return this;
+  }
+
+  /**
+   * [Optional] Options to configure parquet support.
+   * @return value or {@code null} for none
+   */
+  public ParquetOptions getParquetOptions() {
+    return parquetOptions;
+  }
+
+  /**
+   * [Optional] Options to configure parquet support.
+   * @param parquetOptions parquetOptions or {@code null} for none
+   */
+  public JobConfigurationLoad setParquetOptions(ParquetOptions parquetOptions) {
+    this.parquetOptions = parquetOptions;
     return this;
   }
 

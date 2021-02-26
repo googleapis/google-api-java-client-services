@@ -31,6 +31,13 @@ package com.google.api.services.remotebuildexecution.v2.model;
 public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time spent to release the CAS blobs used by the task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String casRelease;
+
+  /**
    * The time spent waiting for Container Manager to assign an asynchronous container for execution.
    * The value may be {@code null}.
    */
@@ -114,6 +121,23 @@ public final class GoogleDevtoolsRemotebuildbotCommandDurations extends com.goog
    */
   @com.google.api.client.util.Key
   private String uploadStartTime;
+
+  /**
+   * The time spent to release the CAS blobs used by the task.
+   * @return value or {@code null} for none
+   */
+  public String getCasRelease() {
+    return casRelease;
+  }
+
+  /**
+   * The time spent to release the CAS blobs used by the task.
+   * @param casRelease casRelease or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandDurations setCasRelease(String casRelease) {
+    this.casRelease = casRelease;
+    return this;
+  }
 
   /**
    * The time spent waiting for Container Manager to assign an asynchronous container for execution.

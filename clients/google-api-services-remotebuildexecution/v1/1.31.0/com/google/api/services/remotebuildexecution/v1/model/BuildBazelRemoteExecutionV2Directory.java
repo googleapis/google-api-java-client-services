@@ -65,11 +65,10 @@ public final class BuildBazelRemoteExecutionV2Directory extends com.google.api.c
   private java.util.List<BuildBazelRemoteExecutionV2FileNode> files;
 
   /**
-   * The node properties of the Directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties;
+  private BuildBazelRemoteExecutionV2NodeProperties nodeProperties;
 
   /**
    * The symlinks in the directory.
@@ -113,18 +112,16 @@ public final class BuildBazelRemoteExecutionV2Directory extends com.google.api.c
   }
 
   /**
-   * The node properties of the Directory.
    * @return value or {@code null} for none
    */
-  public java.util.List<BuildBazelRemoteExecutionV2NodeProperty> getNodeProperties() {
+  public BuildBazelRemoteExecutionV2NodeProperties getNodeProperties() {
     return nodeProperties;
   }
 
   /**
-   * The node properties of the Directory.
    * @param nodeProperties nodeProperties or {@code null} for none
    */
-  public BuildBazelRemoteExecutionV2Directory setNodeProperties(java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties) {
+  public BuildBazelRemoteExecutionV2Directory setNodeProperties(BuildBazelRemoteExecutionV2NodeProperties nodeProperties) {
     this.nodeProperties = nodeProperties;
     return this;
   }

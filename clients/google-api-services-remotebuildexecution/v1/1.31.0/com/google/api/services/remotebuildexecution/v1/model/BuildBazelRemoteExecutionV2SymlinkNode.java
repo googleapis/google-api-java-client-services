@@ -38,24 +38,19 @@ public final class BuildBazelRemoteExecutionV2SymlinkNode extends com.google.api
   private java.lang.String name;
 
   /**
-   * The node properties of the SymlinkNode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties;
-
-  static {
-    // hack to force ProGuard to consider BuildBazelRemoteExecutionV2NodeProperty used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(BuildBazelRemoteExecutionV2NodeProperty.class);
-  }
+  private BuildBazelRemoteExecutionV2NodeProperties nodeProperties;
 
   /**
    * The target path of the symlink. The path separator is a forward slash `/`. The target path can
    * be relative to the parent directory of the symlink or it can be an absolute path starting with
-   * `/`. Support for absolute paths can be checked using the Capabilities API. The canonical form
-   * forbids the substrings `/./` and `//` in the target path. `..` components are allowed anywhere
-   * in the target path.
+   * `/`. Support for absolute paths can be checked using the Capabilities API. `..` components are
+   * allowed anywhere in the target path as logical canonicalization may lead to different behavior
+   * in the presence of directory symlinks (e.g. `foo/../bar` may not be the same as `bar`). To
+   * reduce potential cache misses, canonicalization is still recommended where this is possible
+   * without impacting correctness.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,18 +74,16 @@ public final class BuildBazelRemoteExecutionV2SymlinkNode extends com.google.api
   }
 
   /**
-   * The node properties of the SymlinkNode.
    * @return value or {@code null} for none
    */
-  public java.util.List<BuildBazelRemoteExecutionV2NodeProperty> getNodeProperties() {
+  public BuildBazelRemoteExecutionV2NodeProperties getNodeProperties() {
     return nodeProperties;
   }
 
   /**
-   * The node properties of the SymlinkNode.
    * @param nodeProperties nodeProperties or {@code null} for none
    */
-  public BuildBazelRemoteExecutionV2SymlinkNode setNodeProperties(java.util.List<BuildBazelRemoteExecutionV2NodeProperty> nodeProperties) {
+  public BuildBazelRemoteExecutionV2SymlinkNode setNodeProperties(BuildBazelRemoteExecutionV2NodeProperties nodeProperties) {
     this.nodeProperties = nodeProperties;
     return this;
   }
@@ -98,9 +91,11 @@ public final class BuildBazelRemoteExecutionV2SymlinkNode extends com.google.api
   /**
    * The target path of the symlink. The path separator is a forward slash `/`. The target path can
    * be relative to the parent directory of the symlink or it can be an absolute path starting with
-   * `/`. Support for absolute paths can be checked using the Capabilities API. The canonical form
-   * forbids the substrings `/./` and `//` in the target path. `..` components are allowed anywhere
-   * in the target path.
+   * `/`. Support for absolute paths can be checked using the Capabilities API. `..` components are
+   * allowed anywhere in the target path as logical canonicalization may lead to different behavior
+   * in the presence of directory symlinks (e.g. `foo/../bar` may not be the same as `bar`). To
+   * reduce potential cache misses, canonicalization is still recommended where this is possible
+   * without impacting correctness.
    * @return value or {@code null} for none
    */
   public java.lang.String getTarget() {
@@ -110,9 +105,11 @@ public final class BuildBazelRemoteExecutionV2SymlinkNode extends com.google.api
   /**
    * The target path of the symlink. The path separator is a forward slash `/`. The target path can
    * be relative to the parent directory of the symlink or it can be an absolute path starting with
-   * `/`. Support for absolute paths can be checked using the Capabilities API. The canonical form
-   * forbids the substrings `/./` and `//` in the target path. `..` components are allowed anywhere
-   * in the target path.
+   * `/`. Support for absolute paths can be checked using the Capabilities API. `..` components are
+   * allowed anywhere in the target path as logical canonicalization may lead to different behavior
+   * in the presence of directory symlinks (e.g. `foo/../bar` may not be the same as `bar`). To
+   * reduce potential cache misses, canonicalization is still recommended where this is possible
+   * without impacting correctness.
    * @param target target or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2SymlinkNode setTarget(java.lang.String target) {

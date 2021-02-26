@@ -93,6 +93,19 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   private java.util.List<java.lang.String> outputFiles;
 
   /**
+   * A list of keys for node properties the client expects to retrieve for output files and
+   * directories. Keys are either names of string-based NodeProperty or names of fields in
+   * NodeProperties. In order to ensure that equivalent `Action`s always hash to the same value, the
+   * node properties MUST be lexicographically sorted by name. Sorting of strings is done by code
+   * point, equivalently, by the UTF-8 bytes. The interpretation of string-based properties is
+   * server-dependent. If a property is not recognized by the server, the server will return an
+   * `INVALID_ARGUMENT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> outputNodeProperties;
+
+  /**
    * A list of the output paths that the client expects to retrieve from the action. Only the listed
    * paths will be returned to the client as output. The type of the output (file or directory) is
    * not specified, and will be determined by the server after action execution. If the resulting
@@ -117,7 +130,8 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * The platform requirements for the execution environment. The server MAY choose to execute the
    * action on any worker satisfying the requirements, so the client SHOULD ensure that running the
    * action on any such worker will have the same result. A detailed lexicon for this can be found
-   * in the accompanying platform.md.
+   * in the accompanying platform.md. DEPRECATED as of v2.2: platform properties are now specified
+   * directly in the action. See documentation note in the Action for migration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,6 +277,35 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
   }
 
   /**
+   * A list of keys for node properties the client expects to retrieve for output files and
+   * directories. Keys are either names of string-based NodeProperty or names of fields in
+   * NodeProperties. In order to ensure that equivalent `Action`s always hash to the same value, the
+   * node properties MUST be lexicographically sorted by name. Sorting of strings is done by code
+   * point, equivalently, by the UTF-8 bytes. The interpretation of string-based properties is
+   * server-dependent. If a property is not recognized by the server, the server will return an
+   * `INVALID_ARGUMENT`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOutputNodeProperties() {
+    return outputNodeProperties;
+  }
+
+  /**
+   * A list of keys for node properties the client expects to retrieve for output files and
+   * directories. Keys are either names of string-based NodeProperty or names of fields in
+   * NodeProperties. In order to ensure that equivalent `Action`s always hash to the same value, the
+   * node properties MUST be lexicographically sorted by name. Sorting of strings is done by code
+   * point, equivalently, by the UTF-8 bytes. The interpretation of string-based properties is
+   * server-dependent. If a property is not recognized by the server, the server will return an
+   * `INVALID_ARGUMENT`.
+   * @param outputNodeProperties outputNodeProperties or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2Command setOutputNodeProperties(java.util.List<java.lang.String> outputNodeProperties) {
+    this.outputNodeProperties = outputNodeProperties;
+    return this;
+  }
+
+  /**
    * A list of the output paths that the client expects to retrieve from the action. Only the listed
    * paths will be returned to the client as output. The type of the output (file or directory) is
    * not specified, and will be determined by the server after action execution. If the resulting
@@ -311,7 +354,8 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * The platform requirements for the execution environment. The server MAY choose to execute the
    * action on any worker satisfying the requirements, so the client SHOULD ensure that running the
    * action on any such worker will have the same result. A detailed lexicon for this can be found
-   * in the accompanying platform.md.
+   * in the accompanying platform.md. DEPRECATED as of v2.2: platform properties are now specified
+   * directly in the action. See documentation note in the Action for migration.
    * @return value or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Platform getPlatform() {
@@ -322,7 +366,8 @@ public final class BuildBazelRemoteExecutionV2Command extends com.google.api.cli
    * The platform requirements for the execution environment. The server MAY choose to execute the
    * action on any worker satisfying the requirements, so the client SHOULD ensure that running the
    * action on any such worker will have the same result. A detailed lexicon for this can be found
-   * in the accompanying platform.md.
+   * in the accompanying platform.md. DEPRECATED as of v2.2: platform properties are now specified
+   * directly in the action. See documentation note in the Action for migration.
    * @param platform platform or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2Command setPlatform(BuildBazelRemoteExecutionV2Platform platform) {

@@ -31,6 +31,14 @@ package com.google.api.services.remotebuildexecution.v2.model;
 public final class BuildBazelRemoteExecutionV2ExecutedActionMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Details that are specific to the kind of worker used. For example, on POSIX-like systems this
+   * could contain a message with getrusage(2) statistics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.util.Map<String, java.lang.Object>> auxiliaryMetadata;
+
+  /**
    * When the worker completed executing the action command.
    * The value may be {@code null}.
    */
@@ -99,6 +107,25 @@ public final class BuildBazelRemoteExecutionV2ExecutedActionMetadata extends com
    */
   @com.google.api.client.util.Key
   private String workerStartTimestamp;
+
+  /**
+   * Details that are specific to the kind of worker used. For example, on POSIX-like systems this
+   * could contain a message with getrusage(2) statistics.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.util.Map<String, java.lang.Object>> getAuxiliaryMetadata() {
+    return auxiliaryMetadata;
+  }
+
+  /**
+   * Details that are specific to the kind of worker used. For example, on POSIX-like systems this
+   * could contain a message with getrusage(2) statistics.
+   * @param auxiliaryMetadata auxiliaryMetadata or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2ExecutedActionMetadata setAuxiliaryMetadata(java.util.List<java.util.Map<String, java.lang.Object>> auxiliaryMetadata) {
+    this.auxiliaryMetadata = auxiliaryMetadata;
+    return this;
+  }
 
   /**
    * When the worker completed executing the action command.

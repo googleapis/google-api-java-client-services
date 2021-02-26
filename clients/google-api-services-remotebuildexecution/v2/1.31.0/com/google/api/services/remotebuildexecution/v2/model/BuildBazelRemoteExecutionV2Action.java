@@ -65,15 +65,26 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
   private BuildBazelRemoteExecutionV2Digest inputRootDigest;
 
   /**
-   * List of required supported NodeProperty keys. In order to ensure that equivalent `Action`s
-   * always hash to the same value, the supported node properties MUST be lexicographically sorted
-   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes. The
-   * interpretation of these properties is server-dependent. If a property is not recognized by the
-   * server, the server will return an `INVALID_ARGUMENT` error.
+   * The optional platform requirements for the execution environment. The server MAY choose to
+   * execute the action on any worker satisfying the requirements, so the client SHOULD ensure that
+   * running the action on any such worker will have the same result. A detailed lexicon for this
+   * can be found in the accompanying platform.md. New in version 2.2: clients SHOULD set these
+   * platform properties as well as those in the Command. Servers SHOULD prefer those set here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> outputNodeProperties;
+  private BuildBazelRemoteExecutionV2Platform platform;
+
+  /**
+   * An optional additional salt value used to place this `Action` into a separate cache namespace
+   * from other instances having the same field contents. This salt typically comes from operational
+   * configuration specific to sources such as repo and service configuration, and allows disowning
+   * an entire set of ActionResults that might have been poisoned by buggy software or tool
+   * failures.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String salt;
 
   /**
    * A timeout after which the execution should be killed. If the timeout is absent, then the client
@@ -151,27 +162,88 @@ public final class BuildBazelRemoteExecutionV2Action extends com.google.api.clie
   }
 
   /**
-   * List of required supported NodeProperty keys. In order to ensure that equivalent `Action`s
-   * always hash to the same value, the supported node properties MUST be lexicographically sorted
-   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes. The
-   * interpretation of these properties is server-dependent. If a property is not recognized by the
-   * server, the server will return an `INVALID_ARGUMENT` error.
+   * The optional platform requirements for the execution environment. The server MAY choose to
+   * execute the action on any worker satisfying the requirements, so the client SHOULD ensure that
+   * running the action on any such worker will have the same result. A detailed lexicon for this
+   * can be found in the accompanying platform.md. New in version 2.2: clients SHOULD set these
+   * platform properties as well as those in the Command. Servers SHOULD prefer those set here.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getOutputNodeProperties() {
-    return outputNodeProperties;
+  public BuildBazelRemoteExecutionV2Platform getPlatform() {
+    return platform;
   }
 
   /**
-   * List of required supported NodeProperty keys. In order to ensure that equivalent `Action`s
-   * always hash to the same value, the supported node properties MUST be lexicographically sorted
-   * by name. Sorting of strings is done by code point, equivalently, by the UTF-8 bytes. The
-   * interpretation of these properties is server-dependent. If a property is not recognized by the
-   * server, the server will return an `INVALID_ARGUMENT` error.
-   * @param outputNodeProperties outputNodeProperties or {@code null} for none
+   * The optional platform requirements for the execution environment. The server MAY choose to
+   * execute the action on any worker satisfying the requirements, so the client SHOULD ensure that
+   * running the action on any such worker will have the same result. A detailed lexicon for this
+   * can be found in the accompanying platform.md. New in version 2.2: clients SHOULD set these
+   * platform properties as well as those in the Command. Servers SHOULD prefer those set here.
+   * @param platform platform or {@code null} for none
    */
-  public BuildBazelRemoteExecutionV2Action setOutputNodeProperties(java.util.List<java.lang.String> outputNodeProperties) {
-    this.outputNodeProperties = outputNodeProperties;
+  public BuildBazelRemoteExecutionV2Action setPlatform(BuildBazelRemoteExecutionV2Platform platform) {
+    this.platform = platform;
+    return this;
+  }
+
+  /**
+   * An optional additional salt value used to place this `Action` into a separate cache namespace
+   * from other instances having the same field contents. This salt typically comes from operational
+   * configuration specific to sources such as repo and service configuration, and allows disowning
+   * an entire set of ActionResults that might have been poisoned by buggy software or tool
+   * failures.
+   * @see #decodeSalt()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSalt() {
+    return salt;
+  }
+
+  /**
+   * An optional additional salt value used to place this `Action` into a separate cache namespace
+   * from other instances having the same field contents. This salt typically comes from operational
+   * configuration specific to sources such as repo and service configuration, and allows disowning
+   * an entire set of ActionResults that might have been poisoned by buggy software or tool
+   * failures.
+   * @see #getSalt()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeSalt() {
+    return com.google.api.client.util.Base64.decodeBase64(salt);
+  }
+
+  /**
+   * An optional additional salt value used to place this `Action` into a separate cache namespace
+   * from other instances having the same field contents. This salt typically comes from operational
+   * configuration specific to sources such as repo and service configuration, and allows disowning
+   * an entire set of ActionResults that might have been poisoned by buggy software or tool
+   * failures.
+   * @see #encodeSalt()
+   * @param salt salt or {@code null} for none
+   */
+  public BuildBazelRemoteExecutionV2Action setSalt(java.lang.String salt) {
+    this.salt = salt;
+    return this;
+  }
+
+  /**
+   * An optional additional salt value used to place this `Action` into a separate cache namespace
+   * from other instances having the same field contents. This salt typically comes from operational
+   * configuration specific to sources such as repo and service configuration, and allows disowning
+   * an entire set of ActionResults that might have been poisoned by buggy software or tool
+   * failures.
+   * @see #setSalt()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public BuildBazelRemoteExecutionV2Action encodeSalt(byte[] salt) {
+    this.salt = com.google.api.client.util.Base64.encodeBase64URLSafeString(salt);
     return this;
   }
 

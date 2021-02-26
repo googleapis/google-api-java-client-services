@@ -46,14 +46,16 @@ public final class BuildBazelRemoteExecutionV2ExecuteOperationMetadata extends c
   private java.lang.String stage;
 
   /**
-   * If set, the client can use this name with ByteStream.Read to stream the standard error.
+   * If set, the client can use this resource name with ByteStream.Read to stream the standard error
+   * from the endpoint hosting streamed responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stderrStreamName;
 
   /**
-   * If set, the client can use this name with ByteStream.Read to stream the standard output.
+   * If set, the client can use this resource name with ByteStream.Read to stream the standard
+   * output from the endpoint hosting streamed responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +96,8 @@ public final class BuildBazelRemoteExecutionV2ExecuteOperationMetadata extends c
   }
 
   /**
-   * If set, the client can use this name with ByteStream.Read to stream the standard error.
+   * If set, the client can use this resource name with ByteStream.Read to stream the standard error
+   * from the endpoint hosting streamed responses.
    * @return value or {@code null} for none
    */
   public java.lang.String getStderrStreamName() {
@@ -102,7 +105,8 @@ public final class BuildBazelRemoteExecutionV2ExecuteOperationMetadata extends c
   }
 
   /**
-   * If set, the client can use this name with ByteStream.Read to stream the standard error.
+   * If set, the client can use this resource name with ByteStream.Read to stream the standard error
+   * from the endpoint hosting streamed responses.
    * @param stderrStreamName stderrStreamName or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ExecuteOperationMetadata setStderrStreamName(java.lang.String stderrStreamName) {
@@ -111,7 +115,8 @@ public final class BuildBazelRemoteExecutionV2ExecuteOperationMetadata extends c
   }
 
   /**
-   * If set, the client can use this name with ByteStream.Read to stream the standard output.
+   * If set, the client can use this resource name with ByteStream.Read to stream the standard
+   * output from the endpoint hosting streamed responses.
    * @return value or {@code null} for none
    */
   public java.lang.String getStdoutStreamName() {
@@ -119,7 +124,8 @@ public final class BuildBazelRemoteExecutionV2ExecuteOperationMetadata extends c
   }
 
   /**
-   * If set, the client can use this name with ByteStream.Read to stream the standard output.
+   * If set, the client can use this resource name with ByteStream.Read to stream the standard
+   * output from the endpoint hosting streamed responses.
    * @param stdoutStreamName stdoutStreamName or {@code null} for none
    */
   public BuildBazelRemoteExecutionV2ExecuteOperationMetadata setStdoutStreamName(java.lang.String stdoutStreamName) {

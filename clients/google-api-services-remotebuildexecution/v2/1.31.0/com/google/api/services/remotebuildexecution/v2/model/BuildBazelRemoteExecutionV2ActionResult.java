@@ -17,7 +17,9 @@
 package com.google.api.services.remotebuildexecution.v2.model;
 
 /**
- * An ActionResult represents the result of an Action being run.
+ * An ActionResult represents the result of an Action being run. It is advised that at least one
+ * field (for example `ActionResult.execution_metadata.Worker`) have a non-default value, to ensure
+ * that the serialized value is non-empty, which can then be used as a basic data sanity check.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Remote Build Execution API. For a detailed

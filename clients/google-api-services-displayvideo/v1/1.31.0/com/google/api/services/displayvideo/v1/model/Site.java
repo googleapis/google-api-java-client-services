@@ -38,7 +38,7 @@ public final class Site extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. The URL or app ID of the site. Must be UTF-8 encoded with a maximum length of 240
+   * Required. The app ID or URL of the site. Must be UTF-8 encoded with a maximum length of 240
    * bytes.
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The URL or app ID of the site. Must be UTF-8 encoded with a maximum length of 240
+   * Required. The app ID or URL of the site. Must be UTF-8 encoded with a maximum length of 240
    * bytes.
    * @return value or {@code null} for none
    */
@@ -72,7 +72,7 @@ public final class Site extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The URL or app ID of the site. Must be UTF-8 encoded with a maximum length of 240
+   * Required. The app ID or URL of the site. Must be UTF-8 encoded with a maximum length of 240
    * bytes.
    * @param urlOrAppId urlOrAppId or {@code null} for none
    */

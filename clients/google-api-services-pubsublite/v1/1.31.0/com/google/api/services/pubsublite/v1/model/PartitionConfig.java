@@ -37,7 +37,10 @@ public final class PartitionConfig extends com.google.api.client.json.GenericJso
   private Capacity capacity;
 
   /**
-   * The number of partitions in the topic. Must be at least 1.
+   * The number of partitions in the topic. Must be at least 1. Once a topic has been created the
+   * number of partitions can be increased but not decreased. Message ordering is not guaranteed
+   * across a topic resize. For more information see
+   * https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -72,7 +75,10 @@ public final class PartitionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The number of partitions in the topic. Must be at least 1.
+   * The number of partitions in the topic. Must be at least 1. Once a topic has been created the
+   * number of partitions can be increased but not decreased. Message ordering is not guaranteed
+   * across a topic resize. For more information see
+   * https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity
    * @return value or {@code null} for none
    */
   public java.lang.Long getCount() {
@@ -80,7 +86,10 @@ public final class PartitionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The number of partitions in the topic. Must be at least 1.
+   * The number of partitions in the topic. Must be at least 1. Once a topic has been created the
+   * number of partitions can be increased but not decreased. Message ordering is not guaranteed
+   * across a topic resize. For more information see
+   * https://cloud.google.com/pubsub/lite/docs/topics#scaling_capacity
    * @param count count or {@code null} for none
    */
   public PartitionConfig setCount(java.lang.Long count) {

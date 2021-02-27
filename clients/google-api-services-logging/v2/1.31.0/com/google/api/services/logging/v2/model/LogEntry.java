@@ -57,7 +57,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A set of user-defined (key, value) data that provides additional information about
-   * the log entry.
+   * the log entry.Cloud Logging truncates label keys that exceed 512 B and label values that exceed
+   * 64 KB upon their associated log entry being written. The truncation is indicated by an ellipsis
+   * at the end of the character string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +90,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
    * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
    * field with a key prefix of k8s-pod/. The system labels that were present in the
-   * metadata.systemLabels field will no longer be available in the LogEntry.
+   * metadata.systemLabels field will no longer be available in the log entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +256,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A set of user-defined (key, value) data that provides additional information about
-   * the log entry.
+   * the log entry.Cloud Logging truncates label keys that exceed 512 B and label values that exceed
+   * 64 KB upon their associated log entry being written. The truncation is indicated by an ellipsis
+   * at the end of the character string.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -263,7 +267,9 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A set of user-defined (key, value) data that provides additional information about
-   * the log entry.
+   * the log entry.Cloud Logging truncates label keys that exceed 512 B and label values that exceed
+   * 64 KB upon their associated log entry being written. The truncation is indicated by an ellipsis
+   * at the end of the character string.
    * @param labels labels or {@code null} for none
    */
   public LogEntry setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -318,7 +324,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
    * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
    * field with a key prefix of k8s-pod/. The system labels that were present in the
-   * metadata.systemLabels field will no longer be available in the LogEntry.
+   * metadata.systemLabels field will no longer be available in the log entry.
    * @return value or {@code null} for none
    */
   public MonitoredResourceMetadata getMetadata() {
@@ -331,7 +337,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * 1.12.6. For GKE versions 1.12.6 and above, the metadata field has been deprecated. The
    * Kubernetes pod labels that used to be in metadata.userLabels will now be present in the labels
    * field with a key prefix of k8s-pod/. The system labels that were present in the
-   * metadata.systemLabels field will no longer be available in the LogEntry.
+   * metadata.systemLabels field will no longer be available in the log entry.
    * @param metadata metadata or {@code null} for none
    */
   public LogEntry setMetadata(MonitoredResourceMetadata metadata) {

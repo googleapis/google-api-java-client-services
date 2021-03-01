@@ -780,7 +780,7 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> status;
 
-      /** Default value of status is LIVE.
+      /** Default value of status is LIVE. [default: LIVE]
        */
       public java.util.List<java.lang.String> getStatus() {
         return status;

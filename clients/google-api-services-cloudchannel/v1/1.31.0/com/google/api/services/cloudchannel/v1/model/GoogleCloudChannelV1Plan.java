@@ -30,8 +30,8 @@ package com.google.api.services.cloudchannel.v1.model;
 public final class GoogleCloudChannelV1Plan extends com.google.api.client.json.GenericJson {
 
   /**
-   * Reseller Billing account that will be charged when this offer is transacted. Only present for
-   * GCP offers.
+   * Reseller Billing account to charge after an offer transaction. Only present for Google Cloud
+   * Platform offers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class GoogleCloudChannelV1Plan extends com.google.api.client.json.G
   private GoogleCloudChannelV1Period trialPeriod;
 
   /**
-   * Reseller Billing account that will be charged when this offer is transacted. Only present for
-   * GCP offers.
+   * Reseller Billing account to charge after an offer transaction. Only present for Google Cloud
+   * Platform offers.
    * @return value or {@code null} for none
    */
   public java.lang.String getBillingAccount() {
@@ -78,8 +78,8 @@ public final class GoogleCloudChannelV1Plan extends com.google.api.client.json.G
   }
 
   /**
-   * Reseller Billing account that will be charged when this offer is transacted. Only present for
-   * GCP offers.
+   * Reseller Billing account to charge after an offer transaction. Only present for Google Cloud
+   * Platform offers.
    * @param billingAccount billingAccount or {@code null} for none
    */
   public GoogleCloudChannelV1Plan setBillingAccount(java.lang.String billingAccount) {

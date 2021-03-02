@@ -46,7 +46,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private NormalizedCoordinate resolution;
 
   /**
-   * Required. URI of the image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`.
+   * Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`.
+   * JPEG is the only supported image type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +92,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. URI of the image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`.
+   * Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`.
+   * JPEG is the only supported image type.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -99,7 +101,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. URI of the image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`.
+   * Required. URI of the JPEG image in Cloud Storage. For example, `gs://bucket/inputs/image.jpeg`.
+   * JPEG is the only supported image type.
    * @param uri uri or {@code null} for none
    */
   public Image setUri(java.lang.String uri) {

@@ -1843,6 +1843,147 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
     }
 
     /**
+     * An accessor for creating requests from the Credentials collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ShoppingContent content = new ShoppingContent(...);}
+     *   {@code ShoppingContent.Credentials.List request = content.credentials().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Credentials credentials() {
+      return new Credentials();
+    }
+
+    /**
+     * The "credentials" collection of methods.
+     */
+    public class Credentials {
+
+      /**
+       * Uploads credentials for the Merchant Center account. If credentials already exist for this
+       * Merchant Center account and purpose, this method updates them.
+       *
+       * Create a request for the method "credentials.create".
+       *
+       * This request holds the parameters needed by the content server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param accountId Required. The merchant id of the account these credentials belong to.
+       * @param content the {@link com.google.api.services.content.model.AccountCredentials}
+       * @return the request
+       */
+      public Create create(java.lang.Long accountId, com.google.api.services.content.model.AccountCredentials content) throws java.io.IOException {
+        Create result = new Create(accountId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ShoppingContentRequest<com.google.api.services.content.model.AccountCredentials> {
+
+        private static final String REST_PATH = "content/v2.1/accounts/{accountId}/credentials";
+
+        /**
+         * Uploads credentials for the Merchant Center account. If credentials already exist for this
+         * Merchant Center account and purpose, this method updates them.
+         *
+         * Create a request for the method "credentials.create".
+         *
+         * This request holds the parameters needed by the the content server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param accountId Required. The merchant id of the account these credentials belong to.
+         * @param content the {@link com.google.api.services.content.model.AccountCredentials}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long accountId, com.google.api.services.content.model.AccountCredentials content) {
+          super(ShoppingContent.this, "POST", REST_PATH, content, com.google.api.services.content.model.AccountCredentials.class);
+          this.accountId = com.google.api.client.util.Preconditions.checkNotNull(accountId, "Required parameter accountId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The merchant id of the account these credentials belong to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long accountId;
+
+        /** Required. The merchant id of the account these credentials belong to.
+         */
+        public java.lang.Long getAccountId() {
+          return accountId;
+        }
+
+        /** Required. The merchant id of the account these credentials belong to. */
+        public Create setAccountId(java.lang.Long accountId) {
+          this.accountId = accountId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Labels collection.
      *
      * <p>The typical use is:</p>
@@ -4225,8 +4366,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Onboards BoG in your Merchant Center account. By using this method, you agree to the Terms of
-     * Service.
+     * Onboards BoG in your Merchant Center account. By using this method, you agree to the [Terms of
+     * Service](https://merchants.google.com/mc/termsofservice/transactions/US/latest).
      *
      * Create a request for the method "buyongoogleprograms.onboard".
      *
@@ -4250,8 +4391,8 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "content/v2.1/{merchantId}/buyongoogleprograms/{regionCode}/onboard";
 
       /**
-       * Onboards BoG in your Merchant Center account. By using this method, you agree to the Terms of
-       * Service.
+       * Onboards BoG in your Merchant Center account. By using this method, you agree to the [Terms of
+       * Service](https://merchants.google.com/mc/termsofservice/transactions/US/latest).
        *
        * Create a request for the method "buyongoogleprograms.onboard".
        *

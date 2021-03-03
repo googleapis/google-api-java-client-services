@@ -30,18 +30,24 @@ package com.google.api.services.cloudasset.v1.model;
 public final class GoogleCloudAssetV1GcsDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The uri of the Cloud Storage object. It's the same uri that is used by gsutil. For
-   * example: "gs://bucket_name/object_name". See [Quickstart: Using the gsutil tool]
-   * (https://cloud.google.com/storage/docs/quickstart-gsutil) for examples.
+   * Required. The uri of the Cloud Storage object. It's the same uri that is used by gsutil.
+   * Example: "gs://bucket_name/object_name". See [Viewing and Editing Object
+   * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
+   * If the specified Cloud Storage object already exists and there is no
+   * [hold](https://cloud.google.com/storage/docs/object-holds), it will be overwritten with the
+   * analysis result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Required. The uri of the Cloud Storage object. It's the same uri that is used by gsutil. For
-   * example: "gs://bucket_name/object_name". See [Quickstart: Using the gsutil tool]
-   * (https://cloud.google.com/storage/docs/quickstart-gsutil) for examples.
+   * Required. The uri of the Cloud Storage object. It's the same uri that is used by gsutil.
+   * Example: "gs://bucket_name/object_name". See [Viewing and Editing Object
+   * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
+   * If the specified Cloud Storage object already exists and there is no
+   * [hold](https://cloud.google.com/storage/docs/object-holds), it will be overwritten with the
+   * analysis result.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -49,9 +55,12 @@ public final class GoogleCloudAssetV1GcsDestination extends com.google.api.clien
   }
 
   /**
-   * Required. The uri of the Cloud Storage object. It's the same uri that is used by gsutil. For
-   * example: "gs://bucket_name/object_name". See [Quickstart: Using the gsutil tool]
-   * (https://cloud.google.com/storage/docs/quickstart-gsutil) for examples.
+   * Required. The uri of the Cloud Storage object. It's the same uri that is used by gsutil.
+   * Example: "gs://bucket_name/object_name". See [Viewing and Editing Object
+   * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
+   * If the specified Cloud Storage object already exists and there is no
+   * [hold](https://cloud.google.com/storage/docs/object-holds), it will be overwritten with the
+   * analysis result.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudAssetV1GcsDestination setUri(java.lang.String uri) {

@@ -169,10 +169,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
      * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
      *        "organizations/123"), a project ID (such as "projects/my-project-id"), or a project number
      *        (such as "projects/12345"), or a folder number (such as "folders/123").
-     * @param content the {@link com.google.api.services.cloudasset.v1p7beta1.model.ExportAssetsRequest}
+     * @param content the {@link com.google.api.services.cloudasset.v1p7beta1.model.GoogleCloudAssetV1p7beta1ExportAssetsRequest}
      * @return the request
      */
-    public ExportAssets exportAssets(java.lang.String parent, com.google.api.services.cloudasset.v1p7beta1.model.ExportAssetsRequest content) throws java.io.IOException {
+    public ExportAssets exportAssets(java.lang.String parent, com.google.api.services.cloudasset.v1p7beta1.model.GoogleCloudAssetV1p7beta1ExportAssetsRequest content) throws java.io.IOException {
       ExportAssets result = new ExportAssets(parent, content);
       initialize(result);
       return result;
@@ -206,10 +206,10 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
        * @param parent Required. The relative name of the root asset. This can only be an organization number (such as
      *        "organizations/123"), a project ID (such as "projects/my-project-id"), or a project number
      *        (such as "projects/12345"), or a folder number (such as "folders/123").
-       * @param content the {@link com.google.api.services.cloudasset.v1p7beta1.model.ExportAssetsRequest}
+       * @param content the {@link com.google.api.services.cloudasset.v1p7beta1.model.GoogleCloudAssetV1p7beta1ExportAssetsRequest}
        * @since 1.13
        */
-      protected ExportAssets(java.lang.String parent, com.google.api.services.cloudasset.v1p7beta1.model.ExportAssetsRequest content) {
+      protected ExportAssets(java.lang.String parent, com.google.api.services.cloudasset.v1p7beta1.model.GoogleCloudAssetV1p7beta1ExportAssetsRequest content) {
         super(CloudAsset.this, "POST", REST_PATH, content, com.google.api.services.cloudasset.v1p7beta1.model.Operation.class);
         this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
         if (!getSuppressPatternChecks()) {

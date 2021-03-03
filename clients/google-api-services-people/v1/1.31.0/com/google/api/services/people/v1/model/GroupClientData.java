@@ -18,7 +18,6 @@ package com.google.api.services.people.v1.model;
 
 /**
  * Arbitrary client data that is populated by clients. Duplicate keys and values are allowed.
- * LINT.IfChange(GroupClientData)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the People API. For a detailed explanation see:

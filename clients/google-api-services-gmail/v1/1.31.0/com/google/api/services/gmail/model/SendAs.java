@@ -80,7 +80,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional HTML signature that is included in messages composed with this alias in the Gmail
-   * web UI.
+   * web UI. This signature is added to new emails only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,7 +222,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional HTML signature that is included in messages composed with this alias in the Gmail
-   * web UI.
+   * web UI. This signature is added to new emails only.
    * @return value or {@code null} for none
    */
   public java.lang.String getSignature() {
@@ -231,7 +231,7 @@ public final class SendAs extends com.google.api.client.json.GenericJson {
 
   /**
    * An optional HTML signature that is included in messages composed with this alias in the Gmail
-   * web UI.
+   * web UI. This signature is added to new emails only.
    * @param signature signature or {@code null} for none
    */
   public SendAs setSignature(java.lang.String signature) {

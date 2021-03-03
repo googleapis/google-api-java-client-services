@@ -63,7 +63,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   private java.util.Map<String, java.lang.Object> pathFilters;
 
   /**
-   * Similar to path_filters, this contains set of filters to apply if `path` field referes to array
+   * Similar to path_filters, this contains set of filters to apply if `path` field refers to array
    * elements. This is meant to support value matching beyond exact match. To perform exact match,
    * use path_filters. When both path_filters and path_value_matchers are set, an implicit AND must
    * be performed.
@@ -190,7 +190,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   }
 
   /**
-   * Similar to path_filters, this contains set of filters to apply if `path` field referes to array
+   * Similar to path_filters, this contains set of filters to apply if `path` field refers to array
    * elements. This is meant to support value matching beyond exact match. To perform exact match,
    * use path_filters. When both path_filters and path_value_matchers are set, an implicit AND must
    * be performed.
@@ -201,7 +201,7 @@ public final class GoogleCloudRecommenderV1beta1Operation extends com.google.api
   }
 
   /**
-   * Similar to path_filters, this contains set of filters to apply if `path` field referes to array
+   * Similar to path_filters, this contains set of filters to apply if `path` field refers to array
    * elements. This is meant to support value matching beyond exact match. To perform exact match,
    * use path_filters. When both path_filters and path_value_matchers are set, an implicit AND must
    * be performed.

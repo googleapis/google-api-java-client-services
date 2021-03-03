@@ -33,6 +33,9 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
    * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
+   * If the specified Cloud Storage object already exists and there is no
+   * [hold](https://cloud.google.com/storage/docs/object-holds), it will be overwritten with the
+   * exported result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,6 +58,9 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
    * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
+   * If the specified Cloud Storage object already exists and there is no
+   * [hold](https://cloud.google.com/storage/docs/object-holds), it will be overwritten with the
+   * exported result.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -65,6 +71,9 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
    * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
+   * If the specified Cloud Storage object already exists and there is no
+   * [hold](https://cloud.google.com/storage/docs/object-holds), it will be overwritten with the
+   * exported result.
    * @param uri uri or {@code null} for none
    */
   public GcsDestination setUri(java.lang.String uri) {

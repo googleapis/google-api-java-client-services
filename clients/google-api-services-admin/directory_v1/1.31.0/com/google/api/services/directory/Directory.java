@@ -14716,6 +14716,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
+      /** Event on which subscription is intended (if subscribing) */
+      @com.google.api.client.util.Key
+      private java.lang.String event;
+
+      /** Event on which subscription is intended (if subscribing)
+       */
+      public java.lang.String getEvent() {
+        return event;
+      }
+
+      /** Event on which subscription is intended (if subscribing) */
+      public List setEvent(java.lang.String event) {
+        this.event = event;
+        return this;
+      }
+
       /** Maximum number of results to return. */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;

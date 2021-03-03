@@ -110,6 +110,14 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Networking configuration for this NodePool. If specified, it overrides the cluster-level
+   * defaults.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NodeNetworkConfig networkConfig;
+
+  /**
    * [Output only] The pod CIDR block size per node in this node pool.
    * The value may be {@code null}.
    */
@@ -326,6 +334,25 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
    */
   public NodePool setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Networking configuration for this NodePool. If specified, it overrides the cluster-level
+   * defaults.
+   * @return value or {@code null} for none
+   */
+  public NodeNetworkConfig getNetworkConfig() {
+    return networkConfig;
+  }
+
+  /**
+   * Networking configuration for this NodePool. If specified, it overrides the cluster-level
+   * defaults.
+   * @param networkConfig networkConfig or {@code null} for none
+   */
+  public NodePool setNetworkConfig(NodeNetworkConfig networkConfig) {
+    this.networkConfig = networkConfig;
     return this;
   }
 

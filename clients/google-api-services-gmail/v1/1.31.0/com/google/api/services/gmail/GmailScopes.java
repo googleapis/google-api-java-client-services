@@ -41,10 +41,10 @@ public class GmailScopes {
   /** Manage drafts and send emails. */
   public static final String GMAIL_COMPOSE = "https://www.googleapis.com/auth/gmail.compose";
 
-  /** Insert mail into your mailbox. */
+  /** Add emails into your Gmail mailbox. */
   public static final String GMAIL_INSERT = "https://www.googleapis.com/auth/gmail.insert";
 
-  /** Manage mailbox labels. */
+  /** See and edit your email labels. */
   public static final String GMAIL_LABELS = "https://www.googleapis.com/auth/gmail.labels";
 
   /** View your email message metadata such as labels and headers, but not the email body. */
@@ -59,7 +59,7 @@ public class GmailScopes {
   /** Send email on your behalf. */
   public static final String GMAIL_SEND = "https://www.googleapis.com/auth/gmail.send";
 
-  /** Manage your basic mail settings. */
+  /** See, edit, create, or change your email settings and filters in Gmail. */
   public static final String GMAIL_SETTINGS_BASIC = "https://www.googleapis.com/auth/gmail.settings.basic";
 
   /** Manage your sensitive mail settings, including who can manage your mail. */

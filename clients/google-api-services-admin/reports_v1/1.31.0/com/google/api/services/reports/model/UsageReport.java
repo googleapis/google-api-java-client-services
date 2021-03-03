@@ -192,7 +192,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     private java.lang.String entityId;
 
     /**
-     * Output only. The user's immutable G Suite profile identifier.
+     * Output only. The user's immutable Google Workspace profile identifier.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -249,7 +249,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. The user's immutable G Suite profile identifier.
+     * Output only. The user's immutable Google Workspace profile identifier.
      * @return value or {@code null} for none
      */
     public java.lang.String getProfileId() {
@@ -257,7 +257,7 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. The user's immutable G Suite profile identifier.
+     * Output only. The user's immutable Google Workspace profile identifier.
      * @param profileId profileId or {@code null} for none
      */
     public Entity setProfileId(java.lang.String profileId) {

@@ -65,9 +65,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
 
   /**
    * IP address of the user doing the action. This is the Internet Protocol (IP) address of the user
-   * when logging into G Suite which may or may not reflect the user's physical location. For
-   * example, the IP address can be the user's proxy server's address or a virtual private network
-   * (VPN) address. The API supports IPv4 and IPv6.
+   * when logging into Google Workspace, which may or may not reflect the user's physical location.
+   * For example, the IP address can be the user's proxy server's address or a virtual private
+   * network (VPN) address. The API supports IPv4 and IPv6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,9 +158,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
 
   /**
    * IP address of the user doing the action. This is the Internet Protocol (IP) address of the user
-   * when logging into G Suite which may or may not reflect the user's physical location. For
-   * example, the IP address can be the user's proxy server's address or a virtual private network
-   * (VPN) address. The API supports IPv4 and IPv6.
+   * when logging into Google Workspace, which may or may not reflect the user's physical location.
+   * For example, the IP address can be the user's proxy server's address or a virtual private
+   * network (VPN) address. The API supports IPv4 and IPv6.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -169,9 +169,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
 
   /**
    * IP address of the user doing the action. This is the Internet Protocol (IP) address of the user
-   * when logging into G Suite which may or may not reflect the user's physical location. For
-   * example, the IP address can be the user's proxy server's address or a virtual private network
-   * (VPN) address. The API supports IPv4 and IPv6.
+   * when logging into Google Workspace, which may or may not reflect the user's physical location.
+   * For example, the IP address can be the user's proxy server's address or a virtual private
+   * network (VPN) address. The API supports IPv4 and IPv6.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public Activity setIpAddress(java.lang.String ipAddress) {
@@ -254,7 +254,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     private java.lang.String key;
 
     /**
-     * The unique G Suite profile ID of the actor. May be absent if the actor is not a G Suite user.
+     * The unique Google Workspace profile ID of the actor. May be absent if the actor is not a Google
+     * Workspace user.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -316,7 +317,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The unique G Suite profile ID of the actor. May be absent if the actor is not a G Suite user.
+     * The unique Google Workspace profile ID of the actor. May be absent if the actor is not a Google
+     * Workspace user.
      * @return value or {@code null} for none
      */
     public java.lang.String getProfileId() {
@@ -324,7 +326,8 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The unique G Suite profile ID of the actor. May be absent if the actor is not a G Suite user.
+     * The unique Google Workspace profile ID of the actor. May be absent if the actor is not a Google
+     * Workspace user.
      * @param profileId profileId or {@code null} for none
      */
     public Actor setProfileId(java.lang.String profileId) {
@@ -351,13 +354,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
 
     /**
      * Name of the event. This is the specific name of the activity reported by the API. And each
-     * `eventName` is related to a specific G Suite service or feature which the API organizes into
-     * types of events. For `eventName` request parameters in general: - If no `eventName` is given,
-     * the report returns all possible instances of an `eventName`. - When you request an `eventName`,
-     * the API's response returns all activities which contain that `eventName`. It is possible that
-     * the returned activities will have other `eventName` properties in addition to the one
-     * requested. For more information about `eventName` properties, see the list of event names for
-     * various applications above in `applicationName`.
+     * `eventName` is related to a specific Google Workspace service or feature which the API
+     * organizes into types of events. For `eventName` request parameters in general: - If no
+     * `eventName` is given, the report returns all possible instances of an `eventName`. - When you
+     * request an `eventName`, the API's response returns all activities which contain that
+     * `eventName`. It is possible that the returned activities will have other `eventName` properties
+     * in addition to the one requested. For more information about `eventName` properties, see the
+     * list of event names for various applications above in `applicationName`.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -378,10 +381,10 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Type of event. The G Suite service or feature that an administrator changes is identified in
-     * the `type` property which identifies an event using the `eventName` property. For a full list
-     * of the API's `type` categories, see the list of event names for various applications above in
-     * `applicationName`.
+     * Type of event. The Google Workspace service or feature that an administrator changes is
+     * identified in the `type` property which identifies an event using the `eventName` property. For
+     * a full list of the API's `type` categories, see the list of event names for various
+     * applications above in `applicationName`.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -389,13 +392,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
 
     /**
      * Name of the event. This is the specific name of the activity reported by the API. And each
-     * `eventName` is related to a specific G Suite service or feature which the API organizes into
-     * types of events. For `eventName` request parameters in general: - If no `eventName` is given,
-     * the report returns all possible instances of an `eventName`. - When you request an `eventName`,
-     * the API's response returns all activities which contain that `eventName`. It is possible that
-     * the returned activities will have other `eventName` properties in addition to the one
-     * requested. For more information about `eventName` properties, see the list of event names for
-     * various applications above in `applicationName`.
+     * `eventName` is related to a specific Google Workspace service or feature which the API
+     * organizes into types of events. For `eventName` request parameters in general: - If no
+     * `eventName` is given, the report returns all possible instances of an `eventName`. - When you
+     * request an `eventName`, the API's response returns all activities which contain that
+     * `eventName`. It is possible that the returned activities will have other `eventName` properties
+     * in addition to the one requested. For more information about `eventName` properties, see the
+     * list of event names for various applications above in `applicationName`.
      * @return value or {@code null} for none
      */
     public java.lang.String getName() {
@@ -404,13 +407,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
 
     /**
      * Name of the event. This is the specific name of the activity reported by the API. And each
-     * `eventName` is related to a specific G Suite service or feature which the API organizes into
-     * types of events. For `eventName` request parameters in general: - If no `eventName` is given,
-     * the report returns all possible instances of an `eventName`. - When you request an `eventName`,
-     * the API's response returns all activities which contain that `eventName`. It is possible that
-     * the returned activities will have other `eventName` properties in addition to the one
-     * requested. For more information about `eventName` properties, see the list of event names for
-     * various applications above in `applicationName`.
+     * `eventName` is related to a specific Google Workspace service or feature which the API
+     * organizes into types of events. For `eventName` request parameters in general: - If no
+     * `eventName` is given, the report returns all possible instances of an `eventName`. - When you
+     * request an `eventName`, the API's response returns all activities which contain that
+     * `eventName`. It is possible that the returned activities will have other `eventName` properties
+     * in addition to the one requested. For more information about `eventName` properties, see the
+     * list of event names for various applications above in `applicationName`.
      * @param name name or {@code null} for none
      */
     public Events setName(java.lang.String name) {
@@ -438,10 +441,10 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Type of event. The G Suite service or feature that an administrator changes is identified in
-     * the `type` property which identifies an event using the `eventName` property. For a full list
-     * of the API's `type` categories, see the list of event names for various applications above in
-     * `applicationName`.
+     * Type of event. The Google Workspace service or feature that an administrator changes is
+     * identified in the `type` property which identifies an event using the `eventName` property. For
+     * a full list of the API's `type` categories, see the list of event names for various
+     * applications above in `applicationName`.
      * @return value or {@code null} for none
      */
     public java.lang.String getType() {
@@ -449,10 +452,10 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Type of event. The G Suite service or feature that an administrator changes is identified in
-     * the `type` property which identifies an event using the `eventName` property. For a full list
-     * of the API's `type` categories, see the list of event names for various applications above in
-     * `applicationName`.
+     * Type of event. The Google Workspace service or feature that an administrator changes is
+     * identified in the `type` property which identifies an event using the `eventName` property. For
+     * a full list of the API's `type` categories, see the list of event names for various
+     * applications above in `applicationName`.
      * @param type type or {@code null} for none
      */
     public Events setType(java.lang.String type) {
@@ -788,7 +791,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     private java.lang.String applicationName;
 
     /**
-     * The unique identifier for a G suite account.
+     * The unique identifier for a Google Workspace account.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -828,7 +831,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The unique identifier for a G suite account.
+     * The unique identifier for a Google Workspace account.
      * @return value or {@code null} for none
      */
     public java.lang.String getCustomerId() {
@@ -836,7 +839,7 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The unique identifier for a G suite account.
+     * The unique identifier for a Google Workspace account.
      * @param customerId customerId or {@code null} for none
      */
     public Id setCustomerId(java.lang.String customerId) {

@@ -31,6 +31,13 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class ExportMetadataRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseDumpType;
+
+  /**
    * Required. A Cloud Storage URI of a folder that metadata are exported to, in the format gs:. A
    * sub-folder containing exported files will be created below it.
    * The value may be {@code null}.
@@ -50,6 +57,23 @@ public final class ExportMetadataRequest extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
+
+  /**
+   * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseDumpType() {
+    return databaseDumpType;
+  }
+
+  /**
+   * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+   * @param databaseDumpType databaseDumpType or {@code null} for none
+   */
+  public ExportMetadataRequest setDatabaseDumpType(java.lang.String databaseDumpType) {
+    this.databaseDumpType = databaseDumpType;
+    return this;
+  }
 
   /**
    * Required. A Cloud Storage URI of a folder that metadata are exported to, in the format gs:. A

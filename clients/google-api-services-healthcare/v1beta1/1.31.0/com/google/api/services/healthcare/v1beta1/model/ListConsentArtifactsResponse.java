@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Lists the Consent artifacts in the given Consent store.
+ * Model definition for ListConsentArtifactsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ListConsentArtifactsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The returned consent artifacts. The maximum number of artifacts returned is determined by the
+   * The returned Consent artifacts. The maximum number of artifacts returned is determined by the
    * value of page_size in the ListConsentArtifactsRequest.
    * The value may be {@code null}.
    */
@@ -44,14 +44,14 @@ public final class ListConsentArtifactsResponse extends com.google.api.client.js
   }
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The returned consent artifacts. The maximum number of artifacts returned is determined by the
+   * The returned Consent artifacts. The maximum number of artifacts returned is determined by the
    * value of page_size in the ListConsentArtifactsRequest.
    * @return value or {@code null} for none
    */
@@ -60,7 +60,7 @@ public final class ListConsentArtifactsResponse extends com.google.api.client.js
   }
 
   /**
-   * The returned consent artifacts. The maximum number of artifacts returned is determined by the
+   * The returned Consent artifacts. The maximum number of artifacts returned is determined by the
    * value of page_size in the ListConsentArtifactsRequest.
    * @param consentArtifacts consentArtifacts or {@code null} for none
    */
@@ -70,7 +70,7 @@ public final class ListConsentArtifactsResponse extends com.google.api.client.js
   }
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,7 +78,7 @@ public final class ListConsentArtifactsResponse extends com.google.api.client.js
   }
 
   /**
-   * Token to retrieve the next page of results or empty if there are no more results in the list.
+   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListConsentArtifactsResponse setNextPageToken(java.lang.String nextPageToken) {

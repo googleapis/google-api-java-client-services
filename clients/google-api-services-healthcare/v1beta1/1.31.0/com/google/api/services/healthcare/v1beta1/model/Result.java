@@ -43,14 +43,14 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the requested data is consented for the given use.
+   * Whether the resource is consented for the given use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean consented;
 
   /**
-   * The unique identifier of the data the consents were checked for.
+   * The unique identifier of the evaluated resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the requested data is consented for the given use.
+   * Whether the resource is consented for the given use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getConsented() {
@@ -82,7 +82,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the requested data is consented for the given use.
+   * Whether the resource is consented for the given use.
    * @param consented consented or {@code null} for none
    */
   public Result setConsented(java.lang.Boolean consented) {
@@ -91,7 +91,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier of the data the consents were checked for.
+   * The unique identifier of the evaluated resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataId() {
@@ -99,7 +99,7 @@ public final class Result extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier of the data the consents were checked for.
+   * The unique identifier of the evaluated resource.
    * @param dataId dataId or {@code null} for none
    */
   public Result setDataId(java.lang.String dataId) {

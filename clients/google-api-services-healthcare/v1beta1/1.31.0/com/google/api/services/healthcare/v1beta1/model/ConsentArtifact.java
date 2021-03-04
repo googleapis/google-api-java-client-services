@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Proof of an end user's consent.
+ * Documentation of a user's consent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Healthcare API. For a detailed explanation see:
@@ -30,29 +30,29 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class ConsentArtifact extends com.google.api.client.json.GenericJson {
 
   /**
-   * Screenshots of the consent content.
+   * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Image> consentContentScreenshots;
 
   /**
-   * An string indicating the version of the consent content.
+   * Optional. An string indicating the version of the consent information shown to the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consentContentVersion;
 
   /**
-   * A signature from guardian.
+   * Optional. A signature from a guardian.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Signature guardianSignature;
 
   /**
-   * Metadata associated with the consent artifact. For example, the consent locale or user agent
-   * version.
+   * Optional. Metadata associated with the Consent artifact. For example, the consent locale or
+   * user agent version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   /**
    * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_i
    * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id
-   * }`.
+   * }`. Cannot be changed after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,21 +75,21 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   private java.lang.String userId;
 
   /**
-   * User's signature.
+   * Optional. User's signature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Signature userSignature;
 
   /**
-   * A signature from a witness.
+   * Optional. A signature from a witness.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Signature witnessSignature;
 
   /**
-   * Screenshots of the consent content.
+   * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
    * @return value or {@code null} for none
    */
   public java.util.List<Image> getConsentContentScreenshots() {
@@ -97,7 +97,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Screenshots of the consent content.
+   * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
    * @param consentContentScreenshots consentContentScreenshots or {@code null} for none
    */
   public ConsentArtifact setConsentContentScreenshots(java.util.List<Image> consentContentScreenshots) {
@@ -106,7 +106,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * An string indicating the version of the consent content.
+   * Optional. An string indicating the version of the consent information shown to the user.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsentContentVersion() {
@@ -114,7 +114,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * An string indicating the version of the consent content.
+   * Optional. An string indicating the version of the consent information shown to the user.
    * @param consentContentVersion consentContentVersion or {@code null} for none
    */
   public ConsentArtifact setConsentContentVersion(java.lang.String consentContentVersion) {
@@ -123,7 +123,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A signature from guardian.
+   * Optional. A signature from a guardian.
    * @return value or {@code null} for none
    */
   public Signature getGuardianSignature() {
@@ -131,7 +131,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A signature from guardian.
+   * Optional. A signature from a guardian.
    * @param guardianSignature guardianSignature or {@code null} for none
    */
   public ConsentArtifact setGuardianSignature(Signature guardianSignature) {
@@ -140,8 +140,8 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Metadata associated with the consent artifact. For example, the consent locale or user agent
-   * version.
+   * Optional. Metadata associated with the Consent artifact. For example, the consent locale or
+   * user agent version.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -149,8 +149,8 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Metadata associated with the consent artifact. For example, the consent locale or user agent
-   * version.
+   * Optional. Metadata associated with the Consent artifact. For example, the consent locale or
+   * user agent version.
    * @param metadata metadata or {@code null} for none
    */
   public ConsentArtifact setMetadata(java.util.Map<String, java.lang.String> metadata) {
@@ -161,7 +161,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   /**
    * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_i
    * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id
-   * }`.
+   * }`. Cannot be changed after creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -171,7 +171,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   /**
    * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_i
    * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id
-   * }`.
+   * }`. Cannot be changed after creation.
    * @param name name or {@code null} for none
    */
   public ConsentArtifact setName(java.lang.String name) {
@@ -197,7 +197,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * User's signature.
+   * Optional. User's signature.
    * @return value or {@code null} for none
    */
   public Signature getUserSignature() {
@@ -205,7 +205,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * User's signature.
+   * Optional. User's signature.
    * @param userSignature userSignature or {@code null} for none
    */
   public ConsentArtifact setUserSignature(Signature userSignature) {
@@ -214,7 +214,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A signature from a witness.
+   * Optional. A signature from a witness.
    * @return value or {@code null} for none
    */
   public Signature getWitnessSignature() {
@@ -222,7 +222,7 @@ public final class ConsentArtifact extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A signature from a witness.
+   * Optional. A signature from a witness.
    * @param witnessSignature witnessSignature or {@code null} for none
    */
   public ConsentArtifact setWitnessSignature(Signature witnessSignature) {

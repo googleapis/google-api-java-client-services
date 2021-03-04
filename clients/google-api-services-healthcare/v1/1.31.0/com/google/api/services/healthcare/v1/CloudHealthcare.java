@@ -1965,6 +1965,709 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         public class ConsentStores {
 
           /**
+           * Checks if a particular data_id of a User data mapping in the specified consent store is consented
+           * for the specified use.
+           *
+           * Create a request for the method "consentStores.checkDataAccess".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link CheckDataAccess#execute()} method to invoke the remote operation.
+           *
+           * @param consentStore Required. Name of the consent store where the requested data_id is stored, of the form `projects/{pr
+           *        oject_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1.model.CheckDataAccessRequest}
+           * @return the request
+           */
+          public CheckDataAccess checkDataAccess(java.lang.String consentStore, com.google.api.services.healthcare.v1.model.CheckDataAccessRequest content) throws java.io.IOException {
+            CheckDataAccess result = new CheckDataAccess(consentStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CheckDataAccess extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.CheckDataAccessResponse> {
+
+            private static final String REST_PATH = "v1/{+consentStore}:checkDataAccess";
+
+            private final java.util.regex.Pattern CONSENT_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Checks if a particular data_id of a User data mapping in the specified consent store is
+             * consented for the specified use.
+             *
+             * Create a request for the method "consentStores.checkDataAccess".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link CheckDataAccess#execute()} method to invoke the remote
+             * operation. <p> {@link CheckDataAccess#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param consentStore Required. Name of the consent store where the requested data_id is stored, of the form `projects/{pr
+           *        oject_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.CheckDataAccessRequest}
+             * @since 1.13
+             */
+            protected CheckDataAccess(java.lang.String consentStore, com.google.api.services.healthcare.v1.model.CheckDataAccessRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.CheckDataAccessResponse.class);
+              this.consentStore = com.google.api.client.util.Preconditions.checkNotNull(consentStore, "Required parameter consentStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public CheckDataAccess set$Xgafv(java.lang.String $Xgafv) {
+              return (CheckDataAccess) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CheckDataAccess setAccessToken(java.lang.String accessToken) {
+              return (CheckDataAccess) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CheckDataAccess setAlt(java.lang.String alt) {
+              return (CheckDataAccess) super.setAlt(alt);
+            }
+
+            @Override
+            public CheckDataAccess setCallback(java.lang.String callback) {
+              return (CheckDataAccess) super.setCallback(callback);
+            }
+
+            @Override
+            public CheckDataAccess setFields(java.lang.String fields) {
+              return (CheckDataAccess) super.setFields(fields);
+            }
+
+            @Override
+            public CheckDataAccess setKey(java.lang.String key) {
+              return (CheckDataAccess) super.setKey(key);
+            }
+
+            @Override
+            public CheckDataAccess setOauthToken(java.lang.String oauthToken) {
+              return (CheckDataAccess) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CheckDataAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CheckDataAccess) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CheckDataAccess setQuotaUser(java.lang.String quotaUser) {
+              return (CheckDataAccess) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CheckDataAccess setUploadType(java.lang.String uploadType) {
+              return (CheckDataAccess) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CheckDataAccess setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CheckDataAccess) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the consent store where the requested data_id is stored, of the
+             * form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStor
+             * es/{consent_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String consentStore;
+
+            /** Required. Name of the consent store where the requested data_id is stored, of the form `projects/{p
+           roject_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`.
+             */
+            public java.lang.String getConsentStore() {
+              return consentStore;
+            }
+
+            /**
+             * Required. Name of the consent store where the requested data_id is stored, of the
+             * form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStor
+             * es/{consent_store_id}`.
+             */
+            public CheckDataAccess setConsentStore(java.lang.String consentStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.consentStore = consentStore;
+              return this;
+            }
+
+            @Override
+            public CheckDataAccess set(String parameterName, Object value) {
+              return (CheckDataAccess) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a new consent store in the parent dataset. Attempting to create a consent store with the
+           * same ID as an existing store fails with an ALREADY_EXISTS error.
+           *
+           * Create a request for the method "consentStores.create".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the dataset this consent store belongs to.
+           * @param content the {@link com.google.api.services.healthcare.v1.model.ConsentStore}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.healthcare.v1.model.ConsentStore content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ConsentStore> {
+
+            private static final String REST_PATH = "v1/{+parent}/consentStores";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Creates a new consent store in the parent dataset. Attempting to create a consent store with
+             * the same ID as an existing store fails with an ALREADY_EXISTS error.
+             *
+             * Create a request for the method "consentStores.create".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the dataset this consent store belongs to.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.ConsentStore}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.healthcare.v1.model.ConsentStore content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.ConsentStore.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the dataset this consent store belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the dataset this consent store belongs to.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The name of the dataset this consent store belongs to. */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID of the consent store to create. The string must match the following
+             * regex: `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String consentStoreId;
+
+            /** Required. The ID of the consent store to create. The string must match the following regex:
+           `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
+             */
+            public java.lang.String getConsentStoreId() {
+              return consentStoreId;
+            }
+
+            /**
+             * Required. The ID of the consent store to create. The string must match the following
+             * regex: `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
+             */
+            public Create setConsentStoreId(java.lang.String consentStoreId) {
+              this.consentStoreId = consentStoreId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes the specified consent store and removes all the consent store's data.
+           *
+           * Create a request for the method "consentStores.delete".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the consent store to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Deletes the specified consent store and removes all the consent store's data.
+             *
+             * Create a request for the method "consentStores.delete".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the consent store to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name of the consent store to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the consent store to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name of the consent store to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Evaluates the user's Consents for all matching User data mappings. Note: User data mappings are
+           * indexed asynchronously, which can cause a slight delay between the time mappings are created or
+           * updated and when they are included in EvaluateUserConsents results.
+           *
+           * Create a request for the method "consentStores.evaluateUserConsents".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link EvaluateUserConsents#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param consentStore Required. Name of the consent store to retrieve User data mappings from.
+           * @param content the {@link com.google.api.services.healthcare.v1.model.EvaluateUserConsentsRequest}
+           * @return the request
+           */
+          public EvaluateUserConsents evaluateUserConsents(java.lang.String consentStore, com.google.api.services.healthcare.v1.model.EvaluateUserConsentsRequest content) throws java.io.IOException {
+            EvaluateUserConsents result = new EvaluateUserConsents(consentStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class EvaluateUserConsents extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.EvaluateUserConsentsResponse> {
+
+            private static final String REST_PATH = "v1/{+consentStore}:evaluateUserConsents";
+
+            private final java.util.regex.Pattern CONSENT_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Evaluates the user's Consents for all matching User data mappings. Note: User data mappings are
+             * indexed asynchronously, which can cause a slight delay between the time mappings are created or
+             * updated and when they are included in EvaluateUserConsents results.
+             *
+             * Create a request for the method "consentStores.evaluateUserConsents".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link EvaluateUserConsents#execute()} method to invoke the
+             * remote operation. <p> {@link EvaluateUserConsents#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param consentStore Required. Name of the consent store to retrieve User data mappings from.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.EvaluateUserConsentsRequest}
+             * @since 1.13
+             */
+            protected EvaluateUserConsents(java.lang.String consentStore, com.google.api.services.healthcare.v1.model.EvaluateUserConsentsRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.EvaluateUserConsentsResponse.class);
+              this.consentStore = com.google.api.client.util.Preconditions.checkNotNull(consentStore, "Required parameter consentStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public EvaluateUserConsents set$Xgafv(java.lang.String $Xgafv) {
+              return (EvaluateUserConsents) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public EvaluateUserConsents setAccessToken(java.lang.String accessToken) {
+              return (EvaluateUserConsents) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public EvaluateUserConsents setAlt(java.lang.String alt) {
+              return (EvaluateUserConsents) super.setAlt(alt);
+            }
+
+            @Override
+            public EvaluateUserConsents setCallback(java.lang.String callback) {
+              return (EvaluateUserConsents) super.setCallback(callback);
+            }
+
+            @Override
+            public EvaluateUserConsents setFields(java.lang.String fields) {
+              return (EvaluateUserConsents) super.setFields(fields);
+            }
+
+            @Override
+            public EvaluateUserConsents setKey(java.lang.String key) {
+              return (EvaluateUserConsents) super.setKey(key);
+            }
+
+            @Override
+            public EvaluateUserConsents setOauthToken(java.lang.String oauthToken) {
+              return (EvaluateUserConsents) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public EvaluateUserConsents setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (EvaluateUserConsents) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public EvaluateUserConsents setQuotaUser(java.lang.String quotaUser) {
+              return (EvaluateUserConsents) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public EvaluateUserConsents setUploadType(java.lang.String uploadType) {
+              return (EvaluateUserConsents) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public EvaluateUserConsents setUploadProtocol(java.lang.String uploadProtocol) {
+              return (EvaluateUserConsents) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the consent store to retrieve User data mappings from. */
+            @com.google.api.client.util.Key
+            private java.lang.String consentStore;
+
+            /** Required. Name of the consent store to retrieve User data mappings from.
+             */
+            public java.lang.String getConsentStore() {
+              return consentStore;
+            }
+
+            /** Required. Name of the consent store to retrieve User data mappings from. */
+            public EvaluateUserConsents setConsentStore(java.lang.String consentStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.consentStore = consentStore;
+              return this;
+            }
+
+            @Override
+            public EvaluateUserConsents set(String parameterName, Object value) {
+              return (EvaluateUserConsents) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the specified consent store.
+           *
+           * Create a request for the method "consentStores.get".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the consent store to get.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ConsentStore> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Gets the specified consent store.
+             *
+             * Create a request for the method "consentStores.get".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the consent store to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.ConsentStore.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name of the consent store to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the consent store to get.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name of the consent store to get. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
@@ -2146,6 +2849,546 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             @Override
             public GetIamPolicy set(String parameterName, Object value) {
               return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the consent stores in the specified dataset.
+           *
+           * Create a request for the method "consentStores.list".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Name of the dataset.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ListConsentStoresResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/consentStores";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+
+            /**
+             * Lists the consent stores in the specified dataset.
+             *
+             * Create a request for the method "consentStores.list".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Name of the dataset.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.ListConsentStoresResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the dataset. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Name of the dataset.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Name of the dataset. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Restricts the stores returned to those matching a filter. Only filtering on
+             * labels is supported. For example, `filter=labels.key=value`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Restricts the stores returned to those matching a filter. Only filtering on labels is
+           supported. For example, `filter=labels.key=value`.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Restricts the stores returned to those matching a filter. Only filtering on
+             * labels is supported. For example, `filter=labels.key=value`.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Limit on the number of consent stores to return in a single response. If
+             * not specified, 100 is used. May not be larger than 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Limit on the number of consent stores to return in a single response. If not specified,
+           100 is used. May not be larger than 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Limit on the number of consent stores to return in a single response. If
+             * not specified, 100 is used. May not be larger than 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Token to retrieve the next page of results, or empty to get the first page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Token to retrieve the next page of results, or empty to get the first page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Token to retrieve the next page of results, or empty to get the first page.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the specified consent store.
+           *
+           * Create a request for the method "consentStores.patch".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datas
+           *        ets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
+           * @param content the {@link com.google.api.services.healthcare.v1.model.ConsentStore}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1.model.ConsentStore content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ConsentStore> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Updates the specified consent store.
+             *
+             * Create a request for the method "consentStores.patch".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datas
+           *        ets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.ConsentStore}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.healthcare.v1.model.ConsentStore content) {
+              super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1.model.ConsentStore.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Resource name of the consent store, of the form `projects/{project_id}/locations/{loc
+             * ation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed
+             * after creation.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/data
+           sets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Resource name of the consent store, of the form `projects/{project_id}/locations/{loc
+             * ation_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed
+             * after creation.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. The update mask that applies to the resource. For the `FieldMask`
+             * definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask. Only the `labels`,
+             * `default_consent_ttl`, and `enable_consent_create_on_update` fields are allowed to be
+             * updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. The update mask that applies to the resource. For the `FieldMask` definition, see
+           https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. Only the
+           `labels`, `default_consent_ttl`, and `enable_consent_create_on_update` fields are allowed to be
+           updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. The update mask that applies to the resource. For the `FieldMask`
+             * definition, see https://developers.google.com/protocol-
+             * buffers/docs/reference/google.protobuf#fieldmask. Only the `labels`,
+             * `default_consent_ttl`, and `enable_consent_create_on_update` fields are allowed to be
+             * updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Queries all data_ids that are consented for a specified use in the given consent store and writes
+           * them to a specified destination. The returned Operation includes a progress counter for the
+           * number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing logs]
+           * (cloud.google.com/healthcare/docs/how-tos/logging)). For example, the following sample log entry
+           * shows a `failed to evaluate consent policy` error that occurred during a QueryAccessibleData call
+           * to consent store `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStor
+           * es/{consent_store_id}`. ```json jsonPayload: { @type:
+           * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: { code:
+           * 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/locations/{
+           * location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}" }
+           * logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
+           * operation: { id:
+           * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/operations/{operation_id}"
+           * producer: "healthcare.googleapis.com/QueryAccessibleData" } receiveTimestamp: "TIMESTAMP"
+           * resource: { labels: { consent_store_id: "{consent_store_id}" dataset_id: "{dataset_id}" location:
+           * "{location_id}" project_id: "{project_id}" } type: "healthcare_consent_store" } severity: "ERROR"
+           * timestamp: "TIMESTAMP" ```
+           *
+           * Create a request for the method "consentStores.queryAccessibleData".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link QueryAccessibleData#execute()} method to invoke the remote operation.
+           *
+           * @param consentStore Required. Name of the consent store to retrieve User data mappings from.
+           * @param content the {@link com.google.api.services.healthcare.v1.model.QueryAccessibleDataRequest}
+           * @return the request
+           */
+          public QueryAccessibleData queryAccessibleData(java.lang.String consentStore, com.google.api.services.healthcare.v1.model.QueryAccessibleDataRequest content) throws java.io.IOException {
+            QueryAccessibleData result = new QueryAccessibleData(consentStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class QueryAccessibleData extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+consentStore}:queryAccessibleData";
+
+            private final java.util.regex.Pattern CONSENT_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+            /**
+             * Queries all data_ids that are consented for a specified use in the given consent store and
+             * writes them to a specified destination. The returned Operation includes a progress counter for
+             * the number of User data mappings processed. Errors are logged to Cloud Logging (see [Viewing
+             * logs] (cloud.google.com/healthcare/docs/how-tos/logging)). For example, the following sample
+             * log entry shows a `failed to evaluate consent policy` error that occurred during a
+             * QueryAccessibleData call to consent store `projects/{project_id}/locations/{location_id}/datase
+             * ts/{dataset_id}/consentStores/{consent_store_id}`. ```json jsonPayload: { @type:
+             * "type.googleapis.com/google.cloud.healthcare.logging.QueryAccessibleDataLogEntry" error: {
+             * code: 9 message: "failed to evaluate consent policy" } resourceName: "projects/{project_id}/loc
+             * ations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_i
+             * d}" } logName: "projects/{project_id}/logs/healthcare.googleapis.com%2Fquery_accessible_data"
+             * operation: { id:
+             * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/operations/{operation_id}"
+             * producer: "healthcare.googleapis.com/QueryAccessibleData" } receiveTimestamp: "TIMESTAMP"
+             * resource: { labels: { consent_store_id: "{consent_store_id}" dataset_id: "{dataset_id}"
+             * location: "{location_id}" project_id: "{project_id}" } type: "healthcare_consent_store" }
+             * severity: "ERROR" timestamp: "TIMESTAMP" ```
+             *
+             * Create a request for the method "consentStores.queryAccessibleData".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link QueryAccessibleData#execute()} method to invoke the remote
+             * operation. <p> {@link QueryAccessibleData#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param consentStore Required. Name of the consent store to retrieve User data mappings from.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.QueryAccessibleDataRequest}
+             * @since 1.13
+             */
+            protected QueryAccessibleData(java.lang.String consentStore, com.google.api.services.healthcare.v1.model.QueryAccessibleDataRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.Operation.class);
+              this.consentStore = com.google.api.client.util.Preconditions.checkNotNull(consentStore, "Required parameter consentStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public QueryAccessibleData set$Xgafv(java.lang.String $Xgafv) {
+              return (QueryAccessibleData) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public QueryAccessibleData setAccessToken(java.lang.String accessToken) {
+              return (QueryAccessibleData) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public QueryAccessibleData setAlt(java.lang.String alt) {
+              return (QueryAccessibleData) super.setAlt(alt);
+            }
+
+            @Override
+            public QueryAccessibleData setCallback(java.lang.String callback) {
+              return (QueryAccessibleData) super.setCallback(callback);
+            }
+
+            @Override
+            public QueryAccessibleData setFields(java.lang.String fields) {
+              return (QueryAccessibleData) super.setFields(fields);
+            }
+
+            @Override
+            public QueryAccessibleData setKey(java.lang.String key) {
+              return (QueryAccessibleData) super.setKey(key);
+            }
+
+            @Override
+            public QueryAccessibleData setOauthToken(java.lang.String oauthToken) {
+              return (QueryAccessibleData) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public QueryAccessibleData setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (QueryAccessibleData) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public QueryAccessibleData setQuotaUser(java.lang.String quotaUser) {
+              return (QueryAccessibleData) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public QueryAccessibleData setUploadType(java.lang.String uploadType) {
+              return (QueryAccessibleData) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public QueryAccessibleData setUploadProtocol(java.lang.String uploadProtocol) {
+              return (QueryAccessibleData) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the consent store to retrieve User data mappings from. */
+            @com.google.api.client.util.Key
+            private java.lang.String consentStore;
+
+            /** Required. Name of the consent store to retrieve User data mappings from.
+             */
+            public java.lang.String getConsentStore() {
+              return consentStore;
+            }
+
+            /** Required. Name of the consent store to retrieve User data mappings from. */
+            public QueryAccessibleData setConsentStore(java.lang.String consentStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONSENT_STORE_PATTERN.matcher(consentStore).matches(),
+                    "Parameter consentStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+              }
+              this.consentStore = consentStore;
+              return this;
+            }
+
+            @Override
+            public QueryAccessibleData set(String parameterName, Object value) {
+              return (QueryAccessibleData) super.set(parameterName, value);
             }
           }
           /**
@@ -2437,6 +3680,4329 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
 
+          /**
+           * An accessor for creating requests from the AttributeDefinitions collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.AttributeDefinitions.List request = healthcare.attributeDefinitions().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public AttributeDefinitions attributeDefinitions() {
+            return new AttributeDefinitions();
+          }
+
+          /**
+           * The "attributeDefinitions" collection of methods.
+           */
+          public class AttributeDefinitions {
+
+            /**
+             * Creates a new Attribute definition in the parent consent store.
+             *
+             * Create a request for the method "attributeDefinitions.create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The name of the consent store that this Attribute definition belongs to.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.AttributeDefinition}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.healthcare.v1.model.AttributeDefinition content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.AttributeDefinition> {
+
+              private static final String REST_PATH = "v1/{+parent}/attributeDefinitions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Creates a new Attribute definition in the parent consent store.
+               *
+               * Create a request for the method "attributeDefinitions.create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The name of the consent store that this Attribute definition belongs to.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.AttributeDefinition}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.healthcare.v1.model.AttributeDefinition content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.AttributeDefinition.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the consent store that this Attribute definition belongs to.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the consent store that this Attribute definition belongs to.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The name of the consent store that this Attribute definition belongs to.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Required. The ID of the Attribute definition to create. The string must match the
+               * following regex: `_a-zA-Z{0,255}` and must not be a reserved keyword within the
+               * Common Expression Language as listed on https://github.com/google/cel-
+               * spec/blob/master/doc/langdef.md.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String attributeDefinitionId;
+
+              /** Required. The ID of the Attribute definition to create. The string must match the following regex:
+             `_a-zA-Z{0,255}` and must not be a reserved keyword within the Common Expression Language as listed
+             on https://github.com/google/cel-spec/blob/master/doc/langdef.md.
+               */
+              public java.lang.String getAttributeDefinitionId() {
+                return attributeDefinitionId;
+              }
+
+              /**
+               * Required. The ID of the Attribute definition to create. The string must match the
+               * following regex: `_a-zA-Z{0,255}` and must not be a reserved keyword within the
+               * Common Expression Language as listed on https://github.com/google/cel-
+               * spec/blob/master/doc/langdef.md.
+               */
+              public Create setAttributeDefinitionId(java.lang.String attributeDefinitionId) {
+                this.attributeDefinitionId = attributeDefinitionId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified Attribute definition. Fails if the Attribute definition is referenced by
+             * any User data mapping, or the latest revision of any Consent.
+             *
+             * Create a request for the method "attributeDefinitions.delete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Attribute definition to delete. To preserve referential
+             *        integrity, Attribute definitions referenced by a User data mapping or the latest revision
+             *        of a Consent cannot be deleted.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Empty> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+
+              /**
+               * Deletes the specified Attribute definition. Fails if the Attribute definition is referenced by
+               * any User data mapping, or the latest revision of any Consent.
+               *
+               * Create a request for the method "attributeDefinitions.delete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Attribute definition to delete. To preserve referential
+             *        integrity, Attribute definitions referenced by a User data mapping or the latest revision
+             *        of a Consent cannot be deleted.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Attribute definition to delete. To preserve
+               * referential integrity, Attribute definitions referenced by a User data mapping or
+               * the latest revision of a Consent cannot be deleted.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Attribute definition to delete. To preserve referential
+             integrity, Attribute definitions referenced by a User data mapping or the latest revision of a
+             Consent cannot be deleted.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Attribute definition to delete. To preserve
+               * referential integrity, Attribute definitions referenced by a User data mapping or
+               * the latest revision of a Consent cannot be deleted.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the specified Attribute definition.
+             *
+             * Create a request for the method "attributeDefinitions.get".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Attribute definition to get.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.AttributeDefinition> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+
+              /**
+               * Gets the specified Attribute definition.
+               *
+               * Create a request for the method "attributeDefinitions.get".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Attribute definition to get.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.AttributeDefinition.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the Attribute definition to get. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Attribute definition to get.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the Attribute definition to get. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the Attribute definitions in the specified consent store.
+             *
+             * Create a request for the method "attributeDefinitions.list".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the consent store to retrieve Attribute definitions from.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ListAttributeDefinitionsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/attributeDefinitions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Lists the Attribute definitions in the specified consent store.
+               *
+               * Create a request for the method "attributeDefinitions.list".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the consent store to retrieve Attribute definitions from.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.ListAttributeDefinitionsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the consent store to retrieve Attribute definitions from. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the consent store to retrieve Attribute definitions from.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the consent store to retrieve Attribute definitions from. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. Restricts the attributes returned to those matching a filter. The only
+               * field available for filtering is `category`. For example,
+               * `filter=category=\"REQUEST\"`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Restricts the attributes returned to those matching a filter. The only field available
+             for filtering is `category`. For example, `filter=category=\"REQUEST\"`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. Restricts the attributes returned to those matching a filter. The only
+               * field available for filtering is `category`. For example,
+               * `filter=category=\"REQUEST\"`.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. Limit on the number of Attribute definitions to return in a single
+               * response. If not specified, 100 is used. May not be larger than 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. Limit on the number of Attribute definitions to return in a single response. If not
+             specified, 100 is used. May not be larger than 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. Limit on the number of Attribute definitions to return in a single
+               * response. If not specified, 100 is used. May not be larger than 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. Token to retrieve the next page of results or empty to get the first
+               * page.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. Token to retrieve the next page of results or empty to get the first page.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. Token to retrieve the next page of results or empty to get the first
+               * page.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the specified Attribute definition.
+             *
+             * Create a request for the method "attributeDefinitions.patch".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id
+             *        }/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
+             *        efinition_id}`. Cannot be changed after creation.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.AttributeDefinition}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1.model.AttributeDefinition content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.AttributeDefinition> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+
+              /**
+               * Updates the specified Attribute definition.
+               *
+               * Create a request for the method "attributeDefinitions.patch".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id
+             *        }/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_d
+             *        efinition_id}`. Cannot be changed after creation.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.AttributeDefinition}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.healthcare.v1.model.AttributeDefinition content) {
+                super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1.model.AttributeDefinition.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Resource name of the Attribute definition, of the form `projects/{project_id}/locat
+               * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attribute
+               * Definitions/{attribute_definition_id}`. Cannot be changed after creation.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_i
+             d}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definitio
+             n_id}`. Cannot be changed after creation.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Resource name of the Attribute definition, of the form `projects/{project_id}/locat
+               * ions/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attribute
+               * Definitions/{attribute_definition_id}`. Cannot be changed after creation.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/attributeDefinitions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Required. The update mask that applies to the resource. For the `FieldMask`
+               * definition, see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `description`,
+               * `allowed_values`, `consent_default_values` and `data_mapping_default_value` fields
+               * can be updated. The updated `allowed_values` must contain all values from the
+               * previous `allowed_values`.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Required. The update mask that applies to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. Only the
+             `description`, `allowed_values`, `consent_default_values` and `data_mapping_default_value` fields
+             can be updated. The updated `allowed_values` must contain all values from the previous
+             `allowed_values`.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Required. The update mask that applies to the resource. For the `FieldMask`
+               * definition, see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `description`,
+               * `allowed_values`, `consent_default_values` and `data_mapping_default_value` fields
+               * can be updated. The updated `allowed_values` must contain all values from the
+               * previous `allowed_values`.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the ConsentArtifacts collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.ConsentArtifacts.List request = healthcare.consentArtifacts().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public ConsentArtifacts consentArtifacts() {
+            return new ConsentArtifacts();
+          }
+
+          /**
+           * The "consentArtifacts" collection of methods.
+           */
+          public class ConsentArtifacts {
+
+            /**
+             * Creates a new Consent artifact in the parent consent store.
+             *
+             * Create a request for the method "consentArtifacts.create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The name of the consent store this Consent artifact belongs to.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.ConsentArtifact}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.healthcare.v1.model.ConsentArtifact content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ConsentArtifact> {
+
+              private static final String REST_PATH = "v1/{+parent}/consentArtifacts";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Creates a new Consent artifact in the parent consent store.
+               *
+               * Create a request for the method "consentArtifacts.create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The name of the consent store this Consent artifact belongs to.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.ConsentArtifact}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.healthcare.v1.model.ConsentArtifact content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.ConsentArtifact.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the consent store this Consent artifact belongs to. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The name of the consent store this Consent artifact belongs to.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The name of the consent store this Consent artifact belongs to. */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified Consent artifact. Fails if the artifact is referenced by the latest
+             * revision of any Consent.
+             *
+             * Create a request for the method "consentArtifacts.delete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Consent artifact to delete. To preserve referential integrity,
+             *        Consent artifacts referenced by the latest revision of a Consent cannot be deleted.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Empty> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+
+              /**
+               * Deletes the specified Consent artifact. Fails if the artifact is referenced by the latest
+               * revision of any Consent.
+               *
+               * Create a request for the method "consentArtifacts.delete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Consent artifact to delete. To preserve referential integrity,
+             *        Consent artifacts referenced by the latest revision of a Consent cannot be deleted.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Consent artifact to delete. To preserve
+               * referential integrity, Consent artifacts referenced by the latest revision of a
+               * Consent cannot be deleted.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Consent artifact to delete. To preserve referential integrity,
+             Consent artifacts referenced by the latest revision of a Consent cannot be deleted.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Consent artifact to delete. To preserve
+               * referential integrity, Consent artifacts referenced by the latest revision of a
+               * Consent cannot be deleted.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the specified Consent artifact.
+             *
+             * Create a request for the method "consentArtifacts.get".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Consent artifact to retrieve.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ConsentArtifact> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+
+              /**
+               * Gets the specified Consent artifact.
+               *
+               * Create a request for the method "consentArtifacts.get".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Consent artifact to retrieve.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.ConsentArtifact.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the Consent artifact to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Consent artifact to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the Consent artifact to retrieve. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consentArtifacts/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the Consent artifacts in the specified consent store.
+             *
+             * Create a request for the method "consentArtifacts.list".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the consent store to retrieve consent artifacts from.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ListConsentArtifactsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/consentArtifacts";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Lists the Consent artifacts in the specified consent store.
+               *
+               * Create a request for the method "consentArtifacts.list".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the consent store to retrieve consent artifacts from.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.ListConsentArtifactsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the consent store to retrieve consent artifacts from. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the consent store to retrieve consent artifacts from.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the consent store to retrieve consent artifacts from. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. Restricts the artifacts returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The fields available for filtering
+               * are: - user_id. For example, `filter=user_id=\"user123\"`. -
+               * consent_content_version - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Restricts the artifacts returned to those matching a filter. The following syntax is
+             available: * A string field value can be written as text inside quotation marks, for example
+             `"query text"`. The only valid relational operation for text fields is equality (`=`), where text
+             is searched within the field, rather than having the field be equal to the text. For example,
+             `"Comment = great"` returns messages with `great` in the comment field. * A number field value can
+             be written as an integer, a decimal, or an exponential. The valid relational operators for number
+             fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`,
+             `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to
+             an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
+             date and time use the RFC3339 time format. Leading zeros are required for one-digit months and
+             days. The valid relational operators for date fields are the equality operator (`=`) , along with
+             the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality
+             (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * Multiple field
+             query expressions can be combined in one query by adding `AND` or `OR` operators between the
+             expressions. If a boolean operator appears within a quoted string, it is not treated as special,
+             it's just another part of the character string to be matched. You can prepend the `NOT` operator to
+             an expression to negate it. The fields available for filtering are: - user_id. For example,
+             `filter=user_id=\"user123\"`. - consent_content_version - metadata. For example,
+             `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. Restricts the artifacts returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The fields available for filtering
+               * are: - user_id. For example, `filter=user_id=\"user123\"`. -
+               * consent_content_version - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. Limit on the number of consent artifacts to return in a single response.
+               * If not specified, 100 is used. May not be larger than 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. Limit on the number of consent artifacts to return in a single response. If not
+             specified, 100 is used. May not be larger than 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. Limit on the number of consent artifacts to return in a single response.
+               * If not specified, 100 is used. May not be larger than 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. The next_page_token value returned from the previous List request, if
+               * any.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The next_page_token value returned from the previous List request, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. The next_page_token value returned from the previous List request, if
+               * any.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the Consents collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.Consents.List request = healthcare.consents().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Consents consents() {
+            return new Consents();
+          }
+
+          /**
+           * The "consents" collection of methods.
+           */
+          public class Consents {
+
+            /**
+             * Activates the latest revision of the specified Consent by committing a new revision with `state`
+             * updated to `ACTIVE`. If the latest revision of the specified Consent is in the `ACTIVE` state, no
+             * new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the
+             * specified Consent is in the `REJECTED` or `REVOKED` state.
+             *
+             * Create a request for the method "consents.activate".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Consent to activate, of the form `projects/{project_id}/locations
+             *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
+             *        }`. An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.ActivateConsentRequest}
+             * @return the request
+             */
+            public Activate activate(java.lang.String name, com.google.api.services.healthcare.v1.model.ActivateConsentRequest content) throws java.io.IOException {
+              Activate result = new Activate(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Activate extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Consent> {
+
+              private static final String REST_PATH = "v1/{+name}:activate";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Activates the latest revision of the specified Consent by committing a new revision with
+               * `state` updated to `ACTIVE`. If the latest revision of the specified Consent is in the `ACTIVE`
+               * state, no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision
+               * of the specified Consent is in the `REJECTED` or `REVOKED` state.
+               *
+               * Create a request for the method "consents.activate".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Activate#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Consent to activate, of the form `projects/{project_id}/locations
+             *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
+             *        }`. An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.ActivateConsentRequest}
+               * @since 1.13
+               */
+              protected Activate(java.lang.String name, com.google.api.services.healthcare.v1.model.ActivateConsentRequest content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.Consent.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public Activate set$Xgafv(java.lang.String $Xgafv) {
+                return (Activate) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Activate setAccessToken(java.lang.String accessToken) {
+                return (Activate) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Activate setAlt(java.lang.String alt) {
+                return (Activate) super.setAlt(alt);
+              }
+
+              @Override
+              public Activate setCallback(java.lang.String callback) {
+                return (Activate) super.setCallback(callback);
+              }
+
+              @Override
+              public Activate setFields(java.lang.String fields) {
+                return (Activate) super.setFields(fields);
+              }
+
+              @Override
+              public Activate setKey(java.lang.String key) {
+                return (Activate) super.setKey(key);
+              }
+
+              @Override
+              public Activate setOauthToken(java.lang.String oauthToken) {
+                return (Activate) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Activate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Activate) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Activate setQuotaUser(java.lang.String quotaUser) {
+                return (Activate) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Activate setUploadType(java.lang.String uploadType) {
+                return (Activate) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Activate setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Activate) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Consent to activate, of the form `projects/{proj
+               * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
+               * id}/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Consent to activate, of the form `projects/{project_id}/location
+             s/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
+             INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Consent to activate, of the form `projects/{proj
+               * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
+               * id}/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              public Activate setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Activate set(String parameterName, Object value) {
+                return (Activate) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Creates a new Consent in the parent consent store.
+             *
+             * Create a request for the method "consents.create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the consent store.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.Consent}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.healthcare.v1.model.Consent content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Consent> {
+
+              private static final String REST_PATH = "v1/{+parent}/consents";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Creates a new Consent in the parent consent store.
+               *
+               * Create a request for the method "consents.create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the consent store.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.Consent}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.healthcare.v1.model.Consent content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.Consent.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the consent store. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the consent store.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the consent store. */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the Consent and its revisions. To keep a record of the Consent but mark it inactive, see
+             * [RevokeConsent]. To delete a revision of a Consent, see [DeleteConsentRevision]. This operation
+             * does not delete the related Consent artifact.
+             *
+             * Create a request for the method "consents.delete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Consent to delete, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Empty> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Deletes the Consent and its revisions. To keep a record of the Consent but mark it inactive,
+               * see [RevokeConsent]. To delete a revision of a Consent, see [DeleteConsentRevision]. This
+               * operation does not delete the related Consent artifact.
+               *
+               * Create a request for the method "consents.delete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Consent to delete, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Consent to delete, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Consent to delete, of the form `projects/{project_id}/locations/
+             {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
+             INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Consent to delete, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified revision of a Consent. An INVALID_ARGUMENT error occurs if the specified
+             * revision is the latest revision.
+             *
+             * Create a request for the method "consents.deleteRevision".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link DeleteRevision#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Consent revision to delete, of the form `projects/{project_id}/lo
+             *        cations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{con
+             *        sent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is not
+             *        specified in the name.
+             * @return the request
+             */
+            public DeleteRevision deleteRevision(java.lang.String name) throws java.io.IOException {
+              DeleteRevision result = new DeleteRevision(name);
+              initialize(result);
+              return result;
+            }
+
+            public class DeleteRevision extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Empty> {
+
+              private static final String REST_PATH = "v1/{+name}:deleteRevision";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Deletes the specified revision of a Consent. An INVALID_ARGUMENT error occurs if the specified
+               * revision is the latest revision.
+               *
+               * Create a request for the method "consents.deleteRevision".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link DeleteRevision#execute()} method to invoke the remote
+               * operation. <p> {@link DeleteRevision#initialize(com.google.api.client.googleapis.services.Abstr
+               * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param name Required. The resource name of the Consent revision to delete, of the form `projects/{project_id}/lo
+             *        cations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{con
+             *        sent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is not
+             *        specified in the name.
+               * @since 1.13
+               */
+              protected DeleteRevision(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public DeleteRevision set$Xgafv(java.lang.String $Xgafv) {
+                return (DeleteRevision) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public DeleteRevision setAccessToken(java.lang.String accessToken) {
+                return (DeleteRevision) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public DeleteRevision setAlt(java.lang.String alt) {
+                return (DeleteRevision) super.setAlt(alt);
+              }
+
+              @Override
+              public DeleteRevision setCallback(java.lang.String callback) {
+                return (DeleteRevision) super.setCallback(callback);
+              }
+
+              @Override
+              public DeleteRevision setFields(java.lang.String fields) {
+                return (DeleteRevision) super.setFields(fields);
+              }
+
+              @Override
+              public DeleteRevision setKey(java.lang.String key) {
+                return (DeleteRevision) super.setKey(key);
+              }
+
+              @Override
+              public DeleteRevision setOauthToken(java.lang.String oauthToken) {
+                return (DeleteRevision) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public DeleteRevision setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (DeleteRevision) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public DeleteRevision setQuotaUser(java.lang.String quotaUser) {
+                return (DeleteRevision) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public DeleteRevision setUploadType(java.lang.String uploadType) {
+                return (DeleteRevision) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public DeleteRevision setUploadProtocol(java.lang.String uploadProtocol) {
+                return (DeleteRevision) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Consent revision to delete, of the form `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent
+               * _store_id}/consents/{consent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs
+               * if `revision_id` is not specified in the name.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Consent revision to delete, of the form `projects/{project_id}/l
+             ocations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}
+             @{revision_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is not specified in the name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Consent revision to delete, of the form `project
+               * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent
+               * _store_id}/consents/{consent_id}@{revision_id}`. An INVALID_ARGUMENT error occurs
+               * if `revision_id` is not specified in the name.
+               */
+              public DeleteRevision setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public DeleteRevision set(String parameterName, Object value) {
+                return (DeleteRevision) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the specified revision of a Consent, or the latest revision if `revision_id` is not
+             * specified in the resource name.
+             *
+             * Create a request for the method "consents.get".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Consent to retrieve, of the form `projects/{project_id}/locations
+             *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
+             *        }`. In order to retrieve a previous revision of the Consent, also provide the revision ID:
+             *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consen
+             *        t_store_id}/consents/{consent_id}@{revision_id}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Consent> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Gets the specified revision of a Consent, or the latest revision if `revision_id` is not
+               * specified in the resource name.
+               *
+               * Create a request for the method "consents.get".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Consent to retrieve, of the form `projects/{project_id}/locations
+             *        /{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id
+             *        }`. In order to retrieve a previous revision of the Consent, also provide the revision ID:
+             *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consen
+             *        t_store_id}/consents/{consent_id}@{revision_id}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.Consent.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Consent to retrieve, of the form `projects/{proj
+               * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
+               * id}/consents/{consent_id}`. In order to retrieve a previous revision of the
+               * Consent, also provide the revision ID: `projects/{project_id}/locations/{location_i
+               * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}@{re
+               * vision_id}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Consent to retrieve, of the form `projects/{project_id}/location
+             s/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. In
+             order to retrieve a previous revision of the Consent, also provide the revision ID: `projects/{proj
+             ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{co
+             nsent_id}@{revision_id}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Consent to retrieve, of the form `projects/{proj
+               * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_
+               * id}/consents/{consent_id}`. In order to retrieve a previous revision of the
+               * Consent, also provide the revision ID: `projects/{project_id}/locations/{location_i
+               * d}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}@{re
+               * vision_id}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the Consent in the given consent store, returning each Consent's latest revision.
+             *
+             * Create a request for the method "consents.list".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the consent store to retrieve Consents from.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ListConsentsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/consents";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Lists the Consent in the given consent store, returning each Consent's latest revision.
+               *
+               * Create a request for the method "consents.list".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the consent store to retrieve Consents from.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.ListConsentsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the consent store to retrieve Consents from. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the consent store to retrieve Consents from.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the consent store to retrieve Consents from. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. Restricts the Consents returned to those matching a filter. The following
+               * syntax is available: * A string field value can be written as text inside quotation
+               * marks, for example `"query text"`. The only valid relational operation for text
+               * fields is equality (`=`), where text is searched within the field, rather than
+               * having the field be equal to the text. For example, `"Comment = great"` returns
+               * messages with `great` in the comment field. * A number field value can be written
+               * as an integer, a decimal, or an exponential. The valid relational operators for
+               * number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The fields available for filtering
+               * are: - user_id. For example, `filter='user_id="user123"'`. - consent_artifact -
+               * state - revision_create_time - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Restricts the Consents returned to those matching a filter. The following syntax is
+             available: * A string field value can be written as text inside quotation marks, for example
+             `"query text"`. The only valid relational operation for text fields is equality (`=`), where text
+             is searched within the field, rather than having the field be equal to the text. For example,
+             `"Comment = great"` returns messages with `great` in the comment field. * A number field value can
+             be written as an integer, a decimal, or an exponential. The valid relational operators for number
+             fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`,
+             `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to
+             an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
+             date and time use the RFC3339 time format. Leading zeros are required for one-digit months and
+             days. The valid relational operators for date fields are the equality operator (`=`) , along with
+             the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality
+             (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * Multiple field
+             query expressions can be combined in one query by adding `AND` or `OR` operators between the
+             expressions. If a boolean operator appears within a quoted string, it is not treated as special,
+             it's just another part of the character string to be matched. You can prepend the `NOT` operator to
+             an expression to negate it. The fields available for filtering are: - user_id. For example,
+             `filter='user_id="user123"'`. - consent_artifact - state - revision_create_time - metadata. For
+             example, `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. Restricts the Consents returned to those matching a filter. The following
+               * syntax is available: * A string field value can be written as text inside quotation
+               * marks, for example `"query text"`. The only valid relational operation for text
+               * fields is equality (`=`), where text is searched within the field, rather than
+               * having the field be equal to the text. For example, `"Comment = great"` returns
+               * messages with `great` in the comment field. * A number field value can be written
+               * as an integer, a decimal, or an exponential. The valid relational operators for
+               * number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The fields available for filtering
+               * are: - user_id. For example, `filter='user_id="user123"'`. - consent_artifact -
+               * state - revision_create_time - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. Limit on the number of Consents to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. Limit on the number of Consents to return in a single response. If not specified, 100 is
+             used. May not be larger than 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. Limit on the number of Consents to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. The next_page_token value returned from the previous List request, if
+               * any.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The next_page_token value returned from the previous List request, if any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. The next_page_token value returned from the previous List request, if
+               * any.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the revisions of the specified Consent in reverse chronological order.
+             *
+             * Create a request for the method "consents.listRevisions".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link ListRevisions#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Consent to retrieve revisions for.
+             * @return the request
+             */
+            public ListRevisions listRevisions(java.lang.String name) throws java.io.IOException {
+              ListRevisions result = new ListRevisions(name);
+              initialize(result);
+              return result;
+            }
+
+            public class ListRevisions extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ListConsentRevisionsResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:listRevisions";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Lists the revisions of the specified Consent in reverse chronological order.
+               *
+               * Create a request for the method "consents.listRevisions".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link ListRevisions#execute()} method to invoke the remote
+               * operation. <p> {@link ListRevisions#initialize(com.google.api.client.googleapis.services.Abstra
+               * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param name Required. The resource name of the Consent to retrieve revisions for.
+               * @since 1.13
+               */
+              protected ListRevisions(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.ListConsentRevisionsResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public ListRevisions set$Xgafv(java.lang.String $Xgafv) {
+                return (ListRevisions) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ListRevisions setAccessToken(java.lang.String accessToken) {
+                return (ListRevisions) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ListRevisions setAlt(java.lang.String alt) {
+                return (ListRevisions) super.setAlt(alt);
+              }
+
+              @Override
+              public ListRevisions setCallback(java.lang.String callback) {
+                return (ListRevisions) super.setCallback(callback);
+              }
+
+              @Override
+              public ListRevisions setFields(java.lang.String fields) {
+                return (ListRevisions) super.setFields(fields);
+              }
+
+              @Override
+              public ListRevisions setKey(java.lang.String key) {
+                return (ListRevisions) super.setKey(key);
+              }
+
+              @Override
+              public ListRevisions setOauthToken(java.lang.String oauthToken) {
+                return (ListRevisions) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ListRevisions setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ListRevisions) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ListRevisions setQuotaUser(java.lang.String quotaUser) {
+                return (ListRevisions) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ListRevisions setUploadType(java.lang.String uploadType) {
+                return (ListRevisions) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ListRevisions setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ListRevisions) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the Consent to retrieve revisions for. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Consent to retrieve revisions for.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the Consent to retrieve revisions for. */
+              public ListRevisions setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. Restricts the revisions returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. Fields available for filtering are: -
+               * user_id. For example, `filter='user_id="user123"'`. - consent_artifact - state -
+               * revision_create_time - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Restricts the revisions returned to those matching a filter. The following syntax is
+             available: * A string field value can be written as text inside quotation marks, for example
+             `"query text"`. The only valid relational operation for text fields is equality (`=`), where text
+             is searched within the field, rather than having the field be equal to the text. For example,
+             `"Comment = great"` returns messages with `great` in the comment field. * A number field value can
+             be written as an integer, a decimal, or an exponential. The valid relational operators for number
+             fields are the equality operator (`=`), along with the less than/greater than operators (`<`, `<=`,
+             `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT` operator to
+             an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form. Fields with
+             date and time use the RFC3339 time format. Leading zeros are required for one-digit months and
+             days. The valid relational operators for date fields are the equality operator (`=`) , along with
+             the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality
+             (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. * Multiple field
+             query expressions can be combined in one query by adding `AND` or `OR` operators between the
+             expressions. If a boolean operator appears within a quoted string, it is not treated as special,
+             it's just another part of the character string to be matched. You can prepend the `NOT` operator to
+             an expression to negate it. Fields available for filtering are: - user_id. For example,
+             `filter='user_id="user123"'`. - consent_artifact - state - revision_create_time - metadata. For
+             example, `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. Restricts the revisions returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. Fields available for filtering are: -
+               * user_id. For example, `filter='user_id="user123"'`. - consent_artifact - state -
+               * revision_create_time - metadata. For example,
+               * `filter=Metadata(\"testkey\")=\"value\"` or `filter=HasMetadata(\"testkey\")`.
+               */
+              public ListRevisions setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. Limit on the number of revisions to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. Limit on the number of revisions to return in a single response. If not specified, 100 is
+             used. May not be larger than 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. Limit on the number of revisions to return in a single response. If not
+               * specified, 100 is used. May not be larger than 1000.
+               */
+              public ListRevisions setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. Token to retrieve the next page of results or empty if there are no more
+               * results in the list.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. Token to retrieve the next page of results or empty if there are no more results in the
+             list.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. Token to retrieve the next page of results or empty if there are no more
+               * results in the list.
+               */
+              public ListRevisions setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public ListRevisions set(String parameterName, Object value) {
+                return (ListRevisions) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the latest revision of the specified Consent by committing a new revision with the
+             * changes. A FAILED_PRECONDITION error occurs if the latest revision of the specified Consent is in
+             * the `REJECTED` or `REVOKED` state.
+             *
+             * Create a request for the method "consents.patch".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
+             *        ataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed
+             *        after creation.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.Consent}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1.model.Consent content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Consent> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Updates the latest revision of the specified Consent by committing a new revision with the
+               * changes. A FAILED_PRECONDITION error occurs if the latest revision of the specified Consent is
+               * in the `REJECTED` or `REVOKED` state.
+               *
+               * Create a request for the method "consents.patch".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{d
+             *        ataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed
+             *        after creation.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.Consent}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.healthcare.v1.model.Consent content) {
+                super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1.model.Consent.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Resource name of the Consent, of the form `projects/{project_id}/locations/{locatio
+               * n_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+               * . Cannot be changed after creation.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{
+             dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed after
+             creation.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Resource name of the Consent, of the form `projects/{project_id}/locations/{locatio
+               * n_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+               * . Cannot be changed after creation.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Required. The update mask to apply to the resource. For the `FieldMask` definition,
+               * see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `user_id`, `policies`,
+               * `consent_artifact`, and `metadata` fields can be updated.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Required. The update mask to apply to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. Only the
+             `user_id`, `policies`, `consent_artifact`, and `metadata` fields can be updated.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Required. The update mask to apply to the resource. For the `FieldMask` definition,
+               * see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `user_id`, `policies`,
+               * `consent_artifact`, and `metadata` fields can be updated.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Rejects the latest revision of the specified Consent by committing a new revision with `state`
+             * updated to `REJECTED`. If the latest revision of the specified Consent is in the `REJECTED`
+             * state, no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of
+             * the specified Consent is in the `ACTIVE` or `REVOKED` state.
+             *
+             * Create a request for the method "consents.reject".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Reject#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Consent to reject, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.RejectConsentRequest}
+             * @return the request
+             */
+            public Reject reject(java.lang.String name, com.google.api.services.healthcare.v1.model.RejectConsentRequest content) throws java.io.IOException {
+              Reject result = new Reject(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Reject extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Consent> {
+
+              private static final String REST_PATH = "v1/{+name}:reject";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Rejects the latest revision of the specified Consent by committing a new revision with `state`
+               * updated to `REJECTED`. If the latest revision of the specified Consent is in the `REJECTED`
+               * state, no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision
+               * of the specified Consent is in the `ACTIVE` or `REVOKED` state.
+               *
+               * Create a request for the method "consents.reject".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Reject#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Reject#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Consent to reject, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.RejectConsentRequest}
+               * @since 1.13
+               */
+              protected Reject(java.lang.String name, com.google.api.services.healthcare.v1.model.RejectConsentRequest content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.Consent.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public Reject set$Xgafv(java.lang.String $Xgafv) {
+                return (Reject) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Reject setAccessToken(java.lang.String accessToken) {
+                return (Reject) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Reject setAlt(java.lang.String alt) {
+                return (Reject) super.setAlt(alt);
+              }
+
+              @Override
+              public Reject setCallback(java.lang.String callback) {
+                return (Reject) super.setCallback(callback);
+              }
+
+              @Override
+              public Reject setFields(java.lang.String fields) {
+                return (Reject) super.setFields(fields);
+              }
+
+              @Override
+              public Reject setKey(java.lang.String key) {
+                return (Reject) super.setKey(key);
+              }
+
+              @Override
+              public Reject setOauthToken(java.lang.String oauthToken) {
+                return (Reject) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Reject setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Reject) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Reject setQuotaUser(java.lang.String quotaUser) {
+                return (Reject) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Reject setUploadType(java.lang.String uploadType) {
+                return (Reject) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Reject setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Reject) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Consent to reject, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Consent to reject, of the form `projects/{project_id}/locations/
+             {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
+             INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Consent to reject, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              public Reject setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Reject set(String parameterName, Object value) {
+                return (Reject) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Revokes the latest revision of the specified Consent by committing a new revision with `state`
+             * updated to `REVOKED`. If the latest revision of the specified Consent is in the `REVOKED` state,
+             * no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision of the
+             * given consent is in `DRAFT` or `REJECTED` state.
+             *
+             * Create a request for the method "consents.revoke".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the Consent to revoke, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.RevokeConsentRequest}
+             * @return the request
+             */
+            public Revoke revoke(java.lang.String name, com.google.api.services.healthcare.v1.model.RevokeConsentRequest content) throws java.io.IOException {
+              Revoke result = new Revoke(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Revoke extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Consent> {
+
+              private static final String REST_PATH = "v1/{+name}:revoke";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+
+              /**
+               * Revokes the latest revision of the specified Consent by committing a new revision with `state`
+               * updated to `REVOKED`. If the latest revision of the specified Consent is in the `REVOKED`
+               * state, no new revision is committed. A FAILED_PRECONDITION error occurs if the latest revision
+               * of the given consent is in `DRAFT` or `REJECTED` state.
+               *
+               * Create a request for the method "consents.revoke".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Consent to revoke, of the form `projects/{project_id}/locations/{
+             *        location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`
+             *        . An INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.RevokeConsentRequest}
+               * @since 1.13
+               */
+              protected Revoke(java.lang.String name, com.google.api.services.healthcare.v1.model.RevokeConsentRequest content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.Consent.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+              }
+
+              @Override
+              public Revoke set$Xgafv(java.lang.String $Xgafv) {
+                return (Revoke) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Revoke setAccessToken(java.lang.String accessToken) {
+                return (Revoke) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Revoke setAlt(java.lang.String alt) {
+                return (Revoke) super.setAlt(alt);
+              }
+
+              @Override
+              public Revoke setCallback(java.lang.String callback) {
+                return (Revoke) super.setCallback(callback);
+              }
+
+              @Override
+              public Revoke setFields(java.lang.String fields) {
+                return (Revoke) super.setFields(fields);
+              }
+
+              @Override
+              public Revoke setKey(java.lang.String key) {
+                return (Revoke) super.setKey(key);
+              }
+
+              @Override
+              public Revoke setOauthToken(java.lang.String oauthToken) {
+                return (Revoke) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Revoke setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Revoke) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Revoke setQuotaUser(java.lang.String quotaUser) {
+                return (Revoke) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Revoke setUploadType(java.lang.String uploadType) {
+                return (Revoke) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Revoke setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Revoke) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Consent to revoke, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Consent to revoke, of the form `projects/{project_id}/locations/
+             {location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. An
+             INVALID_ARGUMENT error occurs if `revision_id` is specified in the name.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Consent to revoke, of the form `projects/{projec
+               * t_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+               * }/consents/{consent_id}`. An INVALID_ARGUMENT error occurs if `revision_id` is
+               * specified in the name.
+               */
+              public Revoke setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/consents/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Revoke set(String parameterName, Object value) {
+                return (Revoke) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the UserDataMappings collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudHealthcare healthcare = new CloudHealthcare(...);}
+           *   {@code CloudHealthcare.UserDataMappings.List request = healthcare.userDataMappings().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public UserDataMappings userDataMappings() {
+            return new UserDataMappings();
+          }
+
+          /**
+           * The "userDataMappings" collection of methods.
+           */
+          public class UserDataMappings {
+
+            /**
+             * Archives the specified User data mapping.
+             *
+             * Create a request for the method "userDataMappings.archive".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Archive#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the User data mapping to archive.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.ArchiveUserDataMappingRequest}
+             * @return the request
+             */
+            public Archive archive(java.lang.String name, com.google.api.services.healthcare.v1.model.ArchiveUserDataMappingRequest content) throws java.io.IOException {
+              Archive result = new Archive(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Archive extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ArchiveUserDataMappingResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:archive";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+
+              /**
+               * Archives the specified User data mapping.
+               *
+               * Create a request for the method "userDataMappings.archive".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Archive#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Archive#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the User data mapping to archive.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.ArchiveUserDataMappingRequest}
+               * @since 1.13
+               */
+              protected Archive(java.lang.String name, com.google.api.services.healthcare.v1.model.ArchiveUserDataMappingRequest content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.ArchiveUserDataMappingResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+              }
+
+              @Override
+              public Archive set$Xgafv(java.lang.String $Xgafv) {
+                return (Archive) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Archive setAccessToken(java.lang.String accessToken) {
+                return (Archive) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Archive setAlt(java.lang.String alt) {
+                return (Archive) super.setAlt(alt);
+              }
+
+              @Override
+              public Archive setCallback(java.lang.String callback) {
+                return (Archive) super.setCallback(callback);
+              }
+
+              @Override
+              public Archive setFields(java.lang.String fields) {
+                return (Archive) super.setFields(fields);
+              }
+
+              @Override
+              public Archive setKey(java.lang.String key) {
+                return (Archive) super.setKey(key);
+              }
+
+              @Override
+              public Archive setOauthToken(java.lang.String oauthToken) {
+                return (Archive) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Archive setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Archive) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Archive setQuotaUser(java.lang.String quotaUser) {
+                return (Archive) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Archive setUploadType(java.lang.String uploadType) {
+                return (Archive) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Archive setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Archive) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the User data mapping to archive. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the User data mapping to archive.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the User data mapping to archive. */
+              public Archive setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Archive set(String parameterName, Object value) {
+                return (Archive) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Creates a new User data mapping in the parent consent store.
+             *
+             * Create a request for the method "userDataMappings.create".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the consent store.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.UserDataMapping}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.healthcare.v1.model.UserDataMapping content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.UserDataMapping> {
+
+              private static final String REST_PATH = "v1/{+parent}/userDataMappings";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Creates a new User data mapping in the parent consent store.
+               *
+               * Create a request for the method "userDataMappings.create".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the consent store.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.UserDataMapping}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.healthcare.v1.model.UserDataMapping content) {
+                super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1.model.UserDataMapping.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the consent store. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the consent store.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the consent store. */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified User data mapping.
+             *
+             * Create a request for the method "userDataMappings.delete".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the User data mapping to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.Empty> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+
+              /**
+               * Deletes the specified User data mapping.
+               *
+               * Create a request for the method "userDataMappings.delete".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the User data mapping to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudHealthcare.this, "DELETE", REST_PATH, null, com.google.api.services.healthcare.v1.model.Empty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the User data mapping to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the User data mapping to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the User data mapping to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets the specified User data mapping.
+             *
+             * Create a request for the method "userDataMappings.get".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the User data mapping to retrieve.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.UserDataMapping> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+
+              /**
+               * Gets the specified User data mapping.
+               *
+               * Create a request for the method "userDataMappings.get".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the User data mapping to retrieve.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.UserDataMapping.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The resource name of the User data mapping to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the User data mapping to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The resource name of the User data mapping to retrieve. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists the User data mappings in the specified consent store.
+             *
+             * Create a request for the method "userDataMappings.list".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. Name of the consent store to retrieve User data mappings from.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.ListUserDataMappingsResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/userDataMappings";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+
+              /**
+               * Lists the User data mappings in the specified consent store.
+               *
+               * Create a request for the method "userDataMappings.list".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. Name of the consent store to retrieve User data mappings from.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudHealthcare.this, "GET", REST_PATH, null, com.google.api.services.healthcare.v1.model.ListUserDataMappingsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Name of the consent store to retrieve User data mappings from. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. Name of the consent store to retrieve User data mappings from.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. Name of the consent store to retrieve User data mappings from. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. Restricts the User data mappings returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The fields available for filtering
+               * are: - data_id - user_id. For example, `filter=user_id=\"user123\"`. - archived -
+               * archive_time
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Restricts the User data mappings returned to those matching a filter. The following
+             syntax is available: * A string field value can be written as text inside quotation marks, for
+             example `"query text"`. The only valid relational operation for text fields is equality (`=`),
+             where text is searched within the field, rather than having the field be equal to the text. For
+             example, `"Comment = great"` returns messages with `great` in the comment field. * A number field
+             value can be written as an integer, a decimal, or an exponential. The valid relational operators
+             for number fields are the equality operator (`=`), along with the less than/greater than operators
+             (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+             operator to an expression to negate it. * A date field value must be written in `yyyy-mm-dd` form.
+             Fields with date and time use the RFC3339 time format. Leading zeros are required for one-digit
+             months and days. The valid relational operators for date fields are the equality operator (`=`) ,
+             along with the less than/greater than operators (`<`, `<=`, `>`, `>=`). Note that there is no
+             inequality (`!=`) operator. You can prepend the `NOT` operator to an expression to negate it. *
+             Multiple field query expressions can be combined in one query by adding `AND` or `OR` operators
+             between the expressions. If a boolean operator appears within a quoted string, it is not treated as
+             special, it's just another part of the character string to be matched. You can prepend the `NOT`
+             operator to an expression to negate it. The fields available for filtering are: - data_id -
+             user_id. For example, `filter=user_id=\"user123\"`. - archived - archive_time
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. Restricts the User data mappings returned to those matching a filter. The
+               * following syntax is available: * A string field value can be written as text inside
+               * quotation marks, for example `"query text"`. The only valid relational operation
+               * for text fields is equality (`=`), where text is searched within the field, rather
+               * than having the field be equal to the text. For example, `"Comment = great"`
+               * returns messages with `great` in the comment field. * A number field value can be
+               * written as an integer, a decimal, or an exponential. The valid relational operators
+               * for number fields are the equality operator (`=`), along with the less than/greater
+               * than operators (`<`, `<=`, `>`, `>=`). Note that there is no inequality (`!=`)
+               * operator. You can prepend the `NOT` operator to an expression to negate it. * A
+               * date field value must be written in `yyyy-mm-dd` form. Fields with date and time
+               * use the RFC3339 time format. Leading zeros are required for one-digit months and
+               * days. The valid relational operators for date fields are the equality operator
+               * (`=`) , along with the less than/greater than operators (`<`, `<=`, `>`, `>=`).
+               * Note that there is no inequality (`!=`) operator. You can prepend the `NOT`
+               * operator to an expression to negate it. * Multiple field query expressions can be
+               * combined in one query by adding `AND` or `OR` operators between the expressions. If
+               * a boolean operator appears within a quoted string, it is not treated as special,
+               * it's just another part of the character string to be matched. You can prepend the
+               * `NOT` operator to an expression to negate it. The fields available for filtering
+               * are: - data_id - user_id. For example, `filter=user_id=\"user123\"`. - archived -
+               * archive_time
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. Limit on the number of User data mappings to return in a single response.
+               * If not specified, 100 is used. May not be larger than 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. Limit on the number of User data mappings to return in a single response. If not
+             specified, 100 is used. May not be larger than 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. Limit on the number of User data mappings to return in a single response.
+               * If not specified, 100 is used. May not be larger than 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. Token to retrieve the next page of results, or empty to get the first
+               * page.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. Token to retrieve the next page of results, or empty to get the first page.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. Token to retrieve the next page of results, or empty to get the first
+               * page.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the specified User data mapping.
+             *
+             * Create a request for the method "userDataMappings.patch".
+             *
+             * This request holds the parameters needed by the healthcare server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/d
+             *        atasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_
+             *        id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1.model.UserDataMapping}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.healthcare.v1.model.UserDataMapping content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends CloudHealthcareRequest<com.google.api.services.healthcare.v1.model.UserDataMapping> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+
+              /**
+               * Updates the specified User data mapping.
+               *
+               * Create a request for the method "userDataMappings.patch".
+               *
+               * This request holds the parameters needed by the the healthcare server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/d
+             *        atasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_
+             *        id}`.
+               * @param content the {@link com.google.api.services.healthcare.v1.model.UserDataMapping}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.healthcare.v1.model.UserDataMapping content) {
+                super(CloudHealthcare.this, "PATCH", REST_PATH, content, com.google.api.services.healthcare.v1.model.UserDataMapping.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Resource name of the User data mapping, of the form `projects/{project_id}/location
+               * s/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMapp
+               * ings/{user_data_mapping_id}`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/
+             datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Resource name of the User data mapping, of the form `projects/{project_id}/location
+               * s/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMapp
+               * ings/{user_data_mapping_id}`.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/consentStores/[^/]+/userDataMappings/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Required. The update mask that applies to the resource. For the `FieldMask`
+               * definition, see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `data_id`, `user_id` and
+               * `resource_attributes` fields can be updated.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Required. The update mask that applies to the resource. For the `FieldMask` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. Only the
+             `data_id`, `user_id` and `resource_attributes` fields can be updated.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Required. The update mask that applies to the resource. For the `FieldMask`
+               * definition, see https://developers.google.com/protocol-
+               * buffers/docs/reference/google.protobuf#fieldmask. Only the `data_id`, `user_id` and
+               * `resource_attributes` fields can be updated.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
         /**
          * An accessor for creating requests from the DicomStores collection.

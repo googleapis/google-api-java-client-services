@@ -17,7 +17,7 @@
 package com.google.api.services.healthcare.v1beta1.model;
 
 /**
- * Checks if a particular data_id of a User data mapping in the given Consent store is consented for
+ * Checks if a particular data_id of a User data mapping in the given consent store is consented for
  * a given use.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,18 +31,19 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class CheckDataAccessRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Consents to evaluate the access request against. They must have the same `user_id` as the
-   * data to check access for, exist in the current `consent_store`, and can have a `state` of
-   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here. If unspecified, all
-   * `ACTIVE` unexpired consents in the current `consent_store` will be evaluated.
+   * Optional. Specific Consents to evaluate the access request against. These Consents must have
+   * the same `user_id` as the evaluated User data mapping, must exist in the current
+   * `consent_store`, and have a `state` of either `ACTIVE` or `DRAFT`. A maximum of 100 Consents
+   * can be provided here. If no selection is specified, the access request is evaluated against all
+   * `ACTIVE` unexpired Consents with the same `user_id` as the evaluated User data mapping.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConsentList consentList;
 
   /**
-   * The unique identifier of the data to check access for. It must exist in the given
-   * `consent_store`.
+   * Required. The unique identifier of the resource to check access for. This identifier must
+   * correspond to a User data mapping in the given consent store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +57,7 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   private java.util.Map<String, java.lang.String> requestAttributes;
 
   /**
-   * The view for CheckDataAccessResponse. If unspecified, defaults to `BASIC` and returns
+   * Optional. The view for CheckDataAccessResponse. If unspecified, defaults to `BASIC` and returns
    * `consented` as `TRUE` or `FALSE`.
    * The value may be {@code null}.
    */
@@ -64,10 +65,11 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   private java.lang.String responseView;
 
   /**
-   * The Consents to evaluate the access request against. They must have the same `user_id` as the
-   * data to check access for, exist in the current `consent_store`, and can have a `state` of
-   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here. If unspecified, all
-   * `ACTIVE` unexpired consents in the current `consent_store` will be evaluated.
+   * Optional. Specific Consents to evaluate the access request against. These Consents must have
+   * the same `user_id` as the evaluated User data mapping, must exist in the current
+   * `consent_store`, and have a `state` of either `ACTIVE` or `DRAFT`. A maximum of 100 Consents
+   * can be provided here. If no selection is specified, the access request is evaluated against all
+   * `ACTIVE` unexpired Consents with the same `user_id` as the evaluated User data mapping.
    * @return value or {@code null} for none
    */
   public ConsentList getConsentList() {
@@ -75,10 +77,11 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The Consents to evaluate the access request against. They must have the same `user_id` as the
-   * data to check access for, exist in the current `consent_store`, and can have a `state` of
-   * either `ACTIVE` or `DRAFT`. A maximum of 100 consents can be provided here. If unspecified, all
-   * `ACTIVE` unexpired consents in the current `consent_store` will be evaluated.
+   * Optional. Specific Consents to evaluate the access request against. These Consents must have
+   * the same `user_id` as the evaluated User data mapping, must exist in the current
+   * `consent_store`, and have a `state` of either `ACTIVE` or `DRAFT`. A maximum of 100 Consents
+   * can be provided here. If no selection is specified, the access request is evaluated against all
+   * `ACTIVE` unexpired Consents with the same `user_id` as the evaluated User data mapping.
    * @param consentList consentList or {@code null} for none
    */
   public CheckDataAccessRequest setConsentList(ConsentList consentList) {
@@ -87,8 +90,8 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The unique identifier of the data to check access for. It must exist in the given
-   * `consent_store`.
+   * Required. The unique identifier of the resource to check access for. This identifier must
+   * correspond to a User data mapping in the given consent store.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataId() {
@@ -96,8 +99,8 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The unique identifier of the data to check access for. It must exist in the given
-   * `consent_store`.
+   * Required. The unique identifier of the resource to check access for. This identifier must
+   * correspond to a User data mapping in the given consent store.
    * @param dataId dataId or {@code null} for none
    */
   public CheckDataAccessRequest setDataId(java.lang.String dataId) {
@@ -123,7 +126,7 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The view for CheckDataAccessResponse. If unspecified, defaults to `BASIC` and returns
+   * Optional. The view for CheckDataAccessResponse. If unspecified, defaults to `BASIC` and returns
    * `consented` as `TRUE` or `FALSE`.
    * @return value or {@code null} for none
    */
@@ -132,7 +135,7 @@ public final class CheckDataAccessRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * The view for CheckDataAccessResponse. If unspecified, defaults to `BASIC` and returns
+   * Optional. The view for CheckDataAccessResponse. If unspecified, defaults to `BASIC` and returns
    * `consented` as `TRUE` or `FALSE`.
    * @param responseView responseView or {@code null} for none
    */

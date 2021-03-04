@@ -75,6 +75,14 @@ public final class GoogleDevtoolsRemotebuildbotCommandEvents extends com.google.
   private java.math.BigInteger numWarnings;
 
   /**
+   * Indicates whether output files and/or output directories were found relative to the execution
+   * root or to the user provided work directory or both or none.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outputLocation;
+
+  /**
    * Indicates whether an asynchronous container was used for execution.
    * The value may be {@code null}.
    */
@@ -182,6 +190,25 @@ public final class GoogleDevtoolsRemotebuildbotCommandEvents extends com.google.
    */
   public GoogleDevtoolsRemotebuildbotCommandEvents setNumWarnings(java.math.BigInteger numWarnings) {
     this.numWarnings = numWarnings;
+    return this;
+  }
+
+  /**
+   * Indicates whether output files and/or output directories were found relative to the execution
+   * root or to the user provided work directory or both or none.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutputLocation() {
+    return outputLocation;
+  }
+
+  /**
+   * Indicates whether output files and/or output directories were found relative to the execution
+   * root or to the user provided work directory or both or none.
+   * @param outputLocation outputLocation or {@code null} for none
+   */
+  public GoogleDevtoolsRemotebuildbotCommandEvents setOutputLocation(java.lang.String outputLocation) {
+    this.outputLocation = outputLocation;
     return this;
   }
 

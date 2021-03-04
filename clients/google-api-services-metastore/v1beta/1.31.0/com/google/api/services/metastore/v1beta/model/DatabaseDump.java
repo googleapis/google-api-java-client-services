@@ -39,8 +39,8 @@ public final class DatabaseDump extends com.google.api.client.json.GenericJson {
   private java.lang.String databaseType;
 
   /**
-   * A Cloud Storage object URI that specifies the source from which to import metadata. It must
-   * begin with gs://.
+   * A Cloud Storage object or folder URI that specifies the source from which to import metadata.
+   * It must begin with gs://.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,6 +52,13 @@ public final class DatabaseDump extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceDatabase;
+
+  /**
+   * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
 
   /**
    * The type of the database.
@@ -71,8 +78,8 @@ public final class DatabaseDump extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Cloud Storage object URI that specifies the source from which to import metadata. It must
-   * begin with gs://.
+   * A Cloud Storage object or folder URI that specifies the source from which to import metadata.
+   * It must begin with gs://.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -80,8 +87,8 @@ public final class DatabaseDump extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Cloud Storage object URI that specifies the source from which to import metadata. It must
-   * begin with gs://.
+   * A Cloud Storage object or folder URI that specifies the source from which to import metadata.
+   * It must begin with gs://.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public DatabaseDump setGcsUri(java.lang.String gcsUri) {
@@ -103,6 +110,23 @@ public final class DatabaseDump extends com.google.api.client.json.GenericJson {
    */
   public DatabaseDump setSourceDatabase(java.lang.String sourceDatabase) {
     this.sourceDatabase = sourceDatabase;
+    return this;
+  }
+
+  /**
+   * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
+   * @param type type or {@code null} for none
+   */
+  public DatabaseDump setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

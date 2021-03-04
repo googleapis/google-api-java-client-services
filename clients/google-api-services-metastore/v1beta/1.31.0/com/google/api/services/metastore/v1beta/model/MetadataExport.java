@@ -31,6 +31,13 @@ package com.google.api.services.metastore.v1beta.model;
 public final class MetadataExport extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The type of the database dump.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseDumpType;
+
+  /**
    * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the form of
    * gs:/, where ` is automatically generated.
    * The value may be {@code null}.
@@ -58,6 +65,23 @@ public final class MetadataExport extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. The type of the database dump.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseDumpType() {
+    return databaseDumpType;
+  }
+
+  /**
+   * Output only. The type of the database dump.
+   * @param databaseDumpType databaseDumpType or {@code null} for none
+   */
+  public MetadataExport setDatabaseDumpType(java.lang.String databaseDumpType) {
+    this.databaseDumpType = databaseDumpType;
+    return this;
+  }
 
   /**
    * Output only. A Cloud Storage URI of a folder that metadata are exported to, in the form of

@@ -17,7 +17,7 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * The response returned by ListChannels.
+ * Model definition for ListChannelsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -43,9 +43,9 @@ public final class ListChannelsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * If there are additional releases remaining beyond the ones in this response, then supply this
-   * token in the next [`list`](../sites.channels/list) call to continue with the next set of
-   * releases.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListChannels`. Page tokens are short-lived and should not be
+   * stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,9 +69,9 @@ public final class ListChannelsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * If there are additional releases remaining beyond the ones in this response, then supply this
-   * token in the next [`list`](../sites.channels/list) call to continue with the next set of
-   * releases.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListChannels`. Page tokens are short-lived and should not be
+   * stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -79,9 +79,9 @@ public final class ListChannelsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * If there are additional releases remaining beyond the ones in this response, then supply this
-   * token in the next [`list`](../sites.channels/list) call to continue with the next set of
-   * releases.
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListChannels`. Page tokens are short-lived and should not be
+   * stored.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListChannelsResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -17,9 +17,7 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * Version preview configuration. If active and unexpired, this version will be accessible via a
- * custom URL even if it is not the currently released version. Deprecated in favor of site
- * channels.
+ * Deprecated in favor of [site channels](sites.channels).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:

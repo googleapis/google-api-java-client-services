@@ -18,7 +18,7 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
  * A `Channel` represents a stream of releases for a site. All sites have a default `live` channel
- * that serves content to the live Firebase-provided domains and any connected custom domains.
+ * that serves content to the Firebase-provided subdomains and any connected custom domains.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -39,8 +39,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
 
   /**
    * The time at which the channel will be automatically deleted. If null, the channel will not be
-   * automatically deleted. This field is present in output whether set directly or via the `ttl`
-   * field.
+   * automatically deleted. This field is present in the output whether it's set directly or via the
+   * `ttl` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The fully-qualified identifier of the Channel.
+   * The fully-qualified identifier for the channel, in the format: sites/
+   * SITE_NAME/channels/CHANNEL_ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +92,11 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Output only. The URL at which the channel can be viewed. For the `live` channel, the content of
-   * the current release may also be visible at other URLs.
+   * Output only. The URL at which the content of this channel's current release can be viewed. This
+   * URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current
+   * release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this
+   * channel is the `live` channel for the Hosting site, then the content of this channel's current
+   * release can also be viewed at any connected custom domains.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +121,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
 
   /**
    * The time at which the channel will be automatically deleted. If null, the channel will not be
-   * automatically deleted. This field is present in output whether set directly or via the `ttl`
-   * field.
+   * automatically deleted. This field is present in the output whether it's set directly or via the
+   * `ttl` field.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -127,8 +131,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
 
   /**
    * The time at which the channel will be automatically deleted. If null, the channel will not be
-   * automatically deleted. This field is present in output whether set directly or via the `ttl`
-   * field.
+   * automatically deleted. This field is present in the output whether it's set directly or via the
+   * `ttl` field.
    * @param expireTime expireTime or {@code null} for none
    */
   public Channel setExpireTime(String expireTime) {
@@ -154,7 +158,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified identifier of the Channel.
+   * The fully-qualified identifier for the channel, in the format: sites/
+   * SITE_NAME/channels/CHANNEL_ID
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -162,7 +167,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The fully-qualified identifier of the Channel.
+   * The fully-qualified identifier for the channel, in the format: sites/
+   * SITE_NAME/channels/CHANNEL_ID
    * @param name name or {@code null} for none
    */
   public Channel setName(java.lang.String name) {
@@ -243,8 +249,11 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The URL at which the channel can be viewed. For the `live` channel, the content of
-   * the current release may also be visible at other URLs.
+   * Output only. The URL at which the content of this channel's current release can be viewed. This
+   * URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current
+   * release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this
+   * channel is the `live` channel for the Hosting site, then the content of this channel's current
+   * release can also be viewed at any connected custom domains.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -252,8 +261,11 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The URL at which the channel can be viewed. For the `live` channel, the content of
-   * the current release may also be visible at other URLs.
+   * Output only. The URL at which the content of this channel's current release can be viewed. This
+   * URL is a Firebase-provided subdomain of `web.app`. The content of this channel's current
+   * release can also be viewed at the Firebase-provided subdomain of `firebaseapp.com`. If this
+   * channel is the `live` channel for the Hosting site, then the content of this channel's current
+   * release can also be viewed at any connected custom domains.
    * @param url url or {@code null} for none
    */
   public Channel setUrl(java.lang.String url) {

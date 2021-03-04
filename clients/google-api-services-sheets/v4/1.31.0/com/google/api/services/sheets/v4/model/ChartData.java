@@ -30,7 +30,8 @@ package com.google.api.services.sheets.v4.model;
 public final class ChartData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The aggregation type for the series of a data source chart. Not supported for regular charts.
+   * The aggregation type for the series of a data source chart. Only supported for data source
+   * charts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,8 +45,8 @@ public final class ChartData extends com.google.api.client.json.GenericJson {
   private DataSourceColumnReference columnReference;
 
   /**
-   * The rule to group the data by if the ChartData backs the domain of a data source chart. Not
-   * supported for regular charts.
+   * The rule to group the data by if the ChartData backs the domain of a data source chart. Only
+   * supported for data source charts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,8 @@ public final class ChartData extends com.google.api.client.json.GenericJson {
   private ChartSourceRange sourceRange;
 
   /**
-   * The aggregation type for the series of a data source chart. Not supported for regular charts.
+   * The aggregation type for the series of a data source chart. Only supported for data source
+   * charts.
    * @return value or {@code null} for none
    */
   public java.lang.String getAggregateType() {
@@ -67,7 +69,8 @@ public final class ChartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The aggregation type for the series of a data source chart. Not supported for regular charts.
+   * The aggregation type for the series of a data source chart. Only supported for data source
+   * charts.
    * @param aggregateType aggregateType or {@code null} for none
    */
   public ChartData setAggregateType(java.lang.String aggregateType) {
@@ -93,8 +96,8 @@ public final class ChartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The rule to group the data by if the ChartData backs the domain of a data source chart. Not
-   * supported for regular charts.
+   * The rule to group the data by if the ChartData backs the domain of a data source chart. Only
+   * supported for data source charts.
    * @return value or {@code null} for none
    */
   public ChartGroupRule getGroupRule() {
@@ -102,8 +105,8 @@ public final class ChartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The rule to group the data by if the ChartData backs the domain of a data source chart. Not
-   * supported for regular charts.
+   * The rule to group the data by if the ChartData backs the domain of a data source chart. Only
+   * supported for data source charts.
    * @param groupRule groupRule or {@code null} for none
    */
   public ChartData setGroupRule(ChartGroupRule groupRule) {

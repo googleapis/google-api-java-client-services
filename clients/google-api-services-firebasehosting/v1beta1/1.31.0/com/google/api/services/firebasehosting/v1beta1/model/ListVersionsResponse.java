@@ -30,7 +30,9 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class ListVersionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The pagination token, if more results exist
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListVersions`. Page tokens are short-lived and should not be
+   * stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +46,9 @@ public final class ListVersionsResponse extends com.google.api.client.json.Gener
   private java.util.List<Version> versions;
 
   /**
-   * The pagination token, if more results exist
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListVersions`. Page tokens are short-lived and should not be
+   * stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -52,7 +56,9 @@ public final class ListVersionsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The pagination token, if more results exist
+   * The pagination token, if more results exist beyond the ones in this response. Include this
+   * token in your next call to `ListVersions`. Page tokens are short-lived and should not be
+   * stored.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListVersionsResponse setNextPageToken(java.lang.String nextPageToken) {

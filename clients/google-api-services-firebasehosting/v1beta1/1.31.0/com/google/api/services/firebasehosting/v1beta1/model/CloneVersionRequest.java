@@ -17,7 +17,7 @@
 package com.google.api.services.firebasehosting.v1beta1.model;
 
 /**
- * The request sent to CloneVersion.
+ * Model definition for CloneVersionRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Hosting API. For a detailed explanation see:
@@ -30,39 +30,41 @@ package com.google.api.services.firebasehosting.v1beta1.model;
 public final class CloneVersionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * If provided, only paths that do not match any of the regexes in this list will be included in
-   * the new version.
+   * If provided, only paths that do not match any of the RegEx values in this list will be included
+   * in the new version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PathFilter exclude;
 
   /**
-   * If true, immediately finalize the version after cloning is complete.
+   * If true, the call to `CloneVersion` immediately finalizes the version after cloning is
+   * complete. If false, the cloned version will have a status of `CREATED`. Use
+   * [`UpdateVersion`](patch) to set the status of the version to `FINALIZED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean finalize;
 
   /**
-   * If provided, only paths that match one or more regexes in this list will be included in the new
-   * version.
+   * If provided, only paths that match one or more RegEx values in this list will be included in
+   * the new version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PathFilter include;
 
   /**
-   * Required. The name of the version to be cloned, in the format:
-   * `sites/{site}/versions/{version}`
+   * Required. The unique identifier for the version to be cloned, in the format:
+   * sites/SITE_NAME/versions/VERSION_ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceVersion;
 
   /**
-   * If provided, only paths that do not match any of the regexes in this list will be included in
-   * the new version.
+   * If provided, only paths that do not match any of the RegEx values in this list will be included
+   * in the new version.
    * @return value or {@code null} for none
    */
   public PathFilter getExclude() {
@@ -70,8 +72,8 @@ public final class CloneVersionRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * If provided, only paths that do not match any of the regexes in this list will be included in
-   * the new version.
+   * If provided, only paths that do not match any of the RegEx values in this list will be included
+   * in the new version.
    * @param exclude exclude or {@code null} for none
    */
   public CloneVersionRequest setExclude(PathFilter exclude) {
@@ -80,7 +82,9 @@ public final class CloneVersionRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * If true, immediately finalize the version after cloning is complete.
+   * If true, the call to `CloneVersion` immediately finalizes the version after cloning is
+   * complete. If false, the cloned version will have a status of `CREATED`. Use
+   * [`UpdateVersion`](patch) to set the status of the version to `FINALIZED`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFinalize() {
@@ -88,7 +92,9 @@ public final class CloneVersionRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * If true, immediately finalize the version after cloning is complete.
+   * If true, the call to `CloneVersion` immediately finalizes the version after cloning is
+   * complete. If false, the cloned version will have a status of `CREATED`. Use
+   * [`UpdateVersion`](patch) to set the status of the version to `FINALIZED`.
    * @param finalize finalize or {@code null} for none
    */
   public CloneVersionRequest setFinalize(java.lang.Boolean finalize) {
@@ -97,8 +103,8 @@ public final class CloneVersionRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * If provided, only paths that match one or more regexes in this list will be included in the new
-   * version.
+   * If provided, only paths that match one or more RegEx values in this list will be included in
+   * the new version.
    * @return value or {@code null} for none
    */
   public PathFilter getInclude() {
@@ -106,8 +112,8 @@ public final class CloneVersionRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * If provided, only paths that match one or more regexes in this list will be included in the new
-   * version.
+   * If provided, only paths that match one or more RegEx values in this list will be included in
+   * the new version.
    * @param include include or {@code null} for none
    */
   public CloneVersionRequest setInclude(PathFilter include) {
@@ -116,8 +122,8 @@ public final class CloneVersionRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The name of the version to be cloned, in the format:
-   * `sites/{site}/versions/{version}`
+   * Required. The unique identifier for the version to be cloned, in the format:
+   * sites/SITE_NAME/versions/VERSION_ID
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceVersion() {
@@ -125,8 +131,8 @@ public final class CloneVersionRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The name of the version to be cloned, in the format:
-   * `sites/{site}/versions/{version}`
+   * Required. The unique identifier for the version to be cloned, in the format:
+   * sites/SITE_NAME/versions/VERSION_ID
    * @param sourceVersion sourceVersion or {@code null} for none
    */
   public CloneVersionRequest setSourceVersion(java.lang.String sourceVersion) {

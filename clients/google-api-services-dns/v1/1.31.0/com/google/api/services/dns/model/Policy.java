@@ -48,7 +48,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over
-   * VPN connections. When enabled, a virtual IP address is allocated from each of the sub-networks
+   * VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks
    * that are bound to this policy.
    * The value may be {@code null}.
    */
@@ -132,7 +132,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over
-   * VPN connections. When enabled, a virtual IP address is allocated from each of the sub-networks
+   * VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks
    * that are bound to this policy.
    * @return value or {@code null} for none
    */
@@ -142,7 +142,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Allows networks bound to this policy to receive DNS queries sent by VMs or applications over
-   * VPN connections. When enabled, a virtual IP address is allocated from each of the sub-networks
+   * VPN connections. When enabled, a virtual IP address is allocated from each of the subnetworks
    * that are bound to this policy.
    * @param enableInboundForwarding enableInboundForwarding or {@code null} for none
    */

@@ -30,7 +30,7 @@ package com.google.api.services.dns.model;
 public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time that the namespace backing this zone was deleted, empty string if it still exists.
+   * The time that the namespace backing this zone was deleted; an empty string if it still exists.
    * This is in RFC3339 text format. Output only.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google
   private java.lang.String namespaceUrl;
 
   /**
-   * The time that the namespace backing this zone was deleted, empty string if it still exists.
+   * The time that the namespace backing this zone was deleted; an empty string if it still exists.
    * This is in RFC3339 text format. Output only.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespace extends com.google
   }
 
   /**
-   * The time that the namespace backing this zone was deleted, empty string if it still exists.
+   * The time that the namespace backing this zone was deleted; an empty string if it still exists.
    * This is in RFC3339 text format. Output only.
    * @param deletionTime deletionTime or {@code null} for none
    */

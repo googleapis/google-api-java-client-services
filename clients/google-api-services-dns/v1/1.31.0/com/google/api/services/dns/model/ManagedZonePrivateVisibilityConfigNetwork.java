@@ -36,7 +36,7 @@ public final class ManagedZonePrivateVisibilityConfigNetwork extends com.google.
   private java.lang.String kind;
 
   /**
-   * The fully qualified URL of the VPC network to bind to. This should be formatted like
+   * The fully qualified URL of the VPC network to bind to. Format this URL like
    * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
    * The value may be {@code null}.
    */
@@ -59,7 +59,7 @@ public final class ManagedZonePrivateVisibilityConfigNetwork extends com.google.
   }
 
   /**
-   * The fully qualified URL of the VPC network to bind to. This should be formatted like
+   * The fully qualified URL of the VPC network to bind to. Format this URL like
    * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
    * @return value or {@code null} for none
    */
@@ -68,7 +68,7 @@ public final class ManagedZonePrivateVisibilityConfigNetwork extends com.google.
   }
 
   /**
-   * The fully qualified URL of the VPC network to bind to. This should be formatted like
+   * The fully qualified URL of the VPC network to bind to. Format this URL like
    * https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
    * @param networkUrl networkUrl or {@code null} for none
    */

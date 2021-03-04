@@ -97,7 +97,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   private java.lang.String token;
 
   /**
-   * The type of delivery mechanism used for this channel.
+   * The type of delivery mechanism used for this channel. Valid values are "web_hook" (or
+   * "webhook"). Both values refer to a channel where Http requests are used to deliver messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,7 +266,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of delivery mechanism used for this channel.
+   * The type of delivery mechanism used for this channel. Valid values are "web_hook" (or
+   * "webhook"). Both values refer to a channel where Http requests are used to deliver messages.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -273,7 +275,8 @@ public final class Channel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of delivery mechanism used for this channel.
+   * The type of delivery mechanism used for this channel. Valid values are "web_hook" (or
+   * "webhook"). Both values refer to a channel where Http requests are used to deliver messages.
    * @param type type or {@code null} for none
    */
   public Channel setType(java.lang.String type) {

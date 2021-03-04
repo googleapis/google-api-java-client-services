@@ -1,11 +1,11 @@
 {
  "kind": "discovery#restDescription",
- "etag": "\"-2NioU2H8y8siEzrBOV_qzRI6kQ/Gzw3zY4GFM9pYqDRgHZ0YoUbcxg\"",
+ "etag": "\"uWj2hSb4GVjzdDlAnRd2gbM1ZQ8/Rjaxlc2y0RE6nuthF2RV3qUKAvg\"",
  "discoveryVersion": "v1",
  "id": "drive:v2",
  "name": "drive",
  "version": "v2",
- "revision": "20210207",
+ "revision": "20210228",
  "title": "Drive API",
  "description": "Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.",
  "ownerDomain": "google.com",
@@ -689,7 +689,7 @@
     },
     "type": {
      "type": "string",
-     "description": "The type of delivery mechanism used for this channel."
+     "description": "The type of delivery mechanism used for this channel. Valid values are \"web_hook\" (or \"webhook\"). Both values refer to a channel where Http requests are used to deliver messages."
     }
    }
   },
